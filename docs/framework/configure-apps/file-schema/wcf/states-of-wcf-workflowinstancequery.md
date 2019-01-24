@@ -2,12 +2,12 @@
 title: '&lt;estados&gt; do WCF, &lt;workflowInstanceQuery&gt;'
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: d67f4143619b72826f8fef4adbf66ff8782e4a34
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 56e3c6ce5c86e468c9a4dd63021264703ab75b02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540813"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>&lt;estados&gt; do WCF, &lt;workflowInstanceQuery&gt;
 
@@ -15,13 +15,13 @@ Representa uma coleção de estados inscritos da instância do fluxo de trabalho
   
 Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<System. ServiceModel > \<acompanhamento >  
-\<perfis de >  
+\<system.serviceModel> \<tracking>  
+\<profiles>  
 \<trackingProfile>  
 \<workflow>  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
-\<estados >  
+\<workflowInstanceQuery>  
+\<states>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ nenhuma.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<estados >](state-of-wcf-workflowinstancequery.md)|Um estado inscrito da instância do fluxo de trabalho controladas quando o registro de rastreamento é criado.|  
+|[\<states>](state-of-wcf-workflowinstancequery.md)|Um estado inscrito da instância do fluxo de trabalho controladas quando o registro de rastreamento é criado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -99,10 +99,10 @@ A configuração a seguir assina o fluxo de trabalho em nível de instância reg
 </workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

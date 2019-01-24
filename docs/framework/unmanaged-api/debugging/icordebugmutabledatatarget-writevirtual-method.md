@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 184ae290b3a7d86a3c0351d4cfb072bce37337d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1c0f07e02ee92fda772a44fe235c3dcb414882bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495949"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>Método ICorDebugMutableDataTarget::WriteVirtual
-Grava a memória no espaço de endereço de processo de destino.  
+Grava a memória no espaço de endereço do processo de destino.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,20 +34,20 @@ HRESULT WriteVirtual(
  [in] O número de bytes em `pBuffer`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `S_OK` no caso de sucesso, ou qualquer outra `HRESULT` em caso de falha.  
+ `S_OK` no êxito ou qualquer outro `HRESULT` em caso de falha.  
   
 ## <a name="remarks"></a>Comentários  
- Se qualquer bytes não podem ser gravados, a chamada de método falhar sem alterar qualquer bytes no espaço de endereço de destino. (Caso contrário, o destino deve ser em um estado inconsistente que torna mais depuração confiável.)  
+ Se qualquer não podem ser gravados, a chamada de método falhará sem alterar quaisquer bytes no espaço de endereço de destino. (Caso contrário, o destino seria em um estado inconsistente que torna mais depurações não confiável.)  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugMutableDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugMutableDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

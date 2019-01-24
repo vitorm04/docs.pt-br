@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b77ead51b4e064d223735ca52affdec434e5c818
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa11cea7e78a56c3f5cbfd9d0678e1ed671f6f3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506037"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;Adicione&gt; elemento para &lt;namedCaches&gt;
 Adiciona uma `namedCache` entrada para o `namedCaches` coleção para um cache de memória.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -78,5 +78,5 @@ Adiciona uma `namedCache` entrada para o `namedCaches` coleção para um cache d
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 - [\<namedCaches > (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

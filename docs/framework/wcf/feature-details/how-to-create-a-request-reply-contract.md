@@ -1,15 +1,15 @@
 ---
-title: Como criar um contrato de resposta/solicitação
+title: 'Como: Criar um contrato de solicitação-resposta'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 0d41973d04fc75f70011505a3361e71e89a05276
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 085514e09eb13676d5c939724071e89535d443f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663603"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a>Como criar um contrato de resposta/solicitação
+# <a name="how-to-create-a-request-reply-contract"></a>Como: Criar um contrato de solicitação-resposta
 Um contrato de solicitação-resposta especifica um método que retorna uma resposta. A resposta deve ser enviada e correlacionada à solicitação de acordo com os termos deste contrato. Mesmo que o método retorna sem resposta (`void` em c#, ou um `Sub` no Visual Basic), a infraestrutura cria e envia uma mensagem vazia ao chamador. Para evitar o envio de uma mensagem de resposta vazia, use um contrato unidirecional para a operação.  
   
 ### <a name="to-create-a-request-reply-contract"></a>Para criar um contrato de solicitação-resposta  
@@ -47,7 +47,7 @@ public interface ICalculator
   
 -   Aplicando o <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> atributos faz com que a geração automática de definições de contrato de serviço em um documento de descrição linguagem WSDL (Web Services) quando o serviço é implantado. O documento é baixado por meio do acréscimo `?wsdl` endereço para o serviço de base para o HTTP. Por exemplo, `http://microsoft/CalculatorService?wsdl`  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Criando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [Como criar um contrato duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Criando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Como: Criar um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

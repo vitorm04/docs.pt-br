@@ -1,5 +1,5 @@
 ---
-title: Como enganchar um comando em um controle com suporte de comando
+title: 'Como: Enganchar um comando em um controle com suporte de comando'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 22aca20eb3f6bc2e31fb5a01ed7c153cccef0bd8
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663200"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Como enganchar um comando em um controle com suporte de comando
+# <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Como: Enganchar um comando em um controle com suporte de comando
 O exemplo a seguir mostra como conectar um <xref:System.Windows.Input.RoutedCommand> a um <xref:System.Windows.Controls.Control> que tem o suporte interno para o comando.  Para um exemplo completo que interliga comandos a várias fontes, consulte o exemplo de [Criar um exemplo de RoutedCommand personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
 ## <a name="example"></a>Exemplo  
@@ -36,6 +36,6 @@ O exemplo a seguir mostra como conectar um <xref:System.Windows.Input.RoutedComm
  [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
  [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Enganchar um comando em um controle sem suporte a comandos](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Enganchar um comando em um controle sem suporte a comandos](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

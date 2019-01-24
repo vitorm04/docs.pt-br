@@ -1,15 +1,15 @@
 ---
-title: 'Serviços: chamadas com falha por segundo'
+title: 'Serviço: Chamadas com falha por segundo'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: 9cd649788e1304c68caa1bbf4b5fd27e6fc9d508
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a043cf30fa67707aca3edf50cf23372ade5e5a42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559886"
 ---
-# <a name="service-calls-failed-per-second"></a>Serviços: chamadas com falha por segundo
+# <a name="service-calls-failed-per-second"></a>Serviço: Chamadas com falha por segundo
 Nome do contador: Chamadas com falha por segundo.  
   
 ## <a name="description"></a>Descrição  
@@ -17,7 +17,7 @@ Nome do contador: Chamadas com falha por segundo.
   
  Esse contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cujo valor é calculado usando a fórmula a seguir.  
   
- (N 1 - N 0) / ((1!D 1 - D 0) / F)  
+ (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   
  No código gerenciado, as exceções são geradas quando ocorrem condições de erro.  
   
@@ -25,5 +25,5 @@ Nome do contador: Chamadas com falha por segundo.
   
  Esse contador é incrementado sempre que houver uma exceção não tratada neste serviço.  
   
-## <a name="see-also"></a>Consulte também  
- [Especificando e lidando com falhas em contratos e serviços](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Consulte também
+- [Especificando e lidando com falhas em contratos e serviços](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

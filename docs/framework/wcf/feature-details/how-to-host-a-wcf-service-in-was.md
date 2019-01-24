@@ -1,33 +1,33 @@
 ---
-title: Como hospedar um serviço do WCF em WAS
+title: 'Como: Hospedar um serviço WCF no WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651169"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Como hospedar um serviço do WCF em WAS
+# <a name="how-to-host-a-wcf-service-in-was"></a>Como: Hospedar um serviço WCF no WAS
 Este tópico descreve as etapas básicas necessárias para criar um serviços de ativação de processo do Windows (também conhecido como WAS) hospedado o serviço Windows Communication Foundation (WCF). FOI é o novo serviço de ativação de processo é uma generalização dos recursos de serviços de informações da Internet (IIS) que funcionam com protocolos de transporte não HTTP. O WCF usa o adaptador de escuta para comunicar as solicitações de ativação recebidas pelos protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e enfileiramento de mensagens.  
   
- Essa opção de hospedagem requer que os componentes de ativação do WAS são instalados e configurados corretamente, mas ele não requer nenhum código de hospedagem a ser gravado como parte do aplicativo. Para obter mais informações sobre como instalar e configurando o WAS, consulte [como: instalar e configurar componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Essa opção de hospedagem requer que os componentes de ativação do WAS são instalados e configurados corretamente, mas ele não requer nenhum código de hospedagem a ser gravado como parte do aplicativo. Para obter mais informações sobre como instalar e configurando o WAS, consulte [como: Instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  Não era oferece suporte à ativação se o pipeline de processamento de solicitação do servidor web está definido para o modo clássico. Pipeline de processamento de solicitação do servidor web deve ser definido para o modo integrado se a ativação do WAS deve ser usada.  
   
  Quando um serviço WCF é hospedado no WAS, as ligações padrão são usadas como de costume. No entanto, ao usar o <xref:System.ServiceModel.NetTcpBinding> e o <xref:System.ServiceModel.NetNamedPipeBinding> para configurar um serviço hospedado do WAS, uma restrição deve ser atendida. Quando diferentes pontos de extremidade usam o mesmo transporte, as configurações de ligação tem que corresponder as sete propriedades a seguir:  
   
--   connectionBufferSize  
+-   ConnectionBufferSize  
   
--   channelInitializationTimeout  
+-   ChannelInitializationTimeout  
   
--   maxPendingConnections  
+-   MaxPendingConnections  
   
--   maxOutputDelay  
+-   MaxOutputDelay  
   
--   maxPendingAccepts  
+-   MaxPendingAccepts  
   
 -   ConnectionPoolSettings.IdleTimeout  
   
@@ -98,6 +98,6 @@ Este tópico descreve as etapas básicas necessárias para criar um serviços de
   
 6.  Compile e execute o cliente.  
   
-## <a name="see-also"></a>Consulte também  
- [Ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Consulte também
+- [Ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

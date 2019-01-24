@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 983cad5ed87d0666ed71a805a3b3f7a3c7e7c091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb91c5dfbe5c83e08d786043d7e4732fa19e53db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566768"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>Método IHostTaskManager::CallNeedsHostHook
-Permite que o host especificar se o common language runtime (CLR) pode embutido chamada especificado para uma função não gerenciada.  
+Permite que o host especificar se o common language runtime (CLR) pode embutir a chamada especificada para uma função não gerenciada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,35 +41,35 @@ HRESULT CallNeedsHostHook (
  [in] O endereço dentro do arquivo mapeado PE (executável portátil) da função não gerenciada que deve ser chamado.  
   
  `pbCallNeedsHostHook`  
- [out] Um ponteiro para um valor booliano que indica se o host requer a chamada a ser vinculada.  
+ [out] Um ponteiro para um valor booliano que indica se o host requer a chamada a ser enganchado.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CallNeedsHostHook` retornou com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
-|HOST_E_TIMEOUT|A chamada foi atingido.|  
-|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado durante um thread bloqueado ou fibra estava aguardando nele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`CallNeedsHostHook` retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
+|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Para ajudar a otimizar a execução de código, o CLR realiza uma análise de cada plataforma chamar invoke durante a compilação para determinar se a chamada pode ser embutida. `CallNeedsHostHook` permite que o host substituir essa decisão, exigindo que uma chamada para uma função não gerenciada ser vinculada. Se o host requer um gancho, o tempo de execução não embutido não a chamada.  
+ Para ajudar a otimizar a execução de código, o CLR realiza uma análise de cada plataforma de chamada de invocação durante a compilação para determinar se a chamada pode ser embutida. `CallNeedsHostHook` permite que o host substitua essa decisão, exigindo que uma chamada para uma função não gerenciada ser enganchado. Se o host requer um gancho, o tempo de execução faz não embutir a chamada.  
   
- O host geralmente exigem um gancho onde ele deve ajustar o estado de ponto flutuante, ou depois de receber a notificação de que uma chamada é entrar em um estado em que o host não pode controlar as solicitações do runtime memória ou qualquer bloqueios. Quando o host requer que a chamada ser conectado, o tempo de execução notifica o host de transições de e para código gerenciado por meio de chamadas para [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), e [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ O host normalmente requer um gancho de onde ele deve ajustar um estado de ponto flutuante, ou depois de receber a notificação de que uma chamada é inserindo um estado em que o host não pode rastrear solicitações do tempo de execução para a memória ou qualquer bloqueios. Quando o host requer que a chamada ser conectado, o tempo de execução notifica o host de transições para e do código gerenciado por meio de chamadas para [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), e [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [Interface IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [Interface IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

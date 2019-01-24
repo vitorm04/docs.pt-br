@@ -2,19 +2,19 @@
 title: '&lt;filterTables&gt;'
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: 2b537619a276f32c50576561aea03b5fbbb58e7d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d73a3c25dbb4d2de41007149ef5864fcf37ad883
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573053"
 ---
 # <a name="ltfiltertablesgt"></a>&lt;filterTables&gt;
 Representa uma seção de configuração para definir as tabelas de roteamento que contêm mapeamentos entre os filtros de roteamento e os pontos de extremidade para enviar mensagens quando o filtro corresponde ao destino.  
   
  \<system.serviceModel>  
-\<roteamento >  
-\<routingTables >  
+\<routing>  
+\<routingTables>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,14 +43,14 @@ Representa uma seção de configuração para definir as tabelas de roteamento q
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Filtros >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Uma tabela de roteamento que contêm mapeamentos entre os filtros de roteamento e os pontos de extremidade para enviar mensagens para quando o filtro corresponde ao destino.|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Uma tabela de roteamento que contêm mapeamentos entre os filtros de roteamento e os pontos de extremidade para enviar mensagens para quando o filtro corresponde ao destino.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<roteamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Uma seção de configuração que contém tabelas de roteamento e os filtros de roteamento.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Uma seção de configuração que contém tabelas de roteamento e os filtros de roteamento.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>

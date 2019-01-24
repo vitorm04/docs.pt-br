@@ -6,15 +6,15 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661276"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Padrões de construtor seguro para DependencyObjects
-De modo geral, os construtores de classe não devem chamar retornos de chamada como métodos virtuais ou representantes, porque construtores podem ser chamados como inicialização de base dos construtores para uma classe derivada. O fornecimento do virtual pode ser feito em um estado de inicialização incompleta de um determinado objeto. No entanto, o sistema de propriedades chama e expõe os retornos de chamada internamente, como parte do sistema de propriedades de dependência. Uma operação como simples de definir um valor de propriedade de dependência com <xref:System.Windows.DependencyObject.SetValue%2A> chamada potencialmente inclui um retorno de chamada em algum lugar na determinação. Por esse motivo, você deve ter cuidado ao definir valores de propriedade de dependência dentro do corpo de um construtor, o que poderá se tornar problemático se o tipo for usado como uma classe base. Há um padrão específico para implementar <xref:System.Windows.DependencyObject> construtores que evita problemas específicos com estados de propriedade de dependência e os retornos de chamada inerentes, que é documentado aqui.  
+De modo geral, os construtores de classe não devem chamar retornos de chamada como métodos virtuais ou representantes, porque construtores podem ser chamados como inicialização de base dos construtores para uma classe derivada. O fornecimento do virtual pode ser feito em um estado de inicialização incompleta de um determinado objeto. No entanto, o sistema de propriedades chama e expõe os retornos de chamada internamente, como parte do sistema de propriedades de dependência. Uma operação tão simples como definir um valor de propriedade de dependência com <xref:System.Windows.DependencyObject.SetValue%2A> chamada potencialmente inclui um retorno de chamada em algum lugar na determinação. Por esse motivo, você deve ter cuidado ao definir valores de propriedade de dependência dentro do corpo de um construtor, o que poderá se tornar problemático se o tipo for usado como uma classe base. Há um padrão específico para a implementação de <xref:System.Windows.DependencyObject> construtores que evita problemas específicos com estados de propriedade de dependência e os retornos de chamada inerentes, que está documentada aqui.  
   
  
   
@@ -62,7 +62,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- Quando o código do aplicativo chama `new MyClass(objectvalue)`, isso chama o construtor padrão e os construtores da classe base. Em seguida, ele define `Property1 = object1`, que chama o método virtual `OnPropertyChanged` na posse `MyClass` <xref:System.Windows.DependencyObject>.  A substituição se refere a `_myList`, que ainda não foi inicializado.  
+ Quando o código do aplicativo chama `new MyClass(objectvalue)`, isso chama o construtor padrão e os construtores da classe base. Em seguida, ele define `Property1 = object1`, que chama o método virtual `OnPropertyChanged` sobre a posse `MyClass` <xref:System.Windows.DependencyObject>.  A substituição se refere a `_myList`, que ainda não foi inicializado.  
   
  Uma maneira de evitar esses problemas é garantir que os retornos de chamada usem apenas outras propriedades de dependência e que cada propriedade de dependência tenha um valor padrão estabelecido como parte de seus metadados registrados.  
   
@@ -112,9 +112,9 @@ public MyClass : SomeBaseClass {
  Para casos em que o tipo base tem várias assinaturas, você deve corresponder deliberadamente todas as assinaturas possíveis com uma implementação do construtor que seja sua e que use o padrão recomendado de chamar o construtor padrão da classe antes de configurar mais propriedades.  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>Definindo propriedades de dependência com SetValue  
- Esses mesmos padrões se aplicam se você estiver definindo uma propriedade que não tenha um wrapper para a conveniência de configuração de propriedade e definir valores com <xref:System.Windows.DependencyObject.SetValue%2A>. As chamadas para <xref:System.Windows.DependencyObject.SetValue%2A> que passar parâmetros do construtor também deve chamar o construtor padrão da classe de inicialização.  
+ Esses mesmos padrões se aplicarão se você estiver definindo uma propriedade que não tem um wrapper para a conveniência da configuração de propriedade e definir valores com <xref:System.Windows.DependencyObject.SetValue%2A>. Suas chamadas para <xref:System.Windows.DependencyObject.SetValue%2A> aprovados pelos parâmetros do construtor também devem chamar o construtor de padrão da classe para inicialização.  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Segurança de propriedade da dependência](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+## <a name="see-also"></a>Consulte também
+- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Segurança de propriedade da dependência](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

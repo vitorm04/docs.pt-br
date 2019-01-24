@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: c1aaaca83b8631a87a8987b9676b53161e821117
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 39a3cd059c0fa9aad1ef2c1ae50fa37b95df52d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650438"
 ---
 # <a name="fromtoby-animations-overview"></a>Visão geral de animações de/para/por
 Este tópico descreve como usar animações de/para/por para animar propriedades de dependência. Uma animação de/para/por cria uma transição entre dois valores.  
@@ -106,7 +106,7 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
 ### <a name="by"></a>Por  
  Quando você define apenas o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade de uma animação, a animação progride do valor base da propriedade que está sendo animada ou da saída de uma animação composta para a soma desse valor e o valor especificado pelo <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade.  
   
- O exemplo a seguir define apenas o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade do <xref:System.Windows.Media.Animation.DoubleAnimation> para 300. Como o exemplo não especifica um valor inicial, o <xref:System.Windows.Media.Animation.DoubleAnimation> usa o valor de base a <xref:System.Windows.FrameworkElement.Width%2A> propriedade, 100, como seu valor inicial. O valor final é determinado adicionando o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> valor da animação, 300, para seu valor inicial, 100:400. Como resultado, o <xref:System.Windows.FrameworkElement.Width%2A> do <xref:System.Windows.Shapes.Rectangle> é animado de 100 a 400.  
+ O exemplo a seguir define apenas o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade do <xref:System.Windows.Media.Animation.DoubleAnimation> para 300. Como o exemplo não especifica um valor inicial, o <xref:System.Windows.Media.Animation.DoubleAnimation> usa o valor de base a <xref:System.Windows.FrameworkElement.Width%2A> propriedade, 100, como seu valor inicial. O valor final é determinado adicionando o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> valor da animação, 300, para seu valor inicial, 100: 400. Como resultado, o <xref:System.Windows.FrameworkElement.Width%2A> do <xref:System.Windows.Shapes.Rectangle> é animado de 100 a 400.  
   
  [!code-csharp[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
  [!code-vb[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
@@ -114,7 +114,7 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
 ### <a name="fromby"></a>De/por  
  Quando você define o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedades de uma animação, a animação progride do valor especificado pela <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriedade, como o valor que é especificado pela soma dos <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedades.  
   
- O exemplo a seguir define o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriedade do <xref:System.Windows.Media.Animation.DoubleAnimation> como 50 e sua <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade para 300. O valor final é determinado adicionando o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> valor da animação, 300, para seu valor inicial, 50:350. Como resultado, o <xref:System.Windows.FrameworkElement.Width%2A> do <xref:System.Windows.Shapes.Rectangle> é animado de 50 a 350.  
+ O exemplo a seguir define o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriedade do <xref:System.Windows.Media.Animation.DoubleAnimation> como 50 e sua <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade para 300. O valor final é determinado adicionando o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> valor da animação, 300, para seu valor inicial, 50: 350. Como resultado, o <xref:System.Windows.FrameworkElement.Width%2A> do <xref:System.Windows.Shapes.Rectangle> é animado de 50 a 350.  
   
  [!code-csharp[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
  [!code-vb[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
@@ -140,12 +140,12 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também permite que você crie seus próprios tipos de animação personalizada. Para obter mais informações, consulte o [visão geral de animações personalizadas](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.Animation.Timeline>  
- <xref:System.Windows.Media.Animation.Storyboard>  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Visão geral de animações de caminho](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [Visão geral de animações personalizadas](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)  
- [Amostra de valores de destino de animação De, Para e Por](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.Animation.Timeline>
+- <xref:System.Windows.Media.Animation.Storyboard>
+- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Visão geral de animações de caminho](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
+- [Visão geral de animações personalizadas](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)
+- [Amostra de valores de destino de animação De, Para e Por](https://go.microsoft.com/fwlink/?LinkID=159988)

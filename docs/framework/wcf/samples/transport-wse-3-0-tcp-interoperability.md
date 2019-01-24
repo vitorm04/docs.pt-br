@@ -1,15 +1,15 @@
 ---
-title: 'Transporte: interoperabilidade de TCP de WSE 3.0'
+title: 'Transporte: Interoperabilidade do WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653002"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>Transporte: interoperabilidade de TCP de WSE 3.0
+# <a name="transport-wse-30-tcp-interoperability"></a>Transporte: Interoperabilidade do WSE 3.0 TCP
 O transporte de interoperabilidade de TCP do WSE 3.0 que demonstra como implementar uma sessão duplex do TCP como um transporte personalizado do Windows Communication Foundation (WCF). Ele também demonstra como você pode usar a extensibilidade da camada do canal a interface durante a transmissão com sistemas implantados existentes. As etapas a seguir mostram como criar esse transporte WCF personalizado:  
   
 1.  Começando com um soquete TCP, criar implementações de cliente e servidor de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> DIME delimitação de quadros que usam para delinear os limites das mensagens.  
@@ -23,7 +23,7 @@ O transporte de interoperabilidade de TCP do WSE 3.0 que demonstra como implemen
 5.  Adicione um elemento de associação que adiciona o transporte personalizado a uma pilha de canais. Para obter mais informações, consulte [adicionando um elemento de associação].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Criando IDuplexSessionChannel  
- A primeira etapa ao escrever o transporte de interoperabilidade de TCP do WSE 3.0 é criar uma implementação de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> na parte superior de um <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` deriva de <xref:System.ServiceModel.Channels.ChannelBase>. A lógica de enviar uma mensagem consiste em duas partes principais: (1) codificação de mensagem em bytes e (2) esses bytes de delimitação de quadros e enviá-los durante a transmissão.  
+ A primeira etapa ao escrever o transporte de interoperabilidade de TCP do WSE 3.0 é criar uma implementação de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> na parte superior de um <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` deriva de <xref:System.ServiceModel.Channels.ChannelBase>. A lógica de enviar uma mensagem consiste em duas partes principais: (1) codificar a mensagem em bytes e (2) esses bytes de delimitação de quadros e enviá-los durante a transmissão.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   

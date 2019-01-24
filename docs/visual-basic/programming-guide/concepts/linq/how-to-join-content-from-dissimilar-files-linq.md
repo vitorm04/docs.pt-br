@@ -1,15 +1,15 @@
 ---
-title: 'Como: associar o conteúdo de arquivos diferentes (LINQ) (Visual Basic)'
+title: 'Como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655459"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Como: associar o conteúdo de arquivos diferentes (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)
 
 Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente. Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo. Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.  
   
@@ -123,13 +123,13 @@ End Class
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
-Criar e compilar um projeto que tem como alvo uma das opções a seguir:
+Crie e compile um projeto direcionado para uma das seguintes opções:
 
-- .NET framework versão 3.5 com uma referência a System.Core.dll.
-- .NET framework versão 4.0 ou superior.
-- Versão do .NET core 1.0 ou superior.
+- Versão 3.5 do .NET Framework com uma referência ao System.Core.dll.
+- .NET Framework versão 4.0 ou posterior.
+- .NET Core versão 1.0 ou posterior.
   
 ## <a name="see-also"></a>Consulte também
 
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

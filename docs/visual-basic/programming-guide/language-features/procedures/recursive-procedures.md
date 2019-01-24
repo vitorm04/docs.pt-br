@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660717"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procedimentos recursivos (Visual Basic)
 Um *recursiva* procedimento é aquele que chama a mesmo. Em geral, isso não é a maneira mais eficiente para gravar o código do Visual Basic.  
@@ -37,15 +37,15 @@ Um *recursiva* procedimento é aquele que chama a mesmo. Em geral, isso não é 
   
  **Teste**. Se você escrever um procedimento recursivo, você deve testá-lo com muito cuidado para garantir que ele atende às sempre alguma condição de limitação. Você também deve garantir que você não pode ficar sem memória devido a ter muitas chamadas recursivas.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.StackOverflowException>  
- [Procedimentos](./index.md)  
- [Subprocedimentos](./sub-procedures.md)  
- [Procedimentos de Função](./function-procedures.md)  
- [Procedimentos de Propriedade](./property-procedures.md)  
- [Procedimentos de Operador](./operator-procedures.md)  
- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)  
- [Sobrecarga de Procedimento](./procedure-overloading.md)  
- [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)  
- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Solução de problemas de exceções: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>Consulte também
+- <xref:System.StackOverflowException>
+- [Procedimentos](./index.md)
+- [Subprocedimentos](./sub-procedures.md)
+- [Procedimentos de Função](./function-procedures.md)
+- [Procedimentos de Propriedade](./property-procedures.md)
+- [Procedimentos de Operador](./operator-procedures.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)
+- [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)
+- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Solucionando problemas de exceções: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519119"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Método ICLRMetaHost::RequestRuntimeLoadedNotification
-Fornece uma função de retorno de chamada que é garantida para ser chamado quando uma versão de runtime (CLR) de linguagem comum é carregado pela primeira vez, mas ainda não começou. Esse método substitui o [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) função.  
+Fornece uma função de retorno de chamada que é garantida para ser chamado quando uma versão do common language runtime (CLR) é carregado pela primeira vez, mas ainda não foi iniciada. Esse método substitui o [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,10 +36,10 @@ HRESULT RequestRuntimeLoadedNotification (
   
 #### <a name="parameters"></a>Parâmetros  
  `pCallbackFunction`  
- [in] A função de retorno de chamada que é chamada quando um novo tempo de execução foi carregado.  
+ [in] A função de retorno de chamada é invocada quando um novo tempo de execução foi carregado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -53,7 +53,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
 -   O retorno de chamada não é invocado para cargas reentrantes de tempo de execução do mesmo.  
   
--   Para cargas de tempo de execução não reentrante chamadas para a função de retorno de chamada são serializadas.  
+-   Para cargas de tempo de execução não reentrante, chamadas para a função de retorno de chamada são serializadas.  
   
  A função de retorno de chamada tem o seguinte protótipo:  
   
@@ -64,7 +64,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
                      CallbackThreadUnsetFnPtr pfnCallbackThreadUnset);  
 ```  
   
- Os protótipos de função de retorno de chamada são os seguintes:  
+ Os protótipos de função de retorno de chamada são da seguinte maneira:  
   
 -   `pfnCallbackThreadSet`:  
   
@@ -78,11 +78,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Se o host pretende carregar ou fazer com que o outro em tempo de execução a ser carregado de forma reentrante o `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` parâmetros que são fornecidas no retorno de chamada a função deve ser usada da seguinte maneira:  
+ Se o host pretende carregar ou fazer com que o outro runtime a ser carregado de forma reentrante, o `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` parâmetros que são fornecidos no retorno de chamada a função deve ser usada da seguinte maneira:  
   
--   `pfnCallbackThreadSet` deve ser chamado pelo thread que pode causar uma carga de tempo de execução antes de uma tentativa de tal carga.  
+-   `pfnCallbackThreadSet` deve ser chamado pelo thread que pode causar uma carga de tempo de execução antes da tentativa de tal carga.  
   
--   `pfnCallbackThreadUnset` deve ser chamado quando o thread não fará com que tal carga de tempo de execução (e antes de retornar de retorno de chamada inicial).  
+-   `pfnCallbackThreadUnset` deve ser chamado quando o thread não fará com que tal uma carga de tempo de execução (e antes de retornar do retorno de chamada inicial).  
   
 -   `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` são ambos não reentrante.  
   
@@ -90,14 +90,14 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
 >  Hospedar aplicativos não devem chamar `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` fora do escopo de `pCallbackFunction` parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548788"
 ---
 # <a name="creating-user-defined-bindings"></a>Criando associações definidas pelo usuário
 Há várias maneiras de criar associações não são fornecidas pelo sistema:  
@@ -23,7 +23,7 @@ Há várias maneiras de criar associações não são fornecidas pelo sistema:
 ## <a name="the-order-of-binding-elements"></a>A ordem dos elementos de associação  
  Cada elemento de associação representa uma etapa de processamento ao enviar ou receber mensagens. Em tempo de execução, elementos de associação de criam os canais e ouvintes necessárias para criar pilhas de canais de entrada e saída.  
   
- Há três tipos principais de elementos de associação: elementos de associação de protocolo, elementos de associação de codificação e elementos de associação de transporte.  
+ Há três tipos principais de elementos de associação: Protocolo de associação de elementos, elementos de associação de codificação e elementos de associação de transporte.  
   
  Elementos de ligação de protocolo – esses elementos representam etapas de processamento de nível mais altos que atuam em mensagens. Canais e ouvintes criados por esses elementos de associação podem adicionar, remover ou modificar o conteúdo da mensagem. Uma determinada vinculação pode ter um número arbitrário de elementos de ligação de protocolo, cada herdando <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) inclui vários elementos de associação de protocolo, incluindo o <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> e o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>Derivando de uma associação padrão  
  Em vez de criar uma classe de associação completamente nova, é possível estender uma das associações fornecidas pelo sistema existentes. Muito, como no caso anterior, você deve substituir a <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> método e o <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.Binding>  
- [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.Binding>
+- [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)

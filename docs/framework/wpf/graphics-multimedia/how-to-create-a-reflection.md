@@ -1,5 +1,5 @@
 ---
-title: Como criar um reflexo
+title: 'Como: Criar um reflexo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], creating reflections
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
-ms.openlocfilehash: 716adff5c5c41e6601e384b6669516cb6ba1041d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0fae98966481003c7906f5cbb34afaea666d583d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559028"
 ---
-# <a name="how-to-create-a-reflection"></a>Como criar um reflexo
+# <a name="how-to-create-a-reflection"></a>Como: Criar um reflexo
 Este exemplo mostra como usar um <xref:System.Windows.Media.VisualBrush> para criar um reflexo. Porque um <xref:System.Windows.Media.VisualBrush> pode exibir um elemento visual existente, você pode usar esse recurso para produzir efeitos visuais interessantes, como reflexões e ampliações.  
   
 ## <a name="example"></a>Exemplo  
@@ -31,6 +31,6 @@ Um objeto visual refletido
   
  Para o exemplo completo, que inclui exemplos que mostram como ampliar partes da tela e como criar reflexões, consulte [exemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.VisualBrush>  
- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.VisualBrush>
+- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

@@ -2,22 +2,22 @@
 title: '&lt;adicionar&gt; &lt;defaultPorts&gt;'
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 0932ef9afacb6278c4857dcfd6ba545595ff8f9d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8b7a4730af6690616058a91cf23bb39734d81abc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541710"
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;adicionar&gt; &lt;defaultPorts&gt;
 Um comunicação ponto de extremidade padrão que o aplicativo cliente ouve.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento de >  
-\<useRequestHeadersForMetadataAddress >  
-\<defaultPorts >  
+\<serviceBehaviors>  
+\<behavior>  
+\<useRequestHeadersForMetadataAddress>  
+\<defaultPorts>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -48,7 +48,7 @@ Um comunicação ponto de extremidade padrão que o aplicativo cliente ouve.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Uma coleção de portas padrão listando os pontos de extremidade de comunicação padrão que o aplicativo cliente ouve.|  
+|[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Uma coleção de portas padrão listando os pontos de extremidade de comunicação padrão que o aplicativo cliente ouve.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.DefaultPortElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.DefaultPortElement>

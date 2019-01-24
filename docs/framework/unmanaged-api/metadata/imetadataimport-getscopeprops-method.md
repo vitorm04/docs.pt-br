@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24ece9bb614957e02c81d3a0f0a0eefe59f3febc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d7c41e05ecf4e33f7ca711befdd90275452439df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718852"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>Método IMetaDataImport::GetScopeProps
-Obtém o nome e, opcionalmente, o identificador da versão do assembly ou módulo no escopo atual de metadados.  
+Obtém o nome e, opcionalmente, o identificador de versão do assembly ou módulo no escopo atual de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,26 +43,26 @@ HRESULT GetScopeProps (
  [out] Um buffer para o nome do assembly ou módulo.  
   
  `cchName`  
- [in] O tamanho em caracteres largos de `szName`.  
+ [in] O tamanho em caracteres largos da `szName`.  
   
  `pchName`  
- [out] O número de caracteres largos retornados em `szName`.  
+ [out] O número de caracteres largos retornado no `szName`.  
   
  `pmvid`  
  [out, opcional] Um ponteiro para um GUID que identifica com exclusividade a versão do assembly ou módulo.  
   
 ## <a name="remarks"></a>Comentários  
- O [: Setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) método é usado para definir essas propriedades.  
+ O [imetadataemit:: Setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) método é usado para definir essas propriedades.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

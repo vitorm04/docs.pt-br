@@ -2,21 +2,15 @@
 title: Procedimentos no Visual Basic
 ms.date: 04/28/2017
 helpviewer_keywords:
-- procedures [Visual Basic], structured code
-- Visual Basic code, procedures
-- procedures [Visual Basic], types of
-- structured code [Visual Basic], procedures
-- procedures
+  - 'procedures [Visual Basic], structured code'
+  - 'Visual Basic code, procedures'
+  - 'procedures [Visual Basic], types of'
+  - 'structured code [Visual Basic], procedures'
+  - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: a4a168fd1fad75f5038044d49886782f391ceb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655124"
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimentos no Visual Basic
-Um *procedimento* é um bloco de instruções do Visual Basic delimitada por uma instrução de declaração (`Function`, `Sub`, `Operator`, `Get`, `Set`) e uma correspondência `End` declaração. Todas as instruções executáveis no Visual Basic devem estar dentro de algum procedimento.  
+Um *procedimento* é um bloco de instruções do Visual Basic entre uma instrução de declaração (`Function`, `Sub`, `Operator`, `Get`, `Set`) e uma correspondência `End` declaração. Todas as instruções executáveis no Visual Basic devem estar dentro de algum procedimento.  
   
 ## <a name="calling-a-procedure"></a>Chamar um procedimento  
  Você invoca um procedimento de algum outro lugar no código. Isso é conhecido como uma *chamada de procedimento*. Quando a execução do procedimento termina, ele retorna o controle para o código que o invocou, que é conhecido como o *código de chamada*. O código de chamada é um demonstrativo, ou uma expressão incluída em um demonstrativo, que especifica o procedimento pelo nome e transfere o controle a ele.  
@@ -61,14 +55,14 @@ Um *procedimento* é um bloco de instruções do Visual Basic delimitada por uma
   
 -   Depois de desenvolver procedimentos para uso em um programa, você pode usá-los em outros programas, geralmente com pouca ou nenhuma modificação. Isso ajuda a evitar a duplicação de código.  
   
-## <a name="see-also"></a>Consulte também  
- [Como criar um procedimento](./how-to-create-a-procedure.md)  
- [Subprocedimentos](./sub-procedures.md)  
- [Procedimentos de Função](./function-procedures.md)  
- [Procedimentos de Propriedade](./property-procedures.md)  
- [Procedimentos de Operador](./operator-procedures.md)  
- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)  
- [Procedimentos Recursivos](./recursive-procedures.md)  
- [Sobrecarga de Procedimento](./procedure-overloading.md)  
- [Procedimentos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Criar um procedimento](./how-to-create-a-procedure.md)
+- [Subprocedimentos](./sub-procedures.md)
+- [Procedimentos de Função](./function-procedures.md)
+- [Procedimentos de Propriedade](./property-procedures.md)
+- [Procedimentos de Operador](./operator-procedures.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Procedimentos Recursivos](./recursive-procedures.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)
+- [Procedimentos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

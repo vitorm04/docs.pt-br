@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: chamando APIs do Windows (Visual Basic)'
+title: 'Passo a passo: Chamando APIs do Windows (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DLLs, calling
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332854"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657968"
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>Instruções passo a passo: chamando APIs do Windows (Visual Basic)
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a>Passo a passo: Chamando APIs do Windows (Visual Basic)
 APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do sistema operacional Windows. Você pode usá-los para executar tarefas quando é difícil escrever procedimentos equivalentes de sua preferência. Por exemplo, o Windows fornecem uma função chamada `FlashWindowEx` que permite que você faça a barra de título para um aplicativo alternativo entre tonalidades claras e escuras.  
   
  A vantagem de usar as APIs do Windows em seu código é que elas podem economizar tempo de desenvolvimento, porque eles contêm dezenas de funções úteis que já foram criadas e esperando para ser usado. A desvantagem é que as APIs do Windows pode ser difícil trabalhar com e implacável quando as coisas dão errado.  
@@ -147,12 +147,12 @@ APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do
   
 12. Clique em **Button2**. A mensagem "o arquivo foi movido com êxito" será exibida se o arquivo pode ser movido.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Criando protótipos em código gerenciado](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [Realizando marshaling de um delegado como um método de retorno de chamada](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Criando protótipos em código gerenciado](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [Realizando marshaling de um delegado como um método de retorno de chamada](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

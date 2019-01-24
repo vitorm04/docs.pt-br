@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6ba8a738b4086b9150e0a1c7b300a519fa3092
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 102fcff6120822c5de0ede45d43a9cd064270085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715472"
 ---
 # <a name="icordebughandlevalue-interface1"></a>ICorDebugHandleValue Interface1
-Uma subclasse de ICorDebugReferenceValue que representa um valor de referência para o qual o depurador criou um identificador para a coleta de lixo.  
+Uma subclasse de ICorDebugReferenceValue que representa um valor de referência para o qual o depurador criou um identificador para coleta de lixo.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -34,19 +34,19 @@ Uma subclasse de ICorDebugReferenceValue que representa um valor de referência 
 |[Método GetHandleType](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|Obtém um valor de CorDebugHandleType que descreve o tipo de identificador referenciada por este `ICorDebugHandleValue`.|  
   
 ## <a name="remarks"></a>Comentários  
- Um `ICorDebugReferenceValue` objeto é invalidado por uma quebra na execução de código depurado. Um `ICorDebugHandleValue` mantém sua referência por meio de quebras e continuação, até que ele seja liberado explicitamente.  
+ Um `ICorDebugReferenceValue` objeto é invalidado por uma interrupção na execução do código depurado. Um `ICorDebugHandleValue` mantém sua referência por meio de quebras e continuações, até que ele é liberado explicitamente.  
   
 > [!NOTE]
->  Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.  
+>  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -3,19 +3,19 @@ title: '&lt;wsFederation&gt;'
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 66596bbc7171a33318b835a552b7fb364d6833f7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fced46560263a030430c04bd550c9ad66f2e1972
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521888"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Fornece configuração para o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
   
-\<IdentityModel >  
-\<federationConfiguration >  
-\<wsFederation >  
+\<system.identityModel.services>  
+\<federationConfiguration>  
+\<wsFederation>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,8 +50,8 @@ Fornece configuração para o <xref:System.IdentityModel.Services.WSFederationAu
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|AuthenticationType|Um URI que especifica o tipo de autenticação. Define o parâmetro wauth a solicitação de entrada WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wauth não está incluído na solicitação.|  
-|atualização|A desejado idade máxima de solicitações de autenticação, em minutos. Define o parâmetro wfresh a solicitação de entrada WS-Federation. Opcional. O padrão é zero. Opcional. **Aviso:** na próxima versão do .NET Framework 4.5, o `freshness` atributo será do tipo `xs:string` e seu valor padrão será `null`.|  
+|authenticationType|Um URI que especifica o tipo de autenticação. Define o parâmetro wauth a solicitação de entrada WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wauth não está incluído na solicitação.|  
+|atualização|A desejado idade máxima de solicitações de autenticação, em minutos. Define o parâmetro wfresh a solicitação de entrada WS-Federation. Opcional. O padrão é zero. Opcional. **Aviso:**  Na próxima versão do .NET Framework 4.5, o `freshness` atributo será do tipo `xs:string` e seu valor padrão será `null`.|  
 |homeRealm|O realm inicial do provedor de identidade (IP) a ser usado para autenticação. Define o parâmetro whr a solicitação de entrada WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro whr não está incluído na solicitação.|  
 |emissor|O URI do emissor do token pretendido. Define a base URL de WS-Federation as solicitações de entrada e solicitações de saída necessárias.|  
 |persistentCookiesOnPassiveRedirects|Especifica se os cookies persistentes são emitidos na autenticação. Opcional. O padrão é "false", os cookies não são emitidos.|  
@@ -63,8 +63,8 @@ Fornece configuração para o <xref:System.IdentityModel.Services.WSFederationAu
 |requestPtr|Uma URL que especifica o local da solicitação de emissão de token. Define o parâmetro wreqptr da solicitação. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wreqptr não está incluído na solicitação. Não incluindo o wreq ou o parâmetro wreqptr na solicitação implica que o STS Saiba que tipo de token para emitir.|  
 |requireHttps|Especifica se a comunicação com o serviço de token de segurança (STS) deve usar o protocolo HTTPS. Opcional. O padrão é "true", o HTTPS deve ser usado.|  
 |recurso|Um URI que identifica o recurso sendo acessado, a terceira parte confiável (RP), como o para o serviço de token de segurança (STS). Opcional. Define o parâmetro wres a solicitação de entrada WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wres não está incluído na solicitação. **Observação:** wres é um parâmetro herdado. Especifique o `realm` atributo para usar o parâmetro wtrealm em vez disso.|  
-|signInQueryString|Fornece um ponto de extensibilidade para especificar parâmetros de consulta de aplicativo definido na URL de solicitação de entrada do Web Services Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação. Os parâmetros são especificados como um fragmento da cadeia de caracteres de consulta usando o seguinte formato: `"param1=value1&param2=value2&param3=value3"` e assim por diante. **Observação:** em um arquivo de configuração de "&" caractere na cadeia de caracteres de consulta deve ser especificado usando a sua referência de entidade, `&`.|  
-|signOutQueryString|Fornece um ponto de extensibilidade para especificar parâmetros de consulta de aplicativo definido na URL de solicitação de entrada do Web Services Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação. Os parâmetros são especificados como um fragmento da cadeia de caracteres de consulta usando o seguinte formato: `"param1=value1&param2=value2&param3=value3"` e assim por diante. **Observação:** em um arquivo de configuração de "&" caractere na cadeia de caracteres de consulta deve ser especificado usando a sua referência de entidade, `&`.|  
+|signInQueryString|Fornece um ponto de extensibilidade para especificar parâmetros de consulta de aplicativo definido na URL de solicitação de entrada do Web Services Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação. Os parâmetros são especificados como um fragmento da cadeia de caracteres de consulta usando o seguinte formato: `"param1=value1&param2=value2&param3=value3"` e assim por diante. **Observação:**  Em um arquivo de configuração de "&" caractere na cadeia de caracteres de consulta deve ser especificado usando a sua referência de entidade, `&`.|  
+|signOutQueryString|Fornece um ponto de extensibilidade para especificar parâmetros de consulta de aplicativo definido na URL de solicitação de entrada do Web Services Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação. Os parâmetros são especificados como um fragmento da cadeia de caracteres de consulta usando o seguinte formato: `"param1=value1&param2=value2&param3=value3"` e assim por diante. **Observação:**  Em um arquivo de configuração de "&" caractere na cadeia de caracteres de consulta deve ser especificado usando a sua referência de entidade, `&`.|  
 |signOutReply|Especifica a URL à qual o cliente deverá ser redirecionado pelo serviço de token de segurança (STS) durante a saída por meio do protocolo WS-Federation passiva. Define o parâmetro wreply em uma solicitação de saída do WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que nenhum parâmetro adicional deve ser incluído na solicitação.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -98,6 +98,6 @@ Fornece configuração para o <xref:System.IdentityModel.Services.WSFederationAu
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

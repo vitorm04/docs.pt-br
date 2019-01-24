@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42dc78ff3c58b67801cd99512781d8c8509dd272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab479aab56b429c104a44b1fae192bc7f20a389d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656915"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Método IMetaDataEmit::SetEventProps
-Define ou atualiza o recurso especificado de um evento definido por uma chamada anterior ao [: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Define ou atualiza o recurso especificado de um evento definido por uma chamada anterior ao [imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,32 +46,32 @@ HRESULT SetEventProps (
  [in] O token de evento.  
   
  `dwEventFlags`  
- [in] Sinalizadores de evento. Esse é um bitmask de `CorEventAttr` valores.  
+ [in] Sinalizadores de eventos. Esse é um bitmask de `CorEventAttr` valores.  
   
  `tkEventType`  
- [in] O token para a classe de evento. Isso é uma `mdTypeDef` ou um `mdTypeRef` token.  
+ [in] O token para a classe de evento. Isso é um `mdTypeDef` ou um `mdTypeRef` token.  
   
  `mdAddOn`  
- [in] O método usado para assinar o evento, ou nulo.  
+ [in] O método usado para assinar o evento, ou null.  
   
  `mdRemoveOn`  
- [in] O método usado para cancelar a assinatura do evento, ou nulo.  
+ [in] O método usado para cancelar a assinatura para o evento, ou nulo.  
   
  `mdFire`  
  [in] O método usado (por uma classe derivada) para gerar o evento.  
   
  `rmdOtherMethods[]`  
- [in] Uma matriz de tokens de outros métodos associados ao evento. O último elemento da matriz deve ser `mdMethodDefNil`.  
+ [in] Uma matriz de tokens para outros métodos associados ao evento. O último elemento da matriz deve ser `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

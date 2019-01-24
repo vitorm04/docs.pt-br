@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e8d6549395c6c61f5f94a4b34ad0e3739737ed1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 501c554f6e2e4ddd8abd21fe81b81d1898ea070b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583607"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>Método IMetaDataImport::GetModuleRefProps
 Obtém o nome do módulo referenciado pelo token de metadados especificado.  
@@ -40,26 +40,26 @@ HRESULT GetModuleRefProps (
   
 #### <a name="parameters"></a>Parâmetros  
  `mur`  
- [in] O token de metadados de ModuleRef que faz referência ao módulo para obter informações de metadados.  
+ [in] O token de metadados ModuleRef que faz referência ao módulo para obter informações de metadados.  
   
  `szName`  
  [out] Um buffer para armazenar o nome do módulo.  
   
  `cchName`  
- [in] O tamanho solicitado de `szName` em caracteres largos.  
+ [in] O tamanho solicitado do `szName` em caracteres largos.  
   
  `pchName`  
  [out] O tamanho retornado de `szName` em caracteres largos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

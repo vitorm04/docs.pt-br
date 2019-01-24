@@ -1,23 +1,23 @@
 ---
-title: '&lt;UserNameAuthentication&gt;'
+title: '&lt;userNameAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b8a85a3b2699aa88db24d1f7afee3de67dbf39b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656620"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
 Especifica as credenciais de um serviço com base no nome de usuário e senha.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento de >  
+\<serviceBehaviors>  
+\<behavior>  
 \<serviceCredentials>  
-\<userNameAuthentication >  
+\<userNameAuthentication>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ Especifica as credenciais de um serviço com base no nome de usuário e senha.
 |`includeWindowsGroups`|Um valor booliano que especifica se os grupos do Windows são incluídos no contexto de segurança. O padrão é `true`.<br /><br /> Definir esse atributo como `true` tem um impacto no desempenho, já que resulta em uma expansão de grupo completo. Defina essa propriedade como `false` se você não precisar estabelecer a lista de grupos de um usuário pertence.|  
 |`maxCacheLogonTokens`|Um inteiro que especifica o número máximo de tokens de logon ao cache. Esse valor deve ser maior que zero. O padrão é 128.|  
 |`membershipProviderName`|Quando o `clientCredentialType` atributo de uma associação é definido como `username`, o nome de usuário é mapeado para contas do Windows. Você pode substituir esse comportamento usando esse atributo, o que é uma cadeia de caracteres que contém o nome da <xref:System.Web.Security.MembershipProvider> valor que fornece o mecanismo de validação de senha relevantes.|  
-|`userNamePasswordValidationMode`|Especifica a maneira na qual nome de usuário a senha é validada. Os valores válidos são:<br /><br /> -Windows<br />-MembershipProvider<br />-Custom<br /><br /> O padrão é Windows. Esse atributo é do tipo <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
+|`userNamePasswordValidationMode`|Especifica a maneira na qual nome de usuário a senha é validada. Os valores válidos são:<br /><br /> -   Windows<br />-MembershipProvider<br />-Custom<br /><br /> O padrão é Windows. Esse atributo é do tipo <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -60,8 +60,8 @@ Especifica as credenciais de um serviço com base no nome de usuário e senha.
   
  Se nenhuma das associações usadas por um serviço estiver configurada para usar a autenticação do Windows para o nome de usuário/senha, as configurações relacionadas ao cache de tokens de logon serão ignoradas. Isso inclui o `cacheLogonTokenLifetime`, `cacheLogonTokens`, e `maxCacheLogonTokens`.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.UserNameServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.UserNameServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>

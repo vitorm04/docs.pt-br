@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78ca269dacc33fb441310ad00ba2548826f5403e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 20cc7e37b2ea66cae9f28367f97b69ed43f1a13e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543861"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; elemento
 Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o assembly não foi encontrado por investigação de associação.  
   
  \<Configuração > elemento  
 \<tempo de execução > elemento  
-\<disableCachingBindingFailures >  
+\<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -80,7 +80,7 @@ Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

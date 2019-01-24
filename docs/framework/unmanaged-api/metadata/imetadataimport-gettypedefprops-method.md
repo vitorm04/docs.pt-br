@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa69eda974187748d7046c792fa16b7729e3deff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718605"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>Método IMetaDataImport::GetTypeDefProps
-Retorna informações de metadados para o <xref:System.Type> representada pelo token de TypeDef especificado.  
+Retorna informações de metadados para o <xref:System.Type> representado pelo token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,26 +48,26 @@ HRESULT GetTypeDefProps (
  [out] Um buffer que contém o nome do tipo.  
   
  `cchTypeDef`  
- [in] O tamanho em caracteres largos de `szTypeDef`.  
+ [in] O tamanho em caracteres largos da `szTypeDef`.  
   
  `pchTypeDef`  
- [out] O número de caracteres largos retornados em `szTypeDef`.  
+ [out] O número de caracteres largos retornado no `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] Um ponteiro para os sinalizadores que modificar a definição de tipo. Esse valor é um bitmask do [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeração.  
+ [out] Um ponteiro para os sinalizadores que modificam a definição de tipo. Esse valor é um bitmask do [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeração.  
   
  `ptkExtends`  
  [out] Um token de metadados de TypeDef ou TypeRef que representa o tipo base do tipo solicitado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

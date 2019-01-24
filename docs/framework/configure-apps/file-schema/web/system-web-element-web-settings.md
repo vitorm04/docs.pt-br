@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 39d305d429490380c76e15bdcdde434f0d75457b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6bb0e832f1fdc845c4150442547b55400f0aea89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47202683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645945"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a>&lt;System. Web&gt; (configurações da Web)
 Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o comportamento de todo o processo.  
@@ -74,5 +74,5 @@ Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o co
 |Arquivo de validação||  
 |Pode ser vazio||  
   
-## <a name="see-also"></a>Consulte também  
- [\<applicationPool> Element (Web Settings)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md) [Elemento applicationPool> (configurações da Web)]
+## <a name="see-also"></a>Consulte também
+- [\<applicationPool> Element (Web Settings)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md) [Elemento applicationPool> (configurações da Web)]

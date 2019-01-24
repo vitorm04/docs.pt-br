@@ -1,5 +1,5 @@
 ---
-title: AddFile Method1
+title: Método1 AddFile
 ms.date: 03/30/2017
 api_name:
 - IALink.AddFile
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57a350fadfa77fdad545ca7ccf2f63d28607c2ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84b68638ed0f7a86156cf7e5fcc98d3c02cba18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662602"
 ---
-# <a name="addfile-method1"></a>AddFile Method1
+# <a name="addfile-method1"></a>Método1 AddFile
 Adiciona arquivos ao assembly. Também pode ser usado para criar os módulos não associados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,13 +41,13 @@ HRESULT AddFile(
   
 #### <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID exclusiva do assembly deve ser aumentado.  
+ ID exclusiva do assembly a ser aumentado.  
   
  `pszFilename`  
  Nome totalmente qualificado do arquivo a ser adicionado.  
   
  `dwFlags`  
- Sinalizadores de COM+ FileDef como `ffContainsNoMetaData` e `ffWriteable`. `dwFlags` é passado para [método DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Como sinalizadores de COM+ FileDef `ffContainsNoMetaData` e `ffWriteable`. `dwFlags` é passado para [método DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
  [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface a ser usado para emitir metadados, se necessário.  
@@ -56,12 +56,12 @@ HRESULT AddFile(
  Ponteiro para onde a ID exclusiva do arquivo adicionado será armazenada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

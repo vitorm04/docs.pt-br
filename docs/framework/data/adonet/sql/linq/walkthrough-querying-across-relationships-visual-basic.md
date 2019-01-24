@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585465"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Passo a passo: Consultando através de relações (Visual Basic)
 Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associações* para representar as relações de chave estrangeira no banco de dados.  
@@ -19,7 +19,7 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
  Este passo a passo foi escrito usando as Configurações de Desenvolvimento do Visual Basic.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Você deve ter concluído [passo a passo: modelo de objeto simples e de consulta (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Este passo a passo é baseado naquele, incluindo a presença do arquivo northwnd.mdf em c:\linqtest.  
+ Você deve ter concluído [passo a passo: Modelo de objeto simples e consulta (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Este passo a passo é baseado naquele, incluindo a presença do arquivo northwnd.mdf em c:\linqtest.  
   
 ## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em três tarefas principais:  
@@ -49,7 +49,7 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Criando e executando uma consulta pela relação de Customer-Order  
- Agora você pode acessar objetos `Order` diretamente nos objetos `Customer` ou na ordem oposta. Não é necessário um explícita *junção* entre clientes e pedidos.  
+ Agora você pode acessar objetos `Order` diretamente nos objetos `Customer` ou na ordem oposta. Não é necessário um explícito *junção* entre clientes e pedidos.  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Para acessar objetos Order usando objetos Customer  
   
@@ -86,10 +86,10 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
   
 4.  Pressione Enter na janela Console para fechar o aplicativo.  
   
-5.  Sobre o **arquivo** menu, clique em **Salvar tudo** se você deseja salvar este aplicativo.  
+5.  No **arquivo** menu, clique em **Salvar tudo** se você quiser salvar esse aplicativo.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- A próximo passo a passo ([passo a passo: manipulando dados (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) demonstra como manipular dados. Esse passo a passo não requer que você salve os dois tutoriais passo a passo desta série que você já concluiu.  
+ A próximo passo a passo ([passo a passo: Manipulando dados (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) demonstra como manipular dados. Esse passo a passo não requer que você salve os dois tutoriais passo a passo desta série que você já concluiu.  
   
-## <a name="see-also"></a>Consulte também  
- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Consulte também
+- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

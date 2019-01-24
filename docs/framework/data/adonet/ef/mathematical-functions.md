@@ -2,18 +2,18 @@
 title: Funções matemáticas
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652261"
 ---
 # <a name="mathematical-functions"></a>Funções matemáticas
 
 O provedor de dados. NET Framework para SQL Server (SqlClient) fornece as funções matemáticas que executam cálculos nos valores de entrada que são fornecidos como argumentos, e retorna um resultado de valor numérico. Essas funções estão no namespace SqlServer, que está disponível quando você usa o SqlClient. A propriedade de namespace de um provedor permite que o Entity Framework descubra qual prefixo é usado por esse provedor para construções específicas, como tipos e funções. A tabela a seguir descreve as funções matemáticas SqlClient.  
   
-## <a name="absexpression"></a>Abs(Expression)
+## <a name="absexpression"></a>ABS(expression)
 
 Executa a função de valor absoluto.
 
@@ -45,7 +45,7 @@ Um `Double`.
 
 `SqlServer.ACOS(.9)`
 
-## <a name="asinexpression"></a>ASIN(Expression)
+## <a name="asinexpression"></a>ASIN(expression)
 
 Retorna o valor de arcsine de expressão especificada.
 
@@ -61,7 +61,7 @@ Um `Double`.
 
 `SqlServer.ASIN(.9)`
 
-## <a name="atanexpression"></a>ATAN(Expression)
+## <a name="atanexpression"></a>ATAN(expression)
 
 Retorna o valor de arctangent de expressão numérica especificada.
 
@@ -77,7 +77,7 @@ Um `Double`.
 
 `SqlServer.ATAN(9)`
 
-## <a name="atn2expression-expression"></a>ATN2(Expression, Expression)
+## <a name="atn2expression-expression"></a>ATN2(expression, expression)
 
 Retorna o ângulo, em radianos, cuja tangente é entre as duas expressões numéricas especificadas.
 
@@ -93,7 +93,7 @@ Um `Double`.
 
 `SqlServer.ATN2(9, 8)`
  
-## <a name="ceilingexpression"></a>CEILING(Expression)
+## <a name="ceilingexpression"></a>CEILING(expression)
 
 Converte a expressão especificada para o inteiro menor que é maior ou igual a ele.
 
@@ -233,7 +233,7 @@ Um `Double`.
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>POWER (numeric_expression, power_expression)
+## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
 
 Calcula o valor de uma expressão especificada em uma potência especificada.
 
@@ -304,7 +304,7 @@ O valor de `numeric_expression` especificado a `power_expression`especificado.
 
 `SqlServer.ROUND(748.58, -3)`
 
-## <a name="signexpression"></a>Sign(Expression) 
+## <a name="signexpression"></a>SIGN(expression) 
 
 Retorna o positivo (+1), 0 (zero), ou (- o sinal de subtração de 1) da expressão especificada. 
 
@@ -320,7 +320,7 @@ Uma `Int32`, `Int64`, `Double`, ou `Decimal`.
 
 `SqlServer.SIGN(-10)`
 
-## <a name="sinexpression"></a>SIN(Expression)
+## <a name="sinexpression"></a>SIN(expression)
 
 Calcula o seno trigonométricas do ângulo especificado em radianos, e retorna uma expressão de `Double` . 
 
@@ -348,7 +348,7 @@ Um `Double`.
 
 **Exemplo** `SqlServer.SQRT(3600)`
 
-## <a name="squareexpression"></a>SQUARE(Expression)
+## <a name="squareexpression"></a>SQUARE(expression)
 
 Retorna o quadrado de expressão especificada. 
 
@@ -364,7 +364,7 @@ Um `Double`.
 
 `SqlServer.SQUARE(25)`
 
-## <a name="tanexpression"></a>TAN(Expression)
+## <a name="tanexpression"></a>TAN(expression)
 
 Calcula a tangente de uma expressão especificada.
 
@@ -383,9 +383,9 @@ Calcula a tangente de uma expressão especificada.
 ## <a name="see-also"></a>Consulte também
 
 Para obter mais informações sobre as funções matemáticas que suporta SqlClient, consulte a documentação para a versão do SQL Server que você especificou no manifesto do provedor SqlClient:  
-  
+
 **SQL Server 2005:** [Funções matemáticas (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
 **SQL Server 2008:** [Funções matemáticas (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
 **SQL Server 2012 e posterior:** [Funções matemáticas (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
- [SqlClient para funções de Entity Framework](sqlclient-for-ef-functions.md)
+- [SqlClient para funções de Entity Framework](sqlclient-for-ef-functions.md)

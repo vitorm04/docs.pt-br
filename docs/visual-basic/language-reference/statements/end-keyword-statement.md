@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
-ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
+ms.openlocfilehash: d65c921a1631cd38c4d0d1ab9b34db3d7e43a97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33605258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654835"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>Término &lt;palavra-chave&gt; Statement (Visual Basic)
 
@@ -101,4 +101,4 @@ O `End` instrução sem uma palavra-chave adicional, não é suportada.
   
 ## <a name="see-also"></a>Consulte também
 
-[Instrução End](end-statement.md)
+- [Instrução End](end-statement.md)

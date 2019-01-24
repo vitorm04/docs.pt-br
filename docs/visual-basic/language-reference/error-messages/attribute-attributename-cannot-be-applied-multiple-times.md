@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: df97a4e391406661db98eb1c958c0e12e45b6c49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6609ce299799bc3c4b78d48478e99e4d4101dd72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565157"
 ---
 # <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a>Atributo &#39; &lt;attributename&gt; &#39; não pode ser aplicado várias vezes
-O atributo só pode ser aplicado uma vez. O `AttributeUsage` atributo determina se um atributo pode ser aplicado mais de uma vez.  
+O atributo pode ser aplicado somente uma vez. O `AttributeUsage` atributo determina se um atributo pode ser aplicado mais de uma vez.  
   
  **ID do erro:** BC30663  
   
@@ -23,13 +23,13 @@ O atributo só pode ser aplicado uma vez. O `AttributeUsage` atributo determina 
   
 1.  Verifique se que o atributo é aplicado somente uma vez.  
   
-2.  Se você estiver usando atributos personalizados que você desenvolveu, considere alterar seus `AttributeUsage` atributo para permitir que vários usos de atributo, como ocorre com o exemplo a seguir.  
+2.  Se você estiver usando atributos personalizados que você desenvolveu, considere alterar seus `AttributeUsage` atributo para permitir que vários usos de atributo, assim como acontece com o exemplo a seguir.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.AttributeUsageAttribute>  
- [Criando Atributos Personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.AttributeUsageAttribute>
+- [Criando Atributos Personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

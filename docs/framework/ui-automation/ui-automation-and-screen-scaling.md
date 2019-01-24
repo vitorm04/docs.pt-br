@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 4fe6a0c39388e72807043e9e1ccd2deb59afb656
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717552"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automação da Interface do Usuário e Escala da Tela
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] permite que os usuários alterem a [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] definindo assim que a maior parte [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementos na tela pareçam maiores. Embora esse recurso tenha sido disponibilizado no [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], nas versões anteriores a escala precisava ser implementada pelos aplicativos. No [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], o Gerenciador de janelas da área de trabalho executa a escala padrão para todos os aplicativos que não lidam com seus próprios recursos de dimensionamento. Aplicativos cliente de automação de interface do usuário devem levar esse recurso em conta.  
   
@@ -77,5 +77,5 @@ ms.locfileid: "48845961"
   
  Se seu aplicativo realiza a comunicação direta entre processos com não - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-com suporte a aplicativos, talvez seja necessário converter entre coordenadas lógicas e físicas usando o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funções `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo de marca-texto](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+## <a name="see-also"></a>Consulte também
+- [Exemplo de marca-texto](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

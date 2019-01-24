@@ -1,18 +1,18 @@
 ---
-title: Como especificar a cadeia de certificados da autoridade de certificação utilizada para verificar assinaturas (WCF)
+title: 'Como: Especifique a cadeia de certificados de autoridade de certificado usada para verificar as assinaturas (WCF)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 9e2ba9f3550442602cab217fec329e6c19efd3b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648778"
 ---
-# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Como especificar a cadeia de certificados da autoridade de certificação utilizada para verificar assinaturas (WCF)
+# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Como: Especifique a cadeia de certificados de autoridade de certificado usada para verificar as assinaturas (WCF)
 Quando o Windows Communication Foundation (WCF) recebe uma mensagem SOAP assinada usando um certificado X.509, por padrão ele verifica se o certificado x. 509 foi emitido por uma autoridade de certificação confiável. Isso é feito procurando em um repositório de certificados e determinar se o certificado de autoridade de certificação tiver sido designada como confiável. Em ordem para o WCF tomar essa decisão, a cadeia de certificados de autoridade de certificação deve ser instalada no repositório de certificados correto.  
   
 ### <a name="to-install-a-certification-authority-certificate-chain"></a>Para instalar uma cadeia de certificados de autoridade de certificação  
@@ -31,7 +31,7 @@ Quando o Windows Communication Foundation (WCF) recebe uma mensagem SOAP assinad
   
          No Microsoft Management Console (MMC), abra o snap-in de certificados. Para o repositório de certificados que o WCF é configurado para recuperar certificados x. 509 no, selecione a **raiz confiáveis** **autoridades de certificação** pasta. Sob o **autoridades de certificação raiz confiáveis** pasta, com o botão direito do **certificados** pasta, aponte para **todas as tarefas**e, em seguida, clique em **importação** . Forneça o arquivo exportado na etapa um.  
   
-         Para obter mais informações sobre como usar o snap-in de certificados com o MMC, consulte [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         Para obter mais informações sobre como usar o snap-in de certificados com o MMC, consulte [como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Consulte também
+- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

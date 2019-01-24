@@ -2,12 +2,12 @@
 title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-ms.openlocfilehash: 33cd9c427ed5ad04eaf9e9889f60f091f335d1e7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d37ee4527226d9347e24fc2ee8007a263c71f198
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564871"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
@@ -32,21 +32,21 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 ### <a name="maxpoolsize"></a>MaxPoolSize  
  Tipo de dados: sint32  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O tamanho máximo do pool que contém objetos de mensagem MSMQ internos.  
   
-### <a name="queuetransferprotocol"></a>queueTransferProtocol  
+### <a name="queuetransferprotocol"></a>QueueTransferProtocol  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Um valor de enumeração que indica o transporte de canal de comunicação em fila que esta associação usa.  
   
 ### <a name="useactivedirectory"></a>UseActiveDirectory  
  Tipo de dados: boolean  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Retorna um valor booliano que indica se os endereços da fila devem ser convertidos usando o Active Directory.  
   
@@ -56,5 +56,5 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>

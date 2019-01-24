@@ -1,15 +1,15 @@
 ---
-title: Como fazer intercâmbio de mensagens dentro de uma sessão confiável
+title: 'Como: Troca de mensagens dentro de uma sessão confiável'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720048"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como fazer intercâmbio de mensagens dentro de uma sessão confiável
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como: Troca de mensagens dentro de uma sessão confiável
 
 Este tópico descreve as etapas necessárias para habilitar uma sessão confiável usando uma das associações fornecidas pelo sistema que dão suporte a essa sessão, mas não por padrão. Habilitar uma sessão confiável imperativamente usando código ou de forma declarativa em seu arquivo de configuração. Este procedimento usa os arquivos de configuração do cliente e o serviço para habilitar a sessão confiável e estipulam que as mensagens chegam na mesma ordem em que foram enviadas.
 
@@ -75,8 +75,8 @@ Várias das associações fornecidas pelo sistema dá suporte a sessões confiá
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-Para obter um exemplo de como criar uma associação personalizada que dá suporte a sessões confiáveis, consulte [como: criar uma associação de sessão confiável personalizada com HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
+Para obter um exemplo de como criar uma associação personalizada que dá suporte a sessões confiáveis, consulte [como: Criar uma associação de sessão confiável personalizada com HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Sessões confiáveis](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Sessões confiáveis](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

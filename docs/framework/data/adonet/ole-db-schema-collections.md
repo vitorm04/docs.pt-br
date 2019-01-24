@@ -2,12 +2,12 @@
 title: Coleções de esquema OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658449"
 ---
 # <a name="ole-db-schema-collections"></a>Coleções de esquema OLE DB
 Esta seção discute o suporte de coleção de esquema para os provedores OLE DB para Microsoft SQL Server, Oracle e Microsoft Jet.  
@@ -131,7 +131,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INDEX_CATALOG|Cadeia de Caracteres|  
 |INDEX_SCHEMA|Cadeia de Caracteres|  
 |INDEX_NAME|Cadeia de Caracteres|  
-|PRIMARY_KEY QUE|Boolean|  
+|PRIMARY_KEY|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
 |TIPO|Int32|  
@@ -274,7 +274,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INDEX_CATALOG|Cadeia de Caracteres|  
 |INDEX_SCHEMA|Cadeia de Caracteres|  
 |INDEX_NAME|Cadeia de Caracteres|  
-|PRIMARY_KEY QUE|Boolean|  
+|PRIMARY_KEY|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
 |TIPO|Int32|  
@@ -391,7 +391,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INDEX_CATALOG|Cadeia de Caracteres|  
 |INDEX_SCHEMA|Cadeia de Caracteres|  
 |INDEX_NAME|Cadeia de Caracteres|  
-|PRIMARY_KEY QUE|Boolean|  
+|PRIMARY_KEY|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
 |TIPO|Int32|  
@@ -411,5 +411,5 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |FILTER_CONDITION|Cadeia de Caracteres|  
 |INTEGRADO|Boolean|  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

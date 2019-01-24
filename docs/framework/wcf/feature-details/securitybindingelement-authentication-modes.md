@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 2b1601bd84e92b5a39c5c4c91fdfe67537720430
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658894"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement Authentication Modes
 Windows Communication Foundation (WCF) fornece vários modos pelos quais os clientes e serviços autenticam um ao outro. Você pode criar elementos de associação para esses modos de autenticação de segurança por meio de métodos estáticos no <xref:System.ServiceModel.Channels.SecurityBindingElement> classe ou por meio da configuração. Este tópico descreve resumidamente os modos de 18 autenticação.  
   
- Para obter um exemplo de como usar o elemento para um dos modos de autenticação, consulte [como: criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Para obter um exemplo de como usar o elemento para um dos modos de autenticação, consulte [como: Criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="basic-configuration-programming"></a>Configuração básica de programação  
  O procedimento a seguir descreve como definir o modo de autenticação em um arquivo de configuração.  
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF) fornece vários modos pelos quais os clie
   
  Se nenhuma associação de inicialização for especificada, o `SspiNegotiated` modo de autenticação é usado para o bootstrap.  
   
-### <a name="sspinegotiation"></a>Destinado a SspiNegotiation  
+### <a name="sspinegotiation"></a>SspiNegotiation  
  Com esse modo de autenticação, um protocolo de negociação é usado para realizar a autenticação de cliente e servidor. Kerberos é usado, se possível; Caso contrário, o NT LanMan (NTLM) é usado. O elemento de associação de segurança é uma `SymmetricSecurityBindingElement` retornado pelo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%2A> método. Como alternativa, defina as `authenticationMode` atributo `SspiNegotiated`.  
   
 ### <a name="sspinegotiatedovertransport"></a>SspiNegotiatedOverTransport  
@@ -120,6 +120,6 @@ Windows Communication Foundation (WCF) fornece vários modos pelos quais os clie
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  Com esse modo de autenticação, o cliente é autenticado usando um Token de nome de usuário que aparece na camada de SOAP como um token de suporte assinado; ou seja, um token que é assinado pela assinatura da mensagem. O serviço é autenticado usando um certificado X.509 na camada de transporte. O elemento de associação de segurança é uma `TransportSecurityBindingElement` retornado pelo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A> método. Como alternativa, defina as `authenticationMode` atributo `UserNameOverTransport`.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [Como criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- [Como: Criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

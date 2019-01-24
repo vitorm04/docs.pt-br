@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61bc7783823408164ae2b073e097a0e85e193be6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3c145bae61922894f4893d532923319ccf16f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499006"
 ---
 # <a name="importfile2-method"></a>Método ImportFile2
 Importa os assemblies e módulos não associados. Esse método é como [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), mas funciona mesmo se o arquivo que está sendo importado não existe no disco.  
@@ -45,13 +45,13 @@ HRESULT ImportFile2(
  Nome do arquivo a ser importado.  
   
  `pszTargetName`  
- Nome de arquivo de saída opcional que pode ser usado para renomear o arquivo como ele está vinculado no assembly.  
+ Nome de arquivo de saída opcional que pode ser usado para renomear o arquivo conforme ele é vinculado no assembly.  
   
  `pAssemblyScopeIn`  
  Escopo opcional [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.  
   
  `fSmartImport`  
- Se TRUE, ImportTypes é usado, caso contrário, a importação deve ser executada manualmente.  
+ Se for TRUE, ImportTypes é usado, caso contrário, a importação deve ser executada manualmente.  
   
  `pImportToken`  
  Recebe a ID do arquivo ou assembly.  
@@ -63,12 +63,12 @@ HRESULT ImportFile2(
  Recebe o encontrado de arquivos e/ou importados de escopos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

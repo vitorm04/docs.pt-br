@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534414"
 ---
 # <a name="using-message-contracts"></a>Utilizando contratos de mensagem
 Normalmente, ao criar aplicativos do Windows Communication Foundation (WCF), os desenvolvedores preste muita atenção para as estruturas de dados e os problemas de serialização e não preciso me preocupar com a estrutura das mensagens na qual os dados são executados. Para esses aplicativos, criação de contratos de dados para os parâmetros ou valores de retorno é simples. (Para obter mais informações, consulte [especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -447,6 +447,6 @@ public class OperationDetails
   
  Se você desejar receber o objeto de mensagem como a propriedade `Result` e ter valores retornados como propriedades nesse objeto, use a opção de comando `/messageContract`. Isso gera uma assinatura que retorna a mensagem de resposta como a propriedade `Result` no objeto <xref:System.EventArgs>. Todos os valores de retorno internos são propriedades do objeto da mensagem de resposta.  
   
-## <a name="see-also"></a>Consulte também  
- [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Serviços de design e implantação](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+## <a name="see-also"></a>Consulte também
+- [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Serviços de design e implantação](../../../../docs/framework/wcf/designing-and-implementing-services.md)

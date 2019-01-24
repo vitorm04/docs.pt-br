@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33564733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661323"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entidades e XAML de caractere XML
 XAML usa entidades de caracteres definidas no XML para caracteres especiais. Este tópico descreve algumas entidades de caractere específico e considerações gerais para outros conceitos XML em XAML.  
@@ -62,8 +62,8 @@ XAML usa entidades de caracteres definidas no XML para caracteres especiais. Est
 ## <a name="xml-processing-instructions"></a>Instruções de processamento de XML  
  XAML lida com as instruções de processamento de XML acordo com especificações de XML, que as instruções devem ser passadas de estado. Serviços de XAML do .NET Framework de processamento de XAML não usa nenhuma instrução de processamento. Outras estruturas existentes que usam XAML também não usar instruções de processamento de XAML.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Extensões de marcação e XAML do WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Gramática XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [Espaço em branco em XAML de processamento](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Extensões de marcação e XAML do WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Gramática XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md)
+- [Espaço em branco em XAML de processamento](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

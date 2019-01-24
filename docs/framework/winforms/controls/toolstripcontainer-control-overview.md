@@ -7,19 +7,19 @@ helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-ms.openlocfilehash: 59afb9de3a97545407fe96f5ded60faee9d9f725
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f8d8bf8edd7968ed2d2a5c4ddd654dccf318f71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654042"
 ---
 # <a name="toolstripcontainer-control-overview"></a>Visão geral do controle ToolStripContainer
-Um <xref:System.Windows.Forms.ToolStripContainer> tem painéis em sua esquerda, direita, superior e lados da parte inferior para posicionamento e rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles de pilha verticalmente se colocá-los na esquerda ou direita <xref:System.Windows.Forms.ToolStripContainer>. Horizontalmente pilha se colocá-los na parte superior ou inferior <xref:System.Windows.Forms.ToolStripContainer>. Você pode usar o centro <xref:System.Windows.Forms.ToolStripContentPanel> do <xref:System.Windows.Forms.ToolStripContainer> para posicionar tradicionais controles no formulário.  
+Um <xref:System.Windows.Forms.ToolStripContainer> tem painéis em seu esquerda, direita, superior e lados da parte inferior para posicionamento e reposicionamento <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles são empilhados verticalmente ao colocá-los na esquerda ou direita <xref:System.Windows.Forms.ToolStripContainer>. Eles são empilhados horizontalmente se colocá-los na parte superior ou inferior <xref:System.Windows.Forms.ToolStripContainer>. Você pode usar a central <xref:System.Windows.Forms.ToolStripContentPanel> do <xref:System.Windows.Forms.ToolStripContainer> para posicionar controles tradicionais no formulário.  
   
- Todos os <xref:System.Windows.Forms.ToolStripContainer> controles são selecionáveis diretamente em tempo de design e pode ser excluídos. Cada painel de um <xref:System.Windows.Forms.ToolStripContainer> é expansíveis e recolhíveis e redimensiona com os controles que ele contém.  
+ Uma ou todas as <xref:System.Windows.Forms.ToolStripContainer> controles são selecionáveis diretamente no tempo de design e pode ser excluídos. Cada painel de um <xref:System.Windows.Forms.ToolStripContainer> é expansível e recolhível e redimensiona com os controles que ele contém.  
   
-### <a name="important-toolstripcontainer-members"></a>Membros importantes ToolStripContainer  
+### <a name="important-toolstripcontainer-members"></a>Membros importantes do ToolStrip  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -32,6 +32,6 @@ Um <xref:System.Windows.Forms.ToolStripContainer> tem painéis em sua esquerda, 
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A>|Obtém o painel superior do <xref:System.Windows.Forms.ToolStripContainer>.|  
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|Obtém ou define um valor que indica se o painel superior do <xref:System.Windows.Forms.ToolStripContainer> está visível.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.ToolStripContainer>  
- <xref:System.Windows.Forms.ToolStripContentPanel>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.ToolStripContainer>
+- <xref:System.Windows.Forms.ToolStripContentPanel>

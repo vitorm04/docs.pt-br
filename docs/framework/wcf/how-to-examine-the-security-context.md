@@ -1,5 +1,5 @@
 ---
-title: Como examinar o contexto de segurança
+title: 'Como: Examine o contexto de segurança'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 64e566fb8d0cfadc2a46d0a335ddb2799739f9f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646260"
 ---
-# <a name="how-to-examine-the-security-context"></a>Como examinar o contexto de segurança
+# <a name="how-to-examine-the-security-context"></a>Como: Examine o contexto de segurança
 Ao programar serviços Windows Communication Foundation (WCF), o contexto de segurança permite que você determine os detalhes sobre as credenciais de cliente e declarações usadas para autenticar com o serviço. Isso é feito por meio das propriedades do <xref:System.ServiceModel.ServiceSecurityContext> classe.  
   
  Por exemplo, você pode recuperar a identidade do cliente atual usando o <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> ou o <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> propriedade. Para determinar se o cliente é anônimo, use o <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> propriedade.  
@@ -54,6 +54,6 @@ Ao programar serviços Windows Communication Foundation (WCF), o contexto de seg
   
 -   <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>Consulte também  
- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
- [Autenticação e identidade de serviço](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Consulte também
+- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)
+- [Autenticação e identidade de serviço](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

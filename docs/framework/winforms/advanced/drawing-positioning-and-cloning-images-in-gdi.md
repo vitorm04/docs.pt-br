@@ -15,18 +15,18 @@ helpviewer_keywords:
 - GDI+, cloning images
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-ms.openlocfilehash: 5ff502884874e21e8f34acb2f15db4c651a0a273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afd5be1fd56382ba0dcbb2938a7e466d1584ae7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548213"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Desenhando, posicionando e clonando imagens no GDI+
-Você pode usar o <xref:System.Drawing.Bitmap> classe para carregar e exibir as imagens de varredura e você pode usar o <xref:System.Drawing.Imaging.Metafile> classe para carregar e exibir imagens de vetor. O <xref:System.Drawing.Bitmap> e <xref:System.Drawing.Imaging.Metafile> classes herdam o <xref:System.Drawing.Image> classe. Para exibir uma imagem de vetor, você precisa de uma ocorrência da <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Imaging.Metafile>. Para exibir uma imagem de varredura, você precisa de uma ocorrência da <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Bitmap>. A instância do <xref:System.Drawing.Graphics> classe fornece a <xref:System.Drawing.Graphics.DrawImage%2A> método, que recebe o <xref:System.Drawing.Imaging.Metafile> ou <xref:System.Drawing.Bitmap> como um argumento.  
+Você pode usar o <xref:System.Drawing.Bitmap> classe para carregar e exibir imagens de varredura e você pode usar o <xref:System.Drawing.Imaging.Metafile> classe para carregar e exibir imagens vetoriais. O <xref:System.Drawing.Bitmap> e <xref:System.Drawing.Imaging.Metafile> classes herdam o <xref:System.Drawing.Image> classe. Para exibir uma imagem vetorial, você precisa de uma instância das <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Imaging.Metafile>. Para exibir uma imagem de varredura, você precisa de uma instância das <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Bitmap>. A instância das <xref:System.Drawing.Graphics> classe fornece a <xref:System.Drawing.Graphics.DrawImage%2A> método, que recebe o <xref:System.Drawing.Imaging.Metafile> ou <xref:System.Drawing.Bitmap> como um argumento.  
   
 ## <a name="file-types-and-cloning"></a>Tipos de arquivo e clonagem  
- O exemplo de código a seguir mostra como construir um <xref:System.Drawing.Bitmap> do arquivo Climber.jpg e exibe o bitmap. O ponto de destino para o canto superior esquerdo da imagem, (10, 10), especificado no segundo e terceiro parâmetros.  
+ O exemplo de código a seguir mostra como construir um <xref:System.Drawing.Bitmap> do arquivo climber e exibe o bitmap. O ponto de destino para o canto superior esquerdo da imagem, (10, 10), especificado no segundo e terceiro parâmetros.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#11)]  
@@ -42,7 +42,7 @@ Você pode usar o <xref:System.Drawing.Bitmap> classe para carregar e exibir as 
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#12)]  
   
- O <xref:System.Drawing.Bitmap> classe fornece um <xref:System.Drawing.Bitmap.Clone%2A> método que você pode usar para fazer uma cópia de um objeto existente <xref:System.Drawing.Bitmap>. O <xref:System.Drawing.Bitmap.Clone%2A> método tem um parâmetro de retângulo de origem que você pode usar para especificar a parte do bitmap original que você deseja copiar. O exemplo de código a seguir mostra como criar um <xref:System.Drawing.Bitmap> por meio da clonagem metade superior de um objeto existente <xref:System.Drawing.Bitmap>. As duas imagens são desenhadas.  
+ O <xref:System.Drawing.Bitmap> classe fornece uma <xref:System.Drawing.Bitmap.Clone%2A> método que você pode usar para fazer uma cópia de um existente <xref:System.Drawing.Bitmap>. O <xref:System.Drawing.Bitmap.Clone%2A> método tem um parâmetro do retângulo de origem que você pode usar para especificar a parte do bitmap original que você deseja copiar. O exemplo de código a seguir mostra como criar uma <xref:System.Drawing.Bitmap> clonando a metade superior da existente <xref:System.Drawing.Bitmap>. As duas imagens são desenhadas.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#13)]  
@@ -51,7 +51,7 @@ Você pode usar o <xref:System.Drawing.Bitmap> classe para carregar e exibir as 
   
  ![Recorte](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
-## <a name="see-also"></a>Consulte também  
- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Como Criar Objetos Gráficos para Desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Consulte também
+- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Como: Criar objetos gráficos para desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

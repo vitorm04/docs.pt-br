@@ -2,12 +2,12 @@
 title: Conceitos e terminologia (transformação funcional) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: 67986e36333ac9a1aba7bec3c1b6c248b4faf55f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651858"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Conceitos e terminologia (transformação funcional) (Visual Basic)
 Este tópico apresenta os conceitos e a terminologia de transformações e puras. A abordagem funcional de transformação a transformação passa de dados codificação que geralmente é mais rápido, mais programar completo expressive, e mais fácil depurar e manter que a programação mais tradicional, mais imperativa.  
@@ -31,7 +31,7 @@ Este tópico apresenta os conceitos e a terminologia de transformações e puras
 ### <a name="functional-programming"></a>Programação funcional  
  A *programação funcional* é uma abordagem de programação que dá suporte diretamente à transformação funcional pura.  
   
- Historicamente, as linguagens de programação funcionais de uso geral, como o ML, Scheme, Haskell e F#, têm sido, principalmente, de interesse da comunidade acadêmica. Embora sempre foi possível gravar transformações e puras no Visual Basic, a dificuldade de fazer assim não tornou uma opção atraente para a maioria dos programadores. Com versões posteriores do Visual Basic, no entanto, novas construções de linguagem, como expressões lambda e Inferência de tipo torná-la funcional programação muito mais fácil e mais produtivo.  
+ Historicamente, as linguagens de programação funcionais de uso geral, como o ML, Scheme, Haskell e F#, têm sido, principalmente, de interesse da comunidade acadêmica. Embora sempre foi possível escrever transformações funcionais puras no Visual Basic, a dificuldade de fazer então não tornou essa opção atrativa à maioria dos programadores. Com versões posteriores do Visual Basic, no entanto, nova construções de linguagem como expressões lambda e Inferência de tipos tornaram a programação funcional muito mais fácil e mais produtivo.  
   
  Para obter mais informações sobre programação funcional, consulte [Programação funcional versus Programação imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).  
   
@@ -42,16 +42,16 @@ Este tópico apresenta os conceitos e a terminologia de transformações e puras
  A tabela a seguir define os termos relacionados às transformações funcionais.  
   
  função (de primeira classe) de pedido superior  
- Uma função que pode ser tratado como um objeto através de programação. Por exemplo, uma função de pedido superior pode ser passada para ou retornado de outras funções. No Visual Basic, representantes e as expressões lambda são recursos de linguagem que oferecem suporte a funções de ordem superior. Para gravar uma função de pedido superior, você declara um ou mais argumentos para tomar representantes, e você frequentemente usa expressões lambda para chamá-lo. Muitos dos operadores de consulta padrão são funções de pedido superior.  
+ Uma função que pode ser tratado como um objeto através de programação. Por exemplo, uma função de pedido superior pode ser passada para ou retornado de outras funções. No Visual Basic, representantes e expressões lambda são recursos de linguagem que dão suporte a funções de ordem superior. Para gravar uma função de pedido superior, você declara um ou mais argumentos para tomar representantes, e você frequentemente usa expressões lambda para chamá-lo. Muitos dos operadores de consulta padrão são funções de pedido superior.  
   
- Para obter mais informações, consulte [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Para obter mais informações, consulte [visão geral de operadores padrão consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  expressão lambda  
  Essencialmente, uma função anônimo embutido que pode ser usada em que um tipo delegate é esperada. Esta é uma definição simplificada de expressões lambda, mas é suficiente para fins deste tutorial.  
   
  Para obter mais informações, consulte [Expressões lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Coleção   
+ Coleção  
  Um conjunto estruturada de dados, geralmente um tipo de uniforme. Para ser compatível com LINQ, uma coleção deve implementar a interface de <xref:System.Collections.IEnumerable> ou a interface de <xref:System.Linq.IQueryable> (ou uma de suas contrapartes genéricos, de <xref:System.Collections.Generic.IEnumerator%601> ou de <xref:System.Linq.IQueryable%601>).  
   
  tuple (tipos anônimos)  
@@ -71,6 +71,6 @@ Este tópico apresenta os conceitos e a terminologia de transformações e puras
   
  Esses recursos de idioma serão usados em exemplos de código em todo esta seção.  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução às transformações e puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Programação funcional versus Programação imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução às transformações funcionais puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Programação funcional versus Programação imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

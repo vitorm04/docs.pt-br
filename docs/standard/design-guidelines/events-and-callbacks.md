@@ -9,12 +9,12 @@ helpviewer_keywords:
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
-ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525476"
 ---
 # <a name="events-and-callbacks"></a>Eventos e retornos de chamada
 Retornos de chamada são os pontos de extensibilidade que permitem que uma estrutura para a chamada de retorno no código do usuário por meio de um delegado. Esses delegados geralmente são passados para o framework por meio de um parâmetro de um método.  
@@ -45,5 +45,5 @@ Retornos de chamada são os pontos de extensibilidade que permitem que uma estru
   
 ## <a name="see-also"></a>Consulte também
 
-- [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
