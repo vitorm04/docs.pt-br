@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 5bf1a0e1d4d8f620f83aab50aa50009a0f6a6cf4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4a99f4826a34ff3ab022686b6615f199558d7af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606290"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplicativos geralmente dependem de arquivos que contêm dados não executáveis, tais como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imagens, vídeo e áudio. Windows Presentation Foundation (WPF) oferece suporte especial para configurar, identificar e usar esses tipos de arquivos de dados, que são chamados de arquivos de dados do aplicativo. Esse suporte gira em torno de um conjunto específico de tipos de arquivo de dados do aplicativo, incluindo:  
   
--   **Arquivos de recurso**: os arquivos de dados que são compilados em um executável ou biblioteca [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+-   **Arquivos de recurso**: Arquivos de dados que são compilados em um executável ou biblioteca [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
--   **Arquivos de conteúdo**: os arquivos de dados independentes que têm uma associação explícita com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+-   **Arquivos de conteúdo**: Arquivos de dados independentes que têm uma associação explícita com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
--   **Site de arquivos de origem**: os arquivos de dados independentes que não têm uma associação com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+-   **Site de arquivos de origem**: Arquivos de dados independentes que não têm uma associação com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
  Uma distinção importante a se fazer entre esses três tipos de arquivos é que os arquivos de recurso e os arquivos de conteúdo são conhecidos em tempo de build; um assembly tem o conhecimento explícito sobre eles. Para arquivos de site de origem, no entanto, um assembly não pode ter nenhum conhecimento sobre eles, ou conhecimento implícito por meio de um pacote [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referência; no caso do último, não há nenhuma garantia de que o local referenciado do arquivo de origem realmente existe.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "43855960"
  Na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], um arquivo de recurso é um arquivo que está incluído em um [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] do projeto como um `Resource` item.  
   
 ```xml  
-<Project "xmlns=http://schemas.microsoft.com/developer/msbuild/2003" ... >  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <ItemGroup>  
     <Resource Include="ResourceFile.xaml" />  
@@ -238,5 +238,5 @@ ms.locfileid: "43855960"
 ## <a name="rebuilding-after-changing-build-type"></a>Recompilando após modificar o tipo de build  
  Depois de alterar o tipo de build de um arquivo de dados do aplicativo, você precisa recompilar o aplicativo inteiro para garantir que essas alterações sejam aplicadas. Se você apenas compilar o aplicativo, as alterações não serão aplicadas.  
   
-## <a name="see-also"></a>Consulte também  
- [URIs "pack://" no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+## <a name="see-also"></a>Consulte também
+- [URIs "pack://" no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

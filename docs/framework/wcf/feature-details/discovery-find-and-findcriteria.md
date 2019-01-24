@@ -2,12 +2,12 @@
 title: FindCriteria e descoberta achada
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 7c389a4f0b8fb9789db33fe3edbb01a1d6302137
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21bfde1dae99a09e278a51ed330166551d4dca8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493307"
 ---
 # <a name="discovery-find-and-findcriteria"></a>FindCriteria e descoberta achada
 Uma operação de localização de descoberta é iniciada por um cliente para descobrir um ou mais serviços e é uma das principais ações na descoberta. Executar um localizar envia uma mensagem de teste do WS-Discovery pela rede. Serviços que correspondem aos critérios especificados responder com mensagens WS-Discovery ProbeMatch. Para obter mais informações sobre as mensagens de descoberta, consulte o [especificação WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -64,8 +64,8 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Usando o canal de cliente de descoberta](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [Descoberta com escopos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Básico](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Usando o canal de cliente de descoberta](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [Descoberta com escopos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [Básico](../../../../docs/framework/wcf/samples/basic-sample.md)

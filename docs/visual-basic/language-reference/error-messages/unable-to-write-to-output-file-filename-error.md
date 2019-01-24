@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e8fbfd54782e601595712035827ea346d1dbf500
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572689"
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Não é possível gravar no arquivo de saída &#39; &lt;filename&gt;&#39;: &lt;erro&gt;
 Ocorreu um problema na criação do arquivo.  
@@ -45,17 +45,17 @@ Ocorreu um problema na criação do arquivo.
   
 1.  Abra a pasta que lhe interessa.  
   
-2.  Clique o **exibições** ícone e escolha **detalhes**.  
+2.  Clique o **modos de exibição** ícone e escolha **detalhes**.  
   
-3.  Clique com botão direito no cabeçalho da coluna e escolha **atributos** na lista suspensa.  
+3.  Clique com botão direito no cabeçalho da coluna e, em seguida, escolha **atributos** na lista suspensa.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Para alterar os atributos de um arquivo ou pasta  
   
-1.  Em **Explorador de arquivos**, com o botão direito no arquivo ou pasta e escolha **propriedades**.  
+1.  Na **Explorador de arquivos**, clique com botão direito no arquivo ou pasta e escolha **propriedades**.  
   
-2.  No **atributos** seção o **geral** guia, desmarque o **somente leitura** caixa.  
+2.  No **atributos** seção o **gerais** guia, desmarque o **somente leitura** caixa.  
   
-3.  Press **OK**.  
+3.  Pressione **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Fale conosco](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Consulte também
+- [Fale conosco](/visualstudio/ide/talk-to-us)

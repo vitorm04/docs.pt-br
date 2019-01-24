@@ -1,5 +1,5 @@
 ---
-title: 'Como: detectar se o .NET Framework 3.5 está instalado'
+title: 'Como: Detectar se o .NET Framework 3.5 está instalado'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - verifying whether.NET Framework 3.5 is installed [WPF]
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 0d0f99dfa88216d0d768895ea751b0f62eccf701
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbdac46a52ae92ec7a8f6fb819a3da54ddccce7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636398"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Como: detectar se o .NET Framework 3.5 está instalado
-Antes dos administradores podem implantar aplicativos do Windows Presentation Foundation (WPF) em um sistema que tem como alvo o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], eles devem primeiro confirmar que o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] em tempo de execução está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está presente em um sistema.  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Como: Detectar se o .NET Framework 3.5 está instalado
+Antes dos administradores podem implantar aplicativos do Windows Presentation Foundation (WPF) em um sistema que tem como alvo o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], eles devem primeiro confirmar que o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] tempo de execução está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está presente em um sistema.  
   
 > [!NOTE]
 >  Para obter mais informações sobre como instalar, implantar e detectar o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], consulte [instalar o .NET Framework para desenvolvedores](../../../../docs/framework/install/guide-for-developers.md).  
@@ -24,7 +24,7 @@ Antes dos administradores podem implantar aplicativos do Windows Presentation Fo
  Quando o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] é instalado, o MSI adiciona ".NET CLR" e o número de versão a cadeia de caracteres UserAgent. O exemplo a seguir mostra um script inserido em uma página HTML simples. O script procura a cadeia de caracteres UserAgent para determinar se o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está instalado e exibe uma mensagem de status nos resultados da pesquisa.  
   
 > [!NOTE]
->  Este script foi desenvolvido para o Internet Explorer. Outros navegadores podem não incluir informações de .NET CLR na cadeia de caracteres UserAgent.  
+>  Este script foi desenvolvido para o Internet Explorer. Outros navegadores podem não incluir informações de CLR do .NET na cadeia de caracteres UserAgent.  
   
 ```  
 <HTML>  
@@ -128,5 +128,5 @@ Antes dos administradores podem implantar aplicativos do Windows Presentation Fo
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## <a name="see-also"></a>Consulte também  
- [Detectar se o .NET Framework 3.0 está instalado](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+## <a name="see-also"></a>Consulte também
+- [Detectar se o .NET Framework 3.0 está instalado](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)

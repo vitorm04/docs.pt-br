@@ -1,5 +1,5 @@
 ---
-title: Como inicializar uma variável de matriz no Visual Basic
+title: 'Como: Inicializar uma variável de matriz no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67382359a97e9f60b079de1d25589de446042237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638916"
 ---
-# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Como inicializar uma variável de matriz no Visual Basic
+# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Como: Inicializar uma variável de matriz no Visual Basic
 Inicializar uma variável de matriz incluindo um literal de matriz em um `New` cláusula e especificando os valores iniciais da matriz. Você pode especificar o tipo ou permitir que ele seja inferido dos valores no literal de matriz. Para obter mais informações sobre como o tipo é inferido, consulte "Preencher uma matriz com valores iniciais" em [matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Para inicializar uma variável de matriz usando um literal de matriz  
@@ -53,6 +53,6 @@ Inicializar uma variável de matriz incluindo um literal de matriz em um `New` c
   
      [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Solução de problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>Consulte também
+- [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Solução de problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

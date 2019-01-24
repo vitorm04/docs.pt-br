@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96352ec5eaba67489dbef999925c56475611746c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b5a1ae284b4f2474cb824ee9dbff2eb82c5a0ead
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568784"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>Método ICLRRuntimeHost::ExecuteInAppDomain
 Especifica o <xref:System.AppDomain> no qual executar o código gerenciado especificado.  
@@ -39,36 +39,36 @@ HRESULT ExecuteInAppDomain(
   
 #### <a name="parameters"></a>Parâmetros  
  `AppDomainId`  
- [in] A ID numérica do <xref:System.AppDomain> no qual executar o método especificado.  
+ [in] A ID numérica da <xref:System.AppDomain> no qual executar o método especificado.  
   
  `pCallback`  
- [in] Um ponteiro para a função a ser executada no especificado <xref:System.AppDomain>.  
+ [in] Um ponteiro para a função a ser executada dentro do especificado <xref:System.AppDomain>.  
   
  `cookie`  
- [in] Um ponteiro para a memória alocada pelo chamador de opaco. Este parâmetro é passado pelo common language runtime (CLR) para o retorno de chamada do domínio. Não é memória de heap gerenciado em tempo de execução. a alocação e o tempo de vida da memória são controladas pelo chamador.  
+ [in] Um ponteiro opaco memória alocada pelo chamador. Esse parâmetro é passado pelo common language runtime (CLR) para o retorno de chamada de domínio. Não é memória de heap gerenciado pelo tempo de execução; tempo de vida da memória e alocação são controlados pelo chamador.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInAppDomain` retornou com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
-|HOST_E_TIMEOUT|A chamada foi atingido.|  
-|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado durante um thread bloqueado ou fibra estava aguardando nele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`ExecuteInAppDomain` retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
+|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `ExecuteInAppDomain` permite que o host exercer controle sobre qual gerenciado <xref:System.AppDomain> o método gerenciado especificado deve ser executado no. Você pode obter o valor do identificador de um domínio aplicativo, que corresponde ao valor da <xref:System.AppDomain.Id%2A> propriedade chamando [método GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
+ `ExecuteInAppDomain` permite que o host exercer controle sobre quais gerenciados <xref:System.AppDomain> o método gerenciado especificado deve ser executado no. Você pode obter o valor do identificador do domínio de aplicativo, que corresponde ao valor de <xref:System.AppDomain.Id%2A> propriedade chamando [método GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

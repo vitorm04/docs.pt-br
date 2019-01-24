@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fce759877ad5e3c9041344647781da07ad19a45a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a2db1aea04ae060623bc39a52ed6990f6137f82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606434"
 ---
 # <a name="hosttype-enumeration"></a>Enumeração HOST_TYPE
 Contém valores que especificam o tipo de host que está iniciando um aplicativo.  
@@ -40,18 +40,18 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Inicie o aplicativo de AppLaunch.exe.<br /><br /> Use esse valor para aplicativos parcialmente confiáveis.|  
-|`HOST_TYPE_CORFLAG`|Inicie o aplicativo diretamente. Ou seja, inicie o aplicativo de seu próprio arquivo de .exe.<br /><br /> Use esse valor para aplicativos totalmente confiáveis.|  
+|`HOST_TYPE_APPLAUNCH`|Inicie o aplicativo de AppLaunch.exe.<br /><br /> Use esse valor para os aplicativos parcialmente confiáveis.|  
+|`HOST_TYPE_CORFLAG`|Inicie o aplicativo diretamente. Ou seja, inicie o aplicativo de seu próprio arquivo .exe.<br /><br /> Use esse valor para os aplicativos totalmente confiáveis.|  
 |`HOST_TYPE_DEFAULT`|Mesmo que HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

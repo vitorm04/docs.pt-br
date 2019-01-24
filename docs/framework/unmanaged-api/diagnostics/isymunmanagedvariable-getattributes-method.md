@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc0f72168e076f661bfefc17c851d7d353e5e742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d418a1088f9ee23a088ab4c8246810d2c9bee4fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574333"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>Método ISymUnmanagedVariable::GetAttributes
 Obtém os sinalizadores de atributo para essa variável.  
@@ -36,7 +36,7 @@ HRESULT GetAttributes(
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Um ponteiro para um `ULONG32` que recebe os atributos. O valor retornado será um dos valores definidos no [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeração.  
+ [out] Um ponteiro para um `ULONG32` que recebe os atributos. O valor retornado será um dos valores definidos na [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeração.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -44,5 +44,5 @@ HRESULT GetAttributes(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

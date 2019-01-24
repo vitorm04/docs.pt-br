@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566722"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Especificando comportamento de tempo de execução de serviço
 Depois que você tiver criado um contrato de serviço ([Criando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md)) e implementado o contrato de serviço ([implementar contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md)) você pode configurar o comportamento da operação das tempo de execução do serviço. Este tópico discute o serviço fornecido pelo sistema e os comportamentos de operação e descreve onde encontrar mais informações para criar novos comportamentos. Enquanto alguns comportamentos são aplicados como atributos, muitos são aplicados usando um arquivo de configuração de aplicativo ou de forma programática. Para obter mais informações sobre como configurar seu aplicativo de serviço, consulte [Configurando os serviços de](../../../docs/framework/wcf/configuring-services.md).  
@@ -120,6 +120,6 @@ Depois que você tiver criado um contrato de serviço ([Criando contratos de ser
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Especifica o nível no qual uma operação de serviço aceita um cabeçalho de transação.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando serviços](../../../docs/framework/wcf/configuring-services.md)  
- [Como controlar instanciação de serviço](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a>Consulte também
+- [Configurando serviços](../../../docs/framework/wcf/configuring-services.md)
+- [Como: Controlar instanciação de serviço](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

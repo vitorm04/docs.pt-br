@@ -1,5 +1,5 @@
 ---
-title: Como aplicar várias transformações a um modelo 3D
+title: 'Como: Aplicar várias transformações a um modelo 3D'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
-ms.openlocfilehash: 591f12d2e4d51df0d8474f894946b24910f8df86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5a916583e8ae8769eb52dc6c2c70db9b782d7c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574411"
 ---
-# <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Como aplicar várias transformações a um modelo 3D
+# <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Como: Aplicar várias transformações a um modelo 3D
 Este exemplo mostra como usar um <xref:System.Windows.Media.Media3D.RotateTransform3D> e um <xref:System.Windows.Media.Media3D.ScaleTransform3D> para girar e alterar a escala de um modelo 3D. O código a seguir mostra como aplicar essas transformações para o <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> propriedade de um <xref:System.Windows.Media.Media3D.GeometryModel3D> em XAML.  
   
  [!code-xaml[3DGallery_snip#Multiple3DTransformationsExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/MultipleTransformationsExample.xaml#multiple3dtransformationsexampleinline1)]  
@@ -35,5 +35,5 @@ Este exemplo mostra como usar um <xref:System.Windows.Media.Media3D.RotateTransf
  [!code-csharp[3DGallery_procedural_snip#Multiple3DTransformationsCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/MultipleTransformationsExample.cs#multiple3dtransformationscodeexamplewholepage)]
  [!code-vb[3DGallery_procedural_snip#Multiple3DTransformationsCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/multipletransformationsexample.vb#multiple3dtransformationscodeexamplewholepage)]  
   
-## <a name="see-also"></a>Consulte também  
- [Transformar a escala de um modelo 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)
+## <a name="see-also"></a>Consulte também
+- [Transformar a escala de um modelo 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)

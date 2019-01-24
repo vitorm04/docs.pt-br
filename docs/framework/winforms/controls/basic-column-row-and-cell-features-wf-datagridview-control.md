@@ -7,39 +7,39 @@ helpviewer_keywords:
 - data grids [Windows Forms], examples
 - DataGridView control [Windows Forms], examples
 ms.assetid: 78085f26-d5d2-4b75-813e-e932b72fd06f
-ms.openlocfilehash: 3d6a44dce7dfd59d484d1a3495982a0d7d1f3e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af8dcaf8b6d32f03c2f2f46312d1290a99381c43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611485"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Funcionalidades de coluna, linha e célula básicas no controle DataGridView dos Windows Forms
 Várias funcionalidades básicas de `DataGridView` células, linhas e colunas podem ser modificadas configurando propriedades individuais. Os tópicos nesta seção descrevem vários dos recursos mais usados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como ocultar colunas no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+ [Como: Ocultar colunas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  Descreve como impedir que colunas específicas apareçam no controle.  
   
- [Como ocultar cabeçalhos no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+ [Como: Ocultar cabeçalhos de coluna no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
  Descreve como impedir que os cabeçalhos das colunas apareçam no controle.  
   
- [Como habilitar a reorganização da coluna no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+ [Como: Habilitar a reorganização de colunas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
  Descreve como habilitar usuários para reorganizar colunas no controle.  
   
- [Como congelar colunas no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+ [Como: Congelar colunas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
  Descreve como evitar que uma ou mais colunas adjacentes rolem.  
   
- [Como deixar colunas somente leitura no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+ [Como: Tornar colunas somente leitura no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
  Descreve como evitar que os usuários editem colunas específicas no controle.  
   
- [Como evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
+ [Como: Evitar a adição de linha e exclusão no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
  Descreve como remover a linha para novos registros na parte inferior do controle para evitar que os usuários adicionem linhas. Também descreve como evitar que os usuários apaguem linhas.  
   
- [Como obter e definir a célula atual no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
+ [Como: Obter e definir a célula atual no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
  Descreve como acessar a célula que tem foco no controle atualmente.  
   
- [Como exibir imagens em células do controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [Como: Exibir imagens em células do controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  Descreve como criar uma coluna de imagem exibindo um ícone em cada célula.  
   
 ## <a name="reference"></a>Referência  
@@ -53,6 +53,6 @@ Várias funcionalidades básicas de `DataGridView` células, linhas e colunas po
  [Programando com células, linhas e colunas no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Fornece tópicos que descrevem como programar com objetos de célula, linha e coluna.  
   
-## <a name="see-also"></a>Consulte também  
- [Controle DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Tipos de coluna no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Consulte também
+- [Controle DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Tipos de coluna no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

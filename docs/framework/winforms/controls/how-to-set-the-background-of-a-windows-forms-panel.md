@@ -1,5 +1,5 @@
 ---
-title: Como definir a tela de fundo de um painel Windows Forms
+title: 'Como: Definir plano de fundo de um painel do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: ff0c748cfb7b38c41b2ede211aed7bf6e6f68544
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c4eadaadf561e127ac2eaa87f62aea4e1dc7ea4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636073"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Como definir a tela de fundo de um painel Windows Forms
-Um Windows Forms <xref:System.Windows.Forms.Panel> controle pode exibir uma cor de plano de fundo e uma imagem de plano de fundo. O <xref:System.Windows.Forms.Control.BackColor%2A> propriedade define a cor de plano de fundo de controles contidos, como os rótulos e botões de opção. Se o <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriedade não for definida, o <xref:System.Windows.Forms.Control.BackColor%2A> seleção preencherá o painel inteiro. Se o <xref:System.Windows.Forms.Control.BackgroundImage%2A> estiver definida, a imagem será exibida atrás de controles contidos.  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Como: Definir plano de fundo de um painel do Windows Forms
+Um Windows Forms <xref:System.Windows.Forms.Panel> controle pode exibir uma cor de fundo e uma imagem de plano de fundo. O <xref:System.Windows.Forms.Control.BackColor%2A> propriedade define a cor de plano de fundo de controles contidos, como rótulos e botões de opção. Se o <xref:System.Windows.Forms.Control.BackgroundImage%2A> não está definida, o <xref:System.Windows.Forms.Control.BackColor%2A> seleção preencherá o painel inteiro. Se o <xref:System.Windows.Forms.Control.BackgroundImage%2A> estiver definida, a imagem será exibida por trás de controles contidos.  
   
-### <a name="to-set-the-background-programmatically"></a>Para definir o plano de fundo programaticamente  
+### <a name="to-set-the-background-programmatically"></a>Definir o plano de fundo de maneira programática  
   
 1.  Definir o painel <xref:System.Windows.Forms.Control.BackColor%2A> propriedade para um valor do tipo <xref:System.Drawing.Color?displayProperty=nameWithType>.  
   
@@ -67,8 +67,8 @@ Um Windows Forms <xref:System.Windows.Forms.Panel> controle pode exibir uma cor 
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Control.BackColor%2A>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [Controle de painel](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- [Visão geral do controle Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Control.BackColor%2A>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+- [Controle de painel](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+- [Visão geral do controle Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)

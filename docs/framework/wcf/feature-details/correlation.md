@@ -2,12 +2,12 @@
 title: Correlação
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: 6d02b95bcf735d42cca2b51167e21a6a091add1c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4c5dc97cfe37b7720c8b0769ca9e49b25c3af908
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631029"
 ---
 # <a name="correlation"></a>Correlação
 Quando os aplicativos de serviço de fluxo de trabalho se comunicam com outros serviços, é importante que as mensagens entre eles são expedidas para a instância de fluxo de trabalho apropriado. Correlação fornece o mecanismo para isso. Os tópicos nesta seção fornecem uma visão geral de correlação e como usá-lo em cenários de serviço de fluxo de trabalho diferente.  
@@ -25,9 +25,9 @@ Quando os aplicativos de serviço de fluxo de trabalho se comunicam com outros s
  [Correlação de solução de problemas](../../../../docs/framework/wcf/feature-details/troubleshooting-correlation.md)  
  Fornece métodos para correlação de solução de problemas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
-- <xref:System.ServiceModel.Activities.CorrelationHandle>  
-- <xref:System.ServiceModel.Activities.Send>  
-- <xref:System.ServiceModel.Activities.Receive>  
-- <xref:System.ServiceModel.CorrelationQuery>  
+- <xref:System.ServiceModel.Activities.CorrelationHandle>
+- <xref:System.ServiceModel.Activities.Send>
+- <xref:System.ServiceModel.Activities.Receive>
+- <xref:System.ServiceModel.CorrelationQuery>

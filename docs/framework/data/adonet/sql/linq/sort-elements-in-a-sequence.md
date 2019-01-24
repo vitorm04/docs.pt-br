@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59384900226fbbcfc879650402b1a5df80b69cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596417"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Elementos de tipo em uma sequência
 Use o operador de <xref:System.Linq.Enumerable.OrderBy%2A> para classificar uma sequência de acordo com um ou mais chaves.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] foi projetado para oferecer suporte a ordenação por tipos primitivos simples, como `string`, `int`e assim por diante. Não suporta classificação para várias classes avaliadas complexo, como tipos anônimos. Também não suporta tipos de dados de `byte` .  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] foi projetado para dar suporte à ordenação por tipos primitivos simples, como `string`, `int`e assim por diante. Não suporta classificação para várias classes avaliadas complexo, como tipos anônimos. Também não suporta tipos de dados de `byte` .  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir classe `Employees` a data de aluguer.  
@@ -88,6 +88,6 @@ Use o operador de <xref:System.Linq.Enumerable.OrderBy%2A> para classificar uma 
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+## <a name="see-also"></a>Consulte também
+- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

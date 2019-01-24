@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-ms.openlocfilehash: 701d86e03d9b14236eec8436d99ec40cebbbcd44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f9827d885996ffab8bdab91d0f774a57073e4a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565144"
 ---
 # <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a>&#39;AddressOf&#39; operando deve ser o nome de um método (sem parênteses)
-O `AddressOf` operador cria uma instância de delegado de procedimento que faz referência a um procedimento específico. A sintaxe é a seguinte:  
+O `AddressOf` operador cria uma instância de procedimento delegado que faz referência a um procedimento específico. A sintaxe é da seguinte maneira.  
   
  `AddressOf` `procedurename`  
   
- Você inseriu o seguinte argumento entre parênteses `AddressOf`, onde nenhuma é necessária.  
+ Você inseriu o seguinte argumento entre parênteses `AddressOf`, em que nenhuma é necessária.  
   
  **ID do erro:** BC30577  
   
@@ -29,6 +29,6 @@ O `AddressOf` operador cria uma instância de delegado de procedimento que faz r
   
 2.  Verifique se que o argumento é um nome de método.  
   
-## <a name="see-also"></a>Consulte também  
- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+## <a name="see-also"></a>Consulte também
+- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)

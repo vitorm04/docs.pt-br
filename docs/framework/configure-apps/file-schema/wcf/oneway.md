@@ -2,21 +2,21 @@
 title: '&lt;oneWay&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: 5f3d534ee98100347acaa485e60a3c74f82ee0b9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c909bce5b54976a215a59ca8fd9f097f574acd80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600291"
 ---
 # <a name="ltonewaygt"></a>&lt;oneWay&gt;
 Habilita o roteamento de pacotes e o uso de métodos unidirecionais para uma associação personalizada.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<customBinding>  
-\<associação >  
-\<oneWay >  
+\<binding>  
+\<oneWay>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,22 +42,22 @@ Habilita o roteamento de pacotes e o uso de métodos unidirecionais para uma ass
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<channelPoolSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|Um <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> objeto que contém as propriedades do pool de canal para o canal atual.|  
+|[\<channelPoolSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|Um <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> objeto que contém as propriedades do pool de canal para o canal atual.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  Para habilitar o roteamento de pacotes, uma camada de conversão unidirecional é necessária, que fornece esse elemento. Um usuário pode criar uma ligação personalizada que esta associação de camadas em um transporte para torná-lo pacote roteável de reconhecimento de sessão ou de solicitação-resposta. Esse elemento também é útil quando você deseja expor métodos unidirecionais de forma mais nativa. Mais transformações podem ser aplicadas nessa camada, como Duplex composto e sistema de mensagens confiável.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.OneWayBindingElement>  
- <xref:System.ServiceModel.Configuration.OneWayElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.OneWayBindingElement>
+- <xref:System.ServiceModel.Configuration.OneWayElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

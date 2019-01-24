@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620182"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Usando um cliente WCF para acessar um serviço
 
@@ -52,7 +52,7 @@ Svcutil.exe <file1 [,file2]>
  Se apenas um nome de arquivo for fornecido, que é o nome do arquivo de saída. Se dois nomes de arquivo fornecidos, o primeiro arquivo é um arquivo de configuração de entrada cujo conteúdo é mesclado com a configuração gerada e gravado no segundo arquivo. Para obter mais informações sobre a configuração, consulte [configurando associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
 
 > [!IMPORTANT]
-> Solicitações de metadados não segura representam certos riscos da mesma maneira que faz a qualquer solicitação de rede não segura: se você não tiver certeza se estão se comunicando com o ponto de extremidade é quem diz ser, as informações recuperadas podem ser metadados de um serviço mal-intencionado.
+> Solicitações de metadados não segura representam certos riscos da mesma maneira que faz a qualquer solicitação de rede não segura: Se não tiver certeza de que você está se comunicando com o ponto de extremidade é quem diz ser, as informações recuperadas podem ser metadados de um serviço mal-intencionado.
 
 ## <a name="add-service-reference-in-visual-studio"></a>Adicionar referência de serviço no Visual Studio
 
@@ -188,12 +188,12 @@ Quando esses tipos de exceções ocorrem, a melhor maneira de resolver o problem
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Como acessar serviços com um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Como chamar operações de serviço de forma assíncrona](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Como acessar os serviços com contratos unidirecionais e de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Como acessar um WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Como: Criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Como: Serviços do Access com um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Como: Chamar operações de serviço de forma assíncrona](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Como: Acessar os serviços com unidirecional e contratos de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Como: Acessar um WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Entendendo o código do cliente gerado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Como melhorar o tempo de inicialização de aplicativos clientes WCF usando o XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Como: Melhorar o tempo de inicialização do WCF cliente aplicativos usando o XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [Especificando o comportamento em tempo de execução do cliente](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Configurando comportamentos do cliente](../../../docs/framework/wcf/configuring-client-behaviors.md)

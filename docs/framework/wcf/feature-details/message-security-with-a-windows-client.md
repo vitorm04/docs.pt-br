@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: dbfcd7ea7b8422c79274e7bc65929080da6f11af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b94bfd92cf586088316b03222e0bbe5c1728bc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573550"
 ---
 # <a name="message-security-with-a-windows-client"></a>Segurança de mensagem com um cliente do Windows
 Este cenário mostra que um cliente do Windows Communication Foundation (WCF) e o servidor protegido pelo modo de segurança de mensagem. O cliente e o serviço são autenticados usando credenciais do Windows.  
@@ -25,7 +25,7 @@ Este cenário mostra que um cliente do Windows Communication Foundation (WCF) e 
 |Autenticação (cliente)|Autenticação mútua do servidor e cliente|  
 |Integridade|Sim, usando o contexto de segurança compartilhado|  
 |Confidencialidade|Sim, usando o contexto de segurança compartilhado|  
-|Transporte|NET. TCP|  
+|Transporte|NET.TCP|  
 |Associação|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Serviço  
@@ -116,6 +116,6 @@ Este cenário mostra que um cliente do Windows Communication Foundation (WCF) e 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

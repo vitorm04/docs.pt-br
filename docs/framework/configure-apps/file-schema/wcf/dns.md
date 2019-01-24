@@ -1,21 +1,21 @@
 ---
-title: '&lt;DNS&gt;'
+title: '&lt;dns&gt;'
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 10fe4c63b08459914a16b2c736c1a454c6914a0b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 68cbb25b79bbda301c29d72800a125c7a6ba0b6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616453"
 ---
-# <a name="ltdnsgt"></a>&lt;DNS&gt;
+# <a name="ltdnsgt"></a>&lt;dns&gt;
 Especifica a identidade esperada do servidor. Essa identidade é válida para X509 modo de autenticação de certificado se o certificado do servidor contém um DNS com o mesmo valor. Também é válido para o modo de autenticação do Windows se o SPN tem o mesmo valor.  
   
  Para obter mais informações sobre como definir o valor do elemento, consulte [identidade de serviço e autenticação](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
- \<identidade >  
-\<DNS >  
+ \<identity>  
+\<dns>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,10 +50,10 @@ Especifica a identidade esperada do servidor. Essa identidade é válida para X5
 </identity>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.DnsEndpointIdentity>  
- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.DnsEndpointIdentity>
+- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

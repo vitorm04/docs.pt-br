@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc900ca20ac87ddecfd8f7adf0894af21ca5d2f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 86736f885e40e553195cf2a5f84575a5384e6b60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564702"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>Método ICorDebugManagedCallback2::FunctionRemapOpportunity
-Notifica o depurador que a execução de código atingiu um ponto de sequência em uma versão anterior de uma função editada.  
+Notifica o depurador para que a execução de código atingiu um ponto de sequência em uma versão mais antiga de uma função editada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,31 +44,31 @@ HRESULT FunctionRemapOpportunity (
  [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém a função editada.  
   
  `pThread`  
- [in] Um ponteiro para um objeto ICorDebugThread que representa o thread em que o ponto de interrupção remapear foi encontrado.  
+ [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread no qual o remapeamento de ponto de interrupção foi encontrado.  
   
  `pOldFunction`  
- [in] Um ponteiro para um objeto ICorDebugFunction que representa a versão da função que está sendo executada no thread.  
+ [in] Um ponteiro para um objeto ICorDebugFunction que representa a versão da função que está sendo executado no thread.  
   
  `pNewFunction`  
- [in] Um ponteiro para um objeto ICorDebugFunction que representa a versão mais recente da função.  
+ [in] Um ponteiro para um objeto de ICorDebugFunction que representa a versão mais recente da função.  
   
  `oldILOffset`  
- [in] O deslocamento de intermediate language (MSIL) da Microsoft do ponteiro de instrução na versão antiga da função.  
+ [in] O Microsoft intermediate language (MSIL) deslocamento o ponteiro de instrução na versão antiga da função.  
   
 ## <a name="remarks"></a>Comentários  
- Esse retorno de chamada de depurador uma oportunidade para remapear o ponteiro de instrução para seus devidos lugares na nova versão da função especificada, chamando o [Icordebugilframe2](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) método. Se o depurador não chamar `RemapFunction` antes de chamar o [Icordebugcontroller](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) método, o tempo de execução continuará a executar o código antigo e disparam outro `FunctionRemapOpportunity` retorno de chamada no próximo ponto de sequência.  
+ Esse retorno de chamada oferece o depurador a oportunidade para remapear o ponteiro de instrução ao seu local apropriado na nova versão da função especificada chamando o [ICorDebugILFrame2::RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) método. Se o depurador não chama `RemapFunction` antes de chamar o [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) método, o tempo de execução continuarão a executar o código antigo e dispararão a outro `FunctionRemapOpportunity` retorno de chamada no próximo ponto de sequência.  
   
- Esse retorno de chamada será invocado para todos os quadros que está executando uma versão mais antiga da função dada até que o depurador Retorna S_OK.  
+ Esse retorno de chamada será invocado para cada quadro que está executando uma versão mais antiga da função determinada até que o depurador Retorna S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

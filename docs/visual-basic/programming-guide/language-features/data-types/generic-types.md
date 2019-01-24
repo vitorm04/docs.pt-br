@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595572"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
 Um *tipo genérico* é um único elemento de programação que se adapta ao executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe genérica ou um procedimento, você não precisa definir uma versão separada para cada tipo de dados para os quais você talvez queira executar essa funcionalidade.  
@@ -59,7 +59,7 @@ Chave de fenda definido como uma ferramenta genérica
   
  Agora você pode usar `stringQ` para trabalhar exclusivamente com `String` valores. Porque `stringQ` é específico para `String` em vez de ser generalizado para `Object` valores, você não tenha tardia associação ou conversão de tipos. Isso economiza tempo de execução e reduz os erros de tempo de execução.  
   
- Para obter mais informações sobre como usar um tipo genérico, consulte [como: usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ Para obter mais informações sobre como usar um tipo genérico, consulte [como: Usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Exemplo de uma classe genérica  
  O exemplo a seguir mostra uma definição de uma classe genérica.  
@@ -74,7 +74,7 @@ Chave de fenda definido como uma ferramenta genérica
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- Para obter um exemplo mais completo, consulte [como: definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Para obter um exemplo mais completo, consulte [como: Definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Elementos de programação qualificados  
  Você pode definir e usar delegados, estruturas, interfaces, procedimentos e as classes genéricas. Observe que o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] define várias classes genéricas, estruturas e interfaces que representam os elementos genéricos comumente usados. O <xref:System.Collections.Generic?displayProperty=nameWithType> namespace fornece dicionários, listas, filas e pilhas. Antes de definir seu próprio elemento genérico, confira se ele já está disponível em <xref:System.Collections.Generic?displayProperty=nameWithType>.  
@@ -149,14 +149,14 @@ Chave de fenda definido como uma ferramenta genérica
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
-- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
-- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
-- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
-- [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)  
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
-- [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
-- [Covariância e Contravariância](../../concepts/covariance-contravariance/index.md)  
+- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Covariância e Contravariância](../../concepts/covariance-contravariance/index.md)
 - [Iteradores](../../../../visual-basic/programming-guide/concepts/iterators.md)

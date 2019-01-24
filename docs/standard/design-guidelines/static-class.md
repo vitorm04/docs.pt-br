@@ -11,12 +11,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: KrzysztofCwalina
-ms.openlocfilehash: a521842d8c4651984d8d6667b93b0f28a1eba894
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d0a2f11b53f50f2ec2f301f7b88df65e1cd7b811
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617376"
 ---
 # <a name="static-class-design"></a>Design de classe estática
 Uma classe estática é definida como uma classe que contém apenas membros estáticos (claro além os membros de instância herdados de <xref:System.Object?displayProperty=nameWithType> e, possivelmente, um construtor particular). Algumas linguagens fornecem suporte interno para classes estáticas. No c# 2.0 e posterior, quando uma classe é declarada como estático, é abstrato, selado, e nenhum membro de instância pode ser substituído ou declarado.  
@@ -39,5 +39,5 @@ Uma classe estática é definida como uma classe que contém apenas membros est�
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
+- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597626"
 ---
 # <a name="adonet-code-examples"></a>Exemplos de código do ADO.NET
 As listagens de código neste tópico demonstram como recuperar dados de um banco de dados usando as seguintes tecnologias do ADO.NET:
@@ -344,9 +344,9 @@ End Class
 ```
 
 ## <a name="see-also"></a>Consulte também
- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)  
- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
- [Criando aplicativos de dados](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [Consultando um modelo de dados de entidade (Entity Framework tarefas)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Como: Executar uma consulta que retorna objetos de tipo anônimo](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)  
+- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)
+- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [Criando aplicativos de dados](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
+- [Consultando um modelo de dados de entidade (Entity Framework tarefas)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
+- [Como: Executar uma consulta que retorna objetos de tipo anônimo](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

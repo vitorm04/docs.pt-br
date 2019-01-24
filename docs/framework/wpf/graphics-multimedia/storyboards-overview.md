@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492679"
 ---
 # <a name="storyboards-overview"></a>Visão geral de storyboards
 Este tópico mostra como usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar e aplicar animações. Ele descreve como manipular interativamente <xref:System.Windows.Media.Animation.Storyboard> objetos e descreve a sintaxe de direcionamento indireto de propriedade.  
@@ -63,7 +63,7 @@ Este tópico mostra como usar <xref:System.Windows.Media.Animation.Storyboard> o
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.EventTrigger>|Sim|Sim|Sim|Sim|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e uma propriedade <xref:System.Windows.Trigger>|Não|Sim|Sim|Sim|[Disparar uma animação quando o valor de uma propriedade é alterado](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como disparar uma animação quando dados são alterados](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como: Disparar uma animação quando dados forem alterados](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sim|Não|Não|Não|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  O exemplo a seguir usa uma <xref:System.Windows.Media.Animation.Storyboard> animar o <xref:System.Windows.FrameworkElement.Width%2A> de uma <xref:System.Windows.Shapes.Rectangle> elemento e o <xref:System.Windows.Media.SolidColorBrush.Color%2A> de um <xref:System.Windows.Media.SolidColorBrush> usado para pintar que <xref:System.Windows.Shapes.Rectangle>.  
@@ -235,7 +235,7 @@ Este tópico mostra como usar <xref:System.Windows.Media.Animation.Storyboard> o
   
 -   <xref:System.Windows.Media.Animation.StopStoryboard>: Interrompe o storyboard.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>Remove o storyboard.  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Remove o storyboard.  
   
  No exemplo a seguir, as ações de storyboard controlável são usadas para controlar um storyboard de forma interativa.  
   
@@ -261,7 +261,7 @@ Este tópico mostra como usar <xref:System.Windows.Media.Animation.Storyboard> o
   
  A vantagem de usar esses métodos é que você não precisa criar <xref:System.Windows.Trigger> ou <xref:System.Windows.TriggerAction> objetos; basta uma referência para o controlável <xref:System.Windows.Media.Animation.Storyboard> você deseja manipular.  
   
- **Observação:** todas as ações interativas executadas em um <xref:System.Windows.Media.Animation.Clock>e, portanto, também em um <xref:System.Windows.Media.Animation.Storyboard> ocorrerá no próximo tique do mecanismo de tempo que ocorrerá logo antes da próxima renderização. Por exemplo, se você usar o <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método para ir para outro ponto em uma animação, o valor da propriedade não é alterado imediatamente, em vez disso, o valor é alterado no próximo tique do mecanismo de temporização.  
+ **Observação:** Todas as ações interativas executadas em um <xref:System.Windows.Media.Animation.Clock>e, portanto, também em um <xref:System.Windows.Media.Animation.Storyboard> ocorrerá no próximo tique do mecanismo de tempo que ocorrerá logo antes da próxima renderização. Por exemplo, se você usar o <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método para ir para outro ponto em uma animação, o valor da propriedade não é alterado imediatamente, em vez disso, o valor é alterado no próximo tique do mecanismo de temporização.  
   
  O exemplo a seguir mostra como aplicar e controlar as animações usando os métodos interativos do <xref:System.Windows.Media.Animation.Storyboard> classe.  
   
@@ -302,7 +302,7 @@ Este tópico mostra como usar <xref:System.Windows.Media.Animation.Storyboard> o
   
  As animações aplicadas pela propriedade <xref:System.Windows.Trigger> objetos se comportam de maneira mais complexa que <xref:System.Windows.EventTrigger> animações ou animações iniciadas usando <xref:System.Windows.Media.Animation.Storyboard> métodos.  Eles "entrega" com animações definida por outros <xref:System.Windows.Trigger> objetos, mas se compõem com <xref:System.Windows.EventTrigger> e animações disparadas por método.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Visão geral das técnicas de animação da propriedade](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral das técnicas de animação da propriedade](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

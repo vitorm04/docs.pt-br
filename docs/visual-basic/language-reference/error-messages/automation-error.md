@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID440
 ms.assetid: 2c4be5c5-2f0d-4a2b-96fe-d1b24f08fc4c
-ms.openlocfilehash: fdd77510d03cd9e5228be1ba9ec9f746dcc0dfe4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a00efe988eb39be75818b5c2c401b58e5f7f2ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490876"
 ---
 # <a name="automation-error"></a>Erro de automação
 Ocorreu um erro ao executar um método ou ao obter ou configurar uma propriedade de uma variável de objeto. O erro foi relatado pelo aplicativo que criou o objeto.  
@@ -20,6 +20,6 @@ Ocorreu um erro ao executar um método ou ao obter ou configurar uma propriedade
   
 2.  Use a instrução `On Error Resume Next` imediatamente antes de acessar a instrução e, em seguida, verifique se há erros imediatamente após acessar a instrução.  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)  
- [Fale conosco](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Consulte também
+- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fale conosco](/visualstudio/ide/talk-to-us)

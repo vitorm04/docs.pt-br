@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2ee8a5d98c3577bc54ecdaa5205f08a5c610830
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52b2c46fbcbf89bdcf1100f41e0ba7553d1f0b0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635046"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>Interface ISymUnmanagedDocumentWriter
 Fornece métodos para gravar em um documento referenciado por um repositório de símbolos.  
@@ -31,10 +31,10 @@ Fornece métodos para gravar em um documento referenciado por um repositório de
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método SetCheckSum](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Define informações de soma de verificação.|  
-|[Método SetSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Conjuntos fonte para um documento que está sendo gravado.|  
+|[Método SetSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Conjuntos de inserido o código-fonte para um documento que está sendo gravado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

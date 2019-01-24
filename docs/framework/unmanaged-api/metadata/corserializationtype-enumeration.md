@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637366"
 ---
 # <a name="corserializationtype-enumeration"></a>Enumeração CorSerializationType
 Especifica como um objeto é serializado pelo common language runtime.  
@@ -60,20 +60,20 @@ typedef enum CorSerializationType {
 |Membro|Descrição|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|A serialização do objeto é indefinida.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|O objeto é serializado como um tipo Boolean|  
+|`SERIALIZATION_TYPE_BOOLEAN`|O objeto é serializado como um tipo booleano|  
 |`SERIALIZATION_TYPE_CHAR`|O objeto é serializado como um tipo de caractere.|  
-|`SERIALIZATION_TYPE_I1`|O objeto é serializado como um inteiro de 1 byte.|  
+|`SERIALIZATION_TYPE_I1`|O objeto é serializado como um inteiro de 1 byte com sinal.|  
 |`SERIALIZATION_TYPE_U1`|O objeto é serializado como um inteiro de 1 byte sem sinal.|  
-|`SERIALIZATION_TYPE_I2`|O objeto é serializado como um inteiro de 2 bytes.|  
-|`SERIALIZATION_TYPE_U2`|O objeto é serializado como um inteiro de 2 bytes sem sinal.|  
-|`SERIALIZATION_TYPE_I4`|O objeto é serializado como um inteiro de 4 bytes.|  
+|`SERIALIZATION_TYPE_I2`|O objeto é serializado como um inteiro com sinal de 2 bytes.|  
+|`SERIALIZATION_TYPE_U2`|O objeto é serializado como um inteiro sem sinal de 2 bytes.|  
+|`SERIALIZATION_TYPE_I4`|O objeto é serializado como um inteiro com sinal de 4 bytes.|  
 |`SERIALIZATION_TYPE_U4`|O objeto é serializado como um inteiro sem sinal de 4 bytes.|  
-|`SERIALIZATION_TYPE_I8`|O objeto é serializado como um inteiro assinado de 8 bytes.|  
-|`SERIALIZATION_TYPE_U8`|O objeto é serializado como um inteiro não assinado de 8 bytes.|  
+|`SERIALIZATION_TYPE_I8`|O objeto é serializado como um inteiro com sinal de 8 bytes.|  
+|`SERIALIZATION_TYPE_U8`|O objeto é serializado como um inteiro sem sinal de 8 bytes.|  
 |`SERIALIZATION_TYPE_R4`|O objeto é serializado como um ponto flutuante de 4 bytes.|  
 |`SERIALIZATION_TYPE_R8`|O objeto é serializado como um ponto flutuante de 8 bytes.|  
-|`SERIALIZATION_TYPE_STRING`|O objeto é serializado como um tipo System. String.|  
-|`SERIALIZATION_TYPE_SZARRAY`|O objeto é serializado como uma única dimensão, nenhuma matriz de limite inferior.|  
+|`SERIALIZATION_TYPE_STRING`|O objeto é serializado como um tipo de System. String.|  
+|`SERIALIZATION_TYPE_SZARRAY`|O objeto é serializado como um unidimensionais, zero matriz de limite inferior.|  
 |`SERIALIZATION_TYPE_TYPE`|O objeto é serializado como um tipo genérico.|  
 |`SERIALIZATION_TYPE_TAGGED_OBJECT`|O objeto é serializado como um objeto marcado.|  
 |`SERIALIZATION_TYPE_FIELD`|O objeto é serializado como um campo.|  
@@ -81,11 +81,11 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_ENUM`|O objeto é serializado como uma enumeração.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

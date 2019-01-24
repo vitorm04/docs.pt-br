@@ -2,12 +2,12 @@
 title: Recuperar metadados
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 89984c0d10ee31665ddefe101e3d7416b9451cbf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 952fb737b1e86c726a4bf57cf614f02d7b108145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612990"
 ---
 # <a name="retrieve-metadata"></a>Recuperar metadados
 Este exemplo demonstra como implementar um cliente que recupera os metadados de um serviço para escolher a comunicação com um ponto de extremidade dinamicamente. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). O serviço foi modificado para expor dois pontos de extremidade — um ponto de extremidade no endereço básico usando o `basicHttpBinding` associação e um ponto de extremidade seguro em {*baseaddress*} / proteger usando o `wsHttpBinding` associação. Em vez de configurar o cliente com as associações e endereços de ponto de extremidade, o cliente recupera dinamicamente os metadados para o serviço usando o <xref:System.ServiceModel.Description.MetadataExchangeClient> de classe e, em seguida, importa os metadados como um <xref:System.ServiceModel.Description.ServiceEndpointCollection> usando o <xref:System.ServiceModel.Description.WsdlImporter> classe.  

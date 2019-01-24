@@ -2,18 +2,18 @@
 title: '&lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 545148d1f663078b8182029817f0f22d33036200
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 54f1ad4feefe15f4901d8e493cadc0842f55224f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606667"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Define uma associação que é segura, confiável, otimizado para máquina comunicação entre processos. Por padrão, ele gera uma pilha de comunicação em tempo de execução com WS-ReliableMessaging para confiabilidade, segurança de transporte para segurança de transferência, pipes nomeada para entrega de mensagens e codificação de mensagem binária.  
   
  \<system.ServiceModel>  
-\<associações >  
+\<bindings>  
 \<netNamedPipeBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -77,7 +77,7 @@ Define uma associação que é segura, confiável, otimizado para máquina comun
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  O `NetNamedPipeBinding` gera uma pilha de comunicação de tempo de execução por padrão, que usa a segurança de transporte, pipes nomeada para entrega de mensagens e uma codificação de mensagem binária. Essa associação é uma Windows Communication Foundation (WCF) fornecida pelo sistema opção apropriada para a comunicação na máquina. Ele também oferece suporte a transações.  
@@ -143,10 +143,10 @@ Define uma associação que é segura, confiável, otimizado para máquina comun
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- [\<associação >](../../../../../docs/framework/misc/binding.md)  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

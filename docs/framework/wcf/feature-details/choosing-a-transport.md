@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494438"
 ---
 # <a name="choosing-a-transport"></a>Selecionando um transporte
 Este tópico discute os critérios para escolher entre os três transportes principais que estão incluídos no Windows Communication Foundation (WCF): HTTP, TCP e pipes nomeados. O WCF também inclui um enfileiramento de mensagens (também conhecido como MSMQ) de transporte, mas este documento não abrange o enfileiramento de mensagens.  
@@ -45,7 +45,7 @@ Este tópico discute os critérios para escolher entre os três transportes prin
  Quando a comunicação é necessária entre diferentes aplicativos WCF em um único computador, e você deseja impedir qualquer comunicação de outro computador, em seguida, use o transporte de pipes nomeados. Uma restrição adicional é que os processos em execução na área de trabalho remota do Windows podem ser restritos à mesma sessão de área de trabalho remota do Windows, a menos que eles têm privilégios elevados.  
   
 > [!WARNING]
->  Ao usar o transporte de pipe nomeado com uma reserva de URL curinga fraco em vários sites hospedados no IIS, o seguinte erro poderá ocorrer: Ocorreu um erro no serviço de ativação NetPipeActivator do protocolo 'NET. pipe' ao tentar escutar para o site '2', Assim, o protocolo é desabilitado temporariamente para o site. Consulte a mensagem de exceção para obter mais detalhes. URL: WeakWildcard:net.pipe:/\<nome do computador > / Status: exceção ConflictingRegistration: nome do processo: ID do processo do SMSvcHost: 1076\  
+>  Ao usar o transporte de pipe nomeado com uma reserva de URL curinga fraco em vários sites hospedados no IIS, o seguinte erro pode ocorrer: Ocorreu um erro no serviço de ativação NetPipeActivator do protocolo 'NET. pipe' ao tentar escutar para o site '2', portanto, o protocolo é desabilitado para o site temporariamente. Consulte a mensagem de exceção para obter mais detalhes. URL: WeakWildcard:net.pipe:/\<nome do computador > / Status: Exceção ConflictingRegistration:  Nome do processo: ID do processo do SMSvcHost: 1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Pontos de decisão para escolher um transporte  
  A tabela a seguir descreve os pontos de decisão comum usados para escolher um transporte. Você deve considerar todos os atributos adicionais e transportes que se aplicam ao seu aplicativo. Identificar os atributos que são importantes para seu aplicativo, identificar os transportes de maneira favorável associar com cada um dos seus atributos e, em seguida, selecione os transportes que funcionam melhor com seu conjunto de atributos.  
@@ -61,16 +61,16 @@ Este tópico discute os critérios para escolher entre os três transportes prin
 |Taxa de transferência|Taxa de transferência mede a quantidade de dados que podem ser transmitidos e processados em um período de tempo especificado. Como latência, o transporte escolhido pode afetar a taxa de transferência para operações de serviço. Maximizar taxa de transferência para um transporte requer minimizando os dois a sobrecarga de transmitir conteúdo, bem como minimizar o tempo gasto aguardando as trocas de mensagens ser concluída. Transportes de pipe nomeado e o TCP adicione pouca sobrecarga para o corpo da mensagem e dar suporte a uma forma de duplex nativa que reduz a espera por respostas de mensagem.|TCP, pipe nomeado|  
 |Ferramentas|Ferramentas representa o suporte a aplicativos de terceiros para um protocolo para o desenvolvimento, diagnóstico, hospedagem e outras atividades. Desenvolvimento de ferramentas e software para funcionar com o protocolo HTTP significa um grande investimento.|HTTP|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Criando associações definidas pelo usuário](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Criando associações definidas pelo usuário](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
