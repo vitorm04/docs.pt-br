@@ -2,12 +2,12 @@
 title: Provedor de WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 4541c411d6bd1f13a03a0b6750e6683a7c2b3f3f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 938eb4fd376c699ddbfedf80f05ef62f81232ca2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497177"
 ---
 # <a name="wmi-provider"></a>Provedor de WMI
 Este exemplo demonstra como coletar dados de serviços do Windows Communication Foundation (WCF) em tempo de execução, usando o provedor Windows Management Instrumentation (WMI) que é incorporado ao WCF. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e demonstra como coletar dados do `ICalculator` serviço em tempo de execução.  
@@ -143,5 +143,5 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>Consulte também  
- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Consulte também
+- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

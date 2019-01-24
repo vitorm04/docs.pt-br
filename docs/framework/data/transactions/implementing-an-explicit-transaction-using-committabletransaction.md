@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1edcdefeaafbee3cfbc0810a47e64f38f9f97ddc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713124"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementando uma transação explícita usando CommittableTransaction
 O <xref:System.Transactions.CommittableTransaction> classe fornece um modo explícito para os aplicativos que usam uma transação, em vez de usar o <xref:System.Transactions.TransactionScope> classe implicitamente. É útil para aplicativos que deseja usar a mesma transação em várias chamadas de função ou várias chamadas de threads. Ao contrário do <xref:System.Transactions.TransactionScope> classe, o criador do aplicativo precisa chamar especificamente o <xref:System.Transactions.CommittableTransaction.Commit%2A> e <xref:System.Transactions.Transaction.Rollback%2A> métodos para confirmar ou anular a transação.  
@@ -43,7 +43,7 @@ O <xref:System.Transactions.CommittableTransaction> classe fornece um modo expl�
   
  Você pode chamar <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> para expedir a demora de confirmação a um thread do pool de threads. Você também pode chamar <xref:System.Transactions.CommittableTransaction.EndCommit%2A> para determinar se a transação, na verdade, foi confirmada. Se a transação não foi confirmada por algum motivo, <xref:System.Transactions.CommittableTransaction.EndCommit%2A> gera uma exceção de transação. Se a transação é ainda não foram confirmada no momento <xref:System.Transactions.CommittableTransaction.EndCommit%2A> é chamado, o chamador é bloqueado até que a transação é confirmada ou anulada.  
   
- É a maneira mais fácil de fazer uma confirmação assíncrona, fornecendo um método de retorno de chamada a ser chamada quando a confirmação for concluída. No entanto, você deve chamar o <xref:System.Transactions.CommittableTransaction.EndCommit%2A> método no original <xref:System.Transactions.CommittableTransaction> objeto usado para invocar a chamada. Para obter esse objeto, você pode baixá-los a *IAsyncResult* parâmetro do método de retorno de chamada, pois o <xref:System.Transactions.CommittableTransaction> classe implementa <xref:System.IAsyncResult> classe.  
+ É a maneira mais fácil de fazer uma confirmação assíncrona, fornecendo um método de retorno de chamada a ser chamada quando a confirmação for concluída. No entanto, você deve chamar o <xref:System.Transactions.CommittableTransaction.EndCommit%2A> método no original <xref:System.Transactions.CommittableTransaction> objeto usado para invocar a chamada. Para obter esse objeto, você pode baixá-los a *IAsyncResult* parâmetro do método de retorno de chamada, uma vez que o <xref:System.Transactions.CommittableTransaction> implementos de classe <xref:System.IAsyncResult> classe.  
   
  O exemplo a seguir mostra como uma confirmação assíncrona pode ser feita.  
   
@@ -85,6 +85,6 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Implementando uma transação implícita, usando o escopo da transação](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
- [Transaction Processing](../../../../docs/framework/data/transactions/index.md) (Processamento de transações)
+## <a name="see-also"></a>Consulte também
+- [Implementando uma transação implícita, usando o escopo da transação](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
+- [Transaction Processing](../../../../docs/framework/data/transactions/index.md) (Processamento de transações)

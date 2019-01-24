@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9f8925630933e2247726f92a93cac67bdc55ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c89a7671cde9e519d0fc66751ee8f95b34fe9039
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669660"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>Método ICorProfilerCallback::AppDomainShutdownFinished
 Notifica o criador de perfil que um domínio de aplicativo foi descarregado de um processo.  
@@ -37,24 +37,24 @@ HRESULT AppDomainShutdownFinished(
   
 #### <a name="parameters"></a>Parâmetros  
  `appDomainId`  
- [in] Identifica o domínio em que os assemblies do aplicativo são armazenados.  
+ [in] Identifica o domínio no qual os assemblies do aplicativo são armazenados.  
   
  `hrStatus`  
- [in] Um HRESULT que indica se o domínio de aplicativo foi descarregado com êxito.  
+ [in] Um HRESULT que indica se o domínio do aplicativo foi descarregado com êxito.  
   
 ## <a name="remarks"></a>Comentários  
- O valor de `appDomainId` não é válido para uma solicitação de informações após o [: Appdomainshutdownstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) método retorna.  
+ O valor de `appDomainId` não é válido para uma solicitação de informações após a [ICorProfilerCallback:: Appdomainshutdownstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) retorno do método.  
   
- Algumas partes do descarregar o domínio de aplicativo podem continuar após o `AppDomainCreationFinished` retorno de chamada. Uma falha de HRESULT em `hrStatus` indica uma falha. No entanto, um HRESULT de sucesso em `hrStatus` indica apenas que a primeira parte do descarregar o domínio de aplicativo foi bem-sucedida.  
+ Algumas partes de descarregar o domínio do aplicativo podem continuar após o `AppDomainCreationFinished` retorno de chamada. Uma falha HRESULT em `hrStatus` indica uma falha. No entanto, um HRESULT de sucesso em `hrStatus` indica apenas que a primeira parte de descarregar o domínio de aplicativo teve êxito.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

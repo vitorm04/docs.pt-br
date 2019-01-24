@@ -2,12 +2,12 @@
 title: Coleções de esquema comuns
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700956"
 ---
 # <a name="common-schema-collections"></a>Coleções de esquema comuns
 As coleções de esquema comuns são as coleções de esquemas que são implementadas por cada um dos provedores gerenciados .NET Framework. Você pode consultar um provedor gerenciado do .NET Framework para determinar a lista de coleções de esquema com suporte por meio da chamada a **GetSchema** método sem argumentos ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam. Essas coleções descrevem todas as colunas necessárias. Provedores são livres para adicionar colunas adicionais, se desejarem. Por exemplo, `SqlClient` e `OracleClient` Adicionar nome do parâmetro na coleção de restrições.  
@@ -48,7 +48,7 @@ As coleções de esquema comuns são as coleções de esquemas que são implemen
 |StringLiteralPattern|cadeia de caracteres|Uma expressão regular que corresponde a um literal de cadeia de caracteres e tem um valor de correspondência do literal em si. Por exemplo, se a fonte de dados usadas aspas para identificar cadeias de caracteres, isso seria: "('([^']&#124;'') *')"'|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|Especifica quais tipos de instruções de junção SQL têm suporte pela fonte de dados.|  
   
-## <a name="datatypes"></a>Tipos de dados  
+## <a name="datatypes"></a>DataTypes  
  Essas informações de expõe de coleção de esquema sobre tipos de dados que são compatíveis com o banco de dados que o .NET Framework provedor gerenciado estão conectadas atualmente à.  
   
 |ColumnName|DataType|Descrição|  
@@ -94,7 +94,7 @@ As coleções de esquema comuns são as coleções de esquemas que são implemen
 |----------------|--------------|-----------------|  
 |ReservedWord|cadeia de caracteres|Palavra reservada do provedor específico.|  
   
-## <a name="see-also"></a>Consulte também  
- [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [GetSchema e coleções de esquema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [GetSchema e coleções de esquema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

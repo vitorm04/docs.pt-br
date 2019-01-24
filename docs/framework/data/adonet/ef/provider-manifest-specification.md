@@ -2,12 +2,12 @@
 title: Especificação do manifesto do provedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 592d435dd0da3a66fb3bbd278a53facb6cf08cb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734046"
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
@@ -54,7 +54,7 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
   
  Você escreve um arquivo XML que tem duas seções:  
   
--   Uma lista de tipos de provedor expressos em termos de EDM e define o mapeamento para ambos direção: EDM-à-provedor e provedor-à-EDM.  
+-   Uma lista de tipos de provedor expressos em termos do EDM e definir o mapeamento para ambos direção: EDM-à-provedor e provedor-à-EDM.  
   
 -   Uma lista de funções suportadas pelo provedor onde o parâmetro e tipos de retorno são expressos em termos de EDM.  
   
@@ -264,7 +264,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Internos|Boolean|Não|verdadeiro|Retifique se a função é compilada no armazenamento de dados|  
 |StoreFunctionName|Cadeia de Caracteres|Não|\<Nome >|Nome de função no armazenamento de dados.  Permite um nível de redirecionamento de nomes de função.|  
 |NiladicFunction|Boolean|Não|False|Retifique se a função não requer parâmetros e é chamado sem nenhum parâmetro|  
-|ParameterType<br /><br /> Semântica|ParameterSemantics|Não|AllowImplicit<br /><br /> Conversão|Escolha de como o pipeline de consulta deve manipular a substituição do tipo de parâmetro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|ParameterType<br /><br /> Semântica|ParameterSemantics|Não|AllowImplicit<br /><br /> Conversão|Escolha de como o pipeline de consulta deve manipular a substituição do tipo de parâmetro:<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
  **Nó de parâmetros**  
   
@@ -274,10 +274,10 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nome|Cadeia de caracteres|Sim|N/D|Identificador/nome do parâmetro.|  
 |Tipo|Cadeia de Caracteres|Sim|N/D|O tipo de EDM de parâmetro.|  
-|Modo|Parâmetro<br /><br /> Direção|Sim|N/D|Direção do parâmetro:<br /><br /> -no<br />-out<br />-inout|  
+|Modo|Parâmetro<br /><br /> Direção|Sim|N/D|Direção do parâmetro:<br /><br /> -no<br />-out<br />-   inout|  
   
 ##### <a name="namespace-attribute"></a>Atributo do namespace  
  Cada provedor de armazenamento de dados deve definir um namespace ou um grupo de namespaces para informações definida no manifesto. Este namespace pode ser usada em consultas Entity SQL para resolver nomes das funções e tipos. Por exemplo: SqlServer. O namespace deve ser diferente de namespace canônica, EDM, definido por serviços de entidade para que as funções padrão são suportadas por Entity consultas SQL.  
   
-## <a name="see-also"></a>Consulte também  
- [Escrevendo um Provedor de Dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Consulte também
+- [Escrevendo um Provedor de Dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

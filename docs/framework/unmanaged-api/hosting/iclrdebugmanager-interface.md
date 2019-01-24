@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 515eb0633c82c3e1386487d1866de79c9898c9cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654601"
 ---
 # <a name="iclrdebugmanager-interface"></a>Interface ICLRDebugManager
 Fornece métodos que permitem que um host associar um conjunto de tarefas com um identificador e um nome amigável.  
@@ -34,26 +34,26 @@ Fornece métodos que permitem que um host associar um conjunto de tarefas com um
 |[Método EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|Remove a associação entre uma lista de tarefas e um identificador e um nome amigável.|  
 |[Método GetDacl](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-getdacl-method.md)|Este método não está implementado.|  
 |[Método IsDebuggerAttached](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-isdebuggerattached-method.md)|Obtém um valor que indica se um depurador está anexado ao processo.|  
-|[Método SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Associa uma lista de [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instâncias com um identificador e um nome amigável.|  
+|[Método SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Associa uma lista dos [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instâncias com um identificador e um nome amigável.|  
 |[Método SetDacl](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)|Este método não está implementado.|  
-|[Método SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Define a política para a leitura de arquivos do programa (PDB) de banco de dados. A política determina se as informações sobre números de linha e de arquivos estão incluídas em pilhas de chamadas.|  
+|[Método SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Define a política para a leitura de arquivos de banco de dados (PDB) do programa. A política determina se a opção informações sobre arquivos e números de linha estão incluídas em pilhas de chamadas.|  
   
 ## <a name="remarks"></a>Comentários  
- Em cenários de depuração, um host pode querer agrupar tarefas de acordo com sua própria lógica de programação. Por exemplo, um agrupamento permitiria que um desenvolvedor ver somente as tarefas necessárias por APIs do desenvolvedor, ao invés de fazer todas as tarefas em execução no processo. `ICLRDebugManager` permite que o host implementar esse tipo de agrupamento.  
+ Em cenários de depuração, um host pode querer agrupar tarefas de acordo com sua própria lógica de programação. Por exemplo, um agrupamento permitiria que um desenvolvedor ver somente as tarefas necessárias para as APIs do desenvolvedor, em vez de ver todas as tarefas em execução no processo. `ICLRDebugManager` permite que o host implementar esse tipo de agrupamento.  
   
 > [!IMPORTANT]
->  Três `ICLRDebugManager` métodos, `BeginConnection`, `SetConnectionTasks` e `EndConnection`, são dependentes entre si. Ele devem ser chamados na ordem fornecida para funcionar como esperado.  
+>  Três `ICLRDebugManager` métodos, `BeginConnection`, `SetConnectionTasks` e `EndConnection`, são dependentes entre si. Eles devem ser chamados na ordem fornecida para funcionar conforme o esperado.  
   
- O agrupamento e os identificadores e nomes amigáveis que atribui o host para o agrupamento não têm significado para o common language runtime (CLR). O CLR simplesmente passa as informações ao longo do depurador.  
+ O agrupamento e os identificadores e nomes amigáveis que o host atribui ao agrupamento, não têm significado para o common language runtime (CLR). O CLR simplesmente passa as informações ao longo do depurador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 357b7b42c7ad609b2a86ec3ee79a0f6f38dd9471
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641974"
 ---
 # <a name="long-data-type-visual-basic"></a>Tipo de dados Long (Visual Basic)
 
@@ -78,10 +78,10 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="see-also"></a>Consulte também
 
-<xref:System.Int64>
-[Tipos de dados](../../../visual-basic/language-reference/data-types/index.md)   
-[Tipo de dados inteiro](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
-[Tipo de dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)   
-[Funções de conversão de tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
-[Resumo da conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
-[Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int64>
+- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
+- [Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Tipo de Dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

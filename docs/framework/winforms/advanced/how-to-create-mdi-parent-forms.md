@@ -1,20 +1,20 @@
 ---
-title: Como criar formulários pai MDI
+title: 'Como: Criar formulários pai MDI'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 8d7a25b771488540d4867143a62c5c2487803a95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1cc3d813b77ddf8220242f4a1dfc7fe39f9cb520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512561"
 ---
-# <a name="how-to-create-mdi-parent-forms"></a>Como criar formulários pai MDI
+# <a name="how-to-create-mdi-parent-forms"></a>Como: Criar formulários pai MDI
 > [!IMPORTANT]
->  Este tópico usa o controle <xref:System.Windows.Forms.MainMenu>, que foi substituído pelo controle <xref:System.Windows.Forms.MenuStrip>. O controle <xref:System.Windows.Forms.MainMenu> é mantido para compatibilidade com versões anteriores e uso futuro, se você desejar.  Para obter informações sobre como criar um MDI pai formulário usando um <xref:System.Windows.Forms.MenuStrip>, consulte [como: criar uma lista de janelas MDI com MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).  
+>  Este tópico usa o controle <xref:System.Windows.Forms.MainMenu>, que foi substituído pelo controle <xref:System.Windows.Forms.MenuStrip>. O controle <xref:System.Windows.Forms.MainMenu> é mantido para compatibilidade com versões anteriores e uso futuro, se você desejar.  Para obter informações sobre como criar um MDI pai formulário usando um <xref:System.Windows.Forms.MenuStrip>, consulte [como: Criar uma lista de janelas MDI com MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).  
   
  A base de um aplicativo de interface MDI é o formulário MDI pai. Este é o formulário que contém as janelas MDI filhas, que as subjanelas nas quais o usuário interage com o aplicativo MDI. Criar um formulário MDI pai é fácil, tanto no Designer de Formulários do Windows e por meio de programação.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "33525185"
   
      O primeiro menu criará e ocultará itens do menu no tempo de execução e o segundo menu irá controlar as janelas MDI filhas abertas. Neste ponto, você já terá criado uma janela MDI pai.  
   
-4.  Pressione **F5** para executar o aplicativo. Para obter informações sobre como criar janelas filho MDI que operam no formulário pai MDI, confira [Como criar formulários filho MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md).  
+4.  Pressione **F5** para executar o aplicativo. Para obter informações sobre como criar janelas que operam no formulário pai MDI filho MDI, consulte [como: Criar formulários filho MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da interface MDI (Interface de Vários Documentos)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Como criar formulários filho MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Como determinar o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [Como Enviar Dados para o Filho MDI Ativo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
- [Como Organizar Formulários Filho MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Aplicativos da interface MDI (Interface de Vários Documentos)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
+- [Como: Criar formulários filho MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Como: Determinar o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
+- [Como: Enviar dados para o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
+- [Como: Organizar formulários filho MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

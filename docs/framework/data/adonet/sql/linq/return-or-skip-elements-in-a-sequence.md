@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 228de9f3b92d45866c98976be08b84988a2db8d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84dcc6471ad37bfda90f58c748c99ff514f7eb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668971"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Elementos Return ou Skip em uma sequência
 Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número específico de elementos em uma sequência e ignorar o restante.  
@@ -18,9 +18,9 @@ Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número esp
  Use o operador <xref:System.Linq.Queryable.Skip%2A> para ignorar um número específico de elementos em uma sequência e retornar o restante.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando são usados em consultas no SQL Server 2000. Para obter mais informações, consulte a entrada "Ignorar e levar a exceções no SQL Server 2000" em [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando são usados em consultas no SQL Server 2000. Para obter mais informações, consulte a entrada "Exceções Skip e Take no SQL Server 2000" em [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte <xref:System.Linq.Queryable.Skip%2A> usando uma subconsulta com o SQL `NOT EXISTS` cláusula. Essa conversão apresenta as seguintes limitações:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduz <xref:System.Linq.Queryable.Skip%2A> por meio de uma subconsulta com o SQL `NOT EXISTS` cláusula. Essa conversão apresenta as seguintes limitações:  
   
 -   O argumento deve ser um conjunto. Não há suporte para vários conjuntos, mesmo se ordenados.  
   
@@ -78,6 +78,6 @@ ORDER BY [t0].[CustomerID]
   
  Para argumentos integrais constantes e não negativos, baseados na especificação SQL, <xref:System.Linq.Queryable.Take%2A> e <xref:System.Linq.Queryable.Skip%2A> são bem definidos.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Conversão de operador de consulta padrão](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>Consulte também
+- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Conversão de operador de consulta padrão](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

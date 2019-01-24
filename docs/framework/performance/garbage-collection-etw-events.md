@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685211"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventos ETW de coleta de lixo
 <a name="top"></a> Esses eventos coletam informações referentes à coleta de lixo. Eles ajudam no diagnóstico e na depuração, inclusive determinando quantas vezes a coleta de lixo foi executada, a quantidade de memória liberada durante a coleta de lixo e assim por diante.  
@@ -66,7 +66,7 @@ ms.locfileid: "33396929"
   
 |Nome do campo|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt32|O *n*coleta de lixo th.|  
+|Contagem|win:UInt32|O *n*ª coleta de lixo.|  
 |Profundidade|win:UInt32|A geração que está sendo coletada.|  
 |Motivo|win:UInt32|Motivo do gatilho da coleta de lixo:<br /><br /> 0x0 – Alocação de heap de objetos pequenos.<br /><br /> 0x1 – Induzido.<br /><br /> 0x2 – Memória insuficiente.<br /><br /> 0x3 – Vazio.<br /><br /> 0x4 – Alocação de heap de objetos grandes.<br /><br /> 0x5 – Espaço insuficiente (para heap de objetos pequenos).<br /><br /> 0x6 – Espaço insuficiente (para heap de objetos grandes).<br /><br /> 0x7 – Induzido, mas não forçado como bloqueio.|  
 |Tipo|win:UInt32|0x0 – A coleta de lixo de bloqueio ocorreu fora da coleta de lixo em segundo plano.<br /><br /> 0x1 – Coleta de lixo em segundo plano.<br /><br /> 0x2 – A coleta de lixo de bloqueio ocorreu durante a coleta de lixo em segundo plano.|  
@@ -92,7 +92,7 @@ ms.locfileid: "33396929"
   
 |Nome do campo|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt32|O *n*coleta de lixo th.|  
+|Contagem|win:UInt32|O *n*ª coleta de lixo.|  
 |Profundidade|win:UInt32|A geração que foi coletada.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
@@ -366,5 +366,5 @@ ms.locfileid: "33396929"
   
  Nenhum dado do evento.  
   
-## <a name="see-also"></a>Consulte também  
- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Consulte também
+- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

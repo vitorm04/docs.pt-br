@@ -1,5 +1,5 @@
 ---
-title: 'Como: especificar as credenciais do cliente para uma solicitação de serviço de dados (WCF Data Services)'
+title: 'Como: Especifique as credenciais do cliente para um serviço de dados de solicitação (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: d0fbf01de05a02c03782af9e392a79b6dd3e8bee
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 786d4deaa1b2e4dfacab6c89c7d3d5e734bd3ffd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718124"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Como: especificar as credenciais do cliente para uma solicitação de serviço de dados (WCF Data Services)
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Como: Especifique as credenciais do cliente para um serviço de dados de solicitação (WCF Data Services)
 Por padrão, a biblioteca de cliente não fornece credenciais ao enviar uma solicitação para um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service. No entanto, você pode especificar que credenciais enviadas para autenticar solicitações ao serviço de dados, fornecendo uma <xref:System.Net.NetworkCredential> para o <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> propriedade do <xref:System.Data.Services.Client.DataServiceContext>. Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). O exemplo neste tópico mostra como fornecer explicitamente as credenciais que são usadas pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente ao solicitar dados do serviço de dados.  
   
  O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente. Esse serviço e as classes de dados do cliente são criadas quando você concluir o [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Você também pode usar o [serviço de dados de exemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) que é publicado no [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] site da Web; esses dados de exemplo serviço é somente leitura e a tentativa de salvar as alterações retornará um erro. Serviços de dados de exemplo no [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] site da Web permitem que a autenticação anônima.  
@@ -52,6 +52,6 @@ Por padrão, a biblioteca de cliente não fornece credenciais ao enviar uma soli
   
  Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+## <a name="see-also"></a>Consulte também
+- [Protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
