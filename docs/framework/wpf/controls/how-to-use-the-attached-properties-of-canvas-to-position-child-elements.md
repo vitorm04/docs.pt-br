@@ -1,5 +1,5 @@
 ---
-title: Como usar as propriedades anexas de tela para posicionar elementos filho
+title: 'Como: Usar as propriedades anexas de tela para posicionar elementos filho'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
-ms.openlocfilehash: 89327b834dfd71c0a7420eb42a598b98cdb5e9d8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a0d0bc51466ee18e09eeffe80a568d277280248c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682039"
 ---
-# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a><span data-ttu-id="ca618-102">Como usar as propriedades anexas de tela para posicionar elementos filho</span><span class="sxs-lookup"><span data-stu-id="ca618-102">How to: Use the Attached Properties of Canvas to Position Child Elements</span></span>
-<span data-ttu-id="ca618-103">Este exemplo mostra como usar as propriedades anexas de <xref:System.Windows.Controls.Canvas> para posicionar elementos filho.</span><span class="sxs-lookup"><span data-stu-id="ca618-103">This example shows how to use the attached properties of <xref:System.Windows.Controls.Canvas> to position child elements.</span></span>  
+# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a><span data-ttu-id="dd733-102">Como: Usar as propriedades anexas de tela para posicionar elementos filho</span><span class="sxs-lookup"><span data-stu-id="dd733-102">How to: Use the Attached Properties of Canvas to Position Child Elements</span></span>
+<span data-ttu-id="dd733-103">Este exemplo mostra como usar as propriedades anexas de <xref:System.Windows.Controls.Canvas> para posicionar elementos filho.</span><span class="sxs-lookup"><span data-stu-id="dd733-103">This example shows how to use the attached properties of <xref:System.Windows.Controls.Canvas> to position child elements.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ca618-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ca618-104">Example</span></span>  
- <span data-ttu-id="ca618-105">O exemplo a seguir adiciona quatro <xref:System.Windows.Controls.Button> elementos como elementos filho de um pai <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="ca618-105">The following example adds four <xref:System.Windows.Controls.Button> elements as child elements of a parent <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="ca618-106">Cada elemento é representado por um <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, e <xref:System.Windows.Controls.Canvas.Top%2A>.</span><span class="sxs-lookup"><span data-stu-id="ca618-106">Each element is represented by a <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, and <xref:System.Windows.Controls.Canvas.Top%2A>.</span></span>
-<span data-ttu-id="ca618-107">Cada <xref:System.Windows.Controls.Button> é posicionado em relação ao pai <xref:System.Windows.Controls.Canvas> e de acordo com seu valor atribuído da propriedade.</span><span class="sxs-lookup"><span data-stu-id="ca618-107">Each <xref:System.Windows.Controls.Button> is positioned relative to the parent <xref:System.Windows.Controls.Canvas> and according to its assigned property value.</span></span>  
+## <a name="example"></a><span data-ttu-id="dd733-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="dd733-104">Example</span></span>  
+ <span data-ttu-id="dd733-105">O exemplo a seguir adiciona quatro <xref:System.Windows.Controls.Button> elementos como elementos filho de um pai <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="dd733-105">The following example adds four <xref:System.Windows.Controls.Button> elements as child elements of a parent <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="dd733-106">Cada elemento é representado por um <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, e <xref:System.Windows.Controls.Canvas.Top%2A>.</span><span class="sxs-lookup"><span data-stu-id="dd733-106">Each element is represented by a <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, and <xref:System.Windows.Controls.Canvas.Top%2A>.</span></span>
+<span data-ttu-id="dd733-107">Cada <xref:System.Windows.Controls.Button> é posicionado em relação ao pai <xref:System.Windows.Controls.Canvas> e de acordo com seu valor atribuído da propriedade.</span><span class="sxs-lookup"><span data-stu-id="dd733-107">Each <xref:System.Windows.Controls.Button> is positioned relative to the parent <xref:System.Windows.Controls.Canvas> and according to its assigned property value.</span></span>  
   
  [!code-cpp[CanvasAttachedProperties#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
  [!code-csharp[CanvasAttachedProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]
  [!code-vb[CanvasAttachedProperties#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="ca618-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ca618-108">See Also</span></span>  
- <xref:System.Windows.Controls.Canvas>  
- <xref:System.Windows.Controls.Canvas.Bottom%2A>  
- <xref:System.Windows.Controls.Canvas.Left%2A>  
- <xref:System.Windows.Controls.Canvas.Right%2A>  
- <xref:System.Windows.Controls.Canvas.Top%2A>  
- <xref:System.Windows.Controls.Button>  
- [<span data-ttu-id="ca618-109">Visão geral de painéis</span><span class="sxs-lookup"><span data-stu-id="ca618-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="ca618-110">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="ca618-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
- [<span data-ttu-id="ca618-111">Visão geral das propriedades anexadas</span><span class="sxs-lookup"><span data-stu-id="ca618-111">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+## <a name="see-also"></a><span data-ttu-id="dd733-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dd733-108">See also</span></span>
+- <xref:System.Windows.Controls.Canvas>
+- <xref:System.Windows.Controls.Canvas.Bottom%2A>
+- <xref:System.Windows.Controls.Canvas.Left%2A>
+- <xref:System.Windows.Controls.Canvas.Right%2A>
+- <xref:System.Windows.Controls.Canvas.Top%2A>
+- <xref:System.Windows.Controls.Button>
+- [<span data-ttu-id="dd733-109">Visão geral de painéis</span><span class="sxs-lookup"><span data-stu-id="dd733-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="dd733-110">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="dd733-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
+- [<span data-ttu-id="dd733-111">Visão geral das propriedades anexadas</span><span class="sxs-lookup"><span data-stu-id="dd733-111">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
