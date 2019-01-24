@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b3623c886a48cc938be017f955fbdac1df3f10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5e2501a5ab62c6aaef2b3f754f9eed10e4e4b97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505011"
 ---
-# <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a><span data-ttu-id="c270d-102">Método IDebuggerThreadControl::ReleaseAllRuntimeThreads</span><span class="sxs-lookup"><span data-stu-id="c270d-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads Method</span></span>
-<span data-ttu-id="c270d-103">Notifica o host que os serviços de depuração estão prestes a liberar todos os threads que estão bloqueados.</span><span class="sxs-lookup"><span data-stu-id="c270d-103">Notifies the host that the debugging services are about to release all threads that are blocked.</span></span>  
+# <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a><span data-ttu-id="3f2a1-102">Método IDebuggerThreadControl::ReleaseAllRuntimeThreads</span><span class="sxs-lookup"><span data-stu-id="3f2a1-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads Method</span></span>
+<span data-ttu-id="3f2a1-103">Notifica o host que os serviços de depuração estão prestes a liberar todos os threads que estão bloqueados.</span><span class="sxs-lookup"><span data-stu-id="3f2a1-103">Notifies the host that the debugging services are about to release all threads that are blocked.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c270d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c270d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f2a1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3f2a1-104">Syntax</span></span>  
   
 ```  
 HRESULT ReleaseAllRuntimeThreads ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="c270d-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="c270d-105">Remarks</span></span>  
- <span data-ttu-id="c270d-106">O `ReleaseAllRuntimeThreads` método nunca será chamado em um thread de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="c270d-106">The `ReleaseAllRuntimeThreads` method will never be called on a runtime thread.</span></span> <span data-ttu-id="c270d-107">Se o host tiver um thread de tempo de execução bloqueado, ele deve liberá-lo agora.</span><span class="sxs-lookup"><span data-stu-id="c270d-107">If the host has a runtime thread blocked, it should release it now.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f2a1-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="3f2a1-105">Remarks</span></span>  
+ <span data-ttu-id="3f2a1-106">O `ReleaseAllRuntimeThreads` método nunca será chamado em um segmento de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="3f2a1-106">The `ReleaseAllRuntimeThreads` method will never be called on a runtime thread.</span></span> <span data-ttu-id="3f2a1-107">Se o host tiver um segmento de tempo de execução bloqueado, ele deverá liberá-lo agora.</span><span class="sxs-lookup"><span data-stu-id="3f2a1-107">If the host has a runtime thread blocked, it should release it now.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c270d-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c270d-108">Requirements</span></span>  
- <span data-ttu-id="c270d-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c270d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f2a1-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3f2a1-108">Requirements</span></span>  
+ <span data-ttu-id="3f2a1-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f2a1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c270d-110">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c270d-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3f2a1-110">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3f2a1-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c270d-111">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="c270d-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3f2a1-111">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="3f2a1-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c270d-112">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c270d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3f2a1-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f2a1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c270d-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c270d-113">See Also</span></span>  
- [<span data-ttu-id="c270d-114">Interface IDebuggerThreadControl</span><span class="sxs-lookup"><span data-stu-id="c270d-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3f2a1-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3f2a1-113">See also</span></span>
+- [<span data-ttu-id="3f2a1-114">Interface IDebuggerThreadControl</span><span class="sxs-lookup"><span data-stu-id="3f2a1-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

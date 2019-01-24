@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583750"
 ---
-# <a name="corprfclausetype-enumeration"></a><span data-ttu-id="3cb3f-102">Enumeração COR_PRF_CLAUSE_TYPE</span><span class="sxs-lookup"><span data-stu-id="3cb3f-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
-<span data-ttu-id="3cb3f-103">Indica o tipo de cláusula de exceção que o código acabou de inserir ou deixar.</span><span class="sxs-lookup"><span data-stu-id="3cb3f-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
+# <a name="corprfclausetype-enumeration"></a><span data-ttu-id="c59a7-102">Enumeração COR_PRF_CLAUSE_TYPE</span><span class="sxs-lookup"><span data-stu-id="c59a7-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
+<span data-ttu-id="c59a7-103">Indica o tipo de cláusula de exceção que o código acabou de inserir ou deixar.</span><span class="sxs-lookup"><span data-stu-id="c59a7-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3cb3f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3cb3f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c59a7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c59a7-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,23 +37,23 @@ typedef enum {
 } COR_PRF_CLAUSE_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3cb3f-105">Membros</span><span class="sxs-lookup"><span data-stu-id="3cb3f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c59a7-105">Membros</span><span class="sxs-lookup"><span data-stu-id="c59a7-105">Members</span></span>  
   
-|<span data-ttu-id="3cb3f-106">Membro</span><span class="sxs-lookup"><span data-stu-id="3cb3f-106">Member</span></span>|<span data-ttu-id="3cb3f-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="3cb3f-107">Description</span></span>|  
+|<span data-ttu-id="c59a7-106">Membro</span><span class="sxs-lookup"><span data-stu-id="c59a7-106">Member</span></span>|<span data-ttu-id="c59a7-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="c59a7-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="3cb3f-108">A cláusula de exceção não é válida.</span><span class="sxs-lookup"><span data-stu-id="3cb3f-108">The exception clause is not valid.</span></span>|  
-|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="3cb3f-109">A cláusula de exceção é uma expressão de filtro.</span><span class="sxs-lookup"><span data-stu-id="3cb3f-109">The exception clause is a filter expression.</span></span>|  
-|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="3cb3f-110">A cláusula de exceção é um `catch` instrução.</span><span class="sxs-lookup"><span data-stu-id="3cb3f-110">The exception clause is a `catch` statement.</span></span>|  
-|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="3cb3f-111">A cláusula de exceção é um `finally` instrução.</span><span class="sxs-lookup"><span data-stu-id="3cb3f-111">The exception clause is a `finally` statement.</span></span>|  
+|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="c59a7-108">A cláusula de exceção não é válida.</span><span class="sxs-lookup"><span data-stu-id="c59a7-108">The exception clause is not valid.</span></span>|  
+|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="c59a7-109">A cláusula de exceção é uma expressão de filtro.</span><span class="sxs-lookup"><span data-stu-id="c59a7-109">The exception clause is a filter expression.</span></span>|  
+|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="c59a7-110">A cláusula de exceção é um `catch` instrução.</span><span class="sxs-lookup"><span data-stu-id="c59a7-110">The exception clause is a `catch` statement.</span></span>|  
+|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="c59a7-111">A cláusula de exceção é um `finally` instrução.</span><span class="sxs-lookup"><span data-stu-id="c59a7-111">The exception clause is a `finally` statement.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3cb3f-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3cb3f-112">Requirements</span></span>  
- <span data-ttu-id="3cb3f-113">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3cb3f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c59a7-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c59a7-112">Requirements</span></span>  
+ <span data-ttu-id="c59a7-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c59a7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3cb3f-114">**Cabeçalho:** Corprof. idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3cb3f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c59a7-114">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c59a7-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3cb3f-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3cb3f-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c59a7-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c59a7-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3cb3f-116">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3cb3f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c59a7-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c59a7-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3cb3f-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3cb3f-117">See Also</span></span>  
- [<span data-ttu-id="3cb3f-118">Criando perfil de enumerações</span><span class="sxs-lookup"><span data-stu-id="3cb3f-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="c59a7-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c59a7-117">See also</span></span>
+- [<span data-ttu-id="c59a7-118">Criando perfil de enumerações</span><span class="sxs-lookup"><span data-stu-id="c59a7-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

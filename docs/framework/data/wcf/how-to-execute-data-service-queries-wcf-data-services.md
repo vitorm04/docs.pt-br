@@ -1,13 +1,6 @@
 ---
-title: "Como executar consultas do serviço de dados (WCF Data Services)"
-ms.custom: 
+title: 'Como: Executar consultas de serviço de dados (WCF Data Services)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,47 +9,43 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ed40236fd902536a45e821abea768d5117fafde
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aac0e4c71ae2752d4f56ae5eadb5f0a8d381d5fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623281"
 ---
-# <a name="how-to-execute-data-service-queries-wcf-data-services"></a><span data-ttu-id="1ea5b-102">Como executar consultas do serviço de dados (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="1ea5b-102">How to: Execute Data Service Queries (WCF Data Services)</span></span>
-<span data-ttu-id="1ea5b-103">O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite consultar um serviço de dados de um aplicativo cliente baseado em .NET Framework usando as classes de serviço de dados do cliente geradas.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enables you to query a data service from a .NET Framework-based client application by using the generated client data service classes.</span></span> <span data-ttu-id="1ea5b-104">Você pode executar consultas usando um desses métodos:</span><span class="sxs-lookup"><span data-stu-id="1ea5b-104">You can execute queries by using one of these methods:</span></span>  
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a><span data-ttu-id="d5f9f-102">Como: Executar consultas de serviço de dados (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="d5f9f-102">How to: Execute Data Service Queries (WCF Data Services)</span></span>
+<span data-ttu-id="d5f9f-103">O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite consultar um serviço de dados de um aplicativo cliente baseado em .NET Framework usando as classes de serviço de dados do cliente geradas.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enables you to query a data service from a .NET Framework-based client application by using the generated client data service classes.</span></span> <span data-ttu-id="d5f9f-104">Você pode executar consultas usando um desses métodos:</span><span class="sxs-lookup"><span data-stu-id="d5f9f-104">You can execute queries by using one of these methods:</span></span>  
   
--   <span data-ttu-id="1ea5b-105">Executando uma consulta LINQ no <xref:System.Data.Services.Client.DataServiceQuery%601> nomeado que você obtém de <xref:System.Data.Services.Client.DataServiceContext> que a ferramenta `Add Data Service Reference` produz.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-105">Executing a LINQ query against the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
+-   <span data-ttu-id="d5f9f-105">Executando uma consulta LINQ no <xref:System.Data.Services.Client.DataServiceQuery%601> nomeado que você obtém de <xref:System.Data.Services.Client.DataServiceContext> que a ferramenta `Add Data Service Reference` produz.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-105">Executing a LINQ query against the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
   
--   <span data-ttu-id="1ea5b-106">Implicitamente, enumerando um <xref:System.Data.Services.Client.DataServiceQuery%601> nomeado que você obtém de <xref:System.Data.Services.Client.DataServiceContext> que a ferramenta `Add Data Service Reference` produz.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-106">Implicitly, by enumerating over the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
+-   <span data-ttu-id="d5f9f-106">Implicitamente, enumerando um <xref:System.Data.Services.Client.DataServiceQuery%601> nomeado que você obtém de <xref:System.Data.Services.Client.DataServiceContext> que a ferramenta `Add Data Service Reference` produz.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-106">Implicitly, by enumerating over the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
   
--   <span data-ttu-id="1ea5b-107">Explicitamente, chamando o método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> em <xref:System.Data.Services.Client.DataServiceQuery%601> ou <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> para a execução assíncrona.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-107">Explicitly, by calling the <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> method on the <xref:System.Data.Services.Client.DataServiceQuery%601>, or the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method for asynchronous execution.</span></span>  
+-   <span data-ttu-id="d5f9f-107">Explicitamente, chamando o método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> em <xref:System.Data.Services.Client.DataServiceQuery%601> ou <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> para a execução assíncrona.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-107">Explicitly, by calling the <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> method on the <xref:System.Data.Services.Client.DataServiceQuery%601>, or the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method for asynchronous execution.</span></span>  
   
- <span data-ttu-id="1ea5b-108">Para obter mais informações, consulte [consultando o Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="1ea5b-108">For more information, see [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="d5f9f-108">Para obter mais informações, consulte [consultando o Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="d5f9f-108">For more information, see [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="1ea5b-109">O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="1ea5b-110">Esse serviço e as classes de dados do cliente são criadas quando você concluir o [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="1ea5b-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="d5f9f-109">O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="d5f9f-110">Esse serviço e as classes de dados do cliente são criadas quando você concluir o [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="d5f9f-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1ea5b-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1ea5b-111">Example</span></span>  
- <span data-ttu-id="1ea5b-112">O exemplo a seguir mostra como definir e executar uma consulta LINQ que retorna todos os `Customers` no serviço de dados Northwind.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-112">The following example shows how to define and execute a LINQ query that returns all `Customers` against the Northwind data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="d5f9f-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d5f9f-111">Example</span></span>  
+ <span data-ttu-id="d5f9f-112">O exemplo a seguir mostra como definir e executar uma consulta LINQ que retorna todos os `Customers` no serviço de dados Northwind.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-112">The following example shows how to define and execute a LINQ query that returns all `Customers` against the Northwind data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomerslinq)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomerslinq)]  
   
-## <a name="example"></a><span data-ttu-id="1ea5b-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1ea5b-113">Example</span></span>  
- <span data-ttu-id="1ea5b-114">O exemplo a seguir mostra como usar o contexto que a ferramenta `Add Data Service Reference` gera para implicitamente executar uma consulta que retorna todos os `Customers` no serviço de dados Northwind.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-114">The following example shows how to use the context that the `Add Data Service Reference` tool generates to implicitly execute a query that returns all `Customers` against the Northwind data service.</span></span> <span data-ttu-id="1ea5b-115">O URI do conjunto de entidades de `Customers` é determinado automaticamente pelo contexto.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-115">The URI of the requested `Customers` entity set is determined automatically by the context.</span></span> <span data-ttu-id="1ea5b-116">A consulta é executada implicitamente quando a enumeração ocorre.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-116">The query is executed implicitly when the enumeration occurs.</span></span>  
+## <a name="example"></a><span data-ttu-id="d5f9f-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d5f9f-113">Example</span></span>  
+ <span data-ttu-id="d5f9f-114">O exemplo a seguir mostra como usar o contexto que a ferramenta `Add Data Service Reference` gera para implicitamente executar uma consulta que retorna todos os `Customers` no serviço de dados Northwind.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-114">The following example shows how to use the context that the `Add Data Service Reference` tool generates to implicitly execute a query that returns all `Customers` against the Northwind data service.</span></span> <span data-ttu-id="d5f9f-115">O URI do conjunto de entidades de `Customers` é determinado automaticamente pelo contexto.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-115">The URI of the requested `Customers` entity set is determined automatically by the context.</span></span> <span data-ttu-id="d5f9f-116">A consulta é executada implicitamente quando a enumeração ocorre.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-116">The query is executed implicitly when the enumeration occurs.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomers)]
  [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomers)]  
   
-## <a name="example"></a><span data-ttu-id="1ea5b-117">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1ea5b-117">Example</span></span>  
- <span data-ttu-id="1ea5b-118">O exemplo a seguir mostra como usar o <xref:System.Data.Services.Client.DataServiceContext> para explicitamente executar uma consulta que retorna todos os `Customers` no serviço de dados Northwind.</span><span class="sxs-lookup"><span data-stu-id="1ea5b-118">The following example shows how to use the <xref:System.Data.Services.Client.DataServiceContext> to explicitly execute a query that returns all `Customers` against the Northwind data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="d5f9f-117">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d5f9f-117">Example</span></span>  
+ <span data-ttu-id="d5f9f-118">O exemplo a seguir mostra como usar o <xref:System.Data.Services.Client.DataServiceContext> para explicitamente executar uma consulta que retorna todos os `Customers` no serviço de dados Northwind.</span><span class="sxs-lookup"><span data-stu-id="d5f9f-118">The following example shows how to use the <xref:System.Data.Services.Client.DataServiceContext> to explicitly execute a query that returns all `Customers` against the Northwind data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersexplicit)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersexplicit)]  
   
-## <a name="see-also"></a><span data-ttu-id="1ea5b-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1ea5b-119">See Also</span></span>  
- [<span data-ttu-id="1ea5b-120">Como adicionar opções de consulta para uma consulta de serviço de dados</span><span class="sxs-lookup"><span data-stu-id="1ea5b-120">How to: Add Query Options to a Data Service Query</span></span>](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="d5f9f-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d5f9f-119">See also</span></span>
+- [<span data-ttu-id="d5f9f-120">Como: Adicionar opções de consulta a uma consulta de serviço de dados</span><span class="sxs-lookup"><span data-stu-id="d5f9f-120">How to: Add Query Options to a Data Service Query</span></span>](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
