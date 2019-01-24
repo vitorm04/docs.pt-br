@@ -4,12 +4,6 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78149d1f8fdad3c11fe693221888f115af84ada2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406416"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (referência de API não gerenciada)
 Oferece suporte à criação de licença Authenticode XrML e módulo de verificação.  
@@ -42,5 +36,5 @@ Oferece suporte à criação de licença Authenticode XrML e módulo de verifica
  [Estrutura AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
  Define as informações sobre o carimbo de data/hora do Authenticode.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de API não gerenciada](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>Consulte também
+- [Referência de API não gerenciada](../../../../docs/framework/unmanaged-api/index.md)
