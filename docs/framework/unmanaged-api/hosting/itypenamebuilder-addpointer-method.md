@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d1f0be1164f4c6ae28ab2bcc580d098e6d1b921
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: edd6b3f3960c5ef6d64e55d41bc540b9bdf0bcd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566687"
 ---
-# <a name="itypenamebuilderaddpointer-method"></a><span data-ttu-id="73453-102">Método ITypeNameBuilder::AddPointer</span><span class="sxs-lookup"><span data-stu-id="73453-102">ITypeNameBuilder::AddPointer Method</span></span>
-<span data-ttu-id="73453-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="73453-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderaddpointer-method"></a><span data-ttu-id="df355-102">Método ITypeNameBuilder::AddPointer</span><span class="sxs-lookup"><span data-stu-id="df355-102">ITypeNameBuilder::AddPointer Method</span></span>
+<span data-ttu-id="df355-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="df355-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73453-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="73453-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df355-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="df355-104">Syntax</span></span>  
   
 ```  
 HRESULT AddPointer ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="73453-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="73453-105">Requirements</span></span>  
- <span data-ttu-id="73453-106">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73453-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="df355-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="df355-105">Requirements</span></span>  
+ <span data-ttu-id="df355-106">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df355-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73453-107">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="73453-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="df355-107">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="df355-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="73453-108">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="73453-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="df355-108">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="df355-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="73453-109">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73453-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="df355-109">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df355-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73453-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="73453-110">See Also</span></span>  
- [<span data-ttu-id="73453-111">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="73453-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="df355-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="df355-110">See also</span></span>
+- [<span data-ttu-id="df355-111">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="df355-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

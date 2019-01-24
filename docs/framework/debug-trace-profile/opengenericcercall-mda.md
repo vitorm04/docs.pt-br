@@ -12,36 +12,36 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2cb99a1bda8223ddece4b4aff4a87d95357d90e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 92528a2cf2227520327b9be2dca70be4c238ff61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564676"
 ---
-# <a name="opengenericcercall-mda"></a><span data-ttu-id="bd86a-102">MDA openGenericCERCall</span><span class="sxs-lookup"><span data-stu-id="bd86a-102">openGenericCERCall MDA</span></span>
-<span data-ttu-id="bd86a-103">O Assistente de Depuração Gerenciado de `openGenericCERCall` é ativado para avisar que um gráfico de CER (região de execução restrita) com variáveis de tipo genérico no método raiz está sendo processado em tempo de compilação JIT ou tempo de geração de imagem nativa e pelo menos uma das variáveis de tipo genérico é um tipo de referência de objeto.</span><span class="sxs-lookup"><span data-stu-id="bd86a-103">The `openGenericCERCall` managed debugging assistant is activated to warn that a constrained execution region (CER) graph with generic type variables at the root method is being processed at JIT-compilation or native image generation time and at least one of the generic type variables is an object reference type.</span></span>  
+# <a name="opengenericcercall-mda"></a><span data-ttu-id="101b3-102">MDA openGenericCERCall</span><span class="sxs-lookup"><span data-stu-id="101b3-102">openGenericCERCall MDA</span></span>
+<span data-ttu-id="101b3-103">O Assistente de Depuração Gerenciado de `openGenericCERCall` é ativado para avisar que um gráfico de CER (região de execução restrita) com variáveis de tipo genérico no método raiz está sendo processado em tempo de compilação JIT ou tempo de geração de imagem nativa e pelo menos uma das variáveis de tipo genérico é um tipo de referência de objeto.</span><span class="sxs-lookup"><span data-stu-id="101b3-103">The `openGenericCERCall` managed debugging assistant is activated to warn that a constrained execution region (CER) graph with generic type variables at the root method is being processed at JIT-compilation or native image generation time and at least one of the generic type variables is an object reference type.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="bd86a-104">Sintomas</span><span class="sxs-lookup"><span data-stu-id="bd86a-104">Symptoms</span></span>  
- <span data-ttu-id="bd86a-105">O código de CER não é executado quando um thread é anulado ou um domínio do aplicativo é descarregado.</span><span class="sxs-lookup"><span data-stu-id="bd86a-105">CER code does not run when a thread is aborted or when an application domain is unloaded.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="101b3-104">Sintomas</span><span class="sxs-lookup"><span data-stu-id="101b3-104">Symptoms</span></span>  
+ <span data-ttu-id="101b3-105">O código de CER não é executado quando um thread é anulado ou um domínio do aplicativo é descarregado.</span><span class="sxs-lookup"><span data-stu-id="101b3-105">CER code does not run when a thread is aborted or when an application domain is unloaded.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="bd86a-106">Causa</span><span class="sxs-lookup"><span data-stu-id="bd86a-106">Cause</span></span>  
- <span data-ttu-id="bd86a-107">Em tempo de compilação JIT, uma instanciação que contém um tipo de referência de objeto é apenas representativo porque o código resultante é compartilhado e cada uma das variáveis de tipo de referência de objeto pode ser qualquer tipo de referência de objeto.</span><span class="sxs-lookup"><span data-stu-id="bd86a-107">At JIT-compilation time, an instantiation containing an object reference type is only representative because the resultant code is shared, and each of the object reference type variables might be any object reference type.</span></span> <span data-ttu-id="bd86a-108">Isso pode impedir a preparação antecipada de alguns recursos de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="bd86a-108">This can prevent the preparation of some run-time resources ahead of time.</span></span>  
+## <a name="cause"></a><span data-ttu-id="101b3-106">Causa</span><span class="sxs-lookup"><span data-stu-id="101b3-106">Cause</span></span>  
+ <span data-ttu-id="101b3-107">Em tempo de compilação JIT, uma instanciação que contém um tipo de referência de objeto é apenas representativo porque o código resultante é compartilhado e cada uma das variáveis de tipo de referência de objeto pode ser qualquer tipo de referência de objeto.</span><span class="sxs-lookup"><span data-stu-id="101b3-107">At JIT-compilation time, an instantiation containing an object reference type is only representative because the resultant code is shared, and each of the object reference type variables might be any object reference type.</span></span> <span data-ttu-id="101b3-108">Isso pode impedir a preparação antecipada de alguns recursos de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="101b3-108">This can prevent the preparation of some run-time resources ahead of time.</span></span>  
   
- <span data-ttu-id="bd86a-109">Em particular, os métodos com variáveis de tipo genérico podem lentamente alocar recursos em segundo plano.</span><span class="sxs-lookup"><span data-stu-id="bd86a-109">In particular, methods with generic type variables can lazily allocate resources in the background.</span></span> <span data-ttu-id="bd86a-110">Essas são chamadas de entradas de dicionário genéricas.</span><span class="sxs-lookup"><span data-stu-id="bd86a-110">These are referred to as generic dictionary entries.</span></span> <span data-ttu-id="bd86a-111">Por exemplo, para a instrução `List<T> list = new List<T>();` em que `T` é uma variável de tipo genérico, o tempo de execução deve procurar e possivelmente criar a instanciação exata em tempo de execução, por exemplo, `List<Object>, List<String>` e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="bd86a-111">For instance, for the statement `List<T> list = new List<T>();` where `T` is a generic type variable the runtime must look up and possibly create the exact instantiation at run time, for example, `List<Object>, List<String>`,and so forth.</span></span> <span data-ttu-id="bd86a-112">Isso pode falhar por vários motivos fora do controle do desenvolvedor, tais como falta de memória.</span><span class="sxs-lookup"><span data-stu-id="bd86a-112">This can fail for a variety of reasons beyond the developer's control, such as running out of memory.</span></span>  
+ <span data-ttu-id="101b3-109">Em particular, os métodos com variáveis de tipo genérico podem lentamente alocar recursos em segundo plano.</span><span class="sxs-lookup"><span data-stu-id="101b3-109">In particular, methods with generic type variables can lazily allocate resources in the background.</span></span> <span data-ttu-id="101b3-110">Essas são chamadas de entradas de dicionário genéricas.</span><span class="sxs-lookup"><span data-stu-id="101b3-110">These are referred to as generic dictionary entries.</span></span> <span data-ttu-id="101b3-111">Por exemplo, para a instrução `List<T> list = new List<T>();` em que `T` é uma variável de tipo genérico, o tempo de execução deve procurar e possivelmente criar a instanciação exata em tempo de execução, por exemplo, `List<Object>, List<String>` e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="101b3-111">For instance, for the statement `List<T> list = new List<T>();` where `T` is a generic type variable the runtime must look up and possibly create the exact instantiation at run time, for example, `List<Object>, List<String>`,and so forth.</span></span> <span data-ttu-id="101b3-112">Isso pode falhar por vários motivos fora do controle do desenvolvedor, tais como falta de memória.</span><span class="sxs-lookup"><span data-stu-id="101b3-112">This can fail for a variety of reasons beyond the developer's control, such as running out of memory.</span></span>  
   
- <span data-ttu-id="bd86a-113">Esse MDA só deve ser ativado em tempo de compilação JIT e não quando há uma instanciação exata.</span><span class="sxs-lookup"><span data-stu-id="bd86a-113">This MDA should only be activated at JIT-compilation time, not when there is an exact instantiation.</span></span>  
+ <span data-ttu-id="101b3-113">Esse MDA só deve ser ativado em tempo de compilação JIT e não quando há uma instanciação exata.</span><span class="sxs-lookup"><span data-stu-id="101b3-113">This MDA should only be activated at JIT-compilation time, not when there is an exact instantiation.</span></span>  
   
- <span data-ttu-id="bd86a-114">Quando esse MDA é ativado, os sintomas prováveis são que as CERs não estejam funcionando para as instanciações incorretas.</span><span class="sxs-lookup"><span data-stu-id="bd86a-114">When this MDA is activated, the likely symptoms are that CERs are not functional for the bad instantiations.</span></span> <span data-ttu-id="bd86a-115">Na verdade, o tempo de execução não tentou implementar uma CER sob as circunstâncias que causaram a ativação do MDA.</span><span class="sxs-lookup"><span data-stu-id="bd86a-115">In fact, the runtime has not attempted to implement a CER under the circumstances that caused the MDA to be activated.</span></span> <span data-ttu-id="bd86a-116">Portanto, se o desenvolvedor usa uma instanciação compartilhada do CER, então os erros de compilação JIT, erros de carregamento de tipo genéricos ou anulações do thread dentro da região da CER pretendida não são detectados.</span><span class="sxs-lookup"><span data-stu-id="bd86a-116">So if the developer uses a shared instantiation of the CER, then JIT-compilation errors, generics type loading errors, or thread aborts within the region of the intended CER are not caught.</span></span>  
+ <span data-ttu-id="101b3-114">Quando esse MDA é ativado, os sintomas prováveis são que as CERs não estejam funcionando para as instanciações incorretas.</span><span class="sxs-lookup"><span data-stu-id="101b3-114">When this MDA is activated, the likely symptoms are that CERs are not functional for the bad instantiations.</span></span> <span data-ttu-id="101b3-115">Na verdade, o tempo de execução não tentou implementar uma CER sob as circunstâncias que causaram a ativação do MDA.</span><span class="sxs-lookup"><span data-stu-id="101b3-115">In fact, the runtime has not attempted to implement a CER under the circumstances that caused the MDA to be activated.</span></span> <span data-ttu-id="101b3-116">Portanto, se o desenvolvedor usa uma instanciação compartilhada do CER, então os erros de compilação JIT, erros de carregamento de tipo genéricos ou anulações do thread dentro da região da CER pretendida não são detectados.</span><span class="sxs-lookup"><span data-stu-id="101b3-116">So if the developer uses a shared instantiation of the CER, then JIT-compilation errors, generics type loading errors, or thread aborts within the region of the intended CER are not caught.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="bd86a-117">Resolução</span><span class="sxs-lookup"><span data-stu-id="bd86a-117">Resolution</span></span>  
- <span data-ttu-id="bd86a-118">Não use variáveis de tipo genérico do tipo de referência de objeto para métodos que podem conter uma CER.</span><span class="sxs-lookup"><span data-stu-id="bd86a-118">Do not use generic type variables that are of object reference type for methods that may contain a CER.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="101b3-117">Resolução</span><span class="sxs-lookup"><span data-stu-id="101b3-117">Resolution</span></span>  
+ <span data-ttu-id="101b3-118">Não use variáveis de tipo genérico do tipo de referência de objeto para métodos que podem conter uma CER.</span><span class="sxs-lookup"><span data-stu-id="101b3-118">Do not use generic type variables that are of object reference type for methods that may contain a CER.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="bd86a-119">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="bd86a-119">Effect on the Runtime</span></span>  
- <span data-ttu-id="bd86a-120">Esse MDA não tem efeito sobre o CLR.</span><span class="sxs-lookup"><span data-stu-id="bd86a-120">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="101b3-119">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="101b3-119">Effect on the Runtime</span></span>  
+ <span data-ttu-id="101b3-120">Esse MDA não tem efeito sobre o CLR.</span><span class="sxs-lookup"><span data-stu-id="101b3-120">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="bd86a-121">Saída</span><span class="sxs-lookup"><span data-stu-id="bd86a-121">Output</span></span>  
- <span data-ttu-id="bd86a-122">A seguir temos uma amostra de saída desse MDA.</span><span class="sxs-lookup"><span data-stu-id="bd86a-122">The following is a sample of output from this MDA.</span></span>  
+## <a name="output"></a><span data-ttu-id="101b3-121">Saída</span><span class="sxs-lookup"><span data-stu-id="101b3-121">Output</span></span>  
+ <span data-ttu-id="101b3-122">A seguir temos uma amostra de saída desse MDA.</span><span class="sxs-lookup"><span data-stu-id="101b3-122">The following is a sample of output from this MDA.</span></span>  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
   
@@ -51,7 +51,7 @@ ms.locfileid: "53153690"
   
  `declaringType name="OpenGenericCERCall"`  
   
-## <a name="configuration"></a><span data-ttu-id="bd86a-123">Configuração</span><span class="sxs-lookup"><span data-stu-id="bd86a-123">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="101b3-123">Configuração</span><span class="sxs-lookup"><span data-stu-id="101b3-123">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -61,8 +61,8 @@ ms.locfileid: "53153690"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bd86a-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="bd86a-124">Example</span></span>  
- <span data-ttu-id="bd86a-125">O código CER não é executado.</span><span class="sxs-lookup"><span data-stu-id="bd86a-125">The CER code is not executed.</span></span>  
+## <a name="example"></a><span data-ttu-id="101b3-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="101b3-124">Example</span></span>  
+ <span data-ttu-id="101b3-125">O código CER não é executado.</span><span class="sxs-lookup"><span data-stu-id="101b3-125">The CER code is not executed.</span></span>  
   
 ```csharp
 using System;  
@@ -106,7 +106,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bd86a-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bd86a-126">See Also</span></span>  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
- <xref:System.Runtime.ConstrainedExecution>  
- [<span data-ttu-id="bd86a-127">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="bd86a-127">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="101b3-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="101b3-126">See also</span></span>
+- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
+- <xref:System.Runtime.ConstrainedExecution>
+- [<span data-ttu-id="101b3-127">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="101b3-127">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
