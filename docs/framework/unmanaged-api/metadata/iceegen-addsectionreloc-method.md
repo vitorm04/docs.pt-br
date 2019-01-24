@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c281d03c6e3774938cfa6e4b4b3a541738b38489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a8e270f45300bd5f8c2e6cd87f9b84f31ec42320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722186"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>Método ICeeGen::AddSectionReloc
-Adiciona uma instrução de .reloc para a base de código.  
+Adiciona uma instrução de reloc a base de código.  
   
- Esse método está obsoleto e não deve ser usado.  
+ Esse método é obsoleto e não deve ser usado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,25 +42,25 @@ HRESULT AddSectionReloc (
   
 #### <a name="parameters"></a>Parâmetros  
  `section`  
- [in] A seção de código na memória ao qual adicionar uma instrução .reloc.  
+ [in] A seção de código na memória ao qual adicionar uma instrução de reloc.  
   
  `offset`  
  [in] O deslocamento da seção.  
   
  `relativeTo`  
- [in] A seção à qual `offset` se refere.  
+ [in] A seção à qual `offset` refere-se.  
   
  `relocType`  
- [in] Uma da [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) valores, que indica o tipo de instrução .reloc para adicionar.  
+ [in] Um dos [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) valores, que indica o tipo da instrução de reloc a adicionar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

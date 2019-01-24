@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 195f311d58f2169d715bb33986ee6e591622f377
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb73980faa64464c572945fe5ad04e015dc8805b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720646"
 ---
 # <a name="cvstruct-structure"></a>Estrutura CVStruct
-Contém informações que são usadas durante a instalação de um módulo ou uma imagem composta.  
+Contém informações que são usadas ao instalar um módulo ou uma imagem composta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,19 +41,19 @@ typedef struct {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|Principal|Número de compilação de versão principal.|  
-|Secundário|Número de compilação de versão secundária.|  
-|Sub|Número de compilação abaixo.|  
-|Build|Número de compilação.|  
+|Principal|Número de build de versão principal.|  
+|Secundário|Número de build de versão secundária.|  
+|Sub|Número de subpropriedades de compilação.|  
+|Build|número de compilação.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+## <a name="see-also"></a>Consulte também
+- [Estruturas de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

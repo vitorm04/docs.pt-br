@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: associando a dados em aplicativos híbridos'
+title: 'Passo a passo: Associando a dados em aplicativos híbridos'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724337"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Instruções passo a passo: associando a dados em aplicativos híbridos
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Passo a passo: Associando a dados em aplicativos híbridos
 Associando uma fonte de dados a um controle é essencial para fornecer aos usuários acesso a dados subjacentes, se você estiver usando [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este passo a passo mostra como você pode usar a vinculação de dados em aplicativos híbridos que incluam [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles.  
   
  As tarefas ilustradas neste passo a passo incluem:  
@@ -122,7 +122,7 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 1.  Dos **dados** menu, selecione **Add New Data Source**.  
   
-2.  No **Data Source Configuration Wizard**, criar uma conexão ao banco de dados Northwind usando um conjunto de dados. Para obter mais informações, consulte [como: conectar a dados em um banco de dados](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  No **Data Source Configuration Wizard**, criar uma conexão ao banco de dados Northwind usando um conjunto de dados. Para obter mais informações, confira [Como: Conectar a dados em um banco de dados](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
   
 3.  Quando for solicitado o **Data Source Configuration Wizard**, salve a cadeia de caracteres de conexão como `NorthwindConnectionString`.  
   
@@ -173,10 +173,10 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 10. Pressione F5 para compilar e executar o aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Vinculação de dados no exemplo de aplicativos híbridos](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [Passo a passo: hospedando um controle composto do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Instruções passo a passo: hospedando um controle de composição do WPF nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Vinculação de dados no exemplo de aplicativos híbridos](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Passo a passo: Hospedando um controle composto do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Passo a passo: Hospedando um controle composto do WPF nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

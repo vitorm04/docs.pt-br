@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fd354e1103832abee7f634eace3dd6defa8b646
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721130"
 ---
 # <a name="setsecurity-function"></a>Função SetSecurity
-Recupera o token de representação associado ao segmento atual.   
+Recupera o token de representação associado ao thread atual.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,23 +39,23 @@ HRESULT SetSecurity (
 
 ## <a name="parameters"></a>Parâmetros
 
-`pNeedToReset` [out] Quando a função retornar, contém um ponteiro para um `boolean` que indica se o token deve ser redefinido chamando o [ResetSecurity](resetsecurity.md) função.  
+`pNeedToReset` [out] Quando a função retorna, contém um ponteiro para um `boolean` que indica se o token deve ser redefinido por meio da chamada a [ResetSecurity](resetsecurity.md) função.  
 
 `token`  
-[out] Quando a função retornar, contém um ponteiro para o identificador de token de representação associado ao segmento atual. Seu valor pode ser `null` se não houver nenhum token associado ao segmento atual. 
+[out] Quando a função retornar, contém um ponteiro para o identificador do token de representação associado ao thread atual. Seu valor pode ser `null` se não houver nenhum token associado ao thread atual. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função tiver êxito, o valor de retorno é `S_OK` (0).
+Se a função for bem-sucedida, o valor retornado é `S_OK` (0).
 
-Se a função falhar, o valor de retorno é um código de erro diferente de zero. Para obter mais informações sobre o erro, chame o [GetErrorInfo](geterrorinfo.md) função.
+Se a função falhar, o valor de retorno é um código de erro diferente de zero. Para obter outras informações de erro, chame o [GetErrorInfo](geterrorinfo.md) função.
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707e482a6952ee1266950dc181fbc85e5d6ef398
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0cffafe9c8eac03d31c2b0b45dd65ed2c5b28861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722628"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>Método IMetaDataAssemblyImport::EnumManifestResources
 Obtém um ponteiro para um enumerador para os recursos referenciados no manifesto do assembly atual.  
@@ -40,32 +40,32 @@ HRESULT EnumManifestResources (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador. Isso deve ser nulo quando o `EnumManifestResources` método é chamado pela primeira vez.  
+ [no, out] Um ponteiro para o enumerador. Isso deve ser um null valor quando o `EnumManifestResources` método é chamado pela primeira vez.  
   
  `rManifestResources`  
  [out] A matriz usada para armazenar o `mdManifestResource` tokens de metadados.  
   
  `cMax`  
- [in] O número máximo de `mdManifestResource` tokens que podem ser colocados em `rManifestResources`.  
+ [in] O número máximo de `mdManifestResource` tokens que podem ser colocadas em `rManifestResources`.  
   
  `pcTokens`  
- [out] O número de `mdManifestResource` tokens realmente realizada em `rManifestResources`.  
+ [out] O número de `mdManifestResource` tokens realmente colocados nos `rManifestResources`.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` retornou com êxito.|  
-|`S_FALSE`|Não há nenhum tokens para enumerar. Nesse caso, `pcTokens` é definido como zero.|  
+|`S_OK`|`EnumManifestResources` retornado com êxito.|  
+|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcTokens` é definido como zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
