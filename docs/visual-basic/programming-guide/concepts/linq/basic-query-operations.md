@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: bcaefce4621fbfe3b3ac1a65ca634136fd9870e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585611"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Operações de consulta básica (Visual Basic)
 Este tópico fornece uma breve introdução ao [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões no Visual Basic e para alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Para mais informações, consulte os seguintes tópicos:  
@@ -103,7 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
   
 > [!NOTE]
->  Você pode executar esse código com a lista de alunos criado na [como: criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
+>  Você pode executar esse código com a lista de alunos criado no [como: Criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
   
  O `Join` palavra-chave é equivalente a um `INNER JOIN` no SQL. Ele combina duas coleções com base nos valores de chave de correspondência entre os elementos em duas coleções. A consulta retorna todo ou parte dos elementos da coleção que têm valores de chave de correspondência. Por exemplo, o código a seguir duplica a ação da junção implícita anterior.  
   
@@ -116,19 +116,19 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
   
- Se você executar esse código usando a lista de alunos criado na [como: criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), a saída do `For Each` instrução é:  
+ Se você executar esse código usando a lista de alunos criado no [como: Criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), a saída do `For Each` instrução é:  
   
- Ano: júnior  
+ Ano: Júnior  
   
  Tucker, Michael  
   
  Garcia, Hugo  
   
- Garcia, Débora  
+ Garcia, Debra  
   
  Tucker, Lance  
   
- Ano: sênior  
+ Ano: Sênior  
   
  Omelchenko, Svetlana  
   
@@ -140,7 +140,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Adams, Terry  
   
- Ano: primeiro ano  
+ Ano: Freshman  
   
  Mortensen, Sven  
   
@@ -152,9 +152,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Para obter mais informações sobre `Group By`, consulte [por cláusula Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Consultas](../../../../visual-basic/language-reference/queries/index.md)  
- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Consultas](../../../../visual-basic/language-reference/queries/index.md)
+- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

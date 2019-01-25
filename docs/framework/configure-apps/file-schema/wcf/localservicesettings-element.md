@@ -2,20 +2,20 @@
 title: elemento &lt;localServiceSettings&gt;
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 5d5150590bc0a8a0d21662eadc7dda67aad872ef
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6427f28bfbaa38df20696911f5f72c73d992c971
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535223"
 ---
 # <a name="ltlocalservicesettingsgt-element"></a>elemento &lt;localServiceSettings&gt;
 Especifica as configurações de segurança de um serviço local para esta associação.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<customBinding>  
-\<associação >  
+\<binding>  
 \<segurança >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -69,7 +69,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica os valores padrão usados para iniciar um serviço de conversa segura.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica os valores padrão usados para iniciar um serviço de conversa segura.|  
   
 ## <a name="remarks"></a>Comentários  
  As configurações são locais porque eles não são publicados como parte da política de segurança do serviço e não afetam a associação do cliente.  
@@ -86,15 +86,15 @@ Especifica as configurações de segurança de um serviço local para esta assoc
   
  Em uma sessão de conversa segura, observe que ambos `inactivityTimeout` e o `receiveTimeout` atributos na associação afetam o tempo limite da sessão. O menor dos dois determina quando o tempo limite seja excedido.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

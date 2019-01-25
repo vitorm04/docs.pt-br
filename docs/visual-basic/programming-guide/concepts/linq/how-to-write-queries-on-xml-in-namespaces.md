@@ -1,15 +1,15 @@
 ---
-title: 'Como: escrever consultas no XML nos Namespaces (Visual Basic)'
+title: 'Como: Escrever consultas no XML nos Namespaces (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: f4e895e560d0fb11c128248e4f42d1d5124bc124
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609922"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Como: escrever consultas no XML nos Namespaces (Visual Basic)
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Como: Escrever consultas no XML nos Namespaces (Visual Basic)
 Para escrever uma consulta em XML que está em um namespace, você deve usar os objetos <xref:System.Xml.Linq.XName> que têm o namespace correto.  
   
  No Visual Basic, a abordagem mais comum é definir um namespace global e, em seguida, usar os literais XML e as propriedades XML que usam o namespace global. Você pode definir um namespace global padrão nesse caso, no qual os elementos nos literais XML estarão no namespace por padrão. Como alternativa, você pode definir um namespace global com um prefixo e, em seguida, usar o prefixo como necessário nos literais XML e nas propriedades XML. Como ocorre com outros formatos de XML, os atributos estão sempre em nenhum namespace por padrão.  
@@ -88,5 +88,5 @@ End Module
 3  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Consulte também
+- [Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a11f689f1fa93e1122ffcc78187c4287db7ea534
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e33d69e319d7817a54dca76526b6c3ee9bb6384f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729964"
 ---
 # <a name="isymunmanagedwriterclosescope-method"></a>Método ISymUnmanagedWriter::CloseScope
 Fecha o escopo léxico atual.  
@@ -42,12 +42,12 @@ HRESULT CloseScope(
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Quando um escopo é fechado, não mais variáveis podem ser definidos dentro dela.  
+ Quando um escopo é fechado, não há mais variáveis podem ser definidas dentro dele.  
   
- [Isymunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) retorna um identificador de escopo opaco que pode ser usado com [: Setscoperange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) definir posteriormente um escopo inicial e final deslocamento. Nesse caso, os deslocamentos passados para `ISymUnmanagedWriter::OpenScope` e `ISymUnmanagedWriter::CloseScope` são ignorados. Identificadores de escopo são válidos somente no método atual.  
+ [Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) retorna um identificador de escopo opaco que pode ser usado com [isymunmanagedwriter:: Setscoperange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) definir posteriormente um escopo inicial e final deslocamento. Nesse caso, os deslocamentos passados para `ISymUnmanagedWriter::OpenScope` e `ISymUnmanagedWriter::CloseScope` são ignorados. Identificadores de escopo são válidos somente no método atual.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

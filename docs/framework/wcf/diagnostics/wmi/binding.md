@@ -2,12 +2,12 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: 84e304f3dedcbd785d6238e6cb5eb142c288b995
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aaf0dd9d6918f2c248942cee3773eee8332adda9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552834"
 ---
 # <a name="binding"></a>Associação
 WMI de associação  
@@ -41,7 +41,7 @@ class Binding
   
  A coleção de elementos implementados pela associação de associação.  
   
-### <a name="closetimeout"></a>closeTimeout  
+### <a name="closetimeout"></a>CloseTimeout  
  Tipo de dados: datetime  
   
  Tipo de acesso: Somente leitura  
@@ -62,14 +62,14 @@ class Binding
   
  O namespace XML da associação.  
   
-### <a name="opentimeout"></a>openTimeout  
+### <a name="opentimeout"></a>OpenTimeout  
  Tipo de dados: datetime  
   
  Tipo de acesso: Somente leitura  
   
  O intervalo de tempo fornecido para a conclusão de uma operação open.  
   
-### <a name="receivetimeout"></a>receiveTimeout  
+### <a name="receivetimeout"></a>ReceiveTimeout  
  Tipo de dados: datetime  
   
  Tipo de acesso: Somente leitura  
@@ -96,5 +96,5 @@ class Binding
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.Binding>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.Binding>

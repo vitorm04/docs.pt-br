@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6323d27158855e5ded1698401835b35632bedebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603827"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Visão geral de renderização de gráficos do WPF
 Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ele se concentra na função do <xref:System.Windows.Media.Visual> classe para suporte à renderização no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo.  
@@ -25,15 +25,15 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
   
  O <xref:System.Windows.Media.Visual> objeto é um núcleo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objeto, cuja função principal é fornecer suporte a renderização. Controles de interface do usuário, como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBox>, derivam o <xref:System.Windows.Media.Visual> de classe e usá-lo para persistir seus dados de renderização. O <xref:System.Windows.Media.Visual> objeto oferece suporte para:  
   
--   Exibição de saída: renderização do conteúdo de desenho persistentes e serializado de um visual.  
+-   Exibição de saída: Renderizando o persistente, serializado conteúdo de desenho de um visual.  
   
--   Transformações: Realizar transformações em um visual.  
+-   Transformações: Execução de transformações em um visual.  
   
--   Recorte: dar suporte à área de recorte para um visual.  
+-   Recorte: Fornecendo suporte de região de recorte para um visual.  
   
--   Teste de clique: determinar se uma coordenada ou geometria está contida dentro dos limites de um visual.  
+-   O teste de clique: Determinando se uma coordenada ou geometria está contida dentro dos limites de um visual.  
   
--   Cálculos de caixa delimitadora: determinar o retângulo delimitador de um visual.  
+-   Cálculos de caixa delimitadora: Determinando o retângulo delimitador de um visual.  
   
  No entanto, o <xref:System.Windows.Media.Visual> objeto não inclui suporte para recursos de não renderização, tais como:  
   
@@ -159,7 +159,7 @@ Diagrama de hierarquia de árvore visual
 Diagrama da ordem de renderização da árvore visual  
   
 ### <a name="root-visual"></a>Visual raiz  
- O **visual raiz** é o elemento mais alto em uma hierarquia de árvore visual. Na maioria dos aplicativos, a classe base do visual raiz seja <xref:System.Windows.Window> ou <xref:System.Windows.Navigation.NavigationWindow>. No entanto, se você estivesse hospedando objetos visuais em um aplicativo Win32, o visual raiz seria o visual mais alto que você estivesse hospedando na janela Win32. Para obter mais informações, consulte [Tutorial: hospedando objetos visuais em um aplicativo Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
+ O **visual raiz** é o elemento mais alto em uma hierarquia de árvore visual. Na maioria dos aplicativos, a classe base do visual raiz seja <xref:System.Windows.Window> ou <xref:System.Windows.Navigation.NavigationWindow>. No entanto, se você estivesse hospedando objetos visuais em um aplicativo Win32, o visual raiz seria o visual mais alto que você estivesse hospedando na janela Win32. Para obter mais informações, confira [Tutorial: Hospedando objetos visuais em um aplicativo Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
   
 ### <a name="relationship-to-the-logical-tree"></a>Relacionamento com a árvore lógica  
  A árvore lógica no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] representa os elementos de um aplicativo em tempo de execução. Embora você não manipule esta árvore diretamente, essa exibição do aplicativo é útil para entender a herança de propriedades e o roteamento de eventos. Diferentemente da árvore visual, a árvore lógica pode representar objetos de dados não visuais, tais como <xref:System.Windows.Documents.ListItem>. Em muitos casos, a árvore lógica mapeia de modo muito próximo às definições de marcação de um aplicativo. O código a seguir mostra um <xref:System.Windows.Controls.DockPanel> elemento definido na marcação.  
@@ -186,7 +186,7 @@ Painel Gerenciador de Árvore Visual no XamlPad
 ### <a name="profiling-visual-performance"></a>Criação de perfil de desempenho Visual  
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um conjunto de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A ferramenta Visual Profiler fornece uma exibição gráfica sofisticada de dados de desempenho, por meio do mapeamento diretamente para a árvore visual do aplicativo. Nessa tela, a seção **Uso de CPU** do Visual Profiler lhe dá um detalhamento preciso do uso de um objeto de serviços do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], assim como renderização e layout.  
   
- ![Exibir a saída do Visual Profiler](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Visual Profiler display output](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Saída de exibição do Visual Profiler  
   
 <a name="visual_rendering_behavior"></a>   
@@ -257,12 +257,12 @@ Elementos gráficos e texto em diferentes configurações de DPI
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Teste de clique na camada visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [Usando objetos DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Tutorial: hospedando objetos visuais em um aplicativo Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Teste de clique na camada visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [Usando objetos DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+- [Tutorial: Hospedando objetos visuais em um aplicativo Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

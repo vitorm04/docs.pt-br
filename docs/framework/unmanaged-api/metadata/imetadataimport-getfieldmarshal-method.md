@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 837b2142e200e224fe32c2c673be0f317633452a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3bc90a17a0469cd716c1e3e990b5c0fb2ff8bf5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647563"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>Método IMetaDataImport::GetFieldMarshal
-Obtém um ponteiro para o tipo nativo, não gerenciado do campo representado pelo token de metadados de campo especificado.  
+Obtém um ponteiro para o tipo não gerenciado, nativo do campo representado pelo token de metadados de campo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,20 +42,20 @@ HRESULT GetFieldMarshal (
  [in] O token de metadados que representa o campo para obter informações de marshaling de interoperabilidade para.  
   
  `ppvNativeType`  
- [out] Um ponteiro para a assinatura de metadados do tipo nativo do campo.  
+ [out] Um ponteiro para a assinatura de metadados de tipo nativo do campo.  
   
  `pcbNativeType`  
  [out] O tamanho em bytes do `ppvNativeType`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

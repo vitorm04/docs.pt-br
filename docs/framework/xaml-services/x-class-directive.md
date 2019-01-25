@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2913782d8179fb882f8e916ed25feafcb5740a3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690040"
 ---
 # <a name="xclass-directive"></a>Diretiva x:Class
 Configura a compilação de marcação XAML para ingressar em classes parciais entre marcação e code-behind. A classe código parcial é definida em um arquivo de código separado em um [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] idioma, enquanto a classe parcial de marcação é normalmente criada pela geração de código durante a compilação de XAML.  
@@ -60,8 +60,8 @@ Configura a compilação de marcação XAML para ingressar em classes parciais e
 ## <a name="silverlight-usage-notes"></a>Notas de uso do Silverlight  
  `x:Class` para o Silverlight está documentado separadamente. Para obter mais informações, consulte [Namespace de XAML (x) Recursos de linguagem (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Consulte também  
- [Diretiva x:Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [XAML e classes personalizadas para WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Diretiva x:ClassModifier](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
- [Tipos migrados do WPF para System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Consulte também
+- [Diretiva x:Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)
+- [XAML e classes personalizadas para WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Diretiva x:ClassModifier](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [Tipos migrados do WPF para System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

@@ -3,21 +3,21 @@ title: '&lt;workflowUnhandledException&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: d9db6ecc2e95e0d1ec5738f1d2f4a09a89c57f21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5c5dddc6d126811d7fd1eaae2f85df1e42c1cd41
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700865"
 ---
 # <a name="ltworkflowunhandledexceptiongt"></a>&lt;workflowUnhandledException&gt;
 Um comportamento de serviço que permite que você especifique a ação a ser executada quando ocorre uma exceção sem tratamento em um serviço de fluxo de trabalho.  
   
 \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento >  
-\<workflowUnhandledException >  
+\<serviceBehaviors>  
+\<behavior>  
+\<workflowUnhandledException>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,6 +49,6 @@ Um comportamento de serviço que permite que você especifique a ação a ser ex
 |-------------|-----------------|  
 |[\<comportamento > de \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Especifica um elemento de comportamento.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.WorkflowUnhandledExceptionElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.WorkflowUnhandledExceptionElement>

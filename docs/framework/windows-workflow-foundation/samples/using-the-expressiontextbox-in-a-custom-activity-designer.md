@@ -2,12 +2,12 @@
 title: Usando o ExpressionTextBox em um designer personalizado de atividades
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: ee9da26625d772eda6100fc4d0db0469941bdb0d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 87f1052b5bf2c7c4e260aa606cb03b978726bb77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587863"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Usando o ExpressionTextBox em um designer personalizado de atividades
 Este exemplo mostra como usar <xref:System.Activities.Presentation.View.ExpressionTextBox> em um designer personalizado de atividade. A atividade personalizado, `MultiAssign`, atribui dois valores de cadeia de caracteres a duas variáveis de cadeia de caracteres. Alguns controles de <xref:System.Activities.Presentation.View.ExpressionTextBox> associação a <xref:System.Activities.InArgument>s e associar a qualquer <xref:System.Activities.OutArgument>S.
@@ -46,6 +46,6 @@ Este exemplo mostra como usar <xref:System.Activities.Presentation.View.Expressi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Activities.Presentation.View.ExpressionTextBox>  
- [Desenvolvendo aplicativos com o Designer de Fluxo de Trabalho](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Activities.Presentation.View.ExpressionTextBox>
+- [Desenvolvendo aplicativos com o Designer de Fluxo de Trabalho](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

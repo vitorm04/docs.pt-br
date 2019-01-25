@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: d5f88656-433d-447c-b21c-2a12bed2e72a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 527e686eb0c354c3a1ebba36772e30211e995ab2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7cacf9333379566f80d270b172a1f3411bdc81cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509760"
 ---
 # <a name="isymunmanagedasyncmethodgetcatchhandleriloffset-method"></a>Método ISymUnmanagedAsyncMethod::GetCatchHandlerILOffset
-Consulte [método DefineCatchHandlerILOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  
+Ver [método DefineCatchHandlerILOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,5 +32,5 @@ HRESULT GetCatchHandlerILOffset(    [out, retval] ULONG32* pRetVal);
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedAsyncMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedAsyncMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

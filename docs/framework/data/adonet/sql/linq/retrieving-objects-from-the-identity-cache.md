@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569148"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recuperando objetos de cache de identidade
 Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de cache de identidade que é gerenciado por <xref:System.Data.Linq.DataContext>.  
@@ -20,7 +20,7 @@ Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de ca
  Em geral, porque uma consulta LINQ to SQL para retornar um objeto de cache de identidade, a consulta deve ser baseado a chave primária de um objeto e deve retornar um único objeto. Em particular, a consulta deve estar em um dos formulários gerais mostrados abaixo.  
   
 > [!NOTE]
->  Consultas pré-compilação compiladas não irão retornar objetos de cache de identidade. Para obter mais informações sobre consultas pré-compiladas, consulte <xref:System.Data.Linq.CompiledQuery> e [como: Store e reutilizar consultas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
+>  Consultas pré-compilação compiladas não irão retornar objetos de cache de identidade. Para obter mais informações sobre consultas pré-compilação compiladas, consulte <xref:System.Data.Linq.CompiledQuery> e [como: Store e reutilizar consultas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
   
  Uma consulta deve estar em um das seguintes formas gerais para recuperar um objeto de cache de identidade:  
   
@@ -64,8 +64,8 @@ Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de ca
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Identidade do objeto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Identidade do objeto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a>Consulte também
+- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Identidade do objeto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Identidade do objeto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

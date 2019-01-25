@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: 9710568c3c21878aa6aad626e3152168a2f0c2fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 86cfcce65998d19aea8592ae33c5baf58e1ff0fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516948"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Limitações da propriedade de intervalo do componente de temporizador dos Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.Timer> componente tem um <xref:System.Windows.Forms.Timer.Interval%2A> propriedade que especifica o número de milissegundos que passam entre um evento de temporizador e o próximo. A menos que o componente está desativado, um temporizador continua recebendo o <xref:System.Windows.Forms.Timer.Tick> evento em intervalos aproximadamente iguais de tempo.  
@@ -28,7 +28,7 @@ Os formulários do Windows <xref:System.Windows.Forms.Timer> componente tem um <
   
 -   A precisão do <xref:System.Windows.Forms.Timer.Interval%2A> propriedade é em milissegundos. Alguns computadores fornecem um contador de alta resolução que tem uma resolução maior do que milissegundos. A disponibilidade desse contador depende do hardware do processador do computador.
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Timer>  
- [Componente Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Visão geral do componente de temporizador](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Timer>
+- [Componente Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
+- [Visão geral do componente de temporizador](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 130ba2864537f017bd3037412d742d887df1ae68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 676f3fe9aa9ad7de1499bb42ff23d446b1cb73d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535483"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>Método ICLRDataTarget::GetTLSValue
-Obtém um valor do armazenamento local de thread (TLS) do thread no processo de destino especificado. Este método é chamado, os serviços de acesso dados common language runtime (CLR).  
+Obtém um valor de armazenamento local de thread (TLS) do thread no processo de destino especificado. Esse método é chamado pelo serviço de acesso de dados do common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,22 +42,22 @@ HRESULT GetTLSValue (
  [in] O identificador de sistema operacional de um thread no processo de destino.  
   
  `index`  
- [in] O índice do local. Esse valor deve ser um índice válido no repositório local de thread especificado.  
+ [in] O índice do local. Esse valor deve ser um índice válido no repositório local do thread especificado.  
   
  `value`  
- [out] Um ponteiro para um `CLRDATA_ADDRESS` valor que especifica o valor retornado do local determinado TLS.  
+ [out] Um ponteiro para um `CLRDATA_ADDRESS` valor que especifica o valor retornado do local indicado TLS.  
   
 ## <a name="remarks"></a>Comentários  
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

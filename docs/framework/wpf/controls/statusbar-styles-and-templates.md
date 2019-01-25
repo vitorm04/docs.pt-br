@@ -9,18 +9,18 @@ helpviewer_keywords:
 - parts [WPF], StatusBar
 - StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
-ms.openlocfilehash: 11fa3ab6edd62f0b5484d9ccf76c101d04be353c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: ee3bd060268d5ab6f713a74f871d7de0dd77782b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660457"
 ---
 # <a name="statusbar-styles-and-templates"></a>Estilos e modelos StatusBar
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Primitives.StatusBar> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Primitives.StatusBar> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="statusbar-parts"></a>Partes de StatusBar  
- O <xref:System.Windows.Controls.Primitives.StatusBar> controle não tem as partes nomeadas.  
+ O <xref:System.Windows.Controls.Primitives.StatusBar> controle não tem nenhuma parte nomeada.  
   
 ## <a name="statusbar-states"></a>Estados de StatusBar  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Primitives.StatusBar> controle.  
@@ -28,11 +28,11 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
 ## <a name="statusbaritem-parts"></a>StatusBarItem partes  
- O <xref:System.Windows.Controls.Primitives.StatusBarItem> controle não tem as partes nomeadas.  
+ O <xref:System.Windows.Controls.Primitives.StatusBarItem> controle não tem nenhuma parte nomeada.  
   
 ## <a name="statusbar-states"></a>Estados de StatusBar  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Primitives.StatusBarItem> controle.  
@@ -40,10 +40,10 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
-## <a name="statusbar-controltemplate-example"></a>Exemplo de ControlTemplate StatusBar  
+## <a name="statusbar-controltemplate-example"></a>Exemplo de ControlTemplate de StatusBar  
  O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.Primitives.StatusBar> controle.  
   
  [!code-xaml[ControlTemplateExamples#StatusBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/statusbar.xaml#statusbar)]  
@@ -54,10 +54,10 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
   
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

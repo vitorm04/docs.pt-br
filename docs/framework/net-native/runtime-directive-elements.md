@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dda1176c6d547421dab9663379329043b614783e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 52800b204873604d927193e1280f2eb6ccbcce0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638360"
 ---
 # <a name="runtime-directive-elements"></a>Elementos da diretiva de tempo de execução
 O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seguintes elementos de diretiva de tempo de execução. Consulte a [Referência do arquivo de configuração (rd.xml) de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) para uma representação hierárquica.  
@@ -68,5 +68,5 @@ O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seg
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  Aplica a política de tempo de execução ao tipo representado por um argumento <xref:System.Type> passado para um método.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência do arquivo de configuração rd.xml](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Consulte também
+- [Referência do arquivo de configuração rd.xml](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

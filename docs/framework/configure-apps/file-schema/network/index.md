@@ -12,12 +12,12 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 93248823284389a865111f9ab47cdac026be55b4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3752a7a42cb8fb5831858c9239f97a6801b64fe5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583344"
 ---
 # <a name="network-settings-schema"></a>Esquema de configurações de rede
 As configurações de rede especificam como o .NET Framework se conecta à Internet. A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].  
@@ -39,6 +39,6 @@ As configurações de rede especificam como o .NET Framework se conecta à Inter
 |[\<iriParsing> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md) [Elemento iriParsing> (configurações de URI)]|Especifica se a análise de IRI (Identificador de Recurso Internacional) é aplicada a um <xref:System.Uri> e se as regras de análise de IRI devem ser aplicada.|  
 |[\<schemeSettings> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md) [Elemento schemeSettings> (configurações de URI)]|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
   
-## <a name="see-also"></a>Consulte também  
-- [Configurando aplicativos da Internet](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
+## <a name="see-also"></a>Consulte também
+- [Configurando aplicativos da Internet](../../../../../docs/framework/network-programming/configuring-internet-applications.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

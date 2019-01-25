@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 343cdc4e30984e75bd2fede2706679839a573153
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517689"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configurando associações fornecidas pelo sistema
 As associações especificam o mecanismo de comunicação a ser usado ao se comunicar com um ponto de extremidade e indicam como se conectar a um ponto de extremidade. Associações consistem em elementos que definem como os canais do Windows Communication Foundation (WCF) são camados para fornecer os recursos de comunicação necessária. Uma associação contém três tipos de elementos:  
@@ -40,7 +40,7 @@ As associações especificam o mecanismo de comunicação a ser usado ao se comu
 |<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Uma associação segura e interoperável que fornece suporte para as versões corretas dos <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, e <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementos de associação.|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Uma associação segura e interoperável que é adequada para contratos de serviços duplex ou para comunicação por intermediários SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Uma associação segura e interoperável que suporta o protocolo WS-Federation, permitindo que as organizações que estão em uma federação para autenticar e autorizar usuários com eficiência.|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<WS2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Uma associação segura e interoperável que deriva de <xref:System.ServiceModel.WS2007HttpBinding> e dá suporte à segurança federada.|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Uma associação segura e interoperável que deriva de <xref:System.ServiceModel.WS2007HttpBinding> e dá suporte à segurança federada.|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Uma associação segura e otimizada, adequada para comunicação de computadores entre aplicativos do WCF.|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Uma associação segura, confiável e otimizada, que é adequada para comunicação no computador entre aplicativos do WCF.|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Uma associação na fila que é adequada para comunicação de computadores entre aplicativos do WCF.|  
@@ -63,7 +63,7 @@ As associações especificam o mecanismo de comunicação a ser usado ao se comu
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Nenhum,<br /><br /> (Transporte)|Nenhum, (Transporte)|(Nenhum), Sim|Sim|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Nenhum, mensagem, (transporte), ambos|(Nenhum)|(Nenhum), Sim|Não|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Par|Nenhum, mensagem, (transporte) misto|(Nenhum)|(Nenhum)|Sim|  
-|<xref:System.ServiceModel.WebHttpBinding>|.NET|Nenhum, transporte, TransportCredentialOnly|(Nenhum)|(Nenhum)|N/D|  
+|<xref:System.ServiceModel.WebHttpBinding>|.Net|Nenhum, transporte, TransportCredentialOnly|(Nenhum)|(Nenhum)|N/D|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Nenhum, (Transporte)|(Nenhum)|(Nenhum), Sim|N/D|  
   
  A tabela a seguir explica os recursos encontrados na tabela anterior.  
@@ -71,13 +71,13 @@ As associações especificam o mecanismo de comunicação a ser usado ao se comu
 |Recurso|Descrição|  
 |-------------|-----------------|  
 |Tipo de interoperabilidade|Nomeia a tecnologia ou o protocolo com o qual a associação garante a interoperação.|  
-|Segurança|Especifica como o canal é protegido:<br /><br /> -None: A mensagem SOAP não é segura e o cliente não está autenticado.<br />-Transport: Requisitos de segurança são satisfeitos na camada de transporte.<br />-Message: Requisitos de segurança são satisfeitos na camada de mensagem.<br />-Misto: Esse modo de segurança é conhecido como `TransportWithMessageCredentials`. Ele lida com as credenciais no nível da mensagem e requisitos de integridade e confidencialidade são atendidos pela camada de transporte.<br />-Ambos: Ambas as mensagens transporte e nível de segurança em nível são usados. Essa capacidade é exclusiva para o <xref:System.ServiceModel.NetMsmqBinding>.|  
+|Segurança|Especifica como o canal é protegido:<br /><br /> -None: A mensagem SOAP não é protegida e o cliente não está autenticado.<br />-Transporte: Requisitos de segurança são satisfeitos na camada de transporte.<br />-Mensagem: Requisitos de segurança são satisfeitos na camada de mensagem.<br />-Misto: Esse modo de segurança é conhecido como `TransportWithMessageCredentials`. Ele lida com as credenciais no nível da mensagem e requisitos de integridade e confidencialidade são atendidos pela camada de transporte.<br />-Ambos: Ambas as mensagens transporte e nível de segurança em nível são usados. Essa capacidade é exclusiva para o <xref:System.ServiceModel.NetMsmqBinding>.|  
 |Session|Especifica se essa associação dá suporte a contratos de sessão.|  
 |Transações|Especifica se as transações estão habilitadas.|  
 |Duplex|Especifica se há suporte para os contratos duplex. Observe que esse recurso exige suporte para sessões na associação.|  
 |Streaming|Especifica se a transmissão de mensagem tem suporte.|  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Usando associações para configurar serviços e clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Usando associações para configurar serviços e clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)

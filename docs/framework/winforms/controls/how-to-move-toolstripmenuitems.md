@@ -1,5 +1,5 @@
 ---
-title: Como mover ToolStripMenuItems
+title: 'Como: Mover ToolStripMenuItems'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], moving
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 69ef2bbaa05155532887897a0aef79a778594169
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 12554ee2225dbb186392b910ddfd7c2f69695e7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660210"
 ---
-# <a name="how-to-move-toolstripmenuitems"></a>Como mover ToolStripMenuItems
+# <a name="how-to-move-toolstripmenuitems"></a>Como: Mover ToolStripMenuItems
 Em tempo de design, você pode mover todos os menus de nível superior e seus itens de menu para um local diferente <xref:System.Windows.Forms.MenuStrip>. Você também pode mover itens de menu individuais entre menus de nível superior ou alterar a posição dos itens de menu dentro de um menu.  
   
 > [!NOTE]
@@ -70,7 +70,7 @@ Em tempo de design, você pode mover todos os menus de nível superior e seus it
   
      O item de menu que você recortou é inserido após o item de menu selecionado.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [Visão geral do controle MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [Visão geral do controle MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

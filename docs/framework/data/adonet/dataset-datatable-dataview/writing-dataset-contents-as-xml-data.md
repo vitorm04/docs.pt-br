@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: ff63c63be9bbfab7c3a9600f259abdea81be4260
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9e4ef54321acec508aac787329cb911e083317bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710398"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Gravando o conteúdo do DataSet como dados XML
 No ADO.NET, você pode gravar a representação XML de um <xref:System.Data.DataSet>, com ou sem seu esquema. Se as informações de esquema forem embutidas no XML embutido, elas serão gravadas através da linguagem de definição de esquema XML (XSD). O esquema contém as definições de tabela do <xref:System.Data.DataSet>, bem como as definições de relação e de restrição.  
@@ -73,10 +73,10 @@ xmlSW.Close();
 |**SimpleContent**|O conteúdo de coluna é gravado como texto no elemento XML da linha atual. Por exemplo:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Observe que **SimpleContent** não pode ser definida para uma coluna de uma tabela que tem **elemento** colunas ou relações aninhadas.|  
 |**Oculto**|A coluna não é gravada na saída XML.|  
   
-## <a name="see-also"></a>Consulte também  
- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- [Aninhamento de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- [Gravando informações de esquema de conjunto de dados como XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)
+- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
+- [Aninhamento de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
+- [Gravando informações de esquema de conjunto de dados como XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
+- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

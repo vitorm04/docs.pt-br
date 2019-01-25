@@ -2,12 +2,12 @@
 title: Orientação de migração
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a07fac293c6e598ff60c635286f8ab808e057b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676868"
 ---
 # <a name="migration-guidance"></a>Orientação de migração
 No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft está lançando a segunda versão principal do Windows Workflow Foundation (WF). O [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi liberado no [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (isso inclui os tipos nos namespaces System.Workflow.*; agora referido como WF3) e aprimorado no [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 também é parte do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mas existe ao lado da nova tecnologia de fluxo de trabalho (os tipos em System. Activities.\* namespaces; chamada como WF4). Ao considerar quando adotar o WF4, é importante primeiro reconhecer que você controla o tempo.  
@@ -26,7 +26,7 @@ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft
  [Visão geral da migração de WF](https://go.microsoft.com/fwlink/?LinkId=153873)  
  Descreve a relação entre WF3 e WF4, e as opções que você tem como usuário ou usuário potencial da tecnologia de fluxo de trabalho no .NET 4.  
   
- [Migração de WF: Práticas recomendadas para desenvolvimento do WF3](https://go.microsoft.com/fwlink/?LinkId=153852)  
+ [Migração de WF: Melhores práticas de desenvolvimento do WF3](https://go.microsoft.com/fwlink/?LinkId=153852)  
  Discute como criar os artefatos do WF3 para que eles possam ser migrados mais facilmente para o WF4.  
   
  [Orientação de WF: regras](https://go.microsoft.com/fwlink/?LinkId=153854)  
@@ -43,17 +43,17 @@ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft
  [Livro de receitas de migração de WF: Atividades personalizadas avançadas](https://go.microsoft.com/fwlink/?LinkId=275560)  
  Fornece orientação para reformatar as atividades personalizadas avançadas do WF3 que usam filas do WF3 e agendar atividades filho como atividades personalizadas do WF4.  
   
- [Livro de receitas de migração de WF: fluxos de trabalho](https://go.microsoft.com/fwlink/?LinkId=153858)  
+ [Livro de receitas de migração de WF: Fluxos de trabalho](https://go.microsoft.com/fwlink/?LinkId=153858)  
  Fornece exemplos e instruções para recriar os fluxos de trabalho do WF3 no WF4.  
   
  [Livro de receitas de migração de WF: Hospedagem de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkId=275561)  
  Fornece orientação para reformatar o código de hospedagem do WF3 como código de hospedagem do WF4. A meta é abranger as principais diferenças na hospedagem de fluxo de trabalho entre WF3 e WF4.  
   
- [Livro de receitas de migração de WF: Acompanhamento de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkId=275562)  
+ [Livro de receitas de migração de WF: Controle de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkId=275562)  
  Fornece orientação para reformatar o código de rastreamento e a configuração do WF3 usando o código de rastreamento e a configuração equivalentes do WF4.  
   
  [Orientação de WF: Serviços de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkId=275564)  
  Fornece instruções passo a passo orientadas para exemplos para recriar os fluxos de trabalho que implementam os serviços Web do Windows Communication Foundation (WCF) (geralmente chamado de serviços de fluxo de trabalho) criados no WF3 para usar WF4, para cenários comuns para atividades prontas.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Activities.Statements.Interop>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Activities.Statements.Interop>

@@ -1,5 +1,5 @@
 ---
-title: Como adicionar dados à área de transferência
+title: 'Como: Adicionar dados à área de transferência'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 6002acfadfd0e688ef432baacbdabffb83890cb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37e46c48be41d0b527e73b15bfff1f069924fa20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682804"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>Como adicionar dados à área de transferência
+# <a name="how-to-add-data-to-the-clipboard"></a>Como: Adicionar dados à área de transferência
 O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode usar para interagir com o recurso de área de transferência do sistema operacional Windows. Muitos aplicativos usam a Área de Transferência como um repositório temporário para dados. Por exemplo, processadores globais usam a Área de Transferência durante operações de cortar e colar. A Área de Transferência também é útil para transferir dados de um aplicativo para outro.  
   
  Quando você adiciona dados à Área de Transferência, você pode indicar o formato de dados para que outros aplicativos possam reconhecer os dados se puderem usar esse formato. Você também pode adicionar dados à Área de Transferência em vários formatos diferentes para aumentar o número de outros aplicativos que potencialmente podem usar os dados.  
   
  Um formato da Área de Transferência é uma cadeia de caracteres que identifica o formato para que um aplicativo que use esse formato possa recuperar os dados associados. O <xref:System.Windows.Forms.DataFormats> classe fornece os nomes de formato predefinidos para seu uso. Você também pode usar seus próprios nomes de formato ou usar o tipo de um objeto como o formato.  
   
- Para adicionar dados à área de transferência em um ou vários formatos, use o <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método. Você pode passar qualquer objeto para esse método, mas, para adicionar dados em vários formatos, é preciso primeiro adicionar os dados a um objeto separado projetado para funcionar com vários formatos. Normalmente, você adicionará os dados para um <xref:System.Windows.Forms.DataObject>, mas você pode usar qualquer tipo que implementa o <xref:System.Windows.Forms.IDataObject> interface.  
+ Para adicionar dados à área de transferência em um ou vários formatos, use o <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método. Você pode passar qualquer objeto para esse método, mas, para adicionar dados em vários formatos, é preciso primeiro adicionar os dados a um objeto separado projetado para funcionar com vários formatos. Normalmente, você irá adicionar seus dados para um <xref:System.Windows.Forms.DataObject>, mas você pode usar qualquer tipo que implementa o <xref:System.Windows.Forms.IDataObject> interface.  
   
  No [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], você pode adicionar dados diretamente à Área de Transferência usando novos métodos projetados para facilitar as tarefas básicas da Área de Transferência. Use esses métodos quando você trabalhar com os dados em um único formato comum, como texto.  
   
 > [!NOTE]
 >  Todos os aplicativos baseados em Windows compartilham a Área de Transferência. Portanto, os conteúdos estão sujeito a alterações quando você muda para outro aplicativo.  
 >   
->  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para modo do único thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método é marcado com o <xref:System.STAThreadAttribute> atributo.  
 >   
 >  Um objeto deve ser serializável para que seja colocado na Área de Transferência. Para fazer um tipo serializável, marque-o com o <xref:System.SerializableAttribute> atributo. Se você passar um objeto não serializável para um método de Área de Transferência, o método falhará sem lançar uma exceção. Para obter mais informações sobre serialização, consulte <xref:System.Runtime.Serialization>.  
   
@@ -53,13 +53,13 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Para adicionar dados à Área de Transferência em vários formatos  
   
-1.  Use o <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método e passar um <xref:System.Windows.Forms.DataObject> que contém seus dados. Você deve usar esse método para adicionar dados à área de transferência em versões anteriores à [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1.  Use o <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método e passar em um <xref:System.Windows.Forms.DataObject> que contém os dados. Você deve usar esse método para adicionar dados à área de transferência em versões anteriores à [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## <a name="see-also"></a>Consulte também  
- [Operações do Tipo "Arrastar e Soltar" e Suporte à Área de Transferência](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
- [Como Recuperar Dados da Área de Transferência](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+## <a name="see-also"></a>Consulte também
+- [Operações do Tipo "Arrastar e Soltar" e Suporte à Área de Transferência](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+- [Como: Recuperar dados da área de transferência](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)

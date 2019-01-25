@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb7475623961fe2ee5fc821c5f237f0a2acfae1a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd85ac8b98d8613924a4acd73ac74a69f3d9b41d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535340"
 ---
 # <a name="get-function"></a>Função Get
 Recupera o valor da propriedade especificado se ele existir.
@@ -88,11 +88,11 @@ O `Get` função também pode retornar propriedades do sistema.
 O `pVal` argumento é atribuído o tipo correto e o valor para o qualificador e o COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) função
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

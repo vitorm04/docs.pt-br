@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7595b4a69dd327e448aade1e2dcba06100e55bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638672"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>Método ISymUnmanagedWriter::SetUserEntryPoint
-Especifica o método definido pelo usuário que é o ponto de entrada para este módulo. Por exemplo, esse ponto de entrada pode ser o método do usuário principal, em vez de gerado pelo compilador stubs antes de principal.  
+Especifica o método definido pelo usuário que é o ponto de entrada para esse módulo. Por exemplo, esse ponto de entrada pode ser o método do usuário principal, em vez de stubs gerados pelo compilador antes de principal.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ HRESULT SetUserEntryPoint(
   
 #### <a name="parameters"></a>Parâmetros  
  `entryMethod`  
- [in] Aponte o token de metadados para o método que é a entrada do usuário.  
+ [in] O token de metadados para o método que é a entrada do usuário do ponto.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -44,5 +44,5 @@ HRESULT SetUserEntryPoint(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

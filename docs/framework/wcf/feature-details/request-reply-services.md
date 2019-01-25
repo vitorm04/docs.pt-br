@@ -7,17 +7,17 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: 8fe1343a4b3590622becf71f1167f4b19dbc67af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8d9ee30df5198335b15d2d7130d853f4dd73a18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516645"
 ---
 # <a name="request-reply-services"></a>Serviços de resposta por solicitação
-Serviços de solicitação-resposta são o tipo de padrão de contrato de operação no Windows Communication Foundation (WCF). Os clientes fazer chamadas para operações de serviço e aguardar uma resposta do serviço. Você pode realizar chamadas para uma operação de serviço ou sincronicamente, onde o cliente bloqueia até ele recebe uma resposta do serviço ou os tempos de chamada ou de forma assíncrona, em que o cliente faz uma chamada para a operação de serviço, continua a trabalhar e recebe o resposta do serviço em outro thread.  
+Serviços de solicitação-resposta são o tipo de padrão de contrato de operação no Windows Communication Foundation (WCF). Os clientes fazem chamadas para operações de serviço e aguardam uma resposta do serviço. Você pode realizar chamadas para uma operação de serviço ou forma síncrona, em que o cliente bloqueia até que ele recebe uma resposta do serviço ou os tempos de chamada ou de forma assíncrona, em que o cliente faz uma chamada para a operação de serviço, continua a trabalhar e recebe o resposta do serviço em outro thread.  
   
- Para criar um contrato de serviço de solicitação-resposta, definir o contrato de serviço e aplicar o <xref:System.ServiceModel.OperationContractAttribute> de classe para cada operação, conforme mostrado no código de exemplo a seguir.  
+ Para criar um contrato de serviço de solicitação-resposta, defina seu contrato de serviço e aplique o <xref:System.ServiceModel.OperationContractAttribute> de classe para cada operação, conforme mostrado no código de exemplo a seguir.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -28,8 +28,8 @@ public interface IRequestReplyCalculator
 }  
 ```  
   
- Você não precisa definir o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriedade `false` porque esse é o comportamento padrão.  
+ Você não precisa definir as <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriedade para `false` porque esse é o comportamento padrão.  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços unidirecionais](../../../../docs/framework/wcf/feature-details/one-way-services.md)  
- [Serviços duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>Consulte também
+- [Serviços unidirecionais](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [Serviços duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)

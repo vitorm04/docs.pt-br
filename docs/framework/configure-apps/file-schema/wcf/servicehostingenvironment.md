@@ -2,18 +2,18 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: eee81f774382bf9bac3caaada0ae144e933cb630
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 47e683969a62541dd48a3c7211e1edf3bb7b4038
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493840"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia para um transporte particular. Se esse elemento estiver vazio, o tipo padrão é usado. Esse elemento só pode ser usado no aplicativo ou arquivos de configuração de nível de máquina.  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
+\<ServiceHostingEnvironment>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,9 +50,9 @@ Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia p
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Uma coleção de elementos de configuração que especificam filtros de prefixo para os endereços base usados pelo host de serviço.|  
-|[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Uma seção de configuração que descreve as configurações de ativação.|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Uma coleção de elementos de configuração que identificam o tipo de um transporte particular.|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Uma coleção de elementos de configuração que especificam filtros de prefixo para os endereços base usados pelo host de serviço.|  
+|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Uma seção de configuração que descreve as configurações de ativação.|  
+|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Uma coleção de elementos de configuração que identificam o tipo de um transporte particular.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -69,7 +69,7 @@ Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia p
   
 -   Estado de sessão baseada em cookie  
   
--   HttpContext. Current  
+-   HttpContext.Current  
   
 -   Extensibilidade de pipeline por meio de HttpModule personalizado  
   
@@ -92,8 +92,8 @@ Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia p
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Hospedagem](../../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Serviços do WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [Hospedagem](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Serviços do WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

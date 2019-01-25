@@ -1,18 +1,18 @@
 ---
-title: Como imprimir um formulário rolável (Visual Basic)
+title: 'Como: Imprimir um formulário rolável (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - entire form [Visual Basic], printing
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
-ms.openlocfilehash: 4a509b7c48f2bff705bc95e58fb88252cb8ca4b9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6cec75eae8046befeb37da39e0b788f045ff4149
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44182025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552496"
 ---
-# <a name="how-to-print-a-scrollable-form-visual-basic"></a>Como imprimir um formulário rolável (Visual Basic)
+# <a name="how-to-print-a-scrollable-form-visual-basic"></a>Como: Imprimir um formulário rolável (Visual Basic)
 O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente permite que você imprimir rapidamente uma imagem de um formulário sem usar um <xref:System.Drawing.Printing.PrintDocument> componente. Por padrão, somente a parte visível no momento do formulário é impresso; Se um usuário tiver redimensionado o formulário no tempo de execução, a imagem não pode imprimir conforme o esperado. O procedimento a seguir mostra como imprimir a área de cliente completa de um formulário rolável, mesmo se o formulário foi redimensionado.  
   
  Os controles PowerPack não estão mais incluídos no Visual Studio, mas você pode baixá-los na [Centro de Download](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
@@ -34,9 +34,9 @@ O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente permite 
     > [!NOTE]
     >  Em alguns sistemas operacionais, texto ou elementos gráficos desenhados pelo <xref:System.Drawing.Graphics> métodos podem não imprimir corretamente. Nesse caso, você não será capaz de imprimir com o `Scrollable` parâmetro.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [Componente PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [Como imprimir a área de cliente de um formulário](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Como imprimir áreas cliente e não cliente de um formulário](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- [Componente PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)
+- [Como: imprimir a área de cliente de um formulário](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+- [Como: imprimir as áreas de cliente e de não cliente de um formulário](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)

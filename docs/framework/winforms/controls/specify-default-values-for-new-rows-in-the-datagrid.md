@@ -1,5 +1,5 @@
 ---
-title: Como especificar valores padrão para novas linhas no controle DataGridView dos Windows Forms
+title: 'Como: Especificar valores padrão para novas linhas no controle DataGridView dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: c28d969f9d4976c7432e7293afb13e7f340f7e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dab9ba7ca16cf0c886601e3c8fea579e70b2f30d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596768"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Como especificar valores padrão para novas linhas no controle DataGridView dos Windows Forms
-Você pode tornar mais conveniente a entrada de dados quando o aplicativo padrão preenche os valores para linhas adicionadas recentemente. Com o <xref:System.Windows.Forms.DataGridView> classe, você pode preencher padrão valores com o <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> evento. Esse evento é gerado quando o usuário insere a linha para novos registros. Quando seu código manipula esse evento, você pode preencher desejadas células com valores de sua escolha.  
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Como: Especificar valores padrão para novas linhas no controle DataGridView dos Windows Forms
+Você pode fazer mais conveniente a entrada de dados quando o aplicativo em default preenche os valores para linhas recém-adicionadas. Com o <xref:System.Windows.Forms.DataGridView> classe, você pode preencher em default valores com o <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> eventos. Esse evento é gerado quando o usuário insere a linha para novos registros. Quando seu código manipula esse evento, você pode preencher desejadas células com valores de sua escolha.  
   
- O exemplo de código a seguir demonstra como especificar valores padrão para novas linhas usando o <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> evento.  
+ O exemplo de código a seguir demonstra como especificar valores padrão para novas linhas usando o <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> eventos.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
@@ -35,8 +35,8 @@ Você pode tornar mais conveniente a entrada de dados quando o aplicativo padrã
   
 -   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
- [Entrada de Dados no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- [Usando a linha para novos registros no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
+- [Entrada de Dados no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+- [Usando a linha para novos registros no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

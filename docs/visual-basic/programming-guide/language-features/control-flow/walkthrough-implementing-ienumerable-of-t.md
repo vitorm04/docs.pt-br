@@ -7,14 +7,14 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499746"
 ---
-# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Instruções passo a passo: implementando IEnumerable(Of T) no Visual Basic
+# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Passo a passo: Implementando IEnumerable(Of T) no Visual Basic
 O <xref:System.Collections.Generic.IEnumerable%601> interface é implementada por classes que podem retornar uma sequência de um item de valores de cada vez. A vantagem de retornar dados de um item por vez é que você não precisa carregar o conjunto completo de dados na memória para trabalhar com ela. Você só precisará usar memória suficiente para carregar um único item de dados. As classes que implementam o `IEnumerable(T)` interface pode ser usada com `For Each` loops ou consultas LINQ.  
   
  Por exemplo, considere um aplicativo que deve ler um arquivo de texto grande e retornar todas as linhas do arquivo que corresponde aos critérios de pesquisa específica. O aplicativo usa uma consulta LINQ para retornar linhas do arquivo que correspondem aos critérios especificados. Para consultar o conteúdo do arquivo, usando uma consulta LINQ, o aplicativo foi possível carregar o conteúdo do arquivo em uma matriz ou uma coleção. No entanto, carregar o arquivo inteiro em uma matriz ou coleção consumiria muito mais memória do que é necessário. A consulta LINQ em vez disso, pode consultar o conteúdo do arquivo por meio de uma classe enumerable, retornando somente os valores que correspondem aos critérios de pesquisa. Consultas que retornam apenas alguns valores correspondentes consumiria muito menos memória.  
@@ -93,8 +93,8 @@ O <xref:System.Collections.Generic.IEnumerable%601> interface é implementada po
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Instrução For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Instrução For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

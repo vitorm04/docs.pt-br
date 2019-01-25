@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527322"
 ---
 # <a name="application-startup-time"></a>Tempo de inicialização do aplicativo
 A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode variar consideravelmente. Este tópico descreve diversas técnicas para reduzir o tempo de inicialização percebido e real de um aplicativo do WPF (Windows Presentation Foundation).  
@@ -26,7 +26,7 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
 ## <a name="implement-a-splash-screen"></a>Implementar uma tela inicial  
  Em casos em que há um atraso significativo e inevitável entre o início de um aplicativo e a exibição da primeira interface do usuário, otimize o tempo de inicialização percebido através de uma *tela inicial*. Essa abordagem exibe uma imagem quase que imediatamente após o usuário iniciar o aplicativo. Quando o aplicativo estiver pronto para exibir sua primeira interface do usuário, a tela inicial desaparece. A partir de [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], você pode usar o <xref:System.Windows.SplashScreen> classe para implementar uma tela inicial. Para obter mais informações, consulte [Adicionar uma tela inicial a um aplicativo do WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- Você também pode implementar sua própria tela inicial, usando gráficos do Win32 nativos. Exibir sua implementação antes do <xref:System.Windows.Application.Run%2A> método é chamado.  
+ Você também pode implementar sua própria tela inicial, usando gráficos do Win32 nativos. Exiba sua implementação antes do <xref:System.Windows.Application.Run%2A> método é chamado.  
   
 ## <a name="analyze-the-startup-code"></a>Analisar o código de inicialização  
  Determine o motivo de uma inicialização a frio lenta. A E/S do disco pode ser a responsável, mas nem sempre é o caso. Em geral, você deve minimizar o uso de recursos externos, como rede, serviços Web ou disco.  
@@ -107,9 +107,9 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  Use o <xref:System.Resources.NeutralResourcesLanguageAttribute> para especificar a cultura neutra para o <xref:System.Resources.ResourceManager>. Essa abordagem evita pesquisas de assembly sem êxito.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>Usar a classe BinaryFormatter para serialização  
- Se você usar a serialização, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe o <xref:System.Xml.Serialization.XmlSerializer> classe. O <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe é implementada na BCL Base Class Library () no assembly mscorlib. O <xref:System.Xml.Serialization.XmlSerializer> é implementado no assembly System.Xml.dll, que pode ser um DLL adicional para carregar.  
+ Se você deve usar a serialização, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe, em vez do <xref:System.Xml.Serialization.XmlSerializer> classe. O <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe é implementada na classe biblioteca BCL (Base) no assembly mscorlib. dll. O <xref:System.Xml.Serialization.XmlSerializer> é implementado no assembly de DLL, que pode ser uma DLL adicional para carregar.  
   
- Se você deve usar o <xref:System.Xml.Serialization.XmlSerializer> classe, você pode obter o melhor desempenho se você gerar previamente o assembly de serialização.  
+ Se você precisar usar o <xref:System.Xml.Serialization.XmlSerializer> classe, você pode obter o melhor desempenho se você gerar previamente o assembly de serialização.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Configurar o ClickOnce para verificar se há atualizações após a inicialização  
  Se seu aplicativo usa o [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], evite o acesso à rede na inicialização, configurando o [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] para verificar se há atualizações no site de implantação depois que o aplicativo for iniciado.  
@@ -120,13 +120,13 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  O primeiro aplicativo do WPF a ser executado após um reinício é o serviço PresentationFontCache. O serviço armazena em cache as fontes do sistema, melhora o acesso à fonte e melhora o desempenho geral. Há uma sobrecarga na inicialização do serviço e, em alguns ambientes controlados, considere a possibilidade de configurar o serviço para iniciar automaticamente quando o sistema for reiniciado.  
   
 ## <a name="set-data-binding-programmatically"></a>Definir a vinculação de dados programaticamente  
- Em vez de usar XAML para definir o <xref:System.Windows.FrameworkElement.DataContext%2A> declarativamente para a janela principal, considere configurá-la por meio de programação no <xref:System.Windows.Application.OnActivated%2A> método.  
+ Em vez de usar XAML para definir a <xref:System.Windows.FrameworkElement.DataContext%2A> declarativamente para a janela principal, considere configurá-lo por meio de programação no <xref:System.Windows.Application.OnActivated%2A> método.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.SplashScreen>  
- <xref:System.AppDomain>  
- <xref:System.Resources.NeutralResourcesLanguageAttribute>  
- <xref:System.Resources.ResourceManager>  
- [Adicionar uma tela inicial a um aplicativo WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (Gerador de Imagens Nativas)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [Elemento \<generatePublisherEvidence >](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.SplashScreen>
+- <xref:System.AppDomain>
+- <xref:System.Resources.NeutralResourcesLanguageAttribute>
+- <xref:System.Resources.ResourceManager>
+- [Adicionar uma tela inicial a um aplicativo WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (Gerador de Imagens Nativas)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [Elemento \<generatePublisherEvidence >](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

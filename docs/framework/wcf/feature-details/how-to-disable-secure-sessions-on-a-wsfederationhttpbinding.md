@@ -1,5 +1,5 @@
 ---
-title: Como desabilitar sessões seguranças em uma WSFederationHttpBinding
+title: 'Como: Desabilitar sessões seguras em um WSFederationHttpBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: b61c8935b785a80f6e3163b3bafd83d3dd84f52f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c03bb9601ecbaaf8694d1df26ba43e34434ac47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720022"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Como desabilitar sessões seguranças em uma WSFederationHttpBinding
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Como: Desabilitar sessões seguras em um WSFederationHttpBinding
 Alguns serviços podem exigir credenciais federadas, mas não dá suporte a sessões seguras. Nesse caso, você deve desabilitar o recurso de sessão segura. Ao contrário do <xref:System.ServiceModel.WSHttpBinding>, o <xref:System.ServiceModel.WSFederationHttpBinding> classe não fornece uma maneira de desabilitar sessões seguras ao se comunicar com um serviço. Em vez disso, você deve criar uma associação personalizada que substitui as configurações de sessão segura com um bootstrap.  
   
  Este tópico demonstra como modificar os elementos de associação contidos em um <xref:System.ServiceModel.WSFederationHttpBinding> para criar uma associação personalizada. O resultado é idêntico de <xref:System.ServiceModel.WSFederationHttpBinding> , exceto que ele não usa sessões seguras.  
@@ -42,5 +42,5 @@ Alguns serviços podem exigir credenciais federadas, mas não dá suporte a sess
   
 -   Para compilar o exemplo de código, crie um projeto que referencia o assembly de ServiceModel.  
   
-## <a name="see-also"></a>Consulte também  
- [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+## <a name="see-also"></a>Consulte também
+- [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

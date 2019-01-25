@@ -2,12 +2,12 @@
 title: Geração de alteração SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0bacd974c4eb9bc98851d35d574a184fde4d9468
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580051"
 ---
 # <a name="modification-sql-generation"></a>Geração de alteração SQL
 Esta seção discute como desenvolver um módulo de geração SQL de alteração para o seu (SQL: provedor de base de dados compliant 1999). Este módulo é responsável para converter uma árvore de comando de alteração apropriadas nas instruções SQL INSERT, UPDATE ou DELETE.  
@@ -286,5 +286,5 @@ delete [dbo].[Categories]
 where ([CategoryID] = @p0)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Escrevendo um Provedor de Dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Consulte também
+- [Escrevendo um Provedor de Dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

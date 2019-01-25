@@ -1,15 +1,15 @@
 ---
-title: 'Como: localizar elementos com um atributo específico (XPath-LINQ para XML) (Visual Basic)'
+title: 'Como: Localizar elementos com um atributo específico (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 9a50eb792a074d245651231678bfea72f124f344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0efc0d6cebce760d90213d5149ca729a7b04663e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654419"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Como: localizar elementos com um atributo específico (XPath-LINQ para XML) (Visual Basic)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Como: Localizar elementos com um atributo específico (XPath-LINQ to XML) (Visual Basic)
 Às vezes você deseja localizar todos os elementos que têm um atributo específico. Você não está preocupado com o conteúdo do atributo. Você quer selecionar com base na existência do atributo.  
   
  A expressão XPath é:  
@@ -59,5 +59,5 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to XML para XPath usuários (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

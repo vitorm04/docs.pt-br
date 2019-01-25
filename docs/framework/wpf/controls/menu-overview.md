@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: a1074d09c195a78dcc79df0841123672b716bcfe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b1f3889803ba681542349443276041d312293bcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626869"
 ---
 # <a name="menu-overview"></a>Visão geral do menu
 O <xref:System.Windows.Controls.Menu> classe lhe permite organizar elementos associados a comandos e manipuladores de eventos em uma ordem hierárquica. Cada <xref:System.Windows.Controls.Menu> elemento contém uma coleção de <xref:System.Windows.Controls.MenuItem> elementos.  
@@ -59,5 +59,5 @@ O <xref:System.Windows.Controls.Menu> classe lhe permite organizar elementos ass
   
  [!code-xaml[MenuStylesSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a>Consulte também
+- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

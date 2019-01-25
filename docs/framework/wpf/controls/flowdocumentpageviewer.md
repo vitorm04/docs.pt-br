@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653756"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 O <xref:System.Windows.Controls.FlowDocumentPageViewer> controle é usado para exibir <xref:System.Windows.Documents.FlowDocument> conteúdo em uma base por página. Compare com o <xref:System.Windows.Controls.FlowDocumentScrollViewer>, que apresenta <xref:System.Windows.Documents.FlowDocument> conteúdo em um visualizador de rolagem.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Documents.FlowDocument>  
- [Visão geral do documento de fluxo](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Documents.FlowDocument>
+- [Visão geral do documento de fluxo](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

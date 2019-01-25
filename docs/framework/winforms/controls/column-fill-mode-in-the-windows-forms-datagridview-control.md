@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: a023d8d8c31131db46cc8535d0e903c2a8d8a345
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 79ef0310e5f134c09c9bbf0c0403ea6aa7cd7059
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595143"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modo de preenchimento da coluna no controle DataGridView dos Windows Forms
 No modo de preenchimento de coluna, o <xref:System.Windows.Forms.DataGridView> controle redimensiona as colunas automaticamente para que elas preencham a largura da área de exibição disponíveis. O controle não exibe a barra de rolagem horizontal, exceto quando ele for necessário para manter a largura de cada coluna igual a ou maior que sua <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> valor da propriedade.  
@@ -60,20 +60,20 @@ No modo de preenchimento de coluna, o <xref:System.Windows.Forms.DataGridView> c
   
 -   Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
--   Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [como: Compilar e executar um exemplo de código completa do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>  
- <xref:System.Windows.Forms.DataGridViewColumn>  
- <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>  
- <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>  
- [Redimensionando colunas e linhas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
+- <xref:System.Windows.Forms.DataGridViewColumn>
+- <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>
+- <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>
+- [Redimensionando colunas e linhas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)

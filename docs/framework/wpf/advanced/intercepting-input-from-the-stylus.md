@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: c012eeb7ef7dad8c52b8b9a5f153582710c1fd73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5384a49461886ba184a0a128467c864b37c0efc9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667018"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interceptando entrada a partir da caneta
 O <xref:System.Windows.Input.StylusPlugIns> arquitetura fornece um mecanismo para implementar o controle de baixo nível sobre <xref:System.Windows.Input.Stylus> de entrada e a criação de tinta digital <xref:System.Windows.Ink.Stroke> objetos. O <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornece um mecanismo para que você possa implementar comportamento personalizado e aplicá-lo para o fluxo de dados provenientes do dispositivo de caneta para o desempenho ideal.  
@@ -70,6 +70,6 @@ O <xref:System.Windows.Input.StylusPlugIns> arquitetura fornece um mecanismo par
 ## <a name="conclusion"></a>Conclusão  
  Criando suas próprias <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classes e inseri-las em <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> coleções, você pode aprimorar bastante o comportamento de sua tinta digital. Você tem acesso a <xref:System.Windows.Input.StylusPoint> dados como ele são gerados, oferecendo a oportunidade para personalizar o <xref:System.Windows.Input.Stylus> entrada. Porque você tem tal acesso de baixo nível para o <xref:System.Windows.Input.StylusPoint> dados, você pode implementar a coleção de tinta e renderizá-la com um desempenho ideal para seu aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- [Tratamento avançado de tinta](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [Acessar e manipular a entrada à caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Tratamento avançado de tinta](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Acessar e manipular a entrada à caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

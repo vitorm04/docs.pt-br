@@ -2,12 +2,12 @@
 title: Agrupamento
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: ee57763674d194f71c85b1318dbb116dc829bd55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 655ef32c039014f446850376e0fe021e79c577c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536315"
 ---
 # <a name="pooling"></a>Agrupamento
 Este exemplo demonstra como estender o Windows Communication Foundation (WCF) para dar suporte a pool de objetos. O exemplo demonstra como criar um atributo que é sintaticamente e semanticamente semelhante para o `ObjectPoolingAttribute` funcionalidade de serviços corporativos de atributo. Pool de objetos pode fornecer um aumento significativo ao desempenho de um aplicativo. No entanto, ele pode ter o efeito oposto, se ele não está sendo usado corretamente. Pool de objetos ajuda a reduzir a sobrecarga de recriar objetos usados com frequência que exigem inicialização extensiva. No entanto, se uma chamada para um método em um objeto de pool leva uma quantidade considerável de tempo para ser concluída, pool de objetos enfileira as solicitações adicionais, assim que o tamanho máximo do pool for atingido. Portanto, pode falhar ao atender solicitações de criação de algum objeto lançando uma exceção de tempo limite.  
@@ -28,7 +28,7 @@ Este exemplo demonstra como estender o Windows Communication Foundation (WCF) pa
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>: Isso é idêntico do método anterior, exceto isso é invocado quando não há nenhum argumento de mensagem.  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Quando o tempo de vida da instância do serviço tenha decorrido, as chamadas de Dispatcher a <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> método. Assim como para o <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> método, a frequência das chamadas para esse método é determinada pelo <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> propriedade.  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Quando tiver decorrido o tempo de vida da instância do serviço, as chamadas de Dispatcher a <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> método. Assim como para o <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> método, a frequência das chamadas para esse método é determinada pelo <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> propriedade.  
   
 ## <a name="the-object-pool"></a>O Pool de objetos  
  Um personalizado <xref:System.ServiceModel.Dispatcher.IInstanceProvider> implementação fornece o objeto necessário pooling semântica para um serviço. Portanto, este exemplo tem um `ObjectPoolingInstanceProvider` tipo que fornece uma implementação personalizada de <xref:System.ServiceModel.Dispatcher.IInstanceProvider> para o pool. Quando o `Dispatcher` chama o <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> método, em vez de criar uma nova instância, a implementação personalizada procura um objeto existente em um pool de memória. Se houver um disponível, ele será retornado. Caso contrário, um novo objeto é criado. A implementação para `GetInstance` é mostrado no código de exemplo a seguir.  
@@ -103,9 +103,9 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  A interface <xref:System.ServiceModel.Description.IServiceBehavior> possui três métodos no-- <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>, e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. O <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> método é usado para garantir que o comportamento pode ser aplicado ao serviço. Neste exemplo, a implementação garante que o serviço não está configurado com <xref:System.ServiceModel.InstanceContextMode.Single>. O <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> método é usado para configurar associações de serviço. Não é necessário neste cenário. O <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> é usado para configurar os dispatchers do serviço. Esse método é chamado pelo WCF quando o <xref:System.ServiceModel.ServiceHost> está sendo inicializado. Os seguintes parâmetros são passados para este método:  
   
--   `Description`: Este argumento fornece a descrição do serviço para o serviço inteiro. Isso pode ser usado para inspecionar os dados de descrição sobre pontos de extremidade do serviço, contratos, associações e outros dados.  
+-   `Description`: Esse argumento fornece a descrição do serviço para o serviço inteiro. Isso pode ser usado para inspecionar os dados de descrição sobre pontos de extremidade do serviço, contratos, associações e outros dados.  
   
--   `ServiceHostBase`: Este argumento fornece o <xref:System.ServiceModel.ServiceHostBase> que está sendo inicializado.  
+-   `ServiceHostBase`: Esse argumento fornece o <xref:System.ServiceModel.ServiceHostBase> que está sendo inicializado.  
   
  O personalizado <xref:System.ServiceModel.Description.IServiceBehavior> uma nova instância da implementação de `ObjectPoolingInstanceProvider` será instanciado e atribuído à <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> propriedade em cada <xref:System.ServiceModel.Dispatcher.DispatchRuntime> de ServiceHostBase.  
   

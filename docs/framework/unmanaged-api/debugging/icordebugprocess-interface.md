@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06e4e3854a850c9639e93c8db2ec8ccd567b242b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae3f64b466e0d356b540cc9d6f3db881e27ac4aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709813"
 ---
 # <a name="icordebugprocess-interface1"></a>ICorDebugProcess Interface1
-Representa um processo que está executando o código gerenciado. Esta interface é uma subclasse de ICorDebugController.  
+Representa um processo que está executando o código gerenciado. Essa interface é uma subclasse de ICorDebugController.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -36,32 +36,32 @@ Representa um processo que está executando o código gerenciado. Esta interface
 |[Método EnumerateObjects](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateobjects-method.md)|Não implementado.|  
 |[Método GetHandle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|Obtém um identificador para o processo.|  
 |[Método GetHelperThreadID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|Obtém a ID do thread de sistema operacional (SO) para o thread de auxiliar interno do depurador.|  
-|[Método GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|Obtém a ID de sistema operacional (SO) do processo.|  
+|[Método GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|Obtém a ID do sistema operacional (SO) do processo.|  
 |[Método GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Não implementado.|  
-|[Método GetThread](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|Obtém a instância de ICorDebugThread que tem o thread de sistema operacional especificado ID|  
-|[Método GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|Obtém o contexto do thread especificado.|  
-|[Método IsOSSuspended](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|Determina se o thread foi suspenso como resultado o depurador ao interromper o processo.|  
-|[Método IsTransitionStub](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-istransitionstub-method.md)|Determina se um endereço está dentro de um stub que fará com que uma transição para código gerenciado.|  
+|[Método GetThread](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|ID do obtém a instância de ICorDebugThread que tem o thread de sistema operacional especificado.|  
+|[Método GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|Obtém o contexto para o thread determinado.|  
+|[Método IsOSSuspended](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|Determina se o thread foi suspenso como resultado o depurador interromper o processo.|  
+|[Método IsTransitionStub](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-istransitionstub-method.md)|Determina se um endereço é dentro de um stub que fará com que uma transição para código gerenciado.|  
 |[Método ModifyLogSwitch](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-modifylogswitch-method.md)|Define o nível de severidade da opção de log especificado.|  
-|[Método ReadMemory](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-readmemory-method.md)|Ler a memória do processo.|  
-|[Método SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)|Define o contexto de determinado thread.|  
+|[Método ReadMemory](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-readmemory-method.md)|Lê a memória do processo.|  
+|[Método SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)|Define o contexto para o thread determinado.|  
 |[Método ThreadForFiberCookie](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-threadforfibercookie-method.md)|Preterido.|  
-|[Método WriteMemory](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-writememory-method.md)|Grava dados em uma área da memória do processo.|  
+|[Método WriteMemory](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-writememory-method.md)|Grava dados em uma área da memória no processo.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.  
+>  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

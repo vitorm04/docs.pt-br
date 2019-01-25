@@ -1,16 +1,16 @@
 ---
-title: 'Como: usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)'
+title: 'Como: Usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: a2101598a083f8d0738cb531ebbaea0f7a87a577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd1e5fff21ef68683d0b721e84c4690d8e440d60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645451"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Como: usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)
-No LINQ, as árvores de expressão são usadas para representar consultas estruturadas que se destinam a fontes de dados que implementam <xref:System.Linq.IQueryable%601>. Por exemplo, o provedor LINQ implementa a interface <xref:System.Linq.IQueryable%601> para consultar repositórios de dados relacionais. O compilador do Visual Basic compila as consultas que essas fontes de dados de destino no código que cria uma árvore de expressão em tempo de execução. O provedor de consultas pode percorrer a estrutura de dados da árvore de expressão e convertê-la em uma linguagem de consulta apropriada para a fonte de dados.  
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Como: Usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)
+No LINQ, as árvores de expressão são usadas para representar consultas estruturadas que se destinam a fontes de dados que implementam <xref:System.Linq.IQueryable%601>. Por exemplo, o provedor LINQ implementa a interface <xref:System.Linq.IQueryable%601> para consultar repositórios de dados relacionais. O compilador do Visual Basic compila as consultas que se destinam a essas fontes de dados no código que cria uma árvore de expressão em tempo de execução. O provedor de consultas pode percorrer a estrutura de dados da árvore de expressão e convertê-la em uma linguagem de consulta apropriada para a fonte de dados.  
   
  As árvores de expressão também são usadas no LINQ para representar expressões lambda que são atribuídas a variáveis do tipo <xref:System.Linq.Expressions.Expression%601>.  
   
@@ -107,8 +107,8 @@ Next
   
 -   Inclua o namespace System.Linq.Expressions.  
   
--   Copie o código do exemplo e cole-o no `Main` `Sub` procedimento.  
+-   Copie o código do exemplo e cole-o na `Main` `Sub` procedimento.  
   
-## <a name="see-also"></a>Consulte também  
- [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [Como: executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+## <a name="see-also"></a>Consulte também
+- [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Como: Executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

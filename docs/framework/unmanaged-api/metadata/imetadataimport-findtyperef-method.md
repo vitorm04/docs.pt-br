@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 375dbaf03384b4d05a7815a11612814d8b427170
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b47369e8cee2215b3e7a21e9f069d18dffda847a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691731"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>Método IMetaDataImport::FindTypeRef
 Obtém um ponteiro para o TypeRef token para o <xref:System.Type> referência que está no escopo especificado e que tem o nome especificado.  
@@ -39,7 +39,7 @@ HRESULT FindTypeRef (
   
 #### <a name="parameters"></a>Parâmetros  
  `tkResolutionScope`  
- [in] Um token de ModuleRef, AssemblyRef ou TypeRef que especifica o módulo, assembly ou tipo, respectivamente, no qual o tipo de referência é definido.  
+ [in] Um token de ModuleRef, AssemblyRef ou TypeRef que especifica o assembly, módulo ou tipo, respectivamente, no qual o tipo de referência é definido.  
   
  `szName`  
  [in] O nome da referência de tipo a ser pesquisado.  
@@ -48,14 +48,14 @@ HRESULT FindTypeRef (
  [out] Um ponteiro para o token TypeRef correspondente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

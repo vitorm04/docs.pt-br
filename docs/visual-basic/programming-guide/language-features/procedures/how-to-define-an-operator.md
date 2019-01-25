@@ -1,5 +1,5 @@
 ---
-title: Como definir um operador (Visual Basic)
+title: 'Como: Definir um operador (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 1f5a020a710cecdfd8722a9fca0a8b329697eced
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: fb150298562c1ec91f73f3c8075f4f8a4fc20b27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679520"
 ---
-# <a name="how-to-define-an-operator-visual-basic"></a>Como definir um operador (Visual Basic)
+# <a name="how-to-define-an-operator-visual-basic"></a>Como: Definir um operador (Visual Basic)
 Se você tiver definido uma classe ou estrutura, você pode definir o comportamento de um operador padrão (como `*`, `<>`, ou `And`) quando um ou ambos os operandos é do tipo de sua classe ou estrutura.  
   
  Defina o operador padrão como um procedimento de operador dentro da classe ou estrutura. Todos os procedimentos de operador devem ser `Public` `Shared`.  
@@ -28,7 +28,7 @@ Se você tiver definido uma classe ou estrutura, você pode definir o comportame
  Definir um operador em uma classe ou estrutura também é chamado *sobrecarga* o operador.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define o `+` chamado de operador para uma estrutura `height`. A estrutura usa alturas medidas em pés e polegadas. Um *polegadas* é 2,54 centímetros e *pés* 12 polegadas. Verifique os valores normalizados (polegadas < 12.0), o construtor executa *módulo* 12 aritmética. O `+` operador usa o construtor para gerar valores normalizados.  
+ O exemplo a seguir define o `+` chamado de operador para uma estrutura `height`. A estrutura usa a altura é medida em pés e polegadas. Uma *polegada* é 2,54 centímetros e uma *pés* é 12 polegadas. Para garantir que os valores normalizados (polegadas < 12.0), o construtor executa *módulo* 12 aritmético. O `+` operador usa o construtor para gerar valores normalizados.  
   
  [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
   
@@ -38,12 +38,12 @@ Se você tiver definido uma classe ou estrutura, você pode definir o comportame
   
  Para obter mais informações e exemplos, consulte [Sobrecarga de operador no Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos de Operador](./operator-procedures.md)  
- [Como definir um operador de conversão](./how-to-define-a-conversion-operator.md)  
- [Como chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)  
- [Como usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)  
- [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Como declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Operador Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)
+## <a name="see-also"></a>Consulte também
+- [Procedimentos de Operador](./operator-procedures.md)
+- [Como: Definir um operador de conversão](./how-to-define-a-conversion-operator.md)
+- [Como: Chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)
+- [Como: Usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)
+- [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Como: declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Operador Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)

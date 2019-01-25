@@ -1,20 +1,20 @@
 ---
-title: '&lt;Serviço&gt;'
+title: '&lt;service&gt;'
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e91e04c602fd867e329477015fc0a8354ae26a05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535002"
 ---
-# <a name="ltservicegt"></a>&lt;Serviço&gt;
+# <a name="ltservicegt"></a>&lt;service&gt;
 O `service` elemento contém as configurações para um serviço do Windows Communication Foundation (WCF). Ele também contém os pontos de extremidade que expõem o serviço.  
   
  \<system.ServiceModel>  
-\<Serviços >  
-\<serviço >  
+\<services>  
+\<service>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,13 +39,13 @@ O `service` elemento contém as configurações para um serviço do Windows Comm
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|Uma coleção de `endpoint` elementos que expõem esse serviço.|  
-|[\<host >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Especifica o host desta instância de serviço. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Especifica o host desta instância de serviço. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Serviços >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|O elemento raiz de todos os elementos de configuração do WCF.|  
+|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|O elemento raiz de todos os elementos de configuração do WCF.|  
   
 ## <a name="remarks"></a>Comentários  
  Os serviços são definidos na `services` seção do arquivo de configuração. Um assembly pode conter qualquer número de serviços. Cada serviço tem seu próprio `service` seção de configuração. Esta seção e seu conteúdo definem o contrato de serviço, o comportamento e os pontos de extremidade do serviço em questão.  
@@ -68,6 +68,6 @@ O `service` elemento contém as configurações para um serviço do Windows Comm
 </service>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.ServiceElement>  
- [Configurando serviços](../../../../../docs/framework/wcf/configuring-services.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.ServiceElement>
+- [Configurando serviços](../../../../../docs/framework/wcf/configuring-services.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ed95d0a0c6fc9ba41bba2c4e16d4ed3b721ae4e3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e686b3e371b24f14637476f9a7fd5455f1b2b86c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580792"
 ---
 # <a name="option-strict-statement"></a>Instrução Option Strict
 Restringe conversões de tipo de dados implícitos para somente conversões de expansão, não permite associação tardia e não permite digitação implícita que resulta em um `Object` tipo.  
@@ -153,14 +153,14 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conversões de Widening e Narrowing](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
-- [Conversões Implícitas e Explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
-- [Página de Compilação, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
-- [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
-- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
-- [Como acessar membros de um objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
-- [Expressões Inseridas no XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
-- [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
-- [Vinculação tardia em soluções do Office](/visualstudio/vsto/late-binding-in-office-solutions)  
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+- [Conversões de Widening e Narrowing](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Conversões Implícitas e Explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Página de Compilação, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Como: Acessar membros de um objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Expressões Inseridas no XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Vinculação tardia em soluções do Office](/visualstudio/vsto/late-binding-in-office-solutions)
+- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
-ms.openlocfilehash: 650acf0efaa88120678819b77b03fab61107c630
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565859"
 ---
 # <a name="choosing-between-class-and-struct"></a>Escolhendo entre a classe e Struct
 Uma das decisões de design básica que faces cada designer de estrutura é se deseja criar um tipo como uma classe (um tipo de referência) ou como um struct (um tipo de valor). Boa compreensão das diferenças no comportamento dos tipos de referência e tipos de valor é fundamental para fazer essa escolha.  
@@ -55,5 +55,5 @@ Uma das decisões de design básica que faces cada designer de estrutura é se d
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
+- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

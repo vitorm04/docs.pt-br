@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: ec91a1f6fba70e3c9706541dc641ddd019d44841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642198"
 ---
 # <a name="getpropertyqualifierset-function"></a>Função GetPropertyQualifierSet
 Recupera o qualificador definido para uma propriedade específica.
@@ -77,11 +77,11 @@ Porque cada método pode ter seus próprio qualificadores, o [IWbemQualifierSet 
 Como as propriedades do sistema não têm nenhum qualificador, a função retornará `WBEM_E_SYSTEM_PROPERTY` se você tentar obter uma [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) ponteiro para uma propriedade do sistema.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

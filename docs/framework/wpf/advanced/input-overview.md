@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592582"
 ---
 # <a name="input-overview"></a>Visão geral da entrada
 <a name="introduction"></a> O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] subsistema fornece um poderoso [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obter a entrada de uma variedade de dispositivos, incluindo o mouse, teclado, toque e caneta. Este tópico descreve os serviços fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e explica a arquitetura dos sistemas de entrada.
@@ -243,7 +243,7 @@ ms.locfileid: "48842782"
 
  Quando você faz com que objetos respondam a manipulações, você pode fazer com que o objeto pareça ter inércia. Isso pode fazer com que seus objetos simulem o mundo físico. Por exemplo, quando você empurra um livro por uma mesa, o livro continua a mover-se depois de você liberá-lo, caso você o empurre com força suficiente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite simular esse comportamento, acionando eventos de manipulação após os dedos do usuário liberarem o objeto.
 
- Para obter informações sobre como criar um aplicativo que permite que o usuário mova, redimensione e gire um objeto, consulte [Passo a passo: criar seu primeiro aplicativo de toque](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Para obter informações sobre como criar um aplicativo que permite que o usuário mover, redimensionar e girar um objeto, consulte [passo a passo: Criando seu primeiro aplicativo do Touch](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
 
  O <xref:System.Windows.UIElement> define os seguintes eventos de manipulação.
 
@@ -391,4 +391,8 @@ ms.locfileid: "48842782"
  Há recursos adicionais disponíveis que explicam roteamento de eventos e elementos estruturais do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em mais detalhes. Consulte as visões gerais a seguir para obter mais informações: [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md), [Visão geral do foco](../../../../docs/framework/wpf/advanced/focus-overview.md), [Visão geral de elementos base](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [Árvores no WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md) e [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
 
 ## <a name="see-also"></a>Consulte também
- [Visão geral do foco](../../../../docs/framework/wpf/advanced/focus-overview.md) [visão geral dos comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md) [visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md) [visão geral de elementos de Base](../../../../docs/framework/wpf/advanced/base-elements-overview.md) [propriedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [Visão geral do foco](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Visão geral de elementos base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Propriedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)

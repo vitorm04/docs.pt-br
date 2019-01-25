@@ -2,12 +2,12 @@
 title: Cenários de desempenho com suporte
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 605521cb91945812db178db3a82883b4d13bc636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614478"
 ---
 # <a name="supported-deployment-scenarios"></a>Cenários de desempenho com suporte
 O subconjunto de recursos do Windows Communication Foundation (WCF) tem suportada para uso em aplicativos parcialmente confiáveis foi projetado para atender aos requisitos de algumas, mas nem todos os cenários para uso do WCF. No servidor, o WCF atende aos requisitos de escala da Internet compartilhada provedores de hospedagem que executam aplicativos de terceiros no [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto por motivos de segurança de permissões de confiança média. No cliente, o suporte de confiança parcial do WCF foi projetado para atender aos requisitos de tecnologias de implantação, como [a implantação do ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) ou [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]da tecnologia de aplicativo de navegador XAML, que permitem que direta e segura implantação de aplicativos da área de trabalho de sites não confiáveis.  
@@ -32,15 +32,15 @@ O subconjunto de recursos do Windows Communication Foundation (WCF) tem suportad
   
  Serviços de fluxo de trabalho exigem permissões de confiança total e não podem ser usados em aplicativos parcialmente confiáveis.  
   
- Para obter mais informações, consulte [como: uso de confiança média no ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
+ Para obter mais informações, confira [Como: Usar confiança média no ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>Confiança parcial no cliente  
  Determinadas precauções de segurança devem ter cuidadas ao baixar e executar código não confiáveis de sites da Internet. Ambos [a implantação do ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) e [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]do aplicativo de navegador da XAML (XBAP) tecnologia de tornar o uso de confiança parcial para conceder permissões limitadas (zona da Internet) para código não confiável.  
   
  WCF pode ser usado para se comunicar com servidores remotos de dentro de aplicativos parcialmente confiáveis, implantados pelo [a implantação do ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) ou XBAP. Inclui o conjunto de permissões da zona da Internet <xref:System.Net.WebPermission> para o host de origem, que permite que esses aplicativos se comuniquem com seu servidor de origem usando qualquer uma das associações WCF com suporte descritas no [compatibilidade de recursos de confiança parcial ](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança de acesso do código](https://go.microsoft.com/fwlink/?LinkId=83717)  
- [Visão geral de aplicativos hospedados pelo navegador do Windows Presentation Foundation](https://go.microsoft.com/fwlink/?LinkId=98397)  
- [Confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- [Confiança média do ASP.Net](https://go.microsoft.com/fwlink/?LinkId=69328)
+## <a name="see-also"></a>Consulte também
+- [Segurança de acesso do código](https://go.microsoft.com/fwlink/?LinkId=83717)
+- [Visão geral de aplicativos hospedados pelo navegador do Windows Presentation Foundation](https://go.microsoft.com/fwlink/?LinkId=98397)
+- [Confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [Confiança média do ASP.Net](https://go.microsoft.com/fwlink/?LinkId=69328)

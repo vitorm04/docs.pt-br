@@ -2,12 +2,12 @@
 title: Criando um BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 5b7fd3e88fa12a66e086906de6f0d7d6a7d1aa17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8c4f3b4b3f9a3e4694ece814de691c07ef88ec5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684873"
 ---
 # <a name="creating-a-bindingelement"></a>Criando um BindingElement
 Associações e elementos de associação (objetos que estendem <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivamente) são o lugar onde o modelo de aplicativo do Windows Communication Foundation (WCF) é associado com as fábricas de canais e ouvintes de canais. Sem associações, usar canais personalizados requer programação no nível de canal como descrito em [programação de nível de serviço canal](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) e [programação de nível de canal do cliente](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Este tópico discute o requisito mínimo para habilitar o uso do seu canal no WCF, o desenvolvimento de um <xref:System.ServiceModel.Channels.BindingElement> de canal e habilitar o uso do aplicativo conforme descrito na etapa 4 do [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -71,7 +71,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  Depois de criar um elemento de associação para o seu canal, retornar para o [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md) tópico para ver se você deseja adicionar suporte de arquivo de configuração para o elemento de associação, se e como adicionar suporte de publicação de metadados, e Se e como para construir uma associação definida pelo usuário que usa o elemento de associação.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Desenvolvimento de canais](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Desenvolvimento de canais](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

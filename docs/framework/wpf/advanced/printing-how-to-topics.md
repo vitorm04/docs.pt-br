@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726436"
 ---
 # <a name="printing-how-to-topics"></a>Tópicos explicativos de impressão
 Os tópicos nesta seção demonstram como usar os recursos de impressão e gerenciamento do sistema de impressão incluídas no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bem como o novo caminho de impressão do [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
@@ -31,7 +31,7 @@ Os tópicos nesta seção demonstram como usar os recursos de impressão e geren
  [Enumerar um subconjunto de filas de impressão](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Instruções para gerar uma lista de impressoras que contém certas características.  
   
- [NOTINBUILD: como estender o Esquema de Impressão e criar novas classes do sistema de impressão](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD: Como: Estender o esquema de impressão e criar novas Classes de sistema de impressão](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Longa discussão sobre como programadores de código gerenciado podem estender o Esquema de Impressão para dispositivos de impressão ou impressoras especiais com características novas ou incomuns.  
   
  [Obter propriedades do objeto do sistema de impressão sem reflexão](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -46,10 +46,10 @@ Os tópicos nesta seção demonstram como usar os recursos de impressão e geren
  [Validar e mesclar PrintTickets](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  Instruções para verificar se um tíquete de impressão é válido e se ele não requer nada que não tem suporte na impressora.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Printing>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.Interop>  
- [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Printing>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.Interop>
+- [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)

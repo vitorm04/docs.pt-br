@@ -2,12 +2,12 @@
 title: Consulte exemplos de expressões (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: f3c3d861ab13fe974b1846ae3351cab50000e168
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98acbbc3b2271fac0d44728becdaffd09e5d28b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584708"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Consulte exemplos de expressões (LINQ to DataSet)
 Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programa que os exemplos na sintaxe da expressão de consulta que usam os operadores de consulta padrão. O <xref:System.Data.DataSet> usado nesses exemplos é preenchido usando o `FillDataSet` método, que é especificado em [Carregando dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obter mais informações, consulte [visão geral de operadores de consulta padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -34,7 +34,7 @@ Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-m
  [Operadores de junção](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
  Os exemplos neste tópico demonstram como usar os métodos de <xref:System.Linq.Enumerable.GroupJoin%2A> e de <xref:System.Linq.Enumerable.Join%2A> para ver <xref:System.Data.DataSet>.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de consulta baseada em método](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
- [Exemplos de operador de conjunto de dados específicos](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>Consulte também
+- [Exemplos de consulta baseada em método](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)
+- [Exemplos de operador de conjunto de dados específicos](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)
+- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

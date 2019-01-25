@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0447a44c555e141c96d6a52ba330e181151a7bc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bfc4ac58785b766e74d836fa3cf3b1aca75f01d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521017"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>Método IMetaDataEmit::SetFieldRVA
-Define um valor de variável global para o endereço virtual relativo do campo referenciado por token especificado.  
+Define um valor da variável global para o endereço virtual relativo do campo referenciado pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,17 +41,17 @@ HRESULT SetFieldRVA (
  [in] O token para o campo de destino.  
   
  `ulRVA`  
- [in] O endereço de uma área de códigos ou dados.  
+ [in] O endereço de uma área do código ou dados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Como descriptografar elementos XML com chaves assimétricas
+title: 'Como: Descriptografar elementos XML com chaves assimétricas'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96bee90c7cb3847f9c7059e1a0b1d737209b924f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 647ac3898924810eb16cbeb8c67f00e6465c8d80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547755"
 ---
-# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Como descriptografar elementos XML com chaves assimétricas
+# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Como: Descriptografar elementos XML com chaves assimétricas
 Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para criptografar e descriptografar um elemento dentro de um documento XML.  Criptografia de XML é uma maneira padrão para trocar ou armazenar dados XML criptografados, sem se preocupar com os dados que está sendo lidos com facilidade.  Para obter mais informações sobre o padrão de criptografia de XML, consulte a recomendação do World Wide Web Consortium (W3C) [sintaxe de assinatura XML e o processamento](https://www.w3.org/TR/xmldsig-core/).  
   
- O exemplo neste procedimento descriptografa um elemento XML que foi criptografado usando os métodos descritos em [como: criptografar a elementos XML com chaves assimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Ele encontra um <`EncryptedData`> elemento, descriptografa o elemento e, em seguida, substitui o elemento por elemento XML de texto sem formatação original.  
+ O exemplo neste procedimento descriptografa um elemento XML que foi criptografado usando os métodos descritos no [como: Criptografar elementos XML com chaves assimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Ele encontra um <`EncryptedData`> elemento, descriptografa o elemento e, em seguida, substitui o elemento por elemento XML de texto sem formatação original.  
   
  Este exemplo descriptografa um elemento XML usando duas chaves.  Ele recupera uma chave privada do RSA gerada anteriormente de um contêiner de chave e, em seguida, usa a chave RSA para descriptografar uma chave de sessão armazenados no <`EncryptedKey`> elemento da <`EncryptedData`> elemento.  O exemplo, em seguida, usa a chave de sessão para descriptografar o elemento XML.  
   
@@ -63,7 +63,7 @@ Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace 
      [!code-vb[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo supõe que um arquivo chamado `test.xml` existe no mesmo diretório que o programa compilado.  Ele também pressupõe que `test.xml` contém um elemento XML que foi criptografado usando as técnicas descritas [como: criptografar a elementos XML com chaves assimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  
+ Este exemplo supõe que um arquivo chamado `test.xml` existe no mesmo diretório que o programa compilado.  Ele também pressupõe que `test.xml` contém um elemento XML que foi criptografado usando as técnicas descritas [como: Criptografar elementos XML com chaves assimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  
   
  [!code-csharp[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#1)]
  [!code-vb[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#1)]  
@@ -83,5 +83,5 @@ Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace 
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Como criptografar elementos XML com chaves assimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Como: Criptografar elementos XML com chaves assimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

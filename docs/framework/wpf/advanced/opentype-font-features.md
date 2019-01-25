@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: f3d1dd9f7ef8122ac5573121e4f779fade776c8c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5751efe0c6621425b8b54c642d51127118c0b6bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529766"
 ---
 # <a name="opentype-font-features"></a>Recursos de fonte OpenType
 Este tópico fornece uma visão geral de alguns dos principais recursos da tecnologia de fonte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -360,9 +360,9 @@ Texto usando letras maiúsculas OpenType
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Documents.Typography>  
- [Especificação OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)  
- [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Pacote de fontes OpenType de exemplo](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [Empacotando fontes com aplicativos](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Documents.Typography>
+- [Especificação OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)
+- [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Pacote de fontes OpenType de exemplo](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+- [Empacotando fontes com aplicativos](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

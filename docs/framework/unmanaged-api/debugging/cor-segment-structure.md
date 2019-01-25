@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deea4e6128eace0ffa539d77bb63f7629eb72354
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 55f1c0da651d786dfdcfda6a54ee1b29db35f3d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587733"
 ---
 # <a name="corsegment-structure"></a>Estrutura COR_SEGMENT
 Contém informações sobre uma região da memória no heap gerenciado.  
@@ -52,7 +52,7 @@ typedef struct _COR_SEGMENT {
  O campo `heap` é o número de processadores, que corresponde ao heap que está sendo relatado. Para os coletores de lixo de estação de trabalho, seu valor é sempre zero, uma vez que estações de trabalho têm apenas um heap de coleta de lixo. Para os coletores de lixo do servidor, seu valor corresponde ao processador ao qual o heap está anexado. Observe que pode haver mais ou menos heaps de coleta de lixo que o número real de processadores devido a detalhes de implementação do coletor de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
@@ -60,6 +60,6 @@ typedef struct _COR_SEGMENT {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

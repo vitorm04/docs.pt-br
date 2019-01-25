@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be7184e07815ebe222b8ff8736c26fd3879c8777
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d7d5b4e7ed4fdf6ae20da654913cbf3e004eb09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506735"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>Método ICorProfilerInfo4::RequestReJIT
-Solicita uma recompilação de JIT de todas as instâncias das funções especificadas.  
+Solicita uma recompilação JIT de todas as instâncias das funções especificadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,41 +38,41 @@ HRESULT RequestReJIT (
   
 #### <a name="parameters"></a>Parâmetros  
  `cFunctions`  
- [in] O número de funções de recompilar.  
+ [in] O número de funções para recompilar.  
   
  `moduleIds`  
- [in] Especifica o `moduleId` parte das (`module`, `methodDef`) pares que identificam as funções a ser recompilado.  
+ [in] Especifica o `moduleId` parte do (`module`, `methodDef`) pares que identificam as funções a ser recompilado.  
   
  `methodIds`  
- [in] Especifica o `methodId` parte das (`module`, `methodDef`) pares que identificam as funções a ser recompilado.  
+ [in] Especifica o `methodId` parte do (`module`, `methodDef`) pares que identificam as funções a ser recompilado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|Foi feita uma tentativa para marcar todos os métodos para recompilação de JIT. O criador de perfil deve implementar o [ICorProfilerCallback4::ReJITError](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) método para determinar quais métodos com êxito foram marcados para recompilação de JIT.|  
-|CORPROF_E_CALLBACK4_REQUIRED|O criador de perfil deve implementar o [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface para a chamada com suporte.|  
-|CORPROF_E_REJIT_NOT_ENABLED|Recompilação de JIT não foi habilitada. Você deve habilitar recompilação JIT durante a inicialização por meio de [: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para definir o `COR_PRF_ENABLE_REJIT` sinalizador.|  
+|S_OK|Foi feita uma tentativa para marcar todos os métodos de recompilação JIT. O criador de perfis deve implementar o [ICorProfilerCallback4::ReJITError](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) método para determinar quais métodos foram marcados para recompilação JIT com êxito.|  
+|CORPROF_E_CALLBACK4_REQUIRED|O criador de perfis deve implementar o [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface para a chamada a ter suporte.|  
+|CORPROF_E_REJIT_NOT_ENABLED|Recompilação JIT não foi habilitada. Você deve habilitar recompilação JIT durante a inicialização usando o [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para definir o `COR_PRF_ENABLE_REJIT` sinalizador.|  
 |E_INVALIDARG|`cFunctions` é 0, ou `moduleIds` ou `methodIds` é `NULL`.|  
 |||  
 |E_OUTOFMEMORY|O CLR não pôde concluir a solicitação porque ele ficou sem memória.|  
   
 ## <a name="remarks"></a>Comentários  
- Chamar `RequestReJIT` para que o tempo de execução recompilar um conjunto especificado de funções. Um criador de perfil de código, em seguida, pode usar o [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface para ajustar o código que é gerado quando as funções são recompiladas. Isso não afeta a funções em execução no momento, apenas futuras invocações. Se qualquer uma das funções especificadas anteriormente foi recompilado JIT, solicitar uma recompilação é equivalente a reversão e recompilar a função. Para preservar a possibilidade de reversão, quando o compilador JIT compila a versão original de uma função, ele considera apenas as versões originais de seus chamados para decisões de inlining. Quando o compilador JIT recompila uma função, ele considera as versões atuais (recompiladas ou originais) de seus chamados de inlining.  
+ Chamar `RequestReJIT` para ter o tempo de execução a recompilar um conjunto de funções especificado. Um criador de perfil de código, em seguida, pode usar o [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface para ajustar o código que é gerado quando as funções são recompiladas. Isso não afeta as funções em execução no momento, invocações de função só futuras. Se qualquer uma das funções especificadas anteriormente tiver sido recompilado por JIT, solicitar uma recompilação é equivalente a reversão e recompilar a função. Para preservar a possibilidade de reversão, quando o compilador JIT compila a versão original de uma função, ele considera somente as versões originais de seus chamados para decisões de inlining. Quando o compilador JIT recompila uma função, ele considera as versões atuais (recompiladas ou originais) do seus receptores de inlining.  
   
- Um criador de perfil normalmente chama `RequestReJIT` em resposta à entrada do usuário solicitando que o criador de perfil instrumentar um ou mais métodos. `RequestReJIT` Normalmente, suspende o tempo de execução para fazer parte de seu trabalho e podem potencialmente gatilho uma coleta de lixo. Como tal, o criador de perfil deve chamar `RequestReJIT` de um thread ele criou anteriormente e não de um thread criado pelo CLR que está executando um retorno de chamada do criador de perfil.  
+ Um criador de perfil chama normalmente `RequestReJIT` em resposta à entrada do usuário solicitando que o criador de perfil instrumentar um ou mais métodos. `RequestReJIT` Normalmente, suspende o tempo de execução para fazer parte de seu trabalho e podem, potencialmente, uma coleta de lixo do gatilho. Como tal, o criador de perfil deve chamar `RequestReJIT` de um thread ele criou anteriormente e não de um thread criado pelo CLR que está executando um retorno de chamada do criador de perfil.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)

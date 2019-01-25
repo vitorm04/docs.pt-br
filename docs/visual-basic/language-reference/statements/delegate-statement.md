@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583646"
 ---
 # <a name="delegate-statement"></a>Instrução Delegate
 Usada para declarar um delegado. Um delegado é um tipo de referência que se refere a um `Shared` método de um tipo ou a um método de instância de um objeto. Qualquer procedimento com parâmetro e tipos de retorno de correspondência pode ser usado para criar uma instância desta classe delegate. O procedimento posteriormente, em seguida, pode ser invocado por meio da instância de delegado.  
@@ -57,19 +57,19 @@ Usada para declarar um delegado. Um delegado é um tipo de referência que se re
   
  A assinatura da função deve corresponder a do tipo delegado. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Para obter mais informações sobre delegados, consulte [delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
+ Para obter mais informações sobre delegados, confira [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `Delegate` declaração para declarar um delegado para operar em dois números e retornando um número. O `DelegateTest` método usa uma instância de um delegado desse tipo e o utiliza para operar em pares de números.  
   
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
- [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Como usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Covariância e Contravariância](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Saída](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Consulte também
+- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
+- [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Como: usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Covariância e Contravariância](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Saída](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

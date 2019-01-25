@@ -2,12 +2,12 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f0f429d7f28360fd76dfff0e7d4a4eba019e5acf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653237"
 ---
 # <a name="datatables"></a>DataTables
 Um <xref:System.Data.DataSet> é composto de uma coleção tabelas, relações e restrições. No ADO.NET, <xref:System.Data.DataTable> objetos são usados para representar as tabelas em um **conjunto de dados**. Um **DataTable** representa uma tabela de dados relacionais de na memória; os dados são locais para o. Aplicativo baseado em NET no qual residem, mas podem ser preenchido a partir de uma fonte de dados, como Microsoft SQL Server usando um **DataAdapter** para obter mais informações, consulte [populando um DataSet a partir de um DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -55,5 +55,5 @@ Um <xref:System.Data.DataSet> é composto de uma coleção tabelas, relações e
  [Visão geral da biblioteca de classes](../../../../../docs/standard/class-library-overview.md)  
  Fornece uma visão geral da biblioteca de classes do .NET Framework, incluindo o **System** namespace, bem como seu namespace de segundo nível **System. Data**.  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

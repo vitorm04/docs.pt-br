@@ -2,12 +2,12 @@
 title: Inferindo colunas
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 56de4b4d6cf704473ec46957625ad1c376f595c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f3edd09b1fb8169e8f609514de38b3c37574079b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655225"
 ---
 # <a name="inferring-columns"></a>Inferindo colunas
 Depois que o ADO.NET determinou de um documento XML que elementos inferir como tabelas para um <xref:System.Data.DataSet>, ele infere, em seguida, as colunas para essas tabelas. O ADO.NET 2.0 introduziu um novo mecanismo de inferência de esquema que infere um tipo de dados fortemente tipado para cada **simpleType** elemento. Nas versões anteriores, o tipo de dados de um inferido **simpleType** elemento era sempre **xsd: string**.  
@@ -35,9 +35,9 @@ Depois que o ADO.NET determinou de um documento XML que elementos inferir como t
   
  O processo de inferência produzirá uma tabela denominada **Element1** com duas colunas, **attr1** e **attr2**. O **ColumnMapping** definirá a propriedade de ambas as colunas **MappingType.Attribute**.  
   
- **Conjunto de dados:** DocumentElement  
+ **DataSet:** DocumentElement  
   
- **Tabela:** Element1  
+ **Tabela:** element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
@@ -57,18 +57,18 @@ Depois que o ADO.NET determinou de um documento XML que elementos inferir como t
   
  O processo de inferência produzirá uma tabela denominada **Element1** com duas colunas, **ChildElement1** e **ChildElement2**. O **ColumnMapping** definirá a propriedade de ambas as colunas **MappingType.Element**.  
   
- **Conjunto de dados:** DocumentElement  
+ **DataSet:** DocumentElement  
   
- **Tabela:** Element1  
+ **Tabela:** element1  
   
 |ChildElement1|ChildElement2|  
 |-------------------|-------------------|  
 |Texto1|Texto2|  
   
-## <a name="see-also"></a>Consulte também  
- [Derivando a estrutura relacional do DataSet do esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Carregar um conjunto de dados do XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Carregando informações de esquema de conjunto de dados de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Derivando a estrutura relacional do DataSet do esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Carregar um conjunto de dados do XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Carregando informações de esquema de conjunto de dados de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)
+- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

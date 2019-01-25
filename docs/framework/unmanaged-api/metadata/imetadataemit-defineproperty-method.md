@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543075"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>Método IMetaDataEmit::DefineProperty
-Cria uma definição de propriedade para o tipo especificado, com especificado `get` e `set` métodos acessadores e recebe um token para essa definição de propriedade.  
+Cria uma definição de propriedade para o tipo especificado, com a especificada `get` e `set` acessadores de método e obtém um token para essa definição de propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,13 +48,13 @@ HRESULT DefineProperty (
   
 #### <a name="parameters"></a>Parâmetros  
  `td`  
- [in] O token de classe ou interface na qual a propriedade está sendo definida.  
+ [in] O token para a classe ou interface na qual a propriedade está sendo definida.  
   
  `szProperty`  
  [in] O nome da propriedade.  
   
  `dwPropFlags`  
- [in] Os sinalizadores de propriedade.  
+ [in] Os sinalizadores da propriedade.  
   
  `pvSig`  
  [in] A assinatura de propriedade.  
@@ -69,7 +69,7 @@ HRESULT DefineProperty (
  [in] O valor padrão para a propriedade.  
   
  `cchValue`  
- [in] A contagem de (Unicode) caracteres `pValue`.  
+ [in] A contagem de (Unicode) caracteres em `pValue`.  
   
  `mdSetter`  
  [in] O método que define o valor da propriedade.  
@@ -84,14 +84,14 @@ HRESULT DefineProperty (
  [out] O `mdProperty` token atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

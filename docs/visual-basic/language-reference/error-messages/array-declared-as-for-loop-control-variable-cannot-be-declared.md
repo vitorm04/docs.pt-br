@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: f6cf397b1e76313ab399d5e39a43ae0263df619c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8fe794adcc1c2d28437bac7e732f99a6b6c07c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518612"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>A matriz declarada para a variável de controle do loop não pode ser declarada com um tamanho inicial
-Um `For Each` loop usa uma matriz como sua *elemento* variável de iteração mas inicializa essa matriz.  
+Um `For Each` loop usa uma matriz como seu *elemento* variável de iteração, mas inicializa essa matriz.  
   
  As instruções a seguir mostram como esse erro pode ser gerado.  
   
@@ -25,15 +25,15 @@ For Each listElement() As Integer In arrayList
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- A primeira `For Each` instrução é a maneira correta de acessar elementos de `arrayList`. O segundo `For Each` instrução gera este erro.  
+ A primeira `For Each` instrução é a maneira correta de acessar elementos de `arrayList`. O segundo `For Each` instrução gera esse erro.  
   
  **ID do erro:** BC32039  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Remova a inicialização da declaração de *elemento* variável de iteração.  
+-   Remova a inicialização da declaração do *elemento* variável de iteração.  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Coleções](../../../standard/collections/index.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Coleções](../../../standard/collections/index.md)

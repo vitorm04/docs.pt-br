@@ -1,15 +1,15 @@
 ---
-title: 'Passo a passo: manipulando dados (C#)'
+title: 'Passo a passo: Manipulação de dados (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: b9b19d4f9a1fb56ddabbf3584c1fb7bb29cd6d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637301"
 ---
-# <a name="walkthrough-manipulating-data-c"></a>Passo a passo: manipulando dados (C#)
+# <a name="walkthrough-manipulating-data-c"></a>Passo a passo: Manipulação de dados (C#)
 Essa explicação passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para adicionar, modificar e excluir dados em um banco de dados. Você usará uma cópia do banco de dados de exemplo Northwind para adicionar um cliente, alterar o nome de um cliente e excluir um pedido.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -23,7 +23,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 -   O banco de dados de exemplo Northwind.  
   
-     Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [baixando bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois de baixar o banco de dados, copie o arquivo northwnd.mdf para a pasta c:\linqtest6.  
+     Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois de baixar o banco de dados, copie o arquivo northwnd.mdf para a pasta c:\linqtest6.  
   
 -   Um arquivo de código C# gerado no banco de dados Northwind.  
   
@@ -49,19 +49,19 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
 -   Enviar essas alterações para o banco de dados Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Criando uma solução LINQ to SQL  
- Na primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  
+ A primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para criar uma solução LINQ to SQL  
   
-1.  No Visual Studio **arquivo** , aponte para **novo**e, em seguida, clique em **projeto**.  
+1.  No Visual Studio **arquivo** , aponte para **New**e, em seguida, clique em **projeto**.  
   
-2.  No **tipos de projeto** painel o **novo projeto** caixa de diálogo, clique em **Visual C#**.  
+2.  No **tipos de projeto** painel na **novo projeto** caixa de diálogo, clique em **Visual C#** .  
   
 3.  No painel **Modelos**, clique em **Aplicativo de Console**.  
   
 4.  No **nome** , digite **LinqDataManipulationApp**.  
   
-5.  No **local** , verifique se onde você deseja armazenar os arquivos de projeto.  
+5.  No **local** , verifique se onde você deseja armazenar seus arquivos de projeto.  
   
 6.  Clique em **OK**.  
   
@@ -70,9 +70,9 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 #### <a name="to-add-systemdatalinq"></a>Para adicionar System.Data.Linq  
   
-1.  Em **Solution Explorer**, clique com botão direito **referências**e, em seguida, clique em **adicionar referência**.  
+1.  Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
   
-2.  No **adicionar referência** caixa de diálogo, clique em **.NET**, clique em assembly System.Data.Linq e, em seguida, clique em **Okey**.  
+2.  No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
   
      O assembly é adicionado ao projeto.  
   
@@ -85,9 +85,9 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Para adicionar o arquivo do código Northwind ao projeto  
   
-1.  Sobre o **projeto** menu, clique em **Add Existing Item**.  
+1.  Sobre o **Project** menu, clique em **Add Existing Item**.  
   
-2.  No **Add Existing Item** caixa de diálogo, navegue até c:\linqtest6\northwind.cs e, em seguida, clique em **adicionar**.  
+2.  No **Adicionar Item existente** caixa de diálogo, navegue até c:\linqtest6\northwind.cs e, em seguida, clique em **Add**.  
   
      O arquivo northwind.cs é adicionado ao projeto.  
   
@@ -102,9 +102,9 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 2.  Pressione F5 para testar o aplicativo neste ponto.  
   
-     Um **Console** janela será aberta.  
+     Um **Console** janela é aberta.  
   
-     Você pode fechar o aplicativo pressionando Enter no **Console** janela, ou clicando em **parar depuração** no Visual Studio **depurar** menu.  
+     Você pode fechar o aplicativo pressionando Enter na **Console** janela, ou clicando em **parar depuração** no Visual Studio **depurar** menu.  
   
 ## <a name="creating-a-new-entity"></a>Criando uma nova entidade  
  Criar uma nova entidade é simples. Você pode criar objetos (como `Customer`) usando a palavra-chave `new`.  
@@ -119,7 +119,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 2.  Pressione F5 para depurar a solução.  
   
-3.  Pressione Enter no **Console** janela para parar a depuração e continuar o passo a passo.  
+3.  Pressione Enter na **Console** janela para parar a depuração e continue o passo a passo.  
   
 ## <a name="updating-an-entity"></a>Atualizando uma entidade  
  Nas etapas a seguir, você recuperará um objeto `Customer` e alterará uma de suas propriedades.  
@@ -156,10 +156,10 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 3.  Pressione F5 para depurar a solução.  
   
-4.  Pressione Enter no **Console** janela para fechar o aplicativo.  
+4.  Pressione Enter na **Console** janela para fechar o aplicativo.  
   
 > [!NOTE]
 >  Depois de adicionar o novo cliente enviando as alterações, você não poderá executar esta solução novamente como está. Para executar novamente a solução, altere o nome do cliente e a ID do cliente a ser adicionada.  
   
-## <a name="see-also"></a>Consulte também  
- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Consulte também
+- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

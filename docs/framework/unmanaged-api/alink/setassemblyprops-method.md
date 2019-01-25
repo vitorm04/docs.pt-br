@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aed553a3a8d54b5229a122e76b61e3e58d4af3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65d6e929a0a6fb5e1933a6c9216dfc5b56342113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560640"
 ---
 # <a name="setassemblyprops-method"></a>Método SetAssemblyProps
-Atribui um nível de conjunto de propriedades.  
+Atribui a propriedades de nível de assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,12 +51,12 @@ HRESULT SetAssemblyProps(
  Novo valor da opção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

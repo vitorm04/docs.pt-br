@@ -1,15 +1,15 @@
 ---
-title: Como criar uma credencial de suporte
+title: 'Como: Criar uma credencial de suporte'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539799"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Como criar uma credencial de suporte
+# <a name="how-to-create-a-supporting-credential"></a>Como: Criar uma credencial de suporte
 É possível ter um esquema de segurança personalizado que requer mais de uma credencial. Por exemplo, pode exigir que um serviço do cliente não apenas um nome de usuário e senha, mas também uma credencial que comprova o cliente é com mais de 18 anos. A segunda credencial é um *que dão suporte a credencial*. Este tópico explica como implementar essas credenciais em um cliente do Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "43499985"
 |Criptografia e não assinados|Tokens de suporte assinados e criptografados são assinados que dão suporte a tokens que também são criptografados quando são exibidas no `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programação que dão suporte a credenciais  
- Para criar um serviço que usa tokens de suporte, você deve criar uma [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obter mais informações, consulte [como: criar um personalizado de associação usando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Para criar um serviço que usa tokens de suporte, você deve criar uma [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obter mais informações, consulte [como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  A primeira etapa ao criar uma ligação personalizada é criar um elemento de associação de segurança, que pode ser um dos três tipos:  
   
@@ -80,5 +80,5 @@ ms.locfileid: "43499985"
 ### <a name="code"></a>Código  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Consulte também  
- [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

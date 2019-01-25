@@ -2,12 +2,12 @@
 title: Validador de senha e nome de usuário
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 44292315e5cd3790b2ba9505747f3e8258106f0a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 08ecebb98df5d4a5d6dcda3e974d6e1a4c104fa5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544004"
 ---
 # <a name="user-name-password-validator"></a>Validador de senha e nome de usuário
 Este exemplo demonstra como implementar um validador personalizado de UserNamePassword. Isso é útil em casos em que nenhum dos modos de validação UserNamePassword internos é adequado para os requisitos do aplicativo; Por exemplo, quando os pares de nome de usuário e senha são armazenados em algum armazenamento externo, como um banco de dados. Este exemplo mostra um serviço que tem um validador personalizado que verifica se há dois pares de nome de usuário/senha específica. O cliente usa tal um par de nome de usuário/senha para se autenticar no serviço.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd759a4167a667919a443bc6492c049631ad222c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed27d8b2ee99d0a9364c577e50120f3c7b4f5929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546787"
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA asynchronousThreadAbort
 O MDA (assistente para depuração gerenciada) `asynchronousThreadAbort` é ativado quando um thread tenta introduzir uma anulação assíncrona em outro thread. Anulações de thread síncronas não ativam o MDA `asynchronousThreadAbort`.
@@ -71,4 +71,5 @@ void FireMda()
 ```
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Threading.Thread> [Diagnosticando erros com assistentes para depuração gerenciada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- <xref:System.Threading.Thread>
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

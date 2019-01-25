@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671847"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>Método IMetaDataImport::GetFieldProps
-Obtém os metadados associados ao campo referenciado pelo FieldDef especificado token.  
+Obtém o token de metadados associados ao campo referido pelo FieldDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ HRESULT GetFieldProps (
   
 #### <a name="parameters"></a>Parâmetros  
  `mb`  
- [in] Um token de FieldDef que representa os metadados associados para o campo.  
+ [in] Um token de FieldDef que representa o campo para obter os metadados associados para.  
   
  `pClass`  
  [out] Um ponteiro para um token de TypeDef que representa o tipo da classe que o campo pertence.  
@@ -77,17 +77,17 @@ HRESULT GetFieldProps (
  [out] Um valor constante para o campo.  
   
  `pcchValue`  
- [out] O tamanho em caracteres de `ppValue`, ou zero não se existir nenhuma cadeia de caracteres.  
+ [out] O tamanho em caracteres de `ppValue`, ou zero, se nenhuma cadeia de caracteres existe.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

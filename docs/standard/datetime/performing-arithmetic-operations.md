@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2a50823b812541786cf1bebfd6b1262ce2e9314
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503143"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Executando operações aritméticas com datas e horários
 
@@ -78,7 +78,7 @@ O <xref:System.TimeZoneInfo> classe inclui uma série de métodos de conversão 
 
 Para obter detalhes, consulte [convertendo horários entre fusos horários](../../../docs/standard/datetime/converting-between-time-zones.md).
 
-O <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> classe fornece os métodos que aplicam regras de ajuste automaticamente quando você executa a data e hora. No entanto, é possível fazer isso convertendo o horário em um fuso horário para UTC, executando a operação aritmética e, em seguida, convertendo do UTC novamente para o horário no fuso horário. Para obter detalhes, consulte [como: usar fusos horários de data e hora aritmética](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
+O <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> classe fornece os métodos que aplicam regras de ajuste automaticamente quando você executa a data e hora. No entanto, é possível fazer isso convertendo o horário em um fuso horário para UTC, executando a operação aritmética e, em seguida, convertendo do UTC novamente para o horário no fuso horário. Para obter detalhes, consulte [como: Usar fusos horários de data e hora aritmética](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
 
 Por exemplo, o código a seguir é semelhante ao código anterior, que adicionou duas horas e meia às 2h em 9 de março de 2008. No entanto, como converte um horário padrão da região central em UTC antes de realizar a aritmética de data e hora e, depois, converte o resultado do UTC novamente no horário padrão da região central, o horário resultante reflete a transição do fuso horário padrão da região central para o horário de verão.
 
@@ -87,5 +87,5 @@ Por exemplo, o código a seguir é semelhante ao código anterior, que adicionou
 
 ## <a name="see-also"></a>Consulte também
 
-* [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
-* [Como usar fusos horários em aritmética de data e hora](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
+- [Como: Usar fusos horários em data e hora](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

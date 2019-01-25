@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 339b823e5e9f38ffd175c79e379e28ccc3565c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1f796e665a4e403d2d2b5a15837dd8bb8bf47ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631341"
 ---
 # <a name="icordebugstepper-interface1"></a>ICorDebugStepper Interface1
 Representa uma etapa na execução do código que é realizada por um depurador, serve como um identificador entre a emissão e a conclusão de um comando e fornece uma maneira de cancelar uma etapa.  
@@ -30,39 +30,39 @@ Representa uma etapa na execução do código que é realizada por um depurador,
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Faz com que essa `ICorDebugStepper` para cancelar o último comando de etapa recebido.|  
+|[Método Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Faz com que essa `ICorDebugStepper` para cancelar o último comando etapa recebido.|  
 |[Método IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Obtém um valor que indica se este `ICorDebugStepper` está executando uma etapa.|  
-|[Método SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Define um valor de CorDebugIntercept que especifica os tipos de código que são entrado em.|  
-|[Método SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Define um valor que indica se chamadas para [: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passar valores de argumento em relação ao código nativo ou em código do Microsoft intermediate language (MSIL) do método que está sendo percorrido.|  
+|[Método SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Define um valor de CorDebugIntercept que especifica os tipos de código são entrados.|  
+|[Método SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Define um valor que indica se chamadas para [ICorDebugStepper:: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passar valores de argumento em relação ao código nativo ou ao código do Microsoft intermediate language (MSIL) do método que está sendo percorrido.|  
 |[Método SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Define um valor de CorDebugUnmappedStop que especifica o tipo de código não mapeado no qual a execução será interrompida.|  
-|[Método Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Faz com que essa `ICorDebugStepper` para percorrer por meio de seu recipiente thread e, opcionalmente, para continuar a depuração único por meio das funções que são chamadas de dentro do thread.|  
-|[Método StepOut](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Faz com que essa `ICorDebugStepper` para percorrer por meio de seu recipiente thread e concluído quando o quadro atual retorna o controle para o quadro de chamada.|  
-|[Método StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Faz com que essa `ICorDebugStepper` para percorrer por meio de seu recipiente thread e para retornar quando atingir código além do último dos intervalos especificados.|  
+|[Método Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Faz com que essa `ICorDebugStepper` a etapa única por meio de seu recipiente thread e, opcionalmente, para continuar a depuração de único por meio de funções que são chamadas de dentro do thread.|  
+|[Método StepOut](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Faz com que essa `ICorDebugStepper` único-percorra seu recipiente thread e concluído quando o quadro atual retorna o controle para o quadro de chamada.|  
+|[Método StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Faz com que essa `ICorDebugStepper` a etapa única por meio de seu recipiente thread e para retornar quando ele atinge o código além do último dos intervalos especificados.|  
   
 ## <a name="remarks"></a>Comentários  
  O `ICorDebugStepper` interface tem as seguintes finalidades:  
   
--   Ele atua como um identificador entre um comando de depuração que é emitido e a conclusão desse comando.  
+-   Ele atua como um identificador entre um comando de depuração é emitido e a conclusão desse comando.  
   
 -   Ele fornece uma interface central para encapsular todo o passo a passo que pode ser executada.  
   
--   Ele fornece uma maneira de cancelar prematuramente uma operação de revisão.  
+-   Ele fornece uma maneira de cancelar prematuramente uma operação de passo a passo.  
   
- Pode haver mais de um seletor por thread. Por exemplo, um ponto de interrupção pode ser obtido ao passar sobre uma função, e o usuário deseja iniciar uma nova operação de revisão nessa função. Cabe o depurador para determinar como tratar essa situação. O depurador talvez queira cancelar a operação de revisão original ou aninhar as duas operações. O `ICorDebugStepper` interface dá suporte a ambas as opções.  
+ Pode haver mais de um seletor por thread. Por exemplo, um ponto de interrupção pode ser obtido ao passar sobre uma função, e o usuário deseja iniciar uma nova operação de deslocamento dentro dessa função. É responsabilidade do depurador para determinar como lidar com essa situação. O depurador poderá cancelar a operação de passo a passo original ou aninhar as duas operações. O `ICorDebugStepper` interface dá suporte a ambas as opções.  
   
- Um seletor pode migrar entre threads se o common language runtime (CLR) faz uma chamada de thread cruzado, empacotada.  
+ Um seletor pode migrar entre threads, se o common language runtime (CLR) faz uma chamada de thread cruzado, com marshaling.  
   
 > [!NOTE]
->  Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.  
+>  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 32a4e084-09b2-4946-a4a7-19a1fed9f7cc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2904fe91f223b528450684d8de2f70dba48fc792
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a1a839291c14b093aceb220810764c40f5b468f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590429"
 ---
 # <a name="isymunmanagedasyncmethodgetasyncstepinfocount-method"></a>Método ISymUnmanagedAsyncMethod::GetAsyncStepInfoCount
-Consulte [método DefineAsyncStepInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).  
+Ver [método DefineAsyncStepInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,5 +32,5 @@ HRESULT GetAsyncStepInfoCount(    [out, retval] ULONG32* pRetVal);
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedAsyncMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedAsyncMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

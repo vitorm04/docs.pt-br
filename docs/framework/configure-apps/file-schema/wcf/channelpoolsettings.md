@@ -1,23 +1,23 @@
 ---
-title: '&lt;ChannelPoolSettings&gt;'
+title: '&lt;channelPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: e55d3a989ae35d6e29062337cc79114a204608bb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 666602bde75cd21b5b3d16bd4d5e6cf63c12d593
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554953"
 ---
-# <a name="ltchannelpoolsettingsgt"></a>&lt;ChannelPoolSettings&gt;
+# <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
 Especifica as configurações de pool de canal para uma associação personalizada.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<customBinding>  
-\<associação >  
-\<oneWay >  
-\<channelPoolSettings >  
+\<binding>  
+\<oneWay>  
+\<channelPoolSettings>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ Especifica as configurações de pool de canal para uma associação personaliza
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Habilita o roteamento de pacotes para uma associação personalizada.|  
+|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Habilita o roteamento de pacotes para uma associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  As cotas são usadas como um mecanismo de diretiva para impedir o consumo de recursos em excesso. Elas impedir ataques de negação de serviço (DOS) que são mal-intencionados ou não intencionais. Use esse elemento ao definir cotas de canal em um canal personalizado.  
@@ -58,14 +58,14 @@ Especifica as configurações de pool de canal para uma associação personaliza
   
 -   O `maxOutboundChannelsPerEndpoint` cota define limites de cache no servidor e o cliente e é usada para melhorar a confiabilidade. O valor padrão se baseia em uma forma prudente modesta alocação de recursos que é adequada para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.ChannelPoolSettings>  
- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.ChannelPoolSettings>
+- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

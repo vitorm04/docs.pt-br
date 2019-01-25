@@ -1,5 +1,5 @@
 ---
-title: Como carregar arquivos no controle RichTextBox dos Windows Forms
+title: 'Como: Carregar arquivos para o controle RichTextBox dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 4d43536cab7806b8cf2de3d63b2d9f7f10024c71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99f869cd5fd3ffc35a58d3d4e7f12161cab3a7ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666040"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Como carregar arquivos no controle RichTextBox dos Windows Forms
-Windows Forms <xref:System.Windows.Forms.RichTextBox> controle pode exibir um texto sem formatação, em texto sem formatação Unicode ou arquivo de formato de Rich Text (RTF). Para fazer isso, chame o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método. Você também pode usar o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método para carregar dados de um fluxo. Para obter mais informações, consulte <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Como: Carregar arquivos para o controle RichTextBox dos Windows Forms
+Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode exibir um texto sem formatação, texto simples Unicode ou arquivo de formato Rich-Text (RTF). Para fazer isso, chame o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método. Você também pode usar o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método para carregar dados de um fluxo. Para obter mais informações, consulte <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Para carregar um Arquivo no controle RichTextBox  
   
 1.  Determinar o caminho do arquivo a ser aberto usando o <xref:System.Windows.Forms.OpenFileDialog> componente. Para obter uma visão geral, consulte [Visão geral do componente OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md).  
   
-2.  Chamar o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método o <xref:System.Windows.Forms.RichTextBox> controle, especificando o arquivo para carregar e, opcionalmente, um tipo de arquivo. No exemplo a seguir, o arquivo a ser carregado é obtido a <xref:System.Windows.Forms.OpenFileDialog> do componente <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade. Se você chamar o método com um nome de arquivo como seu único argumento, o tipo de arquivo será considerado como RTF. Para especificar outro tipo de arquivo, chame o método com um valor de <xref:System.Windows.Forms.RichTextBoxStreamType> enumeração como seu segundo argumento.  
+2.  Chame o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método da <xref:System.Windows.Forms.RichTextBox> controle, especificando o arquivo a ser carregado e, opcionalmente, um tipo de arquivo. No exemplo a seguir, o arquivo a ser carregado é obtido a <xref:System.Windows.Forms.OpenFileDialog> do componente <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade. Se você chamar o método com um nome de arquivo como seu único argumento, o tipo de arquivo será considerado como RTF. Para especificar outro tipo de arquivo, chame o método com um valor da <xref:System.Windows.Forms.RichTextBoxStreamType> enumeração como seu segundo argumento.  
   
      No exemplo a seguir, o <xref:System.Windows.Forms.OpenFileDialog> componente é mostrado quando um botão é clicado. O arquivo selecionado é aberto e exibido no <xref:System.Windows.Forms.RichTextBox> controle. Este exemplo supõe que um formulário tem um botão, `btnOpenFile`.  
   
@@ -66,7 +66,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> controle pode exibir um te
        }  
     ```  
   
-     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
+     (Visual c#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
   
     ```csharp  
     this.btnOpenFile.Click += new System.EventHandler(this. btnOpenFile_Click);  
@@ -78,10 +78,10 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> controle pode exibir um te
     ```  
   
     > [!IMPORTANT]
-    >  Para executar esse processo, seu assembly pode exigir um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Para executar esse processo, o assembly pode exigir um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.RichTextBox>  
- [Controle RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.RichTextBox>
+- [Controle RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

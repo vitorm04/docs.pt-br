@@ -1,15 +1,15 @@
 ---
-title: 'Como: Crie um documento com namespaces (LINQ to XML) (Visual Basic)'
+title: 'Como: Criar um documento com Namespaces (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0f24b509cdac86f652fb41197c2594b4c474fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631269"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Como: Crie um documento com namespaces (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Como: Criar um documento com Namespaces (LINQ to XML) (Visual Basic)
 Este tópico mostra como criar um documento com namespaces no Visual Basic.  
   
  Ao usar literais XML no Visual Basic, os usuários podem definir um namespace XML global padrão. Este namespace é o namespace padrão para literais XML e propriedades XML. O namespace XML padrão pode ser definida no nível de projeto ou nível de arquivo. Se for definida em nível de arquivo, substitui o namespace padrão no nível do projeto.  
@@ -114,5 +114,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Consulte também
+- [Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

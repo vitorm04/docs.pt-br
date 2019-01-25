@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 2094ba308ba384feb8542e896cb1eafcf645947c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eb6e2c0e59ae0c29937fb5542e3b4638dd2b7b8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671441"
 ---
 # <a name="await-operator-visual-basic"></a>Operador Await (Visual Basic)
 Aplicar o `Await` operador para um operando em uma expressão lambda ou método assíncrono para suspender a execução do método até que a tarefa aguardada seja concluída. A tarefa representa um trabalho em andamento.  
@@ -43,7 +43,7 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  Para obter o exemplo completo, consulte [Passo a passo: acessando a Web usando async e await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode baixar o exemplo em [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) no site da Microsoft. O exemplo está no projeto AsyncWalkthrough_HttpClient.  
+>  Para o exemplo completo, confira o [Passo a passo: Como acessar a Web usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode baixar o exemplo em [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) no site da Microsoft. O exemplo está no projeto AsyncWalkthrough_HttpClient.  
   
  Se `Await` é aplicada ao resultado de uma chamada de método que retorna um `Task(Of TResult)`, o tipo do `Await` expressão é TResult. Se `Await` é aplicada ao resultado de uma chamada de método que retorna um `Task`, o `Await` expressão não retorna um valor. O exemplo a seguir ilustra a diferença.  
   
@@ -103,7 +103,7 @@ Public Async Function WaitSynchronously() As Task(Of String)
 End Function  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Instruções passo a passo: acessando a Web e usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async](../../../visual-basic/language-reference/modifiers/async.md)
+## <a name="see-also"></a>Consulte também
+- [Programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Passo a passo: acessar a Web usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async](../../../visual-basic/language-reference/modifiers/async.md)

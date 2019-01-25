@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 305a8d7b5a800c46ed814b1e654947859dc9bd03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349f6922c18a7745c8eff05b1786dc649f8bb70a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520978"
 ---
 # <a name="couninitializecor-function"></a>Função CoUninitializeCor
 `CoUninitializeCor` é obsoleto.  
@@ -35,5 +35,5 @@ STDAPI_(void) CoUninitializeCor(void);
 ## <a name="remarks"></a>Comentários  
  O common language runtime não pode ser descarregado de um processo. Para remover completamente o tempo de execução de um processo em execução, você deve desligar esse processo.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

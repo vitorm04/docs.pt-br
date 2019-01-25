@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576009"
 ---
 # <a name="corfieldattr-enumeration"></a>Enumeração CorFieldAttr
 Contém valores que descrevem os metadados sobre um campo.  
@@ -65,29 +65,29 @@ typedef enum CorFieldAttr {
 |`fdFieldAccessMask`|Especifica informações de acessibilidade.|  
 |`fdPrivateScope`|Especifica que o campo não pode ser referenciado.|  
 |`fdPrivate`|Especifica que o campo é acessível somente por seu tipo pai.|  
-|`fdFamANDAssem`|Especifica que o campo é acessível por classes derivadas em seu assembly.|  
-|`fdAssembly`|Especifica que o campo é acessível por todos os tipos em seu assembly.|  
-|`fdFamily`|Especifica que o campo é acessível somente por seu tipo e classes derivadas.|  
-|`fdFamORAssem`|Especifica que o campo é acessível por classes derivadas e de todos os tipos em seu assembly.|  
-|`fdPublic`|Especifica que o campo é acessível por todos os tipos com visibilidade desse escopo.|  
+|`fdFamANDAssem`|Especifica que o campo pode ser acessado por classes derivadas em seu assembly.|  
+|`fdAssembly`|Especifica que o campo pode ser acessado por todos os tipos em seu assembly.|  
+|`fdFamily`|Especifica que o campo é acessível somente por seu tipo e as classes derivadas.|  
+|`fdFamORAssem`|Especifica que o campo pode ser acessado por classes derivadas e por todos os tipos em seu assembly.|  
+|`fdPublic`|Especifica que o campo pode ser acessado por todos os tipos com visibilidade desse escopo.|  
 |`fdStatic`|Especifica que o campo é um membro de seu tipo, em vez de um membro de instância.|  
 |`fdInitOnly`|Especifica que o campo não pode ser alterado depois que ele é inicializado.|  
 |`fdLiteral`|Especifica que o valor do campo é uma constante de tempo de compilação.|  
-|`fdNotSerialized`|Especifica que o campo não é serializado ao seu tipo é remoto.|  
-|`fdSpecialName`|Especifica que o campo é especial, e que descreve seu nome como.|  
-|`fdPinvokeImpl`|Especifica que a implementação de campo é encaminhada por meio de PInvoke.|  
+|`fdNotSerialized`|Especifica que o campo não é serializado quando seu tipo é remoto.|  
+|`fdSpecialName`|Especifica que o campo é especial, e que seu nome descreve como.|  
+|`fdPinvokeImpl`|Especifica que a implementação de campo é encaminhada por meio do PInvoke.|  
 |`fdReservedMask`|Reservado para uso interno pelo common language runtime.|  
-|`fdRTSpecialName`|Especifica que os metadados de tempo de execução de linguagem comum APIs interno deve verificar a codificação do nome.|  
+|`fdRTSpecialName`|Especifica que os metadados do common language runtime APIs internas deve verificar a codificação de nome.|  
 |`fdHasFieldMarshal`|Especifica que o campo contém informações de marshaling.|  
 |`fdHasDefault`|Especifica que o campo tem um valor padrão.|  
 |`fdHasFieldRVA`|Especifica que o campo tem um endereço virtual relativo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

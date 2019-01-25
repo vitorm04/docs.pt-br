@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ee2272a43d9f71cd49754a7f4233868b8bb9134
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d15f34c55f0ee261c65649e9d431944201c546f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506024"
 ---
 # <a name="cordebugintercept-enumeration"></a>Enumeração CorDebugIntercept
-Indica os tipos de código que pode ser interceptado (isto é, entrado em).  
+Indica os tipos de código que podem ser interceptadas (isto é, entrados).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,19 +50,19 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_SECURITY`|Código que impõe a segurança pode ser interceptado.|  
 |`INTERCEPT_CONTEXT_POLICY`|Uma política de contexto pode ser interceptada.|  
 |`INTERCEPT_INTERCEPTION`|Não usado.|  
-|`INTERCEPT_ALL`|Todo o código pode ser interceptado.|  
+|`INTERCEPT_ALL`|Todos os códigos podem ser interceptados.|  
   
 ## <a name="remarks"></a>Comentários  
- Use o [: Setinterceptmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) método para estabelecer os tipos de código que pode ser interceptado.  
+ Use o [ICorDebugStepper:: Setinterceptmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) método para estabelecer os tipos de código que podem ser interceptadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

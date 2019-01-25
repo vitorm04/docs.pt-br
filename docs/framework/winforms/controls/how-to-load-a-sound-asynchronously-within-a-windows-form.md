@@ -1,5 +1,5 @@
 ---
-title: Como carregar um som de forma assíncrona dentro de um Windows Form
+title: 'Como: Carregar um som de forma assíncrona dentro de um formulário do Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 2de2be478e81183201cc85e1a6dfd6f1a1833af6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed1257a942eb990c9b0c6427d264013e3324326b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523669"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Como carregar um som de forma assíncrona dentro de um Windows Form
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Como: Carregar um som de forma assíncrona dentro de um formulário do Windows
 O exemplo de código a seguir carrega um som de forma assíncrona de uma URL e é reproduzido em um novo thread.  
   
 ## <a name="example"></a>Exemplo  
@@ -30,7 +30,7 @@ O exemplo de código a seguir carrega um som de forma assíncrona de uma URL e �
   
 -   Se você substituir o nome de arquivo `"http://www.tailspintoys.com/sounds/stop.wav"` com um nome de arquivo válido.  
   
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [como: Compilar e executar um exemplo de código completa do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Operações de arquivo devem ser incluídas dentro de blocos de tratamento de exceção apropriados.  
@@ -52,8 +52,8 @@ O exemplo de código a seguir carrega um som de forma assíncrona de uma URL e �
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo. Por exemplo, o arquivo `Form1.vb` não pode ser um arquivo de origem do Visual Basic. Verifique todas as entradas antes de usar os dados no seu aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Media.SoundPlayer.LoadAsync%2A>  
- <xref:System.Media.SoundPlayer.LoadCompleted>  
- <xref:System.Media.SoundPlayer.Play%2A>  
- [Como reproduzir um som de um Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Media.SoundPlayer.LoadAsync%2A>
+- <xref:System.Media.SoundPlayer.LoadCompleted>
+- <xref:System.Media.SoundPlayer.Play%2A>
+- [Como: Reproduzir um som de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

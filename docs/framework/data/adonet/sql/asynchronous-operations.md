@@ -2,12 +2,12 @@
 title: Operações assíncronas
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538655"
 ---
 # <a name="asynchronous-operations"></a>Operações assíncronas
 Algumas operações de banco de dados, como execuções de comando, podem levar um tempo significativo para ser concluído. Nesse caso, aplicativos de thread único devem bloquear outras operações e aguarde até que o comando seja concluído antes que possa continuar suas próprias operações. Em contraste, sendo capaz de atribuir a operação de longa execução a um thread em segundo plano permite que o thread de primeiro plano permaneça ativo durante toda a operação. Em um aplicativo do Windows, por exemplo, delegando a operação de longa execução a um thread em segundo plano permite que o thread da interface do usuário continuar responsiva enquanto a operação está em execução.  
@@ -29,7 +29,7 @@ Algumas operações de banco de dados, como execuções de comando, podem levar 
  [Sondagem em aplicativos de Console](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Fornece um exemplo que demonstra o uso de sondagem para aguardar a conclusão de uma execução de comando assíncrono de um aplicativo de console. Essa técnica também é válida em uma biblioteca de classes ou em outro aplicativo sem uma interface do usuário.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
- [Chamando métodos síncronos de forma assíncrona](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+- [Chamando métodos síncronos de forma assíncrona](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -1,18 +1,18 @@
 ---
-title: 'Exemplos de sintaxe da consulta com base em método: Divisão'
+title: 'Exemplos de sintaxe de consulta com base em método: Divisão'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-ms.openlocfilehash: 6a1f4d13a75f787730d6155161296c3307b845f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2155d0cb9aa47e5940974db92077b51f8139e09d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536068"
 ---
-# <a name="method-based-query-syntax-examples-partitioning"></a>Exemplos de sintaxe da consulta com base em método: Divisão
+# <a name="method-based-query-syntax-examples-partitioning"></a>Exemplos de sintaxe de consulta com base em método: Divisão
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Skip%2A>, e <xref:System.Linq.Enumerable.Take%2A> métodos para consultar o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando a sintaxe de expressão de consulta. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
  Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
@@ -48,5 +48,5 @@ Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Sk
  [!code-csharp[DP L2E Examples#TakeNested](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#takenested)]
  [!code-vb[DP L2E Examples#TakeNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#takenested)]  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Consulte também
+- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

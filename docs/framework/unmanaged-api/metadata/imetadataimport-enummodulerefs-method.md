@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 294156983507476b7ddfda3bc3cad16bb32f422b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e84581a0642fe5bee3b88b6774ab2155fd2736a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490778"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>Método IMetaDataImport::EnumModuleRefs
 Enumera ModuleRef tokens que representam os módulos importados.  
@@ -40,33 +40,33 @@ HRESULT EnumModuleRefs (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada do método.  
+ [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
   
  `rModuleRefs`  
- [out] A matriz usada para armazenar os tokens de ModuleRef.  
+ [out] A matriz usada para armazenar os tokens ModuleRef.  
   
  `cMax`  
  [in] O tamanho máximo da `rModuleRefs` matriz.  
   
  `pcModuleRefs`  
- [out] O número de tokens de ModuleRef retornados em `rModuleRefs`.  
+ [out] O número de tokens ModuleRef retornado no `rModuleRefs`.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` retornou com êxito.|  
-|`S_FALSE`|Não há nenhum tokens para enumerar. Nesse caso, `pcModuleRefs` é zero.|  
+|`S_OK`|`EnumModuleRefs` retornado com êxito.|  
+|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcModuleRefs` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503723"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Como: Invocar o compilador de linha de comando (Visual Basic)
 Você pode invocar o compilador de linha de comando, digitando o nome do seu arquivo executável na linha de comando, também conhecido como prompt do MS-DOS. Se você compilar do Prompt de comando do Windows padrão, você deve digitar o caminho totalmente qualificado para o arquivo executável. Para substituir esse comportamento padrão, você pode usar o Prompt de comando do desenvolvedor para Visual Studio ou modificar a variável de ambiente PATH. Ambos permitem que você compile de qualquer diretório simplesmente digitando o nome do compilador.  
@@ -57,6 +57,6 @@ Você pode invocar o compilador de linha de comando, digitando o nome do seu arq
   
      Por exemplo, se você armazenou seu código-fonte em um diretório chamado `SourceFiles`, abra o Prompt de comando e o tipo `cd SourceFiles` para alterar para aquele diretório. Se o diretório contiver um arquivo de origem denominado `Source.vb`, você pode compilá-lo digitando `vbc.exe Source.vb`.  
   
-## <a name="see-also"></a>Consulte também  
- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>Consulte também
+- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

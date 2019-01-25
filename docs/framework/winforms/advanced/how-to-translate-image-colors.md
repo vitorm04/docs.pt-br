@@ -1,5 +1,5 @@
 ---
-title: Como converter cores de imagens
+title: 'Como: Converter cores de imagens'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 48f506f76ff6e9ca648822d073b6f6a852b9ca8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a3ed1f3f6b3e89c8df160b7e753839e20acd877
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549753"
 ---
-# <a name="how-to-translate-image-colors"></a>Como converter cores de imagens
+# <a name="how-to-translate-image-colors"></a>Como: Converter cores de imagens
 Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. As entradas de matriz de cores que representam as conversões são fornecidas na tabela a seguir.  
   
 |Componente a ser convertido|Entrada da matriz|  
@@ -27,7 +27,7 @@ Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. A
 |Alfa|[4][3]|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir constrói um <xref:System.Drawing.Image> objeto do arquivo ColorBars.bmp. Em seguida, o código adiciona 0,75 ao componente vermelho de cada pixel na imagem. A imagem original é desenhada ao lado da imagem transformada.  
+ O exemplo a seguir constrói um <xref:System.Drawing.Image> objeto no arquivo Colorbars. Em seguida, o código adiciona 0,75 ao componente vermelho de cada pixel na imagem. A imagem original é desenhada ao lado da imagem transformada.  
   
  A ilustração a seguir mostra a imagem original à esquerda e a imagem transformada à direita.  
   
@@ -46,10 +46,10 @@ Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. A
  [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `ColorBars.bmp` por um nome de arquivo de imagem e um caminho que sejam válidos no sistema.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `ColorBars.bmp` por um nome de arquivo de imagem e um caminho que sejam válidos no sistema.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Imaging.ColorMatrix>  
- <xref:System.Drawing.Imaging.ImageAttributes>  
- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Imaging.ColorMatrix>
+- <xref:System.Drawing.Imaging.ImageAttributes>
+- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)

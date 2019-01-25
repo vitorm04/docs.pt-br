@@ -1,5 +1,5 @@
 ---
-title: 'Como: associar dados usando uma fonte de dados do projeto (WCF Data Services)'
+title: 'Como: Associar dados usando uma fonte de dados do projeto (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540748"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Como: associar dados usando uma fonte de dados do projeto (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Como: Associar dados usando uma fonte de dados do projeto (WCF Data Services)
 
 Você pode criar fontes de dados que são baseados nos objetos de dados gerados em um aplicativo de cliente do WCF Data Services. Quando você adiciona uma referência a um serviço de dados usando o **adicionar referência de serviço** caixa de diálogo, uma fonte de dados do projeto é criada junto com as classes de dados do cliente gerado. Uma fonte de dados é criada para cada conjunto de entidades que os dados de serviço expõe. Você pode criar formulários que exibem dados do serviço, arrastando esses itens de fonte de dados das **fontes de dados** janela no designer. Esses itens se tornam os controles que estão associados à fonte de dados. Durante a execução, esta fonte de dados está associada a uma instância da <xref:System.Data.Services.Client.DataServiceCollection%601> classe, que é preenchida com objetos que são retornados por uma consulta ao serviço de dados. Para obter mais informações, consulte [associando dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 
@@ -23,7 +23,7 @@ Você pode criar fontes de dados que são baseados nos objetos de dados gerados 
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Usar uma fonte de dados do projeto em uma janela do WPF
 
-1.  No Visual Studio, em um projeto do WPF, adicione uma referência ao serviço de dados Northwind. Para obter mais informações, consulte [como: adicionar uma referência de serviço de dados](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1.  No Visual Studio, em um projeto do WPF, adicione uma referência ao serviço de dados Northwind. Para obter mais informações, confira [Como: Adicionar uma referência de serviço de dados](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
 2.  No **fontes de dados** janela, expanda o `Customers` nó no **NorthwindEntities** fonte de dados do projeto.
 
@@ -120,4 +120,4 @@ Você pode criar fontes de dados que são baseados nos objetos de dados gerados 
 ## <a name="see-also"></a>Consulte também
 
 - [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
-- [How to: Bind Data to Windows Presentation Foundation Elements](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md) (Como associar dados aos elementos do Windows Presentation Foundation)
+- [Como: Associar dados aos elementos do Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

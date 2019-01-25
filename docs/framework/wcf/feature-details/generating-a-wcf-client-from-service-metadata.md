@@ -2,12 +2,12 @@
 title: Gerando um cliente do WCF de metadados de serviço
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570951"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Gerando um cliente do WCF de metadados de serviço
 Este tópico descreve como usar as várias opções no Svcutil.exe para gerar os clientes de documentos de metadados.  
@@ -47,13 +47,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/idioma:\<idioma >**|Especifica a linguagem de programação a ser usada para gerar o código. Forneça um nome de linguagem registrado no arquivo Machine. config ou o nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> Para obter mais informações, consulte [classe CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/language:\<language>**|Especifica a linguagem de programação a ser usada para gerar o código. Forneça um nome de linguagem registrado no arquivo Machine. config ou o nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Values: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> Para obter mais informações, consulte [classe CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Escolhendo um Namespace para o cliente  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/namespace:\<cadeia de caracteres, cadeia de caracteres >**|Especifica um mapeamento de um esquema WSDL ou XML `targetNamespace` para um namespace do common language runtime (CLR). Usando um caractere curinga (*) para o `targetNamespace` mapeia todos os `targetNamespaces` sem um mapeamento explícito para o namespace CLR.<br /><br /> Para certificar-se de que o nome do contrato de mensagem não entrem em conflito com o nome da operação, qualquer um qualificar a referência de tipo com dois-pontos duplos (`::`) ou verifique se os nomes são exclusivos.<br /><br /> Padrão: Derivado do namespace de destino do documento do esquema para `DataContracts`. O namespace padrão é usado para todos os outros tipos gerados.<br /><br /> Forma abreviada: `/n`|  
+|**/namespace:\<string,string>**|Especifica um mapeamento de um esquema WSDL ou XML `targetNamespace` para um namespace do common language runtime (CLR). Usando um caractere curinga (*) para o `targetNamespace` mapeia todos os `targetNamespaces` sem um mapeamento explícito para o namespace CLR.<br /><br /> Para certificar-se de que o nome do contrato de mensagem não entrem em conflito com o nome da operação, qualquer um qualificar a referência de tipo com dois-pontos duplos (`::`) ou verifique se os nomes são exclusivos.<br /><br /> Padrão: Derivado do namespace de destino do documento do esquema para `DataContracts`. O namespace padrão é usado para todos os outros tipos gerados.<br /><br /> Forma abreviada: `/n`|  
   
 ## <a name="choosing-a-data-binding"></a>Escolhendo uma associação de dados  
   
@@ -69,6 +69,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/mergeConfig**|Mescla a configuração gerada em um arquivo existente, em vez de substituir o arquivo existente.|  
 |**/noConfig**|Não gera arquivos de configuração.|  
   
-## <a name="see-also"></a>Consulte também  
- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Visão geral da arquitetura de metadados](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Visão geral da arquitetura de metadados](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

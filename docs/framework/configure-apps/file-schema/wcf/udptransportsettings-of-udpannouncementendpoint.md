@@ -2,19 +2,19 @@
 title: '&lt;udpTransportSettings&gt; de &lt;udpAnnouncementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: ae640f2e2035f89cb33aecf7e5225cf4fbe3fb20
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5b1cb23e589847dc54d16ecda1747c9e78e45e11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613773"
 ---
 # <a name="ltudptransportsettingsgt-of-ltudpannouncementendpointgt"></a>&lt;udpTransportSettings&gt; de &lt;udpAnnouncementEndpoint&gt;
 Este elemento de configuração expõe para as configurações de transporte UDP [ \<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md).  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
-\<udpAnnouncementEndpoint >  
+\<standardEndpoints>  
+\<udpAnnouncementEndpoint>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ Este elemento de configuração expõe para as configurações de transporte UDP
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)|Um ponto de extremidade padrão que corrigiu o anúncio de ligação de transporte de contrato e UDP.|  
+|[\<udpAnnoucementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)|Um ponto de extremidade padrão que corrigiu o anúncio de ligação de transporte de contrato e UDP.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Discovery.UdpTransportSettings>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Discovery.UdpTransportSettings>

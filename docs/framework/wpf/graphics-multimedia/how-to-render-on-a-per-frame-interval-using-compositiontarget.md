@@ -1,5 +1,5 @@
 ---
-title: Como renderizar em um intervalo por quadro usando CompositionTarget
+title: 'Como: Renderizar em um intervalo por quadro usando CompositionTarget'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511219"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Como renderizar em um intervalo por quadro usando CompositionTarget
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Como: Renderizar em um intervalo por quadro usando CompositionTarget
 O mecanismo de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece vários recursos para criar animações baseadas em quadros. No entanto, há cenários de aplicativo em que é necessário um controle mais refinado da renderização por quadro. O <xref:System.Windows.Media.CompositionTarget> objeto fornece a capacidade de criar animações personalizadas com base em um retorno de chamada por quadro.  
   
  <xref:System.Windows.Media.CompositionTarget> é uma classe estática que representa a superfície de exibição em que seu aplicativo está sendo desenhado. O <xref:System.Windows.Media.CompositionTarget.Rendering> evento é gerado toda vez que cena do aplicativo é desenhada. A taxa de quadros de renderização é o número de vezes que a cena é desenhada por segundo.  
@@ -40,6 +40,6 @@ O mecanismo de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
  Adicionando ou removendo uma renderização <xref:System.EventHandler> delegado enquanto o evento está disparando será adiado até depois que o evento tenha terminado de acionamento. Isso é consistente com como <xref:System.MulticastDelegate>-eventos com base são manipulados no tempo de execução do CLR (Common Language). Observe também que não há uma garantia de que os eventos de renderização serão chamados em uma ordem específica. Se você tiver vários <xref:System.EventHandler> delegados que se baseiam em uma ordem específica, você deve registrar um único <xref:System.Windows.Media.CompositionTarget.Rendering> eventos e multiplexar os delegados no item correto ordem por conta própria.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.CompositionTarget>  
- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.CompositionTarget>
+- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

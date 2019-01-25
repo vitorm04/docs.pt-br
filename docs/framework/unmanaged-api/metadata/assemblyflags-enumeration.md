@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521251"
 ---
 # <a name="assemblyflags-enumeration"></a>Enumeração AssemblyFlags
 Contém valores que descrevem os recursos de tempo de execução de um assembly.  
@@ -42,24 +42,24 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Especifica que as definições de tipo exportado implícitas dentro dos arquivos que compõem o assembly. Nas versões do .NET Framework 1.0 e 1.1, esse valor é sempre devem ser definidas.|  
-|`afImplicitResources`|Especifica que as definições de recursos são implícitas dentro dos arquivos que compõem o assembly. No .NET Framework 1.0 e 1.1, esse valor é sempre devem ser definidas.|  
-|`afNonSideBySideAppDomain`|Especifica que o assembly não é possível executar com outras versões se estiverem sendo executados no mesmo domínio do aplicativo.|  
-|`afNonSideBySideProcess`|Especifica que o assembly não é possível executar com outras versões se estiverem sendo executados no mesmo processo.|  
-|`afNonSideBySideMachine`|Especifica que o assembly não é possível executar com outras versões se estiverem sendo executados no mesmo computador.|  
+|`afImplicitExportedTypes`|Especifica que as definições de tipo exportado implícitas dentro dos arquivos que compõem o assembly. Nas versões do .NET Framework 1.0 e 1.1, esse valor sempre deve ser definido.|  
+|`afImplicitResources`|Especifica que as definições de recurso são implícitas dentro dos arquivos que compõem o assembly. No .NET Framework 1.0 e 1.1, esse valor é sempre deve ser definido.|  
+|`afNonSideBySideAppDomain`|Especifica que o assembly não seja executado com outras versões se estiverem sendo executados no mesmo domínio do aplicativo.|  
+|`afNonSideBySideProcess`|Especifica que o assembly não seja executado com outras versões se estiverem sendo executados no mesmo processo.|  
+|`afNonSideBySideMachine`|Especifica que o assembly não seja executado com outras versões se elas estão em execução no mesmo computador.|  
   
 ## <a name="remarks"></a>Comentários  
- Os valores entre 0x0010 e 0x0070, inclusive, são usados para descrever os recursos de compatibilidade lado a lado do assembly referenciado. Se nenhum desses valores estiverem definidos, o assembly deve para ser compatível com o lado a lado.  
+ Os valores entre 0x0010 e 0x0070, inclusive, são usados para descrever os recursos de compatibilidade lado a lado do assembly referenciado. Se nenhum desses valores estiverem definidas, o assembly deve para ser compatível com o lado a lado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MsCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

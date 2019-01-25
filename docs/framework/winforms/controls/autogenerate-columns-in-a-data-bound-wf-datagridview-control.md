@@ -1,5 +1,5 @@
 ---
-title: Como gerar automaticamente colunas em um controle DataGridView dos Windows Forms associado a dados
+title: 'Como: Gerar automaticamente colunas em uma associação de dados de Windows Forms DataGridView Control'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - columns [Windows Forms], autogenerating
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
-ms.openlocfilehash: 97fbc2c21f618b9fa0451c17ebf87579f51a3f0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1968968461edb475be4cd30261a66b53cd7f0e94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554004"
 ---
-# <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Como gerar automaticamente colunas em um controle DataGridView dos Windows Forms associado a dados
-O exemplo de código a seguir demonstra como exibir as colunas de uma fonte de dados associados em um <xref:System.Windows.Forms.DataGridView> controle. Quando o <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> é o valor da propriedade `true` (o padrão), um <xref:System.Windows.Forms.DataGridViewColumn> é criado para cada coluna na tabela de fonte de dados.  
+# <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Como: Gerar automaticamente colunas em uma associação de dados de Windows Forms DataGridView Control
+O exemplo de código a seguir demonstra como exibir as colunas da fonte de dados associados em um <xref:System.Windows.Forms.DataGridView> controle. Quando o <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> é o valor da propriedade `true` (o padrão), um <xref:System.Windows.Forms.DataGridViewColumn> é criado para cada coluna na tabela de fonte de dados.  
   
- Se o <xref:System.Windows.Forms.DataGridView> controle já tem colunas ao definir o <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> propriedade, o limite existente colunas são comparadas com as colunas na fonte de dados e preservadas sempre que houver uma correspondência. Colunas não associadas sempre são preservadas. As colunas associadas para as quais não há nenhuma correspondência na fonte de dados são removidas. Colunas da fonte de dados para o qual não há nenhuma correspondência no controle geram novos <xref:System.Windows.Forms.DataGridViewColumn> objetos, que são adicionados ao final do <xref:System.Windows.Forms.DataGridView.Columns%2A> coleção.  
+ Se o <xref:System.Windows.Forms.DataGridView> controle já tem colunas quando você definir o <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> propriedade, o limite existente colunas são comparadas com as colunas na fonte de dados e preservadas sempre que houver uma correspondência. Colunas não associadas sempre são preservadas. As colunas associadas para as quais não há nenhuma correspondência na fonte de dados são removidas. Colunas da fonte de dados para o qual não há nenhuma correspondência no controle geram novos <xref:System.Windows.Forms.DataGridViewColumn> objetos, que são adicionados ao final do <xref:System.Windows.Forms.DataGridView.Columns%2A> coleção.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#020](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#020)]
@@ -30,12 +30,12 @@ O exemplo de código a seguir demonstra como exibir as colunas de uma fonte de d
   
 -   Um controle <xref:System.Windows.Forms.DataGridView> chamado `customersDataGridView`.  
   
--   Um <xref:System.Data.DataSet> objeto chamado `customersDataSet` que tem uma tabela chamada `Customers`.  
+-   Um <xref:System.Data.DataSet> objeto nomeado `customersDataSet` que tem uma tabela chamada `Customers`.  
   
--   Referências a <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, e <xref:System.Xml?displayProperty=nameWithType> assemblies.  
+-   Referências para o <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, e <xref:System.Xml?displayProperty=nameWithType> assemblies.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A?displayProperty=nameWithType>  
- [Exibindo dados no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Como remover colunas geradas automaticamente de um controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A?displayProperty=nameWithType>
+- [Exibindo dados no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como: Remover colunas geradas automaticamente de um controle de DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)

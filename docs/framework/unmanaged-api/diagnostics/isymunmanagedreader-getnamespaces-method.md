@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630951"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>Método ISymUnmanagedReader::GetNamespaces
-Obtém os namespaces definidos no escopo global esse armazenamento de símbolo.  
+Obtém os namespaces definidos no escopo global dentro desse repositório de símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ HRESULT GetNamespaces (
  [out] Um ponteiro para uma variável que recebe o comprimento da lista de namespace.  
   
  `namespaces`  
- [out] Um ponteiro para uma variável que recebe a lista de namespace.  
+ [out] Um ponteiro para uma variável que recebe a lista de namespaces.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -54,5 +54,5 @@ HRESULT GetNamespaces (
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

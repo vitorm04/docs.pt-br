@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 2a7dd80d141ff5945bcce71fead1bb5bc24ad737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552366"
 ---
 # <a name="string-basics-in-visual-basic"></a>Noções básicas de cadeias de caracteres no Visual Basic
 O `String` tipo de dados representa uma série de caracteres (cada uma instância de um por vez representando o `Char` tipo de dados). Este tópico apresenta os conceitos básicos de cadeias de caracteres no Visual Basic.  
@@ -71,8 +71,8 @@ World]]></xml>.Value
   
  Ao contrário de outros tipos de dados intrínsecos, `String` é um tipo de referência. Quando uma variável do tipo de referência é passada como um argumento para uma função ou sub-rotina, uma referência para o endereço de memória onde os dados são armazenados é passada em vez do valor real da cadeia de caracteres. Portanto, no exemplo anterior, o nome da variável permanece o mesmo, mas ele aponta para uma instância nova e diferente de `String` classe, que contém o novo valor.  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Tipo de Dados de Caractere](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Operações básicas de cadeias de caracteres](../../../../standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Tipo de Dados de Caractere](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Operações básicas de cadeias de caracteres](../../../../standard/base-types/basic-string-operations.md)

@@ -1,5 +1,5 @@
 ---
-title: Como redimensionar uma tela usando um elevador
+title: 'Como: Redimensionar uma tela usando um elevador'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: be267e832180b49686079f426dfa5c30ffdd81b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0873656e71df928ac3bd5a767b5e15d2f2c7836
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591452"
 ---
-# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Como redimensionar uma tela usando um elevador
+# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Como: Redimensionar uma tela usando um elevador
 Este exemplo mostra como usar um <xref:System.Windows.Controls.Primitives.Thumb> controle para redimensionar um <xref:System.Windows.Controls.Canvas> controle.  
   
 ## <a name="example"></a>Exemplo  
@@ -46,8 +46,8 @@ Este exemplo mostra como usar um <xref:System.Windows.Controls.Primitives.Thumb>
   
  Para o exemplo completo, consulte [Exemplo de funcionalidade de arrastar do elevador](https://go.microsoft.com/fwlink/?LinkID=160042).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Controls.Primitives.Thumb>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Controls.Primitives.Thumb>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>
