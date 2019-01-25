@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: atribuindo conteúdo WPF em Windows Forms na hora do design'
+title: 'Passo a passo: Atribuindo conteúdo WPF nos Windows Forms em tempo de Design'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 554153335c08c9c8911a5d4fda3696db1e0abf2a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 49421fc6c673ffe090e58d733ff0a309464edbb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527738"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Instruções passo a passo: atribuindo conteúdo WPF em Windows Forms na hora do design
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: Atribuindo conteúdo WPF nos Windows Forms em tempo de Design
 Essa instrução passo a passo mostra como selecionar os tipos de controle do WPF (Windows Presentation Foundation) que você deseja exibir em seu formulário. Você pode selecionar qualquer tipo de controle WPF incluído no seu projeto.
 
  Nesta instrução passo a passo, as seguintes tarefas serão executadas:
@@ -49,9 +49,9 @@ Essa instrução passo a passo mostra como selecionar os tipos de controle do WP
   
 #### <a name="to-create-wpf-control-types"></a>Criar tipos de controle WPF  
   
-1.  Adicione um novo WPF <xref:System.Windows.Controls.UserControl> projeto à solução. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, consulte [Instruções passo a passo: como criar novo conteúdo WPF nos Windows Forms em tempo de design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Adicione um novo WPF <xref:System.Windows.Controls.UserControl> projeto à solução. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, confira [Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, consulte [Como Selecionar e Mover Elementos na Superfície de Design](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+2.  No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, confira [Como: Selecionar e mover elementos na superfície de Design](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
   
 3.  No **propriedades** janela, defina o valor da <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> propriedades a serem `200`.  
   
@@ -96,9 +96,9 @@ Essa instrução passo a passo mostra como selecionar os tipos de controle do WP
   
 9. O controle `elementHost2` agora hospeda uma instância do tipo `UserControl1`.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Usando Controles do WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Usando Controles do WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

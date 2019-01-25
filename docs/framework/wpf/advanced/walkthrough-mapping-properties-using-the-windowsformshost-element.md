@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: mapeando propriedades usando o elemento WindowsFormsHost'
+title: 'Passo a passo: Mapeando propriedades usando o elemento WindowsFormsHost'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 4841ce260adfb5d0c0d4b0f359ac9998521d584b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 943137017dcc1f8b347441669add13c3ab056f7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493645"
 ---
-# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Instruções passo a passo: mapeando propriedades usando o elemento WindowsFormsHost
+# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Passo a passo: Mapeando propriedades usando o elemento WindowsFormsHost
 
 Este passo a passo mostra como usar o <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> propriedade para mapear [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propriedades às propriedades correspondentes em um hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle.
 
@@ -160,4 +160,4 @@ Configure seus mapeamentos de propriedades chamando os métodos descritos anteri
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows Forms e mapeamento de propriedade do WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
 - [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Passo a passo: hospedando um controle do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Passo a passo: Hospedando um controle de formulários do Windows no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)

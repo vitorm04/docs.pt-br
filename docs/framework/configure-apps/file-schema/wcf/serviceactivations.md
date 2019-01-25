@@ -2,19 +2,19 @@
 title: '&lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 82422716482eafe996534e3bf1a94b4c7a604a6d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5da05c7b6a9685b9e34b3181ce8e0bd31ccd052b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704950"
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
 Um elemento de configuração que permite adicionar configurações que definem as configurações de ativação de serviço virtual que são mapeados para seus tipos de serviço do Windows Communication Foundation (WCF). Isso torna possível para ativar serviços hospedados no WAS / IIS sem um arquivo. svc.  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
-\<serviceActivations >  
+\<serviceHostingEnvironment>  
+\<serviceActivations>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ Um elemento de configuração que permite adicionar configurações que definem 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Define o tipo que o ambiente de hospedagem de serviço instancia para um transporte particular.|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Define o tipo que o ambiente de hospedagem de serviço instancia para um transporte particular.|  
   
 ## <a name="remarks"></a>Comentários  
  O exemplo a seguir mostra como definir as configurações de ativação dentro de seu arquivo Web. config.  
@@ -66,7 +66,7 @@ Um elemento de configuração que permite adicionar configurações que definem 
   
  Ativação baseada em configuração oferece suporte à ativação pelo protocolo http e não http. Ele requer que as extensões no relatativeAddress, ou seja,. svc,. xoml ou. xamlx. Você pode mapear suas próprias extensões para o buildProviders saber, que, em seguida, permitirá que você ativar o serviço ao longo de qualquer extensão. Após o conflito, o `<serviceActivations>` seção substitui os registros. svc.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>

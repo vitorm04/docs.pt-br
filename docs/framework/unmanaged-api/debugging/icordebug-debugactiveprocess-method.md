@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84137e7163101f7eaa54a45df0fbaa4e7bcf70fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9cdee0d111c18d7bdf8c91ed4cbb368504ca3b2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538304"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>Método ICorDebug::DebugActiveProcess
 Anexa o depurador a um processo existente.  
@@ -39,25 +39,25 @@ HRESULT DebugActiveProcess (
   
 #### <a name="parameters"></a>Parâmetros  
  `id`  
- [in] A ID do processo ao qual o depurador será anexada.  
+ [in] A ID do processo ao qual o depurador deve ser anexado.  
   
  `win32Attach`  
- [in] Valor booliano que é definido como `true` se o depurador deve se comportar conforme o depurador do Win32 para o processo e distribuir os retornos de chamada não gerenciados; caso contrário, `false`.  
+ [in] Valor booliano que é definido como `true` se o depurador deve se comportar como o depurador do Win32 para o processo e expedir os retornos de chamada não gerenciados; caso contrário, `false`.  
   
  `ppProcess`  
  [out] Um ponteiro para o endereço de um objeto de "ICorDebugProcess" que representa o processo ao qual o depurador foi anexado.  
   
 ## <a name="remarks"></a>Comentários  
- Não há suporte para depuração Interop em plataformas Win9x e não-x86, como as plataformas com base em IA-64 e AMD64.  
+ Não há suporte para depuração Interop em plataformas Win9x e não x86, como plataformas baseadas em IA-64 e com base em AMD64.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

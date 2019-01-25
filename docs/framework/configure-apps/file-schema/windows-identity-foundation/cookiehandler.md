@@ -3,19 +3,19 @@ title: '&lt;cookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 99bf6edb4e4f631eba292990c65c1f0c8553d8c0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 58c258bd20ce6b69a73b37a61a4d26f1efbb117a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717097"
 ---
 # <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
 Configura a <xref:System.IdentityModel.Services.CookieHandler> que o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) usa para ler e gravar cookies.  
   
- \<IdentityModel >  
-\<federationConfiguration >  
-\<cookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ Configura a <xref:System.IdentityModel.Services.CookieHandler> que o <xref:Syste
 |path|Especifica o valor do caminho dos cookies gravados. O padrão é "Appdomainappvirtualpath".|  
 |modo|Um do <xref:System.IdentityModel.Services.CookieHandlerMode> valores que especifica o tipo de manipulador de cookie usado pelo SAM. Os valores a seguir podem ser usados:<br /><br /> -"Default" — o mesmo que "Em bloco".<br />-"Em bloco" — usa uma instância da <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe. Esse manipulador de cookie garante que os cookies individuais não excedam um tamanho máximo do conjunto. Isso é feito por "agrupamento" potencialmente um cookie lógico em um número de cookies no-the-wire.<br />-"Custom" – usa uma instância de uma classe personalizada derivada de <xref:System.IdentityModel.Services.CookieHandler>. A classe derivada é referenciada pelo `<customCookieHandler>` elemento filho.<br /><br /> O padrão é "Default".|  
 |persistentSessionLifetime|Especifica o tempo de vida das sessões persistentes. Se for zero, sessões transitórias serão sempre usadas. O valor padrão é "0:0:0", que especifica uma sessão transitória. O valor máximo é "365:0:0", que especifica uma sessão de 365 dias. O valor deve ser especificado de acordo com a seguinte restrição: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, onde o valor mais à esquerda especifica os dias, o valor intermediário (se houver) especifica horas e minutos de Especifica o valor mais à direita (se presente).|  
-|RequireSsl|Especifica se o sinalizador "Secure" é emitido para qualquer cookie gravado. Se esse valor for definido, os cookies de sessão de entrada só estará disponíveis em HTTPS. O padrão é "true".|  
+|requireSsl|Especifica se o sinalizador "Secure" é emitido para qualquer cookie gravado. Se esse valor for definido, os cookies de sessão de entrada só estará disponíveis em HTTPS. O padrão é "true".|  
 |hideFromScript|Controla se o sinalizador "HttpOnly" é emitido para qualquer cookie gravado. Alguns navegadores da web honrar esse sinalizador, mantendo o script do lado do cliente de acessar o valor do cookie. O padrão é "true".|  
 |domínio|O valor de domínio para qualquer cookie gravado. O padrão é "".|  
   
@@ -55,8 +55,8 @@ Configura a <xref:System.IdentityModel.Services.CookieHandler> que o <xref:Syste
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<chunkedCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Configura o <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Esse elemento pode estar presente apenas se o `mode` atributo do `<cookieHandler>` elemento é "Default" ou "Em bloco".|  
-|[\<customCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Define o tipo de manipulador de cookie personalizado. Esse elemento deve estar presente se o `mode` atributo do `<cookieHandler>` elemento é "Custom". Ele não pode estar presente para todos os outros valores da `mode` atributo. O tipo personalizado deve ser derivado de <xref:System.IdentityModel.Services.CookieHandler> classe.|  
+|[\<chunkedCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Configura o <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Esse elemento pode estar presente apenas se o `mode` atributo do `<cookieHandler>` elemento é "Default" ou "Em bloco".|  
+|[\<customCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Define o tipo de manipulador de cookie personalizado. Esse elemento deve estar presente se o `mode` atributo do `<cookieHandler>` elemento é "Custom". Ele não pode estar presente para todos os outros valores da `mode` atributo. O tipo personalizado deve ser derivado de <xref:System.IdentityModel.Services.CookieHandler> classe.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -83,7 +83,7 @@ Configura a <xref:System.IdentityModel.Services.CookieHandler> que o <xref:Syste
 <cookieHandler requireSsl="false" />  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Services.CookieHandler>  
- <xref:System.IdentityModel.Services.ChunkedCookieHandler>  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Services.CookieHandler>
+- <xref:System.IdentityModel.Services.ChunkedCookieHandler>
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>

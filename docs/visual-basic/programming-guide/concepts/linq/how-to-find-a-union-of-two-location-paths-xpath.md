@@ -1,15 +1,15 @@
 ---
-title: 'Como: localizar uma união de dois caminhos de local (XPath-LINQ to XML) (Visual Basic)'
+title: 'Como: Localizar uma união de dois caminhos de local (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: 3f67ac24d12e7d2fcbd74e2f27a75d982c1cf00b
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: 964e42f194cd5e6a4d8f36cfe2164268e650f9da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "42754081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728246"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Como: localizar uma união de dois caminhos de local (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Como: Localizar uma união de dois caminhos de local (XPath-LINQ to XML) (Visual Basic)
 O XPath permite que você localize a união de resultados de dois caminhos de local XPath.  
   
  A expressão XPath é:  
@@ -21,7 +21,7 @@ O XPath permite que você localize a união de resultados de dois caminhos de lo
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza os elementos de `Category` e todos os elementos de `Price` , e os concatena em uma única coleção. Observe que a consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] chama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> para ordenar os resultados. Os resultados da avaliação de expressão XPath são também em ordem do documento.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -65,5 +65,5 @@ Results are identical
 <Price>6.99</Price>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

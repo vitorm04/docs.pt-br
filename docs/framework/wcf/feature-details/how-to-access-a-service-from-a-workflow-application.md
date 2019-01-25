@@ -1,22 +1,22 @@
 ---
-title: Como acessar um serviço de um aplicativo de fluxo de trabalho
+title: 'Como: Acessar um serviço de um aplicativo de fluxo de trabalho'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: e9158f91d8df74cc9fd871567d854d32353d16e1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653691"
 ---
-# <a name="how-to-access-a-service-from-a-workflow-application"></a>Como acessar um serviço de um aplicativo de fluxo de trabalho
-Este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicativo de console do fluxo de trabalho. Ele depende da conclusão do [como: criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tópico. Embora este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicativo de fluxo de trabalho, os mesmos métodos podem ser usados para chamar qualquer serviço do Windows Communication Foundation (WCF) de um aplicativo de fluxo de trabalho.
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>Como: Acessar um serviço de um aplicativo de fluxo de trabalho
+Este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicativo de console do fluxo de trabalho. Ele depende da conclusão do [como: Criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tópico. Embora este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicativo de fluxo de trabalho, os mesmos métodos podem ser usados para chamar qualquer serviço do Windows Communication Foundation (WCF) de um aplicativo de fluxo de trabalho.
 
 ### <a name="create-a-workflow-console-application-project"></a>Crie um projeto de aplicativo de Console do fluxo de trabalho
 
 1.  Inicie o Visual Studio 2012.
 
-2.  Carregar o projeto MyWFService criado na [como: criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tópico.
+2.  Carregar o projeto MyWFService criado na [como: Criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tópico.
 
 3.  Clique com botão direito do **MyWFService** solução na **Gerenciador de soluções** e selecione **Add**, **novo projeto**. Selecione **fluxo de trabalho** na **modelos instalados** e **aplicativo de Console do fluxo de trabalho** na lista de tipos de projeto. Nomeie o projeto MyWFClient e usar o local padrão, conforme mostrado na ilustração a seguir.
 
@@ -65,5 +65,5 @@ Este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicat
 ## <a name="see-also"></a>Consulte também
 
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Como criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Como: Criar um serviço de fluxo de trabalho com atividades de mensagem](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
 - [Consumir um serviço do WCF de um fluxo de trabalho em um projeto Web](https://go.microsoft.com/fwlink/?LinkId=207725)

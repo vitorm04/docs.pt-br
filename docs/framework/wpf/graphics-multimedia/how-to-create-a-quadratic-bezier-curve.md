@@ -1,19 +1,19 @@
 ---
-title: Como criar uma curva de Bézier quadrática
+title: 'Como: Criar uma curva de Bézier quadrática'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Bezier curves [WPF], creating
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-ms.openlocfilehash: 8481a7e0e6d682a335b22ea6cdf73a23a9f155af
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a5d424f3fda3957bf54d7073d41d9fe2dabb1736
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650087"
 ---
-# <a name="how-to-create-a-quadratic-bezier-curve"></a>Como criar uma curva de Bézier quadrática
+# <a name="how-to-create-a-quadratic-bezier-curve"></a>Como: Criar uma curva de Bézier quadrática
 Este exemplo mostra como criar uma curva de Bezier quadrática.  Para criar uma curva de Bezier quadrática, use o <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.QuadraticBezierSegment> classes.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,6 +35,6 @@ Este exemplo mostra como criar uma curva de Bezier quadrática.  Para criar uma 
   
  Este exemplo faz parte de um exemplo maior; para ver o exemplo completo, confira o [Exemplo de geometrias](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um arco elíptico](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [Criar uma curva de Bézier cúbica](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a>Consulte também
+- [Criar um arco elíptico](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)
+- [Criar uma curva de Bézier cúbica](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

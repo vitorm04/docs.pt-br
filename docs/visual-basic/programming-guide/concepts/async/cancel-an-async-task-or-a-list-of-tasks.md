@@ -2,12 +2,12 @@
 title: Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 0024cb1bf4ac7c27d64edcd695b4782dfbcd16af
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695887"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)
 Você pode configurar um botão que pode ser usado para cancelar um aplicativo assíncrono se não desejar aguardar sua conclusão. Seguindo os exemplos neste tópico, você pode adicionar um botão de cancelamento a um aplicativo que baixa o conteúdo de um site ou uma lista de sites.  
@@ -21,17 +21,17 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
  O primeiro exemplo associa o botão **Cancelar** a uma única tarefa de download. Se você escolher o botão enquanto o aplicativo está baixando conteúdo, o download será cancelado.  
   
 ### <a name="downloading-the-example"></a>Baixando o Exemplo  
- Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, seguir estas etapas.  
+ Você pode baixar o projeto completo do Windows Presentation Foundation (WPF) de [exemplo assíncrono: Bem ajustando seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.  
   
 1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
 2.  Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
   
-3.  No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (. sln) para AsyncFineTuningVB.  
+3.  Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningVB.  
   
 4.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelATask** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
-5.  Pressione a tecla F5 para executar o projeto.  
+5.  Escolha a tecla F5 para executar o projeto.  
   
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.  
   
@@ -139,17 +139,17 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
  Você pode estender o exemplo anterior para cancelar muitas tarefas associando a mesma instância `CancellationTokenSource` a cada tarefa. Se você escolher o botão **Cancelar**, cancela todas as tarefas que ainda não estão concluídas.  
   
 ### <a name="downloading-the-example"></a>Baixando o Exemplo  
- Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, seguir estas etapas.  
+ Você pode baixar o projeto completo do Windows Presentation Foundation (WPF) de [exemplo assíncrono: Bem ajustando seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.  
   
 1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
 2.  Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
   
-3.  No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (. sln) para AsyncFineTuningVB.  
+3.  Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningVB.  
   
 4.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAListOfTasks** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
-5.  Pressione a tecla F5 para executar o projeto.  
+5.  Escolha a tecla F5 para executar o projeto.  
   
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.  
   
@@ -250,7 +250,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
 ##  <a name="BKMK_CompleteExamples"></a> Exemplos completos  
  As seções a seguir contêm o código para cada um dos exemplos anteriores. Observe que você deve adicionar uma referência para <xref:System.Net.Http>.  
   
- Você pode baixar os projetos de [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Você pode baixar os projetos de [exemplo assíncrono: Ajuste fino do aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ### <a name="cancel-a-task-example"></a>Exemplo de cancelar uma tarefa  
  O código a seguir é o arquivo. XAML. vb completo para um exemplo que cancela uma única tarefa.  
@@ -454,9 +454,9 @@ End Class
 ' Downloads canceled.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Threading.CancellationTokenSource>  
- <xref:System.Threading.CancellationToken>  
- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Threading.CancellationTokenSource>
+- <xref:System.Threading.CancellationToken>
+- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Exemplo de Async: ajuste do seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

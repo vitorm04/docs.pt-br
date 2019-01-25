@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: demonstrando herança visual'
+title: 'Passo a passo: Demonstrando Herança Visual'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564325"
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a>Instruções passo a passo: demonstrando herança visual
+# <a name="walkthrough-demonstrating-visual-inheritance"></a>Passo a passo: Demonstrando Herança Visual
 A herança visual permite que você veja os controles no formulário de base e adicione novos controles. Neste passo a passo, você criará um formulário de base e o compilará em uma biblioteca de classes. Você importará esta biblioteca de classes em outro projeto e criará um novo formulário que herda do formulário de base. Durante este passo a passo, você aprenderá a:  
   
 -   Criar um projeto de biblioteca de classes que contém um formulário de base.  
@@ -161,9 +161,9 @@ A herança visual permite que você veja os controles no formulário de base e a
 12. Pressione F5 para executar o aplicativo e observe o comportamento do formulário herdado.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- A herança para controles de usuário funciona basicamente da mesma forma. Abra um novo projeto de biblioteca de classes e adicione um controle de usuário. Coloque os controles constituintes nele e compile o projeto. Abra outro novo projeto de biblioteca de classes e adicione uma referência à biblioteca de classes compilada. Além disso, tente adicionar um controle herdado (por meio da caixa de diálogo **Adicionar Novos Itens**) ao projeto e usar o **Selecionador de Herança**. Adicionar um controle de usuário e alterar o `Inherits` (`:` no Visual c#) instrução. Para mais informações, consulte [Como herdar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ A herança para controles de usuário funciona basicamente da mesma forma. Abra um novo projeto de biblioteca de classes e adicione um controle de usuário. Coloque os controles constituintes nele e compile o projeto. Abra outro novo projeto de biblioteca de classes e adicione uma referência à biblioteca de classes compilada. Além disso, tente adicionar um controle herdado (por meio da caixa de diálogo **Adicionar Novos Itens**) ao projeto e usar o **Selecionador de Herança**. Adicionar um controle de usuário e alterar o `Inherits` (`:` no Visual c#) instrução. Para obter mais informações, confira [Como: Herdar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Como Herdar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Herança Visual dos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Herdar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Herança Visual dos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: f77864d827ce12d40971dd7f7159e985ab4096ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552606"
 ---
 # <a name="guide-to-the-documentation"></a>Guia para a documentação
 Fornecido aqui é orientação sobre a documentação do Windows Communication Foundation (WCF). Documentos associados são pontos de partida recomendados agrupados de acordo com interesses e níveis específicos de experiência.  
@@ -44,7 +44,7 @@ Fornecido aqui é orientação sobre a documentação do Windows Communication F
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>Usando o Windows Communication Foundation com outras tecnologias  
   
--   Para criar um serviço que se comunica com clientes do ASP.NET, consulte [como: configurar o serviço do WCF para interoperar com clientes de serviço Web ASP.NET](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
+-   Para criar um serviço que se comunica com clientes do ASP.NET, consulte [como: Configurar o serviço do WCF para interoperar com clientes de serviço Web do ASP.NET](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
   
 -   Integração com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] comunicação remota é explicada na [Migrando aplicativos de comunicação remota do .NET para WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
   
@@ -52,17 +52,17 @@ Fornecido aqui é orientação sobre a documentação do Windows Communication F
   
 -   Para integrar um aplicativo COM existente com um cliente ou um serviço WCF, consulte [integrando aplicativos COM](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md).  
   
--   Para integrar um aplicativo de MSMQ existente com um cliente ou um serviço WCF, consulte [como: troca de mensagens na fila com pontos de extremidade do WCF](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) e [como: troca de mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+-   Para integrar um aplicativo de MSMQ existente com um cliente ou um serviço WCF, consulte [como: Troca de mensagens com pontos de extremidade do WCF em fila](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) e [como: Trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 -   Para usar os serviços de informações da Internet (IIS) para hospedar um serviço, consulte [serviços de hospedagem](../../../docs/framework/wcf/hosting-services.md).  
   
--   Para usar o WCF para consumir um serviço de extensões WSE (Web Services) 3.0, consulte [como: acessar um serviço do WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
+-   Para usar o WCF para consumir um serviço de extensões WSE (Web Services) 3.0, consulte [como: Acessar um WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>WS-* protocolos com suporte no Windows Communication Foundation  
  Para ver uma lista de protocolos com suporte nas associações fornecidas pelo sistema, consulte [Web Services protocolos com suporte pelas associações de interoperabilidade System-Provided](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Para ver a lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Amostras do Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)  
- [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)  
- [Diretrizes e práticas recomendadas](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- [Compilando clientes](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>Consulte também
+- [Amostras do Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)
+- [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)
+- [Diretrizes e práticas recomendadas](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [Compilando clientes](../../../docs/framework/wcf/building-clients.md)

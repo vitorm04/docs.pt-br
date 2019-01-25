@@ -2,12 +2,12 @@
 title: Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: e1cbc11e65453cb9aeb020f3f12e3ca0156a6d6d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710282"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 

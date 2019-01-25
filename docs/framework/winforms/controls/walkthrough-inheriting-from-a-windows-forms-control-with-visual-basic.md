@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: herdando um controle dos Windows Forms com Visual Basic'
+title: 'Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 6c70de1bf6a5340b6f5b2c652110ed9be5536665
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 157c323a2536f1034b7a8ceace630a9e15168552
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728129"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Instruções passo a passo: herdando um controle dos Windows Forms com Visual Basic
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic
 Com o Visual Basic, você pode criar controles personalizados avançados por meio *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão herdará funcionalidades do formulários padrão do Windows <xref:System.Windows.Forms.Button> controlar e exporá uma propriedade personalizada chamada `ButtonValue`.  
   
 > [!NOTE]
@@ -146,9 +146,9 @@ Com o Visual Basic, você pode criar controles personalizados avançados por mei
   
      O numeral "5" é exibido em `Label1`, demonstrando que a propriedade `ButtonValue` de seu controle herdado foi passada para `Label1` por meio do método `ValueButton1_Click`. Portanto, seu controle `ValueButton` herda todas as funcionalidades do botão padrão dos Windows Forms, mas expõe uma propriedade adicional personalizada.  
   
-## <a name="see-also"></a>Consulte também  
- [Passo a passo: criando um controle de composição com o Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Como exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Noções básicas de herança (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Instruções passo a passo para criação de componentes](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+## <a name="see-also"></a>Consulte também
+- [Passo a passo: Criando um controle composto com o Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Como: Exibir um controle na caixa de diálogo de itens de caixa de ferramentas de escolha](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Noções básicas de herança (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Instruções passo a passo para criação de componentes](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

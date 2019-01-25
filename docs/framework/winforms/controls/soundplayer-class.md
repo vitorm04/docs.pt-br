@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 29399beebef3de3e7b4ae8ce7f3611e3d158296f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a93519cbc320def91c030e7344b33be2a10b4351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674330"
 ---
 # <a name="soundplayer-class"></a>Classe SoundPlayer
 A classe `SoundPlayer` permite que você inclua facilmente sons em seus aplicativos.  
@@ -22,22 +22,22 @@ A classe `SoundPlayer` permite que você inclua facilmente sons em seus aplicati
  [Visão geral da classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  Apresenta a classe e suas propriedades, métodos e eventos mais usados.  
   
- [Como reproduzir um som de um Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [Como: Reproduzir um som de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
  Fornece código para reproduzir um som especificado por meio de um caminho de arquivo, caminho UNC ou caminho HTTP.  
   
- [Como executar um bipe de um Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ [Como: Executar um bipe de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
  Fornece código para reproduzir o som de aviso sonoro do computador.  
   
- [Como reproduzir um som inserido em um recurso de um Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
+ [Como: Reproduzir um som inserido em um recurso de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
  Fornece código para tocar um som de um recurso.  
   
- [Como reproduzir um som do sistema de um Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ [Como: Reproduzir um som do sistema de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
  Fornece código para reproduzir um dos sons do sistema.  
   
- [Como carregar um som de forma assíncrona dentro de um Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ [Como: Carregar um som de forma assíncrona dentro de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
  Fornece código para carregar um som de forma assíncrona de uma URL e reproduzi-lo.  
   
- [Como executar um loop de um som tocado em um Windows Form](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
+ [Como: Loop de um som tocado em um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
  Fornece código que toca um som repetidamente.  
   
 ## <a name="reference"></a>Referência  
@@ -51,6 +51,6 @@ A classe `SoundPlayer` permite que você inclua facilmente sons em seus aplicati
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
-## <a name="see-also"></a>Consulte também 
+## <a name="see-also"></a>Consulte também
 
 - [Objeto My. Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

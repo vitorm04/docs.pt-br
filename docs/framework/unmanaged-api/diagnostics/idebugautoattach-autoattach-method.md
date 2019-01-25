@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663512"
 ---
 # <a name="idebugautoattachautoattach-method"></a>Método IDebugAutoAttach::AutoAttach
-Executa automaticamente do servidor chamado depurador anexar.  
+Executa automaticamente o depurador de servidor chamado attach.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ HRESULT AutoAttach
  [in] Sempre definido como `GUID_NULL`.  
   
  `dwPid`  
- [in] Processar ID, normalmente é recuperado com o `GetCurrentProcessId` função.  
+ [in] ID de processo, normalmente são recuperado com o `GetCurrentProcessId` função.  
   
  `dwProgramType`  
  [in] Tipo de programa: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, ou `AUTOATTACH_PROGRAM_UNKNOWN`.  
@@ -54,7 +54,7 @@ HRESULT AutoAttach
  [in] ID do programa.  
   
  `pszSessionId`  
- [in] Cadeia de caracteres passada, o verbo debug.  
+ [in] A cadeia de caracteres passada pelo verbo debug.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido.  
@@ -62,5 +62,5 @@ HRESULT AutoAttach
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** DbgAutoAttach.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IDebugAutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IDebugAutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

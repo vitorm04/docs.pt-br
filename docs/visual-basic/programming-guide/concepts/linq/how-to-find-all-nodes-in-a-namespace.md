@@ -1,15 +1,15 @@
 ---
-title: 'Como: localizar todos os nós em um Namespace (Visual Basic)'
+title: 'Como: Localizar todos os nós em um Namespace (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: 8018ede1c8ef5942325caec3a97afdd89880a331
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a89b0eae4baf380787df32b1d327dd1f52b6f05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640663"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Como: localizar todos os nós em um Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Como: Localizar todos os nós em um Namespace (Visual Basic)
 Você pode filtrar no namespace de cada elemento ou atributo para localizar todos os nós nesse namespace específico.  
   
 ## <a name="example"></a>Exemplo  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Exemplo  
  O arquivo XML acessado pela consulta contém pedidos de compra em dois namespaces diferentes. A consulta cria uma nova árvore com apenas os elementos em uma namespaces.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: pedidos de compra consolidados](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Ordens de compra consolidadas](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -109,5 +109,5 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas básicas (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

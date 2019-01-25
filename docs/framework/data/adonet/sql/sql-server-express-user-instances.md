@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664077"
 ---
 # <a name="sql-server-express-user-instances"></a>Instâncias de usuário do SQL Server Express
 O Microsoft SQL Server Express Edition (SQL Server Express) dá suporte ao recurso de instância de usuário, que somente está disponível quando é usado o Provedor de Dados .NET Framework para SQL Server (`SqlClient`). Uma instância de usuário é uma instância separada do Mecanismo de Banco de Dados SQL Server Express que é gerado por uma instância pai. As instâncias de usuário permitem que usuários que não são administradores em seus computadores locais anexem e conectem-se aos bancos de dados SQL Server Express. Cada instância é executada no contexto de segurança do usuário individual, uma instância por usuário.  
@@ -150,8 +150,8 @@ private static void OpenSqlConnection()
   
 -   ASP.NET dedicado hospedado usando a Autenticação do Windows. Uma única instância do SQL Server Express pode ser hospedada em uma intranet. O aplicativo conecta-se usando a conta ASPNET do Windows, não usando representação. As instâncias de usuário não devem ser usadas para os cenários de hospedagem compartilhados ou de terceiros onde todos os aplicativos compartilhariam a mesma instância de usuário e não permanecessem isolados entre si.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
- [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [Conectando a uma fonte de dados](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+- [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [Conectando a uma fonte de dados](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

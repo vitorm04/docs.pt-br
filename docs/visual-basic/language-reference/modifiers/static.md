@@ -7,22 +7,22 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: 2cbd99a026a5ebf0e215ee5732d62ccf639d3836
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1205d620fb5b6ec6af14cdeb7c6d78439f9e6b97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627623"
 ---
 # <a name="static-visual-basic"></a>Estático (Visual Basic)
-Especifica que um ou mais variáveis locais declaradas devem continuar a existir e manter seus valores mais recentes após o término do procedimento no qual eles são declarados.  
+Especifica que um ou mais variáveis locais declaradas devem continuar a existir e manter seus valores mais recentes após o encerramento do procedimento no qual eles são declarados.  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, uma variável local em um procedimento deixa de existir assim que o procedimento será interrompida. Uma variável estática continua existindo e retém seu valor mais recente. Na próxima vez que seu código chama o procedimento, a variável não for reiniciada, e ela ainda mantém o valor mais recente que você atribuiu a ele. Uma variável estática continua a existir para o tempo de vida da classe ou módulo que está definido no.  
+ Normalmente, uma variável local em um procedimento deixa de existir assim que o procedimento será interrompida. Uma variável estática continua a existir e mantém seu valor mais recente. Na próxima vez em que seu código chama o procedimento, a variável não for reiniciada, e ela ainda mantém o valor mais recente que você atribuiu a ele. Uma variável estática continua existindo durante a vida útil da classe ou módulo que é definido em.  
   
 ## <a name="rules"></a>Regras  
   
--   **Contexto de declaração.** Você pode usar `Static` somente nas variáveis locais. Isso significa que o contexto da declaração para um `Static` variável deve ser um procedimento ou um bloco em um procedimento, e ele não pode ser um arquivo de origem, namespace, classe, estrutura ou módulo.  
+-   **Contexto da declaração.** Você pode usar `Static` somente nas variáveis locais. Isso significa que o contexto da declaração para um `Static` variável deve ser um procedimento ou um bloco em um procedimento, e ele não pode ser um arquivo de origem, namespace, classe, estrutura ou módulo.  
   
      Não é possível usar `Static` dentro de um procedimento de estrutura.  
   
@@ -40,17 +40,17 @@ Especifica que um ou mais variáveis locais declaradas devem continuar a existir
   
  [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
   
- O `Static` variável `totalSales` foi inicializada para 0 somente uma vez. Cada vez que você inserir `updateSales`, `totalSales` ainda tem o valor mais recente que você calculou para ela.  
+ O `Static` variável `totalSales` será inicializada como 0, apenas uma vez. Cada vez que você insere `updateSales`, `totalSales` ainda tem o valor mais recente que calculou para ela.  
   
  O `Static` modificador pode ser usado neste contexto:  
   
  [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Tempo de vida no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Declaração de Variável](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Consulte também
+- [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Tempo de vida no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Declaração de Variável](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

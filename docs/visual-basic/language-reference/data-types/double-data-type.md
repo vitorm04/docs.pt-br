@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626471"
 ---
 # <a name="double-data-type-visual-basic"></a>Tipo de dados double (Visual Basic)
 Mantém conectado IEEE de 64 bits (8 bytes) de precisão dupla números de ponto flutuante que variam em valor de - 1, 79769313486231570E + 308 a - 4.94065645841246544-324 para valores negativos e de 4.94065645841246544-324 1.79769313486231570 + 308 para valores positivos. Números de precisão dupla armazenam uma aproximação de um número real.  
@@ -55,13 +55,13 @@ Mantém conectado IEEE de 64 bits (8 bytes) de precisão dupla números de ponto
   
 -   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Double?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Double?displayProperty=nameWithType>  
- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)  
- [Tipo de Dados Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Tipo de Dados Simples](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Solução de problemas de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Caracteres de Tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Double?displayProperty=nameWithType>
+- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
+- [Tipo de Dados Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Tipo de Dados Simples](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Solução de problemas de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Caracteres de Tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

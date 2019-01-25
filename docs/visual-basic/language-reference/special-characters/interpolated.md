@@ -1,12 +1,12 @@
 ---
 title: $ (Referência do Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: f4651849241ec0ccf8052cc012ae97babd299e62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 94c88b5f6d741bb35af775b56b1bab273bbf5b1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715420"
 ---
 # <a name="-visual-basic-reference"></a>$ (Referência do Visual Basic)
 
@@ -18,6 +18,6 @@ O exemplo a seguir usa o caractere `$` para definir uma cadeia de caracteres int
 
 Para obter mais informações sobre cadeias de caracteres interpoladas, consulte o tópico [Cadeias de caracteres interpoladas](../../programming-guide/language-features/strings/interpolated-strings.md).
 
-## <a name="see-also"></a>Consulte também  
- [Referência do Visual Basic](../index.md)  
- [Caracteres especiais do Visual Basic](index.md)
+## <a name="see-also"></a>Consulte também
+- [Referência do Visual Basic](../index.md)
+- [Caracteres especiais do Visual Basic](index.md)

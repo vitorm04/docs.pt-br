@@ -1,23 +1,23 @@
 ---
-title: Como criar um StackPanel
+title: 'Como: Criar um StackPanel'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
-ms.openlocfilehash: 30f24d8dba7c09271a5957822439af6b64e05aca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20e2b21b10129c096398606501768a7ace0617fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674226"
 ---
-# <a name="how-to-create-a-stackpanel"></a>Como criar um StackPanel
+# <a name="how-to-create-a-stackpanel"></a>Como: Criar um StackPanel
 Este exemplo mostra como criar um <xref:System.Windows.Controls.StackPanel>.  
   
 ## <a name="example"></a>Exemplo  
- Um <xref:System.Windows.Controls.StackPanel> permite que a pilha de elementos em uma direção especificada. Usando propriedades que são definidas em <xref:System.Windows.Controls.StackPanel>, conteúdos podem fluir tanto verticalmente, que é a configuração padrão, ou horizontalmente.  
+ Um <xref:System.Windows.Controls.StackPanel> permite empilhar elementos em uma direção especificada. Usando as propriedades que são definidas em <xref:System.Windows.Controls.StackPanel>, o conteúdo pode fluir tanto verticalmente, que é a configuração padrão, ou horizontalmente.  
   
- O exemplo a seguir verticalmente pilhas cinco <xref:System.Windows.Controls.TextBlock> controla, cada um com outro <xref:System.Windows.Controls.Border> e <xref:System.Windows.Controls.Border.Background%2A>, usando <xref:System.Windows.Controls.StackPanel>. Elementos filho que não especificada têm <xref:System.Windows.FrameworkElement.Width%2A> esticada para preencher a janela pai; no entanto, os elementos filho que têm um especificado <xref:System.Windows.FrameworkElement.Width%2A>, estão centralizados na janela.  
+ O exemplo a seguir verticalmente pilhas cinco <xref:System.Windows.Controls.TextBlock> controles, cada um com outro <xref:System.Windows.Controls.Border> e <xref:System.Windows.Controls.Border.Background%2A>, usando <xref:System.Windows.Controls.StackPanel>. Os elementos filho que não têm nenhum especificada <xref:System.Windows.FrameworkElement.Width%2A> ser esticada para preencher a janela pai; no entanto, os elementos filho que têm um especificado <xref:System.Windows.FrameworkElement.Width%2A>, são centralizadas dentro da janela.  
   
  A direção da pilha padrão em um <xref:System.Windows.Controls.StackPanel> é vertical. Para o controle de fluxo de conteúdo em um <xref:System.Windows.Controls.StackPanel>, use o <xref:System.Windows.Controls.StackPanel.Orientation%2A> propriedade. Você pode controlar o alinhamento horizontal usando o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propriedade.  
   
@@ -43,7 +43,7 @@ Este exemplo mostra como criar um <xref:System.Windows.Controls.StackPanel>.
 </Page>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Controls.StackPanel>  
- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Controls.StackPanel>
+- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)

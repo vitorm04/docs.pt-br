@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ListView [WPF], styles and templates
 - templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-ms.openlocfilehash: e29f8cf14d80658b373dded2c7116524d165aa4c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 66e9f5d45a4c9b3a04291a8ebbf054ebc055b5a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643631"
 ---
 # <a name="listview-styles-and-templates"></a>Estilos e modelos ListView
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.ListView> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.ListView> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="listview-parts"></a>Partes de ListView  
- O <xref:System.Windows.Controls.ListView> controle não tem as partes nomeadas.  
+ O <xref:System.Windows.Controls.ListView> controle não tem nenhuma parte nomeada.  
   
- Quando você cria um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.ListView>, o modelo pode conter um <xref:System.Windows.Controls.ItemsPresenter> dentro de um <xref:System.Windows.Controls.ScrollViewer>. (O <xref:System.Windows.Controls.ItemsPresenter> exibe cada item de <xref:System.Windows.Controls.ListView>; o <xref:System.Windows.Controls.ScrollViewer> habilita a rolagem dentro do controle).  Se o <xref:System.Windows.Controls.ItemsPresenter> não é filho direto do <xref:System.Windows.Controls.ScrollViewer>, você deve fornecer o <xref:System.Windows.Controls.ItemsPresenter> o nome `ItemsPresenter`.  
+ Quando você cria um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.ListView>, o modelo pode conter um <xref:System.Windows.Controls.ItemsPresenter> dentro de um <xref:System.Windows.Controls.ScrollViewer>. (O <xref:System.Windows.Controls.ItemsPresenter> exibe cada item em de <xref:System.Windows.Controls.ListView>; o <xref:System.Windows.Controls.ScrollViewer> habilita a rolagem no controle).  Se o <xref:System.Windows.Controls.ItemsPresenter> não é filho direto do <xref:System.Windows.Controls.ScrollViewer>, você deve dar a <xref:System.Windows.Controls.ItemsPresenter> o nome, `ItemsPresenter`.  
   
 ## <a name="listview-states"></a>Estados de ListView  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.ListView> controle.  
@@ -30,11 +30,11 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
 ## <a name="listviewitem-parts"></a>Partes de ListViewItem  
- O <xref:System.Windows.Controls.ListViewItem> controle não tem as partes nomeadas.  
+ O <xref:System.Windows.Controls.ListViewItem> controle não tem nenhuma parte nomeada.  
   
 ## <a name="listviewitem-states"></a>Estados de ListViewItem  
  A tabela a seguir lista os estados para o <xref:System.Windows.Controls.ListViewItem> controle.  
@@ -50,8 +50,8 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Não selecionado|SelectionStates|O item não está selecionado.|  
 |SelectedUnfocused|SelectionStates|O item está selecionado, mas não tem o foco.|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
 ## <a name="listview-controltemplate-examples"></a>Exemplos de ControlTemplate de ListView  
  O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.ListView> controle e seus tipos associados.  
@@ -64,10 +64,10 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
   
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

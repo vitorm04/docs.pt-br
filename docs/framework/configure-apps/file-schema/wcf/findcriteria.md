@@ -1,19 +1,19 @@
 ---
-title: '&lt;FindCriteria&gt;'
+title: '&lt;findCriteria&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: 0a2fb7ae641f8ec34c518d8dc2c11fbc2ae26190
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b90e6cab923075dbf750dc0d26a0eb1196cfde32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741226"
 ---
-# <a name="ltfindcriteriagt"></a>&lt;FindCriteria&gt;
+# <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
 Um elemento de configuração que fornece um conjunto de critérios utilizados por um aplicativo cliente para pesquisar para um serviço de descoberta. Critérios podem ser agrupados em critérios de pesquisa (especificando quais serviços você está procurando) e encontre os critérios de término (quanto tempo a pesquisa deve durar).  
   
  \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,16 +57,16 @@ Um elemento de configuração que fornece um conjunto de critérios utilizados p
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Uma coleção de elementos de configuração que contêm os nomes dos tipos de contrato de serviço de fluxo de trabalho.|  
+|[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Uma coleção de elementos de configuração que contêm os nomes dos tipos de contrato de serviço de fluxo de trabalho.|  
 |\<Extensões > de \<findCriteria >|Uma coleção de objetos de elemento XML que fornecem extensões.|  
-|[\<escopos >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Uma coleção de objetos que contêm URIs absolutos que são usados durante uma operação de localização para localizar um serviço específico ou serviços.<br /><br /> Se o serviço específico for encontrado, foi feita uma correspondência bem-sucedida entre o URI do serviço e o URI de escopo, às vezes, com a Ajuda das regras de escopo que lidam com complicações de correspondência.|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Uma coleção de objetos que contêm URIs absolutos que são usados durante uma operação de localização para localizar um serviço específico ou serviços.<br /><br /> Se o serviço específico for encontrado, foi feita uma correspondência bem-sucedida entre o URI do serviço e o URI de escopo, às vezes, com a Ajuda das regras de escopo que lidam com complicações de correspondência.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Contém as configurações necessitadas por um aplicativo para participar do processo de descoberta de serviço como um cliente.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Contém as configurações necessitadas por um aplicativo para participar do processo de descoberta de serviço como um cliente.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Discovery.FindCriteria>  
- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Discovery.FindCriteria>
+- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

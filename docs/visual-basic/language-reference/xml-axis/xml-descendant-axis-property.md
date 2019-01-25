@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 6040401ce3e98c835677be3c4cc7698013348f37
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 3b8d13e606f28896cae88162d572470e49af3739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730276"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Propriedade de eixo descendente XML (Visual Basic)
 Fornece acesso aos descendentes dos seguintes: uma <xref:System.Xml.Linq.XElement> objeto, um <xref:System.Xml.Linq.XDocument> objeto, uma coleção de <xref:System.Xml.Linq.XElement> objetos ou uma coleção de <xref:System.Xml.Linq.XDocument> objetos.  
@@ -75,9 +75,9 @@ object...<descendant>
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Linq.XElement>  
- [Propriedades do Eixo XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Literais XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Criando XML no Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Nomes de Elementos e Atributos XML Declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Xml.Linq.XElement>
+- [Propriedades do Eixo XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Literais XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Criando XML no Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Nomes de Elementos e Atributos XML Declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

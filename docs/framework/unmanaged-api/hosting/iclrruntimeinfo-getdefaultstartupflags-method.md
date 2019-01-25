@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 546a26306a1faaeceb1337b79bd2d27970d9f5be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a4615200bce3aa11401abc9e9c264ab8d8e797b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720009"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>Método ICLRRuntimeInfo::GetDefaultStartupFlags
 Obtém os sinalizadores de inicialização e o arquivo de configuração de host que será usado para iniciar o tempo de execução.  
@@ -38,13 +38,13 @@ HRESULT GetDefaultStartupFlags(
   
 #### <a name="parameters"></a>Parâmetros  
  `pdwStartupFlags`  
- [out] Um ponteiro para os sinalizadores de inicialização do host que estão atualmente definidas.  
+ [out] Um ponteiro para os sinalizadores de inicialização de host que estão atualmente definidas.  
   
  `pwzHostConfigFile`  
  [out] Um ponteiro para o caminho do diretório do arquivo de configuração de host atual.  
   
  `pcchHostConfigFile`  
- [out no] Na entrada, o tamanho de `pwzHostConfigFile`, para evitar estouros de buffer. Se `pwzHostConfigFile` é null, o método retorna o tamanho necessário do `pwzHostConfigFile` de pré-alocação.  
+ [no, out] O tamanho de entrada na `pwzHostConfigFile`, para evitar estouros de buffer. Se `pwzHostConfigFile` é nulo, o método retorna o tamanho necessário do `pwzHostConfigFile` para pré-alocação.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Esse método retorna o HRESULT específico a seguir, bem como erros HRESULT que indicam falha do método.  
@@ -54,18 +54,18 @@ HRESULT GetDefaultStartupFlags(
 |S_OK|O método foi concluído com êxito.|  
   
 ## <a name="remarks"></a>Comentários  
- Este método retorna os valores de sinalizador padrão (`STARTUP_CONCURRENT_GC` e `NULL`), ou os valores fornecidos por uma chamada anterior a [: Setdefaultstartupflags método](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), ou os valores definidos por qualquer uma da `CorBind*` métodos se eles estiverem associados a esse tempo de execução.  
+ Esse método retorna os valores de sinalizador padrão (`STARTUP_CONCURRENT_GC` e `NULL`), ou os valores fornecidos por uma chamada anterior para o [método iclrruntimeinfo:: Setdefaultstartupflags](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), ou os valores definidos por qualquer um do `CorBind*` métodos de se eles estiverem associados a esse tempo de execução.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

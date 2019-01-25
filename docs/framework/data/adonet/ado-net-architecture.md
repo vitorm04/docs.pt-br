@@ -2,12 +2,12 @@
 title: Arquitetura do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623177"
 ---
 # <a name="adonet-architecture"></a>Arquitetura do ADO.NET
 Antigamente, o processamento de dados dependia basicamente de um modelo de duas camadas baseado em conexão. Como o processamento de dados usa cada vez mais arquiteturas de várias camadas, os programadores estão adotando uma abordagem desconectada para fornecer melhor escalabilidade a seus aplicativos.  
@@ -56,6 +56,6 @@ Arquitetura do ADO.NET
   
  O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] e as classes XML do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] convergem para o objeto `DataSet`. O `DataSet` pode ser preenchido com dados de uma fonte XML, quer ele seja um arquivo ou um fluxo XML. O `DataSet` pode ser gravado como XML compatível com World-Wide Web Consortium (W3C) que inclui seu esquema como a linguagem de definição de esquema XML (XSD), independentemente da fonte dos dados no `DataSet`. Como o formato nativo de serialização do `DataSet` é XML, ele é um meio excelente para mover os dados entre as camadas, tornando o `DataSet` uma opção ideal para a comunicação remota dos dados e do contexto de esquema para e de um serviço Web XML. Para obter mais informações, consulte [Documentos e dados XML](../../../../docs/standard/data/xml/index.md).  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

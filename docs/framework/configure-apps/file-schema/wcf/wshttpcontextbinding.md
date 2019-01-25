@@ -2,18 +2,18 @@
 title: '&lt;wsHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: a35012cbc075268fad5b371148c0fa276ffdad61
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8445829e0253d66723c3bcaf7416885cde6d9271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558997"
 ---
 # <a name="ltwshttpcontextbindinggt"></a>&lt;wsHttpContextBinding&gt;
 Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer que o nível de proteção seja assinado.  
   
 \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<wsHttpContextBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -80,7 +80,7 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
 |proxyAddress|Um URI que especifica o endereço do proxy HTTP. Se `useSystemWebProxy` está `true`, essa configuração deve ser `null`. O padrão é `null`.|  
 |receiveTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de recebimento ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
 |sendTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de envio ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
-|textEncoding|Especifica a codificação a ser usada para emitir mensagens na associação de conjunto de caracteres. Os valores válidos incluem o seguinte:<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian de codificação.<br />-Utf16TextEncoding: codificação de 16 bits.<br />-Utf8TextEncoding: codificação de 8 bits.<br /><br /> O padrão é Utf8TextEncoding.<br /><br /> Esse atributo é do tipo <xref:System.Text.Encoding>.|  
+|textEncoding|Especifica a codificação a ser usada para emitir mensagens na associação de conjunto de caracteres. Os valores válidos incluem o seguinte:<br /><br /> -   UnicodeFffeTextEncoding: Unicode BigEndian de codificação.<br />-Utf16TextEncoding: codificação de 16 bits.<br />-   Utf8TextEncoding: codificação de 8 bits.<br /><br /> O padrão é Utf8TextEncoding.<br /><br /> Esse atributo é do tipo <xref:System.Text.Encoding>.|  
 |transactionFlow|Um valor booliano que especifica se a associação dá suporte a fluxo de WS-Transactions. O padrão é `false`.|  
 |useDefaultWebProxy|Um valor booliano que especifica se o proxy HTTP configurado automaticamente do sistema é usado. O padrão é `true`.|  
   
@@ -96,15 +96,15 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSHttpContextBinding>  
- <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>  
- <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)  
- [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSHttpContextBinding>
+- <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>
+- <xref:System.ServiceModel.Channels.ContextBindingElement>
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

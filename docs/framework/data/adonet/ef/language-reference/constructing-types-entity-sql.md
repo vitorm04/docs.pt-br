@@ -2,22 +2,22 @@
 title: Criando tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718579"
 ---
 # <a name="constructing-types-entity-sql"></a>Criando tipos (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece três tipos de construtores: construtores e construtores de tipo nomeado construtores de conjunto de linhas.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece três tipos dos construtores: construtores, nomeados construtores de tipo e construtores de coleção de linhas.  
   
 ## <a name="row-constructors"></a>Coloque construtores  
  Você usa construtores de linha em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para construir registros anônimos, tipados estrutural de um ou mais valores. O tipo do resultado de um construtor de linha é um tipo de linha cujos tipos de campo correspondem aos tipos de valores usados para construir a linha. Por exemplo, a expressão a seguir constrói um valor do tipo `Record(a int, b string, c int)`:  
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
- Se você não fornecer um alias para um construtor de expressão em seguida, Entity Framework tentará gerar um. Para obter mais informações, consulte a seção "Regras de alias" [identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).  
+ Se você não fornecer um alias para um construtor de expressão em seguida, Entity Framework tentará gerar um. Para obter mais informações, consulte a seção "Regras Serrilha" [identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).  
   
  As seguintes regras se aplicam para o construtor de serrilha de expressão em uma linha:  
   
@@ -25,7 +25,7 @@ ms.locfileid: "32765250"
   
 -   Duas expressões no mesmo construtor de linha não podem ter as mesmas alias.  
   
- Para obter mais informações sobre os construtores de linha, consulte [linha](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
+ Para obter mais informações sobre construtores de linha, consulte [linha](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   
 ## <a name="collection-constructors"></a>Construtores de coleção  
  Você usa construtores de coleção em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para criar uma instância de um multiset de uma lista de valores. Todos os valores no construtor deve ser do tipo correspondente mutuamente `T`, e o construtor gerenciar uma coleção do tipo `Multiset<T>`. Por exemplo, a expressão a seguir cria uma coleção de inteiros:  
@@ -61,9 +61,9 @@ ms.locfileid: "32765250"
   
  Os argumentos para o construtor são considerados para estar na mesma ordem que a declaração de atributos de tipo.  
   
- Para obter mais informações, consulte [chamado construtor de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
+ Para obter mais informações, consulte [construtor de tipo nomeado](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Sistema de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+## <a name="see-also"></a>Consulte também
+- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Sistema de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

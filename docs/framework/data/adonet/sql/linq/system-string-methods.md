@@ -2,12 +2,12 @@
 title: Métodos de System.String
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: a6a8ce897cc6ac15f3452d2ba98b1b12bee544c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618089"
 ---
 # <a name="systemstring-methods"></a>Métodos de System.String
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte aos seguintes métodos de <xref:System.String> .  
@@ -47,13 +47,13 @@ ms.locfileid: "33360064"
   
 ## <a name="differences-from-net"></a>Diferenças do .NET  
   
--   Consultas não esclarecem os agrupamentos do SQL Server que podem ser aplicado no servidor, e portanto fornecerão comparações que levam confidenciais, sem diferenciação de maiúsculas e minúsculas por padrão. Esse comportamento difere de opção, semântica maiúsculas de minúsculas do .NET Framework.  
+-   Consultas não esclarecem as ordenações do SQL Server que podem ser aplicadas no servidor, e portanto fornecerão comparações que levam confidenciais, sem diferenciação de maiúsculas e minúsculas por padrão. Esse comportamento difere de opção, semântica maiúsculas de minúsculas do .NET Framework.  
   
--   Quando `LastIndexOf` retorna 0, a cadeia de caracteres é `NULL` ou a posição encontrada é 0.  
+-   Quando `LastIndexOf` retorna 0, a cadeia de caracteres é `NULL` ou posição encontrada é 0.  
   
 -   Os resultados inesperados podem ser retornados de concatenação ou outras operações em cadeias de caracteres de comprimento fixo (`CHAR`, `NCHAR`), porque esses tipos têm automaticamente o preenchimento aplicado ao base de dados.  
   
 -   Porque muitos métodos, como `Replace`, `ToLower`, `ToUpper`, e o indexador de caracteres, não têm nenhuma conversão válido para `TEXT` ou colunas e XML de `NTEXT` , `SqlExceptions` ocorre se traduzido normalmente. Esse comportamento é considerado aceitável para esses tipos. No entanto, todas as operações de cadeia de caracteres devem corresponder a semântica do Common Language Runtime (CLR) para `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, e `NVARCHAR(max)`.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

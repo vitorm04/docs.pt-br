@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14717b67db03b941d33b5df61c64b5df078adaa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 424e0323c018367560d4cf3542e9e8668575a03f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675143"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>Método ICorProfilerCallback::RemotingClientSendingMessage
-Notifica o criador de perfil que o cliente está enviando uma solicitação para o servidor.  
+Notifica o criador de perfil que o cliente está enviando uma solicitação ao servidor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,27 +37,27 @@ HRESULT RemotingClientSendingMessage(
   
 #### <a name="parameters"></a>Parâmetros  
  `pCookie`  
- [in] Um valor que corresponde com o valor fornecido no [Remotingserverreceivingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) sob estas condições:  
+ [in] Um valor que corresponde com o valor fornecido no [ICorProfilerCallback:: Remotingserverreceivingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) sob estas condições:  
   
 -   Cookies GUID de comunicação remota estão ativos.  
   
--   O canal tem sucesso na transmissão de mensagem.  
+-   O canal é bem-sucedida na transmissão de mensagem.  
   
--   Cookies GUID estão ativos no processo do servidor.  
+-   Os cookies GUID são Active Directory sobre o processo do lado do servidor.  
   
  Isso permite que o emparelhamento fácil de chamadas de comunicação remota e a criação de uma pilha de chamadas lógicas.  
   
  `fIsAsync`  
- [in] Um valor que é `true` se a chamada for assíncrona; caso contrário, `false`.  
+ [in] Um valor que é `true` se a chamada é assíncrona; caso contrário, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be6332c76b3dae9c02e1a939286b70438ee14cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ff4fe6f73370a28bf4f874b697616c08e7b40a3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736660"
 ---
 # <a name="importfileex2-method"></a>Método ImportFileEx2
 Importa os assemblies e módulos não associados. Esse método é como [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), mas funciona mesmo se o arquivo que está sendo importado não existe no disco.  
@@ -52,13 +52,13 @@ HRESULT ImportFileEx2(
  Escopo de importação opcional [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.  
   
  `fSmartImport`  
- Se TRUE, ImportTypes é usado, caso contrário, a importação deve ser executada manualmente.  
+ Se for TRUE, ImportTypes é usado, caso contrário, a importação deve ser executada manualmente.  
   
  `dwOpenFlags`  
- Sinalizadores para ser passado para [método OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ Sinalizadores a serem passados para [método OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Recebe uma ID exclusiva para o assembly ou arquivo.  
+ Recebe a ID exclusiva para o arquivo ou assembly.  
   
  `ppAssemblyScope`  
  Recebe o escopo de importação de assembly [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface. Pode ser NULL se o arquivo não é um assembly.  
@@ -67,12 +67,12 @@ HRESULT ImportFileEx2(
  Recebe o número de arquivos e/ou importados de escopos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

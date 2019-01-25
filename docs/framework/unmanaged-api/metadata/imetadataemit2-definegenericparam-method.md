@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66b2b9d6fb3f6379abb92fe081f36b487f9df234
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b54f5bb47135bcf56c91cd07b916c959e75b9fb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745282"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>Método IMetaDataEmit2::DefineGenericParam
 Cria uma definição para um parâmetro de tipo genérico e obtém um token para esse parâmetro de tipo genérico.  
@@ -43,13 +43,13 @@ HRESULT DefineGenericParam (
   
 #### <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] Um `mdTypeDef` ou `mdMethodDef` token que representa o construtor para o qual definir um parâmetro genérico ou método.  
+ [in] Uma `mdTypeDef` ou `mdMethodDef` token que representa o método ou construtor para o qual definir um parâmetro genérico.  
   
  `ulParamSeq`  
  [in] O índice do parâmetro genérico.  
   
  `dwParamFlags`  
- [in] Um valor de [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeração que descreve o tipo para o parâmetro genérico.  
+ [in] Um valor igual a [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeração que descreve o tipo para o parâmetro genérico.  
   
  `szname`  
  [in] O nome do parâmetro.  
@@ -58,20 +58,20 @@ HRESULT DefineGenericParam (
  [in] Esse parâmetro é reservado para extensibilidade futura.  
   
  `rtkConstraints`  
- [in] Uma matriz de restrições de tipo terminada em zero. Membros da matriz devem ser um `mdTypeDef`, `mdTypeRef`, ou `mdTypeSpec` token de metadados.  
+ [in] Uma matriz terminada em zero de restrições de tipo. Membros da matriz devem ser um `mdTypeDef`, `mdTypeRef`, ou `mdTypeSpec` token de metadados.  
   
  `pgp`  
  [out] Um token que representa o parâmetro genérico.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

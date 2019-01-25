@@ -2,12 +2,12 @@
 title: 'Passo a passo: Inserindo informações de tipo de Assemblies do Microsoft Office no Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5b94c190a77f6877c9a3d37f310aa527083a26a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722771"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Passo a passo: Inserindo informações de tipo de Assemblies do Microsoft Office no Visual Studio (Visual Basic)
 Se inserir informações de tipo em um aplicativo que faz referência a objetos COM, você poderá eliminar a necessidade de um PIA (assembly de interoperabilidade primário). Além disso, as informações de tipo inseridas permitem que você conquiste a independência de versão para seu aplicativo. Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca COM sem precisar especificar um PIA específico para cada versão. Esse é um cenário comum para aplicativos que usam objetos de bibliotecas do Microsoft Office. Inserir informações de tipo possibilita que a mesma build de um programa funcione com diferentes versões do Microsoft Office em diferentes computadores sem precisar reimplantar o programa ou o PIA para cada versão do Microsoft Office.  
@@ -95,7 +95,7 @@ Se inserir informações de tipo em um aplicativo que faz referência a objetos 
   
 8.  Salvar o projeto.  
   
-9. Pressione CTRL+F5 para compilar e executar o projeto. Verifique se uma pasta de trabalho do Excel foi criada no local especificado no código de exemplo: C:\SampleFolder\SampleWorkbook.xls.  
+9. Pressione CTRL+F5 para compilar e executar o projeto. Verifique se que uma pasta de trabalho do Excel foi criada no local especificado no código de exemplo: C:\samplefolder\sampleworkbook.xls.  
   
 ##  <a name="BKMK_publishapp"></a> Para publicar o aplicativo em um computador em que uma versão diferente do Microsoft Office está instalada  
   
@@ -107,9 +107,9 @@ Se inserir informações de tipo em um aplicativo que faz referência a objetos 
   
 4.  Quando a instalação for concluída, execute o programa instalado.  
   
-5.  Verifique se uma pasta de trabalho do Excel foi criada no local especificado no código de amostra: C:\SampleFolder\SampleWorkbook.xls.  
+5.  Verifique se que uma pasta de trabalho do Excel foi criada no local especificado no código de exemplo: C:\samplefolder\sampleworkbook.xls.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

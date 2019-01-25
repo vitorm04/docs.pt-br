@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 793d3996f9cbcb1a38a728ade06f775784166123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745890"
 ---
 # <a name="waitoption-enumeration"></a>Enumeração WAIT_OPTION
-Contém valores que indicam que a ação que um host deve executar se uma operação solicitada pelos blocos de runtime (CLR) de linguagem comum.  
+Contém valores que indicam que a ação um host deve executar se uma operação solicitada pelos blocos de runtime (CLR) de linguagem comum.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|Notifica o host que a tarefa deve ser ativada se o CLR chama o [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) método.|  
+|`WAIT_ALERTABLE`|Notifica o host que a tarefa deve ser ativada se o CLR chama o [ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) método.|  
 |`WAIT_MSGPUMP`|Notifica o host que ele deve bomba de mensagens no thread atual do sistema operacional se o thread fica bloqueado. O tempo de execução especifica esse valor somente em um <xref:System.Threading.ApartmentState.STA> thread.|  
-|`WAIT_NOTINDEADLOCK`|Notifica o host que a solicitação de sincronização especificado não pode ser dividida por um host. Ou seja, o host não pode retornar `HOST_E_DEADLOCK`.|  
+|`WAIT_NOTINDEADLOCK`|Notifica o host que a solicitação de sincronização especificado não pode ser dividida por um host. Ou seja, o host não é possível retornar `HOST_E_DEADLOCK`.|  
   
 ## <a name="remarks"></a>Comentários  
- O [Ihosttaskmanager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) e [Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) ambos os métodos usam um parâmetro deste tipo.  
+ O [ihosttaskmanager:: sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) e [ihosttaskmanager:: Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) ambos os métodos usam um parâmetro desse tipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

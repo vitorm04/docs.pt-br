@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0d8dc3afe188e18d0804055f869e5090ebc4224
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3a67a92204ffc2041d4ea11c8551064582b7c15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544959"
 ---
 # <a name="icordebugobjectvaluegetmanagedcopy-method"></a>Método ICorDebugObjectValue::GetManagedCopy
 `GetManagedCopy` é obsoleto. Não chame este método.  
@@ -38,6 +38,6 @@ HRESULT GetManagedCopy (
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>Consulte também  
-    
- 
+## <a name="see-also"></a>Consulte também
+
+

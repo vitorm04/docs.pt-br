@@ -1,15 +1,15 @@
 ---
-title: 'Como: computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)'
+title: 'Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9eb0198c16efebd09af45ae26a47288b2153cf43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c99696472deaa79842e3270d05b63cd591754d8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671896"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Como: computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)
 Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv. Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.  
   
 ### <a name="to-create-the-source-file"></a>Para criar o arquivo de origem  
@@ -145,6 +145,6 @@ End Class
 ## <a name="compiling-the-code"></a>Compilando o código  
  Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

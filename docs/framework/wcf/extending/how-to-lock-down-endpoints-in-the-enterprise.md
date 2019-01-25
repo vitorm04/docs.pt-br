@@ -1,15 +1,15 @@
 ---
-title: Como bloquear pontos de extremidade na empresa
+title: 'Como: Bloquear pontos de extremidade na empresa'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663057"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Como bloquear pontos de extremidade na empresa
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Como: Bloquear pontos de extremidade na empresa
 Empresas de grandes porte geralmente exigem que os aplicativos são desenvolvidos em conformidade com políticas de segurança da empresa. O tópico a seguir discute como desenvolver e instalar um validador de ponto de extremidade do cliente que pode ser usado para validar todos os aplicativos de cliente do Windows Communication Foundation (WCF) instalados em computadores.  
   
  Nesse caso, o validador é um validador de cliente, pois esse comportamento de ponto de extremidade é adicionado ao cliente [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) seção no arquivo Machine. config. WCF carrega comportamentos de ponto de extremidade comuns somente para aplicativos cliente e carrega os comportamentos de serviço comuns apenas para aplicativos de serviço. Para instalar esse validador mesmo para aplicativos de serviço, o validador deve ser um comportamento de serviço. Para obter mais informações, consulte o [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) seção.  
@@ -63,6 +63,6 @@ Empresas de grandes porte geralmente exigem que os aplicativos são desenvolvido
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Talvez você queira criptografar os elementos do arquivo de configuração. Para obter mais informações, consulte a seção Consulte também.  
   
-## <a name="see-also"></a>Consulte também  
- [Criptografia de elementos do arquivo de configuração usando a DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [Criptografia de elementos do arquivo de configuração usando o RSA](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>Consulte também
+- [Criptografia de elementos do arquivo de configuração usando a DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Criptografia de elementos do arquivo de configuração usando o RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

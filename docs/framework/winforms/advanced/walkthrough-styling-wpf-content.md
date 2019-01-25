@@ -1,19 +1,19 @@
 ---
-title: 'Instruções passo a passo: criando o conteúdo WPF'
+title: 'Passo a passo: Criando o conteúdo WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 45009f865589d040b0076fe0b115863d475ec488
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725396"
 ---
-# <a name="walkthrough-styling-wpf-content"></a>Instruções passo a passo: criando o conteúdo WPF
+# <a name="walkthrough-styling-wpf-content"></a>Passo a passo: Criando o conteúdo WPF
 Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Windows Presentation Foundation) hospedado em um Windows Form.
 
  Nesta instrução passo a passo, as seguintes tarefas serão executadas:
@@ -47,9 +47,9 @@ Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Wi
   
 #### <a name="to-create-wpf-control-types"></a>Criar tipos de controle WPF  
   
-1.  Adicione um novo WPF <xref:System.Windows.Controls.UserControl> projeto à solução. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, consulte [Instruções passo a passo: como criar novo conteúdo WPF nos Windows Forms em tempo de design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Adicione um novo WPF <xref:System.Windows.Controls.UserControl> projeto à solução. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, confira [Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, consulte [Como Selecionar e Mover Elementos na Superfície de Design](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+2.  No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, confira [Como: Selecionar e mover elementos na superfície de Design](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
   
 3.  No **propriedades** janela, defina o valor da <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> propriedades a serem `200`.  
   
@@ -149,11 +149,11 @@ Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Wi
   
 5.  Clique nos botões OK e Cancelar e exibir as diferenças.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Usando Controles do WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Usando Controles do WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)

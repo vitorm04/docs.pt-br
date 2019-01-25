@@ -11,12 +11,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
-ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559535"
 ---
 # <a name="nested-types"></a>Tipos aninhados
 Um tipo aninhado é um tipo definido dentro do escopo de outro tipo, que é chamado de tipo de delimitador. Um tipo aninhado tem acesso a todos os membros do seu tipo delimitador. Por exemplo, ele tem acesso a campos privados, definidos no tipo delimitador e protegidos campos definidos em todos os ascendentes do tipo delimitador.  
@@ -47,5 +47,5 @@ Um tipo aninhado é um tipo definido dentro do escopo de outro tipo, que é cham
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
+- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563997"
 ---
 # <a name="cordeclsecurity-enumeration"></a>Enumeração CorDeclSecurity
 Especifica as ações de segurança que podem ser executadas usando a segurança declarativa.  
@@ -64,14 +64,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|Reservado.|  
 |`dclRequest`|Reservado.|  
 |`dclDemand`|Todos os chamadores na pilha de chamadas deverão ter a permissão especificada pelo objeto de permissão atual.|  
-|`dclAssert`|O código de chamada pode acessar o recurso identificado pelo objeto de permissão atual, mesmo que os chamadores mais acima na pilha não recebeu permissão para acessar o recurso|  
-|`dclDeny`|A capacidade de acessar o recurso especificado pelo objeto atual da permissão é negada a chamadores, mesmo se eles têm permissão para acessá-lo.|  
+|`dclAssert`|O código de chamada pode acessar o recurso identificado pelo objeto de permissão atual, mesmo que os chamadores na pilha não recebeu permissão para acessar o recurso|  
+|`dclDeny`|A capacidade de acessar o recurso especificado pelo objeto de permissão atual é negada aos chamadores, mesmo que eles tenham recebidos permissão para acessá-lo.|  
 |`dclPermitOnly`|Somente os recursos especificados por esse objeto de permissão poderão ser acessados, mesmo que o código tenha recebido permissão para acessar outros recursos.|  
 |`dclLinktimeCheck`|O chamador imediato é necessário ter a permissão especificada para um determinado período de tempo.|  
-|`dclInheritanceCheck`|A classe derivada herdar de outra classe ou substituindo um método é necessária para ter a permissão especificada.|  
-|`dclRequestMinimum`|O chamador pode solicitar para as permissões mínimas necessárias para a execução de código. Esta ação só pode ser usada no escopo do assembly.|  
-|`dclRequestOptional`|O chamador pode solicitar permissões adicionais que são opcionais (não é necessário para executar). Essa solicitação recusa implicitamente todas as outras permissões não solicitadas especificamente. Esta ação só pode ser usada no escopo do assembly.|  
-|`dclRequestRefuse`|Solicitação do chamador para permissões que pode ser usado de forma incorreta não será concedida. Esta ação só pode ser usada no escopo do assembly.|  
+|`dclInheritanceCheck`|A classe derivada, herdar de outra classe ou substituindo um método é necessária ter a permissão especificada.|  
+|`dclRequestMinimum`|O chamador possa solicitar as permissões mínimas necessárias para a execução de código. Esta ação só pode ser usada no escopo do assembly.|  
+|`dclRequestOptional`|O chamador possa solicitar permissões adicionais que são opcionais (não é necessário para executar). Essa solicitação recusa implicitamente todas as outras permissões não solicitadas especificamente. Esta ação só pode ser usada no escopo do assembly.|  
+|`dclRequestRefuse`|A solicitação do chamador para permissões que podem ser usadas indevidamente não será concedida. Esta ação só pode ser usada no escopo do assembly.|  
 |`dclPrejitGrant`|Reservado.|  
 |`dclPrejitDenied`|Reservado.|  
 |`dclNonCasDemand`|Reservado.|  
@@ -83,11 +83,11 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Reservado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

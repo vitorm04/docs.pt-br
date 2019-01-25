@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: exibindo dados em um controle DataRepeater (Visual Studio)'
+title: 'Passo a passo: Exibindo dados em um controle DataRepeater (Visual Studio)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4153fecaecc80fc4c40fb6dd9026b07c49ec0fb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729243"
 ---
-# <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Instruções passo a passo: exibindo dados em um controle DataRepeater (Visual Studio)
+# <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Passo a passo: Exibindo dados em um controle DataRepeater (Visual Studio)
 Este passo a passo fornece um cenário básico do início ao fim para exibir dados associados em um <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle.  
   
 ## <a name="prerequisite"></a>Pré-requisito  
@@ -59,9 +59,9 @@ Este passo a passo fornece um cenário básico do início ao fim para exibir dad
   
 #### <a name="to-add-a-datarepeater-control"></a>Para adicionar um controle DataRepeater  
   
-1.  Sobre o **modo de exibição** menu, clique em **caixa de ferramentas**.  
+1.  No menu **Exibir**, clique em **Caixa de Ferramentas**.  
   
-     O **caixa de ferramentas** é aberta.  
+     A **Caixa de ferramentas** é aberta.  
   
 2.  Selecione o **Visual Basic PowerPacks** guia.  
   
@@ -76,13 +76,13 @@ Este passo a passo fornece um cenário básico do início ao fim para exibir dad
   
 #### <a name="to-add-a-data-source"></a>Para adicionar uma fonte de dados  
   
-1.  Sobre o **dados** menu, clique em **Show Data Sources**.  
+1.  No menu **Dados**, clique em **Mostrar Fontes de Dados**.  
   
-2.  No **fontes de dados** janela, clique em **Add New Data Source**.  
+2.  Na janela **Fontes de Dados**, clique em **Adicionar Nova Fonte de Dados**.  
   
-3.  Selecione **banco de dados** sobre o **escolher um tipo de fonte de dados** página e, em seguida, clique em **próxima**.  
+3.  Selecione **Banco de Dados** na página **Escolher um Tipo de Fonte de Dados** e, em seguida, clique em **Avançar**.  
   
-4.  Sobre o **escolha sua Conexão de dados** , execute uma das seguintes etapas:  
+4.  Na página **Escolha a Conexão de Dados**, executa uma das seguintes etapas:  
   
     -   Se uma conexão de dados com o banco de dados de exemplo Northwind estiver disponível na lista suspensa, clique nela.  
   
@@ -97,7 +97,7 @@ Este passo a passo fornece um cenário básico do início ao fim para exibir dad
   
 6.  Clique em **próxima** sobre o **salvar a cadeia de Conexão para o arquivo de configuração de aplicativo** página.  
   
-7.  Expanda o **tabelas** nó na **Choose Your Database Objects** página.  
+7.  Expanda o nó **Tabelas** na página **Escolher Objetos do Banco de Dados**.  
   
 8.  Marque as caixas de seleção ao lado de **clientes** e **pedidos** tabelas e clique **concluir**.  
   
@@ -231,14 +231,14 @@ Este passo a passo fornece um cenário básico do início ao fim para exibir dad
   
 7.  Pressione F5 para executar o aplicativo. Quando você seleciona cada cliente no primeiro <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controlar, os pedidos para aquele cliente são exibidos na segunda <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle.  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao Controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [Como exibir dados associados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
- [Como exibir controles não associados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- [Como alterar o layout de um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
- [Como exibir cabeçalhos de item em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
- [Como pesquisar dados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
- [Como: criar um formulário mestre/detalhes usando dois controles DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
- [Como alterar a aparência de um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
- [Como desabilitar a adição e a exclusão de itens DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
- [Solução de problemas do controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução ao Controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+- [Como: Exibir dados associados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)
+- [Como: Exibir controles não associados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
+- [Como: Alterar o Layout de um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)
+- [Como: Exibir cabeçalhos de Item em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
+- [Como: Dados de pesquisa em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)
+- [Como: Criar um formulário mestre/detalhes usando dois controles DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
+- [Como: Alterar a aparência de um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+- [Como: Desabilitar a adição e exclusão de itens DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)
+- [Solução de problemas do controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

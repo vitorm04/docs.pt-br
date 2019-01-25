@@ -2,12 +2,12 @@
 title: Autenticação no SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 0172259446724e0be85bd7ca2d15cf299db04e27
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 060d756306226ef34fb968a87425bc0d4ea545f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630925"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
 SQL Server dá suporte a dois modos de autenticação, o modo de autenticação do Windows e o modo misto.  
@@ -78,9 +78,9 @@ SQL Server dá suporte a dois modos de autenticação, o modo de autenticação 
 |--------------|-----------------|  
 |[Entidades de segurança](/sql/relational-databases/security/authentication-access/principals-database-engine)|Descreve logons e outras entidades de segurança no SQL Server.|  
   
-## <a name="see-also"></a>Consulte também  
- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
- [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Conectando a uma fonte de dados](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Conectando a uma fonte de dados](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

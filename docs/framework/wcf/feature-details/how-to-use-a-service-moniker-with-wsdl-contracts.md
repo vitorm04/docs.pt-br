@@ -1,15 +1,15 @@
 ---
-title: Como usar um Moniker de serviço com contratos WSDL
+title: 'Como: Usar um Moniker de serviço com contratos WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726566"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Como usar um Moniker de serviço com contratos WSDL
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Como: Usar um Moniker de serviço com contratos WSDL
 Essas são situações em que talvez você queira que um cliente de interoperabilidade COM totalmente independente. O serviço que você deseja chamar não pode expor um ponto de extremidade MEX e o cliente do WCF com que dll não pode ser registrado para interoperabilidade. Nesses casos, você pode criar um arquivo WSDL que descreve o serviço e passá-la para o moniker de serviço do WCF. Este tópico descreve como chamar o exemplo de Introdução ao WCF usando um moniker de WCF WSDL.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>Usando o moniker de serviço WSDL  
@@ -56,6 +56,6 @@ Essas são situações em que talvez você queira que um cliente de interoperabi
   
 7.  Execute o aplicativo Visual Basic. Caixa de mensagem será exibida com os resultados da subtração de chamada (145, 76.54).  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Visão geral da integração de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [Visão geral da integração de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

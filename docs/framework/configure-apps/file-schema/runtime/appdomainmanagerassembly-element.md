@@ -1,5 +1,5 @@
 ---
-title: '&lt;appDomainManagerAssembly&gt; elemento'
+title: '&lt;appDomainManagerAssembly&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <appDomainManagerAssembly> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23c0edd99d09417c8e657045407a02a07338d7b2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4e2c43a5cfba89df3ae90950f09a7a947729f51b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746590"
 ---
-# <a name="ltappdomainmanagerassemblygt-element"></a>&lt;appDomainManagerAssembly&gt; elemento
+# <a name="ltappdomainmanagerassemblygt-element"></a>&lt;appDomainManagerAssembly&gt; Element
 Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o domínio do aplicativo padrão no processo.  
   
  \<configuration>  
 \<runtime>  
-\<appDomainManagerAssembly >  
+\<appDomainManagerAssembly>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,10 +73,10 @@ Especifica o assembly que fornece o gerenciador do domínio do aplicativo para o
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
-- [\<appDomainManagerType > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Consulte também
+- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
+- [\<appDomainManagerType > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Método SetAppDomainManagerType](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

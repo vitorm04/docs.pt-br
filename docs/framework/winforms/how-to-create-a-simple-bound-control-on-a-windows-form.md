@@ -1,18 +1,18 @@
 ---
-title: Como criar um controle associado simples em um Windows Form
+title: 'Como: Criar um controle associado simples em um formulário do Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643566"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como criar um controle associado simples em um Windows Form
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como: Criar um controle associado simples em um formulário do Windows
 Com a *associação simples*, é possível exibir um elemento de dados simples, como um valor de coluna de uma tabela de dados em um controle. Você pode associar de maneira simples qualquer propriedade de um controle a um valor de dados.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ Com a *associação simples*, é possível exibir um elemento de dados simples, 
     > [!NOTE]
     >  Como controles de associação simples mostram apenas um elemento de dados, é muito comum incluir a lógica de navegação em um Windows Form com controles de associação simples.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Binding>  
- [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Binding>
+- [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

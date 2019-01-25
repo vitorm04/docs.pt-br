@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 0bcab736aad1df84713c7a111d23b82a54ec4334
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602527"
 ---
 # <a name="sending-and-receiving-faults"></a>Enviando e recebendo falhas
 Falhas de SOAP transmitem condição informações de erro de um serviço em um cliente e no caso de duplex de um cliente a um serviço de uma maneira interoperável. Normalmente, um serviço define o conteúdo de falha personalizado e especifica quais operações poderá retorná-los. (Para obter mais informações, consulte [definindo e especificando falhas](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Este tópico discute como um serviço ou cliente duplex pode enviar essas falhas quando a condição de erro correspondente e como um cliente ou aplicativo de serviço lida com essas falhas. Para obter uma visão geral de tratamento de erros em aplicativos do Windows Communication Foundation (WCF), consulte [especificação e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -104,9 +104,9 @@ Falhas de SOAP transmitem condição informações de erro de um serviço em um 
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.FaultException>  
- <xref:System.ServiceModel.FaultException%601>  
- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
- [Exceções esperadas](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [Use fechar e anular para liberar recursos de cliente do WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.FaultException>
+- <xref:System.ServiceModel.FaultException%601>
+- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
+- [Exceções esperadas](../../../docs/framework/wcf/samples/expected-exceptions.md)
+- [Use fechar e anular para liberar recursos de cliente do WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

@@ -1,5 +1,5 @@
 ---
-title: Como abranger linhas e colunas em um controle TableLayoutPanel
+title: 'Como: Abranger linhas e colunas em um controle TableLayoutPanel'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.SpanRowsColumns
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 5363e7a7def8d2593d3ac474deb9d3d7b77d3912
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fdcb4bccefe814554148aaac6e2d42e49893b7e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685224"
 ---
-# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Como abranger linhas e colunas em um controle TableLayoutPanel
+# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Como: Abranger linhas e colunas em um controle TableLayoutPanel
 Controles em um <xref:System.Windows.Forms.TableLayoutPanel> controle pode abranger linhas e colunas adjacentes.  
   
 > [!NOTE]
@@ -35,5 +35,5 @@ Controles em um <xref:System.Windows.Forms.TableLayoutPanel> controle pode abran
   
 5.  Defina as <xref:System.Windows.Forms.Button> do controle **ColumnSpan** propriedade **1**. Observe que o <xref:System.Windows.Forms.Button> controle passa para a primeira coluna e abrange as primeira e segunda linhas.  
   
-## <a name="see-also"></a>Consulte também  
- [Controle TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Controle TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

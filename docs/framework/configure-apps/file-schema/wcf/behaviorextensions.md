@@ -2,12 +2,12 @@
 title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 363b5862b4d7677acdf37595ae9c6eeb6c38efa2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6698da198c4e1798af4a63e72e1d7ef9e09a5d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599017"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 Extensões de comportamento permitem ao usuário criar elementos de comportamento definidos pelo usuário. Esses elementos podem ser usados juntamente com os elementos de comportamento padrão do Windows Communication Foundation (WCF). O `behaviorExtensions` seção define o elemento, de modo que ele pode ser usado na configuração. Aqui está um exemplo de uma extensão de comportamento típico.  
@@ -51,6 +51,6 @@ Extensões de comportamento permitem ao usuário criar elementos de comportament
   
  Para obter mais informações, consulte [como o tempo de execução Localiza Assemblies](https://go.microsoft.com/fwlink/?LinkId=95336) e <xref:System.AppDomain.TypeResolve>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  
- [Configurando e estendendo o tempo de execução com comportamentos](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
+- [Configurando e estendendo o tempo de execução com comportamentos](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: acb4d67f41b1434fe8052a74e976907f24fecd31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb686be625d0d38bcf0de496c192276ebaa3410d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629560"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>Método ICorProfilerInfo::GetThreadContext
-Obtém a identidade de contexto atualmente associada com o segmento especificado.  
+Obtém a identidade de contexto associada ao thread especificado no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +40,16 @@ HRESULT GetThreadContext(
  [in] A ID do thread.  
   
  `pContextId`  
- [out] Um ponteiro para a ID do contexto atualmente associado com o segmento especificado. Se o thread não tem nenhum contexto associado a ela, essa função retornará CORPROF_E_DATAINCOMPLETE.  
+ [out] Um ponteiro para a ID do contexto associado ao thread especificado no momento. Se o thread não tiver contexto associado a ela, essa função retornará CORPROF_E_DATAINCOMPLETE.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

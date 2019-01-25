@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603658"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Método ISymUnmanagedWriter::DefineField
 Define uma única variável que não está dentro de um método. Esse método é usado para determinados campos em classes, campos de bits e assim por diante.  
@@ -44,7 +44,7 @@ HRESULT DefineField(
   
 #### <a name="parameters"></a>Parâmetros  
  `parent`  
- [in] O tipo de metadados ou um método de token.  
+ [in] O método ou tipo de metadados de token.  
   
  `name`  
  [in] O nome do campo.  
@@ -76,5 +76,5 @@ HRESULT DefineField(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

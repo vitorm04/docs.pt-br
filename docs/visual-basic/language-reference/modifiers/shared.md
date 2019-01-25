@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b76d999bfe3f7ae5205cb9486e040c1d6191b78c
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 001baa8d3cbd294772bef634825c67ea13b23458
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597275"
 ---
 # <a name="shared-visual-basic"></a>Compartilhado (Visual Basic)
 Especifica que um ou mais elementos de programação declarados estão associados com uma classe ou estrutura em geral e não uma instância específica da classe ou estrutura.  
@@ -92,10 +92,10 @@ Especifica que um ou mais elementos de programação declarados estão associado
   
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Estático](../../../visual-basic/language-reference/modifiers/static.md)  
- [Tempo de vida no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Consulte também
+- [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Estático](../../../visual-basic/language-reference/modifiers/static.md)
+- [Tempo de vida no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

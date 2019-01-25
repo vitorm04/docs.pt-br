@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 52077103277cdc4d32dfe3e44fcccffeec20295e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706859"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Esta visão geral descreve como [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expõe objetos inseridos, ou elementos filho, dentro de um documento de texto ou um contêiner.  
   
@@ -150,12 +150,12 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> com os parâmetros de (1,1).|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o conteúdo da célula da tabela; nesse caso, o elemento é um controle de texto.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> em que <xref:System.Windows.Automation.AutomationElement> é o objeto retornado pelo anterior `GetItem` método.|Retorna "Y".|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Automation.TextPattern>  
- <xref:System.Windows.Automation.Text.TextPatternRange>  
- <xref:System.Windows.Automation.Provider.ITextProvider>  
- <xref:System.Windows.Automation.Provider.ITextRangeProvider>  
- [Acessar objetos inseridos usando automação de interface do usuário](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
- [Expor o conteúdo de uma tabela usando automação de interface do usuário](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Percorrer texto usando automação de interface do usuário](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [Pesquisa de TextPattern e exemplo de seleção](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Automation.TextPattern>
+- <xref:System.Windows.Automation.Text.TextPatternRange>
+- <xref:System.Windows.Automation.Provider.ITextProvider>
+- <xref:System.Windows.Automation.Provider.ITextRangeProvider>
+- [Acessar objetos inseridos usando automação de interface do usuário](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+- [Expor o conteúdo de uma tabela usando automação de interface do usuário](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
+- [Percorrer texto usando automação de interface do usuário](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
+- [Pesquisa de TextPattern e exemplo de seleção](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

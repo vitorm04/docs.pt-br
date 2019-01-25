@@ -2,12 +2,12 @@
 title: ORDENAR POR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 5cffd7a696496f92ae83822faff2f08e325eea93
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ac888a26f906d8439b51c9c56d966440d7a25b7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670193"
 ---
 # <a name="order-by-entity-sql"></a>ORDENAR POR (Entity SQL)
 Especifica a ordem de classificação usado em objetos retornados em uma instrução SELECT.  
@@ -30,7 +30,7 @@ Especifica a ordem de classificação usado em objetos retornados em uma instru�
  Qualquer expressão de consulta válida especificando uma propriedade para classificar. Várias expressões de tipo podem ser especificadas. A sequência das expressões de tipo na cláusula ORDER BY define a organização do conjunto de resultados classificada.  
   
  ORDENE {} collation_name  
- Especifica que a cláusula ORDER BY operação deve ser executado de acordo com o agrupamento especificado em `collation_name`. COLLATE é aplicável somente para expressões de cadeia de caracteres.  
+ Especifica que a operação ORDER BY deve ser executada de acordo com a ordenação especificada em `collation_name`. COLLATE é aplicável somente para expressões de cadeia de caracteres.  
   
  ASC  
  Especifica que os valores na propriedade especificada devem ser classificados na ordem crescente, o valor menor para o maior valor. Esse é o padrão.  
@@ -118,15 +118,15 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>Exemplo  
  A seguinte consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa o operador cláusula ORDER pelo especificar ordem de classificação usado em objetos retornados em uma instrução SELECT. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento [como: executar uma consulta que retorna resultados de StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)  
- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)  
- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a>Consulte também
+- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
+- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
+- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

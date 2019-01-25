@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac378a48900d5820ad35587a6d269648ef99a77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bd12feb47352d9bb78aa8ef056072f9bdc6fba3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710316"
 ---
 # <a name="corgcstattypes-enumeration"></a>Enumeração COR_GC_STAT_TYPES
 Especifica as estatísticas sejam registradas para uma coleta de lixo.  
@@ -36,22 +36,22 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Esta enumeração Especifica quais estatísticas no [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estrutura devem ser definidas [Iclrgcmanager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) método.  
+ Esta enumeração Especifica quais estatísticas na [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estrutura devem ser definidas [iclrgcmanager:: getStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) método.  
   
 ## <a name="members"></a>Membros  
   
 |Membro|Descrição|  
 |------------|-----------------|  
 |`COR_GC_COUNTS`|Registra o número de coletas de lixo executadas para cada geração.|  
-|`COR_GC_MEMORYUSAGE`|Registros memória uso e lixo coleta as estatísticas de tamanho.|  
+|`COR_GC_MEMORYUSAGE`|Registros memória lixo e uso coleta estatísticas de tamanho.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** GCHost.idl, GCHost.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Estrutura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Estrutura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

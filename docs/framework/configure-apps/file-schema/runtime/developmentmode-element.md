@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 982bc04e362f82760226b1cd2b8b3febe9cc7107
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2f6a48a055d98a2f0b379df612da4e8fd49f3987
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669088"
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt; elemento
 Especifica se o tempo de execução pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.  
   
  \<configuration>  
 \<runtime>  
-\<developmentMode >  
+\<developmentMode>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,7 +71,7 @@ Especifica se o tempo de execução pesquisa por assemblies em diretórios espec
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Como: Localizar Assemblies usando DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

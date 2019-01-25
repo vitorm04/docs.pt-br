@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
 ms.assetid: fa2cf36e-2169-42db-8449-6aca579e8303
-ms.openlocfilehash: f53d7828256637c3825e8f706cb8b5abf66f0ae6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06098dc66ee4b162c298c3cbed6d815c056177e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600616"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>A máquina de servidor remoto não existe ou está indisponível (Visual Basic)
-Você está tentando se conectar a um servidor remoto que não está disponível ou não existe. Esse erro pode ser causado pela sua conexão de rede é perdida.  
+Você está tentando se conectar a um servidor remoto que não está disponível ou não existe. Esse erro pode ser causado por sua conexão de rede que está sendo perdida.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
 -   Reconectar-se à rede e tente novamente.  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Consulte também
+- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)

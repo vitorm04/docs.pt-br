@@ -1,5 +1,5 @@
 ---
-title: Como escolher as impressoras conectadas ao computador de um usuário nos Windows Forms
+title: 'Como: Escolher as impressoras conectadas a um usuário&#39;s de computador no Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 5f54a74dc8118d2ebcb2df7e91f229c1807b0297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f45fadab0f3480d4c475ff8ee448b8d1cddb13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572806"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Como escolher as impressoras conectadas ao computador de um usuário nos Windows Forms
-Geralmente, os usuários escolhem uma impressora diferente da impressora padrão para imprimir. Você pode habilitar os usuários podem escolher uma impressora entre as instaladas no momento usando o <xref:System.Windows.Forms.PrintDialog> componente. Por meio de <xref:System.Windows.Forms.PrintDialog> componente, o <xref:System.Windows.Forms.DialogResult> do <xref:System.Windows.Forms.PrintDialog> componente é capturado e usado para selecionar a impressora.  
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Como: Escolher as impressoras conectadas a um usuário&#39;s de computador no Windows Forms
+Geralmente, os usuários escolhem uma impressora diferente da impressora padrão para imprimir. Você pode habilitar os usuários escolham uma impressora dentre as instaladas no momento usando o <xref:System.Windows.Forms.PrintDialog> componente. Por meio de <xref:System.Windows.Forms.PrintDialog> componente, o <xref:System.Windows.Forms.DialogResult> da <xref:System.Windows.Forms.PrintDialog> componente é capturado e usado para selecionar a impressora.  
   
- No procedimento a seguir, um arquivo de texto é selecionado para ser impresso na impressora padrão. O <xref:System.Windows.Forms.PrintDialog> classe, em seguida, é instanciada.  
+ No procedimento a seguir, um arquivo de texto é selecionado para ser impresso na impressora padrão. O <xref:System.Windows.Forms.PrintDialog> classe é então instanciada.  
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>Para escolher uma impressora e imprimir um arquivo  
   
-1.  Selecione a impressora a ser usada com a <xref:System.Windows.Forms.PrintDialog> componente.  
+1.  Selecione a impressora a ser usada com o <xref:System.Windows.Forms.PrintDialog> componente.  
   
      No exemplo de código a seguir, há dois eventos que estão sendo manipulados. No primeiro, um <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> evento, o <xref:System.Windows.Forms.PrintDialog> classe é instanciada e a impressora selecionada pelo usuário é capturada no <xref:System.Windows.Forms.DialogResult> propriedade.  
   
-     No segundo caso, o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento o <xref:System.Drawing.Printing.PrintDocument> componente, um documento de exemplo é impresso na impressora especificada.  
+     No segundo evento, o <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos do <xref:System.Drawing.Printing.PrintDocument> componente, um documento de exemplo é impresso na impressora especificada.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -106,5 +106,5 @@ Geralmente, os usuários escolhem uma impressora diferente da impressora padrão
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte à impressão nos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Consulte também
+- [Suporte à impressão nos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

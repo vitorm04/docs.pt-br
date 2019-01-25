@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93e96d6f8570e6aef7bfc18ef2859dc1e86ec8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: acc4da79796e975d349d1cb33c301c25c4791cb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709072"
 ---
 # <a name="userthread-structure"></a>Estrutura USER_THREAD
-Fornece informações para um depurador sobre um segmento. Para obter mais informações, consulte o [Inotifysource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) método.  
+Fornece informações para um depurador sobre um segmento. Para obter mais informações, consulte o [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,12 +42,12 @@ typedef struct tagUSER_THREAD
 |Membro|Descrição|  
 |------------|-----------------|  
 |`pSidBuffer`|Endereço do buffer de thread.|  
-|`dwSidLen`|Comprimento do buffer de thread, em bytes.|  
+|`dwSidLen`|Tamanho do buffer de thread, em bytes.|  
 |`dwTid`|ID do thread.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Consulte também  
- [Método SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)  
- [Estruturas de repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>Consulte também
+- [Método SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
+- [Estruturas de repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

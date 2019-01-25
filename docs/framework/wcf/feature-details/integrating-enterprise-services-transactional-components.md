@@ -2,12 +2,12 @@
 title: Integração de componentes transacionais de Enterprise Services
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 1fd338e57dab16a02cd31de6b45d4c5291591043
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 865756506f34fecb1848675205715acfb261ba2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686498"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integração de componentes transacionais de Enterprise Services
 Windows Communication Foundation (WCF) fornece um mecanismo automático para a integração com o Enterprise Services (consulte [integração de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). No entanto, convém a flexibilidade para desenvolver serviços que usam internamente componentes transacionais hospedados em serviços corporativos. Como o recurso de transações do WCF é compilado com o <xref:System.Transactions> infra-estrutura, o processo para a integração do Enterprise Services com o WCF é idêntico ao que, para especificar a interoperabilidade entre <xref:System.Transactions> e os serviços corporativos, conforme descrito na [Interoperabilidade com serviços da empresa e transações COM+](https://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -92,6 +92,6 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Integração de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Integração de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+## <a name="see-also"></a>Consulte também
+- [Integração de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Integração de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

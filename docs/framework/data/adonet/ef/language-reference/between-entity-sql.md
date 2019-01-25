@@ -2,15 +2,15 @@
 title: ENTRE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: bab31ca0a6fd37f5179412b7a4936d564620135e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cface8ab50e53f21293ad54ea6961c7e308080b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690678"
 ---
 # <a name="between-entity-sql"></a>ENTRE (Entity SQL)
-Determina se uma expressão resulta em um valor em um intervalo especificado. O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] entre a expressão tem a mesma funcionalidade que a expressão Transact-SQL entre.  
+Determina se uma expressão resulta em um valor em um intervalo especificado. O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ENTER expressão tem a mesma funcionalidade que a expressão Transact-SQL entre.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,11 +43,11 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="example"></a>Exemplo  
  Os seguintes usos da consulta SQL Entity ENTER o operador determinar se uma expressão resulta em um valor em um intervalo especificado. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento [como: executar uma consulta que retorna resultados de StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#BETWEEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#between)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Consulte também
+- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
