@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630834"
 ---
-# <a name="icordebugcontrollerhasqueuedcallbacks-method"></a><span data-ttu-id="6b22b-102">Método ICorDebugController::HasQueuedCallbacks</span><span class="sxs-lookup"><span data-stu-id="6b22b-102">ICorDebugController::HasQueuedCallbacks Method</span></span>
-<span data-ttu-id="6b22b-103">Obtém um valor que indica se qualquer retornos de chamada gerenciados atualmente na fila para o segmento especificado.</span><span class="sxs-lookup"><span data-stu-id="6b22b-103">Gets a value that indicates whether any managed callbacks are currently queued for the specified thread.</span></span>  
+# <a name="icordebugcontrollerhasqueuedcallbacks-method"></a><span data-ttu-id="05971-102">Método ICorDebugController::HasQueuedCallbacks</span><span class="sxs-lookup"><span data-stu-id="05971-102">ICorDebugController::HasQueuedCallbacks Method</span></span>
+<span data-ttu-id="05971-103">Obtém um valor que indica se qualquer retorno de chamada gerenciado atualmente na fila para o thread especificado.</span><span class="sxs-lookup"><span data-stu-id="05971-103">Gets a value that indicates whether any managed callbacks are currently queued for the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b22b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6b22b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05971-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="05971-104">Syntax</span></span>  
   
 ```  
 HRESULT HasQueuedCallbacks (  
@@ -36,28 +36,28 @@ HRESULT HasQueuedCallbacks (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6b22b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6b22b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="05971-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="05971-105">Parameters</span></span>  
  `pThread`  
- <span data-ttu-id="6b22b-106">[in] Um ponteiro para um objeto de "ICorDebugThread" que representa o thread.</span><span class="sxs-lookup"><span data-stu-id="6b22b-106">[in] A pointer to an "ICorDebugThread" object that represents the thread.</span></span>  
+ <span data-ttu-id="05971-106">[in] Um ponteiro para um objeto de "ICorDebugThread" que representa o thread.</span><span class="sxs-lookup"><span data-stu-id="05971-106">[in] A pointer to an "ICorDebugThread" object that represents the thread.</span></span>  
   
  `pbQueued`  
- <span data-ttu-id="6b22b-107">[out] Um ponteiro para um valor que é `true` se qualquer retornos de chamada gerenciados estão atualmente na fila para o segmento especificado; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="6b22b-107">[out] A pointer to a value that is `true` if any managed callbacks are currently queued for the specified thread; otherwise, `false`.</span></span>  
+ <span data-ttu-id="05971-107">[out] Um ponteiro para um valor que é `true` se qualquer retorno de chamada gerenciado está atualmente na fila para o segmento especificado; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="05971-107">[out] A pointer to a value that is `true` if any managed callbacks are currently queued for the specified thread; otherwise, `false`.</span></span>  
   
- <span data-ttu-id="6b22b-108">Se null for especificado para o `pThread` parâmetro `HasQueuedCallbacks` retornará `true` se há retornos de chamada gerenciados na fila de qualquer thread.</span><span class="sxs-lookup"><span data-stu-id="6b22b-108">If null is specified for the `pThread` parameter, `HasQueuedCallbacks` will return `true` if there are currently managed callbacks queued for any thread.</span></span>  
+ <span data-ttu-id="05971-108">Se null for especificado para o `pThread` parâmetro, `HasQueuedCallbacks` retornará `true` se não houver gerenciados retornos de chamada na fila para qualquer thread.</span><span class="sxs-lookup"><span data-stu-id="05971-108">If null is specified for the `pThread` parameter, `HasQueuedCallbacks` will return `true` if there are currently managed callbacks queued for any thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6b22b-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="6b22b-109">Remarks</span></span>  
- <span data-ttu-id="6b22b-110">Retornos de chamada será expedida um por vez, cada vez que [Icordebugcontroller](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) é chamado.</span><span class="sxs-lookup"><span data-stu-id="6b22b-110">Callbacks will be dispatched one at a time, each time [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called.</span></span> <span data-ttu-id="6b22b-111">O depurador pode verificar esse sinalizador se deseja relatar vários eventos de depuração que ocorrem simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="6b22b-111">The debugger can check this flag if it wants to report multiple debugging events that occur simultaneously.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="05971-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="05971-109">Remarks</span></span>  
+ <span data-ttu-id="05971-110">Retornos de chamada será expedido um por vez, cada vez [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) é chamado.</span><span class="sxs-lookup"><span data-stu-id="05971-110">Callbacks will be dispatched one at a time, each time [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called.</span></span> <span data-ttu-id="05971-111">O depurador pode verificar esse sinalizador se deseja relatar vários eventos de depuração que ocorrem ao mesmo tempo.</span><span class="sxs-lookup"><span data-stu-id="05971-111">The debugger can check this flag if it wants to report multiple debugging events that occur simultaneously.</span></span>  
   
- <span data-ttu-id="6b22b-112">Quando eventos de depuração são enfileirados, eles já tenham ocorrido, para que o depurador deve esvaziar a fila inteira para ter certeza do estado do elemento a ser depurado.</span><span class="sxs-lookup"><span data-stu-id="6b22b-112">When debugging events are queued, they have already occurred, so the debugger must drain the entire queue to be sure of the state of the debuggee.</span></span> <span data-ttu-id="6b22b-113">(Chamar `ICorDebugController::Continue` para que a fila.) Por exemplo, se a fila contém dois eventos de depuração no thread *X*, e o depurador suspende a thread *X* após o primeiro evento de depuração e, em seguida, chama `ICorDebugController::Continue`, o segundo evento de depuração para thread *X* será enviado, embora o thread foi suspenso.</span><span class="sxs-lookup"><span data-stu-id="6b22b-113">(Call `ICorDebugController::Continue` to drain the queue.) For example, if the queue contains two debugging events on thread *X*, and the debugger suspends thread *X* after the first debugging event and then calls `ICorDebugController::Continue`, the second debugging event for thread *X* will be dispatched although the thread has been suspended.</span></span>  
+ <span data-ttu-id="05971-112">Quando eventos de depuração são enfileirados, eles já ocorreram, portanto, o depurador deve drenar a fila inteira para ter certeza do estado do elemento a ser depurado.</span><span class="sxs-lookup"><span data-stu-id="05971-112">When debugging events are queued, they have already occurred, so the debugger must drain the entire queue to be sure of the state of the debuggee.</span></span> <span data-ttu-id="05971-113">(Chamar `ICorDebugController::Continue` para diminuir a fila.) Por exemplo, se a fila contém dois eventos de depuração no thread *X*, e o depurador suspende o thread *X* após o primeiro evento de depuração e, em seguida, chama `ICorDebugController::Continue`, o segundo evento de depuração para thread *X* será expedido, embora o thread foi suspenso.</span><span class="sxs-lookup"><span data-stu-id="05971-113">(Call `ICorDebugController::Continue` to drain the queue.) For example, if the queue contains two debugging events on thread *X*, and the debugger suspends thread *X* after the first debugging event and then calls `ICorDebugController::Continue`, the second debugging event for thread *X* will be dispatched although the thread has been suspended.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6b22b-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6b22b-114">Requirements</span></span>  
- <span data-ttu-id="6b22b-115">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b22b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05971-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="05971-114">Requirements</span></span>  
+ <span data-ttu-id="05971-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05971-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b22b-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6b22b-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="05971-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05971-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6b22b-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6b22b-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="05971-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05971-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6b22b-118">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b22b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="05971-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05971-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b22b-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6b22b-119">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="05971-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="05971-119">See also</span></span>
+

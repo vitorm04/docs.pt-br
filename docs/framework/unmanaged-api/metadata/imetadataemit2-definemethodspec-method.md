@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d56209e030939f53e3f72fe0c8a10db2160dd19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492514"
 ---
-# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="e488d-102">Método IMetaDataEmit2::DefineMethodSpec</span><span class="sxs-lookup"><span data-stu-id="e488d-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
-<span data-ttu-id="e488d-103">Cria uma instância genérica de um método e recebe um token para a definição.</span><span class="sxs-lookup"><span data-stu-id="e488d-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
+# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="4f804-102">Método IMetaDataEmit2::DefineMethodSpec</span><span class="sxs-lookup"><span data-stu-id="4f804-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
+<span data-ttu-id="4f804-103">Cria uma instância genérica de um método e obtém um token para a definição.</span><span class="sxs-lookup"><span data-stu-id="4f804-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e488d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e488d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f804-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4f804-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineMethodSpec (  
@@ -38,28 +38,28 @@ HRESULT DefineMethodSpec (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e488d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e488d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4f804-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4f804-105">Parameters</span></span>  
  `tkParent`  
- <span data-ttu-id="e488d-106">[in] Um token para o método do qual criar a instância genérica.</span><span class="sxs-lookup"><span data-stu-id="e488d-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="e488d-107">O token deve ser do tipo `mdMethodDef` ou `mdMemberRef`.</span><span class="sxs-lookup"><span data-stu-id="e488d-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
+ <span data-ttu-id="4f804-106">[in] Um token para o método do qual criar a instância genérica.</span><span class="sxs-lookup"><span data-stu-id="4f804-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="4f804-107">O token deve ser do tipo `mdMethodDef` ou `mdMemberRef`.</span><span class="sxs-lookup"><span data-stu-id="4f804-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="e488d-108">[in] Um ponteiro para o binário COM+ assinatura do método.</span><span class="sxs-lookup"><span data-stu-id="e488d-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
+ <span data-ttu-id="4f804-108">[in] Um ponteiro para o binário COM + assinatura do método.</span><span class="sxs-lookup"><span data-stu-id="4f804-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
   
  `cbSibBlob`  
- <span data-ttu-id="e488d-109">[in] O tamanho, em bytes, de `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="e488d-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="4f804-109">[in] O tamanho, em bytes, do `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="4f804-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
   
  `pmi`  
- <span data-ttu-id="e488d-110">[out] Um token para a definição de metadados de assinatura do método.</span><span class="sxs-lookup"><span data-stu-id="e488d-110">[out] A token to the metadata signature definition of the method.</span></span>  
+ <span data-ttu-id="4f804-110">[out] Um token para a definição de metadados de assinatura do método.</span><span class="sxs-lookup"><span data-stu-id="4f804-110">[out] A token to the metadata signature definition of the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e488d-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e488d-111">Requirements</span></span>  
- <span data-ttu-id="e488d-112">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e488d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4f804-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4f804-111">Requirements</span></span>  
+ <span data-ttu-id="4f804-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f804-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e488d-113">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e488d-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4f804-113">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4f804-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e488d-114">**Biblioteca:** usado como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="e488d-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4f804-114">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4f804-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e488d-115">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e488d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4f804-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f804-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e488d-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e488d-116">See Also</span></span>  
- [<span data-ttu-id="e488d-117">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="e488d-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [<span data-ttu-id="e488d-118">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="e488d-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4f804-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4f804-116">See also</span></span>
+- [<span data-ttu-id="4f804-117">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="4f804-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="4f804-118">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="4f804-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f35a712472887a928b1732f076b39ac08724c7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12f5930fb6d4e149653bc29d2f36b0df72c71447
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498824"
 ---
-# <a name="icorprofilerinfo3enumjitedfunctions-method"></a><span data-ttu-id="d8c73-102">Método ICorProfilerInfo3::EnumJITedFunctions</span><span class="sxs-lookup"><span data-stu-id="d8c73-102">ICorProfilerInfo3::EnumJITedFunctions Method</span></span>
-<span data-ttu-id="d8c73-103">Retorna um enumerador para todas as funções que foram anteriormente compilados JIT.</span><span class="sxs-lookup"><span data-stu-id="d8c73-103">Returns an enumerator for all functions that were previously JIT-compiled.</span></span>  
+# <a name="icorprofilerinfo3enumjitedfunctions-method"></a><span data-ttu-id="23738-102">Método ICorProfilerInfo3::EnumJITedFunctions</span><span class="sxs-lookup"><span data-stu-id="23738-102">ICorProfilerInfo3::EnumJITedFunctions Method</span></span>
+<span data-ttu-id="23738-103">Retorna um enumerador para todas as funções que foram previamente compilado por JIT.</span><span class="sxs-lookup"><span data-stu-id="23738-103">Returns an enumerator for all functions that were previously JIT-compiled.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8c73-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d8c73-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23738-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="23738-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d8c73-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d8c73-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="23738-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="23738-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="d8c73-106">[out] Um ponteiro para o [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerador.</span><span class="sxs-lookup"><span data-stu-id="d8c73-106">[out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.</span></span>  
+ <span data-ttu-id="23738-106">[out] Um ponteiro para o [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerador.</span><span class="sxs-lookup"><span data-stu-id="23738-106">[out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d8c73-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="d8c73-107">Remarks</span></span>  
- <span data-ttu-id="d8c73-108">Esse método pode sobrepor `JITCompilation` retornos de chamada, como o [: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="d8c73-108">This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method.</span></span> <span data-ttu-id="d8c73-109">O enumerador retornado por esse método não inclui funções que são carregadas de imagens nativas geradas com Ngen.exe.</span><span class="sxs-lookup"><span data-stu-id="d8c73-109">The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23738-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="23738-107">Remarks</span></span>  
+ <span data-ttu-id="23738-108">Esse método pode se sobrepor `JITCompilation` retornos de chamada, como o [ICorProfilerCallback:: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="23738-108">This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method.</span></span> <span data-ttu-id="23738-109">O enumerador retornado por esse método não inclui funções que são carregadas de imagens nativas geradas com Ngen.exe.</span><span class="sxs-lookup"><span data-stu-id="23738-109">The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d8c73-110">A enumeração retornada inclui apenas "0" para o valor da `COR_PRF_FUNCTION::reJitId` campo.</span><span class="sxs-lookup"><span data-stu-id="d8c73-110">The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.</span></span>  <span data-ttu-id="d8c73-111">Se você precisar válido `COR_PRF_FUNCTION::reJitId` valores, use o [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="d8c73-111">If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.</span></span>  
+>  <span data-ttu-id="23738-110">Enumeração retornada inclui apenas "0" para o valor da `COR_PRF_FUNCTION::reJitId` campo.</span><span class="sxs-lookup"><span data-stu-id="23738-110">The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.</span></span>  <span data-ttu-id="23738-111">Se você precisar válida `COR_PRF_FUNCTION::reJitId` valores, use o [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="23738-111">If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8c73-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d8c73-112">Requirements</span></span>  
- <span data-ttu-id="d8c73-113">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8c73-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23738-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="23738-112">Requirements</span></span>  
+ <span data-ttu-id="23738-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23738-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8c73-114">**Cabeçalho:** Corprof. idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d8c73-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="23738-114">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="23738-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d8c73-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8c73-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="23738-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="23738-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d8c73-116">**Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8c73-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="23738-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23738-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8c73-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d8c73-117">See Also</span></span>  
- [<span data-ttu-id="d8c73-118">Interface ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="d8c73-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="d8c73-119">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="d8c73-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="d8c73-120">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="d8c73-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="23738-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23738-117">See also</span></span>
+- [<span data-ttu-id="23738-118">Interface ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="23738-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="23738-119">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="23738-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="23738-120">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="23738-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

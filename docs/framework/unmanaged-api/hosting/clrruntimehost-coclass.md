@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fed7519402b4c3c1b2405ea99f8ba484781e95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e40f08a3dae6f17617e97e07a23b9d7eb611083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558625"
 ---
-# <a name="clrruntimehost-coclass"></a><span data-ttu-id="59114-102">Coclass CLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="59114-102">CLRRuntimeHost Coclass</span></span>
-<span data-ttu-id="59114-103">Fornece interfaces para gerenciar a execução de código em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="59114-103">Provides interfaces for managing code execution by the runtime.</span></span>  
+# <a name="clrruntimehost-coclass"></a><span data-ttu-id="15d94-102">Coclass CLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="15d94-102">CLRRuntimeHost Coclass</span></span>
+<span data-ttu-id="15d94-103">Fornece interfaces para gerenciar a execução de código em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="15d94-103">Provides interfaces for managing code execution by the runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59114-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="59114-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15d94-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="15d94-104">Syntax</span></span>  
   
 ```  
 coclass CLRRuntimeHost {  
@@ -35,21 +35,21 @@ coclass CLRRuntimeHost {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="59114-105">Interfaces</span><span class="sxs-lookup"><span data-stu-id="59114-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="15d94-105">Interfaces</span><span class="sxs-lookup"><span data-stu-id="15d94-105">Interfaces</span></span>  
   
-|<span data-ttu-id="59114-106">Interface</span><span class="sxs-lookup"><span data-stu-id="59114-106">Interface</span></span>|<span data-ttu-id="59114-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="59114-107">Description</span></span>|  
+|<span data-ttu-id="15d94-106">Interface</span><span class="sxs-lookup"><span data-stu-id="15d94-106">Interface</span></span>|<span data-ttu-id="15d94-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="15d94-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="59114-108">Interface ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="59114-108">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|<span data-ttu-id="59114-109">Fornece métodos para controlar a execução de aplicativos em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="59114-109">Provides methods for controlling the execution of applications by the runtime.</span></span>|  
-|[<span data-ttu-id="59114-110">Interface ICLRValidator</span><span class="sxs-lookup"><span data-stu-id="59114-110">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|<span data-ttu-id="59114-111">Fornece métodos para validação de imagens executáveis portáteis e os relatórios detalhados de erros de validação.</span><span class="sxs-lookup"><span data-stu-id="59114-111">Provides methods for validation of portable executable images and for detailed reporting of validation errors.</span></span>|  
+|[<span data-ttu-id="15d94-108">Interface ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="15d94-108">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|<span data-ttu-id="15d94-109">Fornece métodos para controlar a execução de aplicativos em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="15d94-109">Provides methods for controlling the execution of applications by the runtime.</span></span>|  
+|[<span data-ttu-id="15d94-110">Interface ICLRValidator</span><span class="sxs-lookup"><span data-stu-id="15d94-110">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|<span data-ttu-id="15d94-111">Fornece métodos para a validação de imagens executáveis portáteis e relatórios detalhados de erros de validação.</span><span class="sxs-lookup"><span data-stu-id="15d94-111">Provides methods for validation of portable executable images and for detailed reporting of validation errors.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="59114-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="59114-112">Requirements</span></span>  
- <span data-ttu-id="59114-113">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59114-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15d94-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="15d94-112">Requirements</span></span>  
+ <span data-ttu-id="15d94-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15d94-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59114-114">**Cabeçalho:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="59114-114">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="15d94-114">**Cabeçalho:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="15d94-114">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="59114-115">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="59114-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="15d94-115">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="15d94-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="59114-116">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59114-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="15d94-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15d94-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59114-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="59114-117">See Also</span></span>  
- [<span data-ttu-id="59114-118">Coclasses de hospedagem</span><span class="sxs-lookup"><span data-stu-id="59114-118">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a><span data-ttu-id="15d94-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="15d94-117">See also</span></span>
+- [<span data-ttu-id="15d94-118">Coclasses de hospedagem</span><span class="sxs-lookup"><span data-stu-id="15d94-118">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

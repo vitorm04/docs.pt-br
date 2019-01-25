@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 632f19e0ead57d5508265fece578bb22f18ba54a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722719"
 ---
-# <a name="getalinkmessagedll-function"></a><span data-ttu-id="b7a8a-102">Função GetALinkMessageDll</span><span class="sxs-lookup"><span data-stu-id="b7a8a-102">GetALinkMessageDll Function</span></span>
-<span data-ttu-id="b7a8a-103">Localiza e carrega a DLL de mensagem.</span><span class="sxs-lookup"><span data-stu-id="b7a8a-103">Finds and loads the message DLL.</span></span> <span data-ttu-id="b7a8a-104">Retorna 0 se a DLL de mensagem não pode ser localizada ou carregada.</span><span class="sxs-lookup"><span data-stu-id="b7a8a-104">Returns 0 if the message DLL could not be located or loaded.</span></span> <span data-ttu-id="b7a8a-105">A DLL de mensagem deve ser em um subdiretório, cujo nome é uma ID de idioma ou no diretório atual.</span><span class="sxs-lookup"><span data-stu-id="b7a8a-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span></span>  
+# <a name="getalinkmessagedll-function"></a><span data-ttu-id="fcc00-102">Função GetALinkMessageDll</span><span class="sxs-lookup"><span data-stu-id="fcc00-102">GetALinkMessageDll Function</span></span>
+<span data-ttu-id="fcc00-103">Localiza e carrega a DLL da mensagem.</span><span class="sxs-lookup"><span data-stu-id="fcc00-103">Finds and loads the message DLL.</span></span> <span data-ttu-id="fcc00-104">Retorna 0 se a DLL da mensagem não pode ser localizado ou carregado.</span><span class="sxs-lookup"><span data-stu-id="fcc00-104">Returns 0 if the message DLL could not be located or loaded.</span></span> <span data-ttu-id="fcc00-105">A DLL de mensagem deve ser em um subdiretório, cujo nome é uma ID de idioma ou no diretório atual.</span><span class="sxs-lookup"><span data-stu-id="fcc00-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7a8a-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b7a8a-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fcc00-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fcc00-106">Syntax</span></span>  
   
 ```  
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b7a8a-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b7a8a-107">Requirements</span></span>  
- <span data-ttu-id="b7a8a-108">**Cabeçalho:** alink.h</span><span class="sxs-lookup"><span data-stu-id="b7a8a-108">**Header:** alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fcc00-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fcc00-107">Requirements</span></span>  
+ <span data-ttu-id="fcc00-108">**Cabeçalho:** alink.h</span><span class="sxs-lookup"><span data-stu-id="fcc00-108">**Header:** alink.h</span></span>  
   
- <span data-ttu-id="b7a8a-109">**Biblioteca**: arquivo</span><span class="sxs-lookup"><span data-stu-id="b7a8a-109">**Library**: alink.dll</span></span>  
+ <span data-ttu-id="fcc00-109">**Biblioteca**: ALink</span><span class="sxs-lookup"><span data-stu-id="fcc00-109">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7a8a-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b7a8a-110">See Also</span></span>  
- [<span data-ttu-id="b7a8a-111">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="b7a8a-111">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a><span data-ttu-id="fcc00-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fcc00-110">See also</span></span>
+- [<span data-ttu-id="fcc00-111">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="fcc00-111">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
