@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564075"
 ---
-# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="6fe46-102">Enumeração CorMethodSemanticsAttr</span><span class="sxs-lookup"><span data-stu-id="6fe46-102">CorMethodSemanticsAttr Enumeration</span></span>
-<span data-ttu-id="6fe46-103">Contém valores que descrevem a relação entre um método e um evento ou propriedade associada.</span><span class="sxs-lookup"><span data-stu-id="6fe46-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
+# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="a7ea1-102">Enumeração CorMethodSemanticsAttr</span><span class="sxs-lookup"><span data-stu-id="a7ea1-102">CorMethodSemanticsAttr Enumeration</span></span>
+<span data-ttu-id="a7ea1-103">Contém valores que descrevem a relação entre um método e um evento ou propriedade associada.</span><span class="sxs-lookup"><span data-stu-id="a7ea1-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6fe46-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6fe46-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7ea1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a7ea1-104">Syntax</span></span>  
   
 ```  
 typedef enum CorMethodSemanticsAttr {  
@@ -41,23 +41,23 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6fe46-105">Membros</span><span class="sxs-lookup"><span data-stu-id="6fe46-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a7ea1-105">Membros</span><span class="sxs-lookup"><span data-stu-id="a7ea1-105">Members</span></span>  
   
-|<span data-ttu-id="6fe46-106">Membro</span><span class="sxs-lookup"><span data-stu-id="6fe46-106">Member</span></span>|<span data-ttu-id="6fe46-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="6fe46-107">Description</span></span>|  
+|<span data-ttu-id="a7ea1-106">Membro</span><span class="sxs-lookup"><span data-stu-id="a7ea1-106">Member</span></span>|<span data-ttu-id="a7ea1-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="a7ea1-107">Description</span></span>|  
 |------------|-----------------|  
-|`msSetter`|<span data-ttu-id="6fe46-108">Especifica que o método é um `set` acessador para uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="6fe46-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
-|`msGetter`|<span data-ttu-id="6fe46-109">Especifica que o método é um `get` acessador para uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="6fe46-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
-|`msOther`|<span data-ttu-id="6fe46-110">Especifica que o método tem uma relação com uma propriedade ou um evento que não sejam aqueles definidos aqui.</span><span class="sxs-lookup"><span data-stu-id="6fe46-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
-|`msAddOn`|<span data-ttu-id="6fe46-111">Especifica que o método adiciona métodos do manipulador para um evento.</span><span class="sxs-lookup"><span data-stu-id="6fe46-111">Specifies that the method adds handler methods for an event.</span></span>|  
-|`msRemoveOn`|<span data-ttu-id="6fe46-112">Especifica que o método Remove métodos do manipulador para um evento.</span><span class="sxs-lookup"><span data-stu-id="6fe46-112">Specifies that the method removes handler methods for an event.</span></span>|  
-|`msFire`|<span data-ttu-id="6fe46-113">Especifica que o método gera um evento.</span><span class="sxs-lookup"><span data-stu-id="6fe46-113">Specifies that the method raises an event.</span></span>|  
+|`msSetter`|<span data-ttu-id="a7ea1-108">Especifica que o método é um `set` acessador para uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="a7ea1-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
+|`msGetter`|<span data-ttu-id="a7ea1-109">Especifica que o método é um `get` acessador para uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="a7ea1-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
+|`msOther`|<span data-ttu-id="a7ea1-110">Especifica que o método tem uma relação com uma propriedade ou um evento diferente daqueles definidos aqui.</span><span class="sxs-lookup"><span data-stu-id="a7ea1-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
+|`msAddOn`|<span data-ttu-id="a7ea1-111">Especifica que o método adiciona métodos do manipulador para um evento.</span><span class="sxs-lookup"><span data-stu-id="a7ea1-111">Specifies that the method adds handler methods for an event.</span></span>|  
+|`msRemoveOn`|<span data-ttu-id="a7ea1-112">Especifica que o método Remove métodos do manipulador para um evento.</span><span class="sxs-lookup"><span data-stu-id="a7ea1-112">Specifies that the method removes handler methods for an event.</span></span>|  
+|`msFire`|<span data-ttu-id="a7ea1-113">Especifica que o método gera um evento.</span><span class="sxs-lookup"><span data-stu-id="a7ea1-113">Specifies that the method raises an event.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6fe46-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6fe46-114">Requirements</span></span>  
- <span data-ttu-id="6fe46-115">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6fe46-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a7ea1-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a7ea1-114">Requirements</span></span>  
+ <span data-ttu-id="a7ea1-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7ea1-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6fe46-116">**Cabeçalho:** Corhdr</span><span class="sxs-lookup"><span data-stu-id="6fe46-116">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="a7ea1-116">**Cabeçalho:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a7ea1-116">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="6fe46-117">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fe46-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a7ea1-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7ea1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6fe46-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6fe46-118">See Also</span></span>  
- [<span data-ttu-id="6fe46-119">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="6fe46-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="a7ea1-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a7ea1-118">See also</span></span>
+- [<span data-ttu-id="a7ea1-119">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="a7ea1-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

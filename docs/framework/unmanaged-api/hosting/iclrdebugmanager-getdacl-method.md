@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c417bd883e2df2b5ae7984df9d8d21eaf7f87623
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a97b277930d3d916df8c8ca292c9c4a0162b5ce9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543770"
 ---
-# <a name="iclrdebugmanagergetdacl-method"></a><span data-ttu-id="82896-102">Método ICLRDebugManager::GetDacl</span><span class="sxs-lookup"><span data-stu-id="82896-102">ICLRDebugManager::GetDacl Method</span></span>
-<span data-ttu-id="82896-103">Este método não está implementado.</span><span class="sxs-lookup"><span data-stu-id="82896-103">This method is not implemented.</span></span>  
+# <a name="iclrdebugmanagergetdacl-method"></a><span data-ttu-id="07a46-102">Método ICLRDebugManager::GetDacl</span><span class="sxs-lookup"><span data-stu-id="07a46-102">ICLRDebugManager::GetDacl Method</span></span>
+<span data-ttu-id="07a46-103">Este método não está implementado.</span><span class="sxs-lookup"><span data-stu-id="07a46-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82896-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="82896-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07a46-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="07a46-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDacl (  
@@ -35,27 +35,27 @@ HRESULT GetDacl (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="82896-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="82896-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="07a46-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="07a46-105">Parameters</span></span>  
  `ppacl`  
- <span data-ttu-id="82896-106">[out] Um ponteiro de interface para a lista de controle de acesso (ACL).</span><span class="sxs-lookup"><span data-stu-id="82896-106">[out] An interface pointer to the Access Control List (ACL).</span></span>  
+ <span data-ttu-id="07a46-106">[out] Um ponteiro de interface para a lista de controle de acesso (ACL).</span><span class="sxs-lookup"><span data-stu-id="07a46-106">[out] An interface pointer to the Access Control List (ACL).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="82896-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="82896-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="07a46-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="07a46-107">Return Value</span></span>  
   
-|<span data-ttu-id="82896-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="82896-108">HRESULT</span></span>|<span data-ttu-id="82896-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="82896-109">Description</span></span>|  
+|<span data-ttu-id="07a46-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="07a46-108">HRESULT</span></span>|<span data-ttu-id="07a46-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="07a46-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="82896-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="82896-110">E_NOTIMPL</span></span>|<span data-ttu-id="82896-111">O método não está implementado.</span><span class="sxs-lookup"><span data-stu-id="82896-111">The method is not implemented.</span></span>|  
+|<span data-ttu-id="07a46-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="07a46-110">E_NOTIMPL</span></span>|<span data-ttu-id="07a46-111">O método não está implementado.</span><span class="sxs-lookup"><span data-stu-id="07a46-111">The method is not implemented.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="82896-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="82896-112">Requirements</span></span>  
- <span data-ttu-id="82896-113">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82896-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07a46-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="07a46-112">Requirements</span></span>  
+ <span data-ttu-id="07a46-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07a46-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82896-114">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="82896-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="07a46-114">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="07a46-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="82896-115">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="82896-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="07a46-115">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="07a46-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="82896-116">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82896-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="07a46-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07a46-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82896-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="82896-117">See Also</span></span>  
- [<span data-ttu-id="82896-118">Interface ICLRControl</span><span class="sxs-lookup"><span data-stu-id="82896-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [<span data-ttu-id="82896-119">Interface ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="82896-119">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- [<span data-ttu-id="82896-120">Método SetDacl</span><span class="sxs-lookup"><span data-stu-id="82896-120">SetDacl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)  
- [<span data-ttu-id="82896-121">Interface IHostControl</span><span class="sxs-lookup"><span data-stu-id="82896-121">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="07a46-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="07a46-117">See also</span></span>
+- [<span data-ttu-id="07a46-118">Interface ICLRControl</span><span class="sxs-lookup"><span data-stu-id="07a46-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="07a46-119">Interface ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="07a46-119">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="07a46-120">Método SetDacl</span><span class="sxs-lookup"><span data-stu-id="07a46-120">SetDacl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)
+- [<span data-ttu-id="07a46-121">Interface IHostControl</span><span class="sxs-lookup"><span data-stu-id="07a46-121">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

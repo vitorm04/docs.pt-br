@@ -1,5 +1,5 @@
 ---
-title: Acesso à propriedade padrão é ambíguo entre os membros de interface herdada &#39; &lt;defaultpropertyname&gt; &#39; da interface &#39; &lt;interfacename1&gt; &#39; e &#39; &lt;defaultpropertyname&gt; &#39; da interface &#39; &lt;interfacename2&gt;&#39;
+title: Acesso à propriedade padrão é ambíguo entre os membros de interface herdada &#39; &lt;defaultpropertyname&gt; &#39; da interface &#39; &lt;interfacename1&gt; &#39; e &#39; &lt;defaultpropertyname&gt; &#39; interface &#39; &lt;interfacename2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518638"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a><span data-ttu-id="632de-102">Acesso à propriedade padrão é ambíguo entre os membros de interface herdada &#39; &lt;defaultpropertyname&gt; &#39; da interface &#39; &lt;interfacename1&gt; &#39; e &#39; &lt;defaultpropertyname&gt; &#39; da interface &#39; &lt;interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="632de-102">Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;</span></span>
-<span data-ttu-id="632de-103">Uma interface herda de duas interfaces, cada uma delas declara uma propriedade padrão com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="632de-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="632de-104">O compilador não é possível resolver um acesso de propriedade padrão sem qualificação.</span><span class="sxs-lookup"><span data-stu-id="632de-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="632de-105">O exemplo a seguir ilustra essa situação.</span><span class="sxs-lookup"><span data-stu-id="632de-105">The following example illustrates this.</span></span>  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a><span data-ttu-id="dd1b1-102">Acesso à propriedade padrão é ambíguo entre os membros de interface herdada &#39; &lt;defaultpropertyname&gt; &#39; da interface &#39; &lt;interfacename1&gt; &#39; e &#39; &lt;defaultpropertyname&gt; &#39; interface &#39; &lt;interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="dd1b1-102">Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;</span></span>
+<span data-ttu-id="dd1b1-103">Uma interface herda de duas interfaces, cada uma das quais declara uma propriedade padrão com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="dd1b1-104">O compilador não pode resolver um acesso a essa propriedade padrão sem qualificação.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="dd1b1-105">O exemplo a seguir ilustra essa situação.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-105">The following example illustrates this.</span></span>  
   
 ```  
 Public Interface Iface1  
@@ -35,21 +35,21 @@ Public Class testClass
 End Class  
 ```  
   
- <span data-ttu-id="632de-106">Quando você especificar `testObj(1)`, o compilador tenta resolvê-lo para a propriedade padrão.</span><span class="sxs-lookup"><span data-stu-id="632de-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="632de-107">No entanto, há duas propriedades padrão possíveis devido a interfaces herdadas, para que o compilador sinaliza este erro.</span><span class="sxs-lookup"><span data-stu-id="632de-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
+ <span data-ttu-id="dd1b1-106">Quando você especifica `testObj(1)`, o compilador tentar resolvê-lo para a propriedade padrão.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="dd1b1-107">No entanto, há duas propriedades padrão possível por causa de interfaces herdadas, portanto, o compilador sinaliza esse erro.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
   
- <span data-ttu-id="632de-108">**ID do erro:** BC30686</span><span class="sxs-lookup"><span data-stu-id="632de-108">**Error ID:** BC30686</span></span>  
+ <span data-ttu-id="dd1b1-108">**ID do erro:** BC30686</span><span class="sxs-lookup"><span data-stu-id="dd1b1-108">**Error ID:** BC30686</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="632de-109">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="632de-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="dd1b1-109">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="dd1b1-109">To correct this error</span></span>  
   
--   <span data-ttu-id="632de-110">Evite herdar quaisquer membros com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="632de-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="632de-111">No exemplo anterior, se `testObj` não precisa de nenhum dos membros de, digamos, `Iface2`, declare-o da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="632de-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
+-   <span data-ttu-id="dd1b1-110">Evite herdar todos os membros com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="dd1b1-111">No exemplo anterior, se `testObj` não precisa de nenhum dos membros de, digamos, `Iface2`, declare-o da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="dd1b1-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     <span data-ttu-id="632de-112">-ou-</span><span class="sxs-lookup"><span data-stu-id="632de-112">-or-</span></span>  
+     <span data-ttu-id="dd1b1-112">-ou-</span><span class="sxs-lookup"><span data-stu-id="dd1b1-112">-or-</span></span>  
   
--   <span data-ttu-id="632de-113">Implemente a interface que herda de uma classe.</span><span class="sxs-lookup"><span data-stu-id="632de-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="632de-114">Em seguida, você pode implementar cada uma das propriedades herdadas com nomes diferentes.</span><span class="sxs-lookup"><span data-stu-id="632de-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="632de-115">No entanto, apenas um deles pode ser a propriedade padrão da classe de implementação.</span><span class="sxs-lookup"><span data-stu-id="632de-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="632de-116">O exemplo a seguir ilustra essa situação.</span><span class="sxs-lookup"><span data-stu-id="632de-116">The following example illustrates this.</span></span>  
+-   <span data-ttu-id="dd1b1-113">Implemente a interface de herança em uma classe.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="dd1b1-114">Em seguida, você pode implementar cada uma das propriedades herdadas com nomes diferentes.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="dd1b1-115">No entanto, apenas um deles pode ser a propriedade padrão da classe de implementação.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="dd1b1-116">O exemplo a seguir ilustra essa situação.</span><span class="sxs-lookup"><span data-stu-id="dd1b1-116">The following example illustrates this.</span></span>  
   
     ```  
     Public Class useIface3  
@@ -63,5 +63,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="632de-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="632de-117">See Also</span></span>  
- [<span data-ttu-id="632de-118">Interfaces</span><span class="sxs-lookup"><span data-stu-id="632de-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="dd1b1-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dd1b1-117">See also</span></span>
+- [<span data-ttu-id="dd1b1-118">Interfaces</span><span class="sxs-lookup"><span data-stu-id="dd1b1-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
