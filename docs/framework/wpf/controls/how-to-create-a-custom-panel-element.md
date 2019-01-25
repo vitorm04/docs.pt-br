@@ -1,5 +1,5 @@
 ---
-title: Como criar um elemento de painel personalizado
+title: 'Como: Criar um elemento de painel personalizado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: bca8900ccb3c31a78066a43709a5e9334bc09eab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 93d9ebacda8c753ab5a4446999e1aa86828a2b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621926"
 ---
-# <a name="how-to-create-a-custom-panel-element"></a><span data-ttu-id="65345-102">Como criar um elemento de painel personalizado</span><span class="sxs-lookup"><span data-stu-id="65345-102">How to: Create a Custom Panel Element</span></span>
-## <a name="example"></a><span data-ttu-id="65345-103">Exemplo</span><span class="sxs-lookup"><span data-stu-id="65345-103">Example</span></span>  
- <span data-ttu-id="65345-104">Este exemplo mostra como substituir o comportamento de layout de padrão para o <xref:System.Windows.Controls.Panel> elemento e criar elementos de layout personalizados que são derivados de <xref:System.Windows.Controls.Panel>.</span><span class="sxs-lookup"><span data-stu-id="65345-104">This example shows how to override the default layout behavior of the <xref:System.Windows.Controls.Panel> element and create custom layout elements that are derived from <xref:System.Windows.Controls.Panel>.</span></span>  
+# <a name="how-to-create-a-custom-panel-element"></a><span data-ttu-id="261e3-102">Como: Criar um elemento de painel personalizado</span><span class="sxs-lookup"><span data-stu-id="261e3-102">How to: Create a Custom Panel Element</span></span>
+## <a name="example"></a><span data-ttu-id="261e3-103">Exemplo</span><span class="sxs-lookup"><span data-stu-id="261e3-103">Example</span></span>  
+ <span data-ttu-id="261e3-104">Este exemplo mostra como substituir o comportamento de layout de padrão para o <xref:System.Windows.Controls.Panel> elemento e criar elementos de layout personalizados que são derivados de <xref:System.Windows.Controls.Panel>.</span><span class="sxs-lookup"><span data-stu-id="261e3-104">This example shows how to override the default layout behavior of the <xref:System.Windows.Controls.Panel> element and create custom layout elements that are derived from <xref:System.Windows.Controls.Panel>.</span></span>  
   
- <span data-ttu-id="65345-105">O exemplo define um personalizado simple <xref:System.Windows.Controls.Panel> elemento chamado `PlotPanel`, que posiciona elementos filho acordo com dois embutidos coordenadas x e y-.</span><span class="sxs-lookup"><span data-stu-id="65345-105">The example defines a simple custom <xref:System.Windows.Controls.Panel> element called `PlotPanel`, which positions child elements according to two hard-coded x- and y-coordinates.</span></span> <span data-ttu-id="65345-106">Neste exemplo, `x` e `y` são definidos como `50`; portanto, todos os elementos filho são posicionados nesse local nos x e y eixos.</span><span class="sxs-lookup"><span data-stu-id="65345-106">In this example, `x` and `y` are both set to `50`; therefore, all child elements are positioned at that location on the x and y axes.</span></span>  
+ <span data-ttu-id="261e3-105">O exemplo define um personalizado simple <xref:System.Windows.Controls.Panel> elemento chamado `PlotPanel`, que posiciona elementos filho acordo com dois embutidos coordenadas x e y-.</span><span class="sxs-lookup"><span data-stu-id="261e3-105">The example defines a simple custom <xref:System.Windows.Controls.Panel> element called `PlotPanel`, which positions child elements according to two hard-coded x- and y-coordinates.</span></span> <span data-ttu-id="261e3-106">Neste exemplo, `x` e `y` são definidos como `50`; portanto, todos os elementos filho são posicionados nesse local nos x e y eixos.</span><span class="sxs-lookup"><span data-stu-id="261e3-106">In this example, `x` and `y` are both set to `50`; therefore, all child elements are positioned at that location on the x and y axes.</span></span>  
   
- <span data-ttu-id="65345-107">Para implementar personalizado <xref:System.Windows.Controls.Panel> comportamentos, o exemplo usa o <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> métodos.</span><span class="sxs-lookup"><span data-stu-id="65345-107">To implement custom <xref:System.Windows.Controls.Panel> behaviors, the example uses the <xref:System.Windows.FrameworkElement.MeasureOverride%2A> and <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> methods.</span></span> <span data-ttu-id="65345-108">Cada método retorna o <xref:System.Windows.Size> dados que são necessários para posicionar e renderizar elementos filho.</span><span class="sxs-lookup"><span data-stu-id="65345-108">Each method returns the <xref:System.Windows.Size> data that is necessary to position and render child elements.</span></span>  
+ <span data-ttu-id="261e3-107">Para implementar personalizado <xref:System.Windows.Controls.Panel> comportamentos, o exemplo usa o <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> métodos.</span><span class="sxs-lookup"><span data-stu-id="261e3-107">To implement custom <xref:System.Windows.Controls.Panel> behaviors, the example uses the <xref:System.Windows.FrameworkElement.MeasureOverride%2A> and <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> methods.</span></span> <span data-ttu-id="261e3-108">Cada método retorna o <xref:System.Windows.Size> dados que são necessários para posicionar e renderizar elementos filho.</span><span class="sxs-lookup"><span data-stu-id="261e3-108">Each method returns the <xref:System.Windows.Size> data that is necessary to position and render child elements.</span></span>  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
  [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="65345-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="65345-109">See Also</span></span>  
- <xref:System.Windows.Controls.Panel>  
- [<span data-ttu-id="65345-110">Visão geral de painéis</span><span class="sxs-lookup"><span data-stu-id="65345-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="65345-111">Criar uma amostra de painel de encapsulamento com conteúdo personalizado</span><span class="sxs-lookup"><span data-stu-id="65345-111">Create a Custom Content-Wrapping Panel Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159979)
+## <a name="see-also"></a><span data-ttu-id="261e3-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="261e3-109">See also</span></span>
+- <xref:System.Windows.Controls.Panel>
+- [<span data-ttu-id="261e3-110">Visão geral de painéis</span><span class="sxs-lookup"><span data-stu-id="261e3-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="261e3-111">Criar uma amostra de painel de encapsulamento com conteúdo personalizado</span><span class="sxs-lookup"><span data-stu-id="261e3-111">Create a Custom Content-Wrapping Panel Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159979)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f37bbe7d9e76d76bfe4c0f80b6f2343a5598bbfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec7e303e5145e16f4c17074d557410ffe4521c20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549831"
 ---
-# <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a><span data-ttu-id="ddcad-102">Método ICLRErrorReportingManager::GetBucketParametersForCurrentException</span><span class="sxs-lookup"><span data-stu-id="ddcad-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Method</span></span>
-<span data-ttu-id="ddcad-103">Obtém o bucket Watson para a exceção atual no thread de chamada.</span><span class="sxs-lookup"><span data-stu-id="ddcad-103">Gets the Watson bucket for the current exception on the calling thread.</span></span>  
+# <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a><span data-ttu-id="7f000-102">Método ICLRErrorReportingManager::GetBucketParametersForCurrentException</span><span class="sxs-lookup"><span data-stu-id="7f000-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Method</span></span>
+<span data-ttu-id="7f000-103">Obtém o número de buckets Watson para a exceção atual no thread de chamada.</span><span class="sxs-lookup"><span data-stu-id="7f000-103">Gets the Watson bucket for the current exception on the calling thread.</span></span>  
   
- <span data-ttu-id="ddcad-104">Um *bucket* é uma coleção de dados de erros relacionados para o mesmo defeito de código.</span><span class="sxs-lookup"><span data-stu-id="ddcad-104">A *bucket* is a collection of error data that is related to the same code defect.</span></span> <span data-ttu-id="ddcad-105">*Watson* se refere a um conjunto de tecnologias para coletar e analisar os dados que está associados uma exceção.</span><span class="sxs-lookup"><span data-stu-id="ddcad-105">*Watson* refers to a set of technologies for collecting and analyzing data that is associated with an exception.</span></span>  
+ <span data-ttu-id="7f000-104">Um *bucket* é uma coleção de dados de erro relacionados para o mesmo defeito do código.</span><span class="sxs-lookup"><span data-stu-id="7f000-104">A *bucket* is a collection of error data that is related to the same code defect.</span></span> <span data-ttu-id="7f000-105">*Watson* refere-se a um conjunto de tecnologias para coletar e analisar os dados que está associados com uma exceção.</span><span class="sxs-lookup"><span data-stu-id="7f000-105">*Watson* refers to a set of technologies for collecting and analyzing data that is associated with an exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ddcad-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ddcad-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7f000-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7f000-106">Syntax</span></span>  
   
 ```  
 HRESULT GetBucketParametersForCurrentException(  
@@ -37,18 +37,18 @@ HRESULT GetBucketParametersForCurrentException(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ddcad-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ddcad-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7f000-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7f000-107">Parameters</span></span>  
  `pParams`  
- <span data-ttu-id="ddcad-108">[out] Um ponteiro para um [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) estrutura que contém dados de erro para a exceção.</span><span class="sxs-lookup"><span data-stu-id="ddcad-108">[out] A pointer to a [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) structure that contains error data for the exception.</span></span>  
+ <span data-ttu-id="7f000-108">[out] Um ponteiro para um [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) estrutura que contém dados de erro da exceção.</span><span class="sxs-lookup"><span data-stu-id="7f000-108">[out] A pointer to a [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) structure that contains error data for the exception.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ddcad-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ddcad-109">Requirements</span></span>  
- <span data-ttu-id="ddcad-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ddcad-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7f000-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7f000-109">Requirements</span></span>  
+ <span data-ttu-id="7f000-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f000-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ddcad-111">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ddcad-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7f000-111">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7f000-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ddcad-112">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="ddcad-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7f000-112">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="7f000-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ddcad-113">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddcad-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7f000-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f000-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ddcad-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ddcad-114">See Also</span></span>  
- [<span data-ttu-id="ddcad-115">Interface ICLRErrorReportingManager</span><span class="sxs-lookup"><span data-stu-id="ddcad-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7f000-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7f000-114">See also</span></span>
+- [<span data-ttu-id="7f000-115">Interface ICLRErrorReportingManager</span><span class="sxs-lookup"><span data-stu-id="7f000-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
