@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d82952e34195ee813d4cd0217c904a5253859f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78cbede0522ce7b78f0a6518ba506b69b4b0515e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712949"
 ---
-# <a name="iceegengenerateceefile-method"></a><span data-ttu-id="550bd-102">Método ICeeGen::GenerateCeeFile</span><span class="sxs-lookup"><span data-stu-id="550bd-102">ICeeGen::GenerateCeeFile Method</span></span>
-<span data-ttu-id="550bd-103">Gera um arquivo de base de código que contém o código base atualmente carregado nisso [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="550bd-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
+# <a name="iceegengenerateceefile-method"></a><span data-ttu-id="e1afa-102">Método ICeeGen::GenerateCeeFile</span><span class="sxs-lookup"><span data-stu-id="e1afa-102">ICeeGen::GenerateCeeFile Method</span></span>
+<span data-ttu-id="e1afa-103">Gera um arquivo de base de código que contém a base de código atualmente carregado nisso [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="e1afa-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
   
- <span data-ttu-id="550bd-104">Esse método está obsoleto e não deve ser usado.</span><span class="sxs-lookup"><span data-stu-id="550bd-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="e1afa-104">Esse método é obsoleto e não deve ser usado.</span><span class="sxs-lookup"><span data-stu-id="e1afa-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="550bd-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="550bd-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1afa-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e1afa-105">Syntax</span></span>  
   
 ```  
 HRESULT GenerateCeeFile ();  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="550bd-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="550bd-106">Parameters</span></span>  
- <span data-ttu-id="550bd-107">`GenerateCeeFile` não usa nenhum parâmetro.</span><span class="sxs-lookup"><span data-stu-id="550bd-107">`GenerateCeeFile` takes no parameters.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e1afa-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e1afa-106">Parameters</span></span>  
+ <span data-ttu-id="e1afa-107">`GenerateCeeFile` não usa nenhum parâmetro.</span><span class="sxs-lookup"><span data-stu-id="e1afa-107">`GenerateCeeFile` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="550bd-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="550bd-108">Requirements</span></span>  
- <span data-ttu-id="550bd-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="550bd-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e1afa-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e1afa-108">Requirements</span></span>  
+ <span data-ttu-id="e1afa-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1afa-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="550bd-110">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="550bd-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e1afa-110">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e1afa-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="550bd-111">**Biblioteca:** usado como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="550bd-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e1afa-111">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="e1afa-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="550bd-112">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="550bd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e1afa-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1afa-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="550bd-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="550bd-113">See Also</span></span>  
- [<span data-ttu-id="550bd-114">Interface ICeeGen</span><span class="sxs-lookup"><span data-stu-id="550bd-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e1afa-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e1afa-113">See also</span></span>
+- [<span data-ttu-id="e1afa-114">Interface ICeeGen</span><span class="sxs-lookup"><span data-stu-id="e1afa-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

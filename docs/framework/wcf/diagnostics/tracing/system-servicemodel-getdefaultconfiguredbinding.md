@@ -2,20 +2,20 @@
 title: System.ServiceModel.GetDefaultConfiguredBinding
 ms.date: 03/30/2017
 ms.assetid: da8e6c84-38b1-4c3b-b619-baca34f31691
-ms.openlocfilehash: c5491017e27a8fa7be00069e6c2609b8b7469281
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 933fb18531da9387a9fbc3dd13248cb113a08c28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33482284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682872"
 ---
-# <a name="systemservicemodelgetdefaultconfiguredbinding"></a><span data-ttu-id="25993-102">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="25993-102">System.ServiceModel.GetDefaultConfiguredBinding</span></span>
-<span data-ttu-id="25993-103">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="25993-103">System.ServiceModel.GetDefaultConfiguredBinding</span></span>  
+# <a name="systemservicemodelgetdefaultconfiguredbinding"></a><span data-ttu-id="de9a3-102">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="de9a3-102">System.ServiceModel.GetDefaultConfiguredBinding</span></span>
+<span data-ttu-id="de9a3-103">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="de9a3-103">System.ServiceModel.GetDefaultConfiguredBinding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="25993-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="25993-104">Description</span></span>  
- <span data-ttu-id="25993-105">Obtenha a associação configurada padrão.</span><span class="sxs-lookup"><span data-stu-id="25993-105">Get the default configured binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="de9a3-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="de9a3-104">Description</span></span>  
+ <span data-ttu-id="de9a3-105">Obtenha a associação padrão configurado.</span><span class="sxs-lookup"><span data-stu-id="de9a3-105">Get the default configured binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25993-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="25993-106">See Also</span></span>  
- [<span data-ttu-id="25993-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="25993-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="25993-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="25993-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="25993-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="25993-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="de9a3-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="de9a3-106">See also</span></span>
+- [<span data-ttu-id="de9a3-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="de9a3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="de9a3-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="de9a3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="de9a3-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="de9a3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

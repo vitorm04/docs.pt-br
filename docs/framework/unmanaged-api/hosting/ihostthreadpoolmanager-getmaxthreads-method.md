@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa6e0e2447cc3ff6766bb33bb603388f37ec3ce0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 887197af49a402df73005906e539791f6d7f7be4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623853"
 ---
-# <a name="ihostthreadpoolmanagergetmaxthreads-method"></a><span data-ttu-id="5b439-102">Método IHostThreadPoolManager::GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="5b439-102">IHostThreadPoolManager::GetMaxThreads Method</span></span>
-<span data-ttu-id="5b439-103">Obtém o número máximo de threads que o host mantém simultaneamente no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="5b439-103">Gets the maximum number of threads that the host maintains concurrently in the thread pool.</span></span>  
+# <a name="ihostthreadpoolmanagergetmaxthreads-method"></a><span data-ttu-id="0b196-102">Método IHostThreadPoolManager::GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="0b196-102">IHostThreadPoolManager::GetMaxThreads Method</span></span>
+<span data-ttu-id="0b196-103">Obtém o número máximo de threads que o host mantém simultaneamente no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="0b196-103">Gets the maximum number of threads that the host maintains concurrently in the thread pool.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b439-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5b439-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b196-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0b196-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMaxThreads (  
@@ -35,39 +35,39 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5b439-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5b439-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0b196-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0b196-105">Parameters</span></span>  
  `pdwMaxWorkerThreads`  
- <span data-ttu-id="5b439-106">[out] Um ponteiro para o número máximo de threads que o host mantém no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="5b439-106">[out] A pointer to the maximum number of threads that the host maintains in the thread pool.</span></span>  
+ <span data-ttu-id="0b196-106">[out] Um ponteiro para o número máximo de threads que o host mantém no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="0b196-106">[out] A pointer to the maximum number of threads that the host maintains in the thread pool.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5b439-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="5b439-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0b196-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="0b196-107">Return Value</span></span>  
   
-|<span data-ttu-id="5b439-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5b439-108">HRESULT</span></span>|<span data-ttu-id="5b439-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="5b439-109">Description</span></span>|  
+|<span data-ttu-id="0b196-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0b196-108">HRESULT</span></span>|<span data-ttu-id="0b196-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="0b196-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5b439-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="5b439-110">S_OK</span></span>|<span data-ttu-id="5b439-111">`GetMaxThreads` retornou com êxito.</span><span class="sxs-lookup"><span data-stu-id="5b439-111">`GetMaxThreads` returned successfully.</span></span>|  
-|<span data-ttu-id="5b439-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5b439-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5b439-113">O common language runtime (CLR (não foi carregado em um processo, ou o CLR está em um estado no qual ele não pode executar código gerenciado ou a chamada de processo com êxito.</span><span class="sxs-lookup"><span data-stu-id="5b439-113">The common language runtime (CLR( has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="5b439-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5b439-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5b439-115">A chamada foi atingido.</span><span class="sxs-lookup"><span data-stu-id="5b439-115">The call timed out.</span></span>|  
-|<span data-ttu-id="5b439-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5b439-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5b439-117">O chamador não possui o bloqueio.</span><span class="sxs-lookup"><span data-stu-id="5b439-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="5b439-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5b439-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5b439-119">Um evento foi cancelado durante um thread bloqueado ou fibra estava aguardando nele.</span><span class="sxs-lookup"><span data-stu-id="5b439-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="5b439-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5b439-120">E_FAIL</span></span>|<span data-ttu-id="5b439-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="5b439-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5b439-122">Quando um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="5b439-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5b439-123">As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5b439-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="5b439-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="5b439-124">E_NOTIMPL</span></span>|<span data-ttu-id="5b439-125">O host não fornece uma implementação de `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="5b439-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
+|<span data-ttu-id="0b196-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="0b196-110">S_OK</span></span>|<span data-ttu-id="0b196-111">`GetMaxThreads` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="0b196-111">`GetMaxThreads` returned successfully.</span></span>|  
+|<span data-ttu-id="0b196-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0b196-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0b196-113">O common language runtime (CLR (não foi carregado em um processo, ou o CLR está em um estado no qual ele não pode executar código gerenciado ou o processo de chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="0b196-113">The common language runtime (CLR( has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="0b196-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0b196-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0b196-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="0b196-115">The call timed out.</span></span>|  
+|<span data-ttu-id="0b196-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0b196-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0b196-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="0b196-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="0b196-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0b196-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0b196-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="0b196-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="0b196-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0b196-120">E_FAIL</span></span>|<span data-ttu-id="0b196-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="0b196-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0b196-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="0b196-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0b196-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="0b196-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="0b196-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="0b196-124">E_NOTIMPL</span></span>|<span data-ttu-id="0b196-125">O host não fornece uma implementação de `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="0b196-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5b439-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="5b439-126">Remarks</span></span>  
- <span data-ttu-id="5b439-127">O CLR chama `GetMaxThreads` para determinar o número total de threads no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="5b439-127">The CLR calls `GetMaxThreads` to determine the total number of threads in the thread pool.</span></span> <span data-ttu-id="5b439-128">O [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) método obtém o número de threads que não estão em processamento itens de trabalho.</span><span class="sxs-lookup"><span data-stu-id="5b439-128">The [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) method gets the number of threads that are not currently processing work items.</span></span> <span data-ttu-id="5b439-129">Todas as solicitações acima do valor retornado do `pdwMaxWorkerThreads` parâmetro permanecem na fila até que os threads ficam disponíveis.</span><span class="sxs-lookup"><span data-stu-id="5b439-129">All requests above the returned value of the `pdwMaxWorkerThreads` parameter remain queued until threads become available.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0b196-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="0b196-126">Remarks</span></span>  
+ <span data-ttu-id="0b196-127">O CLR chama `GetMaxThreads` para determinar o número total de threads no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="0b196-127">The CLR calls `GetMaxThreads` to determine the total number of threads in the thread pool.</span></span> <span data-ttu-id="0b196-128">O [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) método obtém o número de threads que não estão processando no momento, os itens de trabalho.</span><span class="sxs-lookup"><span data-stu-id="0b196-128">The [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) method gets the number of threads that are not currently processing work items.</span></span> <span data-ttu-id="0b196-129">Todas as solicitações acima do valor retornado do `pdwMaxWorkerThreads` parâmetro permanecem na fila até que os threads se tornem disponíveis.</span><span class="sxs-lookup"><span data-stu-id="0b196-129">All requests above the returned value of the `pdwMaxWorkerThreads` parameter remain queued until threads become available.</span></span>  
   
- <span data-ttu-id="5b439-130">Se o host não fornecer uma implementação de `GetMaxThreads`, ele deverá retornar um valor HRESULT de E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="5b439-130">If the host does not provide an implementation of `GetMaxThreads`, it should return an HRESULT value of E_NOTIMPL.</span></span>  
+ <span data-ttu-id="0b196-130">Se o host não fornecer uma implementação de `GetMaxThreads`, ele deverá retornar um valor HRESULT de E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="0b196-130">If the host does not provide an implementation of `GetMaxThreads`, it should return an HRESULT value of E_NOTIMPL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b439-131">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5b439-131">Requirements</span></span>  
- <span data-ttu-id="5b439-132">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b439-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b196-131">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0b196-131">Requirements</span></span>  
+ <span data-ttu-id="0b196-132">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b196-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b439-133">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5b439-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0b196-133">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0b196-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5b439-134">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="5b439-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0b196-134">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="0b196-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5b439-135">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b439-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0b196-135">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b196-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b439-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b439-136">See Also</span></span>  
- <xref:System.Threading.ThreadPool.GetMaxThreads%2A>  
- <xref:System.Threading.ThreadPool>  
- [<span data-ttu-id="5b439-137">Método GetMinThreads</span><span class="sxs-lookup"><span data-stu-id="5b439-137">GetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)  
- [<span data-ttu-id="5b439-138">Método SetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="5b439-138">SetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)  
- [<span data-ttu-id="5b439-139">Interface IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="5b439-139">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0b196-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0b196-136">See also</span></span>
+- <xref:System.Threading.ThreadPool.GetMaxThreads%2A>
+- <xref:System.Threading.ThreadPool>
+- [<span data-ttu-id="0b196-137">Método GetMinThreads</span><span class="sxs-lookup"><span data-stu-id="0b196-137">GetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)
+- [<span data-ttu-id="0b196-138">Método SetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="0b196-138">SetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)
+- [<span data-ttu-id="0b196-139">Interface IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="0b196-139">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

@@ -2,19 +2,19 @@
 title: '&lt;bindingElementExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: ee67df95de715f0b21250bbf5739f84b4945d719
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b843f2986a0020b8ce079e58bf9865a0b3d402d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569895"
 ---
-# <a name="ltbindingelementextensionsgt"></a><span data-ttu-id="bc73c-102">&lt;bindingElementExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="bc73c-102">&lt;bindingElementExtensions&gt;</span></span>
-<span data-ttu-id="bc73c-103">Esta seção permite o uso de um elemento de associação personalizada de um computador ou arquivo de configuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="bc73c-103">This section enables the use of a custom binding element from a machine or application configuration file.</span></span> <span data-ttu-id="bc73c-104">Você pode adicionar um elemento de associação personalizado a essa coleção usando o `add` palavra-chave e a configuração o `type` atributo do elemento a ser uma extensão de elemento de associação, bem como o `name` de atributo para o elemento de associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="bc73c-104">You can add a custom binding element to this collection by using the `add` keyword, and setting the `type` attribute of the element to a binding element extension, as well as the `name` attribute to the custom binding element.</span></span>  
+# <a name="ltbindingelementextensionsgt"></a><span data-ttu-id="fa07b-102">&lt;bindingElementExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="fa07b-102">&lt;bindingElementExtensions&gt;</span></span>
+<span data-ttu-id="fa07b-103">Esta seção permite o uso de um elemento de associação personalizada de um computador ou arquivo de configuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fa07b-103">This section enables the use of a custom binding element from a machine or application configuration file.</span></span> <span data-ttu-id="fa07b-104">Você pode adicionar um elemento de associação personalizado a essa coleção usando o `add` palavra-chave e a configuração o `type` atributo do elemento a ser uma extensão de elemento de associação, bem como o `name` de atributo para o elemento de associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="fa07b-104">You can add a custom binding element to this collection by using the `add` keyword, and setting the `type` attribute of the element to a binding element extension, as well as the `name` attribute to the custom binding element.</span></span>  
   
- <span data-ttu-id="bc73c-105">As extensões de associação permitem ao usuário criar elementos de associação definidas pelo usuário para uso como parte de ligações personalizadas.</span><span class="sxs-lookup"><span data-stu-id="bc73c-105">Binding extensions enable the user to create user-defined binding elements for use as part of custom bindings.</span></span> <span data-ttu-id="bc73c-106">Programaticamente, uma extensão de associação é um tipo que implementa a classe abstrata <xref:System.ServiceModel.Channels.BindingElement>.</span><span class="sxs-lookup"><span data-stu-id="bc73c-106">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.BindingElement>.</span></span> <span data-ttu-id="bc73c-107">No arquivo de configuração, o `bindingElementExtensions` seção é usada para definir um elemento de extensão.</span><span class="sxs-lookup"><span data-stu-id="bc73c-107">In the configuration file, the `bindingElementExtensions` section is used to define an extension element.</span></span>  
+ <span data-ttu-id="fa07b-105">As extensões de associação permitem ao usuário criar elementos de associação definidas pelo usuário para uso como parte de ligações personalizadas.</span><span class="sxs-lookup"><span data-stu-id="fa07b-105">Binding extensions enable the user to create user-defined binding elements for use as part of custom bindings.</span></span> <span data-ttu-id="fa07b-106">Programaticamente, uma extensão de associação é um tipo que implementa a classe abstrata <xref:System.ServiceModel.Channels.BindingElement>.</span><span class="sxs-lookup"><span data-stu-id="fa07b-106">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.BindingElement>.</span></span> <span data-ttu-id="fa07b-107">No arquivo de configuração, o `bindingElementExtensions` seção é usada para definir um elemento de extensão.</span><span class="sxs-lookup"><span data-stu-id="fa07b-107">In the configuration file, the `bindingElementExtensions` section is used to define an extension element.</span></span>  
   
- <span data-ttu-id="bc73c-108">O exemplo a seguir usa o `add` elemento, bem como o `name` atributo a ser adicionado a uma extensão de associação para o `bindingElementExtensions` seção do arquivo de configuração.</span><span class="sxs-lookup"><span data-stu-id="bc73c-108">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
+ <span data-ttu-id="fa07b-108">O exemplo a seguir usa o `add` elemento, bem como o `name` atributo a ser adicionado a uma extensão de associação para o `bindingElementExtensions` seção do arquivo de configuração.</span><span class="sxs-lookup"><span data-stu-id="fa07b-108">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -28,9 +28,9 @@ ms.locfileid: "54151435"
 </system.serviceModel>
 ```  
   
- <span data-ttu-id="bc73c-109">Para adicionar capacidades de configuração para o elemento, o usuário precisa para escrever e registrar um `bindingElementExtensionSection` elemento.</span><span class="sxs-lookup"><span data-stu-id="bc73c-109">To add configuration abilities to the element, the user needs to write and register a `bindingElementExtensionSection` element.</span></span> <span data-ttu-id="bc73c-110">Para obter mais informações sobre isso, consulte o <xref:System.Configuration> documentação.</span><span class="sxs-lookup"><span data-stu-id="bc73c-110">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+ <span data-ttu-id="fa07b-109">Para adicionar capacidades de configuração para o elemento, o usuário precisa para escrever e registrar um `bindingElementExtensionSection` elemento.</span><span class="sxs-lookup"><span data-stu-id="fa07b-109">To add configuration abilities to the element, the user needs to write and register a `bindingElementExtensionSection` element.</span></span> <span data-ttu-id="fa07b-110">Para obter mais informações sobre isso, consulte o <xref:System.Configuration> documentação.</span><span class="sxs-lookup"><span data-stu-id="fa07b-110">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
   
- <span data-ttu-id="bc73c-111">Depois que o elemento e seu tipo de configuração são definidos, a extensão pode ser usada como parte de uma ligação personalizada, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="bc73c-111">After the element and its configuration type are defined, the extension can be used as part of a custom binding as shown in the following example.</span></span>  
+ <span data-ttu-id="fa07b-111">Depois que o elemento e seu tipo de configuração são definidos, a extensão pode ser usada como parte de uma ligação personalizada, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="fa07b-111">After the element and its configuration type are defined, the extension can be used as part of a custom binding as shown in the following example.</span></span>  
   
 ```xml  
 <customBinding>
@@ -43,6 +43,6 @@ ms.locfileid: "54151435"
 </customBinding>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bc73c-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bc73c-112">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>  
- [<span data-ttu-id="bc73c-113">Estendendo associações</span><span class="sxs-lookup"><span data-stu-id="bc73c-113">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="fa07b-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fa07b-112">See also</span></span>
+- <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
+- [<span data-ttu-id="fa07b-113">Estendendo associações</span><span class="sxs-lookup"><span data-stu-id="fa07b-113">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
