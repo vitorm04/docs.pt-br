@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643374"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>Método ISymUnmanagedWriter::DefineParameter
-Define um único parâmetro no método atual. O tipo de parâmetro é obtido da posição do parâmetro (sequência) na assinatura do método.  
+Define um único parâmetro no método atual. O tipo de parâmetro é obtido a posição do parâmetro (sequência) dentro da assinatura do método.  
   
- Se os parâmetros são definidos nos metadados para um determinado método, não é necessário defini-los novamente usando esse método. Os leitores de símbolo devem verificar os metadados normal para os parâmetros antes de verificar se o armazenamento de símbolo.  
+ Se os parâmetros são definidos nos metadados para um determinado método, você não precisa defini-los novamente usando esse método. Os leitores de símbolo devem verificar os metadados normal para os parâmetros antes de verificar se o repositório de símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,13 +56,13 @@ HRESULT DefineParameter(
  [in] O tipo de endereço.  
   
  `addr1`  
- [in] O primeiro endereço para a especificação do parâmetro.  
+ [in] O primeiro endereço para a especificação de parâmetro.  
   
  `addr2`  
- [in] O segundo endereço para a especificação do parâmetro.  
+ [in] O segundo endereço para a especificação de parâmetro.  
   
  `addr3`  
- [in] O terceiro endereço para a especificação do parâmetro.  
+ [in] O terceiro endereço para a especificação de parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -70,5 +70,5 @@ HRESULT DefineParameter(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

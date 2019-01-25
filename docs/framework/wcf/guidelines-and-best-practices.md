@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2b3ce24a967a4c8a15facb3f0a5dbdc0243a06ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515934"
 ---
 # <a name="guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas
 Esta seção contém tópicos que fornecem diretrizes para criação de aplicativos do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Práticas recomendadas: controle de versão de contrato de dados](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Práticas recomendadas: Controle de versão de contrato de dados](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Explica como e quando criar contratos de dados que não são interrompidas quando versões futuras são criadas.  
   
  [Controle de versão de serviço](../../../docs/framework/wcf/service-versioning.md)  
@@ -44,8 +44,8 @@ Esta seção contém tópicos que fornecem diretrizes para criação de aplicati
   
  [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>Consulte também  
- [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Amostras do Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
- [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)  
- [Compilando clientes](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>Consulte também
+- [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Amostras do Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)
+- [Compilando clientes](../../../docs/framework/wcf/building-clients.md)

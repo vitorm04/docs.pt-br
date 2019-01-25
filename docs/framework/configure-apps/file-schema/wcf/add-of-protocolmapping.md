@@ -2,18 +2,18 @@
 title: '&lt;adicionar&gt; &lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: e21c3ca665d6a75394d70da43ec2044e00f16429
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ce970b9ef71e2a28de680926f96f83500948619b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632810"
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;adicionar&gt; &lt;protocolMapping&gt;
 Representa um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e uma associação do Windows Communication Foundation (WCF). Durante a criação de pontos de extremidade padrão em tempo de execução, o WCF analisa os mapeamentos configurados e decide em qual associação a ser usado para um determinado endereço de base.  
   
  \<system.serviceModel>  
-\<protocolMapping >  
+\<protocolMapping>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,7 +44,7 @@ Representa um mapeamento de protocolo padrão entre um esquema de protocolo de t
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Representa uma seção de configuração para definir mapeamentos de protocolo padrão entre esquemas de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e associações do Windows Communication Foundation (WCF).|  
+|[\<protocolMapping>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Representa uma seção de configuração para definir mapeamentos de protocolo padrão entre esquemas de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e associações do Windows Communication Foundation (WCF).|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de configuração a seguir mostra o mapeamento de protocolo padrão no arquivo Machine. config. Você pode substituir esse mapeamento padrão no nível do computador, modificando o arquivo Machine. config. Ou, se você quiser apenas substituí-la dentro do escopo de um aplicativo, você pode substituir essa seção dentro de seu arquivo de configuração de aplicativo e alterar o mapeamento para esquemas de protocolo individual.  
@@ -62,6 +62,6 @@ Representa um mapeamento de protocolo padrão entre um esquema de protocolo de t
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>      
- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

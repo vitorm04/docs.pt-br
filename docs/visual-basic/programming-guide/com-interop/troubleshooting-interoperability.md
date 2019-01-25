@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 8525fa7eca2f61d3091a7597db94247b4701ed19
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 413c9331611d3406c13df58f25db1ef0255339b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517663"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionando problemas de interoperabilidade (Visual Basic)
 Quando você interoperar entre o código gerenciado do e COM o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], você pode encontrar um ou mais dos seguintes problemas comuns.  
@@ -128,10 +128,10 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
-- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)  
-- [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
-- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
-- [Instruções passo a passo: implementando a herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
-- [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Passo a passo: implementação de herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Cache de assembly global](../../../framework/app-domains/gac.md)

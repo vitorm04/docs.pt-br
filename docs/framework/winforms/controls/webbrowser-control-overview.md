@@ -7,15 +7,15 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: 2e69b71b3e354101d950d6f7011b13fc7c0de030
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 919098fd5eb6578b91a7b44cf99ba3aef9076081
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610975"
 ---
 # <a name="webbrowser-control-overview"></a>Visão geral do controle WebBrowser
-O <xref:System.Windows.Forms.WebBrowser> controle fornece um wrapper gerenciado para o controle WebBrowser ActiveX. O wrapper gerenciado permite exibir páginas da Web em seus aplicativos cliente dos Windows Forms. Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para duplicar a funcionalidade de navegação da Web do Internet Explorer em seu aplicativo, ou você pode desabilitar a funcionalidade padrão do Internet Explorer e usar o controle como um simples visualizador de documentos HTML. Você também pode usar o controle para adicionar elementos da interface do usuário com base em DHTML ao seu formulário e ocultar o fato de que eles são hospedados no <xref:System.Windows.Forms.WebBrowser> controle. Essa abordagem permite combinar perfeitamente controles Web com controles dos Windows Forms em um único aplicativo.  
+O <xref:System.Windows.Forms.WebBrowser> controle fornece um wrapper gerenciado para o controle WebBrowser ActiveX. O wrapper gerenciado permite exibir páginas da Web em seus aplicativos cliente dos Windows Forms. Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para duplicar a funcionalidade de navegação da Web Internet Explorer em seu aplicativo, ou você pode desabilitar a funcionalidade padrão do Internet Explorer e usar o controle como um visualizador de documentos HTML simple. Você também pode usar o controle para adicionar elementos da interface do usuário com base em DHTML ao seu formulário e ocultar o fato de que eles são hospedados no <xref:System.Windows.Forms.WebBrowser> controle. Essa abordagem permite combinar perfeitamente controles Web com controles dos Windows Forms em um único aplicativo.  
   
 ## <a name="frequently-used-properties-methods-and-events"></a>Propriedades, métodos e eventos usados com frequência  
  O <xref:System.Windows.Forms.WebBrowser> controle tem várias propriedades, métodos e eventos que você pode usar para implementar controles encontrados no Internet Explorer. Por exemplo, você pode usar o método `Navigate` para implementar uma barra de endereços e os métodos `GoBack`, `GoForward`, `Stop` e `Refresh` para implementar os botões de navegação em uma barra de ferramentas. Você pode manipular o evento `Navigated` para atualizar a barra de endereços com o valor da propriedade `Url` e a barra de título com o valor da propriedade `DocumentTitle`.  
@@ -40,21 +40,21 @@ O <xref:System.Windows.Forms.WebBrowser> controle fornece um wrapper gerenciado 
 |Método <xref:System.Windows.Forms.WebBrowser.Stop%2A>|Interrompe a navegação atual e para elementos de página dinâmicos, como sons e animação.|  
 |Propriedade <xref:System.Windows.Forms.WebBrowser.Url%2A>|Obtém ou define a URL da página da Web atual. Configurar essa propriedade leva o controle para a nova URL.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.WebBrowser>  
- <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
- <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  
- <xref:System.Windows.Forms.WebBrowserEncryptionLevel>  
- <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>  
- <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>  
- <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>  
- <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>  
- <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>  
- <xref:System.Windows.Forms.WebBrowserReadyState>  
- <xref:System.Windows.Forms.WebBrowserRefreshOption>  
- [Como navegar até uma URL com o controle WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- [Como imprimir com um controle WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
- [Como adicionar recursos do navegador da Web a um Aplicativo dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- [Como criar um visualizador de documento HTML em um Aplicativo dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- [Como implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
- [Segurança do WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.WebBrowser>
+- <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>
+- <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>
+- <xref:System.Windows.Forms.WebBrowserEncryptionLevel>
+- <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>
+- <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>
+- <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>
+- <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>
+- <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
+- <xref:System.Windows.Forms.WebBrowserReadyState>
+- <xref:System.Windows.Forms.WebBrowserRefreshOption>
+- [Como: Navegue até uma URL com o controle WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Como: Imprimir com um controle WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+- [Como: Adicionar recursos do navegador da Web a um aplicativo do Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Como: Criar um visualizador de documento HTML em um aplicativo do Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Como: Implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)
+- [Segurança do WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)

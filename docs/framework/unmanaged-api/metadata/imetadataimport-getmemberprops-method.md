@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93763da2afbbdb1e738c802ba172e9f16e5f7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611404"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Método IMetaDataImport::GetMemberProps
-Obtém informações de metadados, incluindo o nome, a assinatura binária e o endereço virtual relativo, do <xref:System.Type> membro referenciado pelo token de metadados especificado.  
+Obtém informações de metadados, incluindo o nome, a assinatura binária e o endereço virtual relativo, da <xref:System.Type> membro referenciado pelo token de metadados especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ HRESULT GetMemberProps (
   
 #### <a name="parameters"></a>Parâmetros  
  `mb`  
- [in] O token que referencia o membro para obter os metadados associados.  
+ [in] O token que referencia o membro para obter os metadados associados para.  
   
  `pClass`  
  [out] Um ponteiro para o token de metadados que representa a classe do membro.  
@@ -67,7 +67,7 @@ HRESULT GetMemberProps (
  [out] Quaisquer valores de sinalizador aplicados ao membro.  
   
  `ppvSigBlob`  
- [out] Um ponteiro para a assinatura de binários de metadados do membro.  
+ [out] Um ponteiro para a assinatura binária metadados do membro.  
   
  `pcbSigBlob`  
  [out] O tamanho em bytes do `ppvSigBlob`.  
@@ -82,20 +82,20 @@ HRESULT GetMemberProps (
  [out] Um sinalizador que marca um <xref:System.ValueType>.  
   
  `ppValue`  
- [out] Um valor de constante de cadeia de caracteres retornado por este membro.  
+ [out] Um valor de cadeia de caracteres constante retornado por este membro.  
   
  `pcchValue`  
- [out] O tamanho em caracteres do `ppValue`, ou zero se `ppValue` não tem uma cadeia de caracteres.  
+ [out] O tamanho em caracteres de `ppValue`, ou zero se `ppValue` não mantém uma cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
