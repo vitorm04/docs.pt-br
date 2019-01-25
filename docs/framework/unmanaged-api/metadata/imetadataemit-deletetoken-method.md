@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 269dac0f3d8a719224c177ef2c261e4c1e2e7e92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 646fe01f3c27979348fc19dcc63c993c006e53ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641337"
 ---
-# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="4209d-102">Método IMetaDataEmit::DeleteToken</span><span class="sxs-lookup"><span data-stu-id="4209d-102">IMetaDataEmit::DeleteToken Method</span></span>
-<span data-ttu-id="4209d-103">Exclui o token especificado do escopo de metadados atual.</span><span class="sxs-lookup"><span data-stu-id="4209d-103">Deletes the specified token from the current metadata scope.</span></span>  
+# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="66d6c-102">Método IMetaDataEmit::DeleteToken</span><span class="sxs-lookup"><span data-stu-id="66d6c-102">IMetaDataEmit::DeleteToken Method</span></span>
+<span data-ttu-id="66d6c-103">Exclui o token especificado do escopo de metadados atual.</span><span class="sxs-lookup"><span data-stu-id="66d6c-103">Deletes the specified token from the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4209d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4209d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66d6c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="66d6c-104">Syntax</span></span>  
   
 ```  
 HRESULT DeleteToken (   
@@ -35,19 +35,19 @@ HRESULT DeleteToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4209d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4209d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="66d6c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="66d6c-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="4209d-106">[in] O token a ser excluído.</span><span class="sxs-lookup"><span data-stu-id="4209d-106">[in] The token to be deleted.</span></span>  
+ <span data-ttu-id="66d6c-106">[in] O token a ser excluído.</span><span class="sxs-lookup"><span data-stu-id="66d6c-106">[in] The token to be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4209d-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4209d-107">Requirements</span></span>  
- <span data-ttu-id="4209d-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4209d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66d6c-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="66d6c-107">Requirements</span></span>  
+ <span data-ttu-id="66d6c-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66d6c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4209d-109">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4209d-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="66d6c-109">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="66d6c-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4209d-110">**Biblioteca:** usado como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="4209d-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="66d6c-110">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="66d6c-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4209d-111">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4209d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="66d6c-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66d6c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4209d-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4209d-112">See Also</span></span>  
- [<span data-ttu-id="4209d-113">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="4209d-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="4209d-114">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="4209d-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="66d6c-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="66d6c-112">See also</span></span>
+- [<span data-ttu-id="66d6c-113">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="66d6c-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="66d6c-114">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="66d6c-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

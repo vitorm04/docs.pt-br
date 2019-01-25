@@ -1,19 +1,19 @@
 ---
-title: 'Como: criar LINQ para exemplos XML (Visual Basic)'
+title: 'Como: Compilar exemplos LINQ to XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 565bca7a-ac8b-497f-8d8d-3323b3d7799e
-ms.openlocfilehash: be0b0dfb2fed4e920ca04054f321cfcf1b928838
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6188ecb72abac7dd9af83d420c9feed1c2fef5e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705765"
 ---
-# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a><span data-ttu-id="64601-102">Como: criar LINQ para exemplos XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64601-102">How to: Build LINQ to XML Examples (Visual Basic)</span></span>
-<span data-ttu-id="64601-103">Os vários trechos e exemplos nesta documentação usam classes e tipos de uma variedade de namespaces.</span><span class="sxs-lookup"><span data-stu-id="64601-103">The various snippets and examples in this documentation use classes and types from a variety of namespaces.</span></span> <span data-ttu-id="64601-104">Para compilar o código em Visual Basic, você precisará fornecer instruções apropriadas de `Imports`.</span><span class="sxs-lookup"><span data-stu-id="64601-104">When compiling Visual Basic code, you need to supply appropriate `Imports` statements.</span></span>  
+# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a><span data-ttu-id="c8af6-102">Como: Compilar exemplos LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8af6-102">How to: Build LINQ to XML Examples (Visual Basic)</span></span>
+<span data-ttu-id="c8af6-103">Os vários snippets e exemplos nesta documentação usam classes e tipos de uma variedade de namespaces.</span><span class="sxs-lookup"><span data-stu-id="c8af6-103">The various snippets and examples in this documentation use classes and types from a variety of namespaces.</span></span> <span data-ttu-id="c8af6-104">Para compilar o código em Visual Basic, você precisará fornecer instruções apropriadas de `Imports`.</span><span class="sxs-lookup"><span data-stu-id="c8af6-104">When compiling Visual Basic code, you need to supply appropriate `Imports` statements.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="64601-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="64601-105">Example</span></span>  
- <span data-ttu-id="64601-106">O código a seguir contém instruções de `Imports` que os exemplos de Visual Basic exigem para compilar e executar.</span><span class="sxs-lookup"><span data-stu-id="64601-106">The following code contains the `Imports` statements that the Visual Basic examples require to build and run.</span></span> <span data-ttu-id="64601-107">Nem todas as instruções de `Imports` são necessárias para todos os exemplos.</span><span class="sxs-lookup"><span data-stu-id="64601-107">Not all `Imports` statements are required for every example.</span></span>  
+## <a name="example"></a><span data-ttu-id="c8af6-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c8af6-105">Example</span></span>  
+ <span data-ttu-id="c8af6-106">O código a seguir contém instruções de `Imports` que os exemplos de Visual Basic exigem para compilar e executar.</span><span class="sxs-lookup"><span data-stu-id="c8af6-106">The following code contains the `Imports` statements that the Visual Basic examples require to build and run.</span></span> <span data-ttu-id="c8af6-107">Nem todas as instruções de `Imports` são necessárias para todos os exemplos.</span><span class="sxs-lookup"><span data-stu-id="c8af6-107">Not all `Imports` statements are required for every example.</span></span>  
   
 ```vb  
 Imports System  
@@ -34,5 +34,5 @@ Imports System.Reflection
 Imports System.IO.Packaging  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="64601-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="64601-108">See Also</span></span>  
- [<span data-ttu-id="64601-109">LINQ para visão geral da programação XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64601-109">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c8af6-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c8af6-108">See also</span></span>
+- [<span data-ttu-id="c8af6-109">LINQ to XML visão geral da programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8af6-109">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

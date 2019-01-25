@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a79133b117f3a718dd84af6c2144a6098bc79f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ef46c066512caac93f5f0cb189152d2cac6dada
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633837"
 ---
-# <a name="iclrdatatargetgetimagebase-method"></a><span data-ttu-id="a5dc8-102">Método ICLRDataTarget::GetImageBase</span><span class="sxs-lookup"><span data-stu-id="a5dc8-102">ICLRDataTarget::GetImageBase Method</span></span>
-<span data-ttu-id="a5dc8-103">Obtém o endereço de memória base da imagem especificada.</span><span class="sxs-lookup"><span data-stu-id="a5dc8-103">Gets the base memory address of the specified image.</span></span>  
+# <a name="iclrdatatargetgetimagebase-method"></a><span data-ttu-id="6d3bc-102">Método ICLRDataTarget::GetImageBase</span><span class="sxs-lookup"><span data-stu-id="6d3bc-102">ICLRDataTarget::GetImageBase Method</span></span>
+<span data-ttu-id="6d3bc-103">Obtém o endereço de memória de base da imagem especificada.</span><span class="sxs-lookup"><span data-stu-id="6d3bc-103">Gets the base memory address of the specified image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5dc8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a5dc8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d3bc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6d3bc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetImageBase (  
@@ -36,24 +36,24 @@ HRESULT GetImageBase (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a5dc8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a5dc8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6d3bc-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6d3bc-105">Parameters</span></span>  
  `imagePath`  
- <span data-ttu-id="a5dc8-106">[in] O nome do arquivo de imagem, incluindo seu caminho.</span><span class="sxs-lookup"><span data-stu-id="a5dc8-106">[in] The file name of the image, including its path.</span></span>  
+ <span data-ttu-id="6d3bc-106">[in] O nome do arquivo de imagem, incluindo seu caminho.</span><span class="sxs-lookup"><span data-stu-id="6d3bc-106">[in] The file name of the image, including its path.</span></span>  
   
  `baseAddress`  
- <span data-ttu-id="a5dc8-107">[out] Um ponteiro para um CLRDATA_ADDRESS que armazena o endereço base da imagem.</span><span class="sxs-lookup"><span data-stu-id="a5dc8-107">[out] A pointer to a CLRDATA_ADDRESS that stores the base address of the image.</span></span>  
+ <span data-ttu-id="6d3bc-107">[out] Um ponteiro para um CLRDATA_ADDRESS que armazena o endereço básico da imagem.</span><span class="sxs-lookup"><span data-stu-id="6d3bc-107">[out] A pointer to a CLRDATA_ADDRESS that stores the base address of the image.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a5dc8-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="a5dc8-108">Remarks</span></span>  
- <span data-ttu-id="a5dc8-109">O nome do arquivo de imagem pode ou não ter um caminho.</span><span class="sxs-lookup"><span data-stu-id="a5dc8-109">The image file name may or may not have a path.</span></span> <span data-ttu-id="a5dc8-110">Se um caminho for especificado, a correspondência é feita no caminho inteiro; Caso contrário, a correspondência é feita apenas no nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="a5dc8-110">If a path is specified, matching is done on the whole path; otherwise, matching is done only on the file name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6d3bc-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="6d3bc-108">Remarks</span></span>  
+ <span data-ttu-id="6d3bc-109">O nome do arquivo de imagem pode ou não ter um caminho.</span><span class="sxs-lookup"><span data-stu-id="6d3bc-109">The image file name may or may not have a path.</span></span> <span data-ttu-id="6d3bc-110">Se um caminho for especificado, a correspondência é feita no caminho inteiro; Caso contrário, a correspondência é feita apenas no nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="6d3bc-110">If a path is specified, matching is done on the whole path; otherwise, matching is done only on the file name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5dc8-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a5dc8-111">Requirements</span></span>  
- <span data-ttu-id="a5dc8-112">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5dc8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6d3bc-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6d3bc-111">Requirements</span></span>  
+ <span data-ttu-id="6d3bc-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d3bc-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5dc8-113">**Cabeçalho:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="a5dc8-113">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="6d3bc-113">**Cabeçalho:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="6d3bc-113">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="a5dc8-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5dc8-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6d3bc-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6d3bc-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a5dc8-115">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5dc8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6d3bc-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d3bc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5dc8-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a5dc8-116">See Also</span></span>  
- [<span data-ttu-id="a5dc8-117">Interface ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="a5dc8-117">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6d3bc-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6d3bc-116">See also</span></span>
+- [<span data-ttu-id="6d3bc-117">Interface ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="6d3bc-117">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

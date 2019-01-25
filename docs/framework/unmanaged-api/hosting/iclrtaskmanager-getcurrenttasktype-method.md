@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51c103fb38dd97ec076096037932925e31280f02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d2a8818ef180b3522a53e29fa84453ea9033a2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522395"
 ---
-# <a name="iclrtaskmanagergetcurrenttasktype-method"></a><span data-ttu-id="f7f8e-102">Método ICLRTaskManager::GetCurrentTaskType</span><span class="sxs-lookup"><span data-stu-id="f7f8e-102">ICLRTaskManager::GetCurrentTaskType Method</span></span>
-<span data-ttu-id="f7f8e-103">Obtém o tipo de tarefa que está em execução atualmente.</span><span class="sxs-lookup"><span data-stu-id="f7f8e-103">Gets the type of the task that is currently executing.</span></span>  
+# <a name="iclrtaskmanagergetcurrenttasktype-method"></a><span data-ttu-id="83876-102">Método ICLRTaskManager::GetCurrentTaskType</span><span class="sxs-lookup"><span data-stu-id="83876-102">ICLRTaskManager::GetCurrentTaskType Method</span></span>
+<span data-ttu-id="83876-103">Obtém o tipo da tarefa que está sendo executado.</span><span class="sxs-lookup"><span data-stu-id="83876-103">Gets the type of the task that is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7f8e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f7f8e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83876-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="83876-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentTaskType(  
@@ -35,18 +35,18 @@ HRESULT GetCurrentTaskType(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f7f8e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f7f8e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="83876-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="83876-105">Parameters</span></span>  
  `pTaskType`  
- <span data-ttu-id="f7f8e-106">[out] Um ponteiro para um valor de [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeração que indica o tipo de tarefa que está sendo executado.</span><span class="sxs-lookup"><span data-stu-id="f7f8e-106">[out] A pointer to a value of the [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeration that indicates the type of task that is currently executing.</span></span>  
+ <span data-ttu-id="83876-106">[out] Um ponteiro para um valor igual a [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeração que indica o tipo de tarefa que está sendo executado.</span><span class="sxs-lookup"><span data-stu-id="83876-106">[out] A pointer to a value of the [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeration that indicates the type of task that is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f7f8e-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f7f8e-107">Requirements</span></span>  
- <span data-ttu-id="f7f8e-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7f8e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83876-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="83876-107">Requirements</span></span>  
+ <span data-ttu-id="83876-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83876-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f7f8e-109">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f7f8e-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="83876-109">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="83876-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f7f8e-110">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="f7f8e-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="83876-110">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="83876-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f7f8e-111">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7f8e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="83876-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83876-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7f8e-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f7f8e-112">See Also</span></span>  
- [<span data-ttu-id="f7f8e-113">Interface ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="f7f8e-113">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="83876-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="83876-112">See also</span></span>
+- [<span data-ttu-id="83876-113">Interface ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="83876-113">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

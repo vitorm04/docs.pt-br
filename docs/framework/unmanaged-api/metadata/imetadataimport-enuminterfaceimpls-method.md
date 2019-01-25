@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 824337a8a87282e59c9fc5df18c71800339e8d7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603762"
 ---
-# <a name="imetadataimportenuminterfaceimpls-method"></a><span data-ttu-id="14841-102">Método IMetaDataImport::EnumInterfaceImpls</span><span class="sxs-lookup"><span data-stu-id="14841-102">IMetaDataImport::EnumInterfaceImpls Method</span></span>
-<span data-ttu-id="14841-103">Enumera MethodDef tokens que representam as implementações de interface.</span><span class="sxs-lookup"><span data-stu-id="14841-103">Enumerates MethodDef tokens representing interface implementations.</span></span>  
+# <a name="imetadataimportenuminterfaceimpls-method"></a><span data-ttu-id="beeac-102">Método IMetaDataImport::EnumInterfaceImpls</span><span class="sxs-lookup"><span data-stu-id="beeac-102">IMetaDataImport::EnumInterfaceImpls Method</span></span>
+<span data-ttu-id="beeac-103">Enumera os tokens MethodDef representando as implementações de interface.</span><span class="sxs-lookup"><span data-stu-id="beeac-103">Enumerates MethodDef tokens representing interface implementations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14841-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="14841-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="beeac-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="beeac-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumInterfaceImpls (  
@@ -39,38 +39,38 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="14841-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="14841-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="beeac-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="beeac-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="14841-106">[out no] Um ponteiro para o enumerador.</span><span class="sxs-lookup"><span data-stu-id="14841-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="beeac-106">[no, out] Um ponteiro para o enumerador.</span><span class="sxs-lookup"><span data-stu-id="beeac-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `td`  
- <span data-ttu-id="14841-107">[in] O token de TypeDef cujo MethodDef tokens representando implementações de interface devem ser enumerados.</span><span class="sxs-lookup"><span data-stu-id="14841-107">[in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.</span></span>  
+ <span data-ttu-id="beeac-107">[in] O token do TypeDef cujos tokens MethodDef representando as implementações de interface são a serem enumerados.</span><span class="sxs-lookup"><span data-stu-id="beeac-107">[in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.</span></span>  
   
  `rImpls`  
- <span data-ttu-id="14841-108">[out] A matriz usada para armazenar os tokens de MethodDef.</span><span class="sxs-lookup"><span data-stu-id="14841-108">[out] The array used to store the MethodDef tokens.</span></span>  
+ <span data-ttu-id="beeac-108">[out] A matriz usada para armazenar os tokens MethodDef.</span><span class="sxs-lookup"><span data-stu-id="beeac-108">[out] The array used to store the MethodDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="14841-109">[in] O tamanho máximo da `rImpls` matriz.</span><span class="sxs-lookup"><span data-stu-id="14841-109">[in] The maximum size of the `rImpls` array.</span></span>  
+ <span data-ttu-id="beeac-109">[in] O tamanho máximo da `rImpls` matriz.</span><span class="sxs-lookup"><span data-stu-id="beeac-109">[in] The maximum size of the `rImpls` array.</span></span>  
   
  `pcImpls`  
- <span data-ttu-id="14841-110">[out] O número real de tokens retornados em `rImpls`.</span><span class="sxs-lookup"><span data-stu-id="14841-110">[out] The actual number of tokens returned in `rImpls`.</span></span>  
+ <span data-ttu-id="beeac-110">[out] O número real de tokens retornado no `rImpls`.</span><span class="sxs-lookup"><span data-stu-id="beeac-110">[out] The actual number of tokens returned in `rImpls`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="14841-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="14841-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="beeac-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="beeac-111">Return Value</span></span>  
   
-|<span data-ttu-id="14841-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="14841-112">HRESULT</span></span>|<span data-ttu-id="14841-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="14841-113">Description</span></span>|  
+|<span data-ttu-id="beeac-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="beeac-112">HRESULT</span></span>|<span data-ttu-id="beeac-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="beeac-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="14841-114">`EnumInterfaceImpls` retornou com êxito.</span><span class="sxs-lookup"><span data-stu-id="14841-114">`EnumInterfaceImpls` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="14841-115">Não há nenhum token MethodDef enumerar.</span><span class="sxs-lookup"><span data-stu-id="14841-115">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="14841-116">Nesse caso, `pcImpls` é definido como zero.</span><span class="sxs-lookup"><span data-stu-id="14841-116">In that case, `pcImpls` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="beeac-114">`EnumInterfaceImpls` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="beeac-114">`EnumInterfaceImpls` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="beeac-115">Não há nenhum token MethodDef para enumerar.</span><span class="sxs-lookup"><span data-stu-id="beeac-115">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="beeac-116">Nesse caso, `pcImpls` é definido como zero.</span><span class="sxs-lookup"><span data-stu-id="beeac-116">In that case, `pcImpls` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="14841-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="14841-117">Requirements</span></span>  
- <span data-ttu-id="14841-118">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14841-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="beeac-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="beeac-117">Requirements</span></span>  
+ <span data-ttu-id="beeac-118">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="beeac-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14841-119">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="14841-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="beeac-119">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="beeac-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="14841-120">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="14841-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="beeac-120">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="beeac-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="14841-121">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14841-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="beeac-121">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="beeac-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14841-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="14841-122">See Also</span></span>  
- [<span data-ttu-id="14841-123">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="14841-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="14841-124">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="14841-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="beeac-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="beeac-122">See also</span></span>
+- [<span data-ttu-id="beeac-123">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="beeac-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="beeac-124">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="beeac-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

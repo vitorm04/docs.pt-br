@@ -1,5 +1,5 @@
 ---
-title: Como mover ToolStripMenuItems
+title: 'Como: Mover ToolStripMenuItems'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], moving
@@ -11,66 +11,66 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 69ef2bbaa05155532887897a0aef79a778594169
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 12554ee2225dbb186392b910ddfd7c2f69695e7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660210"
 ---
-# <a name="how-to-move-toolstripmenuitems"></a><span data-ttu-id="c7418-102">Como mover ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="c7418-102">How to: Move ToolStripMenuItems</span></span>
-<span data-ttu-id="c7418-103">Em tempo de design, você pode mover todos os menus de nível superior e seus itens de menu para um local diferente <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="c7418-103">At design time, you can move entire top-level menus and their menu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="c7418-104">Você também pode mover itens de menu individuais entre menus de nível superior ou alterar a posição dos itens de menu dentro de um menu.</span><span class="sxs-lookup"><span data-stu-id="c7418-104">You can also move individual menu items between top-level menus or change the position of menu items within a menu.</span></span>  
+# <a name="how-to-move-toolstripmenuitems"></a><span data-ttu-id="f724a-102">Como: Mover ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="f724a-102">How to: Move ToolStripMenuItems</span></span>
+<span data-ttu-id="f724a-103">Em tempo de design, você pode mover todos os menus de nível superior e seus itens de menu para um local diferente <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="f724a-103">At design time, you can move entire top-level menus and their menu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="f724a-104">Você também pode mover itens de menu individuais entre menus de nível superior ou alterar a posição dos itens de menu dentro de um menu.</span><span class="sxs-lookup"><span data-stu-id="f724a-104">You can also move individual menu items between top-level menus or change the position of menu items within a menu.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c7418-105">As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas.</span><span class="sxs-lookup"><span data-stu-id="c7418-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c7418-106">Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**.</span><span class="sxs-lookup"><span data-stu-id="c7418-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c7418-107">Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="c7418-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="f724a-105">As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas.</span><span class="sxs-lookup"><span data-stu-id="f724a-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f724a-106">Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**.</span><span class="sxs-lookup"><span data-stu-id="f724a-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f724a-107">Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="f724a-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a><span data-ttu-id="c7418-108">Mover um menu de nível superior e seus itens de menu para outro local de nível superior</span><span class="sxs-lookup"><span data-stu-id="c7418-108">To move a top-level menu and its menu items to another top-level location</span></span>  
+### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a><span data-ttu-id="f724a-108">Mover um menu de nível superior e seus itens de menu para outro local de nível superior</span><span class="sxs-lookup"><span data-stu-id="f724a-108">To move a top-level menu and its menu items to another top-level location</span></span>  
   
-1.  <span data-ttu-id="c7418-109">Clique e mantenha pressionado o botão esquerdo do mouse no menu que você deseja mover.</span><span class="sxs-lookup"><span data-stu-id="c7418-109">Click and hold down the left mouse button on the menu that you want to move.</span></span>  
+1.  <span data-ttu-id="f724a-109">Clique e mantenha pressionado o botão esquerdo do mouse no menu que você deseja mover.</span><span class="sxs-lookup"><span data-stu-id="f724a-109">Click and hold down the left mouse button on the menu that you want to move.</span></span>  
   
-2.  <span data-ttu-id="c7418-110">Arraste o ponto de inserção para o menu de nível superior que está antes do novo local desejado e solte o botão esquerdo do mouse.</span><span class="sxs-lookup"><span data-stu-id="c7418-110">Drag the insertion point to the top-level menu that is before the intended new location and release the left mouse button.</span></span>  
+2.  <span data-ttu-id="f724a-110">Arraste o ponto de inserção para o menu de nível superior que está antes do novo local desejado e solte o botão esquerdo do mouse.</span><span class="sxs-lookup"><span data-stu-id="f724a-110">Drag the insertion point to the top-level menu that is before the intended new location and release the left mouse button.</span></span>  
   
-     <span data-ttu-id="c7418-111">O menu selecionado se move para a direita do ponto de inserção.</span><span class="sxs-lookup"><span data-stu-id="c7418-111">The selected menu moves to the right of the insertion point.</span></span>  
+     <span data-ttu-id="f724a-111">O menu selecionado se move para a direita do ponto de inserção.</span><span class="sxs-lookup"><span data-stu-id="f724a-111">The selected menu moves to the right of the insertion point.</span></span>  
   
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a><span data-ttu-id="c7418-112">Mover um menu de nível superior e seus itens de menu para outro local suspenso</span><span class="sxs-lookup"><span data-stu-id="c7418-112">To move a top-level menu and its menu items to a drop-down location</span></span>  
+### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a><span data-ttu-id="f724a-112">Mover um menu de nível superior e seus itens de menu para outro local suspenso</span><span class="sxs-lookup"><span data-stu-id="f724a-112">To move a top-level menu and its menu items to a drop-down location</span></span>  
   
-1.  <span data-ttu-id="c7418-113">Clique com o botão esquerdo do mouse no menu que você deseja mover e pressione CTRL + X ou clique com o botão direito do mouse no menu e selecione **Recortar** no menu de atalho.</span><span class="sxs-lookup"><span data-stu-id="c7418-113">Left-click the menu that you want to move and press CTRL+X, or right-click the menu and select **Cut** from the shortcut menu.</span></span>  
+1.  <span data-ttu-id="f724a-113">Clique com o botão esquerdo do mouse no menu que você deseja mover e pressione CTRL + X ou clique com o botão direito do mouse no menu e selecione **Recortar** no menu de atalho.</span><span class="sxs-lookup"><span data-stu-id="f724a-113">Left-click the menu that you want to move and press CTRL+X, or right-click the menu and select **Cut** from the shortcut menu.</span></span>  
   
-2.  <span data-ttu-id="c7418-114">No menu de nível superior de destino, clique com o botão esquerdo do mouse no item de menu acima do novo local desejado e pressione CTRL + V, ou clique com o botão direito do mouse no item de menu acima do novo local desejado e selecione **Colar** no menu de atalho.</span><span class="sxs-lookup"><span data-stu-id="c7418-114">In the destination top-level menu, left-click the menu item above the intended new location and press CTRL+V, or right-click the menu item above the intended new location and select **Paste** from the shortcut menu.</span></span>  
+2.  <span data-ttu-id="f724a-114">No menu de nível superior de destino, clique com o botão esquerdo do mouse no item de menu acima do novo local desejado e pressione CTRL + V, ou clique com o botão direito do mouse no item de menu acima do novo local desejado e selecione **Colar** no menu de atalho.</span><span class="sxs-lookup"><span data-stu-id="f724a-114">In the destination top-level menu, left-click the menu item above the intended new location and press CTRL+V, or right-click the menu item above the intended new location and select **Paste** from the shortcut menu.</span></span>  
   
-     <span data-ttu-id="c7418-115">O menu que você recorta é inserido após o item de menu selecionado.</span><span class="sxs-lookup"><span data-stu-id="c7418-115">The menu that you cut is inserted after the selected menu item.</span></span>  
+     <span data-ttu-id="f724a-115">O menu que você recorta é inserido após o item de menu selecionado.</span><span class="sxs-lookup"><span data-stu-id="f724a-115">The menu that you cut is inserted after the selected menu item.</span></span>  
   
-### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a><span data-ttu-id="c7418-116">Mover um item de menu de dentro de um menu usando o Editor de coleção de itens</span><span class="sxs-lookup"><span data-stu-id="c7418-116">To move a menu item within a menu using the Items Collection Editor</span></span>  
+### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a><span data-ttu-id="f724a-116">Mover um item de menu de dentro de um menu usando o Editor de coleção de itens</span><span class="sxs-lookup"><span data-stu-id="f724a-116">To move a menu item within a menu using the Items Collection Editor</span></span>  
   
-1.  <span data-ttu-id="c7418-117">Clique com o botão direito do mouse no menu que contém o item de menu que você deseja mover.</span><span class="sxs-lookup"><span data-stu-id="c7418-117">Right-click the menu that contains the menu item you want to move.</span></span>  
+1.  <span data-ttu-id="f724a-117">Clique com o botão direito do mouse no menu que contém o item de menu que você deseja mover.</span><span class="sxs-lookup"><span data-stu-id="f724a-117">Right-click the menu that contains the menu item you want to move.</span></span>  
   
-2.  <span data-ttu-id="c7418-118">No menu de atalho, escolha **Editar DropDownItems**.</span><span class="sxs-lookup"><span data-stu-id="c7418-118">From the shortcut menu, choose **Edit DropDownItems**.</span></span>  
+2.  <span data-ttu-id="f724a-118">No menu de atalho, escolha **Editar DropDownItems**.</span><span class="sxs-lookup"><span data-stu-id="f724a-118">From the shortcut menu, choose **Edit DropDownItems**.</span></span>  
   
-3.  <span data-ttu-id="c7418-119">No **Editor de Coleção de Itens**, clique com o botão esquerdo do mouse no item de menu que você deseja mover.</span><span class="sxs-lookup"><span data-stu-id="c7418-119">In the **Items Collection Editor**, left-click the menu item you want to move.</span></span>  
+3.  <span data-ttu-id="f724a-119">No **Editor de Coleção de Itens**, clique com o botão esquerdo do mouse no item de menu que você deseja mover.</span><span class="sxs-lookup"><span data-stu-id="f724a-119">In the **Items Collection Editor**, left-click the menu item you want to move.</span></span>  
   
-4.  <span data-ttu-id="c7418-120">Clique nas teclas de direção para cima e para baixo para mover o item de menu no menu.</span><span class="sxs-lookup"><span data-stu-id="c7418-120">Click the UP and DOWN ARROW keys to move the menu item within the menu.</span></span>  
+4.  <span data-ttu-id="f724a-120">Clique nas teclas de direção para cima e para baixo para mover o item de menu no menu.</span><span class="sxs-lookup"><span data-stu-id="f724a-120">Click the UP and DOWN ARROW keys to move the menu item within the menu.</span></span>  
   
-5.  <span data-ttu-id="c7418-121">Clique em **OK**.</span><span class="sxs-lookup"><span data-stu-id="c7418-121">Click **OK**.</span></span>  
+5.  <span data-ttu-id="f724a-121">Clique em **OK**.</span><span class="sxs-lookup"><span data-stu-id="f724a-121">Click **OK**.</span></span>  
   
-### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a><span data-ttu-id="c7418-122">Mover um item de menu de dentro de um menu usando o teclado</span><span class="sxs-lookup"><span data-stu-id="c7418-122">To move a menu item within a menu using the keyboard</span></span>  
+### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a><span data-ttu-id="f724a-122">Mover um item de menu de dentro de um menu usando o teclado</span><span class="sxs-lookup"><span data-stu-id="f724a-122">To move a menu item within a menu using the keyboard</span></span>  
   
-1.  <span data-ttu-id="c7418-123">Pressione e mantenha a tecla ALT pressionada.</span><span class="sxs-lookup"><span data-stu-id="c7418-123">Press and hold down the ALT key.</span></span>  
+1.  <span data-ttu-id="f724a-123">Pressione e mantenha a tecla ALT pressionada.</span><span class="sxs-lookup"><span data-stu-id="f724a-123">Press and hold down the ALT key.</span></span>  
   
-2.  <span data-ttu-id="c7418-124">Clique e mantenha pressionado o botão esquerdo do mouse no item de menu que você deseja mover.</span><span class="sxs-lookup"><span data-stu-id="c7418-124">Click and hold the left mouse button on the menu item that you want to move.</span></span>  
+2.  <span data-ttu-id="f724a-124">Clique e mantenha pressionado o botão esquerdo do mouse no item de menu que você deseja mover.</span><span class="sxs-lookup"><span data-stu-id="f724a-124">Click and hold the left mouse button on the menu item that you want to move.</span></span>  
   
-3.  <span data-ttu-id="c7418-125">Arraste o item de menu para o novo local e solte o botão esquerdo do mouse.</span><span class="sxs-lookup"><span data-stu-id="c7418-125">Drag the menu item to the new location and release the left mouse button.</span></span>  
+3.  <span data-ttu-id="f724a-125">Arraste o item de menu para o novo local e solte o botão esquerdo do mouse.</span><span class="sxs-lookup"><span data-stu-id="f724a-125">Drag the menu item to the new location and release the left mouse button.</span></span>  
   
-### <a name="to-move-a-menu-item-to-another-menu"></a><span data-ttu-id="c7418-126">Mover um item de menu para outro menu</span><span class="sxs-lookup"><span data-stu-id="c7418-126">To move a menu item to another menu</span></span>  
+### <a name="to-move-a-menu-item-to-another-menu"></a><span data-ttu-id="f724a-126">Mover um item de menu para outro menu</span><span class="sxs-lookup"><span data-stu-id="f724a-126">To move a menu item to another menu</span></span>  
   
-1.  <span data-ttu-id="c7418-127">Clique com o botão esquerdo do mouse no item de menu que você deseja mover e pressione CTRL + X ou clique com o botão direito do mouse no item de menu e escolha **Recortar** no menu de atalho.</span><span class="sxs-lookup"><span data-stu-id="c7418-127">Left-click the menu item that you want to move and press CTRL+X, or right-click the menu item and choose **Cut** from the shortcut menu.</span></span>  
+1.  <span data-ttu-id="f724a-127">Clique com o botão esquerdo do mouse no item de menu que você deseja mover e pressione CTRL + X ou clique com o botão direito do mouse no item de menu e escolha **Recortar** no menu de atalho.</span><span class="sxs-lookup"><span data-stu-id="f724a-127">Left-click the menu item that you want to move and press CTRL+X, or right-click the menu item and choose **Cut** from the shortcut menu.</span></span>  
   
-2.  <span data-ttu-id="c7418-128">Clique com o botão esquerdo do mouse no menu que contém o item de menu que você recortou.</span><span class="sxs-lookup"><span data-stu-id="c7418-128">Left-click the menu that will contain the menu item that you cut.</span></span>  
+2.  <span data-ttu-id="f724a-128">Clique com o botão esquerdo do mouse no menu que contém o item de menu que você recortou.</span><span class="sxs-lookup"><span data-stu-id="f724a-128">Left-click the menu that will contain the menu item that you cut.</span></span>  
   
-3.  <span data-ttu-id="c7418-129">Clique com o botão esquerdo do mouse no item de menu anterior ao novo local desejado e pressione CTRL + V, ou clique com o botão direito do mouse no item de menu anterior ao novo local desejado e selecione **Colar** no menu de atalho.</span><span class="sxs-lookup"><span data-stu-id="c7418-129">Left-click the menu item that is before the intended new location and press CTRL+V, or right-click the menu item that is before the intended new location and select **Paste** from the shortcut menu.</span></span>  
+3.  <span data-ttu-id="f724a-129">Clique com o botão esquerdo do mouse no item de menu anterior ao novo local desejado e pressione CTRL + V, ou clique com o botão direito do mouse no item de menu anterior ao novo local desejado e selecione **Colar** no menu de atalho.</span><span class="sxs-lookup"><span data-stu-id="f724a-129">Left-click the menu item that is before the intended new location and press CTRL+V, or right-click the menu item that is before the intended new location and select **Paste** from the shortcut menu.</span></span>  
   
-     <span data-ttu-id="c7418-130">O item de menu que você recortou é inserido após o item de menu selecionado.</span><span class="sxs-lookup"><span data-stu-id="c7418-130">The menu item that you cut is inserted after the selected menu item.</span></span>  
+     <span data-ttu-id="f724a-130">O item de menu que você recortou é inserido após o item de menu selecionado.</span><span class="sxs-lookup"><span data-stu-id="f724a-130">The menu item that you cut is inserted after the selected menu item.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7418-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c7418-131">See Also</span></span>  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [<span data-ttu-id="c7418-132">Visão geral do controle MenuStrip</span><span class="sxs-lookup"><span data-stu-id="c7418-132">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f724a-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f724a-131">See also</span></span>
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [<span data-ttu-id="f724a-132">Visão geral do controle MenuStrip</span><span class="sxs-lookup"><span data-stu-id="f724a-132">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
