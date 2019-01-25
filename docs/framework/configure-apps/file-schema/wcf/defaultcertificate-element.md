@@ -2,25 +2,25 @@
 title: Elemento &lt;defaultCertificate&gt;
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 2f6167d7b30da753d093a87753eeef3374fcc0f0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e4c76ea2b3e4064f3bc14461be1729af299117b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676622"
 ---
-# <a name="ltdefaultcertificategt-element"></a><span data-ttu-id="ecf44-102">Elemento &lt;defaultCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="ecf44-102">&lt;defaultCertificate&gt; Element</span></span>
-<span data-ttu-id="ecf44-103">Especifica um certificado X.509 a ser usado quando um serviço ou STS não fornece um através de um protocolo de negociação.</span><span class="sxs-lookup"><span data-stu-id="ecf44-103">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>  
+# <a name="ltdefaultcertificategt-element"></a><span data-ttu-id="906e9-102">Elemento &lt;defaultCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="906e9-102">&lt;defaultCertificate&gt; Element</span></span>
+<span data-ttu-id="906e9-103">Especifica um certificado X.509 a ser usado quando um serviço ou STS não fornece um através de um protocolo de negociação.</span><span class="sxs-lookup"><span data-stu-id="906e9-103">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>  
   
- <span data-ttu-id="ecf44-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="ecf44-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="ecf44-105">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="ecf44-105">\<behaviors></span></span>  
-<span data-ttu-id="ecf44-106">seção endpointBehaviors</span><span class="sxs-lookup"><span data-stu-id="ecf44-106">endpointBehaviors section</span></span>  
-<span data-ttu-id="ecf44-107">\<comportamento de ></span><span class="sxs-lookup"><span data-stu-id="ecf44-107">\<behavior></span></span>  
-<span data-ttu-id="ecf44-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="ecf44-108">\<clientCredentials></span></span>  
-<span data-ttu-id="ecf44-109">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="ecf44-109">\<serviceCertificate></span></span>  
-<span data-ttu-id="ecf44-110">\<defaultCertificate ></span><span class="sxs-lookup"><span data-stu-id="ecf44-110">\<defaultCertificate></span></span>  
+ <span data-ttu-id="906e9-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="906e9-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="906e9-105">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="906e9-105">\<behaviors></span></span>  
+<span data-ttu-id="906e9-106">seção endpointBehaviors</span><span class="sxs-lookup"><span data-stu-id="906e9-106">endpointBehaviors section</span></span>  
+<span data-ttu-id="906e9-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="906e9-107">\<behavior></span></span>  
+<span data-ttu-id="906e9-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="906e9-108">\<clientCredentials></span></span>  
+<span data-ttu-id="906e9-109">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="906e9-109">\<serviceCertificate></span></span>  
+<span data-ttu-id="906e9-110">\<defaultCertificate></span><span class="sxs-lookup"><span data-stu-id="906e9-110">\<defaultCertificate></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ecf44-111">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ecf44-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="906e9-111">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="906e9-111">Syntax</span></span>  
   
 ```xml  
 <defaultCertificate findValue="String"
@@ -29,56 +29,56 @@ ms.locfileid: "54146986"
                     x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialiNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ecf44-112">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="ecf44-112">Attributes and Elements</span></span>  
- <span data-ttu-id="ecf44-113">As seções a seguir descrevem atributos, elementos filho e elementos pai</span><span class="sxs-lookup"><span data-stu-id="ecf44-113">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="906e9-112">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="906e9-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="906e9-113">As seções a seguir descrevem atributos, elementos filho e elementos pai</span><span class="sxs-lookup"><span data-stu-id="906e9-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ecf44-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="ecf44-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="906e9-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="906e9-114">Attributes</span></span>  
   
-|<span data-ttu-id="ecf44-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="ecf44-115">Attribute</span></span>|<span data-ttu-id="ecf44-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="ecf44-116">Description</span></span>|  
+|<span data-ttu-id="906e9-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="906e9-115">Attribute</span></span>|<span data-ttu-id="906e9-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="906e9-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="ecf44-117">findValue</span><span class="sxs-lookup"><span data-stu-id="ecf44-117">findValue</span></span>|<span data-ttu-id="ecf44-118">Cadeia.</span><span class="sxs-lookup"><span data-stu-id="ecf44-118">String.</span></span> <span data-ttu-id="ecf44-119">O valor a ser procurado.</span><span class="sxs-lookup"><span data-stu-id="ecf44-119">The value to search for.</span></span>|  
-|<span data-ttu-id="ecf44-120">x509FindType</span><span class="sxs-lookup"><span data-stu-id="ecf44-120">x509FindType</span></span>|<span data-ttu-id="ecf44-121">Enumeração.</span><span class="sxs-lookup"><span data-stu-id="ecf44-121">Enumeration.</span></span> <span data-ttu-id="ecf44-122">Um dos campos do certificado para pesquisar.</span><span class="sxs-lookup"><span data-stu-id="ecf44-122">One of the certificate fields to search.</span></span>|  
-|<span data-ttu-id="ecf44-123">storeLocation</span><span class="sxs-lookup"><span data-stu-id="ecf44-123">storeLocation</span></span>|<span data-ttu-id="ecf44-124">Enumeração.</span><span class="sxs-lookup"><span data-stu-id="ecf44-124">Enumeration.</span></span> <span data-ttu-id="ecf44-125">Um dos dois sistemas locais de repositório para pesquisar.</span><span class="sxs-lookup"><span data-stu-id="ecf44-125">One of the two system store locations to search.</span></span>|  
-|<span data-ttu-id="ecf44-126">storeName</span><span class="sxs-lookup"><span data-stu-id="ecf44-126">storeName</span></span>|<span data-ttu-id="ecf44-127">Enumeração.</span><span class="sxs-lookup"><span data-stu-id="ecf44-127">Enumeration.</span></span> <span data-ttu-id="ecf44-128">Um dos armazenamentos de sistema para pesquisar.</span><span class="sxs-lookup"><span data-stu-id="ecf44-128">One of the system stores to search.</span></span>|  
+|<span data-ttu-id="906e9-117">findValue</span><span class="sxs-lookup"><span data-stu-id="906e9-117">findValue</span></span>|<span data-ttu-id="906e9-118">Cadeia.</span><span class="sxs-lookup"><span data-stu-id="906e9-118">String.</span></span> <span data-ttu-id="906e9-119">O valor a ser procurado.</span><span class="sxs-lookup"><span data-stu-id="906e9-119">The value to search for.</span></span>|  
+|<span data-ttu-id="906e9-120">x509FindType</span><span class="sxs-lookup"><span data-stu-id="906e9-120">x509FindType</span></span>|<span data-ttu-id="906e9-121">Enumeração.</span><span class="sxs-lookup"><span data-stu-id="906e9-121">Enumeration.</span></span> <span data-ttu-id="906e9-122">Um dos campos do certificado para pesquisar.</span><span class="sxs-lookup"><span data-stu-id="906e9-122">One of the certificate fields to search.</span></span>|  
+|<span data-ttu-id="906e9-123">storeLocation</span><span class="sxs-lookup"><span data-stu-id="906e9-123">storeLocation</span></span>|<span data-ttu-id="906e9-124">Enumeração.</span><span class="sxs-lookup"><span data-stu-id="906e9-124">Enumeration.</span></span> <span data-ttu-id="906e9-125">Um dos dois sistemas locais de repositório para pesquisar.</span><span class="sxs-lookup"><span data-stu-id="906e9-125">One of the two system store locations to search.</span></span>|  
+|<span data-ttu-id="906e9-126">storeName</span><span class="sxs-lookup"><span data-stu-id="906e9-126">storeName</span></span>|<span data-ttu-id="906e9-127">Enumeração.</span><span class="sxs-lookup"><span data-stu-id="906e9-127">Enumeration.</span></span> <span data-ttu-id="906e9-128">Um dos armazenamentos de sistema para pesquisar.</span><span class="sxs-lookup"><span data-stu-id="906e9-128">One of the system stores to search.</span></span>|  
   
-## <a name="findvalue-attribute"></a><span data-ttu-id="ecf44-129">findValue atributo</span><span class="sxs-lookup"><span data-stu-id="ecf44-129">findValue Attribute</span></span>  
+## <a name="findvalue-attribute"></a><span data-ttu-id="906e9-129">findValue atributo</span><span class="sxs-lookup"><span data-stu-id="906e9-129">findValue Attribute</span></span>  
   
-|<span data-ttu-id="ecf44-130">Valor</span><span class="sxs-lookup"><span data-stu-id="ecf44-130">Value</span></span>|<span data-ttu-id="ecf44-131">Descrição</span><span class="sxs-lookup"><span data-stu-id="ecf44-131">Description</span></span>|  
+|<span data-ttu-id="906e9-130">Valor</span><span class="sxs-lookup"><span data-stu-id="906e9-130">Value</span></span>|<span data-ttu-id="906e9-131">Descrição</span><span class="sxs-lookup"><span data-stu-id="906e9-131">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="ecf44-132">Cadeia de Caracteres</span><span class="sxs-lookup"><span data-stu-id="ecf44-132">String</span></span>|<span data-ttu-id="ecf44-133">O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado.</span><span class="sxs-lookup"><span data-stu-id="ecf44-133">The value depends on the field (specified by the X509FindType attribute) being searched.</span></span> <span data-ttu-id="ecf44-134">Por exemplo, se você está procurando uma impressão digital, o valor deve ser uma cadeia de caracteres de números hexadecimais.</span><span class="sxs-lookup"><span data-stu-id="ecf44-134">For example, if searching for a thumbprint, the value must be a string of hexadecimal numbers.</span></span>|  
+|<span data-ttu-id="906e9-132">Cadeia de Caracteres</span><span class="sxs-lookup"><span data-stu-id="906e9-132">String</span></span>|<span data-ttu-id="906e9-133">O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado.</span><span class="sxs-lookup"><span data-stu-id="906e9-133">The value depends on the field (specified by the X509FindType attribute) being searched.</span></span> <span data-ttu-id="906e9-134">Por exemplo, se você está procurando uma impressão digital, o valor deve ser uma cadeia de caracteres de números hexadecimais.</span><span class="sxs-lookup"><span data-stu-id="906e9-134">For example, if searching for a thumbprint, the value must be a string of hexadecimal numbers.</span></span>|  
   
-## <a name="x509findtype-attribute"></a><span data-ttu-id="ecf44-135">Atributo x509FindType</span><span class="sxs-lookup"><span data-stu-id="ecf44-135">x509FindType Attribute</span></span>  
+## <a name="x509findtype-attribute"></a><span data-ttu-id="906e9-135">Atributo x509FindType</span><span class="sxs-lookup"><span data-stu-id="906e9-135">x509FindType Attribute</span></span>  
   
-|<span data-ttu-id="ecf44-136">Valor</span><span class="sxs-lookup"><span data-stu-id="ecf44-136">Value</span></span>|<span data-ttu-id="ecf44-137">Descrição</span><span class="sxs-lookup"><span data-stu-id="ecf44-137">Description</span></span>|  
+|<span data-ttu-id="906e9-136">Valor</span><span class="sxs-lookup"><span data-stu-id="906e9-136">Value</span></span>|<span data-ttu-id="906e9-137">Descrição</span><span class="sxs-lookup"><span data-stu-id="906e9-137">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="ecf44-138">Enumeração</span><span class="sxs-lookup"><span data-stu-id="ecf44-138">Enumeration</span></span>|<span data-ttu-id="ecf44-139">Os valores são: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span><span class="sxs-lookup"><span data-stu-id="ecf44-139">Values include: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span></span>|  
+|<span data-ttu-id="906e9-138">Enumeração</span><span class="sxs-lookup"><span data-stu-id="906e9-138">Enumeration</span></span>|<span data-ttu-id="906e9-139">Os valores são: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span><span class="sxs-lookup"><span data-stu-id="906e9-139">Values include: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span></span>|  
   
-## <a name="storelocation-attribute"></a><span data-ttu-id="ecf44-140">storeLocation atributo</span><span class="sxs-lookup"><span data-stu-id="ecf44-140">storeLocation Attribute</span></span>  
+## <a name="storelocation-attribute"></a><span data-ttu-id="906e9-140">storeLocation atributo</span><span class="sxs-lookup"><span data-stu-id="906e9-140">storeLocation Attribute</span></span>  
   
-|<span data-ttu-id="ecf44-141">Valor</span><span class="sxs-lookup"><span data-stu-id="ecf44-141">Value</span></span>|<span data-ttu-id="ecf44-142">Descrição</span><span class="sxs-lookup"><span data-stu-id="ecf44-142">Description</span></span>|  
+|<span data-ttu-id="906e9-141">Valor</span><span class="sxs-lookup"><span data-stu-id="906e9-141">Value</span></span>|<span data-ttu-id="906e9-142">Descrição</span><span class="sxs-lookup"><span data-stu-id="906e9-142">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="ecf44-143">Enumeração</span><span class="sxs-lookup"><span data-stu-id="ecf44-143">Enumeration</span></span>|<span data-ttu-id="ecf44-144">CurrentUser ou LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="ecf44-144">CurrentUser or LocalMachine.</span></span>|  
+|<span data-ttu-id="906e9-143">Enumeração</span><span class="sxs-lookup"><span data-stu-id="906e9-143">Enumeration</span></span>|<span data-ttu-id="906e9-144">CurrentUser ou LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="906e9-144">CurrentUser or LocalMachine.</span></span>|  
   
-## <a name="storename-attribute"></a><span data-ttu-id="ecf44-145">storeName atributo</span><span class="sxs-lookup"><span data-stu-id="ecf44-145">storeName Attribute</span></span>  
+## <a name="storename-attribute"></a><span data-ttu-id="906e9-145">storeName atributo</span><span class="sxs-lookup"><span data-stu-id="906e9-145">storeName Attribute</span></span>  
   
-|<span data-ttu-id="ecf44-146">Valor</span><span class="sxs-lookup"><span data-stu-id="ecf44-146">Value</span></span>|<span data-ttu-id="ecf44-147">Descrição</span><span class="sxs-lookup"><span data-stu-id="ecf44-147">Description</span></span>|  
+|<span data-ttu-id="906e9-146">Valor</span><span class="sxs-lookup"><span data-stu-id="906e9-146">Value</span></span>|<span data-ttu-id="906e9-147">Descrição</span><span class="sxs-lookup"><span data-stu-id="906e9-147">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="ecf44-148">Enumeração</span><span class="sxs-lookup"><span data-stu-id="ecf44-148">Enumeration</span></span>|<span data-ttu-id="ecf44-149">Os valores são: Catálogo de endereços, AuthRoot, CertificateAuthority, não permitido, My, raiz, TrustedPeople e TrustedPublisher.</span><span class="sxs-lookup"><span data-stu-id="ecf44-149">Values include: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, and TrustedPublisher.</span></span>|  
+|<span data-ttu-id="906e9-148">Enumeração</span><span class="sxs-lookup"><span data-stu-id="906e9-148">Enumeration</span></span>|<span data-ttu-id="906e9-149">Os valores são: Catálogo de endereços, AuthRoot, CertificateAuthority, não permitido, My, raiz, TrustedPeople e TrustedPublisher.</span><span class="sxs-lookup"><span data-stu-id="906e9-149">Values include: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, and TrustedPublisher.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="ecf44-150">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="ecf44-150">Child Elements</span></span>  
- <span data-ttu-id="ecf44-151">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="ecf44-151">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="906e9-150">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="906e9-150">Child Elements</span></span>  
+ <span data-ttu-id="906e9-151">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="906e9-151">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="ecf44-152">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="ecf44-152">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="906e9-152">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="906e9-152">Parent Elements</span></span>  
   
-|<span data-ttu-id="ecf44-153">Elemento</span><span class="sxs-lookup"><span data-stu-id="ecf44-153">Element</span></span>|<span data-ttu-id="ecf44-154">Descrição</span><span class="sxs-lookup"><span data-stu-id="ecf44-154">Description</span></span>|  
+|<span data-ttu-id="906e9-153">Elemento</span><span class="sxs-lookup"><span data-stu-id="906e9-153">Element</span></span>|<span data-ttu-id="906e9-154">Descrição</span><span class="sxs-lookup"><span data-stu-id="906e9-154">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ecf44-155">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="ecf44-155">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|<span data-ttu-id="ecf44-156">Especifica um certificado a ser usado ao autenticar um serviço para o cliente.</span><span class="sxs-lookup"><span data-stu-id="ecf44-156">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
+|[<span data-ttu-id="906e9-155">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="906e9-155">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|<span data-ttu-id="906e9-156">Especifica um certificado a ser usado ao autenticar um serviço para o cliente.</span><span class="sxs-lookup"><span data-stu-id="906e9-156">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ecf44-157">Comentários</span><span class="sxs-lookup"><span data-stu-id="ecf44-157">Remarks</span></span>  
- <span data-ttu-id="ecf44-158">Para associações que usam a segurança de mensagem baseada em certificado, o certificado especificado por este elemento de configuração é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas ao cliente.</span><span class="sxs-lookup"><span data-stu-id="ecf44-158">For bindings that use certificate-based message security, certificate specified by this configuration element is used to encrypt messages to the service and is expected to be used by the service for signing replies to the client.</span></span> <span data-ttu-id="ecf44-159">Ele armazena um único certificado a ser usado quando nenhum certificado é especificado por um serviço.</span><span class="sxs-lookup"><span data-stu-id="ecf44-159">It stores a single certificate to be used when no certificate is specified by a service.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="906e9-157">Comentários</span><span class="sxs-lookup"><span data-stu-id="906e9-157">Remarks</span></span>  
+ <span data-ttu-id="906e9-158">Para associações que usam a segurança de mensagem baseada em certificado, o certificado especificado por este elemento de configuração é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas ao cliente.</span><span class="sxs-lookup"><span data-stu-id="906e9-158">For bindings that use certificate-based message security, certificate specified by this configuration element is used to encrypt messages to the service and is expected to be used by the service for signing replies to the client.</span></span> <span data-ttu-id="906e9-159">Ele armazena um único certificado a ser usado quando nenhum certificado é especificado por um serviço.</span><span class="sxs-lookup"><span data-stu-id="906e9-159">It stores a single certificate to be used when no certificate is specified by a service.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ecf44-160">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ecf44-160">Example</span></span>  
- <span data-ttu-id="ecf44-161">O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI começa com `http://www.contoso.com` e um certificado a ser usado para todos os outros pontos de extremidade que não executam o processo de negociação do certificado.</span><span class="sxs-lookup"><span data-stu-id="ecf44-161">The following example specifies a certificate to use for endpoints whose URI begins with `http://www.contoso.com` and a certificate to use for all other endpoints that do not perform certificate negotiation.</span></span>  
+## <a name="example"></a><span data-ttu-id="906e9-160">Exemplo</span><span class="sxs-lookup"><span data-stu-id="906e9-160">Example</span></span>  
+ <span data-ttu-id="906e9-161">O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI começa com `http://www.contoso.com` e um certificado a ser usado para todos os outros pontos de extremidade que não executam o processo de negociação do certificado.</span><span class="sxs-lookup"><span data-stu-id="906e9-161">The following example specifies a certificate to use for endpoints whose URI begins with `http://www.contoso.com` and a certificate to use for all other endpoints that do not perform certificate negotiation.</span></span>  
   
 ```xml  
 <serviceCertificate>
@@ -98,11 +98,11 @@ ms.locfileid: "54146986"
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ecf44-162">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ecf44-162">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>  
- [<span data-ttu-id="ecf44-163">Trabalhando com certificados</span><span class="sxs-lookup"><span data-stu-id="ecf44-163">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [<span data-ttu-id="ecf44-164">\<authentication></span><span class="sxs-lookup"><span data-stu-id="ecf44-164">\<authentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
- [<span data-ttu-id="ecf44-165">Protegendo clientes</span><span class="sxs-lookup"><span data-stu-id="ecf44-165">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
- [<span data-ttu-id="ecf44-166">Protegendo serviços e clientes</span><span class="sxs-lookup"><span data-stu-id="ecf44-166">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="906e9-162">Consulte também</span><span class="sxs-lookup"><span data-stu-id="906e9-162">See also</span></span>
+- <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
+- [<span data-ttu-id="906e9-163">Trabalhando com certificados</span><span class="sxs-lookup"><span data-stu-id="906e9-163">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="906e9-164">\<authentication></span><span class="sxs-lookup"><span data-stu-id="906e9-164">\<authentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
+- [<span data-ttu-id="906e9-165">Protegendo clientes</span><span class="sxs-lookup"><span data-stu-id="906e9-165">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
+- [<span data-ttu-id="906e9-166">Protegendo serviços e clientes</span><span class="sxs-lookup"><span data-stu-id="906e9-166">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

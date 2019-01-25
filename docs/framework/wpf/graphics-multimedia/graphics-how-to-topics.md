@@ -8,31 +8,31 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: f566b5139f839ae37b90c4ea30a4bdfafa696ede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688194"
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="7855c-102">Tópicos explicativos de elementos gráficos</span><span class="sxs-lookup"><span data-stu-id="7855c-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="7855c-103">Os tópicos a seguir demonstram como usar os recursos gráficos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7855c-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="e9bb0-102">Tópicos explicativos de elementos gráficos</span><span class="sxs-lookup"><span data-stu-id="e9bb0-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="e9bb0-103">Os tópicos a seguir demonstram como usar os recursos gráficos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e9bb0-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7855c-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="7855c-104">In This Section</span></span>  
- [<span data-ttu-id="7855c-105">Animar um retângulo</span><span class="sxs-lookup"><span data-stu-id="7855c-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="7855c-106">Animar a posição de um objeto usando PointAnimation</span><span class="sxs-lookup"><span data-stu-id="7855c-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="7855c-107">Transformar pontos e vetores</span><span class="sxs-lookup"><span data-stu-id="7855c-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="7855c-108">Estender o quadro transparente em um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="7855c-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="7855c-109">Como melhorar o desempenho de renderização armazenando em cache um elemento</span><span class="sxs-lookup"><span data-stu-id="7855c-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="7855c-110">Como usar um elemento armazenado em cache como um pincel</span><span class="sxs-lookup"><span data-stu-id="7855c-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e9bb0-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="e9bb0-104">In This Section</span></span>  
+ [<span data-ttu-id="e9bb0-105">Animar um retângulo</span><span class="sxs-lookup"><span data-stu-id="e9bb0-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="e9bb0-106">Animar a posição de um objeto usando PointAnimation</span><span class="sxs-lookup"><span data-stu-id="e9bb0-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="e9bb0-107">Transformar pontos e vetores</span><span class="sxs-lookup"><span data-stu-id="e9bb0-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="e9bb0-108">Estender o quadro transparente em um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="e9bb0-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="e9bb0-109">Como: Melhorar o desempenho de renderização armazenando em cache um elemento</span><span class="sxs-lookup"><span data-stu-id="e9bb0-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="e9bb0-110">Como: Usar um elemento armazenado em cache como um pincel</span><span class="sxs-lookup"><span data-stu-id="e9bb0-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7855c-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7855c-111">See Also</span></span>  
- <xref:System.Windows.Shapes.Shape>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Media.Geometry>  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="7855c-112">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="7855c-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="7855c-113">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="7855c-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e9bb0-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e9bb0-111">See also</span></span>
+- <xref:System.Windows.Shapes.Shape>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Media.Geometry>
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Effects.BitmapEffect>
+- [<span data-ttu-id="e9bb0-112">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="e9bb0-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="e9bb0-113">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="e9bb0-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

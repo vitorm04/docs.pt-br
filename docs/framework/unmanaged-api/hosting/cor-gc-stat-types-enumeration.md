@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac378a48900d5820ad35587a6d269648ef99a77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bd12feb47352d9bb78aa8ef056072f9bdc6fba3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710316"
 ---
-# <a name="corgcstattypes-enumeration"></a><span data-ttu-id="cdac4-102">Enumeração COR_GC_STAT_TYPES</span><span class="sxs-lookup"><span data-stu-id="cdac4-102">COR_GC_STAT_TYPES Enumeration</span></span>
-<span data-ttu-id="cdac4-103">Especifica as estatísticas sejam registradas para uma coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="cdac4-103">Specifies the statistics to be recorded for a garbage collection.</span></span>  
+# <a name="corgcstattypes-enumeration"></a><span data-ttu-id="e6c22-102">Enumeração COR_GC_STAT_TYPES</span><span class="sxs-lookup"><span data-stu-id="e6c22-102">COR_GC_STAT_TYPES Enumeration</span></span>
+<span data-ttu-id="e6c22-103">Especifica as estatísticas sejam registradas para uma coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="e6c22-103">Specifies the statistics to be recorded for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cdac4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="cdac4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6c22-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e6c22-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,23 +35,23 @@ typedef enum {
 } COR_GC_STAT_TYPES;  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="cdac4-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="cdac4-105">Remarks</span></span>  
- <span data-ttu-id="cdac4-106">Esta enumeração Especifica quais estatísticas no [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estrutura devem ser definidas [Iclrgcmanager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="cdac4-106">This enumeration specifies which statistics in the [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure are to be set by [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6c22-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="e6c22-105">Remarks</span></span>  
+ <span data-ttu-id="e6c22-106">Esta enumeração Especifica quais estatísticas na [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estrutura devem ser definidas [iclrgcmanager:: getStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="e6c22-106">This enumeration specifies which statistics in the [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure are to be set by [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method.</span></span>  
   
-## <a name="members"></a><span data-ttu-id="cdac4-107">Membros</span><span class="sxs-lookup"><span data-stu-id="cdac4-107">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e6c22-107">Membros</span><span class="sxs-lookup"><span data-stu-id="e6c22-107">Members</span></span>  
   
-|<span data-ttu-id="cdac4-108">Membro</span><span class="sxs-lookup"><span data-stu-id="cdac4-108">Member</span></span>|<span data-ttu-id="cdac4-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="cdac4-109">Description</span></span>|  
+|<span data-ttu-id="e6c22-108">Membro</span><span class="sxs-lookup"><span data-stu-id="e6c22-108">Member</span></span>|<span data-ttu-id="e6c22-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="e6c22-109">Description</span></span>|  
 |------------|-----------------|  
-|`COR_GC_COUNTS`|<span data-ttu-id="cdac4-110">Registra o número de coletas de lixo executadas para cada geração.</span><span class="sxs-lookup"><span data-stu-id="cdac4-110">Records the number of garbage collections performed for each generation.</span></span>|  
-|`COR_GC_MEMORYUSAGE`|<span data-ttu-id="cdac4-111">Registros memória uso e lixo coleta as estatísticas de tamanho.</span><span class="sxs-lookup"><span data-stu-id="cdac4-111">Records memory usage and garbage collection size statistics.</span></span>|  
+|`COR_GC_COUNTS`|<span data-ttu-id="e6c22-110">Registra o número de coletas de lixo executadas para cada geração.</span><span class="sxs-lookup"><span data-stu-id="e6c22-110">Records the number of garbage collections performed for each generation.</span></span>|  
+|`COR_GC_MEMORYUSAGE`|<span data-ttu-id="e6c22-111">Registros memória lixo e uso coleta estatísticas de tamanho.</span><span class="sxs-lookup"><span data-stu-id="e6c22-111">Records memory usage and garbage collection size statistics.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cdac4-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cdac4-112">Requirements</span></span>  
- <span data-ttu-id="cdac4-113">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cdac4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6c22-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e6c22-112">Requirements</span></span>  
+ <span data-ttu-id="e6c22-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6c22-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cdac4-114">**Cabeçalho:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="cdac4-114">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="e6c22-114">**Cabeçalho:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="e6c22-114">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="cdac4-115">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cdac4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e6c22-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6c22-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cdac4-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cdac4-116">See Also</span></span>  
- [<span data-ttu-id="cdac4-117">Estrutura COR_GC_STATS</span><span class="sxs-lookup"><span data-stu-id="cdac4-117">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- [<span data-ttu-id="cdac4-118">Enumerações de hospedagem</span><span class="sxs-lookup"><span data-stu-id="cdac4-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="e6c22-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e6c22-116">See also</span></span>
+- [<span data-ttu-id="e6c22-117">Estrutura COR_GC_STATS</span><span class="sxs-lookup"><span data-stu-id="e6c22-117">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [<span data-ttu-id="e6c22-118">Enumerações de hospedagem</span><span class="sxs-lookup"><span data-stu-id="e6c22-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

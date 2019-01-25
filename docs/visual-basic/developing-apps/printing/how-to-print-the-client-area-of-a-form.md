@@ -1,41 +1,41 @@
 ---
-title: Como imprimir a área cliente de um formulário (Visual Basic)
+title: 'Como: Imprimir a área de cliente de um formulário (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - client area [Visual Basic], printing
 ms.assetid: c06c9c0e-bc07-48cd-9596-e29a2ff96236
-ms.openlocfilehash: b2f13d1ec151a5fd1967b522a601e0e19de04cbb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2c808b480c38fc34006dcdf5832a814dfef1c62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45689217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505621"
 ---
-# <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a><span data-ttu-id="47fe4-102">Como imprimir a área cliente de um formulário (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47fe4-102">How to: Print the Client Area of a Form (Visual Basic)</span></span>
-<span data-ttu-id="47fe4-103">O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente permite que você imprimir rapidamente uma imagem de um formulário sem usar um <xref:System.Drawing.Printing.PrintDocument> componente.</span><span class="sxs-lookup"><span data-stu-id="47fe4-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to quickly print an image of a form without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span> <span data-ttu-id="47fe4-104">O procedimento a seguir mostra como imprimir apenas a área de cliente de um formulário, sem a barra de título, bordas e barras de rolagem.</span><span class="sxs-lookup"><span data-stu-id="47fe4-104">The following procedure shows how to print just the client area of a form, without the title bar, borders, and scroll bars.</span></span>  
+# <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a><span data-ttu-id="f840b-102">Como: Imprimir a área de cliente de um formulário (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f840b-102">How to: Print the Client Area of a Form (Visual Basic)</span></span>
+<span data-ttu-id="f840b-103">O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente permite que você imprimir rapidamente uma imagem de um formulário sem usar um <xref:System.Drawing.Printing.PrintDocument> componente.</span><span class="sxs-lookup"><span data-stu-id="f840b-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to quickly print an image of a form without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span> <span data-ttu-id="f840b-104">O procedimento a seguir mostra como imprimir apenas a área de cliente de um formulário, sem a barra de título, bordas e barras de rolagem.</span><span class="sxs-lookup"><span data-stu-id="f840b-104">The following procedure shows how to print just the client area of a form, without the title bar, borders, and scroll bars.</span></span>  
   
- <span data-ttu-id="47fe4-105">Os controles PowerPack não estão mais incluídos no Visual Studio, mas você pode baixá-los na [Centro de Download](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span><span class="sxs-lookup"><span data-stu-id="47fe4-105">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
+ <span data-ttu-id="f840b-105">Os controles PowerPack não estão mais incluídos no Visual Studio, mas você pode baixá-los na [Centro de Download](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span><span class="sxs-lookup"><span data-stu-id="f840b-105">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
   
-### <a name="to-print-the-client-area-of-a-form"></a><span data-ttu-id="47fe4-106">Para imprimir a área de cliente de um formulário</span><span class="sxs-lookup"><span data-stu-id="47fe4-106">To print the client area of a form</span></span>  
+### <a name="to-print-the-client-area-of-a-form"></a><span data-ttu-id="f840b-106">Para imprimir a área de cliente de um formulário</span><span class="sxs-lookup"><span data-stu-id="f840b-106">To print the client area of a form</span></span>  
   
-1.  <span data-ttu-id="47fe4-107">No **caixa de ferramentas**, clique no **Visual Basic PowerPacks** guia e, em seguida, arraste o <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente para o formulário.</span><span class="sxs-lookup"><span data-stu-id="47fe4-107">In the **Toolbox**, click the **Visual Basic PowerPacks** tab and then drag the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component onto the form.</span></span>  
+1.  <span data-ttu-id="f840b-107">No **caixa de ferramentas**, clique no **Visual Basic PowerPacks** guia e, em seguida, arraste o <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente para o formulário.</span><span class="sxs-lookup"><span data-stu-id="f840b-107">In the **Toolbox**, click the **Visual Basic PowerPacks** tab and then drag the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component onto the form.</span></span>  
   
-     <span data-ttu-id="47fe4-108">O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente é adicionado à bandeja de componentes.</span><span class="sxs-lookup"><span data-stu-id="47fe4-108">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component is added to the component tray.</span></span>  
+     <span data-ttu-id="f840b-108">O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente é adicionado à bandeja de componentes.</span><span class="sxs-lookup"><span data-stu-id="f840b-108">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component is added to the component tray.</span></span>  
   
-2.  <span data-ttu-id="47fe4-109">No **propriedades** janela, defina as <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> propriedade <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>.</span><span class="sxs-lookup"><span data-stu-id="47fe4-109">In the **Properties** window, set the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> property to <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>.</span></span>  
+2.  <span data-ttu-id="f840b-109">No **propriedades** janela, defina as <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> propriedade <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>.</span><span class="sxs-lookup"><span data-stu-id="f840b-109">In the **Properties** window, set the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> property to <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>.</span></span>  
   
-3.  <span data-ttu-id="47fe4-110">Adicione o seguinte código no manipulador de eventos apropriado (por exemplo, nos `Click` manipulador de eventos para um **impressão**`Button`).</span><span class="sxs-lookup"><span data-stu-id="47fe4-110">Add the following code in the appropriate event handler (for example, in the `Click` event handler for a **Print**`Button`).</span></span>  
+3.  <span data-ttu-id="f840b-110">Adicione o seguinte código no manipulador de eventos apropriado (por exemplo, nos `Click` manipulador de eventos para um **impressão**`Button`).</span><span class="sxs-lookup"><span data-stu-id="f840b-110">Add the following code in the appropriate event handler (for example, in the `Click` event handler for a **Print**`Button`).</span></span>  
   
     ```  
     PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.ClientAreaOnly)  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="47fe4-111">Em alguns sistemas operacionais, texto ou elementos gráficos desenhados pelo <xref:System.Drawing.Graphics> métodos podem não imprimir corretamente.</span><span class="sxs-lookup"><span data-stu-id="47fe4-111">On some operating systems, text or graphics drawn by <xref:System.Drawing.Graphics> methods may not print correctly.</span></span> <span data-ttu-id="47fe4-112">Nesse caso, use o método de impressão compatível: `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption CompatibleModeClientAreaOnly).`</span><span class="sxs-lookup"><span data-stu-id="47fe4-112">In this case, use the compatible printing method: `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption CompatibleModeClientAreaOnly).`</span></span>  
+    >  <span data-ttu-id="f840b-111">Em alguns sistemas operacionais, texto ou elementos gráficos desenhados pelo <xref:System.Drawing.Graphics> métodos podem não imprimir corretamente.</span><span class="sxs-lookup"><span data-stu-id="f840b-111">On some operating systems, text or graphics drawn by <xref:System.Drawing.Graphics> methods may not print correctly.</span></span> <span data-ttu-id="f840b-112">Nesse caso, use o método de impressão compatível: `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption CompatibleModeClientAreaOnly).`</span><span class="sxs-lookup"><span data-stu-id="f840b-112">In this case, use the compatible printing method: `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption CompatibleModeClientAreaOnly).`</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47fe4-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="47fe4-113">See Also</span></span>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [<span data-ttu-id="47fe4-114">Componente PrintForm</span><span class="sxs-lookup"><span data-stu-id="47fe4-114">PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [<span data-ttu-id="47fe4-115">Como imprimir áreas cliente e não cliente de um formulário</span><span class="sxs-lookup"><span data-stu-id="47fe4-115">How to: Print Client and Non-Client Areas of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [<span data-ttu-id="47fe4-116">Como imprimir um formulário rolável</span><span class="sxs-lookup"><span data-stu-id="47fe4-116">How to: Print a Scrollable Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+## <a name="see-also"></a><span data-ttu-id="f840b-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f840b-113">See also</span></span>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- [<span data-ttu-id="f840b-114">Componente PrintForm</span><span class="sxs-lookup"><span data-stu-id="f840b-114">PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/printform-component.md)
+- [<span data-ttu-id="f840b-115">Como: imprimir as áreas de cliente e de não cliente de um formulário</span><span class="sxs-lookup"><span data-stu-id="f840b-115">How to: Print Client and Non-Client Areas of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+- [<span data-ttu-id="f840b-116">Como: imprimir um formulário rolável</span><span class="sxs-lookup"><span data-stu-id="f840b-116">How to: Print a Scrollable Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

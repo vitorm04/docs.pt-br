@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a33d8b489551dc69542e1b12bcf83602ec5a2008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: beb48835039f142ea1d9e18871f77ada1b6f4f3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706307"
 ---
-# <a name="isymunmanagedscope2-interface"></a><span data-ttu-id="40cd1-102">Interface ISymUnmanagedScope2</span><span class="sxs-lookup"><span data-stu-id="40cd1-102">ISymUnmanagedScope2 Interface</span></span>
-<span data-ttu-id="40cd1-103">Representa um escopo léxico dentro de um método.</span><span class="sxs-lookup"><span data-stu-id="40cd1-103">Represents a lexical scope within a method.</span></span> <span data-ttu-id="40cd1-104">Essa interface estende o [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface com métodos que obtêm informações sobre constantes definidas dentro do escopo.</span><span class="sxs-lookup"><span data-stu-id="40cd1-104">This interface extends the [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface with methods that get information about constants defined within the scope.</span></span>  
+# <a name="isymunmanagedscope2-interface"></a><span data-ttu-id="b83e0-102">Interface ISymUnmanagedScope2</span><span class="sxs-lookup"><span data-stu-id="b83e0-102">ISymUnmanagedScope2 Interface</span></span>
+<span data-ttu-id="b83e0-103">Representa um escopo léxico dentro de um método.</span><span class="sxs-lookup"><span data-stu-id="b83e0-103">Represents a lexical scope within a method.</span></span> <span data-ttu-id="b83e0-104">Essa interface estende o [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface com métodos que obtêm informações sobre constantes definidas dentro do escopo.</span><span class="sxs-lookup"><span data-stu-id="b83e0-104">This interface extends the [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface with methods that get information about constants defined within the scope.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="40cd1-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="40cd1-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b83e0-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="b83e0-105">Methods</span></span>  
   
-|<span data-ttu-id="40cd1-106">Método</span><span class="sxs-lookup"><span data-stu-id="40cd1-106">Method</span></span>|<span data-ttu-id="40cd1-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="40cd1-107">Description</span></span>|  
+|<span data-ttu-id="b83e0-106">Método</span><span class="sxs-lookup"><span data-stu-id="b83e0-106">Method</span></span>|<span data-ttu-id="b83e0-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="b83e0-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="40cd1-108">Método GetConstantCount</span><span class="sxs-lookup"><span data-stu-id="40cd1-108">GetConstantCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|<span data-ttu-id="40cd1-109">Obtém uma contagem das constantes definidas dentro desse escopo.</span><span class="sxs-lookup"><span data-stu-id="40cd1-109">Gets a count of the constants defined within this scope.</span></span>|  
-|[<span data-ttu-id="40cd1-110">Método GetConstants</span><span class="sxs-lookup"><span data-stu-id="40cd1-110">GetConstants Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|<span data-ttu-id="40cd1-111">Obtém as constantes locais definidas dentro desse escopo.</span><span class="sxs-lookup"><span data-stu-id="40cd1-111">Gets the local constants defined within this scope.</span></span>|  
+|[<span data-ttu-id="b83e0-108">Método GetConstantCount</span><span class="sxs-lookup"><span data-stu-id="b83e0-108">GetConstantCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|<span data-ttu-id="b83e0-109">Obtém uma contagem das constantes definidas dentro desse escopo.</span><span class="sxs-lookup"><span data-stu-id="b83e0-109">Gets a count of the constants defined within this scope.</span></span>|  
+|[<span data-ttu-id="b83e0-110">Método GetConstants</span><span class="sxs-lookup"><span data-stu-id="b83e0-110">GetConstants Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|<span data-ttu-id="b83e0-111">Obtém as constantes locais definidas dentro desse escopo.</span><span class="sxs-lookup"><span data-stu-id="b83e0-111">Gets the local constants defined within this scope.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="40cd1-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="40cd1-112">Requirements</span></span>  
- <span data-ttu-id="40cd1-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="40cd1-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b83e0-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b83e0-112">Requirements</span></span>  
+ <span data-ttu-id="b83e0-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b83e0-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40cd1-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="40cd1-114">See Also</span></span>  
- [<span data-ttu-id="40cd1-115">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="40cd1-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [<span data-ttu-id="40cd1-116">Interface ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="40cd1-116">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b83e0-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b83e0-114">See also</span></span>
+- [<span data-ttu-id="b83e0-115">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="b83e0-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="b83e0-116">Interface ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="b83e0-116">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
