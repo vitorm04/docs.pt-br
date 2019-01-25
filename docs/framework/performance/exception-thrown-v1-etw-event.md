@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07932a12916138dd7cbee2576e4fc747898b8063
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610828"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Evento ETW Exception Thrown_V1
 Esse evento captura informações sobre as exceções geradas.  
@@ -37,8 +37,8 @@ Esse evento captura informações sobre as exceções geradas.
 |Mensagem de exceção|win:UnicodeString|A mensagem de exceção real.|  
 |EIPCodeThrow|win:Pointer|Ponteiro de instrução em que ocorreu a exceção.|  
 |ExceptionHR|win:UInt32|Exceção [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException (consulte [Eventos CLR ETW](../../../docs/framework/performance/clr-etw-events.md) na documentação do Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indica que o estado do processo está corrompido; consulte [Tratando exceções de estado corrompido](https://go.microsoft.com/fwlink/?LinkId=179681) no MSDN).<br /><br /> 0x10: IsCLSCompliant (uma exceção que é derivada de <xref:System.Exception> está em conformidade com CLS; caso contrário, ela não está em conformidade com CLS).|  
+|ExceptionFlags|win:UInt16|0x01: HasInnerException (consulte [eventos CLR ETW](../../../docs/framework/performance/clr-etw-events.md) na documentação do Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indica que o estado do processo está corrompido; consulte [tratamento de exceções de estado corrompido](https://go.microsoft.com/fwlink/?LinkId=179681) no MSDN).<br /><br /> 0x10: IsCLSCompliant (uma exceção que é derivada de <xref:System.Exception> é compatível com CLS; caso contrário, ele não é compatível com CLS).|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
-## <a name="see-also"></a>Consulte também  
- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Consulte também
+- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

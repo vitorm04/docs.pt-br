@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMessageDropped
 ms.date: 03/30/2017
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
-ms.openlocfilehash: 07bef8b391a03f2c011e1d1a7c7fb4fad908e022
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6218948e89288e76034d7c3f032f3c585e286c3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570532"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
 A mensagem descartada do MSMQ.  
@@ -19,8 +19,8 @@ A mensagem descartada do MSMQ.
   
  Ver [tratamento de mensagens suspeitas](https://go.microsoft.com/fwlink/?LinkID=99546) para obter mais detalhes sobre quando as mensagens se tornarão suspeitas e como configurar seu serviço para tratá-las adequadamente.  
   
-## <a name="see-also"></a>Consulte também  
- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Manipulação de mensagens suspeitas](https://go.microsoft.com/fwlink/?LinkID=99546)
+## <a name="see-also"></a>Consulte também
+- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Manipulação de mensagens suspeitas](https://go.microsoft.com/fwlink/?LinkID=99546)

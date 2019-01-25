@@ -2,18 +2,18 @@
 title: '&lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: a72880b0078c78ce3fdbad1243390237159056ac
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97df2a9863bb4c1f31b24f0dbe370efaef0991a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715277"
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 Representa uma associação que um serviço do Windows Communication Foundation (WCF) pode usar para configurar e expor pontos de extremidade que podem se comunicar por HTTP. Quando usado com um contrato duplex, soquetes da Web será usado, caso contrário, o HTTP será usado.  
   
  \<system.ServiceModel>  
-\<associações >  
+\<bindings>  
 \<netHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -76,7 +76,7 @@ Representa uma associação que um serviço do Windows Communication Foundation 
 |`proxyAddress`|Um URI que contém o endereço do proxy HTTP. Se `useSystemWebProxy` é definido como `true`, essa configuração deve ser `null`. O padrão é `null`.|  
 |`receiveTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de recebimento ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 10:00:00.|  
 |`sendTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de envio ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
-|`textEncoding`|Define a codificação a ser usada para emitir mensagens na associação de conjunto de caracteres. Os valores válidos incluem o seguinte:<br /><br /> -BigEndianUnicode: Unicode BigEndian de codificação.<br />-Unicode: codificação de 16 bits.<br />-UTF8: codificação de 8 bits<br /><br /> O padrão é UTF8. Esse atributo é do tipo <xref:System.Text.Encoding>.|  
+|`textEncoding`|Define a codificação a ser usada para emitir mensagens na associação de conjunto de caracteres. Os valores válidos incluem o seguinte:<br /><br /> -   BigEndianUnicode: Unicode BigEndian de codificação.<br />-Unicode: codificação de 16 bits.<br />-   UTF8: codificação de 8 bits<br /><br /> O padrão é UTF8. Esse atributo é do tipo <xref:System.Text.Encoding>.|  
 |`transferMode`|Válido <xref:System.ServiceModel.TransferMode> valor que especifica se as mensagens são armazenadas em buffer ou transmitidas em uma solicitação ou resposta.|  
 |`useDefaultWebProxy`|Um valor booliano que especifica se o proxy HTTP configurado automaticamente do sistema deve ser usado, se disponível. O padrão é `true`.|  
 |||  
@@ -92,7 +92,7 @@ Representa uma associação que um serviço do Windows Communication Foundation 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  O NetHttpBinding usa HTTP como o transporte para enviar mensagens. Quando usado com um contrato duplex, soquetes da Web será usado.  Quando usado com um contrato de solicitação-resposta que NetHttpBinding irá se comportar como um BasicHttpBinding com um codificador binário.  
@@ -173,12 +173,12 @@ Representa uma associação que um serviço do Windows Communication Foundation 
   
  Para obter mais informações sobre a configuração padrão e sem nome associações e comportamentos, consulte [configuração simplificado](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 6788a7908489591e266af6d141006f2aa2d0e6f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbbcc748a65942e3a89785b267e9231f4a4a01a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686173"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>Parâmetros opcionais devem especificar um valor padrão
 Parâmetros opcionais devem fornecer valores padrão que podem ser usados se nenhum parâmetro for fornecido por um procedimento de chamada.  
@@ -30,5 +30,5 @@ Parâmetros opcionais devem fornecer valores padrão que podem ser usados se nen
     End Sub  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Opcional](../../../visual-basic/language-reference/modifiers/optional.md)
+## <a name="see-also"></a>Consulte também
+- [Opcional](../../../visual-basic/language-reference/modifiers/optional.md)

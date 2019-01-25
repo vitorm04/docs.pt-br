@@ -2,12 +2,12 @@
 title: Interceptor de mensagem personalizado
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 5a72a964c571cf68d4b215f4029ff95c52cba0e2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3b24535c67c1d16da63ec3b282d456e65ff8dd95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733266"
 ---
 # <a name="custom-message-interceptor"></a>Interceptor de mensagem personalizado
 Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particular, ele mostra como implementar um elemento de associação personalizado que cria as fábricas de canais e ouvintes de canais para interceptar todas as mensagens de entrada e saídas em um ponto específico na pilha de tempo de execução. O exemplo também inclui um cliente e servidor que demonstram o uso dessas fábricas personalizadas.  
@@ -68,7 +68,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
 ## <a name="adding-policy"></a>Adicionar política  
  Integrar com nosso sistema de política, `InterceptingBindingElement` implementa IPolicyExportExtension para sinalizar que podemos deve participar de geração de política. Para dar suporte à importação de política em um cliente gerado, o usuário pode registrar uma classe derivada de `InterceptingBindingElementImporter` e substituir `CreateMessageInterceptor`() para gerar a sua política habilitada `ChannelMessageInterceptor` classe.  
   
-## <a name="example-droppable-message-inspector"></a>Exemplo: Inspetor de mensagens Droppable  
+## <a name="example-droppable-message-inspector"></a>Exemplo: Inspetor de mensagens droppable  
  Incluído no exemplo é um exemplo de implementação de `ChannelMessageInspector` que descarta mensagens.  
   
 ```  

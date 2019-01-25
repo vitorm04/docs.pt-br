@@ -8,15 +8,15 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655849"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Tópicos explicativos de programação da camada visual
-Os tópicos nesta seção demonstram como usar a camada visual para composição de baixo nível e testes.  
+Os tópicos nesta seção demonstram como usar a camada visual para composição de baixo nível e de teste de clique.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Obter o deslocamento de um visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
@@ -26,9 +26,9 @@ Os tópicos nesta seção demonstram como usar a camada visual para composição
  [Teste de clique usando um contêiner de host Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
  [Renderizar em um intervalo por quadro usando CompositionTarget](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

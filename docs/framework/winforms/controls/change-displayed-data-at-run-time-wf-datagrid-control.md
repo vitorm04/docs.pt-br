@@ -1,5 +1,5 @@
 ---
-title: Como alterar dados exibidos no tempo de execução no controle DataGrid dos Windows Forms
+title: 'Como: Alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 1059f774ae8d2c203d7a4f5c02c597b4686304f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc0fe47d728a196de81f7bf099e3a25ac2bb9211
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605559"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Como alterar dados exibidos no tempo de execução no controle DataGrid dos Windows Forms
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Como: Alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Depois de ter criado uma Windows Forms <xref:System.Windows.Forms.DataGrid> usando os recursos de tempo de design, você também poderá alterar dinamicamente os elementos do <xref:System.Data.DataSet> objeto da grade em tempo de execução. Isso pode incluir as alterações para qualquer um dos valores individuais da tabela ou alterar a fonte de dados está vinculado a <xref:System.Windows.Forms.DataGrid> controle. Alterações em valores individuais são feitas por meio de <xref:System.Data.DataSet> do objeto, não o <xref:System.Windows.Forms.DataGrid> controle.  
+ Depois de criar um Windows Forms <xref:System.Windows.Forms.DataGrid> usando os recursos de tempo de design, você também poderá alterar dinamicamente os elementos do <xref:System.Data.DataSet> objeto da grade em tempo de execução. Isso pode incluir alterações em valores individuais da tabela ou alterar a fonte de dados está vinculado a <xref:System.Windows.Forms.DataGrid> controle. Alterações em valores individuais são feitas por meio de <xref:System.Data.DataSet> do objeto, não o <xref:System.Windows.Forms.DataGrid> controle.  
   
 ### <a name="to-change-data-programmatically"></a>Alterar dados com programação  
   
-1.  Especifique a tabela desejada a partir de <xref:System.Data.DataSet> desejados de linha e campo da tabela e defina a célula como o novo valor e objeto.  
+1.  Especifique a tabela desejada do <xref:System.Data.DataSet> objeto e o estado desejado de linhas e de campo da tabela e defina a célula igual para o novo valor.  
   
     > [!NOTE]
-    >  Para especificar a primeira tabela do <xref:System.Data.DataSet> ou a primeira linha da tabela, use 0.  
+    >  Para especificar o primeiro índice da <xref:System.Data.DataSet> ou a primeira linha da tabela, use 0.  
   
-     O exemplo a seguir mostra como alterar a segunda entrada da primeira linha da primeira tabela de um conjunto de dados clicando em `Button1`. O <xref:System.Data.DataSet> (`ds`) e tabelas (`0` e `1`) foram criadas anteriormente.  
+     O exemplo a seguir mostra como alterar a segunda entrada da primeira linha da primeira tabela de um conjunto de dados, clicando em `Button1`. O <xref:System.Data.DataSet> (`ds`) e tabelas (`0` e `1`) foram criados anteriormente.  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -53,7 +53,7 @@ ms.locfileid: "33526908"
        }  
     ```  
   
-     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
+     (Visual c#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -64,13 +64,13 @@ ms.locfileid: "33526908"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     No tempo, você pode usar de execução de <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método para associar o <xref:System.Windows.Forms.DataGrid> controle a uma fonte de dados diferente. Por exemplo, você pode ter vários controles de dados [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], cada um conectado a um banco de dados diferente.  
+     No tempo, você pode usar de execução de <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método para associar o <xref:System.Windows.Forms.DataGrid> controle a uma fonte de dados diferentes. Por exemplo, você pode ter vários controles de dados [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], cada um conectado a um banco de dados diferente.  
   
 ### <a name="to-change-the-datasource-programmatically"></a>Alterar o DataSource com programação  
   
-1.  Definir o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método com o nome da fonte de dados e da tabela que você deseja associar a.  
+1.  Defina o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método com o nome da fonte de dados e tabela que você deseja associar.  
   
-     O exemplo a seguir mostra como alterar a fonte de data usando o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método para um [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controle de dados (adoPubsAuthors) que está conectada à tabela de autores no banco de dados Pubs.  
+     O exemplo a seguir mostra como alterar a fonte de data usando o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método para um [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controle de dados (adoPubsAuthors) conectado à tabela autores no banco de dados Pubs.  
   
     ```vb  
     Private Sub ResetSource()  
@@ -93,8 +93,8 @@ ms.locfileid: "33526908"
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [DataSets ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
- [Como excluir ou ocultar colunas no controle DataGrid do Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [Como adicionar tabelas e colunas ao controle DataGrid do Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [Como associar o controle DataGrid dos Windows Forms a uma fonte de dados](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a>Consulte também
+- [DataSets ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)
+- [Como: Excluir ou ocultar colunas no controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como: Adicionar tabelas e colunas para o controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

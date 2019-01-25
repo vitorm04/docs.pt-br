@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe360a50038f49fdea1528c8c520dc893b258057
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2a283915f8326a19c7d2c9b45851b9879fe0ec17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634981"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>Método ISymUnmanagedVariable::GetAddressField2
 Obtém o segundo campo de endereço para essa variável. Seu significado depende do tipo de endereço.  
@@ -44,8 +44,8 @@ HRESULT GetAddressField2(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- [Método GetAddressField1](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)  
- [Método GetAddressField3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)  
- [Método GetAddressKind](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [Método GetAddressField1](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
+- [Método GetAddressField3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)
+- [Método GetAddressKind](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)

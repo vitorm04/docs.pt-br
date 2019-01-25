@@ -2,12 +2,12 @@
 title: Bases de dados de exemplo de transferência (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: a98dd4e3d2ff113d3a5374d97fe30cec9524c095
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0fc3e8d447f82c89b3b558d95b45120db0a876d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573319"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Bases de dados de exemplo de transferência (LINQ to DataSet)
 Os exemplos e explicações passo a passo no [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentação usam o banco de dados de exemplo AdventureWorks. Você pode baixar o produto gratuitamente do site de download da Microsoft. Os exemplos e explicações passo a passo no [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentação use SQL Server como o armazenamento de dados. O SQL Server Express edition, que está disponível sem carregamento, também pode ser usada como o armazenamento de dados em vez do SQL Server.  
@@ -73,5 +73,5 @@ Os exemplos e explicações passo a passo no [!INCLUDE[linq_dataset](../../../..
   
 3.  Siga as instruções de instalação no site.  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

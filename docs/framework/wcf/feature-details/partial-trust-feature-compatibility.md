@@ -2,12 +2,12 @@
 title: Compatibilidade da funcionalidade de confiança parcial
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564715"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidade da funcionalidade de confiança parcial
 Windows Communication Foundation (WCF) oferece suporte a um subconjunto limitado da funcionalidade quando executados em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados em torno de um conjunto específico de cenários, conforme descrito na [suporte para cenários de implantação](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tópico.  
@@ -92,7 +92,7 @@ Windows Communication Foundation (WCF) oferece suporte a um subconjunto limitado
   
 -   Verifique se o aplicativo é implantado como um aplicativo totalmente confiável que os usuários não podem modificar as configurações de segurança de acesso ao código para executar o aplicativo em um ambiente de confiança parcial. Se eles podem fazer isso, o comportamento não é executado e nenhuma exceção é lançada. Para garantir isso, consulte a **levelfinal** usando a opção [Caspol.exe (ferramenta de política de segurança de acesso do código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- Para obter um exemplo de um comportamento comum, consulte [como: bloqueio para baixo os pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Para obter um exemplo de um comportamento comum, consulte [como: Bloquear pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configuração  
  Com uma exceção, o código parcialmente confiável só pode carregar a seções de configuração do WCF no local `app.config` arquivo. Para carregar as seções de configuração do WCF que fazem referência a seções do WCF em Machine. config ou em uma raiz do arquivo Web. config requer ConfigurationPermission(Unrestricted). Sem essa permissão, referências a WCF seções de configuração (comportamentos, associações) fora os resultados do arquivo de configuração local em uma exceção quando a configuração é carregada.  
@@ -159,10 +159,10 @@ Windows Communication Foundation (WCF) oferece suporte a um subconjunto limitado
 ## <a name="unlisted-features"></a>Recursos não listados  
  A melhor maneira de descobrir que uma parte das informações ou ação não está disponível quando em execução em um ambiente parcialmente confiável é tentar acessar o recurso ou executar a ação dentro de um `try` bloco e, em seguida, `catch` a falha. Para evitar a saturação os arquivos de rastreamento com erros duplicados, WCF desabilita o rastreamento do recurso ou ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso a recursos com falha, a primeira vez que uma tentativa de acessar o recurso ou executar a ação.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [Cenários de implantação com suporte](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [Práticas recomendadas de confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [Cenários de implantação com suporte](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
+- [Práticas recomendadas de confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

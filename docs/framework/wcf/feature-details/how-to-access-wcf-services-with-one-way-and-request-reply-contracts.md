@@ -1,20 +1,20 @@
 ---
-title: Como acessar os serviços do WCF com contratos de resposta/solicitação e unidirecionais
+title: 'Como: Acessar os serviços WCF com unidirecional e contratos de solicitação-resposta'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639154"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Como acessar os serviços do WCF com contratos de resposta/solicitação e unidirecionais
-Os procedimentos a seguir descrevem como para acessar um serviço do Windows Communication Foundation (WCF) que define um contrato unidirecional e um contrato de solicitação-resposta e que não usa o padrão de comunicação duplex.  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Como: Acessar os serviços WCF com unidirecional e contratos de solicitação-resposta
+Os procedimentos a seguir descrevem como acessar um serviço do Windows Communication Foundation (WCF) que define um contrato unidirecional e um contrato de solicitação-resposta e que não usa o padrão de comunicação duplex.  
   
 ### <a name="to-define-the-service"></a>Para definir o serviço  
   
-1.  Declare o contrato de serviço. As operações que devem ser unidirecional devem ter `IsOneWay` definida como `true` dentro de <xref:System.ServiceModel.OperationContractAttribute>. O código a seguir declara a `IOneWayCalculator` contrato com operações unidirecionais para `Add`, `Subtract`, `Multiply`, e `Divide`. Ele também define uma operação de resposta de solicitação chamada `SayHello`.  
+1.  Declare o contrato de serviço. As operações que devem ser unidirecional devem ter `IsOneWay` definido como `true` dentro de <xref:System.ServiceModel.OperationContractAttribute>. O código a seguir declara a `IOneWayCalculator` contrato que tem operações unidirecionais para `Add`, `Subtract`, `Multiply`, e `Divide`. Ele também define uma operação de resposta de solicitação chamada `SayHello`.  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ Os procedimentos a seguir descrevem como para acessar um serviço do Windows Com
     }  
     ```  
   
-2.  Implemente o contrato de serviço. O código a seguir implementa a `IOnewayCalculator` interface.  
+2.  Implemente o contrato de serviço. O código a seguir implementa o `IOnewayCalculator` interface.  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -109,7 +109,7 @@ Os procedimentos a seguir descrevem como para acessar um serviço do Windows Com
   
 ### <a name="to-access-the-service"></a>Para acessar o serviço  
   
-1.  Execute o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) usando o endereço de ponto de extremidade de troca de metadados para criar a classe de cliente para o serviço usando a seguinte linha de comando: `Svcutil http://localhost:8000/Service` o [ServiceModel Ferramenta de utilitário de metadados (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) gera um conjunto de interfaces e classes, conforme mostrado no código de exemplo a seguir.  
+1.  Execute o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) usando o endereço de ponto de extremidade de troca de metadados para criar a classe de cliente para o serviço usando a seguinte linha de comando: `Svcutil http://localhost:8000/Service` O [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) gera um conjunto de interfaces e classes, conforme mostrado no código de exemplo a seguir.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -194,7 +194,7 @@ Os procedimentos a seguir descrevem como para acessar um serviço do Windows Com
     }  
     ```  
   
-     Observe o `IOneWayCalculator` interface as operações de serviço unidirecional com o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> atributo definido como `true` e a operação de serviço de solicitação-resposta tem o atributo definido como o valor padrão, `false`. Observe também o `OneWayCalculatorClient` classe. Esta é a classe que você usará para chamar o serviço.  
+     Observe na `IOneWayCalculator` interface as operações de serviço unidirecional com o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> atributo definido como `true` e a operação de serviço de solicitação-resposta tem o atributo definido como o valor padrão, `false`. Observe também o `OneWayCalculatorClient` classe. Esta é a classe que você usará para chamar o serviço.  
   
 2.  Crie o objeto de cliente.  
   
@@ -239,7 +239,7 @@ Os procedimentos a seguir descrevem como para acessar um serviço do Windows Com
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  Feche o cliente para fechar conexões e limpar os recursos.  
+4.  Feche o cliente para fechar as conexões e limpar os recursos.  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
@@ -400,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços unidirecionais](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>Consulte também
+- [Serviços unidirecionais](../../../../docs/framework/wcf/feature-details/one-way-services.md)

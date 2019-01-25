@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5d58a90901b7d7cb80ea7f25401b857b4d4875e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7e6d3f4a1c77e8b5070086e871d4d08fcf138f6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696913"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>Método ICLRErrorReportingManager::BeginCustomDump
-Especifica a configuração de despejos de pilha personalizado para o relatório de erros.  
+Especifica a configuração de despejos de heap personalizado para o relatório de erros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +40,13 @@ HRESULT BeginCustomDump (
   
 #### <a name="parameters"></a>Parâmetros  
  `dwFlavor`  
- [in] Um [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) valor que indica o tipo de despejo de pilha no qual criar o despejo de pilha personalizado.  
+ [in] Um [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) valor que indica o tipo de despejo de pilha no qual criar o despejo de heap personalizado.  
   
  `dwNumItems`  
  [in] O comprimento do `items` matriz. Se `dwFlavor` não é DUMP_FLAVOR_Mini, `dwNumItems` deve ser zero.  
   
  `items`  
- [in] Uma matriz de [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) instâncias, especificando os itens a serem adicionados para o minidespejo. Se `dwFlavor` não é DUMP_FLAVOR_Mini, `items` deve ser nulo.  
+ [in] Uma matriz de [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) instâncias, especificando os itens a serem adicionados ao miniarquivo de despejo. Se `dwFlavor` não é DUMP_FLAVOR_Mini, `items` deve ser nulo.  
   
  `dwReserved`  
  [in] Reservado para uso futuro.  
@@ -56,28 +56,28 @@ HRESULT BeginCustomDump (
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O método é retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
-|HOST_E_TIMEOUT|A chamada foi atingido.|  
-|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado durante um thread bloqueado ou fibra estava aguardando nele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
+|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O `BeginCustomDump` método define a configuração de despejo de pilha personalizado. O [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) método limpa a configuração de despejo de pilha personalizado e libera qualquer estado associado. Ele deve ser chamado depois que o despejo de pilha personalizado for concluído.  
+ O `BeginCustomDump` método define a configuração de despejo de heap personalizado. O [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) método limpa a configuração de despejo de heap personalizado e libera qualquer estado associado. Ele deve ser chamado depois que o despejo de heap personalizado for concluído.  
   
 > [!IMPORTANT]
->  Falha ao chamar `EndCustomDump` faz com que a memória vazem.  
+>  Falha ao chamar `EndCustomDump` faz com que a memória de vazar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Estrutura CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
- [Enumeração ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)  
- [Interface ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Estrutura CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)
+- [Enumeração ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)
+- [Interface ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83f6190872ecf4435688f3b7c82a61f5f15d9f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744187"
 ---
 # <a name="assemblymetadata-structure"></a>Estrutura ASSEMBLYMETADATA
-Contém informações sobre o assembly referenciado, inclusive sua versão e seu nível de suporte para localidades, processadores e sistemas operacionais.  
+Contém informações sobre o assembly referenciado, inclusive sua versão e seu nível de suporte para as localidades, processadores e sistemas operacionais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,27 +47,27 @@ typedef struct {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`usMajorVersion`|O número de versão principal do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usMajorVersion` estão configurados, a versão principal não for especificada.|  
-|`usMinorVersion`|O número de versão secundária do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usMinorVersion` estão configurados, a versão secundária não está especificada.|  
-|`usBuildNumber`|O número de compilação do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usBuildNumber` estão configurados, o número de compilação não é especificado.|  
-|`usRevisionNumber`|O número de revisão do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usRevisionNumber` estão configurados, o número de revisão não for especificado.|  
-|`szLocale`|Uma lista de nomes de localidades em conformidade com a especificação RFC1766, separada por ponto e vírgula, especificando as localidades com suporte pelo assembly referenciado. Um valor nulo indica independência de localidade. **Observação:** no .NET Framework versão 1.0 não é possível especificar mais de uma localidade.|  
-|`cbLocale`|O tamanho em caracteres largos de `szLocale`.|  
-|`rdwProcessor`|Uma matriz de identificadores, conforme definido em Winnt. h, para os tipos de processador que são suportados pelo assembly referenciado. Um valor NULL indica independência de processador.|  
-|`ulProcessor`|O comprimento do `rdwProcessor` matriz.|  
-|`rOS`|Uma matriz de [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instâncias especificando os sistemas operacionais que têm suporte para o assembly referenciado. Um valor NULL indica independência de sistema operacional.|  
-|`ulOS`|O comprimento do `rOS` matriz.|  
+|`usMajorVersion`|O número de versão principal do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usMajorVersion` forem definidos, a versão principal não for especificada.|  
+|`usMinorVersion`|O número de versão secundária do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usMinorVersion` forem definidos, a versão secundária não for especificada.|  
+|`usBuildNumber`|O número de build do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usBuildNumber` forem definidos, o número de build não for especificado.|  
+|`usRevisionNumber`|O número de revisão do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usRevisionNumber` forem definidos, o número de revisão não for especificado.|  
+|`szLocale`|Uma lista de nomes de localidades em conformidade com a especificação RFC1766, separada por ponto e vírgula, especificando as localidades com suporte no assembly referenciado. Um valor nulo indica a independência de localidade. **Observação:**  No .NET Framework versão 1.0 não é possível especificar mais de uma localidade.|  
+|`cbLocale`|O tamanho em caracteres largos da `szLocale`.|  
+|`rdwProcessor`|Uma matriz de identificadores, conforme definido em Winnt. h, para os tipos de processador que são compatíveis com o assembly referenciado. Um valor NULL indica a independência do processador.|  
+|`ulProcessor`|O comprimento da matriz `rdwProcessor`.|  
+|`rOS`|Uma matriz de [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instâncias especificando os sistemas operacionais que são compatíveis com o assembly referenciado. Um valor NULL indica a independência do sistema operacional.|  
+|`ulOS`|O comprimento da matriz `rOS`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [Estrutura OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)
+## <a name="see-also"></a>Consulte também
+- [Estruturas de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Estrutura OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

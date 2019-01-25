@@ -2,18 +2,18 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: a376f1eaa7c8790cf2174335749ed3001b403967
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 199a5d820a80565ccdfa2cb11fe749d63bd65087
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644254"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 Representa uma seção de configuração para definir um conjunto padrão de mapeamento de protocolo entre esquemas de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e associações do WCF. Durante a criação de pontos de extremidade padrão em tempo de execução, o Windows Communication Foundation (WCF) analisa os mapeamentos configurados e decide em qual associação a ser usado para um determinado endereço de base.  
   
-[**\<System. ServiceModel >**](system-servicemodel.md)  
-&nbsp;&nbsp;**\<protocolMapping >**  
+[**\<system.serviceModel>**](system-servicemodel.md)  
+&nbsp;&nbsp;**\<protocolMapping>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ Representa uma seção de configuração para definir um conjunto padrão de map
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Filtros >](filters-of-routing.md)|Contém um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e uma associação do WCF.|  
+|[\<filters>](filters-of-routing.md)|Contém um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e uma associação do WCF.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -59,6 +59,6 @@ Representa uma seção de configuração para definir um conjunto padrão de map
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

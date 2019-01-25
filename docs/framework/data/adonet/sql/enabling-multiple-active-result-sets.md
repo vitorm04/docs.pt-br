@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 70e589fcff241a664ef470dfeb746412cde6b515
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570194"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitando vários conjuntos de resultados ativos
 O Multiple Active Result Sets (MARS) é um recurso que funciona com o SQL Server para permitir a execução de vários lotes em uma única conexão. Quando MARS está ativado para uso com o SQL Server, cada objeto de comando usado adiciona uma sessão à conexão.  
@@ -111,6 +111,6 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="detecting-mars-support"></a>Detectando o suporte de MARS  
  Um aplicativo pode verificar o suporte de MARS lendo o valor `SqlConnection.ServerVersion`. O número principal deve ser 9 para o SQL Server 2005 e 10 para o SQL Server 2008.  
   
-## <a name="see-also"></a>Consulte também  
- [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

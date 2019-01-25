@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: b370e92aaab88a7f0d49f1de60b50fa6bbf1e161
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39323008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565898"
 ---
 # <a name="function-statement-visual-basic"></a>Instrução Function (Visual Basic)
 Declara o nome, parâmetros e código que definem um `Function` procedimento.  
@@ -67,9 +67,9 @@ End Function
   
     -   [Privado](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    -   [Friend protegido](../../language-reference/modifiers/protected-friend.md)
+    -   [Amigo Protegido](../../language-reference/modifiers/protected-friend.md)
 
-    - [Privado protegido](../../language-reference/modifiers/private-protected.md)  
+    - [Particular Protegido](../../language-reference/modifiers/private-protected.md)  
   
      Ver [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -254,15 +254,15 @@ End Function
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Sub](sub-statement.md)  
- [Procedimentos de Função](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [Lista de Parâmetros](parameter-list.md)  
- [Instrução Dim](dim-statement.md)  
- [Instrução Call](call-statement.md)  
- [Of](of-clause.md)  
- [Matrizes de Parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Como usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Solução de problemas de Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Expressão de Função](../../../visual-basic/language-reference/operators/function-expression.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Sub](sub-statement.md)
+- [Procedimentos de Função](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
+- [Lista de Parâmetros](parameter-list.md)
+- [Instrução Dim](dim-statement.md)
+- [Instrução Call](call-statement.md)
+- [Of](of-clause.md)
+- [Matrizes de Parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [Como: usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Solução de problemas de Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Expressão de Função](../../../visual-basic/language-reference/operators/function-expression.md)

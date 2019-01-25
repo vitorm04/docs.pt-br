@@ -2,12 +2,12 @@
 title: Serviço AJAX sem configuração
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 60b61a26574764f0f2ea4ca834c5ba92b49a043d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f722eac27fadbd772b85a638c3c9171c2783a8b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582168"
 ---
 # <a name="ajax-service-without-configuration"></a>Serviço AJAX sem configuração
 Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para criar um serviço básico de ASP.NET Asynchronous JavaScript and XML (AJAX) (um serviço que você pode acessar por meio de código JavaScript de um cliente de navegador da Web) sem usar qualquer configuração Configurações. O serviço usa a sintaxe especial no arquivo. svc para habilitar automaticamente um ponto de extremidade do AJAX.  
@@ -50,5 +50,5 @@ Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para c
 > [!NOTE]
 >  Ao executar este exemplo, certifique-se de que a autenticação anônima e autenticação do Windows não estão habilitados simultaneamente para a pasta ServiceModelSamples no IIS. Se esse for o caso, desabilite a autenticação do Windows. Depois de executar o exemplo, habilitar a autenticação do Windows e execute "iisreset".  
   
-## <a name="see-also"></a>Consulte também  
- [Serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+## <a name="see-also"></a>Consulte também
+- [Serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

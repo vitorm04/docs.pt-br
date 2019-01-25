@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d62b9be1bef16014e2870c15a232bb46d4daf10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583724"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>Método IMetaDataImport::GetMemberRefProps
 Obtém os metadados associados ao membro referenciado pelo token especificado.  
@@ -43,7 +43,7 @@ HRESULT GetMemberRefProps (
   
 #### <a name="parameters"></a>Parâmetros  
  `mr`  
- [in] O token de MemberRef para retornar os metadados associados.  
+ [in] O token de MemberRef para retornar os metadados associados para.  
   
  `ptk`  
  [out] Um token de TypeDef ou TypeRef ou TypeSpec que representa a classe que declara o membro ou um token de ModuleRef que representa a classe de módulo que declara o membro ou um MethodDef que representa o membro.  
@@ -52,26 +52,26 @@ HRESULT GetMemberRefProps (
  [out] Um buffer de cadeia de caracteres para o nome do membro.  
   
  `cchMember`  
- [in] O tamanho solicitado em caracteres largos de `szMember`.  
+ [in] O tamanho solicitado em caracteres largos da `szMember`.  
   
  `pchMember`  
- [out] O tamanho retornado em caracteres largos de `szMember`.  
+ [out] O tamanho retornado em caracteres largos da `szMember`.  
   
  `ppvSibBlob`  
- [out] Um ponteiro para a assinatura de binários de metadados para o membro.  
+ [out] Um ponteiro para a assinatura de metadados de binários para o membro.  
   
  `pbSig`  
  [out] O tamanho em bytes do `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

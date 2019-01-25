@@ -1,5 +1,5 @@
 ---
-title: 'Tempo de vida do objeto: como os objetos são criados e destruídos (Visual Basic)'
+title: 'Tempo de vida do objeto: Como os objetos são criados e destruídos (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 319d606bcd19397932c05f1d5b808f2f5d8923ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610325"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Tempo de vida do objeto: como os objetos são criados e destruídos (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Tempo de vida do objeto: Como os objetos são criados e destruídos (Visual Basic)
 Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`. Tarefas de inicialização geralmente devem ser executadas em novos objetos antes de serem usadas. Tarefas comuns de inicialização incluem abrir arquivos, conectar-se aos bancos de dados e ler os valores das chaves do registro. Visual Basic controla a inicialização de novos objetos usando procedimentos denominados *construtores* (métodos especiais que permitem o controle sobre a inicialização).  
   
  Depois que um objeto sai do escopo, ele é liberado pelo common language runtime (CLR). Visual Basic controla o lançamento dos recursos do sistema usando procedimentos denominados *destruidores*. Juntos, os construtores e os destruidores oferecem suporte à criação de bibliotecas de classe robusta e previsível.  
@@ -74,7 +74,7 @@ Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`.
   
  Quando um objeto não é mais necessário, o CLR chama o método <xref:System.Object.Finalize%2A> para esse objeto antes de liberar sua memória. O método <xref:System.Object.Finalize%2A> é denominado de `destructor` porque executa tarefas de limpeza, como salvar informações do estado, fechar arquivos e conexões ao bancos de dados e outras tarefas que devem ser executadas antes de liberar o objeto.  
   
- ![Construtores e herança 2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
+ ![Constructors Inheritance2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
   
 ## <a name="idisposable-interface"></a>Interface IDisposable  
  Instâncias de classe geralmente controlam os recursos não gerenciados pelo CLR, assim como identificadores do Windows e conexões de banco de dados. Esses recursos devem ser descartados no método `Finalize` da classe, para que eles sejam liberados quando o objeto for destruído pelo coletor de lixo. No entanto, o coletor de lixo destrói objetos somente quando o CLR exige mais memória livre. Isso significa que os recursos podem não ser liberados até muito tempo depois que o objeto sair do escopo.  
@@ -146,9 +146,9 @@ End Sub
   
  Outra diferença entre os sistemas de coleta de lixo envolve o uso de `Nothing`. Para aproveitar a contagem de referência no Visual Basic 6.0 e em versões anteriores, os programadores às vezes atribuem `Nothing` para as variáveis de objeto para liberar as referências que essas variáveis mantinham. Se a variável mantiver a última referência ao objeto, os recursos do objeto são lançados imediatamente. Em versões posteriores do Visual Basic, embora haja casos em que esse procedimento ainda é importante, executá-lo nunca faz com que o objeto referenciado libere seus recursos imediatamente. Para liberar recursos imediatamente, use o método <xref:System.IDisposable.Dispose%2A> do objeto, se disponível. A única vez em que você deve definir uma variável para `Nothing` é quando seu tempo de vida é longo em relação ao tempo que o coletor de lixo leva para detectar objetos órfãos.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IDisposable.Dispose%2A>  
- [Inicialização e término de componentes](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [Operador New](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Limpando recursos não gerenciados](../../../../standard/garbage-collection/unmanaged.md)  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.IDisposable.Dispose%2A>
+- [Inicialização e término de componentes](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)
+- [Operador New](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Limpando recursos não gerenciados](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)

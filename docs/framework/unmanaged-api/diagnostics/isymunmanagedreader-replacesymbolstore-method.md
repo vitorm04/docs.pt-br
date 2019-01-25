@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03607cf96d73e96eef63fe62b86b50be02f34421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f06c416d3443b350a172fab1a93a5d72bf40c197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740353"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>Método ISymUnmanagedReader::ReplaceSymbolStore
-Substitui o repositório de símbolos existente por um repositório de símbolos delta. Esse método é semelhante do [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) método, exceto pelo fato do determinado delta atua como uma substituição completa em vez de uma atualização.  
+Substitui o repositório de símbolos existente por um repositório de símbolos delta. Esse método é semelhante para o [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) método, exceto pelo fato do delta de determinado atua como uma substituição completa em vez de uma atualização.  
   
 > [!NOTE]
->  É necessário especificar apenas uma da `filename` ou `pIStream` parâmetros, não ambos. Se `filename` for especificado, o armazenamento de símbolo será atualizado com os símbolos no arquivo. Se `pIStream` for especificado, o repositório será atualizado com os dados a partir de <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+>  Você precisa especificar apenas um dos `filename` ou `pIStream` parâmetros, não ambos. Se `filename` for especificado, o repositório de símbolos será atualizado com os símbolos no arquivo. Se `pIStream` for especificado, o repositório será atualizado com os dados a partir de <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ HRESULT ReplaceSymbolStore (
   
 #### <a name="parameters"></a>Parâmetros  
  `filename`  
- [in] O nome do arquivo que contém o armazenamento de símbolo.  
+ [in] O nome do arquivo que contém o repositório de símbolos.  
   
  `pIStream`  
  [in] O fluxo de arquivos, usado como uma alternativa para o `filename` parâmetro.  
@@ -51,5 +51,5 @@ HRESULT ReplaceSymbolStore (
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

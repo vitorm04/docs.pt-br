@@ -2,12 +2,12 @@
 title: Exemplo de serviço de AJAX utilizando tipos complexos
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: ef44dc0eddb165c93b912da4fed994074668a250
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 338d7105180df94f85647da413fc682451b7c9d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676660"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Exemplo de serviço de AJAX utilizando tipos complexos
 Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para criar um serviço ASP.NET Asynchronous JavaScript and XML (AJAX) que cria instâncias de tipos complexos e envia-os entre o cliente como notação JSON (JavaScript Object) e o serviço. Você pode acessar um serviço AJAX usando código JavaScript de um cliente de navegador da Web. Este exemplo se baseia a [serviço de AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo.  
@@ -66,5 +66,5 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   
-## <a name="see-also"></a>Consulte também  
- [Serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+## <a name="see-also"></a>Consulte também
+- [Serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

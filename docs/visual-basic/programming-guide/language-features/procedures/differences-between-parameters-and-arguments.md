@@ -11,40 +11,40 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: a5075c218371b754ac883b97475ab941811966b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec7c92975bc056fd740033b602b15cd1611c44d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694029"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Diferenças entre parâmetros e argumentos (Visual Basic)
-Na maioria dos casos, um procedimento deve ter algumas informações sobre as circunstâncias em que ele foi chamado. Um procedimento que executa tarefas repetidas ou compartilhadas usa informações diferentes para cada chamada. Essas informações consistem em variáveis, constantes e expressões que você passa para o procedimento quando chamá-lo.  
+Na maioria dos casos, um procedimento deve ter algumas informações sobre as circunstâncias em que ele tiver sido chamado. Um procedimento que executa tarefas repetidas ou compartilhadas usa informações diferentes para cada chamada. Essas informações consistem em variáveis, constantes e expressões que você passa para o procedimento quando você chamá-lo.  
   
- Para comunicar essa informação para o procedimento, o procedimento define um *parâmetro*, e o código de chamada passa um *argumento* para esse parâmetro. Você pode considerar o parâmetro como um espaço de estacionamento e o argumento como um automóvel. Assim como automóveis diferentes podem estacionar em um espaço de estacionamento em momentos diferentes, o código de chamada pode passar um argumento diferente para o mesmo parâmetro toda vez que ele chama o procedimento.  
+ Para se comunicar essas informações para o procedimento, o procedimento define um *parâmetro*, e o código de chamada passa um *argumento* para esse parâmetro. Você pode considerar o parâmetro como um espaço de estacionamento e o argumento como um automóvel. Assim como automóveis diferentes podem deixar um espaço de estacionamento em momentos diferentes, o código de chamada pode passar um argumento diferente para o mesmo parâmetro toda vez que ele chama o procedimento.  
   
 ## <a name="parameters"></a>Parâmetros  
- Um *parâmetro* representa um valor que o procedimento espera passar quando você chamá-lo. Declaração do procedimento define seus parâmetros.  
+ Um *parâmetro* representa um valor que o procedimento espera que você passe quando você chamá-lo. Declaração do procedimento define seus parâmetros.  
   
- Quando você define uma `Function` ou `Sub` procedimento, você especificar um *lista de parâmetros* entre parênteses imediatamente após o nome do procedimento. Para cada parâmetro, você especificar um nome, um tipo de dados e um mecanismo de passagem ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Você também pode indicar que um parâmetro é opcional. Isso significa que o código de chamada não precisa passar um valor para ele.  
+ Quando você define uma `Function` ou `Sub` procedimento, você especifica um *lista de parâmetros* entre parênteses imediatamente após o nome do procedimento. Para cada parâmetro, você especificar um nome, um tipo de dados e um mecanismo de passagem ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Você também pode indicar que um parâmetro é opcional. Isso significa que o código de chamada não precisa passar um valor para ele.  
   
- O nome de cada parâmetro serve como um *variável local* no procedimento. Você usar o nome do parâmetro da mesma maneira que você usar qualquer outra variável.  
+ O nome de cada parâmetro serve como uma *variável local* no procedimento. Você usar o nome do parâmetro da mesma maneira que você usar qualquer outra variável.  
   
 ## <a name="arguments"></a>Arguments  
- Um *argumento* representa o valor que você passa para um parâmetro de procedimento quando você chamar o procedimento. O código de chamada fornece os argumentos quando ele chama o procedimento.  
+ Uma *argumento* representa o valor que você passa para um parâmetro de procedimento quando você chama o procedimento. O código de chamada fornece os argumentos quando ele chama o procedimento.  
   
  Quando você chama um `Function` ou `Sub` procedimento, você incluir um *lista de argumentos* entre parênteses imediatamente após o nome do procedimento. Cada argumento corresponde ao parâmetro na mesma posição na lista.  
   
- Em contraste com a definição de parâmetro, os argumentos não têm nomes. Cada argumento é uma expressão, que pode conter zero ou mais variáveis, constantes e literais. O tipo de dados da expressão avaliada normalmente deve corresponder ao tipo de dados definido para o parâmetro correspondente e, em qualquer caso deve ser conversível para o tipo de parâmetro.  
+ Em contraste com a definição de parâmetro, argumentos não têm nomes. Cada argumento é uma expressão, que pode conter zero ou mais variáveis, constantes e literais. O tipo de dados da expressão avaliada normalmente deve corresponder ao tipo de dados definido para o parâmetro correspondente e, em qualquer caso deve ser conversível para o tipo de parâmetro.  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos](./index.md)  
- [Subprocedimentos](./sub-procedures.md)  
- [Procedimentos de Função](./function-procedures.md)  
- [Procedimentos de Propriedade](./property-procedures.md)  
- [Procedimentos de Operador](./operator-procedures.md)  
- [Como definir um parâmetro para um procedimento](./how-to-define-a-parameter-for-a-procedure.md)  
- [Como passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)  
- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)  
- [Procedimentos Recursivos](./recursive-procedures.md)  
- [Sobrecarga de Procedimento](./procedure-overloading.md)
+## <a name="see-also"></a>Consulte também
+- [Procedimentos](./index.md)
+- [Subprocedimentos](./sub-procedures.md)
+- [Procedimentos de Função](./function-procedures.md)
+- [Procedimentos de Propriedade](./property-procedures.md)
+- [Procedimentos de Operador](./operator-procedures.md)
+- [Como: Definir um parâmetro para um procedimento](./how-to-define-a-parameter-for-a-procedure.md)
+- [Como: Passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)
+- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)
+- [Procedimentos Recursivos](./recursive-procedures.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)

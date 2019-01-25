@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c9080a588b96c5b89c280a0fb407952bd580f26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5484f8bd5515d3a4a3cd08110cc5d48c4356a9f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590140"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>Método ICLRDataTarget::ReadVirtual
-Lê dados do endereço de memória virtual especificado no buffer especificado.  
+Lê dados do endereço da memória virtual especificado no buffer especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,13 +53,13 @@ HRESULT ReadVirtual (
  [out] Um ponteiro para o número de bytes retornados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

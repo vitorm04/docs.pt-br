@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651598"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 Para se conectar a um servidor de banco de dados, existem, normalmente, várias etapas demoradas. Um canal físico, como um soquete ou um pipe nomeado, deve ser estabelecido, o handshake inicial com o servidor deve ocorrer, informações de cadeia de conexão devem ser analisadas, a conexão deve ser autenticada pelo servidor, verificações devem ser realizadas para a inscrição na transação atual e assim por diante.  
@@ -129,8 +129,8 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="application-role-alternatives"></a>Alternativas a funções de aplicativo  
  Recomendamos que você aproveite todas as vantagens dos mecanismos de segurança que podem ser usados no lugar de funções de aplicativo. Para obter mais informações, consulte [criando funções de aplicativo no SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Pooling de Conexão](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [SQL Server and ADO.NET](../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
- [Contadores de desempenho](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Pooling de Conexão](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [SQL Server and ADO.NET](../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+- [Contadores de desempenho](../../../../docs/framework/data/adonet/performance-counters.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

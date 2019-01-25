@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9d64ee6942d9397ceb45b812ef3c26179fac9b2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540293"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW no CLR
 Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para Windows). Cada evento tem uma palavra-chave e um nível associados, que são descritos no tópico [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). O CLR tem dois provedores para os eventos:  
@@ -61,10 +61,10 @@ Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para
  [Evento de pilha](../../../docs/framework/performance/stack-etw-event.md)  
  Captura informações que são usadas com outros eventos para gerar rastreamentos de pilha depois que um evento é acionado.  
   
-## <a name="see-also"></a>Consulte também  
- [Melhorar a depuração e ajuste de desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkId=179696)  
- [Blog de desempenho do Windows](https://go.microsoft.com/fwlink/?LinkId=179509)  
- [Controlando o log no .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
- [Provedores CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)  
- [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
- [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Consulte também
+- [Melhorar a depuração e ajuste de desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkId=179696)
+- [Blog de desempenho do Windows](https://go.microsoft.com/fwlink/?LinkId=179509)
+- [Controlando o log no .NET Framework](../../../docs/framework/performance/controlling-logging.md)
+- [Provedores CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)
+- [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
+- [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

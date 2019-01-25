@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78fddd65099d5f6bfc4796d5fa353a92171bda5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530996"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Extensão de marcação ComponentResourceKey
 Define e referencia chaves para recursos carregados de assemblies externos. Isso permite que um recurso de pesquisa especifique um tipo de destino em um assembly, em vez de um dicionário de recurso explícito em um assembly ou em uma classe.  
@@ -58,25 +58,25 @@ Define e referencia chaves para recursos carregados de assemblies externos. Isso
   
  Para fazer referência a recursos de componente que vêm de temas, geralmente é recomendável usar `{DynamicResource}`, em vez de `{StaticResource}`. Isso é mostrado em usos. `{DynamicResource}` é recomendado porque o tema em si pode ser alterado pelo usuário. Se você desejar que o recurso do componente que mais se aproxima da intenção do autor do controle para dar suporte a um tema, habilite a referência de recurso do componente para que seja dinâmica também.  
   
- O <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifica um tipo que existe no assembly de destino onde o recurso é definido. Um `ComponentResourceKey` pode ser definido e usado independentemente de saber exatamente onde o <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> é definido, mas a hora deve resolver o tipo por meio de assemblies referenciados.  
+ O <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifica um tipo que existe no assembly de destino onde o recurso é definido. Um `ComponentResourceKey` pode ser definido e usado independentemente de saber exatamente onde o <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> é definido, mas, eventualmente, deve resolver o tipo por meio de assemblies referenciados.  
   
- Um uso comum para <xref:System.Windows.ComponentResourceKey> é definir chaves que são expostas como membros de uma classe. Para este uso, você deve usar o <xref:System.Windows.ComponentResourceKey> construtor de classe, não a extensão de marcação. Para obter mais informações, consulte <xref:System.Windows.ComponentResourceKey>, ou a seção "Definindo e referenciando chaves para recursos de tema" do tópico [visão geral de criação do controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Um uso comum para <xref:System.Windows.ComponentResourceKey> é definir chaves que são expostas como membros de uma classe. Para este uso, você usa o <xref:System.Windows.ComponentResourceKey> construtor de classe, não a extensão de marcação. Para obter mais informações, consulte <xref:System.Windows.ComponentResourceKey>, ou a seção "Definindo e referenciando chaves para recursos de tema" do tópico [visão geral da criação de controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
  Para estabelecer chaves e referenciar recursos de chave, sintaxe do atributo normalmente é usada para a extensão de marcação `ComponentResourceKey`.  
   
- A sintaxe compacta mostrada depende do <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> assinatura de construtor e o uso de parâmetro posicional de uma extensão de marcação. A ordem na qual o `targetTypeName` e o `targetID` são apresentados é importante. A sintaxe detalhada depende de <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> construtor padrão e, em seguida, define o <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> de maneira análoga à sintaxe de atributo verdadeira em um elemento de objeto. Na sintaxe detalhada, a ordem na qual as propriedades são definidas não é importante. O relacionamento e os mecanismos dessas duas alternativas (compacta e detalhada) é descrito em mais detalhes no tópico [Extensões de marcação e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ A sintaxe compacta mostrada depende de <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> assinatura de construtor e o uso do parâmetro posicional de uma extensão de marcação. A ordem na qual o `targetTypeName` e o `targetID` são apresentados é importante. A sintaxe detalhada depende de <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> construtor padrão e, em seguida, define o <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> de forma análoga à sintaxe de atributo verdadeira em um elemento de objeto. Na sintaxe detalhada, a ordem na qual as propriedades são definidas não é importante. O relacionamento e os mecanismos dessas duas alternativas (compacta e detalhada) é descrito em mais detalhes no tópico [Extensões de marcação e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
  Tecnicamente, o valor de `targetID` pode ser qualquer objeto, não precisa ser uma cadeia de caracteres. No entanto, o uso mais comum no WPF é alinhar o valor `targetID` com formulários que são cadeias de caracteres e o ponto em que tais cadeias são válidas na [Gramática XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
   
  `ComponentResourceKey` pode ser usado na sintaxe de elemento de objeto. Nesse caso, especificando o valor de ambas as <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> propriedades é necessário para inicializar adequadamente a extensão.  
   
- No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementação leitor, o tratamento para esta extensão de marcação é definida pelo <xref:System.Windows.ComponentResourceKey> classe.  
+ No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementação do leitor, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.ComponentResourceKey> classe.  
   
  `ComponentResourceKey` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usam os caracteres { e } na sintaxe de atributo, que é a convenção pela qual um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconhece que uma extensão de marcação deve processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.ComponentResourceKey>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Visão geral da criação de controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Extensões de marcação e XAML do WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.ComponentResourceKey>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Visão geral da criação de controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Extensões de marcação e XAML do WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

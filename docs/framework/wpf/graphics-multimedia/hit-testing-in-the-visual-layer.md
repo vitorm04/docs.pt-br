@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692409"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Teste de clique na camada visual
 Este tópico fornece uma visão geral da funcionalidade de teste de clique fornecida pela camada visual. Suporte a teste de clique permite que você determine se um valor de geometria ou de ponto está dentro do conteúdo renderizado de um <xref:System.Windows.Media.Visual>, permitindo que você implemente o comportamento de interface do usuário, como um retângulo de seleção para selecionar vários objetos.  
@@ -24,13 +24,13 @@ Este tópico fornece uma visão geral da funcionalidade de teste de clique forne
 ## <a name="hit-testing-scenarios"></a>Cenários de teste de clique  
  O <xref:System.Windows.UIElement> classe fornece o <xref:System.Windows.UIElement.InputHitTest%2A> método, que permite que você teste contra um elemento usando um determinado valor de coordenada. Em muitos casos, o <xref:System.Windows.UIElement.InputHitTest%2A> método fornece a funcionalidade desejada para implementar o teste de elementos de clique. No entanto, há várias situações em que talvez seja necessário implementar o teste de clique na camada visual.  
   
--   Testes de clique em não -<xref:System.Windows.UIElement> objetos: isso se aplica se você estiver o teste de clique não -<xref:System.Windows.UIElement> objetos, como <xref:System.Windows.Media.DrawingVisual> ou objetos gráficos.  
+-   Testes de clique em não -<xref:System.Windows.UIElement> objetos: Isso se aplicará se você estiver o teste de clique não -<xref:System.Windows.UIElement> objetos, como <xref:System.Windows.Media.DrawingVisual> ou objetos gráficos.  
   
--   Testes de clique usando uma geometria: isso se aplica se você precisa realizar teste de clique usando um objeto de geometria em vez do valor de coordenada de um ponto.  
+-   O teste de clique usando uma geometria: Isso se aplica se você precisar de teste de clique usando um objeto de geometria em vez de valores de coordenadas de um ponto.  
   
--   Testes de clique em vários objetos: isso se aplica quando você precisa realizar teste de clique em vários objetos, como objetos sobrepostos. Você pode obter resultados para todos os elementos visuais que interceptam uma geometria ou ponto e não apenas o primeiro deles.  
+-   O teste de clique em vários objetos: Isso se aplica quando você precisa para teste de clique em vários objetos, como objetos sobrepostos. Você pode obter resultados para todos os elementos visuais que interceptam uma geometria ou ponto e não apenas o primeiro deles.  
   
--   Ignorando <xref:System.Windows.UIElement> política de teste de clique: isso se aplica quando você precisa ignorar o <xref:System.Windows.UIElement> política, que leva em consideração fatores como se um elemento está desabilitado ou invisível de teste de clique.  
+-   Ignorando <xref:System.Windows.UIElement> política de teste de clique: Isso se aplica quando você precisa ignorar o <xref:System.Windows.UIElement> política, que leva em consideração fatores como se um elemento está desabilitado ou invisível de teste de clique.  
   
 > [!NOTE]
 >  Para um exemplo de código completo ilustrando o teste de clique na camada visual, consulte [Exemplo de teste de clique usando DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994) e [Exemplo de teste de clique com interoperação do Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  
@@ -138,13 +138,13 @@ Aparando uma árvore visual
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- <xref:System.Windows.Media.HitTestResult>  
- <xref:System.Windows.Media.HitTestResultCallback>  
- <xref:System.Windows.Media.HitTestFilterCallback>  
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
- [Teste de clique usando DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)  
- [Teste de clique com o exemplo de interoperação do Win32](https://go.microsoft.com/fwlink/?LinkID=159995)  
- [Teste de clique de geometria em um visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Teste de clique usando um contêiner de host Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- <xref:System.Windows.Media.HitTestResult>
+- <xref:System.Windows.Media.HitTestResultCallback>
+- <xref:System.Windows.Media.HitTestFilterCallback>
+- <xref:System.Windows.UIElement.IsHitTestVisible%2A>
+- [Teste de clique usando DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [Teste de clique com o exemplo de interoperação do Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [Teste de clique de geometria em um visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+- [Teste de clique usando um contêiner de host Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ba09991e9452a86c6b7a1cbb08a38a71ba2aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d3e10a3dbae0d1b790c0d80c9286affedaa4c8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709137"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Método ICorDebugHeapValue3::GetThreadOwningMonitorLock
-Retorna o thread gerenciado que possui o bloqueio de monitor nesse objeto.  
+Retorna o thread gerenciado que detém o bloqueio de monitor nesse objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,43 +38,43 @@ HRESULT GetThreadOwningMonitorLock (
   
 #### <a name="parameters"></a>Parâmetros  
  `ppThread`  
- [out] O thread gerenciado que possui o bloqueio de monitor nesse objeto.  
+ [out] O thread gerenciado que detém o bloqueio de monitor nesse objeto.  
   
  `pAcquisitionCount`  
- [out] O número de vezes que esse thread precisa liberar o bloqueio antes de retornar para sendo sem proprietário.  
+ [out] O número de vezes que esse thread terá de liberar o bloqueio antes de retornar ao que está sendo sem proprietário.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|S_FALSE|Nenhum thread gerenciado possui o bloqueio de monitor nesse objeto.|  
+|S_FALSE|Nenhum thread gerenciado detém o bloqueio de monitor nesse objeto.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Se um thread gerenciado possui o bloqueio de monitor nesse objeto:  
+ Se um thread gerenciado detém o bloqueio de monitor nesse objeto:  
   
 -   O método retorna S_OK.  
   
--   O objeto de thread é válido até que o thread será encerrado.  
+-   O objeto de thread é válido até que o thread seja encerrado.  
   
- Se nenhum thread gerenciado possui o bloqueio de monitor nesse objeto `ppThread` e `pAcquisitionCount` foram modificados, e o método retornará S_FALSE.  
+ Se nenhum thread gerenciado detém o bloqueio de monitor nesse objeto `ppThread` e `pAcquisitionCount` forem alterados, e o método retorna S_FALSE.  
   
- Se `ppThread` ou `pAcquisitionCount` não é um ponteiro válido, o resultado é indefinido.  
+ Se `ppThread` ou `pAcquisitionCount` não for um ponteiro válido, o resultado será indefinido.  
   
- Se ocorrer um erro, de modo que ele não pode ser determinado que, se houver, thread possui o bloqueio de monitor nesse objeto, o método retorna um HRESULT que indica falha.  
+ Se ocorrer um erro, de modo que ele não pode ser determinado que, se houver, o thread possui o bloqueio de monitor nesse objeto, o método retorna um HRESULT que indica falha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

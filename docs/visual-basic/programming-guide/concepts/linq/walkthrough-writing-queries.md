@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666573"
 ---
-# <a name="walkthrough-writing-queries-in-visual-basic"></a>Instruções passo a passo: escrevendo consultas em Visual Basic
+# <a name="walkthrough-writing-queries-in-visual-basic"></a>Passo a passo: Escrevendo consultas em Visual Basic
 Este passo a passo demonstra como você pode usar recursos de linguagem do Visual Basic para escrever [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões de consulta. O passo a passo demonstra como criar consultas em uma lista de objetos do aluno, como executar as consultas e como modificá-los. As consultas incorporam vários recursos, incluindo tipos anônimos, inferência de tipo local e inicializadores de objeto.  
   
  Depois de concluir este passo a passo, você estará pronto para passar para os exemplos e documentação para o determinado [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provedor que você está interessado. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provedores incluem [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -43,11 +43,11 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
 -   Definir um `Student` de classe e criar uma lista de instâncias da classe.  
   
     > [!IMPORTANT]
-    >  O código necessário para definir a `Student` de classe e criar a lista usada no passo a passo exemplos é fornecido no [como: criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Você pode copiá-lo a partir daí e cole-a no seu projeto. O novo código substitui o código que apareceu quando você criou o projeto.  
+    >  O código necessário para definir a `Student` de classe e criar a lista usada no passo a passo exemplos é fornecido no [como: Criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Você pode copiá-lo a partir daí e cole-a no seu projeto. O novo código substitui o código que apareceu quando você criou o projeto.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Para adicionar um novo aluno à lista de alunos  
   
--   Seguem o padrão no `getStudents` método para adicionar outra instância da `Student` classe à lista. Adicionar o aluno apresentará os inicializadores de objeto. Para obter mais informações, consulte [inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   Seguem o padrão no `getStudents` método para adicionar outra instância da `Student` classe à lista. Adicionar o aluno apresentará os inicializadores de objeto. Para obter mais informações, consulte [inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Criar uma consulta  
  Quando executada, a consulta adicionada nesta seção produz uma lista dos alunos cuja classificação acadêmica coloca-os nos dez principais. Porque a consulta seleciona completo `Student` cada vez, o tipo do resultado da consulta de objeto é `IEnumerable(Of Student)`. No entanto, o tipo de consulta normalmente não é especificado nas definições de consulta. Em vez disso, o compilador usa a inferência de tipo local para determinar o tipo. Para obter mais informações, consulte [inferência de tipo Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Variável de intervalo da consulta, `currentStudent`, serve como uma referência a cada `Student` instância na origem, `students`, fornecendo acesso às propriedades de cada objeto no `students`.  
@@ -144,11 +144,11 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18733c2d643a75f9bb11159ba4acdbc8ab064c55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a3c1aad3bcd6151267671122fb21772082e15cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658774"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>Método ICLRDataTarget::SetTLSValue
-Define um valor no armazenamento local de thread (TLS) do thread no processo de destino especificado. Este método é chamado, os serviços de acesso dados common language runtime (CLR).  
+Define um valor no armazenamento local de thread (TLS) do thread no processo de destino especificado. Esse método é chamado pelo serviço de acesso de dados do common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ HRESULT SetTLSValue (
  [in] O identificador de sistema operacional de um thread no processo de destino.  
   
  `index`  
- [in] O índice do local. Esse valor deve ser um índice válido no repositório local de thread especificado.  
+ [in] O índice do local. Esse valor deve ser um índice válido no repositório local do thread especificado.  
   
  `value`  
  [in] Um `CLRDATA_ADDRESS` valor que especifica o valor a ser colocado no local determinado TLS.  
@@ -51,13 +51,13 @@ HRESULT SetTLSValue (
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

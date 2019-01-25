@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4d10b313adc60e2b851d32aeea70e2993480b0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9b8a952bb2827d1946787f15151887fa25b8da52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733721"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>Método ICorProfilerCallback2::FinalizeableObjectQueued
-Notifica o criador de perfil de código que um objeto com um finalizador foi enfileirado para o thread do finalizador para execução do seu `Finalize` método.  
+Notifica o criador de perfil de código que um objeto com um finalizador foi enfileirado para o thread do finalizador para a execução de seu `Finalize` método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +37,20 @@ HRESULT FinalizeableObjectQueued(
   
 #### <a name="parameters"></a>Parâmetros  
  `finalizerFlags`  
- [in] Um valor de [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeração que descreve aspectos do finalizador.  
+ [in] Um valor igual a [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeração que descreve os aspectos do finalizador.  
   
  `objectID`  
- [in] A ID do objeto que foi colocado em fila.  
+ [in] A ID do objeto que foi enfileirado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

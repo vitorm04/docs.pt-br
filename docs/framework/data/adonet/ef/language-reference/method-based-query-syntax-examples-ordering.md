@@ -1,18 +1,18 @@
 ---
-title: 'Exemplos de sintaxe da consulta com base em método: Classificação'
+title: 'Exemplos de sintaxe de consulta com base em método: Ordenando'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
-ms.openlocfilehash: c059bd771667c23bb9aeb78b548e7036e4b8a73a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: a2dcdcc65a40ada37817d66ef0a7c147831990b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702087"
 ---
-# <a name="method-based-query-syntax-examples-ordering"></a>Exemplos de sintaxe da consulta com base em método: Classificação
+# <a name="method-based-query-syntax-examples-ordering"></a>Exemplos de sintaxe de consulta com base em método: Ordenando
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.ThenBy%2A> método para consultar o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando a sintaxe de consulta com base em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
  Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
@@ -36,5 +36,5 @@ Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Th
  [!code-csharp[DP L2E Examples#ThenByDescending_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#thenbydescending_mq)]
  [!code-vb[DP L2E Examples#ThenByDescending_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescending_mq)]  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Consulte também
+- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

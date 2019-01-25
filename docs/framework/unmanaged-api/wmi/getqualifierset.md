@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0b35a901586a4e0951b9915330f974dc48e931c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632173"
 ---
 # <a name="getqualifierset-function"></a>Função GetQualifierSet
 Recupera o qualificador definido para uma instância da classe ou uma definição de classe.
@@ -68,11 +68,11 @@ Essa função encapsula uma chamada para o [IWbemClassObject::GetQualifierSet](/
 O [IWbemQualifierSet ponteiro](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite que o chamador adicionar, editar ou excluir esses qualificadores. Esses qualificadores adicionadas, editadas ou excluídas se aplicam a toda a definição de classe ou instância.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ba2b0cf7d88104eaadd434732edf3c1d4060e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc0dde4f2455ed45ddf8ca1efefa7ab67ba04f6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660769"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>Método ICorDebugProcess2::SetDesiredNGENCompilerFlags
-Define os sinalizadores que devem ser inseridos em uma imagem pré-compilado em ordem para o tempo de execução carregar a imagem no processo atual.  
+Define os sinalizadores que devem ser inseridos em uma imagem pré-compilada para que o tempo de execução carregar essa imagem no processo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,24 +37,24 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 #### <a name="parameters"></a>Parâmetros  
  `pdwFlags`  
- [in] Um valor de [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeração que especifica os sinalizadores de compilador usada para selecionar a imagem correta de pré-compilada.  
+ [in] Um valor igual a [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeração que especifica os sinalizadores de compilador usado para selecionar a imagem correta de pré-compilada.  
   
 ## <a name="remarks"></a>Comentários  
- O `SetDesiredNGENCompilerFlags` método Especifica os sinalizadores que devem ser inseridos em uma imagem pré-compilado, para que o tempo de execução será carregado se a imagem nesse processo. Os sinalizadores definidos por esse método são usados apenas para selecionar a imagem pré-compilado correta. Se essa imagem não existir, o tempo de execução carregará a imagem do Microsoft intermediate language (MSIL) e o compilador just-in-time (JIT) em vez disso. Nesse caso, o depurador ainda deve usar o [Icordebugmodule2](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) método para definir os sinalizadores conforme desejado para a compilação JIT.  
+ O `SetDesiredNGENCompilerFlags` método Especifica os sinalizadores que devem ser inseridos em uma imagem pré-compilada para que o tempo de execução carregará a imagem nesse processo. Os sinalizadores definidos por esse método são usados somente para selecionar a imagem correta de pré-compilado. Se nenhuma imagem desse tipo existir, o tempo de execução carregará a imagem da Microsoft intermediate language (MSIL) e o compilador just-in-time (JIT) em vez disso. Nesse caso, o depurador ainda deve usar o [ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) método para definir os sinalizadores conforme desejado para a compilação JIT.  
   
- Se uma imagem é carregada, mas alguns compilação JIT deve ser realizadas para essa imagem (que será o caso se a imagem contém genéricos), os sinalizadores de compilador especificados pelo `SetDesiredNGENCompilerFlags` método aplicará a compilação JIT extra.  
+ Se uma imagem é carregada, mas alguns compilação JIT deve ser realizadas para essa imagem (que será o caso se a imagem contém as classes genéricas), os sinalizadores de compilador especificados pelo `SetDesiredNGENCompilerFlags` método aplicará a compilação JIT extra.  
   
- O `SetDesiredNGENCompilerFlags` método deve ser chamado durante a [Icordebugmanagedcallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) retorno de chamada. Tentativas de chamar o `SetDesiredNGENCompilerFlags` método posteriormente falhará. Além disso, as tentativas de definir os sinalizadores que não estão definidos no `CorDebugJITCompilerFlags` enumeração ou são ilegal para determinado processo falhará.  
+ O `SetDesiredNGENCompilerFlags` método deve ser chamado durante a [icordebugmanagedcallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) retorno de chamada. Tenta chamar o `SetDesiredNGENCompilerFlags` método posteriormente falhará. Além disso, tentativas de definir os sinalizadores que não estão definidos no `CorDebugJITCompilerFlags` são não é válido para o processo especificado ou enumeração falharão.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

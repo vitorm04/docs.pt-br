@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 351748d0b27fa6ffc2368aacddc6c7aca290cddb
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507220"
 ---
 # <a name="reflection-and-net-native"></a>Reflexão e .NET Nativo
 No .NET Framework, o desenvolvimento gerenciado oferece suporte à metaprogramação por meio da API de reflexão. A reflexão permite inspecionar objetos em um aplicativo, chamar métodos em objetos descobertos por meio de inspeção, gerar novos tipos no tempo de execução e oferece suporte a muitos outros cenários de código dinâmico. Ele também oferece suporte à serialização e desserialização, o que permite que os valores do campo do objeto sejam mantidos e restaurados posteriormente. Todos esses cenários exigem o compilador do .NET Framework JIT (just-in-time) para gerar código nativo com base em metadados disponíveis.  
@@ -33,6 +33,6 @@ No .NET Framework, o desenvolvimento gerenciado oferece suporte à metaprograma�
   
 -   [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Compilação de aplicativos com o .NET Native](../../../docs/framework/net-native/index.md)  
- [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)
+## <a name="see-also"></a>Consulte também
+- [Compilação de aplicativos com o .NET Native](../../../docs/framework/net-native/index.md)
+- [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 9c2a0e70-3a39-4ba9-96ea-a7fe531fae9f
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: aa2e4d260ce7cee33bb72b807affc87220e57e8a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 41c72ca6aefbe934085a5e7bb5ee7cd5a7b9b54f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724090"
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle CheckBox
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Este tópico fornece informações sobre [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] suporte para o tipo de controle de caixa de seleção. Na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], um tipo de controle é um conjunto de condições que um controle deve atender para usar o <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> propriedade. As condições incluem diretrizes específicas para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] valores de propriedade e padrões de controle.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48850283"
 ## <a name="default-action"></a>Ação padrão  
  A ação padrão da caixa de seleção é fazer com que um botão de opção para se tornar focado e alternar seu estado atual. Conforme mencionado anteriormente, caixas de seleção apresentam um binário (Sim/não) (ativado/desativado) decisão ao usuário ou ternária (ligado, desligado, indeterminado). Se a caixa de seleção é binária a ação padrão faz com que o estado de "on" para se tornar "desativado" ou o estado "desativado" para se tornar "on". Em uma caixa de seleção estado terciário os ciclos de ação padrão por meio dos Estados da caixa de seleção na mesma ordem como se o usuário tivesse enviado sucessivo cliques do mouse para o controle.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Automation.ControlType.CheckBox>  
- [Visão geral de tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Automation.ControlType.CheckBox>
+- [Visão geral de tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

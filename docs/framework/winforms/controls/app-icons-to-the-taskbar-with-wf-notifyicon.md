@@ -1,5 +1,5 @@
 ---
-title: Como adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms
+title: 'Como: Adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,28 +13,28 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: c7658a3a1c72c3fed4033e644d0dd776b06ee1a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 925134e4a0317322d7a4f4cfdc9ac8e3780cf9e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650673"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Como adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms
-Windows Forms <xref:System.Windows.Forms.NotifyIcon> componente exibe um único ícone na área de notificação de status da barra de tarefas. Para exibir vários ícones na área de status, você deve ter vários <xref:System.Windows.Forms.NotifyIcon> componentes no formulário. Para definir o ícone exibido para um controle, use o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade. Você também pode escrever código no <xref:System.Windows.Forms.NotifyIcon.DoubleClick> manipulador de eventos para que algo acontece quando o usuário clica duas vezes no ícone. Por exemplo, você pode fazer com que uma caixa de diálogo apareça para o usuário configurar o processo em segundo plano representado pelo ícone.  
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Como: Adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms
+Os formulários do Windows <xref:System.Windows.Forms.NotifyIcon> componente exibe um único ícone na área de notificação de status da barra de tarefas. Para exibir vários ícones na área de status, você deve ter vários <xref:System.Windows.Forms.NotifyIcon> componentes em seu formulário. Para definir o ícone exibido para um controle, use o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade. Você também pode escrever código no <xref:System.Windows.Forms.NotifyIcon.DoubleClick> manipulador de eventos para que algo acontece quando o usuário clica duas vezes no ícone. Por exemplo, você pode fazer com que uma caixa de diálogo apareça para o usuário configurar o processo em segundo plano representado pelo ícone.  
   
 > [!NOTE]
 >  O <xref:System.Windows.Forms.NotifyIcon> componente é usado para fins de notificação apenas, para alertar os usuários que ocorreu um evento ou ação ou houve uma alteração no status de algum tipo. Você deve usar os menus, barras de ferramentas e outros elementos de interface do usuário para interação padrão com aplicativos.  
   
 ### <a name="to-set-the-icon"></a>Definir o ícone  
   
-1.  Atribuir um valor para o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade. O valor deve ser do tipo `System.Drawing.Icon` e pode ser carregados de um arquivo .ico. Você pode especificar o arquivo de ícone no código ou clicando no botão de reticências (![de tela de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) ao lado de <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade no  **Propriedades** janela e, em seguida, selecionando o arquivo no **abrir** caixa de diálogo que aparece.  
+1.  Atribuir um valor para o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade. O valor deve ser do tipo `System.Drawing.Icon` e pode ser carregados de um arquivo .ico. Você pode especificar o arquivo de ícone no código ou clicando no botão de reticências (![captura de tela VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) ao lado de <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade no  **As propriedades** janela e, em seguida, selecionando o arquivo na **aberto** caixa de diálogo que aparece.  
   
 2.  Defina a propriedade <xref:System.Windows.Forms.NotifyIcon.Visible%2A> como `true`.  
   
-3.  Definir o <xref:System.Windows.Forms.NotifyIcon.Text%2A> propriedade como uma cadeia de caracteres de dica de ferramenta apropriada.  
+3.  Defina o <xref:System.Windows.Forms.NotifyIcon.Text%2A> propriedade como uma cadeia de caracteres de dica de ferramenta apropriada.  
   
-     No exemplo de código a seguir, o caminho definido para o local do ícone é a pasta **Meus Documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows incluem essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem o aplicativo com mais segurança. O exemplo a seguir exige um formulário com um <xref:System.Windows.Forms.NotifyIcon> controle já foi adicionado. Ele também requer um arquivo de ícone denominado `Icon.ico`.  
+     No exemplo de código a seguir, o caminho definido para o local do ícone é a pasta **Meus Documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows incluem essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem o aplicativo com mais segurança. O exemplo a seguir exige um formulário com um <xref:System.Windows.Forms.NotifyIcon> controle já adicionado. Ele também requer um arquivo de ícone denominado `Icon.ico`.  
   
     ```vb  
     ' You should replace the bold icon in the sample below  
@@ -71,9 +71,9 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> componente exibe um único 
     notifyIcon1->Text = "Antivirus program";  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.NotifyIcon>  
- <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
- [Como associar um menu de atalho a um componente NotifyIcon dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- [Componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- [Visão geral do componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.NotifyIcon>
+- <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
+- [Como: Associar um Menu de atalho um componente NotifyIcon dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [Componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
+- [Visão geral do componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)

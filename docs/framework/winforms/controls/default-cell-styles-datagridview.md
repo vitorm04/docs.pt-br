@@ -1,5 +1,5 @@
 ---
-title: Como definir estilos de célula padrão e formatos de dados para o controle DataGridView dos Windows Forms usando o designer
+title: 'Como: Definir estilos de célula padrão e formatos de dados para o controle DataGridView do Windows Forms usando o Designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: adee6ab283fb7e2fe9bbfcda78c9692621407e9e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 003ddd68de22d60b771ca525cfa5cc6b2e1e1e3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650766"
 ---
-# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Como definir estilos de célula padrão e formatos de dados para o controle DataGridView dos Windows Forms usando o designer
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Definir estilos de célula padrão e formatos de dados para o controle DataGridView do Windows Forms usando o Designer
 O <xref:System.Windows.Forms.DataGridView> controle permite especificar estilos de célula padrão e formatos de dados para todo o controle, para colunas específicas, para os cabeçalhos de linha e coluna e para linhas para criar um efeito de razão alternadas de célula. Os estilos padrão definidos para todo o controle serão substituídos por estilos padrão definidos para colunas e linhas alternadas. Além disso, os estilos definidos no código para as linhas e células individuais substituem os estilos padrão.  
   
- Para obter mais informações sobre estilos de célula, consulte [Estilos de Célula no Controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md). Para definir estilos para linhas alternadas, consulte [Como Definir Estilos de Linha Alternada para o Controle DataGridView dos Windows Forms Usando o Designer](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
+ Para obter mais informações sobre estilos de célula, consulte [Estilos de Célula no Controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md). Para definir estilos para linhas alternadas, consulte [como: Definir estilos de linha alternada para o Windows Forms usando o Designer de controle de DataGridView](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
   
- Você também pode definir estilos usando o <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> propriedade afete todas as linhas que serão adicionadas ao controle. Para obter mais informações sobre o modelo de linha, consulte [Como Usar o Modelo de Linha para Personalizar Linhas no Controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md).  
+ Você também pode definir estilos usando o <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> propriedade afete todas as linhas que serão adicionadas ao controle. Para obter mais informações sobre o modelo de linha, consulte [como: Usar o modelo de linha para personalizar linhas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md).  
   
- Os procedimentos a seguir exigem uma **aplicativo do Windows** projeto com um formulário que contém um <xref:System.Windows.Forms.DataGridView> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [Como criar um projeto de aplicativos do Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Como adicionar controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Os procedimentos a seguir exigem uma **aplicativo do Windows** projeto com um formulário que contém um <xref:System.Windows.Forms.DataGridView> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [como: Adicionar controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -59,14 +59,14 @@ O <xref:System.Windows.Forms.DataGridView> controle permite especificar estilos 
   
 4.  Se você estiver associando a <xref:System.Windows.Forms.DataGridView> controle a uma fonte de dados que é provável que contenham valores nulos, preencha o **valor nulo** caixa de texto. Esse valor é exibido quando o valor da célula for igual a uma referência nula (`Nothing` no Visual Basic) ou <xref:System.DBNull.Value?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewCellStyle>  
- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>  
- [Estilos de célula no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- [Como definir estilos de linhas alternados para o controle DataGridView dos Windows Forms usando o designer](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
- [Como: criar um projeto de aplicativo do Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [Como Adicionar Controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewCellStyle>
+- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
+- [Estilos de célula no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Como: Definir estilos de linha alternada para o controle DataGridView do Windows Forms usando o Designer](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [Como: Criar um projeto de aplicativo do Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)
+- [Como: Adicionar controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

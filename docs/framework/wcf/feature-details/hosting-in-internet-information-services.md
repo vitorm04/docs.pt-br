@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: e9d0e5a165eb2eabae95da9fd1e744a9bd1c201b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: edf3927fb9fdbd9855561b32aec2a425d7ee0638
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680894"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedagem no Internet Information Services
 É uma opção para hospedar os serviços do Windows Communication Foundation (WCF) dentro de um aplicativo de serviços de informações da Internet (IIS). Esse modelo de hospedagem é semelhante ao modelo usado pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e serviços Web (ASMX) de serviços Web do ASP.NET.  
@@ -56,10 +56,10 @@ ms.locfileid: "44085102"
 ## <a name="wcf-services-and-aspnet"></a>Serviços WCF e ASP.NET  
  Os serviços WCF podem ser hospedados de qualquer lado a lado com [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade em que os serviços podem aproveitar ao máximo dos recursos fornecidos pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] plataforma de aplicativos Web. Para uma discussão sobre esses recursos, consulte [serviços WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Estendendo a hospedagem usando ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- [Implantando um serviço WCF hospedado em Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
- [Serviços do WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Configurando os Serviços de Informações da Internet 7.0 para Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Consulte também
+- [Estendendo a hospedagem usando ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
+- [Implantando um serviço WCF hospedado em Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
+- [Serviços do WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [Configurando os Serviços de Informações da Internet 7.0 para Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
+- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

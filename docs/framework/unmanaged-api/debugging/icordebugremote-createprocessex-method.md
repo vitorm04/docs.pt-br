@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06bdc3605d981acad68a97901627f361da4061c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: efc46a0128a4fb9a0edaa86ad20689fda0c2710b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521771"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Método ICorDebugRemote::CreateProcessEx
 Inicia um processo em um computador remoto sob o depurador.  
@@ -52,53 +52,53 @@ HRESULT CreateProcessEx (
  [in] Ponteiro para um [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Usado para determinar o computador remoto no qual o processo será iniciado.  
   
  `lpApplicationName`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado pelo processo iniciado. O módulo é executado no contexto de segurança do processo de chamada.  
+ [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado, o processo iniciado. O módulo é executado no contexto de segurança do processo de chamada.  
   
  `lpCommandLine`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executado pelo processo iniciado.  
+ [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executado, o processo iniciado.  
   
  `lpProcessAttributes`  
- [in] Não usado para depuração remota.  
+ [in] Não utilizado para a depuração remota.  
   
  `lpThreadAttributes`  
- [in] Não usado para depuração remota.  
+ [in] Não utilizado para a depuração remota.  
   
  `bInheritHandles`  
- [in] Não usado para depuração remota.  
+ [in] Não utilizado para a depuração remota.  
   
  `dwCreationFlags`  
- [in] Não usado para depuração remota.  
+ [in] Não utilizado para a depuração remota.  
   
  `lpEnvironment`  
  [in] Ponteiro para um bloco de ambiente para o novo processo.  
   
  `lpCurrentDirectory`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo. Se esse parâmetro for null, o novo processo terá a mesma unidade atual e o diretório como o processo de chamada.  
+ [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo. Se esse parâmetro for nulo, o novo processo terá a mesma unidade atual e o diretório como o processo de chamada.  
   
  `lpStartupInfo`  
- [in] Não usado para depuração remota.  
+ [in] Não utilizado para a depuração remota.  
   
  `lpProcessInformation`  
- [in] Não usado para depuração remota.  
+ [in] Não utilizado para a depuração remota.  
   
  `debuggingFlags`  
- [in] Não usado para depuração remota.  
+ [in] Não utilizado para a depuração remota.  
   
  `ppProcess`  
  [out] Um ponteiro para o endereço de um objeto de "ICorDebugProcess Interface" que representa o processo.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK  
- O processo no computador remoto e retornado um "Interface ICorDebugProcess" foi iniciada com êxito para a depuração.  
+ Iniciado com êxito o processo no computador remoto e retornado uma "Interface ICorDebugProcess" para depuração.  
   
- E_FAIL (ou outros códigos de retorno E_)  
- Não é possível iniciar o processo no computador remoto e retornar "ICorDebugProcess Interface" para depuração.  
+ E_FAIL (ou outros códigos de retorno e _)  
+ Não é possível iniciar o processo no computador remoto e retornar uma "ICorDebugProcess Interface" para depuração.  
   
 ## <a name="remarks"></a>Comentários  
  Não há suporte para a depuração de modo misto no Silverlight.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl  
   
@@ -106,8 +106,8 @@ HRESULT CreateProcessEx (
   
  **Versões do .NET framework:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

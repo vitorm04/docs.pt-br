@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7634ec801a30aa7ba07954c1df0c3d37ec279eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d6a5673c2aaf287131274b0c590f00a69c64fed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517143"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra União
-Representa um deslocamento de endereço que é usado pelo [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface para realocar uma seção.  
+Representa um deslocamento de endereço que é usado pelas [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface para realocar uma seção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +38,16 @@ typedef union  {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`highAdj`|O ajuste de endereço superior da seção.|  
+|`highAdj`|O ajuste de endereço superior para a seção.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Uniões de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+## <a name="see-also"></a>Consulte também
+- [Uniões de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Exemplos de sintaxe da consulta com base em método: Conversão'
+title: 'Exemplos de sintaxe de consulta com base em método: Conversão'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: 5f1ef8680bc6826f4e8b1beb1e49fce3a15c40c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3e3986bcd956fae45005671cc945ea0c861d7e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702308"
 ---
-# <a name="method-based-query-syntax-examples-conversion"></a>Exemplos de sintaxe da consulta com base em método: Conversão
+# <a name="method-based-query-syntax-examples-conversion"></a>Exemplos de sintaxe de consulta com base em método: Conversão
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> e <xref:System.Linq.Enumerable.ToList%2A> métodos para consultar o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando a sintaxe de consulta com base em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
  Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
@@ -44,5 +44,5 @@ Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.To
  [!code-csharp[DP L2E Examples#ToList](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#tolist)]
  [!code-vb[DP L2E Examples#ToList](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#tolist)]  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Consulte também
+- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

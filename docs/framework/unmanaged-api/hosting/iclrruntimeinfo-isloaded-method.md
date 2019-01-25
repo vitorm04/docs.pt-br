@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ff1723cb481ee946e0c5c433009d3d6d7460cf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 69a3b0921528ed09ee4ab3a1ede6b9efe565e02a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619209"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>Método ICLRRuntimeInfo::IsLoaded
-Indica se o common language runtime (CLR) associado com o [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface é carregada em um processo. Um tempo de execução pode ser carregado sem também ter sido iniciada.  
+Indica se o common language runtime (CLR) associada a [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface é carregado em um processo. Um tempo de execução pode ser carregado sem também ter sido iniciada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ HRESULT IsLoaded(
  [out] `true` se o CLR é carregado no processo; caso contrário, `false`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -59,20 +59,20 @@ HRESULT IsLoaded(
   
 -   Preterido `CorBindTo*` funções (consulte [funções de hospedagem de CLR preterido](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) na API de hospedagem do .NET Framework 2.0).  
   
- Um host pode chamar uma das `CorBindTo*` funções, como o [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) função, para criar uma instância de uma versão específica do CLR. O host pode então chamar o [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) método e especifique o mesmo número de versão para obter um [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.  
+ Um host pode chamar um dos preteridas `CorBindTo*` funções, como o [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) função, para criar uma instância de uma versão específica do CLR. O host pode então chamar o [iclrmetahost:: Getruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) método e especificar o mesmo número de versão para obter uma [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.  
   
- Se o host, em seguida, chama o `IsLoaded` método retornado [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface, `pbLoaded` retorna `true`; caso contrário, retornará `false`.  
+ Se o host, em seguida, chama o `IsLoaded` método no retornado [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface, `pbLoaded` retorna `true`; caso contrário, ele retorna `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

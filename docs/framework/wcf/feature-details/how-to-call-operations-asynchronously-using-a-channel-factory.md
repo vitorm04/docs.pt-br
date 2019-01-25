@@ -1,21 +1,21 @@
 ---
-title: Como chamar operações assíncronas usando uma fábrica de canais
+title: 'Como: Chamar operações assíncronas usando uma fábrica de canais'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: a45ba48408fd98c89db8664aec679a437ce8af24
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c57b5ccd81a8a2123ac2269adbd75a3a656ba51e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695706"
 ---
-# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Como chamar operações assíncronas usando uma fábrica de canais
-Este tópico aborda como um cliente pode acessar uma operação de serviço assincronamente ao usar um <xref:System.ServiceModel.ChannelFactory%601>-com base em aplicativo cliente. (Ao usar um <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> objeto no qual invocar um serviço que você pode usar o modelo de chamada assíncrona controlada por evento. Para obter mais informações, consulte [como: chamar operações de serviço de forma assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obter mais informações sobre o modelo de chamada assíncrono baseado em evento, consulte [padrão assíncrono baseado em evento (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
+# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Como: Chamar operações assíncronas usando uma fábrica de canais
+Este tópico aborda como um cliente pode acessar uma operação de serviço assincronamente ao usar um <xref:System.ServiceModel.ChannelFactory%601>-com base em aplicativo cliente. (Ao usar um <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> objeto no qual invocar um serviço que você pode usar o modelo de chamada assíncrona controlada por evento. Para obter mais informações, confira [Como: Chamar operações de serviço de forma assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obter mais informações sobre o modelo de chamada assíncrono baseado em evento, consulte [padrão assíncrono baseado em evento (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
   
- Implementa o serviço neste tópico o `ICalculator` interface. O cliente pode chamar as operações nesta interface de forma assíncrona, o que significa que operações com `Add` são divididas em dois métodos, `BeginAdd` e `EndAdd`, a primeira opção que inicia a chamada e recupera o último resultado Quando a operação for concluída. Para obter um exemplo que mostra como implementar uma operação de forma assíncrona em um serviço, consulte [como: implementar uma operação de serviço assíncrona](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Para obter detalhes sobre as operações síncronas e assíncronas, consulte [síncrona e operações assíncronas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+ Implementa o serviço neste tópico o `ICalculator` interface. O cliente pode chamar as operações nesta interface de forma assíncrona, o que significa que operações com `Add` são divididas em dois métodos, `BeginAdd` e `EndAdd`, a primeira opção que inicia a chamada e recupera o último resultado Quando a operação for concluída. Para obter um exemplo que mostra como implementar uma operação de forma assíncrona em um serviço, consulte [como: Implementar uma operação de serviço assíncrona](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Para obter detalhes sobre as operações síncronas e assíncronas, consulte [síncrona e operações assíncronas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 ## <a name="procedure"></a>Procedimento  
   
@@ -47,5 +47,5 @@ Este tópico aborda como um cliente pode acessar uma operação de serviço assi
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
   
-## <a name="see-also"></a>Consulte também  
- [Contrato de serviço: Exemplo de assíncrono](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)
+## <a name="see-also"></a>Consulte também
+- [Contrato de serviço: Exemplo de assíncrono](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)

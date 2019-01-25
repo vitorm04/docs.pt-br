@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603905"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Método IMetaDataEmit::DefineNestedType
 Cria a assinatura de metadados de uma definição de tipo, retorna um `mdTypeDef` para esse tipo de token e especifica que o tipo definido é um membro do tipo referenciado pelo `tdEncloser` parâmetro.  
@@ -48,7 +48,7 @@ HRESULT DefineNestedType (
  [in] `TypeDef` atributos. Esse é um bitmask de `CorTypeAttr` valores.  
   
  `tkExtends`  
- [in] O token de classe base. Isso é uma `mdTypeDef` ou um `mdTypeRef` token.  
+ [in] O token da classe base. Isso é um `mdTypeDef` ou um `mdTypeRef` token.  
   
  `rtkImplements`[]  
  [in] Uma matriz de tokens que especificam as interfaces que implementa essa interface ou classe.  
@@ -60,14 +60,14 @@ HRESULT DefineNestedType (
  [out] O `mdTypeDef` token atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

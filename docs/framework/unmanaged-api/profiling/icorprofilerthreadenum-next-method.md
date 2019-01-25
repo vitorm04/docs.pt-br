@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ed01b2f59c46d1dcedd62846ea663c9aa7213b37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25a6baea0cdd92d6d214ab8a697b0c00c44c42bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457716"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664571"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>Método ICorProfilerThreadEnum::Next
-Obtém o número especificado de threads de contíguas de uma coleção sequencial de threads, começando na posição atual do enumerador na sequência.  
+Obtém o número especificado de threads contíguos de uma coleção sequencial de threads, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,13 +42,13 @@ HRESULT Next (    [in]  ULONG      celt,
  [in] O número de threads para recuperar.  
   
  `ids`  
- [out] Uma matriz de `ThreadID` valores, cada um deles representa um segmento recuperado.  
+ [out] Uma matriz de `ThreadID` valores, cada um deles representa um thread recuperado.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de threads de fato retornadas no `ids` matriz.  
+ [out] Um ponteiro para o número de threads, na verdade, é retornado no `ids` matriz.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -56,14 +56,14 @@ HRESULT Next (    [in]  ULONG      celt,
 |S_FALSE|Menos de `celt` elementos foram retornados, que indica que a enumeração foi concluída.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: Como mostrar uma paleta de cores com o componente ColorDialog
+title: 'Como: Mostrar uma paleta de cores com o componente ColorDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: ea12fe19b6c8c7464f0820267face8a1d66de784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34da70280ff6e5b850469e7ba041cc7c7aaf1f47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637119"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Como mostrar uma paleta de cores com o componente ColorDialog
-O [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) componente exibe uma paleta de cores e retorna uma propriedade que contém a cor que o usuário selecionado.  
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Como: Mostrar uma paleta de cores com o componente ColorDialog
+O [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) componente exibe uma paleta de cores e retorna uma propriedade que contém a cor que o usuário selecionou.  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>Para escolher uma cor usando o componente ColorDialog  
   
@@ -30,9 +30,9 @@ O [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-compone
   
 2.  Use o <xref:System.Windows.Forms.DialogResult> propriedade para determinar como a caixa de diálogo foi fechada.  
   
-3.  Use o <xref:System.Windows.Forms.ColorDialog.Color%2A> propriedade o <xref:System.Windows.Forms.ColorDialog> componente para definir a cor escolhida.  
+3.  Use o <xref:System.Windows.Forms.ColorDialog.Color%2A> propriedade do <xref:System.Windows.Forms.ColorDialog> componente para definir a cor escolhida.  
   
-     No exemplo a seguir, o <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos abre um <xref:System.Windows.Forms.ColorDialog> componente. Quando uma cor é escolhido e o usuário clica **Okey**, o <xref:System.Windows.Forms.Button> cor do plano de fundo do controle é definido como a cor escolhida. O exemplo supõe que o formulário tem uma <xref:System.Windows.Forms.Button> controle e um <xref:System.Windows.Forms.ColorDialog> componente.  
+     No exemplo a seguir, o <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos abre um <xref:System.Windows.Forms.ColorDialog> componente. Quando uma cor é escolhido e o usuário clica **Okey**, o <xref:System.Windows.Forms.Button> cor do plano de fundo do controle é definido como a cor escolhida. O exemplo supõe que seu formulário tem um <xref:System.Windows.Forms.Button> controle e um <xref:System.Windows.Forms.ColorDialog> componente.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -65,7 +65,7 @@ O [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-compone
        }  
     ```  
   
-     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
+     (Visual c#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -76,6 +76,6 @@ O [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-compone
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.ColorDialog>  
- [Componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.ColorDialog>
+- [Componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)

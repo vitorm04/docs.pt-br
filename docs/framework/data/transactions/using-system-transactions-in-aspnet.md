@@ -2,12 +2,12 @@
 title: Usando System. Transactions no ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 7b73ec970776f39a0c056e2a706d4818cda6cd72
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7c83532de42faff06594305b01137fd8fd63674e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711821"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Usando System. Transactions no ASP.NET
 Este tópico descreve como você pode usar com êxito <xref:System.Transactions> dentro de um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo.  
@@ -59,7 +59,7 @@ Este tópico descreve como você pode usar com êxito <xref:System.Transactions>
   
  Para obter mais informações, consulte [adicione o elemento para assemblies de compilação (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4).  
   
-## <a name="see-also"></a>Consulte também  
- [Níveis de confiança do ASP.NET e arquivos de política](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy Element (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
- [Escalonamento de gerenciamento de transações](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+## <a name="see-also"></a>Consulte também
+- [Níveis de confiança do ASP.NET e arquivos de política](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)
+- [securityPolicy Element (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)
+- [Escalonamento de gerenciamento de transações](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
