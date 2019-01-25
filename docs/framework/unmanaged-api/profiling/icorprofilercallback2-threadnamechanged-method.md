@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf11d71b90f11a5d9a3844ed59a8574b7b76699
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bd350c843c32102291de8327f5c37b27e287fd5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706359"
 ---
-# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="a2752-102">Método ICorProfilerCallback2::ThreadNameChanged</span><span class="sxs-lookup"><span data-stu-id="a2752-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
-<span data-ttu-id="a2752-103">Notifica o criador de perfil de código que o nome de um thread foi alterado.</span><span class="sxs-lookup"><span data-stu-id="a2752-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
+# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="a53ee-102">Método ICorProfilerCallback2::ThreadNameChanged</span><span class="sxs-lookup"><span data-stu-id="a53ee-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
+<span data-ttu-id="a53ee-103">Notifica o criador de perfil de código que o nome de um thread foi alterado.</span><span class="sxs-lookup"><span data-stu-id="a53ee-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2752-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a2752-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a53ee-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a53ee-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadNameChanged(  
@@ -36,25 +36,25 @@ HRESULT ThreadNameChanged(
     [in] WCHAR name[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a2752-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a2752-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a53ee-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a53ee-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="a2752-106">[in] A ID do thread.</span><span class="sxs-lookup"><span data-stu-id="a2752-106">[in] The ID of the thread.</span></span>  
+ <span data-ttu-id="a53ee-106">[in] A ID do thread.</span><span class="sxs-lookup"><span data-stu-id="a53ee-106">[in] The ID of the thread.</span></span>  
   
  `cchName`  
- <span data-ttu-id="a2752-107">[in] O comprimento do novo nome do thread.</span><span class="sxs-lookup"><span data-stu-id="a2752-107">[in] The length of the new name of the thread.</span></span>  
+ <span data-ttu-id="a53ee-107">[in] O comprimento do novo nome do thread.</span><span class="sxs-lookup"><span data-stu-id="a53ee-107">[in] The length of the new name of the thread.</span></span>  
   
  `name`  
- <span data-ttu-id="a2752-108">[in] O novo nome do thread.</span><span class="sxs-lookup"><span data-stu-id="a2752-108">[in] The new name of the thread.</span></span> <span data-ttu-id="a2752-109">O nome não é terminada em nulo.</span><span class="sxs-lookup"><span data-stu-id="a2752-109">The name is not null-terminated.</span></span>  
+ <span data-ttu-id="a53ee-108">[in] O novo nome do thread.</span><span class="sxs-lookup"><span data-stu-id="a53ee-108">[in] The new name of the thread.</span></span> <span data-ttu-id="a53ee-109">O nome não é terminada em nulo.</span><span class="sxs-lookup"><span data-stu-id="a53ee-109">The name is not null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2752-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a2752-110">Requirements</span></span>  
- <span data-ttu-id="a2752-111">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2752-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a53ee-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a53ee-110">Requirements</span></span>  
+ <span data-ttu-id="a53ee-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a53ee-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2752-112">**Cabeçalho:** Corprof. idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a2752-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a53ee-112">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a53ee-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a2752-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2752-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a53ee-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a53ee-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a2752-114">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2752-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a53ee-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a53ee-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2752-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a2752-115">See Also</span></span>  
- [<span data-ttu-id="a2752-116">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="a2752-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="a2752-117">Interface ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="a2752-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a53ee-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a53ee-115">See also</span></span>
+- [<span data-ttu-id="a53ee-116">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="a53ee-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="a53ee-117">Interface ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="a53ee-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

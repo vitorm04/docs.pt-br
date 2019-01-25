@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b53347e9f446d6340bfc5dab2d8f898ebbbf93f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527101"
 ---
-# <a name="imetadataimportenumcustomattributes-method"></a><span data-ttu-id="b5d6f-102">Método IMetaDataImport::EnumCustomAttributes</span><span class="sxs-lookup"><span data-stu-id="b5d6f-102">IMetaDataImport::EnumCustomAttributes Method</span></span>
-<span data-ttu-id="b5d6f-103">Enumera os tokens de definição de atributo personalizado associados ao tipo especificado ou membro.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-103">Enumerates custom attribute-definition tokens associated with the specified type or member.</span></span>  
+# <a name="imetadataimportenumcustomattributes-method"></a><span data-ttu-id="91755-102">Método IMetaDataImport::EnumCustomAttributes</span><span class="sxs-lookup"><span data-stu-id="91755-102">IMetaDataImport::EnumCustomAttributes Method</span></span>
+<span data-ttu-id="91755-103">Enumera os tokens de definição de atributo personalizado associados com o tipo especificado ou um membro.</span><span class="sxs-lookup"><span data-stu-id="91755-103">Enumerates custom attribute-definition tokens associated with the specified type or member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5d6f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b5d6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91755-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="91755-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumCustomAttributes (   
@@ -40,41 +40,41 @@ HRESULT EnumCustomAttributes (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b5d6f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b5d6f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="91755-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="91755-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="b5d6f-106">[out no] Um ponteiro para o enumerador retornado.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-106">[in, out] A pointer to the returned enumerator.</span></span>  
+ <span data-ttu-id="91755-106">[no, out] Um ponteiro para o enumerador retornado.</span><span class="sxs-lookup"><span data-stu-id="91755-106">[in, out] A pointer to the returned enumerator.</span></span>  
   
  `tk`  
- <span data-ttu-id="b5d6f-107">[in] Um token para o escopo de enumeração ou zero para todos os atributos personalizados.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-107">[in] A token for the scope of the enumeration, or zero for all custom attributes.</span></span>  
+ <span data-ttu-id="91755-107">[in] Um token para o escopo da enumeração, ou zero para todos os atributos personalizados.</span><span class="sxs-lookup"><span data-stu-id="91755-107">[in] A token for the scope of the enumeration, or zero for all custom attributes.</span></span>  
   
  `tkType`  
- <span data-ttu-id="b5d6f-108">[in] Um token para o construtor do tipo de atributos a serem enumerados, ou `null` para todos os tipos.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-108">[in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.</span></span>  
+ <span data-ttu-id="91755-108">[in] Um token para o construtor do tipo dos atributos a serem enumerados, ou `null` para todos os tipos.</span><span class="sxs-lookup"><span data-stu-id="91755-108">[in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.</span></span>  
   
  `rCustomAttributes`  
- <span data-ttu-id="b5d6f-109">[out] Uma matriz de tokens de atributo personalizado.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-109">[out] An array of custom attribute tokens.</span></span>  
+ <span data-ttu-id="91755-109">[out] Uma matriz de tokens de atributo personalizado.</span><span class="sxs-lookup"><span data-stu-id="91755-109">[out] An array of custom attribute tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="b5d6f-110">[in] O tamanho máximo da `rCustomAttributes` matriz.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-110">[in] The maximum size of the `rCustomAttributes` array.</span></span>  
+ <span data-ttu-id="91755-110">[in] O tamanho máximo da `rCustomAttributes` matriz.</span><span class="sxs-lookup"><span data-stu-id="91755-110">[in] The maximum size of the `rCustomAttributes` array.</span></span>  
   
  `pcCustomAttributes`  
- <span data-ttu-id="b5d6f-111">[out, opcional] O número real de valores do token retornado na `rCustomAttributes`.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-111">[out, optional] The actual number of token values returned in `rCustomAttributes`.</span></span>  
+ <span data-ttu-id="91755-111">[out, opcional] O número real de valores do token retornado na `rCustomAttributes`.</span><span class="sxs-lookup"><span data-stu-id="91755-111">[out, optional] The actual number of token values returned in `rCustomAttributes`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b5d6f-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="b5d6f-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="91755-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="91755-112">Return Value</span></span>  
   
-|<span data-ttu-id="b5d6f-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b5d6f-113">HRESULT</span></span>|<span data-ttu-id="b5d6f-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="b5d6f-114">Description</span></span>|  
+|<span data-ttu-id="91755-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="91755-113">HRESULT</span></span>|<span data-ttu-id="91755-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="91755-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="b5d6f-115">`EnumCustomAttributes` retornou com êxito.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-115">`EnumCustomAttributes` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="b5d6f-116">Não há nenhum atributo personalizado para enumerar.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-116">There are no custom attributes to enumerate.</span></span> <span data-ttu-id="b5d6f-117">Nesse caso, `pcCustomAttributes` é zero.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-117">In that case, `pcCustomAttributes` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="91755-115">`EnumCustomAttributes` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="91755-115">`EnumCustomAttributes` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="91755-116">Não há nenhum atributo personalizado para enumerar.</span><span class="sxs-lookup"><span data-stu-id="91755-116">There are no custom attributes to enumerate.</span></span> <span data-ttu-id="91755-117">Nesse caso, `pcCustomAttributes` é zero.</span><span class="sxs-lookup"><span data-stu-id="91755-117">In that case, `pcCustomAttributes` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b5d6f-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b5d6f-118">Requirements</span></span>  
- <span data-ttu-id="b5d6f-119">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5d6f-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="91755-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="91755-118">Requirements</span></span>  
+ <span data-ttu-id="91755-119">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="91755-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5d6f-120">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b5d6f-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="91755-120">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="91755-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b5d6f-121">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="b5d6f-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="91755-121">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="91755-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b5d6f-122">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5d6f-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="91755-122">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="91755-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5d6f-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b5d6f-123">See Also</span></span>  
- [<span data-ttu-id="b5d6f-124">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="b5d6f-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="b5d6f-125">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="b5d6f-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="91755-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="91755-123">See also</span></span>
+- [<span data-ttu-id="91755-124">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="91755-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="91755-125">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="91755-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

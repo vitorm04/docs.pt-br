@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6195d9666afa8fba3f77322366e4709634e53bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfa4db00662ed3abffbfd01e6e36005cd272a271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664584"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a><span data-ttu-id="01ea6-102">Função _EFN_GetManagedObjectFieldInfo</span><span class="sxs-lookup"><span data-stu-id="01ea6-102">_EFN_GetManagedObjectFieldInfo Function</span></span>
-<span data-ttu-id="01ea6-103">Obtém o deslocamento do início de um objeto para um campo e o valor do campo, usando o ponteiro de objeto fornecido e o nome do campo.</span><span class="sxs-lookup"><span data-stu-id="01ea6-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  
+# <a name="efngetmanagedobjectfieldinfo-function"></a><span data-ttu-id="1c471-102">Função _EFN_GetManagedObjectFieldInfo</span><span class="sxs-lookup"><span data-stu-id="1c471-102">_EFN_GetManagedObjectFieldInfo Function</span></span>
+<span data-ttu-id="1c471-103">Obtém o deslocamento do início de um objeto para um campo e o valor do campo, usando o ponteiro de objeto fornecido e o nome do campo.</span><span class="sxs-lookup"><span data-stu-id="1c471-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01ea6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="01ea6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c471-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1c471-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedObjectFieldInfo(  
@@ -38,33 +38,33 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="01ea6-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="01ea6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1c471-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1c471-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="01ea6-106">[in] Um ponteiro para o cliente de depuração.</span><span class="sxs-lookup"><span data-stu-id="01ea6-106">[in] A pointer to the debug client.</span></span>  
+ <span data-ttu-id="1c471-106">[in] Um ponteiro para o cliente de depuração.</span><span class="sxs-lookup"><span data-stu-id="1c471-106">[in] A pointer to the debug client.</span></span>  
   
  `objAddr`  
- <span data-ttu-id="01ea6-107">[in] Um ponteiro de objeto gerenciado.</span><span class="sxs-lookup"><span data-stu-id="01ea6-107">[in] A managed object pointer.</span></span>  
+ <span data-ttu-id="1c471-107">[in] Um ponteiro de objeto gerenciado.</span><span class="sxs-lookup"><span data-stu-id="1c471-107">[in] A managed object pointer.</span></span>  
   
- <span data-ttu-id="01ea6-108">szFieldName</span><span class="sxs-lookup"><span data-stu-id="01ea6-108">szFieldName</span></span>  
- <span data-ttu-id="01ea6-109">[in] Um ponteiro de objeto gerenciado para o nome do campo.</span><span class="sxs-lookup"><span data-stu-id="01ea6-109">[in] A managed object pointer to the field name.</span></span>  
+ <span data-ttu-id="1c471-108">szFieldName</span><span class="sxs-lookup"><span data-stu-id="1c471-108">szFieldName</span></span>  
+ <span data-ttu-id="1c471-109">[in] Um ponteiro de objeto gerenciado para o nome do campo.</span><span class="sxs-lookup"><span data-stu-id="1c471-109">[in] A managed object pointer to the field name.</span></span>  
   
  `pValue`  
- <span data-ttu-id="01ea6-110">[out] O valor do campo.</span><span class="sxs-lookup"><span data-stu-id="01ea6-110">[out] The field value.</span></span> <span data-ttu-id="01ea6-111">Este parâmetro pode ser nulo.</span><span class="sxs-lookup"><span data-stu-id="01ea6-111">This parameter can be null.</span></span>  
+ <span data-ttu-id="1c471-110">[out] O valor do campo.</span><span class="sxs-lookup"><span data-stu-id="1c471-110">[out] The field value.</span></span> <span data-ttu-id="1c471-111">Este parâmetro pode ser nulo.</span><span class="sxs-lookup"><span data-stu-id="1c471-111">This parameter can be null.</span></span>  
   
  `pOffset`  
- <span data-ttu-id="01ea6-112">[out] O deslocamento do `objAddr` ao campo.</span><span class="sxs-lookup"><span data-stu-id="01ea6-112">[out] The offset from `objAddr` to the field.</span></span> <span data-ttu-id="01ea6-113">Este parâmetro pode ser nulo.</span><span class="sxs-lookup"><span data-stu-id="01ea6-113">This parameter can be null.</span></span>  
+ <span data-ttu-id="1c471-112">[out] O deslocamento do `objAddr` ao campo.</span><span class="sxs-lookup"><span data-stu-id="1c471-112">[out] The offset from `objAddr` to the field.</span></span> <span data-ttu-id="1c471-113">Este parâmetro pode ser nulo.</span><span class="sxs-lookup"><span data-stu-id="1c471-113">This parameter can be null.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="01ea6-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="01ea6-114">Remarks</span></span>  
- <span data-ttu-id="01ea6-115">Se o deslocamento for 0, o deslocamento não é gravado.</span><span class="sxs-lookup"><span data-stu-id="01ea6-115">If the offset is 0, no offset is written.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1c471-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="1c471-114">Remarks</span></span>  
+ <span data-ttu-id="1c471-115">Se o deslocamento for 0, nenhum deslocamento é gravado.</span><span class="sxs-lookup"><span data-stu-id="1c471-115">If the offset is 0, no offset is written.</span></span>  
   
- <span data-ttu-id="01ea6-116">Não se houver nenhum código gerenciado no thread no momento no contexto, a função retorna o HRESULT SOS_E_NOMANAGEDCODE com um valor de recurso de 0xa0 e um código de erro de 0x1000.</span><span class="sxs-lookup"><span data-stu-id="01ea6-116">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+ <span data-ttu-id="1c471-116">Não se houver nenhum código gerenciado no thread atualmente no contexto, a função retornará o HRESULT SOS_E_NOMANAGEDCODE com um valor de recurso de 0xa0 e um código de erro de 0x1000.</span><span class="sxs-lookup"><span data-stu-id="1c471-116">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01ea6-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="01ea6-117">Requirements</span></span>  
- <span data-ttu-id="01ea6-118">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01ea6-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c471-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1c471-117">Requirements</span></span>  
+ <span data-ttu-id="1c471-118">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c471-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01ea6-119">**Cabeçalho:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="01ea6-119">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="1c471-119">**Cabeçalho:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="1c471-119">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="01ea6-120">**Versão do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01ea6-120">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1c471-120">**Versão do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c471-120">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01ea6-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="01ea6-121">See Also</span></span>  
- [<span data-ttu-id="01ea6-122">Depurando funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="01ea6-122">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="1c471-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1c471-121">See also</span></span>
+- [<span data-ttu-id="1c471-122">Depurando funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="1c471-122">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

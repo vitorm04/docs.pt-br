@@ -3,25 +3,25 @@ title: '&lt;activityStateQueries&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: bdd3c8ae-a13f-4df1-9b3c-a9d6c4bb1b5f
-ms.openlocfilehash: c215380530acef630ff99dc24e2fc9cf35bbd3d4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bfd19e00e79a95eb717ca9131e92b5ff5c600d5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511976"
 ---
-# <a name="ltactivitystatequeriesgt"></a><span data-ttu-id="12100-102">&lt;activityStateQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="12100-102">&lt;activityStateQueries&gt;</span></span>
-<span data-ttu-id="12100-103">Representa uma coleção de consultas que são usados para controlar as alterações do ciclo de vida das atividades que compõem uma instância de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="12100-103">Represents a collection of queries that are used to track life cycle changes of the activities that make up a workflow instance.</span></span> <span data-ttu-id="12100-104">Por exemplo, convém manter o controle de toda vez que a atividade "Enviar email" é concluído em uma instância de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="12100-104">For example, you may want to keep track of every time the "Send E-Mail" activity completes within a workflow instance.</span></span> <span data-ttu-id="12100-105">Essa consulta é necessária para um participante de rastreamento para se inscrever em objetos de registro de estado de atividade.</span><span class="sxs-lookup"><span data-stu-id="12100-105">This query is necessary for a tracking participant to subscribe to activity state record objects.</span></span> <span data-ttu-id="12100-106">Os estados disponíveis para assinar são especificados em ActivityStates.</span><span class="sxs-lookup"><span data-stu-id="12100-106">The available states to subscribe to are specified in ActivityStates.</span></span>  
+# <a name="ltactivitystatequeriesgt"></a><span data-ttu-id="b3085-102">&lt;activityStateQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="b3085-102">&lt;activityStateQueries&gt;</span></span>
+<span data-ttu-id="b3085-103">Representa uma coleção de consultas que são usados para controlar as alterações do ciclo de vida das atividades que compõem uma instância de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="b3085-103">Represents a collection of queries that are used to track life cycle changes of the activities that make up a workflow instance.</span></span> <span data-ttu-id="b3085-104">Por exemplo, você talvez queira manter o controle de toda vez que a atividade de "Enviar email" termina dentro de uma instância de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="b3085-104">For example, you may want to keep track of every time the "Send E-Mail" activity completes within a workflow instance.</span></span> <span data-ttu-id="b3085-105">Essa consulta é necessária para um participante de rastreamento para se inscrever em objetos de registro de estado de atividade.</span><span class="sxs-lookup"><span data-stu-id="b3085-105">This query is necessary for a tracking participant to subscribe to activity state record objects.</span></span> <span data-ttu-id="b3085-106">Os estados disponíveis para assinar são especificados em ActivityStates.</span><span class="sxs-lookup"><span data-stu-id="b3085-106">The available states to subscribe to are specified in ActivityStates.</span></span>  
   
- <span data-ttu-id="12100-107">Para obter mais informações sobre consultas de perfil de controle, consulte [perfis controle](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="12100-107">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="b3085-107">Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="b3085-107">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-<span data-ttu-id="12100-108">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="12100-108">\<system.serviceModel></span></span>  
-<span data-ttu-id="12100-109">\<controle ></span><span class="sxs-lookup"><span data-stu-id="12100-109">\<tracking></span></span>  
-<span data-ttu-id="12100-110">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="12100-110">\<trackingProfile></span></span>  
-<span data-ttu-id="12100-111">\<workflow></span><span class="sxs-lookup"><span data-stu-id="12100-111">\<workflow></span></span>  
-<span data-ttu-id="12100-112">\<activityStateQueries ></span><span class="sxs-lookup"><span data-stu-id="12100-112">\<activityStateQueries></span></span>  
+<span data-ttu-id="b3085-108">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="b3085-108">\<system.serviceModel></span></span>  
+<span data-ttu-id="b3085-109">\<tracking></span><span class="sxs-lookup"><span data-stu-id="b3085-109">\<tracking></span></span>  
+<span data-ttu-id="b3085-110">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="b3085-110">\<trackingProfile></span></span>  
+<span data-ttu-id="b3085-111">\<workflow></span><span class="sxs-lookup"><span data-stu-id="b3085-111">\<workflow></span></span>  
+<span data-ttu-id="b3085-112">\<activityStateQueries></span><span class="sxs-lookup"><span data-stu-id="b3085-112">\<activityStateQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12100-113">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="12100-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3085-113">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b3085-113">Syntax</span></span>  
   
 ```xml
 <tracking>
@@ -44,26 +44,26 @@ ms.locfileid: "32755468"
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="12100-114">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="12100-114">Attributes and Elements</span></span>  
- <span data-ttu-id="12100-115">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="12100-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b3085-114">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="b3085-114">Attributes and Elements</span></span>  
+ <span data-ttu-id="b3085-115">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="b3085-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="12100-116">Atributos</span><span class="sxs-lookup"><span data-stu-id="12100-116">Attributes</span></span>  
- <span data-ttu-id="12100-117">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="12100-117">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b3085-116">Atributos</span><span class="sxs-lookup"><span data-stu-id="b3085-116">Attributes</span></span>  
+ <span data-ttu-id="b3085-117">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="b3085-117">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="12100-118">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="12100-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b3085-118">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="b3085-118">Child Elements</span></span>  
   
-|<span data-ttu-id="12100-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="12100-119">Element</span></span>|<span data-ttu-id="12100-120">Descrição</span><span class="sxs-lookup"><span data-stu-id="12100-120">Description</span></span>|  
+|<span data-ttu-id="b3085-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="b3085-119">Element</span></span>|<span data-ttu-id="b3085-120">Descrição</span><span class="sxs-lookup"><span data-stu-id="b3085-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="12100-121">\<activityStateQuery ></span><span class="sxs-lookup"><span data-stu-id="12100-121">\<activityStateQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|<span data-ttu-id="12100-122">Uma consulta que é usada para controlar o tratamento de falhas que ocorrem dentro de uma atividade.</span><span class="sxs-lookup"><span data-stu-id="12100-122">A query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="12100-123">Esse evento ocorre sempre que um FaultHandler processa uma falha.</span><span class="sxs-lookup"><span data-stu-id="12100-123">This event occurs each time a FaultHandler processes a fault.</span></span>|  
+|[<span data-ttu-id="b3085-121">\<activityStateQuery></span><span class="sxs-lookup"><span data-stu-id="b3085-121">\<activityStateQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|<span data-ttu-id="b3085-122">Uma consulta que é usada para controlar o tratamento de falhas que ocorrem dentro de uma atividade.</span><span class="sxs-lookup"><span data-stu-id="b3085-122">A query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="b3085-123">Esse evento ocorre sempre que um FaultHandler processa uma falha.</span><span class="sxs-lookup"><span data-stu-id="b3085-123">This event occurs each time a FaultHandler processes a fault.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="12100-124">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="12100-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b3085-124">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="b3085-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="12100-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="12100-125">Element</span></span>|<span data-ttu-id="12100-126">Descrição</span><span class="sxs-lookup"><span data-stu-id="12100-126">Description</span></span>|  
+|<span data-ttu-id="b3085-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="b3085-125">Element</span></span>|<span data-ttu-id="b3085-126">Descrição</span><span class="sxs-lookup"><span data-stu-id="b3085-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="12100-127">\<workflow></span><span class="sxs-lookup"><span data-stu-id="12100-127">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="12100-128">Um elemento de configuração que contém todas as consultas para um fluxo de trabalho específico identificado pelo **activityDefinitionId** propriedade.</span><span class="sxs-lookup"><span data-stu-id="12100-128">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
+|[<span data-ttu-id="b3085-127">\<workflow></span><span class="sxs-lookup"><span data-stu-id="b3085-127">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="b3085-128">Um elemento de configuração que contém todas as consultas para um fluxo de trabalho específico identificado pela **activityDefinitionId** propriedade.</span><span class="sxs-lookup"><span data-stu-id="b3085-128">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="12100-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="12100-129">See Also</span></span>  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [<span data-ttu-id="12100-130">Acompanhamento e rastreamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="12100-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="12100-131">Acompanhando perfis</span><span class="sxs-lookup"><span data-stu-id="12100-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="b3085-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b3085-129">See also</span></span>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [<span data-ttu-id="b3085-130">Acompanhamento e rastreamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="b3085-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="b3085-131">Acompanhando perfis</span><span class="sxs-lookup"><span data-stu-id="b3085-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
