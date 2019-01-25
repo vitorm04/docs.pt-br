@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1056e1b8d544e514063c6c1ad20b447815960ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a57d8f8da0431e6d3dcc9042d310cc70c6a27f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689020"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>API ALink (referência de API não gerenciada)
-Oferece suporte à criação de assemblies do .NET Framework e módulos não associados.  
+Tem suporte para a criação de módulos não associados e assemblies do .NET Framework.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [AssemblyAttributesGoHere](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
@@ -39,5 +39,5 @@ Oferece suporte à criação de assemblies do .NET Framework e módulos não ass
   
  [Interface IALink3](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de API não gerenciada](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>Consulte também
+- [Referência de API não gerenciada](../../../../docs/framework/unmanaged-api/index.md)
