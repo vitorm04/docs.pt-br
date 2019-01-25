@@ -1,5 +1,5 @@
 ---
-title: Como controlar um storyboard depois de ter começado
+title: 'Como: Controlar um Storyboard depois de ter começado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,41 +7,41 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 2407de5029007748de691a3020078b1241b02fd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fd9f34cdd6aac56ee5a29d972f18979292c69e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570142"
 ---
-# <a name="how-to-control-a-storyboard-after-it-starts"></a>Como controlar um storyboard depois de ter começado
-Este exemplo mostra como usar código para controlar um <xref:System.Windows.Media.Animation.Storyboard> depois que ele foi iniciado. Para controlar um storyboard no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Trigger> e <xref:System.Windows.TriggerAction> objetos; por exemplo, consulte [usar gatilhos de eventos para controlar um Storyboard após iniciar](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+# <a name="how-to-control-a-storyboard-after-it-starts"></a>Como: Controlar um Storyboard depois de ter começado
+Este exemplo mostra como usar código para controlar um <xref:System.Windows.Media.Animation.Storyboard> depois que ele foi iniciado. Para controlar um storyboard no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Trigger> e <xref:System.Windows.TriggerAction> objetos; por exemplo, consulte [usar gatilhos de evento para controlar um Storyboard depois de ter começado](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
- Para iniciar um storyboard, utilize o <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método, que distribui as animações do storyboard às propriedades que ele anima e inicia o storyboard.  
+ Para iniciar um storyboard, use seu <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método, que distribui as animações do storyboard às propriedades que elas animam e inicia o storyboard.  
   
- Para tornar um storyboard controlável, você deve usar o <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método e especifique **true** como o segundo parâmetro. Em seguida, use os métodos interativos do storyboard para pausar, retomar, procurar, parar, acelerar ou retardar o storyboard ou avançar para seu período de preenchimento. A seguir temos uma lista de métodos interativos de storyboard:  
+ Para tornar um storyboard controlável, você deve usar o <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método e especifique **verdadeiro** como o segundo parâmetro. Em seguida, use os métodos interativos do storyboard para pausar, retomar, procurar, parar, acelerar ou retardar o storyboard ou avançar para seu período de preenchimento. A seguir temos uma lista de métodos interativos de storyboard:  
   
 -   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Pausa o storyboard.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Retoma um storyboard pausado.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Retoma um storyboard em pausa.  
   
 -   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Define a velocidade interativa do storyboard.  
   
 -   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Busca o storyboard no local especificado.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Busca o storyboard para o local especificado. Ao contrário de <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método, esta operação é processado antes do tique seguinte.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Busca o storyboard para o local especificado. Ao contrário de <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método, essa operação é processado antes da próxima escala.  
   
 -   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Avança o storyboard para seu período de preenchimento, se ele tiver um.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Para o storyboard.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Interrompe o storyboard.  
   
  No exemplo a seguir, diversos métodos de storyboard são usados para controlar de forma interativa um storyboard.  
   
- **Observação:** para ver um exemplo de controle de um storyboard usando gatilhos com [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [Usar gatilhos de evento para controlar um storyboard depois de ter começado](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ **Observação:** Para ver um exemplo de como controlar um storyboard usando gatilhos com [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [usar gatilhos de evento para controlar um Storyboard depois de ter começado](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
  [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
-## <a name="see-also"></a>Consulte também  
- [Usar gatilhos de evento para controlar um storyboard depois de ter começado](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+## <a name="see-also"></a>Consulte também
+- [Usar gatilhos de evento para controlar um storyboard depois de ter começado](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

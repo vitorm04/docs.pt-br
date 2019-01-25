@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar um aplicativo do Windows Forms a partir da linha de comando'
+title: 'Como: Criar um aplicativo do Windows Forms a partir da linha de comando'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581970"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Como: criar um aplicativo do Windows Forms a partir da linha de comando
-Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas para criar e executar um aplicativo do Windows Forms na linha de comando. Há um suporte abrangente para esses procedimentos no Visual Studio.  Consulte também as [Instruções Passo a Passo: Criando um Formulários Simples do Windows Form](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Como: Criar um aplicativo do Windows Forms a partir da linha de comando
+Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas para criar e executar um aplicativo do Windows Forms na linha de comando. Há um suporte abrangente para esses procedimentos no Visual Studio.  Consulte também [passo a passo: Criando um formulário do Windows simples](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Procedimento  
   
@@ -113,9 +113,9 @@ Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas
   
 -   Para compilar o código, siga as instruções no procedimento a seguir que descrevem como compilar e executar o aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [Alterando a aparência dos Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [Aprimorando aplicativos do Windows Forms](../../../docs/framework/winforms/advanced/index.md)  
- [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [Alterando a aparência dos Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [Aprimorando aplicativos do Windows Forms](../../../docs/framework/winforms/advanced/index.md)
+- [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

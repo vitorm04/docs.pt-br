@@ -2,18 +2,18 @@
 title: Definições de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7abbe5dfed005a10955a385cadf12725a9450512
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ac27c3dd43cb83272bff991dbd713e8269ccbb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743524"
 ---
 # <a name="type-definitions-entity-sql"></a>Definições de tipo (Entity SQL)
 Uma definição de tipo é usada na instrução de declaração de uma função in-line de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .  
   
 ## <a name="remarks"></a>Comentários  
- A instrução de declaração para uma função embutida consiste de [função](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) palavra-chave seguida pelo identificador que representa o nome da função (por exemplo, "MyAvg") seguido por uma lista de definições de parâmetro entre parênteses (para exemplo, "devido a Collection(Decimal)").  
+ A instrução de declaração para uma função in-line consiste as [função](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) seguido pelo identificador que representa o nome da função (por exemplo, "MyAvg") seguido por uma lista de definições de parâmetro no parêntese (por palavra-chave exemplo, "a dívidas dívidas.  
   
  A lista de definição de parâmetro consiste de zero ou mais definições de parâmetro. Cada definição de parâmetro consiste em um identificador (o nome do parâmetro para a função, por exemplo, a dívidas “”) seguido por uma definição de tipo (por exemplo, “coleção (decimal) ").  
   
@@ -86,6 +86,6 @@ Function UnReference(p1 Ref(AdventureWorks.Order)) AS (
 select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

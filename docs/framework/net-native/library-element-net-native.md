@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eabaf1dd99fce7cd4c45f80666534f904fcdfdf9
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: e6615ab30fdc0d0ab65f135e1df4e206f5548dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743772"
 ---
 # <a name="ltlibrarygt-element-net-native"></a>Elemento &lt;Library&gt; (.NET Nativo)
 Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução.  
@@ -58,7 +58,7 @@ Elemento \<Library>
   
  O elemento `<Library>` serve como um contêiner para definir os elementos do programa cujos metadados são necessária no tempo de execução. Este elemento não expressa política. No tempo de compilação, as ferramentas do compilador pesquisam somente a biblioteca designada pelo elemento `<Library>` para os elementos do programa identificados por seus elementos filho. Em contraste, as ferramentas do compilador pesquisam todas as bibliotecas, incluindo as bibliotecas principais do .NET Framework, por elementos de programa identificados por elementos filhos do elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) elemento.  
   
- As diretivas `<Library>` podem ser utilizadas condicionalmente. Se o nome do `<Library>` elemento inicia e termina com um asterisco (\*), o `<Library>` diretiva terá efeito apenas se o assembly especificado entre os asteriscos é referenciado pelo aplicativo. Por exemplo, a diretiva de tempo de execução a seguir se aplica somente se o assembly Utillities.dll for referenciado pelo aplicativo.  
+ As diretivas `<Library>` podem ser utilizadas condicionalmente. Se o nome da `<Library>` elemento começa e termina com um asterisco (\*), o `<Library>` diretiva terá efeito apenas se o assembly especificado entre os asteriscos for referenciado pelo aplicativo. Por exemplo, a diretiva de tempo de execução a seguir se aplica somente se o assembly Utillities.dll for referenciado pelo aplicativo.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -68,8 +68,8 @@ Elemento \<Library>
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [\<Aplicativo > elemento](../../../docs/framework/net-native/application-element-net-native.md)  
- [\<Diretivas > elemento](../../../docs/framework/net-native/directives-element-net-native.md)  
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Consulte também
+- [\<Aplicativo > elemento](../../../docs/framework/net-native/application-element-net-native.md)
+- [\<Diretivas > elemento](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -2,12 +2,12 @@
 title: Visão geral de sindicalização do WCF
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
-ms.openlocfilehash: cba14edc5743966c53f23b3dbf965c5472ed2702
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 82e8e1192b791dde1ca0ea7e030c7cfc82476b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718241"
 ---
 # <a name="wcf-syndication-overview"></a>Visão geral de sindicalização do WCF
 Windows Communication Foundation (WCF) oferece suporte para expor feeds de sindicalização de um serviço WCF. Sindicalização é um mecanismo de integração de aplicativos no qual um servidor expõe alguns dados de aplicativo em um formato interoperável, conhecido como um feed. Um feed é uma coleção de dados de aplicativo que consiste em alguns metadados de nível de feed (título, autor, URL e outros metadados) e uma série de itens de feed. Dentro do feed, os itens do feed são geralmente temporal em ordem cronológica inversa. Um item de feed consiste em um conjunto padrão de metadados de nível de item (title, URL, data de criação, categoria e outros metadados de nível de item) e uma quantidade arbitrária de dados específicos do aplicativo. Os dois tipos mais comuns de feeds de agregação são RSS Really Simple Syndication () 2.0 e Atom 1.0, sendo que ambos têm suporte pelo WCF.  
@@ -21,5 +21,5 @@ Windows Communication Foundation (WCF) oferece suporte para expor feeds de sindi
 ## <a name="syndication-formats"></a>Formatos de distribuição  
  A plataforma de sindicalização do WCF dá suporte a RSS 2.0 e Atom 1.0.  
   
-## <a name="see-also"></a>Consulte também  
- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Consulte também
+- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

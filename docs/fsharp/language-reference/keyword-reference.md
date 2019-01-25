@@ -2,12 +2,12 @@
 title: Referência de palavras-chave
 description: Encontre links para informações sobre todos os F# palavras-chave.
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579830"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857899"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
@@ -73,7 +73,7 @@ A tabela a seguir mostra todos os F# palavras-chave em ordem alfabética, junto 
 |`return!`|[Expressões de Computação](computation-expressions.md)<br /><br />[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)|Usado para indicar uma expressão de computação que, quando avaliada, fornece o resultado da expressão contentora de computação.|
 |`select`|[Expressões de Consulta](query-expressions.md)|Usado em expressões de consulta para especificar quais campos ou colunas para extrair. Observe que se trata de uma palavra-chave contextual, que significa que não é, na verdade, uma palavra reservada e atua apenas como uma palavra-chave no contexto apropriado.|
 |`static`|[Membros](members/index.md)|Usado para indicar um método ou propriedade que pode ser chamada sem uma instância de um tipo ou um membro de valor que é compartilhado entre todas as instâncias de um tipo.|
-|`struct`|[Estruturas](structures.md)<br /><br />[Restrições](generics/constraints.md)|Usada para declarar um tipo de estrutura.<br /><br />Também é usado em restrições de parâmetro genérico.<br /><br />Usado para compatibilidade OCaml nas definições de módulo.|
+|`struct`|[Estruturas](structures.md)<br /><br /> [Tuplas](tuples.md)<br/><br/>[Restrições](generics/constraints.md)|Usada para declarar um tipo de estrutura.<br /><br/>Usado para especificar uma tupla de struct.<br/><br />Também é usado em restrições de parâmetro genérico.<br /><br />Usado para compatibilidade OCaml nas definições de módulo.|
 |`then`|[Expressões condicionais: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Construtores](members/constructors.md)|Usada em expressões condicionais.<br /><br />Também é usado para executar os efeitos colaterais após a construção de objeto.|
 |`to`|[Loops: `for...to` Expressão](loops-for-to-expression.md)|Usado em `for` loops para indicar um intervalo.|
 |`true`|[Tipos Primitivos](primitive-types.md)|Usado como um literal booliano.|

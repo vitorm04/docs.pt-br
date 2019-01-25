@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bc1407f8444b78154981619742bd0da188c4335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 463838681ceaaeb2edab85a22dd979fb143b9248
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602878"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>Método ICorDebugType2::GetTypeID
-Obtém um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) para este tipo.  
+Obtém uma [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) para esse tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,23 +44,23 @@ HRESULT GetTypeID(
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
-|`S_OK`|O método foi bem-sucedido. O método recuperou válido [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).|  
+|`S_OK`|O método foi bem-sucedido. O método recuperou válida [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).|  
 |`CORDBG_E_CLASS_NOT_LOADED`|O tipo não foi carregado.|  
 |`CORDBG_E_UNSUPPORTED`|Não há suporte para o tipo.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse método fornece um mapeamento de ICorDebugType, que representa um tipo que pode ou não tenham sido carregado no tempo de execução, como um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), que serve como opaco identificador que identifica um tipo carregado no tempo de execução.  
+ Esse método fornece um mapeamento de ICorDebugType, que representa um tipo que pode, ou pode não ter sido carregado no tempo de execução, como uma [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), que serve como opaco identificador que identifica um tipo carregado no tempo de execução.  
   
  Quando o tipo que representa o ICorDebugType ainda não foi carregado, esse método retornará `CORDBG_E_CLASS_NOT_LOADED`.  Se não há suporte para o tipo, ele retorna `CORDBG_E_UNSUPPORTED`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugType2](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugType2](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Como designar um botão dos Windows Forms como o botão Cancelar
+title: 'Como: Designar um botão dos Windows Forms como o botão Cancelar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
-ms.openlocfilehash: efe68ec8e5c34607bb8f865b5d0c7919a0377ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74d025677682735fc7f1c68116b2364887f0519c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701463"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>Como designar um botão dos Windows Forms como o botão Cancelar
-Em qualquer formulário do Windows, você pode designar um <xref:System.Windows.Forms.Button> controle botão de cancelamento. Um botão Cancelar é clicado sempre que o usuário pressiona a tecla ESC, independentemente de qual outro controle no formulário tem o foco. Geralmente, este botão é programado para permitir que o usuário sair rapidamente de uma operação sem confirmar qualquer ação.  
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>Como: Designar um botão dos Windows Forms como o botão Cancelar
+Em qualquer formulário do Windows, você pode designar um <xref:System.Windows.Forms.Button> controle para ser o botão Cancelar. Um botão Cancelar é clicado sempre que o usuário pressiona a tecla ESC, independentemente de qual outro controle no formulário tem o foco. Geralmente, este botão é programado para permitir que o usuário sair rapidamente de uma operação sem se comprometer com qualquer ação.  
   
-### <a name="to-designate-the-cancel-button"></a>Para designar o botão Cancelar  
+### <a name="to-designate-the-cancel-button"></a>Para designar um botão Cancelar  
   
-1.  Definir o formulário <xref:System.Windows.Forms.Form.CancelButton%2A> propriedade apropriada <xref:System.Windows.Forms.Button> controle.  
+1.  Definir o formulário <xref:System.Windows.Forms.Form.CancelButton%2A> propriedade para apropriado <xref:System.Windows.Forms.Button> controle.  
   
     ```vb  
     Private Sub SetCancelButton(ByVal myCancelBtn As Button)  
@@ -44,10 +44,10 @@ Em qualquer formulário do Windows, você pode designar um <xref:System.Windows.
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Form.CancelButton%2A>  
- [Visão geral do controle de botão](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [Formas de selecionar um controle de botão dos Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [Como responder a cliques no botão dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Como designar um botão dos Windows Forms como o botão Aceitar](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
- [Controle de botão](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Form.CancelButton%2A>
+- [Visão geral do controle de botão](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
+- [Formas de selecionar um controle de botão dos Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
+- [Como: Responder a cliques de botão do Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [Como: Designar um botão dos Windows Forms como botão aceitar](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)
+- [Controle de botão](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

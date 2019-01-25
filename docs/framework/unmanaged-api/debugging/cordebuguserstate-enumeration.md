@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b1ee5044c2223d3ff90cf10b53cad4e1b353d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726495"
 ---
 # <a name="cordebuguserstate-enumeration"></a>Enumeração CorDebugUserState
 Indica o estado do usuário de um thread.  
@@ -46,29 +46,29 @@ typedef enum CorDebugUserState {
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|Foi solicitado o encerramento do thread.|  
+|`USER_STOP_REQUESTED`|Um encerramento do thread foi solicitado.|  
 |`USER_SUSPEND_REQUESTED`|Foi solicitada uma suspensão do thread.|  
 |`USER_BACKGROUND`|O thread está em execução em segundo plano.|  
-|`USER_UNSTARTED`|O thread não iniciou a execução.|  
+|`USER_UNSTARTED`|O thread não foi iniciada para execução.|  
 |`USER_STOPPED`|O thread foi encerrado.|  
-|`USER_WAIT_SLEEP_JOIN`|O thread está aguardando outro thread para concluir uma tarefa.|  
+|`USER_WAIT_SLEEP_JOIN`|O thread está aguardando outro thread concluir uma tarefa.|  
 |`USER_SUSPENDED`|O thread foi suspenso.|  
-|`USER_UNSAFE_POINT`|O thread está em um ponto desprotegido. Ou seja, o thread está em um ponto na execução de onde ele pode bloquear a coleta de lixo.<br /><br /> Depurar eventos podem ser distribuídos de pontos não seguros, mas a suspensão de um thread em um ponto desprotegido muito provavelmente causará um deadlock até que o thread seja retomado. Os pontos seguros e são determinados pela implementação de coleta de lixo e just-in-time (JIT).|  
+|`USER_UNSAFE_POINT`|O thread está em um ponto que não é seguro. Ou seja, o thread está em um ponto na execução em que ele pode bloquear a coleta de lixo.<br /><br /> Depurar eventos podem ser despachados de pontos que não é seguros, mas a suspensão de um thread em um ponto que não é seguro muito provavelmente causará um deadlock até que o thread seja retomado. Os pontos seguros e são determinados pela implementação da coleta de lixo e just-in-time (JIT).|  
 |`USER_THREADPOOL`|É o thread do pool de threads.|  
   
 ## <a name="remarks"></a>Comentários  
- O estado do usuário de um thread é o estado em que o thread tem quando o depurador examina a ele. Um thread pode ter uma combinação de estados do usuário.  
+ O estado do usuário de um thread é o estado que o thread tiver quando o depurador examina a ele. Um thread pode ter uma combinação de estados do usuário.  
   
- Use o [Getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) método para recuperar o estado do usuário do thread.  
+ Use o [icordebugthread:: Getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) método para recuperar o estado do usuário do thread.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -2,12 +2,12 @@
 title: Sessões seguras
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-ms.openlocfilehash: 1f3a1e23f7cac2540216365acfca5c23cddfce71
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63e363e90a656c918b68d3f86d8b6ad3b7a540e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715706"
 ---
 # <a name="secure-sessions"></a>Sessões seguras
 Um recurso do Windows Communication Foundation (WCF) é sessões confiáveis que garantem que as mensagens são recebidas na ordem em que foram enviadas. Os tópicos nesta seção abordam as implicações de segurança a considerar ao criar uma sessão confiável. Para obter mais informações sobre as sessões confiáveis, consulte [sessões usando](../../../../docs/framework/wcf/using-sessions.md).  
@@ -34,7 +34,7 @@ Um recurso do Windows Communication Foundation (WCF) é sessões confiáveis que
   
  [Serviços de design e implantação](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Como: Habilitar a detecção de reprodução de mensagem](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Como: Criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Habilitar a detecção de reprodução de mensagem](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)
+- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Como: Criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

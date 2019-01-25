@@ -2,12 +2,12 @@
 title: Ativação de MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 20287af1c1d93bbdcfa83d88e5790284fbbff170
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745435"
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 Este exemplo demonstra como hospedar aplicativos no serviço de ativação de processos para Windows (WAS) que são lidos a partir de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e se baseia o [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) exemplo. Nesse caso, o serviço é um aplicativo hospedado na Web e o cliente é auto-hospedado e gera como saída para o console para observar o status das ordens de compra enviado.  
@@ -219,7 +219,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Além disso, você deve instalar os componentes de ativação não HTTP do WCF:  
   
-    1.  Dos **inicie** menu, escolha **painel de controle**.  
+    1.  No menu **Iniciar**, selecione **Painel de Controle**.  
   
     2.  Selecione **programas e recursos**.  
   
@@ -305,7 +305,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     >  Executar o arquivo em lotes redefinirá o DefaultAppPool para ser executado usando o .NET Framework versão 2.0.  
   
- Por padrão com o `netMsmqBinding` transporte de associação de segurança está habilitada. Duas propriedades, `MsmqAuthenticationMode` e `MsmqProtectionLevel`, juntos determinam o tipo de segurança de transporte. Por padrão, o modo de autenticação está definido como `Windows` e o nível de proteção é definido como `Sign`. Para o MSMQ fornecer a autenticação e o recurso de assinatura, ele deve ser parte de um domínio. Se você executar esse exemplo em um computador que não faz parte de um domínio, o seguinte erro é recebido: "Mensagem interna do usuário certificado do enfileiramento de mensagens não existe".  
+ Por padrão com o `netMsmqBinding` transporte de associação de segurança está habilitada. Duas propriedades, `MsmqAuthenticationMode` e `MsmqProtectionLevel`, juntos determinam o tipo de segurança de transporte. Por padrão, o modo de autenticação está definido como `Windows` e o nível de proteção é definido como `Sign`. Para o MSMQ fornecer a autenticação e o recurso de assinatura, ele deve ser parte de um domínio. Se você executar esse exemplo em um computador que não faz parte de um domínio, o seguinte erro foi recebido: "Mensagem do usuário interna certificado do enfileiramento de mensagens não existe".  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para executar o exemplo em um computador associado a um grupo de trabalho  
   
@@ -330,7 +330,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Para alterar a identidade que o processo de trabalho é executado:  
   
-    1.  Execute Inetmgr.exe.  
+    1.  Run Inetmgr.exe.  
   
     2.  Sob **Pools de aplicativos**, clique com botão direito do **AppPool** (normalmente **DefaultAppPool**) e escolha **definir padrões do Pool de aplicativos...** .  
   
@@ -350,5 +350,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Consulte também
+- [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)

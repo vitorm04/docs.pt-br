@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 532f69afd949971fbb4f56a8fdbcc6eab159446f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738203"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>Método ISymUnmanagedWriter::DefineDocument
-Define um documento de origem. GUIDs são fornecidos para idiomas conhecidos, fornecedores e tipos de documento.  
+Define um documento de origem. GUIDs são fornecidos para linguagens mais conhecidas, fornecedores e tipos de documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ HRESULT DefineDocument(
   
 #### <a name="parameters"></a>Parâmetros  
  `url`  
- [in] Um ponteiro para um `WCHAR` que define o uniform resource locator (URL) que identifica o documento.  
+ [in] Um ponteiro para um `WCHAR` que define o localizador recursos uniforme (URL) que identifica o documento.  
   
  `language`  
  [in] Um ponteiro para um GUID que define o idioma do documento.  
@@ -60,5 +60,5 @@ HRESULT DefineDocument(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

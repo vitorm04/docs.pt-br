@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea617668a72413f3387a35fe009b37fa15d03354
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9bf3e5d427698673576f71e290fde54275b75317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683448"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>Método IMetaDataTables::GetTableInfo
-Obtém o nome, o tamanho de linha, o número de linhas, o número de colunas e o índice da coluna de chave da tabela especificada.  
+Obtém o nome, tamanho da linha, número de linhas, o número de colunas e o índice da coluna de chave da tabela especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ HRESULT GetTableInfo (
   
 #### <a name="parameters"></a>Parâmetros  
  `ixTbl`  
- [in] O identificador da tabela cujas propriedades para retornar.  
+ [in] O identificador da tabela cujas propriedades a serem retornadas.  
   
  `pcbRow`  
  [out] Um ponteiro para o tamanho, em bytes, de uma linha da tabela.  
@@ -60,14 +60,14 @@ HRESULT GetTableInfo (
  [out] Um ponteiro para um ponteiro para o nome da tabela.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

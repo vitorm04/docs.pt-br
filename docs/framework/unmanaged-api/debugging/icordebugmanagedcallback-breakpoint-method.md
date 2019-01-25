@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 381fdecfb2cb194cd1eb00a5b55db6fb89eeebbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a1df57e82309d42092c38dfcdd8b65ccc2797f9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743277"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>Método ICorDebugManagedCallback::Breakpoint
 Notifica o depurador quando um ponto de interrupção é encontrado.  
@@ -42,19 +42,19 @@ HRESULT Breakpoint (
  [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o ponto de interrupção.  
   
  `pThread`  
- [in] Um ponteiro para um objeto ICorDebugThread que representa o segmento que contém o ponto de interrupção.  
+ [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread que contém o ponto de interrupção.  
   
  `pBreakpoint`  
- [in] Um ponteiro para um objeto ICorDebugBreakpoint que representa o ponto de interrupção.  
+ [in] Um ponteiro para um objeto de ICorDebugBreakpoint que representa o ponto de interrupção.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

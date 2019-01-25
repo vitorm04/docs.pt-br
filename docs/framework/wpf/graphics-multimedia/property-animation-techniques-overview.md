@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 438b59aa4aa4213960e0bc3d479a2b949f6d374e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 09e778f89f58556a53f19b4c89e3d82ed94cd64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614153"
 ---
 # <a name="property-animation-techniques-overview"></a>Visão geral das técnicas de animação da propriedade
 Este tópico descreve as diferentes abordagens para animar propriedades: storyboards, animações locais, relógios e animações por quadro.  
@@ -58,7 +58,7 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.EventTrigger>|Sim|Sim|Sim|Sim|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e uma propriedade <xref:System.Windows.Trigger>|Não|Sim|Sim|Sim|[Disparar uma animação quando o valor de uma propriedade é alterado](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como disparar uma animação quando dados são alterados](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como: Disparar uma animação quando dados forem alterados](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sim|Não|Não|Não|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Para obter mais informações sobre <xref:System.Windows.Media.Animation.Storyboard> objetos, consulte a [visão geral de Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
@@ -108,7 +108,7 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
  Para obter mais informações sobre objetos de Relógio, consulte o [Visão geral da animação e do sistema de tempo](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
-## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>Animação por quadro: ignorar o sistema de animação e tempo  
+## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>Animação por quadro: Ignorar o sistema de animação e tempo  
  Use esta abordagem quando você precisar ignorar completamente o sistema de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Um cenário para essa abordagem são as animações de física, em que cada etapa da animação requer que os objetos sejam recalculados com base no último conjunto de interações de objetos.  
   
  Animações por quadro não podem ser definidas dentro de estilos, modelos de controle ou modelos de dados.  
@@ -121,8 +121,8 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
  Para obter mais informações, consulte o <xref:System.Windows.Media.CompositionTarget.Rendering> página.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Visão geral da animação e do sistema de tempo](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Visão geral da animação e do sistema de tempo](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

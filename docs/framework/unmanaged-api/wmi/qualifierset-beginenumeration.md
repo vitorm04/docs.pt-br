@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d20701237501834c611c4e498c39597cf275176
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3577c90af51886868d57796fb5bfae91dedcee16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720113"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>Função QualifierSet_BeginEnumeration
 Redefine um enumerador dos qualificadores de um objeto para o início da enumeração.  
@@ -71,15 +71,15 @@ Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são defin
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |  | 0 | Retorne os nomes de todos os qualificadores. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retorne apenas os nomes dos qualificadores específica para a propriedade atual ou o objeto. <br/> Para uma propriedade: retornar apenas os qualificadores específica para a propriedade (incluindo substituições), e não os qualificadores propagadas da definição da classe. <br/> Para uma instância: retornar apenas os nomes de qualificador de específico da instância. <br/> Para uma classe: retornar apenas os qualificadores específica para o beiong de classe derivada.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: retorno propagados apenas os qualificadores a essa propriedade de definição de classe e não os valores da propriedade em si. <br/> Para uma instância: retorno apenas desses qualificadores propagados da definição da classe. <br/> Para uma classe: retornar apenas os nomes de qualificador herdados de classes pai. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retorne apenas os nomes dos qualificadores específica para a propriedade atual ou o objeto. <br/> Para uma propriedade: Retorne apenas os qualificadores específicos para a propriedade (incluindo substituições) e não os qualificadores propagados da definição da classe. <br/> Para uma instância: Retorne apenas os nomes específicos da instância qualificador. <br/> Para uma classe: Retorne apenas os qualificadores específico para o beiong de classe derivada.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: Retorno propagados apenas os qualificadores a essa propriedade de definição de classe e não os valores da propriedade em si. <br/> Para uma instância: Retorno apenas desses qualificadores propagados da definição da classe. <br/> Para uma classe: Retornar apenas os nomes de qualificador herdados de classes pai. |
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

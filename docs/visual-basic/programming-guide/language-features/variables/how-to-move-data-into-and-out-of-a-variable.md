@@ -1,18 +1,18 @@
 ---
-title: Como inserir e remover dados de uma variável (Visual Basic)
+title: 'Como: Mover dados dentro e fora de uma variável (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: bfda451cefff699561253910715d8450414b00ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b34173ebb3226fa00610c124c7b680e18d80de9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717925"
 ---
-# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Como inserir e remover dados de uma variável (Visual Basic)
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Como: Mover dados dentro e fora de uma variável (Visual Basic)
 Você pode armazenar um valor em uma variável, colocando o nome da variável no lado esquerdo de uma instrução de atribuição.  
   
 ## <a name="putting-data-in-a-variable"></a>Colocar dados em uma variável  
@@ -30,7 +30,7 @@ Você pode armazenar um valor em uma variável, colocando o nome da variável no
      O valor gerado no lado direito da instrução de atribuição é armazenado na variável.  
   
 ## <a name="getting-data-from-a-variable"></a>Obtendo dados de uma variável  
- Recuperar o valor da variável, incluindo o nome da variável em uma expressão.  
+ Para recuperar um valor de variável, incluindo o nome da variável em uma expressão.  
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>Para recuperar um valor de uma variável  
   
@@ -38,7 +38,7 @@ Você pode armazenar um valor em uma variável, colocando o nome da variável no
   
      -ou-  
   
--   Use o nome de variável seguido de igual (`=`) entrar em uma instrução de atribuição.  
+-   Use o nome da variável igual a seguir (`=`) entrar em uma instrução de atribuição.  
   
      O exemplo a seguir lê o valor da variável `startValue` e, em seguida, usa o valor da variável `counter` em uma expressão.  
   
@@ -47,9 +47,9 @@ Você pode armazenar um valor em uma variável, colocando o nome da variável no
     cellValue = (counter + 5) ^ 2  
     ```  
   
-     O valor da variável participa na expressão apenas como uma constante seria e, em seguida, ele é armazenado na variável ou propriedade no lado esquerdo da instrução de atribuição.  
+     O valor da variável participa na expressão, assim como seria uma constante e, em seguida, ele é armazenado na variável ou propriedade no lado esquerdo da instrução de atribuição.  
   
-## <a name="see-also"></a>Consulte também  
- [Variáveis](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+## <a name="see-also"></a>Consulte também
+- [Variáveis](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

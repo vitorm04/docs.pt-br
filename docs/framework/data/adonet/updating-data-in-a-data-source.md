@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 088dc9507f073553f8a857bd11ecd016f0d94244
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730874"
 ---
 # <a name="updating-data-in-a-data-source"></a>Atualizando dados em uma fonte de dados
 As instruções SQL que modificam dados (como UPDATE, INSERT ou DELETE) não retornam linhas. Da mesma forma, muitos procedimentos armazenados executam uma ação, mas não retornam linhas. Para executar comandos que não retornam linhas, criar uma **comando** objeto com o comando SQL apropriado e uma **Conexão**, incluindo quaisquer **parâmetros**. Execute o comando com o **ExecuteNonQuery** método o **comando** objeto.  
@@ -91,8 +91,8 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usando os comandos para modificar dados](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)  
- [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Usando os comandos para modificar dados](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+- [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

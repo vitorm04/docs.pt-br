@@ -1,5 +1,5 @@
 ---
-title: Como adicionar controles sem uma interface do usuário aos Windows Forms
+title: 'Como: Adicionar controles sem uma Interface do usuário ao Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 9458fc7f3344a5692581485a0e5bd462e45551d9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 442a6175b1b378cf3489314e190c58312a327c01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738583"
 ---
-# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Como adicionar controles sem uma interface do usuário aos Windows Forms
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Como: Adicionar controles sem uma Interface do usuário ao Windows Forms
 Um controle (ou componente) não visual fornece funcionalidade ao seu aplicativo. Diferente de outros controles, os componentes não fornecem uma interface do usuário ao usuário e, portanto, não precisam ser exibido na superfície do Designer de Formulários do Windows. Quando um componente é adicionado a um formulário, o Designer de Formulários do Windows exibe uma bandeja redimensionável na parte inferior do formulário em que todos os componentes são exibidos. Quando um controle é adicionado à bandeja de componentes, você pode selecionar o componente e definir suas propriedades como faria com qualquer outro controle no formulário.  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ Um controle (ou componente) não visual fornece funcionalidade ao seu aplicativo
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Adicionar um componente a um Windows Form  
   
-1.  Abra o formulário. Para ver mais detalhes, consulte [Como exibir Windows Forms no Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Abra o formulário. Para obter detalhes, consulte [como: Exibir Windows Forms no Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Na **Caixa de ferramentas**, clique em um componente e arraste-o para o formulário.  
   
@@ -79,12 +79,12 @@ Um controle (ou componente) não visual fornece funcionalidade ao seu aplicativo
     > [!IMPORTANT]
     >  Você poderia expor seu computador local a um risco de segurança por meio da rede referenciando um UserControl mal-intencionado. Isso seria um problemas apenas no caso de uma pessoa mal-intencionada criar um controle personalizado prejudicial e você adicioná-lo por engano ao seu projeto.  
   
-## <a name="see-also"></a>Consulte também  
- [Controles dos Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Como Adicionar Controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Como adicionar controles do ActiveX ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- [Como copiar controles entre Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
- [Colocando controles nos Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Controles dos Windows Forms por função](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>Consulte também
+- [Controles dos Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Como: Adicionar controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Como: Adicionar controles ActiveX ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Como: Copiar controles entre Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)
+- [Colocando controles nos Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles dos Windows Forms por função](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

@@ -2,12 +2,12 @@
 title: Suporte do SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527608"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Suporte do SqlClient para LocalDB
 A partir do SQL Server Codinome Denali, uma versão leve do SQL Server, denominada LocalDB, estará disponível. Este tópico discute como se conectar a um banco de dados LocalDB.  
@@ -58,6 +58,6 @@ A partir do SQL Server Codinome Denali, uma versão leve do SQL Server, denomina
   
 -   Use o `AttachDBFilename` palavra-chave de cadeia de caracteres de conexão para especificar o. Arquivo MDF.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md) (Recursos do SQL Server e o ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md) (Recursos do SQL Server e o ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

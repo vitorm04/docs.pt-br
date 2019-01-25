@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525203"
 ---
 # <a name="panels-overview"></a>Visão geral de painéis
 <xref:System.Windows.Controls.Panel> elementos são componentes que controlam a renderização de elementos – seu tamanho e as dimensões, sua posição e a disposição de seu conteúdo filho. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece uma série de predefinido <xref:System.Windows.Controls.Panel> elementos, bem como a capacidade de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  
@@ -252,13 +252,13 @@ ms.locfileid: "47196623"
   
  Para obter mais informações sobre como criar aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] com [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]s localizáveis, consulte a [Visão geral do uso de layout automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Exemplo de galeria de layout do WPF](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Criar uma amostra de painel de encapsulamento com conteúdo personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [Visão geral das propriedades anexadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Visão geral do uso de layout automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Consulte também
+- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Exemplo de galeria de layout do WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Criar uma amostra de painel de encapsulamento com conteúdo personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [Visão geral das propriedades anexadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Visão geral do uso de layout automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

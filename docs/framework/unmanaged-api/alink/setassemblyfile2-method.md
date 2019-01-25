@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade568889d1c0203115f160d855de8c598798196
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3882998d3155b49251fbe091b72ef11022ebfd2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540202"
 ---
 # <a name="setassemblyfile2-method"></a>Método SetAssemblyFile2
-Define o nome e as opções para um novo assembly. Não chame esse método quando você produzir módulos não associados.  
+Define o nome e as opções para um novo assembly. Não chame este método quando você produzir módulos não associados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,21 +42,21 @@ HRESULT SetAssemblyFile2(
  Nome do arquivo de manifesto.  
   
  `pEmitter`  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface para este arquivo.  
+ [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface para esse arquivo.  
   
  `afFlags`  
- Opções representado por [enumeração AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
+ Opções de representado por [enumeração AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Recebe o ID exclusivo para o assembly que está sendo construído.  
+ Recebe a ID exclusiva para o assembly que está sendo construído.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8992c9e47e2b62e90191a67fc7353e138502ebf1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 195f55f4f107e075c6f6c8e797481128c90b3432
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721013"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Esquema de configurações de compilador e de provedor de linguagem
 As configurações do compilador e do provedor de linguagem especificam os elementos de configuração do compilador para os provedores de linguagem disponíveis. Cada elemento de configuração do compilador especifica o nome do tipo de provedor de código, os parâmetros do compilador, os nomes de linguagens com suporte e as extensões de arquivo com suporte.  
@@ -58,8 +58,8 @@ As configurações do compilador e do provedor de linguagem especificam os eleme
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Consulte também
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

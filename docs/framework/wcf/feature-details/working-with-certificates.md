@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693604"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
@@ -24,7 +24,7 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
  Os certificados devem ser emitidos por uma autoridade de certificação, que é normalmente um distribuidor de certificados de terceiros. Em um domínio do Windows, uma autoridade de certificação é incluída e pode ser usada para emitir certificados para computadores no domínio.  
   
 ## <a name="viewing-certificates"></a>Exibindo certificados  
- Para trabalhar com certificados, geralmente é necessário exibi-los e examinar suas propriedades. Isso é feito facilmente com a ferramenta de snap-in do Console de Gerenciamento Microsoft (MMC). Para obter mais informações, confira [Como exibir certificados com o snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Para trabalhar com certificados, geralmente é necessário exibi-los e examinar suas propriedades. Isso é feito facilmente com a ferramenta de snap-in do Console de Gerenciamento Microsoft (MMC). Para obter mais informações, confira [Como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Repositórios de certificados  
  Os certificados estão localizados em repositórios. Dois grandes repositórios de certificado existem e são divididos em sub-repositórios. Se você for o administrador em um computador, poderá exibir os dois principais repositórios usando a ferramenta do snap-in do MMC. Os não administradores podem exibir somente o repositório do usuário atual.  
@@ -52,12 +52,12 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
 -   Se o serviço ou o cliente é um aplicativo executado em uma conta de usuário, use o repositório do **usuário atual**.  
   
 ### <a name="accessing-stores"></a>Acessando repositórios  
- Os repositórios são protegidos por listas de controle de acesso (ACLs), como pastas em um computador. Ao criar um serviço hospedado pelos Serviços de Informações da Internet (IIS), o processo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] é executado sob a conta do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Essa conta deve ter acesso ao repositório que contém os certificados que um serviço usa. Cada um dos principais repositórios é protegido por uma lista de acesso padrão, mas as listas podem ser modificadas. Se você criar uma função separada para acessar um repositório, deverá conceder permissão de acesso a essa função. Para saber como modificar a lista de acesso usando a ferramenta WinHttpCertConfig.exe, confira [Como criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obter mais informações sobre como usar certificados do cliente com o IIS, confira [Como chamar um serviço Web usando um certificado do cliente para autenticação em um aplicativo Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Os repositórios são protegidos por listas de controle de acesso (ACLs), como pastas em um computador. Ao criar um serviço hospedado pelos Serviços de Informações da Internet (IIS), o processo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] é executado sob a conta do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Essa conta deve ter acesso ao repositório que contém os certificados que um serviço usa. Cada um dos principais repositórios é protegido por uma lista de acesso padrão, mas as listas podem ser modificadas. Se você criar uma função separada para acessar um repositório, deverá conceder permissão de acesso a essa função. Para saber como modificar a lista de acesso usando a ferramenta WinHttpCertConfig.exe, consulte [como: Criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obter mais informações sobre como usar certificados do cliente com o IIS, confira [Como chamar um serviço Web usando um certificado do cliente para autenticação em um aplicativo Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Confiança de cadeia e autoridades de certificado  
  Os certificados são criados em uma hierarquia onde cada certificado individual está vinculado à CA que emitiu o certificado. Este é o link para o certificado da CA. A autoridade de certificação do certificado, em seguida, links para a autoridade de certificação que emitiu o certificado da CA original. Esse processo é repetido até que o certificado da CA seja alcançado. O certificado da CA é inerentemente de confiança.  
   
- Os certificados digitais são usados para autenticar uma entidade confiando nessa hierarquia, também chamada de *cadeia de confiança*. Exiba uma cadeia de certificado usando o snap-in do MMC clicando duas vezes no certificado e, em seguida, clicando na guia **Caminho do Certificado**. Para obter mais informações sobre como importar cadeias de certificados para uma Autoridade de certificação, confira [Como especificar a cadeia de certificados da autoridade de certificação usada para verificar assinaturas](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Os certificados digitais são usados para autenticar uma entidade confiando nessa hierarquia, também chamada de *cadeia de confiança*. Exiba uma cadeia de certificado usando o snap-in do MMC clicando duas vezes no certificado e, em seguida, clicando na guia **Caminho do Certificado**. Para obter mais informações sobre como importar cadeias de certificado para uma autoridade de certificação, consulte [como: Especifique a cadeia de certificados de autoridade de certificado usada para verificar as assinaturas](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
 >  Qualquer emissor pode ser designado uma autoridade confiável colocando o certificado do emissor no repositório de certificados da autoridade confiável.  
@@ -96,7 +96,7 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
   
 3.  Importe o certificado de autoridade no repositório de Autoridades de Certificação Confiáveis.  
   
-4.  Para obter instruções passo a passo, confira [Como criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4.  Para obter instruções passo a passo, consulte [como: Criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Qual certificado usar?  
  As perguntas comuns sobre certificados são qual certificado usar e por quê. A resposta depende de se você está programando um cliente ou serviço. As informações a seguir fornecem uma orientação geral e não são uma resposta completa a essas perguntas.  
@@ -170,9 +170,9 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
   
  Na primeira versão do WCF, o mapeamento é feito sem consulta à política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

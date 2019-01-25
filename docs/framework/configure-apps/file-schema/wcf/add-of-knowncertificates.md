@@ -2,23 +2,23 @@
 title: '&lt;adicionar&gt; &lt;knownCertificates&gt;'
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: c08df67ef4f659b0c8f4a5e07c774487edb28caa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1189b394669acb826342b0a250b39db738599495
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579466"
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;adicionar&gt; &lt;knownCertificates&gt;
 Adiciona um certificado X.509 à coleção de certificados conhecidos.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento de >  
+\<serviceBehaviors>  
+\<behavior>  
 \<serviceCredentials>  
-\<issuedTokenAuthentication >  
-\<knownCertificates >  
+\<issuedTokenAuthentication>  
+\<knownCertificates>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -75,7 +75,7 @@ Adiciona um certificado X.509 à coleção de certificados conhecidos.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Representa uma coleção de certificados X.509 que são fornecidos por um Security Token Service (STS) para validação de tokens de segurança.|  
+|[\<knownCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Representa uma coleção de certificados X.509 que são fornecidos por um Security Token Service (STS) para validação de tokens de segurança.|  
   
 ## <a name="remarks"></a>Comentários  
  O cenário de token emitido tem três etapas. O primeiro estágio, um cliente tentar acessar um serviço é chamado um *serviço de token seguro*. O serviço de token seguro, em seguida, autentica o cliente e emite subsequentemente um token, normalmente um token de segurança asserções SAML (Markup Language) para o cliente. O cliente, em seguida, retorne para o serviço com o token. O serviço examina o token para os dados que permite que o serviço autenticar o token e, portanto, o cliente. Para autenticar o token, o certificado usa o serviço de token seguro deve ser conhecida para o serviço.  
@@ -117,16 +117,16 @@ Adiciona um certificado X.509 à coleção de certificados conhecidos.
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>  
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>  
- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>  
- [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)  
- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Como: Configurar credenciais em um serviço de Federação](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>
+- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>
+- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>
+- [\<knownCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)
+- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Como: Configurar credenciais em um serviço de Federação](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 38acd9056f9517e6d8b62691cdeb1a2960bec800
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 292ec8c76695427ab00110d83502f7d16c6504b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719736"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Conversões entre cadeias de caracteres e outros tipos (Visual Basic)
 Você pode converter um numérico `Boolean`, ou valor de data/hora um `String`. Você também pode converter na direção inversa — de um valor de cadeia de caracteres para numérico, `Boolean`, ou `Date` — desde que o conteúdo da cadeia de caracteres pode ser interpretado como um valor válido do tipo de dados de destino. Em caso negativo, ocorrerá um erro de tempo de execução.  
   
  As conversões para todas as essas atribuições, em qualquer direção, são conversões de estreitamento. Você deve usar as palavras-chave de conversão de tipo (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`, e `CType`). O <xref:Microsoft.VisualBasic.Strings.Format%2A> e <xref:Microsoft.VisualBasic.Conversion.Val%2A> funções oferecem controle adicional sobre as conversões entre cadeias de caracteres e números.  
   
- Se você tiver definido uma classe ou estrutura, você pode definir operadores de conversão de tipo entre `String` e o tipo de sua classe ou estrutura. Para obter mais informações, consulte [como: definir um operador de conversão](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Se você tiver definido uma classe ou estrutura, você pode definir operadores de conversão de tipo entre `String` e o tipo de sua classe ou estrutura. Para obter mais informações, confira [Como: Definir um operador de conversão](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="conversion-of-numbers-to-strings"></a>Conversão de números em cadeias de caracteres  
  Você pode usar o `Format` função para converter um número em uma cadeia de caracteres formatada, que pode incluir não apenas os dígitos apropriados, mas também a formatação de símbolos, como um símbolo de moeda (como `$`), milhares separadores ou *agrupamento de dígitos símbolos* (como `,`) e um separador decimal (como `.`). `Format` usa automaticamente os símbolos apropriados de acordo com o **opções regionais** as configurações especificadas no Windows **painel de controle**.  
@@ -40,12 +40,12 @@ Str = "The total count is " & count
   
  Quando o Visual Basic converte uma cadeia de caracteres para um valor numérico, ele usa o **opções regionais** as configurações especificadas no Windows **painel de controle** interpretar milhares separador, o separador decimal, e símbolo de moeda. Isso significa que uma conversão pode ter êxito em uma configuração, mas não em outro. Por exemplo, `"$14.20"` é aceitável na localidade inglês (Estados Unidos), mas não em qualquer localidade francês.  
   
-## <a name="see-also"></a>Consulte também  
- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Como: converter um objeto em outro tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Conversões de Matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)  
- [Funções de Conversão do Tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Introdução a aplicativos internacionais com base no .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+## <a name="see-also"></a>Consulte também
+- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Como: Converter um objeto em outro tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Conversões de Matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
+- [Funções de Conversão do Tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Introdução a aplicativos internacionais com base no .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

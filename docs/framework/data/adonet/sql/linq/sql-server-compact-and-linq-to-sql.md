@@ -2,12 +2,12 @@
 title: SQL Server Compact e LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: 1229fcb285038875950776a924870c9be6bef13b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4385dc10d36e1f175fa52a8821401b2a9bc9bd31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697264"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact e LINQ to SQL
 SQL Server Compact é o banco de dados padrão instalado com o Visual Studio. Para obter mais informações, consulte [PAVE failover usando o SQL Server Compact (Visual Studio)](https://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc).  
@@ -42,5 +42,5 @@ SQL Server Compact é o banco de dados padrão instalado com o Visual Studio. Pa
   
 -   O SQL Server Compact não dá suporte a confiança parcial.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>Consulte também
+- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

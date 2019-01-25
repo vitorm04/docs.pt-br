@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 3113b953c1c547035883a4f4b51f53e4aefdf0a6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c49dfb8eaf5a91c7ebdf10833b229c4b05a7ce56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664805"
 ---
 # <a name="creating-an-ink-input-control"></a>Criando um controle de entrada de tinta
 Você pode criar um controle personalizado que renderiza a tinta de forma dinâmica e estática. Ou seja, é possível renderizar a tinta conforme um usuário desenha um traço, fazendo com que a tinta apareça "fluindo" da caneta eletrônica e exibi-la depois de adicionada ao controle, tanto pela caneta eletrônica, colada da área de transferência ou carregada de um arquivo. Para renderizar a tinta dinamicamente, o controle deve usar um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Para renderizar a tinta estaticamente, você deve substituir os métodos de evento de caneta (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, e <xref:System.Windows.UIElement.OnStylusUp%2A>) para coletar <xref:System.Windows.Input.StylusPoint> dados, criar traços e adicioná-los para um <xref:System.Windows.Controls.InkPresenter> (que renderiza a tinta no controle).  
   
  Este tópico contém as seguintes subseções:  
   
--   [Como coletar dados de ponto da caneta e criar traços de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [Como: Coletar dados de ponto da caneta e criar traços de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Como habilitar o controle para aceitar a entrada do mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [Como: Habilitar o controle aceitar a entrada do Mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [Juntando as peças](#PuttingItTogether)  
   
@@ -37,7 +37,7 @@ Você pode criar um controle personalizado que renderiza a tinta de forma dinâm
 -   [Conclusão](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
-## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Como coletar dados de ponto da caneta e criar traços de tinta  
+## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Como: Coletar dados de ponto da caneta e criar traços de tinta  
  Para criar um controle que coleta e gerencia traços de tinta, faça o seguinte:  
   
 1.  Derive uma classe de <xref:System.Windows.Controls.Control> ou uma das classes derivadas de <xref:System.Windows.Controls.Control>, como <xref:System.Windows.Controls.Label>.  
@@ -68,7 +68,7 @@ Você pode criar um controle personalizado que renderiza a tinta de forma dinâm
      [!code-csharp[AdvancedInkTopicsSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
-## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Como habilitar o controle para aceitar a entrada do mouse  
+## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Como: Habilitar o controle aceitar a entrada do Mouse  
  Se você adicionar o controle anterior ao seu aplicativo, executá-lo e usar o mouse como um dispositivo de entrada, você notará que os traços não serão preservados. Para manter os traços quando o mouse for usado como o dispositivo de entrada, faça o seguinte:  
   
 1.  Substituir a <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> e crie um novo <xref:System.Windows.Input.StylusPointCollection> Obtenha a posição do mouse quando o evento ocorreu e crie um <xref:System.Windows.Input.StylusPoint> usando os dados de ponto e adicione o <xref:System.Windows.Input.StylusPoint> para o <xref:System.Windows.Input.StylusPointCollection>.  
@@ -98,6 +98,6 @@ Você pode criar um controle personalizado que renderiza a tinta de forma dinâm
 ## <a name="conclusion"></a>Conclusão  
  Você pode criar um controle que coleta e renderiza a tinta, substituindo os métodos de evento da caneta. Ao criar seu próprio controle, derivando suas próprias <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classes e inserindo-o em <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, você pode implementar praticamente qualquer comportamento imaginável com tinta digital. Você tem acesso a <xref:System.Windows.Input.StylusPoint> dados como ele são gerados, dando a você a oportunidade de personalizar <xref:System.Windows.Input.Stylus> de entrada e renderizá-lo na tela, conforme apropriado para seu aplicativo. Porque você tem tal acesso de baixo nível para o <xref:System.Windows.Input.StylusPoint> dados, você pode implementar a coleção de tinta e renderizá-la com um desempenho ideal para seu aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- [Tratamento avançado de tinta](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [Acessar e manipular a entrada à caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Tratamento avançado de tinta](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Acessar e manipular a entrada à caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

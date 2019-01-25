@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 095c84a5cb448803bbfa45e0fad8a494343ca7f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6da390fb7de3c248fa5389f133d65f9914d5260a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714679"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>Método ICorDebugStaticFieldSymbol::GetName
 Obtém o nome do campo estático.  
@@ -26,10 +26,10 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>Parâmetros  
  `cchName`  
- [in] O número de caracteres a `szName` buffer.  
+ [in] O número de caracteres no `szName` buffer.  
   
  `pcchName`  
- [out] Um ponteiro para o número de caracteres gravados o `szName` buffer.  
+ [out] Um ponteiro para o número de caracteres gravados, na verdade, o `szName` buffer.  
   
  `szName`  
  [out] Uma matriz de caracteres que armazena o nome retornado.  
@@ -40,14 +40,14 @@ HRESULT GetName(
 >  Esse método só está disponível com o .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

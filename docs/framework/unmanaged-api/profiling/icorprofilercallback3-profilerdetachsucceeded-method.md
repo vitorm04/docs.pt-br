@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bffe293f7d29c34a22196336533202996f3fd129
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52803fc04aa55f40a131e2d53dc4ef7dba70bcde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727112"
 ---
 # <a name="icorprofilercallback3profilerdetachsucceeded-method"></a>Método ICorProfilerCallback3::ProfilerDetachSucceeded
-Notifica o criador de perfil que o common language runtime (CLR) está prestes a Descarregue o DLL do criador de perfil.  
+Notifica o criador de perfil que o common language runtime (CLR) está prestes a descarregar a DLL do criador de perfil.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,23 +37,23 @@ HRESULT ProfilerDetachSucceeded();
  O valor de retorno desse retorno de chamada é ignorado.  
   
 ## <a name="remarks"></a>Comentários  
- O `ProfilerDetachSucceeded` retorno de chamada for emitido após todos os threads abandonaram o código do criador de perfil. Quando este método é chamado, o criador de perfil deve executar as tarefas de última hora que não são apropriadas para seu destruidor, como notificar sua interface do usuário ou o componente de log. No entanto, o criador de perfil não deve chamar funções em interfaces que são fornecidas pelo CLR durante esse retorno de chamada (como o [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) ou `IMetaData*` interfaces).  
+ O `ProfilerDetachSucceeded` retorno de chamada é emitido depois que todos os threads tenham saído código do criador de perfil. Quando este método é chamado, o criador de perfil deve executar qualquer tarefa de última hora que não é apropriada para seu destruidor, como notificar sua interface do usuário ou o componente de log. No entanto, o criador de perfil não deve chamar funções em interfaces que são fornecidos pelo CLR durante esse retorno de chamada (como o [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) ou `IMetaData*` interfaces).  
   
- O CLR cria uma entrada no log de eventos de aplicativo do Windows para indicar que a operação desanexar é bem-sucedida.  
+ O CLR cria uma entrada no log de eventos de aplicativo do Windows para indicar que a operação de desanexação for bem-sucedida.  
   
- Depois que o criador de perfil retorna desse retorno de chamada, o CLR libera o objeto do criador de perfil e descarrega o DLL do criador de perfil. Portanto, o criador de perfil não deve executar qualquer ação que cause a execução para ocorrer dentro de DLL do criador de perfil depois de retornar desse retorno de chamada. Por exemplo, ele não deve criar threads ou registrar retornos de chamada timer.  
+ Depois que o criador de perfil retorna desse retorno de chamada, o CLR libera o objeto criador de perfil e descarrega a DLL do criador de perfil. Portanto, o criador de perfil não deve executar as ações que poderiam causar a execução ocorra dentro a DLL do criador de perfil depois que ele retorna desse retorno de chamada. Por exemplo, ele não deve criar threads ou registrar retornos de chamada do temporizador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)

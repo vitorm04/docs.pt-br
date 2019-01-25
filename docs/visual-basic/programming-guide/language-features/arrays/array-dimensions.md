@@ -9,42 +9,42 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708526"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensões de matriz no Visual Basic
-Um *dimensão* é uma direção na qual você pode variar a especificação de elementos uma matriz de. Uma matriz que contém as vendas total para cada dia do mês tem uma dimensão (o dia do mês). Uma matriz que contém as total de vendas por departamento para cada dia do mês tem duas dimensões (o número do departamento e o dia do mês). O número de dimensões que tem uma matriz é chamado seu *classificação*.  
+Um *dimensão* é uma direção na qual você pode variar a especificação de elementos uma matriz de. Uma matriz que contém as vendas total para cada dia do mês tem uma dimensão (o dia do mês). Uma matriz que contém as total de vendas por departamento para cada dia do mês tem duas dimensões (o número de departamento e o dia do mês). O número de dimensões que tem uma matriz é chamado de seu *classificação*.  
   
 > [!NOTE]
->  Você pode usar o <xref:System.Array.Rank%2A> propriedade para determinar quantas dimensões tem de uma matriz.  
+>  Você pode usar o <xref:System.Array.Rank%2A> propriedade para determinar quantas dimensões de uma matriz tem.  
   
 ## <a name="working-with-dimensions"></a>Trabalhando com dimensões  
- Você especifica um elemento de uma matriz, fornecendo um *índice* ou *subscrito* para cada uma das suas dimensões. Os elementos são contíguos ao longo de cada dimensão de índice 0 até o índice mais alto para essa dimensão.  
+ Especifica um elemento de uma matriz, fornecendo uma *índice* ou *subscrito* para cada uma das suas dimensões. Os elementos são contíguos ao longo de cada dimensão do índice 0 até o índice mais alto para essa dimensão.  
   
  As ilustrações a seguir mostram a estrutura conceitual de matrizes com diferentes classificações. Cada elemento nas ilustrações mostra os valores de índice que acessá-lo. Por exemplo, você pode acessar o primeiro elemento da segunda linha da matriz bidimensional especificando índices `(1, 0)`.  
   
- ![Diagrama de gráfico de um&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![Diagrama gráfico de um&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 Matriz unidimensional  
   
- ![Diagrama de gráfico de dois&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![Diagrama gráfico de dois&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 matriz bidimensional  
   
- ![Diagrama de gráfico de três&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![Diagrama gráfico de três&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 matriz tridimensional  
   
 ### <a name="one-dimension"></a>Uma dimensão  
- Muitas matrizes possuem apenas uma dimensão, como o número de pessoas de cada idade. O único requisito para especificar um elemento é a idade para a qual o elemento contém a contagem. Portanto, essa matriz usa apenas um índice. O exemplo a seguir declara uma variável para manter uma *matriz unidimensional* contagens de idade para idades de 0 a 120.  
+ Muitas matrizes têm apenas uma dimensão, como o número de pessoas de cada idade. O único requisito para especificar um elemento é a idade para o qual esse elemento contém a contagem. Portanto, essa matriz usa apenas um índice. O exemplo a seguir declara uma variável para conter um *matriz unidimensional* de idade, contagens de idades de 0 a 120.  
   
 ```  
 Dim ageCounts(120) As UInteger  
 ```  
   
 ### <a name="two-dimensions"></a>Duas dimensões  
- Algumas matrizes possuem duas dimensões, como o número de escritórios em cada andar de cada prédio em um campus. A especificação de um elemento requer o número de construção e o andar, e cada elemento contém a contagem para essa combinação de edifício e andar. Portanto, essa matriz usa dois índices. O exemplo a seguir declara uma variável para manter uma *matriz bidimensional* contagem de escritórios, de edifícios de 0 até 40 e Pisos de 0 a 5.  
+ Algumas matrizes têm duas dimensões, como o número de escritórios em cada andar de cada prédio em um campus. A especificação de um elemento requer o número de construção e o piso, e cada elemento contém a contagem para essa combinação de prédio e andar. Portanto, essa matriz usa dois índices. O exemplo a seguir declara uma variável para conter um *matriz bidimensional* contagem de escritórios, de edifícios de 0 até 40 e andares de 0 a 5.  
   
 ```  
 Dim officeCounts(40, 5) As Byte  
@@ -53,7 +53,7 @@ Dim officeCounts(40, 5) As Byte
  Uma matriz bidimensional também é chamada um *matriz retangular*.  
   
 ### <a name="three-dimensions"></a>Três dimensões  
- Algumas matrizes possuem três dimensões, como valores em espaço tridimensional. Essa matriz usa três índices, que nesse caso representam as coordenadas de z de espaço físico, x e y. O exemplo a seguir declara uma variável para manter uma *matriz tridimensional* temperaturas do ar em vários pontos em um volume tridimensional.  
+ Algumas matrizes possuem três dimensões, tais como os valores no espaço tridimensional. Essa matriz usa três índices, que nesse caso, representam os x, y e coordenadas z de espaço físico. O exemplo a seguir declara uma variável para conter um *matriz tridimensional* temperaturas do ar em vários pontos em um volume tridimensional.  
   
 ```  
 Dim airTemperatures(99, 99, 24) As Single  
@@ -66,29 +66,29 @@ Dim airTemperatures(99, 99, 24) As Single
 >  Quando você adiciona dimensões para uma matriz, o armazenamento total necessário para a matriz aumenta consideravelmente, então use matrizes multidimensionais com cuidado.  
   
 ## <a name="using-different-dimensions"></a>Usando dimensões diferentes  
- Suponha que você deseja controlar quantidades de vendas para cada dia do mês atual. Você pode declarar uma matriz unidimensional com 31 elementos, um para cada dia do mês, como o exemplo a seguir mostra.  
+ Suponha que você deseja controlar as quantidades de vendas para cada dia do mês presente. Você pode declarar uma matriz unidimensional com 31 elementos, um para cada dia do mês, como o exemplo a seguir mostra.  
   
 ```  
 Dim salesAmounts(30) As Double  
 ```  
   
- Agora suponha que você deseja controlar as mesmas informações não só para cada dia do mês, mas também para cada mês do ano. Você pode declarar uma matriz bidimensional com 12 linhas (meses) e 31 colunas (para os dias), como mostra o exemplo a seguir.  
+ Agora suponha que você deseja controlar as mesmas informações não apenas para todos os dias do mês, mas também para cada mês do ano. Você pode declarar uma matriz bidimensional com 12 linhas (meses) e 31 colunas (para os dias), como mostra o exemplo a seguir.  
   
 ```  
 Dim salesAmounts(11, 30) As Double  
 ```  
   
- Agora suponha que você optar por ter sua matriz armazenar informações para mais de um ano. Se você quiser controlar quantidades de vendas por cinco anos, você pode declarar uma matriz tridimensional com 5 camadas, 12 linhas e 31 colunas, como mostra o exemplo a seguir.  
+ Agora suponha que você optar por ter sua matriz armazenar informações para mais de um ano. Se você quiser controlar quantidades de vendas por cinco anos, você poderia declarar uma matriz tridimensional com 5 camadas, 12 linhas e 31 colunas, como mostra o exemplo a seguir.  
   
 ```  
 Dim salesAmounts(4, 11, 30) As Double  
 ```  
   
- Observe que, como cada índice varia de 0 até seu máximo, cada dimensão de `salesAmounts` é declarada como menor que o comprimento necessário para a dimensão. Observe também que o tamanho da matriz aumenta com cada nova dimensão. Os três tamanhos nos exemplos anteriores são 31, 372 e 1,860 elementos respectivamente.  
+ Observe que, como cada índice varia de 0 até seu máximo, cada dimensão de `salesAmounts` é declarada como um a menos que o tamanho necessário para a dimensão. Observe também que o tamanho da matriz aumenta com cada nova dimensão. Os três tamanhos nos exemplos anteriores são 31, 372 e 1,860 elementos respectivamente.  
   
 > [!NOTE]
->  Você pode criar uma matriz sem usar o `Dim` instrução ou o `New` cláusula. Por exemplo, você pode chamar o <xref:System.Array.CreateInstance%2A> método ou outro componente pode passar ao seu código uma matriz criada dessa maneira. Essa matriz pode ter um limite inferior diferente de 0. Você sempre pode testar o limite inferior de uma dimensão usando o <xref:System.Array.GetLowerBound%2A> método ou o `LBound` função.  
+>  Você pode criar uma matriz sem usar o `Dim` instrução ou o `New` cláusula. Por exemplo, você pode chamar o <xref:System.Array.CreateInstance%2A> método ou outro componente pode passar seu código de uma matriz criada dessa maneira. Como uma matriz pode ter um limite inferior diferente de 0. Você sempre pode testar o limite inferior de uma dimensão usando o <xref:System.Array.GetLowerBound%2A> método ou o `LBound` função.  
   
-## <a name="see-also"></a>Consulte também  
- [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Solução de problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>Consulte também
+- [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Solução de problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

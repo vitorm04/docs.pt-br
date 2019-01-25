@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0b882500b41080bc5998232b5afbce9d13157b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641545"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Classe MissingMetadataException (.NET Nativo)
 **.NET para Aplicativos da Windows Store para Windows 10, somente [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -81,9 +81,9 @@ ms.locfileid: "53148309"
   
  A classe `MissingMetadataException` não contém membros exclusivos. Todos os seus membros são herdados de sua classe base, <xref:System.TypeAccessException>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Exception?displayProperty=nameWithType>  
- <xref:System.TypeAccessException>  
- [Classe MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [Classe MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Exception?displayProperty=nameWithType>
+- <xref:System.TypeAccessException>
+- [Classe MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
+- [Classe MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

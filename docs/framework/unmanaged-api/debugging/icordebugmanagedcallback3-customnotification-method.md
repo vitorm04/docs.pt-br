@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 098e140b7bffb7798a37b1881f2cb2ced36bcf1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276a45c9f7b66fecdc4df07da94f813fe025fcb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592504"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>Método ICorDebugManagedCallback3::CustomNotification
-Indica que uma notificação do depurador personalizados foi gerada.  
+Indica que uma notificação personalizada de depurador foi gerada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,10 +39,10 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
  [in] Um ponteiro para o thread que gerou a notificação.  
   
  `pAppDomain`  
- [in] Um ponteiro para o domínio de aplicativo que contém o thread que gerou a notificação.  
+ [in] Um ponteiro para o domínio do aplicativo que contém o thread que gerou a notificação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -51,20 +51,20 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Uma chamada subsequente para a [Icordebugthread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) método recupera o objeto de thread que foi passado para o <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> método. Tipo de objeto de thread deve ter sido habilitado chamando o [Icordebugprocess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) método. O depurador pode ler parâmetros de tipo específico de campos do objeto de thread e pode armazenar as respostas nos campos.  
+ Uma chamada subsequente para o [ICorDebugThread4::GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) método recupera o objeto de thread que foi passado para o <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> método. Tipo do objeto de thread deve ter sido habilitado por meio da chamada a [ICorDebugProcess3::SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) método. O depurador pode ler os parâmetros de tipo específico dos campos do objeto de thread e pode armazenar as respostas nos campos.  
   
- O [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface não impõe nenhuma política nos tipos de notificações ou seu conteúdo e a semântica das notificações é estritamente um contrato entre os depuradores, aplicativos e o .NET Framework.  
+ O [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface não impõe nenhuma política sobre os tipos de notificações ou seu conteúdo e a semântica das notificações é estritamente um contrato entre depuradores, aplicativos e o .NET Framework.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugManagedCallback3](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugManagedCallback3](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

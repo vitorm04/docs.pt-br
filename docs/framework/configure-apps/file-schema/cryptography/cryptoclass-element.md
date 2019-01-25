@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: aec786123357337cbaa6251191a023c092af3049
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 726f13d778fc4cff9bdafed4518e9dee3eeab6b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501276"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; elemento
 Contém uma classe de criptografia que tem um mapeamento para um nome amigável no elemento [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<cryptoClasses >  
-\<cryptoClass >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<cryptoClasses>  
+\<cryptoClass>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -77,8 +77,8 @@ Contém uma classe de criptografia que tem um mapeamento para um nome amigável 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configurando classes de criptografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

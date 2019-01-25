@@ -2,12 +2,12 @@
 title: Ferramenta geradora de serializador de XML (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 2091c75f5aeef8b64ac9afa361f28dbe0b76530b
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: aa8671146c241c2867c373aacf3cd12f12aaeb1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743550"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Ferramenta geradora de serializador de XML (Sgen.exe)
 O Gerador de Serializador de XML cria um assembly de serialização de XML para tipos em um assembly especificado para aprimorar o desempenho de inicialização de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos dos tipos especificados.  
@@ -22,18 +22,18 @@ sgen [options]
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/a\[ssembly\]:**_nome de arquivo_|Gera o código de serialização para todos os tipos contidos no assembly ou no executável especificado pelo *filename*. Somente um nome de arquivo pode ser fornecido. Se esse argumento for repetido, o último nome de arquivo será usado.|  
+|**/a\[ssembly\]:**_filename_|Gera o código de serialização para todos os tipos contidos no assembly ou no executável especificado pelo *filename*. Somente um nome de arquivo pode ser fornecido. Se esse argumento for repetido, o último nome de arquivo será usado.|  
 |**/c\[ompiler\]:**_opções_|Especifica as opções para passar para o compilador C#. Todas as opções csc.exe têm suporte quando são passadas para o compilador. Isso pode ser usado para especificar que o assembly deve ser assinado e para especificar o arquivo de chave.|  
-|**/d\[epuração\]**|Gera uma imagem que pode ser usada com um depurador.|  
-|**/f\[orçar\]**|Força a substituição de um assembly existente de mesmo nome. O padrão é **false**.|  
+|**/d\[ebug\]**|Gera uma imagem que pode ser usada com um depurador.|  
+|**/f\[orce\]**|Força a substituição de um assembly existente de mesmo nome. O padrão é **false**.|  
 |**/help ou /?**|Exibe sintaxe de comando e opções para a ferramenta.|  
-|**/k\[Mant\]**|Suprime a exclusão dos arquivos de origem gerados e outros arquivos temporários depois que tiverem sido compilados no assembly de serialização. Isso pode ser usado para determinar se a ferramenta está gerando o código de serialização para um tipo específico.|  
+|**/k\[eep\]**|Suprime a exclusão dos arquivos de origem gerados e outros arquivos temporários depois que tiverem sido compilados no assembly de serialização. Isso pode ser usado para determinar se a ferramenta está gerando o código de serialização para um tipo específico.|  
 |**/n\[ologo\]**|Suprime a exibição do banner de inicialização da Microsoft.|  
-|**/o\[ut\]:**_caminho_|Especifica o diretório no qual salvar o assembly gerado. **Observação:**  O nome do assembly gerado é composto do nome do assembly de entrada mais "xmlSerializers.dll".|  
-|**p\[roxytypes\]**|Gera o código de serialização somente para os tipos de proxy de serviço Web XML.|  
+|**/o\[ut\]:**_path_|Especifica o diretório no qual salvar o assembly gerado. **Observação:**  O nome do assembly gerado é composto do nome do assembly de entrada mais "xmlSerializers.dll".|  
+|**/p\[roxytypes\]**|Gera o código de serialização somente para os tipos de proxy de serviço Web XML.|  
 |**/r\[eference\]:**_assemblyfiles_|Especifica os assemblies que são referenciados pelos tipos que exigem a serialização de XML. Aceita vários arquivos de assembly separados por vírgulas.|  
 |**/s\[ilent\]**|Suprime a exibição de mensagens de sucesso.|  
-|**/t\[IPO\]:**_tipo_|Gera o código de serialização somente para o tipo especificado.|  
+|**/t\[ype\]:**_type_|Gera o código de serialização somente para o tipo especificado.|  
 |**/v\[erbose\]**|Exibe a saída detalhada para depuração. Lista os tipos do assembly de destino que não podem ser serializados com o <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
@@ -57,6 +57,6 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Consulte também
 
-- [Ferramentas](../../../docs/framework/tools/index.md)  
-- [Visão geral do XML Web Services](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+- [Ferramentas](../../../docs/framework/tools/index.md)
+- [Visão geral do XML Web Services](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)
 - [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

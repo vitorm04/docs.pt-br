@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20833624b4b853a1a56964e11a25f446c6b39053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e67e3bc3477e078a4f1d963cdd768676503dc953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607657"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>Método ICorDebugMDA::GetOSThreadId
-Obtém o identificador de thread do sistema operacional (SO) no qual o Assistente de depuração gerenciado (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) está em execução.  
+Obtém o identificador de thread do sistema operacional (SO) no qual o Assistente para depuração gerenciada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) está em execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,17 +40,17 @@ HRESULT GetOSThreadId (
  [out] Um ponteiro para o identificador de thread do sistema operacional.  
   
 ## <a name="remarks"></a>Comentários  
- O thread de sistema operacional é usado em vez de um ICorDebugThread para situações em que um MDA é acionado em um thread nativo ou em um thread gerenciado que ainda não tiver inserido o código gerenciado.  
+ O thread de sistema operacional é usado em vez de um ICorDebugThread para situações em que um MDA é acionado em um thread nativo ou em um thread gerenciado que ainda não tenha entrado em código gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

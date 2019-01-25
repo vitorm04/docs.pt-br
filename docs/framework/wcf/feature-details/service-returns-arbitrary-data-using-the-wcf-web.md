@@ -1,16 +1,16 @@
 ---
-title: Como criar um serviço que retorna dados arbitrários utilizando o Modelo de programação HTTP Web do Windows Communication Foundation (WCF)
+title: 'Como: Criar um serviço que retorna dados arbitrários usando o modelo de programação WCF Web HTTP'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576389"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como criar um serviço que retorna dados arbitrários utilizando o Modelo de programação HTTP Web do Windows Communication Foundation (WCF)
-Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF. Este tópico discute como usar o modelo de programação WCF WEB HTTP para criar um serviço. Esse serviço tem uma operação que retorna um fluxo.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como: Criar um serviço que retorna dados arbitrários usando o modelo de programação WCF Web HTTP
+Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF. Este tópico discute usando o modelo de programação WCF WEB HTTP para criar esse tipo de serviço. Esse serviço tem uma operação que retorna um fluxo.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar o contrato de serviço  
   
@@ -25,9 +25,9 @@ ms.locfileid: "33498102"
         }  
     ```  
   
-     Como o método retorna um <xref:System.IO.Stream>, WCF presume que a operação tem controle total sobre os bytes retornados da operação de serviço e se aplica a nenhuma formatação para os dados que são retornados.  
+     Como o método retorna um <xref:System.IO.Stream>, WCF pressupõe que a operação tem controle total sobre os bytes que são retornados da operação de serviço e ele se aplica nenhuma formatação para os dados que são retornados.  
   
-2.  Implemente o contrato de serviço. O contrato tem apenas uma operação (`GetImage`). Este método gera um bitmap e, em seguida, salvá-lo para um <xref:System.IO.MemoryStream> no formato. jpg. A operação, em seguida, retorna o fluxo ao chamador.  
+2.  Implemente o contrato de serviço. O contrato tem apenas uma operação (`GetImage`). Esse método gera um bitmap e, em seguida, salve-o em um <xref:System.IO.MemoryStream> no formato. jpg. A operação, em seguida, retorna o fluxo ao chamador.  
   
     ```  
     public class Service : IImageServer  
@@ -51,9 +51,9 @@ ms.locfileid: "33498102"
        }  
     ```  
   
-     Observe que a segunda à última linha de código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Observe o segundo a última linha do código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     Isso define o cabeçalho de tipo de conteúdo para `"image/jpeg"`. Embora este exemplo mostra como retornar um arquivo. jpg, ele pode ser modificado para retornar qualquer tipo de dados que é necessários, em qualquer formato. A operação deve recuperar ou gerar os dados e, em seguida, gravá-la em um fluxo.  
+     Isso define o cabeçalho de tipo de conteúdo para `"image/jpeg"`. Embora este exemplo mostra como retornar um arquivo. jpg, ele pode ser modificado para retornar qualquer tipo de dados que são necessários, em qualquer formato. A operação deve recuperar ou gerar os dados e, em seguida, gravá-lo em um fluxo.  
   
 ### <a name="to-host-the-service"></a>Para hospedar o serviço  
   
@@ -68,19 +68,19 @@ ms.locfileid: "33498102"
     }  
     ```  
   
-2.  Criar uma variável para conter o endereço base para o serviço dentro do `Main` método.  
+2.  Crie uma variável para manter o endereço básico para o serviço dentro de `Main` método.  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço especificando a classe de serviço e o endereço base.  
+3.  Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço especificando a classe de serviço e o endereço básico.  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4.  Adicionar um ponto de extremidade usando o <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4.  Adicione um ponto de extremidade usando o <xref:System.ServiceModel.WebHttpBinding> e o <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
@@ -105,10 +105,10 @@ ms.locfileid: "33498102"
   
 1.  Executar o serviço, você verá a seguinte saída do serviço. `Service is running Press ENTER to close the host`  
   
-2.  Abra o Internet Explorer e digite `http://localhost:8000/Service/GetImage?width=50&height=40` você verá um retângulo amarelo com uma linha azul diagonal por meio do centro.  
+2.  Abra o Internet Explorer e digite `http://localhost:8000/Service/GetImage?width=50&height=40` você deverá ver um retângulo amarelo com uma linha azul diagonal por meio do centro.  
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma listagem completa do código para este tópico.  
+ A seguir está uma listagem completa do código deste tópico.  
   
 ```  
 using System;  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Quando estiver compilando o código de exemplo referência a System.ServiceModel.dll e System.  
+-   Quando compilar o código de exemplo faz referência ServiceModel. dll e System.  
   
-## <a name="see-also"></a>Consulte também  
- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Consulte também
+- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

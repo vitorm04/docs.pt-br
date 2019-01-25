@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ab0d482366b037f92a55f00dd33df8a312e84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6711d0e0423534744de1ee4b8a734ed2f8eab24d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514277"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>Método ICorProfilerInfo2::GetStaticFieldInfo
 Obtém um valor que indica o tipo de estático que se aplica ao campo especificado.  
@@ -44,22 +44,22 @@ HRESULT GetStaticFieldInfo (
  [in] O token de metadados para o campo estático.  
   
  `pFieldInfo`  
- [out] Um ponteiro para um valor de [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeração que indica se o campo especificado é estático, e se assim, o tipo de estático que se aplica ao campo.  
+ [out] Um ponteiro para um valor igual a [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeração que indica se o campo especificado é estático e, se assim, o tipo de estático que se aplica ao campo.  
   
 ## <a name="remarks"></a>Comentários  
- Essas informações podem ser usadas para determinar a função ser chamada para obter o endereço do campo estático.  
+ Essas informações podem ser usadas para determinar qual função a ser chamada para obter o endereço do campo estático.  
   
- O código de criador de perfil ainda deve verificar os metadados para um campo estático garantir que realmente tem um endereço. Literais estáticos (ou seja, constantes) existem somente nos metadados e não tem um endereço.  
+ O código do criador de perfil ainda deve verificar os metadados para um campo estático para garantir que ele realmente tenha um endereço. Literais estáticas (ou seja, constantes) existem somente nos metadados e não tem um endereço.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
