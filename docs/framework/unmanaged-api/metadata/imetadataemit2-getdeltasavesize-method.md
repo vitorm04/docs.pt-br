@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad6e565db634477e4f0382afdec12361ce7111a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb59fdb2249d798c70b1990a6bca41c5c14b80c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610559"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>Método IMetaDataEmit2::GetDeltaSaveSize
-Obtém um valor que indica nenhuma alteração no tamanho de metadados que resulta da sessão atual edit-and-continue.  
+Obtém um valor que indica qualquer alteração no tamanho de metadados que resulta da sessão atual de editar e continuar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,20 +38,20 @@ HRESULT GetDeltaSaveSize (
   
 #### <a name="parameters"></a>Parâmetros  
  `fSave`  
- [in] Uma da [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) valores, que indica o nível de precisão desejado. Para o .NET Framework versão 2.0, esse parâmetro é ignorado.  
+ [in] Um dos [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) valores, que indica o nível de precisão desejado. Para o .NET Framework versão 2.0, esse parâmetro será ignorado.  
   
  `pdwSaveSize`  
  [out] A alteração no tamanho dos metadados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

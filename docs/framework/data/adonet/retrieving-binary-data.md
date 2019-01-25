@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: ec4ef17687e4e1bf2cc18182a64fc7361fe3b6f7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2d1b88d25c5c2e94d86c1fed53c472e2b0af493e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643644"
 ---
 # <a name="retrieving-binary-data"></a>Recuperando dados binários
 Por padrão, o **DataReader** carrega dados de entrada como uma linha assim que uma linha inteira de dados está disponível. Os blobs precisam de tratamento diferente, no entanto, porque podem conter gigabytes de dados que não podem ser contidos em uma única linha. O **ExecuteReader** método tem uma sobrecarga que levará um <xref:System.Data.CommandBehavior> argumento para modificar o comportamento padrão do **DataReader**. Você pode passar <xref:System.Data.CommandBehavior.SequentialAccess> para o **ExecuteReader** método para modificar o comportamento padrão do **DataReader** para que, em vez de carregar linhas de dados, ele carregará dados sequencialmente conforme ela é recebida. Isso é ideal para carregar BLOBs ou outras estruturas grandes de dados. Observe que esse comportamento pode depender da sua fonte de dados. Por exemplo, retornar um BLOB do Microsoft Access carregará o BLOB inteiro que está sendo carregado na memória, em vez de em sequência à medida que é recebido.  
@@ -153,7 +153,7 @@ reader.Close();
 connection.Close();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [SQL Server Binary and Large-Value Data](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Trabalhando com DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
+- [SQL Server Binary and Large-Value Data](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

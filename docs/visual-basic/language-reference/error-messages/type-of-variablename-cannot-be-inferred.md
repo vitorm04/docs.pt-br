@@ -1,5 +1,5 @@
 ---
-title: Tipo de &#39; &lt;variablename&gt; &#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo
+title: Tipo de &#39; &lt;variablename&gt; &#39; não pode ser inferido porque os limites do loop e a variável step não são ampliados para o mesmo tipo
 ms.date: 07/20/2015
 f1_keywords:
 - bc30982
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ae14426181778a78254db8a5cd968d60bbdc8f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631251"
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo de &#39; &lt;variablename&gt; &#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo
-Você escreveu uma `For...Next` loop no qual o compilador não é possível inferir um tipo de dados para a variável de controle de loop porque as seguintes condições forem verdadeiras:  
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo de &#39; &lt;variablename&gt; &#39; não pode ser inferido porque os limites do loop e a variável step não são ampliados para o mesmo tipo
+Você escreveu uma `For...Next` loop em que o compilador não é possível inferir um tipo de dados para a variável de controle de loop porque as seguintes condições forem verdadeiras:  
   
 -   O tipo de dados da variável de controle de loop não é especificado com um `As` cláusula.  
   
--   Os limites do loop e a variável de etapa contém pelo menos dois tipos de dados.  
+-   Os limites do loop e a variável step contêm pelo menos dois tipos de dados.  
   
--   Não há conversões padrão existe entre os tipos de dados.  
+-   Não há nenhuma conversão padrão entre os tipos de dados.  
   
- Portanto, o compilador não pode inferir o tipo de dados da variável de controle do loop.  
+ Portanto, o compilador não pode inferir o tipo de dados da variável de controle de um loop.  
   
- No exemplo a seguir, a variável de etapa é um caractere e os limites do loop são ambos inteiros. Como não há nenhuma conversão padrão entre caracteres e inteiros, este erro é relatado.  
+ No exemplo a seguir, a variável step é um caractere e os limites do loop são ambos inteiros. Como não há nenhuma conversão padrão entre caracteres e inteiros, esse erro é relatado.  
   
 ```vb  
 Dim stepVar = "1"c  
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Altere os tipos de limites do loop e a variável de etapa conforme necessário para que pelo menos um deles é um tipo que os outros ampliam. No exemplo anterior, altere o tipo de `stepVar` para `Integer`.  
+-   Altere os tipos de limites do loop e a variável step conforme necessário para que pelo menos um deles é um tipo que os outros ampliam. No exemplo anterior, altere o tipo de `stepVar` para `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Use funções de conversão explícitas para converter os limites do loop e a variável de etapa para os tipos apropriados. No exemplo anterior, aplique a `Val` função `stepVar`.  
+-   Use funções de conversão explícitas para converter os limites do loop e a variável de etapa para os tipos apropriados. No exemplo anterior, se aplicam a `Val` função `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  
@@ -62,11 +62,11 @@ Dim n = 20
     Next  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Conversões Implícitas e Explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Conversões de Widening e Narrowing](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Conversões Implícitas e Explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Conversões de Widening e Narrowing](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

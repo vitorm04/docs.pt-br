@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f44d50f6736e0698fd876eedab78dbf41434af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5767b60fa992b49fdc2a60feb243a26c0e2ea1ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534537"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>Método ISymUnmanagedBinder3::GetReaderFromCallback
-Permite que o usuário implementa ou fornecer por meio do retorno de chamada ou uma `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` para obter as informações de diretório de depuração da memória.  
+Permite ao usuário implementar ou fornecer por meio do retorno de chamada ou um `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` para obter as informações de diretório de depuração da memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,13 +50,13 @@ HRESULT GetReaderFromCallback(
  [in] Um ponteiro para o caminho de pesquisa.  
   
  `searchPolicy`  
- [in] Um valor de [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeração que especifica a política a ser usado ao fazer uma pesquisa de um leitor de símbolo.  
+ [in] Um valor igual a [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeração que especifica a política a ser usada ao fazer uma pesquisa por um leitor de símbolo.  
   
  `callback`  
  [in] Um ponteiro para a função de retorno de chamada.  
   
  `pRetVal`  
- [out] Um ponteiro que está definido para retornado [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
+ [out] Um ponteiro que é definido para retornado [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -64,5 +64,5 @@ HRESULT GetReaderFromCallback(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedBinder3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedBinder3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

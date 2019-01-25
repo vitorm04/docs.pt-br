@@ -1,15 +1,15 @@
 ---
-title: 'Como: recuperar um único atributo (LINQ to XML) (Visual Basic)'
+title: 'Como: Recuperar um único atributo (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: e9e4dce95e9c3202b1cd2a53c186126deac0913c
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 73f5a252bd207edaa14aead42a6f122c3320423e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704674"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Como: recuperar um único atributo (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Como: Recuperar um único atributo (LINQ to XML) (Visual Basic)
 Este tópico explica como recuperar um único atributo de um elemento, dado o nome do atributo. Isso é útil para gravar as expressões de consulta onde você deseja localizar um elemento que possui um atributo específico.  
   
  O método de <xref:System.Xml.Linq.XElement.Attribute%2A> da classe de <xref:System.Xml.Linq.XElement> retorna <xref:System.Xml.Linq.XAttribute> com o nome especificado.  
@@ -92,5 +92,5 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Eixos LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Consulte também
+- [Eixos LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

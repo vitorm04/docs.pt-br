@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 88200b41346a18732647602fb16774610014330c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: db492967dc6df882221f0547b609b3c7f700b118
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627691"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Como: Criar um provedor de Token de segurança personalizadas
 Este tópico mostra como criar novos tipos de token com um provedor de token de segurança personalizada e como integrar o provedor com um Gerenciador de token de segurança personalizada.  
@@ -54,11 +54,11 @@ Este tópico mostra como criar novos tipos de token com um provedor de token de 
  [!code-csharp[c_CustomTokenProvider#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#0)]
  [!code-vb[c_CustomTokenProvider#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#0)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Selectors.SecurityTokenProvider>  
- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
- <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
- <xref:System.IdentityModel.Tokens.X509SecurityToken>  
- [Passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [Como: Criar um autenticador de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Arquitetura de segurança](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Selectors.SecurityTokenProvider>
+- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
+- <xref:System.IdentityModel.Selectors.SecurityTokenManager>
+- <xref:System.IdentityModel.Tokens.X509SecurityToken>
+- [Passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Como: Criar um autenticador de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Arquitetura de segurança](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

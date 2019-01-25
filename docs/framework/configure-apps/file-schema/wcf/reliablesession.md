@@ -2,21 +2,21 @@
 title: '&lt;reliableSession&gt;'
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 56cc48cd93020f37ac73b7f6b89130fdd1a3f7db
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0768cbce237b2d119be719eab1de9da4a551e5ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509799"
 ---
 # <a name="ltreliablesessiongt"></a>&lt;reliableSession&gt;
 Define a configuração para mensagens WS-Reliable. Quando esse elemento é adicionado a uma ligação personalizada, o canal resultante pode dar suporte a exatamente-uma vez as garantias de entrega.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<customBinding>  
-\<associação >  
-\<reliableSession >  
+\<binding>  
+\<reliableSession>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,14 +38,14 @@ Define a configuração para mensagens WS-Reliable. Quando esse elemento é adic
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|AcknowledgementInterval|Um <xref:System.TimeSpan> que contém o intervalo de tempo máximo que o canal vai esperar para enviar uma confirmação para mensagens recebidas até esse ponto. O padrão é 00:00:0.2.|  
-|FlowControlEnabled|Um valor booliano que indica se o controle de fluxo avançado, uma implementação específica da Microsoft de controle de fluxo de mensagens WS-Reliable, é ativado. O padrão é `true`.|  
-|InactivityTimeout|Um <xref:System.TimeSpan> que especifica a duração máxima que o canal vai permitir que a outra parte da comunicação para não enviar qualquer mensagem, antes de considerar falha do canal. O padrão é 10:00:00.<br /><br /> Atividade em um canal é definida como receber mensagens de infraestrutura ou de um aplicativo. Essa propriedade controla a quantidade máxima de tempo para manter uma sessão inativa ativa. Se passar mais tempo sem nenhuma atividade, a sessão será anulada, a infraestrutura e as falhas de canal. **Observação:**  Não é necessário para o aplicativo periodicamente enviar mensagens para manter a conexão ativa.|  
-|MaxPendingChannels|Um inteiro que especifica o número máximo de canais que podem esperar no ouvinte para serem aceitos. Esse valor deve estar entre 1 a 16384 inclusivo. O padrão é 4.<br /><br /> Os canais são pendente quando estão aguardando para serem aceitos. Quando esse limite é atingido, nenhum canal é criados. Em vez disso, eles são colocados no pendentes modo até que esse número chegar para baixo (aceitando pendentes canais). Este é um limite por fábrica.<br /><br /> Quando o limite for atingido e um aplicativo remoto tenta estabelecer uma nova sessão confiável, a solicitação será negada e a operação de abertura que gerou este falhas. Esse limite não se aplica ao número de pendentes canais de saída.|  
-|MaxRetryCount|Um inteiro que especifica o número máximo de vezes que um canal confiável tenta retransmitir uma mensagem que não recebeu uma confirmação, chamando Send em seu canal subjacente.<br /><br /> Esse valor deve ser maior que zero. O padrão é 8.<br /><br /> Esse valor deve ser um inteiro maior que zero. Se uma confirmação não for recebida após a última retransmissão, as falhas de canal.<br /><br /> Uma mensagem é considerada a ser transferida se sua entrega no destinatário foi reconhecida pelo destinatário.<br /><br /> Se uma confirmação não foi recebida dentro de um determinado período de tempo para uma mensagem que já foi transmitida, a infraestrutura retransmite automaticamente a mensagem. A infraestrutura de tenta reenviar a mensagem no máximo o número de vezes especificado por essa propriedade. Se uma confirmação não for recebida após a última retransmissão, as falhas de canal.<br /><br /> A infraestrutura usa um algoritmo de retirada exponencial para determinar quando retransmitir, com base em um tempo de ida e volta médio computado. Inicialmente, o tempo começa em 1 segundo antes de retransmissão e dobrar o atraso com cada tentativa, o que resulta em aproximadamente 8,5 minutos passando entre a primeira tentativa de transmissão e a última tentativa de retransmissão. O tempo para a primeira tentativa de retransmissão é ajustado de acordo com o tempo de ida e volta calculado e a ampliação resultante de tempo que levar essas tentativas varia de acordo. Isso permite que o tempo de retransmissão para adaptar-se dinamicamente à condições variáveis da rede.|  
-|MaxTransferWindowSize|Um inteiro que especifica o tamanho máximo do buffer. Os valores válidos são de 1 a 4096 inclusivo.<br /><br /> No cliente, este atributo define o tamanho máximo do buffer usado por um canal confiável para manter as mensagens que ainda não confirmadas pelo destinatário. A unidade da cota é uma mensagem. Se o buffer estiver cheio, mais operações de envio são bloqueadas.<br /><br /> No receptor, este atributo define o tamanho máximo do buffer usado pelo canal para armazenar mensagens de entrada ainda não foram expedidas para o aplicativo. Se o buffer estiver cheio, ainda mais as mensagens são descartadas silenciosamente pelo destinatário e exigem retransmissão pelo cliente.|  
+|acknowledgementInterval|Um <xref:System.TimeSpan> que contém o intervalo de tempo máximo que o canal vai esperar para enviar uma confirmação para mensagens recebidas até esse ponto. O padrão é 00:00:0.2.|  
+|flowControlEnabled|Um valor booliano que indica se o controle de fluxo avançado, uma implementação específica da Microsoft de controle de fluxo de mensagens WS-Reliable, é ativado. O padrão é `true`.|  
+|inactivityTimeout|Um <xref:System.TimeSpan> que especifica a duração máxima que o canal vai permitir que a outra parte da comunicação para não enviar qualquer mensagem, antes de considerar falha do canal. O padrão é 10:00:00.<br /><br /> Atividade em um canal é definida como receber mensagens de infraestrutura ou de um aplicativo. Essa propriedade controla a quantidade máxima de tempo para manter uma sessão inativa ativa. Se passar mais tempo sem nenhuma atividade, a sessão será anulada, a infraestrutura e as falhas de canal. **Observação:**  Não é necessário para o aplicativo periodicamente enviar mensagens para manter a conexão ativa.|  
+|maxPendingChannels|Um inteiro que especifica o número máximo de canais que podem esperar no ouvinte para serem aceitos. Esse valor deve estar entre 1 a 16384 inclusivo. O padrão é 4.<br /><br /> Os canais são pendente quando estão aguardando para serem aceitos. Quando esse limite é atingido, nenhum canal é criados. Em vez disso, eles são colocados no pendentes modo até que esse número chegar para baixo (aceitando pendentes canais). Este é um limite por fábrica.<br /><br /> Quando o limite for atingido e um aplicativo remoto tenta estabelecer uma nova sessão confiável, a solicitação será negada e a operação de abertura que gerou este falhas. Esse limite não se aplica ao número de pendentes canais de saída.|  
+|maxRetryCount|Um inteiro que especifica o número máximo de vezes que um canal confiável tenta retransmitir uma mensagem que não recebeu uma confirmação, chamando Send em seu canal subjacente.<br /><br /> Esse valor deve ser maior que zero. O padrão é 8.<br /><br /> Esse valor deve ser um inteiro maior que zero. Se uma confirmação não for recebida após a última retransmissão, as falhas de canal.<br /><br /> Uma mensagem é considerada a ser transferida se sua entrega no destinatário foi reconhecida pelo destinatário.<br /><br /> Se uma confirmação não foi recebida dentro de um determinado período de tempo para uma mensagem que já foi transmitida, a infraestrutura retransmite automaticamente a mensagem. A infraestrutura de tenta reenviar a mensagem no máximo o número de vezes especificado por essa propriedade. Se uma confirmação não for recebida após a última retransmissão, as falhas de canal.<br /><br /> A infraestrutura usa um algoritmo de retirada exponencial para determinar quando retransmitir, com base em um tempo de ida e volta médio computado. Inicialmente, o tempo começa em 1 segundo antes de retransmissão e dobrar o atraso com cada tentativa, o que resulta em aproximadamente 8,5 minutos passando entre a primeira tentativa de transmissão e a última tentativa de retransmissão. O tempo para a primeira tentativa de retransmissão é ajustado de acordo com o tempo de ida e volta calculado e a ampliação resultante de tempo que levar essas tentativas varia de acordo. Isso permite que o tempo de retransmissão para adaptar-se dinamicamente à condições variáveis da rede.|  
+|maxTransferWindowSize|Um inteiro que especifica o tamanho máximo do buffer. Os valores válidos são de 1 a 4096 inclusivo.<br /><br /> No cliente, este atributo define o tamanho máximo do buffer usado por um canal confiável para manter as mensagens que ainda não confirmadas pelo destinatário. A unidade da cota é uma mensagem. Se o buffer estiver cheio, mais operações de envio são bloqueadas.<br /><br /> No receptor, este atributo define o tamanho máximo do buffer usado pelo canal para armazenar mensagens de entrada ainda não foram expedidas para o aplicativo. Se o buffer estiver cheio, ainda mais as mensagens são descartadas silenciosamente pelo destinatário e exigem retransmissão pelo cliente.|  
 |ordered|Um valor booleano que especifica se as mensagens são garantidas de chegar na ordem em que foram enviadas. Se essa configuração for `false`, as mensagens podem chegar fora de ordem. O padrão é `true`.|  
-|ReliableMessagingVersion|Um valor válido de <xref:System.ServiceModel.ReliableMessagingVersion> que especifica a versão de WS-ReliableMessaging a ser usada.|  
+|reliableMessagingVersion|Um valor válido de <xref:System.ServiceModel.ReliableMessagingVersion> que especifica a versão de WS-ReliableMessaging a ser usada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -54,7 +54,7 @@ Define a configuração para mensagens WS-Reliable. Quando esse elemento é adic
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  Sessões confiáveis fornecem recursos de sistema de mensagens confiável e sessões. Mensagens confiáveis tentará novamente a comunicação em caso de falha e permite que as garantias de entrega, como em ordem de chegada de mensagens seja especificado. Sessões de mantêm o estado dos clientes entre chamadas. Esse elemento também fornece a entrega de mensagens ordenadas. Esta sessão implementado pode cruzar intermediários SOAP e transporte.  
@@ -119,12 +119,12 @@ Define a configuração para mensagens WS-Reliable. Quando esse elemento é adic
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.ReliableSessionElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>  
- [Sessões confiáveis](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.ReliableSessionElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
+- [Sessões confiáveis](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

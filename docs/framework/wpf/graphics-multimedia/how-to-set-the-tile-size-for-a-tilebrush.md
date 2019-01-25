@@ -1,18 +1,18 @@
 ---
-title: Como definir o tamanho de lado para um TileBrush
+title: 'Como: Definir o tamanho de lado para um TileBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tilepropertys
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: e1ba1a25281ffdd1cc00e0bed0efe4f8508780be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4bfc14693f1714206e89ec50128ad62dd239dbee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713558"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Como definir o tamanho de lado para um TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Como: Definir o tamanho de lado para um TileBrush
 Este exemplo mostra como definir o tamanho de bloco para um <xref:System.Windows.Media.TileBrush>. Por padrão, um <xref:System.Windows.Media.TileBrush> produz um único bloco que preenche completamente a área que você está pintando. Você pode substituir esse comportamento, definindo a <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriedades.  
   
  O <xref:System.Windows.Media.TileBrush.Viewport%2A> propriedade especifica o tamanho de bloco para um <xref:System.Windows.Media.TileBrush>. Por padrão, o valor da <xref:System.Windows.Media.TileBrush.Viewport%2A> propriedade é relativo ao tamanho da área que está sendo pintada. Para tornar o <xref:System.Windows.Media.TileBrush.Viewport%2A> propriedade especificar um tamanho de bloco absoluto, defina a <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriedade para <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
@@ -38,7 +38,7 @@ Este exemplo mostra como definir o tamanho de bloco para um <xref:System.Windows
   
  Embora este exemplo usa o <xref:System.Windows.Media.ImageBrush> classe, o <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriedades se comportam de forma idêntica para os outros <xref:System.Windows.Media.TileBrush> objetos, ou seja, para <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush>. Para obter mais informações sobre <xref:System.Windows.Media.ImageBrush> e o outro <xref:System.Windows.Media.TileBrush> objetos, consulte [pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.TileBrush>  
- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Criar padrões de bloco diferentes com um TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.TileBrush>
+- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Criar padrões de bloco diferentes com um TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

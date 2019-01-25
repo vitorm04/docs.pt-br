@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0a506f05aac3b8335a0863c3152567fe05463a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b66cc09eda1fe5ea46a55b6239e05b5acec851c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566899"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>Método ICorDebugManagedCallback::UpdateModuleSymbols
-Notifica o depurador que alterou os símbolos para um módulo de tempo de execução de linguagem comum.  
+Notifica o depurador para que os símbolos para um módulo de tempo de execução de linguagem comum foram alterados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,23 +45,23 @@ HRESULT UpdateModuleSymbols (
  [in] Um ponteiro para um objeto ICorDebugModule que representa o módulo no qual os símbolos foram alterados.  
   
  `pSymbolStream`  
- [in] Um ponteiro para um COM Win32 `IStream` objeto que contém os símbolos modificados.  
+ [in] Um ponteiro para uma COM Win32 `IStream` objeto que contém os símbolos modificados.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método fornece uma oportunidade para atualizar a exibição do depurador de símbolos do módulo chamando [Isymunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) ou [: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
+ Esse método fornece uma oportunidade para atualizar a exibição do depurador de símbolos do módulo, chamando [isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) ou [isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
   
  Esse retorno de chamada pode ocorrer várias vezes para o mesmo módulo.  
   
- Um depurador deve tentar associar os pontos de interrupção de nível de origem não associados.  
+ Um depurador deve tentar associar pontos de interrupção não associados no nível da origem.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

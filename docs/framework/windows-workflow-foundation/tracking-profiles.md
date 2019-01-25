@@ -2,12 +2,12 @@
 title: Controlando perfis
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 95f14cff9c60158f0ce188d031a94870c0b0ac5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559249"
 ---
 # <a name="tracking-profiles"></a>Controlando perfis
 Controlando os perfis contêm consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidas quando o estado de uma instância de fluxo de trabalho se altera em tempo de execução.  
@@ -380,7 +380,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 </trackingProfile>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Acompanhamento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Consulte também
+- [Acompanhamento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d741e8df8f2b8c6d90a1d867c73495a2ffd1304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d05f9c727672c4f249e388a32b1101aaafd2f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538252"
 ---
 # <a name="ltmethodinstantiationgt-element-net-native"></a>Elemento &lt;MethodInstantiation&gt; (.NET Nativo)
 Aplica a política de reflexão de tempo de execução a um método genérico construído.  
@@ -74,8 +74,8 @@ Aplica a política de reflexão de tempo de execução a um método genérico co
 ## <a name="remarks"></a>Comentários  
  O elemento `<MethodInstantiation>` substitui a política de reflexão de tempo de execução do seu método genérico aberto correspondente.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+## <a name="see-also"></a>Consulte também
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)

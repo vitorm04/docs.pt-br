@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf73f382c1da15e0285ee95be9e8bce39575ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557351"
 ---
 # <a name="corgenericparamattr-enumeration"></a>Enumeração CorGenericParamAttr
-Contém valores que descrevem o <xref:System.Type> parâmetros para tipos genéricos, como usado em chamadas para [Imetadataemit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Contém valores que descrevem o <xref:System.Type> parâmetros de tipos genéricos, como usado em chamadas para [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,22 +49,22 @@ typedef enum CorGenericParamAttr {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`gpVarianceMask`|Variação de parâmetro só se aplica a parâmetros genéricos para interfaces e delegados.|  
+|`gpVarianceMask`|Variação de parâmetro se aplica somente aos parâmetros genéricos de interfaces e delegados.|  
 |`gpNonVariant`|Indica a ausência de variação.|  
 |`gpCovariant`|Indica a covariância.|  
-|`gpContravariant`|Indica contravariância.|  
-|`gpSpecialConstraintMask`|Restrições especiais podem aplicar a qualquer <xref:System.Type> parâmetro.|  
-|`gpNoSpecialConstraint`|Indica que nenhuma restrição se aplica ao <xref:System.Type> parâmetro.|  
+|`gpContravariant`|Indica a contravariância.|  
+|`gpSpecialConstraintMask`|As restrições especiais podem aplicar a qualquer <xref:System.Type> parâmetro.|  
+|`gpNoSpecialConstraint`|Indica que nenhuma restrição se aplica para o <xref:System.Type> parâmetro.|  
 |`gpReferenceTypeConstraint`|Indica que o <xref:System.Type> parâmetro deve ser um tipo de referência.|  
 |`gpNotNullableValueTypeConstraint`|Indica que o <xref:System.Type> parâmetro deve ser um tipo de valor não pode ser um valor nulo.|  
-|`gpDefaultConstructorConstraint`|Indica que o <xref:System.Type> parâmetro deve ter um construtor público padrão que não usa nenhum parâmetro.|  
+|`gpDefaultConstructorConstraint`|Indica que o <xref:System.Type> parâmetro deve ter um construtor público padrão que não aceita parâmetros.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

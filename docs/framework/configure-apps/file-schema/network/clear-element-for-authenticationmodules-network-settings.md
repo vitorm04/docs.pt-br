@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 42fa6a44891e012300f61f1a11a47537c6739e2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b2f5194cc6a4c7c0329edb2a1718a642781f79b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563412"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Limpar&gt; elemento para authenticationModules (configurações de rede)
 Limpa todos os módulos de autenticação do aplicativo.  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
-\<Limpar >  
+\<authenticationModules>  
+\<clear>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +65,7 @@ Limpa todos os módulos de autenticação do aplicativo.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

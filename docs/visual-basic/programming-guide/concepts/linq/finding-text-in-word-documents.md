@@ -2,12 +2,12 @@
 title: Localizando texto em documentos do Word (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: d9f9b0066a1f9b1fbe25c52f5bc23721b9e813c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ab6d337fdf20684027cef3a41fe367bbedd4ee2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720857"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Localizando texto em documentos do Word (Visual Basic)
 Este tópico estende as consultas anteriores para fazer algo útil: localizar todas as ocorrências de uma cadeia de caracteres no documento.  
@@ -15,7 +15,7 @@ Este tópico estende as consultas anteriores para fazer algo útil: localizar to
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, para localizar todas as ocorrências de uma parte específica de texto no documento. Para fazer isso, usamos uma consulta encontrar a cadeia de caracteres “hello world”. Este exemplo cria nos exemplos anteriores neste tutorial. A nova consulta é chamada nos comentários no código a seguir.  
   
- Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o código-fonte Office documento Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -305,9 +305,9 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Próximas etapas  
  A próxima seção fornece informações sobre documentos de WordprocessingML:  
   
--   [Detalhes do Office abrir documentos de WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+-   [Detalhes do Office Open XML WordprocessingML documentos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Refatoração usando uma função pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
- [Execução adiada e avaliação lenta em LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+- [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refatoração usando uma função pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
+- [Execução adiada e avaliação lenta em LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

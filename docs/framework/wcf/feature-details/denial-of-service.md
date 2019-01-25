@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516155"
 ---
 # <a name="denial-of-service"></a>Negação de serviço
 Negação de serviço ocorre quando um sistema está sobrecarregado de tal forma que as mensagens não podem ser processadas, ou eles são processados extremamente lenta.  
@@ -69,21 +69,21 @@ Negação de serviço ocorre quando um sistema está sobrecarregado de tal forma
 ## <a name="protect-configuration-files-with-acls"></a>Proteger arquivos de configuração com as ACLs  
  Você pode especificar as declarações obrigatórias e opcionais em arquivos de código e a configuração para [!INCLUDE[infocard](../../../../includes/infocard-md.md)] tokens emitidos. Isso resulta em elementos correspondentes que está sendo emitidos em `RequestSecurityToken` mensagens que são enviadas para a segurança de serviço de token. Um invasor pode modificar código ou a configuração para remover declarações obrigatórias ou opcionais, potencialmente, obtendo o serviço de token de segurança para emitir um token que não permite o acesso ao serviço de destino.  
   
- Para atenuar: exigem acesso ao computador para modificar o arquivo de configuração. Controle de acesso de arquivo de uso de ACLs para proteger arquivos de configuração. WCF requer que o código ser no cache de assembly global ou de diretório do aplicativo antes que ele permita que esse código ser carregado da configuração. Use as ACLs do diretório para proteger os diretórios.  
+ Para atenuar: Exigir acesso ao computador para modificar o arquivo de configuração. Controle de acesso de arquivo de uso de ACLs para proteger arquivos de configuração. WCF requer que o código ser no cache de assembly global ou de diretório do aplicativo antes que ele permita que esse código ser carregado da configuração. Use as ACLs do diretório para proteger os diretórios.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Número máximo de sessões seguras para um serviço é atingido  
  Quando um cliente é autenticado com êxito por um serviço e uma sessão segura é estabelecida com o serviço, o serviço mantém controle de sessão até que o cliente cancela a ele ou a sessão expirar. Contagens de cada sessão estabelecida para o limite para o número máximo de sessões simultâneas do Active Directory com um serviço. Quando esse limite for atingido, os clientes que tentam criar uma nova sessão com o serviço serão rejeitados até que uma ou sessões ativas mais expiram ou são canceladas por um cliente. Um cliente pode ter várias sessões com um serviço, e cada uma dessas sessões de contagens em relação ao limite.  
   
 > [!NOTE]
->  Quando você usa sessões com monitoração de estado, o parágrafo anterior não se aplica. Para obter mais informações sobre as sessões com monitoração de estado, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Quando você usa sessões com monitoração de estado, o parágrafo anterior não se aplica. Para obter mais informações sobre as sessões com monitoração de estado, consulte [como: Criar um contexto de segurança para uma sessão segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Para atenuar isso, defina o limite para o número máximo de sessões ativas e o tempo de vida máximo para uma sessão, definindo o <xref:System.ServiceModel.Channels.SecurityBindingElement> propriedade do <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
   
-## <a name="see-also"></a>Consulte também  
- [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Consulte também
+- [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

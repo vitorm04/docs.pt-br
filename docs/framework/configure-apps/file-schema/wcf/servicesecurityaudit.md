@@ -2,20 +2,20 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 3202b5055d16f0daa1bd829aa53ff6662a687b5d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 91fe14c22dce45a89b91d9d4c20e30928acd60c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630691"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Especifica configurações que habilitem a auditoria de eventos de segurança durante as operações de serviço.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento de >  
+\<serviceBehaviors>  
+\<behavior>  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -46,7 +46,7 @@ Especifica configurações que habilitem a auditoria de eventos de segurança du
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamento de >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
  Este elemento de configuração é usado para auditoria de eventos de autenticação do Windows Communication Foundation (WCF). Quando a auditoria estiver habilitada, a autenticação com êxito ou falha tentativas (ou ambos) podem ser auditados. Os eventos são gravados em um dos três logs de eventos: aplicativo, segurança ou o log padrão para a versão do sistema operacional. Os logs de eventos podem todas ser exibidos usando o Visualizador de eventos do Windows.  
@@ -78,10 +78,10 @@ Especifica configurações que habilitem a auditoria de eventos de segurança du
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Auditoria](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Como: Eventos de auditoria de segurança](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
- [Comportamento de auditoria de serviço](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Auditoria](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Como: Eventos de auditoria de segurança](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Comportamento de auditoria de serviço](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

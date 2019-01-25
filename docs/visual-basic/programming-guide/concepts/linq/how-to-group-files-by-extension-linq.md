@@ -1,15 +1,15 @@
 ---
-title: 'Como: agrupar arquivos por extensão (LINQ) (Visual Basic)'
+title: 'Como: Agrupar arquivos por extensão (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 61b4ebee03511df8bb06b792ecfd700959d0696b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c52debf2e40c6ed6da2d7f3c7dbdb16e1f7396f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728220"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Como: agrupar arquivos por extensão (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Como: Agrupar arquivos por extensão (LINQ) (Visual Basic)
 Este exemplo mostra como o LINQ pode ser usado para realizar operações avançadas de classificação e agrupamento em listas de arquivos ou pastas. Ele também mostra como paginar a saída na janela do console usando os métodos <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Exemplo  
@@ -94,8 +94,8 @@ End Module
  A saída desse programa pode ser longa, dependendo dos detalhes do sistema de arquivos local e o que está definido em `startFolder`. Para habilitar a exibição de todos os resultados, este exemplo mostra como paginá-los. As mesmas técnicas podem ser aplicadas a aplicativos do Windows e aplicativos Web. Observe que, como o código dispõe os itens em um grupo, é necessário um loop `For Each` aninhado. Há também alguma lógica adicional para calcular a posição atual na lista e para permitir que o usuário interrompa a paginação e saia do programa. Nesse caso específico, a consulta de paginação é executada nos resultados da consulta original armazenados em cache. Em outros contextos, como LINQ to SQL, esse cache não é necessário.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou superior com uma referência a System.Core.dll e um `Imports` declaração para o namespace System. Linq.  
+ Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou posterior com uma referência à dll e um `Imports` instrução para o namespace System. Linq.  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

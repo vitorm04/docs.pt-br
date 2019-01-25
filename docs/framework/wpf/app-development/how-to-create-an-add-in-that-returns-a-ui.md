@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: f882d62152d0116d5bff3bcd604f04c249443a94
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 0c7a91a53a16012340b5612e19255dfd2f2bad85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654081"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Como: Criar um suplemento que retorne uma interface do usuário
 Este exemplo mostra como criar um suplemento que retorna um Windows Presentation Foundation (WPF) para um host de aplicativo autônomo do WPF.  
@@ -89,6 +89,6 @@ Este exemplo mostra como criar um suplemento que retorna um Windows Presentation
  [!code-csharp[SimpleAddInReturnsAUISample#GetUICode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Host/MainWindow.xaml.cs#getuicode)]
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
-## <a name="see-also"></a>Consulte também  
- [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [Visão geral dos suplementos do WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Visão geral dos suplementos do WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

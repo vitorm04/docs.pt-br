@@ -2,12 +2,12 @@
 title: LINQ e o ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 13532401a56c6ab2c77a2df575d5b3dde573df2d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714809"
 ---
 # <a name="linq-and-adonet"></a>LINQ e o ADO.NET
 Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de programação: uma linguagem de alto nível para as camadas de apresentação e lógica de negócios (como Visual c# ou Visual Basic) e uma linguagem de consulta para interagir com o banco de dados (como [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Isso exige que o desenvolvedor seja proficiente em várias linguagens para ser eficaz e também provoca incompatibilidades de linguagens no ambiente de desenvolvimento. Por exemplo, um aplicativo que usa uma API de acesso a dados para executar uma consulta em um banco de dados especifica a consulta como um literal de cadeia de caracteres usando aspas. Essa cadeia de caracteres de consulta é ilegível para o compilador e os erros não são verificados, como sintaxe inválida ou se as colunas ou linhas referenciadas realmente existem. Não há nenhuma verificação do tipo dos parâmetros da consulta e também nenhum suporte do `IntelliSense`.  
@@ -20,7 +20,7 @@ Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de 
   
  O diagrama a seguir fornece uma visão geral de como as tecnologias LINQ do ADO.NET estão relacionadas às linguagens de programação de alto nível e às fontes de dados habilitadas para LINQ.  
   
- ![Visão geral do ADO.NET LINQ to](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
+ ![LINQ to ADO.NET overview](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
  Para obter mais informações sobre o LINQ, consulte [Language Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md).
   
@@ -41,8 +41,8 @@ Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de 
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
-- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)  
-- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)
+- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [LINQ (Consulta Integrada à Linguagem)](../../../csharp/programming-guide/concepts/linq/index.md)
 - [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

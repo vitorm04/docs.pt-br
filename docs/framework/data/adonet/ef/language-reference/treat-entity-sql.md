@@ -2,12 +2,12 @@
 title: TRATAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: c3291dc6d5bc79430c8bf011ee6a2f4dc213ffad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 82e1ad172148065ce90628b7e23578623cc7199a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632602"
 ---
 # <a name="treat-entity-sql"></a>TRATAR (Entity SQL)
 Trata um objeto de um tipo base específico como um objeto do tipo derivado especificado.  
@@ -66,6 +66,6 @@ WHERE p IS OF (NamespaceName.Employee)
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Tipos estruturados anulável](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a>Consulte também
+- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Tipos estruturados anulável](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

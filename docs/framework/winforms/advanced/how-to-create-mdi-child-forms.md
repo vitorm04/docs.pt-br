@@ -1,5 +1,5 @@
 ---
-title: Como criar formulários filho MDI
+title: 'Como: Criar formulários filho MDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6ff5873fc2e0a321ad682805457be87c609972fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708451"
 ---
-# <a name="how-to-create-mdi-child-forms"></a>Como criar formulários filho MDI
+# <a name="how-to-create-mdi-child-forms"></a>Como: Criar formulários filho MDI
 Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interface MDI](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), pois esses formulários são o centro da interação do usuário.  
   
  No procedimento a seguir, você criará um formulário filho MDI que exibe um <xref:System.Windows.Forms.RichTextBox> controle, semelhante aos aplicativos de processamento de texto. Substituindo o <xref:System.Windows.Forms> controlar com outros controles, como o <xref:System.Windows.Forms.DataGridView> controle ou uma mistura de controles permite que você crie janelas filho MDI (e, por extensão, aplicativos MDI) com diversas possibilidades.  
@@ -106,9 +106,9 @@ Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interfa
     > [!NOTE]
     >  Quando um formulário MDI filho tem um <xref:System.Windows.Forms.MainMenu> componente (com, geralmente, uma estrutura de menu de itens de menu) e ele é aberto em um formulário pai MDI que tem um <xref:System.Windows.Forms.MainMenu> componente (com, geralmente, uma estrutura de menu de itens de menu), o menu itens mesclará automaticamente Se você tiver definido o <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade (e, opcionalmente, o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade). Defina as <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade de ambos <xref:System.Windows.Forms.MainMenu> componentes e todos os itens de menu do formulário filho para <xref:System.Windows.Forms.MenuMerge.MergeItems>. Além disso, defina o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade para que os itens de menu de ambos os menus aparecem na ordem desejada. Além disso, tenha em mente que, quando você fecha um formulário pai MDI, cada um dos filhos MDI forms gera uma <xref:System.Windows.Forms.Form.Closing> evento antes do <xref:System.Windows.Forms.Form.Closing> é gerado para o pai da MDI. Cancelando um filho MDI <xref:System.Windows.Forms.Form.Closing> evento não impedirá que o pai MDI <xref:System.Windows.Forms.Form.Closing> evento seja gerado; no entanto, o <xref:System.ComponentModel.CancelEventArgs> argumento para o pai MDI <xref:System.Windows.Forms.Form.Closing> evento agora será definido como `true`. Você pode forçar o pai MDI e todos os filhos MDI, configurando o <xref:System.ComponentModel.CancelEventArgs> argumento para `false`.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da interface MDI (Interface de Vários Documentos)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Como criar formulários pai MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Como determinar o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [Como Enviar Dados para o Filho MDI Ativo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
- [Como Organizar Formulários Filho MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Aplicativos da interface MDI (Interface de Vários Documentos)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
+- [Como: Criar formulários pai MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Como: Determinar o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
+- [Como: Enviar dados para o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
+- [Como: Organizar formulários filho MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

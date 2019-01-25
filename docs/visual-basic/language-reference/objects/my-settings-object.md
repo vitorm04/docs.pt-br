@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 293e7cd6449b8a35b5e42b4823a4412e0d6a3f14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628156"
 ---
 # <a name="mysettings-object"></a>Objeto My.Settings
 Fornece propriedades e métodos para acessar as configurações do aplicativo.  
@@ -47,10 +47,10 @@ Fornece propriedades e métodos para acessar as configurações do aplicativo.
   
 |Para|Consulte|  
 |---|---|  
-|Ler uma configuração de aplicativo|[Como ler configurações do aplicativo no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Alterar uma configuração de usuário|[Como alterar configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Persistir configurações do usuário|[Como persistir configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Criar uma grade de propriedade para as configurações do usuário|[Como criar grades de propriedades para configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Ler uma configuração de aplicativo|[Como: Ler configurações do aplicativo no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Alterar uma configuração de usuário|[Como: Alterar configurações de usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Persistir configurações do usuário|[Como: Persistir configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Criar uma grade de propriedade para as configurações do usuário|[Como: Criar grades de propriedades para configurações de usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo exibe o valor da configuração `Nickname`.  
@@ -59,10 +59,10 @@ Fornece propriedades e métodos para acessar as configurações do aplicativo.
   
  Para que esse exemplo funcione, seu aplicativo deve ter uma configuração `Nickname`, do tipo `String`.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Configuration.ApplicationSettingsBase>  
- [Como ler configurações do aplicativo no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [Como alterar configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
- [Como persistir configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
- [Como criar grades de propriedades para configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Configuration.ApplicationSettingsBase>
+- [Como: Ler configurações do aplicativo no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [Como: Alterar configurações de usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [Como: Persistir configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [Como: Criar grades de propriedades para configurações de usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

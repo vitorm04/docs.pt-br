@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: implementando a herança com objetos COM (Visual Basic)'
+title: 'Passo a passo: Implementando a herança com objetos COM (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: e99deb2ea5e8acd5e1e07adffe29d35e2624b27e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648200"
 ---
-# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Instruções passo a passo: implementando a herança com objetos COM (Visual Basic)
+# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Passo a passo: Implementando a herança com objetos COM (Visual Basic)
 Você pode derivar classes de Visual Basic de `Public` classes em objetos COM, mesmo aqueles criados em versões anteriores do Visual Basic. As propriedades e métodos das classes herdadas de objetos COM a podem ser substituídos ou sobrecarregados assim como as propriedades e métodos de qualquer outra classe base podem ser substituídos ou sobrecarregados. Herança de objetos COM é útil quando você tiver uma biblioteca de classe existente que você não deseja recompilar.  
   
  O procedimento a seguir mostra como usar o Visual Basic 6.0 para criar um objeto COM que contém uma classe e, em seguida, usá-lo como uma classe base.  
@@ -129,7 +129,7 @@ Você pode derivar classes de Visual Basic de `Public` classes em objetos COM, m
   
 -   As propriedades que usam `ByRef` parâmetros não podem ser substituídos.  
   
-## <a name="see-also"></a>Consulte também  
- [Interoperabilidade COM em Aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [Tipo de Dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)
+## <a name="see-also"></a>Consulte também
+- [Interoperabilidade COM em Aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Tipo de Dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)

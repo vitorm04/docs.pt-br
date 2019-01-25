@@ -1,23 +1,23 @@
 ---
-title: Como criar um ponto de extremidade de serviço em código
+title: 'Como: Criar um ponto de extremidade de serviço no código'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 38a7083662ce5ae50cc3ed7f03a224efa65622ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 143a43545646e180bcfdedb60c64bbbb7c83ac2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517468"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a>Como criar um ponto de extremidade de serviço em código
-Neste exemplo, um `ICalculator` contrato é definido para um serviço de cálculo, o serviço é implementado no `CalculatorService` classe e seu ponto de extremidade é definido no código, onde ele é especificado que o serviço deve usar o <xref:System.ServiceModel.BasicHttpBinding> classe.  
+# <a name="how-to-create-a-service-endpoint-in-code"></a>Como: Criar um ponto de extremidade de serviço no código
+Neste exemplo, uma `ICalculator` contrato é definido para um serviço de Calculadora e, em seguida, o serviço é implementado de `CalculatorService` classe e, em seguida, seu ponto de extremidade é definido no código, onde ele é especificado que o serviço deve usar o <xref:System.ServiceModel.BasicHttpBinding> classe.  
   
- Geralmente é a prática recomendada para especificar declarativamente a associação e as informações de endereço na configuração em vez de imperativa no código. Definir pontos de extremidade no código geralmente não é prático porque as associações e os endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Geralmente, informações sem o código de endereçamento e manter a associação permite que a alteração sem precisar recompilar ou reimplantar o aplicativo.  
+ Ele geralmente é a prática recomendada para especificar declarativamente as informações de endereço e associação na configuração em vez de imperativa no código. Definir pontos de extremidade no código geralmente não é prático porque as associações e endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. De modo geral, informações fora do código de endereçamento e manter a associação permite que eles alterem os sem ter que recompilar ou reimplantar o aplicativo.  
   
-#### <a name="to-create-a-service-endpoint-in-code"></a>Para criar um ponto de extremidade de serviço em código  
+#### <a name="to-create-a-service-endpoint-in-code"></a>Para criar um ponto de extremidade de serviço no código  
   
 1.  Crie a interface que define o contrato de serviço.  
   
@@ -34,17 +34,17 @@ Neste exemplo, um `ICalculator` contrato é definido para um serviço de cálcul
      [!code-csharp[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  Crie o host e chamar <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> ou uma das outras sobrecargas para adicionar o ponto de extremidade de serviço para o host.  
+4.  Criar o host e chamar <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> ou uma das outras sobrecargas para adicionar o ponto de extremidade de serviço para o host.  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  
   
-     Para especificar a associação no código, mas usar os pontos de extremidade padrão fornecidos pelo tempo de execução, passe o endereço grave para construtor ao criar o <xref:System.ServiceModel.ServiceHost>e não chame <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+     Para especificar a associação no código, mas usar os pontos de extremidade padrão fornecidos pelo tempo de execução, passe o endereço grave no construtor ao criar o <xref:System.ServiceModel.ServiceHost>e não chame <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificado](../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Como especificar uma associação de serviço no código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Especificar uma associação de serviço no código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

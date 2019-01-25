@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f3e5b3c4dcec98f293b4d6444d781705c700f88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6300195cafeedd8823e0b10b4ee0ebf9ff8e2055
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528063"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>Programação em SQL Server e atributos de proteção de host
 A capacidade de carregar e executar um código gerenciado em um host do SQL Server exige que os requisitos do host referentes à segurança de acesso do código e à proteção de recursos do host sejam atendidos.  Os requisitos de segurança de acesso do código são especificados por um dos três conjuntos de permissões do SQL Server: SAFE, EXTERNAL-ACCESS ou UNSAFE. O código em execução nos conjuntos de permissões SAFE ou EXTERNAL-ACCESS devem evitar determinados tipos ou membros que têm o atributo <xref:System.Security.Permissions.HostProtectionAttribute> aplicado. O <xref:System.Security.Permissions.HostProtectionAttribute> não é uma permissão de segurança como uma garantia de confiabilidade, pois ele identifica constructos de código específicos, sejam tipos ou métodos, que o host pode não permitir.  O uso do <xref:System.Security.Permissions.HostProtectionAttribute> impõe um modelo de programação que ajuda a proteger a estabilidade do host.  
@@ -53,7 +53,7 @@ A capacidade de carregar e executar um código gerenciado em um host do SQL Serv
 |`System.Windows.Forms`|Propriedade <xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType>|  
   
 ## <a name="sql-server-permission-sets"></a>Conjuntos de permissões do SQL Server  
- O SQL Server permite aos usuários especificar os requisitos de confiabilidade do código implantado em um banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para o assembly: SAFE, EXTERNAL-ACCESS ou UNSAFE.  
+ O SQL Server permite aos usuários especificar os requisitos de confiabilidade do código implantado em um banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: SAFE, EXTERNAL-ACCESS ou UNSAFE.  
   
 |Conjunto de permissões|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
@@ -75,6 +75,6 @@ A capacidade de carregar e executar um código gerenciado em um host do SQL Serv
   
  Com base nessas considerações, o SQL Server não permite o uso de variáveis estáticas e membros de dados estáticos. Para assemblies SAFE e EXTERNAL-ACCESS, o SQL Server examina os metadados do assembly em tempo CREATE ASSEMBLY e falha a criação desses assemblies se encontra o uso de variáveis e membros de dados estáticos.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Security.Permissions.HostProtectionAttribute>  
- <xref:System.Security.Permissions.HostProtectionResource>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Security.Permissions.HostProtectionAttribute>
+- <xref:System.Security.Permissions.HostProtectionResource>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46881b76685fd04f8bc5e3a67830e58f85cd774
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8897eda39a0ff5f1a11a95aeea4e2887912592ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519249"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>Método ICorRuntimeHost::LocksHeldByLogicalThread
-Recupera o número de bloqueios que mantém o thread atual.  
+Recupera o número de bloqueios que o thread atual mantém.  
   
  Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
   
@@ -39,16 +39,16 @@ HRESULT LocksHeldByLogicalThread(
   
 #### <a name="parameters"></a>Parâmetros  
  `pCount`  
- [out] Um ponteiro para o número de bloqueios que contém o segmento atual.  
+ [out] Um ponteiro para o número de bloqueios que mantém o thread atual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
  **Versões do .NET framework:** 1.0, 1.1  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

@@ -2,12 +2,12 @@
 title: Procedimento de configuração único para exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583384"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimento de configuração único para exemplos do Windows Communication Foundation
 A maioria dos exemplos do Windows Communication Foundation (WCF) é hospedada em serviços de informações da Internet (IIS) e executar a partir de um diretório virtual comum. Este procedimento de configuração única cria uma pasta no disco; Ele também adiciona um diretório virtual IIS chamado **ServiceModelSamples**.
@@ -40,11 +40,11 @@ A maioria dos exemplos do Windows Communication Foundation (WCF) é hospedada em
   
 5.  Siga as [instruções do Firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md) para habilitar as portas usadas pelos exemplos.  
   
-6.  Verifique o seguinte diretório padrão: \<InstallDrive >:**\WF_WCF_Samples**. Se os exemplos foram instalados anteriormente, isso é o diretório padrão.  
+6.  Verifique o seguinte diretório padrão: \<InstallDrive>:**\WF_WCF_Samples**. Se os exemplos foram instalados anteriormente, isso é o diretório padrão.  
   
 7.  Se os exemplos não são instalados, instalá-los do local de download de exemplos [Visual c#](https://go.microsoft.com/fwlink/?LinkId=190939) ou [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8.  Depois de instalar os exemplos, vá para: \<InstallDrive >:**\WF_WCF_Samples\WCF\Setup\\**  
+8.  Depois de instalar os exemplos, vá para: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. Execute o **Setupvroot.bat** arquivo em lotes. As etapas a seguir são executadas:  
   

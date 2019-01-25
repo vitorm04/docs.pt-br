@@ -1,5 +1,5 @@
 ---
-title: Como associar um menu de atalho a um componente NotifyIcon dos Windows Forms
+title: 'Como: Associar um Menu de atalho um componente NotifyIcon dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,46 +10,46 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: c0371dfb30c70bd2c4d98362abc7dc06926a5e88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 142d40040872a0fbe4e679a8ad67ef0ca48b4753
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573680"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Como associar um menu de atalho a um componente NotifyIcon dos Windows Forms
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Como: Associar um Menu de atalho um componente NotifyIcon dos Windows Forms
 > [!NOTE]
->  Embora <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> substituir e adiciona a funcionalidade para o <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> controles de versões anteriores, <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> são mantidos para uso futuro e compatibilidade com versões anteriores, se você escolher.  
+>  Embora <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> substituam e adicionem funcionalidade para o <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> de versões anteriores, os controles <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> são mantidos para compatibilidade com versões anteriores e uso futuro, se você escolher.  
   
- O <xref:System.Windows.Forms.NotifyIcon> componente exibe um ícone na área de notificação de status da barra de tarefas. Normalmente, aplicativos permitem clicar com o botão direito do mouse nesse ícone para enviar comandos para o aplicativo que ele representa. Associando um <xref:System.Windows.Forms.ContextMenu> componente com o <xref:System.Windows.Forms.NotifyIcon> componente, você pode adicionar essa funcionalidade em seus aplicativos.  
+ O <xref:System.Windows.Forms.NotifyIcon> componente exibe um ícone na área de notificação de status da barra de tarefas. Normalmente, aplicativos permitem clicar com o botão direito do mouse nesse ícone para enviar comandos para o aplicativo que ele representa. Associando um <xref:System.Windows.Forms.ContextMenu> componente com o <xref:System.Windows.Forms.NotifyIcon> componente, você pode adicionar essa funcionalidade aos seus aplicativos.  
   
 > [!NOTE]
->  Se você quiser que seu aplicativo para ser minimizado na inicialização ao exibir uma instância do <xref:System.Windows.Forms.NotifyIcon> componente na barra de tarefas, defina o formulário principal <xref:System.Windows.Forms.Form.WindowState%2A> propriedade <xref:System.Windows.Forms.FormWindowState.Minimized> e verifique se o <xref:System.Windows.Forms.NotifyIcon> do componente <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriedade é definido como `true`.  
+>  Se você quiser que seu aplicativo seja minimizado na inicialização ao exibir uma instância das <xref:System.Windows.Forms.NotifyIcon> componente na barra de tarefas, defina o formulário principal <xref:System.Windows.Forms.Form.WindowState%2A> propriedade a ser <xref:System.Windows.Forms.FormWindowState.Minimized> e certifique-se a <xref:System.Windows.Forms.NotifyIcon> do componente <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriedade é definido como `true`.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Associar um menu de atalho ao componente NotifyIcon no tempo de design  
   
-1.  Adicionar um <xref:System.Windows.Forms.NotifyIcon> componente ao formulário e defina as propriedades importantes, como o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriedades.  
+1.  Adicionar um <xref:System.Windows.Forms.NotifyIcon> ao seu formulário e defina as propriedades importantes, como o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriedades.  
   
-     Para obter mais informações, consulte [Como adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon do Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+     Para obter mais informações, confira [Como: Adicionar ícones de aplicativo ao TaskBar com o Windows Forms ao componente NotifyIcon](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
-2.  Adicionar um <xref:System.Windows.Forms.ContextMenu> componente para o formulário do Windows.  
+2.  Adicionar um <xref:System.Windows.Forms.ContextMenu> ao seu formulário do Windows.  
   
      Adicione itens de menu ao menu de atalho que representam os comandos que você deseja disponibilizar no tempo de execução. Esse também é um bom momento para adicionar melhorias de menu a esses itens de menu, como teclas de acesso.  
   
-3.  Definir o <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriedade o <xref:System.Windows.Forms.NotifyIcon> componente para o menu de atalho que você adicionou.  
+3.  Defina a <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriedade do <xref:System.Windows.Forms.NotifyIcon> componente para o menu de atalho que você adicionou.  
   
      Com essa propriedade definida, o menu de atalho será exibido ao clicar no ícone da barra de tarefas.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Associar um menu de atalho ao componente NotifyIcon com programação  
   
-1.  Criar uma instância do <xref:System.Windows.Forms.NotifyIcon> classe e um <xref:System.Windows.Forms.ContextMenu> classe com quaisquer configurações de propriedade são necessárias para o aplicativo (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriedades para o <xref:System.Windows.Forms.NotifyIcon> componente, itens de menu para o <xref:System.Windows.Forms.ContextMenu> componente).  
+1.  Criar uma instância do <xref:System.Windows.Forms.NotifyIcon> classe e uma <xref:System.Windows.Forms.ContextMenu> classe, com todas as configurações de propriedade são necessárias para o aplicativo (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> as propriedades para o <xref:System.Windows.Forms.NotifyIcon> componente, itens de menu para o <xref:System.Windows.Forms.ContextMenu> componente).  
   
-2.  Definir o <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriedade o <xref:System.Windows.Forms.NotifyIcon> componente para o menu de atalho que você adicionou.  
+2.  Defina a <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriedade do <xref:System.Windows.Forms.NotifyIcon> componente para o menu de atalho que você adicionou.  
   
      Com essa propriedade definida, o menu de atalho será exibido ao clicar no ícone da barra de tarefas.  
   
     > [!NOTE]
-    >  O exemplo de código a seguir cria uma estrutura de menu básica. Você precisará personalizar as opções do menu para que se ajustem ao aplicativo que você está desenvolvendo. Além disso, você deve escrever código para manipular o <xref:System.Windows.Forms.MenuItem.Click> eventos para esses itens de menu.  
+    >  O exemplo de código a seguir cria uma estrutura de menu básica. Você precisará personalizar as opções do menu para que se ajustem ao aplicativo que você está desenvolvendo. Além disso, você vai querer escrever código para manipular o <xref:System.Windows.Forms.MenuItem.Click> eventos para esses itens de menu.  
   
     ```vb  
     Public ContextMenu1 As New ContextMenu  
@@ -126,9 +126,9 @@ notifyIcon1 = gcnew System::Windows::Forms::NotifyIcon();
 contextMenu1 = gcnew System::Windows::Forms::ContextMenu();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.NotifyIcon>  
- <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
- [Como adicionar ícones do aplicativo à TaskBar com o componente NotifyIcon dos Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- [Componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- [Visão geral do componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.NotifyIcon>
+- <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
+- [Como: Adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
+- [Visão geral do componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)

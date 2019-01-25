@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypassTrustedAppStrongNames&gt; elemento'
+title: '&lt;bypassTrustedAppStrongNames&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe6beb359575c818131e1ae502fdebcec5096c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 725e2ee19c97cf2642134058ece07b32455516a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565469"
 ---
-# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; elemento
+# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; Element
 Especifica se deve ignorar a validação de nomes fortes em assemblies de confiança total que são carregados em uma confiança total <xref:System.AppDomain>.  
   
  \<configuration>  
 \<runtime>  
-\<bypassTrustedAppStrongNames >  
+\<bypassTrustedAppStrongNames>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,7 +83,7 @@ Especifica se deve ignorar a validação de nomes fortes em assemblies de confia
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Como: Desabilitar o recurso de desvio de nome forte](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

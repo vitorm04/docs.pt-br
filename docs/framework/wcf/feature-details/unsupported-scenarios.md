@@ -2,12 +2,12 @@
 title: Cenários sem suporte
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631250"
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 Por vários motivos, o Windows Communication Foundation (WCF) não oferece suporte a alguns cenários de segurança específicos. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos, e, portanto, o WCF não oferece suporte a execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e autenticação integrada do HTTP/HTTPS são suportados quando executados WCF em Windows XP Home Edition.  
@@ -28,7 +28,7 @@ Por vários motivos, o Windows Communication Foundation (WCF) não oferece supor
   
 -   Um token de contexto de segurança com base em estado (SCT) é criado (por padrão, a criação está desabilitada).  
   
- O SCT baseado em estado só pode ser criado usando uma associação personalizada. Para obter mais informações, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) No código, o token está habilitado com a criação de um elemento de associação de segurança (tanto <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) usando o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> ou o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> método e a configuração do `requireCancellation` parâmetro para `false`. O parâmetro refere-se para o armazenamento em cache do SCT. Definir o valor como `false` habilita o recurso SCT baseado em estado.  
+ O SCT baseado em estado só pode ser criado usando uma associação personalizada. Para obter mais informações, confira [Como: Criar um contexto de segurança para uma sessão segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) No código, o token está habilitado com a criação de um elemento de associação de segurança (tanto <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) usando o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> ou o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> método e a configuração do `requireCancellation` parâmetro para `false`. O parâmetro refere-se para o armazenamento em cache do SCT. Definir o valor como `false` habilita o recurso SCT baseado em estado.  
   
  Como alternativa, na configuração, o token é ativado pela criação de um <`customBinding`>, adicionando um <`security`> elemento e a configuração a `authenticationMode` SecureConversation do atributo e o `requireSecurityContextCancellation` de atributo para `true`.  
   
@@ -108,10 +108,10 @@ Por vários motivos, o Windows Communication Foundation (WCF) não oferece supor
   
  A correção é modificar a associação diretamente no cliente depois de fazer a importação.  
   
-## <a name="see-also"></a>Consulte também  
- [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Consulte também
+- [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

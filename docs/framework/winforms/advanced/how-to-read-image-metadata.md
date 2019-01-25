@@ -1,5 +1,5 @@
 ---
-title: Como ler metadados de imagens
+title: 'Como: Ler metadados de imagem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 92ce4eb8d51fbd25f9a129a629dc47bfb9941f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a22085e0bbaeda1a166c6d46b2604858fb403d8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741438"
 ---
-# <a name="how-to-read-image-metadata"></a>Como ler metadados de imagens
+# <a name="how-to-read-image-metadata"></a>Como: Ler metadados de imagem
 Alguns arquivos de imagem contêm metadados que você pode ler para determinar os recursos da imagem. Por exemplo, uma fotografia digital pode conter metadados que você pode ler para determinar a marca e modelo da câmera usada para capturar a imagem. Com o [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], você pode ler os metadados existentes e escrever novos metadados para os arquivos de imagem.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] armazena um item individual de metadados em um <xref:System.Drawing.Imaging.PropertyItem> objeto. Você pode ler o <xref:System.Drawing.Image.PropertyItems%2A> propriedade de um <xref:System.Drawing.Image> objeto para recuperar todos os metadados de um arquivo. O <xref:System.Drawing.Image.PropertyItems%2A> propriedade retorna uma matriz de <xref:System.Drawing.Imaging.PropertyItem> objetos.  
@@ -54,7 +54,7 @@ Alguns arquivos de imagem contêm metadados que você pode ler para determinar o
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- O exemplo de código a seguir lê e exibe as sete partes dos metadados no arquivo `FakePhoto.jpg`. O segundo item de propriedade (índice 1) na lista tem <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (fabricante de equipamento) e <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (matriz de bytes codificados em ASCII). O exemplo de código exibe o valor desse item de propriedade.  
+ O exemplo de código a seguir lê e exibe as sete partes dos metadados no arquivo `FakePhoto.jpg`. O segundo item de propriedade (índice 1) na lista tem <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (fabricante do equipamento) e <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (matriz de bytes codificados em ASCII). O exemplo de código exibe o valor desse item de propriedade.  
   
  O código produz uma saída semelhante à seguinte:  
   
@@ -121,8 +121,8 @@ Alguns arquivos de imagem contêm metadados que você pode ler para determinar o
  [!code-vb[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e cole esse código no manipulador de eventos de pintura. Você deve substituir `FakePhoto.jpg` por um nome e caminho de imagem válidos no seu sistema e importar o namespace `System.Drawing.Imaging`.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Lidar com o formulário <xref:System.Windows.Forms.Control.Paint> eventos e cole este código no manipulador de eventos de pintura. Você deve substituir `FakePhoto.jpg` por um nome e caminho de imagem válidos no seu sistema e importar o namespace `System.Drawing.Imaging`.  
   
-## <a name="see-also"></a>Consulte também  
- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Consulte também
+- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,15 +1,15 @@
 ---
-title: Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
+title: 'Como: Adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643124"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Como: Adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
 Este tópico explica como criar um serviço do Windows Communication Foundation (WCF) podem ser descobertos. Ele se baseia a [auto-hospedar](https://go.microsoft.com/fwlink/?LinkId=145523) exemplo.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Para configurar a amostra existente do serviço de hospedagem interna para descoberta  
@@ -340,6 +340,6 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>Consulte também  
- [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Modelo de objeto de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Modelo de objeto de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

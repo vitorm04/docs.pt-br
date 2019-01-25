@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cd6cce73a96cf522521d7cd8d0cc8024e95b93c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b50bb5312b294a3e92ab945c3f0443a4eb81d133
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634412"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>Método ICorDebugManagedCallback::StepComplete
 Notifica o depurador que uma etapa foi concluída.  
@@ -43,25 +43,25 @@ HRESULT StepComplete (
  [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o segmento em que a etapa foi concluída.  
   
  `pThread`  
- [in] Um ponteiro para um objeto ICorDebugThread que representa o thread em que a etapa foi concluída.  
+ [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread no qual a etapa foi concluída.  
   
  `pStepper`  
- [in] Um ponteiro para um objeto ICorDebugStepper que representa a etapa na execução de código.  
+ [in] Um ponteiro para um objeto de ICorDebugStepper que representa a etapa na execução do código.  
   
  `reason`  
- [in] Um valor da enumeração CorDebugStepReason que indica o resultado de uma etapa individual.  
+ [in] Um valor de enumeração CorDebugStepReason que indica o resultado de uma etapa individual.  
   
 ## <a name="remarks"></a>Comentários  
- O seletor pode ser usado para continuar a depuração se desejado, a menos que a depuração será encerrada.  
+ O seletor pode ser usado para continuar a depuração se desejado, a menos que a depuração é encerrada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

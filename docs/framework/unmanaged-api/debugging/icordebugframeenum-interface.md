@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c7b539ce01f7e25dba12a78b95097eebae175bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91609d7afde9338d194dce96cdc852e3505f2a84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575522"
 ---
 # <a name="icordebugframeenum-interface1"></a>ICorDebugFrameEnum Interface1
-Implementa métodos ICorDebugEnum e enumera ICorDebugFrame matrizes.  
+Implementa métodos ICorDebugEnum e enumera matrizes de ICorDebugFrame.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -35,16 +35,16 @@ Implementa métodos ICorDebugEnum e enumera ICorDebugFrame matrizes.
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.  
+>  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

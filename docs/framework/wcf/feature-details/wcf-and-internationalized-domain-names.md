@@ -2,12 +2,12 @@
 title: WCF e nomes de domínio internacionalizados
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: a0d4a5b4fe5dd3bc7cf41c8c6ad320dd83861aec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83c6f3c2afec0f2b6b8fccca4bd8252e9ab35400
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571581"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF e nomes de domínio internacionalizados
 Foi adicionado suporte para permitir que os serviços WCF com nomes de domínio internacionalizado (IDN). Um nome de domínio internacionalizados é um nome de domínio que contém caracteres não ASCII. Esse suporte inclui a capacidade de hospedar um serviço WCF com um nome IDN e um cliente WCF para se comunicar com um serviço web com um nome IDN.  
@@ -41,5 +41,5 @@ Foi adicionado suporte para permitir que os serviços WCF com nomes de domínio 
 > [!WARNING]
 >  Ao adicionar caracteres Unicode a applicationHost.exe.config, salve o arquivo usando a codificação UTF-8.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Uri?displayProperty=nameWithType>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Uri?displayProperty=nameWithType>

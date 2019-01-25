@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 5735b5104884a702a649a029116be7446424ec67
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603828"
 ---
 # <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Tipo de membro &#39; &lt;membername&gt; &#39; não é compatível com CLS
 O tipo de dados especificado para esse membro não é parte do [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS). Isso não é um erro no seu componente, porque o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e Visual Basic dão suporte a esse tipo de dados. No entanto, outro componente escrito em estritamente código compatível com CLS pode não dar suporte a esse tipo de dados. Esse componente não pode ser capaz de interagir com êxito com seu componente.  
@@ -41,6 +41,6 @@ O tipo de dados especificado para esse membro não é parte do [independência d
   
 -   Se você estiver fazendo interface com objetos de automação ou COM, tenha em mente que alguns tipos têm larguras de dados diferentes que no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Por exemplo, `uint` geralmente é 16 bits em outros ambientes. Se você estiver passando um argumento de 16 bits para tal componente, declare-o como `UShort` em vez de `UInteger` no seu código gerenciado do Visual Basic.  
   
-## <a name="see-also"></a>Consulte também  
- [Reflexão](../../../framework/reflection-and-codedom/reflection.md)  
- 
+## <a name="see-also"></a>Consulte também
+- [Reflexão](../../../framework/reflection-and-codedom/reflection.md)
+

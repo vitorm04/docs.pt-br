@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a3b35c28dc9b764b99b73440a1526176293e10a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514745"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que permite aos desenvolvedores escreverem consultas no modelo conceitual do Entity Framework usando Visual Basic ou Visual C#. As consultas no Entity Framework são representadas por consultas de árvore de comando, que são executadas no contexto de objeto. O LINQ to Entities converte consultas do LINQ (Consulta Integrada à Linguagem) para consultas de árvore de comando, executa as consultas no Entity Framework e retorna os objetos que podem ser usados pelo Entity Framework e pelo LINQ. Veja a seguir o processo para criar e executar uma consulta LINQ to Entities:  
@@ -88,8 +88,8 @@ O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que 
   
  [Problemas conhecidos e considerações no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas conhecidos e considerações no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [Entity Framework do ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a>Consulte também
+- [Problemas conhecidos e considerações no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [Entity Framework do ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)

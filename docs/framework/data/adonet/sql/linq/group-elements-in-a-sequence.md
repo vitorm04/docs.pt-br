@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 1223dee7e307c032bd14be154b58972e51287c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 352951c4ee6a96e0bf91b583ad61b431f490a624
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518469"
 ---
 # <a name="group-elements-in-a-sequence"></a>Agrupar os elementos em uma sequência
 O operador de <xref:System.Linq.Enumerable.GroupBy%2A> agrupa elementos de uma sequência. Os exemplos usam o base de dados Northwind.  
   
 > [!NOTE]
->  Valores nulos de coluna em consultas de <xref:System.Linq.Enumerable.GroupBy%2A> podem lançar as vezes <xref:System.InvalidOperationException>. Para obter mais informações, consulte a seção "GroupBy InvalidOperationException" [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  Valores nulos de coluna em consultas de <xref:System.Linq.Enumerable.GroupBy%2A> podem lançar as vezes <xref:System.InvalidOperationException>. Para obter mais informações, consulte a seção "De GroupBy InvalidOperationException" [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir divide `Products` por `CategoryID`.  
@@ -72,6 +72,6 @@ O operador de <xref:System.Linq.Enumerable.GroupBy%2A> agrupa elementos de uma s
  [!code-csharp[DLinqQueryExamples#35](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#35)]
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+## <a name="see-also"></a>Consulte também
+- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

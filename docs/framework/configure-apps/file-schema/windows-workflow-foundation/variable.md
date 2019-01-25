@@ -3,12 +3,12 @@ title: '&lt;variable&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
-ms.openlocfilehash: c65b377d85783f29ca2a8223e97eb10b073cee0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 185e7e7196f6679ec3d1fae8a2a256b934022ca9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647875"
 ---
 # <a name="ltvariablegt"></a>&lt;variable&gt;
 Representa uma coleção de variáveis associadas a essa consulta de atividade.  
@@ -16,14 +16,14 @@ Representa uma coleção de variáveis associadas a essa consulta de atividade.
  Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<Acompanhamento >  
-\<perfis de >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
 \<workflow>  
-\<activityStateQueries >  
-\<activityStateQuery >  
-\<variáveis >  
-\<variável >  
+\<activityStateQueries>  
+\<activityStateQuery>  
+\<variables>  
+\<variable>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ Representa uma coleção de variáveis associadas a essa consulta de atividade.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<variável >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|Uma variável associada a uma consulta de estado de atividade.|  
+|[\<variable>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|Uma variável associada a uma consulta de estado de atividade.|  
   
 ## <a name="remarks"></a>Comentários  
  Um recurso exclusivo de um ActivityStateQuery é a capacidade de extrair dados para controlar a execução de um fluxo de trabalho. Isso fornece contexto adicional ao acessar o rastreamento registra pós execução. Você pode usar o [ \<argumentos >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) e [ \<estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elementos a extrair qualquer variável ou argumento de qualquer atividade em um fluxo de trabalho. O exemplo a seguir mostra uma consulta de estado da atividade que extrai variáveis e argumentos quando `Closed` de atividade que controla o registro é emitida. Argumentos e variáveis podem ser extraídos somente com um ActivityStateRecord e são assinados dentro de um controle de perfil usando [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
@@ -77,8 +77,8 @@ Representa uma coleção de variáveis associadas a essa consulta de atividade.
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

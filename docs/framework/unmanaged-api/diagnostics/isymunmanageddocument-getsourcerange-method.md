@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a89c706ece0949ffa3c182d53b57221acf81b18d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515058"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>Método ISymUnmanagedDocument::GetSourceRange
-Retorna o intervalo especificado da fonte incorporada no buffer fornecido. O buffer deve ser grande o suficiente para manter o código-fonte.  
+Retorna o intervalo especificado da origem inserida para o buffer fornecido. O buffer deve ser grande o suficiente para manter o código-fonte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ HRESULT GetSourceRange(
  [in] A linha inicial no documento atual.  
   
  `startColumn`  
- [in] A coluna de início do documento atual.  
+ [in] A coluna inicial no documento atual.  
   
  `endLine`  
  [in] A linha final no documento atual.  
@@ -66,5 +66,5 @@ HRESULT GetSourceRange(
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

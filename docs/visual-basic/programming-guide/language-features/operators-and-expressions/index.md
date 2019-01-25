@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: a0f6d026714f8e933dc75dbb7c3a5e6e8e1bd795
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 9badc41a97043b6e32da4dd93834770f871261c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498524"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operadores e expressões no Visual Basic
 Um *operador* é um elemento de código que executa uma operação em um ou mais elementos de código que retêm valores. Os elementos de valor incluem variáveis, constantes, literais, propriedades, valores retornados dos procedimentos `Function` e `Operator`, bem como expressões.  
@@ -60,11 +60,11 @@ Um *operador* é um elemento de código que executa uma operação em um ou mais
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- No exemplo anterior, o Visual Basic que executa as operações na expressão à direita do operador de atribuição (`=`), em seguida, atribui o valor resultante para a variável `x` à esquerda. Não há nenhum limite prático para o número de operadores que podem ser combinados em uma expressão, mas é necessário entender a [Precedência do operador no Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) para assegurar que você obtenha os resultados esperados.  
+ No exemplo anterior, o Visual Basic que executa as operações na expressão no lado direito do operador de atribuição (`=`), em seguida, atribui o valor resultante à variável `x` à esquerda. Não há nenhum limite prático para o número de operadores que podem ser combinados em uma expressão, mas é necessário entender a [Precedência do operador no Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) para assegurar que você obtenha os resultados esperados.  
   
  Para obter mais informações e exemplos, consulte [Sobrecarga de operador no Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores](../../../../visual-basic/language-reference/operators/index.md)  
- [Combinação Eficiente de Operadores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
- [Instruções](../../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a>Consulte também
+- [Operadores](../../../../visual-basic/language-reference/operators/index.md)
+- [Combinação Eficiente de Operadores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [Instruções](../../../../visual-basic/language-reference/statements/index.md)

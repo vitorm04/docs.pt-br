@@ -3,20 +3,20 @@ title: '&lt;tokenReplayCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e89afc5764dbdb86e87d2307425299dff57c686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525139"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 Registra um cache de reprodução de token com um serviço ou uma coleção de manipulador de token de segurança.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<armazena em cache >  
-\<tokenReplayCache >  
+\<caches>  
+\<tokenReplayCache>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ Registra um cache de reprodução de token com um serviço ou uma coleção de m
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<armazena em cache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra os caches usados por um serviço ou uma coleção de manipulador de token de segurança.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra os caches usados por um serviço ou uma coleção de manipulador de token de segurança.|  
   
 ## <a name="remarks"></a>Comentários  
  O cache de reprodução de token é usado para detectar tokens reproduzidos. Detecção de reprodução de token é habilitada pela [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) elemento, que também especifica a hora de expiração máximo de tokens.  
@@ -62,6 +62,6 @@ Registra um cache de reprodução de token com um serviço ou uma coleção de m
 </caches>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Tokens.TokenReplayCache>  
- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Tokens.TokenReplayCache>
+- [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

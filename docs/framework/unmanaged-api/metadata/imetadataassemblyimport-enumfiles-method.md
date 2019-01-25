@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1995ed0b281978b45b01dbeda54b02094a30412
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 43a895446e0070476bde3d15d332f010265176e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515031"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>Método IMetaDataAssemblyImport::EnumFiles
 Enumera os arquivos referenciados no manifesto do assembly atual.  
@@ -40,32 +40,32 @@ HRESULT EnumFiles (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador. Isso deve ser um valor nulo para a primeira chamada do método.  
+ [no, out] Um ponteiro para o enumerador. Isso deve ser um valor nulo para a primeira chamada desse método.  
   
  `rFiles`  
  [out] A matriz usada para armazenar o `mdFile` tokens de metadados.  
   
  `cMax`  
- [in] O número máximo de `mdFile` tokens que podem ser colocados em `rFiles`.  
+ [in] O número máximo de `mdFile` tokens que podem ser colocadas em `rFiles`.  
   
  `pcTokens`  
- [out] O número de `mdFile` tokens realmente realizada em `rFiles`.  
+ [out] O número de `mdFile` tokens realmente colocados nos `rFiles`.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` retornou com êxito.|  
-|`S_FALSE`|Não há nenhum tokens para enumerar. Nesse caso, `pcTokens` é definido como zero.|  
+|`S_OK`|`EnumFiles` retornado com êxito.|  
+|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcTokens` é definido como zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

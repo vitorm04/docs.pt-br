@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 343ee168809fc63ef63559eda0fd018abde684e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 186238d8e823f028caaed2e2618d882d21e1358f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548944"
 ---
 # <a name="declare-statement"></a>Instrução Declare
 Declara uma referência a um procedimento implementado em um arquivo externo.  
@@ -124,7 +124,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
     -   Em uma plataforma Unicode, como Windows NT, Windows 2000 ou Windows XP, primeiro consultar o procedimento externo sem modificação do nome. Se isso falhar, acrescente "W" ao final do procedimento externo nomear e procurá-lo novamente.  
   
--   **Mecanismo.** Visual Basic usa o .NET Framework *de invocação de plataforma* mecanismo (PInvoke) para resolver e acessar procedimentos externos. O `Declare` instrução e o <xref:System.Runtime.InteropServices.DllImportAttribute> classe os dois usam este mecanismo automaticamente e não é necessário nenhum conhecimento do PInvoke. Para obter mais informações, consulte [instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+-   **Mecanismo.** Visual Basic usa o .NET Framework *de invocação de plataforma* mecanismo (PInvoke) para resolver e acessar procedimentos externos. O `Declare` instrução e o <xref:System.Runtime.InteropServices.DllImportAttribute> classe os dois usam este mecanismo automaticamente e não é necessário nenhum conhecimento do PInvoke. Para obter mais informações, confira [Passo a passo: Chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
 >  Se o procedimento externo é executado fora o common language runtime (CLR), vale *código não gerenciado*. Quando você chama tal procedimento, por exemplo, uma função de API do Win32 ou um método COM, você pode expor seu aplicativo a riscos de segurança. Para obter mais informações, consulte [diretrizes de codificação segura para código não gerenciado](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
@@ -141,12 +141,12 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Lista de Parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Instrução Call](../../../visual-basic/language-reference/statements/call-statement.md)  
- [Instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Lista de Parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Instrução Call](../../../visual-basic/language-reference/statements/call-statement.md)
+- [Passo a passo: fazer chamadas de APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

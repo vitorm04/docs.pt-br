@@ -2,12 +2,12 @@
 title: Cancelar as demais tarefas assíncronas depois que um é concluída (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 2f784449f6a70bccb386cc268e7c33cefe8f9a14
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0edcc969caaeae46240f048e76fbe153041873e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645802"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar as demais tarefas assíncronas depois que um é concluída (Visual Basic)
 Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> juntamente com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.  
@@ -18,13 +18,13 @@ Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=na
 >  Para executar os exemplos, você precisa ter o Visual Studio 2012 ou uma versão mais recente e o .NET Framework 4.5 ou posterior instalados em seu computador.  
   
 ## <a name="downloading-the-example"></a>Baixando o Exemplo  
- Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, seguir estas etapas.  
+ Você pode baixar o projeto completo do Windows Presentation Foundation (WPF) de [exemplo assíncrono: Bem ajustando seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.  
   
 1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
 2.  Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
   
-3.  No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (. sln) para AsyncFineTuningVB.  
+3.  Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningVB.  
   
 4.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterOneTask** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
@@ -34,7 +34,7 @@ Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=na
   
 6.  Execute o programa várias vezes para verificar que diferentes downloads são concluídos em primeiro.  
   
- Se você não quiser baixar o projeto, você pode examinar o arquivo. XAML. vb no final deste tópico.  
+ Se não quiser baixar o projeto, você poderá examinar o arquivo MainWindow.xaml.vb no final deste tópico.  
   
 ## <a name="building-the-example"></a>Compilando o Exemplo  
  O exemplo neste tópico adiciona ao projeto que é desenvolvido no [cancelar uma tarefa assíncrona ou uma lista de tarefas](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.  
@@ -107,7 +107,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
   
  Observe que você deve adicionar uma referência para <xref:System.Net.Http>.  
   
- Você pode baixar o projeto de [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Você pode baixar o projeto de [exemplo assíncrono: Ajuste fino do aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -234,7 +234,7 @@ End Class
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
-- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
-- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
-- [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>
+- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Exemplo de Async: ajuste do seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

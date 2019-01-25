@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar fusos horários com regras de ajuste'
+title: 'Como: Criar fusos horários com regras de ajuste'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a5c04f7807638a4a8b114828083835f348ac08
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721169"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Como: criar fusos horários com regras de ajuste
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Como: Criar fusos horários com regras de ajuste
 
 As informações precisas de fuso horário que são exigidas por um aplicativo não podem estar presentes em um determinado sistema por diversos motivos:
 
@@ -34,7 +34,7 @@ Nesses casos, você pode chamar o <xref:System.TimeZoneInfo.CreateCustomTimeZone
 > [!IMPORTANT]
 > Fusos horários personalizados criados ao chamar o <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método não são adicionados ao registro. Em vez disso, eles podem ser acessados apenas pela referência de objeto retornada pelo <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> chamada de método.
 
-Este tópico mostra como criar um fuso horário com regras de ajuste. Para criar um fuso horário que não dá suporte a regras de ajuste de horário de verão, consulte [como: criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
+Este tópico mostra como criar um fuso horário com regras de ajuste. Para criar um fuso horário que não dá suporte a regras de ajuste de horário de verão, consulte [como: Criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>Para criar um fuso horário com regras de ajuste flutuantes
 
@@ -95,6 +95,6 @@ Este exemplo requer:
 
 ## <a name="see-also"></a>Consulte também
 
-* [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
-* [Visão geral de fusos horários](../../../docs/standard/datetime/time-zone-overview.md)
-* [Como criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
+- [Visão geral de fusos horários](../../../docs/standard/datetime/time-zone-overview.md)
+- [Como: Criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

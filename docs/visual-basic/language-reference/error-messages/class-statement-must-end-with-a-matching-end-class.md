@@ -1,5 +1,5 @@
 ---
-title: '&#39;Classe&#39; deve finalizar com uma correspondência &#39;End Class&#39;'
+title: '&#39;Classe de&#39; instrução deve terminar com uma correspondência &#39;End Class&#39;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30481
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 7c9051b15f6d9cf37d7d0245f758905467d5bbc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e80ce58048bfa7f2fecc65e7167479df07bf57c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715074"
 ---
-# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Classe&#39; deve finalizar com uma correspondência &#39;End Class&#39;
-`Class` é usado para iniciar um `Class` bloco; portanto, ele só pode aparecer no início do bloco, com uma correspondência `End Class` terminando o bloco de instrução. Ou você tem uma redundância `Class` instrução, ou você não encerrou o `Class` bloco com `End Class`.  
+# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Classe de&#39; instrução deve terminar com uma correspondência &#39;End Class&#39;
+`Class` é usado para iniciar um `Class` block; portanto, ele só pode aparecer no início do bloco, com uma correspondência `End Class` terminando o bloco de instrução. Ou você tem um redundantes `Class` instrução, ou você não ter terminado sua `Class` bloco com `End Class`.  
   
  **ID do erro:** BC30481  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Localize e remova o desnecessária `Class` instrução.  
+-   Localize e remova o desnecessárias `Class` instrução.  
   
--   Conclua o `Class` bloco com uma correspondência `End Class`.  
+-   Concluo a `Class` bloco com uma correspondência `End Class`.  
   
-## <a name="see-also"></a>Consulte também  
- [Final \<palavra-chave > instrução](../../../visual-basic/language-reference/statements/end-keyword-statement.md)  
- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)
+## <a name="see-also"></a>Consulte também
+- [End \<palavra-chave > demonstrativo](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)

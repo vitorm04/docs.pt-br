@@ -2,12 +2,12 @@
 title: Transações e simultaneidade
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494048"
 ---
 # <a name="transactions-and-concurrency"></a>Transações e simultaneidade
 Uma transação consiste em um único comando ou em um grupo de comandos executados como um pacote. As transações permitem que você combine várias operações em uma única unidade de trabalho. Se uma falha ocorrer em determinado ponto na transação, todas as atualizações poderão ser revertidas para o estado em vigor antes da transação.  
@@ -34,10 +34,10 @@ Uma transação consiste em um único comando ou em um grupo de comandos executa
  [Simultaneidade otimista](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Descreve a simultaneidade otimista e pessimista, e como você pode testar as violações de simultaneidade.  
   
-## <a name="see-also"></a>Consulte também  
- [Transaction Fundamentals](../../../../docs/framework/data/transactions/transaction-fundamentals.md) (Conceitos básicos de transação)  
- [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Transaction Fundamentals](../../../../docs/framework/data/transactions/transaction-fundamentals.md) (Conceitos básicos de transação)
+- [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

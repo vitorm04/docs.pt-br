@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568992"
 ---
 # <a name="claims-and-tokens"></a>Declarações e tokens
 Este tópico descreve os vários tipos de declaração que o Windows Communication Foundation (WCF) cria dos tokens padrão que ele dá suporte.  
@@ -55,7 +55,7 @@ Este tópico descreve os vários tipos de declaração que o Windows Communicati
 ## <a name="user-namepassword"></a>Nome de usuário/senha  
  Em que a credencial do cliente é um nome e senha do usuário (ou equivalente) que não é mapeado para uma conta do Windows, resultante `ClaimSet` é emitida por estático <xref:System.IdentityModel.Claims.ClaimSet.System%2A> propriedade do `ClaimSet` classe. O `ClaimSet` contém uma `Identity` do tipo de declaração <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> cujo recurso é o nome de usuário do cliente fornece. Uma declaração correspondente tem uma `Right` de `PossessProperty`.  
   
-## <a name="rsa-keys"></a>Chaves RSA  
+## <a name="rsa-keys"></a>RSA Keys  
  Em uma chave RSA não associada a um certificado é usada, resultante `ClaimSet` é emitido por conta própria e contém um `Identity` do tipo de declaração <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> cujo recurso é a chave RSA. Uma declaração correspondente tem uma `Right` de `PossessProperty`.  
   
 ## <a name="saml"></a>SAML  
@@ -64,9 +64,9 @@ Este tópico descreve os vários tipos de declaração que o Windows Communicati
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Declarações de identidade e ServiceSecurityContext.IsAnonymous  
  Se nenhum dos `ClaimSet` objetos resultantes de credenciais do cliente contêm uma declaração com um `Right` de `Identity,` o <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> propriedade retorna `true`. Se um ou mais essas declarações estão presentes, o `IsAnonymous` propriedade retorna `false`.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Claims.ClaimSet>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims.ClaimTypes>  
- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Claims.ClaimSet>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims.ClaimTypes>
+- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

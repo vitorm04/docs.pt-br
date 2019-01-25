@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427840430a37f675ccc0f0ee4f423370f2a55550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646364"
 ---
 # <a name="3-d-transformations-overview"></a>Visão geral de transformações 3D
 Este tópico descreve como aplicar transformações a modelos 3D no sistema de elementos gráficos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. As transformações permitem ao desenvolvedor reposicionar, redimensionar e reorientar modelos sem alterar os valores base que os definem.  
@@ -67,7 +67,7 @@ Exemplo de centro de escala
   
  [!code-xaml[animation3dgallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
- Observação: o 3D do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é um sistema destro, o que significa que um valor positivo de ângulo para uma rotação resulta em uma rotação no sentido anti-horário sobre o eixo.  
+ Observação:[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3-d é um sistema destro, o que significa que um valor positivo de ângulo para uma rotação resulta em uma rotação no sentido anti-horário sobre o eixo.  
   
  Rotações eixo-ângulo assumirão a rotação sobre a origem se um valor não for especificado para o <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterX%2A>, <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterY%2A>, e <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterZ%2A> propriedades no RotateTransform3D. Assim como na colocação em escala, é útil lembrar que a rotação transforma todo espaço de coordenadas do modelo. Se o modelo não tiver sido criado sobre a origem ou tiver sido movido anteriormente, a rotação poderá "girar" em relação à origem em vez de rotacionar no lugar.  
   
@@ -105,7 +105,7 @@ Exemplo de rotação
   
  Como as câmeras são modelos, também é possível transformar propriedades de câmeras.  Enquanto você certamente pode alterar a aparência da cena transformando as distâncias de plano ou o local da câmera (com efeito, transformando toda a projeção da cena), observe que muitos dos efeitos conseguidos dessa maneira podem não fazer tanto "sentido visual" para o visualizador como as transformações aplicadas ao local ou à posição dos modelos na cena.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de elementos gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Exemplo de transformações 2D](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de elementos gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Exemplo de transformações 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7db5f8afdfe61709aba9569bcee8c0d3aa6ee44f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527036"
 ---
 # <a name="optional-visual-basic"></a>Opcional (Visual Basic)
 Especifica que um argumento de procedimento pode ser omitido quando o procedimento é chamado.  
@@ -21,9 +21,9 @@ Especifica que um argumento de procedimento pode ser omitido quando o procedimen
 ## <a name="remarks"></a>Comentários  
  Para cada parâmetro opcional, você deve especificar uma expressão constante como o valor padrão desse parâmetro. Se a expressão for avaliada como [nada](../../../visual-basic/language-reference/nothing.md), o valor padrão do tipo de dados de valor é usado como o valor padrão do parâmetro.  
   
- Se a lista de parâmetros contém um parâmetro opcional, cada parâmetro que o segue também deve ser opcional.  
+ Se a lista de parâmetros contém um parâmetro opcional, cada parâmetro que vem a seguir também deve ser opcional.  
   
- O `Optional` modificador pode ser usado nesses contextos:  
+ O `Optional` modificador pode ser usado nestes contextos:  
   
 -   [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
@@ -62,11 +62,11 @@ End Function
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como chamar um procedimento com os argumentos transmitidos por posição e argumentos passados pelo nome. O procedimento tem dois parâmetros opcionais.  
+ O exemplo a seguir demonstra como chamar um procedimento com os argumentos passados por posição e com os argumentos passados pelo nome. O procedimento tem dois parâmetros opcionais.  
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Lista de Parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Consulte também
+- [Lista de Parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 - Padding property [Windws Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-ms.openlocfilehash: 11db7b49f37b4367f31b2c27c61225f8f71bde80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c022eea5b4c7e0cfa02352afb5d1e3d45e0eb828
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629716"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Layout em controles dos Windows Forms
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace fornece várias ferramentas de layout para fazer isso.  
@@ -24,14 +24,14 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
  [Margem e preenchimento em controles dos Windows Forms](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)  
  Descreve o <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A> propriedades e suas funções no layout.  
   
- [Como alinhar um controle às bordas de formulários](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)  
- Demonstra como usar o <xref:System.Windows.Forms.Control.Dock%2A> propriedade para alinhar o controle para a borda da forma que ele ocupe.  
+ [Como: Alinhar um controle às bordas de formulários](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)  
+ Demonstra como usar o <xref:System.Windows.Forms.Control.Dock%2A> propriedade para alinhar o controle na borda da forma que ele ocupa.  
   
- [Como criar uma borda ao redor de um controle dos Windows Forms usando preenchimento](../../../../docs/framework/winforms/controls/how-to-create-a-border-around-a-windows-forms-control-using-padding.md)  
+ [Como: Criar uma borda em torno de um Windows Forms usando preenchimento de controle](../../../../docs/framework/winforms/controls/how-to-create-a-border-around-a-windows-forms-control-using-padding.md)  
  Demonstra como usar o <xref:System.Windows.Forms.Control.Padding%2A> propriedade descrever um controle.  
   
- [Como implementar um mecanismo de layout personalizado](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-layout-engine.md)  
- Demonstra como implementar um <xref:System.Windows.Forms.Layout.LayoutEngine> para organizar controles de formulários do Windows.  
+ [Como: Implementar um mecanismo de Layout personalizado](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-layout-engine.md)  
+ Demonstra como implementar um <xref:System.Windows.Forms.Layout.LayoutEngine> para organizar os controles de formulários do Windows.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.TableLayoutPanel>  
@@ -40,8 +40,8 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  Fornece documentação de referência para o <xref:System.Windows.Forms.FlowLayoutPanel> controle.  
   
-## <a name="see-also"></a>Consulte também  
- [Como ancorar e encaixar controles filho em um controle FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
- [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [Como criar um layout dos Windows Forms que responda bem à localização](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
- [Comportamento de AutoSize no controle TableLayoutPanel](../../../../docs/framework/winforms/controls/autosize-behavior-in-the-tablelayoutpanel-control.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Ancorar e encaixar controles filho em um controle FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Como: Projetar um Layout de formulários do Windows que responde bem à localização](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Comportamento de AutoSize no controle TableLayoutPanel](../../../../docs/framework/winforms/controls/autosize-behavior-in-the-tablelayoutpanel-control.md)

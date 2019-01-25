@@ -1,5 +1,5 @@
 ---
-title: Como configurar uma porta com um certificado SSL
+title: 'Como: Configurar uma porta com um certificado SSL'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0a2ac22bfb5f84235d34a554df8cc1ad43ddc489
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521706"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Como configurar uma porta com um certificado SSL
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Como: Configurar uma porta com um certificado SSL
 Ao criar um serviço Windows Communication Foundation (WCF) auto-hospedado com o <xref:System.ServiceModel.WSHttpBinding> classe que usa segurança de transporte, você também deve configurar uma porta com um certificado X.509. Se você estiver criando um serviço auto-hospedado, você poderá hospedá-lo serviço no IIS (Serviços de Informações da Internet). Para obter mais informações, consulte [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Para configurar uma porta, a ferramenta usada depende do sistema operacional que está sendo executado no computador.  
@@ -55,9 +55,9 @@ Ao criar um serviço Windows Communication Foundation (WCF) auto-hospedado com o
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Para obter a impressão digital de um certificado  
   
-1.  Use o snap-in do MMC dos Certificados para localizar um certificado X.509 cuja finalidade seja a autenticação de cliente. Para obter mais informações, confira [Como exibir certificados com o snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Use o snap-in do MMC dos Certificados para localizar um certificado X.509 cuja finalidade seja a autenticação de cliente. Para obter mais informações, confira [Como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Para acessar a impressão digital do certificado. Para obter mais informações, consulte [como: recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Para acessar a impressão digital do certificado. Para obter mais informações, confira [Como: Recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Copie a impressão digital do certificado em um editor de texto, como o Bloco de Notas.  
   
@@ -129,5 +129,5 @@ Ao criar um serviço Windows Communication Foundation (WCF) auto-hospedado com o
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Consulte também  
-* [Segurança de transporte de HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>Consulte também
+- [Segurança de transporte de HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ed486a885514d02bf2be9c473e102c2c5f0e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e6314a76433276561a8b4b87a852464dae69824
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656252"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Método IMetaDataImport::EnumTypeDefs
-Enumera os tokens de TypeDef que representa todos os tipos de dentro do escopo atual.  
+Enumera os tokens de TypeDef que representa todos os tipos dentro do escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ HRESULT EnumTypeDefs (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out] Um ponteiro para o novo enumerador. Isso deve ser NULL para a primeira chamada do método.  
+ [out] Um ponteiro para o novo enumerador. Isso deve ser NULL para a primeira chamada desse método.  
   
  `rTypeDefs`  
  [in] A matriz usada para armazenar os tokens de TypeDef.  
@@ -49,27 +49,27 @@ HRESULT EnumTypeDefs (
  [in] O tamanho máximo da `rTypeDefs` matriz.  
   
  `pcTypeDefs`  
- [out] O número de tokens de TypeDef retornados em `rTypeDefs`.  
+ [out] O número de tokens de TypeDef retornado no `rTypeDefs`.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` retornou com êxito.|  
-|`S_FALSE`|Não há nenhum tokens para enumerar. Nesse caso, `pcTypeDefs` é zero.|  
+|`S_OK`|`EnumTypeDefs` retornado com êxito.|  
+|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcTypeDefs` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- O token de TypeDef representa um tipo como uma classe ou uma interface, bem como qualquer tipo adicionados por meio de um mecanismo de extensibilidade.  
+ O token de TypeDef representa um tipo como uma classe ou uma interface, bem como qualquer tipo adicionado por meio de um mecanismo de extensibilidade.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

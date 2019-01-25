@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7751ed951c213c52c68125543622ed110124f5b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 158ff204d57c3b08ced91d397ef71f24c5f44248
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499204"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>Método ISymUnmanagedWriter5::MapTokenToSourceSpan
-Mapeia o token de metadados fornecidos para a linha de origem span no arquivo de origem especificado.  
+Mapeia o token de metadados fornecidos para a linha de origem determinado span no arquivo de origem especificado.  
   
  Deve ser chamado entre as chamadas para [método OpenMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) e [método CloseMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md).  
   
@@ -39,5 +39,5 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter5](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter5](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)

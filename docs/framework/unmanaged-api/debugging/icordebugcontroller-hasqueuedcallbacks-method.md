@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630834"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>Método ICorDebugController::HasQueuedCallbacks
-Obtém um valor que indica se qualquer retornos de chamada gerenciados atualmente na fila para o segmento especificado.  
+Obtém um valor que indica se qualquer retorno de chamada gerenciado atualmente na fila para o thread especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,23 +41,23 @@ HRESULT HasQueuedCallbacks (
  [in] Um ponteiro para um objeto de "ICorDebugThread" que representa o thread.  
   
  `pbQueued`  
- [out] Um ponteiro para um valor que é `true` se qualquer retornos de chamada gerenciados estão atualmente na fila para o segmento especificado; caso contrário, `false`.  
+ [out] Um ponteiro para um valor que é `true` se qualquer retorno de chamada gerenciado está atualmente na fila para o segmento especificado; caso contrário, `false`.  
   
- Se null for especificado para o `pThread` parâmetro `HasQueuedCallbacks` retornará `true` se há retornos de chamada gerenciados na fila de qualquer thread.  
+ Se null for especificado para o `pThread` parâmetro, `HasQueuedCallbacks` retornará `true` se não houver gerenciados retornos de chamada na fila para qualquer thread.  
   
 ## <a name="remarks"></a>Comentários  
- Retornos de chamada será expedida um por vez, cada vez que [Icordebugcontroller](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) é chamado. O depurador pode verificar esse sinalizador se deseja relatar vários eventos de depuração que ocorrem simultaneamente.  
+ Retornos de chamada será expedido um por vez, cada vez [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) é chamado. O depurador pode verificar esse sinalizador se deseja relatar vários eventos de depuração que ocorrem ao mesmo tempo.  
   
- Quando eventos de depuração são enfileirados, eles já tenham ocorrido, para que o depurador deve esvaziar a fila inteira para ter certeza do estado do elemento a ser depurado. (Chamar `ICorDebugController::Continue` para que a fila.) Por exemplo, se a fila contém dois eventos de depuração no thread *X*, e o depurador suspende a thread *X* após o primeiro evento de depuração e, em seguida, chama `ICorDebugController::Continue`, o segundo evento de depuração para thread *X* será enviado, embora o thread foi suspenso.  
+ Quando eventos de depuração são enfileirados, eles já ocorreram, portanto, o depurador deve drenar a fila inteira para ter certeza do estado do elemento a ser depurado. (Chamar `ICorDebugController::Continue` para diminuir a fila.) Por exemplo, se a fila contém dois eventos de depuração no thread *X*, e o depurador suspende o thread *X* após o primeiro evento de depuração e, em seguida, chama `ICorDebugController::Continue`, o segundo evento de depuração para thread *X* será expedido, embora o thread foi suspenso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- 
+## <a name="see-also"></a>Consulte também
+

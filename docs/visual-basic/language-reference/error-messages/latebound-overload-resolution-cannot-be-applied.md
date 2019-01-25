@@ -1,5 +1,5 @@
 ---
-title: Resolução de sobrecarga latebound não pode ser aplicada a &#39; &lt;procedurename&gt; &#39; porque a instância de acesso é um tipo de interface
+title: Resolução de sobrecarga com associação tardia não pode ser aplicada a &#39; &lt;procedurename&gt; &#39; porque a instância de acesso é um tipo de interface
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651507"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Resolução de sobrecarga latebound não pode ser aplicada a &#39; &lt;procedurename&gt; &#39; porque a instância de acesso é um tipo de interface
-O compilador está tentando resolver uma referência a uma propriedade ou procedimento sobrecarregado, mas a referência falha porque um argumento é do tipo `Object` e o objeto da referência possui o tipo de dados de uma interface. O `Object` argumento força o compilador para resolver a referência de associação tardia.  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Resolução de sobrecarga com associação tardia não pode ser aplicada a &#39; &lt;procedurename&gt; &#39; porque a instância de acesso é um tipo de interface
+O compilador está tentando resolver uma referência a uma propriedade ou procedimento sobrecarregado, mas a referência falha porque um argumento é do tipo `Object` e o objeto da referência tem o tipo de dados de uma interface. O `Object` argumento força o compilador a resolver a referência de associação tardia.  
   
- Nessas circunstâncias, o compilador resolve a sobrecarga por meio da classe de implementação, em vez de por meio da interface subjacente. Se a classe renomeia uma das versões sobrecarregadas, o compilador não considera que a versão seja um sobrecarregamento porque seu nome é diferente. Por sua vez, isso faz o compilador ignorar a versão renomeada quando ela pode ter sido a escolha correta para resolver a referência.  
+ Nessas circunstâncias, o compilador resolve a sobrecarga por meio da classe de implementação, em vez de por meio da interface subjacente. Se a classe renomeia uma das versões sobrecarregadas, o compilador não considera essa versão como uma sobrecarga porque seu nome é diferente. Isso por sua vez faz com que o compilador deverá ignorar a versão renomeada quando ela pode ter sido a escolha correta para resolver a referência.  
   
  **ID do erro:** BC30933  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Use `CType` para converter o argumento de `Object` para o tipo especificado pela assinatura da sobrecarga que você deseja chamar.  
+-   Use `CType` para lançar um argumento de `Object` para o tipo especificado pela assinatura da sobrecarga que você deseja chamar.  
   
-     Observe que isso não ajuda para converter o objeto que faz referência a interface subjacente. Você deve converter o argumento para evitar esse erro.  
+     Observe que ele não ajuda a converter o objeto que faz referência a interface subjacente. Você deve converter o argumento para evitar esse erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma chamada para um sobrecarregados `Sub` procedimento que causa esse erro em tempo de compilação.  
+ O exemplo a seguir mostra uma chamada para uma sobrecarga `Sub` procedimento que causa esse erro em tempo de compilação.  
   
 ```  
 Module m1  
@@ -53,18 +53,18 @@ Module m1
 End Module  
 ```  
   
- No exemplo anterior, se o compilador permitisse a chamada a `s1` como escrito, a resolução teria se realizado por meio da classe `c1` em vez da interface `i1`. Isso significa que o compilador não consideraria `s2` porque seu nome é diferente em `c1`, mesmo que é a opção correta conforme definido pelo `i1`.  
+ No exemplo anterior, se o compilador permitia a chamada para `s1` conforme foi escrito, a resolução podem ocorrer por meio da classe `c1` em vez da interface `i1`. Isso significa que o compilador não consideraria `s2` porque seu nome é diferente `c1`, mesmo que ele seja a escolha correta, conforme definido pelo `i1`.  
   
- Você pode corrigir o erro alterando a chamada para qualquer uma das linhas de código a seguir:  
+ Você pode corrigir o erro alterando a chamada para qualquer uma das seguintes linhas de código:  
   
 ```  
 refer.s1(CType(o1, Integer))  
 refer.s1(CType(o1, Double))  
 ```  
   
- Cada uma das linhas de código converte explicitamente o `Object` variável `o1` para um dos tipos de parâmetro definidos para as sobrecargas.  
+ Cada uma das linhas de código converte explicitamente o `Object` variável `o1` para um dos tipos de parâmetro definido para as sobrecargas.  
   
-## <a name="see-also"></a>Consulte também  
- [Sobrecarga de Procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Resolução de Sobrecarga](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
- [Função CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>Consulte também
+- [Sobrecarga de Procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Resolução de Sobrecarga](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+- [Função CType](../../../visual-basic/language-reference/functions/ctype-function.md)

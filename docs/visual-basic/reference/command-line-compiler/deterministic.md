@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: dde79ca9ce6e77102c05fce7c507784457af4a4b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8334691ff5ac09c19287dbc2ec2503dbd5149f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572481"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -51,5 +51,5 @@ O compilador considera as seguintes entradas com a finalidade de determinismo:
 Quando as fontes estão disponíveis publicamente, a compilação determinística pode ser usada para estabelecer se um binário é compilado de uma fonte confiável. Isso também pode ser útil em um sistema de compilação contínua para determinar se as etapas de compilação dependentes de alterações para um binário precisam ser executadas. 
 
 ## <a name="see-also"></a>Consulte também
-[Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
-[Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

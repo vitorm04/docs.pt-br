@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 36370eb54e75df9bf2bf8eb9e073bbbee995e287
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 7a7a8cc13a48b453b157443039f11c548756b0fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588646"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
 O WPF (Windows Presentation Foundation) fornece um conjunto de serviços que podem ser usados para estender a funcionalidade de uma [propriedade](../../../standard/base-types/common-type-system.md#Properties) de um tipo. Em conjunto, esses serviços são normalmente conhecidos como o sistema de propriedades do WPF. Uma propriedade que tem o suporte do sistema de propriedades do WPF é conhecida como uma propriedade de dependência. Esta visão geral descreve o sistema de propriedades do WPF e as funcionalidades de uma propriedade de dependência. Isso inclui como usar as propriedades de dependência existentes no XAML e no código. Esta visão geral também apresenta aspectos especializados de propriedades de dependência, como metadados de propriedades de dependência e como criar sua própria propriedade de dependência em uma classe personalizada.
 
 ## <a name="prerequisites"></a>Pré-requisitos
-Este tópico pressupõe que você tenha algum conhecimento básico sobre o sistema de tipos .NET e sobre programação orientada a objeto. Para seguir os exemplos deste tópico, você também deve ter noções básicas de XAML e saber como escrever aplicativos do WPF. Para obter mais informações, confira [Passo a passo: Meu primeiro aplicativo de área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+Este tópico pressupõe que você tenha algum conhecimento básico sobre o sistema de tipos .NET e sobre programação orientada a objeto. Para seguir os exemplos deste tópico, você também deve ter noções básicas de XAML e saber como escrever aplicativos do WPF. Para obter mais informações, confira [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Propriedades de dependência e propriedades CLR
  No WPF, as propriedades normalmente são expostas como [propriedades](../../../standard/base-types/common-type-system.md#Properties) padrão do .NET. Em um nível básico, você poderá interagir com essas propriedades diretamente e nunca saber que elas são implementadas como uma propriedade de dependência. No entanto, você deve se familiarizar com algumas ou todas as funcionalidades do sistema de propriedades do WPF para poder aproveitá-las.
@@ -40,11 +40,11 @@ As propriedades de dependência e o sistema de propriedades do WPF estendem a fu
 
 A seguinte lista relaciona a terminologia usada com propriedades de dependência:
 
-- **Propriedade de dependência:** uma propriedade que tem o suporte de uma <xref:System.Windows.DependencyProperty>.
+- **Propriedade de dependência:** Uma propriedade que é apoiada por um <xref:System.Windows.DependencyProperty>.
 
-- **Identificador de propriedade de dependência:** uma instância de <xref:System.Windows.DependencyProperty>, que é obtida como um valor retornado durante o registro de uma propriedade de dependência e, em seguida, armazenada como um membro estático de uma classe. Esse identificador é usado como um parâmetro para muitas das APIs que interagem com o sistema de propriedades do WPF.
+- **Identificador de propriedade de dependência:** Um <xref:System.Windows.DependencyProperty> instância, que é obtida como um valor de retorno ao registrar uma propriedade de dependência e, em seguida, armazenada como um membro estático de uma classe. Esse identificador é usado como um parâmetro para muitas das APIs que interagem com o sistema de propriedades do WPF.
 
-- **“Wrapper” CLR:** as implementações reais get e set da propriedade. Essas implementações incorporam o identificador de propriedade de dependência com seu uso em chamadas <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A>, fornecendo o suporte para a propriedade usando o sistema de propriedades do WPF.
+- **CLR "wrapper":** O valor real get e set implementações para a propriedade. Essas implementações incorporam o identificador de propriedade de dependência com seu uso em chamadas <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A>, fornecendo o suporte para a propriedade usando o sistema de propriedades do WPF.
 
 O exemplo a seguir define a propriedade de dependência `IsSpinning` e mostra a relação entre o identificador <xref:System.Windows.DependencyProperty> e a propriedade à qual ele dá suporte.
 
@@ -197,7 +197,7 @@ Normalmente, você não desejará que os estilos sempre sejam aplicados e oculte
 - De modo geral, as propriedades de dependência devem ser consideradas propriedades públicas, acessíveis ou, pelo menos, detectáveis por qualquer chamador que tem acesso a uma instância. Para obter mais informações, consulte [Segurança das propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-property-security.md).
 
 ## <a name="see-also"></a>Consulte também
- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Propriedades de dependência somente leitura](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Arquitetura do WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Propriedades de dependência somente leitura](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Arquitetura do WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

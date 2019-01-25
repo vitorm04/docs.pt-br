@@ -1,22 +1,22 @@
 ---
-title: Como utilizar o Svcutil.exe para exportar metadados de código de serviço compilado
+title: 'Como: Use Svcutil.exe para exportar metadados de código de serviço compilado'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 68d651a396aa748d53f9121e9861260bdbf2dffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6af43b076f7c508fd17cac367caeed30065b0c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648084"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Como utilizar o Svcutil.exe para exportar metadados de código de serviço compilado
-Svcutil.exe pode exportar os metadados para os serviços, contratos e tipos de dados em assemblies compilados, da seguinte maneira:  
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Como: Use Svcutil.exe para exportar metadados de código de serviço compilado
+Svcutil.exe pode exportar metadados para os serviços, contratos e tipos de dados em assemblies compilados, da seguinte maneira:  
   
--   Para exportar metadados para todos os compilado contratos de serviço para um conjunto de assemblies usando Svcutil.exe, especifique os assemblies como parâmetros de entrada. Este é o comportamento padrão.  
+-   Para exportar metadados para todos os compilado contratos de serviço para um conjunto de módulos (assemblies) usando Svcutil.exe, especifique os assemblies como parâmetros de entrada. Este é o comportamento padrão.  
   
--   Para exportar metadados para um serviço compilado usando Svcutil.exe, especifique o assembly de serviço ou assemblies como parâmetros de entrada. Você deve usar o `/serviceName` opção para indicar o nome da configuração do serviço que você deseja exportar. Svcutil.exe carrega automaticamente o arquivo de configuração para o assembly do executável especificado.  
+-   Para exportar metadados para um serviço compilado usando Svcutil.exe, especifique o assembly de serviço ou assemblies como parâmetros de entrada. Você deve usar o `/serviceName` opção para indicar o nome da configuração do serviço que você deseja exportar. Svcutil.exe carregará automaticamente o arquivo de configuração para o assembly executável especificado.  
   
--   Para exportar todos os tipos de contrato de dados em um conjunto de assemblies, use o `/dataContractOnly` opção.  
+-   Para exportar todos os tipos de contrato de dados em um conjunto de módulos (assemblies), use o `/dataContractOnly` opção.  
   
 > [!NOTE]
 >  Use o `/reference` opção para especificar os caminhos de arquivo para todos os assemblies dependentes.  
@@ -25,10 +25,10 @@ Svcutil.exe pode exportar os metadados para os serviços, contratos e tipos de d
   
 1.  Compile suas implementações de contrato de serviço em um ou mais libraries.1 de classe  
   
-2.  Execute Svcutil.exe nos assemblies compilados.  
+2.  Execute Svcutil.exe em assemblies compilados.  
   
     > [!NOTE]
-    >  Talvez seja necessário usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
+    >  Você talvez precise usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
   
     ```  
     svcutil.exe Contracts.dll  
@@ -36,9 +36,9 @@ Svcutil.exe pode exportar os metadados para os serviços, contratos e tipos de d
   
 ### <a name="to-export-metadata-for-a-compiled-service"></a>Para exportar metadados para um serviço compilado  
   
-1.  Compile sua implementação de serviço em um assembly.  
+1.  Compile sua implementação de serviço em um assembly executável.  
   
-2.  Criar um arquivo de configuração para o executável do serviço e adicione uma configuração de serviço.  
+2.  Crie um arquivo de configuração para o executável do serviço e adicione uma configuração de serviço.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -56,27 +56,27 @@ Svcutil.exe pode exportar os metadados para os serviços, contratos e tipos de d
 3.  Execute Svcutil.exe no serviço compilado executável usando o `/serviceName` para especificar o nome da configuração do serviço.  
   
     > [!NOTE]
-    >  Talvez seja necessário usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
+    >  Você talvez precise usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
-### <a name="to-export-metadata-for-compiled-data-contracts"></a>Para exportar metadados de contratos de dados compilados  
+### <a name="to-export-metadata-for-compiled-data-contracts"></a>Para exportar metadados para contratos de dados compilado  
   
 1.  Compile suas implementações de contrato de dados em uma ou mais bibliotecas de classe.  
   
-2.  Executar Svcutil.exe nos assemblies compilados usando o `/dataContract` switch para especificar que apenas os metadados de contratos de dados devem ser gerados.  
+2.  Executar Svcutil.exe em assemblies compilados usando o `/dataContract` para especificar que apenas os metadados para contratos de dados devem ser gerados.  
   
     > [!NOTE]
-    >  Talvez seja necessário usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
+    >  Você talvez precise usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como gerar metadados para a implementação de serviço simples e a configuração.  
+ O exemplo a seguir demonstra como gerar metadados para uma implementação de serviço simples e a configuração.  
   
  Para exportar metadados para o contrato de serviço.  
   
@@ -162,6 +162,6 @@ public class MyService : IPersonFinder
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+## <a name="see-also"></a>Consulte também
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

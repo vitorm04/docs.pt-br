@@ -2,12 +2,12 @@
 title: Integração do Common Language Runtime do SQL
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 5f6c1dcccaddeadb65e6fc949960b0232d00ed81
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7d291e5ab715638217c024302c36188d63b20239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493957"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integração do Common Language Runtime do SQL
 O SQL Server 2005 introduziu a integração do componente CLR do .NET Framework para Microsoft Windows. Isso significa que você pode gravar procedimentos armazenados, gatilhos, tipos definidos pelo usuário, funções definidas pelo usuário, agregações definidas pelo usuário e funções de streaming com valor de tabela, usando qualquer linguagem do .NET Framework, incluindo o Microsoft Visual Basic .NET e o Microsoft Visual C#. O namespace <xref:Microsoft.SqlServer.Server> contém um conjunto de APIs de modo que o código gerenciado possa interagir com o ambiente do Microsoft SQL Server.  
@@ -42,7 +42,7 @@ O SQL Server 2005 introduziu a integração do componente CLR do .NET Framework 
  [Comportamento específico em processo do SQL Server do ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
  Descreve as extensões específicas no processo do SQL Server para o ADO.NET, e a conexão de contexto. Fornece links para tópicos adicionais.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
- [Criando objetos do SQL Server 2005 em código gerenciado](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+- [Criando objetos do SQL Server 2005 em código gerenciado](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

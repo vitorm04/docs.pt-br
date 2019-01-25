@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f117b9807d57847d53cf00fbb4983e187798f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730848"
 ---
 # <a name="resetsecurity-function"></a>Função ResetSecurity
 Atribui o token de representação fornecido para o thread atual.   
@@ -39,20 +39,20 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parâmetros
 
 `token`  
-[in] O token de representação para associar o thread atual. Seu valor pode ser `null`. 
+[in] O token de representação a ser associado com o thread atual. Seu valor pode ser `null`. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função tiver êxito, o valor de retorno é `S_OK` (0).
+Se a função for bem-sucedida, o valor retornado é `S_OK` (0).
 
-Se a função falhar, o valor de retorno é um código de erro diferente de zero. Para obter mais informações sobre o erro, chame o [GetErrorInfo](geterrorinfo.md) função.
+Se a função falhar, o valor de retorno é um código de erro diferente de zero. Para obter outras informações de erro, chame o [GetErrorInfo](geterrorinfo.md) função.
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

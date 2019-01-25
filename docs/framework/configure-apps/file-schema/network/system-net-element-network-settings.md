@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 82e022e28d3559791be3236fb80081807426a456
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f387ecccac2c1c97d03e2c22a31ad2dd0577c77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567770"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; (configurações de rede)
 Contém configurações que especificam como o .NET Framework se conecta à rede.  
@@ -50,7 +50,7 @@ Contém configurações que especificam como o .NET Framework se conecta à rede
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[Configuração](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contém configurações para todos os namespaces.|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contém configurações para todos os namespaces.|  
   
 ## <a name="remarks"></a>Comentários  
  O [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elemento contém definições de classes no <xref:System.Net> e namespaces filho relacionados. As configurações de configuram os módulos de autenticação, gerenciamento de conexão, configurações de email, o servidor proxy e módulos de solicitação de Internet para receber informações de hosts da Internet.  
@@ -92,5 +92,5 @@ Contém configurações que especificam como o .NET Framework se conecta à rede
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

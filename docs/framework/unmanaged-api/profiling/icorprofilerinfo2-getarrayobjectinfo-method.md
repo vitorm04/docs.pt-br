@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6e6f4f6bdfba8deecb3661d88a881759da043ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0444b6a5fd1bb286df573b1bba7d35b0d2d14a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498837"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Método ICorProfilerInfo2::GetArrayObjectInfo
 Obtém informações detalhadas sobre um objeto de matriz.  
@@ -52,20 +52,20 @@ HRESULT GetArrayObjectInfo(
  [out] Uma matriz que contém números inteiros, cada um representando o inferior associado de uma dimensão da matriz.  
   
  `ppData`  
- [out] Um ponteiro para o endereço do buffer bruto para a matriz, que é organizada de acordo com a convenção de C++.  
+ [out] Um ponteiro para o endereço do buffer bruto para a matriz, que é disposta de acordo com a convenção de C++.  
   
 ## <a name="remarks"></a>Comentários  
- O `pDimensionSizes` e `pDimensionLowerBounds` são paralelas matrizes, portanto os elementos localizados no mesmo índice em cada matriz são características da mesma entidade.  
+ O `pDimensionSizes` e `pDimensionLowerBounds` são matrizes paralelas, portanto, os elementos localizados no mesmo índice em cada matriz são características da mesma entidade.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Como transformar um pincel
+title: 'Como: Transformar um pincel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: ebc8d4c6cb36d76b70691cce183f9e6070d19822
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a90e17fa8bb4fec339fda8acbcdff5c0916d61bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529954"
 ---
-# <a name="how-to-transform-a-brush"></a>Como transformar um pincel
+# <a name="how-to-transform-a-brush"></a>Como: Transformar um pincel
 Este exemplo mostra como transformar <xref:System.Windows.Media.Brush> objetos usando suas duas propriedades de transformação: <xref:System.Windows.Media.Brush.RelativeTransform%2A> e <xref:System.Windows.Media.Brush.Transform%2A>.  
   
  Os exemplos seguintes usam um <xref:System.Windows.Media.RotateTransform> girar o conteúdo de um <xref:System.Windows.Media.ImageBrush> em 45 graus.  
@@ -44,7 +44,7 @@ Este exemplo mostra como transformar <xref:System.Windows.Media.Brush> objetos u
   
  Para obter o exemplo completo, consulte [Exemplo de pincéis](https://go.microsoft.com/fwlink/?LinkID=159973). Para obter mais informações sobre pincéis, consulte [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da transformação de pincel](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral da transformação de pincel](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)
+- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

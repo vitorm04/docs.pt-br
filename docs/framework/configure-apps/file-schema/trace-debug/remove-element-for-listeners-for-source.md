@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8beb3ef041b153535afcb8bd92e1c29787e1f161
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654406"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Remova&gt; elemento para &lt;ouvintes&gt; para &lt;fonte&gt;
 Remove um ouvinte da coleção `Listeners` de uma origem de rastreamento.  
   
  \<configuration>  
-\<System. Diagnostics >  
-\<fontes >  
+\<system.diagnostics>  
+\<sources>  
 \<origem >  
-\<ouvintes >  
+\<listeners>  
 \<remove>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -81,9 +81,9 @@ Remove um ouvinte da coleção `Listeners` de uma origem de rastreamento.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Diagnostics.TraceSource.Listeners%2A>  
- <xref:System.Diagnostics.TraceSource>  
- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
- [Ouvintes de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Diagnostics.TraceSource.Listeners%2A>
+- <xref:System.Diagnostics.TraceSource>
+- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
+- [Ouvintes de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
