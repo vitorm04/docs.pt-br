@@ -8,54 +8,54 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 3a16952c5cd3759873faeb0fce45b8aa5170b083
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693782"
 ---
-# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="25d0d-102">Elemento personalizado para NameValueSectionHandler e DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="25d0d-102">Custom element for NameValueSectionHandler and DictionarySectionHandler</span></span>
+# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="2d0f7-102">Elemento personalizado para NameValueSectionHandler e DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="2d0f7-102">Custom element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 
-<span data-ttu-id="25d0d-103">Define as configurações para as seções de configuração personalizadas que usam o <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classes.</span><span class="sxs-lookup"><span data-stu-id="25d0d-103">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span>
+<span data-ttu-id="2d0f7-103">Define as configurações para seções de configuração personalizadas que usam o <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classes.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-103">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span>
 
-<span data-ttu-id="25d0d-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="25d0d-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="25d0d-105">&nbsp;&nbsp;**\<sectionName >**</span><span class="sxs-lookup"><span data-stu-id="25d0d-105">&nbsp;&nbsp;**\<sectionName>**</span></span>
+<span data-ttu-id="2d0f7-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="2d0f7-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="2d0f7-105">&nbsp;&nbsp;**\<sectionName>**</span><span class="sxs-lookup"><span data-stu-id="2d0f7-105">&nbsp;&nbsp;**\<sectionName>**</span></span>
 
-## <a name="attributes"></a><span data-ttu-id="25d0d-106">Atributos</span><span class="sxs-lookup"><span data-stu-id="25d0d-106">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="2d0f7-106">Atributos</span><span class="sxs-lookup"><span data-stu-id="2d0f7-106">Attributes</span></span>
 
-<span data-ttu-id="25d0d-107">Nenhum</span><span class="sxs-lookup"><span data-stu-id="25d0d-107">None</span></span>
+<span data-ttu-id="2d0f7-107">Nenhum</span><span class="sxs-lookup"><span data-stu-id="2d0f7-107">None</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="25d0d-108">Elemento pai</span><span class="sxs-lookup"><span data-stu-id="25d0d-108">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="2d0f7-108">Elemento pai</span><span class="sxs-lookup"><span data-stu-id="2d0f7-108">Parent element</span></span>
 
-|     | <span data-ttu-id="25d0d-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="25d0d-109">Description</span></span> |
+|     | <span data-ttu-id="2d0f7-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="2d0f7-109">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="25d0d-110">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="25d0d-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="25d0d-111">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="25d0d-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="2d0f7-110">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="2d0f7-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="2d0f7-111">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="25d0d-112">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="25d0d-112">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="2d0f7-112">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="2d0f7-112">Child elements</span></span>
 
-|     | <span data-ttu-id="25d0d-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="25d0d-113">Description</span></span> |
+|     | <span data-ttu-id="2d0f7-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="2d0f7-113">Description</span></span> |
 | --- | ----------- |
-| <span data-ttu-id="25d0d-114">[**\<Adicionar >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler></span><span class="sxs-lookup"><span data-stu-id="25d0d-114">[**\<add>**](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) for <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler></span></span>  | <span data-ttu-id="25d0d-115">Adiciona as configurações de aplicativo personalizado.</span><span class="sxs-lookup"><span data-stu-id="25d0d-115">Adds custom application settings.</span></span> |
-| <span data-ttu-id="25d0d-116">[**\<Remover >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler></span><span class="sxs-lookup"><span data-stu-id="25d0d-116">[**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) for <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler></span></span> |    <span data-ttu-id="25d0d-117">Remove uma configuração definida anteriormente.</span><span class="sxs-lookup"><span data-stu-id="25d0d-117">Removes a previously defined setting.</span></span> |
-| <span data-ttu-id="25d0d-118">[**\<Limpar >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler></span><span class="sxs-lookup"><span data-stu-id="25d0d-118">[**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) for <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler></span></span> | <span data-ttu-id="25d0d-119">Limpa todas as configurações previamente definidas em uma seção.</span><span class="sxs-lookup"><span data-stu-id="25d0d-119">Clears all previously defined settings in a section.</span></span> |
+| <span data-ttu-id="2d0f7-114">[**\<Adicionar >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler></span><span class="sxs-lookup"><span data-stu-id="2d0f7-114">[**\<add>**](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) for <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler></span></span>  | <span data-ttu-id="2d0f7-115">Adiciona as configurações de aplicativo personalizado.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-115">Adds custom application settings.</span></span> |
+| <span data-ttu-id="2d0f7-116">[**\<Remover >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler></span><span class="sxs-lookup"><span data-stu-id="2d0f7-116">[**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) for <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler></span></span> |    <span data-ttu-id="2d0f7-117">Remove uma configuração definida anteriormente.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-117">Removes a previously defined setting.</span></span> |
+| <span data-ttu-id="2d0f7-118">[**\<Limpar >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler></span><span class="sxs-lookup"><span data-stu-id="2d0f7-118">[**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) for <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler></span></span> | <span data-ttu-id="2d0f7-119">Limpa todas as configurações definidas anteriormente em uma seção.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-119">Clears all previously defined settings in a section.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="25d0d-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="25d0d-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2d0f7-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="2d0f7-120">Remarks</span></span>
 
-<span data-ttu-id="25d0d-121">O  **\<sectionName >** é um elemento personalizado definido por um  **\<seção >** marca no  **\<configSections >** elemento.</span><span class="sxs-lookup"><span data-stu-id="25d0d-121">The **\<sectionName>** element is a custom element defined by a **\<section>** tag in the **\<configSections>** element.</span></span>
+<span data-ttu-id="2d0f7-121">O  **\<sectionName >** é um elemento personalizado definido por uma  **\<seção >** marcar no  **\<configSections >** elemento.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-121">The **\<sectionName>** element is a custom element defined by a **\<section>** tag in the **\<configSections>** element.</span></span>
 
-<span data-ttu-id="25d0d-122">A tabela a seguir mostra que o tipo de objeto, o método ConfigurationSettings.GetConfig retorna para cada manipulador de seção de configuração:</span><span class="sxs-lookup"><span data-stu-id="25d0d-122">The following table shows the type of object the ConfigurationSettings.GetConfig method returns for each configuration section handler:</span></span>
+<span data-ttu-id="2d0f7-122">A tabela a seguir mostra que o tipo de objeto, o método ConfigurationSettings.GetConfig retorna para cada manipulador de seção de configuração:</span><span class="sxs-lookup"><span data-stu-id="2d0f7-122">The following table shows the type of object the ConfigurationSettings.GetConfig method returns for each configuration section handler:</span></span>
 
-| <span data-ttu-id="25d0d-123">Manipulador da seção de configuração</span><span class="sxs-lookup"><span data-stu-id="25d0d-123">Configuration section handler</span></span>                        | <span data-ttu-id="25d0d-124">Tipo de retorno</span><span class="sxs-lookup"><span data-stu-id="25d0d-124">Return type</span></span>                                                |
+| <span data-ttu-id="2d0f7-123">Manipulador de seção de configuração</span><span class="sxs-lookup"><span data-stu-id="2d0f7-123">Configuration section handler</span></span>                        | <span data-ttu-id="2d0f7-124">Tipo de retorno</span><span class="sxs-lookup"><span data-stu-id="2d0f7-124">Return type</span></span>                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
 | <xref:System.Configuration.NameValueSectionHandler>  | <xref:System.Collections.Specialized.NameValueCollection>  |
 | <xref:System.Configuration.DictionarySectionHandler> | <xref:System.Collections.IDictionary>                      |
 
-## <a name="example"></a><span data-ttu-id="25d0d-125">Exemplo</span><span class="sxs-lookup"><span data-stu-id="25d0d-125">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2d0f7-125">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2d0f7-125">Example</span></span>
 
-<span data-ttu-id="25d0d-126">O exemplo a seguir mostra como declarar seções que usam o <xref:System.Configuration.DictionarySectionHandler> e <xref:System.Configuration.NameValueSectionHandler> classes.</span><span class="sxs-lookup"><span data-stu-id="25d0d-126">The following example shows how to declare sections that use the <xref:System.Configuration.DictionarySectionHandler> and <xref:System.Configuration.NameValueSectionHandler> classes.</span></span> 
+<span data-ttu-id="2d0f7-126">O exemplo a seguir mostra como declarar seções que usam o <xref:System.Configuration.DictionarySectionHandler> e <xref:System.Configuration.NameValueSectionHandler> classes.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-126">The following example shows how to declare sections that use the <xref:System.Configuration.DictionarySectionHandler> and <xref:System.Configuration.NameValueSectionHandler> classes.</span></span> 
 
-<span data-ttu-id="25d0d-127">O primeiro elemento personalizado é  **\<dictionarySample >**, que contém as configurações de leitura pelo <xref:System.Configuration.DictionarySectionHandler> classe no `System.dll` assembly.</span><span class="sxs-lookup"><span data-stu-id="25d0d-127">The first custom element is **\<dictionarySample>**, which contains settings read by the <xref:System.Configuration.DictionarySectionHandler> class in the `System.dll` assembly.</span></span> <span data-ttu-id="25d0d-128">O segundo elemento personalizado é  **\<mySection >**, que contém as configurações de leitura pelo <xref:System.Configuration.NameValueSectionHandler> classe no `System.dll` assembly.</span><span class="sxs-lookup"><span data-stu-id="25d0d-128">The second custom element is **\<mySection>**, which contains settings read by the <xref:System.Configuration.NameValueSectionHandler> class in the `System.dll` assembly.</span></span>
+<span data-ttu-id="2d0f7-127">É o primeiro elemento personalizado  **\<dictionarySample >**, que contém as configurações lidas pelo <xref:System.Configuration.DictionarySectionHandler> classe o `System.dll` assembly.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-127">The first custom element is **\<dictionarySample>**, which contains settings read by the <xref:System.Configuration.DictionarySectionHandler> class in the `System.dll` assembly.</span></span> <span data-ttu-id="2d0f7-128">O segundo elemento personalizado estiver  **\<mySection >**, que contém as configurações lidas pelo <xref:System.Configuration.NameValueSectionHandler> classe no `System.dll` assembly.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-128">The second custom element is **\<mySection>**, which contains settings read by the <xref:System.Configuration.NameValueSectionHandler> class in the `System.dll` assembly.</span></span>
 
 ```xml
 <configuration>
@@ -76,10 +76,10 @@ ms.locfileid: "32752043"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="25d0d-129">arquivo de configuração</span><span class="sxs-lookup"><span data-stu-id="25d0d-129">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="2d0f7-129">arquivo de configuração</span><span class="sxs-lookup"><span data-stu-id="2d0f7-129">Configuration file</span></span>
 
-<span data-ttu-id="25d0d-130">Esse elemento pode ser usado no arquivo de configuração do aplicativo, o arquivo de configuração de máquina (*Machine. config*), e *Web. config* arquivos que não estão no nível de diretório do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="25d0d-130">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="2d0f7-130">Esse elemento pode ser usado no arquivo de configuração do aplicativo, arquivo de configuração de máquina (*Machine. config*), e *Web. config* arquivos que não estão no nível de diretório do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2d0f7-130">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="25d0d-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="25d0d-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d0f7-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2d0f7-131">See also</span></span>
 
-[<span data-ttu-id="25d0d-132">Esquema de arquivo de configuração para o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="25d0d-132">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="2d0f7-132">Esquema de arquivo de configuração para o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="2d0f7-132">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

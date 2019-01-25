@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7283266857d81b7d97bcacb56862b50f01cd3f0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ee62c903da2f2568884b9be30b22bdcdc2d2c4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686264"
 ---
-# <a name="icordebugregistersetsetthreadcontext-method"></a><span data-ttu-id="22401-102">Método ICorDebugRegisterSet::SetThreadContext</span><span class="sxs-lookup"><span data-stu-id="22401-102">ICorDebugRegisterSet::SetThreadContext Method</span></span>
-<span data-ttu-id="22401-103">`SetThreadContext` não é implementado no .NET Framework versão 2.0.</span><span class="sxs-lookup"><span data-stu-id="22401-103">`SetThreadContext` is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="22401-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="22401-104">Do not call this method.</span></span>  
+# <a name="icordebugregistersetsetthreadcontext-method"></a><span data-ttu-id="36a34-102">Método ICorDebugRegisterSet::SetThreadContext</span><span class="sxs-lookup"><span data-stu-id="36a34-102">ICorDebugRegisterSet::SetThreadContext Method</span></span>
+<span data-ttu-id="36a34-103">`SetThreadContext` não é implementada no .NET Framework versão 2.0.</span><span class="sxs-lookup"><span data-stu-id="36a34-103">`SetThreadContext` is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="36a34-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="36a34-104">Do not call this method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="22401-105">Use a operação de nível mais alto [Icordebugnativeframe](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) para definir o contexto de thread.</span><span class="sxs-lookup"><span data-stu-id="22401-105">Use the higher-level operation [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) to set the context of a thread.</span></span>  
+>  <span data-ttu-id="36a34-105">Use a operação de nível mais alto [icordebugnativeframe:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) para definir o contexto de um thread.</span><span class="sxs-lookup"><span data-stu-id="36a34-105">Use the higher-level operation [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) to set the context of a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22401-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="22401-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36a34-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="36a34-106">Syntax</span></span>  
   
 ```  
 HRESULT SetThreadContext (  
@@ -40,15 +40,15 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="22401-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="22401-107">Requirements</span></span>  
- <span data-ttu-id="22401-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22401-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36a34-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="36a34-107">Requirements</span></span>  
+ <span data-ttu-id="36a34-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36a34-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="22401-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="22401-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="36a34-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="36a34-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="22401-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="22401-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="36a34-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36a34-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="22401-111">**Versões do .NET framework:** 1.1 e 1.0</span><span class="sxs-lookup"><span data-stu-id="22401-111">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="36a34-111">**Versões do .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="36a34-111">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22401-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="22401-112">See Also</span></span>  
- [<span data-ttu-id="22401-113">Interface ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="22401-113">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [<span data-ttu-id="22401-114">Interface ICorDebugRegisterSet2</span><span class="sxs-lookup"><span data-stu-id="22401-114">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="36a34-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="36a34-112">See also</span></span>
+- [<span data-ttu-id="36a34-113">Interface ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="36a34-113">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="36a34-114">Interface ICorDebugRegisterSet2</span><span class="sxs-lookup"><span data-stu-id="36a34-114">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

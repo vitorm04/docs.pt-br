@@ -1,23 +1,23 @@
 ---
-title: '&lt;Host&gt;'
+title: '&lt;host&gt;'
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-ms.openlocfilehash: afa9d65223ab3a7730a55bc41ed98458707b32db
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1fb35058d407d0fbae78092bb4ccd45b0aaa40e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702022"
 ---
-# <a name="lthostgt"></a><span data-ttu-id="1a1b1-102">&lt;Host&gt;</span><span class="sxs-lookup"><span data-stu-id="1a1b1-102">&lt;host&gt;</span></span>
-<span data-ttu-id="1a1b1-103">Especifica configurações para um host de serviço.</span><span class="sxs-lookup"><span data-stu-id="1a1b1-103">Specifies settings for a service host.</span></span>  
+# <a name="lthostgt"></a><span data-ttu-id="3452a-102">&lt;host&gt;</span><span class="sxs-lookup"><span data-stu-id="3452a-102">&lt;host&gt;</span></span>
+<span data-ttu-id="3452a-103">Especifica configurações para um host de serviço.</span><span class="sxs-lookup"><span data-stu-id="3452a-103">Specifies settings for a service host.</span></span>  
   
- <span data-ttu-id="1a1b1-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="1a1b1-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="1a1b1-105">\<Serviços ></span><span class="sxs-lookup"><span data-stu-id="1a1b1-105">\<services></span></span>  
-<span data-ttu-id="1a1b1-106">\<serviço ></span><span class="sxs-lookup"><span data-stu-id="1a1b1-106">\<service></span></span>  
-<span data-ttu-id="1a1b1-107">\<host ></span><span class="sxs-lookup"><span data-stu-id="1a1b1-107">\<host></span></span>  
+ <span data-ttu-id="3452a-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="3452a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="3452a-105">\<services></span><span class="sxs-lookup"><span data-stu-id="3452a-105">\<services></span></span>  
+<span data-ttu-id="3452a-106">\<service></span><span class="sxs-lookup"><span data-stu-id="3452a-106">\<service></span></span>  
+<span data-ttu-id="3452a-107">\<host></span><span class="sxs-lookup"><span data-stu-id="3452a-107">\<host></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1a1b1-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1a1b1-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3452a-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3452a-108">Syntax</span></span>  
   
 ```xml  
 <host>
@@ -29,29 +29,29 @@ ms.locfileid: "54145218"
 </host>
 ```  
   
-## <a name="type"></a><span data-ttu-id="1a1b1-109">Tipo</span><span class="sxs-lookup"><span data-stu-id="1a1b1-109">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="3452a-109">Tipo</span><span class="sxs-lookup"><span data-stu-id="3452a-109">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1a1b1-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="1a1b1-110">Attributes and Elements</span></span>  
- <span data-ttu-id="1a1b1-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="1a1b1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3452a-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="3452a-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="3452a-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="3452a-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1a1b1-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="1a1b1-112">Attributes</span></span>  
- <span data-ttu-id="1a1b1-113">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="1a1b1-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3452a-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="3452a-112">Attributes</span></span>  
+ <span data-ttu-id="3452a-113">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="3452a-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="1a1b1-114">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="1a1b1-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3452a-114">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="3452a-114">Child Elements</span></span>  
   
-|<span data-ttu-id="1a1b1-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="1a1b1-115">Element</span></span>|<span data-ttu-id="1a1b1-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="1a1b1-116">Description</span></span>|  
+|<span data-ttu-id="3452a-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="3452a-115">Element</span></span>|<span data-ttu-id="3452a-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="3452a-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="1a1b1-117">\<baseAddresses ></span><span class="sxs-lookup"><span data-stu-id="1a1b1-117">\<baseAddresses></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|<span data-ttu-id="1a1b1-118">Uma coleção de `baseAddress` elementos que especifica os endereços base usados pelo host de serviço.</span><span class="sxs-lookup"><span data-stu-id="1a1b1-118">A collection of `baseAddress` elements that specifies the base addresses used by the service host.</span></span>|  
-|[<span data-ttu-id="1a1b1-119">\<tempos limite ></span><span class="sxs-lookup"><span data-stu-id="1a1b1-119">\<timeOuts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|<span data-ttu-id="1a1b1-120">Um elemento de configuração que especifica o intervalo de tempo permitido para o host de serviço abrir ou fechar.</span><span class="sxs-lookup"><span data-stu-id="1a1b1-120">A configuration element that specifies the interval of time allowed for the service host to open or close.</span></span>|  
+|[<span data-ttu-id="3452a-117">\<baseAddresses></span><span class="sxs-lookup"><span data-stu-id="3452a-117">\<baseAddresses></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|<span data-ttu-id="3452a-118">Uma coleção de `baseAddress` elementos que especifica os endereços base usados pelo host de serviço.</span><span class="sxs-lookup"><span data-stu-id="3452a-118">A collection of `baseAddress` elements that specifies the base addresses used by the service host.</span></span>|  
+|[<span data-ttu-id="3452a-119">\<timeOuts></span><span class="sxs-lookup"><span data-stu-id="3452a-119">\<timeOuts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|<span data-ttu-id="3452a-120">Um elemento de configuração que especifica o intervalo de tempo permitido para o host de serviço abrir ou fechar.</span><span class="sxs-lookup"><span data-stu-id="3452a-120">A configuration element that specifies the interval of time allowed for the service host to open or close.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="1a1b1-121">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="1a1b1-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3452a-121">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="3452a-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="1a1b1-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="1a1b1-122">Element</span></span>|<span data-ttu-id="1a1b1-123">Descrição</span><span class="sxs-lookup"><span data-stu-id="1a1b1-123">Description</span></span>|  
+|<span data-ttu-id="3452a-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="3452a-122">Element</span></span>|<span data-ttu-id="3452a-123">Descrição</span><span class="sxs-lookup"><span data-stu-id="3452a-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="1a1b1-124">\<service></span><span class="sxs-lookup"><span data-stu-id="1a1b1-124">\<service></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|<span data-ttu-id="1a1b1-125">Especifica as configurações para um serviço do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="1a1b1-125">Specifies the settings for a Windows Communication Foundation (WCF) service.</span></span>|  
+|[<span data-ttu-id="3452a-124">\<service></span><span class="sxs-lookup"><span data-stu-id="3452a-124">\<service></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|<span data-ttu-id="3452a-125">Especifica as configurações para um serviço do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="3452a-125">Specifies the settings for a Windows Communication Foundation (WCF) service.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="1a1b1-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1a1b1-126">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.HostElement>  
- <xref:System.ServiceModel.ServiceHost>  
- [<span data-ttu-id="1a1b1-127">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="1a1b1-127">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a><span data-ttu-id="3452a-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3452a-126">See also</span></span>
+- <xref:System.ServiceModel.Configuration.HostElement>
+- <xref:System.ServiceModel.ServiceHost>
+- [<span data-ttu-id="3452a-127">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="3452a-127">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)

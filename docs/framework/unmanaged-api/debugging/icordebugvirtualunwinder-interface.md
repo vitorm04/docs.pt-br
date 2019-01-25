@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 ms.assetid: a09e9ccc-0b37-43e3-95c1-bc5fa7ee5f42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb04ac42b3cc77db3af53c87efb0d1f1f75da928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9db6b83e2feedd761b95dec455213051e37366e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684139"
 ---
-# <a name="icordebugvirtualunwinder-interface"></a><span data-ttu-id="08f24-102">Interface ICorDebugVirtualUnwinder</span><span class="sxs-lookup"><span data-stu-id="08f24-102">ICorDebugVirtualUnwinder Interface</span></span>
-<span data-ttu-id="08f24-103">Fornece métodos para ajudar a desenrolamento de pilha.</span><span class="sxs-lookup"><span data-stu-id="08f24-103">Provides methods to help in stack unwinding.</span></span>  
+# <a name="icordebugvirtualunwinder-interface"></a><span data-ttu-id="b2509-102">Interface ICorDebugVirtualUnwinder</span><span class="sxs-lookup"><span data-stu-id="b2509-102">ICorDebugVirtualUnwinder Interface</span></span>
+<span data-ttu-id="b2509-103">Fornece métodos para ajudá-lo desenrolamento de pilha.</span><span class="sxs-lookup"><span data-stu-id="b2509-103">Provides methods to help in stack unwinding.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="08f24-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="08f24-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b2509-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="b2509-104">Methods</span></span>  
   
-|<span data-ttu-id="08f24-105">Método</span><span class="sxs-lookup"><span data-stu-id="08f24-105">Method</span></span>|<span data-ttu-id="08f24-106">Nome</span><span class="sxs-lookup"><span data-stu-id="08f24-106">Name</span></span>|  
+|<span data-ttu-id="b2509-105">Método</span><span class="sxs-lookup"><span data-stu-id="b2509-105">Method</span></span>|<span data-ttu-id="b2509-106">Nome</span><span class="sxs-lookup"><span data-stu-id="b2509-106">Name</span></span>|  
 |------------|----------|  
-|[<span data-ttu-id="08f24-107">Método GetContext</span><span class="sxs-lookup"><span data-stu-id="08f24-107">GetContext Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-getcontext-method.md)|<span data-ttu-id="08f24-108">Obtém o contexto atual deste unwinder.</span><span class="sxs-lookup"><span data-stu-id="08f24-108">Gets the current context of this unwinder.</span></span>|  
-|[<span data-ttu-id="08f24-109">Método Next</span><span class="sxs-lookup"><span data-stu-id="08f24-109">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-next-method.md)|<span data-ttu-id="08f24-110">Avança para o contexto do chamador.</span><span class="sxs-lookup"><span data-stu-id="08f24-110">Advances to the caller's context.</span></span>|  
+|[<span data-ttu-id="b2509-107">Método GetContext</span><span class="sxs-lookup"><span data-stu-id="b2509-107">GetContext Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-getcontext-method.md)|<span data-ttu-id="b2509-108">Obtém o contexto atual deste desenrolador.</span><span class="sxs-lookup"><span data-stu-id="b2509-108">Gets the current context of this unwinder.</span></span>|  
+|[<span data-ttu-id="b2509-109">Método Next</span><span class="sxs-lookup"><span data-stu-id="b2509-109">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-next-method.md)|<span data-ttu-id="b2509-110">Avança para o contexto do chamador.</span><span class="sxs-lookup"><span data-stu-id="b2509-110">Advances to the caller's context.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="08f24-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="08f24-111">Remarks</span></span>  
- <span data-ttu-id="08f24-112">Os membros de `ICorDebugVirtualUnwinder` interface são implementadas pelo depurador para ajudar o desenrolamento de pilha.</span><span class="sxs-lookup"><span data-stu-id="08f24-112">The members of the `ICorDebugVirtualUnwinder` interface are implemented by the debugger to help in stack unwinding.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2509-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="b2509-111">Remarks</span></span>  
+ <span data-ttu-id="b2509-112">Os membros do `ICorDebugVirtualUnwinder` interface são implementados pelo depurador para ajudá-lo desenrolamento de pilha.</span><span class="sxs-lookup"><span data-stu-id="b2509-112">The members of the `ICorDebugVirtualUnwinder` interface are implemented by the debugger to help in stack unwinding.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="08f24-113">Esta interface só está disponível com o .NET Native.</span><span class="sxs-lookup"><span data-stu-id="08f24-113">This interface is available with .NET Native only.</span></span> <span data-ttu-id="08f24-114">Se você implementar essa interface para cenários de ICorDebug fora do .NET nativo, o common language runtime irá ignorar essa interface.</span><span class="sxs-lookup"><span data-stu-id="08f24-114">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
+>  <span data-ttu-id="b2509-113">Essa interface só está disponível com o .NET Native.</span><span class="sxs-lookup"><span data-stu-id="b2509-113">This interface is available with .NET Native only.</span></span> <span data-ttu-id="b2509-114">Se você implementar essa interface para cenários de ICorDebug fora do .NET nativo, o common language runtime irá ignorar essa interface.</span><span class="sxs-lookup"><span data-stu-id="b2509-114">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="08f24-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="08f24-115">Requirements</span></span>  
- <span data-ttu-id="08f24-116">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08f24-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2509-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b2509-115">Requirements</span></span>  
+ <span data-ttu-id="b2509-116">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2509-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08f24-117">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="08f24-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b2509-117">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2509-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="08f24-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="08f24-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2509-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2509-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="08f24-119">**Versões do .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08f24-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="b2509-119">**Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2509-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08f24-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="08f24-120">See Also</span></span>  
- [<span data-ttu-id="08f24-121">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="08f24-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="08f24-122">Depuração</span><span class="sxs-lookup"><span data-stu-id="08f24-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="b2509-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b2509-120">See also</span></span>
+- [<span data-ttu-id="b2509-121">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="b2509-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b2509-122">Depuração</span><span class="sxs-lookup"><span data-stu-id="b2509-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
