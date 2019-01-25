@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738820"
 ---
 # <a name="layout"></a>Layout
 Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Entender como e quando ocorrem os cálculos de layout é essencial para a criação de interfaces do usuário no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -146,11 +146,11 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Novidades  
- Entender como os elementos são medidos e organizados é o primeiro passo para entender o layout. Para obter mais informações sobre como as disponíveis <xref:System.Windows.Controls.Panel> elementos, consulte [visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md). Para compreender melhor as várias propriedades de posicionamento que podem afetar o layout, consulte [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Para obter um exemplo de um personalizado <xref:System.Windows.Controls.Panel> elemento, consulte [Custom Panel Sample Radial](https://go.microsoft.com/fwlink/?LinkID=159982). Quando você estiver pronto para juntar tudo em um aplicativo leve, consulte [instruções passo a passo: meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Entender como os elementos são medidos e organizados é o primeiro passo para entender o layout. Para obter mais informações sobre como as disponíveis <xref:System.Windows.Controls.Panel> elementos, consulte [visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md). Para compreender melhor as várias propriedades de posicionamento que podem afetar o layout, consulte [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Para obter um exemplo de um personalizado <xref:System.Windows.Controls.Panel> elemento, consulte [Custom Panel Sample Radial](https://go.microsoft.com/fwlink/?LinkID=159982). Quando você estiver pronto para juntar tudo em um aplicativo leve, consulte [passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.UIElement>  
- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.UIElement>
+- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

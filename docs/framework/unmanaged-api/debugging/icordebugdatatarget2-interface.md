@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 13f11388-2f91-48d8-98d6-6a4a63cb5746
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85ff64e30519e448b87c2e9ae5d2c66959d836fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0931cb5ed133d4de82473ae786f28f13fd396db5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742992"
 ---
 # <a name="icordebugdatatarget2-interface"></a>Interface ICorDebugDataTarget2
-Logicamente estende o [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interface.  
+Estende logicamente a [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interface.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -27,17 +27,17 @@ Logicamente estende o [ICorDebugDataTarget](../../../../docs/framework/unmanaged
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esta interface só está disponível com o .NET Native. Se você implementar essa interface para cenários de ICorDebug fora do .NET nativo, o common language runtime irá ignorar essa interface.  
+>  Essa interface só está disponível com o .NET Native. Se você implementar essa interface para cenários de ICorDebug fora do .NET nativo, o common language runtime irá ignorar essa interface.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

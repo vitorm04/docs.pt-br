@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: 74e21045ec70faf6ee82200a15362d51edf61433
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: af608031a661037b89c9783ac2451a6b536f9cd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731381"
 ---
 # <a name="selective-serialization"></a>Serialização seletiva
 Uma classe geralmente contém os campos que não devem ser serializados. Por exemplo, presuma que uma classe armazene uma ID de thread em uma variável de membro. Quando a classe é desserializada, o thread que armazenou a ID de quando a classe foi serializada pode não estar mais em execução; portanto, serializar esse valor não faz sentido. Você pode impedir que variáveis de membros sejam serializadas marcando-as com o atributo [NonSerialized](xref:System.NonSerializedAttribute) da maneira a seguir.  
@@ -33,6 +33,6 @@ Se possível, crie um objeto que possa conter dados confidenciais de segurança 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Serialização binária](binary-serialization.md)  
-- [Serialização XML e SOAP](xml-and-soap-serialization.md)  
+- [Serialização binária](binary-serialization.md)
+- [Serialização XML e SOAP](xml-and-soap-serialization.md)
 - [Segurança e serialização](../../../docs/framework/misc/security-and-serialization.md)

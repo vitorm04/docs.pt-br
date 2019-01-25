@@ -11,12 +11,12 @@ helpviewer_keywords:
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
-ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632017"
 ---
 # <a name="event-design"></a>Design de eventos
 Eventos são a forma mais usada de retornos de chamada (construções que permitem que o framework chamar o código de usuário). Outros mecanismos de retorno de chamada incluem membros fazer delegados, os membros virtuais e plug-ins baseados em interface. Dados de estudos de usabilidade indicam que a maioria dos desenvolvedores estão mais familiarizado com o uso de eventos que estão usando outros mecanismos de retorno de chamada. Eventos são integrados perfeitamente com o Visual Studio e muitos idiomas.  
@@ -72,5 +72,5 @@ Eventos são a forma mais usada de retornos de chamada (construções que permit
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
+- [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

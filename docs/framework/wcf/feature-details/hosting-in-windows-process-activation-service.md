@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731264"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedagem no serviço de ativação do processo do Windows
 O serviço de ativação de processos do Windows (WAS) gerencia a ativação e o tempo de vida dos processos de trabalho que contêm aplicativos que hospedar serviços do Windows Communication Foundation (WCF). O modelo de processo WAS generaliza o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] modelo de processo para o servidor HTTP, removendo a dependência no HTTP. Isso permite que os serviços do WCF para usar HTTP e protocolos não HTTP, como o NET. TCP, em um ambiente de hospedagem que oferece suporte à ativação baseada em mensagem e oferece a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
   
- Para obter mais informações sobre a criação de um serviço WCF que é executado no ambiente de hospedagem do WAS, consulte [como: hospedar um serviço WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Para obter mais informações sobre a criação de um serviço WCF que é executado no ambiente de hospedagem do WAS, consulte [como: Hospedar um serviço WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  O modelo de processo WAS oferece vários recursos que permitem que os aplicativos sejam hospedados em uma maneira que é mais robusto, mais gerenciável e que usa recursos com eficiência:  
   
@@ -26,7 +26,7 @@ O serviço de ativação de processos do Windows (WAS) gerencia a ativação e o
   
 -   Permite que os aplicativos tirar proveito do modelo de processo do IIS sem exigir que o volume de implantação de uma instalação completa do IIS.  
   
- Para obter mais informações sobre os recursos do WAS, consulte [IIS 7.0 Beta: administração de Web do IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Para obter mais informações sobre os recursos do WAS, consulte [IIS 7.0 Beta: Administração do IIS 7.0 Web](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
  [O Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) funciona com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] e o Windows o serviço de ativação de processos (WAS) para fornecer um ambiente de serviços NET4 WCF e WF de hospedagem de aplicativos avançados. Esses benefícios incluem gerenciamento de ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida contra falha, órfão de processo, ativação e sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) e [conceitos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -39,9 +39,9 @@ O serviço de ativação de processos do Windows (WAS) gerencia a ativação e o
   
 |Cenário|Associações do site|Caminho do aplicativo|URIs de aplicativo básico|  
 |--------------|-------------------|----------------------|---------------------------|  
-|Somente HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|HTTP e não HTTP|http: *: 80:\*<br /><br /> NET. TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />NET.TCP://localhost/appTwo/|  
-|Não-HTTP apenas|NET. pipe: *|/appThree|NET.pipe://appThree/|  
+|Somente HTTP|http: *:80:\*|/appTwo|http://localhost/appTwo/|  
+|HTTP e não HTTP|http: *:80:\*<br /><br /> net.tcp: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
+|Não-HTTP apenas|net.pipe: *|/appThree|net.pipe://appThree/|  
   
  Serviços e recursos dentro de um aplicativo também podem ser resolvidos. Dentro de um aplicativo, os recursos do aplicativo são endereçados relativo ao caminho base do aplicativo. Por exemplo, suponha que um site em um nome de máquina contoso.com tem associações de site para protocolos HTTP e NET. TCP. Também supõem que o site contém um aplicativo localizado em /Billing, que expõe um serviço em GetOrders.svc. Em seguida, se o serviço GetOrders.svc exposto a um ponto de extremidade com um endereço relativo da SecureEndpoint, o ponto de extremidade de serviço deve ser exposto nos URIs a seguir:  
   
@@ -51,9 +51,9 @@ O serviço de ativação de processos do Windows (WAS) gerencia a ativação e o
 ## <a name="the-was-runtime"></a>O WAS tempo de execução  
  Aplicativos são organizados em sites para fins de endereçamento e de gerenciamento. Em tempo de execução aplicativos também são agrupados juntos em pools de aplicativos. Um pool de aplicativos pode hospedar vários aplicativos diferentes de muitos sites diferentes. Todos os aplicativos dentro de um pool de aplicativos compartilham um conjunto comum de características de tempo de execução. Por exemplo, todos são executados sob a mesma versão do common language runtime (CLR) e todas elas compartilham uma identidade comum do processo. Cada pool de aplicativos corresponde a uma instância de um processo de trabalho (w3wp.exe). Cada aplicativo gerenciado em execução dentro de um pool de aplicativos compartilhados é isolado de outros aplicativos por meio de um AppDomain do CLR.  
   
-## <a name="see-also"></a>Consulte também  
- [Arquitetura de ativação WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
- [Configurando o WAS para utilização com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Como instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
- [Como hospedar um serviço do WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Consulte também
+- [Arquitetura de ativação WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
+- [Configurando o WAS para utilização com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Como: Instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Como: Hospedar um serviço WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -1,5 +1,5 @@
 ---
-title: Como animar a cor ou a opacidade de um SolidColorBrush
+title: 'Como: Animar a cor ou a opacidade de um SolidColorBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SolidColorBrush [WPF], animating color of
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], opacity of SolidColorBrush
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
-ms.openlocfilehash: 194f01d3d5aa4c2b5a08a6c3fdb3dc195b0e9e3e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6bd7f27f1cce6169181640bb52edad4a493c228
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738687"
 ---
-# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Como animar a cor ou a opacidade de um SolidColorBrush
+# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Como: Animar a cor ou a opacidade de um SolidColorBrush
 Este exemplo mostra como animar a <xref:System.Windows.Media.SolidColorBrush.Color%2A> e <xref:System.Windows.Media.Brush.Opacity%2A> de um <xref:System.Windows.Media.SolidColorBrush>.  
   
 ## <a name="example"></a>Exemplo  
@@ -34,7 +34,7 @@ Este exemplo mostra como animar a <xref:System.Windows.Media.SolidColorBrush.Col
   
  Para consistência com outros exemplos de animação, as versões de código deste exemplo usam um <xref:System.Windows.Media.Animation.Storyboard> objeto para aplicar suas animações. No entanto, ao aplicar uma única animação no código, é mais simples usar o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método em vez de usar um <xref:System.Windows.Media.Animation.Storyboard>. Para obter um exemplo, consulte [Animar uma propriedade sem usar um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Exemplo de pincéis](https://go.microsoft.com/fwlink/?LinkID=159973)
+## <a name="see-also"></a>Consulte também
+- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Exemplo de pincéis](https://go.microsoft.com/fwlink/?LinkID=159973)

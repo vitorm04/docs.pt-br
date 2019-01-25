@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0bffe72a4bcadb4a36a9ac54263d55e242ffc4d4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 990add41d5f48da19f6bc20e4bbff19f36132df6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742101"
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt; elemento
 Especifica se deve-se impor um requisito de configuração do computador em que os algoritmos de criptografia devem estar em conformidade com o FIPS (padrão norte-americano de processamento de informações).  
@@ -71,7 +71,7 @@ Especifica se deve-se impor um requisito de configuração do computador em que 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Modelo de criptografia](../../../../../docs/standard/security/cryptography-model.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735023"
 ---
 # <a name="lockclrversion-function"></a>Função LockClrVersion
-Permite que o host determinar qual versão do common language runtime (CLR) será usado no processo antes de inicializar explicitamente o CLR.  
+Permite que o host determine qual versão do common language runtime (CLR) será usado dentro do processo antes de inicializar explicitamente o CLR.  
   
  Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -41,57 +41,57 @@ HRESULT LockClrVersion (
   
 #### <a name="parameters"></a>Parâmetros  
  `hostCallback`  
- [in] A função a ser chamada pelo CLR na inicialização.  
+ [in] A função a ser chamado pelo CLR na inicialização.  
   
  `pBeginHostSetup`  
- [in] A função a ser chamado pelo host para informar ao CLR que a inicialização está iniciando.  
+ [in] A função a ser chamado pelo host para informar ao CLR que a inicialização está sendo iniciado.  
   
  `pEndHostSetup`  
- [in] A função a ser chamado pelo host para informar ao CLR que a inicialização for concluída.  
+ [in] A função a ser chamado pelo host para informar ao CLR que a inicialização foi concluída.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Esse método retorna códigos de erro COM padrão, conforme definido no Winerror. H, além dos valores a seguir.  
+ Esse método retorna códigos de erro COM padrão, conforme definido em Winerror. H, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|E_INVALIDARG|Um ou mais dos argumentos for nulo.|  
+|E_INVALIDARG|Um ou mais dos argumentos é nulo.|  
   
 ## <a name="remarks"></a>Comentários  
- As chamadas de host `LockClrVersion` antes de inicializar o CLR. `LockClrVersion` usa três parâmetros, que são chamadas de retorno do tipo [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Esse tipo é definido da seguinte maneira.  
+ O host chama `LockClrVersion` antes de inicializar o CLR. `LockClrVersion` usa três parâmetros, que são os retornos de chamada do tipo [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Esse tipo é definido da seguinte maneira.  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- As seguintes etapas ocorrem na inicialização do tempo de execução:  
+ As seguintes etapas ocorrem após a inicialização do tempo de execução:  
   
-1.  As chamadas de host [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ou uma das outras funções de inicialização de tempo de execução. Como alternativa, o host foi possível inicializar o tempo de execução usando a ativação de objeto COM.  
+1.  O host chama [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ou uma das outras funções de inicialização de tempo de execução. Como alternativa, o host foi possível inicializar o tempo de execução usando a ativação de objeto COM.  
   
 2.  O tempo de execução chama a função especificada pelo `hostCallback` parâmetro.  
   
-3.  A função especificada por `hostCallback` , em seguida, faz com que a seguinte sequência de chamadas:  
+3.  A função especificada por `hostCallback` , em seguida, faz a seguinte sequência de chamadas:  
   
     -   A função especificada pelo `pBeginHostSetup` parâmetro.  
   
-    -   `CorBindToRuntimeEx` (ou outra função de inicialização do tempo de execução).  
+    -   `CorBindToRuntimeEx` (ou outra função de inicialização de tempo de execução).  
   
-    -   [Iclrruntimehost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [Iclrruntimehost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
     -   A função especificada pelo `pEndHostSetup` parâmetro.  
   
- Todas as chamadas de `pBeginHostSetup` para `pEndHostSetup` devem ocorrer em um único thread ou fibra, com a mesma pilha de lógica. Esse thread pode ser diferente do thread no qual `hostCallback` é chamado.  
+ Todas as chamadas de `pBeginHostSetup` para `pEndHostSetup` deve ocorrer em um único thread ou fibra, com a mesma pilha de lógica. Esse thread pode ser diferente do thread no qual `hostCallback` é chamado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

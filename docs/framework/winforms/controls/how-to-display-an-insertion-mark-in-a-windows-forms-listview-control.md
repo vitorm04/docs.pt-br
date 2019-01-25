@@ -1,5 +1,5 @@
 ---
-title: Como exibir uma marca de inserção em um controle ListView dos Windows Forms
+title: 'Como: Exibir uma marca de inserção em um controle ListView dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: b9b6e1911d3e372861ebcdc5a175314d69c89175
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6e2e89baf17c63ea3ad4814cd761449baeb78405
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627506"
 ---
-# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Como exibir uma marca de inserção em um controle ListView dos Windows Forms
+# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Como: Exibir uma marca de inserção em um controle ListView dos Windows Forms
 A marca de inserção no <xref:System.Windows.Forms.ListView> controle mostra aos usuários o ponto onde os itens arrastados serão inseridos. Quando um usuário arrasta um item para um ponto entre dois outros itens, a marca de inserção mostra o local da nova esperado do item.  
   
 > [!NOTE]
@@ -40,13 +40,13 @@ A marca de inserção no <xref:System.Windows.Forms.ListView> controle mostra ao
   
 -   Referências aos assemblies Sistema e System.Windows.Forms.  
   
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [como: Compilar e executar um exemplo de código completa do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.ListViewInsertionMark>  
- [Controle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Visão geral do controle ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- [Recursos do Windows XP e controles do Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- [Instruções Passo a Passo: Executando uma Operação do Tipo "Arrastar e Soltar" nos Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.ListViewInsertionMark>
+- [Controle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Visão geral do controle ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+- [Recursos do Windows XP e controles do Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)
+- [Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

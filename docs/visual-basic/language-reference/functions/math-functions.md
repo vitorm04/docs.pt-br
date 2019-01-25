@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a644183f0af7a10672acc62e39ac174b88a47b90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731810"
 ---
 # <a name="math-functions-visual-basic"></a>Funções matemáticas (Visual Basic)
 Os métodos do <xref:System.Math?displayProperty=nameWithType> classe fornecer trigonométricas, logarítmicas e outras funções matemáticas comuns.  
@@ -166,9 +166,9 @@ End Function
   
  **Assembly:** mscorlib (em mscorlib. dll)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
- <xref:System.Double.NaN>  
- [Funções Matemáticas Derivadas](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [Operadores Aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
+- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>
+- <xref:System.Double.NaN>
+- [Funções Matemáticas Derivadas](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [Operadores Aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
