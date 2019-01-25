@@ -1,14 +1,14 @@
 ---
 title: Guia de conteúdo do ML.NET
 description: Saiba como criar soluções de IA personalizadas e integrá-las aos seus aplicativos do .NET usando o ML.NET.
-ms.date: 11/06/2018
+ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550455"
 ---
 # <a name="mlnet-content-guide"></a>Guia de conteúdo do ML.NET
 
@@ -28,6 +28,8 @@ Para entender os conceitos básicos, veja [Conceitos básicos do treinamento de 
 ## <a name="tutorials"></a>Tutoriais
 
 [Análise de sentimento usando um modelo de classificação binária](tutorials/sentiment-analysis.md) mostra como criar um aplicativo que determina se o sentimento é positivo ou negativo.
+
+[Classificar os problemas do GitHub usando um modelo de classificação multiclasse](tutorials/github-issue-classification.md) mostra como criar um aplicativo que determina o rótulo de Área de um problema do GitHub.
 
 [Previsão do valor da corrida do táxi usando um modelo de regressão](tutorials/taxi-fare.md) mostra como criar um aplicativo de previsão que usa diversos fatores de dados históricos para determinar a resposta.
 

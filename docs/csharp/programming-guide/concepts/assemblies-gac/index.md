@@ -2,17 +2,17 @@
 title: Assemblies e o cache de assembly global (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 25ae3a25b825a0594d7cc9479c58e967375e61b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577039"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblies e o cache de assembly global (C#)
 Os assemblies formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para um aplicativo baseado em .NET Framework. Os assemblies tomam a forma de um arquivo executável (.exe) ou de biblioteca de link dinâmico (.dll) e são os blocos de construção do .NET Framework. Eles oferecem ao Common Language Runtime as informações de que ele precisa para estar ciente das implementações de tipo. Você pode pensar em um assembly como uma coleção de tipos e recursos que formam uma unidade lógica de funcionalidade e são criados para trabalharem juntos.  
   
- Os assemblies podem conter um ou mais módulos. Por exemplo, projetos maiores podem ser planejados de forma que vários desenvolvedores individuais trabalhem em módulos separados, todos juntos para criar um único assembly. Para obter mais informações sobre os módulos, consulte o tópico [Como compilar um Assembly de vários arquivos](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Os assemblies podem conter um ou mais módulos. Por exemplo, projetos maiores podem ser planejados de forma que vários desenvolvedores individuais trabalhem em módulos separados, todos juntos para criar um único assembly. Para obter mais informações sobre os módulos, confira o tópico [Como: compilar um assembly de vários arquivos](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Os assemblies têm as seguintes propriedades:  
   
@@ -52,12 +52,12 @@ Os assemblies formam a unidade fundamental de implantação, controle de versão
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
-- [Assemblies no Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Assemblies Amigáveis (C#)](friend-assemblies.md)  
-- [Como compartilhar um assembly com outros aplicativos (C#)](how-to-share-an-assembly-with-other-applications.md)  
-- [Como carregar e descarregar assemblies (C#)](how-to-load-and-unload-assemblies.md)  
-- [Como determinar se um arquivo é um Assembly (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
-- [Como criar e usar assemblies utilizando a linha de comando (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [Assemblies no Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblies Amigáveis (C#)](friend-assemblies.md)
+- [Como: compartilhar um assembly com outros aplicativos (C#)](how-to-share-an-assembly-with-other-applications.md)
+- [Como: carregar e descarregar assemblies (C#)](how-to-load-and-unload-assemblies.md)
+- [Como: determinar se um arquivo é um assembly (C#)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Como: criar e usar assemblies usando a linha de comando (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [Passo a passo: inserindo informações de tipo dos Microsoft Office Assemblies no Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
