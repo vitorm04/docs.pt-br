@@ -1,23 +1,23 @@
 ---
-title: 'Como: Controle prefixos de namespace (Visual Basic) (LINQ to XML)'
+title: 'Como: Prefixos de Namespace de controle (Visual Basic) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: f60f90ef6742dfd725f51ff7e760436117346e85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91117307caf7e55bd8b512fbd841760616f0b2c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623736"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a><span data-ttu-id="793d4-102">Como: Controle prefixos de namespace (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="793d4-102">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>
-<span data-ttu-id="793d4-103">Este tópico descreve como você pode controlar prefixos de namespace.</span><span class="sxs-lookup"><span data-stu-id="793d4-103">This topic describes how you can control namespace prefixes.</span></span>  
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a><span data-ttu-id="40abe-102">Como: Prefixos de Namespace de controle (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="40abe-102">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>
+<span data-ttu-id="40abe-103">Este tópico descreve como você pode controlar prefixos de namespace.</span><span class="sxs-lookup"><span data-stu-id="40abe-103">This topic describes how you can control namespace prefixes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="793d4-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="793d4-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="40abe-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="40abe-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="793d4-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="793d4-105">Description</span></span>  
- <span data-ttu-id="793d4-106">Esse exemplo declara dois namespaces.</span><span class="sxs-lookup"><span data-stu-id="793d4-106">This example declares two namespaces.</span></span> <span data-ttu-id="793d4-107">Especifica que o `http://www.adventure-works.com` namespace tem o prefixo `aw`e que o `www.fourthcoffee.com` namespace tem o prefixo de `fc`.</span><span class="sxs-lookup"><span data-stu-id="793d4-107">It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
+### <a name="description"></a><span data-ttu-id="40abe-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="40abe-105">Description</span></span>  
+ <span data-ttu-id="40abe-106">Esse exemplo declara dois namespaces.</span><span class="sxs-lookup"><span data-stu-id="40abe-106">This example declares two namespaces.</span></span> <span data-ttu-id="40abe-107">Especifica que o `http://www.adventure-works.com` namespace tem o prefixo `aw`e que o `www.fourthcoffee.com` namespace tem o prefixo `fc`.</span><span class="sxs-lookup"><span data-stu-id="40abe-107">It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="793d4-108">Código</span><span class="sxs-lookup"><span data-stu-id="793d4-108">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="40abe-108">Código</span><span class="sxs-lookup"><span data-stu-id="40abe-108">Code</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -40,8 +40,8 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="793d4-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="793d4-109">Comments</span></span>  
- <span data-ttu-id="793d4-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="793d4-110">This example produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="40abe-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="40abe-109">Comments</span></span>  
+ <span data-ttu-id="40abe-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="40abe-110">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -53,5 +53,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="793d4-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="793d4-111">See Also</span></span>  
- [<span data-ttu-id="793d4-112">Trabalhando com Namespaces XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="793d4-112">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="40abe-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="40abe-111">See also</span></span>
+- [<span data-ttu-id="40abe-112">Trabalhando com Namespaces XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="40abe-112">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

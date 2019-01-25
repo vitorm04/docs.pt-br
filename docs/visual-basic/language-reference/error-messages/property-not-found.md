@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID422
 ms.assetid: 127e0f5f-0997-4ac5-b9af-2e6a2eb513a2
-ms.openlocfilehash: c3e8d783767c0c81fe66cc214acb9b44a7ad8b57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9912094e7e9b489c24d5aaebe6fba705c400da8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611846"
 ---
-# <a name="property-not-found"></a><span data-ttu-id="d8d3d-102">Propriedade não localizada</span><span class="sxs-lookup"><span data-stu-id="d8d3d-102">Property not found</span></span>
-<span data-ttu-id="d8d3d-103">Este objeto não suporta a propriedade especificada.</span><span class="sxs-lookup"><span data-stu-id="d8d3d-103">This object does not support the specified property.</span></span>  
+# <a name="property-not-found"></a><span data-ttu-id="98cb3-102">Propriedade não localizada</span><span class="sxs-lookup"><span data-stu-id="98cb3-102">Property not found</span></span>
+<span data-ttu-id="98cb3-103">Este objeto não oferece suporte a propriedade especificada.</span><span class="sxs-lookup"><span data-stu-id="98cb3-103">This object does not support the specified property.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d8d3d-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="d8d3d-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="98cb3-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="98cb3-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="d8d3d-105">Verifique a ortografia do nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="d8d3d-105">Check the spelling of the property's name.</span></span>  
+1.  <span data-ttu-id="98cb3-105">Verifique a ortografia do nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="98cb3-105">Check the spelling of the property's name.</span></span>  
   
-2.  <span data-ttu-id="d8d3d-106">Verifique a documentação do objeto para certificar-se de que você não está tentando acessar algo parecido com uma propriedade "texto" quando o objeto dá suporte a um "legenda" ou a propriedade nomeada da mesma forma.</span><span class="sxs-lookup"><span data-stu-id="d8d3d-106">Check the object's documentation to make sure you are not trying to access something like a "text" property when the object actually supports a "caption" or similarly named property.</span></span>  
+2.  <span data-ttu-id="98cb3-106">Verifique a documentação do objeto para verificar se que você não está tentando acessar algo parecido com uma propriedade de "text" quando o objeto dá suporte, na verdade, um "legenda" ou uma propriedade nomeada da mesma forma.</span><span class="sxs-lookup"><span data-stu-id="98cb3-106">Check the object's documentation to make sure you are not trying to access something like a "text" property when the object actually supports a "caption" or similarly named property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8d3d-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d8d3d-107">See Also</span></span>  
- [<span data-ttu-id="d8d3d-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="d8d3d-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="98cb3-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="98cb3-107">See also</span></span>
+- [<span data-ttu-id="98cb3-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="98cb3-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
