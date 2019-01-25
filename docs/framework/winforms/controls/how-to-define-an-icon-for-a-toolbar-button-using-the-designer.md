@@ -1,5 +1,5 @@
 ---
-title: Como definir um ícone para um botão ToolBar usando o designer
+title: 'Como: Definir um ícone para um botão de barra de ferramentas usando o Designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: f26e21d824420fc4ff0480de21f260309c5c2e11
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bfd84913015eaf45674b3cd0c7a3d53a202874c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527062"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Como definir um ícone para um botão ToolBar usando o designer
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Como: Definir um ícone para um botão de barra de ferramentas usando o Designer
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.ToolStrip> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.ToolBar>, no entanto, o controle <xref:System.Windows.Forms.ToolBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.  
   
  <xref:System.Windows.Forms.ToolBar> botões são capazes de exibir ícones dentro deles para facilitar a identificação pelos usuários. Isso é feito pela adição de imagens para o <xref:System.Windows.Forms.ImageList> componente e associá-lo com o <xref:System.Windows.Forms.ToolBar> controle.  
   
- O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contém uma <xref:System.Windows.Forms.ToolBar> controle e um <xref:System.Windows.Forms.ImageList> componente. Para obter informações sobre como configurar um projeto desse tipo, consulte [Como criar um projeto de aplicativos do Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Como adicionar controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contém uma <xref:System.Windows.Forms.ToolBar> controle e um <xref:System.Windows.Forms.ImageList> componente. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [como: Adicionar controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>Para definir um ícone para um botão de barra de ferramentas em tempo de design  
   
-1.  Adicionar imagens para o <xref:System.Windows.Forms.ImageList> componente. Para obter mais informações, consulte [Como adicionar ou remover imagens ImageList com o designer](../../../../docs/framework/winforms/controls/how-to-add-or-remove-imagelist-images-with-the-designer.md).  
+1.  Adicionar imagens para o <xref:System.Windows.Forms.ImageList> componente. Para obter mais informações, confira [Como: Adicionar ou remover imagens ImageList com o Designer](../../../../docs/framework/winforms/controls/how-to-add-or-remove-imagelist-images-with-the-designer.md).  
   
 2.  Selecione o <xref:System.Windows.Forms.ToolBar> controle no formulário.  
   
@@ -41,8 +41,8 @@ ms.locfileid: "43856602"
   
 6.  No **propriedades** janela que aparece no painel à direita do **Editor de coleção ToolBarButton**, defina o <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propriedade de cada botão de barra de ferramentas para um dos valores na lista, que é desenhada entre as imagens que você adicionou ao <xref:System.Windows.Forms.ImageList> componente.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.ToolBar>  
- [Como disparar eventos de menu para botões da barra de ferramentas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [Controle de barra de ferramentas](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.ToolBar>
+- [Como: Disparar eventos de Menu para botões da barra de ferramentas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Controle de barra de ferramentas](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

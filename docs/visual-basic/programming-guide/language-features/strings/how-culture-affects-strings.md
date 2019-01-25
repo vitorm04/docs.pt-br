@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543442"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Como a cultura afeta cadeias de caracteres no Visual Basic
 Esta página de Ajuda discute como o Visual Basic usa informações de cultura para executar comparações e conversões de cadeia de caracteres.  
@@ -36,7 +36,7 @@ Esta página de Ajuda discute como o Visual Basic usa informações de cultura p
  Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Conversion.Str%2A> e <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>Usando uma cultura específica  
- Imagine que você está desenvolvendo um aplicativo que envia uma data (formatada como uma cadeia de caracteres) a um serviço Web. Nesse caso, seu aplicativo deve usar uma cultura específica para a conversão de cadeia de caracteres. Para ilustrar o porquê, considere o resultado do uso da data <xref:System.DateTime.ToString> método: se seu aplicativo usa esse método para formatar a data 4 de julho de 2005, ele retornará "4/7/2005 12:00:00 AM" quando executado com a cultura do inglês dos Estados Unidos (en-US), mas ele retorna " 04.07.2005 00:00:00 "quando executado com a cultura de alemão (de-DE).  
+ Imagine que você está desenvolvendo um aplicativo que envia uma data (formatada como uma cadeia de caracteres) a um serviço Web. Nesse caso, seu aplicativo deve usar uma cultura específica para a conversão de cadeia de caracteres. Para ilustrar o porquê, considere o resultado do uso da data <xref:System.DateTime.ToString> método: Se seu aplicativo usa esse método para formatar a data 4 de julho de 2005, ele retorna "4/7/2005 12:00:00 AM" quando executado com a cultura do inglês dos Estados Unidos (en-US), mas ele retorna "04.07.2005 00:00:00" quando executado com a cultura de alemão (de-DE).  
   
  Quando você precisar executar uma conversão de cadeia de caracteres em um formato de cultura específica, você deve usar o `CultureInfo` classe está incorporada a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Você pode criar um novo `CultureInfo` objeto para uma cultura específica, passando o nome da cultura para o <xref:System.Globalization.CultureInfo.%23ctor%2A> construtor. Os nomes de cultura com suporte são listados no <xref:System.Globalization.CultureInfo> página de Ajuda da classe.  
   
@@ -78,7 +78,7 @@ Esta página de Ajuda discute como o Visual Basic usa informações de cultura p
 ### <a name="security-considerations"></a>Considerações sobre segurança  
  Se seu aplicativo toma decisões de segurança com base no resultado de uma comparação ou operação de alteração de caso e, em seguida, a operação deve usar o <xref:System.String.Compare%2A?displayProperty=nameWithType> método e passar `Ordinal` ou `OrdinalIgnoreCase` para o `comparisonType` argumento.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Globalization.CultureInfo>  
- [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Funções de Conversão do Tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Globalization.CultureInfo>
+- [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Funções de Conversão do Tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

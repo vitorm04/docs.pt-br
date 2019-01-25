@@ -1,16 +1,16 @@
 ---
-title: Como habilitar o rastreamento do WIF
+title: 'Como: Habilitar o rastreamento do WIF'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605146"
 ---
-# <a name="how-to-enable-wif-tracing"></a>Como habilitar o rastreamento do WIF
+# <a name="how-to-enable-wif-tracing"></a>Como: Habilitar o rastreamento do WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -18,7 +18,7 @@ ms.locfileid: "47207105"
 -   Web Forms do ASP.NET®  
   
 ## <a name="summary"></a>Resumo  
- Estas instruções fornecem procedimentos passo a passo detalhados para habilitar o rastreamento do WIF em um aplicativo ASP.NET. Elas também fornecem instruções para testar o aplicativo para verificar se o ouvinte de rastreamento e o registro estão funcionando corretamente. Essas instruções não têm tópicos de explicações detalhados para criar um STS (Serviço de Token de Segurança), e usa o STS de Desenvolvimento que vem com a Ferramenta de Identidade e Acesso. O STS de Desenvolvimento não efetua a autenticação real e destina-se somente a testes. Você precisará instalar a Ferramenta de Identidade e Acesso para concluir estas instruções. O download pode ser feito na seguinte localização: [Ferramenta de Identidade e Acesso](https://go.microsoft.com/fwlink/?LinkID=245849)  
+ Estas instruções fornecem procedimentos passo a passo detalhados para habilitar o rastreamento do WIF em um aplicativo ASP.NET. Elas também fornecem instruções para testar o aplicativo para verificar se o ouvinte de rastreamento e o registro estão funcionando corretamente. Essas instruções não têm tópicos de explicações detalhados para criar um STS (Serviço de Token de Segurança), e usa o STS de Desenvolvimento que vem com a Ferramenta de Identidade e Acesso. O STS de Desenvolvimento não efetua a autenticação real e destina-se somente a testes. Você precisará instalar a Ferramenta de Identidade e Acesso para concluir estas instruções. Ele pode ser baixado do seguinte local: [Ferramenta de identidade e acesso](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 > [!IMPORTANT]
 >  Habilitar o rastreamento do WIF para aplicações passivas, ou seja, aplicativos que usam o protocolo Web Services Federation, pode expor o aplicativo a ataques de DoS (negação de serviço) ou à divulgação de informações para uma terceira parte mal-intencionada. Isso inclui RPs passivos e STSes passivos. Por esse motivo, é recomendável que você não habilite o rastreamento do WIF para RPs passivos ou STSes em um ambiente de produção.  
@@ -42,7 +42,7 @@ ms.locfileid: "47207105"
 -   Habilitar o rastreamento e verificar se ele está funcionando  
   
 ## <a name="overview"></a>Visão geral  
- O rastreamento permite depurar e solucionar problemas de vários tipos de problemas com o WIF, incluindo tokens, cookies, declarações, mensagens de protocolo e muito mais. O rastreamento do WIF é semelhante ao rastreamento do WCF; por exemplo, você pode escolher o detalhamento dos rastreamentos para exibir tudo, desde mensagens críticas até todas as mensagens. Os rastreamentos do WIF podem ser gerados em arquivos **.xml** ou em arquivos **.svclog** que podem ser exibidos usando a ferramenta Visualizador de Rastreamento de Serviço. Essa ferramenta está localizada no diretório **bin** do caminho de instalação do SDK do Windows no seu computador, por exemplo: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
+ O rastreamento permite depurar e solucionar problemas de vários tipos de problemas com o WIF, incluindo tokens, cookies, declarações, mensagens de protocolo e muito mais. O rastreamento do WIF é semelhante ao rastreamento do WCF; por exemplo, você pode escolher o detalhamento dos rastreamentos para exibir tudo, desde mensagens críticas até todas as mensagens. Os rastreamentos do WIF podem ser gerados em arquivos **.xml** ou em arquivos **.svclog** que podem ser exibidos usando a ferramenta Visualizador de Rastreamento de Serviço. Essa ferramenta está localizada na **bin** diretório do SDK do Windows caminho de instalação no seu computador, por exemplo: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
@@ -65,14 +65,14 @@ ms.locfileid: "47207105"
   
 5.  A janela **Identidade e Acesso** é exibida. Em **Provedores**, selecione **Testar o aplicativo com o STS de Desenvolvimento Local** e clique em **Aplicar**.  
   
-6.  Crie uma nova pasta chamada **logs** na raiz da unidade **C:**, conforme mostrado: **C:\logs**  
+6.  Crie uma nova pasta chamada **logs** na raiz do **c:** unidade, como mostrado: **C:\logs**  
   
 7.  Adicione o elemento **\<System.Diagnostics>** a seguir para o arquivo de configuração *Web.config* imediatamente após o fechamento do elemento **\</configSections>**, conforme mostrado:  
   
     ```xml  
     <configuration>  
         <configSections>  
-        …  
+            ...
         </configSections>  
         <system.diagnostics>  
             <sources>  

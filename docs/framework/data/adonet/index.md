@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 87b29db0cc093b195361ef34086f41038c181bef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507311"
 ---
 # <a name="adonet"></a>ADO.NET
 O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para desenvolvedores do .NET Framework. O ADO.NET fornece um conjunto rico de componentes para criar aplicativos distribuídos e de compartilhamento de dados. Faz parte do .NET Framework, fornecendo acesso a dados de aplicativo relacionais e XML. O ADO.NET oferece suporte a uma variedade de necessidades de desenvolvimento, incluindo a criação de clientes front-end de banco de dados e objetos comerciais de camada intermediária usados por aplicativos, ferramentas, linguagens ou navegadores da Internet.  
@@ -62,6 +62,6 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
  [Exemplos e início rápido](https://msdn.microsoft.com/library/ms184422.aspx)  
  Fornece listagens completas de todos os exemplos e exemplos do QuickStart associados com o .NET Framework.  
   
-## <a name="see-also"></a>Consulte também  
- [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

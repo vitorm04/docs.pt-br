@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7e653101faf9e0664f41e031c7bad05523825f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5854abd97c05cf0d57bfdd9a19826fea2fd7502
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566938"
 ---
 # <a name="constrained-execution-regions"></a>Regiões de execução restrita
 Uma CER (região de execução restrita) faz parte de um mecanismo para a criação de código gerenciado confiável. A CER define uma área na qual o CLR (Common Language Runtime) é restrito de gerar exceções fora de banda que possam impedir que o código na área seja executado em sua totalidade. Nessa região, o código do usuário é restrito de executar um código que poderá resultar na geração de exceções fora de banda. O método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve preceder imediatamente um bloco `try` e marca os blocos `catch`, `finally` e `fault` como regiões de execução restrita. Depois de marcado como uma região restrita, o código deverá chamar apenas outro código com contratos de confiabilidade forte e o código não deverá alocar nem fazer chamadas virtuais a métodos não preparados ou não confiáveis, a menos que o código esteja preparado para manipular falhas. O CLR atrasa as anulações de thread do código que está sendo executado em uma CER.  
@@ -114,5 +114,5 @@ Uma CER (região de execução restrita) faz parte de um mecanismo para a criaç
   
 -   Ponteiros de função e representantes.  
   
-## <a name="see-also"></a>Consulte também  
- [Melhores práticas de confiabilidade](../../../docs/framework/performance/reliability-best-practices.md)
+## <a name="see-also"></a>Consulte também
+- [Melhores práticas de confiabilidade](../../../docs/framework/performance/reliability-best-practices.md)

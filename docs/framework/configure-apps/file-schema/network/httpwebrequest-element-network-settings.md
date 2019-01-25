@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 0d3feb168acbd623270a2038bf06a3c97126bd05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a883b2e57d0f055237d68e4f69651ef496795ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590020"
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; (configurações de rede)
 Personaliza os parâmetros de solicitação da Web.  
@@ -21,7 +21,7 @@ Personaliza os parâmetros de solicitação da Web.
  \<configuration>  
 \<system.net>  
 \<Configurações >  
-\<httpWebRequest >  
+\<httpWebRequest>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,6 +76,6 @@ Personaliza os parâmetros de solicitação da Web.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

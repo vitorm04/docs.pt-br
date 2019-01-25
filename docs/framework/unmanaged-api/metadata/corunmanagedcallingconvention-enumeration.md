@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b249d26335a66b55d0643f3e75bfd90554f731e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9a1ee9ab1649a832b6daefc96049d68850f3bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555551"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Enumeração CorUnmanagedCallingConvention
 Especifica as convenções de chamada para código não gerenciado.  
@@ -48,7 +48,7 @@ typedef enum CorUnmanagedCallingConvention {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|A convenção de chamada de idioma de C.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|A convenção de chamada do idioma do C.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|A convenção de chamada padrão.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|A "this" convenção de chamada.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|A convenção de chamada "rápida".|  
@@ -58,14 +58,14 @@ typedef enum CorUnmanagedCallingConvention {
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Não usado.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR não dá suporte a convenção de chamada "rápida" no .NET Framework versão 1.0.  
+ O CLR não oferece suporte a convenção de chamada "rápida" no .NET Framework versão 1.0.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

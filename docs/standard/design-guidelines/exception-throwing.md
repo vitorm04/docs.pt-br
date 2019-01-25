@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
-ms.openlocfilehash: 016a42ee7a772a3268e823e75b6239467e13b315
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562876"
 ---
 # <a name="exception-throwing"></a>Gerando exceções
 Diretrizes de exceções descritas nesta seção exigem uma boa definição do significado da falha de execução. Falha na execução ocorre sempre que um membro não pode fazer o que ele foi projetado para fazer (o que o nome do membro implica). Por exemplo, se o `OpenFile` método não pode retornar um identificador de arquivo aberto para o chamador, ele será considerado uma falha na execução.  
@@ -66,5 +66,5 @@ Diretrizes de exceções descritas nesta seção exigem uma boa definição do s
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de design para exceções](../../../docs/standard/design-guidelines/exceptions.md)

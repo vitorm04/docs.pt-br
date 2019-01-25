@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
-ms.openlocfilehash: 928cfd33a187637c6d18da3cccefb22bb2950acf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 546417cc0b4aed7fa092ddb25fe37fa8d95d0e91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510476"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>Conta todas o número de elementos em uma sequência
 Use o operador de <xref:System.Linq.Enumerable.Count%2A> para contar o número de elementos em uma sequência.  
@@ -31,6 +31,6 @@ Use o operador de <xref:System.Linq.Enumerable.Count%2A> para contar o número d
  [!code-csharp[DLinqQueryExamples#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#5)]
  [!code-vb[DLinqQueryExamples#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+## <a name="see-also"></a>Consulte também
+- [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

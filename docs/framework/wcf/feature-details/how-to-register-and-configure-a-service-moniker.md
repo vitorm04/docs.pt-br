@@ -1,18 +1,18 @@
 ---
-title: Como registrar e configurar um Moniker de serviço
+title: 'Como: Registrar e configurar um Moniker de serviço'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593791"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Como registrar e configurar um Moniker de serviço
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Como: Registrar e configurar um Moniker de serviço
 Antes de usar o moniker de serviço do Windows Communication Foundation (WCF) dentro de um aplicativo COM um contrato com tipo, você deve registrar os tipos de atributo necessários com e configurar o aplicativo COM e o identificador de origem com a ligação exigida configuração.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Para registrar os tipos de atributo necessários COM  
@@ -87,7 +87,7 @@ Antes de usar o moniker de serviço do Windows Communication Foundation (WCF) de
     >  Você pode usar um código semelhante em um C++, c# ou qualquer outro aplicativo de linguagem .NET.  
   
     > [!NOTE]
-    >  : Se o moniker está mal formado ou se o serviço estiver disponível, a chamada para `GetObject` retornará um erro de "Sintaxe inválida". Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
+    >  : Se o moniker está mal formado ou se o serviço está indisponível, a chamada para `GetObject` retornará um erro de "Sintaxe inválida". Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
   
      Embora este tópico se concentra no uso o moniker de serviço do código do VB 6.0, você pode usar um moniker de serviço de outros idiomas. Quando usar um moniker de C++ de código a Svcutil.exe gerado assembly deve ser importado com "no_namespace named_guids raw_interfaces_only", conforme mostrado no código a seguir.  
   
@@ -97,5 +97,5 @@ Antes de usar o moniker de serviço do Windows Communication Foundation (WCF) de
   
      Isso modifica as definições de interface importado para que todos os métodos retornam um `HResult`. Outro valores de retorno é convertido em parâmetros de saída. A execução geral dos métodos permanece o mesmo. Isso permite que você determine a causa de uma exceção ao chamar um método no proxy. Essa funcionalidade só está disponível a partir do código C++.  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Consulte também
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

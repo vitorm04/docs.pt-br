@@ -2,12 +2,12 @@
 title: Inferindo estrutura relacional do DataSet do XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 13f63d416b76dbeaedbc007cd27eb2975f1efdef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5cbbcd148f13a630398e870124803d482f63698
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587642"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Inferindo estrutura relacional do DataSet do XML
 A estrutura relacional ou o esquema de um <xref:System.Data.DataSet> é composto de tabelas, colunas, restrições e relações. Ao carregar um <xref:System.Data.DataSet> do XML, o esquema pode ser predefinido ou pode ser criado, explicitamente ou por meio de inferência do XML que está sendo carregado. Para obter mais informações sobre como carregar o esquema e conteúdo de um <xref:System.Data.DataSet> do XML, consulte [carregar um conjunto de dados do XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) e [Carregando informações de esquema de conjunto de dados do XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
@@ -47,5 +47,5 @@ A estrutura relacional ou o esquema de um <xref:System.Data.DataSet> é composto
  [ADO.NET Overview](../../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)  
  Descreve o ADO.NET arquitetura e componentes e como usá-los para acessar fontes de dados existentes e gerenciar dados de aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

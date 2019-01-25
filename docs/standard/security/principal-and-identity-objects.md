@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604387"
 ---
 # <a name="principal-and-identity-objects"></a>Objetos Principal e Identity
 Código gerenciado pode descobrir a identidade ou a função de uma entidade de segurança por meio de um <xref:System.Security.Principal.IPrincipal> objeto que contém uma referência a um <xref:System.Security.Principal.IIdentity> objeto. Pode ser útil comparar objetos identity e principal para conceitos familiares, como contas de usuário e grupo. Na maioria dos ambientes de rede, as contas de usuário representam pessoas ou programas, enquanto as contas de grupo representam determinadas categorias de usuários e os direitos que eles possuem. Da mesma forma, os objetos de identidade do .NET Framework representam usuários, enquanto as funções representam as associações e contextos de segurança. No .NET Framework, o objeto de entidade encapsula um objeto de identidade e uma função. Aplicativos do .NET framework concedem direitos para a entidade de segurança com base em sua identidade ou, mais comumente, sua associação de função.  
@@ -44,9 +44,9 @@ Código gerenciado pode descobrir a identidade ou a função de uma entidade de 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como criar um objeto WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [Como criar objetos GenericPrincipal e GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [Como substituir um objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [Representação e reversão](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [Segurança baseada em Função](../../../docs/standard/security/role-based-security.md)  
+- [Como: Criar um objeto WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [Como: Criar objetos GenericPrincipal e GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [Como substituir um objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)
+- [Representação e reversão](../../../docs/standard/security/impersonating-and-reverting.md)
+- [Segurança baseada em Função](../../../docs/standard/security/role-based-security.md)
 - [Principais conceitos de segurança](../../../docs/standard/security/key-security-concepts.md)

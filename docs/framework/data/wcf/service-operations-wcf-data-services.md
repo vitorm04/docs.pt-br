@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: da8d482fbf506749f9805edcbbaad3c893ad56b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497112"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operações de serviço (WCF Data Services)
-O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina operações de serviço em um serviço de dados para expor métodos no servidor. Como outros recursos do serviço de dados, as operações de serviço são endereçadas por URIs. As operações de serviço permitem que você exponha a lógica de negócio em um serviço de dados, como implementar a lógica de validação, aplicar a segurança baseada em função, ou expor recursos de consulta especializada. Operações de serviço são métodos adicionados para a classe de serviço de dados que é derivada de <xref:System.Data.Services.DataService%601>. Como todos os outros recursos do serviço dados, você pode fornecer parâmetros para o método de operação de serviço. Por exemplo, o seguinte URI da operação de serviço (com base no [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) serviço de dados) passa o valor `London` para o `city` parâmetro:  
+O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina operações de serviço em um serviço de dados para expor métodos no servidor. Como outros recursos do serviço de dados, as operações de serviço são endereçadas por URIs. As operações de serviço permitem que você exponha a lógica de negócio em um serviço de dados, como implementar a lógica de validação, aplicar a segurança baseada em função, ou expor recursos de consulta especializada. Operações de serviço são métodos adicionados à classe de serviço de dados que deriva de <xref:System.Data.Services.DataService%601>. Como todos os outros recursos de serviço do dados, você pode fornecer parâmetros para o método de operação de serviço. Por exemplo, o seguinte URI da operação de serviço (com base nas [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) serviço de dados) passa o valor `London` para o `city` parâmetro:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -27,7 +27,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
  [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
  [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
- Você pode usar o <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> do <xref:System.Data.Services.DataService%601> para acessar diretamente a fonte de dados que o serviço de dados está usando. Para obter mais informações, consulte [como: definir uma operação de serviço](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
+ Você pode usar o <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> do <xref:System.Data.Services.DataService%601> para acessar diretamente a fonte de dados que o serviço de dados está usando. Para obter mais informações, confira [Como: Definir uma operação de serviço](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
   
  Para obter informações sobre como chamar uma operação de serviço de um aplicativo de cliente do .NET Framework, consulte [chamar operações de serviço](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).  
   
@@ -96,7 +96,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 >  Se uma operação de serviço tiver um tipo de retorno que foi oculto pelo acesso de restrição nos conjuntos de entidades subjacentes, a operação de serviço não estará disponível para aplicativos cliente.  
   
- Para obter mais informações, consulte [como: definir uma operação de serviço](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
+ Para obter mais informações, confira [Como: Definir uma operação de serviço](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
   
 ## <a name="raising-exceptions"></a>Gerando exceções  
  Recomendamos que você use a classe <xref:System.Data.Services.DataServiceException> sempre que gerar uma exceção na execução do serviço de dados. Isso ocorre porque o tempo de execução do serviço de dados sabe como mapear corretamente as propriedades desse objeto de exceção para a mensagem de resposta HTTP. Quando você gera um <xref:System.Data.Services.DataServiceException> em uma operação de serviço, a exceção retornada é empacotada em um <xref:System.Reflection.TargetInvocationException>. Para retornar o <xref:System.Data.Services.DataServiceException> base sem o <xref:System.Reflection.TargetInvocationException> incluído, você deverá substituir o método <xref:System.Data.Services.DataService%601.HandleException%2A> no <xref:System.Data.Services.DataService%601>, extrair o <xref:System.Data.Services.DataServiceException> de <xref:System.Reflection.TargetInvocationException> e retorná-lo como o erro de nível superior, como no exemplo a seguir:  
@@ -104,5 +104,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interceptadores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+## <a name="see-also"></a>Consulte também
+- [Interceptadores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

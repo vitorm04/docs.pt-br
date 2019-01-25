@@ -2,17 +2,17 @@
 title: Segurança de transporte de HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bda749366b452a41a925fa36c90b3a2caa6bca32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602982"
 ---
 # <a name="http-transport-security"></a>Segurança de transporte de HTTP
 Ao usar o HTTP como o transporte, a segurança é fornecida por uma implementação de Secure Sockets Layer (SSL). SSL é amplamente usado na Internet para autenticar um serviço para um cliente e, em seguida, para fornecer confidencialidade (criptografia) para o canal. Este tópico explica como o SSL funciona e como ele é implementado no Windows Communication Foundation (WCF).  
   
-## <a name="basic-ssl"></a>SSL básico  
+## <a name="basic-ssl"></a>Basic SSL  
  Como funciona o SSL é melhor explicada por meio de um cenário típico, nesse caso, site da Web de um banco. O site permite que o cliente faça logon com um nome de usuário e senha. Após ser autenticado, o usuário pode executar transações, como exibir saldos da conta, pagar contas e mover o dinheiro de uma conta para outra.  
   
  Quando um usuário pela primeira vez visita o site, o mecanismo SSL inicia uma série de negociações, chamado de um *handshake*, com cliente do usuário (neste caso, o Internet Explorer). Primeiro, o SSL autentica o site do banco para o cliente. Isso é uma etapa essencial porque os clientes primeiro devem saber que eles estão se comunicando com o site real e não uma falsificação que tenta seduzir digitando seu nome de usuário e senha. SSL faz essa autenticação usando um certificado SSL fornecido por uma autoridade confiável, como a VeriSign. A lógica funciona assim: VeriSign garante a identidade do site do banco. Como a VeriSign confia no Internet Explorer, o site é confiável. Se você quiser verificar com a VeriSign, você pode fazer então também clicando no logotipo VeriSign. Que apresenta uma instrução de autenticidade com a data de expiração e que ele é emitido para (o site do banco).  
@@ -38,9 +38,9 @@ Ao usar o HTTP como o transporte, a segurança é fornecida por uma implementaç
 ### <a name="using-iis-for-transport-security"></a>Usando o IIS para segurança de transporte  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Para configurar [!INCLUDE[iisver](../../../../includes/iisver-md.md)] como um host protegido (usando SSL), consulte [IIS 7.0 Beta: Configurando Secure Sockets Layer no IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Para configurar [!INCLUDE[iisver](../../../../includes/iisver-md.md)] como um host protegido (usando SSL), consulte [IIS 7.0 Beta: Configurando o protocolo SSL no IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
   
- Configurar certificados para uso com [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+ Configurar certificados para uso com [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: Configurando certificados de servidor no IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 #### <a name="iis-60"></a>IIS 6,0  
  Para configurar [!INCLUDE[iis601](../../../../includes/iis601-md.md)] como um host protegido (usando SSL), consulte [Configurando Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601).  
@@ -50,8 +50,8 @@ Ao usar o HTTP como o transporte, a segurança é fornecida por uma implementaç
 ### <a name="using-httpcfg-for-ssl"></a>Usando HttpCfg para SSL  
  Se você estiver criando um aplicativo WCF auto-hospedado, baixe a ferramenta HttpCfg.exe, disponível na [site de ferramentas de suporte do Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=29002).  
   
- Para obter mais informações sobre como usar a ferramenta HttpCfg.exe para configurar uma porta com um certificado X.509, consulte [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Para obter mais informações sobre como usar a ferramenta HttpCfg.exe para configurar uma porta com um certificado X.509, consulte [como: Configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+## <a name="see-also"></a>Consulte também
+- [Segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

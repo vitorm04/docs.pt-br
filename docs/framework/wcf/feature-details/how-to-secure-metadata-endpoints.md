@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e6fbaabb97e4a8de3e4bdbcc0c105b6cf999c0d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590676"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Como: Proteger pontos de extremidade de metadados
 Metadados para um serviço podem conter informações confidenciais sobre seu aplicativo que um usuário mal-intencionado pode aproveitar. Os consumidores do seu serviço também podem exigir um mecanismo seguro para obtenção de metadados sobre o serviço. Portanto, às vezes, é necessário publicar seus metadados usando um ponto de extremidade seguro.  
@@ -21,7 +21,7 @@ Metadados para um serviço podem conter informações confidenciais sobre seu ap
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Para criar uma empresa de metadados de HTTPS GET segura no código  
   
-1.  Configure uma porta com um certificado x. 509 apropriado. O certificado deve vir de uma autoridade confiável, e deve ter um uso pretendido do "Autorização de serviço". Você deve usar a ferramenta HttpCfg.exe para anexar o certificado à porta. Consulte [como: Configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Configure uma porta com um certificado x. 509 apropriado. O certificado deve vir de uma autoridade confiável, e deve ter um uso pretendido do "Autorização de serviço". Você deve usar a ferramenta HttpCfg.exe para anexar o certificado à porta. Confira [Como Configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
     > [!IMPORTANT]
     >  O assunto do certificado ou seu sistema de nome de domínio (DNS) deve corresponder ao nome do computador. Isso é essencial porque uma das primeiras etapas que executa o mecanismo HTTPS é verificar se o certificado é emitido para o mesmo identificador de URI (Uniform Resource) como o endereço no qual ele é invocado.  
@@ -92,11 +92,11 @@ Metadados para um serviço podem conter informações confidenciais sobre seu ap
   
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [Como: Configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [Como: Configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -1,5 +1,5 @@
 ---
-title: Como acessar itens específicos em um controle ComboBox, ListBox ou CheckedListBox dos Windows Forms
+title: 'Como: Acessar específicos de itens em um Windows Forms ComboBox, ListBox ou CheckedListBox controle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 731527f2d6adb206fa4d8bc4bc2e488c61b86200
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6478c24550f9f32ea75899521f7aa610ef12955
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656694"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Como acessar itens específicos em um controle ComboBox, ListBox ou CheckedListBox dos Windows Forms
-Acessar itens específicos em uma caixa de combinação de Windows Forms, caixa de listagem ou caixa de listagem marcada é uma tarefa essencial. Ele permite que você programaticamente determine o que está em uma lista, em qualquer posição determinada.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Como: Acessar específicos de itens em um Windows Forms ComboBox, ListBox ou CheckedListBox controle
+Acessar itens específicos em uma caixa de combinação de Windows Forms, caixa de listagem ou caixa de listagem marcada é uma tarefa essencial. Ele permite que você determine programaticamente o que está em uma lista, em qualquer posição determinada.  
   
 ### <a name="to-access-a-specific-item"></a>Para acessar um item específico  
   
@@ -51,8 +51,8 @@ Acessar itens específicos em uma caixa de combinação de Windows Forms, caixa 
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [Controles dos Windows Forms usados para listar opções](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [Controles dos Windows Forms usados para listar opções](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

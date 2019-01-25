@@ -2,12 +2,12 @@
 title: DataSets, DataTables e DataViews
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d712f82b0d776b671a8d8219276c32761d245047
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521277"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSets, DataTables e DataViews
 O <xref:System.Data.DataSet> do ADO.NET é uma representação de dados residentes na memória que fornecem um modelo de programação relacional consistente independentemente da origem dos dados que contém. Um <xref:System.Data.DataSet> representa um conjunto completo de dados que incluem as tabelas que contêm, pedem e restringem os dados, bem como as relações entre tabelas.  
@@ -78,6 +78,6 @@ O <xref:System.Data.DataSet> do ADO.NET é uma representação de dados resident
  [Adding Existing Constraints to a DataSet](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md) (Adicionando restrições existentes a um DataSet)  
  Descreve como preencher um **DataSet** com informações de chave primária de uma fonte de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

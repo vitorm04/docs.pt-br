@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427d93a9aff527d36720c4199782fa104a66f8d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576337"
 ---
 # <a name="gethashfromblob-function"></a>Função GetHashFromBlob
 Obtém um hash do assembly no endereço de memória especificado, usando o algoritmo de hash especificado.  
@@ -43,32 +43,32 @@ HRESULT GetHashFromBlob (
   
 #### <a name="parameters"></a>Parâmetros  
  `pbBlob`  
- [in] Um ponteiro para o endereço do bloco de memória a ser transformado em hash.  
+ [in] Um ponteiro para o endereço do bloco de memória a ser transformada em hash.  
   
  `cchBlob`  
  [in] O comprimento, em bytes, do bloco de memória.  
   
  `piHashAlg`  
- [out no] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo padrão.  
+ [no, out] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo padrão.  
   
  `pbHash`  
  [out] O buffer de hash retornado.  
   
  `cchHash`  
- [in] O tamanho máximo solicitado da `pbHash`.  
+ [in] O tamanho máximo solicitado de `pbHash`.  
   
  `pchHash`  
  [out] O tamanho, em bytes, do retornado `pbHash`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Método GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)  
- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Método GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
+- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -2,12 +2,12 @@
 title: Utilizando contadores de desempenho
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 787a3d08b463980721fb207d029057e14618db5e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 755d93e8165b9747f799571836d6b54e54a5fc45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623151"
 ---
 # <a name="using-performance-counters"></a>Utilizando contadores de desempenho
 Este exemplo demonstra como acessar os contadores de desempenho do Windows Communication Foundation (WCF) e como criar contadores de desempenho definidos pelo usuário. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -76,5 +76,5 @@ Este exemplo demonstra como acessar os contadores de desempenho do Windows Commu
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>Consulte também  
- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Consulte também
+- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

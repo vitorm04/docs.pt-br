@@ -1,5 +1,5 @@
 ---
-title: Como criar gerenciador de autorização personalizado para um serviço
+title: 'Como: Criar um Gerenciador de autorização personalizado para um serviço'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 7fe392b2fcd2f8ccb00bfd6ffd7e917649f8280c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573943"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Como criar gerenciador de autorização personalizado para um serviço
-A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) oferece suporte a um modelo de autorização extensível baseada em declarações. Declarações são extraídas de tokens e, opcionalmente, processadas por diretivas de autorização personalizada e, em seguida, são colocadas em um <xref:System.IdentityModel.Policy.AuthorizationContext>. Um Gerenciador de autorização examina as declarações de <xref:System.IdentityModel.Policy.AuthorizationContext> para tomar decisões de autorização.  
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Como: Criar um Gerenciador de autorização personalizado para um serviço
+A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) oferece suporte a um modelo de autorização extensível baseada em declarações. Declarações são extraídas de tokens e, opcionalmente, processadas por diretivas de autorização personalizado e, em seguida, colocadas em um <xref:System.IdentityModel.Policy.AuthorizationContext>. Um Gerenciador de autorização examina as declarações no <xref:System.IdentityModel.Policy.AuthorizationContext> para tomar decisões de autorização.  
   
- Por padrão, as decisões de autorização são feitas a <xref:System.ServiceModel.ServiceAuthorizationManager> classe; no entanto essas decisões podem ser substituídos por criar uma autorização personalizada manager. Para criar uma autorização personalizada manager, crie uma classe que deriva de <xref:System.ServiceModel.ServiceAuthorizationManager> e implementar <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método. Decisões de autorização são feitas no <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método, que retorna `true` quando o acesso é concedido e `false` quando o acesso é negado.  
+ Por padrão, as decisões de autorização são feitas pelo <xref:System.ServiceModel.ServiceAuthorizationManager> classe; no entanto essas decisões podem ser substituídas, criando uma autorização personalizada manager. Para criar uma autorização personalizada manager, crie uma classe que deriva de <xref:System.ServiceModel.ServiceAuthorizationManager> e implementar <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método. Decisões de autorização são feitas as <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método, que retorna `true` quando o acesso é concedido e `false` quando o acesso é negado.  
   
  Se a decisão de autorização depende do conteúdo do corpo da mensagem, use o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> método.  
   
@@ -26,9 +26,9 @@ A infraestrutura do modelo de identidade no Windows Communication Foundation (WC
   
  Registro do Gerenciador de autorização personalizada para um serviço pode ser feito no código ou configuração.  
   
-### <a name="to-create-a-custom-authorization-manager"></a>Para criar uma autorização personalizada manager  
+### <a name="to-create-a-custom-authorization-manager"></a>Para criar uma autorização personalizada Gerenciador  
   
-1.  Derivar uma classe a partir de <xref:System.ServiceModel.ServiceAuthorizationManager> classe.  
+1.  Derive uma classe do <xref:System.ServiceModel.ServiceAuthorizationManager> classe.  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
@@ -44,11 +44,11 @@ A infraestrutura do modelo de identidade no Windows Communication Foundation (WC
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>Para registrar um Gerenciador de autorização personalizada usando código  
   
-1.  Criar uma instância da autorização personalizada Gerenciador e atribuí-la para o <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> propriedade.  
+1.  Crie uma instância da autorização personalizada Gerenciador e atribuí-lo para o <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> propriedade.  
   
      O <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> podem ser acessados usando <xref:System.ServiceModel.ServiceHostBase.Authorization%2A> propriedade.  
   
-     O código a seguir exemplo registra o `MyServiceAuthorizationManager` Gerenciador de autorização personalizadas.  
+     O seguinte código de exemplo registra o `MyServiceAuthorizationManager` Gerenciador de autorização personalizado.  
   
      [!code-csharp[c_CustomAuthMgr#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#4)]
      [!code-vb[c_CustomAuthMgr#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#4)]  
@@ -59,17 +59,17 @@ A infraestrutura do modelo de identidade no Windows Communication Foundation (WC
   
 2.  Adicionar um [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) para o [ \<comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
   
-     Para o [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), adicione um `serviceAuthorizationManagerType` de atributos e defina seu valor para o tipo que representa o Gerenciador de autorização personalizada.  
+     Para o [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), adicione um `serviceAuthorizationManagerType` de atributos e defina seu valor para o tipo que representa o Gerenciador de autorização personalizado.  
   
 3.  Adicione uma associação que protege a comunicação entre o cliente e o serviço.  
   
-     A associação que é escolhida para essa comunicação determina as declarações que são adicionadas para o <xref:System.IdentityModel.Policy.AuthorizationContext>, que usa o Gerenciador de autorização personalizada para tomar decisões de autorização. Para obter mais detalhes sobre as associações fornecidas pelo sistema, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     A associação que é escolhida para essa comunicação determina as declarações que são adicionadas à <xref:System.IdentityModel.Policy.AuthorizationContext>, que usa o Gerenciador de autorização personalizada para tomar decisões de autorização. Para obter mais detalhes sobre as associações fornecidas pelo sistema, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Associar o comportamento de um ponto de extremidade de serviço, adicionando um [ \<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento e defina o valor da `behaviorConfiguration` de atributo para o valor do atributo name para o [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento.  
+4.  Associar o comportamento de um ponto de extremidade de serviço, adicionando um [ \<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento e defina o valor da `behaviorConfiguration` para o valor do atributo de nome de atributo a [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento.  
   
-     Para obter mais informações sobre como configurar um ponto de extremidade de serviço, consulte [como: criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
+     Para obter mais informações sobre como configurar um ponto de extremidade de serviço, consulte [como: Criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
-     O exemplo de código a seguir registra o Gerenciador de autorização personalizada `Samples.MyServiceAuthorizationManager`.  
+     O exemplo de código a seguir registra o Gerenciador de autorização personalizado `Samples.MyServiceAuthorizationManager`.  
   
     ```xml  
     <configuration>  
@@ -109,15 +109,15 @@ A infraestrutura do modelo de identidade no Windows Communication Foundation (WC
     ```  
   
     > [!WARNING]
-    >  Observe que, quando você especificar serviceAuthorizationManagerType, a cadeia de caracteres deve conter o nome de tipo totalmente qualificado. uma vírgula e o nome do assembly no qual o tipo é definido. Se você omitir o nome do assembly, o WCF tentará carregar o tipo do System.ServiceModel.dll.  
+    >  Observe que, quando você especificar serviceAuthorizationManagerType, a cadeia de caracteres deve conter o nome do tipo totalmente qualificado. uma vírgula e o nome do assembly no qual o tipo é definido. Se você deixar o nome do assembly, o WCF tentará carregar o tipo do ServiceModel.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra uma implementação básica de um <xref:System.ServiceModel.ServiceAuthorizationManager> classe que inclui substituindo o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método. O código de exemplo examina o <xref:System.IdentityModel.Policy.AuthorizationContext> para um personalizado de declaração e retorna `true` quando o recurso para essa declaração personalizada corresponde ao valor de ação do <xref:System.ServiceModel.OperationContext>. Para uma implementação mais completa de um <xref:System.ServiceModel.ServiceAuthorizationManager> de classe, consulte [política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md).  
+ O exemplo de código a seguir demonstra uma implementação básica de um <xref:System.ServiceModel.ServiceAuthorizationManager> classe que inclui substituindo o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método. O código de exemplo examina a <xref:System.IdentityModel.Policy.AuthorizationContext> para um personalizado de declaração e retorna `true` quando o recurso para essa declaração personalizada corresponde ao valor de ação do <xref:System.ServiceModel.OperationContext>. Para uma implementação mais completa de um <xref:System.ServiceModel.ServiceAuthorizationManager> classe, consulte [política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
  [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)

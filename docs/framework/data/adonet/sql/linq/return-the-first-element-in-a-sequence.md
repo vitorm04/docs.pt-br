@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
-ms.openlocfilehash: fd228b2d7534feca3cff49586ac0d43fbf9bcb1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74280b0da0713ae089178449fd7fcd0de39e7f9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546670"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>Retornar o primeiro elemento em uma sequência
 Use o operador de <xref:System.Linq.Enumerable.First%2A> para retornar o primeiro elemento em uma sequência. Consultas que usam <xref:System.Linq.Enumerable.First%2A> é executado imediatamente.  
@@ -36,6 +36,6 @@ Use o operador de <xref:System.Linq.Enumerable.First%2A> para retornar o primeir
  [!code-csharp[DLinqQueryExamples#15](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#15)]
  [!code-vb[DLinqQueryExamples#15](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#15)]  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+## <a name="see-also"></a>Consulte também
+- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

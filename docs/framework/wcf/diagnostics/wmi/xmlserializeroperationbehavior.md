@@ -2,12 +2,12 @@
 title: XmlSerializerOperationBehavior
 ms.date: 03/30/2017
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-ms.openlocfilehash: 7c7b53ff8eb8b6bc3dd73e5dea6f4c6a5613ec56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1e5c6217003923c21181f6a1f2efd942b2d53cf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524241"
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  
@@ -31,14 +31,14 @@ class XmlSerializerOperationBehavior : Behavior
 ### <a name="style"></a>Estilo  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Define o estilo da mensagem SOAP.  
   
 ### <a name="use"></a>Use  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Especifica o estilo de codificação de SOAP.  
   
@@ -48,5 +48,5 @@ class XmlSerializerOperationBehavior : Behavior
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>

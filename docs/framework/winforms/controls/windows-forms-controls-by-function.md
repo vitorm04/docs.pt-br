@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 058a18878b89991bd8124bd69e18476d4f1479d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543062"
 ---
 # <a name="windows-forms-controls-by-function"></a>Controles dos Windows Forms por função
 O Windows Forms oferece controles e componentes que executam várias funções. A tabela a seguir lista os controles e componentes dos Windows Forms de acordo com a função geral. Além disso, quando há vários controles que têm a mesma função, o controle recomendado é listado com uma observação sobre o controle que foi substituído por ele. Em uma tabela separada posterior, os controles substituídos são listados com suas substituições recomendadas.  
@@ -23,8 +23,8 @@ O Windows Forms oferece controles e componentes que executam várias funções. 
   
 |Função|Controle|Descrição|  
 |--------------|-------------|-----------------|  
-|Exibição de dados|Controle <xref:System.Windows.Forms.DataGridView>|O <xref:System.Windows.Forms.DataGridView> controle fornece uma tabela personalizável para exibir dados. O <xref:System.Windows.Forms.DataGridView> classe permite que a personalização de células, linhas, colunas e bordas. **Observação:** o <xref:System.Windows.Forms.DataGridView> controle fornece vários recursos básicos e avançados que estão faltando no <xref:System.Windows.Forms.DataGrid> controle. Para obter mais informações, consulte [Diferenças entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
-|Vinculação de dados e navegação|<xref:System.Windows.Forms.BindingSource> Componente|Simplifica a associação de controles em um formulário a dados, fornecendo gerenciamento de moeda, notificação de alteração e outros serviços.|  
+|Exibição de dados|Controle <xref:System.Windows.Forms.DataGridView>|O <xref:System.Windows.Forms.DataGridView> controle fornece uma tabela personalizável para exibir dados. O <xref:System.Windows.Forms.DataGridView> classe permite a personalização de células, linhas, colunas e bordas. **Observação:**  O <xref:System.Windows.Forms.DataGridView> controle fornece vários recursos básicos e avançados que estão faltando no <xref:System.Windows.Forms.DataGrid> controle. Para obter mais informações, consulte [Diferenças entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Vinculação de dados e navegação|<xref:System.Windows.Forms.BindingSource> |Simplifica a associação de controles em um formulário a dados, fornecendo gerenciamento de moeda, notificação de alteração e outros serviços.|  
 ||Controle <xref:System.Windows.Forms.BindingNavigator>|Fornece uma interface do tipo de barra de ferramentas para navegar e manipular dados em um formulário.|  
 |Edição de texto|Controle <xref:System.Windows.Forms.TextBox>|Exibe o texto inserido em tempo de design que pode ser editado por usuários em tempo de execução ou ser modificado programaticamente.|  
 ||Controle <xref:System.Windows.Forms.RichTextBox>|Permite que o texto seja exibido formatado em texto sem formatação ou em RTF (Formato Rich Text).|  
@@ -42,7 +42,7 @@ O Windows Forms oferece controles e componentes que executam várias funções. 
 ||Controle <xref:System.Windows.Forms.NumericUpDown>|Exibe uma lista de numerais que os usuários podem percorrer usando os botões para cima e para baixo.|  
 ||Controle <xref:System.Windows.Forms.TreeView>|Exibe uma coleção hierárquica de objetos de nó que podem consistir em texto com caixas de seleção opcionais ou ícones.|  
 |Exibição de gráficos|Controle <xref:System.Windows.Forms.PictureBox>|Exibe arquivos gráficos, como bitmaps e ícones, em um quadro.|  
-|Armazenamento de gráficos|Controle <xref:System.Windows.Forms.ImageList>|Serve como um repositório de imagens. <xref:System.Windows.Forms.ImageList> as imagens que eles contêm e os controles podem ser reutilizadas de um aplicativo para o próximo.|  
+|Armazenamento de gráficos|Controle <xref:System.Windows.Forms.ImageList>|Serve como um repositório de imagens. <xref:System.Windows.Forms.ImageList> controles e as imagens que eles contêm podem ser reutilizadas de um aplicativo para o próximo.|  
 |Configuração do valor|Controle <xref:System.Windows.Forms.CheckBox>|Exibe uma caixa de seleção e um rótulo de texto. Geralmente, é usado para definir opções.|  
 ||Controle <xref:System.Windows.Forms.CheckedListBox>|Exibe uma lista rolável de itens, cada um deles acompanhado por uma caixa de seleção.|  
 ||Controle <xref:System.Windows.Forms.RadioButton>|Exibe um botão que pode ser ativado ou desativado.|  
@@ -56,18 +56,18 @@ O Windows Forms oferece controles e componentes que executam várias funções. 
 ||Controle <xref:System.Windows.Forms.PrintPreviewDialog>|Exibe uma caixa de diálogo que exibe como um controle <xref:System.Drawing.Printing.PrintDocument> componente aparecerá quando impresso.|  
 ||Controle <xref:System.Windows.Forms.FolderBrowserDialog>|Exibe uma caixa de diálogo que permite que os usuários naveguem, criem e, eventualmente, selecionem uma pasta|  
 ||Controle <xref:System.Windows.Forms.SaveFileDialog>|Exibe uma caixa de diálogo que permite que os usuários salvem um arquivo.|  
-|Controles de menu|Controle <xref:System.Windows.Forms.MenuStrip>|Cria menus personalizados. **Observação:** o <xref:System.Windows.Forms.MenuStrip> foi projetado para substituir o <xref:System.Windows.Forms.MainMenu> controle.|  
-||Controle <xref:System.Windows.Forms.ContextMenuStrip>|Cria menus de contexto personalizados. **Observação:** o <xref:System.Windows.Forms.ContextMenuStrip> foi projetado para substituir o <xref:System.Windows.Forms.ContextMenu> controle.|  
+|Controles de menu|Controle <xref:System.Windows.Forms.MenuStrip>|Cria menus personalizados. **Observação:**  O <xref:System.Windows.Forms.MenuStrip> foi projetado para substituir o <xref:System.Windows.Forms.MainMenu> controle.|  
+||Controle <xref:System.Windows.Forms.ContextMenuStrip>|Cria menus de contexto personalizados. **Observação:**  O <xref:System.Windows.Forms.ContextMenuStrip> foi projetado para substituir o <xref:System.Windows.Forms.ContextMenu> controle.|  
 |Comandos|Controle <xref:System.Windows.Forms.Button>|Inicia, para ou interrompe um processo.|  
 ||Controle <xref:System.Windows.Forms.LinkLabel>|Exibe o texto como um link com estilo da Web e dispara um evento quando o usuário clica no texto especial. Normalmente, o texto é um link para outra janela ou site.|  
 ||Controle <xref:System.Windows.Forms.NotifyIcon>|Exibe um ícone na área de notificação de status da barra de tarefas que representa um aplicativo em execução em segundo plano.|  
-||Controle <xref:System.Windows.Forms.ToolStrip>|Cria barras de ferramentas que podem ter a aparência do Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer ou uma aparência personalizada, com ou sem temas e com suporte para estouro e reordenação de itens em tempo de execução. **Observação:** o <xref:System.Windows.Forms.ToolStrip> controle foi projetado para substituir o <xref:System.Windows.Forms.ToolBar> controle.|  
-|Ajuda do usuário|<xref:System.Windows.Forms.HelpProvider> Componente|Fornece Ajuda pop-up ou online para os controles.|  
-||<xref:System.Windows.Forms.ToolTip> Componente|Fornece uma janela pop-up que exibe uma breve descrição da finalidade do controle quando o usuário deixa o ponteiro sobre o controle.|  
+||Controle <xref:System.Windows.Forms.ToolStrip>|Cria barras de ferramentas que podem ter a aparência do Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer ou uma aparência personalizada, com ou sem temas e com suporte para estouro e reordenação de itens em tempo de execução. **Observação:**  O <xref:System.Windows.Forms.ToolStrip> controle foi projetado para substituir o <xref:System.Windows.Forms.ToolBar> controle.|  
+|Ajuda do usuário|<xref:System.Windows.Forms.HelpProvider> |Fornece Ajuda pop-up ou online para os controles.|  
+||<xref:System.Windows.Forms.ToolTip> |Fornece uma janela pop-up que exibe uma breve descrição da finalidade do controle quando o usuário deixa o ponteiro sobre o controle.|  
 |Agrupando outros controles|Controle <xref:System.Windows.Forms.Panel>|Agrupa um conjunto de controles em um quadro rolável sem rótulo.|  
 ||Controle <xref:System.Windows.Forms.GroupBox>|Agrupa um conjunto de controles (como botões de opção) em um quadro não rolável rotulado.|  
 ||Controle <xref:System.Windows.Forms.TabControl>|Fornece uma página com guias para organizar e acessar objetos agrupados com eficiência.|  
-||Controle <xref:System.Windows.Forms.SplitContainer>|Fornece dois painéis separados por uma barra móvel. **Observação:** o <xref:System.Windows.Forms.SplitContainer> controle foi projetado para substituir o <xref:System.Windows.Forms.Splitter> controle.|  
+||Controle <xref:System.Windows.Forms.SplitContainer>|Fornece dois painéis separados por uma barra móvel. **Observação:**  O <xref:System.Windows.Forms.SplitContainer> controle foi projetado para substituir o <xref:System.Windows.Forms.Splitter> controle.|  
 ||Controle <xref:System.Windows.Forms.TableLayoutPanel>|Representa um painel que dispõe de forma dinâmica o conteúdo em uma grade composta por linhas e colunas.|  
 ||Controle <xref:System.Windows.Forms.FlowLayoutPanel>|Representa um painel que dispõe de forma dinâmica o conteúdo horizontal ou verticalmente.|  
 |Áudio|Controle <xref:System.Media.SoundPlayer>|Reproduz arquivos de som no formato .wav. Os sons podem ser carregados ou executados de forma assíncrona.|  
@@ -84,6 +84,6 @@ O Windows Forms oferece controles e componentes que executam várias funções. 
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |Layout de formulários|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>Consulte também  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+## <a name="see-also"></a>Consulte também
+- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

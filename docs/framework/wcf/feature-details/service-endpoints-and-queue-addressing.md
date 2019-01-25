@@ -2,12 +2,12 @@
 title: Pontos de extremidade de serviço e endereçamento de fila
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613916"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem serviços leiam de filas e como pontos de extremidade de serviço são mapeados para as filas. Como lembrete, a ilustração a seguir mostra clássico, implantação de aplicativo na fila do Windows Communication Foundation (WCF).  
@@ -40,7 +40,7 @@ Este tópico discute como os clientes atendem serviços leiam de filas e como po
   
 -   \<*nome da fila*> é o nome da fila. O nome da fila também pode consultar uma subfila. Portanto, \< *nome da fila*> = \< *nome-da-fila*> [; *sub-queue-name*].  
   
- Exemplo 1: Para resolver uma fila particular PurchaseOrders hospedados no computador abc atadatum.com, o URI seria net.msmq://abc.adatum.com/private/PurchaseOrders.  
+ Exemplo 1: Para lidar com uma fila particular PurchaseOrders hospedados no computador abc atadatum.com, o URI seria net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
  Exemplo 2: Para resolver uma fila pública AccountsPayable hospedado no computador def atadatum.com, o URI seria net.msmq://def.adatum.com/AccountsPayable.  
   
@@ -72,9 +72,9 @@ Este tópico discute como os clientes atendem serviços leiam de filas e como po
   
 |Endereço da fila com base no URI do WCF|Use a propriedade do Active Directory|Propriedade de protocolo de transferência de fila|Nomes de formato resultantes do MSMQ|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|NET.MSMQ://\<machine-name >/privado/abc|False (padrão)|Nativo (padrão)|DIRECT=OS:machine-name\private$\abc|  
-|NET.MSMQ://\<machine-name >/privado/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
-|NET.MSMQ://\<machine-name >/privado/abc|verdadeiro|Nativo|PÚBLICO = some guid (o GUID da fila)|  
+|Net.msmq://\<machine-name>/private/abc|False (padrão)|Nativo (padrão)|DIRECT=OS:machine-name\private$\abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|verdadeiro|Nativo|PÚBLICO = some guid (o GUID da fila)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Leitura de mensagens da fila de inatividade ou a fila de mensagens suspeitas  
  Para ler mensagens de uma fila de mensagens suspeitas que é uma subfila da fila de destino, abra o `ServiceHost` com o endereço da subfila de mensagens.  
@@ -100,9 +100,9 @@ Este tópico discute como os clientes atendem serviços leiam de filas e como po
   
  Observe que você só pode usar nomes de formato direto e nomes de formato públicos e privados (requer a integração do Active Directory) ao receber mensagens de uma fila usando `MsmqIntegrationBinding`. No entanto, é recomendável que você use nomes de formato direto. Por exemplo, em [!INCLUDE[wv](../../../../includes/wv-md.md)], usar qualquer outro nome de formato faz com que um erro porque o sistema tenta abrir uma subfila, que só pode ser aberta com nomes de formato direto.  
   
- Ao abordar SRMP usando `MsmqIntegrationBinding`, não há nenhum requisito de adicionar /msmq/ no nome do formato direto para ajudar a serviços de informações da Internet (IIS) com expedição. Por exemplo: ao tratar de uma fila abc usando o SRMP de protocolo, em vez de DIRECT =http://adatum.com/msmq/private$/ abc, você deve usar DIRECT =http://adatum.com/private$/ abc.  
+ Ao abordar SRMP usando `MsmqIntegrationBinding`, não há nenhum requisito de adicionar /msmq/ no nome do formato direto para ajudar a serviços de informações da Internet (IIS) com expedição. Por exemplo: Ao tratar de uma fila abc usando o SRMP de protocolo, em vez de DIRECT =http://adatum.com/msmq/private$/ abc, você deve usar DIRECT =http://adatum.com/private$/ abc.  
   
  Observe que você não pode usar net.msmq:// endereçamento com `MsmqIntegrationBinding`. Porque `MsmqIntegrationBinding` dá suporte à forma livre MSMQ formato nome endereçamento, você pode usar um serviço WCF que usa essa associação para usar recursos da lista de distribuição e de multicast no MSMQ. Especificação de uma exceção `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding`. Ele deve ser do net.msmq:// formulário, semelhante a como ele é especificado usando o `NetMsmqBinding`.  
   
-## <a name="see-also"></a>Consulte também  
- [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>Consulte também
+- [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

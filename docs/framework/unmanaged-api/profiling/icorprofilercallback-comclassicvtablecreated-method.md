@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dcb45fcc987952ec5e84cc468dda8d8ede38bdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c23c52108c5c6534f5b8e8b41517ed2129590466
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574827"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>Método ICorProfilerCallback::COMClassicVTableCreated
-Notifica o criador de perfil que foi criada uma vtable interoperabilidade COM para o IID e a classe especificada.  
+Notifica o criador de perfil que foi criada uma vtable interoperabilidade do COM para o IID e a classe especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,31 +39,31 @@ HRESULT COMClassicVTableCreated(
   
 #### <a name="parameters"></a>Parâmetros  
  `wrappedClasId`  
- [in] A ID da classe para a qual o vtable foi criado.  
+ [in] A ID da classe para o qual foi criada a vtable.  
   
  `implementedIID`  
  [in] A ID da interface implementada pela classe. Esse valor pode ser NULL se a interface é somente interna.  
   
  `pVTable`  
- [in] Um ponteiro para o início de vtable.  
+ [in] Um ponteiro para o início do vtable.  
   
  `cSlots`  
- [in] O número de slots que estão em de vtable.  
+ [in] O número de slots que estão no vtable.  
   
 ## <a name="remarks"></a>Comentários  
- O criador de perfil não deve bloquear em sua implementação deste método porque a pilha não pode estar em um estado que permite a coleta de lixo e, portanto, a coleta de lixo preemptivo não pode ser habilitada. Se o criador de perfil bloqueia aqui e uma tentativa de coleta de lixo, tempo de execução será bloqueado até que esse retorno de chamada retorna.  
+ O criador de perfil não deve bloquear em sua implementação desse método, porque a pilha não pode estar em um estado que permite a coleta de lixo e, portanto, a coleta de lixo preemptive não pode ser habilitada. Se o criador de perfil bloqueia aqui e coleta de lixo é tentada, o tempo de execução será bloqueada até que esse retorno de chamada retorne.  
   
- A implementação do criador de perfil do método não deve chamar código gerenciado ou em qualquer causa de maneira uma alocação de memória gerenciada.  
+ Implementação do criador de perfil deste método não deve chamar código gerenciado ou em qualquer forma de causa uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Método COMClassicVTableDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Método COMClassicVTableDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)

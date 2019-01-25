@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 844ac2a8aad4ce2cc6f70de2d5a53c7c0b6f4f6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53a8f9aefa4460493113c035aa05e971b05d5167
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500165"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>Método ICorProfilerCallback::JITInlining
-Notifica o criador de perfil que o compilador just-in-time (JIT) está prestes a inserir uma função em linha com outra função.  
+Notifica o criador de perfil que o compilador just-in-time (JIT) está prestes a inserir uma função alinhada com outra função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,18 +47,18 @@ HRESULT JITInlining(
  [out] `true` para permitir a inserção ocorrer; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- O criador de perfil pode definir `pfShouldInline` para `false` para impedir que o `calleeId` função seja inserido para o `callerId` função. Além disso, o criador de perfil global pode desabilitar inserção embutido usando o valor COR_PRF_DISABLE_INLINING o [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeração.  
+ O criador de perfil pode definir `pfShouldInline` à `false` para impedir que o `calleeId` função seja inserido no `callerId` função. Além disso, o criador de perfil pode desativar globalmente a inserção embutido usando o valor COR_PRF_DISABLE_INLINING a [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeração.  
   
- Funções inseridas embutido não gerar eventos para entrar ou sair. Portanto, o criador de perfil deve definir `pfShouldInline` para `false` para gerar um gráfico de chamadas de preciso. Configuração `pfShouldInline` para `false` afetará o desempenho, como inserção embutido geralmente aumenta a velocidade e reduz o número de eventos de compilação JIT separados para o método inserido.  
+ Funções inseridas embutido não acionar eventos para entrar ou sair. Portanto, o criador de perfil deve definir `pfShouldInline` para `false` para produzir um gráfico de chamadas de preciso. Definindo `pfShouldInline` para `false` afetará o desempenho, porque a inserção embutidos geralmente aumenta a velocidade e reduz o número de eventos de compilação JIT separados para o método inserido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

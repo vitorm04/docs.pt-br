@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 53773c51aef6b9530ed0b2cfaf0ef08cdb340ec2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 922769d60d0ff8425b68a96d0272ee23c6d083ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579180"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementação de Provedor de Automação de Interface de Usuário do Lado do Cliente
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Vários diferente [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] estruturas estão em uso na [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] sistemas operacionais, inclusive [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], e [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expõe informações sobre os elementos de interface do usuário para os clientes. No entanto, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] próprio não tem consciência dos diferentes tipos de controles que existem dessas estruturas e as técnicas que são necessários para extrair as informações. Em vez disso, ela deixa essa tarefa para objetos chamados provedores. Um provedor extrai informações de um controle específico e passa essas informações para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], que então o apresenta ao cliente de maneira consistente.  
   
@@ -51,6 +51,6 @@ ms.locfileid: "48842600"
   
  Os dois últimos parâmetros são opcionais. O cliente pode especificar o nome da imagem do aplicativo de destino quando desejar usar provedores diferentes para diferentes aplicativos. Por exemplo, o cliente pode usar um provedor para um [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] lista de controle de exibição em um aplicativo conhecido que suporta o padrão de exibição de vários e outro para um controle semelhante em outro aplicativo conhecido que não.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um provedor de automação de interface do usuário do lado do cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [Implementar provedores de automação de interface do usuário em um aplicativo cliente](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+## <a name="see-also"></a>Consulte também
+- [Criar um provedor de automação de interface do usuário do lado do cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [Implementar provedores de automação de interface do usuário em um aplicativo cliente](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
