@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 2264686f34123e74bf7d24ce80877742d952f35d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 61a0684b55ae1e40f264db2af3607b07f2fb33a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612028"
 ---
 # <a name="structured-navigation-overview"></a>Visão geral da navegação estruturada
 Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], um <xref:System.Windows.Controls.Frame>, ou uma <xref:System.Windows.Navigation.NavigationWindow> é composto de páginas que podem ser identificadas pelo pacote [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] e acessadas por hiperlinks. A estrutura de páginas e as maneiras pelas quais elas podem ser navegadas, como definidas pelos hiperlinks, é conhecida como uma topologia de navegação. Uma topologia como esta serve a uma variedade de tipos de aplicativos, especialmente aqueles que navegam através de documentos. Para tais aplicativos, o usuário pode navegar de uma página à outra sem que as páginas precisem saber qualquer coisa sobre a outra.  
@@ -169,7 +169,7 @@ Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../incl
   
  Em outros casos, os aplicativos podem ter topologias complexas de navegação que dependem da navegação estruturada para operar com eficiência. Para obter mais informações, consulte [Visão geral de topologias de navegação](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Navigation.PageFunction%601>  
- <xref:System.Windows.Navigation.NavigationService>  
- [Visão geral de topologias de navegação](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Navigation.PageFunction%601>
+- <xref:System.Windows.Navigation.NavigationService>
+- [Visão geral de topologias de navegação](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

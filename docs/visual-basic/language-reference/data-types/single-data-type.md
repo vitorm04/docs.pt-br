@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: cd94411629f18557f677a6d1f65bfc0dede43e83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534505"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo de dados único (Visual Basic)
 Mantém conectado IEEE de 32 bits (4 bytes) de precisão simples números de ponto flutuante que variam em valor de - 3,4028235E + 38 a - 1,401298E-45 para valores negativos e de 1,401298E-45 3,4028235E + 38 para valores positivos. Números de precisão simples armazenam uma aproximação de um número real.  
@@ -47,12 +47,12 @@ Mantém conectado IEEE de 32 bits (4 bytes) de precisão simples números de pon
   
 -   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Single?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Single?displayProperty=nameWithType>  
- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)  
- [Tipo de Dados Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Tipo de Dados Duplo](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Solução de problemas de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Single?displayProperty=nameWithType>
+- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
+- [Tipo de Dados Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Tipo de Dados Duplo](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Solução de problemas de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

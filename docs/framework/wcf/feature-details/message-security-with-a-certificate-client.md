@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a027577f5118f9a5b2f3eeaa29ddfde20851a8f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530847"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Segurança da mensagens com um cliente de certificado
 O cenário a seguir mostra um serviço protegido usando o modo de segurança de mensagem e o cliente do Windows Communication Foundation (WCF). O cliente e o serviço são autenticados com certificados. Para obter mais informações, consulte [segurança do aplicativo distribuído](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
@@ -143,8 +143,8 @@ O cenário a seguir mostra um serviço protegido usando o modo de segurança de 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

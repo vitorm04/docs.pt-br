@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625136"
 ---
 # <a name="corexemain2-function"></a>Função _CorExeMain2
-Executa o ponto de entrada no código do mapeamento de memória especificado. Essa função é chamada pelo carregador do sistema operacional.  
+Executa o ponto de entrada no código mapeado na memória especificado. Essa função é chamada pelo carregador do sistema operacional.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
 #### <a name="parameters"></a>Parâmetros  
  `pUnmappedPE`  
- [in] Um ponteiro para o código de mapeamento de memória.  
+ [in] Um ponteiro para o código mapeado na memória.  
   
  `cUnmappedPE`  
  [in] O número de elementos `pUnmappedPE` pode conter.  
@@ -55,13 +55,13 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  [in] Parâmetros de linha de comando, se houver.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

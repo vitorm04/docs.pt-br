@@ -2,12 +2,12 @@
 title: Concedendo permissões de nível de linha no SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553758"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Concedendo permissões de nível de linha no SQL Server
 Em alguns cenários, há um requisito para controlar o acesso a dados em um nível mais granular do que simplesmente concedendo, revogando ou negando permissões fornece. Por exemplo, um aplicativo de banco de dados do hospital pode exigir médicos individuais serão restritas a acesso a informações relacionadas ao somente seus pacientes. Existem requisitos semelhantes em muitos ambientes, incluindo finanças, lei, governo e militares aplicativos. Para ajudar a lidar com esses cenários, o SQL Server 2016 fornece uma [segurança em nível de linha](https://msdn.microsoft.com/library/dn765131.aspx) recurso que simplifica e centraliza a lógica de acesso de nível de linha em uma política de segurança. Para versões anteriores do SQL Server, uma funcionalidade semelhante pode ser obtida usando modos de exibição para aplicar a filtragem de nível de linha.  
@@ -59,11 +59,11 @@ Em alguns cenários, há um requisito para controlar o acesso a dados em um nív
   
 -   Grant EXECUTE nos procedimentos armazenados para funções de banco de dados. Os usuários só podem acessar dados por meio de procedimentos armazenados fornecidos.  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança em nível de linha](https://msdn.microsoft.com/library/dn765131.aspx)  
- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
- [Visão geral de segurança do SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Gerenciando permissões com procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [Escrevendo SQL dinâmico seguro no SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Segurança em nível de linha](https://msdn.microsoft.com/library/dn765131.aspx)
+- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Visão geral de segurança do SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Gerenciando permissões com procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Escrevendo SQL dinâmico seguro no SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

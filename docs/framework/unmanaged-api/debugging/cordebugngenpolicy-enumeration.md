@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ae40916807a86d1c9828080a6cb9e5c1d14c2ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671220"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>Enumeração CorDebugNGenPolicy
 Fornece um valor que determina se um depurador carrega imagens nativas (NGen) do cache de imagens nativas.  
@@ -40,19 +40,19 @@ enum CorDebugNGENPolicy {
   
 |Nome do membro|Descrição|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|Em um [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] aplicativo, o uso de imagens do cache de imagem nativa local está desabilitado. Em um aplicativo de área de trabalho, essa configuração não tem nenhum efeito.|  
+|`DISABLE_LOCAL_NIC`|Em um [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] aplicativo, o uso de imagens do cache de imagem nativo local está desabilitado. Em um aplicativo da área de trabalho, essa configuração não tem nenhum efeito.|  
   
 ## <a name="remarks"></a>Comentários  
- O `CorDebugNGENPolicy` enumeração é usada pelo [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) método. Desabilitando o uso de imagens do cache de imagem nativa local fornece para uma experiência consistente de depuração, garantindo que o depurador carrega imagens depuráveis compilação JIT, em vez de imagens nativas otimizadas.  
+ O `CorDebugNGENPolicy` enumeração é usada pelo [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) método. Desabilitando o uso de imagens do cache de imagem nativo local fornece uma experiência de depuração consistente, garantindo que o depurador carrega imagens depuráveis compilado por JIT, em vez de imagens nativas otimizadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

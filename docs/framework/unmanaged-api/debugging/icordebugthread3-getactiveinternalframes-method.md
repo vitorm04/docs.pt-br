@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ac87de35478e5eabdc8cdc3568baf2086923e38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1995a344052439947d7893382eacb00920281d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511076"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>Método ICorDebugThread3::GetActiveInternalFrames
 Retorna uma matriz de quadros internos ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objetos) na pilha.  
@@ -47,37 +47,37 @@ HRESULT GetActiveInternalFrames
  [out] Um ponteiro para um `ULONG32` que contém o número de quadros internos na pilha.  
   
  `ppInternalFrames`  
- [out no] Um ponteiro para o endereço de uma matriz de quadros internos na pilha.  
+ [no, out] Um ponteiro para o endereço de uma matriz de quadros internos na pilha.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objeto foi criado com êxito.|  
-|E_INVALIDARG|`cInternalFrames` não é zero e `ppInternalFrames` é `null`, ou `pcInternalFrames` é `null`.|  
+|E_INVALIDARG|`cInternalFrames` não é zero e `ppInternalFrames` está `null`, ou `pcInternalFrames` é `null`.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` é menor do que a contagem de quadros internos.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Quadros internos são estruturas de dados inseridas na pilha pelo tempo de execução para armazenar dados temporários.  
+ Quadros internos são estruturas de dados enviadas para a pilha em tempo de execução para armazenar dados temporários.  
   
- Quando você chama primeiro `GetActiveInternalFrames`, você deve definir o `cInternalFrames` parâmetro como 0 (zero) e o `ppInternalFrames` parâmetro como null. Quando `GetActiveInternalFrames` retorna primeiro, `pcInternalFrames` contém a contagem de quadros na pilha internas.  
+ Quando você chama primeiramente `GetActiveInternalFrames`, você deve definir o `cInternalFrames` parâmetro como 0 (zero) e o `ppInternalFrames` parâmetro como null. Quando `GetActiveInternalFrames` retornado pela primeira vez, `pcInternalFrames` contém a contagem de quadros na pilha internas.  
   
- `GetActiveInternalFrames` deve ser chamado pela segunda vez. Você deve passar a contagem adequada (`pcInternalFrames`) no `cInternalFrames` parâmetro, e especifique um ponteiro para uma matriz de tamanho apropriado no `ppInternalFrames`.  
+ `GetActiveInternalFrames` deverá ser chamado pela segunda vez. Você deve passar a contagem correta (`pcInternalFrames`) na `cInternalFrames` parâmetro, e especifique um ponteiro para uma matriz de tamanho apropriado no `ppInternalFrames`.  
   
- Use o [Icordebugstackwalk](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) quadros de pilha do método de retorno real.  
+ Use o [icordebugstackwalk:: GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) registros de ativação do método para retornar real.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

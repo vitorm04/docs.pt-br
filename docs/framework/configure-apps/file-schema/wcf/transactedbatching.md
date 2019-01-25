@@ -2,12 +2,12 @@
 title: '&lt;transactedBatching&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: f56751ea3f8bdc9ecbeff57db835e5fc2edbb73e
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2f89a1a6c2cc110a4695b792c5aa801b516393be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565989"
 ---
 # <a name="lttransactedbatchinggt"></a>&lt;transactedBatching&gt;
 Especifica se o envio em lote de transações tem suporte para operações de recebimento.  
@@ -15,8 +15,8 @@ Especifica se o envio em lote de transações tem suporte para operações de re
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<comportamento de >  
-\<transactedBatching >  
+\<behavior>  
+\<transactedBatching>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ Especifica se o envio em lote de transações tem suporte para operações de re
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamento de >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|  
   
 ## <a name="remarks"></a>Comentários  
  Um transporte configurado com transações em lotes de tentativas de enviar em lote várias operações em uma transação de recebimento. Ao fazer isso, o custo relativamente alto de criação de uma transação e confirmá-lo em cada receber operação é evitada.  
@@ -83,6 +83,6 @@ Especifica se o envio em lote de transações tem suporte para operações de re
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.TransactedBatchingElement>  
- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.TransactedBatchingElement>
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7bc5f3fc1c87b8acbbfeb0bad0c7766c0a2ef1dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688292"
 ---
 # <a name="schema-restrictions"></a>Restrições de esquema
 O segundo parâmetro opcional do **GetSchema** método é retornado das restrições que são usadas para limitar a quantidade de informações de esquema, e ele é passado para o **GetSchema** método como uma matriz de cadeias de caracteres . A posição na matriz determina os valores que você pode passar, e isso é equivalente ao número de restrição.  
@@ -130,7 +130,7 @@ class Program
 }  
 ```  
   
-## <a name="sql-server-schema-restrictions"></a>Restrições de esquema do SQL Server  
+## <a name="sql-server-schema-restrictions"></a>SQL Server Schema Restrictions  
  As tabelas a seguir listam as restrições para coleções de esquemas do SQL Server.  
   
 ### <a name="users"></a>Usuários  
@@ -212,9 +212,9 @@ class Program
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catálogo|@Catalog|db_name()|1|  
-|Proprietário|@Owner|user_name)|2|  
-|Tabela|@Table|o.Name|3|  
-|ConstraintName|@ConstraintName|x.Name|4|  
+|Proprietário|@Owner|user_name()|2|  
+|Tabela|@Table|o.name|3|  
+|ConstraintName|@ConstraintName|x.name|4|  
 |Column|@Column|c.name|5|  
   
 ### <a name="indexes"></a>Índices  
@@ -222,15 +222,15 @@ class Program
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catálogo|@Catalog|db_name()|1|  
-|Proprietário|@Owner|user_name)|2|  
-|Tabela|@Table|o.Name|3|  
+|Proprietário|@Owner|user_name()|2|  
+|Tabela|@Table|o.name|3|  
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |assembly_name|@AssemblyName|assemblies.name|1|  
-|udt_name|@UDTName|Types.assembly_class|2|  
+|udt_name|@UDTName|types.assembly_class|2|  
   
 ### <a name="foreignkeys"></a>ForeignKeys  
   
@@ -261,5 +261,5 @@ class Program
 |Tabela|@Table|TABLE_NAME|3|  
 |Column|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

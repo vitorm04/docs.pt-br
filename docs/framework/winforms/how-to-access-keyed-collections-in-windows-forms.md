@@ -1,5 +1,5 @@
 ---
-title: Como acessar coleções indexadas por chave no Windows Forms
+title: 'Como: Coleções em formulários do Windows com chave de acesso'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: 59e5cea29ee520b1f13f8fae98ae4042cc86fef7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0071e3cc3ae2576bed8a7111fc2a120ea3a113c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676299"
 ---
-# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Como acessar coleções indexadas por chave no Windows Forms
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Como: Coleções em formulários do Windows com chave de acesso
 -   Você pode acessar itens de coleção individuais por chave. Essa funcionalidade foi adicionada a muitas classes de coleção que normalmente são usadas por aplicativos dos Windows Forms. A lista a seguir exibe algumas das classes de coleção que têm coleções acessíveis por chave:  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
@@ -51,6 +51,6 @@ ms.locfileid: "33538720"
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- [Como adicionar ou remover imagens com o componente ImageList dos Windows Forms](../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+## <a name="see-also"></a>Consulte também
+- [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Como: Adicionar ou remover imagens com o componente ImageList dos Windows Forms](../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

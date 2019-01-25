@@ -2,12 +2,12 @@
 title: Referência de palavras-chave
 description: Encontre links para informações sobre todos os F# palavras-chave.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579830"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
@@ -20,7 +20,7 @@ A tabela a seguir mostra todos os F# palavras-chave em ordem alfabética, junto 
 |Palavra-chave|Link|Descrição|
 |-------|----|-----------|
 |`abstract`|[Membros](members/index.md)<br /><br />[Classes Abstratas](abstract-classes.md)|Indica um método que seja o tipo no qual ele é declarado ou que é virtual e tem uma implementação padrão não tem nenhuma implementação.|
-|`and`|[`let` Associações](functions/let-bindings.md)<br /><br />[Membros](members/index.md)<br /><br />[Restrições](generics/constraints.md)|Usado em mutuamente associações recursivas, em declarações de propriedade e com várias restrições em parâmetros genéricos.|
+|`and`|[`let` Associações](functions/let-bindings.md)<br /><br />[Registros](records.md)<br /><br />[Membros](members/index.md)<br /><br />[Restrições](generics/constraints.md)|Usado em mutuamente recursivas associações e registros, em declarações de propriedade e com várias restrições em parâmetros genéricos.|
 |`as`|[Classes](classes.md)<br /><br />[Correspondência Padrão](Pattern-Matching.md)|Usado para dar um nome de objeto de objeto de classe atual. Também é usado para fornecer um nome a um padrão de todo dentro de uma correspondência de padrões.|
 |`assert`|[Asserções](assertions.md)|Usado para verificar o código durante a depuração.|
 |`base`|[Classes](classes.md)<br /><br />[Herança](inheritance.md)|Usado como o nome do objeto da classe base.|

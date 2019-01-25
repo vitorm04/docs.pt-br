@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 615f98bf36d29c1f269d6866b1232ad33a5ae2f2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 53fc47c7dd26142d2ead49178afefe2775a96580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543140"
 ---
 # <a name="skip-clause-visual-basic"></a>Cláusula Skip (Visual Basic)
 Ignora um número especificado de elementos em uma coleção e, em seguida, retorna os elementos restantes.  
@@ -42,11 +42,11 @@ Skip count
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Cláusula Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Cláusula Take](../../../visual-basic/language-reference/queries/take-clause.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Cláusula Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Cláusula Take](../../../visual-basic/language-reference/queries/take-clause.md)

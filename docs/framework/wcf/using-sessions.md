@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533122"
 ---
 # <a name="using-sessions"></a>Utilizando sessões
 Em aplicativos do Windows Communication Foundation (WCF), uma *sessão* correlaciona a um grupo de mensagens em uma conversa. As sessões WCF são diferentes do objeto de sessão disponível no [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicativos, dar suporte a comportamentos diferentes e são controlados de maneiras diferentes. Este tópico descreve os recursos que permitem que as sessões no WCF aplicativos e como usá-los.  
@@ -129,7 +129,7 @@ Em aplicativos do Windows Communication Foundation (WCF), uma *sessão* correlac
   
 -   Uma operação de terminação em qualquer tipo de objeto de cliente do WCF (por padrão, nenhuma operação está encerrando; o contrato deve especificar explicitamente uma operação de terminação). Quando a primeira operação é chamada, o objeto de cliente WCF abre o canal automaticamente e inicia uma sessão.  
   
- Para obter exemplos, consulte [como: criar um serviço que requer sessões](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , bem como a [comportamento de serviço padrão](../../../docs/framework/wcf/samples/default-service-behavior.md) e [criação de instâncias](../../../docs/framework/wcf/samples/instancing.md) exemplos.  
+ Para ver mais exemplos, veja [Como: Criar um serviço que requer sessões](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , bem como a [padrão de comportamento de serviço](../../../docs/framework/wcf/samples/default-service-behavior.md) e [criação de instâncias](../../../docs/framework/wcf/samples/instancing.md) exemplos.  
   
  Para obter mais informações sobre os clientes e sessões, consulte [serviços de acesso usando um cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
@@ -145,6 +145,6 @@ Em aplicativos do Windows Communication Foundation (WCF), uma *sessão* correlac
 > [!NOTE]
 >  MaxConcurrentSessions não tem efeito nesse caso porque há apenas uma "sessão" disponível.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

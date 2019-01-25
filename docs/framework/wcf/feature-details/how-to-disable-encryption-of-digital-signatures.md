@@ -1,29 +1,29 @@
 ---
-title: Como desabilitar criptografia de assinaturas digitais
+title: 'Como: Desabilitar a criptografia de assinaturas digitais'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
-ms.openlocfilehash: 074a32f6a69f8353568e76c99f4b65aece813f55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 360d939db1c7e75cea1b6f3c6a013f214564a717
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576363"
 ---
-# <a name="how-to-disable-encryption-of-digital-signatures"></a>Como desabilitar criptografia de assinaturas digitais
-Por padrão, uma mensagem é assinada e a assinatura digital é criptografada. Isso é controlado pela criação de uma associação personalizada com uma instância do <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> ou o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e configuração de `MessageProtectionOrder` propriedade ou classe a um <xref:System.ServiceModel.Security.MessageProtectionOrder> valor de enumeração. O padrão é <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Esse processo consome até 30% mais tempo do que simplesmente assinatura e criptografia com base no tamanho da mensagem geral (quanto menor a mensagem, maior o impacto de desempenho). A desabilitação da criptografia da assinatura, no entanto, pode permitir que um invasor adivinhar o conteúdo da mensagem. Isso é possível porque o elemento de assinatura contém o código de hash do texto sem formatação de todas as partes da mensagem assinada. Por exemplo, embora o corpo da mensagem é criptografado por padrão, a assinatura não criptografada contém o código hash do corpo da mensagem antes da criptografia. Se o conjunto de valores possíveis para a parte assinada e criptografada é pequeno, um invasor consiga deduzir o conteúdo examinando o valor de hash. Criptografando a assinatura atenua esse vetor de ataque.  
+# <a name="how-to-disable-encryption-of-digital-signatures"></a>Como: Desabilitar a criptografia de assinaturas digitais
+Por padrão, uma mensagem é assinada e a assinatura digital é criptografada. Isso é controlado pela criação de uma associação personalizada com uma instância da <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> ou o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e definindo o `MessageProtectionOrder` propriedade de qualquer classe para um <xref:System.ServiceModel.Security.MessageProtectionOrder> valor de enumeração. O padrão é <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Esse processo consome até 30 por cento mais tempo do que simplesmente assinar e criptografar com base no tamanho geral da mensagem (a mensagem menor, maior o impacto de desempenho). Desabilitar a criptografia da assinatura, no entanto, pode permitir que um invasor adivinhar o conteúdo da mensagem. Isso é possível porque o elemento de assinatura contém o código hash do texto sem formatação de todas as partes na mensagem assinada. Por exemplo, embora o corpo da mensagem é criptografado por padrão, a assinatura não criptografada contém o código hash do corpo da mensagem antes da criptografia. Se o conjunto de valores possíveis para a parte assinado e criptografado é pequeno, um invasor poderá deduzir o conteúdo, observando o valor de hash. Criptografando a assinatura atenua esse vetor de ataque.  
   
- Portanto, desabilite a criptografia da assinatura somente quando o valor do conteúdo for baixo ou o conjunto de valores possíveis de conteúdo é grande e não determinísticas, e o ganho de desempenho mais importante do que como reduzir o ataque descrito acima.  
+ Portanto, desabilite a criptografia da assinatura somente quando o valor do conteúdo é baixo ou o conjunto de valores possíveis de conteúdo é grande e não determinísticas, e o ganho de desempenho é mais importante do que reduzir o ataque descrito acima.  
   
 > [!NOTE]
->  Se não houver nada na mensagem que é criptografada, o elemento de assinatura não é criptografado, mesmo quando o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> está definida como <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Esse comportamento ocorre mesmo com associações fornecidas pelo sistema; todas as associações fornecidas pelo sistema que a ordem de proteção de mensagem definida como `SignBeforeEncryptAndEncryptSignature`. No entanto, o WSDL Web Services Description Language () WCF gera a será ainda contêm o `<sp:EncryptSignature>` asserção.  
+>  Se não houver nada na mensagem que é criptografada, o elemento de assinatura não for criptografado, mesmo quando o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> estiver definida como <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Esse comportamento ocorre mesmo com associações fornecidas pelo sistema; todas as associações fornecidas pelo sistema que a ordem de proteção de mensagem definida como `SignBeforeEncryptAndEncryptSignature`. No entanto, a descrição de linguagem WSDL (Web Services) WCF gera será ainda contêm a `<sp:EncryptSignature>` asserção.  
   
 ### <a name="to-disable-digital-signing"></a>Para desabilitar a assinatura digital  
   
-1.  Criará um <xref:System.ServiceModel.Channels.CustomBinding>. Para obter mais informações, consulte [como: criar um personalizado de associação usando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+1.  Criará um <xref:System.ServiceModel.Channels.CustomBinding>. Para obter mais informações, confira [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
-2.  Adicione um <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> à coleção de associação.  
+2.  Adicione uma <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> ou um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> à coleção de associação.  
   
-3.  Definir o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> propriedade <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>, ou defina o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> propriedade para <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
+3.  Defina a <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> propriedade para <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>, ou defina o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> propriedade para <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+## <a name="see-also"></a>Consulte também
+- [Recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 2fefdf81ab25d2e109f265f0c895a3415ad5673d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e5c94cce8b16649854050855800ac1bf2fc6572
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580571"
 ---
 # <a name="-addmodule"></a>-addmodule
 Faz com que o compilador verifique todos os tipos de informações de arquivos especificados disponíveis para o projeto que você está compilando.  
@@ -24,19 +24,19 @@ Faz com que o compilador verifique todos os tipos de informações de arquivos e
   
 ## <a name="arguments"></a>Arguments  
  `fileList`  
- Necessário. Lista delimitada por vírgulas de arquivos que contêm metadados, mas não contêm manifestos de assembly. Nomes de arquivos que contenham espaços devem ficar entre aspas ("").  
+ Necessário. Lista delimitada por vírgula de arquivos que contêm metadados, mas não contêm manifestos de assembly. Nomes de arquivo que contêm espaços devem estar entre aspas ("").  
   
 ## <a name="remarks"></a>Comentários  
- Os arquivos listados pelo `fileList` parâmetro deve ser criado com o `-target:module` opção, ou com o equivalente do compilador outro para `-target:module`.  
+ Os arquivos listados pela `fileList` parâmetro deve ser criado com o `-target:module` opção, ou com equivalentes do outro compilador a `-target:module`.  
   
- Todos os módulos adicionados com `-addmodule` deve estar no mesmo diretório que o arquivo de saída em tempo de execução. Ou seja, você pode especificar um módulo em qualquer diretório no tempo de compilação, mas o módulo deve estar no diretório de aplicativo em tempo de execução. Se não for, você receberá um <xref:System.TypeLoadException> erro.  
+ Todos os módulos adicionados com `-addmodule` deve estar no mesmo diretório que o arquivo de saída em tempo de execução. Ou seja, você pode especificar um módulo em qualquer diretório no tempo de compilação, mas o módulo deve estar no diretório do aplicativo em tempo de execução. Se não for, você obterá um <xref:System.TypeLoadException> erro.  
   
- Se você especificar (implícita ou explicitamente) qualquer[-alvo (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) opção diferente de `-target:module` com `-addmodule`, os arquivos que você passa para `-addmodule` se tornam parte do assembly do projeto. Um assembly é necessário para executar um arquivo de saída que tem um ou mais arquivos adicionados com `-addmodule`.  
+ Se você especificar (implícita ou explicitamente) qualquer[-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) opção diferente de `-target:module` com `-addmodule`, os arquivos que você passa para `-addmodule` se tornam parte do assembly do projeto. Um assembly é necessário para executar um arquivo de saída que tem um ou mais arquivos adicionados com `-addmodule`.  
   
- Use [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) importar metadados de um arquivo que contém um assembly.  
+ Use [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) para importar metadados de um arquivo que contém um assembly.  
   
 > [!NOTE]
->  O `-addmodule` opção não está disponível no ambiente de desenvolvimento do Visual Studio; está disponível somente quando estiver compilando na linha de comando.  
+>  O `-addmodule` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir cria um módulo.  
@@ -49,8 +49,8 @@ Faz com que o compilador verifique todos os tipos de informações de arquivos e
   
  Quando você executa `t1`, ele produz `802`.  
   
-## <a name="see-also"></a>Consulte também  
- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-alvo (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-referência (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Consulte também
+- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-referência (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

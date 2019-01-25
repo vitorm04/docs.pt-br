@@ -2,23 +2,23 @@
 title: ProtocolInitializationFailure
 ms.date: 03/30/2017
 ms.assetid: 8ee26f94-c85e-4e92-b56b-16f486c8b00e
-ms.openlocfilehash: 1e2a854a517572d09904baaf7291aac1d31bddd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 044cf6058dee6254ad0d427a5c6cd1a09a688c0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506778"
 ---
 # <a name="protocolinitializationfailure"></a>ProtocolInitializationFailure
-ID: 142  
+Id: 142  
   
- Severidade: erro  
+ Gravidade: Erro  
   
  Categoria: TransactionBridge  
   
 ## <a name="description"></a>Descrição  
- Esse evento indica que o serviço de protocolo WS-AT falhou ao inicializar. Como resultado, a funcionalidade WS-AT está desabilitada. O evento lista o ID do protocolo, nome do protocolo, exceção, o nome do processo e ID de processo. .  
+ Esse evento indica que o serviço do protocolo WS-AT falhou ao inicializar. Como resultado, a funcionalidade de transação WS-Atomic está desabilitada. O evento lista o ID de protocolo, nome do protocolo, exceção, nome do processo e ID de processo. .  
   
-## <a name="see-also"></a>Consulte também  
- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Consulte também
+- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

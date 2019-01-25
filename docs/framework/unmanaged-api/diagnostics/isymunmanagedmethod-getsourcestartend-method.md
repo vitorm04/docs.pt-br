@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561862"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>Método ISymUnmanagedMethod::GetSourceStartEnd
-Obtém as posições de documento de início e término para a fonte deste método. A primeira posição de matriz é o início e a segunda posição de matriz é o final.  
+Obtém as posições inicial e final no documento para a fonte deste método. A primeira posição de matriz é o início e a segunda posição de matriz é o fim.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,16 +39,16 @@ HRESULT GetSourceStartEnd(
   
 #### <a name="parameters"></a>Parâmetros  
  `docs`  
- [in] O início e término documentos de origem.  
+ [in] O inicial e final documentos de origem.  
   
  `lines`  
- [in] Documentos de origem inicial e final de linhas no correspondente.  
+ [in] Documentos de origem inicial e final de linhas nas correspondentes.  
   
  `columns`  
- [in] Documentos de origem inicial e final de colunas no correspondente.  
+ [in] Documentos de origem inicial e final colunas nas correspondentes.  
   
  `pRetVal`  
- [out] `true` se posições foram definidos; caso contrário, `false`.  
+ [out] `true` se as posições foram definidas, caso contrário, `false`.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -56,5 +56,5 @@ HRESULT GetSourceStartEnd(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -1,19 +1,19 @@
 ---
-title: Como distorcer um elemento
+title: 'Como: Distorcer um elemento'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - skewing elements [WPF]
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: f828e4d4e59fa5ed31f81f3e83570a25add19e01
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ba5f3645156459a711d88b7330b221a5d083e7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611326"
 ---
-# <a name="how-to-skew-an-element"></a>Como distorcer um elemento
+# <a name="how-to-skew-an-element"></a>Como: Distorcer um elemento
 Este exemplo mostra como usar um <xref:System.Windows.Media.SkewTransform> para inclinar um elemento. Uma distorção, também conhecida como cisalhamento, é uma transformação que alonga o espaço de coordenadas de uma maneira não uniforme. Um uso típico de um <xref:System.Windows.Media.SkewTransform> é para simular [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] profundidade em [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] objetos.  
   
  Use o <xref:System.Windows.Media.SkewTransform.CenterX%2A> e <xref:System.Windows.Media.SkewTransform.CenterY%2A> as propriedades para especificar o centro do ponto do <xref:System.Windows.Media.SkewTransform>.  
@@ -42,8 +42,8 @@ Três exemplos ilustrativos de SkewTransform
   
  Para obter o exemplo completo, consulte [Amostras de Transformação 2D](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.SkewTransform>  
- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.SkewTransform>
+- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: KrzysztofCwalina
-ms.openlocfilehash: 1719e9843252c25d1e799471330c6cb08211245b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4943ddcdf1bc4e3e32c8d664cbcc5c50ae3959bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543822"
 ---
 # <a name="virtual-members"></a>Membros virtuais
 Membros virtuais podem ser substituídos, portanto, alterar o comportamento da subclasse. Eles são muito semelhantes aos retornos de chamada em termos de extensibilidade que eles fornecem, mas eles são melhores em termos de desempenho de execução e o consumo de memória. Além disso, os membros virtuais se sentir mais naturais em cenários que exigem a criação de um especial de um tipo existente (especialização).  
@@ -40,5 +40,5 @@ Membros virtuais podem ser substituídos, portanto, alterar o comportamento da s
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

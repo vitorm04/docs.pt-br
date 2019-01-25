@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: implementando um formulário que usa uma operação em segundo plano'
+title: 'Passo a passo: Implementando um formulário que usa uma operação em segundo plano'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543520"
 ---
-# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Instruções passo a passo: implementando um formulário que usa uma operação em segundo plano
+# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Passo a passo: Implementando um formulário que usa uma operação em segundo plano
 Se você tiver uma operação que levará muito tempo para ser concluída, e não desejar sua interface do usuário (UI) para parar de responder ou "parada", você pode usar o <xref:System.ComponentModel.BackgroundWorker> classe para executar a operação em outro thread.  
   
  Este passo a passo ilustra como usar o <xref:System.ComponentModel.BackgroundWorker> classe para executar cálculos demorados em "em"segundo plano, enquanto a interface do usuário permanece responsiva.  Quando terminar, você terá um aplicativo que calcula números de Fibonacci de forma assíncrona. Embora o cálculo de um número de Fibonacci grande possa levar um tempo considerável, o thread de interface do usuário principal não será interrompido por esse atraso e o formulário será responsivo durante o cálculo.  
@@ -37,7 +37,7 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 -   Adicionando relatórios de progresso e suporte a cancelamento  
   
- Para obter uma listagem completa do código usado neste exemplo, consulte [Como implementar um formulário que usa uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+ Para obter uma listagem completa do código usado neste exemplo, consulte [como: Implementar um formulário que usa uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -57,7 +57,7 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 5.  Renomeie o primeiro <xref:System.Windows.Forms.Button> controle `startAsyncButton` e defina as <xref:System.Windows.Forms.Control.Text%2A> propriedade `Start Async`. Renomeie o segundo <xref:System.Windows.Forms.Button> controle `cancelAsyncButton`e defina as <xref:System.Windows.Forms.Control.Text%2A> propriedade `Cancel Async`. Defina suas <xref:System.Windows.Forms.Control.Enabled%2A> propriedade para `false`.  
   
-6.  Criar um manipulador de eventos para ambos os <xref:System.Windows.Forms.Button> dos controles <xref:System.Windows.Forms.Control.Click> eventos. Para detalhes, consulte [Como criar manipuladores de eventos usando o Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Criar um manipulador de eventos para ambos os <xref:System.Windows.Forms.Button> dos controles <xref:System.Windows.Forms.Control.Click> eventos. Para obter detalhes, consulte [como: Criar manipuladores de eventos usando o Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 7.  Arraste uma <xref:System.Windows.Forms.Label> controlar do **caixa de ferramentas** para o formulário e renomeie- `resultLabel`.  
   
@@ -75,7 +75,7 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Como implementar manipuladores de evento assíncrono  
   
-1.  No **propriedades** janela, com o <xref:System.ComponentModel.BackgroundWorker> componente ainda selecionado, clique no **eventos** botão. Clique duas vezes o <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para criar manipuladores de eventos. Para mais informações sobre como usar os manipuladores de evento, consulte [Como criar manipuladores de eventos usando o Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  No **propriedades** janela, com o <xref:System.ComponentModel.BackgroundWorker> componente ainda selecionado, clique no **eventos** botão. Clique duas vezes o <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para criar manipuladores de eventos. Para obter mais informações sobre como usar manipuladores de eventos, consulte [como: Criar manipuladores de eventos usando o Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 2.  Crie um novo método, chamado `ComputeFibonacci`, no formulário. Esse método faz o trabalho real e ele será executado em segundo plano. Esse código demonstra a implementação recursiva do algoritmo de Fibonacci, que é notavelmente ineficiente, demorando mais tempo para concluir o cálculo de números maiores. Ele é usado aqui para fins ilustrativos, para mostrar uma operação que pode introduzir longos atrasos em seu aplicativo.  
   
@@ -156,7 +156,7 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 -   Use várias <xref:System.ComponentModel.BackgroundWorker> objetos para várias operações simultâneas.  
   
--   Para depurar seu aplicativo multi-threaded, consulte [Como usar a janela Threads](/visualstudio/debugger/how-to-use-the-threads-window).  
+-   Para depurar seu aplicativo multi-threaded, consulte [como: Usar a janela Threads](/visualstudio/debugger/how-to-use-the-threads-window).  
   
 -   Implemente seu próprio componente que dá suporte ao modelo de programação assíncrona. Para mais informações, consulte [Visão geral sobre o padrão assíncrono baseado em evento](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
@@ -169,6 +169,6 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
 - [Threading gerenciado](../../../../docs/standard/threading/index.md)
 - [Práticas recomendadas de threading gerenciado](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Como implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)  
-- [Passo a passo: executando uma operação em segundo plano](walkthrough-running-an-operation-in-the-background.md)
+- [Como: Implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Passo a passo: Executando uma operação em segundo plano](walkthrough-running-an-operation-in-the-background.md)
 - [Componente BackgroundWorker](backgroundworker-component.md)

@@ -2,12 +2,12 @@
 title: '&lt;cancelRequestedQuery&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 6b41721dcc0c489377c59bfccdd0b1a617f551b0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 72fd23097760375738c2116b4535940873436986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498262"
 ---
 # <a name="ltcancelrequestedquerygt-of-wcf"></a>&lt;cancelRequestedQuery&gt; de WCF
 
@@ -16,12 +16,12 @@ Representa uma consulta que é usada para controlar solicitações cancelar uma 
 Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
-\<Acompanhamento >  
-\<perfis de >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
 \<workflow>  
 \<cancelRequestedQueries>  
-\<cancelRequestedQuery >  
+\<cancelRequestedQuery>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ nenhuma.
 |-------------|-----------------|  
 |[\<cancelRequestedQueries>](cancelrequestedqueries-of-wcf.md)|Representa uma coleção de consultas que são usados para controlar solicitações cancelar uma atividade filho pela atividade pai.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>

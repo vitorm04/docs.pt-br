@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2a5a69186e41642abf77357db8b04e2611a43f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513121"
 ---
 # <a name="serialization"></a>Serialização
 A serialização é o processo de converter um objeto em um formato que possa ser prontamente persistido ou transportado. Por exemplo, você pode serializar um objeto, transportá-lo pela Internet usando HTTP e desserializado-lo no computador de destino.  
@@ -103,5 +103,5 @@ public class Person : ISerializable {
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)

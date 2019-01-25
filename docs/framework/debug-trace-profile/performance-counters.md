@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c9bf5d138be250d1dfeee012368153bac96b067
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672390"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no .NET Framework
 Este tópico fornece uma lista de contadores de desempenho, você pode encontrar na [Monitor de desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -251,6 +251,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Extensão do exame da pilha**|Exibe a profundidade da pilha durante essa última verificação de segurança de acesso do código de tempo de execução. Verificações de segurança de acesso do código de tempo de execução são realizadas movimentando a pilha. Esse contador não é uma média, ele exibe apenas o último valor observado.|  
 |**Verificações de tempo de execução total**|Exibe o número total de verificações de segurança de acesso do código de tempo de execução realizadas desde que o aplicativo foi iniciado. Verificações de segurança de acesso de código de tempo de execução são realizadas quando um chamador requer uma permissão específica. A verificação de tempo de execução é feita em cada chamada pelo chamador e examina a pilha do thread atual do chamador. Quando usado com o contador **Extensão do exame da pilha**, esse contador indica a penalidade de desempenho que ocorre para verificações de segurança.|  
   
-## <a name="see-also"></a>Consulte também  
- [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [Criação de perfil do tempo de execução](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+## <a name="see-also"></a>Consulte também
+- [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Criação de perfil do tempo de execução](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

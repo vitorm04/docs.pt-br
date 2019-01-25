@@ -1,22 +1,22 @@
 ---
-title: '&lt;EnableAmPmParseAdjustment&gt; elemento'
+title: '&lt;EnableAmPmParseAdjustment&gt; Element'
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 97bb5912ec4d384260e3809166efacded8e2b389
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679091"
 ---
-# <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; elemento
+# <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; Element
 Determina se a data e hora de métodos de análise usam um conjunto de regras ajustado para analisar cadeias de caracteres de data que contêm um dia, mês, hora e designador AM/PM.  
   
  \<configuration>  
  \<runtime>  
-\<EnableAmPmParseAdjustment >  
+\<EnableAmPmParseAdjustment>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,11 +76,11 @@ Determina se a data e hora de métodos de análise usam um conjunto de regras aj
   
  A tabela a seguir ilustra a diferença no <xref:System.DateTime> valor quando o <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> método é usado para analisar a cadeia de caracteres "" 4/10 6 AM"com o `<EnableAmPmParseAdjustment>` do elemento `enabled` propriedade definida como"0"ou"1". Ele pressupõe que hoje é dia 5 de janeiro de 2017 e exibe a data como se ele é formatado usando a cadeia de caracteres de formato de "G" da cultura especificada.  
   
-|Nome da cultura|habilitado = "0"|habilitado = "1"|  
+|Nome da cultura|enabled="0"|enabled="1"|  
 |------------------|------------------|------------------|  
 |en-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>Consulte também  
-- [\<tempo de execução > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+## <a name="see-also"></a>Consulte também
+- [\<tempo de execução > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
 - [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

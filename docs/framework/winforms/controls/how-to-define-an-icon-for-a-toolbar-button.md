@@ -1,5 +1,5 @@
 ---
-title: Como definir um ícone para um botão ToolBar
+title: 'Como: Definir um ícone para um botão de barra de ferramentas'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 9c396f861307d1c8e722beaf38c6cb914d0630c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa622245155a1e7bdeb0184b0cd5ff07f651bfbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644788"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Como definir um ícone para um botão ToolBar
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Como: Definir um ícone para um botão de barra de ferramentas
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.ToolStrip> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.ToolBar>, no entanto, o controle <xref:System.Windows.Forms.ToolBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.  
   
- <xref:System.Windows.Forms.ToolBar> botões são capazes de exibir ícones dentro delas para facilitar a identificação pelos usuários. Isso é conseguido por meio da adição de imagens para o [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) componente e, em seguida, associar a <xref:System.Windows.Forms.ImageList> componente com o <xref:System.Windows.Forms.ToolBar> controle.  
+ <xref:System.Windows.Forms.ToolBar> botões são capazes de exibir ícones dentro deles para facilitar a identificação pelos usuários. Isso é feito pela adição de imagens para o [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) componente e, em seguida, associar a <xref:System.Windows.Forms.ImageList> componente com o <xref:System.Windows.Forms.ToolBar> controle.  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Para definir um ícone para um botão de barra de ferramentas programaticamente  
   
 1.  Em um procedimento, instanciar uma <xref:System.Windows.Forms.ImageList> componente e um <xref:System.Windows.Forms.ToolBar> controle.  
   
-2.  O mesmo procedimento, atribuir uma imagem para o <xref:System.Windows.Forms.ImageList> componente.  
+2.  No mesmo procedimento, atribuir uma imagem para o <xref:System.Windows.Forms.ImageList> componente.  
   
-3.  Atribuir o mesmo procedimento, o <xref:System.Windows.Forms.ImageList> o controle para o <xref:System.Windows.Forms.ToolBar> controlar e atribuir a <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propriedade dos botões de barra de ferramentas individuais.  
+3.  No mesmo procedimento, atribua o <xref:System.Windows.Forms.ImageList> o controle para o <xref:System.Windows.Forms.ToolBar> controlar e atribuir o <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propriedade dos botões da barra de ferramentas individuais.  
   
-     No exemplo de código a seguir, o caminho definido para o local da imagem é a pasta **Meus documentos**. Isso acontece porque presumimos que a maioria dos computadores rodando o sistema operacional Windows vai incluir este diretório. Isso também permite que usuários com níveis mínimos de acesso ao sistema executem com segurança o aplicativo. O exemplo a seguir assume uma forma com um <xref:System.Windows.Forms.PictureBox> controle já foi adicionado.  
+     No exemplo de código a seguir, o caminho definido para o local da imagem é a pasta **Meus documentos**. Isso acontece porque presumimos que a maioria dos computadores rodando o sistema operacional Windows vai incluir este diretório. Isso também permite que usuários com níveis mínimos de acesso ao sistema executem com segurança o aplicativo. O exemplo a seguir supõe um formulário com um <xref:System.Windows.Forms.PictureBox> controle já adicionado.  
   
-     Seguindo as etapas acima, você deve ter gravado código semelhante ao exibido abaixo.  
+     Seguindo as etapas acima, você deve ter escrito o código semelhante àquela exibida abaixo.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -115,8 +115,8 @@ ms.locfileid: "33531905"
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.ToolBar>  
- [Como disparar eventos de menu para botões da barra de ferramentas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [Controle de barra de ferramentas](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.ToolBar>
+- [Como: Disparar eventos de Menu para botões da barra de ferramentas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Controle de barra de ferramentas](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

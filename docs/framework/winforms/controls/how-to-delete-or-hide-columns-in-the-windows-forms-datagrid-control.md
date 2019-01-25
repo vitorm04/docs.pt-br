@@ -1,5 +1,5 @@
 ---
-title: Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms
+title: 'Como: Excluir ou ocultar colunas no controle DataGrid dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 6541ffff1149e5df13c43ee392ffa8b221c8407d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 635fbc112a241c4c8b17d2b49c22042c6bd59a21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653938"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Como: Excluir ou ocultar colunas no controle DataGrid dos Windows Forms
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -32,13 +32,13 @@ ms.locfileid: "33534548"
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Excluir uma coluna do DataGrid com programação  
   
-1.  Na área de declarações do formulário, declarar uma nova instância do <xref:System.Windows.Forms.DataGridTableStyle> classe.  
+1.  Na área de declarações do formulário, declare uma nova instância do <xref:System.Windows.Forms.DataGridTableStyle> classe.  
   
-2.  Definir o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> propriedade para a tabela na fonte de dados que você deseja aplicar o estilo. O exemplo a seguir usa o <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> propriedade, que ele pressupõe que já está definida.  
+2.  Defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> propriedade para a tabela na fonte de dados que você deseja aplicar o estilo. O exemplo a seguir usa o <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> propriedade, que pressupõe que já está definido.  
   
-3.  Adicionar o novo <xref:System.Windows.Forms.DataGridTableStyle> objeto à coleção de estilos de tabela de grade.  
+3.  Adicione o novo <xref:System.Windows.Forms.DataGridTableStyle> objeto à coleção de estilos de tabela do datagrid.  
   
-4.  Chamar o <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> método o <xref:System.Windows.Forms.DataGrid>do <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> coleção, que especifica o índice de coluna da coluna para excluir.  
+4.  Chame o <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> método da <xref:System.Windows.Forms.DataGrid>do <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> coleção, especificando o índice de coluna da coluna a ser excluída.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "33534548"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Ocultar uma coluna do DataGrid com programação  
   
-1.  Na área de declarações do formulário, declarar uma nova instância do <xref:System.Windows.Forms.DataGridTableStyle> classe.  
+1.  Na área de declarações do formulário, declare uma nova instância do <xref:System.Windows.Forms.DataGridTableStyle> classe.  
   
-2.  Definir o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade do <xref:System.Windows.Forms.DataGridTableStyle> para a tabela na fonte de dados que você deseja aplicar o estilo. O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> propriedade, que ele pressupõe que já está definida.  
+2.  Definir a <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade do <xref:System.Windows.Forms.DataGridTableStyle> à tabela na fonte de dados que você deseja aplicar o estilo. O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> propriedade, que pressupõe que já está definido.  
   
-3.  Adicionar o novo <xref:System.Windows.Forms.DataGridTableStyle> objeto à coleção de estilos de tabela de grade.  
+3.  Adicione o novo <xref:System.Windows.Forms.DataGridTableStyle> objeto à coleção de estilos de tabela do datagrid.  
   
-4.  Ocultar a coluna, definindo seu `Width` propriedade como 0, que especifica o índice de coluna da coluna para ocultar.  
+4.  Ocultar a coluna configurando sua `Width` propriedade como 0, que especifica o índice de coluna da coluna a ser oculta.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -124,6 +124,6 @@ ms.locfileid: "33534548"
     }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Como alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
- [Como adicionar tabelas e colunas ao controle DataGrid do Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Como: Adicionar tabelas e colunas para o controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
