@@ -7,37 +7,37 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510423"
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="a6f64-102">Tópicos explicativos de animação do quadro-chave</span><span class="sxs-lookup"><span data-stu-id="a6f64-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="a6f64-103">Os tópicos nesta seção demonstram como usar animações de quadro-chave para animar mais de dois valores de propriedade e controlar a interpolação.</span><span class="sxs-lookup"><span data-stu-id="a6f64-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="80fdb-102">Tópicos explicativos de animação do quadro-chave</span><span class="sxs-lookup"><span data-stu-id="80fdb-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="80fdb-103">Os tópicos nesta seção demonstram como usar animações de quadro-chave para animar mais de dois valores de propriedade e controlar a interpolação.</span><span class="sxs-lookup"><span data-stu-id="80fdb-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a6f64-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="a6f64-104">In This Section</span></span>  
- [<span data-ttu-id="a6f64-105">Animar um objeto usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-106">Animar um valor booliano usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-107">Animar um duplo usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-108">Animar uma matriz usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-109">Animar um ponto usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-110">Animar uma geometria de retângulo usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-111">Animar uma cadeia de caracteres usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-112">Animar cor usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-113">Animar alterações de tamanho usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-114">Animar a espessura de uma borda usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="a6f64-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="a6f64-115">Controlar o tempo de animação do quadro principal</span><span class="sxs-lookup"><span data-stu-id="a6f64-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="80fdb-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="80fdb-104">In This Section</span></span>  
+ [<span data-ttu-id="80fdb-105">Animar um objeto usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-106">Animar um valor booliano usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-107">Animar um duplo usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-108">Animar uma matriz usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-109">Animar um ponto usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-110">Animar uma geometria de retângulo usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-111">Animar uma cadeia de caracteres usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-112">Animar cor usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-113">Animar alterações de tamanho usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-114">Animar a espessura de uma borda usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="80fdb-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="80fdb-115">Controlar o tempo de animação do quadro principal</span><span class="sxs-lookup"><span data-stu-id="80fdb-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="a6f64-116">Referência</span><span class="sxs-lookup"><span data-stu-id="a6f64-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="80fdb-116">Referência</span><span class="sxs-lookup"><span data-stu-id="80fdb-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="a6f64-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a6f64-117">See Also</span></span>  
- [<span data-ttu-id="a6f64-118">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="a6f64-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="a6f64-119">Visão geral da animação</span><span class="sxs-lookup"><span data-stu-id="a6f64-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="a6f64-120">Visão geral das animações de quadro-chave</span><span class="sxs-lookup"><span data-stu-id="a6f64-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="80fdb-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="80fdb-117">See also</span></span>
+- [<span data-ttu-id="80fdb-118">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="80fdb-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="80fdb-119">Visão geral da animação</span><span class="sxs-lookup"><span data-stu-id="80fdb-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [<span data-ttu-id="80fdb-120">Visão geral das animações de quadro-chave</span><span class="sxs-lookup"><span data-stu-id="80fdb-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
