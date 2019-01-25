@@ -1,19 +1,19 @@
 ---
-title: Como preservar a taxa de proporção de uma imagem usada como um plano de fundo
+title: 'Como: Preservar a taxa de proporção de uma imagem usada como um plano de fundo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - aspect ratios of background images [WPF], preserving
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: 8cf0a3804172b90af33318299d60aa6c7eaa53f0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f8133ac4fcd01e08f41861b7a441e9ff1325f6ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698317"
 ---
-# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Como preservar a taxa de proporção de uma imagem usada como um plano de fundo
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Como: Preservar a taxa de proporção de uma imagem usada como um plano de fundo
 Este exemplo mostra como usar o <xref:System.Windows.Media.TileBrush.Stretch%2A> propriedade de um <xref:System.Windows.Media.ImageBrush> para preservar a taxa de proporção da imagem.  
   
  Por padrão, quando você usa um <xref:System.Windows.Media.ImageBrush> para pintar uma área, seu conteúdo é alongado para preencher completamente a área de saída. Quando a área de saída e a imagem têm proporções diferentes, a imagem é distorcida pelo ajuste.  
@@ -39,6 +39,6 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.TileBrush.Stretch%2A>
   
  Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Media.ImageBrush> classe. Para o exemplo completo, consulte [exemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.TileBrush>  
- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.TileBrush>
+- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

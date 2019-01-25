@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671259"
 ---
 # <a name="path-markup-syntax"></a>Sintaxe de marcação do caminho
 Caminhos são discutidos [formas e desenho básico no WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e o [visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), no entanto, este tópico descreve em detalhes a poderosa e complexa mini-linguagem você pode usar para especificar o caminho geometrias mais eficiência usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -40,20 +40,20 @@ Caminhos são discutidos [formas e desenho básico no WPF Overview](../../../../
 ### <a name="a-note-about-white-space"></a>Uma observação sobre o espaço em branco  
  Para resumir, um único espaço é mostrado na seção de sintaxe que segue, mas vários espaços também são aceitos sempre que um único espaço é mostrado.  
   
- Dois números não precisam ser separados por uma vírgula ou espaço em branco, mas isso só pode ser feito quando a cadeia de caracteres resultante é ambígua. Por exemplo, `2..3` é na verdade dois números: "2". E ".3". Da mesma forma, `2-3` é "2" e "-3". Espaços não são necessários antes ou depois de comandos.  
+ Dois números não precisam ser separados por uma vírgula ou espaço em branco, mas isso só pode ser feito quando a cadeia de caracteres resultante é ambígua. Por exemplo, `2..3` é na verdade dois números: "2." E ".3". Da mesma forma, `2-3` é "2" e "-3". Espaços não são necessários antes ou depois de comandos.  
   
 ### <a name="syntax"></a>Sintaxe  
  O [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] atributo sintaxe de uso para um <xref:System.Windows.Media.StreamGeometry> é composto de um recurso opcional <xref:System.Windows.Media.FillRule> valor e um ou mais descrições de figura.  
   
 |Uso do atributo StreamGeometry XAML|  
 |-----------------------------------------|  
-|`<` *objeto* *propriedade* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  O [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] atributo sintaxe de uso para um <xref:System.Windows.Media.PathFigureCollection> é composto de uma ou mais descrições de figura.  
   
 |Uso do atributo PathFigureCollection XAML|  
 |-----------------------------------------------|  
-|`<` *objeto* *propriedade* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Termo|Descrição|  
 |----------|-----------------|  
@@ -142,7 +142,7 @@ Uma letra maiuscula `V` indica que `y` é um valor absoluto; uma minúscula `v` 
   
 |Sintaxe|  
 |------------|  
-|`Q``controlPoint``endPoint`<br /><br /> - ou -<br /><br /> `q``controlPoint``endPoint`|  
+|`Q` `controlPoint` `endPoint`<br /><br /> - ou -<br /><br /> `q` `controlPoint` `endPoint`|  
   
 |Termo|Descrição|  
 |----------|-----------------|  
@@ -166,7 +166,7 @@ Uma letra maiuscula `V` indica que `y` é um valor absoluto; uma minúscula `v` 
   
 |Sintaxe|  
 |------------|  
-|`T``controlPoint``endPoint`<br /><br /> - ou -<br /><br /> `t``controlPoint``endPoint`|  
+|`T` `controlPoint` `endPoint`<br /><br /> - ou -<br /><br /> `t` `controlPoint` `endPoint`|  
   
 |Termo|Descrição|  
 |----------|-----------------|  
@@ -202,7 +202,7 @@ Uma letra maiuscula `V` indica que `y` é um valor absoluto; uma minúscula `v` 
   
 |Sintaxe|  
 |------------|  
-|`x``,``y`<br /><br /> - ou -<br /><br /> `x` `y`|  
+|`x` `,` `y`<br /><br /> - ou -<br /><br /> `x` `y`|  
   
 |Termo|Descrição|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ Uma letra maiuscula `V` indica que `y` é um valor absoluto; uma minúscula `v` 
   
  Você também pode usar notação científica. Por exemplo, `+1.e17` é um valor válido.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

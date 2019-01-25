@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: a792bbea108bcdf33d430c47773466ef3dccdb0c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 8a7b663368cab917cbabfc5ca089b266c47c5ee8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662368"
 ---
 # <a name="ltseealsogt-visual-basic"></a>&lt;seealso&gt; (Visual Basic)
 Especifica um link que aparece na seção Consulte também.  
@@ -23,7 +23,7 @@ Especifica um link que aparece na seção Consulte também.
   
 #### <a name="parameters"></a>Parâmetros  
  `member`  
- Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome do elemento no XML de saída. `member` deve ser exibido entre aspas duplas (" ").  
+ Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome de elemento no XML de saída. `member` deve ser exibido entre aspas duplas (" ").  
   
 ## <a name="remarks"></a>Comentários  
  Use o `<seealso>` marca para especificar o texto que você deseja que apareça em uma seção Consulte também. Use [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) para especificar um link de dentro do texto.  
@@ -35,5 +35,5 @@ Especifica um link que aparece na seção Consulte também.
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/seealso_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Consulte também
+- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)

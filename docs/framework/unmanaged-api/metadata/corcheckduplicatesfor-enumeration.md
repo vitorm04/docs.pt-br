@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdb1570b682088e92ff7c7a78d84259d02d8512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9c930b6fe81fdb7013e95a20d33ff0ba0148f88f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658806"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>Enumeração CorCheckDuplicatesFor
-Especifica os tokens de metadados que serão verificados para duplicatas.  
+Especifica os tokens de metadados que serão verificados duplicatas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -70,9 +70,9 @@ typedef enum CorCheckDuplicatesFor {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`MDDupAll`|Verifique se todos os tokens de metadados de duplicatas.|  
+|`MDDupAll`|Verifique se todos os tokens de metadados para as duplicatas.|  
 |`MDDupENC`|Não usado.|  
-|`MDNoDupChecks`|Não verifica tokens de metadados de duplicatas.|  
+|`MDNoDupChecks`|Não verificam os tokens de metadados para as duplicatas.|  
 |`MDDupTypeDef`|Verificar se há duplicatas de `mdTypeDef` tokens.|  
 |`MDDupInterfaceImpl`|Verificar se há duplicatas de `mdInterfaceImpl` tokens.|  
 |`MDDupMethodDef`|Verificar se há duplicatas de `mdMethodDef` tokens.|  
@@ -96,14 +96,14 @@ typedef enum CorCheckDuplicatesFor {
 |`MDDupMethodSpec`|Verificar se há duplicatas de `mdMethodSpec` tokens.|  
 |`MDDupGenericParamConstraint`|Verificar se há duplicatas de `mdGenericParamConstraint` tokens.|  
 |`MDDupAssembly`|Verificar se há duplicatas de `mdAssembly` tokens.|  
-|`MDDupDefault`|Verificar se há duplicatas de `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, e `mdMethodSpec` tokens.|  
+|`MDDupDefault`|Verificar se há duplicatas `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, e `mdMethodSpec` tokens.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

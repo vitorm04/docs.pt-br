@@ -2,12 +2,12 @@
 title: Solução de problemas do tutorial de introdução
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 43128743ba16aefc8669ace85070a16d80145a71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5b8cd04ef4d98e522e255e1b7529e848351b2e0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695654"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Solução de problemas do tutorial de introdução
 Este tópico lista os problemas mais comuns encontrados ao trabalhar por meio do Tutorial de Introdução e como resolvê-los.  
@@ -30,7 +30,7 @@ Este tópico lista os problemas mais comuns encontrados ao trabalhar por meio do
  O **Add Existing Item** caixa de diálogo exibe somente os arquivos com as seguintes extensões por padrão:. cs,. resx,. Settings,. xsd,. WSDL. Você pode especificar que você deseja ver todos os tipos de arquivo, selecionando **todos os arquivos (\*.\*)**  na caixa de lista suspensa no canto inferior direito do **Add Existing Item** caixa de diálogo.  
 
 
-**Compilando o aplicativo cliente: 'CalculatorClient' não contém uma definição para '\<nome do método >' e nenhum método de extensão '\<nome do método >' aceitando um primeiro argumento do tipo 'CalculatorClient' pôde ser encontrado (tem não está usando uma diretiva ou uma referência de assembly?)**  
+**Compilando o aplicativo cliente: 'CalculatorClient' não contém uma definição para '\<nome do método >' e nenhum método de extensão '\<nome do método >' aceitando um primeiro argumento do tipo 'CalculatorClient' pôde ser encontrado (está faltando um usando diretiva ou um referência de assembly?)**  
 
 Somente os métodos que são marcados com o `ServiceOperationAttribute` são expostos para o mundo exterior. Se você omitir a `ServiceOperationAttribute` atributo de um dos métodos a `ICalculator` interface, você receber essa mensagem de erro ao compilar um aplicativo cliente que faz uma chamada para a operação não tem o atributo.  
 
@@ -38,11 +38,11 @@ Somente os métodos que são marcados com o `ServiceOperationAttribute` são exp
 
  Você receberá esse erro se você não adicionar o arquivo Proxy.cs ou Proxy.vb ao seu projeto de cliente.  
 
-**Executando o cliente: exceção sem tratamento: System.ServiceModel.EndpointNotFoundException: não foi possível conectar ao `http://localhost:8000/ServiceModelSamples/Service/CalculatorService`. Código de erro TCP 10061: nenhuma conexão pôde ser feita porque a máquina de destino recusou-a ativamente.**
+**Executando o cliente: Exceção sem tratamento: System.ServiceModel.EndpointNotFoundException: Não foi possível conectar ao `http://localhost:8000/ServiceModelSamples/Service/CalculatorService`. Código de erro TCP 10061: Nenhuma conexão pôde ser feita porque a máquina de destino recusou-a ativamente.**
 
 Esse erro ocorre se você executar o aplicativo cliente sem executar o serviço.  
   
-**Exceção sem tratamento: System.ServiceModel.Security.SecurityNegotiationException: negociação de segurança SOAP com `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` de destino `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` falhou**  
+**Exceção sem tratamento: System.ServiceModel.Security.SecurityNegotiationException: Negociação de segurança SOAP com `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` de destino `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` falhou**  
 
 Esse erro ocorre em um computador ingressado no domínio que não tem conectividade de rede. Conectar seu computador à rede ou desativar a segurança para o cliente e o serviço. Para o serviço, modifique o código que cria o WSHttpBinding ao seguinte.  
   
@@ -57,7 +57,7 @@ Para o cliente, altere o  **\<segurança >** elemento sob o  **\<associação >*
 <security mode="Node" />  
 ```  
 
-## <a name="see-also"></a>Consulte também  
- [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Início rápido de solução de problemas do WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- [Solução de problemas de instalação](../../../docs/framework/wcf/troubleshooting-setup-issues.md)
+## <a name="see-also"></a>Consulte também
+- [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Início rápido de solução de problemas do WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)
+- [Solução de problemas de instalação](../../../docs/framework/wcf/troubleshooting-setup-issues.md)

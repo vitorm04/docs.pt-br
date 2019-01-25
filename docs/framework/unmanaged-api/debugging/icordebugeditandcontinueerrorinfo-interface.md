@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0922a27dff8d7958d60b4cf225143a96f1a6c351
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d50aa8a5cc98ff966cdd42061cbead22611becfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680277"
 ---
 # <a name="icordebugeditandcontinueerrorinfo-interface"></a>Interface ICorDebugEditAndContinueErrorInfo
 `ICorDebugEditAndContinueErrorInfo` é obsoleto. Não use essa interface.  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

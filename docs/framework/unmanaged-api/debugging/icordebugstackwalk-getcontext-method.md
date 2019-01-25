@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1126842a30f19831cc845bcfccc0e08f4bf5f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 306eee3c0ce4689d1d6295aba1ef7584841dcc72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731043"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>Método ICorDebugStackWalk::GetContext
-Retorna o contexto para o quadro atual de [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto.  
+Retorna o contexto para o quadro atual na [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 #### <a name="parameters"></a>Parâmetros  
  `contextFlags`  
- [in] Sinalizadores que indicam o conteúdo solicitado do buffer de contexto (definido em Winnt. H).  
+ [in] Sinalizadores que indicam o conteúdo solicitado do buffer de contexto (definidos em Winnt. H).  
   
  `contextBufSize`  
  [in] O tamanho alocado do buffer de contexto.  
@@ -50,7 +50,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  [out] O buffer de contexto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -62,17 +62,17 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Porque desenrolamento restaura apenas um subconjunto de registros, como registros não volátil, o contexto pode não coincidir com o estado do registro no momento da chamada.  
+ Porque o desenrolamento restaura apenas um subconjunto de registros, como registros não voláteis, o contexto pode não coincidir com o estado de registro no momento da chamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Como criar figuras usando linhas, curvas e formas
+title: 'Como: Criar figuras usando linhas, curvas e formas'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: 222245fa4b3b593e0a38752a8cb991a12e469698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb0b13b8c7b27d6c85cc969f10c126df26a14acf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707824"
 ---
-# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Como criar figuras usando linhas, curvas e formas
-Para criar uma figura, construir um <xref:System.Drawing.Drawing2D.GraphicsPath>e, em seguida, chamar métodos, como <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, para adicionar primitivos para o caminho.  
+# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Como: Criar figuras usando linhas, curvas e formas
+Para criar uma figura, construa uma <xref:System.Drawing.Drawing2D.GraphicsPath>e, em seguida, chamar métodos, como <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, para adicionar primitivos ao caminho.  
   
 ## <a name="example"></a>Exemplo  
  Os exemplos de código a seguir criam caminhos que têm figuras:  
@@ -32,9 +32,9 @@ Para criar uma figura, construir um <xref:System.Drawing.Drawing2D.GraphicsPath>
  [!code-vb[System.Drawing.ConstructingDrawingPaths#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#22)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Os exemplos anteriores são projetados para uso com o Windows Forms e eles requerem <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+ Os exemplos anteriores são projetados para uso com o Windows Forms e exigem <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Drawing2D.GraphicsPath>  
- [Construindo e desenhando demarcadores](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
- [Usando uma caneta para desenhar linhas e formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Drawing2D.GraphicsPath>
+- [Construindo e desenhando demarcadores](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+- [Usando uma caneta para desenhar linhas e formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: 66d30b949fbfe8190b9e2ae2ea7896ac36bf0bac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55cd3284f331e9793a0bb73f26ed16bbd99fa116
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685640"
 ---
 # <a name="graphics-paths-in-gdi"></a>demarcadores de elementos gráficos no GDI+
 Os demarcadores são formados combinando linhas, retângulos e curvas simples. Lembre-se do [visão geral de elementos gráficos vetoriais](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) que os seguintes blocos de construção básicos provaram para ser mais útil para desenhar imagens:  
@@ -34,16 +34,16 @@ Os demarcadores são formados combinando linhas, retângulos e curvas simples. L
   
 -   Splines de Bézier  
   
- No GDI+, o <xref:System.Drawing.Drawing2D.GraphicsPath> objeto permite que você colete uma sequência desses blocos de construção em uma única unidade. A sequência de inteira de linhas, retângulos, polígonos e curvas, em seguida, pode ser desenhada com uma chamada para o <xref:System.Drawing.Graphics.DrawPath%2A> método o <xref:System.Drawing.Graphics> classe. A ilustração a seguir mostra um demarcador criado pela combinação de uma linha, um arco, uma spline de Bézier e uma spline cardinal.  
+ No GDI+, a <xref:System.Drawing.Drawing2D.GraphicsPath> objeto permite que você colete uma sequência desses blocos de construção em uma única unidade. Toda a sequência de linhas, retângulos, polígonos e curvas pode então ser desenhada com uma chamada para o <xref:System.Drawing.Graphics.DrawPath%2A> método da <xref:System.Drawing.Graphics> classe. A ilustração a seguir mostra um demarcador criado pela combinação de uma linha, um arco, uma spline de Bézier e uma spline cardinal.  
   
  ![Demarcador](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.gif "Aboutgdip02_art14")  
   
 ## <a name="using-a-path"></a>Usando um demarcador  
- O <xref:System.Drawing.Drawing2D.GraphicsPath> classe fornece os seguintes métodos para criar uma sequência de itens a ser desenhado: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> (para splines cardinais), e <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>. Cada um desses métodos está sobrecarregado; ou seja, cada método dá suporte a diferentes listas de parâmetros. Por exemplo, uma variação do <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> método recebe quatro inteiros e outra variação de <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> método recebe dois <xref:System.Drawing.Point> objetos.  
+ O <xref:System.Drawing.Drawing2D.GraphicsPath> classe fornece os seguintes métodos para a criação de uma sequência de itens a ser desenhada: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> (para splines cardinais) e <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>. Cada um desses métodos está sobrecarregado; ou seja, cada método dá suporte a diferentes listas de parâmetros. Por exemplo, uma variação do <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> método recebe quatro inteiros e outra variação de <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> método recebe dois <xref:System.Drawing.Point> objetos.  
   
- Os métodos para adicionar linhas, retângulos e splines de Bézier em um caminho têm métodos de plural complementar que adicionar vários itens no caminho em uma única chamada: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLines%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangles%2A>, e <xref:System.Drawing.Drawing2D.GraphicsPath.AddBeziers%2A>. Além disso, o <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A> métodos têm métodos complementar, <xref:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddPie%2A>, que adiciona uma curva fechada ou pizza para o caminho.  
+ Os métodos para adicionar linhas, retângulos e splines de Bézier em um caminho tem vários métodos complementares que adicionam diversos itens para o caminho em uma única chamada: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLines%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangles%2A>, e <xref:System.Drawing.Drawing2D.GraphicsPath.AddBeziers%2A>. Além disso, o <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A> têm métodos complementares, <xref:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddPie%2A>, que adicionam uma curva fechada ou pizza ao caminho.  
   
- Para desenhar um caminho, é necessário um <xref:System.Drawing.Graphics> objeto, um <xref:System.Drawing.Pen> objeto e um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. O <xref:System.Drawing.Graphics> objeto fornece o <xref:System.Drawing.Graphics.DrawPath%2A> método e o <xref:System.Drawing.Pen> objeto armazena atributos, como a largura e a cor da linha usada para renderizar o caminho. O <xref:System.Drawing.Drawing2D.GraphicsPath> objeto armazena a sequência de linhas e curvas que compõem o caminho. O <xref:System.Drawing.Pen> objeto e o <xref:System.Drawing.Drawing2D.GraphicsPath> objeto são transmitidos como argumentos para o <xref:System.Drawing.Graphics.DrawPath%2A> método. O exemplo a seguir desenha um demarcador que consiste em uma linha, uma elipse e uma spline de Bézier:  
+ Para desenhar um caminho, você precisa de uma <xref:System.Drawing.Graphics> objeto, um <xref:System.Drawing.Pen> objeto e um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. O <xref:System.Drawing.Graphics> objeto fornece os <xref:System.Drawing.Graphics.DrawPath%2A> método e o <xref:System.Drawing.Pen> objeto armazena atributos como largura e cor da linha usada para renderizar o demarcador. O <xref:System.Drawing.Drawing2D.GraphicsPath> objeto armazena a sequência de linhas e curvas que compõem o caminho. O <xref:System.Drawing.Pen> objeto e o <xref:System.Drawing.Drawing2D.GraphicsPath> objeto são passados como argumentos para o <xref:System.Drawing.Graphics.DrawPath%2A> método. O exemplo a seguir desenha um demarcador que consiste em uma linha, uma elipse e uma spline de Bézier:  
   
  [!code-csharp[LinesCurvesAndShapes#101](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#101)]
  [!code-vb[LinesCurvesAndShapes#101](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#101)]  
@@ -66,9 +66,9 @@ Os demarcadores são formados combinando linhas, retângulos e curvas simples. L
   
  ![Demarcadores](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
- <xref:System.Drawing.Point?displayProperty=nameWithType>  
- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Como Criar Objetos Gráficos para Desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Construindo e desenhando demarcadores](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
+- <xref:System.Drawing.Point?displayProperty=nameWithType>
+- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Como: Criar objetos gráficos para desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Construindo e desenhando demarcadores](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

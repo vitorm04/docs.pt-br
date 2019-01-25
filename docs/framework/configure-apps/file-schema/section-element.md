@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 17b44ca93efc26f4732f5fe2926f894257d8f984
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 295cb8ee77c3042dc5742fb23cf4bbcd085b4d36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659209"
 ---
 # <a name="section-element"></a>\<seção > elemento
 
 Contém uma declaração de seção de configuração.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<seção >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<seção >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,12 +39,12 @@ Contém uma declaração de seção de configuração.
          allowLocation="true|false" />
 ```
 
-## <a name="required-attributes"></a>Atributos necessários.
+## <a name="required-attributes"></a>Atributos obrigatórios
 
 |           | Descrição |
 | --------- | ----------- |
 | **name**  | Especifica o nome da seção de configuração. |
-| **type**  | Especifica o nome da classe do manipulador de seção de configuração que lê a seção do arquivo de configuração. O valor do tipo tem a sintaxe "simples de assembly de nome fully-qualified-section-handler-class-name". O nome do assembly simples é o nome do arquivo raiz sem o *. dll* extensão de arquivo. |
+| **type**  | Especifica o nome da classe de manipulador de seção de configuração que lê a seção do arquivo de configuração. O valor do tipo tem a sintaxe "fully-qualified-section-handler-class-name-simple-assembly-name". O nome de assembly simples é o nome do arquivo raiz sem a *. dll* extensão de arquivo. |
 
 ## <a name="optional-attributes"></a>Atributos opcionais
 
@@ -52,18 +52,18 @@ Os atributos a seguir são aplicáveis apenas para aplicativos ASP.NET. O sistem
 
 |                     | Descrição |
 | ------------------- | ----------- |
-| **allowDefinition** | Especifica qual arquivo de configuração, a seção pode ser usada em. Use um dos seguintes valores:<br><br>**Em qualquer lugar**<br>Permite que a seção a ser usado em qualquer arquivo de configuração. Esse é o padrão.<br>**MachineOnly**<br>Permite que a seção a ser usado apenas no arquivo de configuração da máquina (*Machine. config*).<br>**MachineToApplication**<br>Permite que a seção a ser usado no arquivo de configuração de máquina ou o arquivo de configuração do aplicativo. |
+| **allowDefinition** | Especifica qual arquivo de configuração, a seção pode ser usada em. Use um dos seguintes valores:<br><br>**Everywhere**<br>Permite que a seção a ser usado em qualquer arquivo de configuração. Esse é o padrão.<br>**MachineOnly**<br>Permite que a seção a ser usado apenas no arquivo de configuração do computador (*Machine. config*).<br>**MachineToApplication**<br>Permite que a seção a ser usado no arquivo de configuração do computador ou o arquivo de configuração do aplicativo. |
 | **allowLocation**   | Determina se a seção pode ser usada dentro de  **\<local >** elemento. Use um dos seguintes valores:<br><br>**true**<br>Permite que a seção a ser usado dentro de  **\<local >** elemento. Esse é o padrão.<br>**false**<br>Não permite a seção a ser usado dentro de  **\<local >** elemento. |
 
 ## <a name="parent-elements"></a>Elementos pai
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contém declarações de namespace e de seção de configuração. |
+| [**\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contém as declarações de namespace e a seção de configuração. |
 | [**\<sectionGroup >** elemento](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
 
 > [!NOTE]
-> Um  **\<seção >** é um elemento filho do  **\<configSections >** ou  **\<sectionGroup >** , mas não ambos.
+> Um  **\<seção >** é um elemento filho de um  **\<configSections >** ou  **\<sectionGroup >** , mas não ambos.
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -71,13 +71,13 @@ Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-Declarar uma seção de configuração essencialmente define um novo elemento para o arquivo de configuração. O novo elemento contém configurações que uma configuração de manipulador de seção (ou seja, uma classe que implementa o <xref:System.Configuration.IConfigurationSectionHandler> interface) lê. Os atributos e elementos filho de uma seção que você definir dependem do manipulador de seção que você usa para ler as configurações.
+Declarar uma seção de configuração essencialmente define um novo elemento para o arquivo de configuração. O novo elemento contém definições de configuração de uma manipulador de seção (ou seja, uma classe que implementa o <xref:System.Configuration.IConfigurationSectionHandler> interface) lê. Os atributos e elementos filho de uma seção que você define dependem do manipulador de seção, que você usa para ler suas configurações.
 
-Declarando um manipulador de seção de configuração no *Machine. config* arquivo permite que você use a seção de configuração em qualquer arquivo de configuração do aplicativo no computador, a menos que o **allowDefinition**atributo especifique o contrário.
+Declarando um manipulador de seção de configuração na *Machine. config* arquivo permite que você use a seção de configuração em qualquer arquivo de configuração de aplicativo nesse computador, a menos que o **allowDefinition**atributo especifique o contrário.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como definir uma seção de configuração e definir configurações para essa seção:
+O exemplo a seguir mostra como definir uma seção de configuração e definir as configurações dessa seção:
 
 ```xml
 <configuration>
@@ -94,8 +94,8 @@ O exemplo a seguir mostra como definir uma seção de configuração e definir c
 
 ## <a name="configuration-file"></a>arquivo de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo, o arquivo de configuração de máquina (*Machine. config*), e *Web. config* arquivos que não estão no nível de diretório do aplicativo.
+Esse elemento pode ser usado no arquivo de configuração do aplicativo, arquivo de configuração de máquina (*Machine. config*), e *Web. config* arquivos que não estão no nível de diretório do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

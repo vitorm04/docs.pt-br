@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668945"
 ---
 # <a name="application-settings-attributes"></a>Atributos de configurações do aplicativo
 A arquitetura de Configurações de Aplicativo fornece muitos atributos que podem ser aplicados à classe wrapper de configurações de aplicativos ou suas propriedades individuais. Esses atributos são examinados no tempo de execução pela infraestrutura de configurações de aplicativo, geralmente especificamente pelo provedor de configurações, a fim de adaptar seu funcionamento às necessidades declaradas do wrapper personalizado.  
@@ -19,7 +19,7 @@ A arquitetura de Configurações de Aplicativo fornece muitos atributos que pode
  A tabela a seguir lista os atributos que podem ser aplicados à classe wrapper de configurações de aplicativo, às propriedades individuais desta classe ou a ambos. Por definição, somente um único atributo de escopo —**UserScopedSettingAttribute** ou **ApplicationScopedSettingAttribute**— deve ser aplicado a todas as propriedades de configurações.  
   
 > [!NOTE]
->  Um provedor de configurações personalizadas, derivado de <xref:System.Configuration.SettingsProvider> classe, só é necessário para reconhecer os três atributos a seguir: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, e **DefaultSettingValueAttribute**.  
+>  Um provedor de configurações personalizadas, derivado de <xref:System.Configuration.SettingsProvider> de classe, só é necessário para reconhecer os três atributos a seguir: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, e **DefaultSettingValueAttribute**.  
   
 |Atributo|Destino|Descrição|  
 |---------------|------------|-----------------|  
@@ -37,8 +37,8 @@ A arquitetura de Configurações de Aplicativo fornece muitos atributos que pode
   
  *Classe* indica que o atributo pode ser aplicado somente a uma classe wrapper de configurações de aplicativo. *Propriedade* indica que o atributo pode ser aplicado somente a propriedades de configurações. *Ambos* indica que o atributo pode ser aplicado em qualquer nível.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- [Arquitetura das Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Como criar configurações de aplicativo](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- [Arquitetura das Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Como: Criar configurações de aplicativo](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

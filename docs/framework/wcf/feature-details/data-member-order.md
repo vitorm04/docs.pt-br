@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: e286b900d7647bcd5bc99b78164e6820c1417a63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93ec81d94d8133fc5a6d71d7f1b57b2e9a6aad21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659625"
 ---
 # <a name="data-member-order"></a>Ordem de membro de dados
-Em alguns aplicativos, é útil saber a ordem na qual os dados de vários membros de dados são enviados ou deve ser recebida (por exemplo, a ordem em que os dados aparecem no XML serializado). Às vezes, pode ser necessário alterar essa ordem. Este tópico explica as regras de ordenação.  
+Em alguns aplicativos, é útil saber a ordem na qual os dados de vários membros de dados são enviados ou são esperados para ser recebida (como a ordem na qual os dados aparecem no XML serializável). Às vezes, pode ser necessário alterar essa ordem. Este tópico explica as regras de ordenação.  
   
 ## <a name="basic-rules"></a>Regras básicas  
  As regras básicas de ordenação de dados incluem:  
   
--   Se um tipo de contrato de dados fizer parte de uma hierarquia de herança, membros de dados de seus tipos base são sempre primeiras na ordem.  
+-   Se um tipo de contrato de dados fizer parte de uma hierarquia de herança, membros de dados de seus tipos base são sempre primeiros na ordem.  
   
--   Em seguida em ordem são membros de dados do tipo que não têm o <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> conjunto em ordem alfabética de atributos.  
+-   Em seguida, em ordem são membros de dados do tipo atual que não têm o <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> conjunto em ordem alfabética de atributos.  
   
--   Em seguida são os membros de dados que tem o <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> conjunto de atributos. Esses são ordenados pelo valor da `Order` propriedade primeiro e, em seguida, em ordem alfabética se houver mais de um membro de um determinado `Order` valor. Valores da ordem podem ser ignorados.  
+-   Em seguida, estão os membros de dados que têm o <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> conjunto de atributos. Esses são ordenados pelo valor da `Order` propriedade primeiro e, em seguida, em ordem alfabética se não houver mais de um membro de um determinado `Order` valor. Valores da ordem podem ser ignoradas.  
   
  Ordem alfabética é estabelecida chamando o <xref:System.String.CompareOrdinal%2A> método.  
   
@@ -62,7 +62,7 @@ Em alguns aplicativos, é útil saber a ordem na qual os dados de vários membro
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

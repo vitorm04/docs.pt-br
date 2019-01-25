@@ -2,12 +2,12 @@
 title: Operadores de sequência
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 01807e48c06bce1d451961bb6204d1f8e49d53f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666157"
 ---
 # <a name="sequence-operators"></a>Operadores de sequência
 Em termos gerais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não suporta os operadores de sequência que têm uma ou mais das seguintes qualidades:  
@@ -45,5 +45,5 @@ Em termos gerais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
 ## <a name="differences-from-net"></a>Diferenças do .NET  
  Todos os operadores suporte a sequência funciona como esperado em Common Language Runtime (CLR) a exceção de `Average`. `Average` retorna um valor do mesmo tipo que o tipo que está sendo especificado média, enquanto em CLR `Average` sempre retorna <xref:System.Double> ou <xref:System.Decimal>. Se o argumento de origem é dobrar explicitamente convertida/decimal ou o seletor converte dobrar/decimal, o SQL resultante também terá uma conversão e o resultado será como esperado.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

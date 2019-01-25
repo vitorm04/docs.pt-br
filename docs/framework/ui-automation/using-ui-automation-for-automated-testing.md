@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 4a43b33c1faf123ce05be70db102bc9b2ac541f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 023c85591ba484e0b8f97a8ef71a4f65a2f05ffb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691782"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Usando automação de interface do usuário para testes automatizados
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Esta visão geral descreve como [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pode ser útil como uma estrutura para o acesso programático em cenários de teste automatizado.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47200835"
 |--------------------------------|------------------|---------------------------------|----------------------------|  
 |Botão|Windows Presentation Foundation|Conteúdo|NameProperty|  
 |Botão|Win32|Legenda|NameProperty|  
-|Image|HTML|ALT|NameProperty|  
+|Image|HTML|alt|NameProperty|  
   
  Provedores de automação de interface do usuário serão responsáveis por mapear as propriedades específicas da estrutura de seus controles para o equivalente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47200835"
 |Adicione as referências de automação de interface do usuário.|O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dll do necessário para clientes de automação de interface do usuário estão listados aqui.<br /><br /> -UIAutomationClient. dll fornece acesso para o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] APIs do lado do cliente.<br />-UIAutomationClientSideProvider. dll fornece a capacidade de automatizar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles. Ver [suporte de automação de interface do usuário para controles padrão](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).<br />-UIAutomationTypes. dll fornece acesso para os tipos específicos definidos em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |Adicionar o <xref:System.Windows.Automation> namespace.|Este namespace contém tudo o que os clientes de automação de interface do usuário precisam usar os recursos do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , exceto a manipulação de texto.|  
 |Adicionar o <xref:System.Windows.Automation.Text> namespace.|Este namespace contém tudo o que uma necessidade dos clientes de automação de interface do usuário para usar os recursos do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] manipulação de texto.|  
-|Localizar os controles de interesse|Scripts de teste automatizados localizam os elementos de automação de interface do usuário que representam os controles de interesse dentro da árvore de automação.<br /><br /> Há várias maneiras de obter elementos de automação de interface do usuário com o código.<br /><br /> -Consulte o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] usando um <xref:System.Windows.Automation.Condition> instrução. Normalmente, é onde a neutralidade de idioma <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> é usado. **Observação:** uma <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> pode ser obtida usando uma ferramenta como Inspect.exe é capaz de relacionar a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades de um controle. <br /><br /> – Use o <xref:System.Windows.Automation.TreeWalker> classe para percorrer toda a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore ou um subconjunto dele.<br />-Rastreie o foco.<br />-Use o hWnd do controle.<br />-Use o local da tela, como o local do cursor do mouse.<br /><br /> Consulte [obtendo elementos de automação de interface do usuário](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
+|Localizar os controles de interesse|Scripts de teste automatizados localizam os elementos de automação de interface do usuário que representam os controles de interesse dentro da árvore de automação.<br /><br /> Há várias maneiras de obter elementos de automação de interface do usuário com o código.<br /><br /> -Consulte o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] usando um <xref:System.Windows.Automation.Condition> instrução. Normalmente, é onde a neutralidade de idioma <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> é usado. **Observação:**  Uma <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> pode ser obtida usando uma ferramenta como Inspect.exe é capaz de relacionar a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades de um controle. <br /><br /> – Use o <xref:System.Windows.Automation.TreeWalker> classe para percorrer toda a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore ou um subconjunto dele.<br />-Rastreie o foco.<br />-Use o hWnd do controle.<br />-Use o local da tela, como o local do cursor do mouse.<br /><br /> Consulte [obtendo elementos de automação de interface do usuário](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
 |Obter padrões de controle|Padrões de controle expõem comportamentos comuns para controles funcionalmente semelhantes.<br /><br /> Depois de localizar os controles que exigem teste, scripts de teste automatizados obter os padrões de controle de interesse de um desses elementos de automação de interface do usuário. Por exemplo, o <xref:System.Windows.Automation.InvokePattern> padrão de controle para a funcionalidade típica de botão ou o <xref:System.Windows.Automation.WindowPattern> padrão de controle para a funcionalidade de janela.<br /><br /> Ver [visão geral de padrões de controle de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).|  
 |Automatizar a interface do usuário|Scripts de teste automatizados podem agora controlar qualquer [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de interesse de um [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] framework usando as informações e funcionalidade exposta pelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] padrões de controle.|  
   
@@ -113,5 +113,5 @@ ms.locfileid: "47200835"
 ## <a name="security"></a>Segurança  
  Para obter informações de segurança, consulte [visão geral de segurança de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-security-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
- [UI Automation Fundamentals](../../../docs/framework/ui-automation/index.md) (Fundamentos da Automação da Interface do Usuário)
+## <a name="see-also"></a>Consulte também
+- [UI Automation Fundamentals](../../../docs/framework/ui-automation/index.md) (Fundamentos da Automação da Interface do Usuário)

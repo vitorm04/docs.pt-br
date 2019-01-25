@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f5a70a01937c52197978db776b90028e1fcb7c6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 78f25b657e6cb103797e13e98c3dd61a80003dc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701814"
 ---
 # <a name="converting-times-between-time-zones"></a>Convertendo horários entre fusos horários
 
@@ -122,6 +122,6 @@ O <xref:System.TimeZoneInfo> classe também inclui uma sobrecarga da <xref:Syste
 
 ## <a name="see-also"></a>Consulte também
 
-* <xref:System.TimeZoneInfo>
-* [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
-* [Encontrando os fusos horários definidos em um sistema local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- <xref:System.TimeZoneInfo>
+- [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
+- [Encontrando os fusos horários definidos em um sistema local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

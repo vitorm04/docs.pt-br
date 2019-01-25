@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730224"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Método IMetaDataAssemblyImport::GetAssemblyRefProps
 Obtém o conjunto de propriedades para a referência de assembly com a assinatura de metadados especificado.  
@@ -52,7 +52,7 @@ HRESULT GetAssemblyRefProps (
  [out] Um ponteiro para a chave pública ou token de metadados.  
   
  `pcbPublicKeyOrToken`  
- [out] O número de bytes a retornado chave pública ou token.  
+ [out] O número de bytes na retornado chave pública ou token.  
   
  `szName`  
  [out] O nome simples do assembly.  
@@ -61,31 +61,31 @@ HRESULT GetAssemblyRefProps (
  [in] O tamanho, em caracteres largos, de `szName`.  
   
  `pchName`  
- [out] Um ponteiro para o número de caracteres largos realmente retornados em `szName`.  
+ [out] Um ponteiro para o número de caracteres largos, na verdade, é retornado no `szName`.  
   
  `pMetaData`  
  [out] Um ponteiro para uma estrutura ASSEMBLYMETADATA que contém os metadados do assembly.  
   
  `ppbHashValue`  
- [out] Um ponteiro para o valor de hash. Este é o hash, usando o algoritmo SHA-1, do `PublicKey` propriedade do assembly referenciado, a menos que o arfFullOriginator sinalizador do [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeração está definida.  
+ [out] Um ponteiro para o valor de hash. Isso é o hash, usando o algoritmo SHA-1, do `PublicKey` propriedade do assembly referenciado, a menos que o arfFullOriginator do sinalizador do [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeração é definida.  
   
  `pcbHashValue`  
  [out] O número de caracteres largos no valor de hash retornado.  
   
  `pdwAssemblyRefFlags`  
- [out] Um ponteiro para os sinalizadores que descrevem os metadados aplicado a um assembly. O valor de sinalizadores é uma combinação de um ou mais [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores.  
+ [out] Um ponteiro para os sinalizadores que descrevem os metadados aplicados a um assembly. O valor de sinalizadores é uma combinação de um ou mais [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Este método retorna S_OK se for bem-sucedida; Caso contrário, ele retorna um dos códigos de erro definidos no arquivo de cabeçalho Winerror. h.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

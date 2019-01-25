@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b84bf20acaaa912e47102973b0484d635f1aa244
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679416"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimento principal no Visual Basic
-Cada aplicativo do Visual Basic deve conter um procedimento chamado `Main`. Esse procedimento serve como a partir do ponto e controle geral para seu aplicativo. O .NET Framework chama o `Main` procedimento quando ele carregar seu aplicativo e está pronto para passá-lo para controle. A menos que você estiver criando um aplicativo Windows Forms, você deve escrever o `Main` procedimento para aplicativos que são executados em seus próprios.  
+Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. Esse procedimento serve como o início do ponto e controle geral para seu aplicativo. O .NET Framework chama seu `Main` procedimento quando ele tiver carregado seu aplicativo e está pronto para transmitir o controle a ele. A menos que você estiver criando um aplicativo do Windows Forms, você deve escrever o `Main` procedimento para aplicativos que executam suas próprias.  
   
- `Main` contém o código que é executado primeiro. Em `Main`, determinar qual formulário é carregado pela primeira vez, quando o programa for iniciado, descubra se uma cópia do seu aplicativo já está em execução no sistema, estabelecer um conjunto de variáveis para o seu aplicativo ou abrir um banco de dados que o aplicativo requer.  
+ `Main` contém o código que é executado primeiro. No `Main`, determinar qual formulário está para ser carregado pela primeira vez quando o programa é iniciado, descubra se uma cópia do seu aplicativo já está em execução no sistema, estabelecer um conjunto de variáveis para seu aplicativo ou abrir um banco de dados que o aplicativo requer.  
   
 ## <a name="requirements-for-the-main-procedure"></a>Requisitos para o procedimento principal  
- Um arquivo que é executado em seu próprio (normalmente com extensão .exe) deve conter um `Main` procedimento. Uma biblioteca (por exemplo, com extensão. dll) não é executado em seu próprio e não requer uma `Main` procedimento. Os requisitos para os diferentes tipos de projetos que você pode criar são da seguinte maneira:  
+ Um arquivo que é executado em seu próprio (normalmente com uma extensão .exe) deve conter um `Main` procedimento. Uma biblioteca (por exemplo, com extensão. dll) não é executado em seu próprio e não requer um `Main` procedimento. Os requisitos para os diferentes tipos de projetos que você pode criar são da seguinte maneira:  
   
--   Aplicativos de console executam em seus próprios, e você deve fornecer pelo menos um `Main` procedimento. .  
+-   Execute aplicativos de console seus próprios, e você deve fornecer pelo menos um `Main` procedimento. .  
   
--   Executar seus próprios aplicativos do Windows Forms. No entanto, o compilador do Visual Basic gera automaticamente um `Main` procedimento como um aplicativo e você não precisa gravar um.  
+-   Aplicativos de formulários do Windows executados suas próprias. No entanto, o compilador do Visual Basic gera automaticamente um `Main` procedimento como um aplicativo e você não precisará escrevê-lo.  
   
--   Bibliotecas de classes não exigem uma `Main` procedimento. Esses incluem bibliotecas de controle do Windows e bibliotecas de controles da Web. Aplicativos Web são implantados como bibliotecas de classe.  
+-   Bibliotecas de classes não exigem um `Main` procedimento. Isso inclui bibliotecas de controle do Windows e bibliotecas de controle de Web. Aplicativos Web são implantados como bibliotecas de classes.  
   
 ## <a name="declaring-the-main-procedure"></a>Declarando o procedimento principal  
- Há quatro maneiras para declarar o `Main` procedimento. Pode levar argumentos ou não, e pode retornar um valor ou não.  
+ Há quatro maneiras de declarar o `Main` procedimento. Pode levar argumentos ou não, e ele pode retornar um valor ou não.  
   
 > [!NOTE]
->  Se você declarar `Main` em uma classe, você deve usar o `Shared` palavra-chave. Em um módulo, `Main` não precisa ser `Shared`.  
+>  Se você declarar `Main` em uma classe, você deve usar o `Shared` palavra-chave. Em um módulo `Main` não precisa ser `Shared`.  
   
--   É a maneira mais simples para declarar um `Sub` procedimento que não usam argumentos ou retornar um valor.  
+-   A maneira mais simples é declarar uma `Sub` procedimento que não usam argumentos ou retornar um valor.  
   
     ```  
     Module mainModule  
@@ -47,7 +47,7 @@ Cada aplicativo do Visual Basic deve conter um procedimento chamado `Main`. Esse
     End Module  
     ```  
   
--   `Main` também pode retornar um `Integer` valor, que o sistema operacional usa como o código de saída para o seu programa. Outros programas podem testar esse código, examinando o valor de ERRORLEVEL do Windows. Para retornar um código de saída, você deve declarar `Main` como um `Function` procedimento em vez de uma `Sub` procedimento.  
+-   `Main` também pode retornar um `Integer` valor, que usa o sistema operacional como o código de saída para o seu programa. Outros programas podem testar esse código, examinando o valor de ERRORLEVEL do Windows. Para retornar um código de saída, você deve declarar `Main` como um `Function` procedimento em vez de um `Sub` procedimento.  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ Cada aplicativo do Visual Basic deve conter um procedimento chamado `Main`. Esse
     End Module  
     ```  
   
--   `Main` também pode usar um `String` matriz como um argumento. Cada cadeia de caracteres na matriz contém um dos argumentos de linha de comando usados para invocar o programa. Você pode executar ações diferentes dependendo de seus valores.  
+-   `Main` também pode tirar uma `String` matriz como um argumento. Cada cadeia de caracteres na matriz contém um dos argumentos de linha de comando usados para invocar o seu programa. Você pode executar ações diferentes dependendo dos seus valores.  
   
     ```  
     Module mainModule  
@@ -108,14 +108,14 @@ Cada aplicativo do Visual Basic deve conter um procedimento chamado `Main`. Esse
     End Module  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
- <xref:System.Array.Length%2A>  
- <xref:Microsoft.VisualBasic.Information.UBound%2A>  
- [Estrutura de um programa do Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Tipo de Dados String](../../../visual-basic/language-reference/data-types/string-data-type.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
+- <xref:System.Array.Length%2A>
+- <xref:Microsoft.VisualBasic.Information.UBound%2A>
+- [Estrutura de um programa Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [/main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Tipo de Dados String](../../../visual-basic/language-reference/data-types/string-data-type.md)

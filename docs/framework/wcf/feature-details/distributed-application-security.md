@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709423"
 ---
 # <a name="distributed-application-security"></a>Segurança de aplicativos distribuídos
 Segurança do Windows Communication Foundation (WCF) é dividida em três áreas funcionais principais: segurança, controle de acesso e auditoria de transferência. Segurança de transferência fornece integridade, confidencialidade e autenticação. Segurança de transferência é fornecida por um dos seguintes: segurança, segurança de mensagem de transporte ou `TransportWithMessageCredential`.  
@@ -65,8 +65,8 @@ Segurança do Windows Communication Foundation (WCF) é dividida em três áreas
 |Configuração|Descrição|  
 |-------------|-----------------|  
 |Nenhum|Especifica que o cliente não precisa apresentar nenhuma credencial. Isso se traduz em um cliente anônimo.|  
-|Basic|Especifica autenticação básica.  Para obter mais informações, consulte RFC2617, "[autenticação HTTP: autenticação básica e Digest](https://go.microsoft.com/fwlink/?LinkId=88313)."|  
-|Digest|Especifica a autenticação Digest.  Para obter mais informações, consulte RFC2617, "[autenticação HTTP: autenticação básica e Digest](https://go.microsoft.com/fwlink/?LinkId=88313)."|  
+|Basic|Especifica autenticação básica.  Para obter mais informações, consulte RFC2617, "[autenticação HTTP: Básica e autenticação Digest](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
+|Digest|Especifica a autenticação Digest.  Para obter mais informações, consulte RFC2617, "[autenticação HTTP: Básica e autenticação Digest](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
 |NTLM|Especifica a autenticação do Windows usando a negociação SSPI em um domínio do Windows.<br /><br /> A negociação SSPI resulta em usando o protocolo Kerberos ou LanMan NT (NTLM).|  
 |Windows|Especifica a autenticação do Windows usando o SSPI em um domínio do Windows. Escolhe o SSPI do protocolo Kerberos ou NTLM como serviço de autenticação.<br /><br /> SSPI tenta o protocolo Kerberos primeiro; Se isso falhar, ele usa NTLM.|  
 |Certificado|Executa a autenticação de cliente usando um certificado, normalmente x. 509.|  
@@ -94,8 +94,8 @@ Segurança do Windows Communication Foundation (WCF) é dividida em três áreas
   
  O modo de segurança de mensagem também permite que você execute a segurança de transferência para que a credencial de serviço é trocada com o cliente como parte de uma negociação inicial. Para habilitar a negociação, defina as <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> propriedade para `true`.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

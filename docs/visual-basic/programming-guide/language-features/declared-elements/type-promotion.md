@@ -10,17 +10,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 104fa906fecc5a5bb8704fe3ab839f9f200cf73b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721872"
 ---
 # <a name="type-promotion-visual-basic"></a>Promoção de tipos (Visual Basic)
-Quando você declara um elemento de programação em um módulo, o Visual Basic promove seu escopo para o namespace que contém o módulo. Isso é conhecido como *promoção de tipo*.  
+Quando você declara um elemento de programação em um módulo, o Visual Basic promove seu escopo para o namespace que contém o módulo. Isso é conhecido como *promoção de tipos*.  
   
- O exemplo a seguir mostra uma definição de um módulo e dois membros desse módulo.  
+ O exemplo a seguir mostra uma definição de um módulo e dois membros de módulo.  
   
  [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
   
@@ -31,37 +31,37 @@ Quando você declara um elemento de programação em um módulo, o Visual Basic 
   
  [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
   
- No exemplo anterior, a primeira chamada usa cadeias de caracteres de qualificação completa. No entanto, isso não é necessário devido a promoção de tipo. A segunda chamada também acessa os membros do módulo sem incluir `projModule` nas cadeias de qualificação.  
+ No exemplo anterior, a primeira chamada usa cadeias de caracteres de qualificação completa. No entanto, isso não é necessário devido a promoção de tipos. A segunda chamada também acessa os membros do módulo sem incluir `projModule` nas cadeias de caracteres de qualificação.  
   
-## <a name="defeat-of-type-promotion"></a>Falha da promoção de tipo  
- Se o namespace já tiver um membro com o mesmo nome como um módulo membro, a promoção de tipo é desfeita por esse módulo associado. O exemplo a seguir mostra uma definição de uma enumeração e um módulo no mesmo namespace.  
+## <a name="defeat-of-type-promotion"></a>Derrota da promoção de tipo  
+ Se o namespace já tiver um membro com o mesmo nome como um membro de módulo, a promoção de tipos é derrotada por esse módulo associado. O exemplo a seguir mostra uma definição de módulo dentro do mesmo namespace e uma enumeração.  
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- No exemplo anterior, o Visual Basic não é possível promover a classe `abc` para `thisNameSpace` porque já existe uma enumeração com o mesmo nome no nível de namespace. Para acessar `abcSub`, você deve usar a cadeia de caracteres de qualificação completa `thisNamespace.thisModule.abc.abcSub`. No entanto, a classe `xyz` ainda é promovida, e você pode acessar `xyzSub` com a cadeia de caracteres de qualificação mais curto `thisNamespace.xyz.xyzSub`.  
+ No exemplo anterior, o Visual Basic não é possível promover a classe `abc` para `thisNameSpace` porque já existe uma enumeração com o mesmo nome no nível de namespace. Para acessar `abcSub`, você deve usar a cadeia de caracteres de qualificação completa `thisNamespace.thisModule.abc.abcSub`. No entanto, a classe `xyz` ainda for promovido, e você pode acessar `xyzSub` com a cadeia de caracteres mais curta qualificação `thisNamespace.xyz.xyzSub`.  
   
-### <a name="defeat-of-type-promotion-for-partial-types"></a>Falha da promoção de tipo para tipos parciais  
- Se uma classe ou estrutura em um módulo usa o [parcial](../../../../visual-basic/language-reference/modifiers/partial.md) palavra-chave, promoção de tipo é desfeita automaticamente por essa classe ou estrutura, se o espaço para nome tem um membro com o mesmo nome ou não. Outros elementos no módulo ainda são qualificados para promoção de tipo.  
+### <a name="defeat-of-type-promotion-for-partial-types"></a>Derrota da promoção de tipos para tipos parciais  
+ Se uma classe ou estrutura dentro de um módulo usa a [parcial](../../../../visual-basic/language-reference/modifiers/partial.md) palavra-chave, a promoção de tipos é derrotada automaticamente por essa classe ou estrutura, se o namespace tem um membro com o mesmo nome. Outros elementos no módulo ainda estão qualificados para a promoção de tipos.  
   
- **Consequências.** Falha da promoção de tipo de uma definição parcial pode causar resultados inesperados e até mesmo erros de compilador. O exemplo a seguir mostra as definições parciais de esqueleto de uma classe, um dos quais está dentro de um módulo.  
+ **Consequências.** Derrota da promoção de tipo de uma definição parcial pode causar resultados inesperados e até mesmo os erros de compilador. O exemplo a seguir mostra o esqueleto de definições parciais de uma classe, um dos quais é dentro de um módulo.  
   
  [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
   
- No exemplo anterior, o desenvolvedor pode esperar o compilador para mesclar as duas definições parciais de `sampleClass`. No entanto, o compilador não considera a promoção para a definição parcial dentro `sampleModule`. Como resultado, ele tenta compilar duas classes separados e distintos, ambos nomeados `sampleClass` , mas com caminhos diferentes de qualificação.  
+ No exemplo anterior, o desenvolvedor pode esperar o compilador para mesclar as duas definições parciais de `sampleClass`. No entanto, o compilador não considera a promoção para a definição parcial dentro `sampleModule`. Como resultado, ele tenta compilar duas classes separados e distintas, ambas chamadas `sampleClass` , mas com caminhos diferentes de qualificação.  
   
  O compilador mescla definições parciais somente quando seus caminhos totalmente qualificados são idênticos.  
   
 ## <a name="recommendations"></a>Recomendações  
  As recomendações a seguir representam uma boa prática de programação.  
   
--   **Nomes exclusivos.** Quando você tem controle total sobre a nomeação de elementos de programação, é sempre uma boa ideia usar nomes exclusivos em todos os lugares. Nomes idênticos exigem qualificação extra e podem tornar mais difícil de ler seu código. Eles também podem levar a erros sutis e resultados inesperados.  
+-   **Nomes exclusivos.** Quando você tem controle total sobre a nomeação de elementos de programação, é sempre uma boa ideia usar nomes exclusivos em todos os lugares. Nomes idênticos exigem qualificação extra e podem tornar seu código mais difícil de ler. Eles também podem levar a erros sutis e resultados inesperados.  
   
--   **Total de qualificação.** Quando você estiver trabalhando com módulos e outros elementos no mesmo namespace, a abordagem mais segura é usar sempre qualificação completa de todos os elementos de programação. Se a promoção de tipo é desfeita para um membro de módulo e você não qualificar esse membro totalmente, você poderá acessar inadvertidamente um elemento de programação diferente.  
+-   **Qualificação completa.** Quando você estiver trabalhando com módulos e outros elementos no mesmo namespace, a abordagem mais segura é usar sempre qualificação completa para todos os elementos de programação. Se a promoção de tipos seja derrotada para um membro de módulo e você não qualificar totalmente esse membro, você poderá acessar inadvertidamente um elemento de programação diferente.  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Module](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [Instrução Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Parcial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Como controlar o escopo de uma variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
- [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Module](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Instrução Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Parcial](../../../../visual-basic/language-reference/modifiers/partial.md)
+- [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Como: Controlar o escopo de uma variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
+- [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

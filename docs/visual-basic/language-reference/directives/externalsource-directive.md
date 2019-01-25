@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 550934723a5599573be578ce5746ab7520b59dd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705963"
 ---
 # <a name="externalsource-directive"></a>Diretiva #ExternalSource
 Indica um mapeamento entre linhas específicas do código-fonte e texto externo à origem.  
@@ -50,5 +50,5 @@ Indica um mapeamento entre linhas específicas do código-fonte e texto externo 
   
  Diretivas de fonte externa não têm nenhum efeito na compilação e não podem ser aninhadas. Eles são destinados a uso interno por apenas o aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>Consulte também
+- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

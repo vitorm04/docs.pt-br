@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5498874661f36ee4e96e6d2d58e3076bb8abbcce
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc68ba1d87a6dcb638eae5bfa041baeaf0846800
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699929"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Define uma ou mais opções usadas pela classe <xref:System.AppContext> para fornecer um mecanismo de recusa de uma nova funcionalidade.  
@@ -43,7 +43,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|"nome = valor"|Um nome de comutador predefinidos, juntamente com seu valor (`true` ou `false`). Vários pares de nome/valor de opção são separados por ponto e vírgula (";"). Para obter uma lista de nomes de comutador predefinidas compatíveis com o .NET Framework, consulte a seção comentários.|  
+|"name=value"|Um nome de comutador predefinidos, juntamente com seu valor (`true` ou `false`). Vários pares de nome/valor de opção são separados por ponto e vírgula (";"). Para obter uma lista de nomes de comutador predefinidas compatíveis com o .NET Framework, consulte a seção comentários.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -83,7 +83,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Controla se um teste de igualdade compara os <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> propriedade de um objeto com o <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> propriedade do segundo objeto. Para obter mais informações, consulte [implementação incorreta de memberdescriptor. Equals](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
  `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Desabilita a validação de OID (identificador) do objeto de uso avançado de chave (EKU) do certificado. Uma extensão de EKU (uso avançado de chave) é uma coleção de OIDs (identificadores de objeto) que indicam os aplicativos que usam a chave.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|Desabilita a atenuação TLS1.0 navegador explorar contra SSL/TLS (FERA) desabilitando o uso de SCH_SEND_AUX_RECORD.|.NET Framework 4.6|
-|`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Controles se o <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> classes podem usar o protocolo SSL 3.0. Para obter mais informações, consulte [atenuação: Protocolos TLS](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
+|`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Controles se o <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> classes podem usar o protocolo SSL 3.0. Para obter mais informações, consulte [atenuação: protocolos TLS](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Desabilita as versões do TLS SystemDefault reverter para um padrão de Tls, Tls11, Tls12.|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Desabilita os alertas do lado do servidor TLS SslStream.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Controles se o [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) serializa alguns caracteres de controle com base nos padrões ECMAScript V6 e V8. Para obter mais informações, consulte [atenuação: Serialização de caracteres de controle com o DataContractJsonSerializer](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET Framework 4.7 |
@@ -161,7 +161,7 @@ O exemplo a seguir usa o `<add>` elemento para adicionar duas configurações pa
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.AppContext?displayProperty=nameWithType>  
-- [\<tempo de execução > elemento](runtime-element.md)  
+## <a name="see-also"></a>Consulte também
+- <xref:System.AppContext?displayProperty=nameWithType>
+- [\<tempo de execução > elemento](runtime-element.md)
 - [Elemento \<configuration>](../configuration-element.md)

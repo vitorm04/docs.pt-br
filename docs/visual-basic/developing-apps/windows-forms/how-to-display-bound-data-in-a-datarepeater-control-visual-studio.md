@@ -1,21 +1,21 @@
 ---
-title: Como exibir dados associados em um controle DataRepeater (Visual Studio)
+title: 'Como: Exibir dados associados em um controle DataRepeater (Visual Studio)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DataRepeater, data-binding
 - DataRepeater, displaying bound controls
 ms.assetid: 56a15326-1334-4275-af4e-075cad79e6f7
-ms.openlocfilehash: b96fb33a0dcf80a86d1fcb6e219e5f35b1f7351c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbcd814edb78c54ce5629a1a8761142674fe6135
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684613"
 ---
-# <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Como exibir dados associados em um controle DataRepeater (Visual Studio)
+# <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Como: Exibir dados associados em um controle DataRepeater (Visual Studio)
 O uso mais comum dos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle é exibir dados associados de um banco de dados ou outra fonte de dados.  
   
- Além de controles associados, você talvez queira adicionar outros controles, como um rótulo estático ou uma imagem que é repetida em cada item no <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle. Para obter mais informações, consulte [como: exibição de controles não associados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md).  
+ Além de controles associados, você talvez queira adicionar outros controles, como um rótulo estático ou uma imagem que é repetida em cada item no <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle. Para obter mais informações, confira [Como: Exibir controles não associados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md).  
   
  Você também pode associar a uma fonte de dados em tempo de execução, definindo o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> propriedade para `True` e a atribuição de uma fonte de dados para o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A> propriedade. Nesse caso, você precisará gerenciar toda a interação com a fonte de dados. Para obter mais informações, consulte [o modo Virtual no controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md).  
   
@@ -31,7 +31,7 @@ O uso mais comum dos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> contro
   
      Você também pode dimensionar e posicionar o controle ou o modelo de item, alterando a **tamanho** e **posição** propriedades na janela Propriedades.  
   
-3.  Sobre o **dados** menu, clique em **Show Data Sources**.  
+3.  No menu **Dados**, clique em **Mostrar Fontes de Dados**.  
   
     > [!NOTE]
     >  Se o **fontes de dados** janela estiver vazia, adicione uma fonte de dados a ele. Para obter mais informações, consulte [Adicionar novas fontes de dados](/visualstudio/data-tools/add-new-data-sources).  
@@ -44,10 +44,10 @@ O uso mais comum dos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> contro
   
      Você pode especificar quais tipos de controles são exibidos para cada campo. Para obter mais informações, consulte [definir o controle a ser criado quando arrastado da janela fontes de dados](/visualstudio/data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
- [Introdução ao Controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [Como exibir controles não associados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- [Como: criar um formulário mestre/detalhes usando dois controles DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
- [Como alterar a aparência de um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
- [Solução de problemas do controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>
+- [Introdução ao Controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+- [Como: Exibir controles não associados em um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
+- [Como: Criar um formulário mestre/detalhes usando dois controles DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
+- [Como: Alterar a aparência de um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+- [Solução de problemas do controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

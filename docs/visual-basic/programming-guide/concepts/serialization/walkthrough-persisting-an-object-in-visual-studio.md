@@ -2,14 +2,14 @@
 title: Mantendo um objeto no Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 25951327028b9b8ced8506b3ba6395e8c9e6abed
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690430"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: mantendo um objeto no Visual Studio (Visual Basic)
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: Mantendo um objeto no Visual Studio (Visual Basic)
 Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
   
 > [!NOTE]
@@ -215,6 +215,6 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
   
  Neste ponto, você pode compilar e executar o aplicativo novamente. Inicialmente, os valores padrão aparecem nas caixas de texto. Tente alterar os valores e digite um nome na quarta caixa de texto. Feche o aplicativo e execute-o novamente. Observe que agora os novos valores aparecem nas caixas de texto.  
   
-## <a name="see-also"></a>Consulte também  
- [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
- [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>Consulte também
+- [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)

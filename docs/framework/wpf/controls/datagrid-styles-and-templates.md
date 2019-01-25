@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 71c9b08407c6e570b42c4fbb7dc264829b5dc17c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 1a8eb1acf1143c31197ef12e4be3bd4451d98eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685432"
 ---
 # <a name="datagrid-styles-and-templates"></a>Estilos e modelos DataGrid
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.DataGrid> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.DataGrid> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datagrid-parts"></a>Partes de DataGrid  
  A tabela a seguir lista as partes nomeadas para o <xref:System.Windows.Controls.DataGrid> controle.  
@@ -26,9 +26,9 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|A linha que contém os cabeçalhos de coluna.|  
   
- Quando você cria um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.DataGrid>, o modelo pode conter um <xref:System.Windows.Controls.ItemsPresenter> dentro de um <xref:System.Windows.Controls.ScrollViewer>. (O <xref:System.Windows.Controls.ItemsPresenter> exibe cada item de <xref:System.Windows.Controls.DataGrid>; o <xref:System.Windows.Controls.ScrollViewer> habilita a rolagem dentro do controle).  Se o <xref:System.Windows.Controls.ItemsPresenter> não é filho direto do <xref:System.Windows.Controls.ScrollViewer>, você deve fornecer o <xref:System.Windows.Controls.ItemsPresenter> o nome `ItemsPresenter`.  
+ Quando você cria um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.DataGrid>, o modelo pode conter um <xref:System.Windows.Controls.ItemsPresenter> dentro de um <xref:System.Windows.Controls.ScrollViewer>. (O <xref:System.Windows.Controls.ItemsPresenter> exibe cada item em de <xref:System.Windows.Controls.DataGrid>; o <xref:System.Windows.Controls.ScrollViewer> habilita a rolagem no controle).  Se o <xref:System.Windows.Controls.ItemsPresenter> não é filho direto do <xref:System.Windows.Controls.ScrollViewer>, você deve dar a <xref:System.Windows.Controls.ItemsPresenter> o nome, `ItemsPresenter`.  
   
- O modelo padrão para o <xref:System.Windows.Controls.DataGrid> contém um <xref:System.Windows.Controls.ScrollViewer> controle. Para obter mais informações sobre as partes definido pelo <xref:System.Windows.Controls.ScrollViewer>, consulte [ScrollViewer estilos e modelos](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
+ O modelo padrão para o <xref:System.Windows.Controls.DataGrid> contém um <xref:System.Windows.Controls.ScrollViewer> controle. Para obter mais informações sobre as partes definidas pela <xref:System.Windows.Controls.ScrollViewer>, consulte [ScrollViewer estilos e modelos](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
   
 ## <a name="datagrid-states"></a>Estados de DataGrid  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.DataGrid> controle.  
@@ -42,7 +42,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Válido|ValidationStates|O controle é válido.|  
   
 ## <a name="datagridcell-parts"></a>Partes de DataGridCell  
- O <xref:System.Windows.Controls.DataGridCell> elemento não tem as partes nomeadas.  
+ O <xref:System.Windows.Controls.DataGridCell> elemento não tem nenhuma parte nomeada.  
   
 ## <a name="datagridcell-states"></a>Estados de DataGridCell  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.DataGridCell> elemento.  
@@ -64,7 +64,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Válido|ValidationStates|A célula é válida.|  
   
 ## <a name="datagridrow-parts"></a>Partes da DataGridRow  
- O <xref:System.Windows.Controls.DataGridRow> elemento não tem as partes nomeadas.  
+ O <xref:System.Windows.Controls.DataGridRow> elemento não tem nenhuma parte nomeada.  
   
 ## <a name="datagridrow-states"></a>Estados de DataGridRow  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.DataGridRow> elemento.  
@@ -169,10 +169,10 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
   
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

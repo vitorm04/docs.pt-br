@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737657"
 ---
 # <a name="sub-statement-visual-basic"></a>Instrução Sub (Visual Basic)
 Declara o nome, parâmetros e código que definem um `Sub` procedimento.  
@@ -72,9 +72,9 @@ End Sub
   
     -   [Privado](../modifiers/private.md)  
   
-    - [Friend protegido](../../language-reference/modifiers/protected-friend.md)
+    - [Amigo Protegido](../../language-reference/modifiers/protected-friend.md)
 
-    - [Privado protegido](../../language-reference/modifiers/private-protected.md)
+    - [Particular Protegido](../../language-reference/modifiers/private-protected.md)
   
      Ver [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -110,7 +110,7 @@ End Sub
   
 -   `name`  
   
-     Necessário. Nome do procedimento. Ver [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Para criar um procedimento de construtor para uma classe, defina o nome de um `Sub` procedimento para o `New` palavra-chave. Para obter mais informações, consulte [tempo de vida do objeto: como os objetos são criados e destruídos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+     Necessário. Nome do procedimento. Ver [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Para criar um procedimento de construtor para uma classe, defina o nome de um `Sub` procedimento para o `New` palavra-chave. Para obter mais informações, consulte [tempo de vida do objeto: Como os objetos são criados e destruídos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 -   `typeparamlist`  
   
@@ -226,14 +226,14 @@ End Sub
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Implements](implements-statement.md)  
- [Instrução Function](function-statement.md)  
- [Lista de Parâmetros](parameter-list.md)  
- [Instrução Dim](dim-statement.md)  
- [Instrução Call](call-statement.md)  
- [Of](of-clause.md)  
- [Matrizes de Parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Como usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Solução de problemas de Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Métodos Parciais](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Implements](implements-statement.md)
+- [Instrução Function](function-statement.md)
+- [Lista de Parâmetros](parameter-list.md)
+- [Instrução Dim](dim-statement.md)
+- [Instrução Call](call-statement.md)
+- [Of](of-clause.md)
+- [Matrizes de Parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [Como: usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Solução de problemas de Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Métodos Parciais](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662732"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 <a name="Introduction"></a> O .NET Framework inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que dão suporte à extensibilidade de suplementos. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também precisam exibam interfaces de usuário que são fornecidas pelos suplementos. Este tópico mostra como o WPF aumenta a modelo suplemento do .NET Framework para habilitar estes cenários, a arquitetura por trás, seus benefícios e suas limitações.  
@@ -282,10 +282,10 @@ ms.locfileid: "53397027"
 ## <a name="performance-optimization"></a>Otimização do desempenho  
  Por padrão, quando vários domínios de aplicativo são usados, os vários assemblies do .NET Framework necessários para cada aplicativo são todos carregados no domínio do aplicativo. Como resultado, o tempo necessário para criar novos domínios de aplicativo e iniciar aplicativos neles pode afetar o desempenho. No entanto, o .NET Framework fornece uma maneira de reduzir os tempos de inicialização instruindo os aplicativos a compartilhar assemblies entre domínios de aplicativo se eles já estiverem carregados. Você pode fazer isso usando o <xref:System.LoaderOptimizationAttribute> atributo, que deve ser aplicado ao método de ponto de entrada (`Main`). Nesse caso, você deve usar apenas código para implementar sua definição de aplicativo (consulte [Visão geral de gerenciamento do aplicativo](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.LoaderOptimizationAttribute>  
- [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [Domínios do aplicativo](../../../../docs/framework/app-domains/application-domains.md)  
- [Visão geral de comunicação remota do .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Tornando os objetos em remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [Tópicos de instruções](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.LoaderOptimizationAttribute>
+- [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Domínios do aplicativo](../../../../docs/framework/app-domains/application-domains.md)
+- [Visão geral de comunicação remota do .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [Tornando os objetos em remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Tópicos de instruções](../../../../docs/framework/wpf/app-development/how-to-topics.md)

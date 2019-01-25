@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fe3beaa13def25f8b7311e38a654d2e82922407
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663973"
 ---
 # <a name="vector-graphics-overview"></a>Visão geral de gráficos vetoriais
 O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha linhas, retângulos e outras formas em um sistema de coordenadas. Você pode escolher entre uma variedade de sistemas de coordenadas, mas o sistema de coordenadas padrão tem origem no canto superior esquerdo, com o eixo x apontando para a direita e o eixo y apontando para baixo. A unidade de medida no sistema de coordenadas padrão é o pixel.  
@@ -47,17 +47,17 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha li
 -   splines de Bézier  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Métodos para desenhar com um objeto gráfico  
- O <xref:System.Drawing.Graphics> classe em [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece os seguintes métodos para desenhar os itens na lista anterior: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (para splines cardinais), e <xref:System.Drawing.Graphics.DrawBezier%2A>. Cada um desses métodos está sobrecarregado; ou seja, cada método dá suporte a diferentes listas de parâmetros. Por exemplo, uma variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e quatro inteiros, enquanto outra variação o <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e dois <xref:System.Drawing.Point> objetos.  
+ O <xref:System.Drawing.Graphics> classe [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece os seguintes métodos para desenhar os itens na lista anterior: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (para splines cardinais) e <xref:System.Drawing.Graphics.DrawBezier%2A>. Cada um desses métodos está sobrecarregado; ou seja, cada método dá suporte a diferentes listas de parâmetros. Por exemplo, uma variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e quatro inteiros, enquanto outra variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e dois <xref:System.Drawing.Point> objetos.  
   
- Os métodos para desenhar linhas, retângulos e splines de Bézier têm métodos plural complementar que se conectam a vários itens em uma única chamada: <xref:System.Drawing.Graphics.DrawLines%2A>, <xref:System.Drawing.Graphics.DrawRectangles%2A>, e <xref:System.Drawing.Graphics.DrawBeziers%2A>. Além disso, o <xref:System.Drawing.Graphics.DrawCurve%2A> método tem um método complementar, <xref:System.Drawing.Graphics.DrawClosedCurve%2A>, que fecha uma curva conectando o ponto final da curva a partir do ponto.  
+ Os métodos para desenhar linhas, retângulos e splines de Bézier têm vários métodos complementares que desenham diversos itens em uma única chamada: <xref:System.Drawing.Graphics.DrawLines%2A>, <xref:System.Drawing.Graphics.DrawRectangles%2A>, e <xref:System.Drawing.Graphics.DrawBeziers%2A>. Além disso, o <xref:System.Drawing.Graphics.DrawCurve%2A> método tem um método correspondente, <xref:System.Drawing.Graphics.DrawClosedCurve%2A>, que fecha uma curva conectando o ponto final da curva a partir do ponto.  
   
- Todos os métodos de desenho de <xref:System.Drawing.Graphics> classe trabalham em conjunto com um <xref:System.Drawing.Pen> objeto. Para desenhar qualquer coisa, você deve criar pelo menos dois objetos: um <xref:System.Drawing.Graphics> objeto e um <xref:System.Drawing.Pen> objeto. O <xref:System.Drawing.Pen> objeto armazena atributos, como largura da linha e a cor do item a ser desenhada. O <xref:System.Drawing.Pen> objeto é passado como um dos argumentos para o método de desenho. Por exemplo, uma variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e quatro inteiros, conforme mostrado no exemplo a seguir, que desenha um retângulo com uma largura de 100, a altura de 50 e um canto superior esquerdo de (10, 20):  
+ Todos os métodos de desenho a <xref:System.Drawing.Graphics> classe trabalham em conjunto com um <xref:System.Drawing.Pen> objeto. Para desenhar qualquer coisa, você deve criar pelo menos dois objetos: uma <xref:System.Drawing.Graphics> objeto e um <xref:System.Drawing.Pen> objeto. O <xref:System.Drawing.Pen> objeto armazena atributos como largura e cor do item a ser desenhado. O <xref:System.Drawing.Pen> objeto é passado como um dos argumentos para o método de desenho. Por exemplo, uma variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e quatro inteiros, conforme mostrado no exemplo a seguir, que desenha um retângulo com uma largura de 100, uma altura de 50 e um canto superior esquerdo de (10, 20):  
   
  [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
  [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
- <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Como Criar Objetos Gráficos para Desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Graphics?displayProperty=nameWithType>
+- <xref:System.Drawing.Pen?displayProperty=nameWithType>
+- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Como: Criar objetos gráficos para desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)

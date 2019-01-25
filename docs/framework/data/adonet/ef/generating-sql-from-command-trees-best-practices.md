@@ -2,12 +2,12 @@
 title: Gerando SQL das árvores de comando - práticas recomendadas
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659089"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Gerando SQL das árvores de comando - práticas recomendadas
 O modelo das árvores de comando de consulta de saída a consulta expressável no SQL. No entanto, há determinados desafios comum para criadores de provedor para gerar o SQL de uma árvore de comando de saída. Este tópico discute esses desafios. No próximo tópico, o provedor exemplo mostra como resolver esses desafios.  
@@ -130,13 +130,13 @@ ON b.y = d.z
  Além disso, quando ajuste joins, as tabelas de participação (ou os subconsultas) podem ter alias de colisão nesse caso essas precisam ser renomeados.  
   
 ## <a name="avoid-select-"></a>Evite SELECT *  
- Não use `SELECT *` para selecionar as tabelas de base. O modelo de armazenamento em um [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplicativo pode incluir somente um subconjunto das colunas que estão na tabela de banco de dados. Nesse caso, `SELECT *` pode produzir um resultado incorreto. Em vez disso, você deve especificar todas as colunas de participação usando os nomes de coluna tipo do resultado das expressões de participação.  
+ Não use `SELECT *` para selecionar as tabelas de base. O modelo de armazenamento em um [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplicativo pode incluir apenas um subconjunto das colunas que estão na tabela de banco de dados. Nesse caso, `SELECT *` pode produzir um resultado incorreto. Em vez disso, você deve especificar todas as colunas de participação usando os nomes de coluna tipo do resultado das expressões de participação.  
   
 ## <a name="reuse-of-expressions"></a>Reutilização de expressões  
- Expressões podem ser reutilizadas na árvore de comando de consulta passado pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Não suponha que cada expressão aparece apenas uma vez na árvore de comando de consulta.  
+ Expressões podem ser reutilizadas na árvore de comando de consulta passada pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Não presuma que cada expressão aparece apenas uma vez na árvore de comando de consulta.  
   
 ## <a name="mapping-primitive-types"></a>Tipos primitivos de mapeamento  
- Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite o mapeamento para tipos que não pode ser usado para várias operações, como tipos BLOB (por exemplo, `ntext` no SQL Server).  
+ Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite mapear para tipos que não pode ser usado para várias operações, como BLOB tipos (por exemplo, `ntext` no SQL Server).  
   
-## <a name="see-also"></a>Consulte também  
- [Geração de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Consulte também
+- [Geração de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

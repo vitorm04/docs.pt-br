@@ -9,15 +9,15 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 072a816f189a772543fbbd63e7202441469c0177
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 220d6e06ef692655bd6db000fa98b4eb2fc69ba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683840"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-Faz com que o compilador para relatar erros se variáveis não são declaradas antes de serem usadas.  
+Faz com que o compilador relatar erros se variáveis não forem declaradas antes de serem usadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -27,12 +27,12 @@ Faz com que o compilador para relatar erros se variáveis não são declaradas a
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Opcional. Especifique `-optionexplicit+` para requer declaração explícita de variáveis. O `-optionexplicit+` opção é o padrão e é o mesmo que `-optionexplicit`. O `-optionexplicit-` opção permite que a declaração implícita de variáveis.  
+ Opcional. Especifique `-optionexplicit+` para exigir a declaração explícita de variáveis. O `-optionexplicit+` opção é o padrão e é o mesmo que `-optionexplicit`. O `-optionexplicit-` opção permite que a declaração implícita de variáveis.  
   
 ## <a name="remarks"></a>Comentários  
  Se o arquivo de código fonte contém um [instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md), a instrução substitui a `-optionexplicit` configuração do compilador de linha de comando.  
   
-### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Para definir /optionexplicit - no IDE do Visual Studio  
+### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Definir - optionexplicit no IDE do Visual Studio  
   
 1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.   
   
@@ -45,11 +45,11 @@ Faz com que o compilador para relatar erros se variáveis não são declaradas a
   
  [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a>Consulte também
+- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

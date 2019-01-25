@@ -1,15 +1,15 @@
 ---
-title: 'Como: gravar dados de objeto para um arquivo XML (Visual Basic)'
+title: 'Como: Gravar dados de objeto para um arquivo XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 434706383c50e5df8e419e3988da8dc7cce87c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715823"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Como: gravar dados de objeto para um arquivo XML (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Como: Gravar dados de objeto para um arquivo XML (Visual Basic)
 Este exemplo grava o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Exemplo  
@@ -54,7 +54,7 @@ End Module
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, ele precisará de acesso `Create` para a pasta. Se o arquivo já existe, o aplicativo precisa apenas de acesso `Write`, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder acesso `Read` a um único arquivo, em vez de acesso `Create` a uma pasta.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IO.StreamWriter>  
- [Como ler dados de objeto de um arquivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.IO.StreamWriter>
+- [Como: Ler dados de objeto de um arquivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

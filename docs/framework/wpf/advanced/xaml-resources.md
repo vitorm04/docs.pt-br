@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718657"
 ---
 # <a name="xaml-resources"></a>Recursos XAML
 Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicativo. Exemplos de recursos incluem pincéis e estilos. Esta visão geral descreve como usar recursos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Você também pode criar e acessar recursos por meio de código ou de forma intercambiável entre o código e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obter mais informações, consulte [recursos e código](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -153,12 +153,12 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
   
  <xref:System.Windows.DataTemplate> também tem uma chave implícita. A chave implícita para um <xref:System.Windows.DataTemplate> é o <xref:System.Windows.DataTemplate.DataType%2A> valor da propriedade. <xref:System.Windows.DataTemplate.DataType%2A> também pode ser especificado como o nome do tipo em vez de usar explicitamente [{... x: Type} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Para obter detalhes, consulte [visão geral de modelagem de dados](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.ResourceDictionary>  
- [Recursos do aplicativo](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Recursos e código](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Definir e referenciar um recurso](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Visão geral do gerenciamento de aplicativos](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [Extensão de marcação x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Extensão de marcação StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [Extensão de marcação DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.ResourceDictionary>
+- [Recursos do aplicativo](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Recursos e código](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [Definir e referenciar um recurso](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
+- [Visão geral do gerenciamento de aplicativos](../../../../docs/framework/wpf/app-development/application-management-overview.md)
+- [Extensão de marcação x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Extensão de marcação StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [Extensão de marcação DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

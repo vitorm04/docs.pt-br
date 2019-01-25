@@ -2,19 +2,19 @@
 title: '&lt;udpTransportSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: 9c7687e849650a57fca059d68157d1f2c032ee74
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 58931cb70f83378740093615adf89a437e32ff2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667187"
 ---
 # <a name="ltudptransportsettingsgt"></a>&lt;udpTransportSettings&gt;
 Este elemento de configuração expõe para as configurações de transporte UDP [ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md).  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
-\<udpDiscoveryEndpoint >  
+\<standardEndpoints>  
+\<udpDiscoveryEndpoint>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ Este elemento de configuração expõe para as configurações de transporte UDP
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Um ponto de extremidade padrão que corrigido descoberta, ligação de transporte de contrato e UDP.|  
+|[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Um ponto de extremidade padrão que corrigido descoberta, ligação de transporte de contrato e UDP.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Discovery.UdpTransportSettings>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Discovery.UdpTransportSettings>

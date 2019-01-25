@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53f02499bbc64f1502951ff9fbf16a848e77f0ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0ce6a207f2a7862b0b49f1e68cda9528aa03ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667525"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>Método ISymUnmanagedWriter2::DefineLocalVariable2
-Define uma única variável no escopo léxico atual. Esse método pode ser chamado várias vezes para uma variável de mesmo nome que tem várias casas ao longo de um escopo. Nesse caso, no entanto, os valores de `startOffset` e `endOffset` parâmetros não devem se sobrepor.  
+Define uma única variável no escopo léxico atual. Esse método pode ser chamado várias vezes para uma variável de mesmo nome que tem vários residências ao longo de um escopo. Nesse caso, no entanto, os valores de `startOffset` e `endOffset` parâmetros não devem se sobrepor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ HRESULT DefineLocalVariable2(
  [in] O nome da variável local.  
   
  `attributes`  
- [in] Os atributos de variável locais.  
+ [in] Atributos da variável local.  
   
  `sigToken`  
  [in] O token de metadados da assinatura.  
@@ -56,19 +56,19 @@ HRESULT DefineLocalVariable2(
  [in] O tipo de endereço.  
   
  `addr1`  
- [in] O primeiro endereço para a especificação do parâmetro.  
+ [in] O primeiro endereço para a especificação de parâmetro.  
   
  `addr2`  
- [in] O segundo endereço para a especificação do parâmetro.  
+ [in] O segundo endereço para a especificação de parâmetro.  
   
  `addr3`  
- [in] O terceiro endereço para a especificação do parâmetro.  
+ [in] O terceiro endereço para a especificação de parâmetro.  
   
  `startOffset`  
- [in] O deslocamento de início para a variável. Esse parâmetro é opcional. Se for 0, esse parâmetro é ignorado e a variável é definida em toda a todo o escopo. Se for um valor diferente de zero, a variável está dentro de deslocamentos do escopo atual.  
+ [in] O deslocamento inicial da variável. Esse parâmetro é opcional. Se for 0, esse parâmetro será ignorado e a variável será definida ao longo de todo o escopo. Se for um valor diferente de zero, a variável estará dentro dos deslocamentos do escopo atual.  
   
  `endOffset`  
- [in] O deslocamento de fim para a variável. Esse parâmetro é opcional. Se for 0, esse parâmetro é ignorado e a variável é definida em toda a todo o escopo. Se for um valor diferente de zero, a variável está dentro de deslocamentos do escopo atual.  
+ [in] O deslocamento final da variável. Esse parâmetro é opcional. Se for 0, esse parâmetro será ignorado e a variável será definida ao longo de todo o escopo. Se for um valor diferente de zero, a variável estará dentro dos deslocamentos do escopo atual.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -76,6 +76,6 @@ HRESULT DefineLocalVariable2(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [Método DefineLocalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [Método DefineLocalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

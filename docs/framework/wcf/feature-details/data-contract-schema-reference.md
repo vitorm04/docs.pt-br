@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662576"
 ---
 # <a name="data-contract-schema-reference"></a>Referência de esquema de contrato de dados
 Este tópico descreve o subconjunto do esquema XML (XSD) usada pelo <xref:System.Runtime.Serialization.DataContractSerializer> para descrever o common language runtime (CLR) tipos para serialização de XML.  
@@ -38,7 +38,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usada pelo <xref:System
   
 -   Todas as anotações (exceto aqueles descritos neste documento) são ignoradas.  
   
-### <a name="xsschema-attributes"></a>\<xs: schema >: atributos  
+### <a name="xsschema-attributes"></a>\<xs:schema>: attributes  
   
 |Atributo|DataContract|  
 |---------------|------------------|  
@@ -50,7 +50,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usada pelo <xref:System
 |`targetNamespace`|Suporte e mapeado para o namespace de contrato de dados. Se esse atributo não for especificado, o namespace em branco será usado. Não pode ser o namespace reservado `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|Ignorado.|  
   
-### <a name="xsschema-contents"></a>\<xs: schema >: conteúdo  
+### <a name="xsschema-contents"></a>\<xs:schema>: contents  
   
 |Conteúdo|Esquema|  
 |--------------|------------|  
@@ -81,7 +81,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usada pelo <xref:System
 |`mixed`|Deve ser false (padrão).|  
 |`name`|Suporte e mapeado para o nome do contrato de dados. Se houver períodos no nome, é feita uma tentativa para mapear o tipo para um tipo interno. Por exemplo, um tipo complexo chamado `A.B` é mapeado para um contrato de dados tipo que é um tipo interno de um tipo com o nome do contrato de dados `A`, mas somente se o tipo de contrato de tal um tipo de dados existe. Mais de um nível de aninhamento é possível: por exemplo, `A.B.C` pode ser um tipo interno, mas somente se `A` e `A.B` ambas existir.|  
   
-### <a name="xscomplextype-contents"></a>\<xs:complexType >: conteúdo  
+### <a name="xscomplextype-contents"></a>\<xs:complexType>: contents  
   
 |Conteúdo|Esquema|  
 |--------------|------------|  
@@ -115,7 +115,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usada pelo <xref:System
 |`any`|Negado.|  
 |(vazio)|Mapeia para um contrato de dados sem membros de dados.|  
   
-## <a name="elements--xselement"></a>Elementos – \<xs: element >  
+## <a name="elements--xselement"></a>Elements – \<xs:element>  
   
 ### <a name="general-information"></a>Informações gerais  
  `<xs:element>` pode ocorrer nos seguintes contextos:  
@@ -189,7 +189,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usada pelo <xref:System
 |`substitutionGroup`|Proibido em GEDs associados.|  
 |`type`|Com suporte e deve corresponder ao tipo associado para GEDs associados (a menos que o elemento contém um tipo anônimo).|  
   
-### <a name="xselement-contents"></a>\<xs: element >: conteúdo  
+### <a name="xselement-contents"></a>\<xs:element>: contents  
   
 |Conteúdo|Esquema|  
 |--------------|------------|  
@@ -338,7 +338,7 @@ public enum MyEnum
 |`itemType`|Negado.|  
 |`id`|Ignorado.|  
   
-### <a name="xslist-contents"></a>\<xs: List >: conteúdo  
+### <a name="xslist-contents"></a>\<xs:list>: contents  
   
 |Conteúdo|Esquema|  
 |--------------|------------|  
@@ -443,7 +443,7 @@ public class Employee : Person
 |`id`|Ignorado.|  
 |`mixed`|Deve ser false.|  
   
-### <a name="xscomplexcontent-contents"></a>\<xs:complexContent >: conteúdo  
+### <a name="xscomplexcontent-contents"></a>\<xs:complexContent>: contents  
   
 |Conteúdo|Esquema|  
 |--------------|------------|  
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

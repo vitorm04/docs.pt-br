@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: b2ef4f083cd9b6f38dc91bf8bf0eac9cd21c2618
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719567"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>Tipo de dados SByte (Visual Basic)
 
@@ -74,11 +74,11 @@ Se o literal inteiro estiver fora do intervalo de `SByte` (ou seja, se for menor
   
 ## <a name="see-also"></a>Consulte também
 
- <xref:System.SByte?displayProperty=nameWithType>  
- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)  
- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Tipo de Dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Tipo de Dados Long](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.SByte?displayProperty=nameWithType>
+- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
+- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Tipo de Dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Tipo de Dados Long](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e18d64bdc67bfa5dce01c9125ee2e8585ab7db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671948"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 <a name="top"></a> Esses eventos coletam informações que são específicas para métodos. A carga desses eventos é necessária para resolução de símbolos. Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.  
@@ -60,7 +60,7 @@ ms.locfileid: "33398099"
 |MethodStartAddress|win:UInt64|Endereço inicial do método.|  
 |MethodSize|win:UInt32|Tamanho do método.|  
 |MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|  
-|MethodFlags|win:UInt32|0x1: método dinâmico.<br /><br /> 0x2: método genérico.<br /><br /> 0x4: método de código com compilação JIT (de outro modo, código de imagem nativa NGEN).<br /><br /> 0x8: método auxiliar.|  
+|MethodFlags|win:UInt32|0x1: Método dinâmico.<br /><br /> 0x2: Método genérico.<br /><br /> 0x4: Método de código com compilação JIT (caso contrário, código de imagem nativa NGEN).<br /><br /> 0x8: Método auxiliar.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
  [Voltar ao início](#top)  
@@ -123,7 +123,7 @@ ms.locfileid: "33398099"
 |MethodStartAddress|win:UInt64|O endereço inicial.|  
 |MethodSize|win:UInt32|O comprimento do método.|  
 |MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|  
-|MethodFlags|win:UInt32|0x1: método dinâmico.<br /><br /> 0x2: método genérico.<br /><br /> 0x4: método com compilação JIT (de outro modo, gerado pelo NGen.exe)<br /><br /> 0x8: método auxiliar.|  
+|MethodFlags|win:UInt32|0x1: Método dinâmico.<br /><br /> 0x2: Método genérico.<br /><br /> 0x4: Método compilado por JIT (caso contrário, gerado pelo NGen.exe)<br /><br /> 0x8: Método auxiliar.|  
 |MethodNameSpace|win:UnicodeString|O nome completo do namespace associado ao método.|  
 |MethodName|win:UnicodeString|O nome de classe completo associado ao método.|  
 |MethodSignature|win:UnicodeString|Assinatura do método (lista separada por vírgulas de nomes de tipo).|  
@@ -161,5 +161,5 @@ ms.locfileid: "33398099"
 |MethodSignature|win:UnicodeString|Assinatura do método (lista separada por vírgulas de nomes de tipo).|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
-## <a name="see-also"></a>Consulte também  
- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Consulte também
+- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

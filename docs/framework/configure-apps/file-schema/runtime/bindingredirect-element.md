@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: fc2c5fb906856365e901c27bfe6624375f1e0137
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7fb610357772b3c74129074096c53bf3f149501a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714744"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt; elemento
 Redireciona uma versão do assembly para outra.  
@@ -24,8 +24,8 @@ Redireciona uma versão do assembly para outra.
  \<configuration>  
 \<runtime>  
 \<assemblyBinding>  
-\<dependentAssembly >  
-\<bindingRedirect >  
+\<dependentAssembly>  
+\<bindingRedirect>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ newVersion="new assembly version"/>
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`oldVersion`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly que foi originalmente solicitada. O formato de um número de versão do assembly é *Major*. Os valores válidos para cada parte desse número de versão estão entre 0 e 65535.<br /><br /> Você também pode especificar um intervalo de versões no seguinte formato:<br /><br /> *n.n.n. n - n.n.n. n*|  
+|`oldVersion`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly que foi originalmente solicitada. O formato de um número de versão do assembly é *Major*. Os valores válidos para cada parte desse número de versão estão entre 0 e 65535.<br /><br /> Você também pode especificar um intervalo de versões no seguinte formato:<br /><br /> *n.n.n.n - n.n.n.n*|  
 |`newVersion`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly a ser usado em vez da versão solicitada originalmente no formato: *n.n.n. n*<br /><br /> Esse valor pode especificar uma versão anterior do `oldVersion`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -86,7 +86,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

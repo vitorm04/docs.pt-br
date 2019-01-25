@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: f4ea8749c6e1c853f87f17e735887bbdd4d72e2a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd2b639f98dbb381cf4bea70cc790fd99ebf185f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708344"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Criando um DataTable de uma consulta (LINQ to DataSet)
 A vinculação de dados é um uso comum do objeto <xref:System.Data.DataTable>. O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> recebe os resultados de uma consulta e copia os dados em um <xref:System.Data.DataTable>, que podem ser usados para vinculação de dados. Quando as operações de dados tiverem sido executadas, o novo <xref:System.Data.DataTable> será mesclado de volta no <xref:System.Data.DataTable> de origem.  
@@ -29,15 +29,15 @@ A vinculação de dados é um uso comum do objeto <xref:System.Data.DataTable>. 
   
  Quando o método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> encontrar uma referência nula ou o tipo de valor anulável em uma linha na tabela de origem, ele substituirá o valor por <xref:System.DBNull.Value>. Dessa maneira, os valores nulos serão manipulados corretamente no <xref:System.Data.DataTable> retornado.  
   
- Observação: o método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> aceita como entrada uma consulta que pode retornar linhas de vários objetos <xref:System.Data.DataTable> ou <xref:System.Data.DataSet>. O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copiará os dados mas não as propriedades dos objetos <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> de origem para o <xref:System.Data.DataTable> retornado. Você precisará definir explicitamente as propriedades no <xref:System.Data.DataTable> retornado, por exemplo <xref:System.Data.DataTable.Locale%2A> e <xref:System.Data.DataTable.TableName%2A>.  
+ Observação: O <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> método aceita como entrada uma consulta que pode retornar linhas de vários <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> objetos. O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copiará os dados mas não as propriedades dos objetos <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> de origem para o <xref:System.Data.DataTable> retornado. Você precisará definir explicitamente as propriedades no <xref:System.Data.DataTable> retornado, por exemplo <xref:System.Data.DataTable.Locale%2A> e <xref:System.Data.DataTable.TableName%2A>.  
   
  O exemplo a seguir consulta a tabela SalesOrderHeader para pedidos após 8 de agosto de 2001 e usa o método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> para criar um <xref:System.Data.DataTable> a partir dessa consulta. O <xref:System.Data.DataTable> é então associado a um <xref:System.Windows.Forms.BindingSource>, que age como o proxy para um <xref:System.Windows.Forms.DataGridView>.  
   
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
-## <a name="creating-a-custom-copytodatatablet-method"></a>Criando um CopyToDataTable personalizado\<T > método  
- Os métodos <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> existentes somente funcionam em uma fonte de <xref:System.Collections.Generic.IEnumerable%601> onde o parâmetro genérico `T` é do tipo <xref:System.Data.DataRow>. Embora isso seja útil, não permite que as tabelas sejam criadas de uma sequência de tipos escalares, de consultas que retornam tipos anônimos ou de consultas que executam uniões de tabela. Para obter um exemplo de como implementar duas personalizado `CopyToDataTable` métodos que carregam uma tabela de uma sequência de tipos escalares ou anônimas, consulte [como: implementar CopyToDataTable\<T > onde o genérico tipo T não é um DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.  
+## <a name="creating-a-custom-copytodatatablet-method"></a>Criar um personalizado CopyToDataTable\<T > método  
+ Os métodos <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> existentes somente funcionam em uma fonte de <xref:System.Collections.Generic.IEnumerable%601> onde o parâmetro genérico `T` é do tipo <xref:System.Data.DataRow>. Embora isso seja útil, não permite que as tabelas sejam criadas de uma sequência de tipos escalares, de consultas que retornam tipos anônimos ou de consultas que executam uniões de tabela. Para obter um exemplo de como implementar dois personalizado `CopyToDataTable` métodos que carregam uma tabela de uma sequência de tipos anônimos ou escalares, consulte [como: Implementar CopyToDataTable\<T > em que o tipo genérico T não é um DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.  
   
  Os exemplos nesta seção usam os seguintes tipos personalizados:  
   
@@ -74,7 +74,7 @@ A vinculação de dados é um uso comum do objeto <xref:System.Data.DataTable>. 
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [Campo genérico e métodos de SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>Consulte também
+- [Guia de Programação](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Campo genérico e métodos de SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
