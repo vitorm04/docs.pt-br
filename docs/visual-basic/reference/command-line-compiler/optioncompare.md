@@ -9,57 +9,57 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 1d50a3bb739bbde09fa10d2adf03ec7c1ff5d344
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 86564b7ce419ef6c6e56a6b677b71009830b5fc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662303"
 ---
-# <a name="-optioncompare"></a><span data-ttu-id="d2cd1-102">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="d2cd1-102">-optioncompare</span></span>
-<span data-ttu-id="d2cd1-103">Especifica como são feitas comparações de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-103">Specifies how string comparisons are made.</span></span>  
+# <a name="-optioncompare"></a><span data-ttu-id="7abbc-102">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="7abbc-102">-optioncompare</span></span>
+<span data-ttu-id="7abbc-103">Especifica como são feitas comparações de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="7abbc-103">Specifies how string comparisons are made.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2cd1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d2cd1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7abbc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7abbc-104">Syntax</span></span>  
   
 ```  
 -optioncompare:{binary | text}  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="d2cd1-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="d2cd1-105">Remarks</span></span>  
- <span data-ttu-id="d2cd1-106">Você pode especificar `-optioncompare` em uma das duas formas: `-optioncompare:binary` usar comparações de cadeia de caracteres binária, e `-optioncompare:text` usar comparações de cadeia de caracteres de texto.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-106">You can specify `-optioncompare` in one of two forms: `-optioncompare:binary` to use binary string comparisons, and `-optioncompare:text` to use text string comparisons.</span></span> <span data-ttu-id="d2cd1-107">Por padrão, o compilador usa `-optioncompare:binary`.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-107">By default, the compiler uses `-optioncompare:binary`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7abbc-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="7abbc-105">Remarks</span></span>  
+ <span data-ttu-id="7abbc-106">Você pode especificar `-optioncompare` em uma das duas formas: `-optioncompare:binary` usar comparações de cadeia de caracteres binária, e `-optioncompare:text` usar comparações de cadeia de caracteres de texto.</span><span class="sxs-lookup"><span data-stu-id="7abbc-106">You can specify `-optioncompare` in one of two forms: `-optioncompare:binary` to use binary string comparisons, and `-optioncompare:text` to use text string comparisons.</span></span> <span data-ttu-id="7abbc-107">Por padrão, o compilador usa `-optioncompare:binary`.</span><span class="sxs-lookup"><span data-stu-id="7abbc-107">By default, the compiler uses `-optioncompare:binary`.</span></span>  
   
- <span data-ttu-id="d2cd1-108">No Microsoft Windows, a página de código atual determina a ordem de classificação binária.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-108">In Microsoft Windows, the current code page determines the binary sort order.</span></span> <span data-ttu-id="d2cd1-109">Uma ordem de classificação binária típica é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="d2cd1-109">A typical binary sort order is as follows:</span></span>  
+ <span data-ttu-id="7abbc-108">No Microsoft Windows, a página de código atual determina a ordem de classificação binária.</span><span class="sxs-lookup"><span data-stu-id="7abbc-108">In Microsoft Windows, the current code page determines the binary sort order.</span></span> <span data-ttu-id="7abbc-109">Uma ordem de classificação binária típica é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="7abbc-109">A typical binary sort order is as follows:</span></span>  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- <span data-ttu-id="d2cd1-110">Comparações de cadeia de caracteres com base em texto são com base em uma ordem de classificação de texto diferencia maiusculas de minúsculas determinada pela localidade do sistema.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-110">Text-based string comparisons are based on a case-insensitive text sort order determined by your system's locale.</span></span> <span data-ttu-id="d2cd1-111">Uma ordem de classificação de texto típica é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="d2cd1-111">A typical text sort order is as follows:</span></span>  
+ <span data-ttu-id="7abbc-110">Comparações de cadeia de caracteres com base em texto são com base em uma ordem de classificação de texto diferencia maiusculas de minúsculas determinada pela localidade do sistema.</span><span class="sxs-lookup"><span data-stu-id="7abbc-110">Text-based string comparisons are based on a case-insensitive text sort order determined by your system's locale.</span></span> <span data-ttu-id="7abbc-111">Uma ordem de classificação de texto típica é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="7abbc-111">A typical text sort order is as follows:</span></span>  
   
  `(A = a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a><span data-ttu-id="d2cd1-112">Definir - optioncompare no IDE do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d2cd1-112">To set -optioncompare in the Visual Studio IDE</span></span>  
+### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a><span data-ttu-id="7abbc-112">Definir - optioncompare no IDE do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7abbc-112">To set -optioncompare in the Visual Studio IDE</span></span>  
   
-1.  <span data-ttu-id="d2cd1-113">Selecione um projeto no **Gerenciador de Soluções**.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-113">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="d2cd1-114">No menu **Projeto**, clique em **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-114">On the **Project** menu, click **Properties**.</span></span>   
+1.  <span data-ttu-id="7abbc-113">Selecione um projeto no **Gerenciador de Soluções**.</span><span class="sxs-lookup"><span data-stu-id="7abbc-113">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="7abbc-114">No menu **Projeto**, clique em **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="7abbc-114">On the **Project** menu, click **Properties**.</span></span>   
   
-2.  <span data-ttu-id="d2cd1-115">Clique na guia **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-115">Click the **Compile** tab.</span></span>  
+2.  <span data-ttu-id="7abbc-115">Clique na guia **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="7abbc-115">Click the **Compile** tab.</span></span>  
   
-3.  <span data-ttu-id="d2cd1-116">Modificar o valor de **Option Compare** caixa.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-116">Modify the value in the **Option Compare** box.</span></span>  
+3.  <span data-ttu-id="7abbc-116">Modificar o valor de **Option Compare** caixa.</span><span class="sxs-lookup"><span data-stu-id="7abbc-116">Modify the value in the **Option Compare** box.</span></span>  
   
-### <a name="to-set--optioncompare-programmatically"></a><span data-ttu-id="d2cd1-117">Definir - optioncompare de maneira programática</span><span class="sxs-lookup"><span data-stu-id="d2cd1-117">To set -optioncompare programmatically</span></span>  
+### <a name="to-set--optioncompare-programmatically"></a><span data-ttu-id="7abbc-117">Definir - optioncompare de maneira programática</span><span class="sxs-lookup"><span data-stu-id="7abbc-117">To set -optioncompare programmatically</span></span>  
   
--   <span data-ttu-id="d2cd1-118">Ver [instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).</span><span class="sxs-lookup"><span data-stu-id="d2cd1-118">See [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md).</span></span>  
+-   <span data-ttu-id="7abbc-118">Ver [instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).</span><span class="sxs-lookup"><span data-stu-id="7abbc-118">See [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2cd1-119">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d2cd1-119">Example</span></span>  
- <span data-ttu-id="d2cd1-120">O seguinte código compila `ProjFile.vb` e usa comparações de cadeia de caracteres binária.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-120">The following code compiles `ProjFile.vb` and uses binary string comparisons.</span></span>  
+## <a name="example"></a><span data-ttu-id="7abbc-119">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7abbc-119">Example</span></span>  
+ <span data-ttu-id="7abbc-120">O seguinte código compila `ProjFile.vb` e usa comparações de cadeia de caracteres binária.</span><span class="sxs-lookup"><span data-stu-id="7abbc-120">The following code compiles `ProjFile.vb` and uses binary string comparisons.</span></span>  
   
 ```console
 vbc -optioncompare:binary projFile.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d2cd1-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d2cd1-121">See Also</span></span>  
- [<span data-ttu-id="d2cd1-122">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d2cd1-122">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="d2cd1-123">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="d2cd1-123">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [<span data-ttu-id="d2cd1-124">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="d2cd1-124">-optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [<span data-ttu-id="d2cd1-125">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="d2cd1-125">-optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [<span data-ttu-id="d2cd1-126">Linhas de Comando de Compilação de Exemplo</span><span class="sxs-lookup"><span data-stu-id="d2cd1-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [<span data-ttu-id="d2cd1-127">Instrução Option Compare</span><span class="sxs-lookup"><span data-stu-id="d2cd1-127">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [<span data-ttu-id="d2cd1-128">Caixa de diálogo Padrões do Visual Basic, Projetos, Opções</span><span class="sxs-lookup"><span data-stu-id="d2cd1-128">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a><span data-ttu-id="7abbc-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7abbc-121">See also</span></span>
+- [<span data-ttu-id="7abbc-122">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7abbc-122">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="7abbc-123">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="7abbc-123">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [<span data-ttu-id="7abbc-124">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="7abbc-124">-optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [<span data-ttu-id="7abbc-125">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="7abbc-125">-optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [<span data-ttu-id="7abbc-126">Linhas de Comando de Compilação de Exemplo</span><span class="sxs-lookup"><span data-stu-id="7abbc-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="7abbc-127">Instrução Option Compare</span><span class="sxs-lookup"><span data-stu-id="7abbc-127">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [<span data-ttu-id="7abbc-128">Caixa de diálogo Padrões do Visual Basic, Projetos, Opções</span><span class="sxs-lookup"><span data-stu-id="7abbc-128">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
