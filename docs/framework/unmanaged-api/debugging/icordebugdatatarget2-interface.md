@@ -4,40 +4,40 @@ ms.date: 03/30/2017
 ms.assetid: 13f11388-2f91-48d8-98d6-6a4a63cb5746
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85ff64e30519e448b87c2e9ae5d2c66959d836fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0931cb5ed133d4de82473ae786f28f13fd396db5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742992"
 ---
-# <a name="icordebugdatatarget2-interface"></a><span data-ttu-id="3e37b-102">Interface ICorDebugDataTarget2</span><span class="sxs-lookup"><span data-stu-id="3e37b-102">ICorDebugDataTarget2 Interface</span></span>
-<span data-ttu-id="3e37b-103">Logicamente estende o [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interface.</span><span class="sxs-lookup"><span data-stu-id="3e37b-103">Logically extends the [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interface.</span></span>  
+# <a name="icordebugdatatarget2-interface"></a><span data-ttu-id="1dbd1-102">Interface ICorDebugDataTarget2</span><span class="sxs-lookup"><span data-stu-id="1dbd1-102">ICorDebugDataTarget2 Interface</span></span>
+<span data-ttu-id="1dbd1-103">Estende logicamente a [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interface.</span><span class="sxs-lookup"><span data-stu-id="1dbd1-103">Logically extends the [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3e37b-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="3e37b-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1dbd1-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="1dbd1-104">Methods</span></span>  
   
-|<span data-ttu-id="3e37b-105">Método</span><span class="sxs-lookup"><span data-stu-id="3e37b-105">Method</span></span>|<span data-ttu-id="3e37b-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="3e37b-106">Description</span></span>|  
+|<span data-ttu-id="1dbd1-105">Método</span><span class="sxs-lookup"><span data-stu-id="1dbd1-105">Method</span></span>|<span data-ttu-id="1dbd1-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="1dbd1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3e37b-107">Método CreateVirtualUnwinder</span><span class="sxs-lookup"><span data-stu-id="3e37b-107">CreateVirtualUnwinder Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-createvirtualunwinder-method.md)|<span data-ttu-id="3e37b-108">Cria um novo unwinder de pilha que inicia o desenrolamento de um contexto inicial (que não é necessariamente folha de um thread).</span><span class="sxs-lookup"><span data-stu-id="3e37b-108">Creates a new stack unwinder that starts unwinding from an initial context (which isn't necessarily the leaf of a thread).</span></span>|  
-|[<span data-ttu-id="3e37b-109">Método EnumerateThreadIDs</span><span class="sxs-lookup"><span data-stu-id="3e37b-109">EnumerateThreadIDs Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-enumeratethreadids-method.md)|<span data-ttu-id="3e37b-110">Retorna uma lista de IDs de thread ativo.</span><span class="sxs-lookup"><span data-stu-id="3e37b-110">Returns a list of active thread IDs.</span></span>|  
-|[<span data-ttu-id="3e37b-111">Método GetImageFromPointer</span><span class="sxs-lookup"><span data-stu-id="3e37b-111">GetImageFromPointer Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-getimagefrompointer-method.md)|<span data-ttu-id="3e37b-112">Retorna o endereço base do módulo e o tamanho de um endereço no módulo.</span><span class="sxs-lookup"><span data-stu-id="3e37b-112">Returns the module base address and size from an address in that module.</span></span>|  
-|[<span data-ttu-id="3e37b-113">Método GetImageLocation</span><span class="sxs-lookup"><span data-stu-id="3e37b-113">GetImageLocation Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-getimagelocation-method.md)|<span data-ttu-id="3e37b-114">Retorna o caminho de um módulo de endereço base do módulo.</span><span class="sxs-lookup"><span data-stu-id="3e37b-114">Returns the path of a module from the module's base address.</span></span>|  
-|[<span data-ttu-id="3e37b-115">Método GetSymbolProviderForImage</span><span class="sxs-lookup"><span data-stu-id="3e37b-115">GetSymbolProviderForImage Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-getsymbolproviderforimage-method.md)|<span data-ttu-id="3e37b-116">Retorna o provedor de símbolo para um módulo do endereço base do módulo.</span><span class="sxs-lookup"><span data-stu-id="3e37b-116">Returns the symbol-provider for a module from the base address of that module.</span></span>|  
+|[<span data-ttu-id="1dbd1-107">Método CreateVirtualUnwinder</span><span class="sxs-lookup"><span data-stu-id="1dbd1-107">CreateVirtualUnwinder Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-createvirtualunwinder-method.md)|<span data-ttu-id="1dbd1-108">Cria um novo unwinder de pilha que inicia o desenrolamento de um contexto inicial (que não é necessariamente folha de um thread).</span><span class="sxs-lookup"><span data-stu-id="1dbd1-108">Creates a new stack unwinder that starts unwinding from an initial context (which isn't necessarily the leaf of a thread).</span></span>|  
+|[<span data-ttu-id="1dbd1-109">Método EnumerateThreadIDs</span><span class="sxs-lookup"><span data-stu-id="1dbd1-109">EnumerateThreadIDs Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-enumeratethreadids-method.md)|<span data-ttu-id="1dbd1-110">Retorna uma lista de IDs de thread ativo.</span><span class="sxs-lookup"><span data-stu-id="1dbd1-110">Returns a list of active thread IDs.</span></span>|  
+|[<span data-ttu-id="1dbd1-111">Método GetImageFromPointer</span><span class="sxs-lookup"><span data-stu-id="1dbd1-111">GetImageFromPointer Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-getimagefrompointer-method.md)|<span data-ttu-id="1dbd1-112">Retorna o endereço base do módulo e o tamanho de um endereço no módulo.</span><span class="sxs-lookup"><span data-stu-id="1dbd1-112">Returns the module base address and size from an address in that module.</span></span>|  
+|[<span data-ttu-id="1dbd1-113">Método GetImageLocation</span><span class="sxs-lookup"><span data-stu-id="1dbd1-113">GetImageLocation Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-getimagelocation-method.md)|<span data-ttu-id="1dbd1-114">Retorna o caminho de um módulo de endereço base do módulo.</span><span class="sxs-lookup"><span data-stu-id="1dbd1-114">Returns the path of a module from the module's base address.</span></span>|  
+|[<span data-ttu-id="1dbd1-115">Método GetSymbolProviderForImage</span><span class="sxs-lookup"><span data-stu-id="1dbd1-115">GetSymbolProviderForImage Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-getsymbolproviderforimage-method.md)|<span data-ttu-id="1dbd1-116">Retorna o provedor de símbolo para um módulo do endereço base do módulo.</span><span class="sxs-lookup"><span data-stu-id="1dbd1-116">Returns the symbol-provider for a module from the base address of that module.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3e37b-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="3e37b-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1dbd1-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="1dbd1-117">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3e37b-118">Esta interface só está disponível com o .NET Native.</span><span class="sxs-lookup"><span data-stu-id="3e37b-118">This interface is available with .NET Native only.</span></span> <span data-ttu-id="3e37b-119">Se você implementar essa interface para cenários de ICorDebug fora do .NET nativo, o common language runtime irá ignorar essa interface.</span><span class="sxs-lookup"><span data-stu-id="3e37b-119">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
+>  <span data-ttu-id="1dbd1-118">Essa interface só está disponível com o .NET Native.</span><span class="sxs-lookup"><span data-stu-id="1dbd1-118">This interface is available with .NET Native only.</span></span> <span data-ttu-id="1dbd1-119">Se você implementar essa interface para cenários de ICorDebug fora do .NET nativo, o common language runtime irá ignorar essa interface.</span><span class="sxs-lookup"><span data-stu-id="1dbd1-119">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3e37b-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3e37b-120">Requirements</span></span>  
- <span data-ttu-id="3e37b-121">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e37b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1dbd1-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1dbd1-120">Requirements</span></span>  
+ <span data-ttu-id="1dbd1-121">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1dbd1-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3e37b-122">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3e37b-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1dbd1-122">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1dbd1-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3e37b-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e37b-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1dbd1-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1dbd1-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3e37b-124">**Versões do .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e37b-124">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="1dbd1-124">**Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1dbd1-124">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e37b-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3e37b-125">See Also</span></span>  
- [<span data-ttu-id="3e37b-126">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="3e37b-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="3e37b-127">Depuração</span><span class="sxs-lookup"><span data-stu-id="3e37b-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="1dbd1-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1dbd1-125">See also</span></span>
+- [<span data-ttu-id="1dbd1-126">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="1dbd1-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="1dbd1-127">Depuração</span><span class="sxs-lookup"><span data-stu-id="1dbd1-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
