@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683957"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informações de privacidade do Windows Communication Foundation
 A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você compila um aplicativo usando o Windows Communication Foundation (WCF), versão 3.0, seu aplicativo pode afetar a privacidade de seus usuários finais. Por exemplo, seu aplicativo explicitamente poderá coletar informações de contato do usuário, ou ele pode solicitar ou enviar informações pela Internet para seu site da Web. Se você incorporar tecnologia da Microsoft em seu aplicativo, o que a tecnologia pode ter seu próprio comportamento que pode afetar a privacidade. WCF não enviar todas as informações à Microsoft do seu aplicativo, a menos que você ou o usuário final optar por enviá-los para nós.  
@@ -95,7 +95,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 ### <a name="tracing"></a>Rastreamento  
  O recurso de diagnóstico da infraestrutura do WCF registra em log as mensagens que passam por meio de transporte e camadas do modelo de serviço e as atividades e eventos associados a essas mensagens. Esse recurso é desativado por padrão. Ele é habilitado usando o arquivo de configuração do aplicativo e o comportamento de rastreamento pode ser modificado usando o provedor de WMI do WCF em tempo de execução. Quando habilitada, a infra-estrutura de rastreamento emite um rastreamento de diagnóstico que contém as mensagens, atividades e eventos de processamento para ouvintes configurados. O formato e o local de saída são determinados por opções de configuração de ouvinte do administrador, mas normalmente é um arquivo XML formatado. O administrador é responsável por definir a lista de controle de acesso (ACL) nos arquivos de rastreamento. Em particular, quando hospedado pelo sistema de ativação do Windows (WAS), o administrador deve se certificar que de arquivos não são servidos do diretório raiz virtual pública se não for desejado.  
   
- Há dois tipos de rastreamento: log de mensagens e o modelo de serviço de diagnóstico, rastreamento, descrito na seção a seguir. Cada tipo é configurado por meio de sua própria origem de rastreamento: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Ambas essas fontes de rastreamento de registro em log capturam dados que são locais para o aplicativo.  
+ Há dois tipos de rastreamento: Diagnóstico do modelo de serviço e de log de mensagens de rastreamento, descrito na seção a seguir. Cada tipo é configurado por meio de sua própria origem de rastreamento: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Ambas essas fontes de rastreamento de registro em log capturam dados que são locais para o aplicativo.  
   
 ### <a name="message-logging"></a>Registro em log de mensagens  
  A mensagem de log de origem de rastreamento (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) permite que um administrador registrar em log as mensagens desse fluxo por meio do sistema. Por meio da configuração, o usuário pode decidir registrar mensagens inteiras ou somente os cabeçalhos de mensagem, se é preciso registrar nas camadas de modelo de transporte e/ou serviço e se é necessário incluir mensagens malformadas. Além disso, o usuário pode configurar a filtragem para restringir quais mensagens são registradas.  
@@ -137,7 +137,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  wsse:password  
   
- wsse:nonce  
+ wsse:Nonce  
   
  Informações potencialmente particulares que são removidas:  
   
@@ -163,7 +163,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  >  
   
- \<Condições NotBefore = "[data e hora]" NotOnOrAfter = "[data e hora]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
  \<AudienceRestrictionCondition>  
   
@@ -171,7 +171,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!– o tipo base abstrato  
   
@@ -185,17 +185,17 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Asserção > [asserção]\</Assertion > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [qualquer] *  
   
- \</ Conselhos >?  
+ \</Advice>?  
   
  <\!– Tipos de base abstratos  
   
  \<Instrução / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
  \<Assunto >  
   
@@ -213,7 +213,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
  \<SubjectConfirmationData > [qualquer]\</SubjectConfirmationData >?  
   
@@ -223,13 +223,13 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
  \<AuthenticationStatement  
   
- AuthenticationMethod = "[uri]"  
+ AuthenticationMethod="[uri]"  
   
  AuthenticationInstant="[dateTime]"  
   
@@ -257,7 +257,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Assunto]  
   
@@ -273,11 +273,11 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</ Atributo > +  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
- Recurso = "[uri]"  
+ Resource="[uri]"  
   
  Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
@@ -285,13 +285,13 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  [Assunto]  
   
- \<Namespace de ação = "[uri]" > [string]\</Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<Evidência >  
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Asserção > [asserção]\</Assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
  \</ Evidência >?  
   
@@ -401,6 +401,6 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  A descrição de linguagem WSDL (Web Services) contém uma definição da porta. Cada porta tem um endereço de ponto de extremidade e uma associação que representa os serviços usados pelo aplicativo. Expondo a WSDL pode ser desativado usando a configuração. Nenhuma informação é mantida no computador.  
   
-## <a name="see-also"></a>Consulte também  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [Segurança](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Consulte também
+- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Segurança](../../../docs/framework/wcf/feature-details/security.md)

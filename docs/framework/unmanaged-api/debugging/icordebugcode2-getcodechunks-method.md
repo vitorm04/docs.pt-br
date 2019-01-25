@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdfcd45b15ddc1491b12de0fa42901b6d3f7fe9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf8bc747f643819eb82448b4ad6b7fab696c9c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572494"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>Método ICorDebugCode2::GetCodeChunks
-Obtém as partes do código que é composto por esse objeto de código.  
+Obtém as partes do código que é composto por este objeto de código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,19 +46,19 @@ HRESULT GetCodeChunks (
  [out] O número de partes retornado no `chunks` matriz.  
   
  `chunks`  
- [out] Uma matriz de estruturas de "CodeChunkInfo", cada uma representando um único bloco de código. Se o valor de `cbufSize` for 0, esse parâmetro pode ser nulo.  
+ [out] Uma matriz de estruturas de "CodeChunkInfo", cada um deles representa um único bloco de código. Se o valor de `cbufSize` for 0, esse parâmetro pode ser nulo.  
   
 ## <a name="remarks"></a>Comentários  
- Os blocos de código nunca serão sobrepostos e eles seguirão a ordem na qual eles seriam tenham sido concatenados por [: Getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md). Um objeto de código Microsoft intermediate language (MSIL) no .NET Framework versão 2.0 compõem um bloco de código único.  
+ As partes de código nunca serão sobrepostas, e eles seguirão a ordem em que eles seriam tenham sido concatenados por [icordebugcode:: Getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md). Um objeto de código Microsoft intermediate language (MSIL) no .NET Framework versão 2.0 compõem uma parte de código único.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- 
+## <a name="see-also"></a>Consulte também
+

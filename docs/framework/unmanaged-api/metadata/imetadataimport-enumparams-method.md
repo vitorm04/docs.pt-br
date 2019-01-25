@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b848c30e824d45f6f619cfdb3d00a2d3cdc4573e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dadfabf1d2507b2bd719b5b73238bb38c9ae7563
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602423"
 ---
 # <a name="imetadataimportenumparams-method"></a>Método IMetaDataImport::EnumParams
-Enumera ParamDef tokens que representam os parâmetros do método referenciada pelo token MethodDef especificado.  
+Enumera os tokens de ParamDef que representam os parâmetros do método referenciada pelo token de MethodDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,10 +41,10 @@ HRESULT EnumParams (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada do método.  
+ [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
   
  `mb`  
- [in] Um token MethodDef que representa o método com parâmetros para enumerar.  
+ [in] Um token MethodDef que representa o método com os parâmetros para enumerar.  
   
  `rParams`  
  [out] A matriz usada para armazenar os tokens de ParamDef.  
@@ -53,24 +53,24 @@ HRESULT EnumParams (
  [in] O tamanho máximo da `rParams` matriz.  
   
  `pcTokens`  
- [out] O número de tokens ParamDef retornado em `rParams`.  
+ [out] O número de tokens ParamDef retornado no `rParams`.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` retornou com êxito.|  
-|`S_FALSE`|Não há nenhum tokens para enumerar. Nesse caso, `pcTokens` é zero.|  
+|`S_OK`|`EnumParams` retornado com êxito.|  
+|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

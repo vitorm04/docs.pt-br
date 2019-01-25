@@ -1,5 +1,5 @@
 ---
-title: '&lt;gcAllowVeryLargeObjects&gt; elemento'
+title: '&lt;gcAllowVeryLargeObjects&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5e0a443f86848a446a7233a2c2e80f693cae9be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 16a6b497136b6cffabeb4151e54bec8d80928b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549074"
 ---
-# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; elemento
+# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; Element
 Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tamanho total.  
   
  \<Configuração > elemento  
 \<tempo de execução > elemento  
-\<gcAllowVeryLargeObjects > elemento  
+\<gcAllowVeryLargeObjects> Element  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -77,6 +77,6 @@ Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tam
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

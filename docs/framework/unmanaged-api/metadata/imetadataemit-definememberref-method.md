@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 881c0b1f755e750efcc74ca61a60bbd97bc5dba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 578f79136f6ccc8a6b7eac644b2a5084d30d2ba0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722823"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>Método IMetaDataEmit::DefineMemberRef
-Define uma referência a um membro de um módulo fora do escopo atual e recebe um token para que a definição de referência.  
+Define uma referência a um membro de um módulo fora do escopo atual e, em seguida, obtém um token para essa definição de referência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ HRESULT DefineMemberRef (
   
 #### <a name="parameters"></a>Parâmetros  
  `tkImport`  
- [in] Token de classe ou a interface, o membro de destino se o membro não for global; Se o membro for global, o `mdModuleRef` token para outro arquivo.  
+ [in] Token para o membro de destino classe ou interface, se o membro não for global; Se o membro for global, o `mdModuleRef` token para outro arquivo.  
   
  `szName`  
  [in] O nome do membro de destino.  
@@ -56,14 +56,14 @@ HRESULT DefineMemberRef (
  [out] O `mdMemberRef` token atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

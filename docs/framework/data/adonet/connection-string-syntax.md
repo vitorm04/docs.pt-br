@@ -2,12 +2,12 @@
 title: Sintaxe da cadeia de conexão
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524540"
 ---
 # <a name="connection-string-syntax"></a>Sintaxe da cadeia de conexão
 Cada provedor de dados .NET Framework tem um objeto de `Connection` que herda de <xref:System.Data.Common.DbConnection> bem como de uma propriedade <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica do provedor. A sintaxe específica da cadeia de conexão para cada provedor está documentada em sua propriedade `ConnectionString`. A tabela a seguir lista os quatro provedores de dados que estão incluídos no .NET Framework.  
@@ -194,7 +194,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  Para obter mais informações sobre a sintaxe da cadeia de conexão ODBC, consulte <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
-## <a name="see-also"></a>Consulte também  
- [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

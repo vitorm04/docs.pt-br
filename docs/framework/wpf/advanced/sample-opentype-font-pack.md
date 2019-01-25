@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 93bba86801ec4971e884cb4703d7a6323a2e94fe
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d460eac13b99a503244503bdc3bbcaccfe649205
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600226"
 ---
 # <a name="sample-opentype-font-pack"></a>Pacote de fontes OpenType de amostra
 Este tópico fornece uma visão geral das fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de exemplo que são distribuídas com o [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. O suporte de fontes de exemplo estendeu os recursos [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] que podem ser usados por aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -53,7 +53,7 @@ Exibindo a fonte Lindsey
 ## <a name="using-the-fonts"></a>Usando as fontes  
  Há duas maneiras de usar fontes no seu aplicativo. Você pode adicionar fontes ao seu aplicativo como itens de conteúdo de projeto que não são inseridos como recursos em um assembly. Como alternativa, você pode adicionar fontes ao seu aplicativo como itens de recurso de projeto que são inseridos nos arquivos de assembly do aplicativo. Para obter mais informações, consulte [Empacotando fontes com aplicativos](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Documents.Typography>  
- [Recursos de fonte OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Empacotando fontes com aplicativos](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Documents.Typography>
+- [Recursos de fonte OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Empacotando fontes com aplicativos](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

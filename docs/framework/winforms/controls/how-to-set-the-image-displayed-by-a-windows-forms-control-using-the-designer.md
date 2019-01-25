@@ -1,5 +1,5 @@
 ---
-title: Como definir a imagem exibida por um controle dos Windows Forms usando o designer
+title: 'Como: Definir a imagem exibida por um Windows Forms usando o Designer de controle'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0f8c2ef747a160adc292a3330a4478b7a8c432d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562304"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Como definir a imagem exibida por um controle dos Windows Forms usando o designer
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Como: Definir a imagem exibida por um Windows Forms usando o Designer de controle
 Vários controles de Windows Forms podem exibir imagens. A imagem pode ser um ícone que esclarece a finalidade do controle, como um ícone de disco em um botão que indica a **salvar** comando. Como alternativa, o ícone pode ser uma imagem de plano de fundo para dar o controle a aparência desejada.  
   
 > [!NOTE]
@@ -32,8 +32,8 @@ Vários controles de Windows Forms podem exibir imagens. A imagem pode ser um í
   
 2.  Selecione a imagem que você deseja exibir.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

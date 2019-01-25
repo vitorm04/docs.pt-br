@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584906"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar origens de rastreamento para emitir rastreamentos e definir níveis de rastreamento, rastreamento de atividades do conjunto e propagação para dar suporte à correlação de rastreamento de ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -58,17 +58,17 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar orige
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurando fontes de rastreamento para emitir rastreamentos  
  O WCF define uma origem de rastreamento para cada assembly. Rastreamentos gerados dentro de um assembly são acessados pelos ouvintes definidos para essa fonte. As seguintes fontes de rastreamento são definidas:  
   
--   System. ServiceModel: Registra todos os estágios do processamento de WCF, sempre que a configuração é lida, uma mensagem é processada no transporte, segurança de processamento, uma mensagem é enviada no código do usuário e assim por diante.  
+-   System.ServiceModel: Registra todos os estágios do processamento de WCF, sempre que a configuração é lida, uma mensagem é processada no transporte, segurança de processamento, uma mensagem é enviada no código do usuário e assim por diante.  
   
 -   System.ServiceModel.MessageLogging: Registra todas as mensagens que fluem através do sistema.  
   
--   System. IdentityModel.  
+-   System.IdentityModel.  
   
 -   System.ServiceModel.Activation.  
   
--   IO: Registro em log para a interface do .NET Framework para o Common Log arquivo CLFS (sistema).  
+-   System.IO.Log: Registro em log para a interface do .NET Framework para o Common Log arquivo CLFS (sistema).  
   
--   Serialization: Logs quando objetos são lidos ou gravados.  
+-   System.Runtime.Serialization: Logs quando objetos são lidos ou gravados.  
   
 -   CardSpace.  
   
@@ -142,7 +142,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar orige
   
  Você pode configurar um ouvinte de rastreamento personalizado para enviar os rastreamentos durante a transmissão, por exemplo, um banco de dados remoto. Como um implantador de aplicativo, você deve aplicar o controle de acesso apropriadas em logs de rastreamento no computador remoto.  
   
- Você também pode configurar um ouvinte de rastreamento programaticamente. Para obter mais informações, consulte [como: criar e inicializar ouvintes de rastreamento](https://go.microsoft.com/fwlink/?LinkId=94648) e [criando um TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239).  
+ Você também pode configurar um ouvinte de rastreamento programaticamente. Para obter mais informações, confira [Como: Criar e inicializar ouvintes de rastreamento](https://go.microsoft.com/fwlink/?LinkId=94648) e [criando um TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Porque `System.Diagnostics.XmlWriterTraceListener` é não é thread-safe, a origem de rastreamento pode bloquear recursos exclusivamente na saída de rastreamentos. Quando vários threads de saída de rastreamentos em uma origem de rastreamento configurado para usar este ouvinte, pode ocorrer a contenção de recursos, que resulta em um problema de desempenho significativa. Para resolver esse problema, você deve implementar um ouvinte personalizado que é thread-safe.  
@@ -153,7 +153,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar orige
 |Nível de rastreamento:|Natureza dos eventos rastreados|Conteúdo dos eventos rastreados|Eventos rastreados|Destino do usuário|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Off|N/D|N/D|Nenhum rastreamento é emitido.|N/D|  
-|Crítico|"Negativo" eventos: eventos que indicam um processamento inesperado ou uma condição de erro.||Exceções sem tratamento, incluindo os seguintes são registradas:<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (o CLR chama qualquer ThreadAbortExceptionHandler)<br />-StackOverflowException (não pode ser detectada)<br />-ConfigurationErrorsException<br />-SEHException<br />– Início aplicativo erros<br />-Eventos Failfast<br />-Paradas do sistema<br />-Mensagens suspeitas: mensagem rastreamentos que fazem com que o aplicativo falhe.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
+|Crítico|"Negativo" eventos: eventos que indicam um processamento inesperado ou uma condição de erro.||Exceções sem tratamento, incluindo os seguintes são registradas:<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (o CLR chama qualquer ThreadAbortExceptionHandler)<br />-StackOverflowException (não pode ser detectada)<br />-   ConfigurationErrorsException<br />-   SEHException<br />– Início aplicativo erros<br />-Eventos Failfast<br />-Paradas do sistema<br />-Mensagens suspeitas: mensagem rastreamentos que fazem com que o aplicativo falhe.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
 |Erro|"Negativo" eventos: eventos que indicam um processamento inesperado ou uma condição de erro.|Processamento inesperado aconteceu. O aplicativo não pôde executar uma tarefa, conforme o esperado. No entanto, o aplicativo está ainda em execução.|Todas as exceções são registradas.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
 |Aviso|"Negativo" eventos: eventos que indicam um processamento inesperado ou uma condição de erro.|Um possível problema ocorreu, ou pode ocorrer, mas o aplicativo ainda funcione corretamente. No entanto, talvez não continue a funcionar corretamente.|-O aplicativo está recebendo mais solicitações do que permitir que suas configurações de limitação.<br />-A fila de recebimento está perto de sua capacidade máxima de configurado.<br />-Tempo limite foi excedido.<br />-Credenciais são rejeitadas.|Administradores<br /><br /> Desenvolvedores de aplicativos|  
 |Informações|"Positivos" eventos: eventos que marcam marcos bem-sucedida|Marcos importantes e bem-sucedido de execução do aplicativo, independentemente se o aplicativo está funcionando corretamente ou não.|Em geral, são geradas mensagens úteis para monitorar e diagnosticar o status do sistema, medir o desempenho ou criação de perfil. Você pode usar essas informações para o gerenciamento de desempenho e planejamento de capacidade:<br /><br /> -Canais são criados.<br />-Ponto de extremidade ouvintes são criados.<br />-Mensagem de transporte de insere/folhas.<br />-Token de segurança é recuperado.<br />-Configuração é lida.|Administradores<br /><br /> Desenvolvedores de aplicativos<br /><br /> Desenvolvedores de produtos.|  
@@ -180,8 +180,8 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar orige
   
  Não é possível usar o `propagateActivity` atributo com fontes de rastreamento definidos pelo usuário. Para a propagação de ID de atividade de código de usuário, verifique se você não definir ServiceModel `ActivityTracing`, ao mesmo tempo, ServiceModel `propagateActivity` atributo definido como `true`.  
   
-## <a name="see-also"></a>Consulte também  
- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Como criar e inicializar ouvintes de rastreamento](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [Criando um TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>Consulte também
+- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Como: Criar e inicializar ouvintes de rastreamento](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Criando um TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab5612a2bb48b2cc93e0150f45107e474a4e6217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27e2f194d252baa2e2ca185d905c945d26a177a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590085"
 ---
 # <a name="corprfcodegenflags-enumeration"></a>Enumeração COR_PRF_CODEGEN_FLAGS
-Define os sinalizadores de geração de código que podem ser definidos com o [: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) método.  
+Define os sinalizadores de geração de código que podem ser definidos com o [icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,20 +39,20 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|Nenhuma função será embutida no corpo dessa função. No entanto, a função em si pode ser embutida em seus chamadores.|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Todas as otimizações serão desabilitadas para o corpo desta função. No entanto, a função em si ainda pode ser embutida em seus chamadores.|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|Não há funções serão embutidas no corpo dessa função. No entanto, a função em si pode ser embutida em chamadores.|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Todas as otimizações serão desabilitadas para o corpo dessa função. No entanto, a função em si ainda pode ser embutida em chamadores.|  
   
 ## <a name="remarks"></a>Comentários  
- O `COR_PRF_CODEGEN_FLAGS` enumeração é usada pelo [: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) método para permitir que o criador de perfil controlar a geração de código para a função recompilado JIT.  
+ O `COR_PRF_CODEGEN_FLAGS` enumeração é usada pelo [icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) método para habilitar o criador de perfil controlar a geração de código para a função recompilado por JIT.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

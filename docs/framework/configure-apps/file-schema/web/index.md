@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 461043dbb57043c5c18ea703d45f8b3ae487d271
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf461049aef20268bcdb514073b4e3cb392f2b4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579921"
 ---
 # <a name="web-settings-schema"></a>Esquema de configurações Web
 As configurações de Web especificam as configurações do ASP.NET em nível de execução que se aplicam ao comportamento de todo o processo gerenciado pela camada de hospedagem do ASP.NET. Essas configurações são diferentes das configurações de tipo de domínio do aplicativo que são especificadas no arquivo Web.config de um aplicativo ASP.NET.  
@@ -38,5 +38,5 @@ As configurações de Web especificam as configurações do ASP.NET em nível de
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Contém informações que a camada de hospedagem do ASP.NET usa.|  
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Especifica as configurações de CPU e do ASP.NET em nível de execução que se aplicam ao comportamento de todo o processo gerenciado pela camada de hospedagem do ASP.NET.|  
   
-## <a name="see-also"></a>Consulte também  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>Consulte também
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

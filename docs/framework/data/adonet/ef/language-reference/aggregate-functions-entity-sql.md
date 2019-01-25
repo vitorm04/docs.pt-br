@@ -2,23 +2,23 @@
 title: Funções agregadas (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e606d0e355bb715cfa0536ad9e33f08f5f692951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492046"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funções agregadas (Entity SQL)
 Uma agregação é uma construção de linguagem que condense uma coleção em um escalar como parte de uma operação de grupo. as agregações de[!INCLUDE[esql](../../../../../../includes/esql-md.md)] vêm em duas formas:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funções de coleção que podem ser usadas em qualquer lugar em uma expressão. Isso inclui usar funções de agregação em projeções e predicados que atuam em coleções. Funções de coleção são o modo preferido de especificar agregações em [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funções de coleção que podem ser usadas em qualquer lugar em uma expressão. Isso inclui usando funções agregadas em projeções e predicados que atuam em coleções. Funções de coleção são o modo preferido para especificar agregados em [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 -   O grupo agrega as expressões de consulta que têm um cláusula GROUP BY. Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregados do grupo aceitam DISTINCT e ALL como modificadores a entrada aggregate.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primeiro tenta interpretar uma expressão como uma função de coleção e, se a expressão for no contexto de uma expressão de seleção ele interpreta como uma agregação do grupo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primeiro tenta interpretar uma expressão como uma função de coleção e se a expressão é no contexto de uma expressão SELECT ele interpretará como uma agregação de grupo.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] define um operador de agregação especial chamado [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Este operador permite que você obtenha uma referência para o conjunto de entrada agrupado. Isso permite uma consultas mais avançados de agrupamento, onde os resultados de cláusula GROUP BY podem ser usados em locais diferentes funções de agregação ou a coleção de grupo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] define um operador aggregate especial chamado [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Este operador permite que você obtenha uma referência ao conjunto agrupado de entrada. Isso permite uma consultas mais avançados de agrupamento, onde os resultados de cláusula GROUP BY podem ser usados em locais diferentes funções de agregação ou a coleção de grupo.  
   
 ## <a name="collection-functions"></a>Funções de coleção  
  Funções de coleção operam em coleções e retornam um valor escalar. Por exemplo, se `orders` é uma coleção de qualquer `orders`, você pode calcular a data de enviar a mais recente com a expressão a seguir:  
@@ -42,5 +42,5 @@ Uma agregação é uma construção de linguagem que condense uma coleção em u
   
  As expressões em GRUPO usadas pela cláusula são avaliadas usando o mesmo escopo de resolução que seria visível para a cláusula WHERE expressão.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>Consulte também
+- [Funções](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

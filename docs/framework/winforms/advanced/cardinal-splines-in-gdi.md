@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 93ae09c72415fa489e62f753e51e5a3ffcfb2425
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7d04f59e2424b71eb5bd0015f9496e6e67edbfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589526"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Splines cardinais no GDI+
 Um spline cardinal é uma sequência de curvas individuais unidas para formar uma curva maior. O spline é especificado por uma matriz de pontos e um parâmetro de tensão. Um spline cardinal passa suavemente pelos pontos na matriz. Não há cantos agudos nem mudanças abruptas na inclinação da curva. A ilustração a seguir mostra um conjunto de pontos e um spline cardinal que passa pelos pontos no conjunto.  
@@ -30,11 +30,11 @@ Um spline cardinal é uma sequência de curvas individuais unidas para formar um
   
  Os quatro splines na ilustração anterior compartilham a mesma linha tangente no ponto de partida. A tangente é a linha desenhada do ponto de partida até o próximo seguinte ao longo da curva. Da mesma forma, a tangente compartilhada no ponto final é a linha desenhada do ponto final até o ponto anterior na curva.  
   
- Para desenhar uma spline cardeal, você precisa de uma instância do <xref:System.Drawing.Graphics> classe, uma <xref:System.Drawing.Pen>e uma matriz de <xref:System.Drawing.Point> objetos da instância do <xref:System.Drawing.Graphics> classe fornece a <xref:System.Drawing.Graphics.DrawCurve%2A> método, que desenha o spline, e o <xref:System.Drawing.Pen> armazena atributos de spline, como largura da linha e cor. A matriz de <xref:System.Drawing.Point> objetos armazena os pontos de curva sejam passados. O exemplo de código a seguir mostra como desenhar um spline cardinal que passa pelos pontos no `myPointArray`. O terceiro parâmetro é a tensão.  
+ Para desenhar um spline cardinal, você precisa de uma instância do <xref:System.Drawing.Graphics> classe, uma <xref:System.Drawing.Pen>e uma matriz de <xref:System.Drawing.Point> objetos da instância das <xref:System.Drawing.Graphics> classe fornece a <xref:System.Drawing.Graphics.DrawCurve%2A> método, que desenha o spline, e o <xref:System.Drawing.Pen> armazena os atributos do spline, como cor e largura da linha. A matriz de <xref:System.Drawing.Point> objetos armazena os pontos que a curva atravessará. O exemplo de código a seguir mostra como desenhar um spline cardinal que passa pelos pontos no `myPointArray`. O terceiro parâmetro é a tensão.  
   
  [!code-csharp[LinesCurvesAndShapes#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#31)]
  [!code-vb[LinesCurvesAndShapes#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>Consulte também  
- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Construir e Desenhar Curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a>Consulte também
+- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Construir e Desenhar Curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

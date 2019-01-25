@@ -2,12 +2,12 @@
 title: Publicação de serviço do WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ca4a95b606f73800b11416627a27b8174e2bdda9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742991"
 ---
 # <a name="wcf-service-publishing"></a>Publicação de serviço do WCF
 
@@ -58,7 +58,7 @@ Se você optar por implantar seu aplicativo no IIS local, você poderá encontra
 ### <a name="svc-file"></a>. Arquivo SVC
  A operação de publicação gera um arquivo *. svc para cada serviço WCF, se o arquivo existe ou não, para assegurar a validade de versão. Há dois tipos diferentes de arquivos svc: um para o WCF Service Library e Syndication Service Library e outra para Sequential e State Machine Workflow Service Library. Gerado \*arquivo. svc é copiado para a pasta raiz no local de destino.
 
-### <a name="webconfig-file"></a>Arquivo Web. config
+### <a name="webconfig-file"></a>Web.config File
  Cada vez que um projeto de serviço é publicado em um local de destino específico, um arquivo Web. config é criado.
 
  O arquivo Web. config gerado inclui as seções de Web que são úteis para hospedagem na Web e o conteúdo do App. config para o WCF service library com as seguintes alterações:

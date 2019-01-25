@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: dd521e3afa7584cadb28829028a5ecfd1cb55a92
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ea860c185d68a24c31ec24de4a087b9b98fe791f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727801"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Desmarque&gt; elemento para &lt;namedCaches&gt;
 Limpa todos os `namedCache` entradas na `namedCaches` coleção para um cache de memória.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -52,5 +52,5 @@ Limpa todos os `namedCache` entradas na `namedCaches` coleção para um cache de
 ## <a name="remarks"></a>Comentários  
  O `clear` elemento limpa todos os `namedCache` entradas na coleção para um cache de memória cache nomeado. Você pode usar o `clear` elemento antes de usar o `add` elemento para adicionar uma nova entrada de cache nomeado para ter certeza de que há em nenhum outro chamado caches na coleção.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 - [\<namedCaches > (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

@@ -2,12 +2,12 @@
 title: LINQ to XML visão geral de Classes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: dd9e392c1fec86bfb1fe0e0f8bee0cd0c7919fe4
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 0b95a3f4411e20390962a2eccf28b8cfad4b8e09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570116"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML visão geral de Classes (Visual Basic)
 Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no namespace <xref:System.Xml.Linq> e uma breve descrição de cada.  
@@ -86,5 +86,5 @@ Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](~/includes/sql
 ### <a name="xtext-class"></a>Classe XText  
  <xref:System.Xml.Linq.XText> representa um nó de texto. Na maioria dos casos, você não tem que usar esta classe. Essa classe é usada principalmente para conteúdo misto.  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to XML visão geral da programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ to XML visão geral da programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

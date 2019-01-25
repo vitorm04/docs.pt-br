@@ -3,21 +3,21 @@ title: '&lt;etwTracking&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 6defccdd6a81a1c00a4b65fa9214c86e6cccbea2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f9d1acd5dafb9df181b036db9d3ad783ca618874
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684314"
 ---
 # <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
 Um comportamento de serviço que permite que um serviço que utiliza o acompanhamento ETW use um <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
 \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento >  
-\<etwTracking >  
+\<serviceBehaviors>  
+\<behavior>  
+\<etwTracking>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ Um comportamento de serviço que permite que um serviço que utiliza o acompanha
 ## <a name="example"></a>Exemplo  
  O exemplo de configuração a seguir mostra o participante de rastreamento ETW padrão que está sendo configurado no arquivo Web. config.  
   
- A Id de provedor que usa o participante de rastreamento do ETW para gravar os registros de rastreamento ETW é definida no  **\<diagnóstico >** seção. O participante de rastreamento tem um perfil associado a ele para especificar os registros de rastreamento que tiver assinado. Isso é definido pelo **profileName** atributo o  **\<Adicionar >** elemento. Depois que eles são definidos, o participante de rastreamento é adicionado para o  **\<etwTracking >** comportamento de serviço. Isso adicionará os participantes de rastreamento selecionado para extensões da instância de fluxo de trabalho, para que eles começam a receber os registros de rastreamento.  
+ A Id do provedor que o participante de rastreamento de ETW usa para gravar os registros de rastreamento ETW é definida na  **\<diagnóstico >** seção. O participante de rastreamento tem um perfil associado a ele para especificar os registros de rastreamento que tiver assinado. Isso é definido pelo **profileName** atributo da  **\<Adicionar >** elemento. Depois que eles são definidos, o participante de rastreamento é adicionado para o  **\<etwTracking >** comportamento de serviço. Isso adicionará os participantes de rastreamento selecionado para extensões da instância de fluxo de trabalho, para que eles começam a receber os registros de rastreamento.  
   
 ```xml  
 <configuration>   
@@ -84,8 +84,8 @@ Um comportamento de serviço que permite que um serviço que utiliza o acompanha
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Acompanhando participantes](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Acompanhando participantes](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

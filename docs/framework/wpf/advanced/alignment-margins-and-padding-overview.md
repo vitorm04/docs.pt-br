@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569947"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Visão geral de alinhamento, margens e preenchimento
 O <xref:System.Windows.FrameworkElement> classe expõe várias propriedades que são usadas para posicionar elementos filho precisamente. Este tópico discute quatro das propriedades mais importantes: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. É importante entender os efeitos dessas propriedades, pois eles fornecem a base para controlar a posição dos elementos em aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -139,13 +139,13 @@ O <xref:System.Windows.FrameworkElement> classe expõe várias propriedades que 
 ## <a name="whats-next"></a>Novidades  
  Propriedades de posicionamento definidas pela <xref:System.Windows.FrameworkElement> classe permitem um controle fino do posicionamento de elementos dentro do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos. Agora você tem várias técnicas que pode usar para melhor posicionar elementos usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Recursos adicionais estão disponíveis e explicam o layout [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mais detalhadamente. O [visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md) tópico contém mais detalhes sobre os vários <xref:System.Windows.Controls.Panel> elementos. O tópico [instruções passo a passo: meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) apresenta técnicas avançadas que usam elementos de layout para posicionar componentes e associar suas ações a fontes de dados.  
+ Recursos adicionais estão disponíveis e explicam o layout [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mais detalhadamente. O [visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md) tópico contém mais detalhes sobre os vários <xref:System.Windows.Controls.Panel> elementos. O tópico [passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) apresenta técnicas avançadas que usam elementos de layout para posicionar componentes e associar suas ações a fontes de dados.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
- [Exemplo de galeria de layout do WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Exemplo de galeria de layout do WPF](https://go.microsoft.com/fwlink/?LinkID=160054)

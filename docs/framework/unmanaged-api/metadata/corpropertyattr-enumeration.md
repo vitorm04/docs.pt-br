@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263981708af2e40bd3690a3cd344156488eed0dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 713913fa046fc1bef12b8849ac82e4399a8dc534
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577565"
 ---
 # <a name="corpropertyattr-enumeration"></a>Enumeração CorPropertyAttr
 Contém valores que descrevem os metadados de uma propriedade.  
@@ -44,18 +44,18 @@ typedef enum CorPropertyAttr {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`prSpecialName`|Especifica que a propriedade é especial, e que descreve seu nome como.|  
+|`prSpecialName`|Especifica que a propriedade é especial, e que seu nome descreve como.|  
 |`prReservedMask`|Reservado para uso interno pelo common language runtime.|  
-|`prRTSpecialName`|Especifica que os metadados de tempo de execução de linguagem comum APIs interno deve verificar a codificação do nome da propriedade.|  
+|`prRTSpecialName`|Especifica que os metadados do common language runtime APIs internas deve verificar a codificação do nome da propriedade.|  
 |`prHasDefault`|Especifica que a propriedade tem um valor padrão.|  
 |`prUnused`|Não utilizado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

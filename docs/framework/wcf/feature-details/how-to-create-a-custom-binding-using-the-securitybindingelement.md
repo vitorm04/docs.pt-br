@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2aa5703e31b2529e0b98d909a763b8b4b23035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576144"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Como: Criar uma associação personalizada utilizando o SecurityBindingElement
 Windows Communication Foundation (WCF) inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem flexibilidade total durante a configuração de todas as opções de segurança que o WCF oferece suporte. Este tópico demonstra como criar uma ligação personalizada diretamente de elementos de ligação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. Para obter mais informações sobre como criar associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -54,20 +54,20 @@ Windows Communication Foundation (WCF) inclui várias associações fornecidas p
 |Modo de segurança|Transporte|Contrato padrão de troca de mensagem|Contrato padrão de troca de mensagem|Contrato padrão de troca de mensagem|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
 |||`Datagram`|`Request Reply`|`Duplex`|  
-|Transporte|HTTPS||||  
+|Transporte|Https||||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP||||  
 |||OneWayBindingElement|||  
 |||SSL ou StreamSecurityBindingElement do Windows|SSL ou StreamSecurityBindingElement do Windows|SSL ou StreamSecurityBindingElement do Windows|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Mensagem|http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|  
+|Mensagem|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|  
 |||||CompositeDuplexBindingElement|  
 |||OneWayBindingElement||OneWayBindingElement|  
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
-||TCP|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|  
+||Tcp|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Misto (transporte com as credenciais de mensagem)|HTTPS|TransportSecurityBindingElement|TransportSecurityBindingElement||  
+|Misto (transporte com as credenciais de mensagem)|Https|TransportSecurityBindingElement|TransportSecurityBindingElement||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|  
@@ -106,10 +106,10 @@ Windows Communication Foundation (WCF) inclui várias associações fornecidas p
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)

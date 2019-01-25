@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbcbc446eabcfcbc28c830f8860bde726c8eb6e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ef967039450c77b5927d501de63d53a245c90be0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509825"
 ---
 # <a name="iappdomainsetup-interface"></a>Interface IAppDomainSetup
-Fornece propriedades que permitem que o host configurar um <xref:System.AppDomain?displayProperty=nameWithType> tipo antes de chamar o [Icorruntimehost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) método criá-la.  
+Fornece propriedades que permitem que o host configurar uma <xref:System.AppDomain?displayProperty=nameWithType> tipo antes de chamar o [icorruntimehost:: Createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) método para criá-lo.  
   
 ## <a name="properties"></a>Propriedades  
   
@@ -32,31 +32,31 @@ Fornece propriedades que permitem que o host configurar um <xref:System.AppDomai
 |--------------|-----------------|  
 |<xref:System.AppDomainSetup.ApplicationBase%2A>|Obtém ou define o nome do diretório que contém o aplicativo.|  
 |<xref:System.AppDomainSetup.ApplicationName%2A>|Obtém ou define o nome do aplicativo.|  
-|<xref:System.AppDomainSetup.CachePath%2A>|Obtém ou define o nome de uma área específica para o aplicativo em arquivos são copiados de sombra.|  
+|<xref:System.AppDomainSetup.CachePath%2A>|Obtém ou define o nome de uma área específica para o aplicativo em que arquivos são copiados em sombra.|  
 |<xref:System.AppDomainSetup.ConfigurationFile%2A>|Obtém ou define o nome do arquivo de configuração para um aplicativo.|  
 |<xref:System.AppDomainSetup.DynamicBase%2A>|Obtém ou define o nome do diretório onde os arquivos gerados dinamicamente são armazenados e acessados.|  
-|<xref:System.AppDomainSetup.LicenseFile%2A>|Obtém ou define o caminho para o arquivo de licença que está associado este domínio.|  
-|<xref:System.AppDomainSetup.PrivateBinPath%2A>|Obtém ou define a lista de pastas, combinada com a <xref:System.AppDomainSetup.ApplicationBase%2A> diretório para investigação de assemblies privados.|  
-|<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>|Obtém ou define um valor de cadeia de caracteres que inclua ou exclua <xref:System.AppDomainSetup.ApplicationBase%2A> do caminho de pesquisa para o aplicativo.|  
-|<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|Obtém ou define os nomes dos diretórios que contêm assemblies para ser copiado de sombra.|  
-|<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|Obtém ou define uma cadeia de caracteres que indica se a cópia de sombra é ativada ou desativada. Os valores válidos são "verdadeiro" ou "false".|  
+|<xref:System.AppDomainSetup.LicenseFile%2A>|Obtém ou define o caminho para o arquivo de licença que está associado esse domínio.|  
+|<xref:System.AppDomainSetup.PrivateBinPath%2A>|Obtém ou define a lista de diretórios, combinado com o <xref:System.AppDomainSetup.ApplicationBase%2A> diretório para investigar assemblies particulares.|  
+|<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>|Obtém ou define um valor de cadeia de caracteres que inclui ou exclui <xref:System.AppDomainSetup.ApplicationBase%2A> do caminho de pesquisa para o aplicativo.|  
+|<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|Obtém ou define os nomes dos diretórios que contêm assemblies a serem copiados em sombra.|  
+|<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|Obtém ou define uma cadeia de caracteres que indica se a cópia de sombra é ativada ou desativada. Valores válidos são "true" ou "false".|  
   
 ## <a name="remarks"></a>Comentários  
  O `IAppDomainSetup` interface corresponde à gerenciado <xref:System.IAppDomainSetup> interface, que o <xref:System.AppDomainSetup> tipo implementa. Consulte <xref:System.IAppDomainSetup?displayProperty=nameWithType> para obter descrições detalhadas de suas propriedades.  
   
- `IAppDomainSetup` representa as informações de associação de assembly que podem ser adicionadas a um <xref:System.AppDomain> instância antes de sua criação. Por exemplo, um host pode definir o <xref:System.AppDomainSetup.ApplicationBase%2A> gerenciados de propriedade para estabelecer um diretório raiz que o common language runtime (CLR) sondas para assemblies.  
+ `IAppDomainSetup` representa as informações de associação de assembly que podem ser adicionadas a um <xref:System.AppDomain> instância antes de sua criação. Por exemplo, um host pode definir o <xref:System.AppDomainSetup.ApplicationBase%2A> assemblies gerenciados de propriedade para estabelecer um diretório raiz, que investiga o common language runtime (CLR).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.AppDomain>  
- <xref:System.AppDomainSetup>  
- <xref:System.IAppDomainSetup>  
- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.AppDomain>
+- <xref:System.AppDomainSetup>
+- <xref:System.IAppDomainSetup>
+- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -8,47 +8,47 @@ helpviewer_keywords:
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65925b7dafb9e89433253d68327c488365674963
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c537e4967c284df899a131b44d96dbdb6e1af29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587668"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Constantes (referência de API não gerenciada)
-Este tópico descreve o tipo de idioma, fornecedor de linguagem e constantes de tipo de documento que são definidos em CorSym.idl.  
+Este tópico descreve o tipo de idioma, fornecedor de idioma e as constantes de tipo de documento são definidas em Corsym.  
   
 ## <a name="language-type-constants"></a>Constantes de tipo de linguagem  
- A tabela a seguir mostra a linguagem de constantes de tipo, que representam os GUIDs que identificam as linguagens de programação.  
+ A tabela a seguir mostra as constantes de tipo, que representam as GUIDs que identificam as linguagens de programação de idioma.  
   
 |Símbolo|Descrição|  
 |------------|-----------------|  
 |CorSym_LanguageType_C|Indica a linguagem C.|  
 |CorSym_LanguageType_CPlusPlus|Indica a linguagem C++.|  
-|CorSym_LanguageType_CSharp|Indica a linguagem c#.|  
+|CorSym_LanguageType_CSharp|Indica o C# idioma.|  
 |CorSym_LanguageType_Basic|Indica o idioma básico.|  
 |CorSym_LanguageType_Java|Indica a linguagem Java.|  
-|CorSym_LanguageType_Cobol|Indica o idioma COBOL.|  
-|CorSym_LanguageType_Pascal|Indica o idioma Pascal.|  
+|CorSym_LanguageType_Cobol|Indica o idioma do COBOL.|  
+|CorSym_LanguageType_Pascal|Indica a linguagem Pascal.|  
 |CorSym_LanguageType_ILAssembly|Indica o código de assembly do Microsoft intermediate language (MSIL).|  
 |CorSym_LanguageType_JScript|Indica a linguagem JScript.|  
-|CorSym_LanguageType_SMC|Indica o idioma SMC.|  
+|CorSym_LanguageType_SMC|Indica a linguagem SMC.|  
 |CorSym_LanguageType_MCPlusPlus|Indica a linguagem C++ habilitada para o .NET Framework.|  
   
-## <a name="language-vendor-constants"></a>Constantes de fornecedor de linguagem  
- A tabela a seguir mostra a linguagem de constantes de fornecedor, que representam os GUIDs que identificam os fornecedores de linguagem de programação.  
+## <a name="language-vendor-constants"></a>Constantes de fornecedor de idioma  
+ A tabela a seguir mostra as constantes de fornecedor, que representam as GUIDs que identificam os fornecedores de linguagem de programação de idioma.  
   
 |Símbolo|Descrição|  
 |------------|-----------------|  
 |CorSym_LanguageVendor_Microsoft|Indica a Microsoft.|  
   
 ## <a name="document-type-constants"></a>Constantes de tipo de documento  
- A tabela a seguir mostra as constantes de tipo, que representam os GUIDs que identificam os tipos de documento de documento.  
+ A tabela a seguir mostra o documento constantes de tipo, que representam as GUIDs que identificam os tipos de documento.  
   
 |Símbolo|Descrição|  
 |------------|-----------------|  
 |CorSym_DocumentType_Text|Indica um documento de texto.|  
-|CorSym_DocumentType_MC|Indica um documento de texto não.|  
+|CorSym_DocumentType_MC|Indica um documento não sejam de texto.|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de API não gerenciada](../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>Consulte também
+- [Referência de API não gerenciada](../../../docs/framework/unmanaged-api/index.md)

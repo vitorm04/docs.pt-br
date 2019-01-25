@@ -2,12 +2,12 @@
 title: Usando as ações implementar o comportamento do lado do servidor
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c478c09ada879bdb237cff1e3c914a5990aba765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622605"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usando as ações implementar o comportamento do lado do servidor
 
@@ -48,7 +48,7 @@ As ações OData fornecem uma maneira de implementar um comportamento que age me
   
  Os parâmetros podem ser passados como tokens. Isso ocorre porque é possível escrever um provedor de serviços de dados que funcione com os tokens que representam recursos. Se for esse o caso, você precisará converter (realizar marshaling) esses tokens em recursos reais antes de distribuir para a ação real. Depois que tiver sido realizado o marshaling do parâmetro, ele deverá estar em um estado editável de forma que as alterações ao recurso que ocorram quando a ação é invocada sejam salvas e gravadas em disco.  
   
- Essa interface requer dois métodos: Invoke e GetResult. Invoke chama o representante que implementa o comportamento da ação e GetResult retorna o resultado da ação.  
+ Essa interface requer dois métodos: Invoke e GetResult adequados. Invoke chama o representante que implementa o comportamento da ação e GetResult retorna o resultado da ação.  
   
 ## <a name="invoking-a-wcf-data-service-action"></a>Chamar uma ação do WCF Data Service  
  As ações são chamadas usando uma solicitação HTTP POST. O URL especifica o recurso seguido pelo nome da ação. Os parâmetros são passados no corpo da solicitação. Por exemplo, se houve um serviço chamado MovieService que expôs uma ação chamada Avaliar. Você pode usar a seguinte URL para chamar a ação Avaliar em um filme específico:  
@@ -80,8 +80,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
   
  No snippet de código acima, a classe `MoviesModel` foi gerada com o Visual Studio para Adicionar a Referência de Serviço a um WCF Data Service.  
   
-## <a name="see-also"></a>Consulte também  
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)  
- [Desenvolvendo e implantando o WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [Provedores de serviços de dados personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+## <a name="see-also"></a>Consulte também
+- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
+- [Desenvolvendo e implantando o WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [Provedores de serviços de dados personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

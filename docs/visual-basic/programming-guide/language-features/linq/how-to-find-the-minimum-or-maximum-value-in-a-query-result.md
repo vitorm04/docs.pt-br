@@ -1,5 +1,5 @@
 ---
-title: Como localizar o valor mínimo ou máximo em um resultado de consulta usando LINQ (Visual Basic)
+title: 'Como: Localizar o valor mínimo ou máximo em um resultado de consulta usando LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - max operator [LINQ in Visual Basic]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: 252601b12e21e122c316952f8e10ce04cbe3f78e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a7215afdfbfc7653247ad0286a36dd2ab50ba2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514264"
 ---
-# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Como localizar o valor mínimo ou máximo em um resultado de consulta usando LINQ (Visual Basic)
+# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Como: Localizar o valor mínimo ou máximo em um resultado de consulta usando LINQ (Visual Basic)
 Consulta integrada à linguagem (LINQ) facilita o acesso às informações de banco de dados e executar consultas.  
   
  O exemplo a seguir mostra como criar um novo aplicativo que executa consultas em um banco de dados do SQL Server. O exemplo determina os valores mínimos e máximo para os resultados usando o `Aggregate` e `Group By` cláusulas. Para obter mais informações, consulte [cláusula Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) e [por cláusula Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
@@ -76,8 +76,8 @@ Consulta integrada à linguagem (LINQ) facilita o acesso às informações de ba
   
 4.  Pressione F5 para executar seu projeto e exibir os resultados.  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Consultas](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [Métodos DataContext (Designer Relacional de Objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>Consulte também
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Consultas](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Métodos DataContext (Designer Relacional de Objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

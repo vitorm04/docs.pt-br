@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744967"
 ---
 # <a name="corsymaddrkind-enumeration"></a>Enumeração CorSymAddrKind
 Indica o tipo de endereço de memória.  
@@ -50,17 +50,17 @@ typedef enum CorSymAddrKind
 |------------|-----------------|  
 |`ADDR_IL_OFFSET`|Indica um Microsoft intermediate language (MSIL) local variável ou parâmetro de índice.|  
 |`ADDR_NATIVE_RVA`|Indica um endereço virtual relativo em um módulo.|  
-|`ADDR_NATIVE_REGISTER`|Indica um registro de CPU.|  
+|`ADDR_NATIVE_REGISTER`|Indica um registro da CPU.|  
 |`ADDR_NATIVE_REGREL`|Indica que o primeiro endereço é um registro e o segundo endereço é um deslocamento.|  
-|`ADDR_NATIVE_OFFSET`|Indica um deslocamento de um endereço base.|  
-|`ADDR_NATIVE_REGREG`|Indica que o primeiro endereço é a parte baixa de um registro, e o segundo endereço é a parte alta.|  
-|`ADDR_NATIVE_REGSTK`|Indica que o primeiro endereço é a parte baixa de um registro, o segundo é a parte alta e a terceira é um deslocamento.|  
-|`ADDR_NATIVE_STKREG`|Indica que o primeiro endereço é um registro, o segundo é um deslocamento e o terceiro é a parte alta do registro.|  
+|`ADDR_NATIVE_OFFSET`|Indica um deslocamento de um endereço básico.|  
+|`ADDR_NATIVE_REGREG`|Indica que o primeiro endereço é a parte baixa de um registro e o segundo endereço é a parte alta.|  
+|`ADDR_NATIVE_REGSTK`|Indica que o primeiro endereço é a parte baixa de um registro, o segundo é a parte alta e o terceiro é um deslocamento.|  
+|`ADDR_NATIVE_STKREG`|Indica que o primeiro endereço é um registro, o segundo é um deslocamento e o terceiro é a parte alta de registro.|  
 |`ADDR_BITFIELD`|Indica que o primeiro endereço é o início de um campo e o segundo endereço é o tamanho do campo.|  
 |`ADDR_NATIVE_ISECTOFFSET`|Indica que o primeiro endereço é a seção e o segundo endereço é um deslocamento.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

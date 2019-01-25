@@ -1,5 +1,5 @@
 ---
-title: Como redimensionar formulários do Windows Forms
+title: 'Como: Redimensionar Formulários do Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 40a2ff3dcde9d0fbbc9a7e6c67430eb8313614e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f9a1aae4e9a787b798d6c27f9daa597955b208a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614544"
 ---
-# <a name="how-to-resize-windows-forms"></a>Como redimensionar formulários do Windows Forms
-Você pode especificar o tamanho do seu Windows Forms de várias maneiras. Você pode alterar a altura e a largura do formulário programaticamente, definindo um novo valor para o <xref:System.Windows.Forms.Form.Size%2A> propriedade, ou ajustar a <xref:System.Windows.Forms.Control.Height%2A> ou <xref:System.Windows.Forms.Control.Width%2A> propriedades individualmente. Se você estiver usando o Visual Studio, você pode alterar o tamanho usando o Designer de formulários do Windows. Consulte também [Como redimensionar Windows Forms usando o Designer](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
+# <a name="how-to-resize-windows-forms"></a>Como: Redimensionar Formulários do Windows
+Você pode especificar o tamanho do seu Windows Forms de várias maneiras. Você pode alterar a altura e a largura do formulário programaticamente, definindo um novo valor para o <xref:System.Windows.Forms.Form.Size%2A> propriedade, ou ajustar a <xref:System.Windows.Forms.Control.Height%2A> ou <xref:System.Windows.Forms.Control.Width%2A> propriedades individualmente. Se você estiver usando o Visual Studio, você pode alterar o tamanho usando o Designer de formulários do Windows. Consulte também [como: Redimensionar Formulários do Windows usando o Designer](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
   
 ### <a name="to-resize-a-form-programmatically"></a>Redimensionar um formulário com programação  
   
@@ -112,6 +112,6 @@ Você pode especificar o tamanho do seu Windows Forms de várias maneiras. Você
     f->Size->X += 100;  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- [Aprimorando aplicativos do Windows Forms](../../../docs/framework/winforms/advanced/index.md)
+## <a name="see-also"></a>Consulte também
+- [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Aprimorando aplicativos do Windows Forms](../../../docs/framework/winforms/advanced/index.md)

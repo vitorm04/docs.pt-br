@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b27a5dec4483afb0f6c66c3a015c89967483cb61
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: e767218456dd4096939d3f353944cb7aeacb352d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601688"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurando aplicativos usando arquivos de configuração 
 O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolvedores e administradores controle e flexibilidade sobre a maneira de executar aplicativos. Os arquivos de configuração são arquivos XML que podem ser alterados quando necessário. Um administrador pode controlar quais recursos protegidos um aplicativo pode acessar, quais versões de assemblies um aplicativo usará e onde os aplicativos e objetos remotos são localizados. Os desenvolvedores podem colocar definições em arquivos de configuração, eliminando a necessidade de recompilar um aplicativo sempre que uma configuração é alterada. Esta seção descreve o que pode ser configurado e por que a configuração de um aplicativo pode ser útil.  
@@ -103,7 +103,7 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
 -   Arquivo de configuração de política de usuário: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como localizar assemblies usando DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Como: Localizar Assemblies usando DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Descreve como direcionar o tempo de execução para usar a variável de ambiente DEVPATH ao procurar por assemblies.  
   
  [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -115,19 +115,19 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
  [Configurando classes de criptografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  Descreve como mapear um nome de algoritmo para uma classe de criptografia e um identificador de objeto para um algoritmo de criptografia.  
   
- [Como criar uma política de editor](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Como: Criar uma política de editor](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  Descreve quando e como você deve adicionar um arquivo de política de editor para especificar as configurações de base de redirecionamento e código de assembly.  
   
  [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)  
  Descreve a hierarquia de esquema de inicialização, tempo de execução, rede e outros tipos de parâmetros de configuração.  
   
-## <a name="see-also"></a>Consulte também  
- [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Especificando o local de um assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [Registrando objetos remotos usando arquivos de configuração](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
- [Administração de site ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: Gerenciamento de política de segurança](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
- [Caspol.exe (Ferramenta de Política de Segurança de Acesso do Código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Objetos remotos](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+## <a name="see-also"></a>Consulte também
+- [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Especificando o local de um assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
+- [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Registrando objetos remotos usando arquivos de configuração](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)
+- [Administração de site ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [NIB: Gerenciamento de política de segurança](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)
+- [Caspol.exe (Ferramenta de Política de Segurança de Acesso do Código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
+- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Objetos remotos](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
