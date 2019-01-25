@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a69ca889e226168adb1b84ab64dc0f882c27606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520523"
 ---
 # <a name="cormethodattr-enumeration"></a>Enumeração CorMethodAttr
 Contém valores que descrevem os recursos de um método.  
@@ -70,22 +70,22 @@ typedef enum CorMethodAttr {
 |------------|-----------------|  
 |`mdMemberAccessMask`|Especifica o acesso de membro.|  
 |`mdPrivateScope`|Especifica que o membro não pode ser referenciado.|  
-|`mdPrivate`|Especifica que o membro é acessível somente pelo tipo de pai.|  
-|`mdFamANDAssem`|Especifica que o membro é acessível por subtipos somente neste assembly.|  
+|`mdPrivate`|Especifica que o membro é acessível somente por tipo de pai.|  
+|`mdFamANDAssem`|Especifica que o membro é acessado por subtipos somente nesse assembly.|  
 |`mdAssem`|Especifica que o membro é acessível por qualquer pessoa no assembly.|  
-|`mdFamily`|Especifica que o membro é acessível somente por tipo e subtipos.|  
-|`mdFamORAssem`|Especifica que o membro é acessível por classes derivadas e por outros tipos em seu assembly.|  
+|`mdFamily`|Especifica que o membro é acessível somente por tipos e subtipos.|  
+|`mdFamORAssem`|Especifica que o membro é acessado por classes derivadas e por outros tipos em seu assembly.|  
 |`mdPublic`|Especifica que o membro é acessado por todos os tipos com acesso ao escopo.|  
 |`mdStatic`|Especifica que o membro é definido como parte do tipo em vez de um membro de uma instância.|  
 |`mdFinal`|Especifica que o método não pode ser substituído.|  
 |`mdVirtual`|Especifica que o método pode ser substituído.|  
 |`mdHideBySig`|Especifica que o método oculta por nome e assinatura, em vez de apenas por nome.|  
 |`mdVtableLayoutMask`|Especifica o layout da tabela virtual.|  
-|`mdReuseSlot`|Especifica que o slot usado para este método na tabela virtual seja reutilizado. Esse é o padrão.|  
+|`mdReuseSlot`|Especifica que o slot utilizado para esse método na tabela virtual ser reutilizadas. Esse é o padrão.|  
 |`mdNewSlot`|Especifica que o método sempre obtém um novo slot na tabela virtual.|  
-|`mdCheckAccessOnOverride`|Especifica que o método pode ser substituído pelos mesmos tipos aos quais ela é visível.|  
+|`mdCheckAccessOnOverride`|Especifica que o método pode ser substituído pelos mesmos tipos aos quais ele está visível.|  
 |`mdAbstract`|Especifica que o método não está implementado.|  
-|`mdSpecialName`|Especifica que o método é especial, e que descreve seu nome como.|  
+|`mdSpecialName`|Especifica que o método é especial, e que seu nome descreve como.|  
 |`mdPinvokeImpl`|Especifica que a implementação do método é encaminhada usando PInvoke.|  
 |`mdUnmanagedExport`|Especifica que o método é um método gerenciado exportado para o código não gerenciado.|  
 |`mdReservedMask`|Reservado para uso interno pelo common language runtime.|  
@@ -94,11 +94,11 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|Especifica que o método chama outro método que contém o código de segurança.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

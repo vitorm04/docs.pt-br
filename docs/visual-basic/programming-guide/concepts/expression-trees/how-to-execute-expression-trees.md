@@ -1,15 +1,15 @@
 ---
-title: 'Como: executar árvores de expressão (Visual Basic)'
+title: 'Como: Executar árvores de expressão (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 5fbd9ea2842a87a941a1b572acadc93b0a7d2e11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fde681905cded0e4043f52c5f2a29cee74b91209
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729347"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>Como: executar árvores de expressão (Visual Basic)
+# <a name="how-to-execute-expression-trees-visual-basic"></a>Como: Executar árvores de expressão (Visual Basic)
 Este tópico mostra como executar uma árvore de expressão. Executar uma árvore de expressão pode retornar um valor ou apenas realizar uma ação, como chamar um método.  
   
  Somente árvores de expressão que representam expressões lambda podem ser executadas. Árvores de expressão que representam expressões lambda são do tipo <xref:System.Linq.Expressions.LambdaExpression> ou <xref:System.Linq.Expressions.Expression%601>. Para executar essas árvores de expressão, chame o método <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> para criar um delegado executável e, em seguida, invoque o delegado.  
@@ -48,6 +48,6 @@ MsgBox(result)
   
 -   Inclua o namespace System.Linq.Expressions.  
   
-## <a name="see-also"></a>Consulte também  
- [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [Como: modificar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+## <a name="see-also"></a>Consulte também
+- [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Como: Modificar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

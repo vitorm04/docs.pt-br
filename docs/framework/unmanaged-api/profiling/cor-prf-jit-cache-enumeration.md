@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6aaa334c83aff18886c0c2db4462d6baaa4cd70f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687408"
 ---
 # <a name="corprfjitcache-enumeration"></a>Enumeração COR_PRF_JIT_CACHE
 Indica o resultado de uma busca de função armazenada em cache.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` tem um valor de zero, portanto `COR_PRF_JIT_CACHE` não pode ser usado como um substituto booliano.  
+>  `COR_PRF_CACHED_FUNCTION_FOUND` tem um valor de zero, então, `COR_PRF_JIT_CACHE` não pode ser usado como um substituto booliano.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,17 +42,17 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|A função foi encontrado.|  
+|`COR_PRF_FUNCTION_FOUND`|A função foi encontrado pela pesquisa.|  
 |`COR_PRF_FUNCTION_NOT_FOUND`|A pesquisa não encontrou a função.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

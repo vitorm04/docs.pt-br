@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657188"
 ---
 # <a name="correftodefcheck-enumeration"></a>Enumeração CorRefToDefCheck
-Especifica os sinalizadores para controlar quais itens referenciados são convertidos para suas definições para otimizar o código.  
+Especifica sinalizadores para controlar quais itens referenciados são convertidos em suas definições para otimizar o código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,18 +42,18 @@ typedef enum CorRefToDefCheck {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Especifica que as referências de tipo e referências de membro devem ser convertidas em definições. Esse é o valor padrão (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Especifica que todos os itens mencionados devem ser convertidos em definições.|  
-|`MDRefToDefNone`|Especifica que nenhum item referenciado deve ser convertidas em definições.|  
+|`MDRefToDefDefault`|Especifica que as referências de tipo e membro devem ser convertidas em definições. Esse é o valor padrão (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Especifica que todos os itens referenciados devem ser convertidos em definições.|  
+|`MDRefToDefNone`|Especifica que nenhum item referenciado deve ser convertido para definições.|  
 |`MDTypeRefToDef`|Especifica que somente as referências de tipo devem ser convertidas para definições de tipo.|  
 |`MDMemberRefToDef`|Especifica que somente as referências de membro devem ser convertidas em definições. Ou seja, as referências de membro devem ser convertidas em definições de método ou definições de campo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,17 +1,17 @@
 ---
-title: Como escolher entre solicitações HTTP POST e HTTP GET para pontos de extremidade AJAX ASP.NET
+title: 'Como: Escolha entre HTTP POST e HTTP GET solicitações para pontos de extremidade do ASP.NET AJAX'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 5cebdf0bae937d84ec23ed97a5d2feca24fff473
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8de65bbf8cd9e0eab3861504946967ad319cd824
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718800"
 ---
-# <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Como escolher entre solicitações HTTP POST e HTTP GET para pontos de extremidade AJAX ASP.NET
+# <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Como: Escolha entre HTTP POST e HTTP GET solicitações para pontos de extremidade do ASP.NET AJAX
 
-Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade habilitados para AJAX ASP.NET que pode ser chamado do JavaScript em um site do cliente. Os procedimentos básicos para a criação de tais serviços é discutida [como: usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) e [como: adicionar um ASP.NET AJAX ponto de extremidade sem usando configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade habilitados para AJAX ASP.NET que pode ser chamado do JavaScript em um site do cliente. Os procedimentos básicos para a criação de tais serviços é discutida em [como: Usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) e [como: Adicionar um ponto de extremidade do ASP.NET AJAX sem utilizar a configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
  ASP.NET AJAX oferece suporte a operações que usam os verbos HTTP POST e HTTP GET, POST HTTP sendo o padrão. Durante a criação de uma operação que não tem efeitos colaterais e retorna dados que raramente ou nunca muda, use HTTP GET. Resultados de operações GET podem ser armazenados em cache, o que significa que várias chamadas para a mesma operação podem resultar em apenas uma solicitação ao seu serviço. O armazenamento em cache não é feito pelo WCF, mas pode ocorrer em qualquer nível (em um navegador do usuário, em um servidor proxy e outros níveis.) Armazenamento em cache é vantajoso se você quiser aumentar o desempenho do serviço, mas pode não ser aceitável se dados forem alterados com frequência ou se a operação executa alguma ação.  
   
@@ -90,6 +90,6 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
   
 2. Você pode usar os serviços com operações GET da mesma maneira que qualquer outro serviço ASP.NET AJAX - inserindo o serviço de controle de URL para a coleção de Scripts do Gerenciador de Script ASP.NET AJAX. Por exemplo, consulte o [serviço de AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md).
   
-## <a name="see-also"></a>Consulte também  
- [Criando serviços WCF para o ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- [Como migrar serviços Web do ASP.NET habilitados para AJAX para o WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a>Consulte também
+- [Criando serviços WCF para o ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
+- [Como: Migrar serviços Web do ASP.NET habilitado para AJAX para o WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

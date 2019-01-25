@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 562b6fcd015441ce5eb6b5f0ab7a4f361bb229c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84d53bd5bb9c0eca83b39fc9d1c83d93440e336b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645452"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>Método IMetaDataInfo::GetFileMapping
 Obtém a região de memória do arquivo mapeado e o tipo de mapeamento.  
@@ -42,37 +42,37 @@ HRESULT GetFileMapping (
  [out] Um ponteiro para o início do arquivo mapeado.  
   
  `pcbData`  
- [out] O tamanho da região de dados mapeado. Se `pdwMappingType` é `fmFlat`, esse é o tamanho do arquivo.  
+ [out] O tamanho da região mapeada. Se `pdwMappingType` é `fmFlat`, esse é o tamanho do arquivo.  
   
  `pdwMappingType`  
- [out] Um [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) valor que indica o tipo de mapeamento. A implementação atual do common language runtime (CLR) sempre retorna `fmFlat`. Outros valores são reservados para uso futuro. No entanto, você sempre deve verificar o valor retornado, pois outros valores podem ser habilitados em versões futuras, ou versões de serviço.  
+ [out] Um [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) valor que indica o tipo de mapeamento. A implementação atual do common language runtime (CLR) sempre retorna `fmFlat`. Outros valores são reservados para uso futuro. No entanto, você sempre deve verificar o valor retornado, porque outros valores podem ser habilitados em versões futuras, ou versões de serviço.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |`S_OK`|Todas as saídas são preenchidas.|  
-|`E_INVALIDARG`|NULO foi passado como um valor de argumento.|  
-|`COR_E_NOTSUPPORTED`|A implementação de CLR não pode fornecer informações sobre a região de memória. Isso pode ocorrer pelos seguintes motivos:<br /><br /> -O escopo de metadados foi aberto com o `ofWrite` ou `ofCopyMemory` sinalizador.<br />-O escopo de metadados foi aberto sem o `ofReadOnly` sinalizador.<br />-A [Imetadatadispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) método foi usado para abrir somente a parte de metadados do arquivo.<br />-O arquivo não é um arquivo PE (executável portátil). **Observação:** essas condições dependem da implementação de CLR e é provavelmente serão reduzidas em futuras versões do CLR.|  
+|`E_INVALIDARG`|NULL foi passado como um valor de argumento.|  
+|`COR_E_NOTSUPPORTED`|A implementação CLR não pode fornecer informações sobre a região de memória. Isso pode ocorrer pelos seguintes motivos:<br /><br /> -O escopo de metadados foi aberto com o `ofWrite` ou `ofCopyMemory` sinalizador.<br />-O escopo de metadados foi aberto sem o `ofReadOnly` sinalizador.<br />-A [imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) método foi usado para abrir somente a parte de metadados do arquivo.<br />-O arquivo não é um arquivo executável portátil (PE). **Observação:**  Essas condições dependem da implementação do CLR e provavelmente enfraquecida em futuras versões do CLR.|  
   
 ## <a name="remarks"></a>Comentários  
- A memória que `ppvData` aponta para é válido somente quando o escopo de metadados subjacente é aberto.  
+ A memória que `ppvData` pontos a serem é válido somente quando o escopo de metadados subjacente está aberto.  
   
- Para que esse método funcione, quando você mapeia os metadados de um arquivo em disco na memória chamando o [Imetadatadispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) método, você deve especificar o `ofReadOnly` sinalizador e você não deve especificar o `ofWrite` ou `ofCopyMemory` sinalizador.  
+ Para que esse método funcione, quando você mapeia os metadados de um arquivo em disco na memória chamando o [imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) método, você deve especificar o `ofReadOnly` sinalizador e você não deve especificar o `ofWrite` ou `ofCopyMemory` sinalizador.  
   
- A escolha do tipo de mapeamento de arquivo para cada escopo é específica para uma determinada implementação do CLR. Ele não pode ser definido pelo usuário. A implementação atual do CLR sempre retorna `fmFlat` em `pdwMappingType`, mas isso pode mudar em futuras versões do CLR ou em futuras versões do serviço de uma determinada versão. Você sempre deve verificar o valor retornado `pdwMappingType`porque diferentes tipos terá diferentes layouts e deslocamentos.  
+ A escolha do tipo de mapeamento de arquivo para cada escopo é específica para uma determinada implementação do CLR. Ele não pode ser definido pelo usuário. A implementação atual do CLR sempre retorna `fmFlat` em `pdwMappingType`, mas isso pode mudar em futuras versões do CLR ou em futuras versões de serviço de uma determinada versão. Você sempre deve verificar o valor retornado `pdwMappingType`, porque os tipos diferentes terão diferentes layouts e deslocamentos.  
   
- Não há suporte para passar NULL para qualquer um dos três parâmetros. O método retorna `E_INVALIDARG`, e nenhuma das saídas são preenchidas. Ignorar o tipo de mapeamento ou o tamanho da região pode resultar no encerramento anormal do programa.  
+ Não há suporte para a passagem de NULL para qualquer um dos três parâmetros. O método retorna `E_INVALIDARG`, e nenhuma das saídas são preenchidas. Ignorar o tipo de mapeamento ou o tamanho da região pode resultar em encerramento anormal do programa.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
- [Enumeração CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
+- [Enumeração CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

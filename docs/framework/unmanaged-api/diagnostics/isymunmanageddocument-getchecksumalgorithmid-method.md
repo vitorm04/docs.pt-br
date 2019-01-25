@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c815b256ebdab82a57f921a5df016a1552f6d052
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c5861f598a653f433ffaa611d6f1be3ba6f69a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585598"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>Método ISymUnmanagedDocument::GetCheckSumAlgorithmId
-Obtém o identificador de algoritmo de soma de verificação ou retorna um GUID de zeros, se não houver nenhuma soma de verificação.  
+Obtém o identificador de algoritmo de soma de verificação ou retorna um GUID de todos os zeros se não houver nenhuma soma de verificação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,5 +41,5 @@ HRESULT GetCheckSumAlgorithmId(
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

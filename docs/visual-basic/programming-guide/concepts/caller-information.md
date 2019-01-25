@@ -1,15 +1,15 @@
 ---
-title: Informações de chamador (Visual Basic)
+title: Informações do chamador (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619007"
 ---
-# <a name="caller-information-visual-basic"></a>Informações de chamador (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Informações do chamador (Visual Basic)
 Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número da linha no código-fonte e o nome do membro do chamador. Essas informações são úteis para fins de rastreamento, depuração e criação de ferramentas de diagnóstico.  
   
  Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
@@ -74,8 +74,8 @@ End Sub
 |Construtor de atributos|O nome do membro ao qual o atributo se aplica. Se o atributo é qualquer elemento dentro de um membro (como um parâmetro, um valor de retorno, ou um parâmetro de tipo genérico), esse resultado é o nome do membro associado a esse elemento.|  
 |Nenhum membro contentor (por exemplo, nível de assembly ou atributos que são aplicadas aos tipos)|O valor padrão do parâmetro opcional.|  
   
-## <a name="see-also"></a>Consulte também  
- [Atributos (Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
- [Atributos comuns (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Conceitos de programação (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Consulte também
+- [Atributos (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [Atributos comuns (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Conceitos de programação (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

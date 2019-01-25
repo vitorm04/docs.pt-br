@@ -1,5 +1,5 @@
 ---
-title: Como classificar uma coluna GridView quando um cabeçalho é clicado
+title: 'Como: Classificar uma coluna GridView quando um cabeçalho é clicado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694081"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Como classificar uma coluna GridView quando um cabeçalho é clicado
-Este exemplo mostra como criar um <xref:System.Windows.Controls.ListView> controle que implementa um <xref:System.Windows.Controls.GridView> exibir modo e classifica os dados de conteúdo quando um usuário clica em um cabeçalho de coluna.  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Como: Classificar uma coluna GridView quando um cabeçalho é clicado
+Este exemplo mostra como criar uma <xref:System.Windows.Controls.ListView> controle que implementa um <xref:System.Windows.Controls.GridView> exibir modo e classifica os dados de conteúdo quando um usuário clica em um cabeçalho de coluna.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define uma <xref:System.Windows.Controls.GridView> com três colunas que se vinculam ao <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, e <xref:System.DateTime.Day%2A>, propriedades do <xref:System.DateTime> estrutura.  
+ O exemplo a seguir define uma <xref:System.Windows.Controls.GridView> com três colunas que se associam ao <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, e <xref:System.DateTime.Day%2A>, as propriedades do <xref:System.DateTime> estrutura.  
   
 ```xaml  
 <GridView>  
@@ -69,7 +69,7 @@ Este exemplo mostra como criar um <xref:System.Windows.Controls.ListView> contro
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Para classificar os dados de acordo com o conteúdo de uma coluna, o exemplo define um manipulador de eventos para lidar com o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento que ocorre quando você pressiona o botão de cabeçalho de coluna. O exemplo a seguir mostra como especificar um manipulador de eventos para o <xref:System.Windows.Controls.GridViewColumnHeader> controle.  
+ Para classificar os dados de acordo com o conteúdo de uma coluna, o exemplo define um manipulador de eventos para manipular o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento que ocorre quando você pressiona o botão de cabeçalho de coluna. O exemplo a seguir mostra como especificar um manipulador de eventos para o <xref:System.Windows.Controls.GridViewColumnHeader> controle.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [Visão geral de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [Visão geral de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [Visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

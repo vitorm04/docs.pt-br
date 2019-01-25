@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711269"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedência do valor de propriedade da dependência
 <a name="introduction"></a> Este tópico explica como o funcionamento do sistema de propriedades do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode afetar o valor de uma propriedade de dependência e descreve a precedência pela qual os aspectos do sistema de propriedades são aplicados ao valor efetivo de uma propriedade.  
@@ -126,9 +126,9 @@ ms.locfileid: "46696776"
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue e precedência de valor  
  O <xref:System.Windows.DependencyObject.ClearValue%2A> método fornece uma maneira rápida limpar qualquer valor aplicado localmente de uma propriedade de dependência que é definida em um elemento. No entanto, chamar <xref:System.Windows.DependencyObject.ClearValue%2A> não é uma garantia de que o padrão estabelecido nos metadados durante o registro de propriedade é o novo valor efetivo. Todos os outros participantes na precedência de valor ainda estão ativos. Somente o valor definido localmente foi removido da sequência de precedência. Por exemplo, se você chamar <xref:System.Windows.DependencyObject.ClearValue%2A> em uma propriedade onde essa propriedade também é definida por um estilo de tema e, em seguida, o valor de tema é aplicado como o novo valor em vez do padrão baseado em metadados. Se você quiser usar todos os participantes do valor da propriedade do processo e defina o valor como o padrão de metadados registrado, você pode obter o valor padrão definitivamente consultando os metadados de propriedade de dependência e, em seguida, você pode usar o valor padrão a localmente Defina a propriedade com uma chamada para <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.DependencyObject>  
- <xref:System.Windows.DependencyProperty>  
- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Retornos de chamada da propriedade de dependência e validação](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.DependencyObject>
+- <xref:System.Windows.DependencyProperty>
+- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Retornos de chamada da propriedade de dependência e validação](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

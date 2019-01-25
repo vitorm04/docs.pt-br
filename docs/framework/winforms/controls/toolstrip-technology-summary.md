@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736000"
 ---
 # <a name="toolstrip-technology-summary"></a>Resumo da tecnologia de ToolStrip
 Este tópico resume as informações sobre o controle `ToolStrip` e as classes que dão suporte ao seu uso.  
@@ -87,7 +87,7 @@ Este tópico resume as informações sobre o controle `ToolStrip` e as classes q
 ## <a name="hosting-controls"></a>Hospedagem de controles  
  O <xref:System.Windows.Forms.ToolStripControlHost> classe fornece wrappers internos para <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, e <xref:System.Windows.Forms.ToolStripProgressBar> controles. Você também pode hospedar qualquer outro controle existente ou COM em um <xref:System.Windows.Forms.ToolStripControlHost>.  
   
- Para um exemplo de hospedagem de controle, consulte [Como encapsular um controle dos Windows Forms com ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
+ Para obter um exemplo de hospedagem de controle, consulte [como: Encapsular um controle dos Windows Forms com ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
 ## <a name="rendering"></a>Renderização  
  <xref:System.Windows.Forms.ToolStrip> classes implementam um esquema de renderização é significativamente diferente de outros controles dos Windows Forms. Com esse esquema, você pode facilmente aplicar estilos e temas.  
@@ -96,7 +96,7 @@ Este tópico resume as informações sobre o controle `ToolStrip` e as classes q
   
  Você pode aplicar o mesmo estilo a vários <xref:System.Windows.Forms.ToolStrip> objetos no mesmo aplicativo, definindo o <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> para <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> e definindo o <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> ou <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> propriedade a ser <xref:System.Windows.Forms.ToolStripManagerRenderMode> que você deseja ou <xref:System.Windows.Forms.ToolStripRenderer> valor, respectivamente.  
   
- Para exemplos de renderização, consulte [Como criar e definir um renderizador personalizado para o controle ToolStrip nos Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
+ Para obter exemplos de renderização, consulte [como: Criar e definir um renderizador personalizado para o controle ToolStrip nos Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
   
 ## <a name="styles-and-themes"></a>Estilos e temas  
  <xref:System.Windows.Forms.ToolStrip> e as classes associadas fornecem uma maneira fácil de dar suporte a estilos visuais e aparência personalizada que não exigem a substituição de <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> métodos para cada item. Use o <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> e o <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> e <xref:System.Windows.Forms.ToolStrip.Renderer%2A> propriedades.  
@@ -112,12 +112,12 @@ Este tópico resume as informações sobre o controle `ToolStrip` e as classes q
   
  A vantagem do reposicionamento em relação ao encaixe é que <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles podem compartilhar espaço horizontal ou vertical com outros controles.  
   
- A maioria do <xref:System.Windows.Forms.ToolStrip> controles podem ser encaixados ao formulário como outros controles em vez de usar reposicionamento. Você também pode especificar que um <xref:System.Windows.Forms.ToolStrip> controle livremente posicionado no formulário removendo-o de seu <xref:System.Windows.Forms.ToolStripContainer> e configuração de seu `Dock` propriedade a ser `None`, ou você pode especificar sua posição absoluta Configurando os respectivos <xref:System.Windows.Forms.Control.Location%2A> propriedade. Consulte [Como remover um ToolStrip de um ToolStripContainer para um formulário](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
+ A maioria do <xref:System.Windows.Forms.ToolStrip> controles podem ser encaixados ao formulário como outros controles em vez de usar reposicionamento. Você também pode especificar que um <xref:System.Windows.Forms.ToolStrip> controle livremente posicionado no formulário removendo-o de seu <xref:System.Windows.Forms.ToolStripContainer> e configuração de seu `Dock` propriedade a ser `None`, ou você pode especificar sua posição absoluta Configurando os respectivos <xref:System.Windows.Forms.Control.Location%2A> propriedade. Confira [Como Remover um ToolStrip de um ToolStripContainer para um formulário](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
   
  Use um ou mais <xref:System.Windows.Forms.ToolStripPanel> controles para obter mais flexibilidade, especialmente para aplicativos de Interface de documentos múltiplos (MDI), ou se você não precisa de um <xref:System.Windows.Forms.ToolStripContainer>. Um <xref:System.Windows.Forms.ToolStripPanel> fornece um espaço encaixável para localizar e reposicionamento <xref:System.Windows.Forms.ToolStrip> controles, mas não controles tradicionais. Por padrão, o <xref:System.Windows.Forms.ToolStripPanel> não aparece no designer de **caixa de ferramentas**, mas você pode colocá-lo lá clicando com o **caixa de ferramentas**e, em seguida, clique em **escolher itens**. Você pode também acessar programaticamente o <xref:System.Windows.Forms.ToolStripPanel> como qualquer outra classe.  
   
  O <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> permitem que os itens de estouro. Isso é semelhante à forma como esses itens se comportam em barras de ferramentas do Microsoft Office.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral do controle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [Arquitetura de controle do ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral do controle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [Arquitetura de controle do ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)

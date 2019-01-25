@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
-ms.openlocfilehash: bfb8ea0d5d7a22bd66f477216129ff834023f4ba
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 61c8f3aa48bb5dd8b02ee8f6327fbde1f55bfe1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595299"
 ---
 # <a name="no-mouse-wheel-is-present"></a>Nenhuma roda do mouse está presente
 O `My.Computer.Mouse.WheelScrollLines` propriedade foi chamada, mas o mouse não tem nenhum roda de rolagem.  
@@ -22,7 +22,7 @@ O `My.Computer.Mouse.WheelScrollLines` propriedade foi chamada, mas o mouse não
   
 -   Instale um mouse com uma roda de rolagem no computador.  
   
-## <a name="see-also"></a>Consulte também  
- [WheelScrollLines](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)  
- [My.Computer.Mouse.WheelExists](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)  
- [Exceção e tratamento de erro no Visual Basic](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)
+## <a name="see-also"></a>Consulte também
+- [My.Computer.Mouse.WheelScrollLines](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)
+- [My.Computer.Mouse.WheelExists](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)
+- [Exceção e tratamento de erro no Visual Basic](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)

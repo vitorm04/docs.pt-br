@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1173091a5f2d8814747c93f827150afe39b8b309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20e718d425d0300aed8cc7ccf064126ee8384704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608291"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>Método ICorDebugCode::CreateBreakpoint
 Cria um ponto de interrupção neste segmento de código no deslocamento especificado.  
@@ -44,18 +44,18 @@ HRESULT CreateBreakpoint (
  [out] Um ponteiro para o endereço de um objeto de "ICorDebugFunctionBreakpoint" que representa o ponto de interrupção.  
   
 ## <a name="remarks"></a>Comentários  
- Antes do ponto de interrupção está ativo, ele deve ser adicionado ao objeto de processo.  
+ Antes do ponto de interrupção estiver ativo, ele deve ser adicionado ao objeto do processo.  
   
- Se esse código é código Microsoft intermediate language (MSIL) e há um just-in-time (JIT)-versão nativo compilado do código, o ponto de interrupção será aplicado o código de compilação JIT. (O mesmo é verdadeiro se o código de compilação JIT posteriormente.)  
+ Se esse código é o código Microsoft intermediate language (MSIL), e há um just-in-time (JIT)-versão compilada, nativo do código, o ponto de interrupção será aplicado o código de compilação JIT. (O mesmo é verdadeiro se o código é compilado por JIT mais tarde.)  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- 
+## <a name="see-also"></a>Consulte também
+

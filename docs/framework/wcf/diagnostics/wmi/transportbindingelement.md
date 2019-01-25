@@ -2,12 +2,12 @@
 title: TransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
-ms.openlocfilehash: 79d8b1f4a5127ca36eb57954cff6ee6a97e55e41
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 303e5523befb68c65bc50ee3933af58897929363
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668437"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
 TransportBindingElement  
@@ -30,31 +30,31 @@ class TransportBindingElement : BindingElement
 ## <a name="properties"></a>Propriedades  
  A classe de TransportBindingElement tem as seguintes propriedades:  
   
-### <a name="manualaddressing"></a>manualAddressing  
+### <a name="manualaddressing"></a>ManualAddressing  
  Tipo de dados: boolean  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Um valor booliano que especifica se o usuário deseja assumir o controle do endereçamento de mensagem.  
   
-### <a name="maxbufferpoolsize"></a>maxBufferPoolSize  
+### <a name="maxbufferpoolsize"></a>MaxBufferPoolSize  
  Tipo de dados: sint64  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O tamanho máximo do buffer do pool para a associação.  
   
 ### <a name="maxreceivedmessagesize"></a>MaxReceivedMessageSize  
  Tipo de dados: sint64  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O tamanho máximo para uma mensagem que é processado por essa associação.  
   
 ### <a name="scheme"></a>Esquema  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O esquema URI para o transporte.  
   
@@ -64,5 +64,5 @@ class TransportBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

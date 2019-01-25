@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 4cbf2a9ec9b742af3895f7c30b1a4dbbdbf5a635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562772"
 ---
 # <a name="drawing-formatted-text"></a>Desenhando texto formatado
 Este tópico fornece uma visão geral dos recursos do <xref:System.Windows.Media.FormattedText> objeto. Este objeto fornece controle de baixo nível para desenhar texto em aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -85,7 +85,7 @@ Exemplo de um pincel de imagem aplicado ao traço e ao realce
  ![Esfera seguindo a geometria de caminho do texto](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Esfera seguindo a geometria de caminho do texto  
   
- Para obter mais informação, consulte [Como criar uma animação de PathGeometry para texto](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Para obter mais informações, confira [Como: Criar uma animação de PathGeometry para texto](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
   
  Você pode criar outros usos interessantes para texto formatado depois que ele foi convertido em um <xref:System.Windows.Media.PathGeometry> objeto. Por exemplo, você pode recortar um vídeo para exibir dentro dele.  
   
@@ -123,9 +123,9 @@ Vídeo em exibição na geometria de caminho do texto
 |DT_WORDBREAK|Nenhum|Não obrigatório. Separação de palavras acontece automaticamente com <xref:System.Windows.Media.FormattedText> objetos. Não é possível desabilitá-la.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Use o <xref:System.Windows.Media.FormattedText.Trimming%2A> propriedade com o valor <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.FormattedText>  
- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Criar texto contornado](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Como criar uma animação de PathGeometry para texto](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.FormattedText>
+- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Criar texto contornado](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [Como: Criar uma animação de PathGeometry para texto](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

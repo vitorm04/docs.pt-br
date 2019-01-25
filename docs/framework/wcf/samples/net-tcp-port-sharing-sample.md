@@ -2,12 +2,12 @@
 title: Exemplo de compartilhamento de porta Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 7ddfb3340c010b57b78fa913601451b6a2af3674
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6180e615d6ae363a4e6fe4bfca3fe0e60f403f58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735484"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Exemplo de compartilhamento de porta Net.TCP
 O protocolo TCP/IP usa um número de 16 bits, chamado de porta, para diferenciar conexões para vários aplicativos de rede em execução no mesmo computador. Se um aplicativo estiver escutando em uma porta, todo o tráfego TCP para essa porta irá para esse aplicativo. Outros aplicativos não podem escutar nessa porta ao mesmo tempo.  
@@ -25,7 +25,7 @@ O protocolo TCP/IP usa um número de 16 bits, chamado de porta, para diferenciar
   
  Compartilhamento de porta NetTcp é um recurso do Windows Communication Foundation (WCF) que da mesma forma permite que vários aplicativos de rede compartilhar uma única porta. O serviço de compartilhamento de porta NetTcp aceita conexões usando o protocolo NET. TCP e encaminha mensagens com base em seu endereço de destino.  
   
- O serviço de compartilhamento de porta NetTcp não é habilitado por padrão. Antes de executar este exemplo, você deve habilitar manualmente o serviço. Para obter mais informações, consulte [como: Habilitar o serviço de compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Se o serviço estiver desabilitado, uma exceção é lançada quando o aplicativo de servidor é iniciado.  
+ O serviço de compartilhamento de porta NetTcp não é habilitado por padrão. Antes de executar este exemplo, você deve habilitar manualmente o serviço. Para obter mais informações, confira [Como: Habilitar o serviço de compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Se o serviço estiver desabilitado, uma exceção é lançada quando o aplicativo de servidor é iniciado.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  

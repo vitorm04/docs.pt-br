@@ -1,5 +1,5 @@
 ---
-title: Como usar proteção de dados
+title: 'Como: Usar a proteção de dados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698382"
 ---
-# <a name="how-to-use-data-protection"></a>Como usar proteção de dados
+# <a name="how-to-use-data-protection"></a>Como: Usar a proteção de dados
 O .NET Framework fornece acesso para a proteção de dados DPAPI (API), que lhe permite criptografar dados usando as informações de conta de usuário atual ou do computador.  Quando você usa a DPAPI, você aliviar o problema difícil de explicitamente gerar e armazenar uma chave de criptografia.  
   
  Use o <xref:System.Security.Cryptography.ProtectedMemory> classe para criptografar uma matriz de bytes na memória.  Essa funcionalidade está disponível no Microsoft Windows XP e sistemas operacionais posteriores.  Você pode especificar que a memória criptografada pelo atual processo pode ser descriptografado pelo processo atual, por todos os processos ou no mesmo contexto de usuário.  Consulte a <xref:System.Security.Cryptography.MemoryProtectionScope> enumeração para uma descrição detalhada do <xref:System.Security.Cryptography.ProtectedMemory> opções.  
@@ -68,5 +68,5 @@ O .NET Framework fornece acesso para a proteção de dados DPAPI (API), que lhe 
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706320"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>Método ISymUnmanagedDocument::GetURL
-Retorna o uniform resource locator (URL) para este documento.  
+Retorna o localizador recursos uniforme (URL) para este documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ HRESULT GetURL(
   
 #### <a name="parameters"></a>Parâmetros  
  `cchUrl`  
- [in] O tamanho, em caracteres, do `szURL` buffer.  
+ [in] O tamanho, em caracteres, da `szURL` buffer.  
   
  `pcchUrl`  
  [out] Um ponteiro para uma variável que recebe o tamanho da URL, incluindo a terminação nula.  
@@ -49,5 +49,5 @@ HRESULT GetURL(
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, um código de erro.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -1,18 +1,18 @@
 ---
-title: Como criar um RSS Feed básico
+title: 'Como: Criar um RSS Feed básico'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: bf8f719a47fda8b592165368234a2db0467c59ce
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1de8d252be4740ad2a23ce1074d772364529eecf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695563"
 ---
-# <a name="how-to-create-a-basic-rss-feed"></a>Como criar um RSS Feed básico
+# <a name="how-to-create-a-basic-rss-feed"></a>Como: Criar um RSS Feed básico
 Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um feed de sindicalização. Este tópico discute como criar um serviço de distribuição que expõe uma feed de sindicalização RSS.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Para criar um serviço básico de distribuição  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Todas as operações de serviço que se aplicam a <xref:System.ServiceModel.Web.WebGetAttribute> atributos são mapeados para as solicitações HTTP GET. Para mapear sua operação para um método diferente de HTTP, use o <xref:System.ServiceModel.Web.WebInvokeAttribute> em vez disso. Para obter mais informações, consulte [como: criar um serviço de Web HTTP WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Todas as operações de serviço que se aplicam a <xref:System.ServiceModel.Web.WebGetAttribute> atributos são mapeados para as solicitações HTTP GET. Para mapear sua operação para um método diferente de HTTP, use o <xref:System.ServiceModel.Web.WebInvokeAttribute> em vez disso. Para obter mais informações, confira [Como: Criar um serviço de Web HTTP WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Implemente o contrato de serviço.  
   
@@ -94,6 +94,6 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
 ## <a name="compiling-the-code"></a>Compilando o código  
  Ao compilar o código anterior, fazer referência a ServiceModel. dll e System.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

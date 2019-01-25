@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d617400fe5c07e8c9754e322960f31a350f62e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657409"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
 Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de um serviço do Windows Communication Foundation (WCF). Cada ponto de extremidade em um serviço WCF requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, os elementos de uma associação, quais associações são incluídas no WCF e como uma associação pode ser especificada para um ponto de extremidade.  
@@ -32,7 +32,7 @@ Associações são objetos que são usados para especificar os detalhes de comun
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
  As informações em uma associação podem ser complexas, e algumas configurações podem não ser compatíveis com outras pessoas. Por esse motivo, o WCF inclui um conjunto de associações fornecidas pelo sistema. Essas associações são projetadas para abranger a maioria dos requisitos do aplicativo. As classes a seguir representam alguns exemplos das associações fornecidas pelo sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Um protocolo HTTP de associação adequada para se conectar a serviços da Web que está em conformidade com o WS-eu especificação do Basic Profile (por exemplo, a serviços baseados em serviços da Web do ASP.NET).  
+-   <xref:System.ServiceModel.BasicHttpBinding>: Um protocolo HTTP adequado para se conectar a serviços Web de associação que está em conformidade com o WS-eu especificação do Basic Profile (por exemplo, a serviços baseados em serviços da Web do ASP.NET).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: Uma associação interoperável adequada para se conectar a pontos de extremidade que estão em conformidade com o WS-* protocolos.  
   
@@ -57,5 +57,5 @@ Associações são objetos que são usados para especificar os detalhes de comun
 ## <a name="code-and-configuration"></a>Configuração e código  
  Você pode definir associações de duas maneiras: por meio de código ou por meio da configuração. Essas duas abordagens não dependem se você estiver usando uma associação fornecida pelo sistema ou uma associação personalizada. Em geral, usando código lhe dá controle total sobre a definição de uma associação em tempo de design. Por outro lado, usando a configuração, permite que um administrador do sistema ou o usuário de um serviço WCF ou o cliente para alterar os parâmetros de uma associação sem ter que recompilar o aplicativo de serviço. Essa flexibilidade geralmente é desejável porque não há nenhuma maneira de prever os requisitos de máquina específica em que um aplicativo WCF deve ser implantado. Manter a associação (e o endereçamento) informações fora do código permite que eles alterem os sem a necessidade de recompilação ou reimplantação do aplicativo. Observe que associações definidas em código são criadas após associações especificadas na configuração, permitindo que as associações definidas pelo código substituir todas as associações definidas por configuração.  
   
-## <a name="see-also"></a>Consulte também  
- [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Consulte também
+- [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

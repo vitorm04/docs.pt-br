@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524176"
 ---
 # <a name="module-statement"></a>Instrução Module
 Declara o nome de um módulo e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem o módulo.  
@@ -96,10 +96,10 @@ End Module
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Instrução Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Tipo de promoção](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Instrução Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Tipo de promoção](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

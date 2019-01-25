@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503112"
 ---
 # <a name="transforms-overview"></a>Visão geral de transformações
 Este tópico descreve como usar o [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes para girar, redimensionar, mover (transladar) e distorcer <xref:System.Windows.FrameworkElement> objetos.  
@@ -80,7 +80,7 @@ Este tópico descreve como usar o [!INCLUDE[TLA#tla_2d](../../../../includes/tla
   
 <a name="transformcenter"></a>   
 ## <a name="transformations-and-coordinate-systems"></a>Sistemas de coordenadas e transformações  
- Quando você transformar um objeto, você não apenas transforma o objeto, você transforma o espaço de coordenadas no qual o objeto existe. Por padrão, uma transformação é centralizada na origem do sistema de coordenadas do objeto alvo: (0,0). A única exceção é <xref:System.Windows.Media.TranslateTransform>; um <xref:System.Windows.Media.TranslateTransform> não tem nenhuma propriedade do centro para definir porque o efeito de translação é o mesmo, independentemente de onde esteja centrado.  
+ Quando você transformar um objeto, você não apenas transforma o objeto, você transforma o espaço de coordenadas no qual o objeto existe. Por padrão, uma transformação é centralizada na origem do sistema de coordenadas do objeto de destino: (0,0). A única exceção é <xref:System.Windows.Media.TranslateTransform>; um <xref:System.Windows.Media.TranslateTransform> não tem nenhuma propriedade do centro para definir porque o efeito de translação é o mesmo, independentemente de onde esteja centrado.  
   
  O exemplo a seguir usa uma <xref:System.Windows.Media.RotateTransform> girar uma <xref:System.Windows.Shapes.Rectangle> elemento, um tipo de <xref:System.Windows.FrameworkElement>, em 45 graus sobre seu centro padrão, (0, 0). A ilustração a seguir mostra o efeito da rotação.  
   
@@ -111,7 +111,7 @@ Um elemento retângulo rotacionado em 45 graus em torno do ponto (25, 25)
  Para obter informações adicionais sobre layout em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], consulte a visão geral do [Layout](../../../../docs/framework/wpf/advanced/layout.md).  
   
 <a name="exampleRotateAnElement45degSection"></a>   
-## <a name="example-rotate-a-frameworkelement-45-degrees"></a>Exemplo: Rotacionar um FrameworkElement em 45 graus  
+## <a name="example-rotate-a-frameworkelement-45-degrees"></a>Exemplo: Girar um FrameworkElement 45 graus  
  O exemplo a seguir usa um <xref:System.Windows.Media.RotateTransform> para girar o botão em 45 graus. O botão está contido em um <xref:System.Windows.Controls.StackPanel> que tem outros dois botões.  
   
  Por padrão, um <xref:System.Windows.Media.RotateTransform> gira sobre o ponto (0, 0). Porque o exemplo não especifica um valor de centro, o botão gira sobre o ponto (0, 0), que é seu canto superior esquerdo. O <xref:System.Windows.Media.RotateTransform> é aplicada para o <xref:System.Windows.UIElement.RenderTransform%2A> propriedade. A ilustração a seguir mostra o resultado da transformação.  
@@ -149,8 +149,8 @@ LayoutTransform utilizado para rotacionar o botão
 ## <a name="freezable-features"></a>Recursos congeláveis  
  Porque ele herda do <xref:System.Windows.Freezable> classe, o <xref:System.Windows.Media.Transform> classe fornece várias funcionalidades especiais: <xref:System.Windows.Media.Transform> objetos podem ser declarados como [recursos](../../../../docs/framework/wpf/advanced/xaml-resources.md), compartilhados entre vários objetos, somente leitura para melhorar desempenho, clonados e transformados em thread-safe. Para obter mais informações sobre os diferentes recursos que são fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte a [visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Matrix>  
- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [Exemplo de transformações 2D](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Matrix>
+- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Exemplo de transformações 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

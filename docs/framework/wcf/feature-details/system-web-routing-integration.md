@@ -2,12 +2,12 @@
 title: Integração de System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 3b95b3117941ce7d019b87b00181b2cbac652f43
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0ace776b8be64f42c05918bc234d39cd96bf8782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688165"
 ---
 # <a name="systemwebrouting-integration"></a>Integração de System.Web.Routing
 Ao hospedar um serviço do Windows Communication Foundation (WCF) no serviço de informações da Internet (IIS), você colocar um arquivo. svc no diretório virtual. Esse arquivo. svc Especifica a fábrica do host de serviço para usar, bem como a classe que implementa o serviço. Ao fazer solicitações para o serviço de você especificar o arquivo. svc no URI, por exemplo: `http://contoso.com/EmployeeServce.svc`. Esse tipo de URI não é ideal para programadores que criam serviços REST. URIs para serviços REST especifique um recurso específico e normalmente não têm nenhuma extensão. O <xref:System.Web.Routing> recurso de integração permite que você hospede um serviço REST do WCF que responde às URIs sem uma extensão. Para obter mais informações sobre roteamento, consulte [roteamento ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  
@@ -69,6 +69,6 @@ Ao hospedar um serviço do Windows Communication Foundation (WCF) no serviço de
     }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Roteamento do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660)
+## <a name="see-also"></a>Consulte também
+- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Roteamento do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660)

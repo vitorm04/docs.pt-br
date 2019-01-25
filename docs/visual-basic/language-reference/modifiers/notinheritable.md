@@ -15,24 +15,24 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: 537d10e68061758234922157b5df14302f1451b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80f111c699de9c40960681812770b5007179da26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699188"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable (Visual Basic)
 Especifica que uma classe não pode ser usada como uma classe base.  
   
 ## <a name="remarks"></a>Comentários  
- **Alternativa termos**. Uma classe que não pode ser herdada às vezes é chamada um *lacrado* classe.  
+ **Termos de alternativo**. Uma classe que não pode ser herdada é chamada, às vezes, uma *lacrado* classe.  
   
  O `NotInheritable` modificador pode ser usado neste contexto:  
   
  [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)

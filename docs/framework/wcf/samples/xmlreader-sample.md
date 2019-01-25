@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: 5ac97afd2efc1bb57a81f5cd2d78fed18ca3804d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dc943f944d710e9e858827fd1a8a2e19c93c7ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573407"
 ---
 # <a name="xmlreader-sample"></a>Exemplo de XmlReader
 O exemplo de XmlReader demonstra o processamento de um corpo de mensagem usando um <xref:System.Xml.XmlReader>. O exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa um serviço de calculadora. Uma operação de serviço adicionais, `Sum`, foi adicionada que aceita uma mensagem que contém uma matriz de valores a serem adicionados juntos. O serviço lê a mensagem usando um <xref:System.Xml.XmlReader>.  

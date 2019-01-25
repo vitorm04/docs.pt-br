@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623619"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>Método ISymUnmanagedMethod::GetSequencePoints
 Obtém todos os pontos de sequência dentro desse método.  
@@ -49,10 +49,10 @@ HRESULT GetSequencePoints(
  [out] Um ponteiro para um `ULONG32` que recebe o comprimento do buffer necessário para conter os pontos de sequência.  
   
  `offsets`  
- [in] Uma matriz na qual deseja armazenar o Microsoft intermediate language (MSIL) desloca desde o início do método para os pontos de sequência.  
+ [in] Uma matriz na qual armazenar o Microsoft intermediate language (MSIL) deslocamentos do início do método para os pontos de sequência.  
   
  `documents`  
- [in] Uma matriz na qual deseja armazenar os documentos em que os pontos de sequência estão localizados.  
+ [in] Uma matriz na qual armazenar os documentos em que os pontos de sequência estão localizados.  
   
  `lines`  
  [in] Uma matriz na qual deseja armazenar as linhas nos documentos em que os pontos de sequência estão localizados.  
@@ -61,10 +61,10 @@ HRESULT GetSequencePoints(
  [in] Uma matriz na qual deseja armazenar as colunas nos documentos em que os pontos de sequência estão localizados.  
   
  `endLines`  
- [in] A matriz de linhas nos documentos em que a sequência de pontos finais.  
+ [in] A matriz de linhas nos documentos em que a sequência de pontos termina.  
   
  `endColumns`  
- [in] A matriz de colunas nos documentos em que a sequência de pontos finais.  
+ [in] A matriz de colunas nos documentos em que a sequência de pontos termina.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -72,5 +72,5 @@ HRESULT GetSequencePoints(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

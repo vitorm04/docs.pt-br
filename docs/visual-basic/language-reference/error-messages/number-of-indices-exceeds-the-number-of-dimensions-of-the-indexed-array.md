@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: d40a19aefdca65773d3d8e37a43d99178586fb1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b113860366ccbe47fed8ef13abb90a540dc88b33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710645"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>O número de índices excede o número de dimensões da matriz indexada
-O número de índices usado para acessar um elemento de matriz deve ser exatamente o mesmo que a classificação da matriz, ou seja, o número de dimensões declarada para ela.  
+O número de índices usados para acessar um elemento de matriz deve ser exatamente o mesmo que a classificação da matriz, ou seja, o número de dimensões declarado para ele.  
   
  **ID do erro:** BC30106  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Remova subscrições da referência de matriz até que o número total de subscritos é igual a classificação da matriz. Por exemplo:  
+-   Remova subscritos da referência de matriz até que o número total de subscritos é igual a classificação da matriz. Por exemplo:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -35,5 +35,5 @@ O número de índices usado para acessar um elemento de matriz deve ser exatamen
     gameBoard(1, 0) = "O"  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Consulte também
+- [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 843236243563ce3dff82726aaab05845fa295b9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518131"
 ---
 # <a name="getversionfromprocess-function"></a>Função GetVersionFromProcess
 Obtém o número de versão do common language runtime (CLR) que está associado com o identificador de processo especificado.  
@@ -51,28 +51,28 @@ HRESULT GetVersionFromProcess (
  [in] O comprimento do buffer de versão.  
   
  `pdwLength`  
- [out] Um ponteiro para o comprimento da cadeia de número de versão.  
+ [out] Um ponteiro para o comprimento da sequência de números de versão.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Esse método retorna códigos de erro do modelo de objeto de componente (COM) padrão, conforme definido no Winerror. H, além dos valores a seguir.  
+ Esse método retorna códigos de erro padrão (COM Component Object Model), conforme definido em Winerror. H, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|E_INVALIDARG|`pVersion` é nulo e `cchBuffer` não for null, ou vice-versa.<br /><br /> -ou-<br /><br /> `hProcess` não é um identificador válido para um processo.<br /><br /> -ou-<br /><br /> O CLR não está carregado.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` é nula ou menor que o comprimento da cadeia de caracteres de versão.|  
-|E_NOTIMPL|Este método não está disponível no sistema operacional Microsoft Windows 95, Microsoft Windows 98 ou Microsoft Windows Millennium Edition.|  
+|E_INVALIDARG|`pVersion` é nulo e `cchBuffer` não for nulo, ou vice-versa.<br /><br /> -ou-<br /><br /> `hProcess` não é um identificador válido para um processo.<br /><br /> -ou-<br /><br /> O CLR não está carregado.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` é nulo ou menor que o comprimento da cadeia de caracteres de versão.|  
+|E_NOTIMPL|Esse método não está disponível no sistema operacional Microsoft Windows 95, Microsoft Windows 98 ou Microsoft Windows Millennium Edition.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Função GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [Função GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Função GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [Função GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

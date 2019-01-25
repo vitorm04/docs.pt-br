@@ -13,12 +13,12 @@ helpviewer_keywords:
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: b140be34d9359cfdca1250a924db787563127d19
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722160"
 ---
 # <a name="constructor-design"></a>Design do construtor
 Há dois tipos dos construtores: construtores e construtores de instância de tipo.  
@@ -80,5 +80,5 @@ Há dois tipos dos construtores: construtores e construtores de instância de ti
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
+- [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

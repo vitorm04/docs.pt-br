@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690404"
 ---
 # <a name="trees-in-wpf"></a>Árvores no WPF
 Em muitas tecnologias, elementos e componentes são organizados em uma estrutura de árvore em que os desenvolvedores manipulam diretamente os nós de objeto na árvore para afetar a renderização ou o comportamento de um aplicativo. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também usa várias metáforas de estrutura de árvore para definir relações entre elementos do programa. Em geral, os desenvolvedores de WPF conseguem criar um aplicativo em código ou definir partes do aplicativo em XAML enquanto pensam conceitualmente sobre a metáfora da árvore de objeto, mas chamarão uma API específica ou usarão marcação específica para fazer isso em vez de alguma API geral de manipulação de árvore de objeto, como a que poderia ser usada em XML DOM. Duas classes auxiliares que fornecem uma exibição da metáfora de árvore, o WPF expõe <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>. Os termos “árvore visual” e “árvore lógica” também são utilizados na documentação do WPF porque essas mesmas árvores são úteis para entender o comportamento de alguns recursos principais do WPF. Este tópico define o que a árvore visual e a árvore lógica representam, discute como tais árvores se relacionam com um conceito de árvore de objeto geral e apresenta <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -86,9 +86,9 @@ Em muitas tecnologias, elementos e componentes são organizados em uma estrutura
   
  No entanto, a pesquisa de recursos também pode se estender além da árvore lógica imediata. Para marcação de aplicativo, a pesquisa de recurso pode seguir adiante até dicionários de recursos no nível do aplicativo e, a seguir, até valores de suporte e sistema de tema que são referenciados como propriedades estáticas ou chaves. Os próprios temas também poderão fazer referência a valores do sistema fora da árvore lógica de tema se as referências de recurso forem dinâmicas. Para obter mais informações sobre dicionários de recursos e lógica de pesquisa, consulte [Recursos de XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da entrada](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Inicialização de elementos de objeto que não estão em uma árvore de objetos](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Arquitetura do WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral da entrada](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Inicialização de elementos de objeto que não estão em uma árvore de objetos](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [Arquitetura do WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
