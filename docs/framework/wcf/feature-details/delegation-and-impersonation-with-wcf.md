@@ -8,15 +8,15 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 08b78a2a6e7d27f28ddd5c9b771f690bc16b1717
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663304"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
-*Representação* é uma técnica comum usada pelos serviços para restringir o acesso para cliente aos recursos de um domínio serviço. Recursos do serviço de domínio podem ser recursos do computador, como arquivos locais (representação), ou um recurso em outro computador, como um compartilhamento de arquivos (delegação). Para um aplicativo de exemplo, consulte [representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
+*Representação* é uma técnica comum usada pelos serviços para restringir o acesso para cliente aos recursos de um domínio serviço. Recursos do serviço de domínio podem ser recursos do computador, como arquivos locais (representação), ou um recurso em outro computador, como um compartilhamento de arquivos (delegação). Para um aplicativo de exemplo, consulte [representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: Representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
   
 > [!IMPORTANT]
 >  Lembre-se de que, ao representar um cliente em um serviço, o serviço é executado com as credenciais do cliente, que podem ter mais privilégios que o processo do servidor.  
@@ -57,9 +57,9 @@ ms.locfileid: "43505411"
  A extensão para o qual o serviço pode representar o cliente depende dos privilégios que a conta de serviço mantém quando ele tenta representação, o tipo de representação usada e, possivelmente, a extensão de representação que permite que o cliente.  
   
 > [!NOTE]
->  Quando o cliente e o serviço estiver executando no mesmo computador e o cliente está em execução sob uma conta do sistema (por exemplo, `Local System` ou `Network Service`), o cliente não pode ser representado quando uma sessão segura é estabelecida com o contexto de segurança com monitoração de estado tokens. Um aplicativo de formulário do Windows ou o console normalmente é executado na conta registrado no momento, para que a conta pode ser representada por padrão. No entanto, quando o cliente é um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] nessa página e página é hospedado no [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ou [!INCLUDE[iisver](../../../../includes/iisver-md.md)], em seguida, o cliente é executado no `Network Service` conta por padrão. Todas as associações fornecidas pelo sistema que dão suporte a sessões seguras usam um token de contexto de segurança sem monitoração de estado (SCT) por padrão. No entanto, se o cliente é um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] página e sessões seguras com SCTs com monitoração de estado são usados, o cliente não pode ser representado. Para obter mais informações sobre como usar SCTs com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Quando o cliente e o serviço estiver executando no mesmo computador e o cliente está em execução sob uma conta do sistema (por exemplo, `Local System` ou `Network Service`), o cliente não pode ser representado quando uma sessão segura é estabelecida com o contexto de segurança com monitoração de estado tokens. Um aplicativo de formulário do Windows ou o console normalmente é executado na conta registrado no momento, para que a conta pode ser representada por padrão. No entanto, quando o cliente é um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] nessa página e página é hospedado no [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ou [!INCLUDE[iisver](../../../../includes/iisver-md.md)], em seguida, o cliente é executado no `Network Service` conta por padrão. Todas as associações fornecidas pelo sistema que dão suporte a sessões seguras usam um token de contexto de segurança sem monitoração de estado (SCT) por padrão. No entanto, se o cliente é um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] página e sessões seguras com SCTs com monitoração de estado são usados, o cliente não pode ser representado. Para obter mais informações sobre como usar SCTs com monitoração de estado em uma sessão segura, consulte [como: Criar um contexto de segurança para uma sessão segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
-## <a name="impersonation-in-a-service-method-declarative-model"></a>Representação em um método de serviço: modelo declarativo  
+## <a name="impersonation-in-a-service-method-declarative-model"></a>Representação em um método de serviço: Modelo declarativo  
  A maioria dos cenários de representação envolvem a execução do método de serviço no contexto do chamador. O WCF fornece um recurso de representação que torna isso fácil de fazer, permitindo que o usuário especifique o requisito de representação no <xref:System.ServiceModel.OperationBehaviorAttribute> atributo. Por exemplo, no código a seguir, a infraestrutura do WCF representará o chamador antes de executar o `Hello` método. Qualquer tentativa de acessar recursos nativos dentro de `Hello` método êxito apenas se a lista de controle de acesso (ACL) do recurso permite que o chamador privilégios de acesso. Para habilitar a representação, defina a <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriedade para um da <xref:System.ServiceModel.ImpersonationOption> valores de enumeração, tanto <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> ou <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, conforme mostrado no exemplo a seguir.  
   
 > [!NOTE]
@@ -73,7 +73,7 @@ ms.locfileid: "43505411"
 > [!NOTE]
 >  Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)], representação falhará se um com monitoração de estado SCT é criado, resultando em um <xref:System.InvalidOperationException>. Para obter mais informações, consulte [cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
-## <a name="impersonation-in-a-service-method-imperative-model"></a>Representação em um método de serviço: modelo imperativo  
+## <a name="impersonation-in-a-service-method-imperative-model"></a>Representação em um método de serviço: Modelo imperativo  
  Às vezes, um chamador não precisa representar o método de serviço inteiro para função, mas para apenas uma parte dele. Nesse caso, obter a identidade do Windows do chamador dentro do método de serviço e executar imperativamente a representação. Fazer isso usando o <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> propriedade do <xref:System.ServiceModel.ServiceSecurityContext> para retornar uma instância das <xref:System.Security.Principal.WindowsIdentity> classe e chamar o <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> método antes de usar a instância.  
   
 > [!NOTE]
@@ -95,8 +95,8 @@ ms.locfileid: "43505411"
 |Necessária|N/D|WCF representará o chamador|  
 |Permitido|false|O WCF não representar o chamador|  
 |Permitido|true|WCF representará o chamador|  
-|Não permitido|false|O WCF não representar o chamador|  
-|Não permitido|true|Não permitido. (Um <xref:System.InvalidOperationException> é gerada.)|  
+|NotAllowed|false|O WCF não representar o chamador|  
+|NotAllowed|true|Não permitido. (Um <xref:System.InvalidOperationException> é gerada.)|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Nível de representação obtidos de credenciais do Windows e armazenados em cache a representação de Token  
  Em alguns cenários, o cliente tem controle parcial sobre o nível de representação que o serviço executa quando uma credencial de cliente do Windows é usada. Um cenário ocorre quando o cliente especifica um nível de representação anônimo. O outro ocorre ao executar a representação com um token em cache. Isso é feito definindo a <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade do <xref:System.ServiceModel.Security.WindowsClientCredential> classe, que pode é acessado como uma propriedade de genérica <xref:System.ServiceModel.ChannelFactory%601> classe.  
@@ -205,21 +205,21 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 -   [Transição de protocolo Kerberos e delegação restrita](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.OperationBehaviorAttribute>  
- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>  
- <xref:System.ServiceModel.ImpersonationOption>  
- <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>  
- <xref:System.ServiceModel.ServiceSecurityContext>  
- <xref:System.Security.Principal.WindowsIdentity>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A>  
- <xref:System.ServiceModel.ServiceHost>  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ChannelFactory%601>  
- <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [Usando a representação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- [Representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- [Como representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.OperationBehaviorAttribute>
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
+- <xref:System.ServiceModel.ImpersonationOption>
+- <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>
+- <xref:System.ServiceModel.ServiceSecurityContext>
+- <xref:System.Security.Principal.WindowsIdentity>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A>
+- <xref:System.ServiceModel.ServiceHost>
+- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ChannelFactory%601>
+- <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
+- [Usando a representação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Como: Representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

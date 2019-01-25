@@ -2,12 +2,12 @@
 title: Serviço de roteamento
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495299"
 ---
 # <a name="routing-service"></a>Serviço de roteamento
 O serviço de roteamento é um intermediário SOAP genérico que atua como um roteador de mensagem. A principal funcionalidade do serviço de roteamento é a capacidade para rotear mensagens com base no conteúdo da mensagem, que permite que uma mensagem a ser encaminhada para um ponto de extremidade do cliente com base em um valor dentro da mensagem em si, no cabeçalho ou no corpo da mensagem.  
@@ -62,7 +62,7 @@ O serviço de roteamento é um intermediário SOAP genérico que atua como um ro
  Usando o roteamento baseado em conteúdo, você pode expor um ponto de extremidade que recebe mensagens de aplicativos de cliente externo e, em seguida, encaminha cada mensagem para o ponto de extremidade interno apropriado com base em um valor dentro da mensagem. Isso é útil para oferecer um ponto de extremidade específico para uma variedade de aplicativos de back-end e também para apresentar um ponto de extremidade do aplicativo para os clientes ao fatorar seu aplicativo em uma variedade de serviços.  
   
 ### <a name="service-versioning"></a>Controle de versão de serviço  
- Ao migrar para uma nova versão da sua solução, você talvez precise manter a versão antiga em paralelo para servir clientes existentes. Geralmente, isso requer que os clientes conectando-se para a versão mais recente devem usar um endereço diferente ao se comunicar com a solução. O serviço de roteamento permite expor um ponto de extremidade de serviço que serve de ambas as versões de sua solução pelo roteamento de mensagens para a solução apropriada com base nas informações específicas da versão contidas na mensagem. Para obter um exemplo de tal implementação, consulte [How To: controle de versão do serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Ao migrar para uma nova versão da sua solução, você talvez precise manter a versão antiga em paralelo para servir clientes existentes. Geralmente, isso requer que os clientes conectando-se para a versão mais recente devem usar um endereço diferente ao se comunicar com a solução. O serviço de roteamento permite expor um ponto de extremidade de serviço que serve de ambas as versões de sua solução pelo roteamento de mensagens para a solução apropriada com base nas informações específicas da versão contidas na mensagem. Para obter um exemplo de tal implementação consulte [How To: Controle de versão de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ### <a name="priority-routing"></a>Roteamento de prioridade  
  Ao fornecer um serviço para vários clientes, você pode ter um contrato de nível de serviço (SLA) com alguns parceiros que requer que todos os dados desses parceiros para ser processada separadamente a partir de outros clientes. Usando um filtro que procura por informações específicas do cliente na mensagem, você pode facilmente rotear mensagens de parceiros específicos para um ponto de extremidade que foi criado para atender aos requisitos de SLA.  
@@ -105,7 +105,7 @@ O serviço de roteamento é um intermediário SOAP genérico que atua como um ro
   
 -   Configuração dinâmica  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao roteamento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [Roteando contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Filtros de mensagem](../../../../docs/framework/wcf/feature-details/message-filters.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução ao roteamento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Roteando contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [Filtros de mensagem](../../../../docs/framework/wcf/feature-details/message-filters.md)

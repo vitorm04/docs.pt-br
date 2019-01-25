@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a7f3a13d05b8a3c4554810655bbda670efb2b3fd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0f33fb559bb4bf47beebc836a093f4b784559609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674802"
 ---
 # <a name="accessibility-best-practices"></a>Práticas recomendadas de Acessibilidade
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Implementando as seguintes práticas recomendadas em controles ou aplicativos aumentará sua acessibilidade para pessoas que usam [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] dispositivos. Muitas dessas práticas recomendadas se concentrar em bom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] design. Cada recomendação inclui informações de implementação [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controles ou aplicativos. Em muitos casos, o trabalho para atender a essas práticas recomendadas já está incluído no [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] controles.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "50191071"
  Localização do mouse não deve interferir com navegação do teclado. Para exemplo, se o mouse está posicionado em algum lugar e o usuário está navegando com o teclado, um clique do mouse não deve ocorrer a menos que iniciada pelo usuário.  
   
 <a name="Multimodal_Interface"></a>   
-## <a name="multimodal-interface"></a>Interface multimodal  
+## <a name="multimodal-interface"></a>Multimodal Interface  
  Práticas recomendadas nesta seção garantem que o aplicativo [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] inclui alternativas para elementos visuais.  
   
 <a name="Provide_User_Selectable_Equivalents_for_Non_Text"></a>   
@@ -132,7 +132,7 @@ ms.locfileid: "50191071"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Usar APIs de entrada padrão com chamadas independente de dispositivo  
  Igualdade de recurso do teclado e mouse, certifique-se chamadas independente de dispositivo, fornecendo [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] com as informações necessárias sobre o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Automation.Peers>  
- [Controle personalizado NumericUpDown com tema e amostra de suporte de automação de interface do usuário](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [Diretrizes para Design de Interface do usuário de teclado](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Automation.Peers>
+- [Controle personalizado NumericUpDown com tema e amostra de suporte de automação de interface do usuário](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)
+- [Diretrizes para Design de Interface do usuário de teclado](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

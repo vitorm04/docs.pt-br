@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 581f576222eb149aede841a5da7a0e5f38c77b58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb54858286ed31d566b5aeb46faed9070f110bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612834"
 ---
 # <a name="gettype-operator-visual-basic"></a>Operador GetType (Visual Basic)
 Retorna um <xref:System.Type> objeto para o tipo especificado. O <xref:System.Type> objeto fornece informações sobre o tipo como suas propriedades, métodos e eventos.  
@@ -27,14 +27,14 @@ GetType(typename)
   
 |Parâmetro|Descrição|  
 |---|---|  
-|`typename`|O nome do tipo para o qual você deseja informações.|  
+|`typename`|O nome do tipo do qual você deseja informações.|  
   
 ## <a name="remarks"></a>Comentários  
- O `GetType` operador retorna o <xref:System.Type> objeto especificado `typename`. Você pode passar o nome de qualquer tipo definido em `typename`. Isso inclui o seguinte:  
+ O `GetType` operador retorna o <xref:System.Type> o objeto especificado `typename`. Você pode passar o nome de qualquer tipo definido em `typename`. Isso inclui o seguinte:  
   
--   Tipo de dados Visual Basic, como `Boolean` ou `Date`.  
+-   Tipo de dados de qualquer Visual Basic, como `Boolean` ou `Date`.  
   
--   Qualquer classe do .NET Framework, estrutura, módulo ou interface, como <xref:System.ArgumentException?displayProperty=nameWithType> ou <xref:System.Double?displayProperty=nameWithType>.  
+-   Qualquer classe do .NET Framework, estrutura, módulo ou interface, tais como <xref:System.ArgumentException?displayProperty=nameWithType> ou <xref:System.Double?displayProperty=nameWithType>.  
   
 -   Qualquer classe, estrutura, módulo ou interface definida por seu aplicativo.  
   
@@ -48,16 +48,16 @@ GetType(typename)
   
  O `GetType` operador pode ser útil nas seguintes circunstâncias:  
   
--   Você deve acessar os metadados para um tipo em tempo de execução. O <xref:System.Type> objeto fornece metadados como membros do tipo e informações de implantação. Você precisa disto, por exemplo, para refletir sobre um assembly. Para obter mais informações, consulte <xref:System.Reflection?displayProperty=nameWithType>.  
+-   Você deve acessar os metadados para um tipo em tempo de execução. O <xref:System.Type> objeto fornece metadados como membros de tipo e informações de implantação. Você precisa, por exemplo, para refletir sobre um assembly. Para obter mais informações, consulte <xref:System.Reflection?displayProperty=nameWithType>.  
   
--   Você deseja comparar duas referências de objeto para ver se elas se referem a instâncias do mesmo tipo. Se isso ocorrer, `GetType` retorna referências para o mesmo <xref:System.Type> objeto.  
+-   Você deseja comparar duas referências de objeto para ver se elas se referem a instâncias do mesmo tipo. Se Sim, `GetType` retorna referências para o mesmo <xref:System.Type> objeto.  
   
 ## <a name="example"></a>Exemplo  
  Os exemplos a seguir mostram o `GetType` operador em uso.  
   
  [!code-vb[VbVbalrOperators#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/gettype-operator_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>Consulte também
+- [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

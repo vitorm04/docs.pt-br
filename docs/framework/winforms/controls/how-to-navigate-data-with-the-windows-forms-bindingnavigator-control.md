@@ -1,5 +1,5 @@
 ---
-title: Como navegar em dados com o controle BindingNavigator dos Windows Forms
+title: 'Como: Navegar em dados com o controle BindingNavigator dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: 14f845e33b38da39b900b32c07297a350326350d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8fb95eb3640783f25890d08a1d6e01839020724c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539682"
 ---
-# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Como navegar em dados com o controle BindingNavigator dos Windows Forms
+# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Como: Navegar em dados com o controle BindingNavigator dos Windows Forms
 O advento do <xref:System.Windows.Forms.BindingNavigator> controle no Windows Forms permite aos desenvolvedores fornecer aos usuários finais com um simples de dados de navegação e manipulação de interface do usuário em formulários que criam.  
   
- O <xref:System.Windows.Forms.BindingNavigator> controle é um <xref:System.Windows.Forms.ToolStrip> controle com botões pré-configurados para navegação para a primeira, por último, próximo e anterior registro em um conjunto de dados, bem como os botões para adicionar e excluir registros. Adicionando botões para o <xref:System.Windows.Forms.BindingNavigator> controle é fácil, porque ele é um <xref:System.Windows.Forms.ToolStrip> controle.  Consulte também [Como adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator do Windows Forms](https://msdn.microsoft.com/library/safa4957\(v=vs.110\)).  
+ O <xref:System.Windows.Forms.BindingNavigator> controle é um <xref:System.Windows.Forms.ToolStrip> controle com botões pré-configurados para navegação para a primeira, por último, próximo e anterior registro em um conjunto de dados, bem como os botões para adicionar e excluir registros. Adicionando botões para o <xref:System.Windows.Forms.BindingNavigator> controle é fácil, porque ele é um <xref:System.Windows.Forms.ToolStrip> controle.  Consulte também [como: Adicione carga, salvar, e botões de cancelamento para o Windows Forms controle BindingNavigator](https://msdn.microsoft.com/library/safa4957\(v=vs.110\)).  
   
  Para cada botão de <xref:System.Windows.Forms.BindingNavigator> de controle, há um membro correspondente do <xref:System.Windows.Forms.BindingSource> componente que permite programaticamente a mesma funcionalidade. Por exemplo, o <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> botão corresponde à <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> método da <xref:System.Windows.Forms.BindingSource> componente, o <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> botão corresponde à <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> método e assim por diante. Como resultado, permitindo que o <xref:System.Windows.Forms.BindingNavigator> controle naveguem nos registros de dados é tão simples como a configuração de seu <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> propriedade ao apropriado <xref:System.Windows.Forms.BindingSource> componente no formulário.  
   
@@ -51,9 +51,9 @@ O advento do <xref:System.Windows.Forms.BindingNavigator> controle no Windows Fo
   
 -   Referência aos conjuntos System, System.Data, System.Drawing, System.Windows.Forms e System.Xml.  
   
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [como: Compilar e executar um exemplo de código completa do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.BindingNavigator>  
- [Controle BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Controle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.BindingNavigator>
+- [Controle BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [Controle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

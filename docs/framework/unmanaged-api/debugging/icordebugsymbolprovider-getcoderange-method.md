@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60ba1c68e95363a59c5a1d217756664f63e5256
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bfaa8ce16a3874d28e06bdb77f1e903548c0a03b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684782"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>Método ICorDebugSymbolProvider::GetCodeRange
 Obtém o endereço de início do método e o tamanho fornecido um endereço virtual relativo (RVA) em um método.  
@@ -26,13 +26,13 @@ HRESULT GetCodeRange(
   
 #### <a name="parameters"></a>Parâmetros  
  `codeRva`  
- [in] O virtual endereço relativo (RVA) em um método.  
+ [in] O endereço virtual relativo (RVA) em um método.  
   
  `pCodeStartAddress`  
  [out] Um ponteiro para o endereço inicial do método.  
   
  `pCodeSize`  
- Um ponteiro para o tamanho de código do método (o número de bytes de código do método).  
+ Um ponteiro para o tamanho do código do método (o número de bytes de código do método).  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -40,14 +40,14 @@ HRESULT GetCodeRange(
 >  Esse método só está disponível com o .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

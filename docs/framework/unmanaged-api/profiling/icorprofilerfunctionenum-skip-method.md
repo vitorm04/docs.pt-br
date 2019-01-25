@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95301c4a99253261721c7f524b99f79a6207feb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba1f357c0d68b5a8b5104569a95433504cc84ee6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675140"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>Método ICorProfilerFunctionEnum::Skip
-Avança o cursor do enumerador de sua posição atual para que o número especificado de elementos será ignorado.  
+Avança o cursor do enumerador de sua posição atual para que o número especificado de elementos é ignorado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,28 +35,28 @@ HRESULT Skip([in] ULONG celt);
   
 #### <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de elementos seja ignorada.  
+ [in] O número de elementos a serem ignoradas.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`celt` elementos foram ignorados.|  
-|S_FALSE|Menos de `celt` elementos foram ignorados, que indica que não existem mais elementos.|  
+|S_FALSE|Menos de `celt` elementos foram ignorados, que indica que não há mais nenhum elemento.|  
   
 ## <a name="remarks"></a>Comentários  
  A nova posição do cursor deste enumerador é (posição atual) + `celt`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

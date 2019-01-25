@@ -2,12 +2,12 @@
 title: Privacidade e segurança de dados
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662134"
 ---
 # <a name="privacy-and-data-security"></a>Privacidade e segurança de dados
 Protegendo e gerenciamento de informações confidenciais em um aplicativo ADO.NET depende de produtos e tecnologias usadas para criá-lo subjacentes. ADO.NET não fornece serviços para proteger ou criptografar dados diretamente.  
@@ -27,7 +27,7 @@ Protegendo e gerenciamento de informações confidenciais em um aplicativo ADO.N
   
  O <xref:System.Security.SecureString> classe fornece métodos para criptografar o texto usando a API de proteção de dados (DPAPI) na memória. A cadeia de caracteres, em seguida, é excluída da memória quando ele não for mais necessário. Não há nenhuma `ToString` método para ler rapidamente o conteúdo de um <xref:System.Security.SecureString>. Você pode inicializar uma nova instância da `SecureString` sem nenhum valor ou ao passar um ponteiro para uma matriz de <xref:System.Char> objetos. Em seguida, você pode usar os vários métodos da classe para trabalhar com a cadeia de caracteres. Para obter mais informações, baixe o [aplicativo de exemplo de SecureString](https://go.microsoft.com/fwlink/?LinkId=120418), que demonstra como usar o `SecureString` classe.  
   
-## <a name="see-also"></a>Consulte também  
- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
- [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

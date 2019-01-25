@@ -2,22 +2,22 @@
 title: '&lt;secureConversationBootstrap&gt;'
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: a923ca5d695b1b0b8f5362320b11f39f5153e9c8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dae0d6c24e50884cf044464209f3a3b9a50079aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744889"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 Especifica os valores padrão usados para iniciar um serviço de conversa segura.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<customBinding>  
-\<associação >  
+\<binding>  
 \<segurança >  
-\<secureConversationBootstrap >  
+\<secureConversationBootstrap>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,9 +51,9 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
 |`authenticationMode`|Especifica o modo de autenticação SOAP usado entre o iniciador e o respondente.<br /><br /> O padrão é sspiNegotiated.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.Configuration.AuthenticationMode>.|  
 |`defaultAlgorithmSuite`|Pacote de algoritmos de segurança define uma variedade de algoritmos como canonização, Digest, KeyWrap, assinatura, criptografia e keyderivation. Cada um dos pacotes de algoritmo de segurança define os valores para esses parâmetros diferentes. Segurança baseada em mensagens é obtida usando esses algoritmos.<br /><br /> Este atributo é usado ao trabalhar com uma plataforma diferente que aceita para um conjunto de algoritmos diferentes do padrão. Você deve estar atento os pontos fortes e fracos dos algoritmos relevantes ao fazer modificações a essa configuração. Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. O padrão é `Basic256`.|  
 |`includeTimestamp`|Um valor booliano que especifica se os carimbos de data / hora é incluídos em cada mensagem. O padrão é `true`.|  
-|`keyEntropyMode`|Especifica a maneira que as chaves para proteger as mensagens são computadas. As chaves podem se basear o material de chave de cliente somente, somente o material de chave de serviço ou uma combinação de ambos. Os valores válidos são:<br /><br /> -ClientEntropy: A chave de sessão é baseada fora do cliente que forneceu o material da chave.<br />-ServerEntropy: A chave de sessão baseia-se desativar o serviço fornecido o material da chave.<br />-CombinedEntropy: A chave de sessão é baseada fora do cliente e o material para chave do serviço fornecido.<br /><br /> O padrão é CombinedEntropy.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|`messageProtectionOrder`|Define a ordem na qual mensagem algoritmos de segurança em nível são aplicados à mensagem. Os valores válidos incluem o seguinte:<br /><br /> -SignBeforeEncrypt: Entrar pela primeira vez e, em seguida, criptografar.<br />-SignBeforeEncryptAndEncryptSignature: Assinar, criptografar e criptografar a assinatura.<br />-EncryptBeforeSign: Criptografe primeiro, em seguida, entrada.<br /><br /> SignBeforeEncryptAndEncryptSignature é o valor padrão ao usar certificados mútuos com WS-Security 1.1.  SignBeforeEncrypt é o valor padrão com o WS-Security 1.0.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
-|`messageSecurityVersion`|Define a versão do WS-Security, o que é usado. Os valores válidos incluem o seguinte:<br /><br /> -WSSecurityJan2004<br />-WSSecurityXXX2005<br /><br /> O padrão é WSSecurityXXX2005. Esse atributo é do tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
+|`keyEntropyMode`|Especifica a maneira que as chaves para proteger as mensagens são computadas. As chaves podem se basear o material de chave de cliente somente, somente o material de chave de serviço ou uma combinação de ambos. Os valores válidos são:<br /><br /> -   ClientEntropy: A chave de sessão é baseada fora do cliente que forneceu o material da chave.<br />-   ServerEntropy: A chave de sessão baseia-se desativar o serviço fornecido o material da chave.<br />-CombinedEntropy: A chave de sessão é baseada fora do cliente e o material para chave do serviço fornecido.<br /><br /> O padrão é CombinedEntropy.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
+|`messageProtectionOrder`|Define a ordem na qual mensagem algoritmos de segurança em nível são aplicados à mensagem. Os valores válidos incluem o seguinte:<br /><br /> -   SignBeforeEncrypt: Entrar pela primeira vez e, em seguida, criptografar.<br />-   SignBeforeEncryptAndEncryptSignature: Assinar, criptografar e criptografar a assinatura.<br />-   EncryptBeforeSign: Criptografe primeiro, em seguida, entrada.<br /><br /> SignBeforeEncryptAndEncryptSignature é o valor padrão ao usar certificados mútuos com WS-Security 1.1.  SignBeforeEncrypt é o valor padrão com o WS-Security 1.0.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
+|`messageSecurityVersion`|Define a versão do WS-Security, o que é usado. Os valores válidos incluem o seguinte:<br /><br /> -   WSSecurityJan2004<br />-   WSSecurityXXX2005<br /><br /> O padrão é WSSecurityXXX2005. Esse atributo é do tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |`requireDerivedKeys`|Um valor booliano que especifica se chaves podem ser derivadas das chaves de prova originais. O padrão é `true`.|  
 |`requireSecurityContextCancellation`|Um valor booliano que especifica se contexto de segurança deve ser cancelado e encerrado quando não for mais necessário. O padrão é `true`.|  
 |`requireSignatureConfirmation`|Um valor booliano que especifica se a confirmação de assinatura de WS-Security está habilitada. Quando definido como `true`, as assinaturas de mensagem são confirmadas pelo respondente. O padrão é `false`.<br /><br /> Confirmação de assinatura é usada para confirmar que o serviço está respondendo no reconhecimento total de uma solicitação.|  
@@ -64,8 +64,8 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Especifica um token emitido atual. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
-|[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Especifica as configurações de segurança de um cliente local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
-|[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Especifica as configurações de segurança de um serviço local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
+|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Especifica as configurações de segurança de um cliente local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
+|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Especifica as configurações de segurança de um serviço local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -73,14 +73,14 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

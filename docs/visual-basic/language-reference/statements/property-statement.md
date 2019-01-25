@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4c92e7b3892fa35035935d5db317c72d74814ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512977"
 ---
 # <a name="property-statement"></a>Instrução Property
 Declara o nome de uma propriedade e os procedimentos de propriedade usados para armazenar e recuperar o valor da propriedade.  
@@ -62,9 +62,9 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     -   [Privado](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    - [Friend protegido](../../language-reference/modifiers/protected-friend.md) 
+    - [Amigo Protegido](../../language-reference/modifiers/protected-friend.md) 
 
-    - [Privado protegido](../../language-reference/modifiers/private-protected.md)
+    - [Particular Protegido](../../language-reference/modifiers/private-protected.md)
   
      Ver [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -207,10 +207,10 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
  [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades Autoimplementadas](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Instrução Get](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Instrução Set](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Lista de Parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Padrão](../../../visual-basic/language-reference/modifiers/default.md)
+## <a name="see-also"></a>Consulte também
+- [Propriedades Autoimplementadas](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Instrução Get](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Instrução Set](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Lista de Parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Padrão](../../../visual-basic/language-reference/modifiers/default.md)

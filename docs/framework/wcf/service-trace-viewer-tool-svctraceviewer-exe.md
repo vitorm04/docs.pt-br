@@ -2,12 +2,12 @@
 title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510592"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclar facilmente, exibir e filtrar as mensagens de rastreamento no log de forma que você possa diagnosticar, reparar e verificar problemas de serviço do WCF.  
@@ -42,11 +42,11 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
 |Nível de rastreamento:|Descrição|  
 |-----------------|-----------------|  
-|Critical|-Registra em log entradas Fail-Fast e Log de eventos e informações de correlação de rastreamento. A seguir estão alguns exemplos de quando você poderá usar o nível Crítico:<br />-O AppDomain foi desativado devido a uma exceção sem tratamento.<br />-Seu aplicativo falha ao iniciar.<br />-A mensagem que causou a falha do processo MyApp.exe foi originada.|  
+|Crítico|-Registra em log entradas Fail-Fast e Log de eventos e informações de correlação de rastreamento. A seguir estão alguns exemplos de quando você poderá usar o nível Crítico:<br />-O AppDomain foi desativado devido a uma exceção sem tratamento.<br />-Seu aplicativo falha ao iniciar.<br />-A mensagem que causou a falha do processo MyApp.exe foi originada.|  
 |Erro|-Registra em log todas as exceções. Você pode usar o nível Erro nas seguintes situações:<br />-Seu código falhou devido a uma exceção de conversão inválido.<br />-Uma exceção "Falha ao criar o ponto de extremidade" está causando a falha na inicialização do seu aplicativo.|  
 |Aviso|-Existe uma condição que poderá resultar em um erro ou falha crítica. Você pode usar este nível nas seguintes situações:<br />-O aplicativo está recebendo mais solicitações que permite que suas configurações de limitação.<br />-A fila de recebimento está com 98% de sua capacidade configurada.|  
 |Informações|-Mensagens úteis para monitorar e diagnosticar o status do sistema, medir o desempenho ou criação de perfil são geradas. É possível utilizar essas informações para o planejamento de capacidade e o gerenciamento de desempenho. Você pode usar este nível nas seguintes situações:<br />-Falha depois que a mensagem chegou ao AppDomain e foi desserializada.<br />-Uma falha ocorreu enquanto a associação HTTP estava sendo criada.|  
-|Modo detalhado|Nível de depuração de rastreamento de código de usuário e de manutenção. Defina este nível quando:<br />-Você não tiver certeza qual método em seu código foi chamado quando a falha ocorreu.<br />-Você tem um ponto de extremidade incorreto configurado e o serviço falhou ao iniciar porque a entrada no repositório de reserva está bloqueada.|  
+|Detalhado|Nível de depuração de rastreamento de código de usuário e de manutenção. Defina este nível quando:<br />-Você não tiver certeza qual método em seu código foi chamado quando a falha ocorreu.<br />-Você tem um ponto de extremidade incorreto configurado e o serviço falhou ao iniciar porque a entrada no repositório de reserva está bloqueada.|  
 |ActivityTracing|Eventos de fluxo entre atividades de processamento e componentes.<br /><br /> Este nível permite que os administradores e desenvolvedores correlacionem aplicativos no mesmo domínio de aplicativos.<br /><br /> -Rastreamentos de limites de atividades: iniciar/parar.<br />-Rastreamentos de transferências.|  
   
  Você pode usar `add` para especificar o nome e o tipo do ouvinte de rastreamento que deseja usar. Na configuração de exemplo, o ouvinte é chamado de `sdt` e o ouvinte de rastreamento do .NET Framework padrão (`System.Diagnostics.XmlWriterTraceListener`) é adicionado como o tipo. Use `initializeData` para definir o nome do arquivo de log para esse ouvinte. Além disso, é possível substituir um nome de arquivo simples por um caminho totalmente qualificado.  
@@ -191,7 +191,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 -   Mostrar Rastreamentos Detalhados que Não Sejam de Mensagens, que, quando desmarcada, ignora rastreamentos de nível de detalhe, exceto para rastreamentos de mensagens. Na maioria dos casos, os rastreamentos de nível de detalhe são menos importantes para análise. Essa opção é útil quando você não quer analisar rastreamentos de nível de detalhe e quer apenas se concentrar em rastreamentos mais importantes.  
   
 ###### <a name="layout-mode"></a>Modo de layout  
- O visualizador possui dois modos de Layout: **processo** e **Thread**. Essa configuração define a maior unidade de organização. O padrão é o modo de Layout **processo**, o que significa que as atividades são agrupadas por processos no gráfico.  
+ O visualizador possui dois modos de Layout: **Processo** e **Thread**. Essa configuração define a maior unidade de organização. O padrão é o modo de Layout **processo**, o que significa que as atividades são agrupadas por processos no gráfico.  
   
 ###### <a name="execution-list"></a>Lista de execução  
  Você pode selecionar o processo ou thread a ser exibido no gráfico nessa lista suspensa. Por exemplo, se você tiver arquivos de rastreamento de dois clientes (A e B) e um serviço abertos, e desejar exibir somente o serviço e o cliente A no gráfico, poderá desmarcar o cliente B na lista.  
@@ -227,11 +227,11 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 #### <a name="using-the-filter-toolbar"></a>Usando a barra de ferramentas de filtro  
  A barra de ferramentas de filtro aparece na parte superior da ferramenta. Se não estiver presente, você pode ativá-la na **exibição** menu. A barra possui três componentes:  
   
--   Procurar por: **procure** define o assunto a ser procurado na operação de filtro. Por exemplo, se você desejar localizar todos os rastreamentos que foram emitidos no contexto do processo X, defina esse campo como X e o **pesquisar em** campo do nome do processo. Esse campo muda para um controle seletor DateTime quando um filtro baseado em hora é selecionado.  
+-   Procurar: **Procure** define o assunto a ser procurado na operação de filtro. Por exemplo, se você desejar localizar todos os rastreamentos que foram emitidos no contexto do processo X, defina esse campo como X e o **pesquisar em** campo do nome do processo. Esse campo muda para um controle seletor DateTime quando um filtro baseado em hora é selecionado.  
   
--   Pesquisar em: esse campo define o tipo de filtro a ser aplicado.  
+-   Pesquise em: Este campo define o tipo de filtro a ser aplicado.  
   
--   Nível: essa configuração define o nível de rastreamento mínimo permitido pelo filtro. Por exemplo, se o nível for definido como Erro e Acima, somente rastreamentos dos níveis Erro e Crítico serão exibidos. Esse filtro é combinado aos critérios especificados por Procurar e Pesquisar em.  
+-   Nível: Essa configuração define o nível de rastreamento mínimo permitido pelo filtro. Por exemplo, se o nível for definido como Erro e Acima, somente rastreamentos dos níveis Erro e Crítico serão exibidos. Esse filtro é combinado aos critérios especificados por Procurar e Pesquisar em.  
   
  O **filtrar agora** botão inicia a operação de filtro. Alguns filtros, principalmente quando são aplicados a um grande conjunto de dados, demoram para serem concluídos. Você pode cancelar a operação de filtro pressionando o **pare** botão que aparece na barra de status na **operações** menu.  
   
@@ -321,9 +321,9 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
  A barra de ferramentas de localização aparece na parte superior do visualizador. Se não estiver presente, você pode ativá-la na **exibição** menu. A barra possui dois componentes:  
   
--   Localizar: permite que você insira a palavra-chave de pesquisa.  
+-   Localize: Permite que você insira a palavra-chave de pesquisa.  
   
--   Examinar: permite que você insira o escopo da pesquisa. Você pode selecionar se deseja pesquisar em todas as atividades ou somente na atividade atual.  
+-   Procure em: Permite que você insira o escopo da pesquisa. Você pode selecionar se deseja pesquisar em todas as atividades ou somente na atividade atual.  
   
  A caixa de diálogo de localização fornece duas opções adicionais:  
   
@@ -335,7 +335,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
     -   A opção "Mensagem registrada" pesquisa a palavra-chave somente nas mensagens.  
   
--   Ignorar atividade raiz: A pesquisa ignora os rastreamentos na atividade "000000000000". Isso melhora o desempenho em grandes arquivos de rastreamento quando a atividade raiz tem milhares de rastreamentos, dos quais a maioria são transferências.  
+-   Ignore atividade raiz: A pesquisa ignora os rastreamentos na atividade "000000000000". Isso melhora o desempenho em grandes arquivos de rastreamento quando a atividade raiz tem milhares de rastreamentos, dos quais a maioria são transferências.  
   
 ### <a name="navigating-traces"></a>Navegando em rastreamentos  
  Como os rastreamentos são registrados passo a passo durante o tempo de execução do aplicativo, a navegação em rastreamentos pode ajudá-lo a depurar seu aplicativo. O Visualizador de Rastreamento de Serviço fornece várias maneiras de navegar em rastreamentos.  
@@ -345,19 +345,19 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
 -   Avançar: Use o **atividade** menus ou pressione "F10". Você também pode usar a tecla de direção "para baixo" no painel de rastreamento.  
   
--   Retroceder: Use o **atividade** menus ou pressione "F9". Você também pode usar a tecla de direção "para cima" no painel de rastreamento.  
+-   Etapa com versões anteriores: Use o **atividade** menus ou pressione "F9". Você também pode usar a tecla de direção "para cima" no painel de rastreamento.  
   
 > [!NOTE]
 >  Isso pode levar você a uma atividade ocorrendo em um processo diferente ou mesmo em um computador diferente, pois as mensagens do WCF podem transportar IDs de atividade que abrangem computadores.  
   
 #### <a name="follow-transfer"></a>Seguir transferência  
- Os rastreamentos de transferência são rastreamentos especiais no arquivo de rastreamento. Uma atividade pode fazer a transferência para outra atividade por um rastreamento de transferência. Por exemplo, "Atividade A" pode transferir para "Atividade B". Nesse caso, há um rastreamento de transferência no ícone de "Atividade A" com o nome "Para: atividade" e a transferência. Esse rastreamento de transferência é um link entre os dois rastreamentos. Na "Atividade B", também pode haver um rastreamento de transferência no final da atividade a ser transferido de volta à "Atividade A". Isso é semelhante às chamadas de função em programas: A chama B e, em seguida, B retorna.  
+ Os rastreamentos de transferência são rastreamentos especiais no arquivo de rastreamento. Uma atividade pode fazer a transferência para outra atividade por um rastreamento de transferência. Por exemplo, "Atividade A" pode transferir para "Atividade B". Nesse caso, há um rastreamento de transferência na "Atividade de um" com o nome "para: Atividade"e o ícone de transferência. Esse rastreamento de transferência é um link entre os dois rastreamentos. Na "Atividade B", também pode haver um rastreamento de transferência no final da atividade a ser transferido de volta à "Atividade A". Isso é semelhante a chamadas de função em programas: Uma chamada o B, B retorna.  
   
  "Seguir transferência" é semelhante a "Step into" em um depurador. Ele segue a transferência de A para B. Ele não tem nenhum efeito em outros rastreamentos.  
   
  Há duas maneiras de seguir uma transferência: pelo mouse ou pelo teclado:  
   
--   Pelo mouse: clique duas vezes no rastreamento de transferência no painel de rastreamento.  
+-   Pelo Mouse: Clique duas vezes o rastreamento de transferência no painel de rastreamento.  
   
 -   Pelo teclado: Selecione um rastreamento de transferência e use "Seguir transferência" no **atividade** menus ou pressione "F11"  
   
@@ -367,7 +367,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 #### <a name="jump-to-next-or-previous-transfer"></a>Passar para a próxima transferência ou a anterior  
  Ao analisar a atividade atual, ou as atividades selecionadas quando várias atividades são selecionadas, você talvez queira localizar as atividades para as quais ela transfere. "Passar para a próxima transferência" permite que você localize o próximo rastreamento de transferência na atividade. Depois de encontrar o rastreamento de transferência, você pode usar "Seguir transferência" Step into a próxima atividade.  
   
--   Ir para a próxima transferência: Use o **atividade** menus ou pressione "Ctrl + F10".  
+-   Ir para próxima transferência: Use o **atividade** menus ou pressione "Ctrl + F10".  
   
 -   Ir para a transferência anterior: Use o **atividade** menu, ou pressione "Ctrl + F9".  
   
@@ -404,41 +404,41 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
 |Ícone|Descrição|  
 |----------|-----------------|  
-|![Rastreamento de aviso](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Rastreamento de aviso: um rastreamento que é emitido no nível de aviso.|  
-|![Rastreamento de erro](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Rastreamento de erro: um rastreamento que é emitido no nível de erro.|  
-|![Rastreamento de início da atividade:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Rastreamento de início de atividade: um rastreamento que marca o início de uma atividade. Contém o nome da atividade. Como designer ou desenvolvedor de aplicativos, você deve definir um rastreamento de início de atividade por ID de atividade para cada processo ou thread.<br /><br /> Se a ID de atividade for propagada nas origens de rastreamento para a correlação de rastreamentos, você poderá consultar vários inícios para a mesma ID de atividade (um por origem de rastreamento). O rastreamento de início será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
-|![Rastreamento de interrupção de atividade](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Rastreamento de interrupção de atividade: um rastreamento que marca o fim de uma atividade. . Contém o nome da atividade. Como designer ou desenvolvedor de aplicativos, você deve definir um rastreamento de interrupção de atividade por ID de atividade para cada origem de rastreamento. Nenhum rastreamento de uma determinada origem aparece após a interrupção de atividade emitida por essa origem de rastreamento, exceto se a granularidade do tempo de rastreamento não for suficientemente pequena. Quando isso acontece, dois rastreamentos com o mesmo tempo, incluindo uma interrupção, podem ser intercalados quando exibidos. Se a ID de atividade for propagada nas origens de rastreamento para a correlação de rastreamentos, você poderá consultar várias interrupções para a mesma ID de atividade (uma por origem de rastreamento). O rastreamento de interrupção será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
-|![Rastreamento de suspensão de atividade](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Rastreamento de suspensão de atividade: um rastreamento que marca o tempo em que uma atividade está em pausa. Nenhum rastreamento é emitido em uma atividade suspensa até que a atividade seja retomada. Uma atividade suspensa indica que nenhum processamento está ocorrendo nela no escopo da origem de rastreamento. Os rastreamentos de suspensão/retomada são úteis para a criação de perfil. O rastreamento de suspensão será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
-|![Rastreamento de retomada de atividade](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Rastreamento de retomada de atividade: um rastreamento que marca o tempo em que uma atividade é retomada após ter sido suspensa. Os rastreamentos podem ser emitidos novamente nessa atividade. Os rastreamentos de suspensão/retomada são úteis para a criação de perfil. O rastreamento de retomada será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
-|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferência: um rastreamento que é emitido quando o fluxo de controle lógico é transferido de uma atividade para outra. A atividade de origem da transferência poderá continuar a executar o trabalho em paralelo à atividade de destino da transferência. O rastreamento de transferência será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
-|![Transferir do](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferência de: um rastreamento que define uma transferência de outra atividade para a atividade atual.|  
-|![Transferir para o](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Transferência para: um rastreamento que define uma transferência de fluxo de controle lógico da atividade atual para outra atividade.|  
+|![Rastreamento de aviso](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Rastreamento de aviso: Um rastreamento que é emitido no nível de aviso|  
+|![Rastreamento de erro](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Rastreamento de erro: Um rastreamento que é emitido no nível de erro.|  
+|![Rastreamento de início da atividade:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Rastreamento de início da atividade: Um rastreamento que marca o início de uma atividade. Contém o nome da atividade. Como designer ou desenvolvedor de aplicativos, você deve definir um rastreamento de início de atividade por ID de atividade para cada processo ou thread.<br /><br /> Se a ID de atividade for propagada nas origens de rastreamento para a correlação de rastreamentos, você poderá consultar vários inícios para a mesma ID de atividade (um por origem de rastreamento). O rastreamento de início será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
+|![Rastreamento de interrupção de atividade](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Rastreamento de interrupção de atividade: Um rastreamento que marca o final de uma atividade. . Contém o nome da atividade. Como designer ou desenvolvedor de aplicativos, você deve definir um rastreamento de interrupção de atividade por ID de atividade para cada origem de rastreamento. Nenhum rastreamento de uma determinada origem aparece após a interrupção de atividade emitida por essa origem de rastreamento, exceto se a granularidade do tempo de rastreamento não for suficientemente pequena. Quando isso acontece, dois rastreamentos com o mesmo tempo, incluindo uma interrupção, podem ser intercalados quando exibidos. Se a ID de atividade for propagada nas origens de rastreamento para a correlação de rastreamentos, você poderá consultar várias interrupções para a mesma ID de atividade (uma por origem de rastreamento). O rastreamento de interrupção será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
+|![Rastreamento de suspensão de atividade](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Rastreamento de suspensão de atividade: Um rastreamento que marca o tempo em que uma atividade está em pausa. Nenhum rastreamento é emitido em uma atividade suspensa até que a atividade seja retomada. Uma atividade suspensa indica que nenhum processamento está ocorrendo nela no escopo da origem de rastreamento. Os rastreamentos de suspensão/retomada são úteis para a criação de perfil. O rastreamento de suspensão será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
+|![Rastreamento de retomada de atividade](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Rastreamento de retomada de atividade: Um rastreamento que marca o tempo que uma atividade é retomada após ter sido suspensa. Os rastreamentos podem ser emitidos novamente nessa atividade. Os rastreamentos de suspensão/retomada são úteis para a criação de perfil. O rastreamento de retomada será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferência: Um rastreamento que é emitido quando o fluxo de controle lógico é transferido de uma atividade para outra. A atividade de origem da transferência poderá continuar a executar o trabalho em paralelo à atividade de destino da transferência. O rastreamento de transferência será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
+|![Transferir do](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferência de: Um rastreamento que define uma transferência de outra atividade para a atividade atual.|  
+|![Transferir para o](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Transferir para: Um rastreamento que define uma transferência de fluxo de controle lógico da atividade atual para outra atividade.|  
   
 ### <a name="wcf-traces"></a>Rastreamentos do WCF  
   
 |Ícone|Descrição|  
 |----------|-----------------|  
-|![Log de rastreamento de mensagem](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Log de rastreamento de mensagem: um rastreamento que é emitido quando uma mensagem WCF é registrada pelo recurso de log de mensagens, quando o `System.ServiceModel.MessageLogging` origem de rastreamento está habilitada. Clicar nesse rastreamento exibe a mensagem. Há quatro pontos de log configuráveis para uma mensagem: ServiceLevelSendRequest, TransportSend, TransportReceive e ServiceLevelReceiveRequest, o que também pode ser especificado pelo atributo `messageSource` no rastreamento de log de mensagens.|  
-|![Rastreamento de mensagem recebida](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Rastreamento de mensagem recebida: um rastreamento que é emitido quando uma mensagem WCF é recebida, se o `System.ServiceModel` origem de rastreamento está habilitada no nível de informações ou detalhado. Esse rastreamento é essencial para exibir a seta de correlação da mensagem na atividade de **Graph** modo de exibição.|  
-|![Rastreamento de mensagem enviada](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Rastreamento de mensagem enviada: um rastreamento que é emitido quando uma mensagem WCF será enviada se o `System.ServiceModel` origem de rastreamento está habilitada no nível de informações ou detalhado. Esse rastreamento é essencial para exibir a seta de correlação da mensagem na atividade de **Graph** modo de exibição.|  
+|![Log de rastreamento de mensagem](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Rastreamento de Log de mensagem: Um rastreamento que é emitido quando uma mensagem WCF é registrada pelo recurso de log de mensagens, quando o `System.ServiceModel.MessageLogging` origem de rastreamento está habilitada. Clicar nesse rastreamento exibe a mensagem. Há quatro pontos de registro em log configurável para uma mensagem: ServiceLevelSendRequest, TransportSend, TransportReceive e ServiceLevelReceiveRequest, o que também pode ser especificado pelo `messageSource` atributo no rastreamento de log de mensagem.|  
+|![Rastreamento de mensagem recebida](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Rastreamento de mensagem recebida: Um rastreamento que é emitido quando uma mensagem WCF é recebida, se o `System.ServiceModel` origem de rastreamento está habilitada no nível de informações ou detalhado. Esse rastreamento é essencial para exibir a seta de correlação da mensagem na atividade de **Graph** modo de exibição.|  
+|![Rastreamento de mensagem enviada](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Rastreamento de mensagem enviada: Um rastreamento que é emitido quando uma mensagem WCF será enviada se o `System.ServiceModel` origem de rastreamento está habilitada no nível de informações ou detalhado. Esse rastreamento é essencial para exibir a seta de correlação da mensagem na atividade de **Graph** modo de exibição.|  
   
 ### <a name="activities"></a>Atividades  
   
 |Ícone|Descrição|  
 |----------|-----------------|  
-|![Atividade](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Atividade: indica que a atividade atual é uma atividade genérica.|  
-|![Atividade raiz](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Atividade raiz: indica a atividade raiz de um processo.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Atividade: Indica que a atividade atual é uma atividade genérico.|  
+|![Atividade raiz](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Atividade raiz: Indica a atividade de raiz de um processo.|  
   
 ### <a name="wcf-activities"></a>Atividades do WCF  
   
 |Ícone|Descrição|  
 |----------|-----------------|  
-|![Atividade de ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Atividade de ambiente: uma atividade que cria, abre ou fecha um cliente ou host do WCF. Os erros que tiverem ocorrido durante essas fases aparecerão nesta atividade.|  
-|![Atividade de escuta](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Atividade de escuta: uma atividade que registra em log os rastreamentos relacionados a um ouvinte. Dentro desta atividade, é possível exibir informações e solicitações de conexão do ouvinte.|  
-|![Receber atividade de Bytes](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Atividade de recepção de bytes: uma atividade que agrupa todos os rastreamentos relacionados à recepção de bytes de entrada em uma conexão entre dois pontos de extremidade. Esta atividade é essencial na correlação com as atividades de transporte que propagam sua ID de atividade, como http.sys. Erros de conexão, como anulações, aparecerão nesta atividade.|  
-|![Atividade de mensagem de processamento](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Processar a atividade de mensagem: uma atividade que agrupa rastreamentos relacionados à criação de uma mensagem WCF. Os erros devido a um envelope incorreto ou uma mensagem malformada aparecerão nesta atividade. Dentro desta atividade, podemos inspecionar cabeçalhos de mensagens para ver se uma ID de atividade foi propagada do chamador. Se isso acontecer, ao transferirmos para a atividade de processamento de ação (o próximo ícone), poderemos também atribuir a esta atividade a ID de atividade propagada para a correlação entre os rastreamentos do chamador e do receptor.|  
-|![Log de rastreamento de mensagem](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Processar a atividade de ação: uma atividade que agrupa todos os rastreamentos relacionados a uma solicitação do WCF entre dois pontos de extremidade. Se `propagateActivity` estiver definido como `true` em ambos os pontos de extremidade na configuração, todos os rastreamentos de ambos os pontos de extremidade serão mesclados em uma única atividade para correlação direta. Tal atividade conterá erros devido ao processamento de segurança ou transporte, estendendo-se ao limite do código do usuário e à volta (se houver uma resposta).|  
-|![Atividade de mensagem de processamento](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Atividade de execução de código de usuário: uma atividade que agrupa rastreamentos de código de usuário para processar uma solicitação.|  
+|![Atividade de ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Atividade de ambiente: Uma atividade que cria, abre ou fecha um cliente ou host do WCF. Os erros que tiverem ocorrido durante essas fases aparecerão nesta atividade.|  
+|![Atividade de escuta](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Atividade de escuta: Uma atividade que registra em log os rastreamentos relacionados a um ouvinte. Dentro desta atividade, é possível exibir informações e solicitações de conexão do ouvinte.|  
+|![Receber atividade de Bytes](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Receba atividade de Bytes: Uma atividade que agrupa todos os rastreamentos relacionados ao recebimento de bytes de entrada em uma conexão entre dois pontos de extremidade. Esta atividade é essencial na correlação com as atividades de transporte que propagam sua ID de atividade, como http.sys. Erros de conexão, como anulações, aparecerão nesta atividade.|  
+|![Atividade de mensagem de processamento](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Atividade do processo de mensagem: Uma atividade que agrupa rastreamentos relacionados à criação de uma mensagem WCF. Os erros devido a um envelope incorreto ou uma mensagem malformada aparecerão nesta atividade. Dentro desta atividade, podemos inspecionar cabeçalhos de mensagens para ver se uma ID de atividade foi propagada do chamador. Se isso acontecer, ao transferirmos para a atividade de processamento de ação (o próximo ícone), poderemos também atribuir a esta atividade a ID de atividade propagada para a correlação entre os rastreamentos do chamador e do receptor.|  
+|![Log de rastreamento de mensagem](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Atividade de ação do processo: Uma atividade que agrupa todos os rastreamentos relacionados a uma solicitação do WCF em dois pontos de extremidade. Se `propagateActivity` estiver definido como `true` em ambos os pontos de extremidade na configuração, todos os rastreamentos de ambos os pontos de extremidade serão mesclados em uma única atividade para correlação direta. Tal atividade conterá erros devido ao processamento de segurança ou transporte, estendendo-se ao limite do código do usuário e à volta (se houver uma resposta).|  
+|![Atividade de mensagem de processamento](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Execute a atividade de código do usuário: Uma atividade que agrupa rastreamentos de código do usuário para processar uma solicitação.|  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
  Se você não tiver permissão para gravar no registro, você obtém a mensagem de erro "O Visualizador de rastreamento do Microsoft Service não foi registrado no sistema" ao usar o "`svctraceviewer /register`" comando para registrar a ferramenta. Se isso ocorrer, você deverá fazer logon usando uma conta que tenha acesso de gravação no Registro.  
@@ -449,7 +449,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
  Se você abrir um log de rastreamento criado em um sistema operacional árabe, poderá observar que o filtro de tempo não funciona. Por exemplo, o ano 2005 corresponde ao ano 1427 no calendário árabe. Porém, o intervalo de tempo aceito pelo filtro da ferramenta Visualizador de Rastreamento de Serviço não oferece suporte a uma data anterior a 1752. Isso indica que você não pode selecionar uma data correta no filtro. Para resolver esse problema, você pode criar um filtro personalizado (**Exibir/filtros personalizados**) usando uma expressão XPath para incluir um intervalo de tempo específico.  
   
-## <a name="see-also"></a>Consulte também  
- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Rastreamento de atividades e propagação para correlação de rastreamento de ponta a ponta](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+## <a name="see-also"></a>Consulte também
+- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Rastreamento de atividades e propagação para correlação de rastreamento de ponta a ponta](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

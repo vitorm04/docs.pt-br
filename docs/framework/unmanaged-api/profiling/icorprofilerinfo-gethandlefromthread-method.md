@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9658ad8a1963d3747fb7c23dce84790a30b17db3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8f1eb2354536a436bd6ae41cf70bf11549982d5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612587"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>Método ICorProfilerInfo::GetHandleFromThread
-A ID de um thread é mapeado para um identificador de thread Win32.  
+A ID de um thread é mapeado para um identificador de thread do Win32.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +40,19 @@ HRESULT GetHandleFromThread(
  [in] A ID do thread a ser mapeada.  
   
  `phThread`  
- [out] Um ponteiro para um identificador de thread Win32.  
+ [out] Um ponteiro para um identificador de thread do Win32.  
   
 ## <a name="remarks"></a>Comentários  
- O criador de perfil deve chamar o Win32 `DuplicateHandle` função no identificador do antes de usá-lo.  
+ O criador de perfil deve chamar o Win32 `DuplicateHandle` função no identificador antes de usá-lo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

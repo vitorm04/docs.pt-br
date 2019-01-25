@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699591"
 ---
 # <a name="routing-scenarios"></a>Cenários de roteamento
 Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um desafio para a lógica de roteamento eficiente de design ao criar uma nova configuração do zero.  No entanto, há vários cenários comuns que seguem a maioria das configurações de serviço de roteamento. Enquanto esses cenários não podem ser aplicadas diretamente em sua configuração específica, Noções básicas sobre como o serviço de roteamento pode ser configurado para tratar desses cenários ajudam a entender o serviço de roteamento.  
@@ -34,17 +34,17 @@ Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um 
   
  Ao usar o serviço de roteamento, você pode expor um ponto de extremidade para receber mensagens de aplicativos cliente e, em seguida, rotear cada mensagem para a versão de serviço correto com base no conteúdo da mensagem. A implementação mais básica envolve a adição de um cabeçalho personalizado para a mensagem que indica a versão do que a mensagem deve ser processado pelo serviço. O serviço de roteamento pode usar o XPathMessageFilter para inspecionar cada mensagem para a presença do cabeçalho personalizado e rotear a mensagem para o ponto de extremidade de destino apropriado.  
   
- Para obter as etapas usadas para criar uma configuração de controle de versão de serviço, consulte [How To: controle de versão do serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
+ Para obter as etapas usadas para criar uma configuração de controle de versão de serviço, consulte [How To: Controle de versão de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Particionamento de dados de serviço  
  Ao criar um ambiente distribuído, geralmente é desejável para distribuir a carga de processamento entre vários computadores para fornecer alta disponibilidade, diminuir a carga de processamento em computadores individuais ou para fornecer recursos dedicados para um subconjunto específico de mensagens. Enquanto o serviço de roteamento não substitui uma solução de balanceamento de carga dedicada, sua capacidade de executar o roteamento com base em conteúdo pode ser usado para rotear mensagens de outra forma semelhante para destinos específicos. Por exemplo, você pode ter um requisito para processar as mensagens de um cliente específico separadamente de mensagens recebidas de outros clientes.  
   
- Para obter as etapas usadas para criar uma configuração de particionamento de dados de serviço, consulte [How To: particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
+ Para obter as etapas usadas para criar uma configuração de particionamento de dados de serviço, consulte [How To: Particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Roteamento dinâmico  
  Muitas vezes é desejável para modificar a configuração de roteamento para atender às crescentes necessidades do negócio, como a adição de uma rota para uma versão mais recente de um serviço, a alteração dos critérios de roteamentos ou alterando o ponto de extremidade de destino uma mensagem específica que o filtro faça o roteamento. O serviço de roteamento permite que você faça isso por meio de <xref:System.ServiceModel.Routing.RoutingExtension>, que permite que você forneça um novo RoutingConfiguration durante o tempo de execução. A nova configuração entrará em vigor imediatamente, mas só afeta qualquer sessão nova processada pelo serviço de roteamento.  
   
- Para obter as etapas usadas para implementar o roteamento dinâmico, consulte [How To: atualização dinâmica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
+ Para obter as etapas usadas para implementar o roteamento dinâmico, consulte [How To: Atualização dinâmica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Multicast  
  Quando o roteamento de mensagens, geralmente você roteamento cada mensagem ao ponto de extremidade de um destino específico.  No entanto, ocasionalmente, talvez precise rotear uma cópia da mensagem para vários pontos de extremidade de destino. Para executar o roteamento de difusão seletiva, as seguintes condições devem ser verdadeiras:  
@@ -63,16 +63,16 @@ Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um 
   
  O serviço de roteamento tenta corrigir esse cenário, fornecendo recursos de tratamento de erros robusto para mensagens que encontrar a rede ou falhas relacionadas à comunicação. Ao criar uma lista de pontos de extremidade de destino possíveis e associar essa lista com cada filtro de mensagem, você remove o ponto único de falha incorrido por ter apenas um destino possível. Em caso de falha, o serviço de roteamento tentará entregar a mensagem para o próximo ponto de extremidade na lista até que a mensagem foi entregue, ocorre uma falha de comunicação não, ou todos os pontos de extremidade foram esgotados.  
   
- Para obter as etapas usadas para configurar o tratamento de erros, consulte [How To: tratamento de erro](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
+ Para obter as etapas usadas para configurar o tratamento de erros, consulte [How To: Tratamento de erro](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>Nesta seção  
- [Como controlar a versão do serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Como: Controle de versão do serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Como particionar dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Como: Particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Como atualizar dinamicamente](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Como: Atualização dinâmica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Como fazer para tratar erros](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Como: Tratamento de erros](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao roteamento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução ao roteamento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

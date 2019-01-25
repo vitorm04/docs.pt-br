@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 729ff2a9cbeacaefdf0452a6c5868c229a8d05b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582520"
 ---
 # <a name="goto-statement"></a>Instrução GoTo
 Branch incondicionalmente para uma linha especificada em um procedimento.  
@@ -34,7 +34,7 @@ GoTo line
  Necessário. Qualquer rótulo de linha.  
   
 ## <a name="remarks"></a>Comentários  
- O `GoTo` instrução pode ramificar somente para linhas no procedimento no qual ele aparece. A linha deve ter uma linha do rótulo que `GoTo` pode consultar. Para obter mais informações, consulte [como: instruções de rótulo](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ O `GoTo` instrução pode ramificar somente para linhas no procedimento no qual ele aparece. A linha deve ter uma linha do rótulo que `GoTo` pode consultar. Para obter mais informações, confira [Como: Rotular instruções](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
 >  `GoTo` instruções podem tornar o código difícil de ler e manter. Sempre que possível, use uma estrutura de controle. Para obter mais informações, consulte [fluxo de controle](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
@@ -62,12 +62,12 @@ Ramificações válidas e inválidas em construções Try
   
  [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Instrução For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Instrução Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)  
- [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Instrução While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [Instrução With ... End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Instrução For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Instrução Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Instrução While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+- [Instrução With ... End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

@@ -7,28 +7,28 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: a5152ad0e5e5ac876783c2b191ee13e845593df8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce38089e91b25cf50e738d956881f3a44bfa3306
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588711"
 ---
 # <a name="object-variable-values-visual-basic"></a>Valores de variável de objeto (Visual Basic)
 Uma variável do [tipo de dados de objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md) pode se referir a qualquer tipo de dados. O valor que você armazene em um `Object` variável é mantida em outro lugar na memória, enquanto a variável contém um ponteiro para os dados.  
   
-## <a name="object-classifier-functions"></a>Funções de classificação de objeto  
+## <a name="object-classifier-functions"></a>Funções de classificação do objeto  
  Visual Basic fornece funções que retornam informações sobre o que um `Object` variável refere-se a, conforme mostrado na tabela a seguir.  
   
-|Função|Retorna VERDADEIRO se a variável de objeto se refere|  
+|Função|Retorna VERDADEIRO se a variável de objeto se refere a|  
 |--------------|---------------------------------------------------|  
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|Uma matriz de valores, em vez de um único valor|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Um [tipo de dados data](../../../../visual-basic/language-reference/data-types/date-data-type.md) valor ou uma cadeia de caracteres que pode ser interpretada como um valor de data e hora|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Um [tipo de dados Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) valor ou uma cadeia de caracteres que pode ser interpretada como um valor de data e hora|  
 |<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Um objeto do tipo <xref:System.DBNull>, que representa dados ausentes ou inexistentes|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Um objeto de exceção, que é derivado de <xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Um objeto de exceção, que deriva de <xref:System.Exception>|  
 |<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nada](../../../../visual-basic/language-reference/nothing.md), ou seja, nenhum objeto atualmente atribuído à variável|  
 |<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Um número ou uma cadeia de caracteres que pode ser interpretada como um número|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Um tipo de referência (como uma cadeia de caracteres, matriz, representante ou tipo de classe)|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Um tipo de referência (como uma cadeia de caracteres, matriz, delegado ou tipo de classe)|  
   
  Você pode usar essas funções para evitar enviar um valor inválido para uma operação ou um procedimento.  
   
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- O exemplo anterior grava as linhas a seguir para o **depurar** janela:  
+ O exemplo anterior grava as seguintes linhas para o **depurar** janela:  
   
  `num is Integer`  
   
@@ -61,17 +61,17 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- A variável de objeto `num` refere-se a dados do tipo `Integer`, e `frm` refere-se a um objeto da classe <xref:System.Windows.Forms.Form>.  
+ A variável de objeto `num` refere-se ao tipo de dados `Integer`, e `frm` refere-se a um objeto da classe <xref:System.Windows.Forms.Form>.  
   
 ## <a name="object-arrays"></a>Matrizes de objetos  
- Você pode declarar e usar uma matriz de `Object` variáveis. Isso é útil quando você precisa lidar com uma variedade de tipos de dados e classes de objeto. Todos os elementos em uma matriz devem ter os mesmos dados declarados de tipo. Declarando esse tipo de dados como `Object` permite armazenar objetos e instâncias juntamente com outros tipos de dados na matriz de classe.  
+ Você pode declarar e usar uma matriz de `Object` variáveis. Isso é útil quando você precisar manipular uma variedade de tipos de dados e classes de objeto. Todos os elementos em uma matriz devem ter os mesmos dados declarados de tipo. Declarando esse tipo de dados como `Object` permite armazenar objetos e instâncias juntamente com outros tipos de dados na matriz de classe.  
   
-## <a name="see-also"></a>Consulte também  
- [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Declaração de Variável do Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Atribuição de variável do objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
- [Como fazer referência à instância atual de um objeto](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
- [Como determinar a que tipo uma variável de objeto se refere](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
- [Como determinar se dois objetos estão relacionados](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [Como determinar se dois objetos são idênticos](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)  
- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a>Consulte também
+- [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Declaração de Variável do Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Atribuição de variável do objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [Como: Fazer referência à instância atual de um objeto](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Como: Determinar que tipo uma variável de objeto se refere a](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Como: Determinar se dois objetos estão relacionados](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Como: Determinar se dois objetos são idênticos](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 0ad8d071a91edaef184c4cc1fa28298f8ec3d71a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632342"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empacotando fontes com aplicativos
 Este tópico fornece uma visão geral de como empacotar fontes com seu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo.  
@@ -166,16 +166,16 @@ Este tópico fornece uma visão geral de como empacotar fontes com seu [!INCLUDE
   
 -   **Um URI absoluto usando o pacote: notação:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos não permitem que você crie uma <xref:System.Windows.Media.FontFamily> objeto programaticamente usando "pack:" como parte de absoluta [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referência a uma fonte. Por exemplo, `"pack://application:,,,/resources/#Pericles Light"` é uma referência de fonte inválida.  
   
--   **Incorporação de fonte automática:** no tempo de design, não há suporte para pesquisar o uso de um aplicativo de fontes e incorporar automaticamente as fontes nos recursos do aplicativo.  
+-   **Incorporação de fonte automática:** Durante o tempo de design, não há nenhum suporte para pesquisar o uso de um aplicativo de fontes e incorporar automaticamente as fontes nos recursos do aplicativo.  
   
 -   **Subconjuntos de fontes:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os aplicativos não dão suporte à criação de subconjuntos de fontes para documentos não fixos.  
   
 -   Em casos em que há uma referência incorreta, o aplicativo volta a usar uma fonte disponível.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Documents.Typography>  
- <xref:System.Windows.Media.FontFamily>  
- [Microsoft Typography: Links, notícias e contatos](https://www.microsoft.com/typography/links/)  
- [Especificação OpenType](https://www.microsoft.com/typography/otspec/)  
- [Recursos de fonte OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Pacote de fontes OpenType de exemplo](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Documents.Typography>
+- <xref:System.Windows.Media.FontFamily>
+- [Microsoft Typography: Links, notícias e contatos](https://www.microsoft.com/typography/links/)
+- [Especificação OpenType](https://www.microsoft.com/typography/otspec/)
+- [Recursos de fonte OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Pacote de fontes OpenType de exemplo](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

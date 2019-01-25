@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdb9e91f5e7dfe8d54fb50c757684117465944df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 759b2a9a419989cfec1020b1a6662bd6f8416739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501185"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>Método IMetaDataImport::EnumPermissionSets
 Enumera as permissões para os objetos em um escopo de metadados especificado.  
@@ -42,13 +42,13 @@ HRESULT EnumPermissionSets
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada do método.  
+ [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
   
  `tk`  
- [in] Um token de metadados que limita o escopo da pesquisa, ou NULL para pesquisar o escopo mais amplo possível.  
+ [in] Um token de metadados que limita o escopo da pesquisa, ou nulo para pesquisar o escopo mais amplo possível.  
   
  `dwActions`  
- [in] Sinaliza que representa o <xref:System.Security.Permissions.SecurityAction> valores para incluir na `rPermission`, ou zero para retornar todas as ações.  
+ [in] Sinaliza que representa o <xref:System.Security.Permissions.SecurityAction> valores a serem incluídos no `rPermission`, ou zero para retornar todas as ações.  
   
  `rPermission`  
  [out] A matriz usada para armazenar os tokens de permissão.  
@@ -57,24 +57,24 @@ HRESULT EnumPermissionSets
  [in] O tamanho máximo da `rPermission` matriz.  
   
  `pcTokens`  
- [out] O número de tokens de permissão retornados em `rPermission`.  
+ [out] O número de tokens de permissão retornado no `rPermission`.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` retornou com êxito.|  
-|`S_FALSE`|Não há nenhum tokens para enumerar. Nesse caso, `pcTokens` é zero.|  
+|`S_OK`|`EnumPermissionSets` retornado com êxito.|  
+|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -2,12 +2,12 @@
 title: Tipos definido pelo usuário CLR
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
-ms.openlocfilehash: 4ea415a348375c52e42ddf26ea09a74e7de5e355
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b946a87e49d8bf496fb215eb95f9db9cb453c13c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681021"
 ---
 # <a name="clr-user-defined-types"></a>Tipos definido pelo usuário CLR
 O Microsoft SQL Server oferece suporte a tipos definidos pelo usuário (UDTs) implementados com o CLR do Microsoft .NET Framework. O CLR é integrado no SQL Server e esse mecanismo permite estender o sistema de tipos do banco de dados. Os UDTs oferecem extensibilidade do usuário do sistema de tipo de dados do SQL Server, além da capacidade de definir tipos estruturados complexos.  
@@ -24,6 +24,6 @@ O Microsoft SQL Server oferece suporte a tipos definidos pelo usuário (UDTs) im
   
 1. [Tipos CLR definidos pelo usuário](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
-[ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)  
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

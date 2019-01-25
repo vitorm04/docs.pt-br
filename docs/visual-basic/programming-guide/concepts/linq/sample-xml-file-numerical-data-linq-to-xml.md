@@ -1,15 +1,15 @@
 ---
-title: 'Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)'
+title: 'Arquivo XML de exemplo: Dados numéricos (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
-ms.openlocfilehash: fb7bdb93aa63d430ba9371ed754616e39ea03487
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 23f5388aeb5cdd97d33423d2d150ccefbae25a52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495780"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Arquivo XML de exemplo: Dados numéricos (LINQ to XML)
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento.  
   
 ## <a name="dataxml"></a>Data.xml  
@@ -55,5 +55,5 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+- [Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

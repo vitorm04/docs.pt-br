@@ -8,42 +8,42 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 620839a0060469604d0affa6637c3cafac0f62c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a9aabdb4ddb508e9d53523192db27708c5b7713
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582136"
 ---
 # <a name="focus-overview"></a>Visão geral do foco
 Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], há dois conceitos principais relativos ao foco: foco do teclado e foco lógico.  O foco do teclado refere-se ao elemento que recebe entrada do teclado e foco lógico refere-se ao elemento em um escopo de foco que tem foco.  Esses conceitos são discutidos em detalhes nesta visão geral.  Noções básicas sobre a diferença entre esses conceitos é importante para a criação de aplicativos complexos que têm várias regiões no qual o foco pode ser obtido.  
   
  As classes principais que participam do gerenciamento de foco são o <xref:System.Windows.Input.Keyboard> classe, o <xref:System.Windows.Input.FocusManager> classe e o elemento base classes, como <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement>.  Para obter mais informações sobre os elementos base, consulte [Visão geral de elementos base](../../../../docs/framework/wpf/advanced/base-elements-overview.md).  
   
- O <xref:System.Windows.Input.Keyboard> classe trata principalmente o foco do teclado e o <xref:System.Windows.Input.FocusManager> está relacionada principalmente ao foco lógico, mas isso não é uma diferença absoluta.  Um elemento que tem o foco do teclado também terá foco lógico, mas não necessariamente um elemento que tenha foco lógico tem o foco do teclado.  Isso é aparente quando você usa o <xref:System.Windows.Input.Keyboard> classe para definir o elemento que tem o foco do teclado, para que ele também define o foco lógico no elemento.  
+ O <xref:System.Windows.Input.Keyboard> classe está relacionada principalmente ao foco do teclado e o <xref:System.Windows.Input.FocusManager> está relacionada principalmente ao foco lógico, mas isso não é uma diferença absoluta.  Um elemento que tem o foco do teclado também terá foco lógico, mas não necessariamente um elemento que tenha foco lógico tem o foco do teclado.  Isso é aparente quando você usa o <xref:System.Windows.Input.Keyboard> classe para definir o elemento que tem o foco do teclado, para que ele também define o foco lógico no elemento.  
   
 
   
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>Foco do teclado  
- O foco do teclado refere-se ao elemento que está recebendo atualmente entrada do teclado.  Em toda a área de trabalho, pode haver apenas um elemento que tem o foco do teclado.  Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o elemento que tem o foco do teclado terá <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> definido como `true`.  A propriedade estática <xref:System.Windows.Input.Keyboard.FocusedElement%2A> no <xref:System.Windows.Input.Keyboard> classe obtém o elemento que tem o foco do teclado no momento.  
+ O foco do teclado refere-se ao elemento que está recebendo atualmente entrada do teclado.  Em toda a área de trabalho, pode haver apenas um elemento que tem o foco do teclado.  Na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o elemento que tem o foco do teclado terá <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> definido como `true`.  A propriedade estática <xref:System.Windows.Input.Keyboard.FocusedElement%2A> sobre o <xref:System.Windows.Input.Keyboard> classe obtém o elemento que tem o foco do teclado no momento.  
   
- Para que um elemento Obtenha o foco do teclado, o <xref:System.Windows.UIElement.Focusable%2A> e <xref:System.Windows.UIElement.IsVisible%2A> propriedades nos elementos base devem ser definidas como `true`.  Algumas classes, como o <xref:System.Windows.Controls.Panel> classe base, ter <xref:System.Windows.UIElement.Focusable%2A> definida como `false` por padrão; portanto, você deve definir <xref:System.Windows.UIElement.Focusable%2A> para `true` se você deseja permitir que tal elemento Obtenha o foco do teclado.  
+ Para que um elemento Obtenha o foco do teclado, o <xref:System.Windows.UIElement.Focusable%2A> e o <xref:System.Windows.UIElement.IsVisible%2A> propriedades nos elementos base devem ser definidas como `true`.  Algumas classes, como o <xref:System.Windows.Controls.Panel> classe base, ter <xref:System.Windows.UIElement.Focusable%2A> definido como `false` por padrão; portanto, você deve definir <xref:System.Windows.UIElement.Focusable%2A> para `true` se você quiser permitir que tal elemento Obtenha o foco do teclado.  
   
- O foco do teclado pode ser obtido por meio de interação do usuário com o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], como tabulações para um elemento ou clique do mouse sobre determinados elementos.  O foco do teclado também pode ser obtido programaticamente usando o <xref:System.Windows.Input.Keyboard.Focus%2A> método o <xref:System.Windows.Input.Keyboard> classe.  O <xref:System.Windows.Input.Keyboard.Focus%2A> método tenta dar o foco do teclado de elemento especificado.  O elemento retornado é o elemento que tem o foco do teclado, que pode ser um elemento diferente do solicitado se o velho ou o novo objeto de foco bloquear a solicitação.  
+ O foco do teclado pode ser obtido por meio de interação do usuário com o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], como tabulações para um elemento ou clique do mouse sobre determinados elementos.  O foco do teclado também pode ser obtido programaticamente usando o <xref:System.Windows.Input.Keyboard.Focus%2A> método no <xref:System.Windows.Input.Keyboard> classe.  O <xref:System.Windows.Input.Keyboard.Focus%2A> método tenta dar o foco de teclado do elemento especificado.  O elemento retornado é o elemento que tem o foco do teclado, que pode ser um elemento diferente do solicitado se o velho ou o novo objeto de foco bloquear a solicitação.  
   
  O exemplo a seguir usa o <xref:System.Windows.Input.Keyboard.Focus%2A> método para definir o foco do teclado em um <xref:System.Windows.Controls.Button>.  
   
  [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
  [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]  
   
- O <xref:System.Windows.UIElement.IsKeyboardFocused%2A> propriedade nas classes de elemento base obtém um valor que indica se o elemento tem o foco do teclado.  O <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> propriedade nas classes de elemento base obtém um valor que indica se o elemento ou qualquer um de seus elementos filhos visuais tem o foco do teclado.  
+ O <xref:System.Windows.UIElement.IsKeyboardFocused%2A> propriedade nas classes de elemento base obtém um valor que indica se o elemento tem foco do teclado.  O <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> propriedade nas classes de elemento base obtém um valor que indica se o elemento ou qualquer um de seus elementos filhos visuais tem o foco do teclado.  
   
- Ao definir o foco inicial na inicialização do aplicativo, o elemento a receber o foco deve ser na árvore visual da janela inicial carregada pelo aplicativo e o elemento deve ter <xref:System.Windows.UIElement.Focusable%2A> e <xref:System.Windows.UIElement.IsVisible%2A> definido como `true`.  O local recomendado para definir o foco inicial está no <xref:System.Windows.FrameworkElement.Loaded> manipulador de eventos.  Um <xref:System.Windows.Threading.Dispatcher> retorno de chamada também pode ser usado ao chamar <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ou <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  
+ Ao definir o foco inicial na inicialização do aplicativo, o elemento a receber o foco deve estar na árvore visual da janela inicial carregada pelo aplicativo e o elemento deve ter <xref:System.Windows.UIElement.Focusable%2A> e <xref:System.Windows.UIElement.IsVisible%2A> definido como `true`.  O local recomendado para definir o foco inicial está no <xref:System.Windows.FrameworkElement.Loaded> manipulador de eventos.  Um <xref:System.Windows.Threading.Dispatcher> retorno de chamada também pode ser usado ao chamar <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ou <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  
   
 <a name="Logical_Focus"></a>   
 ## <a name="logical-focus"></a>Foco lógico  
- Foco lógico refere-se para o <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> em um escopo de foco.  Um escopo de foco é um elemento que controla o <xref:System.Windows.Input.FocusManager.FocusedElement%2A> dentro de seu escopo.  Quando o foco de teclado deixar um escopo de foco, o elemento com foco perderá o foco do teclado mas manterá o foco lógico.  Quando o foco de teclado retornar para o escopo de foco, o elemento com foco obterá o foco do teclado.  Isso permite que o foco do teclado seja alterado entre vários escopos de foco, mas assegura que o elemento focalizado no escopo de foco recupere o foco do teclado quando o foco retornar para o escopo de foco.  
+ Foco lógico refere-se ao <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> em um escopo de foco.  Um escopo de foco é um elemento que controla o <xref:System.Windows.Input.FocusManager.FocusedElement%2A> dentro de seu escopo.  Quando o foco de teclado deixar um escopo de foco, o elemento com foco perderá o foco do teclado mas manterá o foco lógico.  Quando o foco de teclado retornar para o escopo de foco, o elemento com foco obterá o foco do teclado.  Isso permite que o foco do teclado seja alterado entre vários escopos de foco, mas assegura que o elemento focalizado no escopo de foco recupere o foco do teclado quando o foco retornar para o escopo de foco.  
   
  Pode haver vários elementos que têm foco lógico em um aplicativo, mas pode haver apenas um elemento com foco lógico em um escopo de foco específico.  
   
@@ -60,9 +60,9 @@ Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
  <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> Retorna o escopo de foco para o elemento especificado.  
   
- Classes em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que são escopos foco por padrão são <xref:System.Windows.Window>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.ToolBar>, e <xref:System.Windows.Controls.ContextMenu>.  
+ As classes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que são escopos de foco por padrão são <xref:System.Windows.Window>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.ToolBar>, e <xref:System.Windows.Controls.ContextMenu>.  
   
- <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A> Obtém o elemento focalizado atualmente para o escopo de foco especificado.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> Define o elemento focalizado no escopo de foco especificado.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> normalmente é usado para definir o elemento focalizado inicial.  
+ <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A> Obtém o elemento focalizado atualmente para o escopo de foco especificado.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> Define o elemento focalizado no escopo de foco especificado.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> normalmente é usado para definir o elemento inicialmente focalizado.  
   
  O exemplo a seguir define o elemento focalizado em um escopo de foco e obtém o elemento focalizado de um escopo de foco.  
   
@@ -71,11 +71,11 @@ Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
 <a name="Keyboard_Navigation"></a>   
 ## <a name="keyboard-navigation"></a>Navegação por teclado  
- O <xref:System.Windows.Input.KeyboardNavigation> classe é responsável pela implementação da navegação padrão de foco do teclado quando uma das teclas de navegação é pressionada.  As teclas de navegação são: TAB, SHIFT + TAB, CTRL + TAB, CTRL + SHIFT + TAB, setas para cima, para baixo, esquerda e direita.  
+ O <xref:System.Windows.Input.KeyboardNavigation> classe é responsável pela implementação da navegação padrão de foco do teclado quando uma das teclas de navegação é pressionada.  As teclas de navegação são: Teclas TAB, SHIFT + TAB, CTRL + TAB, CTRL + SHIFT + TAB, seta para cima, seta para baixo, seta para a esquerda e seta para a direita.  
   
- O comportamento de navegação de um recipiente de navegação pode ser alterado definindo o anexo <xref:System.Windows.Input.KeyboardNavigation> propriedades <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A>, <xref:System.Windows.Input.KeyboardNavigation.ControlTabNavigation%2A>, e <xref:System.Windows.Input.KeyboardNavigation.DirectionalNavigation%2A>.  Essas propriedades são do tipo <xref:System.Windows.Input.KeyboardNavigationMode> e os valores possíveis são <xref:System.Windows.Input.KeyboardNavigationMode.Continue>, <xref:System.Windows.Input.KeyboardNavigationMode.Local>, <xref:System.Windows.Input.KeyboardNavigationMode.Contained>, <xref:System.Windows.Input.KeyboardNavigationMode.Cycle>, <xref:System.Windows.Input.KeyboardNavigationMode.Once>, e <xref:System.Windows.Input.KeyboardNavigationMode.None>.  O valor padrão é <xref:System.Windows.Input.KeyboardNavigationMode.Continue>, que significa que o elemento não é um recipiente de navegação.  
+ O comportamento de navegação de um contêiner de navegação pode ser alterado definindo o anexo <xref:System.Windows.Input.KeyboardNavigation> propriedades <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A>, <xref:System.Windows.Input.KeyboardNavigation.ControlTabNavigation%2A>, e <xref:System.Windows.Input.KeyboardNavigation.DirectionalNavigation%2A>.  Essas propriedades são do tipo <xref:System.Windows.Input.KeyboardNavigationMode> e os valores possíveis são <xref:System.Windows.Input.KeyboardNavigationMode.Continue>, <xref:System.Windows.Input.KeyboardNavigationMode.Local>, <xref:System.Windows.Input.KeyboardNavigationMode.Contained>, <xref:System.Windows.Input.KeyboardNavigationMode.Cycle>, <xref:System.Windows.Input.KeyboardNavigationMode.Once>, e <xref:System.Windows.Input.KeyboardNavigationMode.None>.  O valor padrão é <xref:System.Windows.Input.KeyboardNavigationMode.Continue>, que significa que o elemento não é um contêiner de navegação.  
   
- O exemplo a seguir cria um <xref:System.Windows.Controls.Menu> com um número de <xref:System.Windows.Controls.MenuItem> objetos.  O <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A> propriedade anexada é definida como <xref:System.Windows.Input.KeyboardNavigationMode.Cycle> sobre o <xref:System.Windows.Controls.Menu>.  Quando o foco é alterado usando a tecla tab dentro de <xref:System.Windows.Controls.Menu>, o foco moverá de cada elemento e quando é atingido o último elemento o foco retornará para o primeiro elemento.  
+ O exemplo a seguir cria uma <xref:System.Windows.Controls.Menu> com um número de <xref:System.Windows.Controls.MenuItem> objetos.  O <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A> propriedade anexada é definida como <xref:System.Windows.Input.KeyboardNavigationMode.Cycle> sobre o <xref:System.Windows.Controls.Menu>.  Quando o foco é alterado usando a tecla tab dentro de <xref:System.Windows.Controls.Menu>, o foco se moverá de cada elemento e quando é atingido o último elemento o foco retornará para o primeiro elemento.  
   
  [!code-xaml[MarkupSnippets#MarkupKeyboardNavigationTabNavigationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupkeyboardnavigationtabnavigationxaml)]  
   
@@ -84,20 +84,20 @@ Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>Foco de navegação por meio de programação  
- Adicionais [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para trabalhar com foco são <xref:System.Windows.UIElement.MoveFocus%2A> e <xref:System.Windows.UIElement.PredictFocus%2A>.  
+ Adicional [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para trabalhar com foco são <xref:System.Windows.UIElement.MoveFocus%2A> e <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
- <xref:System.Windows.FrameworkElement.MoveFocus%2A> Altera o foco para o próximo elemento no aplicativo.  Um <xref:System.Windows.Input.TraversalRequest> é usado para especificar a direção.   O <xref:System.Windows.Input.FocusNavigationDirection> passado para <xref:System.Windows.UIElement.MoveFocus%2A> Especifica o direções diferentes foco pode ser movido, como <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> e <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
+ <xref:System.Windows.FrameworkElement.MoveFocus%2A> Altera o foco para o próximo elemento no aplicativo.  Um <xref:System.Windows.Input.TraversalRequest> é usado para especificar a direção.   O <xref:System.Windows.Input.FocusNavigationDirection> passado para <xref:System.Windows.UIElement.MoveFocus%2A> Especifica o direções diferentes foco pode ser movido, tais como <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> e <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   
- O exemplo a seguir usa <xref:System.Windows.FrameworkElement.MoveFocus%2A> para alterar o elemento focalizado atualmente.  
+ O exemplo a seguir usa <xref:System.Windows.FrameworkElement.MoveFocus%2A> para alterar o elemento focalizado.  
   
  [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
  [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
- <xref:System.Windows.FrameworkElement.PredictFocus%2A> Retorna o objeto que deve receber o foco, se o foco fosse alterado.  Atualmente, apenas <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, e <xref:System.Windows.Input.FocusNavigationDirection.Right> são suportados pelo <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
+ <xref:System.Windows.FrameworkElement.PredictFocus%2A> Retorna o objeto que deve receber o foco se o foco devesse ser alterado.  Atualmente, apenas <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, e <xref:System.Windows.Input.FocusNavigationDirection.Right> são suportados pelo <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>Eventos de foco  
- Os eventos relacionados ao foco do teclado são <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> e <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.  Os eventos são definidos como eventos anexados no <xref:System.Windows.Input.Keyboard> de classe, mas são mais prontamente acessíveis como eventos roteados equivalentes nas classes de elemento base.  Para obter mais informações sobre os eventos, consulte a [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Os eventos relacionados ao foco do teclado estão <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> e <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.  Os eventos são definidos como eventos anexados no <xref:System.Windows.Input.Keyboard> de classe, mas são mais prontamente acessíveis como eventos roteados equivalentes nas classes de elemento base.  Para obter mais informações sobre os eventos, consulte a [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
  <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> é gerado quando o elemento obtém o foco do teclado.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> é gerado quando o elemento perde o foco do teclado.  Se o <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> evento ou o <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> evento é manipulado e <xref:System.Windows.RoutedEventArgs.Handled%2A> é definido como `true`, em seguida, o foco não será alterado.  
   
@@ -105,21 +105,21 @@ Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
  [!code-xaml[keyboardsample#KeyboardSampleXAMLHandlerHookup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml#keyboardsamplexamlhandlerhookup)]  
   
- Quando o <xref:System.Windows.Controls.TextBox> obtém o foco do teclado, o <xref:System.Windows.Controls.Control.Background%2A> propriedade o <xref:System.Windows.Controls.TextBox> é alterado para <xref:System.Windows.Media.Brushes.LightBlue%2A>.  
+ Quando o <xref:System.Windows.Controls.TextBox> obtém o foco do teclado, o <xref:System.Windows.Controls.Control.Background%2A> propriedade da <xref:System.Windows.Controls.TextBox> é alterado para <xref:System.Windows.Media.Brushes.LightBlue%2A>.  
   
  [!code-csharp[keyboardsample#KeyboardSampleGotFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplegotfocus)]
  [!code-vb[keyboardsample#KeyboardSampleGotFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplegotfocus)]  
   
- Quando o <xref:System.Windows.Controls.TextBox> perde o foco do teclado, o <xref:System.Windows.Controls.Control.Background%2A> propriedade o <xref:System.Windows.Controls.TextBox> é alterada para branco.  
+ Quando o <xref:System.Windows.Controls.TextBox> perde o foco do teclado, o <xref:System.Windows.Controls.Control.Background%2A> propriedade do <xref:System.Windows.Controls.TextBox> é alterada de volta para branco.  
   
  [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
  [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
- Os eventos relacionados a foco lógico são <xref:System.Windows.UIElement.GotFocus> e <xref:System.Windows.UIElement.LostFocus>.  Esses eventos são definidos no <xref:System.Windows.Input.FocusManager> eventos anexados, mas o <xref:System.Windows.Input.FocusManager> não expõe invólucros do evento CLR.  <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> expõem esses eventos de modo mais conveniente.  
+ Os eventos relacionados ao foco lógico são <xref:System.Windows.UIElement.GotFocus> e <xref:System.Windows.UIElement.LostFocus>.  Esses eventos são definidos na <xref:System.Windows.Input.FocusManager> como eventos anexados, mas o <xref:System.Windows.Input.FocusManager> não expõe wrappers do evento CLR.  <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> expõem esses eventos de modo mais conveniente.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Input.FocusManager>  
- <xref:System.Windows.UIElement>  
- <xref:System.Windows.ContentElement>  
- [Visão geral da entrada](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Visão geral de elementos base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Input.FocusManager>
+- <xref:System.Windows.UIElement>
+- <xref:System.Windows.ContentElement>
+- [Visão geral da entrada](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Visão geral de elementos base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)

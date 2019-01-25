@@ -2,12 +2,12 @@
 title: Configuração do cliente
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e178f8b08fbadbb5549fa10631d3a57f71a7e0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503216"
 ---
 # <a name="client-configuration"></a>Configuração do cliente
 Você pode usar a configuração de cliente do Windows Communication Foundation (WCF) para especificar o endereço, associação, comportamento e contrato, as propriedades de "ABC" do ponto de extremidade de cliente, quais clientes usam para se conectar aos pontos de extremidade de serviço. O [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tem um [ \<ponto de extremidade >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) cujos atributos são usados para configurar o ponto de extremidade ABCs do elemento. Esses atributos são discutidos na seção "Configurando pontos de extremidade" deste tópico.  
@@ -84,7 +84,7 @@ Você pode usar a configuração de cliente do Windows Communication Foundation 
   
  Cada ponto de extremidade deve ter um endereço associado a ele para localizar e identificar o ponto de extremidade. O `address` atributo pode ser usado para especificar a URL que fornece a localização do ponto de extremidade. Mas o endereço de um ponto de extremidade de serviço também pode ser especificado no código, criando um identificador de recurso uniforme (URI) e é adicionado para o <xref:System.ServiceModel.ServiceHost> usando um do <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> métodos. Para obter mais informações, consulte [endereços](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Como indica a introdução, o [ \<cabeçalhos >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) e [ \<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementos fazem parte do <xref:System.ServiceModel.EndpointAddress> e também são discutidas no [ Endereços](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) tópico.  
   
- O `binding` atributo indica o tipo de ponto de extremidade de associação espera usar ao se conectar a um serviço. O tipo deve ter uma seção de configuração registrado se ela deve ser referenciado. No exemplo anterior, isso é o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) seção, que indica que o ponto de extremidade usa um <xref:System.ServiceModel.WSHttpBinding>. Mas pode haver mais de uma associação de um determinado tipo em que o ponto de extremidade pode usar. Cada um deles tem sua própria [ \<associação >](../../../../docs/framework/misc/binding.md) elemento dentro do elemento type (binding). O `bindingconfiguration` atributo é usado para distinguir as associações do mesmo tipo. Seu valor é correspondido com o `name` atributo o [ \<associação >](../../../../docs/framework/misc/binding.md) elemento. Para obter mais informações sobre como configurar um cliente de associação usando a configuração, consulte [como: especificar uma associação de cliente na configuração](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
+ O `binding` atributo indica o tipo de ponto de extremidade de associação espera usar ao se conectar a um serviço. O tipo deve ter uma seção de configuração registrado se ela deve ser referenciado. No exemplo anterior, isso é o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) seção, que indica que o ponto de extremidade usa um <xref:System.ServiceModel.WSHttpBinding>. Mas pode haver mais de uma associação de um determinado tipo em que o ponto de extremidade pode usar. Cada um deles tem sua própria [ \<associação >](../../../../docs/framework/misc/binding.md) elemento dentro do elemento type (binding). O `bindingconfiguration` atributo é usado para distinguir as associações do mesmo tipo. Seu valor é correspondido com o `name` atributo o [ \<associação >](../../../../docs/framework/misc/binding.md) elemento. Para obter mais informações sobre como configurar um cliente de associação usando a configuração, consulte [como: Especificar uma associação de cliente na configuração](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
   
  O `behaviorConfiguration` atributo é usado para especificar quais [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) dos [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) o ponto de extremidade deve usar. Seu valor é correspondido com o `name` atributo o [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento. Para obter um exemplo de como usar a configuração para especificar comportamentos do cliente, consulte [Configurando comportamentos do cliente](../../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
@@ -93,6 +93,6 @@ Você pode usar a configuração de cliente do Windows Communication Foundation 
 ### <a name="configuring-metadata"></a>Configuração de metadados  
  O [ \<metadados >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento é usado para especificar as configurações usadas para registrar metadados importar extensões. Para obter mais informações sobre como estender o sistema de metadados, consulte [estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Configurando comportamentos do cliente](../../../../docs/framework/wcf/configuring-client-behaviors.md)
+## <a name="see-also"></a>Consulte também
+- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Configurando comportamentos do cliente](../../../../docs/framework/wcf/configuring-client-behaviors.md)

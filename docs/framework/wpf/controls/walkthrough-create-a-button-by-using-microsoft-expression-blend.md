@@ -1,19 +1,19 @@
 ---
-title: 'Instruções passo a passo: criar um botão usando o Microsoft Expression Blend'
+title: 'Passo a passo: Criar um botão usando o Microsoft Expression Blend'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: ce0a0623c2317fd95286e96c7bb5521a7400d4f9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bf6da0600335061e15560aabf668671a24d8911d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502241"
 ---
-# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Instruções passo a passo: criar um botão usando o Microsoft Expression Blend
+# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Passo a passo: Criar um botão usando o Microsoft Expression Blend
 Estas instruções passo a passo demonstram o processo de criação de um botão personalizado [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando o Microsoft Expression Blend.  
   
 > [!IMPORTANT]
@@ -42,23 +42,23 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
 #### <a name="to-convert-a-rectangle-to-a-button"></a>Para converter um retângulo em um botão  
   
-1.  **Defina a propriedade Background da janela como preto:** selecione a janela, clique em de **guia propriedades**e defina o <xref:System.Windows.Controls.Control.Background%2A> propriedade para `Black`.  
+1.  **Defina a propriedade Background da janela como preto:** Selecione a janela, clique no **guia propriedades**e defina as <xref:System.Windows.Controls.Control.Background%2A> propriedade `Black`.  
   
      ![Como definir a tela de fundo de um botão como preto](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")  
   
-2.  **Desenhe um retângulo aproximadamente do tamanho de um botão na janela:** selecione a ferramenta de retângulo no painel de ferramentas do lado esquerdo e arraste o retângulo para a janela.  
+2.  **Desenhe um retângulo aproximadamente do tamanho de um botão na janela:** Selecione a ferramenta de retângulo no painel à esquerda de ferramenta e arraste o retângulo para a janela.  
   
      ![Como desenhar um retângulo](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")  
   
-3.  **Arredonde os cantos do retângulo:** arraste os pontos de controle do retângulo ou definir diretamente os <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> propriedades. Defina os valores das <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> a 20.  
+3.  **Harmonizar os cantos do retângulo:** Arraste os pontos de controle do retângulo ou defina diretamente a <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> propriedades. Defina os valores das <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> a 20.  
   
      ![Como arredondar os cantos de um retângulo](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")  
   
-4.  **Altere o retângulo para um botão:** selecione o retângulo. No menu **Ferramentas**, clique em **Fazer botão**.  
+4.  **Altere o retângulo em um botão:** Selecione o retângulo. No menu **Ferramentas**, clique em **Fazer botão**.  
   
      ![Como transformar uma forma em um botão](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")  
   
-5.  **Especifique o escopo do estilo/modelo:** será exibida uma caixa de diálogo semelhante a esta.  
+5.  **Especifique o escopo do estilo/modelo:** Aparece uma caixa de diálogo semelhante à seguinte.  
   
      ![A caixa de diálogo “Criar recurso de estilo”](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
@@ -69,7 +69,7 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
 #### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a>Para editar o modelo de botão a fim de alterar a aparência do botão  
   
-1.  **Acesse o modo de exibição Editar modelo:** para personalizar ainda mais a aparência do botão, precisamos editar o modelo de botão. Este modelo foi criado ao converter o retângulo em um botão. Para editar o modelo de botão, clique com o botão direito do mouse no botão e selecione **Editar partes do controle (modelo)** e, em seguida, **Editar modelo**.  
+1.  **Entrar no modo de exibição Editar modelo:** Para personalizar a aparência do botão, é necessário editar o modelo de botão. Este modelo foi criado ao converter o retângulo em um botão. Para editar o modelo de botão, clique com o botão direito do mouse no botão e selecione **Editar partes do controle (modelo)** e, em seguida, **Editar modelo**.  
   
      ![Como editar um modelo](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")  
   
@@ -77,11 +77,11 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
      ![Componentes da apresentação de um retângulo](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")  
   
-2.  **Alterar os nomes dos componentes do modelo:** com o botão direito o retângulo no inventário do modelo, altere o <xref:System.Windows.Shapes.Rectangle> nome de "[Rectangle]" para "outerRectangle" e mude "[ContentPresenter]" para "myContentPresenter".  
+2.  **Altere os nomes dos componentes do modelo:** Clique com botão direito o retângulo no inventário do modelo, altere o <xref:System.Windows.Shapes.Rectangle> nome de "[Rectangle]" para "outerRectangle" e mude "[ContentPresenter]" para "myContentPresenter".  
   
      ![Como renomear um componente de um modelo](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")  
   
-3.  **Altere o retângulo para que fique vazio no interior (como uma rosca):** selecionar **outerRectangle** e defina <xref:System.Windows.Shapes.Shape.Fill%2A> como "Transparent" e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> para 5.  
+3.  **Altere o retângulo para que fique vazio no interior (como uma rosca):** Selecione **outerRectangle** e defina <xref:System.Windows.Shapes.Shape.Fill%2A> como "Transparent" e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> para 5.  
   
      ![Como esvaziar um retângulo](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")  
   
@@ -89,51 +89,51 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
      ![Como definir o uso de cor do modelo](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")  
   
-4.  **Crie um retângulo interno:** agora, crie outro retângulo (chame-o de “innerRectangle”) e posicione-o simetricamente dentro do **outerRectangle** . Para esse tipo de trabalho, você provavelmente desejará aplicar zoom para ampliar o botão na área de edição.  
+4.  **Crie um retângulo interno:** Agora, crie outro retângulo (chame-o "innerRectangle") e posicione-o simetricamente dentro de **outerRectangle** . Para esse tipo de trabalho, você provavelmente desejará aplicar zoom para ampliar o botão na área de edição.  
   
     > [!NOTE]
     >  Seu retângulo pode ficar diferente da figura (por exemplo, pode ter cantos arredondados).  
   
      ![Como criar um retângulo dentro de outro retângulo](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")  
   
-5.  **Mova o ContentPresenter para a parte superior:** neste ponto, é possível que o texto “Botão” não esteja mais visível. Isso ocorre porque o **innerRectangle** fica sobre o **myContentPresenter**. Para corrigir isso, arraste **myContentPresenter** para baixo de **innerRectangle**. Reposicione os retângulos e o **myContentPresenter** para terem uma aparência semelhante à aparência abaixo.  
+5.  **Mova o ContentPresenter para a parte superior:** Neste ponto, é possível que o texto "Botão" não será visível mais. Isso ocorre porque o **innerRectangle** fica sobre o **myContentPresenter**. Para corrigir isso, arraste **myContentPresenter** para baixo de **innerRectangle**. Reposicione os retângulos e o **myContentPresenter** para terem uma aparência semelhante à aparência abaixo.  
   
     > [!NOTE]
     >  Como alternativa, também é possível posicionar o **myContentPresenter** na parte superior clicando com o botão direito do mouse nele e pressionando **Encaminhar**.  
   
      ![Como mover um botão para a parte superior de outro botão](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")  
   
-6.  **Alterar a aparência do innerRectangle:** defina a <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> valores como 20. Além disso, defina as <xref:System.Windows.Shapes.Shape.Fill%2A> ao plano de fundo do modelo usando a expressão personalizada "{TemplateBinding Background}") e defina <xref:System.Windows.Shapes.Shape.Stroke%2A> para "transparent". Observe que as configurações para o <xref:System.Windows.Shapes.Shape.Fill%2A> e <xref:System.Windows.Shapes.Shape.Stroke%2A> dos **innerRectangle** são o oposto do **outerRectangle**.  
+6.  **Altere a aparência do innerRectangle:** Defina as <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> valores como 20. Além disso, defina as <xref:System.Windows.Shapes.Shape.Fill%2A> ao plano de fundo do modelo usando a expressão personalizada "{TemplateBinding Background}") e defina <xref:System.Windows.Shapes.Shape.Stroke%2A> para "transparent". Observe que as configurações para o <xref:System.Windows.Shapes.Shape.Fill%2A> e <xref:System.Windows.Shapes.Shape.Stroke%2A> dos **innerRectangle** são o oposto do **outerRectangle**.  
   
      ![Como alterar a aparência de um retângulo](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")  
   
-7.  **Adicione uma camada de vidro na parte superior:** a peça final da personalização da aparência do botão é adicionar uma camada de vidro na parte superior. Essa camada do vidro consiste em um terceiro retângulo. Como o vidro cobrirá o botão inteiro, o retângulo de vidro terá dimensões semelhantes às do **outerRectangle**. Portanto, para criar o retângulo, basta fazer uma cópia do **outerRectangle**. Destaque p **outerRectangle** e use CTRL+C e CTRL+V para fazer uma cópia. Nomeie esse novo retângulo como “glassCube”.  
+7.  **Adicione uma camada de vidro na parte superior:** A peça final da personalização da aparência do botão é adicionar uma camada de vidro na parte superior. Essa camada do vidro consiste em um terceiro retângulo. Como o vidro cobrirá o botão inteiro, o retângulo de vidro terá dimensões semelhantes às do **outerRectangle**. Portanto, para criar o retângulo, basta fazer uma cópia do **outerRectangle**. Destaque p **outerRectangle** e use CTRL+C e CTRL+V para fazer uma cópia. Nomeie esse novo retângulo como “glassCube”.  
   
-8.  **Reposicione o glassCube, se necessário:** caso o **glassCube** ainda não esteja posicionado para cobrir o botão inteiro, arraste-o até a posição.  
+8.  **Reposicione o glassCube, se necessário:** Se **glassCube** é ainda não estiver posicionado de forma que ele abranja a todo o botão, arraste-o para a posição.  
   
-9. **Dê ao glassCube uma forma um pouco diferente da do outerRectangle:** mude as propriedades do **glassCube**. Começar alterando a <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> propriedades para 10 e o <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> para 2.  
+9. **Dê ao glassCube uma forma ligeiramente diferente outerRectangle:** Alterar as propriedades de **glassCube**. Começar alterando a <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> e <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> propriedades para 10 e o <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> para 2.  
   
      ![As configurações de aparência para o glassCube](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")  
   
-10. **Tornar glassCube a aparência de vidro:** definir o <xref:System.Windows.Shapes.Shape.Fill%2A> uma aparência vítrea ao usando um gradiente linear que seja 75% opaco e alterna entre as cores branco e transparente 6 aproximadamente uniformemente espaçados a intervalos. As marcas de gradiente devem ser definidas como:  
+10. **Verifique o glassCube aparência de vidro:** Defina o <xref:System.Windows.Shapes.Shape.Fill%2A> uma aparência vítrea ao usando um gradiente linear que seja 75% opaco e alterna entre as cores branco e transparente 6 aproximadamente uniformemente espaçados a intervalos. As marcas de gradiente devem ser definidas como:  
   
-    -   Marca de gradiente 1: branco com valor alfa de 75%  
+    -   Parada de gradiente 1: Branco com valor alfa de 75%  
   
-    -   Marca de gradiente 2: transparente  
+    -   Parada de gradiente 2: Transparente  
   
-    -   Marca de gradiente 3: branco com valor alfa de 75%  
+    -   Parada de gradiente 3: Branco com valor alfa de 75%  
   
-    -   Marca de gradiente 4: transparente  
+    -   Parada de gradiente 4: Transparente  
   
-    -   Marca de gradiente 5: branco com valor alfa de 75%  
+    -   Parada de gradiente 5: Branco com valor alfa de 75%  
   
-    -   Marca de gradiente 6: transparente  
+    -   Parada de gradiente 6: Transparente  
   
      É criada uma aparência de vidro “ondulada”.  
   
      ![Um retângulo com aparência de vidro](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")  
   
-11. **Oculte a camada de vidro:** depois de ver qual é a aparência da camada vítrea, acesse o **painel Aparência** do **painel Propriedades** e defina a opacidade como 0% para ocultá-la. Nas próximas seções, vamos usar gatilhos de propriedade e eventos para mostrar e manipular a camada de vidro.  
+11. **Oculte a camada do vidro:** Agora que você veja o que a aparência da camada vítrea, vá para o **painel aparência** da **painel de propriedades** e definir a opacidade como 0% para ocultá-la. Nas próximas seções, vamos usar gatilhos de propriedade e eventos para mostrar e manipular a camada de vidro.  
   
      ![Como ocultar o retângulo de vidro](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")  
   
@@ -142,13 +142,13 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
 #### <a name="to-set-property-triggers"></a>Para definir gatilhos de propriedade  
   
-1.  **Crie um novo gatilho de propriedade:** com **glassCube** selecionado, clique em **+ Propriedade**, no painel **Gatilhos** (veja a figura após a próxima etapa). É criado um gatilho de propriedade com um gatilho de propriedade padrão.  
+1.  **Crie um novo gatilho de propriedade:** Com o **glassCube** selecionado, clique em **+ propriedade** no **gatilhos** painel (consulte a figura a seguir a próxima etapa). É criado um gatilho de propriedade com um gatilho de propriedade padrão.  
   
-2.  **Transforme IsMouseOver na propriedade usada pelo gatilho:** alterar a propriedade a ser <xref:System.Windows.UIElement.IsMouseOver%2A>. Isso faz com que o gatilho de propriedade Ativar quando a <xref:System.Windows.UIElement.IsMouseOver%2A> é de propriedade `true` (quando o usuário aponta para o botão com o mouse).  
+2.  **Transforme IsMouseOver na propriedade usada pelo gatilho:** Altere a propriedade para <xref:System.Windows.UIElement.IsMouseOver%2A>. Isso faz com que o gatilho de propriedade Ativar quando a <xref:System.Windows.UIElement.IsMouseOver%2A> é de propriedade `true` (quando o usuário aponta para o botão com o mouse).  
   
      ![Como definir um gatilho em uma propriedade](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")  
   
-3.  **IsMouseOver dispara uma opacidade de 100% para glassCube:** observe que o **registro do gatilho está ativado** (veja a figura anterior). Isso significa que as alterações feitas aos valores de propriedade de **glassCube** durante a gravação em se tornará uma ação que ocorre quando <xref:System.Windows.UIElement.IsMouseOver%2A> é `true`. Durante a gravação, alterar o <xref:System.Windows.UIElement.Opacity%2A> dos **glassCube** para 100%.  
+3.  **IsMouseOver dispara uma opacidade de 100% para glassCube:** Observe que o **gravação de gatilho está** (consulte a figura anterior). Isso significa que as alterações feitas aos valores de propriedade de **glassCube** durante a gravação em se tornará uma ação que ocorre quando <xref:System.Windows.UIElement.IsMouseOver%2A> é `true`. Durante a gravação, alterar o <xref:System.Windows.UIElement.Opacity%2A> dos **glassCube** para 100%.  
   
      ![Como definir a opacidade de um botão](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")  
   
@@ -158,11 +158,11 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
      Pressione F5 para executar o aplicativo e mova o ponteiro do mouse sobre o botão e fora dele. A camada de vidro deve aparecer quando você passa o mouse sobre o botão e desaparecer quando o ponteiro sair.  
   
-4.  **IsMouseOver gatilhos traçar a alteração do valor:** vamos associar outras ações com o <xref:System.Windows.UIElement.IsMouseOver%2A> gatilho. Enquanto o registro continua, mude a seleção de **glassCube** para **outerRectangle**. Em seguida, defina as <xref:System.Windows.Shapes.Shape.Stroke%2A> dos **outerRectangle** para a expressão personalizada de "{DynamicResource {X:Static Highlightbrushkey}}". Isso define o <xref:System.Windows.Shapes.Shape.Stroke%2A> para típica usada pelos botões de cor de realce. Pressione F5 para ver o efeito ao passar o mouse sobre o botão.  
+4.  **IsMouseOver gatilhos traçar a alteração do valor:** Vamos associar outras ações com o <xref:System.Windows.UIElement.IsMouseOver%2A> gatilho. Enquanto o registro continua, mude a seleção de **glassCube** para **outerRectangle**. Em seguida, defina as <xref:System.Windows.Shapes.Shape.Stroke%2A> dos **outerRectangle** para a expressão personalizada de "{DynamicResource {X:Static Highlightbrushkey}}". Isso define o <xref:System.Windows.Shapes.Shape.Stroke%2A> para típica usada pelos botões de cor de realce. Pressione F5 para ver o efeito ao passar o mouse sobre o botão.  
   
      ![Como definir o traço para a cor de destaque](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")  
   
-5.  **IsMouseOver dispara texto desfocado:** vamos associar mais de uma ação para o <xref:System.Windows.UIElement.IsMouseOver%2A> disparador de propriedade. Faça o conteúdo do botão parecer um pouco desfocado quando o vidro aparecer sobre ele. Para fazer isso, podemos aplicar um desfoque <xref:System.Windows.Media.Effects.BitmapEffect> para o <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).  
+5.  **IsMouseOver dispara texto desfocado:** Vamos associar mais de uma ação para o <xref:System.Windows.UIElement.IsMouseOver%2A> disparador de propriedade. Faça o conteúdo do botão parecer um pouco desfocado quando o vidro aparecer sobre ele. Para fazer isso, podemos aplicar um desfoque <xref:System.Windows.Media.Effects.BitmapEffect> para o <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).  
   
      ![Como desfocar o conteúdo de um botão](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")  
   
@@ -171,7 +171,7 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
      Neste ponto, usamos um gatilho de propriedade com várias ações associadas para criar o comportamento de destaque para quando o ponteiro do mouse entrar e sair da área do botão. Outro comportamento comum para um botão é destacar quando ele tem o foco (como após ser clicado). Podemos acrescentar tal comportamento adicionando outro gatilho de propriedade para o <xref:System.Windows.UIElement.IsFocused%2A> propriedade.  
   
-6.  **Criar um gatilho de propriedade para IsFocused:** usando o mesmo procedimento para <xref:System.Windows.UIElement.IsMouseOver%2A> (consulte a primeira etapa desta seção), crie outro gatilho de propriedade para o <xref:System.Windows.UIElement.IsFocused%2A> propriedade. Enquanto o **registro de gatilho estiver ativado**, adicione as ações a seguir ao gatilho:  
+6.  **Crie gatilho de propriedade para IsFocused:** Usando o mesmo procedimento para <xref:System.Windows.UIElement.IsMouseOver%2A> (consulte a primeira etapa desta seção), crie outro gatilho de propriedade para o <xref:System.Windows.UIElement.IsFocused%2A> propriedade. Enquanto o **registro de gatilho estiver ativado**, adicione as ações a seguir ao gatilho:  
   
     -   **glassCube** obtém um <xref:System.Windows.UIElement.Opacity%2A> de 100%.  
   
@@ -181,11 +181,11 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
 #### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>Para usar gatilhos de evento e animações para adicionar interatividade  
   
-1.  **Criar um gatilho de evento MouseEnter:** adicionar um novo gatilho de evento e selecione <xref:System.Windows.UIElement.MouseEnter> como o evento para usar no gatilho.  
+1.  **Crie um gatilho de evento MouseEnter:** Adicione um novo gatilho de evento e selecione <xref:System.Windows.UIElement.MouseEnter> como o evento para usar no gatilho.  
   
      ![Como criar um gatilho de evento MouseEnter](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")  
   
-2.  **Criar uma linha do tempo de animação:** em seguida, associe uma linha do tempo de animação para o <xref:System.Windows.UIElement.MouseEnter> eventos.  
+2.  **Crie uma linha do tempo de animação:** Em seguida, associe uma linha do tempo de animação para o <xref:System.Windows.UIElement.MouseEnter> eventos.  
   
      ![Como adicionar uma linha do tempo da animação a um evento](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")  
   
@@ -196,17 +196,17 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
      ![O painel da linha do tempo](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")  
   
-3.  **Crie um quadro chave:** para criar uma animação, selecione o objeto que deseja animar, crie dois ou mais quadros chave na linha do tempo e, para esses quadros chave, defina os valores da propriedade entre os quais quer a interpolação da animação. A figura a seguir é uma orientação para a criação de um quadro chave.  
+3.  **Crie um quadro-chave:** Para criar uma animação, selecione o objeto que você deseja animar, crie duas ou mais quadros chave na linha do tempo e para esses quadros chave, defina os valores de propriedade que você deseja que a animação para interpolar entre. A figura a seguir é uma orientação para a criação de um quadro chave.  
   
      ![Como criar um quadro chave](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")  
   
-4.  **Reduza glassCube neste quadro chave:** com o segundo quadro chave selecionado, reduza o tamanho do **glassCube** para 90% do seu tamanho total usando **Transformar tamanho**.  
+4.  **Reduza glassCube neste quadro chave:** Com o segundo quadro chave selecionado, reduzir o tamanho do **glassCube** a 90% de seu tamanho total usando o **transformar tamanho**.  
   
      ![Como reduzir o tamanho de um botão](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")  
   
      Pressione F5 para executar o aplicativo. Mova o ponteiro do mouse sobre o botão. Observe que a camada do vidro é reduzida sobre o botão.  
   
-5.  **Crie outro gatilho de evento e associe uma animação diferente a ele:** vamos adicionar mais uma animação. Use um procedimento semelhante ao que você usou para criar a animação anterior do gatilho de evento:  
+5.  **Crie outro gatilho de evento e associe uma animação diferente ele:** Vamos adicionar mais uma animação. Use um procedimento semelhante ao que você usou para criar a animação anterior do gatilho de evento:  
   
     1.  Criar um novo gatilho de evento usando o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
@@ -247,9 +247,9 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
 -   Diversos: crie gradientes, adicione BitmapEffects, use transformações e defina as propriedades básicas dos objetos.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um botão usando XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Visão geral dos efeitos de bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Criar um botão usando XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)
+- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Visão geral dos efeitos de bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

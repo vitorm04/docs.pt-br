@@ -2,12 +2,12 @@
 title: Conceitos de segurança utilizados no WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 9fe27f3f63f8c7fad1a4bbb0975a5255d5a16654
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541788"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Conceitos de segurança utilizados no WCF
 Segurança do Windows Communication Foundation (WCF) é criada nos conceitos já está em uso e implantada em várias infraestruturas de segurança.  
@@ -15,7 +15,7 @@ Segurança do Windows Communication Foundation (WCF) é criada nos conceitos já
  O WCF dá suporte a alguns dessas infraestruturas, como o protocolo (SSL) sobre HTTP (HTTPS). No entanto, o WCF vai além do suporte a infra-estruturas de segurança existente com a implementação de padrões de segurança interoperável mais recentes (como WS-Security) sobre as mensagens codificadas em SOAP. Se você estiver usando mecanismos existentes ou novos padrões interoperáveis, os conceitos de segurança por trás de ambos são os mesmos. Noções básicas sobre os conceitos por trás de infraestruturas existentes e os padrões mais recentes é central para implementar o melhor modelo de segurança para um aplicativo.  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>Introdução à segurança para os serviços Web WCF  
- O grupo Microsoft Patterns and Practices escreveu um whitepaper detalhado sobre diretrizes de segurança do WCF que está disponível para download aqui: [guia de segurança do WCF](https://go.microsoft.com/fwlink/?LinkId=210210). Este white paper descreve os conceitos fundamentais de segurança como eles se relacionam com serviços da web, principais conceitos de segurança do WCF, cenários de aplicativos de intranet e cenários de aplicativos de internet.  
+ O grupo Microsoft Patterns and Practices escreveu um whitepaper detalhado sobre diretrizes de segurança do WCF que está disponível para download aqui: [Guia de segurança do WCF](https://go.microsoft.com/fwlink/?LinkId=210210). Este white paper descreve os conceitos fundamentais de segurança como eles se relacionam com serviços da web, principais conceitos de segurança do WCF, cenários de aplicativos de intranet e cenários de aplicativos de internet.  
   
 ## <a name="industry-wide-security-specifications"></a>Especificações de segurança de todo o setor  
   
@@ -29,7 +29,7 @@ Segurança do Windows Communication Foundation (WCF) é criada nos conceitos já
  Certificados x. 509 são uma forma de credencial primário usada em aplicativos de segurança. Para obter mais informações sobre o x. 509 Consulte certificados [certificados de chave pública X.509](https://go.microsoft.com/fwlink/?LinkId=210213). Certificados x. 509 são armazenados em um repositório de certificados. Um computador que executa o Windows tem vários tipos de armazenamentos de certificados, cada um com uma finalidade diferente. Para obter mais informações sobre os diferentes armazenamentos, consulte [repositórios de certificados](https://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>Especificações de segurança de serviços Web  
- As associações definidas pelo sistema dar suporte a várias especificações de segurança de serviços da web muito usada. Para obter uma lista completa de associações fornecidas pelo sistema e as especificações de serviços da web dão suporte a consulte: [Web Services dá suporte para protocolos System-Provided associações de interoperabilidade](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ As associações definidas pelo sistema dar suporte a várias especificações de segurança de serviços da web muito usada. Para obter uma lista completa de associações fornecidas pelo sistema e as especificações de serviços da web que eles dão suporte a consulte: [Protocolos de serviços Web com suporte em associações de interoperabilidade fornecidas pelo sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Mecanismos de controle de acesso  
  WCF fornece várias maneiras para controlar o acesso a um serviço ou a operação. Entre elas estão  
@@ -46,6 +46,6 @@ Segurança do Windows Communication Foundation (WCF) é criada nos conceitos já
   
  Para obter mais informações sobre esses tópicos, consulte [mecanismos de controle de acesso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

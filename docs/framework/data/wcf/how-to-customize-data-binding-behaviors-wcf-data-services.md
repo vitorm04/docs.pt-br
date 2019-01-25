@@ -1,5 +1,5 @@
 ---
-title: 'Como: personalizar dados de associação comportamentos (WCF Data Services)'
+title: 'Como: Personalizar dados de associação de comportamentos (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: 6ebc50a4a4ed2c91db0dcbcb53d3965757a94f9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 159326886c69a308891dbd4318aa1ac81eab9448
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621741"
 ---
-# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Como: personalizar dados de associação comportamentos (WCF Data Services)
-Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode fornecer lógica personalizada que é chamada pelo <xref:System.Data.Services.Client.DataServiceCollection%601> quando um objeto é adicionado ou removido da coleção de associação ou quando for detectada uma alteração de propriedade. Essa lógica personalizada é fornecida como métodos, referenciados como <xref:System.Func%602> delegados, que retornam um valor de `false` quando o comportamento padrão deve ser executado ainda quando o método personalizado é concluído e `true` quando subsequentes de processamento do evento deve ser interrompido.  
+# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Como: Personalizar dados de associação de comportamentos (WCF Data Services)
+Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode fornecer lógica personalizada que é chamada pelo <xref:System.Data.Services.Client.DataServiceCollection%601> quando um objeto é adicionado ou removido da coleção de associação ou quando for detectada uma alteração de propriedade. Essa lógica personalizada é fornecida como métodos, referenciados como <xref:System.Func%602> delegados, que retornam um valor de `false` quando o comportamento padrão deve ainda ser executado quando o método personalizado é concluído e `true` quando subsequentes de processamento da evento deve ser interrompido.  
   
- Os exemplos neste tópico fornecem métodos personalizados para ambos os `entityChanged` e `entityCollectionChanged` parâmetros de <xref:System.Data.Services.Client.DataServiceCollection%601>. Os exemplos neste tópico usam o serviço de dados de exemplo Northwind e dados de cliente gerado automaticamente classes de serviço. Esse serviço e as classes de dados do cliente são criadas quando você concluir o [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Os exemplos neste tópico fornecem métodos personalizados para ambos os `entityChanged` e `entityCollectionChanged` parâmetros de <xref:System.Data.Services.Client.DataServiceCollection%601>. Os exemplos neste tópico usam o serviço de dados de exemplo Northwind e dados de cliente gerado automaticamente classes de serviço. Esse serviço e as classes de dados do cliente são criadas quando você concluir o [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Exemplo  
- A seguinte página de code-behind para o arquivo XAML cria um <xref:System.Data.Services.Client.DataServiceCollection%601> com métodos personalizados que são chamados quando ocorrem alterações nos dados que são associados a coleção de associação. Quando o <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged> evento ocorrer, o método fornecido impede que um item que foi removido da coleção de associação seja excluído do serviço de dados. Quando o <xref:System.Collections.ObjectModel.ObservableCollection%601.PropertyChanged> evento ocorrer, o `ShipDate` valor é validado para garantir que as alterações não são feitas para pedidos que já tenham sido fornecidos.  
+ A seguinte página code-behind para o arquivo XAML cria um <xref:System.Data.Services.Client.DataServiceCollection%601> com métodos personalizados que são chamados quando ocorrem alterações nos dados que estão associados à coleção de associação. Quando o <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged> evento ocorrer, o método fornecido impede que um item que foi removido da coleção de associação que está sendo excluído do serviço de dados. Quando o <xref:System.Collections.ObjectModel.ObservableCollection%601.PropertyChanged> evento ocorrer, o `ShipDate` valor é validado para garantir que não são feitas alterações em pedidos que já foram enviados.  
   
  [!code-csharp[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#wpfdatabindingcustom)]
  [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#wpfdatabindingcustom)]
@@ -32,5 +32,5 @@ Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode forn
   
  [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
-## <a name="see-also"></a>Consulte também  
- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+## <a name="see-also"></a>Consulte também
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

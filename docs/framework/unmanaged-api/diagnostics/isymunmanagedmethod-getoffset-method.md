@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6485688c2964d477f0c5f68a3da714f084fa308f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515295"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>Método ISymUnmanagedMethod::GetOffset
-Retorna o deslocamento dentro desse método que corresponde à posição especificada dentro de um documento.  
+Retorna o deslocamento dentro desse método que corresponde a uma determinada posição dentro de um documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ HRESULT GetOffset(
  [in] Um ponteiro para o documento para o qual o deslocamento é solicitado.  
   
  `line`  
- [in] A linha do documento para o qual o deslocamento é solicitado.  
+ [in] A linha de documento para o qual o deslocamento é solicitado.  
   
  `column`  
  [in] A coluna de documento para o qual o deslocamento é solicitado.  
@@ -56,5 +56,5 @@ HRESULT GetOffset(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

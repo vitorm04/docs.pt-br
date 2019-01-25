@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b53347e9f446d6340bfc5dab2d8f898ebbbf93f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527101"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Método IMetaDataImport::EnumCustomAttributes
-Enumera os tokens de definição de atributo personalizado associados ao tipo especificado ou membro.  
+Enumera os tokens de definição de atributo personalizado associados com o tipo especificado ou um membro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,13 +42,13 @@ HRESULT EnumCustomAttributes (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador retornado.  
+ [no, out] Um ponteiro para o enumerador retornado.  
   
  `tk`  
- [in] Um token para o escopo de enumeração ou zero para todos os atributos personalizados.  
+ [in] Um token para o escopo da enumeração, ou zero para todos os atributos personalizados.  
   
  `tkType`  
- [in] Um token para o construtor do tipo de atributos a serem enumerados, ou `null` para todos os tipos.  
+ [in] Um token para o construtor do tipo dos atributos a serem enumerados, ou `null` para todos os tipos.  
   
  `rCustomAttributes`  
  [out] Uma matriz de tokens de atributo personalizado.  
@@ -63,18 +63,18 @@ HRESULT EnumCustomAttributes (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` retornou com êxito.|  
+|`S_OK`|`EnumCustomAttributes` retornado com êxito.|  
 |`S_FALSE`|Não há nenhum atributo personalizado para enumerar. Nesse caso, `pcCustomAttributes` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
