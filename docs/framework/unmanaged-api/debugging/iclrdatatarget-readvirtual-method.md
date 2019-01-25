@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c9080a588b96c5b89c280a0fb407952bd580f26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5484f8bd5515d3a4a3cd08110cc5d48c4356a9f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590140"
 ---
-# <a name="iclrdatatargetreadvirtual-method"></a><span data-ttu-id="81360-102">Método ICLRDataTarget::ReadVirtual</span><span class="sxs-lookup"><span data-stu-id="81360-102">ICLRDataTarget::ReadVirtual Method</span></span>
-<span data-ttu-id="81360-103">Lê dados do endereço de memória virtual especificado no buffer especificado.</span><span class="sxs-lookup"><span data-stu-id="81360-103">Reads data from the specified virtual memory address into the specified buffer.</span></span>  
+# <a name="iclrdatatargetreadvirtual-method"></a><span data-ttu-id="f0172-102">Método ICLRDataTarget::ReadVirtual</span><span class="sxs-lookup"><span data-stu-id="f0172-102">ICLRDataTarget::ReadVirtual Method</span></span>
+<span data-ttu-id="f0172-103">Lê dados do endereço da memória virtual especificado no buffer especificado.</span><span class="sxs-lookup"><span data-stu-id="f0172-103">Reads data from the specified virtual memory address into the specified buffer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81360-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="81360-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0172-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f0172-104">Syntax</span></span>  
   
 ```  
 HRESULT ReadVirtual (  
@@ -39,27 +39,27 @@ HRESULT ReadVirtual (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="81360-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="81360-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f0172-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f0172-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="81360-106">[in] Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.</span><span class="sxs-lookup"><span data-stu-id="81360-106">[in] A CLRDATA_ADDRESS that stores the virtual memory address.</span></span>  
+ <span data-ttu-id="f0172-106">[in] Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.</span><span class="sxs-lookup"><span data-stu-id="f0172-106">[in] A CLRDATA_ADDRESS that stores the virtual memory address.</span></span>  
   
  `buffer`  
- <span data-ttu-id="81360-107">[out] Um ponteiro para um buffer que recebe os dados.</span><span class="sxs-lookup"><span data-stu-id="81360-107">[out] A pointer to a buffer that receives the data.</span></span>  
+ <span data-ttu-id="f0172-107">[out] Um ponteiro para um buffer que recebe os dados.</span><span class="sxs-lookup"><span data-stu-id="f0172-107">[out] A pointer to a buffer that receives the data.</span></span>  
   
  `bytesRequested`  
- <span data-ttu-id="81360-108">[in] O comprimento do buffer.</span><span class="sxs-lookup"><span data-stu-id="81360-108">[in] The length of the buffer.</span></span>  
+ <span data-ttu-id="f0172-108">[in] O comprimento do buffer.</span><span class="sxs-lookup"><span data-stu-id="f0172-108">[in] The length of the buffer.</span></span>  
   
  `bytesRead`  
- <span data-ttu-id="81360-109">[out] Um ponteiro para o número de bytes retornados.</span><span class="sxs-lookup"><span data-stu-id="81360-109">[out] A pointer to the number of bytes returned.</span></span>  
+ <span data-ttu-id="f0172-109">[out] Um ponteiro para o número de bytes retornados.</span><span class="sxs-lookup"><span data-stu-id="f0172-109">[out] A pointer to the number of bytes returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81360-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="81360-110">Requirements</span></span>  
- <span data-ttu-id="81360-111">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81360-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0172-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f0172-110">Requirements</span></span>  
+ <span data-ttu-id="f0172-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f0172-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81360-112">**Cabeçalho:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="81360-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="f0172-112">**Cabeçalho:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="f0172-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="81360-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="81360-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f0172-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f0172-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="81360-114">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81360-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f0172-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0172-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81360-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="81360-115">See Also</span></span>  
- [<span data-ttu-id="81360-116">Interface ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="81360-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f0172-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f0172-115">See also</span></span>
+- [<span data-ttu-id="f0172-116">Interface ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="f0172-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
