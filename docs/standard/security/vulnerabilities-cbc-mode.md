@@ -4,12 +4,12 @@ description: Saiba como detectar e atenuar as vulnerabilidades de medição de t
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123638"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066163"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de medição de tempo com a descriptografia simétrica de modo CBC usando preenchimento
 
@@ -29,7 +29,7 @@ Codificações de bloco de outra propriedade, chamada de modo, que determina a r
 
 Um invasor pode usar um oracle de preenchimento, em combinação com como CBC dados são estruturados, para enviar mensagens ligeiramente alteradas para o código que expõe o oracle e continuar enviando dados até que o oracle informa os dados estão corretos. Essa resposta, o invasor pode descriptografar a mensagem byte por byte.
 
-As redes de computador moderno são de tal alta qualidade que um invasor pode detectar muito pequeno (menos de 0,1 ms) tempo de diferenças em execução em sistemas remotos. Aplicativos que são supondo uma descriptografia bem-sucedida só pode acontecer quando os dados não foram adulterados ao podem ser vulneráveis a ataques de ferramentas projetadas para observar as diferenças na descriptografia bem-sucedidas e malsucedida. Embora essa diferença de tempo pode ser mais significativa em alguns idiomas ou bibliotecas que outros, ele agora acredita-se que se trata de uma ameaça prática para todas as linguagens e bibliotecas quando a resposta do aplicativo a falha é levada em conta.
+As redes de computador moderno são de tal alta qualidade que um invasor pode detectar muito pequeno (menos de 0,1 ms) tempo de diferenças em execução em sistemas remotos. Aplicativos que são supondo uma descriptografia bem-sucedida só pode acontecer quando os dados não foram adulterados ao podem ser vulneráveis a ataques de ferramentas projetadas para observar as diferenças na descriptografia bem-sucedidas e malsucedida. Embora essa diferença de tempo pode ser mais significativa em alguns idiomas ou bibliotecas que outros, ele agora acredita-se que se trata de uma ameaça prática para todas as linguagens e bibliotecas quando a resposta do aplicativo a falha é levada em conta.
 
 Esse ataque se baseia na capacidade de alterar os dados criptografados e testar o resultado com o oracle. A única maneira de reduzir totalmente o ataque é detectar alterações aos dados criptografados e se recusar a executar quaisquer ações nele. O modo padrão para fazer isso é criar uma assinatura para os dados e validar a assinatura antes de todas as operações são executadas. A assinatura deve ser verificável, ela não pode ser criada pelo invasor, caso contrário, eles seriam alterar os dados criptografados e calcular uma nova assinatura com base nos dados alterados. Um tipo comum de assinatura apropriado é conhecido como um código de autenticação de mensagem de hash com chave (HMAC). Um HMAC é diferente de uma soma de verificação, ele usa uma chave secreta, conhecido somente a pessoa que está produzindo o HMAC e a pessoa validá-lo. Sem posse da chave, você não pode produzir um HMAC correto. Quando você receber seus dados, seria pegar os dados criptografados, você e o compartilhamento de remetente, compare o HMAC elas enviou em relação a um computado de computação independentemente o HMAC usando a chave secreta. Essa comparação deve ser um tempo constante, caso contrário, você adicionou outro oracle detectável, permitindo que um tipo diferente de ataque.
 
@@ -100,7 +100,7 @@ Aplicativos que não é possível alterar seu formato de mensagens, mas executar
 
 ## <a name="finding-vulnerable-code---native-applications"></a>Localizando o código vulnerável - aplicativos nativos
 
-Para programas criados em relação a criptografia do Windows: biblioteca de próxima geração (CNG):
+Para programas criados em relação a criptografia do Windows: Biblioteca de próxima geração (CNG):
 
 - É a chamada de descriptografia [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), especificando o `BCRYPT_BLOCK_PADDING` sinalizador.
 - O identificador de chave foi inicializado chamando [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) com [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) definido como `BCRYPT_CHAIN_MODE_CBC`.
@@ -109,7 +109,7 @@ Para programas criados em relação a criptografia do Windows: biblioteca de pr�
 Para programas criados em relação a API criptográfica do Windows mais antigos:
 
 - É a chamada de descriptografia [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) com `Final=TRUE`.
-- O identificador de chave foi inicializado chamando [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) com [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) definido como `CRYPT_MODE_CBC`.
+- O identificador de chave foi inicializado chamando [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) com [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) definido como `CRYPT_MODE_CBC`.
   - Uma vez que `CRYPT_MODE_CBC` é o padrão, afetado código pode não ter atribuído qualquer valor para `KP_MODE`.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>Código vulnerável localizando - aplicativos gerenciados

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691470"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065998"
 ---
 # <a name="securing-method-access"></a>Protegendo o acesso dos métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Substituições com virtual internal ou Overloads Overridable Friend  
   
 > [!NOTE]
->  Esta seção avisa sobre um problema de segurança ao declarar um método como ambos `virtual` e `internal` (`Overloads``Overridable``Friend` no Visual Basic). Esse aviso se aplica somente às versões do .NET Framework 1.0 e 1.1, não se aplica a versões posteriores.  
+>  Esta seção avisa sobre um problema de segurança ao declarar um método como ambos `virtual` e `internal` (`Overloads` `Overridable` `Friend` no Visual Basic). Esse aviso se aplica somente às versões do .NET Framework 1.0 e 1.1, não se aplica a versões posteriores.  
   
  Nas versões do .NET Framework 1.0 e 1.1, você deve estar atento uma nuance de acessibilidade de sistema de tipo durante a confirmação de que seu código não está disponível para outros assemblies. Um método que é declarado **virtual** e **interno** (**Overloads Overridable Friend** no Visual Basic) pode substituir a entrada de vtable da classe pai e pode ser usada somente em dentro do mesmo assembly porque ele é interno. No entanto, a acessibilidade para a substituição é determinada pelo **virtual** palavra-chave e isso pode ser substituído de outro assembly, contanto que o código tenha acesso à própria classe. Se a possibilidade de uma substituição apresenta um problema, use a segurança declarativa para corrigi-lo ou remover as **virtual** palavra-chave se ela não seja estritamente necessária.  
   

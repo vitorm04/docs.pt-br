@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 974abb123c4c11f6bb512431cea5cc6460a5c55a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e106e17c0f0e5702927c4599fb143fb3554ce3
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654731"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065941"
 ---
 # <a name="iclrdatatarget3-interface"></a>Interface ICLRDataTarget3
 Uma subclasse de [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) que fornece acesso a informações de exceção.  
@@ -40,7 +40,7 @@ Uma subclasse de [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debu
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

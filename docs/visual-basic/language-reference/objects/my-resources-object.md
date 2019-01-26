@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571815"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065863"
 ---
 # <a name="myresources-object"></a>Objeto My.Resources
 Fornece classes e propriedades para acessar os recursos do aplicativo.  
@@ -26,9 +26,9 @@ Fornece classes e propriedades para acessar os recursos do aplicativo.
  Você pode acessar arquivos de recurso específico de cultura do aplicativo do `My.Resources` objeto. Por padrão, o `My.Resources` objeto pesquisa os recursos do arquivo de recurso que corresponda à cultura no <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> propriedade. No entanto, você pode substituir esse comportamento e especificar uma determinada cultura a ser usado para os recursos. Para saber mais, veja [Recursos em aplicativos da área de trabalho](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Propriedades  
- As propriedades do `My.Resources` objeto fornecer acesso somente leitura aos recursos de seu aplicativo. Para adicionar ou remover recursos, use o **Designer de projeto**. Você pode acessar os recursos adicionados por meio de **Designer de projeto** usando `My.Resources.``resourceName`.  
+ As propriedades do `My.Resources` objeto fornecer acesso somente leitura aos recursos de seu aplicativo. Para adicionar ou remover recursos, use o **Designer de projeto**. Você pode acessar os recursos adicionados por meio de **Designer de projeto** usando `My.Resources.` *resourceName*.  
   
- Você também pode adicionar ou remover arquivos de recurso selecionando o seu projeto no **Gerenciador de soluções** e clicando em **Adicionar Novo Item** ou **Adicionar Item existente** do  **Projeto** menu. Você pode acessar recursos adicionados dessa maneira, usando `My.Resources.``resourceFileName`.`resourceName`.  
+ Você também pode adicionar ou remover arquivos de recurso selecionando o seu projeto no **Gerenciador de soluções** e clicando em **Adicionar Novo Item** ou **Adicionar Item existente** do  **Projeto** menu. Você pode acessar recursos adicionados dessa maneira, usando `My.Resources.` *resourceFileName*`.`*resourceName*.  
   
  Cada recurso tem um nome, categoria e valor, e essas configurações de recurso determinam como a propriedade para acessar o recurso aparece no `My.Resources` objeto. Para recursos adicionados na **Designer de projeto**:  
   

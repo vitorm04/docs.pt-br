@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e373610a78cbed5d31ff408e3c4ef8f11216f6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679065"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066228"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Visão Geral de Padrões de Controle de Automação de Interface de Usuário
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "54679065"
   
  Clientes de automação de interface do usuário de acessam os métodos e propriedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes de padrão de controle e usá-los para obter informações sobre a [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], ou manipular o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Essas classes de padrão de controle são encontradas na <xref:System.Windows.Automation> namespace (por exemplo, <xref:System.Windows.Automation.InvokePattern> e <xref:System.Windows.Automation.SelectionPattern>).  
   
- Os clientes usam <xref:System.Windows.Automation.AutomationElement> métodos (como <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> ou <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) ou o [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] acessadores para acessar o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades em um padrão. Cada classe de padrão de controle tem um membro de campo (por exemplo, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' ou <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) que identifica esse padrão de controle e pode ser passado como um parâmetro para <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> ou <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar esse padrão para um <xref:System.Windows.Automation.AutomationElement>.  
+ Os clientes usam <xref:System.Windows.Automation.AutomationElement> métodos (como <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> ou <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) ou o [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] acessadores para acessar o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades em um padrão. Cada classe de padrão de controle tem um membro de campo (por exemplo, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> ou <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) que identifica esse padrão de controle e pode ser passado como um parâmetro para <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> ou <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar esse padrão para um <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Padrões de controle dinâmico  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: cd2e48ad9ee5e6266fff676cf109cdf6b0136f32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f60c0c07c0270b94dbb018b9423e210f16269d6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573901"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065798"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Como: Usar uma classe genérica (Visual Basic)
 Uma classe que leva *parâmetros de tipo* é chamado um *classe genérica*. Se você estiver usando uma classe genérica, você pode gerar uma *classe construída* dele, fornecendo uma *argumento de tipo* para cada um desses parâmetros. Em seguida, você pode declarar uma variável do tipo de classe construído, e você pode criar uma instância da classe construída e atribuí-lo para a variável.  
@@ -39,7 +39,7 @@ Uma classe que leva *parâmetros de tipo* é chamado um *classe genérica*. Se v
   
 1.  No início do seu arquivo de origem, inclua uma [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar o <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. Isso permite que você consulte os <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> classe sem precisar qualificar totalmente para diferenciá-lo de outras classes de consulta, como <xref:System.Collections.Queue?displayProperty=nameWithType>.  
   
-2.  Crie o objeto da maneira normal, mas adicione `(Of` `type``)` imediatamente após o nome da classe.  
+2.  Crie o objeto da maneira normal, mas adicione `(Of type)` imediatamente após o nome da classe.  
   
      O exemplo a seguir usa a mesma classe (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) para criar dois objetos de fila que mantêm itens de diferentes tipos de dados. Ele adiciona itens ao final de cada fila e, em seguida, remove e exibe os itens da frente de cada fila.  
   

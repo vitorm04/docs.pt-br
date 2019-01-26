@@ -2,12 +2,12 @@
 title: Protocolos de transação
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 559b7ec1539a43ec27010031320be144d6f5e24b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533761"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066227"
 ---
 # <a name="transaction-protocols"></a>Protocolos de transação
 Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination e de transações de WS-Atomic.  
@@ -118,7 +118,7 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination 
   
  R1232: Saída `wscoor:Register` mensagens devem usar o `IssuedTokenOverTransport` modo de autenticação descrito em [protocolos de segurança](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- O `wsse:Timestamp` elemento deve ser assinado usando o `SecurityContextToken``STx` emitido. Essa assinatura é uma prova de posse do token associado à transação específica e é usada para autenticar um participante de inscrição na transação. A mensagem RegistrationResponse é enviada novamente via HTTPS.  
+ O `wsse:Timestamp` elemento deve ser assinado usando o `SecurityContextToken STx` emitido. Essa assinatura é uma prova de posse do token associado à transação específica e é usada para autenticar um participante de inscrição na transação. A mensagem RegistrationResponse é enviada novamente via HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configuração de associação de protocolo 2PC  
  WCF dá suporte a mensagens unidirecionais (datagram) por HTTPS. Correlação entre as mensagens é deixada como um detalhe de implementação.  

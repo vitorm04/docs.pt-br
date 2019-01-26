@@ -2,12 +2,12 @@
 title: Canal de agrupamento
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 3e98e4be3c5ad9d6d18990feeae86369775972b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db14ceb956202bee06ff5e6b37b21fb837c6f1d9
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624230"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066409"
 ---
 # <a name="chunking-channel"></a>Canal de agrupamento
 Ao enviar mensagens grandes usando o Windows Communication Foundation (WCF), geralmente é desejável para limitar a quantidade de memória usada para armazenar em buffer as mensagens. Uma solução possível é transmitir o corpo da mensagem (supondo que a maior parte dos dados está no corpo). No entanto, alguns protocolos exigem armazenamento em buffer da mensagem inteira. Sistema de mensagens confiável e segurança são dois exemplos de tais. Outra solução possível é dividir a mensagem grande em mensagens menores chamado partes, enviar partes de uma dessas partes por vez e reconstituir a mensagem grande no lado de recepção. O aplicativo em si pode fazer esse agrupamento e desprovisionamento de agrupamento ou use um canal personalizado para fazê-lo. O exemplo de agrupamento de canal mostra como um protocolo personalizado ou o canal em camadas pode ser usado para fazer a eliminação da divisão de mensagens arbitrariamente grandes e o agrupamento.  
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` chamadas `innerChannel.Open` para abrir o canal interno.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` primeiro define `stopReceive` à `true` para sinalizar o pendente `ReceiveChunkLoop` para parar. Ele aguarda até que o `receiveStopped``ManualResetEvent`, que é definido quando `ReceiveChunkLoop` para. Supondo que o `ReceiveChunkLoop` para de dentro do tempo limite especificado, `OnClose` chamadas `innerChannel.Close` com o tempo limite restante.  
+ `OnClose` primeiro define `stopReceive` à `true` para sinalizar o pendente `ReceiveChunkLoop` para parar. Ele aguarda até que o `receiveStopped` <xref:System.Threading.ManualResetEvent>, que é definido quando `ReceiveChunkLoop` para. Supondo que o `ReceiveChunkLoop` para de dentro do tempo limite especificado, `OnClose` chamadas `innerChannel.Close` com o tempo limite restante.  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` chamadas `innerChannel.Abort` para anular o canal interno. Se não houver um pendente `ReceiveChunkLoop` ele obtém uma exceção a partir de pendente `innerChannel.Receive` chamar.  

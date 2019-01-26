@@ -1,13 +1,13 @@
 ---
 title: Extensões de tipo
 description: Saiba como F# extensões de tipo permitem que você adicionar novos membros a um tipo de objeto definido anteriormente.
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614039"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066149"
 ---
 # <a name="type-extensions"></a>Extensões de tipo
 
@@ -121,7 +121,7 @@ Não há nenhuma maneira de obter esse código funcione com uma extensão de tip
 
 * Como é, o `Sum` membro tem uma restrição diferente no `'T` (`static member get_Zero` e `static member (+)`) que o que define a extensão de tipo.
 * Modificando a extensão de tipo para ter a mesma restrição como `Sum` não será mais correspondente a restrição definida na `IEnumerable<'T>`.
-* Fazer a alteração de membro a ser `member inline Sum` fornecerão um erro que restrições de tipo são incompatíveis
+* Alterando `member this.Sum` para `member inline this.Sum` fornecerão um erro que restrições de tipo são incompatíveis.
 
 O que é desejado são métodos estáticos que "flutuem no espaço de" e podem ser apresentados como se eles estiverem estendendo um tipo. Isso é onde os métodos de extensão tornam-se necessário.
 
