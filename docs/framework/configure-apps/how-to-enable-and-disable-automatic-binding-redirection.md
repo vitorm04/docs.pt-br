@@ -5,16 +5,14 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980827"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083647"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Como habilitar e desabilitar o redirecionamento automático de associações
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Como: Habilitar e desabilitar o redirecionamento de associação automática
 
 Quando você compila aplicativos no Visual Studio que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versões posteriores, redirecionamentos de associação poderão ser automaticamente adicionadas ao arquivo de configuração de aplicativo para substituir a Unificação do assembly. Redirecionamentos de associação serão adicionados se o seu aplicativo ou seus componentes fizerem referência a mais de uma versão do mesmo assembly, mesmo se você especificar manualmente redirecionamentos de associação no arquivo de configuração para seu aplicativo. O recurso de redirecionamento de associação automático afeta os aplicativos da área de trabalho e aplicativos web que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] ou uma versão posterior, embora o comportamento é ligeiramente diferente para um aplicativo web. Você pode habilitar o redirecionamento de associação automático se você tiver aplicativos existentes destinados a versões anteriores do .NET Framework, ou você pode desativar esse recurso se você quiser criar manualmente redirecionamentos de associação.
 

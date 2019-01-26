@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 54c20e56fa1729cb534821e263e316c26e01cde6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4a10f8973a78a80067ab6eb23fafd3540a68abe
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687304"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083399"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;System. Diagnostics&gt; elemento
 Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.  

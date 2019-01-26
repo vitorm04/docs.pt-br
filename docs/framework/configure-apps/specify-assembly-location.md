@@ -6,14 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f15111fbd65896cc42ab3d1462dc567133a7b4ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b5d732eb669119e346c61dce29b579911798edf
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566340"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083568"
 ---
 # <a name="specifying-an-assembly39s-location"></a>Especificando um Assembly&#39;s local
 Há duas maneiras para especificar o local de um assembly:  

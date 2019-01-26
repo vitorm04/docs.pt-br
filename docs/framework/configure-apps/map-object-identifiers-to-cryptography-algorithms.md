@@ -8,14 +8,12 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1bb5c6b46ff0f75082b0b7b631a197dd64156cf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 000d5d94b19907dfed40ac03f3172b9b8449c6f2
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672858"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083439"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapeando identificadores de objeto para algoritmos de criptografia
 Assinaturas digitais Certifique-se de que dados não seja violados quando ela é enviada de um programa para outro. Normalmente, a assinatura digital é computada, aplicando uma função matemática para o hash dos dados a serem assinados. Ao formatar um valor de hash a ser assinada, alguns algoritmos de assinatura digital acrescentar um ASN. 1 objeto OID (identificador) como parte da operação de formatação. O OID identifica o algoritmo que foi usado para computar o hash. Você pode mapear os algoritmos para identificadores de objeto para estender o mecanismo de criptografia para usar algoritmos personalizados. O exemplo a seguir mostra como mapear um identificador de objeto para um novo algoritmo de hash.  

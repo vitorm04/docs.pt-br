@@ -2,17 +2,21 @@
 title: Esquema de configurações de rastreamento e depuração
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'tracing [.NET Framework], trace and debug settings schema'
-  - 'configuration schema [.NET Framework], trace and debug settings'
-  - 'configuration settings [.NET Framework], tracing'
-  - schema configuration settings
-  - 'configuration settings [.NET Framework], debugging'
-  - 'trace listeners, trace and debug settings schema'
-  - 'configuration sections [.NET Framework]'
-  - 'elements [.NET Framework], trace and debug settings'
+- tracing [.NET Framework], trace and debug settings schema
+- configuration schema [.NET Framework], trace and debug settings
+- configuration settings [.NET Framework], tracing
+- schema configuration settings
+- configuration settings [.NET Framework], debugging
+- trace listeners, trace and debug settings schema
+- configuration sections [.NET Framework]
+- elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-author: mcleblanc
-ms.author: markl
+ms.openlocfilehash: 0ea53f0c9a209d9bcbcc1e758cdcf957cde095dc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083490"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Esquema de configurações de rastreamento e depuração
 As configurações de rastreamento e depuração especificam ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.  

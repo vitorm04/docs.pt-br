@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222734"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083711"
 ---
 # <a name="ltstartupgt-element"></a>&lt;inicialização&gt; elemento
 
 Especifica informações de inicialização de tempo de execução de linguagem comum.
 
- \<Configuração > \<inicialização >
+ \<configuration> \<startup>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -98,6 +96,6 @@ Especifica informações de inicialização de tempo de execução de linguagem 
 
 - [Esquema de configurações de inicialização](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Como: Configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Como: configurar um aplicativo para dar suporte ao .NET Framework 4 ou a versões posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Execução lado a lado para interoperabilidade COM](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
 - [Execução lado a lado em processo](../../../deployment/in-process-side-by-side-execution.md)

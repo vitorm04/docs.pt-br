@@ -2,16 +2,20 @@
 title: Esquema de configurações de criptografia
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'configuration schema [.NET Framework], cryptography'
-  - 'elements [.NET Framework], cryptography'
-  - schema configuration settings
-  - 'cryptography, settings schema'
-  - 'cryptography, mapping algorithm names'
-  - 'configuration sections [.NET Framework]'
-  - 'configuration settings [.NET Framework], cryptography'
+- configuration schema [.NET Framework], cryptography
+- elements [.NET Framework], cryptography
+- schema configuration settings
+- cryptography, settings schema
+- cryptography, mapping algorithm names
+- configuration sections [.NET Framework]
+- configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-author: mcleblanc
-ms.author: markl
+ms.openlocfilehash: 2958ab01cb92872026437e31d2225d12d8606e97
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083373"
 ---
 # <a name="cryptography-settings-schema"></a>Esquema de configurações de criptografia
 O esquema de configurações de criptografia contém elementos que especificam como mapear nomes de algoritmo amigáveis para classes que implementam algoritmos de criptografia.  
