@@ -4,12 +4,12 @@ description: Conheça os novos recursos encontrados no .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679887"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novidades do .NET Core 2.0
 
@@ -163,4 +163,4 @@ A [Arquitetura do Aplicativo .NET](https://www.microsoft.com/net/learn/architect
 
 ## <a name="see-also"></a>Consulte também
 
-* [Novidades do ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+- [Novidades do ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)

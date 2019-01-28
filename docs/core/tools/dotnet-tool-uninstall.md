@@ -2,12 +2,12 @@
 title: Comando dotnet tool uninstall
 description: O comando dotnet tool uninstall desinstala do computador a Ferramenta Global do .NET Core especificada.
 ms.date: 05/29/2018
-ms.openlocfilehash: 2ac0046d012fcf4a4be1c9bfa2e942e35b2c7290
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 4d53d305131e3399ab5d9c19f9319f3ba3544c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680917"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -65,4 +65,4 @@ Desinstala a Ferramenta Global [dotnetsay](https://www.nuget.org/packages/dotnet
 
 ## <a name="see-also"></a>Consulte também
 
-* [Ferramentas Globais do .NET Core](global-tools.md)
+- [Ferramentas Globais do .NET Core](global-tools.md)

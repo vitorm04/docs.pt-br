@@ -4,12 +4,12 @@ description: Saiba como usar o repositório de pacotes de tempo de execução pa
 author: bleroy
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: a190e148715547fde29d3a852183ea4d75065e79
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 2f37e0de4b6fcb1b2047470b0a9df3753fe87d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697979"
 ---
 # <a name="runtime-package-store"></a>Repositório de pacotes de tempo de execução
 
@@ -147,5 +147,5 @@ Quando a implantação é *cortada* na publicação, somente as versões especí
 
 ## <a name="see-also"></a>Consulte também
 
-* [dotnet-publish](../tools/dotnet-publish.md)  
-* [dotnet-store](../tools/dotnet-store.md)  
+- [dotnet-publish](../tools/dotnet-publish.md)
+- [dotnet-store](../tools/dotnet-store.md)
