@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 11d8a4d1841a1d161c4aed233a025813374556d6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: eaa2bd3327cf76522c74dad07a5a9e0e268a3b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605949"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando
 
@@ -157,4 +157,4 @@ Observe que os comandos e as etapas mostradas neste tutorial para executar o apl
 
 ## <a name="see-also"></a>Consulte também
 
-* [Organizando e testando projetos com as ferramentas da CLI do .NET Core](testing-with-cli.md)
+- [Organizando e testando projetos com as ferramentas da CLI do .NET Core](testing-with-cli.md)

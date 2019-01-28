@@ -3,12 +3,12 @@ title: Modelos personalizados para dotnet new
 description: Saiba mais sobre modelos personalizados para qualquer tipo de projeto ou de arquivos do .NET.
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 60ae9a6f0af7e75ba721a739ec51d77c59d7792e
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503920"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
@@ -152,8 +152,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Consulte também
 
-* [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/create-custom-template.md)
-* [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)
-* [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
-* [Como criar seus próprios modelos para dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
-* [Esquema *template.json* no Repositório de Esquema JSON](http://json.schemastore.org/template)
+- [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/create-custom-template.md)
+- [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)
+- [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
+- [Como criar seus próprios modelos para dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [Esquema *template.json* no Repositório de Esquema JSON](http://json.schemastore.org/template)

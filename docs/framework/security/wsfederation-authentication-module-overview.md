@@ -3,12 +3,12 @@ title: Visão geral do módulo de autenticação WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: bff3875b5f2f3ac187796d89fcd6da31ba911362
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703660"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Visão geral do módulo de autenticação WSFederation
 O Windows Identity Foundation (WIF) inclui suporte para autenticação federada em aplicativos do ASP.NET por meio do módulo de autenticação WS-Federated (WS-FAM). Este tópico ajudará você a entender como a autenticação federada funciona e como usá-la.  
@@ -35,7 +35,7 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
   
  Configure o WS-FAM para especificar o STS para o qual as solicitações não autenticadas deverão ser redirecionadas. O WIF permite autenticar um usuário de duas maneiras:  
   
-1.  Redirecionamento passivo: quando um usuário não autenticado tenta acessar um recurso protegido e você deseja simplesmente redirecioná-lo para um STS sem a necessidade de uma página de logon, essa é a abordagem correta. O STS verifica a identidade do usuário e emite um token de segurança que contém as declarações apropriadas para esse usuário. Essa opção exige que o WS-FAM seja adicionado ao pipeline dos módulos de HTTP. Você pode usar a Ferramenta de Acesso e Identidade para o Visual Studio 2012 para modificar o arquivo de configuração do seu aplicativo para usar WS-FAM e federar com um STS. Para saber mais, confira [Ferramenta de Identidade e Acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1.  Redirecionamento passivo: Quando um usuário não autenticado tenta acessar um recurso protegido, e você deseja simplesmente redirecioná-lo para um STS sem a necessidade de uma página de logon, isso é a abordagem correta. O STS verifica a identidade do usuário e emite um token de segurança que contém as declarações apropriadas para esse usuário. Essa opção exige que o WS-FAM seja adicionado ao pipeline dos módulos de HTTP. Você pode usar a Ferramenta de Acesso e Identidade para o Visual Studio 2012 para modificar o arquivo de configuração do seu aplicativo para usar WS-FAM e federar com um STS. Para saber mais, confira [Ferramenta de Identidade e Acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
 2.  Chame o método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> ou o método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> por meio do code-behind de uma página de entrada no aplicativo RP.  
   
@@ -139,7 +139,7 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
