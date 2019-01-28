@@ -7,53 +7,53 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738086"
 ---
-# <a name="-c-compiler-options"></a><span data-ttu-id="8ca34-102">@ (Opções do compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="8ca34-102">@ (C# Compiler Options)</span></span>
-<span data-ttu-id="8ca34-103">A opção @ possibilita especificar um arquivo que contém opções do compilador e arquivos de código-fonte a serem compilados.</span><span class="sxs-lookup"><span data-stu-id="8ca34-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
+# <a name="-c-compiler-options"></a><span data-ttu-id="e1536-102">@ (Opções do compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="e1536-102">@ (C# Compiler Options)</span></span>
+<span data-ttu-id="e1536-103">A opção @ possibilita especificar um arquivo que contém opções do compilador e arquivos de código-fonte a serem compilados.</span><span class="sxs-lookup"><span data-stu-id="e1536-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ca34-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8ca34-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1536-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e1536-104">Syntax</span></span>  
   
 ```  
 @response_file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="8ca34-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="8ca34-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e1536-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="e1536-105">Arguments</span></span>  
  `response_file`  
- <span data-ttu-id="8ca34-106">Um arquivo que lista as opções do compilador ou os arquivos de código-fonte a serem compilados.</span><span class="sxs-lookup"><span data-stu-id="8ca34-106">A file that lists compiler options or source code files to compile.</span></span>  
+ <span data-ttu-id="e1536-106">Um arquivo que lista as opções do compilador ou os arquivos de código-fonte a serem compilados.</span><span class="sxs-lookup"><span data-stu-id="e1536-106">A file that lists compiler options or source code files to compile.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8ca34-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="8ca34-107">Remarks</span></span>  
- <span data-ttu-id="8ca34-108">As opções do compilador e os arquivos de código-fonte serão processados pelo compilador apenas se eles tiverem sido especificados na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="8ca34-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e1536-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="e1536-107">Remarks</span></span>  
+ <span data-ttu-id="e1536-108">As opções do compilador e os arquivos de código-fonte serão processados pelo compilador apenas se eles tiverem sido especificados na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="e1536-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
   
- <span data-ttu-id="8ca34-109">Para especificar mais de um arquivo de resposta em uma compilação, especifique várias opções de arquivo de resposta.</span><span class="sxs-lookup"><span data-stu-id="8ca34-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="8ca34-110">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="8ca34-110">For example:</span></span>  
+ <span data-ttu-id="e1536-109">Para especificar mais de um arquivo de resposta em uma compilação, especifique várias opções de arquivo de resposta.</span><span class="sxs-lookup"><span data-stu-id="e1536-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="e1536-110">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="e1536-110">For example:</span></span>  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- <span data-ttu-id="8ca34-111">Em um arquivo de resposta, várias opções de compilador e de arquivos de código-fonte podem ser exibidas em uma linha.</span><span class="sxs-lookup"><span data-stu-id="8ca34-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="8ca34-112">Uma única especificação de opção do compilador deve ser exibida em uma linha (não é possível abranger várias linhas).</span><span class="sxs-lookup"><span data-stu-id="8ca34-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="8ca34-113">Os arquivos de resposta podem ter comentários que começam com o símbolo #.</span><span class="sxs-lookup"><span data-stu-id="8ca34-113">Response files can have comments that begin with the # symbol.</span></span>  
+ <span data-ttu-id="e1536-111">Em um arquivo de resposta, várias opções de compilador e de arquivos de código-fonte podem ser exibidas em uma linha.</span><span class="sxs-lookup"><span data-stu-id="e1536-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="e1536-112">Uma única especificação de opção do compilador deve ser exibida em uma linha (não é possível abranger várias linhas).</span><span class="sxs-lookup"><span data-stu-id="e1536-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="e1536-113">Os arquivos de resposta podem ter comentários que começam com o símbolo #.</span><span class="sxs-lookup"><span data-stu-id="e1536-113">Response files can have comments that begin with the # symbol.</span></span>  
   
- <span data-ttu-id="8ca34-114">Especificar opções do compilador de dentro de um arquivo de resposta é como emitir esses comandos na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="8ca34-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="8ca34-115">Consulte [Compilando da linha de comando](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="8ca34-115">See [Building from the Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
+ <span data-ttu-id="e1536-114">Especificar opções do compilador de dentro de um arquivo de resposta é como emitir esses comandos na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="e1536-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="e1536-115">Consulte [Compilando da linha de comando](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="e1536-115">See [Building from the Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
   
- <span data-ttu-id="8ca34-116">O compilador processa as opções de comando como elas são encontradas.</span><span class="sxs-lookup"><span data-stu-id="8ca34-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="8ca34-117">Portanto, os argumentos da linha de comando podem substituir opções listadas anteriormente em arquivos de resposta.</span><span class="sxs-lookup"><span data-stu-id="8ca34-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="8ca34-118">Por outro lado, opções em um arquivo de resposta substituirão as opções listadas anteriormente na linha de comando ou em outros arquivos de resposta.</span><span class="sxs-lookup"><span data-stu-id="8ca34-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
+ <span data-ttu-id="e1536-116">O compilador processa as opções de comando como elas são encontradas.</span><span class="sxs-lookup"><span data-stu-id="e1536-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="e1536-117">Portanto, os argumentos da linha de comando podem substituir opções listadas anteriormente em arquivos de resposta.</span><span class="sxs-lookup"><span data-stu-id="e1536-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="e1536-118">Por outro lado, opções em um arquivo de resposta substituirão as opções listadas anteriormente na linha de comando ou em outros arquivos de resposta.</span><span class="sxs-lookup"><span data-stu-id="e1536-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
   
- <span data-ttu-id="8ca34-119">O C# fornece o arquivo csc.rsp, localizado no mesmo diretório que o arquivo csc.exe.</span><span class="sxs-lookup"><span data-stu-id="8ca34-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="8ca34-120">Consulte [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) para obter informações sobre csc.rsp.</span><span class="sxs-lookup"><span data-stu-id="8ca34-120">See [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
+ <span data-ttu-id="e1536-119">O C# fornece o arquivo csc.rsp, localizado no mesmo diretório que o arquivo csc.exe.</span><span class="sxs-lookup"><span data-stu-id="e1536-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="e1536-120">Consulte [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) para obter informações sobre csc.rsp.</span><span class="sxs-lookup"><span data-stu-id="e1536-120">See [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
   
- <span data-ttu-id="8ca34-121">Essa opção do compilador não pode ser definida no ambiente de desenvolvimento do Visual Studio nem pode ser alterada por meio de programação.</span><span class="sxs-lookup"><span data-stu-id="8ca34-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
+ <span data-ttu-id="e1536-121">Essa opção do compilador não pode ser definida no ambiente de desenvolvimento do Visual Studio nem pode ser alterada por meio de programação.</span><span class="sxs-lookup"><span data-stu-id="e1536-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8ca34-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8ca34-122">Example</span></span>  
- <span data-ttu-id="8ca34-123">A seguir, há algumas linhas de um exemplo de arquivo de resposta:</span><span class="sxs-lookup"><span data-stu-id="8ca34-123">The following are a few lines from a sample response file:</span></span>  
+## <a name="example"></a><span data-ttu-id="e1536-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e1536-122">Example</span></span>  
+ <span data-ttu-id="e1536-123">A seguir, há algumas linhas de um exemplo de arquivo de resposta:</span><span class="sxs-lookup"><span data-stu-id="e1536-123">The following are a few lines from a sample response file:</span></span>  
   
 ```console  
 # build the first output file  
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8ca34-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8ca34-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e1536-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e1536-124">See also</span></span>
 
-- [<span data-ttu-id="8ca34-125">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="8ca34-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="e1536-125">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="e1536-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
