@@ -2,12 +2,12 @@
 title: Exemplo que resulta em partes de documentos do Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: 5dd8e4238ff4015130160b5297f807d79013ce7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbfecf43824249363bf23596c9a148536423f9a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642773"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Exemplo que resulta em partes de documentos do Office Open XML (C#)
 Este tópico mostra como abrir um documento do Office Open XML e acessar partes dentro deles.  

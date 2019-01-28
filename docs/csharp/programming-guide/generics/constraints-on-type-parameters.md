@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: daad986a1e62fe3b1d28fc25d3ebf6d2960d8b1d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694965"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
@@ -113,7 +113,7 @@ Você pode usá-lo conforme mostrado no exemplo a seguir para criar uma enum e c
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Collections.Generic>
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [Classes genéricas](../../../csharp/programming-guide/generics/generic-classes.md)  
-- [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Classes genéricas](../../../csharp/programming-guide/generics/generic-classes.md)
+- [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md)

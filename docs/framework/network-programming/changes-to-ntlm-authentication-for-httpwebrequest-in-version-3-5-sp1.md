@@ -2,12 +2,12 @@
 title: Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589552"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1
 Foram feitas alterações de segurança no .NET Framework versão 3.5 SP1 que afetam a maneira como a autenticação integrada do Windows é manipulada por <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> e por classes relacionadas no namespace System.Net. Essas alterações podem afetar os aplicativos que usam essas classes para fazer solicitações da Web e receber respostas em que a autenticação integrada do Windows baseada no NTLM é usada. Essa alteração pode afetar os servidores Web e aplicativos cliente configurados para usar a autenticação integrada do Windows.  
@@ -50,7 +50,7 @@ Foram feitas alterações de segurança no .NET Framework versão 3.5 SP1 que af
   
  Uma solução alternativa menos segura é desabilitar a verificação de loopback, conforme descrito em <https://support.microsoft.com/kb/896861>. Isso desabilita a proteção contra ataques de reflexão. Portanto, é melhor restringir o conjunto de nomes alternativos somente àqueles que você espera que sejam usados pelo computador.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
- <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
+- <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
+- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

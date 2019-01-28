@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e62d115292edc7b75ff782ac2c9161d942077333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655329"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 Quando um cliente COM chama um objeto .NET, o Common Language Runtime cria o objeto gerenciado e um CCW (COM Callable Wrapper) para o objeto. Se não é possível referenciar um objeto .NET diretamente, os clientes COM usam o CCW como um proxy do objeto gerenciado.  
@@ -189,9 +189,9 @@ Se o seu aplicativo exigir chamadas early-bound para métodos de interface de ev
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [Wrappers COM](com-wrappers.md)  
- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)  
- [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)  
- [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
+- [Wrappers COM](com-wrappers.md)
+- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
+- [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)
+- [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)

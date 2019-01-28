@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1be7184a37e98e72118065de262d1484476d1cb8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502060"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -60,9 +60,9 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
   
 ## <a name="see-also"></a>Consulte também
 
-- [Melhorando o desempenho de interoperabilidade](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)  
-- [Introdução à interoperabilidade entre COM e .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)  
-- [Introdução à interoperabilidade COM em Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
-- [Marshaling entre código gerenciado e não gerenciado](../../../../docs/framework/interop/interop-marshaling.md)  
-- [Interoperação com código não gerenciado](../../../../docs/framework/interop/index.md)  
+- [Melhorando o desempenho de interoperabilidade](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [Introdução à interoperabilidade entre COM e .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
+- [Introdução à interoperabilidade COM em Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [Marshaling entre código gerenciado e não gerenciado](../../../../docs/framework/interop/interop-marshaling.md)
+- [Interoperação com código não gerenciado](../../../../docs/framework/interop/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)

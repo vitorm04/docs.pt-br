@@ -1,14 +1,14 @@
 ---
 title: Unir usando chaves compostas (LINQ em C#)
 description: Saiba como unir usando chaves compostas em LINQ.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 460a52da7e0c0a47b77d4c64e76641bae9da7cd6
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080098"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857509"
 ---
 # <a name="join-by-using-composite-keys"></a>Unir usando chaves compostas
 
@@ -38,6 +38,6 @@ As chaves compostas também podem ser usadas em uma cláusula `group`.
 
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ (Consulta Integrada à Linguagem)](index.md)  
-- [Cláusula join](../language-reference/keywords/join-clause.md)  
-- [Cláusula group](../language-reference/keywords/group-clause.md)  
+- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [Cláusula join](../language-reference/keywords/join-clause.md)
+- [Cláusula group](../language-reference/keywords/group-clause.md)

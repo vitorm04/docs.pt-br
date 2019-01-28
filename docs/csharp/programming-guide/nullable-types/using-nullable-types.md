@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2c6f2f78ed71558b71adcc1d4d8cc9a6f459d75
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658241"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Usando tipos que permitem valor nulo (Guia de programação em C#)
 
@@ -112,6 +112,6 @@ Observe que esses dois operadores não seguem as regras descritas na seção [Op
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos que permitem valor nulo](index.md)  
-- [Guia de Programação em C#](../../programming-guide/index.md)  
-- [O que exatamente "levantado" significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  
+- [Tipos que permitem valor nulo](index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [O que exatamente "levantado" significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

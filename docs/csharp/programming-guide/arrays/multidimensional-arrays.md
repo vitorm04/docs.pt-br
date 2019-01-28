@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: d5663062815f0c85772aa0e30f5edeac654431b8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4547bd94a0870dbb3955c4980361c8be0453616d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642406"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Matrizes multidimensionais (Guia de Programação em C#)
 
@@ -51,7 +51,7 @@ As matrizes podem ter mais de uma dimensão. Por exemplo, a declaração a segui
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Matrizes](../../../csharp/programming-guide/arrays/index.md)  
-- [Matrizes unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Matrizes](../../../csharp/programming-guide/arrays/index.md)
+- [Matrizes unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
 - [Matrizes denteadas](../../../csharp/programming-guide/arrays/jagged-arrays.md)

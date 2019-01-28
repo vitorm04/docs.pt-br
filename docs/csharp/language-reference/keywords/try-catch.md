@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 7e48783c01a5b94f51f89d25f465f22358e7aa8f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df4ccde0a9a377b06b8efc64cc78936a983c66cc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240015"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083919"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referência de C#)
 
@@ -163,7 +163,7 @@ O exemplo a seguir ilustra o tratamento de exceção para métodos assíncronos.
 
 Remova a marca de comentário da linha `throw new Exception` no exemplo para demonstrar o tratamento de exceção. A propriedade `IsFaulted` da tarefa é definida para `True`, a propriedade `Exception.InnerException` da tarefa é definida para a exceção e a exceção é capturada em um bloco `catch`.
 
-Remova a marca de comentário da linha `throw new OperationCancelledException` para demonstrar o que acontece quando você cancela um processo assíncrono. A propriedade `IsCanceled` da tarefa é definida para `true` e a exceção é capturada no bloco `catch`. Em algumas condições que não se aplicam a este exemplo, a propriedade `IsFaulted` da tarefa é definida para `true` e `IsCanceled` é definido para `false`.
+Remova a marca de comentário da linha `throw new OperationCanceledException` para demonstrar o que acontece quando você cancela um processo assíncrono. A propriedade `IsCanceled` da tarefa é definida para `true` e a exceção é capturada no bloco `catch`. Em algumas condições que não se aplicam a este exemplo, a propriedade `IsFaulted` da tarefa é definida para `true` e `IsCanceled` é definido para `false`.
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 

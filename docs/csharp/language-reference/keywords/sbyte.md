@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: e7dc10706257b2c1fa8574f193523272339f61ff
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df184bf32fa09b10c7f3de508ffb73b9cf156b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663395"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (Referência de C#)
 
@@ -108,11 +108,11 @@ Para obter mais informações, veja [Tipos integrais](~/_csharplang/spec/types.m
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.SByte>  
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.SByte>
+- [Referência de C#](../../../csharp/language-reference/index.md)
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

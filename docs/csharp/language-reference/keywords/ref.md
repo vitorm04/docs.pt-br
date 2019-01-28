@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726644"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -154,12 +154,12 @@ Você pode combinar modificadores para declarar um struct como `readonly ref`. U
   
 ## <a name="see-also"></a>Consulte também
 
-- [Escrever código eficiente seguro](../../write-safe-efficient-code.md)  
+- [Escrever código eficiente seguro](../../write-safe-efficient-code.md)
 - [Retornos de ref e locais de ref](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Expressão condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
 - [Operador de atribuição ref](../operators/assignment-operator.md#ref-assignment-operator)
-- [Passando parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [Parâmetros de método](method-parameters.md)  
-- [Referência de C#](../index.md)  
-- [Guia de Programação em C#](../../programming-guide/index.md)  
+- [Passando parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Parâmetros de método](method-parameters.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)

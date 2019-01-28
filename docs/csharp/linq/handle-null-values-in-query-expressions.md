@@ -1,14 +1,14 @@
 ---
 title: Manipular valores nulos em expressões de consulta (LINQ em C#)
 description: Saiba como manipular valores nulos em expressões de consulta LINQ em C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: 2c477ef371dbb424c72fb9d34948760b7e3f5609
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 14609aee2bbd1fbb487589bb41683a1f3cad1362
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259474"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857561"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Manipular valores nulos em expressões de consulta
 
@@ -30,6 +30,6 @@ Em uma cláusula join, se apenas uma das chaves de comparação for um tipo de v
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Nullable%601>  
-- [LINQ (Consulta Integrada à Linguagem)](index.md)  
-- [Tipos que permitem valor nulo](../programming-guide/nullable-types/index.md)  
+- <xref:System.Nullable%601>
+- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [Tipos que permitem valor nulo](../programming-guide/nullable-types/index.md)

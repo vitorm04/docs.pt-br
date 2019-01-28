@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 0fd917d1af38ba558634dfcf5e3a1abf95420a9d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 136d3959a52b793acddf21ae83b8d8eaec053eee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616271"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (Referência de C#)
 Talvez seja necessário referenciar duas versões de assemblies que têm os mesmos nomes de tipo totalmente qualificado. Por exemplo, você pode ter que usar duas ou mais versões de um assembly no mesmo aplicativo. Ao usar um alias de assembly externo, os namespaces de cada assembly podem ser encapsulados dentro de namespaces de nível raiz nomeados pelo alias, permitindo que eles sejam utilizados no mesmo arquivo.  
@@ -43,9 +43,9 @@ Talvez seja necessário referenciar duas versões de assemblies que têm os mesm
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
-- [Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [Referência de C#](../../../csharp/language-reference/index.md)
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [/reference (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

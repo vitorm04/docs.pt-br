@@ -7,12 +7,12 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 9c235b6084238917c2cb3f2cd745aef0264f82ce
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2b52bca57bde2fd198fd1621cb8a8f7dfc73ec9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740756"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Matrizes de tipo implícito (Guia de Programação em C#)
 
@@ -34,10 +34,10 @@ ms.locfileid: "53238267"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Variáveis Locais Tipadas Implicitamente](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)  
-- [Matrizes](../../../csharp/programming-guide/arrays/index.md)  
-- [Tipos Anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [var](../../../csharp/language-reference/keywords/var.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Variáveis Locais Tipadas Implicitamente](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
+- [Matrizes](../../../csharp/programming-guide/arrays/index.md)
+- [Tipos Anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [var](../../../csharp/language-reference/keywords/var.md)
 - [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

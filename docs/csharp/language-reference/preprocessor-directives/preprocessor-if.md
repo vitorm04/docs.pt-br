@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: df1b26b0e06d4fff81627ec633ce97f9d6ca036f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 07679ed0334af26cd52353080ebd6fb39f9daecf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592543"
 ---
 # <a name="if-c-reference"></a>#if (Referência de C#)
 
@@ -89,7 +89,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Diretivas do pré-processador do C#](index.md)  
+- [Referência de C#](../../../csharp/language-reference/index.md)
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Diretivas do pré-processador do C#](index.md)
 - [Como: compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688994"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -440,9 +440,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)  
- [Copiando e fixando](copying-and-pinning.md)  
- [Marshaling padrão para matrizes](default-marshaling-for-arrays.md)  
- [Marshaling padrão para objetos](default-marshaling-for-objects.md)  
- [Marshaling padrão para cadeias de caracteres](default-marshaling-for-strings.md)
+## <a name="see-also"></a>Consulte também
+- [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)
+- [Copiando e fixando](copying-and-pinning.md)
+- [Marshaling padrão para matrizes](default-marshaling-for-arrays.md)
+- [Marshaling padrão para objetos](default-marshaling-for-objects.md)
+- [Marshaling padrão para cadeias de caracteres](default-marshaling-for-strings.md)

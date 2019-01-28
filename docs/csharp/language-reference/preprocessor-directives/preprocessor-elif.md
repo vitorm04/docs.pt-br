@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: d7ca980146369174a202c8096cdba154712a438e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 00a9298be6ecd6f5e775d930190ddb6e227e4711
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587223"
 ---
 # <a name="elif-c-reference"></a>#elif (Referência de C#)
 O `#elif` permite criar uma diretiva condicional composta. A expressão `#elif` será avaliada se nenhum dos [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) anteriores nem nenhuma diretiva `#elif`, opcional, anterior avaliar expressões para `true`. Se uma expressão `#elif` for avaliada como `true`, o compilador avalia todo o código entre o `#elif` e a próxima diretiva condicional. Por exemplo:  
@@ -43,6 +43,6 @@ O `#elif` permite criar uma diretiva condicional composta. A expressão `#elif` 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Referência de C#](../../../csharp/language-reference/index.md)
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)

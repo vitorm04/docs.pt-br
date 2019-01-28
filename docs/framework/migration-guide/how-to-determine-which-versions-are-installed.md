@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1a0ee772618b89d3b8cf6efc9400e3dcf4804da
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 31200b72cb551c91791e2e14332aacab8e7f0519
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672000"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como: Determinar quais versões do .NET Framework estão instaladas
 
@@ -230,6 +230,6 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
 
 ## <a name="see-also"></a>Consulte também
 
-[Como: Determinar quais atualizações do .NET Framework estão instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
-[Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md)  
-[Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md)  
+- [Como: Determinar quais atualizações do .NET Framework estão instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md)
+- [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md)

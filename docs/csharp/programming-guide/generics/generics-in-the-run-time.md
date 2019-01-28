@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: 81e506a8b2528b6e3fa783ecd90aa4aa8987bbe5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587262"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Genéricos em tempo de execução (Guia de Programação em C#)
 Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL) conterá metadados que o identificarão como possuidor de parâmetros de tipo. O uso de MSIL em um tipo genérico será diferente de acordo com o parâmetro de tipo fornecido, ou seja, se ele é um tipo de valor ou um tipo de referência.  
@@ -49,7 +49,7 @@ Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL)
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Collections.Generic>  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- <xref:System.Collections.Generic>
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)
 - [Genéricos](~/docs/standard/generics/index.md)

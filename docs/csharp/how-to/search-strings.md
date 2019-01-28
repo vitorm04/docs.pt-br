@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 030d71f95947e98d9f269095908b0431c2192430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623385"
 ---
 # <a name="how-to-search-strings"></a>Como pesquisar cadeias de caracteres
 
@@ -74,12 +74,12 @@ Este padrão de pesquisa único corresponde a várias cadeias de caracteres vál
 
 Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../programming-guide/index.md)  
-- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
+- [Guia de Programação em C#](../programming-guide/index.md)
+- [Cadeias de Caracteres](../programming-guide/strings/index.md)
 - [LINQ e Cadeias de Caracteres](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Expressões regulares do .NET Framework](../../standard/base-types/regular-expressions.md)
 - [Linguagem de expressão regular – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [Práticas recomendadas para o uso de cadeias de caracteres no .NET](../../standard/base-types/best-practices-strings.md)  
+- [Práticas recomendadas para o uso de cadeias de caracteres no .NET](../../standard/base-types/best-practices-strings.md)

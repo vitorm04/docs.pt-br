@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 614b70562954fee99c6de3e66b54bbdd1134f553
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596690"
 ---
 # <a name="classes-c-programming-guide"></a>Classes (Guia de Programação em C#)
 

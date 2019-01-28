@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
-ms.openlocfilehash: 498f266597032a4c35dbc8783994095b5c08fc3d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3e6c08050186642ceec4e2301524919379e12aaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527699"
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Como: copiar, excluir e mover arquivos e pastas (Guia de Programação em C#)
 Os exemplos a seguir mostram como copiar, mover e excluir arquivos e pastas de maneira síncrona usando as classes <xref:System.IO.File?displayProperty=nameWithType>, <xref:System.IO.Directory?displayProperty=nameWithType>, <xref:System.IO.FileInfo?displayProperty=nameWithType> e <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> do namespace <xref:System.IO?displayProperty=nameWithType>. Esses exemplos não fornecem uma barra de progresso ou qualquer outra interface do usuário. Se você quiser fornecer uma caixa de diálogo de progresso padrão, confira [Como fornecer uma caixa de diálogo de progresso para operações de arquivo](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
@@ -34,9 +34,9 @@ Os exemplos a seguir mostram como copiar, mover e excluir arquivos e pastas de m
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Sistema de arquivos e o Registro (Guia de Programação em C#)](index.md)  
-- [Como: fornecer uma caixa de diálogo de progresso para operações de arquivo](how-to-provide-a-progress-dialog-box-for-file-operations.md)  
-- [E/S de arquivo e de fluxo](../../../standard/io/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Sistema de arquivos e o Registro (Guia de Programação em C#)](index.md)
+- [Como: fornecer uma caixa de diálogo de progresso para operações de arquivo](how-to-provide-a-progress-dialog-box-for-file-operations.md)
+- [E/S de arquivo e de fluxo](../../../standard/io/index.md)
 - [Tarefas comuns de E/S](../../../standard/io/common-i-o-tasks.md)

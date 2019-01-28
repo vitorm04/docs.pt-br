@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 105f564d40799c1c006caf8b59d6199dbd8e9318
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681723"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (opções do compilador C#)
 
@@ -48,10 +48,10 @@ Para obter mais informações, consulte [Criando e usando assemblies de nomes fo
 1. Abra a página **Propriedades** do projeto.
 1. Modifique a propriedade **Apenas adiar a assinatura**.
 
-Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.
+Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opção -publicsign do C#](publicsign-compiler-option.md)  
-- [Opções do compilador de C#](index.md)  
+- [Opção -publicsign do C#](publicsign-compiler-option.md)
+- [Opções do compilador de C#](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

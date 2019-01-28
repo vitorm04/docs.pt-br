@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f9729a3536a6611ed593f16ba3bc09e7af20a4c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4e29c0cc85f0ec6ccd3f428d64121f53b91ae9a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713844"
 ---
 # <a name="throw-c-reference"></a>throw (Referência de C#)
 
@@ -70,10 +70,10 @@ Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../index.md)  
-- [Guia de Programação em C#](../../programming-guide/index.md)  
-- [try-catch](try-catch.md)  
-- [As instruções try, catch e throw em C++](try-catch.md)  
-- [Palavras-chave do C#](index.md)  
-- [Instruções para manipulação de exceções](exception-handling-statements.md)  
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [try-catch](try-catch.md)
+- [As instruções try, catch e throw em C++](try-catch.md)
+- [Palavras-chave do C#](index.md)
+- [Instruções para manipulação de exceções](exception-handling-statements.md)
 - [Como: Gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

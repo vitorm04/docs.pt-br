@@ -1,14 +1,14 @@
 ---
 title: Agrupar resultados da consulta (LINQ em C#)
 description: Saiba como agrupar resultados usando LINQ em C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: f768718cb1435efdc67791612776c9e9ce2b14b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 577a358c31fcf5346e7aab7a2e2b6be10fd1beff
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798323"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857847"
 ---
 # <a name="group-query-results"></a>Agrupar resultados de consultas
 
@@ -76,11 +76,11 @@ Cole o seguinte método na classe `StudentClass`. Altere a instrução de chamad
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Linq.Enumerable.GroupBy%2A>  
-- <xref:System.Linq.IGrouping%602>  
-- [LINQ (Consulta Integrada à Linguagem)](index.md)  
-- [Cláusula group](../language-reference/keywords/group-clause.md)  
-- [Tipos Anônimos](../programming-guide/classes-and-structs/anonymous-types.md)  
-- [Executar uma subconsulta em uma operação de agrupamento](perform-a-subquery-on-a-grouping-operation.md)  
-- [Criar um grupo aninhado](create-a-nested-group.md)  
-- [Agrupando Dados](../programming-guide/concepts/linq/grouping-data.md)  
+- <xref:System.Linq.Enumerable.GroupBy%2A>
+- <xref:System.Linq.IGrouping%602>
+- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [Cláusula group](../language-reference/keywords/group-clause.md)
+- [Tipos Anônimos](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Executar uma subconsulta em uma operação de agrupamento](perform-a-subquery-on-a-grouping-operation.md)
+- [Criar um grupo aninhado](create-a-nested-group.md)
+- [Agrupando Dados](../programming-guide/concepts/linq/grouping-data.md)

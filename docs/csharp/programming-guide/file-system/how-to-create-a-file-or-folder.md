@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: aa5c6782b11ac89b418ac84faafaa8409ad65049
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8f0b375a2e2ed7304c43a27309dbdde5a2f5a476
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731875"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como: criar um arquivo ou uma pasta (Guia de Programação em C#)
 Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arquivo na subpasta e gravar dados no arquivo programaticamente.  
@@ -70,6 +70,6 @@ Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arqui
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Sistema de arquivos e o Registro (Guia de Programação em C#)](../../../csharp/programming-guide/file-system/index.md)

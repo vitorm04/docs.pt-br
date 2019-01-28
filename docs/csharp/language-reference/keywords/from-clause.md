@@ -9,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: ab0602f9ed353cf3959516e285086ab5af98c9f8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d44c0b7a2f6617a01416ccc5bd1eb857b1f782da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607888"
 ---
 # <a name="from-clause-c-reference"></a>Cláusula from (Referência de C#)
 
@@ -32,7 +32,7 @@ No exemplo a seguir, `numbers` é a fonte de dados e `num` é a variável de int
 
 ## <a name="the-range-variable"></a>A variável de intervalo
 
-O compilador infere que o tipo da variável de intervalo quando a fonte de dados implementa <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, se a fonte tem um tipo de `IEnumerable<Customer>`, então, a variável de intervalo será inferida como `Customer`. O tipo deve ser especificado explicitamente somente quando a fonte for um tipo `IEnumerable` não genérico, como <xref:System.Collections.ArrayList>. Confira mais informações em [Como: Consultar um ArrayList com LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
+O compilador infere que o tipo da variável de intervalo quando a fonte de dados implementa <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, se a fonte tem um tipo de `IEnumerable<Customer>`, então, a variável de intervalo será inferida como `Customer`. O tipo deve ser especificado explicitamente somente quando a fonte for um tipo `IEnumerable` não genérico, como <xref:System.Collections.ArrayList>. Para obter mais informações, confira [Como: Consultar um ArrayList com LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
 No exemplo anterior, `num` é inferido como do tipo `int`. Como a variável de intervalo é fortemente tipada, é possível chamar métodos nela ou usá-la em outras operações. Por exemplo, em vez de gravar `select num`, grave `select num.ToString()` para fazer com que a expressão de consulta retorne uma sequência de cadeias de caracteres em vez de números inteiros. Também é possível gravar `select num + 10` para fazer com que a expressão retorne a sequência 14, 11, 13, 12, 10. Para obter mais informações, consulte [cláusula select](select-clause.md).
 
@@ -56,5 +56,5 @@ Para obter mais informações sobre as operações de união que usam várias cl
 
 ## <a name="see-also"></a>Consulte também
 
-- [Palavras-chave de Consulta (LINQ)](query-keywords.md)  
-- [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)  
+- [Palavras-chave de Consulta (LINQ)](query-keywords.md)
+- [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)

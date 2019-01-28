@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599771"
 ---
 # <a name="handling-errors"></a>Manipulando erros
 As classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> geram exceções do sistema (como <xref:System.ArgumentException>) e exceções específicas à Web (que são <xref:System.Net.WebException> geradas pelo método <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -167,6 +167,6 @@ End Try
   
  Quando uma **SocketException** é gerada, a classe **SocketException** define a propriedade <xref:System.Net.Sockets.SocketException.ErrorCode%2A> com o último erro de soquete do sistema operacional ocorrido. Para obter mais informações sobre códigos de erro de soquete, consulte a documentação de códigos de erro da API do Winsock 2.0 no MSDN.  
   
-## <a name="see-also"></a>Consulte também  
- [Fundamentos do tratamento de exceções](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [Solicitando dados](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Consulte também
+- [Fundamentos do tratamento de exceções](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Solicitando dados](../../../docs/framework/network-programming/requesting-data.md)

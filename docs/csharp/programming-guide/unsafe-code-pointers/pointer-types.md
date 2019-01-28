@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724038"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -91,12 +91,12 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../index.md)  
-- [Código não seguro e ponteiros](index.md)  
-- [Conversões de ponteiro](pointer-conversions.md)  
-- [Expressões de ponteiro](pointer-expressions.md)  
-- [Tipos](../../language-reference/keywords/types.md)  
-- [unsafe](../../language-reference/keywords/unsafe.md)  
-- [Instrução fixed](../../language-reference/keywords/fixed-statement.md)  
-- [stackalloc](../../language-reference/keywords/stackalloc.md)  
-- [Conversões boxing e unboxing](../types/boxing-and-unboxing.md)
+- [Guia de Programação em C#](../index.md)
+- [Código não seguro e ponteiros](index.md)
+- [Conversões de ponteiro](pointer-conversions.md)
+- [Expressões de ponteiro](pointer-expressions.md)
+- [Tipos](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)
+- [Instrução fixed](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/keywords/stackalloc.md)
+- [Conversão boxing e unboxing](../types/boxing-and-unboxing.md)

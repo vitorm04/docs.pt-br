@@ -3,12 +3,12 @@ title: Consultar uma coleção de objetos (LINQ em C#)
 description: Saiba como consultar coleções usando LINQ em C#.
 ms.date: 11/30/2016
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
-ms.openlocfilehash: 7bc59e7009f9ae8d8f66c24e9519d9100404c9c4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b2f5dd09c540800e9a2498d48883357f58c0116
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734497"
 ---
 # <a name="query-a-collection-of-objects"></a>Consultar uma coleção de objetos
 
@@ -26,5 +26,5 @@ Essa consulta é intencionalmente simples para que você possa testar. Por exemp
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ (Consulta Integrada à Linguagem)](index.md)  
+- [LINQ (Consulta Integrada à Linguagem)](index.md)
 - [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md)

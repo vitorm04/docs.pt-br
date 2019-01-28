@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592844"
 ---
 # <a name="members-c-programming-guide"></a>Membros (Guia de Programação em C#)
 Classes e structs têm membros que representam seus dados e comportamento. Os membros de uma classe incluem todos os membros declarados na classe, juntamente com todos os membros (exceto construtores e finalizadores) declarados em todas as classes em sua hierarquia de herança. Os membros privados em classes base são herdados, mas não podem ser acessados de classes derivadas.  
@@ -33,15 +33,15 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
-- [Eventos](../../../csharp/programming-guide/events/index.md)  
-- [Tipos aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
-- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Indexadores](../../../csharp/programming-guide/indexers/index.md)
+- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Tipos aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
+- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 - [Operadores sobrecarregáveis](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

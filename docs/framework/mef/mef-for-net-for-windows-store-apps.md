@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39b7228de775f4dc92e932731ad9967315437e6e
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c2c6f28a88c709c27df82250fcbdc22de210e93a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663291"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF para .NET para aplicativos da Windows Store
 <xref:System.Composition?displayProperty=nameWithType> e seus namespaces filho contêm tipos para o desenvolvimento de aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] extensíveis com o MEF (Managed Extensibility Framework). Esses namespaces fazem parte do [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] subconjunto [!INCLUDE[win8](../../../includes/win8-md.md)] do sistema operacional.  
@@ -26,7 +26,7 @@ ms.locfileid: "49121110"
   
  Para obter mais informações sobre o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e uma lista de namespaces e tipos que ele contém, confira [Visão geral de aplicativos .NET da Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=238312) no Centro de Desenvolvimento do Windows.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos aplicativos .NET para Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=238312)  
- [.NET para aplicativos da Windows Store – APIs com suporte](https://go.microsoft.com/fwlink/p/?LinkID=247912)  
- [MEF (Managed Extensibility Framework)](../../../docs/framework/mef/index.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral dos aplicativos .NET para Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=238312)
+- [.NET para aplicativos da Windows Store – APIs com suporte](https://go.microsoft.com/fwlink/p/?LinkID=247912)
+- [MEF (Managed Extensibility Framework)](../../../docs/framework/mef/index.md)

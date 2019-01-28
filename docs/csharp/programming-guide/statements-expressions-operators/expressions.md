@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600486"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
 Uma *expressão* é uma sequência de um ou mais operandos e zero ou mais operadores que podem ser avaliados como um valor, objeto, método ou namespace único. As expressões podem consistir de um valor literal, uma invocação de método, um operador e seus operandos ou um *nome simples*. Os nomes simples podem ser o nome de uma variável, um membro de tipo, um parâmetro de método, um namespace ou um tipo.  
@@ -75,9 +75,9 @@ O C# dá suporte a *membros aptos para expressão*, o que permite que você forn
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
-- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [Tipos](../../../csharp/programming-guide/types/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)
+- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Tipos](../../../csharp/programming-guide/types/index.md)
 - [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

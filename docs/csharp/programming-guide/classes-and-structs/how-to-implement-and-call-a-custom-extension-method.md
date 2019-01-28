@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 9f1f7994043288f8896b48a3f12d1c7ee93c3661
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1bac65ec5aef2846b2b310a65ffbefd5433e93bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652209"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Como: implementar e chamar um método de extensão personalizado (Guia de Programação em C#)
 Este tópico mostra como implementar seus próprios métodos de extensão para qualquer tipo do .NET. O código de cliente pode usar seus métodos de extensão, adicionando uma referência à DLL que os contém e adicionando uma diretiva [using](../../../csharp/language-reference/keywords/using-directive.md) que especifica o namespace no qual os métodos de extensão são definidos.  
@@ -44,12 +44,12 @@ Este tópico mostra como implementar seus próprios métodos de extensão para q
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Métodos de Extensão](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
-- [LINQ (Consulta Integrada à Linguagem)](../../../csharp/linq/linq-in-csharp.md)  
-- [Classes static e membros de classes static](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
-- [internal](../../../csharp/language-reference/keywords/internal.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [this](../../../csharp/language-reference/keywords/this.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Métodos de Extensão](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ (Consulta Integrada à Linguagem)](../../../csharp/linq/linq-in-csharp.md)
+- [Classes static e membros de classes static](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [this](../../../csharp/language-reference/keywords/this.md)
 - [namespace](../../../csharp/language-reference/keywords/namespace.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-ms.openlocfilehash: 79c798bb6ec16fc639d37defc40da5af770e5bba
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5dfddb0faf77e40397eafd70955e233a9a320163
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635813"
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Como: acessar argumentos de linha de comando usando foreach (Guia de Programação em C#)
 Outra abordagem para iterar na matriz é usar a instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md), conforme mostrado neste exemplo. A instrução `foreach` pode ser usada para iterar em uma matriz, em uma classe de coleção do .NET Framework ou em qualquer classe ou struct que implementa a interface <xref:System.Collections.IEnumerable>.  
@@ -27,11 +27,11 @@ Outra abordagem para iterar na matriz é usar a instrução [foreach](../../../c
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Array>  
-- <xref:System.Collections>  
-- [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
-- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Como: exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- <xref:System.Array>
+- <xref:System.Collections>
+- [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)
+- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Como: exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

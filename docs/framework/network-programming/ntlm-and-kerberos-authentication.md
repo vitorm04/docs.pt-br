@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 254ffea79612c10f147984dda37d0117edbf9e3e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4b93bce3560aaf5e0c888324e74129b5cb62262e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515830"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>Autenticação NTLM e Kerberos
 A autenticação padrão NTLM e a autenticação Kerberos usam as credenciais de usuário do Microsoft Windows NT associadas com o aplicativo de chamada para tentar a autenticação com o servidor. Ao usar a autenticação NTLM não padrão, o aplicativo define o tipo de autenticação para NTLM e usa um objeto <xref:System.Net.NetworkCredential> para passar o nome de usuário, senha e domínio para o host, conforme mostrado no exemplo a seguir.  
@@ -62,6 +62,6 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 > [!NOTE]
 >  A autenticação NTLM não funciona por meio de um servidor proxy.  
   
-## <a name="see-also"></a>Consulte também  
- [Autenticação Básica e Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [Autenticação da Internet](../../../docs/framework/network-programming/internet-authentication.md)
+## <a name="see-also"></a>Consulte também
+- [Autenticação Básica e Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [Autenticação da Internet](../../../docs/framework/network-programming/internet-authentication.md)

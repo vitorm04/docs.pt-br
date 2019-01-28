@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e26bab4823795ba5d8afc88266b05cd71f4daf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721022"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalência de tipo e tipos de interoperabilidade inseridos
 
@@ -55,6 +55,6 @@ Se um tipo não tiver o atributo <xref:System.Runtime.InteropServices.TypeIdenti
 
 ## <a name="see-also"></a>Consulte também
 
-<xref:System.Type.IsEquivalentTo%2A>  
-[Usando tipos COM no código gerenciado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
-[Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)  
+- <xref:System.Type.IsEquivalentTo%2A>
+- [Usando tipos COM no código gerenciado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)

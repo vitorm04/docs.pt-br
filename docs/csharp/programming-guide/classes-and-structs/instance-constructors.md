@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 5cc7c06a763c4b274b154afc581e495a7e2aa09b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e3ba825fcbf40e08a2cb4488de2bbed9257c2508
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592829"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Construtores de instâncias (Guia de Programação em C#)
 Os construtores de instância são usados para criar e inicializar quaisquer variáveis de membro de instância quando você usa a expressão [new](../../../csharp/language-reference/keywords/new.md) para criar um objeto de uma [classe](../../../csharp/language-reference/keywords/class.md). Para inicializar uma classe [estática](../../../csharp/language-reference/keywords/static.md) ou variáveis estáticas em uma classe não estática, é necessário definir um construtor estático. Para obter mais informações, consulte [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -23,7 +23,7 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
 > [!NOTE]
 >  Para maior clareza, essa classe contém campos públicos. O uso de campos públicos não é uma prática de programação recomendada, porque permite que qualquer acesso de programa não restrito e não verificado a trabalhos internos de um objeto. Geralmente os membros de dados devem ser privados e devem ser acessados apenas por meio de propriedades e métodos de classe.  
   
- Esse construtor de instância é chamado sempre que um objeto com base na classe `CoOrds` é criado. Um construtor como este, que não usa nenhum argumento, é chamado um *construtor padrão*. No entanto, geralmente é útil fornecer construtores adicionais. Por exemplo, podemos adicionar um construtor à classe `CoOrds` que nos permite especificar os valores iniciais para os membros de dados:  
+ Esse construtor de instância é chamado sempre que um objeto com base na classe `Coords` é criado. Um construtor como este, que não usa nenhum argumento, é chamado um *construtor padrão*. No entanto, geralmente é útil fornecer construtores adicionais. Por exemplo, podemos adicionar um construtor à classe `Coords` que nos permite especificar os valores iniciais para os membros de dados:  
   
  [!code-csharp[csProgGuideObjects#76](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_2.cs)]  
   
@@ -31,7 +31,7 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
   
  [!code-csharp[csProgGuideObjects#77](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_3.cs)]  
   
- Se uma classe não tem um construtor, um construtor padrão é gerado automaticamente e os valores padrão são usados para inicializar os campos de objeto. Por exemplo, um [int](../../../csharp/language-reference/keywords/int.md) é inicializada como 0. Para obter mais informações sobre valores padrão, consulte [Tabela de valores padrão](../../../csharp/language-reference/keywords/default-values-table.md). Portanto, como construtor padrão da classe `CoOrds` inicializa todos os membros de dados como zero, ele pode ser totalmente removido sem alterar a maneira como a classe funciona. Um exemplo completo que usa vários construtores é fornecido no Exemplo 1 posteriormente neste tópico e um exemplo de um construtor gerado automaticamente é fornecido no Exemplo 2.  
+ Se uma classe não tem um construtor, um construtor padrão é gerado automaticamente e os valores padrão são usados para inicializar os campos de objeto. Por exemplo, um [int](../../../csharp/language-reference/keywords/int.md) é inicializada como 0. Para obter mais informações sobre valores padrão, consulte [Tabela de valores padrão](../../../csharp/language-reference/keywords/default-values-table.md). Portanto, como construtor padrão da classe `Coords` inicializa todos os membros de dados como zero, ele pode ser totalmente removido sem alterar a maneira como a classe funciona. Um exemplo completo que usa vários construtores é fornecido no Exemplo 1 posteriormente neste tópico e um exemplo de um construtor gerado automaticamente é fornecido no Exemplo 2.  
   
  Construtores de instância também podem ser usados para chamar os construtores de instância de classes base. O construtor de classe pode invocar o construtor da classe base por meio do inicializador, da seguinte maneira:  
   
@@ -60,8 +60,8 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 - [static](../../../csharp/language-reference/keywords/static.md)

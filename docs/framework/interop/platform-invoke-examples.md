@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 330d8ff784218483caf153b5c14f8a30df2d2452
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 612cd108e37d6f072bafed919c14532498352e4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628923"
 ---
 # <a name="platform-invoke-examples"></a>Exemplos de invocação de plataforma
 Os exemplos a seguir demonstram como definir e chamar a função **MessageBox** na User32.dll, passando uma cadeia de caracteres simples como um argumento. Nos exemplos, o campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> é definido como **Auto** para permitir que a plataforma de destino determine a largura de caractere e o marshaling da cadeia de caracteres.  
@@ -31,7 +31,7 @@ Os exemplos a seguir demonstram como definir e chamar a função **MessageBox** 
   
  Para obter exemplos adicionais, consulte [Marshaling de dados com invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [Criando protótipos em código gerenciado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Especificando um conjunto de caracteres](../../../docs/framework/interop/specifying-a-character-set.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- [Criando protótipos em código gerenciado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Especificando um conjunto de caracteres](../../../docs/framework/interop/specifying-a-character-set.md)

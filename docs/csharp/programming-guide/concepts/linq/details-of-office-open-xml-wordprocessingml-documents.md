@@ -2,12 +2,12 @@
 title: Detalhes de documentos do Office Open XML WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 40c9ed57-b827-4c9e-a3e7-8b2163122106
-ms.openlocfilehash: 20dd5dcb6a76987ce9f3df22a0f2b867dc3ac3e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 72a3ae541733f2604f7ea95762fd48794a46856d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689803"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a>Detalhes de documentos do Office Open XML WordprocessingML (C#)
 Esta seção fornece informações sobre os detalhes de documentos do Office Open XML WordprocessingML. Mostra exemplos de partes do documento e estilo de um documento Open XML.  

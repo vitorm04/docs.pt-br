@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738060"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (opções do compilador C#)
 
@@ -43,8 +43,8 @@ As opções **-publicsign** e **-delaysign** são mutuamente exclusivas.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opção -delaysign do compilador C#](delaysign-compiler-option.md)  
-- [Opção -keyfile do compilador C#](keyfile-compiler-option.md)  
-- [Opção -keycontainer do compilador C#](keycontainer-compiler-option.md)  
-- [Opções do compilador de C#](index.md)  
+- [Opção -delaysign do compilador C#](delaysign-compiler-option.md)
+- [Opção -keyfile do compilador C#](keyfile-compiler-option.md)
+- [Opção -keycontainer do compilador C#](keycontainer-compiler-option.md)
+- [Opções do compilador de C#](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

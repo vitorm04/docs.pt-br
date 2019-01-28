@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 05cc42c38fdfeb6e1314b2836dbc82f7edc70cde
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a8b2395d9f738be1bceb4ffb0381f250b03434e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506986"
 ---
 # <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt; (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -37,5 +37,5 @@ ms.locfileid: "53241188"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

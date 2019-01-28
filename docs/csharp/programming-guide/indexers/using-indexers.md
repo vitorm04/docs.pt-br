@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 8c0d145fab69e60a12ebb8b28f087ab643e508b9
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: a6e2ea41c463d5e6959ce7f05a3547ef24f08765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601929"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Usando indexadores (Guia de Programação em C#)
 
@@ -75,6 +75,6 @@ O exemplo a seguir declara uma classe que armazena os dias da semana. Um acessad
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Indexadores](../../../csharp/programming-guide/indexers/index.md)
 - [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)

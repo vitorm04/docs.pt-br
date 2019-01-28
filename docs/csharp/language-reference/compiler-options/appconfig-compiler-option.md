@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514056"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (opções do compilador C#)
 A opção do compilador **-appconfig** permite que um aplicativo em C# especifique o local de um arquivo de configuração de aplicativo (app.config) de um assembly para o CLR (Common Language Runtime) em tempo de associação do assembly.  
@@ -54,7 +54,7 @@ A opção do compilador **-appconfig** permite que um aplicativo em C# especifiq
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
-- [Elemento \<supportPortability>](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+- [Elemento \<supportPortability>](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 6db3db3ebe3e1934a8e74212692f07158b88b1d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717513"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -298,5 +298,5 @@ O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de obje
 
 ## <a name="see-also"></a>Consulte também
 
-- [Classes e objetos](../tour-of-csharp/classes-and-objects.md)   
+- [Classes e objetos](../tour-of-csharp/classes-and-objects.md)
 - [Herança (Guia de programação em C#)](../programming-guide/classes-and-structs/inheritance.md)

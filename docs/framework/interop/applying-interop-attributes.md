@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589760"
 ---
 # <a name="applying-interop-attributes"></a>Aplicando atributos de interoperabilidade
 O namespace <xref:System.Runtime.InteropServices> fornece três categorias de atributos específicos à interoperabilidade: aquelas aplicadas por você em tempo de design, aquelas aplicadas pelas ferramentas de interoperabilidade COM e as APIs durante o processo de conversão e aquelas aplicadas por você ou pela interoperabilidade COM.  
@@ -67,9 +67,9 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Contém o **TYPEFLAGS** que foi originalmente importado para esse tipo da biblioteca de tipos COM.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Contém o **VARFLAGS** que foi originalmente importado para essa variável da biblioteca de tipos COM.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices>  
- [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Atributos](../../../docs/standard/attributes/index.md)  
- [Qualificando tipos .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Empacotando um assembly para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.InteropServices>
+- [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Atributos](../../../docs/standard/attributes/index.md)
+- [Qualificando tipos .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [Empacotando um assembly para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

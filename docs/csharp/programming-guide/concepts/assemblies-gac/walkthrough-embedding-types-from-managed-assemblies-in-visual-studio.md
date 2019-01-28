@@ -2,12 +2,12 @@
 title: 'Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500623"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)
 Se você inserir informações de um assembly gerenciado de nome forte, você poderá acoplar vagamente tipos em um aplicativo para atingir a independência de versão. Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca gerenciada sem precisar ser recompilado para cada versão.  
@@ -234,7 +234,7 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 ## <a name="see-also"></a>Consulte também
 
-- [/link (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
-- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [/link (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Assemblies e o cache de assembly global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

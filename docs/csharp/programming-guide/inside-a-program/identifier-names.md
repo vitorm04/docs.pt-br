@@ -2,12 +2,12 @@
 title: Nomes de identificadores
 description: Conheça as regras para nomes de identificador válidos na linguagem de programação C#.
 ms.date: 08/21/2018
-ms.openlocfilehash: e5ff83661c9a86273760f32a795f7de6dbc7bf1d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2147b3846d4ba6d5471b81448489c6d716e3cd61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606946"
 ---
 # <a name="identifier-names"></a>Nomes de identificadores
 

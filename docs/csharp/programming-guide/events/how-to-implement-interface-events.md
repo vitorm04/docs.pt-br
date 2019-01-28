@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: d52d4d5140e96f81377733e39d1c36886718b706
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 47bd7184e26a643aa8ff17b3e0a0507ab7978216
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540268"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Como: implementar eventos de interface (Guia de Programação em C#)
 Um [interface](../../../csharp/language-reference/keywords/interface.md) pode declarar uma [evento](../../../csharp/language-reference/keywords/event.md). O exemplo a seguir mostra como implementar eventos de interface em uma classe. Basicamente, as regras são as mesmas aplicadas à implementação de qualquer método ou propriedade de interface.  
@@ -60,8 +60,8 @@ Ao fornecer acessadores próprios, é possível especificar se os dois eventos s
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Eventos](../../../csharp/programming-guide/events/index.md)  
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
-- [Implementação de interface explícita](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)
+- [Implementação de interface explícita](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)
 - [Como: acionar eventos de classe base em classes derivadas](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

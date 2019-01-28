@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637736"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Assemblies de coleção para geração de tipos dinâmicos
 
@@ -77,9 +77,9 @@ As seguintes restrições se aplicam a assemblies de coleção:
 - **Objetos associados ao contexto**    
    Não há suporte para variáveis de contexto estático. Tipos em um assembly de coleção não podem estender <xref:System.ContextBoundObject>. No entanto, um código em assemblies de coleção podem usar objetos associados a contexto definidos em outro lugar.
 
-- **Dados de thread estático**       
+- **Dados de thread estático**       
    Não há suporte para variáveis de thread estático.
 
 ## <a name="see-also"></a>Consulte também
 
-[Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)
+- [Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)

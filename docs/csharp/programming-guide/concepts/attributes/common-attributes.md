@@ -2,12 +2,12 @@
 title: Atributos comuns (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504389"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558574"
 ---
 # <a name="common-attributes-c"></a>Atributos comuns (C#)
 Este tópico descreve os atributos que são mais comumente usados nos programas em C#.  
@@ -231,9 +231,9 @@ class SampleClass
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
-- [Atributos](../../../../../docs/standard/attributes/index.md)  
-- [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [Atributos](../../../../../docs/standard/attributes/index.md)
+- [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [Acessando atributos usando reflexão (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 67ef164232a27b8110dfcd108a0345d9d63e8f91
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d1a95519b2c7fc1d90d677e7a62c549defe289ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596391"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Como: executar código de limpeza usando finally (Guia de Programação em C#)
 O propósito de uma instrução `finally` é garantir que a limpeza necessária de objetos, normalmente objetos que estão mantendo recursos externos, ocorra imediatamente, mesmo que uma exceção seja lançada. Um exemplo dessa limpeza é chamar <xref:System.IO.Stream.Close%2A> em um <xref:System.IO.FileStream> imediatamente após o uso, em vez de esperar que o objeto passe pela coleta de lixo feita pelo Common Language Runtime, da seguinte maneira:  
@@ -30,10 +30,10 @@ O propósito de uma instrução `finally` é garantir que a limpeza necessária 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)  
-- [Tratamento de Exceção](../../../csharp/programming-guide/exceptions/exception-handling.md)  
-- [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)
+- [Tratamento de Exceção](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

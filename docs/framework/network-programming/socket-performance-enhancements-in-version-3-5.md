@@ -2,12 +2,12 @@
 title: Melhorias do desempenho de soquete na versão 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 588edc35f1b0fb39beb9be9a71573a1727ffeab8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587759"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Melhorias do desempenho de soquete na versão 3.5
 A classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> foi aprimorada na Versão 3.5 para uso por aplicativos que usam a E/S de rede assíncrona para obter o melhor desempenho. Uma série de novas classes foi adicionada como parte de um conjunto de melhorias da classe <xref:System.Net.Sockets.Socket>, que fornece um padrão assíncrono alternativo que pode ser usado por aplicativos de soquete especializados de alto desempenho. Essas melhorias foram projetadas especificamente para aplicativos de servidor de rede que exigem alto desempenho. Um aplicativo pode usar o padrão assíncrono aprimorado exclusivamente ou somente nas áreas de acesso direcionadas de seu aplicativo (ao receber grandes quantidades de dados, por exemplo).  
@@ -33,10 +33,10 @@ A classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> foi aprim
   
  O tempo de vida do novo objeto de contexto da operação de soquete assíncrono é determinado por referências no código do aplicativo e por referências de E/S assíncrona. Não é necessário que o aplicativo retenha uma referência a um objeto de contexto da operação de soquete assíncrono depois que ele é enviado como um parâmetro para um dos métodos da operação de soquete assíncrono. Ele permanecerá referenciado até o retorno do retorno de chamada de conclusão. No entanto, é vantajoso para o aplicativo reter a referência ao objeto de contexto, de modo que ele possa ser reutilizado para uma operação futura de soquete assíncrono.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Exemplos de código de soquete](socket-code-examples.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
+- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Exemplos de código de soquete](socket-code-examples.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 5688e71c49309c3f879eda4fd6df8ba75b327426
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 39a34539fbd9623d4ae3c6bddf55e50e3502db61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692344"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Como: converter uma matriz de bytes em um int (Guia de Programação em C#)
 Este exemplo mostra como usar a classe <xref:System.BitConverter> para converter uma matriz de bytes em um [int](../../../csharp/language-reference/keywords/int.md) e de volta em uma matriz de bytes. Talvez você precise converter bytes em um tipo de dados interno depois de ler bytes da rede, por exemplo. Além do método [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) no exemplo, a tabela a seguir lista métodos na classe <xref:System.BitConverter> convertem bytes (de uma matriz de bytes) em outros tipos internos.  
@@ -47,6 +47,6 @@ Este exemplo mostra como usar a classe <xref:System.BitConverter> para converter
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.BitConverter>  
-- <xref:System.BitConverter.IsLittleEndian>  
+- <xref:System.BitConverter>
+- <xref:System.BitConverter.IsLittleEndian>
 - [Tipos](../../../csharp/programming-guide/types/index.md)

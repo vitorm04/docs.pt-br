@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: c7775de75ddbf274f3a1555c9f0daaf63bbee713
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dfa3b60e0c76e377a52243c534139d6c9025d46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573316"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Criando e lançando exceções (Guia de Programação em C#)
 As exceções são usadas para indicar que ocorreu um erro durante a execução do programa. Objetos de exceção que descrevem um erro são criados e, em seguida, *lançados* com a palavra-chave [throw](../../../csharp/language-reference/keywords/throw.md). Então, o tempo de execução procura o manipulador de exceção mais compatível.  
@@ -68,7 +68,7 @@ Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.m
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)  
-- [Hierarquia de exceções](../../../standard/exceptions/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)
+- [Hierarquia de exceções](../../../standard/exceptions/index.md)
 - [Tratamento de Exceção](../../../csharp/programming-guide/exceptions/exception-handling.md)

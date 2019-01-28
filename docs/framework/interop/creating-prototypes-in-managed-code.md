@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564286"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
 Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
@@ -221,12 +221,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)  
- [Especificando um ponto de entrada](specifying-an-entry-point.md)  
- [Especificando um conjunto de caracteres](specifying-a-character-set.md)  
- [Exemplos de invocação de plataforma](platform-invoke-examples.md)  
- [Considerações sobre segurança de invocação de plataforma](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
- [Identificando funções em DLLs](identifying-functions-in-dlls.md)  
- [Criando uma classe para conter funções de DLL](creating-a-class-to-hold-dll-functions.md)  
- [Chamando uma função de DLL](calling-a-dll-function.md)
+## <a name="see-also"></a>Consulte também
+- [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)
+- [Especificando um ponto de entrada](specifying-an-entry-point.md)
+- [Especificando um conjunto de caracteres](specifying-a-character-set.md)
+- [Exemplos de invocação de plataforma](platform-invoke-examples.md)
+- [Considerações sobre segurança de invocação de plataforma](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [Identificando funções em DLLs](identifying-functions-in-dlls.md)
+- [Criando uma classe para conter funções de DLL](creating-a-class-to-hold-dll-functions.md)
+- [Chamando uma função de DLL](calling-a-dll-function.md)

@@ -1,12 +1,12 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 081a8f6edcddd5e87d3d9750b91ff42a72b92886
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589302"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -81,11 +81,11 @@ SecondAttribute
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Attribute>  
-- <xref:System.Reflection>  
-- [Guia de Programação em C#](../..//index.md)  
-- [Atributos](../../../..//standard/attributes/index.md)  
-- [Reflexão (C#)](../reflection.md)  
-- [Atributos](index.md)  
-- [Criando atributos personalizados (C#)](creating-custom-attributes.md)  
+- <xref:System.Attribute>
+- <xref:System.Reflection>
+- [Guia de Programação em C#](../..//index.md)
+- [Atributos](../../../..//standard/attributes/index.md)
+- [Reflexão (C#)](../reflection.md)
+- [Atributos](index.md)
+- [Criando atributos personalizados (C#)](creating-custom-attributes.md)
 - [Acessando atributos usando reflexão (C#)](accessing-attributes-by-using-reflection.md)

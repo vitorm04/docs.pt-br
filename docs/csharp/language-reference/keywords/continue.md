@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C#]
 ms.assetid: 8a5ac96f-f98a-4519-b32d-345847ed7be0
-ms.openlocfilehash: fbb5d170f10c0a4b6c6edeae6c3f4a549de65525
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0b3baf6eb4843ff67a3d76af06ca86ca9ec2db03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690586"
 ---
 # <a name="continue-c-reference"></a>continue (Referência de C#)
 
@@ -31,8 +31,8 @@ Neste exemplo, um contador é inicializado para a contagem de 1 a 10. Ao usar a 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
-- [Instrução Break](/cpp/cpp/break-statement-cpp)  
+- [Referência de C#](../../../csharp/language-reference/index.md)
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Instrução Break](/cpp/cpp/break-statement-cpp)
 - [Instruções de atalho](../../../csharp/language-reference/keywords/jump-statements.md)

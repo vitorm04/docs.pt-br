@@ -4,12 +4,12 @@ description: Saiba como definir e usar os valores ref return e ref local
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514407"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -124,5 +124,5 @@ Essa segunda versão é mais eficiente, com sequências mais longas em cenários
 
 ## <a name="see-also"></a>Consulte também
 
-- [ref keyword](../../language-reference/keywords/ref.md)  
+- [ref keyword](../../language-reference/keywords/ref.md)
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)

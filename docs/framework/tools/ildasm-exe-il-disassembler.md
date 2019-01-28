@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 95a060f047094d7f1336a3e1e26b34c7d47b5a42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495508"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -186,7 +186,7 @@ Um tipo aninhado deve ser precedido por sua classe de contenção, delimitada po
 
 ## <a name="see-also"></a>Consulte também
 
-[Ferramentas](../../../docs/framework/tools/index.md)  
-[Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-[Processo de execução gerenciada](../../../docs/standard/managed-execution-process.md)  
-[Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ferramentas](../../../docs/framework/tools/index.md)
+- [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Processo de execução gerenciada](../../../docs/standard/managed-execution-process.md)
+- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

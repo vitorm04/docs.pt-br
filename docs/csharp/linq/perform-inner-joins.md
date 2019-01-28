@@ -1,14 +1,14 @@
 ---
 title: Executar junções internas (LINQ em C#)
 description: Saiba como executar junções internas usando o LINQ em C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
-ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112777"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857951"
 ---
 # <a name="perform-inner-joins"></a>Executar junções internas
 
@@ -66,8 +66,8 @@ O resultado de `query1` é equivalente ao conjunto de resultados que seria obtid
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [Executar junções agrupadas](perform-grouped-joins.md)  
-- [Executar junções externas esquerdas](perform-left-outer-joins.md)  
-- [Tipos anônimos](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [Executar junções agrupadas](perform-grouped-joins.md)
+- [Executar junções externas esquerdas](perform-left-outer-joins.md)
+- [Tipos anônimos](../programming-guide/classes-and-structs/anonymous-types.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0c13f5aef9f08929dcd17f53777ba9e23b00b838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728379"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumindo funções de DLL não gerenciadas
 A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Win32. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
@@ -72,7 +72,7 @@ Uma chamada da invocação de plataforma a uma função de DLL não gerenciada
   
  A invocação de plataforma gera exceções geradas pela função não gerenciada para o chamador gerenciado.
 
-## <a name="see-also"></a>Consulte também  
- [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)  
- [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)  
+## <a name="see-also"></a>Consulte também
+- [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)
+- [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)
+- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
