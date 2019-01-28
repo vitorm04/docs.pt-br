@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica seu projeto .NET Core em um diretório.
 ms.date: 05/29/2018
-ms.openlocfilehash: 353adfcbb0479e4a951b900f06327e23a3414225
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 40ce31073ee3f6f94e110f3a4e1eeda0c7b2e48d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559267"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -227,5 +227,5 @@ Publique o aplicativo atual, mas não restaure as referências P2P (projeto a pr
 
 ## <a name="see-also"></a>Consulte também
 
-* [Estruturas de destino](../../standard/frameworks.md)
-* [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)
+- [Estruturas de destino](../../standard/frameworks.md)
+- [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)
