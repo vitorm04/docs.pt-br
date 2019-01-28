@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645893"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -287,7 +287,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
  em que *subexpression* é qualquer padrão de expressão regular válido. Por exemplo, `(?i-s:)` ativa a diferenciação de maiúsculas e minúsculas e desabilita o modo de linha única. Para saber mais sobre as opções embutidas que você pode especificar, veja [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Você pode especificar opções que se aplicam a toda uma expressão regular, em vez de a uma subexpressão, usando um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método estático. Você também pode especificar opções embutidas que são aplicadas após um ponto específico de uma expressão regular, usando a construção de linguagem `(?imnsx-imnsx)`.  
+>  Você pode especificar opções que se aplicam a toda uma expressão regular, em vez de a uma subexpressão, usando um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método estático. Você também pode especificar opções embutidas que são aplicadas após um ponto específico de uma expressão regular, usando o constructo de linguagem `(?imnsx-imnsx)`.  
   
  O constructo de opções de grupo não é um grupo de captura. Ou seja, embora todas as porções de uma cadeia de caracteres que são capturadas pela *subexpressão* sejam incluídas na correspondência, elas não são incluídas em grupos capturados, nem usadas para preencher o objeto <xref:System.Text.RegularExpressions.GroupCollection>.  
   
@@ -295,7 +295,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começar a correspondência em um limite de palavra.|  
+|`\b`|Começa a correspondência em um limite de palavra.|  
 |`(?ix: d \w+)`|Usa a correspondência sem diferenciar letras maiúsculas e minúsculas e ignora espaços em branco nesse padrão e corresponde um "d" seguido por um ou mais caracteres que compõem palavras.|  
 |`\s`|Corresponde a um caractere de espaço em branco.|  
   
@@ -472,5 +472,5 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
 ## <a name="see-also"></a>Consulte também
 
-- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

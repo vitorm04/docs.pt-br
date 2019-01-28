@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f3e44b81b519bcae42c2e69eff46e73b1ae631a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490798"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend, coleta de lixo e pontos seguros
 Quando você chama <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> em um thread, o sistema observa que uma suspensão de thread foi solicitada e permite que o thread seja executado até atingir um ponto seguro antes de realmente suspendê-lo. Um ponto seguro de um thread é um ponto da execução em que a coleta de lixo pode ser executada.  
@@ -28,7 +28,7 @@ Quando você chama <xref:System.Threading.Thread.Suspend%2A?displayProperty=name
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Threading.Thread>  
-- <xref:System.GC>  
-- [Threading](../../../docs/standard/threading/index.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.GC>
+- [Threading](../../../docs/standard/threading/index.md)
 - [Gerenciamento Automático de Memória](../../../docs/standard/automatic-memory-management.md)

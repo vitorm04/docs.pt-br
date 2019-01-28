@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bad5372af1d771dc93a20e61090ef84126f3e1eb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 41c9793900c3e7accd5463a19de10d1cb81afd59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503827"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Programação assíncrona usando delegados
 Os representantes permitem que você chame um método síncrono de maneira assíncrona. Quando você chama um representante de forma síncrona, o método `Invoke` chama o método de destino diretamente no thread atual. Se o método `BeginInvoke` for chamado, o CLR (Common Language Runtime) enfileira a solicitação e retorna imediatamente ao chamador. O método de destino é chamado de forma assíncrona em um thread a partir do pool de threads. O thread original, que enviou a solicitação, permanece livre para continuar a executar em paralelo com o método de destino. Se um método de retorno de chamada foi especificado na chamada para o método `BeginInvoke`, o método de retorno de chamada é chamado quando termina o método de destino. O método de retorno de chamada, o método `EndInvoke` obtém o valor retornado e os parâmetros de entrada/saída ou somente de saída. Se nenhum método de retorno de chamada for especificado ao chamar `BeginInvoke`, `EndInvoke` pode ser chamado do thread que chamou `BeginInvoke`.  
@@ -37,4 +37,4 @@ Os representantes permitem que você chame um método síncrono de maneira assí
   
 ## <a name="see-also"></a>Consulte também
 
-* <xref:System.Delegate>
+- <xref:System.Delegate>

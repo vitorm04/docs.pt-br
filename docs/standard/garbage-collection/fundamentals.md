@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982861"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066309"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 <a name="top"></a> No CLR (Common Language Runtime), o coletor de lixo atua como um gerenciador automático de memória. Ele oferece os seguintes benefícios:  
@@ -98,7 +98,7 @@ ms.locfileid: "50982861"
   
  Há um heap gerenciado para cada processo gerenciado. Todos os threads no processo alocam memória para objetos no mesmo heap.  
   
- Para reservar memória, o coletor de lixo chama a função [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) de Win32 e reserva um segmento de memória por vez para aplicativos gerenciados. O coletor de lixo também reserva segmentos conforme o necessário, e libera segmentos de volta para o sistema operacional (depois de eliminar qualquer objeto) chamando a função [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) de Win32.  
+ Para reservar memória, o coletor de lixo chama a função [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) de Win32 e reserva um segmento de memória por vez para aplicativos gerenciados. O coletor de lixo também reserva segmentos conforme o necessário, e libera segmentos de volta para o sistema operacional (depois de eliminar qualquer objeto) chamando a função [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) de Win32.  
   
 > [!IMPORTANT]
 >  O tamanho de segmentos alocados pelo coletor de lixo é específico da implementação e está sujeito a alterações a qualquer momento, incluindo em atualizações periódicas. Seu aplicativo nunca deve fazer suposições sobre o tamanho de um segmento em particular nem depender dele, tampouco deve tentar configurar a quantidade de memória disponível para alocações de segmento.  

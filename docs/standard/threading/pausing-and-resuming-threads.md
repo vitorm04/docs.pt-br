@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648213"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausando e interrompendo threads
 
@@ -51,9 +51,9 @@ As formas mais comuns para sincronizar as atividades de threads são segmentos d
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadInterruptedException>  
-- <xref:System.Threading.ThreadAbortException>  
-- [Threading](../../../docs/standard/threading/index.md)  
-- [Usando threads e threading](../../../docs/standard/threading/using-threads-and-threading.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadInterruptedException>
+- <xref:System.Threading.ThreadAbortException>
+- [Threading](../../../docs/standard/threading/index.md)
+- [Usando threads e threading](../../../docs/standard/threading/using-threads-and-threading.md)
 - [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

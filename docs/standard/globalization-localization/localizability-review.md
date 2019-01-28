@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a4c205d61e6de3e835954e405cece143520b4d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623971"
 ---
 # <a name="localizability-review"></a>Revisão de localização
 A revisão de localização é uma etapa intermediária no desenvolvimento de um aplicativo pronto para o mundo. Ela verifica se um aplicativo globalizado está pronto para a localização e identifica qualquer código ou aspecto da interface do usuário que exija tratamento especial. Esta etapa também ajuda a garantir que o processo de localização não apresente qualquer defeito funcionais em seu aplicativo. Quando todos os problemas levantados pela revisão de localização forem resolvidos, o aplicativo estará pronto para a localização. Se a revisão de localização estiver concluída, você não precisará modificar qualquer código-fonte durante o processo de localização.  
@@ -75,7 +75,7 @@ A revisão de localização é uma etapa intermediária no desenvolvimento de um
   
 ## <a name="see-also"></a>Consulte também
 
-- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  
-- [Localização](../../../docs/standard/globalization-localization/localization.md)  
-- [Globalização](../../../docs/standard/globalization-localization/globalization.md)  
+- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
+- [Localização](../../../docs/standard/globalization-localization/localization.md)
+- [Globalização](../../../docs/standard/globalization-localization/globalization.md)
 - [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)

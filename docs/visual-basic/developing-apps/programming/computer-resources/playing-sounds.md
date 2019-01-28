@@ -11,12 +11,12 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-ms.openlocfilehash: decd845fde5bd4fad702cfe05fd63fcc180b63a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f303687fb86e23191727df769af52811a93fe71e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715784"
 ---
 # <a name="playing-sounds-visual-basic"></a>Executando sons (Visual Basic)
 O objeto `My.Computer.Audio` fornece métodos para reproduzir sons.  
@@ -41,7 +41,7 @@ O objeto `My.Computer.Audio` fornece métodos para reproduzir sons.
   
  [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
- O exemplo de código anterior também está disponível como um trecho de código do IntelliSense. No seletor de trecho de código, ele está localizado em **Aplicativos do Windows Forms > Sons**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
+ O exemplo de código anterior também está disponível como um snippet de código do IntelliSense. No seletor de snippet de código, ele está localizado em **Aplicativos do Windows Forms &gt; Sons**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
  Em geral, quando um aplicativo reproduz um som em loop, ele deve interromper o som eventualmente.  
   
@@ -54,7 +54,7 @@ O objeto `My.Computer.Audio` fornece métodos para reproduzir sons.
   
  [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
- O exemplo de código anterior também está disponível como um trecho de código do IntelliSense. No seletor de trecho de código, ele está localizado em **Aplicativos do Windows Forms > Sons**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
+ O exemplo de código anterior também está disponível como um snippet de código do IntelliSense. No seletor de snippet de código, ele está localizado em **Aplicativos do Windows Forms &gt; Sons**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
 ## <a name="playing-system-sounds"></a>Reproduzindo sons do sistema  
  Use o método `My.Computer.Audio.PlaySystemSound` para reproduzir o som do sistema especificado.  
@@ -65,9 +65,9 @@ O objeto `My.Computer.Audio` fornece métodos para reproduzir sons.
   
  [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Audio>  
- <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>  
- <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>  
- <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>  
- <xref:Microsoft.VisualBasic.AudioPlayMode>
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Devices.Audio>
+- <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>
+- <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>
+- <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>
+- <xref:Microsoft.VisualBasic.AudioPlayMode>

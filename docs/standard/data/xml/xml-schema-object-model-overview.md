@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7f3075d46ef0e8b98af471ae3943f7500128e5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c63a21ed871bf967674d09230f897b7ab98dfa4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554940"
 ---
 # <a name="xml-schema-object-model-overview"></a>Visão geral do modelo de objeto de esquema XML
 O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que permite a você criar, editar, e validar esquemas programaticamente. O SOM opera sobre documentos de esquema XML de forma semelhante à forma como Document Object Model (DOM) opera sobre documentos XML. Documentos de esquema XML são arquivos XML válidos, que carregados uma vez no SOM, transmitem significar sobre a estrutura e a validade de outros documentos XML que estão de acordo com o esquema.  
@@ -40,10 +40,10 @@ O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [Compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [Percorrer esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [Compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Percorrer esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [Infoset de compilação pós-esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

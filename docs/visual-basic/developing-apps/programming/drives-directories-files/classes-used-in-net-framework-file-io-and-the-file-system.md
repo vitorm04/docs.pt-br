@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39333033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705317"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
 As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .NET Framework, categorizadas em classes de E/S de arquivos, classes usadas para criar fluxos e classes usadas para ler e gravar em fluxos.  
@@ -56,8 +56,8 @@ As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Lê caracteres de um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Grava caracteres em um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
   
-## <a name="see-also"></a>Consulte também  
- [Compondo fluxos](../../../../standard/io/composing-streams.md)  
- [E/S de arquivo e de fluxo](../../../../standard/io/index.md)  
- [E/S de arquivo assíncrona](../../../../standard/io/asynchronous-file-i-o.md)  
- [Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Consulte também
+- [Compondo fluxos](../../../../standard/io/composing-streams.md)
+- [E/S de arquivo e de fluxo](../../../../standard/io/index.md)
+- [E/S de arquivo assíncrona](../../../../standard/io/asynchronous-file-i-o.md)
+- [Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

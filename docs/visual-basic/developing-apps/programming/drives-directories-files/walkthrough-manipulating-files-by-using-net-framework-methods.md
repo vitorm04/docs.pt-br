@@ -15,14 +15,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 20150326308513325a9f1219de3e3023e6c5192b
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 89645c489cb9f21ffe415fb7c02ae09fca9a7444
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505699"
 ---
-# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Instruções passo a passo: manipulando arquivos usando métodos do .NET Framework (Visual Basic)
+# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Passo a passo: Manipulando arquivos usando métodos do .NET Framework (Visual Basic)
 Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a classe <xref:System.IO.StreamReader>, verificar se um arquivo está sendo acessado, pesquisar uma cadeia de caracteres dentro de um arquivo lido com uma instância da classe <xref:System.IO.StreamReader> e gravar em um arquivo usando a classe <xref:System.IO.StreamWriter>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -42,7 +42,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 4.  Adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.  
   
-|**Object**|**Propriedades**|**Value**|  
+|**Object**|**Propriedades**|**Valor**|  
 |---|---|---|   
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Submit`<br /><br /> **Enviar entrada**|  
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Clear`<br /><br /> **Limpar entrada**|  
@@ -147,7 +147,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
  Para testar seu código, pressione F5 para compilar o aplicativo. Clique em **Obter Entradas**, selecione uma entrada e clique em **Exibir**. A entrada aparece na `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Clique em **Editar entrada**. A entrada aparece na `Entry`<xref:System.Windows.Forms.TextBox>. Edite a entrada na `Entry`<xref:System.Windows.Forms.TextBox> e clique em **Enviar Edição**. Abra o arquivo `MyDiary.txt` para confirmar a correção. Agora, selecione uma entrada e clique em **Excluir entrada**. Quando o <xref:System.Windows.Forms.MessageBox> solicita confirmação, clique em **OK**. Feche o aplicativo e abra `MyDiary.txt` para confirmar a exclusão.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IO.StreamReader>  
- <xref:System.IO.StreamWriter>  
- [Explicações Passo a Passo](../../../../visual-basic/walkthroughs.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.StreamWriter>
+- [Explicações Passo a Passo](../../../../visual-basic/walkthroughs.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688890"
 ---
 # <a name="comparing-strings-in-net"></a>Comparando cadeias de caracteres em .NET
 O .NET fornece vários métodos para comparar os valores de cadeias de caracteres. A tabela a seguir lista e descreve os métodos de comparação de valores.  
@@ -46,9 +46,9 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
 |Valor retornado|Condição|  
 |------------------|---------------|  
-|Um inteiro negativo|A primeira cadeia de caracteres precede a segunda cadeia de caracteres na ordem de classificação.<br /><br /> -ou-<br /><br /> A primeira cadeia de caracteres é `null`.|  
-|0|A primeira cadeia de caracteres e a segunda cadeia de caracteres são iguais.<br /><br /> -ou-<br /><br /> Ambas as cadeias de caracteres são `null`.|  
-|Um inteiro positivo<br /><br /> -ou-<br /><br /> 1|A primeira cadeia de caracteres segue a segunda cadeia de caracteres na ordem de classificação.<br /><br /> -ou-<br /><br /> A segunda cadeia de caracteres é `null`.|  
+|Um inteiro negativo|A primeira cadeia de caracteres precede a segunda cadeia de caracteres na ordem de classificação.<br /><br /> - ou -<br /><br /> A primeira cadeia de caracteres é `null`.|  
+|0|A primeira cadeia de caracteres e a segunda cadeia de caracteres são iguais.<br /><br /> - ou -<br /><br /> Ambas as cadeias de caracteres são `null`.|  
+|Um inteiro positivo<br /><br /> - ou -<br /><br /> 1|A primeira cadeia de caracteres segue a segunda cadeia de caracteres na ordem de classificação.<br /><br /> - ou -<br /><br /> A segunda cadeia de caracteres é `null`.|  
   
 > [!IMPORTANT]
 >  O método <xref:System.String.Compare%2A?displayProperty=nameWithType> destina-se principalmente para uso em ordenação ou classificação de cadeias de caracteres. Você não deve usar o método <xref:System.String.Compare%2A?displayProperty=nameWithType> para testar a igualdade (ou seja, para procurar explicitamente um valor retornado de 0 sem considerar se uma cadeia de caracteres é menor que ou maior que a outra). Em vez disso, para determinar se duas cadeias de caracteres são iguais, use o método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
@@ -152,7 +152,7 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
 ## <a name="see-also"></a>Consulte também
 
-- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)
 - [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Classificação de tabelas de peso (para .NET em Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
 - [Tabela do elemento de ordenação Unicode padrão (para .NET Core em Linux e macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

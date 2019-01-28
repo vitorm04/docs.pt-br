@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 683a71b27d3e3dd1c0db4e49c2c188ccad0fb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607115"
 ---
 # <a name="implementing-a-dispose-method"></a>Como implementar um método Dispose
 
@@ -38,7 +38,7 @@ Para ajudar a garantir que os recursos sejam sempre limpos corretamente, um mét
 O exemplo de código fornecido para o método <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> mostra a agressividade com a qual uma coleta de lixo pode fazer com que um finalizador seja executado enquanto um membro do objeto recuperado ainda está em execução. É uma boa ideia chamar o método <xref:System.GC.KeepAlive%2A> no final de um método <xref:System.IDisposable.Dispose%2A> longo.  
   
 <a name="Dispose2"></a>
-## <a name="dispose-and-disposeboolean"></a>Dispose() e Dispose(Booliano)  
+## <a name="dispose-and-disposeboolean"></a>Dispose() e Dispose(Boolean)  
 
 A interface <xref:System.IDisposable> requer a implementação de um único método sem parâmetros, <xref:System.IDisposable.Dispose%2A>. No entanto, o padrão de descarte requer que dois métodos `Dispose` sejam implementados:  
   
@@ -162,11 +162,11 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `Disp
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.GC.SuppressFinalize%2A>   
-- <xref:System.IDisposable>   
-- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>   
-- <xref:Microsoft.Win32.SafeHandles>   
-- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
-- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-- [Como definir e consumir classes e structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+- <xref:System.GC.SuppressFinalize%2A>
+- <xref:System.IDisposable>
+- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>
+- <xref:Microsoft.Win32.SafeHandles>
+- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
+- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
+- [Como: definir e consumir classes e estruturas (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
 - [Padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md)

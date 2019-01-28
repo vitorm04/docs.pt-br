@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617909"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizando dados para multithreading
 Quando vários threads podem fazer chamadas para as propriedades e métodos de um único objeto, é fundamental que essas chamadas sejam sincronizadas. Caso contrário, um thread pode interromper o que outro thread está fazendo e o objeto pode ser deixado em um estado inválido. Uma classe cujos membros são protegidos de tais interrupções é denominada thread-safe.  
@@ -69,8 +69,8 @@ Quando vários threads podem fazer chamadas para as propriedades e métodos de u
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)  
-- [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
-- [Instrução SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)
+- [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Instrução SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [Instrução lock](~/docs/csharp/language-reference/keywords/lock-statement.md)

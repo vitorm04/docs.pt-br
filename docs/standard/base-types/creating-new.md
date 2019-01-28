@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659482"
 ---
 # <a name="creating-new-strings-in-net"></a>Criação de novas cadeias de caracteres no .NET
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que cadeias de caracteres sejam criadas usando uma atribuição simples e também sobrecarrega um constructo de classe para dar suporte à criação de cadeias de caracteres usando um número de parâmetros diferentes. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] também fornece vários métodos na classe <xref:System.String?displayProperty=nameWithType> que criam novos objetos de cadeia de caracteres combinando várias cadeias de caracteres, matrizes de cadeias de caracteres ou objetos.  
@@ -82,5 +82,5 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que cadei
   
 ## <a name="see-also"></a>Consulte também
 
-- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)
 - [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)

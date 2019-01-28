@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613903"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegados genéricos para manipulação de matrizes e listas
 Este tópico fornece uma visão geral de delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.  
@@ -43,9 +43,9 @@ Este tópico fornece uma visão geral de delegados genéricos para conversões, 
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [Genéricos](../../../docs/standard/generics/index.md)  
-- [Coleções genéricas no .NET Framework](../../../docs/standard/generics/collections.md)  
-- [Interfaces genéricas](../../../docs/standard/generics/interfaces.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [Genéricos](../../../docs/standard/generics/index.md)
+- [Coleções genéricas no .NET Framework](../../../docs/standard/generics/collections.md)
+- [Interfaces genéricas](../../../docs/standard/generics/interfaces.md)
 - [Covariância e Contravariância](../../../docs/standard/generics/covariance-and-contravariance.md)

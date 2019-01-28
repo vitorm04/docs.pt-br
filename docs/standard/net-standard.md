@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bf8b73d5785ad39180b47963130105b905f955c1
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: d759ab8fe436ad68ca67943b7a4330cea093ae52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535912"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -67,7 +67,7 @@ A especificação do .NET Standard é um conjunto padronizado de APIs. A especif
 
 A especificação oficial é um conjunto de arquivos .cs que definem as APIs que fazem parte do padrão. O [diretório ref](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) em [dotnet/standard repository](https://github.com/dotnet/standard) define as APIs do .NET Standard.
 
-O metapacote [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([de origem](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) descreve o conjunto de bibliotecas que define (parcialmente) uma ou mais versões do .NET Standard.
+O metapacote [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([de origem](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) descreve o conjunto de bibliotecas que define (parcialmente) uma ou mais versões do .NET Standard.
 
 Um componente específico, como o `System.Runtime`, descreve:
 

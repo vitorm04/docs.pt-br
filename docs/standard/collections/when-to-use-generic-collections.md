@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674031"
 ---
 # <a name="when-to-use-generic-collections"></a>Quando usar coleções genéricas
 Geralmente é recomendável usar coleções genéricas, porque você obtém a vantagem imediata da segurança de tipos sem precisar derivar de um tipo de coleção base e implementar membros específicos do tipo. Tipos de coleção genérica também geralmente executam melhor do que os tipos de coleção não genérica correspondentes (e melhor do que tipos que são derivados de tipos de coleção base não genérica) quando os elementos da coleção forem tipos de valor, pois com genéricos não é necessário colocar os elementos em caixa.  
@@ -55,6 +55,6 @@ Geralmente é recomendável usar coleções genéricas, porque você obtém a va
   
 ## <a name="see-also"></a>Consulte também
 
-- [Coleções e Estruturas de Dados](../../../docs/standard/collections/index.md)  
-- [Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [Coleções e Estruturas de Dados](../../../docs/standard/collections/index.md)
+- [Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)
 - [Genéricos](../../../docs/standard/generics/index.md)

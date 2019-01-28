@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415527"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066422"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap de objeto grande em sistemas Windows
 
@@ -34,7 +34,7 @@ Objetos pequenos sempre são alocados na geração 0 e, dependendo de seu tempo 
 
 Os objetos grandes pertencem à geração 2 porque são coletados apenas durante uma coleta de geração 2. Quando uma geração é coletada, todas as suas gerações mais jovens também são coletadas. Por exemplo, quando ocorre uma GC de geração 1, as gerações 1 e 0 são coletadas. E quando ocorre uma GC de geração 2, todo o heap é coletado. Por esse motivo, um GC de geração 2 também é chamado de *GC completo*. Este artigo se refere ao GC de geração 2, em vez de ao GC completo, mas os termos são intercambiáveis.
 
-Gerações fornecem uma exibição lógica do heap de GC. Fisicamente, os objetos residem em segmentos de heaps gerenciados. Um *segmento de heap gerenciado* é um bloco de memória que o GC reserva do sistema operacional chamando a [função VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) em nome do código gerenciado. Quando o CLR é carregado, o GC aloca dois segmentos de heap iniciais: um para objetos pequenos (o Heap de Objeto Pequeno ou SOH) e outro para objetos grandes (o Heap de Objeto Grande).
+Gerações fornecem uma exibição lógica do heap de GC. Fisicamente, os objetos residem em segmentos de heaps gerenciados. Um *segmento de heap gerenciado* é um bloco de memória que o GC reserva do sistema operacional chamando a [função VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) em nome do código gerenciado. Quando o CLR é carregado, o GC aloca dois segmentos de heap iniciais: um para objetos pequenos (o Heap de Objeto Pequeno ou SOH) e outro para objetos grandes (o Heap de Objeto Grande).
 
 As solicitações de alocação são então atendidas colocando os objetos gerenciados em um desses segmentos de heap gerenciado. Se o objeto for menor que 85.000 bytes, ele será colocado no segmento de SOH; caso contrário, ele será colocado em um segmento de LOH. Os segmentos são confirmados (em blocos menores) à medida que mais objetos são alocados a eles.
 Para o SOH, os objetos que sobrevivem a um GC são promovidos para a próxima geração. Os objetos que sobrevivem a uma coleta de geração 0 são considerados objetos de geração 1 e assim por diante. No entanto, os objetos que sobrevivem à geração mais antiga ainda serão considerados como estando na geração mais antiga. Em outras palavras, os sobreviventes da geração 2 são objetos de geração 2; e os sobreviventes de LOH são objetos LOH (que são coletados com a gen2).
@@ -57,9 +57,9 @@ Figura 2: Depois de um GC geração 2
 
 Se não houver espaço livre suficiente para acomodar as solicitações de alocação de objeto grande, o GC primeiro tentará adquirir mais segmentos do sistema operacional. Se isso falhar, ele disparará um GC de geração 2 na esperança de liberar algum espaço.
 
-Durante um GC de geração 1 ou 2, o coletor de lixo libera segmentos que não contêm objetos vivos novamente para o sistema operacional chamando a [função VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). O espaço após o último objeto vivo até o final do segmento tem a confirmação anulada (exceto no segmento efêmero em que gen0/gen1 vivem, em que o coletor de lixo mantém alguns confirmados, porque o aplicativo alocará nele imediatamente). E os espaços livres permanecem confirmados, embora estejam redefinidos, o que significa que o sistema operacional não precisa gravar dados neles novamente em disco.
+Durante um GC de geração 1 ou 2, o coletor de lixo libera segmentos que não contêm objetos vivos novamente para o sistema operacional chamando a [função VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree). O espaço após o último objeto vivo até o final do segmento tem a confirmação anulada (exceto no segmento efêmero em que gen0/gen1 vivem, em que o coletor de lixo mantém alguns confirmados, porque o aplicativo alocará nele imediatamente). E os espaços livres permanecem confirmados, embora estejam redefinidos, o que significa que o sistema operacional não precisa gravar dados neles novamente em disco.
 
-Como o LOH é coletado apenas durante os GCs de geração 2, o segmento de LOH só pode ser liberado durante um desses GCs. A Figura 3 ilustra um cenário em que o coletor de lixo libera um segmento (segmento 2) novamente para o sistema operacional e anula a confirmação de mais espaço nos segmentos restantes. Se ele precisar usar o espaço com anulação de confirmação no final do segmento para atender a solicitações de alocação de objeto grande, ele confirmará a memória novamente. (Para obter uma explicação da confirmação/anulação de confirmação, confira a documentação do [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).)
+Como o LOH é coletado apenas durante os GCs de geração 2, o segmento de LOH só pode ser liberado durante um desses GCs. A Figura 3 ilustra um cenário em que o coletor de lixo libera um segmento (segmento 2) novamente para o sistema operacional e anula a confirmação de mais espaço nos segmentos restantes. Se ele precisar usar o espaço com anulação de confirmação no final do segmento para atender a solicitações de alocação de objeto grande, ele confirmará a memória novamente. (Para obter uma explicação da confirmação/anulação de confirmação, confira a documentação do [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).)
 
 ![Figura 3: LOH depois de um GC ger. 2](media/loh/loh-figure-3.jpg)  
 Figura 3: LOH depois de um GC geração 2
@@ -302,13 +302,13 @@ Como o LOH não é compactado, às vezes, ele é considerado a origem de fragmen
 
 É mais comum ver a fragmentação da VM causada por objetos grandes temporários que exigem que o coletor de lixo adquira frequentemente novos segmentos de heap gerenciado do sistema operacional e libere os segmentos vazios novamente para o sistema operacional.
 
-Para verificar se o LOH está causando a fragmentação da VM, defina um ponto de interrupção em [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) e [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) para ver quem os chama. Por exemplo, para ver quem tentou alocar blocos de memória virtual maiores que 8 MB do sistema operacional, defina um ponto de interrupção como este:
+Para verificar se o LOH está causando a fragmentação da VM, defina um ponto de interrupção em [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) e [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) para ver quem os chama. Por exemplo, para ver quem tentou alocar blocos de memória virtual maiores que 8 MB do sistema operacional, defina um ponto de interrupção como este:
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Esse comando invade o depurador e mostra a pilha de chamadas somente se [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) é chamado com um tamanho de alocação maior que 8 MB (0x800000).
+Esse comando invade o depurador e mostra a pilha de chamadas somente se [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) é chamado com um tamanho de alocação maior que 8 MB (0x800000).
 
 O CLR 2.0 adicionou um recurso chamado *VM Hoarding*, que pode ser útil para cenários em que os segmentos (incluindo heaps de objeto grande e pequeno) são frequentemente adquiridos e liberados. Para especificar o VM Hoarding, você especifica um sinalizador de inicialização chamado `STARTUP_HOARD_GC_VM` pela API de hospedagem. Em vez de liberar segmentos vazios novamente para o sistema operacional, o CLR anula a confirmação da memória nesses segmentos e os coloca em uma lista de espera. (Observe que o CLR não faz isso para segmentos muito grandes.) Posteriormente, o CLR usa esses segmentos para atender a novas solicitações de segmento. Na próxima vez que seu aplicativo precisar de um novo segmento, o CLR usará um dessa lista de espera, caso consiga encontrar um que seja grande o suficiente.
 
