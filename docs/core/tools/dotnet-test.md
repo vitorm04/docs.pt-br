@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 05/29/2018
-ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535276"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -304,5 +304,5 @@ Para obter mais informações e exemplos sobre como usar a filtragem de teste de
 
 ## <a name="see-also"></a>Consulte também
 
-* [Estruturas e Destinos](../../standard/frameworks.md)  
-* [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+- [Estruturas e Destinos](../../standard/frameworks.md)
+- [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
