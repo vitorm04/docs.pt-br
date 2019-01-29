@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535302"
 ---
 # <a name="the-regular-expression-object-model"></a>O modelo de objeto de expressão regular
 <a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seguintes seções:  
@@ -84,7 +84,7 @@ ms.locfileid: "45664729"
  Essas operações são descritas nas seções a seguir.  
   
 ### <a name="matching-a-regular-expression-pattern"></a>Correspondendo um padrão de expressão regular  
- O método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> retorna `true` se a cadeia corresponder ao padrão, ou `false` se não corresponder. Geralmente, o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> é usado para validar a entrada da cadeia de caracteres. Por exemplo, o código a seguir assegura que uma cadeia corresponda a um número do cadastro de pessoas físicas válido nos Estados Unidos.  
+ O método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> retorna `true` se a cadeia corresponder ao padrão, ou `false` se não corresponder. Geralmente, o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> é usado para validar a entrada da cadeia de caracteres. Por exemplo, o código a seguir assegura que uma cadeia de caracteres corresponda a um número do cadastro de pessoas físicas válido nos Estados Unidos.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/validate1.vb#1)]  
@@ -171,7 +171,7 @@ ms.locfileid: "45664729"
   
  Por padrão, a chamada para o método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> usa a avaliação lenta para preencher o objeto <xref:System.Text.RegularExpressions.MatchCollection>. O acesso a propriedades que requerem uma coleção completamente preenchida, como as propriedades <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, pode envolver uma penalização de desempenho. Como resultado, recomendamos que você acesse a coleção usando o objeto <xref:System.Collections.IEnumerator> retornado pelo método <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Linguagens individuais oferecem constructos, como `For Each` no Visual Basic e `foreach` no C#, que encapsulam a interface <xref:System.Collections.IEnumerator> da coleção.  
   
- O exemplo a seguir usa o método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> para preencher um objeto <xref:System.Text.RegularExpressions.MatchCollection> com todas as correspondências localizadas em uma cadeia de caracteres de entrada. O exemplo enumera a coleção, copia as correspondência para uma matriz de cadeia de caracteres e registra as posições dos caracteres em uma matriz de inteiros.  
+ O exemplo a seguir usa o método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> para preencher um objeto <xref:System.Text.RegularExpressions.MatchCollection> com todas as correspondências localizadas em uma cadeia de caracteres de entrada. O exemplo enumera a coleção, copia as correspondências para uma matriz de cadeia de caracteres e registra as posições dos caracteres em uma matriz de inteiros.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matchcollection1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
@@ -281,10 +281,10 @@ ms.locfileid: "45664729"
 |-------------|-----------------|  
 |`^`|Começar a correspondência no início da cadeia de caracteres de entrada.|  
 |`(?<name>\w+)`|Corresponde a um ou mais caracteres de palavra. O nome deste grupo de captura é `name`.|  
-|`:`|Corresponde a dois pontos.|  
+|`:`|Corresponder a dois pontos.|  
 |`(?<value>\w+)`|Corresponde a um ou mais caracteres de palavra. O nome deste grupo de captura é `value`.|  
   
- As propriedades da classe <xref:System.Text.RegularExpressions.Group> fornecem informações sobre o grupo capturado: a propriedade `Group.Value` contém a subcadeia de caracteres capturada, a propriedade `Group.Index` indica a posição inicial do grupo capturado no texto de entrada, a propriedade `Group.Length` contém o comprimento do texto capturado e a propriedade `Group.Success` indica se uma subcadeia de caracteres corresponde ao padrão definido pelo grupo de captura.  
+ As propriedades da classe <xref:System.Text.RegularExpressions.Group> oferecem informações sobre o grupo capturado: A propriedade `Group.Value` contém a subcadeia de caracteres capturada, a propriedade `Group.Index` indica a posição inicial do grupo capturado no texto de entrada, a propriedade `Group.Length` contém o comprimento do texto capturado, e a propriedade `Group.Success` indica se uma subcadeia de caracteres corresponde ao padrão definido pelo grupo de captura.  
   
  Aplicar quantificadores a um grupo (para obter mais informações, confira [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica a relação de uma captura por grupo de captura de duas formas:  
   
@@ -301,7 +301,7 @@ ms.locfileid: "45664729"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   Quantificadores podem corresponder a diversas ocorrência de um padrão que é definido por um grupo de captura. Nesse caso, as propriedades `Value` e `Length` de um objeto <xref:System.Text.RegularExpressions.Group> contêm informações somente sobre a última subcadeia de caracteres capturada. Por exemplo, a seguinte expressão regular corresponde a uma única sentença que termina com um ponto. Ela utiliza dois constructos de agrupamento: o primeiro captura palavras individuais, juntamente com um caractere de espaço em branco; o segundo captura palavras individuais. Como a saída do exemplo mostra, embora a expressão regular tenha sucesso ao capturar uma sequência inteira, o segundo grupo de captura só captura a última palavra.  
+-   Os quantificadores podem corresponder a diversas ocorrências de um padrão que é definido por um grupo de captura. Nesse caso, as propriedades `Value` e `Length` de um objeto <xref:System.Text.RegularExpressions.Group> contêm informações somente sobre a última subcadeia de caracteres capturada. Por exemplo, a seguinte expressão regular corresponde a uma única sentença que termina com um ponto. Ela utiliza dois constructos de agrupamento: A primeira captura palavras individuais, juntamente com um caractere de espaço em branco; a segunda captura palavras individuais. Como a saída do exemplo mostra, embora a expressão regular tenha sucesso ao capturar uma sequência inteira, o segundo grupo de captura só captura a última palavra.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -323,7 +323,7 @@ ms.locfileid: "45664729"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/capturecollection1.cs#14)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/capturecollection1.vb#14)]  
   
- O exemplo a seguir usa a expressão regular `(Abc)+` para localizar uma ou mais execuções consecutivas da cadeia de caracteres "Abc" na cadeia "XYZAbcAbcAbcXYZAbcAb". O exemplo ilustra o uso da propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> para retornar vários grupos de subcadeias de caracteres capturadas.  
+ O exemplo a seguir usa a expressão regular `(Abc)+` para localizar uma ou mais execuções consecutivas da cadeia de caracteres “Abc” na cadeia “XYZAbcAbcAbcXYZAbcAb”. O exemplo ilustra o uso da propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> para retornar vários grupos de subcadeias de caracteres capturadas.  
   
  [!code-csharp[RegularExpressions.Classes#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#5)]
  [!code-vb[RegularExpressions.Classes#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#5)]  
@@ -353,6 +353,6 @@ ms.locfileid: "45664729"
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Text.RegularExpressions>  
-- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- <xref:System.Text.RegularExpressions>
+- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
 - [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622943"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 <a name="Top"></a> Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais pode ocorrer em uma cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:  
@@ -594,6 +594,6 @@ ms.locfileid: "53131463"
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Char.GetUnicodeCategory%2A>  
-- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- <xref:System.Char.GetUnicodeCategory%2A>
+- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md)
