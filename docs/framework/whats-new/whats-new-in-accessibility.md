@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680281"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -215,11 +215,11 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
     O visual de foco do controle <xref:System.Windows.Controls.Expander> agora está visível. Os visuais de teclado dos controles <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> também estão visíveis. Por exemplo:
 
-    Antes: 
+    Antes: 
     
     ![Controle expansor com foco antes das melhorias de acessibilidade](media/expander-before.png)
 
-    Depois: 
+    Depois: 
 
     ![Controle expansor com foco após as melhorias de acessibilidade](media/expander-after.png)
 
@@ -227,11 +227,11 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
  
     O texto nos controles <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> agora é de visualização mais fácil quando selecionado em temas de alto contraste. Por exemplo:
 
-    Antes: 
+    Antes: 
 
     ![Botão de opção de alto contraste com foco antes das melhorias de acessibilidade](media/radio-button-before.png)
     
-    Depois: 
+    Depois: 
 
     ![Botão de opção de alto contraste com foco após as melhorias de acessibilidade](media/radio-button-after.png)
 
@@ -239,11 +239,11 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
  
     A partir do .NET Framework 4.7.1, a borda de um controle <xref:System.Windows.Controls.ComboBox> desabilitado é da mesma cor do texto desabilitado. Por exemplo:
     
-    Antes: 
+    Antes: 
 
      ![Borda e texto desabilitados da ComboBox antes das melhorias de acessibilidade](media/combo-disabled-before.png)
 
-    Depois:   
+    Depois:   
 
      ![Borda e texto desabilitados da ComboBox após as melhorias de acessibilidade](media/combo-disabled-after.png)
 
@@ -251,43 +251,43 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
     Antes:
 
-    ![Cores de tema do botão antes das melhorias de acessibilidade](media/button-themes-before.png) 
+    ![Cores de tema do botão antes das melhorias de acessibilidade](media/button-themes-before.png) 
     
-    Depois: 
+    Depois: 
 
-    ![Cores de tema do botão após as melhorias de acessibilidade](media/button-themes-after.png) 
+    ![Cores de tema do botão após as melhorias de acessibilidade](media/button-themes-after.png) 
 
     Por fim, no .NET Framework 4.7 e em versões anteriores, a configuração do estilo de um controle <xref:System.Windows.Controls.ComboBox> como `Toolbar.ComboBoxStyleKey` fazia com que a seta suspensa ficasse invisível. Esse problema é corrigido a partir do .NET Framework 4.7.1. Por exemplo:
 
-    Antes: 
+    Antes: 
 
-    ![Toolbar.ComboBoxStyleKey antes das melhorias de acessibilidade](media/comboboxstylekey-before.png) 
+    ![Toolbar.ComboBoxStyleKey antes das melhorias de acessibilidade](media/comboboxstylekey-before.png) 
     
-    Depois: 
+    Depois: 
 
-    ![Toolbar.ComboBoxStyleKey após as melhorias de acessibilidade](media/comboboxstylekey-after.png) 
+    ![Toolbar.ComboBoxStyleKey após as melhorias de acessibilidade](media/comboboxstylekey-after.png) 
 
 - Controle <xref:System.Windows.Controls.DataGrid>
 
     A partir do .NET Framework 4.7.1, a seta do indicador de classificação nos controles <xref:System.Windows.Controls.DataGrid> agora usa as cores de tema corretas. Por exemplo:
 
-    Antes: 
+    Antes: 
 
-    ![Seta do indicador de classificação antes das melhorias de acessibilidade](media/sort-indicator-before.png) 
+    ![Seta do indicador de classificação antes das melhorias de acessibilidade](media/sort-indicator-before.png) 
     
-    Depois:   
+    Depois:   
  
-    ![Seta do indicador de classificação após as melhorias de acessibilidade](media/sort-indicator-after.png) 
+    ![Seta do indicador de classificação após as melhorias de acessibilidade](media/sort-indicator-after.png) 
     
     Além disso, no .NET Framework 4.7 e em versões anteriores, o estilo de link padrão era alterado para uma cor incorreta ao passar o mouse nos modos de alto contraste. Isso é resolvido a partir do .NET Framework 4.7.1. Da mesma forma, as colunas da caixa de seleção <xref:System.Windows.Controls.DataGrid> usam as cores esperadas para os comentários do foco de teclado a partir do .NET Framework 4.7.1.
 
-    Antes: 
+    Antes: 
 
-    ![Estilo de link padrão de DataGrid antes das melhorias de acessibilidade](media/default-link-style-before.png) 
+    ![Estilo de link padrão de DataGrid antes das melhorias de acessibilidade](media/default-link-style-before.png) 
  
-    Depois:    
+    Depois:    
   
-    ![Estilo de link padrão de DataGrid após as melhorias de acessibilidade](media/default-link-style-after.png)  
+    ![Estilo de link padrão de DataGrid após as melhorias de acessibilidade](media/default-link-style-after.png)  
 
 Para obter mais informações sobre as melhorias de acessibilidade do WPF no .NET Framework 4.7.1, consulte [Melhorias de acessibilidade no WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -298,7 +298,7 @@ No .NET Framework 4.7.1, o WinForms (Windows Forms) inclui alterações de acess
 
 **Vídeo aprimorado no modo de Alto Contraste**
 
-A partir do .NET Framework 4.7.1, vários controles do WinForms oferecem uma melhor renderização nos modos de HighContrast disponíveis no sistema operacional. O Windows 10 alterou os valores de algumas cores do sistema de alto contraste e o Windows Forms é baseado na estrutura Win32 do Windows 10. Para obter a melhor experiência, execute a última versão do Windows e aceite as últimas alterações do sistema operacional adicionando um arquivo app.manifest a um aplicativo de teste e remova a marca de comentário da linha de sistema operacional com suporte do Windows 10 para que ela seja semelhante à seguinte:
+Do .NET Framework 4.7.1 em diante, vários controles do WinForms oferecem uma melhor renderização nos modos de HighContrast disponíveis no sistema operacional. O Windows 10 alterou os valores de algumas cores do sistema de alto contraste e o Windows Forms é baseado na estrutura Win32 do Windows 10. Para obter a melhor experiência, execute a última versão do Windows e aceite as últimas alterações do sistema operacional adicionando um arquivo app.manifest a um aplicativo de teste e remova a marca de comentário da linha de sistema operacional com suporte do Windows 10, de modo que ela fique parecida com a seguinte:
 
 ```xml
 <!-- Windows 10 -->
@@ -316,11 +316,11 @@ Alguns exemplos de alterações de alto contraste incluem:
 
     Antes:
 
-    ![Texto desabilitado antes das melhorias de acessibilidade](media/wf-disabled-before.png) 
+    ![Texto desabilitado antes das melhorias de acessibilidade](media/wf-disabled-before.png) 
 
     Depois:
 
-    ![Texto desabilitado após as melhorias de acessibilidade](media/wf-disabled-after.png) 
+    ![Texto desabilitado após as melhorias de acessibilidade](media/wf-disabled-after.png) 
 
 - Melhorias de alto contraste na caixa de diálogo Exceção de Thread.
 
@@ -441,5 +441,5 @@ As alterações de acessibilidade no Designer de Fluxo de Trabalho incluem as se
 
 ## <a name="see-also"></a>Consulte também
 
-[Novidades do .NET Framework](whats-new.md)
- 
+- [Novidades do .NET Framework](whats-new.md)
+

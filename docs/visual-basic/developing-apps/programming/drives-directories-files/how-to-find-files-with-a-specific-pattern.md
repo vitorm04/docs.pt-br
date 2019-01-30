@@ -1,19 +1,19 @@
 ---
-title: Como localizar arquivos com um padrão específico no Visual Basic
+title: 'Como: Localizar arquivos com um padrão específico no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: c1e627893ca1ff03b405f0fb45072214ea76a194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6010aa263b734f5bf57eaa3082a794cb1019645e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498538"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Como localizar arquivos com um padrão específico no Visual Basic
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Como: Localizar arquivos com um padrão específico no Visual Basic
 O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> retorna uma coleção somente leitura de cadeias de caracteres que representam os nomes de caminho para os arquivos. É possível usar o parâmetro `wildCards` para especificar um padrão específico. Para incluir subdiretórios na pesquisa, configure o parâmetro `searchType` para `SearchOption.SearchAllSubDirectories`.  
   
  Uma coleção vazia é retornada se nenhum arquivo correspondente ao padrão especificado for encontrado.  
@@ -46,8 +46,8 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
   
 -   O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>  
- [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- [Solução de problemas: lendo e gravando em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
- [Como obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
+- [Como: Localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Solução de problemas: Lendo e gravando em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Como: Obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

@@ -2,15 +2,15 @@
 title: Materialização intermediária (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: 56c4bb57a931362b3e14f6a8da917ae6907565d6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 065a7e0ffadaa48d400d4f4e3e045014b3658213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685994"
 ---
 # <a name="intermediate-materialization-c"></a>Materialização intermediária (C#)
-Se você não for cauteloso, em algumas situações dràstica você pode alterar a memória e o perfil de desempenho do seu aplicativo causando o materialization prematuro das coleções nas suas consultas. Alguns operadores de consulta padrão faz com que o materialization de sua coleção de origem antes de produzir um único elemento. Por exemplo, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> primeiro itera através da coleção inteira de origem, então classe todos os itens, e então produz basicamente o primeiro item. Isso significa que é grande obter o primeiro item de uma coleção ordenada; cada item não for depois disso caro. Isso faz sentido: Seria impossível para esse operador de consulta de fazer outra maneira.  
+Se você não for cauteloso, em algumas situações dràstica você pode alterar a memória e o perfil de desempenho do seu aplicativo causando o materialization prematuro das coleções nas suas consultas. Alguns operadores de consulta padrão faz com que o materialization de sua coleção de origem antes de produzir um único elemento. Por exemplo, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> primeiro itera através da coleção inteira de origem, então classe todos os itens, e então produz basicamente o primeiro item. Isso significa que é grande obter o primeiro item de uma coleção ordenada; cada item não for depois disso caro. Isso faz sentido: Seria impossível para esse operador de consulta fazer de outra maneira.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo altera o exemplo anterior. O método de `AppendString` chama <xref:System.Linq.Enumerable.ToList%2A> antes de fazer iterações pela origem. Isso faz com que o materialization.  
@@ -88,4 +88,4 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: encadear consultas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Tutorial: Encadeando consultas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

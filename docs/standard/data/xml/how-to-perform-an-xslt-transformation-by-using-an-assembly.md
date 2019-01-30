@@ -1,5 +1,5 @@
 ---
-title: Como executar uma transformação XSLT usando um assembly
+title: 'Como: Executar uma transformação XSLT usando um assembly'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef0d47ae18b8bdd3f1d49a20937b65e9872ab551
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44201745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625608"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Como executar uma transformação XSLT usando um assembly
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Como: Executar uma transformação XSLT usando um assembly
 O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly. O assembly pode ser passado diretamente no método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Para copiar os arquivos XML e XSLT para seu computador local  
@@ -183,7 +183,7 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- [Compilador de XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
-- [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [Compilador de XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Build pela linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

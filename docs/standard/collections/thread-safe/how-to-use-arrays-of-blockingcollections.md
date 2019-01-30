@@ -1,5 +1,5 @@
 ---
-title: Como usar matrizes de coleções Blocking em um pipeline
+title: 'Como: Usar matrizes de coleções de bloqueio em um pipeline'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e2e312668a7cf4fe39596ae018adaf62cd850e4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a4667d78fdf91a3e62c22d88c7cbe9effaae57d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44187540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627194"
 ---
-# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Como usar matrizes de coleções Blocking em um pipeline
+# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Como: Usar matrizes de coleções de bloqueio em um pipeline
 O exemplo a seguir mostra como usar matrizes de objetos <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> com métodos estáticos como <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A> para implementar transferência de dados rápida e flexível entre componentes.  
   
 ## <a name="example"></a>Exemplo  
@@ -28,5 +28,5 @@ O exemplo a seguir mostra como usar matrizes de objetos <xref:System.Collections
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)

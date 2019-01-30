@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: encadear consultas juntas (C#)'
+title: 'Tutorial: Encadeando consultas (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3beed32aa276f218a80267748e74707941957e53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737410"
 ---
-# <a name="tutorial-chaining-queries-together-c"></a>Tutorial: encadear consultas juntas (C#)
+# <a name="tutorial-chaining-queries-together-c"></a>Tutorial: Encadeando consultas (C#)
 Este tutorial mostra o modelo de processamento quando você encadea consultas juntos. Encadeamento consultas seja adjacente uma parte fundamental de escrever transformações funcionais. É importante compreender exatamente como as consultas encadeadas funcionam.  
   
  Consultas que processam documentos do Office Open XML usam essa técnica amplamente.  

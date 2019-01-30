@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690612"
 ---
 # <a name="using-threads-and-threading"></a>Usando threads e threading
 
@@ -24,11 +24,11 @@ Aplicativos que usam multithreading são mais responsivos a entradas do usuário
 > [!NOTE]
 > Se precisar de mais controle sobre o comportamento dos threads de seu aplicativo, você poderá gerenciar os threads por conta própria. No entanto, começando no .NET Framework 4, a programação multi-threaded ficou bastante simplificada com as classes <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, o [PLINQ (LINQ paralelo)](../parallel-programming/parallel-linq-plinq.md), as novas classes de coleção simultânea no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> e um novo modelo de programação que se baseia no conceito de tarefas e não em threads. Para obter mais informações, confira [Programação paralela](../parallel-programming/index.md) e [TPL (biblioteca de paralelismo de tarefas)](../parallel-programming/task-parallel-library-tpl.md).
 
-## <a name="how-to-create-and-start-a-new-thread"></a>Como criar e iniciar um thread
+## <a name="how-to-create-and-start-a-new-thread"></a>Como: Criar e iniciar um novo thread
 
 Crie um thread criando uma nova instância da classe <xref:System.Threading.Thread?displayProperty=nameWithType> e fornecendo o nome do método que você deseja executar em um novo thread para o construtor. Para iniciar um thread criado, chame o método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Para obter mais informações e exemplos, confira o artigo [Criando threads e passando dados na hora de início](creating-threads-and-passing-data-at-start-time.md) e a referência da API <xref:System.Threading.Thread>.
 
-## <a name="how-to-stop-a-thread"></a>Como interromper um thread
+## <a name="how-to-stop-a-thread"></a>Como: Interromper um thread
 
 Para terminar a execução de um thread, use o método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Esse método gera uma <xref:System.Threading.ThreadAbortException> no thread em que é invocado. Para obter mais informações, confira [Destruindo threads](destroying-threads.md).
 
@@ -36,7 +36,7 @@ Começando com o .NET Framework 4, você pode usar o <xref:System.Threading.Canc
 
 Use o método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> para fazer com que o thread de chamada espere o encerramento do thread no qual o método é invocado.
 
-## <a name="how-to-pause-or-interrupt-a-thread"></a>Como pausar ou interromper um thread
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Como: Pausar ou interromper um thread
 
 Use o método <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> para pausar o thread atual por um período de tempo especificado. Você pode interromper um thread bloqueado chamando o método <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>. Para obter mais informações, confira [Pausando e interrompendo threads](pausing-and-resuming-threads.md).
 
@@ -54,6 +54,6 @@ A tabela a seguir apresenta algumas das propriedades do <xref:System.Threading.T
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [Threads e threading](threads-and-threading.md)  
-- [Programação paralela](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [Threads e threading](threads-and-threading.md)
+- [Programação paralela](../parallel-programming/index.md)

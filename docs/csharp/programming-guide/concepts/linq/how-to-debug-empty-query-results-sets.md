@@ -1,15 +1,15 @@
 ---
-title: Como depurar conjuntos de resultados de consultas vazios (C#)
+title: 'Como: Depurar conjuntos de resultados de consultas vazios (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0503c09bbdd28276ea4fdc1147e0bca5471fa6e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723177"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>Como depurar conjuntos de resultados de consultas vazios (C#)
+# <a name="how-to-debug-empty-query-results-sets-c"></a>Como: Depurar conjuntos de resultados de consultas vazios (C#)
 Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.  
   
  Definir primeiro exemplos neste tópico mostra uma maneira comum que XML em um namespace padrão é carregado, e deduzido de modo inadequado.  

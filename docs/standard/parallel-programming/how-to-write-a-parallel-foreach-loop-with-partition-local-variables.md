@@ -1,5 +1,5 @@
 ---
-title: Como gravar um loop Parallel.ForEach com variáveis locais de partição
+title: 'Como: Gravar um loop Parallel.ForEach com variáveis locais de partição'
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 2f27d1f11e4517653c9beb2d868d798c215741a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730978"
 ---
-# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Como gravar um loop Parallel.ForEach com variáveis locais de partição
+# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Como: Gravar um loop Parallel.ForEach com variáveis locais de partição
 O exemplo a seguir mostra como gravar um método <xref:System.Threading.Tasks.Parallel.ForEach%2A> que usa variáveis locais de partição. Quando um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A> é executado, ele divide a coleção de origem em diversas partições. Cada partição tem sua própria cópia da variável local de partição. Uma variável local de partição é semelhante a uma [variável local de thread](xref:System.Threading.ThreadLocal%601), com a diferença de que várias partições podem ser executadas em um único thread.
   
- O código e os parâmetros desse exemplo parecem com o método <xref:System.Threading.Tasks.Parallel.For%2A> correspondente. Para saber mais, confira [Como escrever um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+ O código e os parâmetros desse exemplo parecem com o método <xref:System.Threading.Tasks.Parallel.For%2A> correspondente. Para obter mais informações, confira [Como: Gravar um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
   
  Para usar uma variável local de partição em um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A>, você deve chamar uma das sobrecargas de método que usa dois parâmetros de tipo. O primeiro parâmetro de tipo, `TSource`, especifica o tipo do elemento de origem. Já o segundo, `TLocal`, especifica o tipo da variável local de partição.  
   
@@ -50,6 +50,6 @@ O exemplo a seguir mostra como gravar um método <xref:System.Threading.Tasks.Pa
   
 ## <a name="see-also"></a>Consulte também
 
-- [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [Como escrever um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [Como: Gravar um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

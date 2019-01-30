@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603307"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tarefas filho anexadas e desanexadas
 Uma *tarefa filho* (ou *tarefa aninhada*) é uma instância <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que é criada no representante do usuário de outra tarefa, conhecida como a *tarefa pai*. Uma tarefa filho pode ser desanexada ou anexada. Um *tarefa filho desanexada* é uma tarefa que é executada de forma independente de sua tarefa pai. Uma *tarefa filho anexada* é uma tarefa aninhada criada com a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> cuja tarefa pai não explicitamente ou por padrão proíbe-a de ser anexada. Uma tarefa pode criar qualquer número de tarefas filho anexadas e desanexadas que só são limitadas pelos recursos do sistema.  
@@ -58,7 +58,7 @@ Uma *tarefa filho* (ou *tarefa aninhada*) é uma instância <xref:System.Threadi
  Se uma tarefa filho desanexada lançar uma exceção, essa exceção deverá ser observada ou manipulada diretamente na tarefa pai assim como ocorre com todas as tarefas não aninhadas. Se uma tarefa filho anexada lançar uma exceção, a exceção será propagada automaticamente para a tarefa pai e de volta para o thread que espera ou tenta acessar a propriedade <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> da tarefa. Portanto, usando tarefas filho anexadas, você pode tratar de todas as exceções em apenas um ponto na chamada para <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> no thread da chamada. Para saber mais, veja [Tratamento de exceção](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
 ## <a name="cancellation-and-child-tasks"></a>Cancelamento e tarefas filho  
- O cancelamento de tarefas é cooperativo. Ou seja, para ser anulável, todas as tarefas filho anexadas ou desanexadas devem monitorar o status do token de cancelamento. Se quiser cancelar uma tarefa pai e todas as tarefas filho usando uma solicitação de cancelamento, passe o mesmo token como um argumento para todas as tarefas e forneça em cada tarefa a lógica para responder à solicitação de cada tarefa. Para obter mais informações, consulte [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md) e [Como cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ O cancelamento de tarefas é cooperativo. Ou seja, para ser anulável, todas as tarefas filho anexadas ou desanexadas devem monitorar o status do token de cancelamento. Se quiser cancelar uma tarefa pai e todas as tarefas filho usando uma solicitação de cancelamento, passe o mesmo token como um argumento para todas as tarefas e forneça em cada tarefa a lógica para responder à solicitação de cada tarefa. Para obter mais informações, confira [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md) e [Como: Cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ### <a name="when-the-parent-cancels"></a>Quando a tarefa pai é cancelada  
  Se houver o cancelamento de uma tarefa pai antes do início de sua tarefa filho, a tarefa filho nunca será iniciada. Se houver o cancelamento de uma tarefa pai após sua tarefa filho já tiver sido iniciada, a tarefa filho será executada até ser concluída, a não ser que ela tenha sua própria lógica de cancelamento. Para obter mais informações, consulte [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md).  
@@ -76,9 +76,9 @@ Uma *tarefa filho* (ou *tarefa aninhada*) é uma instância <xref:System.Threadi
   
  Para impedir que uma tarefa filho seja anexada a uma tarefa pai, especifique a opção <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> ao criar a <xref:System.Threading.Tasks.Task> pai ou o objeto <xref:System.Threading.Tasks.Task%601>. Quando uma tarefa tenta se anexar à sua tarefa pai e a tarefa pai especifica a opção <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, a tarefa filho não poderá se anexar a uma tarefa pai e será executada apenas como se a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> não fosse especificada.  
   
- É provável que você também queira impedir que uma tarefa filho se anexe à sua tarefa pai quando a tarefa filho não for concluída de maneira oportuna. Como a tarefa pai não termina até que todas as tarefas filho sejam concluídas, uma tarefa filho de longa duração pode fazer com que o aplicativo geral tenha um baixo desempenho. Para obter um exemplo que mostre como melhorar o desempenho do aplicativo impedindo que ele seja anexado à sua tarefa pai, confira [Como evitar que uma tarefa filho se anexe à sua tarefa pai](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ É provável que você também queira impedir que uma tarefa filho se anexe à sua tarefa pai quando a tarefa filho não for concluída de maneira oportuna. Como a tarefa pai não termina até que todas as tarefas filho sejam concluídas, uma tarefa filho de longa duração pode fazer com que o aplicativo geral tenha um baixo desempenho. Para obter um exemplo que mostra como melhorar o desempenho do aplicativo impedindo que uma tarefa seja anexada à sua tarefa pai, confira [Como: Impedir que uma tarefa filho seja anexada a seu pai](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação paralela](../../../docs/standard/parallel-programming/index.md)  
+- [Programação paralela](../../../docs/standard/parallel-programming/index.md)
 - [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

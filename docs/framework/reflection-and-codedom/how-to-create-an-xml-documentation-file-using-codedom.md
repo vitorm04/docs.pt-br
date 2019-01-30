@@ -1,5 +1,5 @@
 ---
-title: Como criar um arquivo de documentação XML usando CodeDOM
+title: 'Como: Criar um arquivo de documentação XML usando o CodeDOM'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81d09188ade29b0cac8985da218494f5373980cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8086a512d117767127260bcf779fc11555cd67dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632823"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como criar um arquivo de documentação XML usando CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como: Criar um arquivo de documentação XML usando o CodeDOM
 O CodeDOM pode ser usado para criar o código que gera a documentação XML. O processo envolve a criação do grafo CodeDOM que contém os comentários de documentação XML, a geração do código e a compilação do código gerado com a opção do compilador que cria a saída de documentação XML.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Para criar um grafo CodeDOM que contém comentários de documentação XML  
@@ -79,7 +79,7 @@ O CodeDOM pode ser usado para criar o código que gera a documentação XML. O p
   
 -   Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.  
   
-## <a name="see-also"></a>Consulte também  
- [Documentando o Código com XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [Comentários da documentação XML](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [Documentação XML](/cpp/ide/xml-documentation-visual-cpp)
+## <a name="see-also"></a>Consulte também
+- [Documentando o Código com XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Comentários da documentação XML](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [Documentação XML](/cpp/ide/xml-documentation-visual-cpp)

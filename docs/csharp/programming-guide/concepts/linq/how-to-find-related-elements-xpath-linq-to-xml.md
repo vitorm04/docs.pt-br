@@ -1,15 +1,15 @@
 ---
-title: Como localizar elementos relacionados (XPath-LINQ to XML) (C#)
+title: 'Como: Localizar elementos relacionados (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 57cbba6e52feec05ed6381899017f1ce5d1e8ec1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617402"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Como localizar elementos relacionados (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Como: Localizar elementos relacionados (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter um elemento que seleciona em um atributo que é chamada pelo valor de outro elemento.  
   
  A expressão XPath é:  
@@ -21,7 +21,7 @@ Este tópico mostra como obter um elemento que seleciona em um atributo que é c
   
  Observe a indexação em uma lista dentro. A rede é “" com base zero. A indexação em uma coleção de nós em um predicado XPath “é um” com base. Este exemplo reflete essa diferença.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  

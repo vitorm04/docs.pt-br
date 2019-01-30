@@ -1,5 +1,5 @@
 ---
-title: Como depurar aplicativos de Serviço Windows
+title: 'Como: Depurar aplicativos do serviço Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 3f8dfff59acaa10fa99874dde2eb6eb6ed04e8fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720360"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Como depurar aplicativos de Serviço Windows
+# <a name="how-to-debug-windows-service-applications"></a>Como: Depurar aplicativos do serviço Windows
 Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle de Serviços, em vez de dentro do Visual Studio. Por esse motivo, depurar um serviço não é tão simples como depurar outros tipos de aplicativos do Visual Studio. Para depurar um serviço, você deve iniciar o serviço e, em seguida, anexar um depurador ao processo no qual ele está sendo executado. Em seguida, você pode depurar seu aplicativo usando todas as funcionalidades de depuração padrão do Visual Studio.  
   
 > [!CAUTION]
@@ -29,7 +29,7 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
  Este artigo aborda a depuração de um serviço que está em execução no computador local, mas você também pode depurar serviços Windows que executados em um computador remoto. Confira [Depuração remota](/visualstudio/debugger/debug-installed-app-package).  
   
 > [!NOTE]
->  Depurar o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> pode ser difícil porque o Gerenciador de controle de Serviços impõe um limite de 30 segundos em todas as tentativas de iniciar um serviço. Para obter mais informações, confira [Solução de problemas: depuração de Serviços Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+>  Depurar o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> pode ser difícil porque o Gerenciador de controle de Serviços impõe um limite de 30 segundos em todas as tentativas de iniciar um serviço. Para obter mais informações, confira [Solução de problemas: Depurando serviços Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
 >  Para obter informações significativas para depuração, o depurador do Visual Studio deve localizar os arquivos de símbolo para os binários que estão sendo depurados. Se você estiver depurando um serviço que você criou no Visual Studio, os arquivos de símbolo (arquivos .pdb) estarão na mesma pasta que o executável ou biblioteca, e o depurador os carregará automaticamente. Se você estiver depurando um serviço que não criou, deve primeiro localizar símbolos para o serviço e certificar-se de que eles podem ser encontrados pelo depurador. Confira [Especificar arquivos de símbolo (.pdb) e de origem no Depurador do Visual Studio](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Se você estiver depurando um processo do sistema ou se desejar ter símbolos para chamadas do sistema em seus serviços, você deve adicionar os Servidores de Símbolo Microsoft. Confira [Depurando símbolos](/windows/desktop/DxTechArts/debugging-with-symbols).  
@@ -38,9 +38,9 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
   
 1.  Crie seu serviço na configuração de depuração.  
   
-2.  Instalar o serviço. Para obter mais informações, confira [Como instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2.  Instalar o serviço. Para obter mais informações, confira [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Inicie o serviço, usando o **Gerenciador de Controle de Serviços**, o **Gerenciador de Servidores** ou o código. Para obter mais informações, confira [Como iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md).  
+3.  Inicie o serviço, usando o **Gerenciador de Controle de Serviços**, o **Gerenciador de Servidores** ou o código. Para obter mais informações, confira [Como: Iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md).  
   
 4.  Inicie o Visual Studio com credenciais administrativas para que você possa se conectar aos processos do sistema.  
   
@@ -66,7 +66,7 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
   
 10. Defina os pontos de interrupção que você deseja usar em seu código.  
   
-11. Acesse o Gerenciador de Controle de Serviços e manuseie seu serviço, enviando comando de parar, pausar e continuar para atingir seus pontos de interrupção. Para obter mais informações de como executar o Gerenciador de Controle de Serviços, confira [Como iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md). Além disso, confira [Solução de problemas: depurando Serviços Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+11. Acesse o Gerenciador de Controle de Serviços e manuseie seu serviço, enviando comando de parar, pausar e continuar para atingir seus pontos de interrupção. Para obter mais informações sobre como executar o Gerenciador de Controle de Serviço, confira [Como: Iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md). Confira também [Solução de problemas: Depurando serviços Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 ## <a name="debugging-tips-for-windows-services"></a>Dicas de depuração para serviços Windows  
  Anexar ao processo do serviço permite depurar a maior parte, mas não todo, do código para esse serviço. Por exemplo, como o serviço já foi iniciado, você não pode depurar o código no serviço do método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> ou o código no método `Main` que é usado para carregar o serviço dessa maneira. Uma maneira de contornar essa limitação é criar um segundo serviço temporário no seu aplicativo de serviço que existe somente para ajudar na depuração. Você pode instalar os dois serviços e, em seguida, iniciar o serviço fictício para carregar o processo do serviço. Depois que o serviço temporário começar o processo, você poderá usar o menu **Depurar** do Visual Studio para anexar ao processo do serviço.  
@@ -75,7 +75,7 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
   
  Tente alterar o programa para um aplicativo de console regular. Para fazer isso, reescreva o método `Main` da seguinte maneira para que ele possa ser executado como um serviço Windows e como um aplicativo de console, dependendo de como for iniciado.  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Como executar um serviço Windows como um aplicativo do console  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Como: Executar um serviço Windows como um aplicativo de console  
   
 1.  Adicione um método para o serviço que executa os métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
@@ -113,8 +113,8 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
   
  Em alguns casos, como quando você deseja depurar um problema ocorre apenas na inicialização do sistema, é necessário usar o depurador do Windows. Instale as [Ferramentas de Depuração para Windows](https://msdn.microsoft.com/windows/hardware/hh852365) e confira [Como depurar os Serviços Windows](https://support.microsoft.com/kb/824344).  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Como instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Como iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Depurando um serviço](/windows/desktop/Services/debugging-a-service)
+## <a name="see-also"></a>Consulte também
+- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Como: Iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Depurando um serviço](/windows/desktop/Services/debugging-a-service)

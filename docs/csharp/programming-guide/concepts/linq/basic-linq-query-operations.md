@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728342"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operações de consulta LINQ básica (C#)
 Este tópico fornece uma breve introdução às expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e a alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Informações mais detalhadas estão nos tópicos a seguir:  
@@ -31,7 +31,7 @@ Este tópico fornece uma breve introdução às expressões de consulta [!INCLUD
   
  [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
   
- [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Passo a passo: Escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 >  Se já estiver familiarizado com uma linguagem de consulta como SQL ou XQuery, você poderá ignorar a maior parte deste tópico. Leia sobre a "cláusula `from`" na próxima seção para saber mais sobre a ordem das cláusulas em expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -44,7 +44,7 @@ Este tópico fornece uma breve introdução às expressões de consulta [!INCLUD
  A variável de intervalo é como a variável de iteração em um loop `foreach`, mas nenhuma iteração real ocorre em uma expressão de consulta. Quando a consulta é executada, a variável de intervalo servirá como uma referência para cada elemento sucessivo em `customers`. Uma vez que o compilador pode inferir o tipo de `cust`, você não precisa especificá-lo explicitamente. Variáveis de intervalo adicionais podem ser introduzidas por uma cláusula `let`. Para obter mais informações, consulte [Cláusula let](../../../../csharp/language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
->  Para fontes de dados não genéricas, como <xref:System.Collections.ArrayList>, a variável de intervalo deve ser tipada explicitamente. Para obter mais informações, consulte [Como consultar um ArrayList com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) e [Cláusula from](../../../../csharp/language-reference/keywords/from-clause.md).  
+>  Para fontes de dados não genéricas, como <xref:System.Collections.ArrayList>, a variável de intervalo deve ser tipada explicitamente. Para obter mais informações, confira [Como: Consultar uma ArrayList com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) e [Cláusula from](../../../../csharp/language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtragem  
  Provavelmente, a operação de consulta mais comum é aplicar um filtro no formulário de uma expressão booliana. O filtro faz com que a consulta retorne apenas os elementos para os quais a expressão é verdadeira. O resultado é produzido usando a cláusula `where`. O filtro em vigor especifica os elementos a serem excluídos da sequência de origem. No exemplo a seguir, somente os `customers` que têm um endereço em Londres são retornados.  
@@ -101,8 +101,8 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Palavras-chave de Consulta (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Passo a passo: Escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Palavras-chave de Consulta (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
 - [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

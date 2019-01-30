@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48266634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606524"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitoramento de recursos de domínio de aplicativo
 O ARM (Monitoramento de recursos de domínio do aplicativo) permite que os hosts monitorem o uso de CPU e memória por domínio do aplicativo. Isso é útil para hosts como o ASP.NET que usam vários domínios do aplicativo em um processo de longa execução. O host pode descarregar o domínio do aplicativo de um aplicativo que está prejudicando o desempenho de todo o processo, mas apenas se puder identificar o aplicativo problemático. O ARM fornece informações que podem ser usadas para ajudar a tomar essas decisões.  
@@ -40,35 +40,35 @@ O ARM (Monitoramento de recursos de domínio do aplicativo) permite que os hosts
 ## <a name="using-arm"></a>Usar ARM  
  O ARM fornece o tempo total do processador usado por um domínio do aplicativo e três tipos de informações sobre o uso da memória.  
   
--   **Total de tempo do processador para um domínio do aplicativo, em segundos**: isso é calculado somando os tempos de thread informados pelo sistema operacional de todos os threads que gastaram tempo executando no domínio do aplicativo durante seu ciclo de vida. Threads bloqueados ou em suspensão não usam o tempo do processador. Quando um thread chama um código nativo, o tempo gasto pelo thread no código nativo é incluído na contagem para o domínio de aplicativo em que a chamada foi feita.  
+-   **Tempo total do processador para um domínio do aplicativo, em segundos**: Isso é calculado pela adição dos tempos de thread relatados pelo sistema operacional de todos os threads que gastaram tempo sendo executados no domínio do aplicativo durante seu tempo de vida. Threads bloqueados ou em suspensão não usam o tempo do processador. Quando um thread chama um código nativo, o tempo gasto pelo thread no código nativo é incluído na contagem para o domínio de aplicativo em que a chamada foi feita.  
   
     -   API gerenciada: propriedade <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>.  
   
-    -   API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).  
+    -   API de hospedagem: Método [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).  
   
     -   Eventos ETW: eventos `ThreadCreated`, `ThreadAppDomainEnter` e `ThreadTerminated`. Para saber mais sobre provedores e palavras-chave, consulte "Eventos de monitoramento de recursos AppDomain" em [Eventos ETW do CLR](../../../docs/framework/performance/clr-etw-events.md).  
   
--   **Total de alocações gerenciadas feitas por um domínio do aplicativo durante seu ciclo de vida, em bytes**: o total de alocações nem sempre reflete o uso da memória por um domínio do aplicativo, pois os objetos alocados podem ser de curta duração. No entanto, se um aplicativo alocar e liberar grandes quantidades de objetos, o custo das alocações poderá ser considerável.  
+-   **Total de alocações gerenciadas feitas por um domínio do aplicativo durante seu tempo de vida, em bytes**: O total de alocações nem sempre reflete o uso de memória por um domínio do aplicativo, porque os objetos alocados podem ser de curta duração. No entanto, se um aplicativo alocar e liberar grandes quantidades de objetos, o custo das alocações poderá ser considerável.  
   
     -   API gerenciada: propriedade <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).  
+    -   API de hospedagem: Método [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).  
   
     -   Eventos ETW: evento `AppDomainMemAllocated`, campo `Allocated`.  
   
--   **Memória gerenciada, em bytes, referenciada por um domínio do aplicativo e que sobreviveu à coleta de bloqueio completa mais recente**: esse número será preciso somente após uma coleta de bloqueio completa. (Isso é diferente das coletas simultâneas, que ocorrem em segundo plano e não bloqueiam o aplicativo). Por exemplo, a sobrecarga do método <xref:System.GC.Collect?displayProperty=nameWithType> causa uma coleta de bloqueio completa.  
+-   **Memória gerenciada, em bytes, que é referenciada por um domínio do aplicativo e que restou após a coleta completa de bloqueio mais recente**: Esse número será preciso somente após uma coleta completa de bloqueio. (Isso é diferente das coletas simultâneas, que ocorrem em segundo plano e não bloqueiam o aplicativo). Por exemplo, a sobrecarga do método <xref:System.GC.Collect?displayProperty=nameWithType> causa uma coleta de bloqueio completa.  
   
     -   API gerenciada: propriedade <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parâmetro `pAppDomainBytesSurvived`.  
+    -   API de hospedagem: Método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parâmetro `pAppDomainBytesSurvived`.  
   
     -   Eventos ETW: evento `AppDomainMemSurvived`, campo `Survived`.  
   
--   **Memória total gerenciada, em bytes, referenciada pelo processo e que sobreviveu à coleta de bloqueio completa mais recente**: a memória restante para domínios de aplicativos individuais pode ser comparada com esse número.  
+-   **Total de memória gerenciada, em bytes, que é referenciada pelo processo e que restou após a coleta completa de bloqueio mais recente**: A memória restante dos domínios do aplicativo individuais pode ser comparada com esse número.  
   
     -   API gerenciada: propriedade <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API de hospedagem: método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parâmetro `pTotalBytesSurvived`.  
+    -   API de hospedagem: Método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parâmetro `pTotalBytesSurvived`.  
   
     -   Eventos ETW: evento `AppDomainMemSurvived`, campo `ProcessSurvived`.  
   
@@ -85,7 +85,7 @@ O ARM (Monitoramento de recursos de domínio do aplicativo) permite que os hosts
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [Interface ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [Interface ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

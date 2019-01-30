@@ -1,18 +1,18 @@
 ---
-title: Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)
+title: 'Como: Transmitir fragmentos XML com acesso a informações de cabeçalho (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: 9c141b21a009f836fbf385c1f4179e288ec6c3b5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a7e590dcc70dcdb4ea7d5681d623c63f194e0d4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655563"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Como: Transmitir fragmentos XML com acesso a informações de cabeçalho (C#)
 Às vezes você precisará ler arbitrariamente grandes arquivos XML, e escreve seu aplicativo para que os vestígio de memória do aplicativo seja previsível. Se você tentar preencher uma árvore XML com um grande arquivo XML, seu uso de memória será proporcionalmente o tamanho do arquivo que é, excessivo. Portanto, você deve usar uma técnica de streaming em vez disso.  
   
- Uma opção é escrever seu aplicativo usando <xref:System.Xml.XmlReader>. No entanto, talvez você queira usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar a árvore XML. Se esse for o caso, você pode escrever seu próprio método personalizado do eixo. Para obter mais informações, consulte [Como gravar um método do eixo LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Uma opção é escrever seu aplicativo usando <xref:System.Xml.XmlReader>. No entanto, talvez você queira usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar a árvore XML. Se esse for o caso, você pode escrever seu próprio método personalizado do eixo. Para obter mais informações, confira [Como: Escrever um método de eixo LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Para escrever seu próprio método do eixo, você escreve um pequeno método que usa <xref:System.Xml.XmlReader> para ler nós até que atingiu um dos nós em que você está interessado. O método chama em <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lê de <xref:System.Xml.XmlReader> e cria uma instância de um fragmento XML. Resulta em cada fragmento com `yield return` o método que está enumerando o método personalizado do eixo. Você pode escrever consultas LINQ no método personalizado do eixo.  
   

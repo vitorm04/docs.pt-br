@@ -1,18 +1,18 @@
 ---
-title: Como atribuir informações de usuário a conexões de grupo
+title: 'Como: Atribuir informações de usuário a conexões de grupo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 6d0be3ccfc0a0b4b032283b7ed34908f79774bb6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50049536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607992"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Como atribuir informações de usuário a conexões de grupo
+# <a name="how-to-assign-user-information-to-group-connections"></a>Como: Atribuir informações de usuário a conexões de grupo
 
   
  O exemplo a seguir demonstra como atribuir informações de usuário a conexões de grupo, supondo que o aplicativo defina as variáveis *UserName*, *SecurelyStoredPassword* e *Domain* antes que essa seção do código seja chamada e que *UserName* seja exclusivo.  
@@ -108,6 +108,6 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciando conexões](../../../docs/framework/network-programming/managing-connections.md)  
- [Agrupamento de conexão](../../../docs/framework/network-programming/connection-grouping.md)
+## <a name="see-also"></a>Consulte também
+- [Gerenciando conexões](../../../docs/framework/network-programming/managing-connections.md)
+- [Agrupamento de conexão](../../../docs/framework/network-programming/connection-grouping.md)

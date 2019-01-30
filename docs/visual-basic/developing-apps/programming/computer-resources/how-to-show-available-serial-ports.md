@@ -1,5 +1,5 @@
 ---
-title: Como mostrar portas seriais disponíveis no Visual Basic
+title: 'Como: Mostrar portas seriais disponíveis no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, availability
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: c13682ddca69d782ea519e0df703c211df8d12c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58f4d629500223ccc6690912b5e261eebc17c6b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603801"
 ---
-# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Como mostrar portas seriais disponíveis no Visual Basic
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Como: Mostrar portas seriais disponíveis no Visual Basic
 Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seriais do computador disponíveis em Visual Basic.  
   
  Para permitir que um usuário selecione qual porta usar, os nomes das portas seriais são colocados em um controle <xref:System.Windows.Forms.ListBox>.  
@@ -26,7 +26,7 @@ Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seria
   
  [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-show-available-serial-ports_1.vb)]  
   
- Este exemplo de código também está disponível como um trecho de código do IntelliSense. No selecionador de trecho de código, ele está localizado em **Conectividade e Redes**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
+ Este exemplo de código também está disponível como um snippet de código do IntelliSense. No selecionador de snippet de código, ele está localizado em **Conectividade e Redes**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
@@ -43,8 +43,8 @@ Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seria
 > [!NOTE]
 >  Os nomes das portas retornados por `My.Computer.Ports.SerialPortNames` podem estar incorretos quando executados no Windows 98. Para evitar erros de aplicativo, use o tratamento de exceções, como a instrução `Try...Catch...Finally` ou a instrução `Using`, ao usar os nomes de portas para abrir portas.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Ports>  
- [Como Discar Modems Conectados a Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- [Como Enviar Cadeias de Caracteres para Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- [Como Receber Cadeias de Caracteres de Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- [Como: Discar modems anexados a portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
+- [Como: Enviar cadeias de caracteres para portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [Como: Receber cadeias de caracteres de portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)

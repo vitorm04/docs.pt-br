@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: 7964a39bb84ac6af6b6c196c053f51c30301985c
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: c8f15ac33ae92a13159c2a95435ba3d2391ace8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42792338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739200"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Armazenando dados e lendo na Área de Transferência (Visual Basic)
 A Área de Transferência pode ser usada para armazenar dados, como texto e imagens. Como a Área de Transferência é compartilhada por todos os processos ativos, ela pode ser usada para transferir dados entre eles. O objeto `My.Computer.Clipboard` permite que você acesse facilmente a Área de Transferência e leia e grave nela.  
@@ -24,13 +24,13 @@ A Área de Transferência pode ser usada para armazenar dados, como texto e imag
   
  [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
- Este exemplo de código também está disponível como um trecho de código do IntelliSense. No seletor de trecho de código, ele está localizado em **Aplicativos do Windows Forms > Área de Transferência**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
+ Este exemplo de código também está disponível como um snippet de código do IntelliSense. No seletor de snippet de código, ele está localizado em **Aplicativos do Windows Forms &gt; Área de Transferência**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
  Use o método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> para recuperar uma imagem da Área de Transferência. Este exemplo verifica se há alguma imagem na Área de Transferência antes de recuperá-la e atribuí-la à `PictureBox1`.  
   
  [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_2.vb)]  
   
- Este exemplo de código também está disponível como um trecho de código do IntelliSense. No seletor de trecho de código, ele está localizado em **Aplicativos do Windows Forms > Área de Transferência**. Para obter mais informações, consulte [Trechos de código](/visualstudio/ide/code-snippets).  
+ Este exemplo de código também está disponível como um snippet de código do IntelliSense. No seletor de snippet de código, ele está localizado em **Aplicativos do Windows Forms &gt; Área de Transferência**. Para obter mais informações, consulte [Snippets de código](/visualstudio/ide/code-snippets).  
   
  Itens colocados na Área de Transferência persistirão mesmo após o aplicativo ser encerrado.  
   
@@ -68,9 +68,9 @@ A Área de Transferência pode ser usada para armazenar dados, como texto e imag
 > [!IMPORTANT]
 >  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>  
- [Como ler dados de objeto de um arquivo XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Como gravar dados de objeto em um arquivo XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>
+- [Como: Ler dados de objeto de um arquivo XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Como: Gravar dados de objeto em um arquivo XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

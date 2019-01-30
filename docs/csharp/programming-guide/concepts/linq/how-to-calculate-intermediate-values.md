@@ -1,21 +1,21 @@
 ---
-title: Como calcular valores intermediários (C#)
+title: 'Como: Calcular valores intermediários (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 15ccf58738b64ebfaef77deb162ddb29db0ae33a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 12c8a87114859ce7b47b8206acb454cdc2838470
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604317"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>Como calcular valores intermediários (C#)
+# <a name="how-to-calculate-intermediate-values-c"></a>Como: Calcular valores intermediários (C#)
 Este exemplo mostra como calcular valores intermediários que podem ser usados na classificação, filtragem, e em selecionar.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir utiliza a cláusula de `Let` .  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -42,7 +42,7 @@ foreach (decimal ex in extensions)
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos em um namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos em um namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

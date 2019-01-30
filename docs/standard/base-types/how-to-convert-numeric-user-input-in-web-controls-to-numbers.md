@@ -1,5 +1,5 @@
 ---
-title: Como converter em números as entradas numéricas do usuário em controles da Web
+title: 'Como: Converter em números as entradas numéricas do usuário em controles da Web'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722355"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Como converter em números as entradas numéricas do usuário em controles da Web
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Como: Converter em números as entradas numéricas do usuário em controles da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, os usuários podem inserir dados numéricos em um controle de <xref:System.Web.UI.WebControls.TextBox> em um número quase ilimitado de formatos. Como resultado, é muito importante determinar a localidade e a cultura do usuário da página da Web. Quando você analisa a entrada do usuário, pode aplicar as convenções de formatação definidas pela localidade e a cultura do usuário.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Para converter a entrada numérica de um controle de caixa de texto da Web em um número  
@@ -73,5 +73,5 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, os usuário
   
 ## <a name="see-also"></a>Consulte também
 
-- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Analisando cadeias de caracteres numéricas](../../../docs/standard/base-types/parsing-numeric.md)

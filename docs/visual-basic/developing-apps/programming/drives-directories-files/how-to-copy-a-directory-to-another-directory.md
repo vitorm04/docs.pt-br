@@ -1,5 +1,5 @@
 ---
-title: Como copiar um diretório para outro diretório no Visual Basic
+title: 'Como: Copiar um diretório para outro diretório no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: 9b6e095d061619cf9d2e2d87a7247cbdbc51cbe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25919e0256b967f59bd98d20e75d159e018ac954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594740"
 ---
-# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Como copiar um diretório para outro diretório no Visual Basic
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Como: Copiar um diretório para outro diretório no Visual Basic
 Use o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> para copiar um diretório para outro diretório. Esse método copia o conteúdo do diretório, bem como o próprio diretório. Se o diretório de destino não existir, ele será criado. Se existir um diretório com o mesmo nome no local de destino e `overwrite` estiver definido como `False`, o conteúdo dos dois diretórios será mesclado. Você pode especificar um novo nome para o diretório durante a operação.  
   
  Ao copiar arquivos em um diretório, podem ser geradas exceções que são causadas pelo arquivo específico, como um arquivo existente durante a mesclagem enquanto `overwrite` é definido como `False`. Quando essas exceções são lançadas, elas são consolidadas em uma única exceção, cuja propriedade `Data` contém entradas em que o caminho do arquivo ou do diretório é a chave e a mensagem de exceção específica está contida no valor correspondente.  
@@ -25,7 +25,7 @@ Use o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> pa
   
      [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
-     Este exemplo de código também está disponível como um trecho de código do IntelliSense. No selecionador de trecho de código, ele está localizado em **Sistema de Arquivos – Processando Unidades, Pastas e Arquivos**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
+     Este exemplo de código também está disponível como um snippet de código do IntelliSense. No selecionador de snippet de código, ele está localizado em **Sistema de Arquivos – Processando Unidades, Pastas e Arquivos**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
@@ -60,7 +60,7 @@ Use o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> pa
   
 -   Um arquivo de destino existe, mas não pode ser acessado (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- [Como obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
+- [Como: Localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Como: Obter a coleção de arquivos em um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

@@ -1,15 +1,15 @@
 ---
-title: Como escrever consultas no XML nos namespaces (C#)
+title: 'Como: Escrever consultas no XML em namespaces (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 29c4b01bfce75ce71d5214fef0cc55cd82c4e776
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722075"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Como escrever consultas no XML nos namespaces (C#)
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Como: Escrever consultas no XML em namespaces (C#)
 Para escrever uma consulta em XML que está em um namespace, você deve usar os objetos <xref:System.Xml.Linq.XName> que têm o namespace correto.  
   
  Para C#, a abordagem mais comum é inicializar um <xref:System.Xml.Linq.XNamespace> usando uma cadeia de caracteres que contém o URI, em seguida, usar a sobrecarga de operador de adição para combinar o namespace com o nome local.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513419"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Armadilhas em potencial em dados e paralelismo da tarefa
 Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> podem melhorar consideravelmente o desempenho em comparação com consultas sequenciais comuns. No entanto, o trabalho de paralelizar o loop apresenta complexidade que pode levar a problemas que, em código sequencial, não são tão comuns ou não são encontrados. Este tópico lista algumas práticas a serem evitadas ao escrever loops paralelos.  
@@ -24,7 +24,7 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
  Em certos casos, um loop paralelo pode executar com mais lentidão do que seu equivalente sequencial. A regra básica é que os loops paralelos que têm poucas interações e delegados de usuários rápidos provavelmente não acelerarão muito. No entanto, como muitos fatores estão envolvidos no desempenho, recomendamos sempre a medição dos resultados reais.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Evite gravar em locais de memória compartilhada  
- No código sequencial, não é incomum ler ou gravar em variáveis estáticas ou campos de classe. No entanto, sempre que vários threads estão acessando essas variáveis simultaneamente, existe um grande potencial para condições de corrida. Embora você possa usar bloqueios para sincronizar o acesso à variável, o custo da sincronização pode prejudicar o desempenho. Portanto, recomendamos que você evite, ou pelo menos limite, o acesso ao estado compartilhado em um loop paralelo tanto quanto possível. A melhor maneira de fazer isso é usar as sobrecargas de <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> que usam uma variável <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para armazenar o estado de local de thread durante a execução do loop. Para obter mais informações, consulte [Como gravar um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Como gravar um loop Parallel.ForEach com variáveis locais de partição](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ No código sequencial, não é incomum ler ou gravar em variáveis estáticas ou campos de classe. No entanto, sempre que vários threads estão acessando essas variáveis simultaneamente, existe um grande potencial para condições de corrida. Embora você possa usar bloqueios para sincronizar o acesso à variável, o custo da sincronização pode prejudicar o desempenho. Portanto, recomendamos que você evite, ou pelo menos limite, o acesso ao estado compartilhado em um loop paralelo tanto quanto possível. A melhor maneira de fazer isso é usar as sobrecargas de <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> que usam uma variável <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para armazenar o estado de local de thread durante a execução do loop. Para obter mais informações, confira [Como: Gravar um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Como: Gravar um loop Parallel.ForEach com variáveis locais de partição](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Evite o excesso de paralelização  
  Ao usar loops paralelos, você incorre em custos indiretos de particionar a coleção de origem e sincronizar os threads de trabalho. Os benefícios da paralelização ainda estão limitados pelo número de processadores no computador. Não há nenhum aumento de velocidade a ser obtido executando vários threads vinculados à computação em apenas um processador. Portanto, você deve ter cuidado para não paralelizar excessivamente um loop.  
@@ -52,7 +52,7 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
 >  Você pode testar isso sozinho inserindo algumas chamadas para <xref:System.Console.WriteLine%2A> nas suas consultas. Embora esse método seja usado nos exemplos de documentação para fins de demonstração, não o use em loops paralelos, a menos que seja necessário.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Esteja ciente de questões de afinidade de thread  
- Algumas tecnologias, por exemplo, interoperabilidade COM para componentes de um único segmento (STA), Windows Forms e Windows Presentation Foundation (WPF), impõem restrições de afinidade de thread que exigem que o código seja executado em um thread específico. Por exemplo, tanto no Windows Forms quanto no WPF, um controle só pode ser acessado no thread em que foi criado. Por exemplo, isso significa que você não pode atualizar um controle de lista de um loop paralelo, a menos que você configure o agendador de thread para agendar o trabalho somente no thread da interface do usuário. Para saber mais, confira [Como programar trabalho no thread de interface do usuário](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Algumas tecnologias, por exemplo, interoperabilidade COM para componentes de um único segmento (STA), Windows Forms e Windows Presentation Foundation (WPF), impõem restrições de afinidade de thread que exigem que o código seja executado em um thread específico. Por exemplo, tanto no Windows Forms quanto no WPF, um controle só pode ser acessado no thread em que foi criado. Por exemplo, isso significa que você não pode atualizar um controle de lista de um loop paralelo, a menos que você configure o agendador de thread para agendar o trabalho somente no thread da interface do usuário. Para obter mais informações, confira [Como: Agendar o trabalho no thread de interface do usuário](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Tenha cuidado ao aguardar delegados que são chamados por Parallel.Invoke  
  Em determinadas circunstâncias, a biblioteca de paralelismo de tarefas embutirá uma tarefa, ou seja, ela será executada na tarefa no thread em execução no momento. (Para saber mais, confira [Agendadores de Tarefas](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)). Em certos casos, essa otimização de desempenho pode resultar em deadlock. Por exemplo, duas tarefas podem executar o mesmo código de delegado, o qual sinaliza quando ocorre um evento e, em seguida, aguarda a sinalização da outra tarefa. Se a segunda tarefa for embutida no mesmo thread que a primeira, e a primeira entrar em um estado de Espera, a segunda tarefa nunca poderá sinalizar o evento. Para evitar isso, especifique um tempo limite para a operação de Espera, ou use constructos de thread explícitos para ajudar a garantir que uma tarefa não possa bloquear a outra.  
@@ -82,6 +82,6 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação paralela](../../../docs/standard/parallel-programming/index.md)  
-- [Possíveis armadilhas com PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
-- [Padrões para programação paralela: noções básicas e aplicação de padrões paralelos com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)
+- [Programação paralela](../../../docs/standard/parallel-programming/index.md)
+- [Possíveis armadilhas com PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
+- [Padrões para programação paralela: Compreendendo e aplicando padrões paralelos com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

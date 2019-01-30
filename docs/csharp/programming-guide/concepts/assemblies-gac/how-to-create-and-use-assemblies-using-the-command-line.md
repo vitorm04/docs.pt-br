@@ -1,24 +1,24 @@
 ---
-title: Como criar e usar assemblies usando a linha de comando (C#)
+title: 'Como: Criar e usar assemblies usando a linha de comando (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 0cb964991cdbcdb3fa528ac96a0e883a37439099
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b582f3959ed4c703123fab99e98bedda0a0a3a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623828"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Como criar e usar assemblies usando a linha de comando (C#)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Como: Criar e usar assemblies usando a linha de comando (C#)
 Um assembly ou uma DLL (biblioteca de vínculo dinâmico), está vinculada ao seu programa em tempo de execução. Para demonstrar a compilação e uso de uma DLL, considere o seguinte cenário:  
   
--   `MathLibrary.DLL`: o arquivo de biblioteca que contém os métodos a serem chamados em tempo de execução. Neste exemplo, a DLL contém dois métodos, `Add` e `Multiply`.  
+-   `MathLibrary.DLL`: O arquivo de biblioteca que contém os métodos a serem chamados em tempo de execução. Neste exemplo, a DLL contém dois métodos, `Add` e `Multiply`.  
   
--   `Add`: o arquivo de origem que contém o método `Add`. Ele retorna a soma de seus parâmetros. A classe `AddClass` que contém o método `Add` é um membro do namespace `UtilityMethods`.  
+-   `Add`: O arquivo de origem que contém o método `Add`. Ele retorna a soma de seus parâmetros. A classe `AddClass` que contém o método `Add` é um membro do namespace `UtilityMethods`.  
   
--   `Mult`: o código-fonte que contém o método `Multiply`. Ele retorna o produto de seus parâmetros. A classe `MultiplyClass` que contém o método `Multiply` também é um membro do namespace `UtilityMethods`.  
+-   `Mult`: O código-fonte que contém o método `Multiply`. Ele retorna o produto de seus parâmetros. A classe `MultiplyClass` que contém o método `Multiply` também é um membro do namespace `UtilityMethods`.  
   
--   `TestCode`: o arquivo que contém o método `Main`. Ele usa os métodos no arquivo DLL para calcular a soma e o produto dos argumentos em tempo de execução.  
+-   `TestCode`: O arquivo que contém o método `Main`. Ele usa os métodos no arquivo DLL para calcular a soma e o produto dos argumentos em tempo de execução.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -124,6 +124,6 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
-- [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [Assemblies e o cache de assembly global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 - [Criando uma classe para conter funções de DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

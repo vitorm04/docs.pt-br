@@ -1,15 +1,15 @@
 ---
-title: Como escrever uma consulta que encontra elementos com base no contexto (C#)
+title: 'Como: Escrever uma consulta que localiza elementos com base no contexto (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 93bfd77ce6bb7be1d305f20f56da67e8fb9c22f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45987949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667944"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Como escrever uma consulta que encontra elementos com base no contexto (C#)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Como: Escrever uma consulta que localiza elementos com base no contexto (C#)
 Muitas vezes você pode ter que escrever uma consulta que seleciona elementos com base no contexto. Você pode querer filtrar com base nos elementos irmãos precedentes ou seguintes. Você pode querer filtrar com base nos elementos filhos ou ancestrais.  
   
  Você pode fazer isso escrevendo uma consulta e usando os resultados da consulta na cláusula `where`. Se você primeiro tiver que testar com zero e, em seguida, testar o valor, é mais conveniente fazer a consulta em uma cláusula `let` e usar os resultados na cláusula `where`.  
@@ -100,8 +100,8 @@ id = 6
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Xml.Linq.XElement.Parse%2A>  
-- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
-- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
-- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+- <xref:System.Xml.Linq.XElement.Parse%2A>
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>
 - [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

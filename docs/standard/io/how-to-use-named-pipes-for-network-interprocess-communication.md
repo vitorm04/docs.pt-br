@@ -1,5 +1,5 @@
 ---
-title: Como usar pipes nomeados para comunicação entre processos em uma rede
+title: 'Como: Usar pipes nomeados para comunicação entre processos na rede'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cc481c7370a21c56daf9ce2949247e65fa33bda
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 608991878b49bf0bafe9ebf90dbfc8eaec69e0e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698863"
 ---
-# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Como usar pipes nomeados para comunicação entre processos em uma rede
+# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Como: Usar pipes nomeados para comunicação entre processos na rede
 Os pipes nomeados fornecem a comunicação entre processos entre um servidor de pipe e um ou mais clientes pipe. Eles oferecem mais funcionalidades do que pipes anônimos, que fornecem comunicação entre processos em um computador local. Pipes nomeados oferecem suporte à comunicação full-duplex em uma rede e em várias instâncias do servidor, comunicação por mensagens e representação do cliente, o que permite que processos de conexão usem seus próprios conjuntos de permissões em servidores remotos.  
   
  Para implementar os pipes nomeados, use as classes <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream>.  
@@ -47,7 +47,7 @@ Os pipes nomeados fornecem a comunicação entre processos entre um servidor de 
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Security.Principal.TokenImpersonationLevel>  
-- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
-- [Pipes](../../../docs/standard/io/pipe-operations.md)  
-- [Como usar pipes anônimos para comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- <xref:System.Security.Principal.TokenImpersonationLevel>
+- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>
+- [Pipes](../../../docs/standard/io/pipe-operations.md)
+- [Como: Usar pipes anônimos para comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

@@ -1,5 +1,5 @@
 ---
-title: Como desabilitar a funcionalidade de desvio de nome forte
+title: 'Como: Desabilitar a funcionalidade de bypass de nome forte'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 628bc1f89e5e09b47c70e39e107987753697cdb4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494296"
 ---
-# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Como desabilitar a funcionalidade de desvio de nome forte
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Como: Desabilitar a funcionalidade de bypass de nome forte
 Desde o .NET Framework versão 3.5 Service Pack 1 (SP1), as assinaturas de nome forte não são validadas quando um assembly é carregado em um objeto <xref:System.AppDomain> de confiança total, como o <xref:System.AppDomain> padrão para a zona `MyComputer`. Isso é conhecido como o recurso de desvio de nome forte. Em um ambiente de confiança total, as exigências de <xref:System.Security.Permissions.StrongNameIdentityPermission> sempre têm êxito para assemblies assinados de confiança total, independentemente de sua assinatura. A única restrição é que o assembly deve ser totalmente confiável porque sua zona é totalmente confiável. Como o nome forte não é um fator determinante sob essas condições, não há nenhum motivo para ser validado. Ignorar a validação de assinaturas de nome forte fornece melhorias significativas de desempenho.  
   
  O recurso de desvio se aplica a qualquer assembly de confiança total que não é assinado com atraso e que é carregado em qualquer <xref:System.AppDomain> de confiança total no diretório especificado por sua propriedade <xref:System.AppDomainSetup.ApplicationBase%2A>.  
@@ -53,7 +53,7 @@ Desde o .NET Framework versão 3.5 Service Pack 1 (SP1), as assinaturas de nome 
 > [!NOTE]
 >  Você poderá ligar e desligar a validação de nome forte para um aplicativo somente se o recurso de desvio estiver habilitado para o computador. Se o recurso de desvio foi desativado para o computador, os nomes fortes são validados para todos os aplicativos e você não pode ignorar a validação para um único aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
-- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-- [Elemento \<bypassTrustedAppStrongNames>](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
+## <a name="see-also"></a>Consulte também
+- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Elemento \<bypassTrustedAppStrongNames>](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

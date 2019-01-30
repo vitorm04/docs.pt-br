@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec54e2234d11a474f89c2890353b4eab53c3d41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693130"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabalhando com logs de aplicativo no Visual Basic
 Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informações de registro em log e rastreamento em logs.  
@@ -42,10 +42,10 @@ Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informaçõe
   
  Os valores de `CompanyName`, `ProductName` e `ProductVersion` vêm das informações do assembly do aplicativo. O formato do nome do arquivo de log é *AssemblyName*.log, em que *AssemblyName* é o nome do arquivo do assembly sem a extensão. Se mais de um arquivo de log for necessário, como quando o log original não está disponível quando o aplicativo tenta gravar no log, o formato do nome do arquivo de log será *AssemblyName*-*iteration*.log, em que `iteration` é um `Integer` positivo.  
   
- Você pode substituir o comportamento padrão adicionando ou alterando os arquivos de configuração de aplicativo e do computador. Para obter mais informações, consulte [Instruções passo a passo: Alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
+ Você pode substituir o comportamento padrão adicionando ou alterando os arquivos de configuração de aplicativo e do computador. Para obter mais informações, confira [Passo a passo: Alterando o local em que My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
   
 ## <a name="configuring-log-settings"></a>Definindo configurações de log  
- O objeto `Log` tem uma implementação padrão que funciona sem um arquivo de configuração do aplicativo, app.config. Para alterar os padrões, você precisa adicionar um arquivo de configuração com as novas configurações. Para obter mais informações, consulte [Instruções passo a passo: filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+ O objeto `Log` tem uma implementação padrão que funciona sem um arquivo de configuração do aplicativo, app.config. Para alterar os padrões, você precisa adicionar um arquivo de configuração com as novas configurações. Para obter mais informações, confira [Passo a passo: Filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
   
  As seções de configuração de log ficam localizadas no nó `<system.diagnostics>` no nó `<configuration>` principal do arquivo app.config. As informações de log são definidas em vários nós:  
   
@@ -100,6 +100,6 @@ Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informaçõe
   
 -   **Evite situações de negação de serviço.** Se seu aplicativo gravar muitas informações no log, ele poderá encher o log ou tornar difícil de encontrar informações importantes.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)

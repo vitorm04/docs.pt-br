@@ -1,18 +1,18 @@
 ---
-title: 'Arquivo XSD de exemplo: clientes e pedidos1'
+title: 'Arquivo de exemplo XSD: Clientes e ordens1'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 3e6eaf41ad8c91f1b59f70f58a8c8f0e127ec949
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9738070ce1b8bf5c0bf8ed4ba75e8d1a248efd53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524618"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a>Arquivo XSD de exemplo: clientes e pedidos
-O arquivo XSD a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém uma definição de esquema para o [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). O esquema usa os recursos `xs:key` e `xs:keyref` de XSD para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order` e o atributo `CustomerID` em cada elemento `Customer`.  
+# <a name="sample-xsd-file-customers-and-orders"></a>Arquivo de exemplo XSD: Clientes e ordens
+O arquivo XSD a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Esse arquivo contém uma definição de esquema para [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). O esquema usa os recursos `xs:key` e `xs:keyref` de XSD para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order` e o atributo `CustomerID` em cada elemento `Customer`.  
   
- Para obter um exemplo de como escrever consultas LINQ que aproveitam as vantagens dessa relação, usando a cláusula `Join`, consulte [Como unir duas coleções (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ Para obter um exemplo de como escrever consultas LINQ que aproveitam essa relação usando a cláusula `Join`, confira [Como: Unir duas coleções (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxsd"></a>CustomersOrders.xsd  
   

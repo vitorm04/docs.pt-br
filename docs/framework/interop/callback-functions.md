@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4494eda29ca6065a157869ec2f93b4875391824
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66df62262d40b4102b9dbd55969e67b6e8041480
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703062"
 ---
 # <a name="callback-functions"></a>Funções de retorno de chamada
 Uma função de retorno de chamada é o código em um aplicativo gerenciado que ajuda uma função de DLL não gerenciada a concluir uma tarefa. As chamadas a uma função de retorno de chamada passam indiretamente de um aplicativo gerenciado, por meio de uma função de DLL e novamente para a implementação gerenciada. Algumas das muitas funções de DLL chamadas com a invocação de plataforma exigem que uma função de retorno de chamada no código gerenciado seja executada corretamente.  
@@ -24,8 +24,8 @@ Uma função de retorno de chamada é o código em um aplicativo gerenciado que 
  ![Retorno de chamada de invocação de plataforma](../../../docs/framework/interop/media/pinvokecallback.gif "pinvokecallback")  
 Função de retorno de chamada e implementação  
   
- As funções de retorno de chamada são ideais para uso em situações em que uma tarefa é executada repetidamente. Outro uso comum é com funções de enumeração, como **EnumFontFamilies**, **EnumPrinters** e **EnumWindows** na API do Win32. A função **EnumWindows** enumera por meio de todas as janelas existentes no computador, chamando a função de retorno de chamada para executar uma tarefa em cada janela. Para obter instruções e um exemplo, consulte [Como implementar funções de retorno de chamada](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
+ As funções de retorno de chamada são ideais para uso em situações em que uma tarefa é executada repetidamente. Outro uso comum é com funções de enumeração, como **EnumFontFamilies**, **EnumPrinters** e **EnumWindows** na API do Win32. A função **EnumWindows** enumera por meio de todas as janelas existentes no computador, chamando a função de retorno de chamada para executar uma tarefa em cada janela. Para obter instruções e um exemplo, confira [Como: Implementar funções de retorno de chamada](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Como implementar funções de retorno de chamada](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
- [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Implementar funções de retorno de chamada](../../../docs/framework/interop/how-to-implement-callback-functions.md)
+- [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)

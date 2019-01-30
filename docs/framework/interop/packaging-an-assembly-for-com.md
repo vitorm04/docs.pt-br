@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531506"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empacotando um assembly para o COM
 Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos gerenciados que pretendem incorporar em seus aplicativos:  
@@ -60,7 +60,7 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
   
      Independentemente do mecanismo escolhido, somente os tipos públicos definidos no assembly que você fornecer são incluídos na biblioteca de tipos gerada.  
   
-     Você pode empacotar uma biblioteca de tipos como um arquivo separado ou inseri-la como arquivo de recurso Win32 dentro de um aplicativo baseado em .NET. Microsoft Visual Basic 6.0 executou essa tarefa para você automaticamente. No entanto, ao usar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], você deve inserir manualmente sua biblioteca de tipos. Para obter instruções, consulte [Como inserir bibliotecas de tipos como recursos do Win32 em aplicativos baseados em .NET](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
+     Você pode empacotar uma biblioteca de tipos como um arquivo separado ou inseri-la como arquivo de recurso Win32 dentro de um aplicativo baseado em .NET. Microsoft Visual Basic 6.0 executou essa tarefa para você automaticamente. No entanto, ao usar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], você deve inserir manualmente sua biblioteca de tipos. Para obter instruções, veja [Como: Inserir bibliotecas de tipos como recursos do Win32 em aplicativos baseados no .NET](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Exportador da Biblioteca de Tipos  
@@ -80,13 +80,13 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
 ## <a name="net-services-installation-tool"></a>Ferramenta de Instalação de Serviços .NET  
  A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) adiciona classes gerenciadas para Serviços do Componente do Windows 2000 e combina várias tarefas em uma única ferramenta. Além de carregar e registrar um assembly, Regsvcs.exe pode gerar, registrar e instalar a biblioteca de tipos em um aplicativo COM+ 1.0 existente.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)  
- [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)  
- [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)  
- [Considerações sobre segurança de assembly](../app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)  
- [Registrando assemblies usando COM](registering-assemblies-with-com.md)  
- [Como inserir bibliotecas de tipo como recursos do Win32 em aplicativos](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- <xref:System.Runtime.InteropServices.ITypeLibConverter>
+- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
+- [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)
+- [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
+- [Considerações sobre segurança de assembly](../app-domains/assembly-security-considerations.md)
+- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Registrando assemblies usando COM](registering-assemblies-with-com.md)
+- [Como: Inserir bibliotecas de tipos como recursos do Win32 em aplicativos](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))

@@ -1,15 +1,15 @@
 ---
-title: Como determinar se um arquivo é um assembly (C#)
+title: 'Como: Determinar se um arquivo é um assembly (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125529"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681762"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Como determinar se um arquivo é um assembly (C#)
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Como: Determinar se um arquivo é um assembly (C#)
 Um arquivo será um assembly somente se ele for gerenciado e se contiver uma entrada de assembly em seus metadados. Para obter mais informações sobre metadados e assemblies, consulte o tópico [Manifesto do assembly](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Como determinar manualmente se um arquivo é um assembly  
@@ -18,7 +18,7 @@ Um arquivo será um assembly somente se ele for gerenciado e se contiver uma ent
   
 2.  Carregue o arquivo que você deseja testar.  
   
-3.  Se o **ILDASM** relatar que o arquivo não é um arquivo PE (executável portátil), então ele não será um assembly. Para obter mais informações, consulte o tópico [Como exibir o conteúdo de um assembly](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Se o **ILDASM** relatar que o arquivo não é um arquivo PE (executável portátil), então ele não será um assembly. Para obter mais informações, confira o tópico [Como: exibir o conteúdo do assembly](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Como determinar programaticamente se um arquivo é um assembly  
   
@@ -68,6 +68,6 @@ class TestAssembly
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Reflection.AssemblyName>  
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
 - [Assemblies e o cache de assembly global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

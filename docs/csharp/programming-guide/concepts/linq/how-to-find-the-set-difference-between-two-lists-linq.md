@@ -1,20 +1,20 @@
 ---
-title: Como localizar a diferença de conjunto entre duas listas (LINQ) (C#)
+title: 'Como: Localizar a diferença de conjunto entre duas listas (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: e416e97b8fe3a1a76a0f04ea46353d9fd8c0ad8c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 13166aaeba50d8cca33861d5489d7839d3933099
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712727"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Como localizar a diferença de conjunto entre duas listas (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Como: Localizar a diferença de conjunto entre duas listas (LINQ) (C#)
 Este exemplo mostra como usar o LINQ para comparar duas listas de cadeias de caracteres e retornar as linhas que estão no names1.txt, mas não no names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
   
-1.  Copiar names1.txt e names2.txt para a pasta de solução, conforme mostrado em [Como combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  Copie names1.txt e names2.txt para a pasta da solução, conforme mostrado em [Como: Combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Exemplo  
   

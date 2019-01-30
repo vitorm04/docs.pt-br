@@ -1,15 +1,15 @@
 ---
-title: Como localizar irmãos anteriores (XPath-LINQ to XML) (C#)
+title: 'Como: Localizar irmãos anteriores (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: d2bd34db7bd839e50ec3e77819230f5f6410b73e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: de5393f720a854b9644dc7cac7d73c3c6d380483
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43787110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707421"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Como localizar irmãos anteriores (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Como: Localizar irmãos anteriores (XPath-LINQ to XML) (C#)
 Este tópico compara o eixo `preceding-sibling` de XPath ao eixo <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> filho do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  A expressão XPath é:  
@@ -21,7 +21,7 @@ Este tópico compara o eixo `preceding-sibling` de XPath ao eixo <xref:System.Xm
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir localiza o elemento de `FullAddress` , e então recuperar os elementos anteriores usando o eixo de `preceding-sibling` .  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

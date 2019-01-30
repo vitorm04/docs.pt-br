@@ -1,19 +1,19 @@
 ---
-title: Como anexar a arquivos de texto no Visual Basic
+title: 'Como: Acrescentar a arquivos de texto no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: 78d98dcf098966de435254926af21db76b7bccfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fabd0b6894fc5ab7d4bab1979d71b171d2b21c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498210"
 ---
-# <a name="how-to-append-to-text-files-in-visual-basic"></a>Como anexar a arquivos de texto no Visual Basic
+# <a name="how-to-append-to-text-files-in-visual-basic"></a>Como: Acrescentar a arquivos de texto no Visual Basic
 O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> pode ser usado para anexar a um arquivo de texto especificando que o parâmetro `append` seja definido como `True`.  
   
 ### <a name="to-append-to-a-text-file"></a>Para acrescentar um arquivo de texto  
@@ -41,7 +41,7 @@ O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> pode se
   
 -   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

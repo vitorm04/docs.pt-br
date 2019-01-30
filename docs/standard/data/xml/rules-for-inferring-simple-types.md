@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550490"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regras para inferir tipos simples
 Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos.  
@@ -37,8 +37,8 @@ Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o t
 |unsignedLong|Inteiros no intervalo de 0 a 18446744073709551615.|  
 |inteiro|Um número de dígitos finito prefixados possivelmente com “-”.|  
 |decimal|Valores numéricos que contêm 0 a 28 dígitos de precisão.|  
-|float|Os decimais opcionalmente seguido por “E” ou “e” tiver usado por um valor inteiro que representa o expoente. Os valores decimais podem estar no intervalo de -16777216 a 16777216. Os valores do expoente podem estar no intervalo de – 149 a 104.<br /><br /> O flutuante permite valores especiais representar a infinito e não valores numéricos. Os valores especiais para o flutuante são: 0, -0, INF, - INF, NaN.|  
-|double|O mesmo como flutuam exceto valores decimais podem estar no intervalo de -9007199254740992 a 9007199254740992, e o expoente valor podem estar no intervalo de – 1075 a 970.<br /><br /> O tipo double permite valores especiais representar a infinito e não valores numéricos. Os valores especiais para o flutuante são: 0, -0, INF, - INF, NaN.|  
+|float|Os decimais opcionalmente seguido por “E” ou “e” tiver usado por um valor inteiro que representa o expoente. Os valores decimais podem estar no intervalo de -16777216 a 16777216. Os valores do expoente podem estar no intervalo de – 149 a 104.<br /><br /> O flutuante permite valores especiais representar a infinito e não valores numéricos. Os valores especiais para float são: 0, -0, INF, -INF e NaN.|  
+|double|O mesmo como flutuam exceto valores decimais podem estar no intervalo de -9007199254740992 a 9007199254740992, e o expoente valor podem estar no intervalo de – 1075 a 970.<br /><br /> O tipo double permite valores especiais representar a infinito e não valores numéricos. Os valores especiais para float são: 0, -0, INF, -INF e NaN.|  
 |duration|O formato de duração W3C.|  
 |dateTime|O formato dateTime W3C.|  
 |hora|O formato de hora W3C.|  
@@ -78,6 +78,6 @@ Os seguintes esquema- está definindo os atributos que são ignorados durante a 
   
 ## <a name="see-also"></a>Consulte também
 
-- [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]  
-- [Inferindo esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]
+- [Inferindo esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regras para inferir tipos de nó e estrutura de esquema](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

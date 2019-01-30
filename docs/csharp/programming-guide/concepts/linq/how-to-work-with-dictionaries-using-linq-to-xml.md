@@ -1,15 +1,15 @@
 ---
-title: Como trabalhar com dicionários usando LINQ to XML (C#)
+title: 'Como: Trabalhar com dicionários usando o LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: afe4fafb9963b4fc429f441349f8190c9a1e5bac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a1104d041c72b48a9aad38a489aefe3ec90a16dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582013"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Como trabalhar com dicionários usando LINQ to XML (C#)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Como: Trabalhar com dicionários usando o LINQ to XML (C#)
 É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados. Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.  
   
 ## <a name="example"></a>Exemplo  

@@ -1,5 +1,5 @@
 ---
-title: Como manipular exceções em loops paralelos
+title: 'Como: Tratar exceções em loops paralelos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf311ad2b79e615f5c3097686035e7bbfbc49c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ef883f37587948871b222ca03a4032bea2109bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711415"
 ---
-# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Como manipular exceções em loops paralelos
+# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Como: Tratar exceções em loops paralelos
 As sobrecargas <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> não têm nenhum mecanismo especial para lidar com exceções que podem ocorrer. Nesse sentido, elas se assemelham aos loops `for` e `foreach` regulares (`For` e `For Each` no Visual Basic); uma exceção sem tratamento causa o encerramento imediato do loop.  
   
  Quando você adiciona sua própria lógica de tratamento de exceção a loops paralelos, trate o caso em que exceções semelhantes podem ser geradas em vários threads ao mesmo tempo e o caso em que uma exceção lançada em um thread faz com que outra exceção seja lançada em outro thread. Você pode manipular ambos os casos encapsulando todas as exceções do loop em um <xref:System.AggregateException?displayProperty=nameWithType>. O exemplo a seguir mostra uma abordagem possível.  
@@ -33,5 +33,5 @@ As sobrecargas <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=name
   
 ## <a name="see-also"></a>Consulte também
 
-- [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

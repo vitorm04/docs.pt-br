@@ -1,5 +1,5 @@
 ---
-title: Como antecipar condições de espaço insuficiente com o armazenamento isolado
+title: 'Como: Prever condições de espaço insuficiente com o armazenamento isolado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: be3c38c1cf1e6fa6f2bfd5fed05ee8150309d7d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609675"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Como antecipar condições de espaço insuficiente com o armazenamento isolado
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Como: Prever condições de espaço insuficiente com o armazenamento isolado
 O código que usa armazenamento isolado é restrito por uma [cota](../../../docs/standard/io/isolated-storage.md#quotas) que especifica o tamanho máximo do compartimento de dados no qual arquivos de armazenamento e diretórios isolados existem. A cota é definida pela política de segurança e é configurável por administradores. Se o tamanho máximo permitido for ultrapassado ao tentar gravar dados, uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será lançada e a operação falhará. Isso ajuda a evitar ataques de negação de serviço que podem fazer com que o aplicativo recuse solicitações porque o armazenamento de dados está cheio.  
   
  Para ajudar você a determinar se uma determinada tentativa de gravação provavelmente falhará por esse motivo, a classe <xref:System.IO.IsolatedStorage.IsolatedStorage> fornece três propriedades somente leitura: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Você pode usar essas propriedades para determinar se a gravação no armazenamento fará com que o tamanho máximo permitido de armazenamento seja ultrapassado. Lembre-se de que o armazenamento isolado pode ser acessado simultaneamente; portanto, ao calcular a quantidade de armazenamento restante, o espaço de armazenamento poderá ser consumido até você tentar gravar no armazenamento. No entanto, você pode usar o tamanho máximo do armazenamento para ajudar a determinar se o limite superior no armazenamento disponível está prestes a ser alcançado.  
@@ -47,6 +47,6 @@ O código que usa armazenamento isolado é restrito por uma [cota](../../../docs
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)  
-- [Como obter repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)
+- [Como: Obter repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

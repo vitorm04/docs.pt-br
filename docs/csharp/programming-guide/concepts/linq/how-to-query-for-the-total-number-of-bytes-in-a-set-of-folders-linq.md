@@ -1,15 +1,15 @@
 ---
-title: Como consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)
+title: 'Como: Consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: 7a11e30a41ce171d516d3ea00a0e8664efe33520
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 52f428bcf427065b80e91c4d299c5d8fd9f32972
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44185922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607547"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Como consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Como: Consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)
 Este exemplo mostra como recuperar o número total de bytes usado por todos os arquivos em uma pasta especificada e todas as suas subpastas.  
   
 ## <a name="example"></a>Exemplo  
@@ -78,5 +78,5 @@ class QuerySize
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

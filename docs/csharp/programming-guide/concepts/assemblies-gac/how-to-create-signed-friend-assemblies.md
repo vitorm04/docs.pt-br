@@ -1,15 +1,15 @@
 ---
-title: Como criar assemblies amigáveis assinados (C#)
+title: 'Como: Criar assemblies amigáveis com sinal (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 3db82db502c7404ce235c5824b58046fbd4dbe7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705424"
 ---
-# <a name="how-to-create-signed-friend-assemblies-c"></a>Como criar assemblies amigáveis assinados (C#)
+# <a name="how-to-create-signed-friend-assemblies-c"></a>Como: Criar assemblies amigáveis com sinal (C#)
 Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes. Os dois assemblies devem ter nomes fortes. Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Para criar um assembly assinado e um assembly amigável  
@@ -90,11 +90,11 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
-- [Assemblies Amigáveis (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
-- [Como criar assemblies amigáveis não assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
-- [Sn.exe (Ferramenta Nome Forte)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
-- [Criar e usar assemblies de nomes fortes](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Assemblies e o cache de assembly global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblies Amigáveis (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Como: Criar assemblies amigáveis sem sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [Sn.exe (Ferramenta Nome Forte)](../../../../framework/tools/sn-exe-strong-name-tool.md)
+- [Criar e usar assemblies de nomes fortes](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)

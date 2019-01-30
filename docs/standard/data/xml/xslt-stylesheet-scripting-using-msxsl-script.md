@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 5c57f8964172d351ddae048ea36e63a13cf2578d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46584247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563425"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Scripts de folha de estilos de XSLT usando &lt;msxsl:script&gt;
 A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usando o elemento `script`.  
@@ -31,7 +31,7 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  onde `msxsl` é um prefixo associado ao namespace `urn:schemas-microsoft-com:xslt`.  
   
- O atributo `language` não é obrigatório, mas, se especificado, o valor deverá ser um dos seguintes: C#, VB, JScript, JavaScript, Visual Basic ou CSharp. Se não for especificado, a linguagem padrão é JScript. O `language-name` não diferencia maiúsculas de minúsculas, portanto “JavaScript” e “Javascript” são equivalentes.  
+ O atributo `language` não é obrigatório, mas se for especificado, seu valor precisará ser um dos seguintes: C#, VB, JScript, JavaScript, VisualBasic ou CSharp. Se não for especificado, a linguagem padrão é JScript. O `language-name` não diferencia maiúsculas de minúsculas, portanto “JavaScript” e “Javascript” são equivalentes.  
   
  O atributo `implements-prefix` é obrigatório. Esse atributo é usado para declarar um namespace e associá-lo ao bloco de script. O valor desse atributo é o prefixo que representa o namespace. Este namespace pode ser definido em qualquer lugar em uma folha de estilos.  
   
@@ -72,7 +72,7 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
 |Fragmento da árvore de resultado|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Se a função de script utilizar um dos seguintes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single ou Decimal, eles serão forçados para Double, que mapeia para o número do tipo XPath do W3C. Todos os outros tipos são forçados para uma cadeia de caracteres chamando o método `ToString`.  
+ Se a função de script utilizar um dos seguintes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single ou Decimal, eles serão forçados para Double, que é mapeado para o número do tipo XPath do W3C. Todos os outros tipos são forçados para uma cadeia de caracteres chamando o método `ToString`.  
   
  Se a função de script utilizar um tipo diferente dos mencionados acima, ou se a função não compilar quando a folha de estilos for carregada no objeto <xref:System.Xml.Xsl.XslTransform>, uma exceção será gerada.  
   
@@ -89,9 +89,10 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
  É altamente recomendável que todo o conteúdo de script seja colocado em uma seção CDATA, porque os operadores, os identificadores ou os delimitadores para uma determinada linguagem têm o potencial de serem mal interpretados como XML. O exemplo a seguir mostra o uso do operador lógico AND no script.  
   
 ```xml  
-<msxsl:script implements-prefix='yourprefix' language='CSharp>  
+<msxsl:script implements-prefix='yourprefix' language='CSharp'>  
     public string book(string abc, string xyz)  
-    {  if ((abc== abc)&&(abc== xyz)) return bar+xyz;  
+    {  
+        if ((abc == bar) && (abc == xyz)) return bar + xyz;  
         else return null;  
     }  
 </msxsl:script>  
@@ -146,8 +147,8 @@ public class Sample
    private const String filename = "number.xml";  
    private const String stylesheet = "calc.xsl";  
   
-   public static void Main() {  
-  
+   public static void Main()  
+   {  
     //Create the XslTransform and load the style sheet.  
     XslTransform xslt = new XslTransform();  
     xslt.Load(stylesheet);  
@@ -162,7 +163,7 @@ public class Sample
     //Transform the file.  
     xslt.Transform(doc, null, writer, null);  
     writer.Close();  
-  }   
+  }  
 }  
 ```  
   
@@ -190,7 +191,8 @@ public class Sample
   
   <msxsl:script language="C#" implements-prefix="user">  
      <![CDATA[  
-     public double circumference(double radius){  
+     public double circumference(double radius)  
+     {  
        double pi = 3.14;  
        double circ = pi*radius*2;  
        return circ;  

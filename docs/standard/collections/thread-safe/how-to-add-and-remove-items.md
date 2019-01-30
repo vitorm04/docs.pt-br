@@ -1,5 +1,5 @@
 ---
-title: Como adicionar e remover itens de um ConcurrentDictionary
+title: 'Como: Adicionar e remover itens de um ConcurrentDictionary'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543416"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Como adicionar e remover itens de um ConcurrentDictionary
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Como: Adicionar e remover itens de um ConcurrentDictionary
 Este exemplo mostra como adicionar, recuperar, atualizar e remover itens de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Essa classe de coleção é uma implementação thread-safe. É recomendável usá-la sempre que vários threads possam estar tentando acessar os elementos simultaneamente.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> fornece vários métodos de conveniência que tornam desnecessário que o código verifique se uma chave existe antes de tentar adicionar ou remover dados. A tabela a seguir lista esses métodos de conveniência e descreve quando usá-los.  
@@ -50,5 +50,5 @@ Este exemplo mostra como adicionar, recuperar, atualizar e remover itens de um <
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)

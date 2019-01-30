@@ -1,15 +1,15 @@
 ---
-title: Como encadear chamadas de método de eixo (LINQ to XML) (C#)
+title: 'Como: Encadear chamadas de método de eixo (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: b486ef5cbf1f9752077cfa8d774184c7be90f6f2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ff3a7548e2ec54e8959f9f9b5ed52c0fc6acb1f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44212094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652196"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Como encadear chamadas de método de eixo (LINQ to XML) (C#)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Como: Encadear chamadas de método de eixo (LINQ to XML) (C#)
 Um padrão comum que você usar em seu código é chamar um método do eixo, então chama um dos eixos do método de extensão.  
   
  Há dois eixos com o nome de `Elements` que retornam uma coleção de elementos: o método de <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> e o método de <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> . Você pode combinar esses dois eixos para localizar todos os elementos de um nome especificado em uma determinada profundidade na árvore.  
@@ -17,7 +17,7 @@ Um padrão comum que você usar em seu código é chamar um método do eixo, ent
 ## <a name="example"></a>Exemplo  
  Este exemplo usa <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> e <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> para localizar todos os elementos de `Name` em todos os elementos de `Address` em todos os elementos de `PurchaseOrder` .  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Várias ordens de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XElement purchaseOrders = XElement.Load("PurchaseOrders.xml");  
@@ -90,7 +90,7 @@ foreach (XElement cp in configParameters)
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma técnica para XML que é em um namespace. Para obter mais informações, consulte [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra em um namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Várias ordens de compra em um namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  

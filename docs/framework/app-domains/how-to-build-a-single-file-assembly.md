@@ -1,5 +1,5 @@
 ---
-title: Como compilar um assembly de arquivo único
+title: 'Como: Criar um assembly de arquivo único'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fff84266dd99b84cc99c1996a3063dc962fa2e94
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597834"
 ---
-# <a name="how-to-build-a-single-file-assembly"></a>Como compilar um assembly de arquivo único
+# <a name="how-to-build-a-single-file-assembly"></a>Como: Criar um assembly de arquivo único
 
 Um assembly de arquivo único, que é o tipo mais simples de assembly, contém informações sobre o tipo e a implementação, bem como o [manifesto do assembly](../../../docs/framework/app-domains/assembly-manifest.md). Você pode usar compiladores de linha de comando ou o Visual Studio para criar um assembly de arquivo único. Por padrão, o compilador cria um arquivo do assembly com uma extensão de .exe.
 
@@ -92,5 +92,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblies de vários arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [Como Compilar um Assembly de Vários Arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Como: Criar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

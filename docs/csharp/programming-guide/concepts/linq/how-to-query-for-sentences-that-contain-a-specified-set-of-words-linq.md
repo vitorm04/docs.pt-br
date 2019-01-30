@@ -1,15 +1,15 @@
 ---
-title: Como consultar sentenças que contenham um conjunto especificado de palavras (LINQ) (C#)
+title: 'Como: Consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: db9c35c0dd8f31541b69877b3ec869b9f4aa9081
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0c91b225527f9c6322da98e3331127652ef52df7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747928"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Como consultar sentenças que contenham um conjunto especificado de palavras (LINQ) (C#)
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Como: Consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (C#)
 Este exemplo mostra como localizar frases em um arquivo de texto que contenham correspondências para cada conjunto de palavras especificado. Embora a matriz de termos de pesquisa esteja embutida em código neste exemplo, ela também poderia ser populada dinamicamente em tempo de execução. Neste exemplo, a consulta retorna as frases que contêm as palavras "Historically", "data" e "integrated".  
   
 ## <a name="example"></a>Exemplo  

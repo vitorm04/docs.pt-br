@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d1546bb9c47d30806d857fa55e1d19fdc2c777
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 40bbf0cfab8044d582490ed0890501d6b123d18e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631237"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Gerando e compilando código-fonte de um gráfico CodeDOM
 O namespace <xref:System.CodeDom.Compiler> fornece interfaces para geração de código-fonte de grafos de objeto CodeDOM e para o gerenciamento da compilação com compiladores com suporte. Um provedor de código pode produzir código-fonte em uma linguagem de programação específica acordo com um grafo CodeDOM. Uma classe que deriva de <xref:System.CodeDom.Compiler.CodeDomProvider> normalmente pode fornecer métodos para gerar e compilar o código para a linguagem à qual o provedor dá suporte.  
@@ -93,8 +93,8 @@ O namespace <xref:System.CodeDom.Compiler> fornece interfaces para geração de 
 ## <a name="languages-with-initial-support"></a>Linguagens com suporte inicial  
  O .NET Framework fornece compiladores de código e geradores de código para as seguintes linguagens: C#, Visual Basic, C++ e JScript. O suporte do CodeDOM pode ser estendido a outras linguagens implementando geradores de código e compiladores de código específicos da linguagem.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.CodeDom>  
- <xref:System.CodeDom.Compiler>  
- [Dynamic Source Code Generation and Compilation](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md) (Compilação e geração de código-fonte dinâmico)  
- [Referência rápida do CodeDOM](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+## <a name="see-also"></a>Consulte também
+- <xref:System.CodeDom>
+- <xref:System.CodeDom.Compiler>
+- [Dynamic Source Code Generation and Compilation](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md) (Compilação e geração de código-fonte dinâmico)
+- [Referência rápida do CodeDOM](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)

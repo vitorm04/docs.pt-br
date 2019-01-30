@@ -1,5 +1,5 @@
 ---
-title: Como localizar arquivos e diretórios existentes no armazenamento isolado
+title: 'Como: Localizar arquivos e diretórios existentes no armazenamento isolado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 277f7d562d5e345556a9047f6e4bf2b60eaef462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646705"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Como localizar arquivos e diretórios existentes no armazenamento isolado
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Como: Localizar arquivos e diretórios existentes no armazenamento isolado
 
 Para procurar um diretório no armazenamento isolado, use o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Esse método usa uma cadeia de caracteres que representa um padrão de pesquisa. Você pode usar o caracteres curinga de caractere único (?) e caracteres múltiplos (\*) no padrão de pesquisa, mas os caracteres curinga deverão aparecer na parte final do nome. Por exemplo, `directory1/*ect*` é uma cadeia de caracteres de pesquisa válida, mas `*ect*/directory2` não é.  
   
@@ -43,5 +43,5 @@ Para procurar um diretório no armazenamento isolado, use o método <xref:System
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)

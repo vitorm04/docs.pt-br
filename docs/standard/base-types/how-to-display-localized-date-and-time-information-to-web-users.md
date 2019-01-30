@@ -1,5 +1,5 @@
 ---
-title: Como exibir informações localizadas de data e hora para usuários da Web
+title: 'Como: Exibir informações localizadas de data e hora para usuários da Web'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085219"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857652"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como exibir informações localizadas de data e hora para usuários da Web
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como: Exibir informações localizadas de data e hora para usuários da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações que analisam e formatam valores de data e hora não devem depender de um formato padrão (que geralmente é o formato da cultura local do servidor Web) ao interagir com o usuário. Em vez disso, formulários da Web que lidam com cadeias de caracteres de data e hora inseridas pelo usuário devem analisar as cadeias de caracteres usando a cultura preferencial do usuário. Da mesma forma, os dados de data e hora devem ser exibidos para o usuário em um formato compatível com a respectiva cultura. Este tópico mostra como fazer isso.  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Para analisar a data e a hora em cadeias de caracteres de entrada do usuário  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Para analisar a data e a hora em cadeias de caracteres de entrada do usuário  
   
 1.  Determine se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> é populada. Se não for, vá para a etapa 6.  
   
@@ -40,7 +43,7 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações
   
 6.  Se a conversão ainda falhar ou se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A> estiver vazia, analise a cadeia de caracteres usando a cultura invariável, que é retornada pela propriedade <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Para analisar a data e a hora local da solicitação do usuário  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Para analisar a data e a hora local da solicitação do usuário  
   
 1.  Adicione um controle <xref:System.Web.UI.WebControls.HiddenField> a um formulário da Web.  
   
@@ -110,7 +113,7 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações
   
 ## <a name="see-also"></a>Consulte também
 
-- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Analisando cadeias de caracteres de data e hora](../../../docs/standard/base-types/parsing-datetime.md)

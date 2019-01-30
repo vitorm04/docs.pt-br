@@ -1,5 +1,5 @@
 ---
-title: 'Mitigação: novo compilador JIT de 64 bits'
+title: 'Mitigação: Novo compilador JIT de 64 bits'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4edce9558cdbdd5937aa12866077210a91ee8494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d3eb82cf9bac1e40947fb78882d18c5f09b0092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690079"
 ---
-# <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigação: novo compilador JIT de 64 bits
+# <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigação: Novo compilador JIT de 64 bits
 A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador JIT de 64 bits para compilação just-in-time. Essa alteração não afeta a compilação com o compilador JIT de 32 bits.  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>Comportamento ou exceções inesperadas  
@@ -69,6 +69,6 @@ A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador 
   
  Avise-nos sobre o problema relatando um bug no [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
- [Elemento \<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+## <a name="see-also"></a>Consulte também
+- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Elemento \<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)

@@ -2,12 +2,12 @@
 title: Exemplo de encadeamento de consultas (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 864d7ed34957defdedf21ccb1671d49c48913d88
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677336"
 ---
 # <a name="chaining-queries-example-c"></a>Exemplo de encadeamento de consultas (C#)
 Este exemplo compila no exemplo anterior e mostra o que acontece quando você encadeia duas consultas que usam execução adiada e avaliação lenta.  
@@ -88,4 +88,4 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: encadear consultas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Tutorial: Encadeando consultas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

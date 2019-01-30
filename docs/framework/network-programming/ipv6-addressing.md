@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633846"
 ---
 # <a name="ipv6-addressing"></a>Endereçamento IPv6
 No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um motivo para um espaço de endereço tão grande é subdividir os endereços disponíveis em uma hierarquia de domínios de roteamento que reflitam a topologia da Internet. Outro motivo é mapear os endereços de adaptadores de rede (ou interfaces) que conectam dispositivos à rede. O IPv6 tem uma capacidade inerente de resolver endereços no nível mais baixo deles, que é o nível de adaptador de rede e também tem capacidades de configuração automática.  
@@ -64,7 +64,7 @@ No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um mot
   
     -   **Endereços de site local**. Esses endereços são usados em um único site e têm o seguinte formato: FEC0::*SubnetID*:*InterfaceID*. Os endereços de sites locais são usados para endereçamento dentro de um site sem a necessidade de um prefixo global.  
   
-    -   **Endereços unicast IPv6 globais**. Esses endereços podem ser usados pela Internet e têm o seguinte formato: 010(FP, 3 bits) ID de TLA (13 bits) Reserved (8 bits) ID de NLA (24 bits) ID de SLA (16 bits) *InterfaceID* (64 bits).  
+    -   **Endereços unicast IPv6 globais**. Esses endereços podem ser usados na Internet e têm o seguinte formato: 010 (FP, 3 bits) ID TLA (13 bits) Reservado (8 bits) ID NLA (24 bits) ID SLA (16 bits) *InterfaceID* (64 bits).  
   
 -   **Endereço multicast**. Um identificador para um conjunto de interfaces (normalmente pertencentes a nós diferentes). Um pacote enviado para esse endereço será enviado para todas as interfaces identificadas pelo endereço. Os tipos de endereço multicast substituem os endereços difundidos por IPv4.  
   
@@ -72,6 +72,6 @@ No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um mot
   
  Em geral, um nó sempre tem um endereço de link local. Ele pode ter um endereço de site local e um ou mais endereços globais.  
   
-## <a name="see-also"></a>Consulte também  
- [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Soquetes](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Consulte também
+- [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Soquetes](../../../docs/framework/network-programming/sockets.md)

@@ -1,17 +1,17 @@
 ---
-title: Como mover um arquivo no Visual Basic
+title: 'Como: Mover um arquivo no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 95a7deeec7c5f5d997a99ba9aa4bae8d7f972b5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6888531918dd932ba5acb3ec967303568606d5df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721866"
 ---
-# <a name="how-to-move-a-file-in-visual-basic"></a>Como mover um arquivo no Visual Basic
+# <a name="how-to-move-a-file-in-visual-basic"></a>Como: Mover um arquivo no Visual Basic
 O método `My.Computer.FileSystem.MoveFile` pode ser utilizado para mover um arquivo para outra pasta. Se a estrutura de destino não existir, ela será criada.  
   
 ### <a name="to-move-a-file"></a>Mover um arquivo  
@@ -49,8 +49,8 @@ O método `My.Computer.FileSystem.MoveFile` pode ser utilizado para mover um arq
   
 -   O usuário não tem a permissão necessária (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- [Como renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- [Como criar uma cópia de um arquivo em um diretório diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
+- [Como: Renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Como: Criar uma cópia de um arquivo em outro diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Como: Analisar caminhos de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

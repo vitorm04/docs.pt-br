@@ -1,21 +1,21 @@
 ---
-title: Como gravar um método do eixo LINQ to XML (C#)
+title: 'Como: Escrever um método de eixo LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 74ed60fa3c78bcbc233e27868b1abe357a85c62a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e00ba6ba2880ab4f26f59a0b8543ac9f58dfbb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529743"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Como gravar um método do eixo LINQ to XML (C#)
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Como: Escrever um método de eixo LINQ to XML (C#)
 Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML. Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos. Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa dois métodos de extensão. O primeiro método de extensão, `GetXPath`, opera em <xref:System.Xml.Linq.XObject>, e retorna uma expressão XPath que quando avaliada retorna o nó ou do atributo. O segundo método de extensão, `Find`, opera em <xref:System.Xml.Linq.XElement>. Retorna uma coleção de objetos <xref:System.Xml.Linq.XAttribute> e objetos de <xref:System.Xml.Linq.XElement> que contêm texto especificado.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Várias ordens de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 public static class MyExtensions  

@@ -1,5 +1,5 @@
 ---
-title: Como criar um par de chaves pública/privada
+title: 'Como: Criar um par de chaves pública/privada'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08715f2824dcb7dbc2c6aa26fd3bd8bd71b97038
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653897"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>Como criar um par de chaves pública/privada
+# <a name="how-to-create-a-public-private-key-pair"></a>Como: Criar um par de chaves pública/privada
 
 Para assinar um assembly com um nome forte, você deve ter um par de chaves pública/privada. Esse par de chaves de criptografia pública/privada é usado durante a compilação para criar um assembly de nome forte. Você pode criar um par de chaves usando a [ferramenta de Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Os arquivos de par de chaves geralmente têm uma extensão .snk.
 

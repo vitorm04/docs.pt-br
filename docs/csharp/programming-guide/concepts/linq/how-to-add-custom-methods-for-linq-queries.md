@@ -1,15 +1,15 @@
 ---
-title: Como adicionar métodos personalizados para consultas LINQ (C#)
+title: 'Como: Adicionar métodos personalizados para consultas LINQ (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: 2e843f64a8556b110bc96126ddbbd760b6093270
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c90e869c3d56696a072585cca7282b459b39e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540722"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Como adicionar métodos personalizados para consultas LINQ (C#)
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Como: Adicionar métodos personalizados para consultas LINQ (C#)
 Você pode estender o conjunto de métodos que você pode usar para consultas LINQ, adicionando os métodos de extensão à interface <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, além do padrão médio ou máximo de operações, você pode criar um método de agregação personalizado para calcular um único valor de uma sequência de valores. Você também pode criar um método que funciona como um filtro personalizado ou como uma transformação de dados específicos para uma sequência de valores e que retorna uma nova sequência. Exemplos desses métodos são <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Reverse%2A>.  
   
  Ao estender a interface <xref:System.Collections.Generic.IEnumerable%601>, você pode aplicar seus métodos personalizados para qualquer coleção enumerável. Para obter mais informações, consulte [Métodos de extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
@@ -207,5 +207,5 @@ foreach (var element in query)
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>
 - [Métodos de Extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0537685a91db2c0e323b3f1bda24c6cadc264e34
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ce9a06c14141bb658eb665e643d8da27e18dd94f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590357"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>Usando a classe XslCompiledTransform
 A classe <xref:System.Xml.Xsl.XslCompiledTransform> é o processador XSLT do Microsoft .NET Framework. Essa classe é usada para compilar folhas de estilos e executar transformações XSLT.  
   
 > [!NOTE]
->  Embora o desempenho geral da classe <xref:System.Xml.Xsl.XslCompiledTransform> seja melhor do que o da classe <xref:System.Xml.Xsl.XslTransform>, o método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> da classe <xref:System.Xml.Xsl.XslCompiledTransform> possivelmente apresentará um desempenho mais lento do que o método <xref:System.Xml.Xsl.XslTransform.Load%2A> da classe <xref:System.Xml.Xsl.XslTransform> na primeira vez que for chamado em uma transformação. Isso ocorre porque o arquivo XSLT deve ser compilado antes que seja carregado. Para saber mais, confira a postagem de blog a seguir: [XslCompiledTransform mais lento do que XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)  
+>  Embora o desempenho geral da classe <xref:System.Xml.Xsl.XslCompiledTransform> seja melhor do que o da classe <xref:System.Xml.Xsl.XslTransform>, o método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> da classe <xref:System.Xml.Xsl.XslCompiledTransform> possivelmente apresentará um desempenho mais lento do que o método <xref:System.Xml.Xsl.XslTransform.Load%2A> da classe <xref:System.Xml.Xsl.XslTransform> na primeira vez que for chamado em uma transformação. Isso ocorre porque o arquivo XSLT deve ser compilado antes que seja carregado. Para obter mais informações, confira a seguinte postagem no blog: [XslCompiledTransform Slower than XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/) (XslCompiledTransform mais lento do que XslTransform?)  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Entradas para a classe de XslCompiledTransform](../../../../docs/standard/data/xml/inputs-to-the-xslcompiledtransform-class.md)  
@@ -34,7 +34,7 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> é o processador XSLT do Mic
 |||  
 |-|-|  
 |[Erros recuperáveis de XSLT](../../../../docs/standard/data/xml/recoverable-xslt-errors.md)|Lista os comportamentos discricionários permitidos pela recomendação da World Wide Web Consortium (W3C) XSLT 1.0 e descreve como esses comportamentos são tratados pela classe <xref:System.Xml.Xsl.XslCompiledTransform>.|  
-|[Como transformar um fragmento do nó](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)|Descreve como transformar um fragmento de nó.|  
+|[Como: Transformar um fragmento de nó](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)|Descreve como transformar um fragmento de nó.|  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Migrando da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
@@ -42,5 +42,5 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> é o processador XSLT do Mic
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Xml.Xsl.XsltSettings>  
+- <xref:System.Xml.Xsl.XsltSettings>
 - <xref:System.Xml.Xsl.XsltMessageEncounteredEventArgs>

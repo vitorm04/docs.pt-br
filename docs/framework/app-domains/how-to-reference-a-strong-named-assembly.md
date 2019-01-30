@@ -1,5 +1,5 @@
 ---
-title: Como referenciar um assembly de nome forte
+title: 'Como: Referenciar um assembly de nome forte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18844a9e8eff574d061b044bf88bc7857ce8033e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596066"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Como referenciar um assembly de nome forte
+# <a name="how-to-reference-a-strong-named-assembly"></a>Como: Referenciar um assembly de nome forte
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
   
  Uma referência de tempo de compilação ocorre quando você indica para o compilador que seu assembly faz referência explícita a outro assembly. Quando você usa a referência no tempo de compilação, o compilador obtém automaticamente a chave pública do assembly com nome forte direcionado e o coloca na referência de assembly do assembly que está sendo compilado.  
@@ -70,5 +70,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  **sn -tp \<** *arquivo de chave pública* **>**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 - [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

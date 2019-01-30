@@ -1,5 +1,5 @@
 ---
-title: Como mapear HRESULTs e exceções
+title: 'Como: Mapear HRESULTs e exceções'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729230"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Como mapear HRESULTs e exceções
+# <a name="how-to-map-hresults-and-exceptions"></a>Como: Mapear HRESULTs e exceções
 Métodos COM relatam erros retornando HRESULTs; métodos .NET os relatam gerando exceções. O tempo de execução manipula a transição entre os dois. Cada classe de exceção do .NET Framework mapeia para um HRESULT.  
   
  Classes de exceção definidas pelo usuário podem especificar qualquer HRESULT apropriado. Essas classes de exceção podem alterar dinamicamente o HRESULT a ser retornado quando a exceção é gerada, definindo o campo **HResult** no objeto de exceção. Informações adicionais sobre a exceção são fornecidas ao cliente por meio da interface **IErrorInfo**, que é implementada no objeto .NET no processo não gerenciado.  
@@ -142,6 +142,6 @@ CMyClass::MethodThatThrows
   
  Campos de exceção, tais como **Message**, **Source** e **StackTrace**, não estão disponíveis para o **StackOverflowException**.  
   
-## <a name="see-also"></a>Consulte também  
- [Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Exceções](../../standard/exceptions/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Exceções](../../standard/exceptions/index.md)

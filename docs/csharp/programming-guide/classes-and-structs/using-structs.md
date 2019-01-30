@@ -5,15 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: b1e1405941cf9076e88aee5689ed933724727bb2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 16a8c1c9534e121c24289fbbfff14485b0338f63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743940"
 ---
 # <a name="using-structs-c-programming-guide"></a>Usando structs (Guia de Programação em C#)
-O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectangle` e `Color`. Embora seja conveniente representar um ponto como uma [classe](../../../csharp/language-reference/keywords/class.md) com [Propriedades Auto-implementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), um [struct](../../../csharp/language-reference/keywords/struct.md) pode ser mais eficiente em alguns cenários. Por exemplo, se você declarar uma matriz de 1000 objetos `Point`, alocará memória adicional para referenciar cada objeto, nesse caso, um struct será mais barato. Como o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contém um objeto chamado <xref:System.Drawing.Point>, o struct neste exemplo é chamado “CoOrds”.  
+O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectangle` e `Color`. Embora seja conveniente representar um ponto como uma [classe](../../../csharp/language-reference/keywords/class.md) com [Propriedades Auto-implementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), um [struct](../../../csharp/language-reference/keywords/struct.md) pode ser mais eficiente em alguns cenários. Por exemplo, se você declarar uma matriz de 1000 objetos `Point`, alocará memória adicional para referenciar cada objeto, nesse caso, um struct será mais barato. Como o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contém um objeto chamado <xref:System.Drawing.Point>, o struct deste exemplo é chamado "Coords".  
   
  [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
@@ -44,7 +44,7 @@ O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectan
 ## <a name="example-2"></a>Exemplo 2  
   
 ### <a name="description"></a>Descrição  
- Este exemplo demonstra um recurso que é exclusivo para struct. Ele cria um objeto CoOrds sem usar o operador `new`. Se você substituir a palavra `struct` pela palavra `class`, o programa não compilará.  
+ Este exemplo demonstra um recurso que é exclusivo para struct. Ele cria um objeto Coords sem usar o operador `new`. Se você substituir a palavra `struct` pela palavra `class`, o programa não compilará.  
   
 ### <a name="code"></a>Código  
  [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
@@ -53,6 +53,6 @@ O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectan
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
 - [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)

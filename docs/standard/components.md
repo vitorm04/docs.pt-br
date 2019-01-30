@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570717"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -28,7 +28,7 @@ Para saber mais sobre o NET Standard e como destinar a ele, consulte o tópico [
 
 Cada implementação do .NET inclui os seguintes componentes:
 
-- Um ou mais tempos de execução. Exemplos: o CLR para o .NET Framework, o CoreCLR e o CoreRT para o .NET Core.
+- Um ou mais tempos de execução. Exemplos: CLR para .NET Framework, CoreCLR e CoreRT para .NET Core.
 - Uma biblioteca de classes que implemente o .NET Standard e possa implementar APIs adicionais. Exemplos: biblioteca de classes base do NET Framework, biblioteca de classes base do .NET Core.
 - Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) e [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) estão incluídos no .NET Framework.
 - Opcionalmente, ferramentas de desenvolvimento. Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.
@@ -86,10 +86,10 @@ Você tem acesso a um amplo conjunto de ferramentas e componentes de infraestrut
 
 ## <a name="see-also"></a>Consulte também
 
-- [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [Guia do .NET Core](../core/index.md)  
-- [Guia do .NET Framework](../framework/index.md)  
-- [Guia do C#](../csharp/index.md)  
-- [Guia do F#](../fsharp/index.md)  
-- [Guia do VB.NET](../visual-basic/index.md)  
+- [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [Guia do .NET Core](../core/index.md)
+- [Guia do .NET Framework](../framework/index.md)
+- [Guia do C#](../csharp/index.md)
+- [Guia do F#](../fsharp/index.md)
+- [Guia do VB.NET](../visual-basic/index.md)

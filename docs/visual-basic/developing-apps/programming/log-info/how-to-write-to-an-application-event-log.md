@@ -1,5 +1,5 @@
 ---
-title: Como gravar em um log de eventos do aplicativo (Visual Basic)
+title: 'Como: Gravar em um Log de Eventos do Aplicativo (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: a62e1e8f6112a96935ce165e42d34c57b223cd95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78d7fbd7aa5cb0062a51145725a6fc2e9dce7525
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662628"
 ---
-# <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Como gravar em um log de eventos do aplicativo (Visual Basic)
+# <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Como: Gravar em um Log de Eventos do Aplicativo (Visual Basic)
 É possível usar os objetos `My.Application.Log` e `My.Log` para gravar informações sobre eventos que ocorrem em seu aplicativo. Este exemplo mostra como configurar um ouvinte de log de eventos. Assim, `My.Application.Log` grava informações de rastreamento no log de eventos do aplicativo.  
   
  Não é possível gravar no log de segurança. Para gravar no log do sistema, é necessário ser um membro do LocalSystem ou ter uma conta Administrador.  
@@ -61,18 +61,18 @@ ms.locfileid: "33590672"
      Substitua `APPLICATION_NAME` pelo nome do aplicativo.  
   
     > [!NOTE]
-    >  Normalmente, um aplicativo grava somente erros no log de eventos. Para obter informações sobre filtragem de saída de log, consulte [Instruções passo a passo: filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+    >  Normalmente, um aplicativo grava somente erros no log de eventos. Para obter informações sobre como filtrar a saída de log, confira [Passo a passo: Filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
   
 ### <a name="to-write-event-information-to-the-event-log"></a>Para gravar informações de evento em um log de eventos  
   
--   Use o método `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` para gravar informações no log de eventos. Para obter mais informações, consulte [Como: Gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) e [Como registrar em log as exceções](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+-   Use o método `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` para gravar informações no log de eventos. Para obter mais informações, confira [Como: Gravar mensagens de Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) e [Como: Registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
   
      Depois de configurar o ouvinte de log de eventos para um assembly, ele receberá todas as mensagens que `My.Applcation.Log` grava desse assembly.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  
- [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Como registrar em log as exceções](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
- [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
+- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
+- [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Como: registrar exceções](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

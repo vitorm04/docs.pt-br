@@ -1,15 +1,15 @@
 ---
-title: Como localizar nós irmãos (XPath-LINQ to XML) (C#)
+title: 'Como: Localizar nós irmãos (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646757"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Como localizar nós irmãos (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Como: Localizar nós irmãos (XPath-LINQ to XML) (C#)
 Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico. A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.  
   
  A expressão XPath é:  
@@ -19,7 +19,7 @@ Você pode desejar localizar todos os seus irmãos de um nó que têm um nome es
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`. A coleção resultante inclui o nó de contexto.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

@@ -1,15 +1,15 @@
 ---
-title: Como localizar um único descendente usando o método de descendentes (C#)
+title: 'Como: Localizar um único descendente usando o método de descendentes (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: fafb7dc4e2e65c913de46b64028f7dcd69fdd2c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a13a4aef6a3d22d2b7c3adb8e37996de08978b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43784654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690521"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Como localizar um único descendente usando o método de descendentes (C#)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Como: Localizar um único descendente usando o método de descendentes (C#)
 Você pode usar o método de eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> para rapidamente escrever código para localizar um único elemento nomeado exclusivamente. Essa técnica é especialmente útil quando você quer localizar um descendente específico com um nome específico. Você pode escrever o código para navegar para o elemento desejado, mas geralmente é mais rápido e fácil escrever código usando o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Exemplo  

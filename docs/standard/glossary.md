@@ -3,14 +3,14 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 author: tdykstra
 ms.author: tdykstra
-ms.date: 07/08/2017
+ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840265"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857964"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -21,6 +21,8 @@ A principal meta deste glossário é esclarecer os significados de termos e acr�
 Compilador Ahead-of-Time.
 
 Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código de máquina. Diferentemente da compilação JIT, a compilação AOT acontece antes que o aplicativo seja executado e normalmente é executada em um computador diferente. Como as cadeias da ferramenta da AOT não compilam em tempo de execução, elas não têm que minimizar o tempo gasto na compilação. Isso significa que elas podem gastar mais tempo em otimização. Como o contexto da AOT é o aplicativo inteiro, o compilador AOT também executa a vinculação de módulo cruzado e a análise de programa inteiro, o que significa que todas as referências são seguidas e um único executável é produzido.
+
+Confira [CoreRT](#corert) e [.NET Native](#net-native).
 
 ## <a name="aspnet"></a>ASP.NET 
 
@@ -272,8 +274,8 @@ Uma implementação do .NET que é usada para criar aplicativos do Windows moder
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia do .NET](index.md)  
-- [Guia do .NET Framework](../framework/index.md)  
-- [.NET Core](../core/index.md)  
-- [Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)  
-- [Visão geral do ASP.NET Core](/aspnet/index#pivot=core)  
+- [Guia do .NET](index.md)
+- [Guia do .NET Framework](../framework/index.md)
+- [.NET Core](../core/index.md)
+- [Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)
+- [Visão geral do ASP.NET Core](/aspnet/index#pivot=core)

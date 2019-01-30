@@ -1,19 +1,19 @@
 ---
-title: Como criar wrappers manualmente
+title: 'Como: Criar wrappers manualmente'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d61095e4e8c7f9b3795b751a5894de99d6ce8f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fba0de3f45afc199255dce93e69142724b68b0fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553029"
 ---
-# <a name="how-to-create-wrappers-manually"></a>Como criar wrappers manualmente
+# <a name="how-to-create-wrappers-manually"></a>Como: Criar wrappers manualmente
 Se você decidir declarar tipos COM manualmente no código-fonte gerenciado, o melhor lugar para começar é com um arquivo de linguagem IDL ou uma biblioteca de tipos existente. Quando você não tem o arquivo IDL ou não pode gerar um arquivo de biblioteca de tipos, pode simular os tipos COM criando declarações gerenciadas e exportando o assembly resultante para uma biblioteca de tipos.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>Para simular tipos COM de uma fonte gerenciada  
@@ -32,7 +32,7 @@ Se você decidir declarar tipos COM manualmente no código-fonte gerenciado, o m
   
 3.  Quando as declarações forem concluídas, compile o arquivo como compilaria qualquer código-fonte gerenciado.  
   
-4.  Assim como ocorre com os tipos importados com Tlbimp.exe, alguns exigem informações adicionais, que podem ser adicionadas diretamente ao código. Para obter detalhes, consulte [Como editar assemblies de interoperabilidade](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)).  
+4.  Assim como ocorre com os tipos importados com Tlbimp.exe, alguns exigem informações adicionais, que podem ser adicionadas diretamente ao código. Para obter detalhes, confira [Como: Editar assemblies de interoperabilidade](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)).  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra um exemplo da interface `ISATest` e da classe `SATest` na IDL e os tipos correspondentes no código-fonte C#.  
@@ -99,10 +99,10 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Personalizando RCWs (Runtime Callable Wrappers)](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))  
- [Tipos de dados COM](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))  
- [How to: Edit Interop Assemblies](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)) (Como editar assemblies de interoperabilidade)  
- [Resumo da conversão de bibliotecas de tipos em assemblies](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Tlbimp.exe (Importador de Biblioteca de Tipos)](../tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)
+## <a name="see-also"></a>Consulte também
+- [Personalizando RCWs (Runtime Callable Wrappers)](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))
+- [Tipos de dados COM](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))
+- [Como: Editar assemblies de interoperabilidade](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))
+- [Resumo da conversão de bibliotecas de tipos em assemblies](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Tlbimp.exe (Importador de Biblioteca de Tipos)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)

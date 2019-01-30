@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57db77b64ddcbe282fed035b52bb122901383ca4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701398"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
@@ -68,7 +68,7 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três man
 > [!NOTE]
 >  Conceitualmente, as demandas são feitas durante a construção do método. Ou seja, as demandas podem ser feitas conforme cada instrução MSIL é emitida. Na implementação atual, todas as solicitações são feitas quando o método <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> é chamado ou quando o compilador JIT (Just-In-Time) é invocado, se o método for invocado sem chamar <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
   
- Se o domínio do aplicativo permitir isso, os métodos dinâmicos hospedados anonimamente podem ignorar as verificações de visibilidade JIT, sujeitos à seguinte restrição: os tipos e membros não públicos acessados por um método dinâmico hospedado anonimamente devem estar em assemblies cujos conjuntos de concessões sejam iguais ao, ou subconjuntos de, conjunto de concessões da pilha de chamadas emissora. Essa capacidade restrita de ignorar as verificações de visibilidade JIT é habilitada se o domínio do aplicativo concede <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+ Se o domínio do aplicativo permitir isso, os métodos dinâmicos hospedados anonimamente poderão ignorar as verificações de visibilidade JIT, sujeitos à seguinte restrição: Os tipos e membros não públicos acessados por um método dinâmico hospedado anonimamente precisam ser em assemblies cujos conjuntos de concessões sejam iguais ao conjunto de concessões da pilha de chamadas de emissão ou sejam subconjuntos dele. Essa capacidade restrita de ignorar as verificações de visibilidade JIT é habilitada se o domínio do aplicativo concede <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
 -   Se o método usar apenas membros e tipos públicos, não serão necessárias permissões durante a construção.  
   
@@ -153,6 +153,6 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três man
 ### <a name="obtaining-information-on-types-and-members"></a>Obtendo informações sobre tipos e membros  
  Desde o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], não é necessária nenhuma permissão para obter informações sobre membros e tipos não públicos. A reflexão é usada para obter as informações necessárias para emitir métodos dinâmicos. Por exemplo, os objetos <xref:System.Reflection.MethodInfo> são usados para emitir chamadas de método. Versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] exigem <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obter mais informações, consulte [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão).  
   
-## <a name="see-also"></a>Consulte também  
- [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)  
- [Emissão de métodos e assemblies dinâmicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+## <a name="see-also"></a>Consulte também
+- [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)
+- [Emissão de métodos e assemblies dinâmicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

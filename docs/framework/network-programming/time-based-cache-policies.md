@@ -17,15 +17,15 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 650b7e17cc486068ba72436931e8bc96a6d0261c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa99806510bac8102478cc21e0782067f7bdff86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497402"
 ---
 # <a name="time-based-cache-policies"></a>Políticas de cache baseadas em tempo
-Uma política de cache baseada em tempo define a atualização das entradas armazenadas em cache usando a hora em que o recurso foi recuperado, os cabeçalhos retornados com o recurso e a hora atual. Ao definir uma política de cache baseada em tempo, é possível usar a política baseada em tempo de <xref:System.Net.Cache.HttpRequestCacheLevel.Default> ou criar uma política baseada em tempo personalizada. Ao usar a política baseada em tempo padrão para os recursos obtidos com o uso do protocolo HTTP, o comportamento de cache exato é determinado pelos cabeçalhos incluídos na resposta armazenada em cache e pelos comportamentos especificados nas seções 13 e 14 do RFC 2616, disponível no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/). Para obter um exemplo de código que demonstra a configuração da política baseada em tempo padrão para recursos HTTP, consulte [Como definir a política de cache baseada em tempo padrão de um aplicativo](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Para obter exemplos de código que demonstram como criar e usar políticas de cache, consulte [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
+Uma política de cache baseada em tempo define a atualização das entradas armazenadas em cache usando a hora em que o recurso foi recuperado, os cabeçalhos retornados com o recurso e a hora atual. Ao definir uma política de cache baseada em tempo, é possível usar a política baseada em tempo de <xref:System.Net.Cache.HttpRequestCacheLevel.Default> ou criar uma política baseada em tempo personalizada. Ao usar a política baseada em tempo padrão para os recursos obtidos com o uso do protocolo HTTP, o comportamento de cache exato é determinado pelos cabeçalhos incluídos na resposta armazenada em cache e pelos comportamentos especificados nas seções 13 e 14 do RFC 2616, disponível no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/). Para obter um exemplo de código que demonstra como definir a política baseada em tempo padrão para recursos HTTP, confira [Como: Definir uma política de cache baseada em tempo padrão para um aplicativo](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Para obter exemplos de código que demonstram como criar e usar políticas de cache, consulte [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Critérios para determinar a atualização das entradas armazenadas em cache  
  Para personalizar uma política de cache baseada em tempo, especifique o uso de um ou mais dos seguintes critérios para determinar a atualização das entradas armazenadas em cache:  
@@ -61,9 +61,9 @@ Uma política de cache baseada em tempo define a atualização das entradas arma
   
 -   [Interação da política de cache – idade máxima e atualização mínima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)  
- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]
+## <a name="see-also"></a>Consulte também
+- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)
+- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]

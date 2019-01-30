@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678792"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 Arquivos de recurso desempenham um papel central em aplicativos localizados. Eles permitem que um aplicativo exiba cadeias de caracteres, imagens e outros dados no idioma e na cultura do usuário e forneça dados alternativos se esses recursos não estiverem disponíveis. O .NET Framework usa um modelo de hub e spoke para localizar e recuperar os recursos localizados. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, que é chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; ela é usada quando não há recursos localizados disponíveis. Você usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para designar a cultura da cultura padrão do aplicativo. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura localizada, mas não contém nenhum código. Como os assemblies satélite não fazem parte do assembly principal, você pode facilmente atualizar ou substituir recursos que correspondem a uma cultura específica sem substituir o assembly principal do aplicativo.  
@@ -84,7 +84,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Para obter uma lista completa das opções disponíveis com Al.exe, consulte [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
-## <a name="satellite-assemblies-an-example"></a>Assemblies satélites: um exemplo  
+## <a name="satellite-assemblies-an-example"></a>Assemblies satélite: Um Exemplo  
  Este é um exemplo simples "Olá, Mundo", que exibe uma caixa de mensagem com uma saudação localizada. O exemplo inclui recursos para as culturas inglesas (Estados Unidos), francesas (França) e russas (Rússia), e sua cultura de fallback é o inglês. Para criar o exemplo, faça o seguinte:  
   
 1.  Crie um arquivo de recurso chamado Greeting.resx ou Greeting.txt para conter o recurso para a cultura padrão. Armazene uma única cadeia de caracteres denominada `HelloString`, cujo valor é "Hello world!" neste arquivo.  
@@ -199,7 +199,7 @@ gacutil -i:StringLibrary.resources.dll
   
  A opção **/i** especifica que Gacutil.exe deve instalar o assembly especificado no cache de assembly global. Após o satélite assembly ser instalado no cache, os recursos que ele contém ficam disponíveis para todos os aplicativos que são projetados para usar o assembly satélite.  
   
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Recursos no Cache de Assembly Global: um exemplo  
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Recursos no cache de assembly global: Um Exemplo  
  O exemplo a seguir usa um método em uma biblioteca de classes .NET Framework para extrair e retornar uma saudação localizada de um arquivo de recurso. A biblioteca e seus recursos são registrados no cache de assembly global. O exemplo do inclui recursos para as culturas inglesa (Estados Unidos), francesa (França), russa (Rússia) e inglesas. Inglês é a cultura padrão; seus recursos são armazenados no assembly principal. O exemplo inicialmente atrasa a assinatura da biblioteca e seus assemblies satélites com uma chave pública. Em seguida, assina-os novamente com um par de chaves públicas/privadas. Para criar o exemplo, faça o seguinte:  
   
 1.  Se você não estiver usando o Visual Studio, use o seguinte comando [Ferramenta de Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para criar um par de chaves públicas/privadas denominado ResKey.snk:  
@@ -308,10 +308,10 @@ gacutil -i:StringLibrary.resources.dll
   
 14. Execute Example.exe.  
   
-## <a name="see-also"></a>Consulte também  
- [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Consulte também
+- [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)

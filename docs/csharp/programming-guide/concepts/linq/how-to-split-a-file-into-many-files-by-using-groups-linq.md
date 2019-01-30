@@ -1,15 +1,15 @@
 ---
-title: Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)
+title: 'Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: d0dd742f599a6acee4928239aab79cc7b1b66d4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bba3cf5e1e6d4aa7b88ddbb7f3454be511982f74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626038"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)
 Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.  
   
 ### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
@@ -29,7 +29,7 @@ Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em se
     Garcia, Debra  
     ```  
   
-2.  Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na sua pasta do projeto: observe que os dois arquivos têm alguns nomes em comum.  
+2.  Copie estes nomes em um arquivo de texto chamado names2.txt e salve-o na pasta do projeto: Observe que os dois arquivos tem alguns nomes em comum.  
   
     ```  
     Liu, Jinghao  
@@ -130,5 +130,5 @@ class SplitWithGroups
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

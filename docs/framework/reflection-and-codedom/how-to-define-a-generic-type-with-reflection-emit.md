@@ -1,5 +1,5 @@
 ---
-title: Como definir um tipo genérico com a emissão de reflexão
+title: 'Como: Definir um tipo genérico com a emissão de reflexão'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645049"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Como definir um tipo genérico com a emissão de reflexão
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Como: Definir um tipo genérico com a emissão de reflexão
 Este tópico mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.  
   
 > [!IMPORTANT]
->  Um método não é genérico apenas porque pertence a um tipo genérico e usa os parâmetros de tipo desse tipo. Um método será genérico somente se ele tiver sua própria lista de parâmetros de tipo. A maioria dos métodos em tipos genéricos não é genérica, como neste exemplo. Para obter um exemplo de emissão de um método genérico, consulte [Como definir um método genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+>  Um método não é genérico apenas porque pertence a um tipo genérico e usa os parâmetros de tipo desse tipo. Um método será genérico somente se ele tiver sua própria lista de parâmetros de tipo. A maioria dos métodos em tipos genéricos não é genérica, como neste exemplo. Para obter um exemplo de emissão de um método genérico, confira [Como: Definir um método genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>Para definir um tipo genérico  
   
@@ -135,7 +135,7 @@ Este tópico mostra como criar um tipo genérico simples com dois parâmetros de
   
 -   Compile o código na linha de comando usando csc.exe, vbc.exe ou cl.exe. Para compilar o código no Visual Studio, coloque-o em um modelo de projeto de aplicativo do console.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Usando a emissão de reflexão](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Cenários de assemblies dinâmicos para a emissão de reflexão](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
+- [Usando a emissão de reflexão](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
+- [Cenários de assemblies dinâmicos para a emissão de reflexão](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

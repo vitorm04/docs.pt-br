@@ -1,5 +1,5 @@
 ---
-title: Como acompanhar o progresso do Instalador do .NET Framework 4.5
+title: 'Como: Acompanhar o progresso do Instalador do .NET Framework 4.5'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 22c44340edf5e7a625524500838ab32d516ad97b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614551"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como acompanhar o progresso do Instalador do .NET Framework 4.5
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como: Acompanhar o progresso do Instalador do .NET Framework 4.5
 O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução redistribuível. Se você desenvolver aplicativos para esta versão do .NET Framework, poderá incluir (encadear) a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como uma parte de pré-requisito da instalação do seu aplicativo. Para apresentar uma experiência de instalação personalizada ou unificada, talvez você queira iniciar silenciosamente a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e acompanhar seu progresso enquanto mostra o progresso da instalação do aplicativo. Para habilitar o acompanhamento silencioso, a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que pode ser inspecionada) define um protocolo usando uma MMIO (E/S mapeada em memória) para se comunicar com a instalação (o inspetor ou encadeador). Esse protocolo define uma maneira para um encadeador obter informações sobre o progresso, obter resultados detalhados, responder às mensagens e cancelar a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 -   **Invocação**.  Para chamar a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e receber informações sobre o progresso da seção MMIO, seu programa de instalação deve fazer o seguinte:  
@@ -35,7 +35,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução
   
          Substitua esses nomes por nomes que são exclusivos para seu programa de instalação.  
   
-    2.  Leia a seção MMIO. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as operações de download e instalação são simultâneas: uma parte do .NET Framework pode ser instalada enquanto outra parte está baixando. Como resultado, o progresso é enviado novamente (isto é, gravado) para a seção MMIO como dois números (`m_downloadSoFar` e `m_installSoFar`) que aumentam de 0 a 255. Quando 255 é gravado e o .NET Framework sai, a instalação está concluída.  
+    2.  Leia a seção MMIO. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as operações de download e instalação são simultâneas: Uma parte do .NET Framework pode estar sendo instalada enquanto outra está sendo baixada. Como resultado, o progresso é enviado novamente (isto é, gravado) para a seção MMIO como dois números (`m_downloadSoFar` e `m_installSoFar`) que aumentam de 0 a 255. Quando 255 é gravado e o .NET Framework sai, a instalação está concluída.  
   
 -   **Códigos de saída**. Os códigos de saída a seguir do comando para chamar o programa redistribuível [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indicam se a instalação teve êxito ou falhou:  
   
@@ -57,7 +57,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução
   
  Você pode baixar a solução completa do Visual Studio para o [.NET Framework 4.5 Chainer Sample](https://go.microsoft.com/fwlink/?LinkId=231345) na Galeria de Exemplos do MSDN.  
   
- As seções a seguir descrevem os arquivos significativos neste exemplo: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.  
+ As seguintes seções descrevem os arquivos significativos nesta amostra: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
@@ -309,6 +309,6 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução
   
  Um servidor típico cria um nome de arquivo MMIO aleatório, cria o arquivo (conforme mostrado no exemplo de código anterior, na `Server::CreateSection`) e inicia o redistribuível usando o método `CreateProcess` e passando o nome do pipe com a opção `-pipe someFileSectionName`. O servidor deve implementar os métodos `OnProgress`, `Send` e `Finished` com código específico da interface do usuário do aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
-- [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+## <a name="see-also"></a>Consulte também
+- [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Implantação](../../../docs/framework/deployment/index.md)

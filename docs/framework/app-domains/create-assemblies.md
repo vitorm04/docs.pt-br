@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8590b38ace0abcc370f94852a35569b95c4a2d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643605"
 ---
 # <a name="creating-assemblies"></a>Criando assemblies
 
@@ -50,7 +50,7 @@ Devem ser feitas considerações especiais ao disponibilizar assemblies de Commo
 
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md)
-- [Como compilar um assembly de arquivo único](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
-- [Como Compilar um Assembly de Vários Arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Como: Criar um assembly de arquivo único](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
+- [Como: Criar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Assemblies de vários arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)

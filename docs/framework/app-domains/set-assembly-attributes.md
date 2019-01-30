@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1ed022193b4896f91f1096a0bb16c21f5374868
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712594"
 ---
 # <a name="setting-assembly-attributes"></a>Configuração de atributos de assembly
 Os atributos de assembly são valores que fornecem informações sobre um assembly. Os atributos são divididos nos seguintes conjuntos de informações:  
@@ -37,9 +37,9 @@ Os atributos de assembly são valores que fornecem informações sobre um assemb
   
 |Atributo de identidade do assembly|Descrição|  
 |---------------------------------|-----------------|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica a cultura compatível com o assembly. Um assembly também pode especificar a independência da cultura, indicando que ela contém os recursos para a cultura padrão. **Observação:** o tempo de execução trata qualquer assembly que não tenha o atributo de cultura definido como nulo, como um assembly satélite. Esses assemblies estão sujeitos às regras de associação de assembly satélite. Para saber mais, confira [Como o tempo de execução localiza os assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica a cultura compatível com o assembly. Um assembly também pode especificar a independência da cultura, indicando que ela contém os recursos para a cultura padrão. **Observação:**  O tempo de execução trata como um assembly satélite qualquer assembly que não tenha o atributo de cultura definido como nulo. Esses assemblies estão sujeitos às regras de associação de assembly satélite. Para saber mais, confira [Como o tempo de execução localiza os assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|O valor que define os atributos de assembly; por exemplo, se o assembly pode ser executado lado a lado.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico no formato *principal*.*secundário*.*compilação*.*revisão* (por exemplo, 2.4.0.0). O Common Language Runtime usa esse valor para executar operações de associação em assemblies com nome forte. **Observação:** se o atributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> não for aplicado a um assembly, o número de versão especificado pelo atributo <xref:System.Reflection.AssemblyVersionAttribute> será usado pelas propriedades <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico no formato *principal*.*secundário*.*compilação*.*revisão* (por exemplo, 2.4.0.0). O Common Language Runtime usa esse valor para executar operações de associação em assemblies com nome forte. **Observação:**  Se o atributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> não for aplicado a um assembly, o número de versão especificado pelo atributo <xref:System.Reflection.AssemblyVersionAttribute> será usado pelas propriedades <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
   
  O exemplo de código a seguir mostra como aplicar os atributos de versão e cultura a um assembly.  
   
@@ -55,7 +55,7 @@ Os atributos de assembly são valores que fornecem informações sobre um assemb
 |<xref:System.Reflection.AssemblyCompanyAttribute>|O valor de cadeia de caracteres que especifica um nome de empresa.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|O valor de cadeia de caracteres que especifica informações sobre direitos autorais.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|O valor de cadeia de caracteres que especifica o número de versão do arquivo Win32. Isso normalmente tem como padrão a versão do assembly.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|O valor de cadeia de caracteres que especifica informações de versão que não são usadas pelo Common Language Runtime, como o número de versão completo de um produto. **Observação:** se esse atributo for aplicado a um assembly, a cadeia de caracteres que ele especifica poderá ser obtida no tempo de execução usando a propriedade <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. A cadeia de caracteres também é usada na chave do Registro e no caminho fornecidos pelas propriedades <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|O valor de cadeia de caracteres que especifica informações de versão que não são usadas pelo Common Language Runtime, como o número de versão completo de um produto. **Observação:**  Se esse atributo for aplicado a um assembly, a cadeia de caracteres especificada por ele poderá ser obtida em tempo de execução usando a propriedade <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. A cadeia de caracteres também é usada na chave do Registro e no caminho fornecidos pelas propriedades <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|O valor de cadeia de caracteres que especifica informações do produto.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|O valor de cadeia de caracteres que especifica informações de marca registrada.|  
   
@@ -86,6 +86,6 @@ Os atributos de assembly são valores que fornecem informações sobre um assemb
  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-## <a name="see-also"></a>Consulte também  
-- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
+## <a name="see-also"></a>Consulte também
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

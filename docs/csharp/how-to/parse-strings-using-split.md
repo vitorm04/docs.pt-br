@@ -1,5 +1,5 @@
 ---
-title: Como analisar cadeias de caracteres usando String.Split (Guia do C#)
+title: 'Como: Analisar cadeias de caracteres usando String.Split (Guia de C#)'
 description: O String.Split retorna uma matriz de divisão de cadeias de caracteres com base em um conjunto de delimitadores. Esta á uma maneira fácil de analisar cadeias de caracteres.
 ms.date: 01/03/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603702"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Como analisar cadeias de caracteres usando String.Split (Guia do C#)
+# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Como: Analisar cadeias de caracteres usando String.Split (Guia de C#)
 
 O método <xref:System.String.Split%2A?displayProperty=nameWithType> cria uma matriz de subcadeias, dividindo a cadeia de caracteres de entrada com base em um ou mais delimitadores. Geralmente essa é a maneira mais fácil de separar uma cadeia de caracteres em limites de palavra. Ele também é usado para dividir cadeias de caracteres em outros caracteres específicos ou cadeias de caracteres.
 
@@ -52,6 +52,6 @@ Você pode experimentar estes exemplos examinando o código em nosso [repositór
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../programming-guide/index.md)  
-- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
+- [Guia de Programação em C#](../programming-guide/index.md)
+- [Cadeias de Caracteres](../programming-guide/strings/index.md)
 - [Expressões regulares do .NET](../../standard/base-types/regular-expressions.md)

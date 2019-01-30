@@ -1,15 +1,15 @@
 ---
-title: Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)
+title: 'Como: Consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 66bdcf1b713a80f2a7cda753cb0f39c016178b9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aa1db0c4de2a4b149ee4dd859cd7ab5ee4b78031
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747850"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Como: Consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)
 Às vezes, arquivos que têm o mesmo nome podem ser localizados em mais de uma pasta. Por exemplo, sob a pasta de instalação do Visual Studio, várias pastas têm um arquivo readme.htm. Este exemplo mostra como consultar esses nomes de arquivos duplicados sob uma pasta raiz especificada. O segundo exemplo mostra como consultar arquivos cujo tamanho e tempos de criação também correspondem.  
   
 ## <a name="example"></a>Exemplo  
@@ -174,5 +174,5 @@ class QueryDuplicateFileNames
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

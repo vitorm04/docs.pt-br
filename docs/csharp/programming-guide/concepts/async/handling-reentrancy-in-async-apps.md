@@ -2,12 +2,12 @@
 title: Tratando a reentrada em aplicativos assíncronos (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 2f66859e90ad0b4745069fc5065477a16ea24476
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9c00a857fd75a44a00781e43b94623f101c7d352
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620417"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Tratando a reentrada em aplicativos assíncronos (C#)
 Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possivelmente, evitar a reentrância, que se refere à reinserção de uma operação assíncrona antes de ela ser concluída. Se você não identificar e tratar as possibilidades de reentrância, isso poderá causar resultados inesperados.  
@@ -104,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a> Desabilitar o botão Iniciar  
  Você pode bloquear o botão **Iniciar** enquanto uma operação estiver em execução, desabilitando o botão na parte superior do manipulador de eventos `StartButton_Click`. Você pode reativar o botão de dentro um bloco `finally` quando a operação for concluída para que os usuários possam executar o aplicativo novamente.  
   
- Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Você também pode baixar o aplicativo finalizado de [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é DisableStartButton.  
+ Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Baixe também o aplicativo concluído em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é DisableStartButton.  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -138,7 +138,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Para obter mais informações sobre o cancelamento, consulte [Ajuste fino de seu aplicativo assíncrono (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Você também pode baixar o aplicativo finalizado de [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.  
+ Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Baixe também o aplicativo concluído em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.  
   
 1.  Declare uma variável <xref:System.Threading.CancellationTokenSource>, `cts`, que está no escopo para todos os métodos.  
   
@@ -298,7 +298,7 @@ TOTAL bytes returned:  890591
   
  As operações compartilham uma <xref:System.Threading.Tasks.Task> global, `pendingWork`, que serve como um gatekeeper para o processo de exibição.  
 
- Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Você também pode baixar o aplicativo finalizado de [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é QueueResults.  
+ Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Baixe também o aplicativo concluído em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é QueueResults.  
    
  A saída a seguir mostra o resultado, caso o usuário escolha o botão **Iniciar** apenas uma vez. O rótulo de letra A indica que o resultado é da primeira vez que o botão **Iniciar** foi escolhido. Os números mostram a ordem das URLs na lista de destinos de download.  
   
@@ -542,7 +542,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Baixar o aplicativo  
   
-1.  Baixe o aplicativo compactado em [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
+1.  Baixe o arquivo compactado em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
 2.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
@@ -712,5 +712,5 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: acessando a Web e usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Passo a passo: acesso à Web com o uso de Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

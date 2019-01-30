@@ -1,5 +1,5 @@
 ---
-title: Como ler um valor a partir de uma chave do Registro no Visual Basic
+title: 'Como: Ler um valor de uma chave do Registro em Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 645ec80124a23ac86a06993bd4e06b59372a6d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f731492ba794cffebe97b93fc6b9c9f5fd8eacdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748084"
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Como ler um valor a partir de uma chave do Registro no Visual Basic
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Como: Ler um valor de uma chave do Registro em Visual Basic
 O método `GetValue` do objeto `My.Computer.Registry` pode ser usado para ler valores no Registro do Windows.  
   
  Se a chave, "Software\MyApp" no exemplo a seguir, não existir, uma exceção será gerada. Se o `ValueName`, "Name" no exemplo a seguir, não existir, `Nothing` será retornado.  
@@ -30,7 +30,7 @@ O método `GetValue` do objeto `My.Computer.Registry` pode ser usado para ler va
   
      [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
- Este exemplo de código também está disponível como um trecho de código do IntelliSense. No seletor de trecho de código, ele está localizado em **Sistema Operacional Windows > Registro**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
+ Este exemplo de código também está disponível como um snippet de código do IntelliSense. No seletor de snippet de código, ele está localizado em **Sistema Operacional Windows &gt; Registro**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Para determinar se um valor existe em uma chave do Registro  
   
@@ -52,7 +52,7 @@ O método `GetValue` do objeto `My.Computer.Registry` pode ser usado para ler va
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- <xref:Microsoft.Win32.RegistryHive>  
- [Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- <xref:Microsoft.Win32.RegistryHive>
+- [Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

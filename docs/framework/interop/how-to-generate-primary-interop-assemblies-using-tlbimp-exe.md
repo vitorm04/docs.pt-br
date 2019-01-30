@@ -1,5 +1,5 @@
 ---
-title: Como gerar assemblies de interoperabilidade primários usando Tlbimp.exe
+title: 'Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c196c0f6525214e2ea25e6506e9c89f4e48906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596131"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Como gerar assemblies de interoperabilidade primários usando Tlbimp.exe
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe
 Há duas maneiras de gerar um assembly de interoperabilidade primário:  
   
 -   Usando o [Importador de Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fornecido pelo [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
@@ -46,7 +46,7 @@ Há duas maneiras de gerar um assembly de interoperabilidade primário:
   
  Um assembly de interoperabilidade primário dependente com um número de versão diferente daquele da biblioteca de tipos original não pode ser descoberto quando instalado no diretório atual. Você deverá registrar o assembly de interoperabilidade primário dependente no Registro do Windows ou usar a opção **/Reference** para certificar-se de que Tlbimp.exe localizará a DLL dependente.  
   
- Você também pode encapsular várias versões de uma biblioteca de tipos. Para obter instruções, consulte [Como encapsular várias versões de bibliotecas de tipos](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100)).  
+ Você também pode encapsular várias versões de uma biblioteca de tipos. Para obter instruções, veja [Como: Encapsular várias versões de bibliotecas de tipos](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100)).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir importa a biblioteca de tipos COM `LibUtil.tlb` e assina o assembly `LibUtil.dll` com um nome forte usando o arquivo de chave `CompanyA.snk`. Omitindo um nome de namespace específico, este exemplo produz o namespace padrão, `LibUtil`.  
@@ -67,5 +67,5 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Como registrar assemblies de interoperabilidade primários](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Registrar assemblies de interoperabilidade primários](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

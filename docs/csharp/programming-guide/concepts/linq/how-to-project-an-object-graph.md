@@ -1,19 +1,19 @@
 ---
-title: Como projetar um gráfico de objeto (C#)
+title: 'Como: Projetar um grafo de objeto (C#)'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: cacbd05b7b03bfd56ce5a55dc088d3227788a3cb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3b0b4ab7d30d24902bde8c5010a3df6b63f3ac3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545167"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Como projetar um gráfico de objeto (C#)
+# <a name="how-to-project-an-object-graph-c"></a>Como: Projetar um grafo de objeto (C#)
 Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir preenche um grafo de objeto com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML de [Arquivo XML de exemplo: pedido de compra típico (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ O seguinte código popula um grafo de objeto com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML [Arquivo XML de exemplo: Ordem de compra típica (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 class Address  
@@ -257,6 +257,6 @@ ShipDate: 5/21/1999
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Linq.Enumerable.Select%2A>  
-- <xref:System.Linq.Enumerable.ToList%2A>  
+- <xref:System.Linq.Enumerable.Select%2A>
+- <xref:System.Linq.Enumerable.ToList%2A>
 - [Projeções e transformações (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

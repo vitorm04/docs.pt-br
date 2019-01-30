@@ -1,5 +1,5 @@
 ---
-title: Como escrever serviços de forma programática
+title: 'Como: Escrever serviços de forma programática'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 904a82a3cc725221defb6795bf813b8cbc490c41
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 70a2c184e7b39af7b4f0466ac9ac627cff98f0c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672906"
 ---
-# <a name="how-to-write-services-programmatically"></a>Como escrever serviços de forma programática
+# <a name="how-to-write-services-programmatically"></a>Como: Escrever serviços de forma programática
 Quando você opta por não usar o modelo de projeto de Serviço Windows, é possível escrever seus próprios serviços configurando a herança e outros elementos de infraestrutura por conta própria. Ao criar um serviço de forma programática, você precisa executar várias etapas que o modelo executaria para você:  
   
 -   Você precisa configurar a classe de serviço para ser herdada da classe <xref:System.ServiceProcess.ServiceBase>.  
@@ -59,20 +59,20 @@ Quando você opta por não usar o modelo de projeto de Serviço Windows, é poss
   
 6.  Substitua quaisquer outros métodos para os quais deseje definir um processamento personalizado e escreva o código para determinar as ações que o serviço deve executar em cada caso.  
   
-7.  Adicionar os instaladores necessários para seu aplicativo de serviço. Para obter mais informações, confira [Como adicionar instaladores no seu aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+7.  Adicionar os instaladores necessários para seu aplicativo de serviço. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 8.  Compile o projeto selecionando **Compilar Solução** no menu **Compilar**.  
   
     > [!NOTE]
     >  Pressione F5 para executar seu projeto. Você não pode executar um projeto de serviço dessa maneira.  
   
-9. Crie um projeto de instalação e as ações personalizadas para instalar o serviço. Para obter um exemplo, confira [Passo a passo: criando um aplicativo de Serviço Windows no designer de componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
+9. Crie um projeto de instalação e as ações personalizadas para instalar o serviço. Para obter um exemplo, confira [Passo a passo: criando um aplicativo de serviço Windows no Designer de Componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
-10. Instale o serviço. Para obter mais informações, confira [Como instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+10. Instale o serviço. Para obter mais informações, confira [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Como criar Serviços do Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Como adicionar instaladores no seu aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Como registrar informações sobre serviços](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [Passo a passo: criando um aplicativo de Serviço Windows no Designer de componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Como: criar serviços do Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Como: adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Como: Registrar em log informações sobre serviços](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [Passo a passo: Criando um aplicativo de serviço Windows no Designer de Componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

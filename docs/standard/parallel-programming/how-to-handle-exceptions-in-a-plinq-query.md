@@ -1,5 +1,5 @@
 ---
-title: Como manipular exceções em uma consulta PLINQ
+title: 'Como: Tratar exceções em uma consulta PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554238"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Como manipular exceções em uma consulta PLINQ
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Como: Tratar exceções em uma consulta PLINQ
 O primeiro exemplo neste tópico mostra como tratar o <xref:System.AggregateException?displayProperty=nameWithType> que pode ser gerado de uma consulta PLINQ ao ser executado. O segundo exemplo mostra como colocar blocos try-catch em representantes, o mais próximo possível de onde a exceção será gerada. Dessa forma, você pode capturá-los assim que eles ocorrerem e, possivelmente, continuar a execução da consulta. Quando as exceções tiverem permissão de emergirem novamente para o thread de associação, então será possível que uma consulta continue a processar alguns itens após a geração da exceção.  
   
  Em alguns casos em que PLINQ volta à execução sequencial e ocorre uma exceção, a exceção pode ser propagada diretamente e não é encapsulada em um <xref:System.AggregateException>. Além disso, <xref:System.Threading.ThreadAbortException>s sempre são propagados diretamente.  
@@ -50,5 +50,5 @@ O primeiro exemplo neste tópico mostra como tratar o <xref:System.AggregateExce
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

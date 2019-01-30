@@ -1,15 +1,15 @@
 ---
-title: Como listar todos os nós em uma árvore (C#)
+title: 'Como: Listar todos os nós em uma árvore (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e014de90935830df3ea5454dcd4d5a840f4d04ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 90c92e8390f75e7b7e2c63d809d8a0aca34e2fd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744473"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Como listar todos os nós em uma árvore (C#)
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Como: Listar todos os nós em uma árvore (C#)
 Às vezes é útil listar todos os nós em uma árvore. Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore. Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.  
   
  Não é particularmente útil executar expressões XPath usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. As expressões XPath têm um desempenho pior que consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e as consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são muito mais avançadas. No entanto, como uma maneira de identificar nós na árvore XML, o XPath funciona bem.  

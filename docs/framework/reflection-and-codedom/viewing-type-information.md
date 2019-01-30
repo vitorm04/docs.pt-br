@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc957b345c1e66059551508f73e37e0f6d69f6cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 267102198731054bd2ce050299627eecbd37a4a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692201"
 ---
 # <a name="viewing-type-information"></a>Exibindo informações de tipo
 A classe <xref:System.Type?displayProperty=nameWithType> é fundamental para reflexão. O Common Language Runtime cria o **Type** para um tipo carregado quando a reflexão solicitá-lo. Você pode usar os métodos, campos, propriedades e classes aninhadas de um objeto **Tipo** para descobrir tudo sobre o tipo do objeto.  
@@ -26,7 +26,7 @@ A classe <xref:System.Type?displayProperty=nameWithType> é fundamental para ref
  Use <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> ou <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> para obter objetos **Tipo** de assemblies que não foram carregados, passando o nome do tipo ou tipos que você deseja. Use <xref:System.Type.GetType%2A?displayProperty=nameWithType> para obter objetos **Tipo** de um assembly que já foi carregado. Use <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> e <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> para obter objetos **Type** do módulo.  
   
 > [!NOTE]
->  Se você quiser examinar e manipular tipos genéricos e métodos, consulte as informações adicionais fornecidas na [Reflexão e tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) e [Como examinar e instanciar tipos genéricos com reflexão](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+>  Caso deseje examinar e manipular métodos e tipos genéricos, confira as informações adicionais fornecidas em [Reflexão e tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) e [Como: Examinar tipos genéricos e criar instâncias deles com a reflexão](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  O exemplo a seguir mostra a sintaxe necessária obter o objeto <xref:System.Reflection.Assembly> e o módulo para um assembly.  
   
@@ -74,19 +74,19 @@ A classe <xref:System.Type?displayProperty=nameWithType> é fundamental para ref
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection.BindingFlags>  
- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetFields%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.MemberInfo>  
- <xref:System.Reflection.ConstructorInfo>  
- <xref:System.Reflection.MethodInfo>  
- <xref:System.Reflection.FieldInfo>  
- <xref:System.Reflection.EventInfo>  
- <xref:System.Reflection.ParameterInfo>  
- [Reflexão e tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Reflection.BindingFlags>
+- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetFields%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.MemberInfo>
+- <xref:System.Reflection.ConstructorInfo>
+- <xref:System.Reflection.MethodInfo>
+- <xref:System.Reflection.FieldInfo>
+- <xref:System.Reflection.EventInfo>
+- <xref:System.Reflection.ParameterInfo>
+- [Reflexão e tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)

@@ -1,15 +1,15 @@
 ---
-title: Como alterar o namespace de uma árvore XML inteira (C#)
+title: 'Como: Alterar o namespace de uma árvore XML inteira (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: cbb7c3d332eea83d6df71812cc18633df6fbb6d0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 020d072cfb58c90720317734199d241c6892511f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539916"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Como alterar o namespace de uma árvore XML inteira (C#)
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Como: Alterar o namespace de uma árvore XML inteira (C#)
 Às vezes você tem que alterar programaticamente ao namespace para um elemento ou atributo. LINQ to XML faz isso fácil. A propriedade de <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> pode ser definida. A propriedade de <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> não pode ser definida, mas você pode facilmente copiar os atributos em <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remover os atributos existentes, e então adiciona novos atributos que estão no novo namespace desejada.  
   
  Para obter mais informações, consulte [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  

@@ -1,15 +1,15 @@
 ---
-title: Como fazer várias solicitações da Web em paralelo, usando async e await (C#)
+title: 'Como: Fazer várias solicitações da Web em paralelo usando async e await (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 527cca572e48cd4b6b895c828327a5770ac83d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c8f1c9a134af2139f3dd0d76614b1f719b4d453c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547638"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Como fazer várias solicitações da Web em paralelo, usando async e await (C#)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Como: Fazer várias solicitações da Web em paralelo usando async e await (C#)
 Em um método assíncrono, as tarefas são iniciadas quando elas são criadas. O operador [await](../../../../csharp/language-reference/keywords/await.md) é aplicado à tarefa no ponto do método em que o processamento não pode continuar até que a tarefa seja concluída. Geralmente, uma tarefa é aguardada assim que ela é criada, como mostrado no exemplo a seguir.  
   
 ```csharp  
@@ -37,13 +37,13 @@ var result = await myTask;
 > [!NOTE]
 >  Para concluir esse projeto, você precisa ter o Visual Studio 2012 ou posterior e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
- Para ver outro exemplo que inicia diversas tarefas ao mesmo tempo, consulte [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Para obter outro exemplo que inicia várias tarefas ao mesmo tempo, confira [Como: Estender o passo a passo assíncrono usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Você pode baixar o código deste exemplo de [Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Para configurar o projeto  
   
-1.  Para configurar um aplicativo WPF, complete as etapas a seguir. Você pode encontrar instruções detalhadas dessas etapas em [Passo a passo: acessando a Web usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Para configurar um aplicativo WPF, complete as etapas a seguir. Encontre instruções detalhadas para essas etapas em [Passo a passo: Acessando a Web usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Crie um aplicativo WPF que contenha uma caixa de texto e um botão. Dê o nome `startButton` para o botão e `resultsTextBox`, para a caixa de texto.  
   
@@ -226,6 +226,6 @@ namespace AsyncExample_MultipleTasks
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: acessando a Web e usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
-- [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
-- [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Passo a passo: acesso à Web com o uso de Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Como: estender o passo a passo Async usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

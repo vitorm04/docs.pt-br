@@ -1,5 +1,5 @@
 ---
-title: 'Como criar uma chave do Registro e definir o valor no Visual Basic:'
+title: 'Como: Criar uma chave do Registro e definir o valor no Visual Basic'
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 4f74d41aa8055e26f5a707829449ddd310ff576f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b41d05a1394e009541bed47fa4d2d8ccadd4bb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585936"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Como criar uma chave do Registro e definir o valor no Visual Basic:
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Como: Criar uma chave do Registro e definir o valor no Visual Basic
 O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para criar uma chave do Registro.  
   
 ## <a name="procedure"></a>Procedimento  
@@ -70,9 +70,9 @@ O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para cr
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
- [Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
+- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
+- [Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md)

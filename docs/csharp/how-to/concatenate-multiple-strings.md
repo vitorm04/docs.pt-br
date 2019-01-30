@@ -1,5 +1,5 @@
 ---
-title: Como concatenar várias cadeias de caracteres (Guia de C#)
+title: 'Como: Concatenar várias cadeias de caracteres (Guia de C#)'
 description: Há várias maneiras para concatenar cadeias de caracteres em C#. Conheça as opções e os motivos subjacentes por trás de diferentes escolhas.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710411"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Como concatenar várias cadeias de caracteres (Guia de C#)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Como: Concatenar várias cadeias de caracteres (Guia de C#)
 
 *Concatenação* é o processo de acrescentar uma cadeia de caracteres ao final de outra cadeia de caracteres. Você concatena cadeias de caracteres usando o operador `+`. Para literais de cadeia de caracteres e constantes de cadeia de caracteres, a concatenação ocorre em tempo de compilação; não ocorre nenhuma concatenação de tempo de execução. Para variáveis de cadeia de caracteres, a concatenação ocorre somente em tempo de execução.
 
@@ -55,7 +55,7 @@ Você pode experimentar estes exemplos examinando o código em nosso [repositór
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.String>  
-- <xref:System.Text.StringBuilder>  
-- [Guia de Programação em C#](../programming-guide/index.md)  
+- <xref:System.String>
+- <xref:System.Text.StringBuilder>
+- [Guia de Programação em C#](../programming-guide/index.md)
 - [Cadeias de Caracteres](../programming-guide/strings/index.md)

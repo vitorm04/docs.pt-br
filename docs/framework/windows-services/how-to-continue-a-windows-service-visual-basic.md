@@ -1,5 +1,5 @@
 ---
-title: Como continuar um Serviço Windows (Visual Basic)
+title: 'Como: Continuar um serviço Windows (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 255dccfb74eced63ffbeff7ef567083a504cc6da
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 86c2414fd6ad9c32a37339c553ec80c98426f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612704"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>Como continuar um Serviço Windows (Visual Basic)
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Como: Continuar um serviço Windows (Visual Basic)
 Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> para continuar o serviço de administração do IIS no computador local.  
   
 ## <a name="example"></a>Exemplo  
@@ -49,7 +49,7 @@ Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> par
   
  O acesso a informações de serviço pode ser restringido usando a enumeração <xref:System.Security.Permissions.PermissionState> para definir permissões na classe <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- [Como Pausar um Serviço Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- [Como: Pausar um Serviço Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

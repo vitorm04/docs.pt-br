@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509291"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
 A reflexão fornece a capacidade de obter informações sobre tipos e membros e de acessar membros (ou seja, chamar métodos e construtores, obter e definir valores de propriedade, adicionar e remover manipuladores de eventos e assim por diante). O uso da reflexão para obter informações sobre tipos e membros não é restrito. Todo o código pode usar reflexões para realizar as seguintes tarefas:  
@@ -56,7 +56,7 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
   
  Essas regras são as mesmas se um membro crítico para segurança for acessado diretamente pelo código compilado ou por meio de reflexão.  
   
- Código de aplicativo que é executado da linha de comando é executado com confiança total. Desde que não esteja marcado como transparente, ele pode usar reflexão para acessar membros críticos para segurança. Quando o mesmo código é executado com confiança parcial (por exemplo, em um domínio do aplicativo em área restrita), o nível de confiança do assembly determina se ele pode acessar o código crítico para segurança: se o assembly tiver um nome forte e estiver instalado no cache de assembly global, ele é um assembly confiável e pode chamar membros crítico de segurança. Se não for confiável, ele se tornará transparente mesmo se não for marcado como transparente e não poderá acessar membros críticos para segurança.  
+ Código de aplicativo que é executado da linha de comando é executado com confiança total. Desde que não esteja marcado como transparente, ele pode usar reflexão para acessar membros críticos para segurança. Quando o mesmo código é executado com confiança parcial (por exemplo, em um domínio do aplicativo em área restrita), o nível de confiança do assembly determina se ele pode acessar o código crítico para segurança: Se o assembly tem um nome forte e está instalado no cache de assembly global, ele é um assembly confiável e pode chamar membros críticos para segurança. Se não for confiável, ele se tornará transparente mesmo se não for marcado como transparente e não poderá acessar membros críticos para segurança.  
   
  Para obter mais informações sobre o modelo de segurança no [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], consulte [Alterações de Segurança](../../../docs/framework/security/security-changes.md).  
   
@@ -82,7 +82,7 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
     > [!NOTE]
     >  Por padrão, a política de segurança nega essa permissão para código originado da Internet. Essa permissão nunca deve ser concedida o código originado da Internet.  
   
--   Para permitir que o código invoque qualquer membro não público, desde que o conjunto de concessões do assembly que contém o membro chamado seja o mesmo ou um subconjunto do conjunto de concessões do assembly que contém a invocação de código: seu código deve receber a concessão de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+-   Para permitir que o código invoque qualquer membro não público, desde que o conjunto de concessões do assembly que contém o membro invocado seja o mesmo ou um subconjunto do conjunto de concessões do assembly que contém o código de invocação: O código precisa receber <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
  Por exemplo, suponha que você concedeu permissões da Internet a um domínio do aplicativo mais <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e, em seguida, executou um aplicativo da Internet com dois assemblies, A e B.  
   
@@ -104,13 +104,13 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
   
 -   A partir do [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], usar reflexão para obter informações sobre tipos e membros não públicos não requer permissões. Em versões anteriores, o <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> é obrigatório.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>  
- <xref:System.Security.Permissions.ReflectionPermission>  
- <xref:System.Security.Permissions.SecurityPermission>  
- [Alterações de segurança](../../../docs/framework/security/security-changes.md)  
- [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)  
- [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Aplicando atributos](../../../docs/standard/attributes/applying-attributes.md)  
- [Acessando atributos personalizados](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Security.Permissions.ReflectionPermissionFlag>
+- <xref:System.Security.Permissions.ReflectionPermission>
+- <xref:System.Security.Permissions.SecurityPermission>
+- [Alterações de segurança](../../../docs/framework/security/security-changes.md)
+- [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)
+- [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Aplicando atributos](../../../docs/standard/attributes/applying-attributes.md)
+- [Acessando atributos personalizados](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

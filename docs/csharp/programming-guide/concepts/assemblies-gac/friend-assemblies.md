@@ -2,12 +2,12 @@
 title: Assemblies amigáveis (C#)
 ms.date: 07/20/2015
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-ms.openlocfilehash: e8c295fe23685e39e20a14ff23139339f24564c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e464162f12fe386c37262753331635ea82b128b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576961"
 ---
 # <a name="friend-assemblies-c"></a>Assemblies amigáveis (C#)
 Um *assembly amigável* é um assembly que pode acessar os membros e tipos [internos](../../../../csharp/language-reference/keywords/internal.md) de outro assembly. Se você identificar um assembly como um assembly amigável, não precisará marcar os tipos e membros como públicos para que eles sejam acessados por outros assemblies. Isso é especialmente conveniente nos seguintes cenários:  
@@ -56,9 +56,9 @@ public class ClassWithFriendMethod
   
      O nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> não pode ser o nome forte do assembly *B*: não inclua a versão, cultura, arquitetura ou token de chave pública do assembly.  
   
--   Se o assembly *A* não tiver um nome forte, o nome do assembly amigável deverá consistir apenas no nome do assembly. Para obter mais informações, consulte [Como criar assemblies amigáveis não assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
+-   Se o assembly *A* não tiver um nome forte, o nome do assembly amigável deverá consistir apenas no nome do assembly. Para obter mais informações, confira [Como: Criar assemblies amigáveis sem sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
   
--   Se o assembly *B* tiver um nome forte, você deverá especificara a chave de nome forte do assembly *B* usando a configuração do projeto ou a opção do compilador `/keyfile` de linha de comando. Para obter mais informações, consulte [Como criar assemblies amigáveis assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
+-   Se o assembly *B* tiver um nome forte, você deverá especificara a chave de nome forte do assembly *B* usando a configuração do projeto ou a opção do compilador `/keyfile` de linha de comando. Para obter mais informações, confira [Como: Criar assemblies amigáveis com sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
   
  A classe <xref:System.Security.Permissions.StrongNameIdentityPermission> também fornece a capacidade de compartilhar tipos, com as seguintes diferenças:  
   
@@ -72,9 +72,9 @@ public class ClassWithFriendMethod
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
-- [Como criar assemblies amigáveis não assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
-- [Como criar assemblies amigáveis assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
-- [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>
+- [Como: Criar assemblies amigáveis sem sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Como: Criar assemblies amigáveis com sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Assemblies e o cache de assembly global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 - [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Como baixar um arquivo no Visual Basic
+title: 'Como: Baixar um arquivo no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: b0dc95674e17a7aba9b04a8b7e0b82c9c97c4180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 435dfe497cde5a08bce8825eaf6fa73daab4348b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43385543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671181"
 ---
-# <a name="how-to-download-a-file-in-visual-basic"></a>Como baixar um arquivo no Visual Basic
+# <a name="how-to-download-a-file-in-visual-basic"></a>Como: Baixar um arquivo no Visual Basic
 O método <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> pode ser usado para baixar um arquivo remoto e armazená-lo em um local específico. Se o parâmetro `ShowUI` for definido como `True`, uma caixa de diálogo será exibida mostrando o andamento do download e permitindo que os usuários cancelem a operação. Por padrão, os arquivos existentes com o mesmo nome não são sobrescritos. Se você deseja sobrescrever os arquivos existentes, defina o parâmetro `overwrite` como `True`.  
   
  As seguintes condições podem causar uma exceção:  
@@ -54,8 +54,8 @@ O método <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> pode ser 
     > [!IMPORTANT]
     >  O protocolo FTP usado pelo método `DownLoadFile` envia informações, incluindo senhas, em texto sem formatação e não deve ser usado para transmitir informações confidenciais.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Network>  
- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
- [Como Carregar um Arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Devices.Network>
+- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
+- [Como: Carregar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [Como: Analisar caminhos de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

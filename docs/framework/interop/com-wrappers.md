@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38031509b999662c86657f0f5cdc7202de65c194
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607193"
 ---
 # <a name="com-wrappers"></a>Wrappers COM
 O COM difere do modelo de objeto .NET Framework de várias maneiras importantes:  
@@ -34,9 +34,9 @@ Visão geral do wrapper COM
   
  Na maioria dos casos, o RCW padrão ou o CCW gerado pelo tempo de execução fornece o marshaling adequado para chamadas que cruzam o limite entre o COM e o .NET Framework. Usando atributos personalizados, opcionalmente, você pode ajustar a maneira como o tempo de execução representa o código gerenciado e não gerenciado.  
   
-## <a name="see-also"></a>Consulte também  
- [Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)  
- [COM Callable Wrapper](com-callable-wrapper.md)  
- [Customizing Standard Wrappers](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)) (Personalizando wrappers padrão)  
- [Como personalizar RCWs (Runtime Callable Wrappers)](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))
+## <a name="see-also"></a>Consulte também
+- [Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)
+- [COM Callable Wrapper](com-callable-wrapper.md)
+- [Customizing Standard Wrappers](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)) (Personalizando wrappers padrão)
+- [Como: Personalizar RCWs (Runtime Callable Wrappers)](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))

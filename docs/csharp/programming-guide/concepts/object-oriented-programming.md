@@ -2,12 +2,12 @@
 title: Programação orientada a objeto (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8e211fec25ceb2e8e42620ff3f421e6943d8b5e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702477"
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 O C# dá suporte completo à programação orientada a objeto, incluindo encapsulamento, herança e polimorfismo.  
@@ -296,7 +296,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };  
 ```  
   
- Para obter mais informações, consulte [Tipos Anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Para obter mais informações, consulte: [Tipos Anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ##  <a name="Inheritance"></a> Herança  
  A herança permite que você crie uma nova classe que reutiliza, estende e modifica o comportamento definido em outras classes. A classe cujos membros são herdados é chamada *classe base* e a classe que herda esses membros é chamada *classe derivada*. No entanto, todas as classes em C# herdam implicitamente da classe <xref:System.Object> que dá suporte à hierarquia de classes do .NET e fornece serviços de nível baixo para todas as classes.  

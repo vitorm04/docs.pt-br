@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689202"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Carregando e usando tipos dinamicamente
 A reflexão fornece a infraestrutura usada pelos compiladores de linguagem como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] e JScript para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. O [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  
@@ -71,7 +71,7 @@ End Module
   
  O conjunto de membros disponíveis aqueles definidos no tipo ou em qualquer tipo base. Se <xref:System.Reflection.BindingFlags> for especificado, membros de qualquer acessibilidade serão retornados ao conjunto. Se **BindingFlags.NonPublic** não for especificado, o associador deverá impor regras de acessibilidade. Ao especificar o sinalizador de associação **Public** ou **NonPublic**, você deverá especificar também o sinalizador de associação **Instance** ou **Static** ou nenhum membro será retornado.  
   
- Se houver somente um membro do nome fornecido, nenhum retorno de chamada é necessário e a associação é realizada nesse método. O caso 1 do exemplo de código ilustra este ponto: apenas um método **PrintBob** está disponível e, portanto, nenhum retorno de chamada é necessário.  
+ Se houver somente um membro do nome fornecido, nenhum retorno de chamada é necessário e a associação é realizada nesse método. O caso 1 do exemplo de código ilustra este ponto: Somente um método **PrintBob** está disponível e, portanto, nenhum retorno de chamada é necessário.  
   
  Se houver mais de um membro do conjunto disponível, todos esses métodos são passados para **BindToMethod**, que seleciona o método apropriado e o retorna. No caso 2 do exemplo de código, há dois métodos chamados **PrintValue**. O método apropriado é selecionado pela chamada para **BindToMethod**.  
   
@@ -99,8 +99,8 @@ End Module
   
  A classe <xref:System.Type> tem métodos **Get** que usam parâmetros do tipo **Binder** para resolver referências a um determinado membro. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> e <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> pesquisam um determinado membro do tipo atual, fornecendo informações de assinatura para esse membro. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> e <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> são chamados de volta para selecionar as informações de determinada assinatura dos métodos apropriados.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Conversão de tipos no .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Conversão de tipos no .NET Framework](../../../docs/standard/base-types/type-conversion.md)

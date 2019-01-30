@@ -1,18 +1,18 @@
 ---
-title: Como chamar um serviço Web de forma assíncrona (Visual Basic)
+title: 'Como: Chamar um serviço Web de forma assíncrona (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9127b0edce029f8b2944ddf692e85166ee8c89b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616141"
 ---
-# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Como chamar um serviço Web de forma assíncrona (Visual Basic)
+# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Como: Chamar um serviço Web de forma assíncrona (Visual Basic)
 Este exemplo conecta um manipulador a um evento de manipulador assíncrono do serviço Web, para que ele possa recuperar o resultado de uma chamada de método assíncrono. Este exemplo usou o serviço Web DemoTemperatureService em `http://www.xmethods.net`.  
   
  Quando você faz referência a um serviço Web em seu projeto no IDE (Ambiente de Desenvolvimento Integrado) do Visual Studio, ele é adicionado ao objeto `My.WebServices`, e o IDE gera uma classe proxy do cliente para acesso a um serviço Web especificado  
@@ -65,6 +65,6 @@ Este exemplo conecta um manipulador a um evento de manipulador assíncrono do se
   
      Para chamar o método Web `getTemp` de forma assíncrona, chame o método `CallGetTempAsync`. Quando o método Web for concluído, seu valor retornado será transmitido ao manipulador de eventos `getTempCompletedHandler`.  
   
-## <a name="see-also"></a>Consulte também  
- [Acessando serviços Web do aplicativo](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- [Objeto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a>Consulte também
+- [Acessando serviços Web do aplicativo](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+- [Objeto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)

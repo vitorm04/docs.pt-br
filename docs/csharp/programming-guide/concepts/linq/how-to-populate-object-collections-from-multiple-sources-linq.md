@@ -1,15 +1,15 @@
 ---
-title: Como preencher coleções de objetos de várias fontes (LINQ) (C#)
+title: 'Como: Popular coleções de objetos de várias fontes (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571331"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Como preencher coleções de objetos de várias fontes (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Como: Popular coleções de objetos de várias fontes (LINQ) (C#)
 
 Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de novos tipos.
 
@@ -18,7 +18,7 @@ Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de
 
 ## <a name="to-create-the-data-file"></a>Para criar o arquivo de dados
 
-Copie os arquivos names.csv e scores.csv para a pasta do projeto, conforme descrito em [Como unir conteúdo de arquivos diferentes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Copie os arquivos names.csv e scores.csv para a pasta do projeto, conforme descrito em [Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -149,6 +149,6 @@ Crie e compile um projeto direcionado para uma das seguintes opções:
 
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [Inicializadores de objeto e coleção](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [Inicializadores de objeto e coleção](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

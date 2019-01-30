@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48845535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558902"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidade de versão no .NET Framework
-Compatibilidade com versões anteriores significa que um aplicativo desenvolvido para uma versão específica de uma plataforma será executado em versões posteriores dessa plataforma. O .NET Framework tenta maximizar a compatibilidade com versões anteriores: o código-fonte gravado para uma versão do .NET Framework deve compilar em versões posteriores do .NET Framework e os binários executados em uma versão do .NET Framework devem se comportar de forma idêntica em versões posteriores do .NET Framework.  
+Compatibilidade com versões anteriores significa que um aplicativo desenvolvido para uma versão específica de uma plataforma será executado em versões posteriores dessa plataforma. O .NET Framework tenta maximizar a compatibilidade com versões anteriores: O código-fonte escrito para uma versão do .NET Framework deverá ser compilado em versões posteriores do .NET Framework e os binários executados em uma versão do .NET Framework deverão se comportar de forma idêntica em versões posteriores do .NET Framework.  
   
 <a name="Apps"></a>   
 ## <a name="version-compatibility-for-apps"></a>Compatibilidade de versão para aplicativos  
@@ -34,7 +34,7 @@ Compatibilidade com versões anteriores significa que um aplicativo desenvolvido
 </configuration>  
 ```  
   
- Para saber mais, confira [How to: Configure an App to Support .NET Framework 4 or 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md) (Como configurar um aplicativo para dar suporte ao .NET Framework 4 ou 4.x).  
+ Para obter mais informações, confira [Como: Configurar um aplicativo para dar suporte ao .NET Framework 4 ou 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
   
 ## <a name="version-compatibility-for-components"></a>Compatibilidade de versão para componentes  
  Um aplicativo pode controlar a versão do .NET Framework no qual é executado, mas um componente não pode. Os componentes e as bibliotecas de classe são carregados no contexto de um aplicativo específico e, assim, executados automaticamente na versão do .NET Framework em que o aplicativo é executado.  
@@ -65,9 +65,9 @@ Compatibilidade com versões anteriores significa que um aplicativo desenvolvido
 ## <a name="compatibility-and-side-by-side-execution"></a>Compatibilidade e execução lado a lado  
  Se você não conseguir encontrar uma solução alternativa adequada para seu problema, lembre-se de que o .NET Framework 4.5 (ou uma de suas versões pontuais) é executado lado a lado com as versões 1.1, 2.0 e 3.5, além de ser uma atualização in-loco que substitui a versão 4. Para aplicativos que segmentam as versões 1.1, 2.0 e 3.5, é possível instalar a versão do .NET Framework adequada no computador de destino para executar o aplicativo em seu melhor ambiente. Para saber mais sobre a execução lado a lado, confira [Side-by-Side Execution](../../../docs/framework/deployment/side-by-side-execution.md) (Execução lado a lado).  
   
-## <a name="see-also"></a>Consulte também  
- [Novidades](../../../docs/framework/whats-new/index.md)  
- [O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Compatibilidade de aplicativos](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Política de ciclo de vida de suporte do Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
- [Problemas de migração do .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
+## <a name="see-also"></a>Consulte também
+- [Novidades](../../../docs/framework/whats-new/index.md)
+- [O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Compatibilidade de aplicativos](../../../docs/framework/migration-guide/application-compatibility.md)
+- [Política de ciclo de vida de suporte do Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Problemas de migração do .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

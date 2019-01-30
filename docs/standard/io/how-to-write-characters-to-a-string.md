@@ -1,5 +1,5 @@
 ---
-title: Como escrever caracteres em uma cadeia de caracteres
+title: 'Como: Gravar caracteres em uma cadeia de caracteres'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bea51eaf11bd9d73d5a68eb09795bd9f9f143f95
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 125c8ba03c4d1006535dd1e10cbd162b32fede4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740977"
 ---
-# <a name="how-to-write-characters-to-a-string"></a>Como escrever caracteres em uma cadeia de caracteres
+# <a name="how-to-write-characters-to-a-string"></a>Como: Gravar caracteres em uma cadeia de caracteres
 Os exemplos de código a seguir gravam caracteres de forma síncrona e assíncrona de uma matriz de caracteres em uma cadeia de caracteres.  
   
 ## <a name="example"></a>Exemplo  
@@ -37,14 +37,14 @@ Os exemplos de código a seguir gravam caracteres de forma síncrona e assíncro
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO.StringWriter>  
-- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
-- <xref:System.Text.StringBuilder>  
-- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)  
-- [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Como ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Como abrir e acrescentar a um arquivo de log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Como ler caracteres de uma cadeia de caracteres](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- <xref:System.IO.StringWriter>
+- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>
+- <xref:System.Text.StringBuilder>
+- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)
+- [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Como: Enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Como: Ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Como: Abrir um arquivo de log e fazer acréscimos a ele](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Como: Ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Como: Gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Como: Ler caracteres de uma cadeia de caracteres](../../../docs/standard/io/how-to-read-characters-from-a-string.md)

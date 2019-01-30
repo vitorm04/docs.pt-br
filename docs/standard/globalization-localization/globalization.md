@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 84e44f0112a5d1b5fd38daf488d865f6e228f82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713935"
 ---
 # <a name="globalization"></a>Globalização
 A globalização envolve projetar e desenvolver um aplicativo preparado para o mundo que dá suporte a interfaces localizadas e dados regionais para usuários em várias culturas. Antes de iniciar a fase de design, você deve determinar a quais culturas seu aplicativo dará suporte. Embora um aplicativo seja direcionado para uma única cultura ou região por padrão, você pode projetá-lo e gravá-lo para que ele possa ser facilmente estendido para usuários em outras culturas ou regiões.  
@@ -204,7 +204,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 <a name="DatesAndTimes_TimeZones"></a>   
 ### <a name="serialization-and-time-zone-awareness"></a>Reconhecimento de Serialização e Fuso Horário  
- Um valor de data/hora pode ter várias interpretações, variando de uma hora geral ("As lojas abrem em 2 de janeiro de 2013, às 9h") para um ponto específico no tempo ("Data de nascimento: 2 de janeiro de 2013, 6h32"). Quando um valor temporal representa um ponto específico no tempo e você o restaura de um valor serializado, você deve certificar-se de que ele representa o mesmo ponto no tempo, independentemente da localização geográfica ou do fuso horário do usuário.  
+ Um valor de data/hora pode ter várias interpretações, variando de uma hora geral ("As lojas abrem em 2 de janeiro de 2013, às 9:00") a um momento específico no tempo ("Data de nascimento: 2 de janeiro de 2013 6h32min00s"). Quando um valor temporal representa um ponto específico no tempo e você o restaura de um valor serializado, você deve certificar-se de que ele representa o mesmo ponto no tempo, independentemente da localização geográfica ou do fuso horário do usuário.  
   
  O exemplo a seguir ilustra esse problema. Ele salva um único valor de data/hora local como uma cadeia de caracteres em três [formatos padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" para data geral com tempo em formato longo, "s" para data/hora classificável e "o" para data/hora de ida e volta), bem como no formato binário.  
   
@@ -371,5 +371,5 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 ## <a name="see-also"></a>Consulte também
 
-- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  
+- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
 - [Melhores práticas para o uso de cadeias de caracteres](../../../docs/standard/base-types/best-practices-strings.md)

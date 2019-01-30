@@ -1,15 +1,15 @@
 ---
-title: Como localizar descendentes de um elemento filho (XPath-LINQ to XML) (C#)
+title: 'Como: Localizar descendentes de um elemento filho (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: 2fbb5111cdabac5ecbdc1db43e2ce2f41ebb7303
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ac5be4acc7d90dcbae3596f6fd253025ae4577b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708448"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Como localizar descendentes de um elemento filho (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Como: Localizar descendentes de um elemento filho (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter os elementos descendentes de um elemento filho com um nome específico.  
   
  A expressão XPath é:  

@@ -1,5 +1,5 @@
 ---
-title: Como compactar e extrair arquivos
+title: 'Como: Compactar e extrair arquivos'
 ms.date: 06/06/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 669936d15cfe1ea125ed36ffdfcfd093b6aacbe1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c35bf549dc4dcd5e12e3580c2357b64dcc42905b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650935"
 ---
-# <a name="how-to-compress-and-extract-files"></a>Como compactar e extrair arquivos
+# <a name="how-to-compress-and-extract-files"></a>Como: Compactar e extrair arquivos
 
 O namespace <xref:System.IO.Compression> contém os seguintes tipos para compactar e descompactar arquivos e fluxos. Você também pode usar esses tipos para ler e modificar o conteúdo de um arquivo compactado:
 
@@ -70,9 +70,9 @@ Você também pode usar as classes <xref:System.IO.Compression.GZipStream> e <xr
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO.Compression.ZipArchive>  
-- <xref:System.IO.Compression.ZipFile>  
-- <xref:System.IO.Compression.ZipArchiveEntry>  
-- <xref:System.IO.Compression.DeflateStream>  
-- <xref:System.IO.Compression.GZipStream>  
+- <xref:System.IO.Compression.ZipArchive>
+- <xref:System.IO.Compression.ZipFile>
+- <xref:System.IO.Compression.ZipArchiveEntry>
+- <xref:System.IO.Compression.DeflateStream>
+- <xref:System.IO.Compression.GZipStream>
 - [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)

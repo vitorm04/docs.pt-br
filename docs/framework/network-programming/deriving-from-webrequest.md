@@ -10,17 +10,17 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717448"
 ---
 # <a name="deriving-from-webrequest"></a>Derivando de WebRequest
 A classe <xref:System.Net.WebRequest> é uma classe base abstrata que fornece os métodos e as propriedades básicas para criar um manipulador de solicitação específico ao protocolo que se ajusta ao modelo de protocolo conectável do .NET Framework. Os aplicativos que usam a classe **WebRequest** podem solicitar dados usando qualquer protocolo com suporte sem a necessidade de especificar o protocolo usado.  
   
- Dois critérios devem ser atendidos para que uma classe específica ao protocolo seja usada como um protocolo conectável: a classe deve implementar a interface <xref:System.Net.IWebRequestCreate> e deve se registrar com o método <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>. A classe deve substituir todos os métodos abstratos e as propriedades de **WebRequest** para fornecer a interface conectável.  
+ Dois critérios precisam ser atendidos para que uma classe específica de protocolo seja usada como um protocolo conectável: A classe precisa implementar a interface <xref:System.Net.IWebRequestCreate> e se registrar no método <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>. A classe deve substituir todos os métodos abstratos e as propriedades de **WebRequest** para fornecer a interface conectável.  
   
  As instâncias de **WebRequest** são destinadas a um único uso; se desejar fazer outra solicitação, crie uma nova **WebRequest**. **WebRequest** dá suporte à interface <xref:System.Runtime.Serialization.ISerializable> para permitir aos desenvolvedores serializar uma **WebRequest** de modelo e, em seguida, reconstruir o modelo para solicitações adicionais.  
   
@@ -88,9 +88,9 @@ A classe <xref:System.Net.WebRequest> é uma classe base abstrata que fornece os
   
  O método **GetResponse** é responsável por criar um descendente apropriado de **WebResponse** para conter a resposta de entrada.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.FileWebRequest>  
- [Programando protocolos conectáveis](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Derivando de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.FileWebRequest>
+- [Programando protocolos conectáveis](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Derivando de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)

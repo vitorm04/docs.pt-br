@@ -1,5 +1,5 @@
 ---
-title: Como iniciar um aplicativo e enviar pressionamentos de tecla (Visual Basic)
+title: 'Como: Iniciar um aplicativo e enviar pressionamentos de tecla a ele (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keystrokes, sending
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - processes, starting and sending keystrokes
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
-ms.openlocfilehash: 716c88153ad01c7b225f31948c8aaaa2694dc512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36d6110a9e0ccf20718e95e6d7601e21e8d8f22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688383"
 ---
-# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Como iniciar um aplicativo e enviar pressionamentos de tecla (Visual Basic)
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Como: Iniciar um aplicativo e enviar pressionamentos de tecla a ele (Visual Basic)
 Este exemplo usa a função `Shell` para iniciar o aplicativo Calculadora e, em seguida, multiplica dois números enviando pressionamentos de tecla usando o método `My.Computer.Keyboard.SendKeys`.  
   
 ## <a name="example"></a>Exemplo  
@@ -26,7 +26,7 @@ Este exemplo usa a função `Shell` para iniciar o aplicativo Calculadora e, em 
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  A chamada para a função `Shell` exige confiança total (classe <xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>  
- <xref:Microsoft.VisualBasic.Interaction.Shell%2A>  
- <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>
+- <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
+- <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>

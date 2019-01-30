@@ -1,15 +1,15 @@
 ---
-title: Como capturar erros de análise (C#)
+title: 'Como: Capturar erros de análise (C#)'
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 879a8f037e9d31051ef0d4059ee3ce2a2fca7a4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2f56ca48278f9ad8b38f8564f54a379cc09f94ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515856"
 ---
-# <a name="how-to-catch-parsing-errors-c"></a>Como capturar erros de análise (C#)
+# <a name="how-to-catch-parsing-errors-c"></a>Como: Capturar erros de análise (C#)
 Este tópico mostra como detectar XML mal formado ou inválido.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é implementado usando <xref:System.Xml.XmlReader>. Se malformado ou XML válido é passado para [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], a classe subjacente de <xref:System.Xml.XmlReader> irá acionar uma exceção. Os vários métodos que analisam XML, tais como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, não capturam a exceção; a exceção pode ser capturada por seu aplicativo.  

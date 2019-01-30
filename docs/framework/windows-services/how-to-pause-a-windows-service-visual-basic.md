@@ -1,5 +1,5 @@
 ---
-title: Como pausar um Serviço Windows (Visual Basic)
+title: 'Como: Pausar um Serviço Windows (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: c62de97439ecf90ebfcc14d9fea4c5ab52f6ef73
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8d378aba5ad09a38d24359fda8b50de072c58035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612717"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Como pausar um Serviço Windows (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Como: Pausar um Serviço Windows (Visual Basic)
 Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> para pausar o serviço de administração do IIS no computador local.  
   
 ## <a name="example"></a>Exemplo  
@@ -47,8 +47,8 @@ Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> par
   
  O acesso a informações de serviço pode ser restringido usando o <xref:System.Security.Permissions.PermissionState> para definir permissões em <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
- [Como Continuar um Serviço Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
+- [Como: Continuar um serviço Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

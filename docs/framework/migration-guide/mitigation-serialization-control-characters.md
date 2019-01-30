@@ -1,5 +1,5 @@
 ---
-title: 'Mitigação: serialização de caracteres de controle com o DataContractJsonSerializer'
+title: 'Mitigação: Serialização de caracteres de controle com o DataContractJsonSerializer'
 ms.date: 04/07/2017
 helpviewer_keywords:
 - .NET Framework 4.7 retargeting changes
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a00edbf2d5833349de14986f2a57a2c943f3ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31f946fa01f3d6334011098d12483445159ce54a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738112"
 ---
-# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Mitigação: serialização de caracteres de controle com o DataContractJsonSerializer
+# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Mitigação: Serialização de caracteres de controle com o DataContractJsonSerializer
 
 A partir do .NET Framework 4.7, a maneira com a qual os caracteres de controle são serializados com o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> foi alterada para estar em conformidade com o ECMAScript V6 e V8. 
  
@@ -43,4 +43,4 @@ Se esse comportamento não for desejado, você poderá recusar esse recurso adic
 ```
  
 ## <a name="see-also"></a>Consulte também
-[Alterações de redirecionamento no .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [Alterações de redirecionamento no .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

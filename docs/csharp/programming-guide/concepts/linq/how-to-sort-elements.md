@@ -1,19 +1,19 @@
 ---
-title: Como classificar os elementos (C#)
+title: 'Como: Classificar elementos (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 7548f183736ac9ed0ed09d3be775b3ffde6cb255
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 66a41fc018b2df64aa95c24d1d698b6c38fd189a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640778"
 ---
-# <a name="how-to-sort-elements-c"></a>Como classificar os elementos (C#)
+# <a name="how-to-sort-elements-c"></a>Como: Classificar elementos (C#)
 Este exemplo mostra como escrever uma consulta que classifica seus resultados.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -41,7 +41,7 @@ foreach (decimal el in prices)
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos em um namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos em um namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -69,5 +69,5 @@ foreach (decimal el in prices)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Classificando dados (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+- [Classificando dados (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)
 - [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

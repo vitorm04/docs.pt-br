@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620078"
 ---
 # <a name="selecting-a-collection-class"></a>Selecionando uma classe de coleção
 Certifique-se de escolher sua classe de coleção com cuidado. A utilização do tipo errado pode restringir o uso da coleção. Em geral, evite usar os tipos no namespace <xref:System.Collections>, a menos que o seu foco seja especificamente o .NET Framework versão 1.1. As versões genéricas e simultâneas das coleções são as preferíveis devido à maior segurança de tipo e outras melhorias.  
@@ -48,13 +48,13 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
   
 -   Cada elemento conterá um valor, uma combinação de uma chave e um valor ou uma combinação de uma chave e diversos valores?  
   
-    -   Um valor: use qualquer uma das coleções baseadas na interface do <xref:System.Collections.IList> ou na interface genérica do <xref:System.Collections.Generic.IList%601>.  
+    -   Um valor: Use uma das coleções baseadas na interface <xref:System.Collections.IList> ou na interface genérica <xref:System.Collections.Generic.IList%601>.  
   
-    -   Uma chave e um valor: use qualquer uma das coleções baseadas na interface do <xref:System.Collections.IDictionary> ou na interface genérica do <xref:System.Collections.Generic.IDictionary%602>.  
+    -   Uma chave e um valor: Use uma das coleções baseadas na interface <xref:System.Collections.IDictionary> ou na interface genérica <xref:System.Collections.Generic.IDictionary%602>.  
   
-    -   Um valor com chave incorporada: use a classe genérica <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
+    -   Um valor com uma chave inserida: Use a classe genérica <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
   
-    -   Uma chave e vários valores: use a classe <xref:System.Collections.Specialized.NameValueCollection>.  
+    -   Uma chave e vários valores: Use a classe <xref:System.Collections.Specialized.NameValueCollection>.  
   
 -   Você precisa classificar os elementos de forma diferente de como foram inseridos?  
   
@@ -81,7 +81,7 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Collections>  
-- <xref:System.Collections.Specialized>  
-- <xref:System.Collections.Generic>  
+- <xref:System.Collections>
+- <xref:System.Collections.Specialized>
+- <xref:System.Collections.Generic>
 - [Coleções Thread-Safe](../../../docs/standard/collections/thread-safe/index.md)

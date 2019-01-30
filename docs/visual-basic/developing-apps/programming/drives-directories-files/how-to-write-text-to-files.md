@@ -1,5 +1,5 @@
 ---
-title: Como gravar texto em arquivos no Visual Basic
+title: 'Como: Gravar texto em arquivos no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: e8d0fa0a3705fa843c9209c6959ddc9a453b8807
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ff220bd8a790d9f5480581b847527fb5fbae449
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634383"
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a>Como gravar texto em arquivos no Visual Basic
+# <a name="how-to-write-text-to-files-in-visual-basic"></a>Como: Gravar texto em arquivos no Visual Basic
 O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> pode ser usado para gravar texto em arquivos. Se o arquivo especificado não existir, ele será criado.  
   
 ## <a name="procedure"></a>Procedimento  
@@ -54,7 +54,7 @@ O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> pode se
   
  Se você estiver executando em um contexto de confiança parcial, o código pode gerar uma exceção devido a privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- [Como ler em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- [Como: Ler de arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

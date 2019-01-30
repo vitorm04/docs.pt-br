@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675145"
 ---
 # <a name="anchors-in-regular-expressions"></a>Âncoras em expressões regulares
 <a name="top"></a> Âncoras ou asserções atômicas de largura zero, especificam uma posição na cadeia de caracteres em que uma correspondência deve ocorrer. Quando você usa uma âncora na sua expressão de pesquisa, o mecanismo de expressões regulares não avança pela cadeia de caracteres ou consome caracteres, ele procura uma correspondência apenas na posição especificada. Por exemplo, `^` Especifica que a correspondência deve começar no início de uma linha ou cadeia de caracteres. Portanto, a expressão regular `^http:` corresponde a "http:" apenas quando ele ocorre no início de uma linha. A tabela a seguir lista as âncoras com suporte pelas expressões regulares no .NET.  
@@ -58,7 +58,7 @@ ms.locfileid: "53155032"
 |Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres de entrada (ou o início da linha se o método for chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
-|`((\w+(\s?)){2,}`|Corresponde a um ou mais caracteres de palavra seguidos por zero ou um espaço exatamente duas vezes. Este é o primeiro grupo de captura. Essa expressão também define um segundo e um terceiro grupos de captura: o segundo consiste na palavra capturada e o terceiro consiste nos espaços capturados.|  
+|`((\w+(\s?)){2,}`|Corresponde a um ou mais caracteres de palavra seguidos por zero ou um espaço exatamente duas vezes. Este é o primeiro grupo de captura. Esta expressão também define um segundo e um terceiro grupo de captura: O segundo consiste na palavra capturada e o terceiro consiste nos espaços capturados.|  
 |`,\s`|Corresponde a uma vírgula seguida por um caractere de espaço em branco.|  
 |`(\w+\s\w+)`|Corresponde a um ou mais caracteres de palavra seguidos por um espaço, seguido por um ou mais caracteres de palavra. Este é o quarto grupo de captura.|  
 |`,`|Corresponde a uma vírgula.|  
@@ -178,5 +178,5 @@ ms.locfileid: "53155032"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md)

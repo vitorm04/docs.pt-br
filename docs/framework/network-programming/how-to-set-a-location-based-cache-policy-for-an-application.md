@@ -1,5 +1,5 @@
 ---
-title: Como definir uma política de cache baseada na localização para um aplicativo
+title: 'Como: Definir uma política de cache baseada na localização para um aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: e47b7de00941a8da24052c21f28e91391cff390d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514043"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Como definir uma política de cache baseada na localização para um aplicativo
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Como: Definir uma política de cache baseada na localização para um aplicativo
 Políticas de cache com base no local permitem que um aplicativo defina explicitamente o comportamento do cache com base na localização do recurso solicitado. Este tópico demonstra como definir a política de cache programaticamente. Para obter informações sobre como configurar a política para um aplicativo usando os arquivos de configuração, veja o [elemento \<requestCaching> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Para definir uma política de cache baseada na localização para um aplicativo  
@@ -153,9 +153,9 @@ Políticas de cache com base no local permitem que um aplicativo defina explicit
     End Sub  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)  
- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]
+## <a name="see-also"></a>Consulte também
+- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)
+- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]

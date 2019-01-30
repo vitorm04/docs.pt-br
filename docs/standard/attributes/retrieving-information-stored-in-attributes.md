@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744071"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperando informações armazenadas em atributos
 Recuperar um atributo personalizado é um processo simples. Primeiro, declare uma instância do atributo que você deseja recuperar. Em seguida, use o método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar o novo atributo para o valor do atributo que você deseja recuperar. Após a inicialização do novo atributo, basta usar suas propriedades para obter os valores.  
   
 > [!IMPORTANT]
->  Este tópico descreve como recuperar atributos para o código carregado no contexto da execução. Para recuperar atributos do código carregado no contexto somente reflexão, use a classe <xref:System.Reflection.CustomAttributeData>, conforme mostrado em [Como carregar assemblies no contexto somente reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+>  Este tópico descreve como recuperar atributos para o código carregado no contexto da execução. Para recuperar os atributos do código carregados no contexto somente de reflexão, é necessário usar a classe <xref:System.Reflection.CustomAttributeData>, conforme mostrado em [Como: carregar assemblies no contexto somente de reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  Esta seção descreve as seguintes maneiras de recuperar os atributos:  
   
@@ -86,7 +86,7 @@ The attribute was not found.
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Type?displayProperty=nameWithType>  
-- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
-- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- <xref:System.Type?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Atributos](../../../docs/standard/attributes/index.md)

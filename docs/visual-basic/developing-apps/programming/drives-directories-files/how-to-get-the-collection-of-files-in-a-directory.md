@@ -1,18 +1,18 @@
 ---
-title: Como obter a coleção de arquivos em um diretório no Visual Basic
+title: 'Como: Obter a coleção de arquivos em um diretório no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders, working with
 - files [Visual Basic], accessing
 ms.assetid: 6c8ba7e8-dd37-4853-92bf-762b67c98160
-ms.openlocfilehash: c498928bd5fc58b8264e9098f49aabafc68c7fe6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a708d9cfd7b1a5ded3088ee567660bd0b3a5423f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731927"
 ---
-# <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Como obter a coleção de arquivos em um diretório no Visual Basic
+# <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Como: Obter a coleção de arquivos em um diretório no Visual Basic
 As sobrecargas do método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> retornam uma coleção somente leitura de cadeias de caracteres representando os nomes dos arquivos dentro de um diretório:  
   
 -   Use a sobrecarga <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> para fazer uma busca de arquivo simples em um diretório especificado, sem buscar em subdiretórios.  
@@ -46,7 +46,7 @@ As sobrecargas do método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles
   
 -   O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A>  
- [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
- [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A>
+- [Como: Localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+- [Como: Localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)

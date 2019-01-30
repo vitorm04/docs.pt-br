@@ -2,12 +2,12 @@
 title: Refatoração em funções puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: fcb396984d58b5601d278a860b272211e785dcfb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44185552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497125"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refatoração em funções puras (C#)
 
@@ -24,7 +24,7 @@ Um aspecto importante de transformações e puras é aprender como o código do 
   
  Uma maneira de fazer a transição para programação funcional é o código existente do refatorar para eliminar efeitos colaterais desnecessários e dependências externas. Dessa maneira, você pode criar versões puras de função do código existente.  
   
- Este tópico descreve o que é uma função pura e o que não é. O tutorial [Tutorial: manipulando conteúdo em um documento WordprocessingML](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) mostra como manipular um documento WordprocessingML e inclui dois exemplos de como refatorar usando uma função pura.  
+ Este tópico descreve o que é uma função pura e o que não é. O [Tutorial: Manipulando o conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) mostra como manipular um documento WordprocessingML e inclui dois exemplos de como fazer a refatoração usando uma função pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminando efeitos colaterais e dependências externas  
  Os seguintes exemplos contrastam duas funções não puras e uma função pura.  
@@ -114,5 +114,5 @@ class Program
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Programação funcional versus Programação obrigatória (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

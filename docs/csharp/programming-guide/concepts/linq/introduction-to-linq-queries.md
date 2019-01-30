@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 80aafccab9b9183a1dc4dc25d531ebe65f6905b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605127"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introdução a consultas LINQ (C#)
 Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas normalmente são expressas em uma linguagem de consulta especializada. Diferentes linguagens foram desenvolvidas ao longo do tempo para os diversos tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que eles tinham que oferecer suporte. O [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifica essa situação ao oferecer um modelo consistente para trabalhar com os dados entre vários tipos de fontes e formatos de dados. Em uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você está sempre trabalhando com objetos. Você usa os mesmos padrões básicos de codificação para consultar e transformar dados em documentos XML, bancos de dados SQL, conjuntos de dados do [!INCLUDE[vstecado](~/includes/vstecado-md.md)], coleções do .NET e qualquer outro formato para o qual um provedor [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] estiver disponível.  
@@ -56,7 +56,7 @@ IQueryable<Customer> custQuery =
  Para obter mais informações sobre como criar tipos específicos de fontes de dados, consulte a documentação para os diversos provedores do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. No entanto, a regra básica é muito simples: uma fonte de dados [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é qualquer objeto que dá suporte à interface genérica <xref:System.Collections.Generic.IEnumerable%601> ou uma interface que herda dela.  
   
 > [!NOTE]
->  Tipos, como <xref:System.Collections.ArrayList>, que dão suporte à interface <xref:System.Collections.IEnumerable> não genérica também podem ser usados como uma fonte de dados [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, consulte [Como consultar um ArrayList com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+>  Tipos, como <xref:System.Collections.ArrayList>, que dão suporte à interface <xref:System.Collections.IEnumerable> não genérica também podem ser usados como uma fonte de dados [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, confira [Como: Consultar uma ArrayList com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
 ##  <a name="query"></a> A consulta  
  A consulta especifica quais informações devem ser recuperadas da fonte (ou fontes) de dados. Opcionalmente, uma consulta também especifica como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. Uma consulta é armazenada em uma variável de consulta e é inicializada com uma expressão de consulta. Para tornar mais fácil escrever consultas, o C# introduziu uma nova sintaxe de consulta.  
@@ -90,9 +90,9 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
+- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Passo a passo: Escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Passo a passo: Escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
 - [Palavras-chave de Consulta (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

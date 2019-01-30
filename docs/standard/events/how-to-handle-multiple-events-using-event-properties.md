@@ -1,5 +1,5 @@
 ---
-title: Como manipular vários eventos usando propriedades de evento
+title: 'Como: Manipular vários eventos usando propriedades de evento'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592215"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>Como manipular vários eventos usando propriedades de evento
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>Como: Manipular vários eventos usando propriedades de evento
 Para usar as propriedades de evento, defina as propriedades de evento na classe que gera os eventos e, em seguida, defina os representantes das propriedades de evento nas classes que tratam dos eventos. Para implementar várias propriedades de evento em uma classe, a classe deve armazenar e manter internamente o representante definido para cada evento. Uma abordagem típica é implementar uma coleção de representantes indexada por uma chave de evento.  
   
  Para armazenar os representantes para cada evento, você pode usar a classe <xref:System.ComponentModel.EventHandlerList> ou implementar sua própria coleção. A classe da coleção deve fornecer métodos para configurar, acessar e recuperar o representante do manipulador de eventos com base na chave de evento. Por exemplo, você poderia usar uma classe <xref:System.Collections.Hashtable> ou derivar uma classe personalizada da classe <xref:System.Collections.DictionaryBase>. Os detalhes da implementação da coleção de representantes não precisam ser expostos fora de sua classe.  
@@ -52,7 +52,7 @@ Para usar as propriedades de evento, defina as propriedades de evento na classe 
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
-- [Eventos](../../../docs/standard/events/index.md)  
-- <xref:System.Web.UI.Control.Events%2A>  
-- [Como declarar eventos personalizados para conservar memória](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
+- [Eventos](../../../docs/standard/events/index.md)
+- <xref:System.Web.UI.Control.Events%2A>
+- [Como: Declarar eventos personalizados para conservar a memória](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

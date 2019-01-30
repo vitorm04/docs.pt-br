@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8717d00b706edf37ce1112bc6d96048d6daa9cd
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: ae6cb54d73c56db7c118b617e070ea86944adeaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720204"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Solucionar problemas de instalações e desinstalações bloqueadas do .NET Framework
 
@@ -77,6 +77,6 @@ O instalador do .NET Framework não pode ser executado no Modo de Compatibilidad
 
 ## <a name="see-also"></a>Consulte também
 
-[Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md)   
-[Como: Determinar quais versões do .NET Framework estão instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
-[Versões e dependências](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md)
+- [Como: Determinar quais versões do .NET Framework estão instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Versões e dependências](../../../docs/framework/migration-guide/versions-and-dependencies.md)

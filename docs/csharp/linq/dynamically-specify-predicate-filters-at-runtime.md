@@ -1,14 +1,14 @@
 ---
 title: Especificar dinamicamente filtros predicados em tempo de execução (LINQ em C#)
 description: Saiba como especificar dinamicamente filtros predicados em tempo de execução usando o LINQ em C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125789"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857730"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Especificar filtros predicados dinamicamente em tempo de execução
 

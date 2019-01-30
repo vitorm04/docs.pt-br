@@ -2,12 +2,12 @@
 title: Filtrando dados (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: df2f9f1bab7767365be65dbb60fb4af324ae3dab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dc31a73a8ebbe52f7d22984cd747a038e2556c28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634626"
 ---
 # <a name="filtering-data-c"></a>Filtrando dados (C#)
 A filtragem é a operação de restringir o conjunto de resultados de forma que ele contenha apenas os elementos correspondentes a uma condição especificada. Ela também é conhecida como seleção.  
@@ -47,10 +47,10 @@ foreach (string str in query)
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Linq>  
-- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Cláusula where](../../../../csharp/language-reference/keywords/where-clause.md)  
-- [Como especificar filtros predicados dinamicamente em tempo de execução](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)  
-- [Como consultar metadados de um assembly com reflexão (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
-- [Como consultar arquivos com um atributo ou nome especificado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
-- [Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- <xref:System.Linq>
+- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Cláusula where](../../../../csharp/language-reference/keywords/where-clause.md)
+- [Como: Especificar filtros de predicado dinamicamente em tempo de execução](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Como: Consultar metadados de um assembly com a reflexão (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Como: Consultar arquivos com um atributo ou um nome especificado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

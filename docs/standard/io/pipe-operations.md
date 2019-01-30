@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdc12091a377a118dc533e5f299fa4833af64baf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 919d4606e4ba72f07ba382244f8508975beffec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741225"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>Operações de pipe no .NET Framework
 Os pipes fornecem um meio de comunicação entre processos. Existem dois tipos de pipes:  
@@ -26,7 +26,7 @@ Os pipes fornecem um meio de comunicação entre processos. Existem dois tipos d
   
      No .NET Framework, você implementa pipes anônimos usando as classes <xref:System.IO.Pipes.AnonymousPipeServerStream> e <xref:System.IO.Pipes.AnonymousPipeClientStream>.  
   
-     Veja [Como usar pipes anônimos para a comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
+     Confira [Como Usar pipes anônimos para comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
   
 -   Pipes nomeados.  
   
@@ -34,10 +34,10 @@ Os pipes fornecem um meio de comunicação entre processos. Existem dois tipos d
   
      No .NET Framework, você implementa pipes nomeados usando as classes <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream>.  
   
-     Veja [Como usar pipes nomeados para comunicação entre processos na rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
+     Confira [Como Usar pipes nomeados para comunicação entre processos na rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)  
-- [Como usar pipes anônimos para comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
-- [Como usar pipes nomeados para comunicação entre processos na rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)
+- [Como: Usar pipes anônimos para comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [Como: Usar pipes nomeados para comunicação entre processos na rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

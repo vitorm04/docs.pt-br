@@ -1,15 +1,15 @@
 ---
-title: Como gerar um XML de arquivos CSV (C#)
+title: 'Como: Gerar um XML com base em arquivos CSV (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 9200cfc443ae87fcbeaf87c7674f15d8a241f5dc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 769cc6c2ca8f4c05c46a0054eaccccfe3911a74c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605780"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Como gerar um XML de arquivos CSV (C#)
+# <a name="how-to-generate-xml-from-csv-files-c"></a>Como: Gerar um XML com base em arquivos CSV (C#)
 Este exemplo mostra como usar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gerar um arquivo XML de um arquivo CSV (valores separados por vírgulas).  
   
 ## <a name="example"></a>Exemplo  

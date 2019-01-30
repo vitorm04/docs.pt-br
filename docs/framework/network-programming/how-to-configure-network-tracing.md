@@ -1,5 +1,5 @@
 ---
-title: Como configurar o rastreamento de rede
+title: 'Como: Configurar o rastreamento de rede'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540527"
 ---
-# <a name="how-to-configure-network-tracing"></a>Como configurar o rastreamento de rede
+# <a name="how-to-configure-network-tracing"></a>Como: Configurar o rastreamento de rede
 O aplicativo ou o arquivo de configuração do computador mantém as configurações que determinam o formato e o conteúdo dos rastreamentos de rede. Antes de executar este procedimento, certifique-se de que o rastreamento está habilitado. Para obter informações sobre como habilitar o rastreamento, consulte [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
  O arquivo de configuração do computador, machine.config, é armazenado na pasta %Windir%\Microsoft.NET\Framework no diretório em que o Windows foi instalado. Há um arquivo machine.config separado nas pastas em %Windir%\Microsoft.NET\Framework para cada versão do .NET Framework instalada no computador (por exemplo, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config ou C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).  
@@ -97,8 +97,8 @@ O aplicativo ou o arquivo de configuração do computador mantém as configuraç
 |`maxdatasize`|Atributo <xref:System.Int32> opcional. Define o número máximo de bytes de dados de rede inclusos em cada linha de rastreamento. O valor padrão é 1024.<br /><br /> Esse atributo deve ser definido no elemento \<source>, conforme mostrado no exemplo. Uma exceção é gerada se esse atributo é definido em um elemento no elemento \<switches>.|  
 |`Tracemode`|Atributo <xref:System.String> opcional. Definido como `includehex` para exibir rastreamentos de protocolo em formato hexadecimal e textual. Definido como `protocolonly` para exibir somente o texto. O valor padrão é `includehex`.<br /><br /> Esse atributo deve ser definido no elemento \<switches>, conforme mostrado no exemplo. Uma exceção é gerada se esse atributo é definido em um elemento no elemento \<source>.|  
   
-## <a name="see-also"></a>Consulte também  
- [Interpretando o rastreamento de rede](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Consulte também
+- [Interpretando o rastreamento de rede](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
