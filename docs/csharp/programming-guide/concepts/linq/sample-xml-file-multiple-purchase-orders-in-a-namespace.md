@@ -1,18 +1,18 @@
 ---
-title: 'Arquivo XML de exemplo: várias ordens de compra em um namespace2'
+title: 'Arquivo XML de exemplo: Várias ordens de compra em um Namespace2'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 2c4812aa1c15223c7d2a65fa21f6c505e21e0bae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d5985fbfae543a6123d523a2caf4ec9ffc99a13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600148"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="797b5-102">Arquivo XML de Exemplo: Vários pedidos de compra em um namespace</span><span class="sxs-lookup"><span data-stu-id="797b5-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
-<span data-ttu-id="797b5-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="797b5-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="797b5-104">Este arquivo contém várias ordens de compra.</span><span class="sxs-lookup"><span data-stu-id="797b5-104">This file contains several purchase orders.</span></span> <span data-ttu-id="797b5-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="797b5-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="23499-102">Arquivo XML de exemplo: Várias ordens de compra em um namespace</span><span class="sxs-lookup"><span data-stu-id="23499-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
+<span data-ttu-id="23499-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23499-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="23499-104">Este arquivo contém várias ordens de compra.</span><span class="sxs-lookup"><span data-stu-id="23499-104">This file contains several purchase orders.</span></span> <span data-ttu-id="23499-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="23499-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="797b5-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="797b5-106">PurchaseOrdersInNamespace.xml</span></span>  
+## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="23499-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="23499-106">PurchaseOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -109,6 +109,6 @@ ms.locfileid: "43523538"
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="797b5-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="797b5-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23499-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23499-107">See also</span></span>
 
-- [<span data-ttu-id="797b5-108">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="797b5-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="23499-108">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="23499-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
