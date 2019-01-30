@@ -1,19 +1,19 @@
 ---
-title: Como trabalhar com dicionários usando LINQ to XML (C#)
+title: 'Como: Trabalhar com dicionários usando o LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: afe4fafb9963b4fc429f441349f8190c9a1e5bac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a1104d041c72b48a9aad38a489aefe3ec90a16dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582013"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a><span data-ttu-id="853f2-102">Como trabalhar com dicionários usando LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="853f2-102">How to: Work with Dictionaries Using LINQ to XML (C#)</span></span>
-<span data-ttu-id="853f2-103">É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados.</span><span class="sxs-lookup"><span data-stu-id="853f2-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="853f2-104">Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.</span><span class="sxs-lookup"><span data-stu-id="853f2-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a><span data-ttu-id="fea1d-102">Como: Trabalhar com dicionários usando o LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="fea1d-102">How to: Work with Dictionaries Using LINQ to XML (C#)</span></span>
+<span data-ttu-id="fea1d-103">É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados.</span><span class="sxs-lookup"><span data-stu-id="fea1d-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="fea1d-104">Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.</span><span class="sxs-lookup"><span data-stu-id="fea1d-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="853f2-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="853f2-105">Example</span></span>  
- <span data-ttu-id="853f2-106">Este exemplo usa um formulário de compilação funcional em que uma consulta projetos novos objetos de <xref:System.Xml.Linq.XElement> e a coleção resultante é passada como um argumento para o construtor do objeto de <xref:System.Xml.Linq.XElement> raiz.</span><span class="sxs-lookup"><span data-stu-id="853f2-106">This example uses a form of functional construction in which a query projects new <xref:System.Xml.Linq.XElement> objects, and the resulting collection is passed as an argument to the constructor of the Root <xref:System.Xml.Linq.XElement> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="fea1d-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="fea1d-105">Example</span></span>  
+ <span data-ttu-id="fea1d-106">Este exemplo usa um formulário de compilação funcional em que uma consulta projetos novos objetos de <xref:System.Xml.Linq.XElement> e a coleção resultante é passada como um argumento para o construtor do objeto de <xref:System.Xml.Linq.XElement> raiz.</span><span class="sxs-lookup"><span data-stu-id="fea1d-106">This example uses a form of functional construction in which a query projects new <xref:System.Xml.Linq.XElement> objects, and the resulting collection is passed as an argument to the constructor of the Root <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  
@@ -28,7 +28,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="853f2-107">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="853f2-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="fea1d-107">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="fea1d-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -39,8 +39,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="853f2-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="853f2-108">Example</span></span>  
- <span data-ttu-id="853f2-109">O código a seguir cria um dicionário XML.</span><span class="sxs-lookup"><span data-stu-id="853f2-109">The following code creates a dictionary from XML.</span></span>  
+## <a name="example"></a><span data-ttu-id="fea1d-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="fea1d-108">Example</span></span>  
+ <span data-ttu-id="fea1d-109">O código a seguir cria um dicionário XML.</span><span class="sxs-lookup"><span data-stu-id="fea1d-109">The following code creates a dictionary from XML.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -57,7 +57,7 @@ foreach (string str in dict.Keys)
     Console.WriteLine("{0}:{1}", str, dict[str]);  
 ```  
   
- <span data-ttu-id="853f2-110">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="853f2-110">This code produces the following output:</span></span>  
+ <span data-ttu-id="fea1d-110">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="fea1d-110">This code produces the following output:</span></span>  
   
 ```  
 Child1:Value1  
@@ -66,6 +66,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="853f2-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="853f2-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fea1d-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fea1d-111">See also</span></span>
 
-- [<span data-ttu-id="853f2-112">Projeções e transformações (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="853f2-112">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="fea1d-112">Projeções e transformações (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="fea1d-112">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

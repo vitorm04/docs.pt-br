@@ -1,21 +1,21 @@
 ---
-title: Como solicitar uma página da Web e recuperar os resultados como um fluxo
+title: 'Como: Solicitar uma página da Web e recuperar os resultados como um fluxo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 6481e923c8daabfcfa94adc45d7d4172e47a779a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ef1867d84b619c58a7b3e29ed0f81f9db0c07a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578579"
 ---
-# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a><span data-ttu-id="41cba-102">Como solicitar uma página da Web e recuperar os resultados como um fluxo</span><span class="sxs-lookup"><span data-stu-id="41cba-102">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>
-<span data-ttu-id="41cba-103">Este exemplo mostra como solicitar uma página da Web e recuperar os resultados em um fluxo.</span><span class="sxs-lookup"><span data-stu-id="41cba-103">This example shows how to request a Web page and retrieve the results in a stream.</span></span>  
+# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a><span data-ttu-id="65255-102">Como: Solicitar uma página da Web e recuperar os resultados como um fluxo</span><span class="sxs-lookup"><span data-stu-id="65255-102">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>
+<span data-ttu-id="65255-103">Este exemplo mostra como solicitar uma página da Web e recuperar os resultados em um fluxo.</span><span class="sxs-lookup"><span data-stu-id="65255-103">This example shows how to request a Web page and retrieve the results in a stream.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="41cba-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="41cba-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="65255-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="65255-104">Example</span></span>  
   
 ```csharp  
 WebClient myClient = new WebClient();  
@@ -31,10 +31,10 @@ Dim response As Stream = myClient.OpenRead("http://www.contoso.com/index.htm")
 response.Close()  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="41cba-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="41cba-105">Compiling the Code</span></span>  
- <span data-ttu-id="41cba-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="41cba-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="65255-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="65255-105">Compiling the Code</span></span>  
+ <span data-ttu-id="65255-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="65255-106">This example requires:</span></span>  
   
--   <span data-ttu-id="41cba-107">Referências aos namespaces <xref:System.IO> e <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="41cba-107">References to the <xref:System.IO> and <xref:System.Net> namespaces.</span></span>  
+-   <span data-ttu-id="65255-107">Referências aos namespaces <xref:System.IO> e <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="65255-107">References to the <xref:System.IO> and <xref:System.Net> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41cba-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="41cba-108">See Also</span></span>  
- [<span data-ttu-id="41cba-109">Solicitando dados</span><span class="sxs-lookup"><span data-stu-id="41cba-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a><span data-ttu-id="65255-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="65255-108">See also</span></span>
+- [<span data-ttu-id="65255-109">Solicitando dados</span><span class="sxs-lookup"><span data-stu-id="65255-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)

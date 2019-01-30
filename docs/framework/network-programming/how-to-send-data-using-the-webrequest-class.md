@@ -1,5 +1,5 @@
 ---
-title: Como enviar dados usando a classe WebRequest
+title: 'Como: Enviar dados usando a classe WebRequest'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 1f10c5e0c6c266b7b31d658ec561bd8d6d85697b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dac372ce4f9da99b91b6f8d140d69ce9f1238f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562889"
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="d0bd5-102">Como enviar dados usando a classe WebRequest</span><span class="sxs-lookup"><span data-stu-id="d0bd5-102">How to: Send Data Using the WebRequest Class</span></span>
-<span data-ttu-id="d0bd5-103">O procedimento a seguir descreve as etapas usadas para enviar dados para um servidor.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="d0bd5-104">Esse procedimento normalmente é usado para enviar dados para uma página da Web.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-104">This procedure is commonly used to post data to a Web page.</span></span>  
+# <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="26fef-102">Como: Enviar dados usando a classe WebRequest</span><span class="sxs-lookup"><span data-stu-id="26fef-102">How to: Send Data Using the WebRequest Class</span></span>
+<span data-ttu-id="26fef-103">O procedimento a seguir descreve as etapas usadas para enviar dados para um servidor.</span><span class="sxs-lookup"><span data-stu-id="26fef-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="26fef-104">Esse procedimento normalmente é usado para enviar dados para uma página da Web.</span><span class="sxs-lookup"><span data-stu-id="26fef-104">This procedure is commonly used to post data to a Web page.</span></span>  
   
-### <a name="to-send-data-to-a-host-server"></a><span data-ttu-id="d0bd5-105">Para enviar dados para um servidor de host</span><span class="sxs-lookup"><span data-stu-id="d0bd5-105">To send data to a host server</span></span>  
+### <a name="to-send-data-to-a-host-server"></a><span data-ttu-id="26fef-105">Para enviar dados para um servidor de host</span><span class="sxs-lookup"><span data-stu-id="26fef-105">To send data to a host server</span></span>  
   
-1.  <span data-ttu-id="d0bd5-106">Criar uma instância <xref:System.Net.WebRequest> chamando <xref:System.Net.WebRequest.Create%2A> com o URI do recurso que aceita dados, por exemplo, um script ou a página ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-106">Create a <xref:System.Net.WebRequest> instance by calling <xref:System.Net.WebRequest.Create%2A> with the URI of the resource that accepts data, for example, a script or ASP.NET page.</span></span>  
+1.  <span data-ttu-id="26fef-106">Criar uma instância <xref:System.Net.WebRequest> chamando <xref:System.Net.WebRequest.Create%2A> com o URI do recurso que aceita dados, por exemplo, um script ou a página ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="26fef-106">Create a <xref:System.Net.WebRequest> instance by calling <xref:System.Net.WebRequest.Create%2A> with the URI of the resource that accepts data, for example, a script or ASP.NET page.</span></span>  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -31,9 +31,9 @@ ms.locfileid: "53129461"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="d0bd5-107">O .NET Framework fornece classes específicas de protocolo derivadas de **WebRequest** e **WebResponse** para URIs que começam com "http:", "https:", "ftp:" e "file:".</span><span class="sxs-lookup"><span data-stu-id="d0bd5-107">The .NET Framework provides protocol-specific classes derived from **WebRequest** and **WebResponse** for URIs that begin with "http:", "https:'', "ftp:", and "file:".</span></span> <span data-ttu-id="d0bd5-108">Para acessar recursos usando outros protocolos, você deve implementar classes específicas de protocolo derivadas de **WebRequest** e **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-108">To access resources using other protocols, you must implement protocol-specific classes that derive from **WebRequest** and **WebResponse**.</span></span> <span data-ttu-id="d0bd5-109">Para obter mais informações, consulte [Programando protocolos conectáveis](../../../docs/framework/network-programming/programming-pluggable-protocols.md).</span><span class="sxs-lookup"><span data-stu-id="d0bd5-109">For more information, see [Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span></span>  
+    >  <span data-ttu-id="26fef-107">O .NET Framework fornece classes específicas de protocolo derivadas de **WebRequest** e **WebResponse** para URIs que começam com "http:", "https:", "ftp:" e "file:".</span><span class="sxs-lookup"><span data-stu-id="26fef-107">The .NET Framework provides protocol-specific classes derived from **WebRequest** and **WebResponse** for URIs that begin with "http:", "https:'', "ftp:", and "file:".</span></span> <span data-ttu-id="26fef-108">Para acessar recursos usando outros protocolos, você deve implementar classes específicas de protocolo derivadas de **WebRequest** e **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="26fef-108">To access resources using other protocols, you must implement protocol-specific classes that derive from **WebRequest** and **WebResponse**.</span></span> <span data-ttu-id="26fef-109">Para obter mais informações, consulte [Programando protocolos conectáveis](../../../docs/framework/network-programming/programming-pluggable-protocols.md).</span><span class="sxs-lookup"><span data-stu-id="26fef-109">For more information, see [Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span></span>  
   
-2.  <span data-ttu-id="d0bd5-110">Definir quaisquer valores de propriedade dos quais você precisa na **WebRequest**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-110">Set any property values that you need in the **WebRequest**.</span></span> <span data-ttu-id="d0bd5-111">Por exemplo, para habilitar a autenticação, defina a propriedade **Credentials** para uma instância da classe <xref:System.Net.NetworkCredential>.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-111">For example, to enable authentication, set the **Credentials** property to an instance of the <xref:System.Net.NetworkCredential> class.</span></span>  
+2.  <span data-ttu-id="26fef-110">Definir quaisquer valores de propriedade dos quais você precisa na **WebRequest**.</span><span class="sxs-lookup"><span data-stu-id="26fef-110">Set any property values that you need in the **WebRequest**.</span></span> <span data-ttu-id="26fef-111">Por exemplo, para habilitar a autenticação, defina a propriedade **Credentials** para uma instância da classe <xref:System.Net.NetworkCredential>.</span><span class="sxs-lookup"><span data-stu-id="26fef-111">For example, to enable authentication, set the **Credentials** property to an instance of the <xref:System.Net.NetworkCredential> class.</span></span>  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -43,7 +43,7 @@ ms.locfileid: "53129461"
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     <span data-ttu-id="d0bd5-112">Na maioria dos casos, a própria instância de **WebRequest** é suficiente para enviar dados.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-112">In most cases, the **WebRequest** instance itself is sufficient to send data.</span></span> <span data-ttu-id="d0bd5-113">No entanto, se você precisar definir propriedades específicas de protocolo, você deverá converter a **WebRequest** para o tipo específico do protocolo.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-113">However, if you need to set protocol-specific properties, you must cast the **WebRequest** to the protocol-specific type.</span></span> <span data-ttu-id="d0bd5-114">Por exemplo, acessar propriedades HTTP específicas de <xref:System.Net.HttpWebRequest>, converta a **WebRequest** para uma referência de **HttpWebRequest**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-114">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebRequest>, cast the **WebRequest** to an **HttpWebRequest** reference.</span></span> <span data-ttu-id="d0bd5-115">O exemplo de código a seguir mostra como definir a propriedade <xref:System.Net.HttpWebRequest.UserAgent%2A> específica de HTTP.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-115">The following code example shows how to set the HTTP-specific <xref:System.Net.HttpWebRequest.UserAgent%2A> property.</span></span>  
+     <span data-ttu-id="26fef-112">Na maioria dos casos, a própria instância de **WebRequest** é suficiente para enviar dados.</span><span class="sxs-lookup"><span data-stu-id="26fef-112">In most cases, the **WebRequest** instance itself is sufficient to send data.</span></span> <span data-ttu-id="26fef-113">No entanto, se você precisar definir propriedades específicas de protocolo, você deverá converter a **WebRequest** para o tipo específico do protocolo.</span><span class="sxs-lookup"><span data-stu-id="26fef-113">However, if you need to set protocol-specific properties, you must cast the **WebRequest** to the protocol-specific type.</span></span> <span data-ttu-id="26fef-114">Por exemplo, acessar propriedades HTTP específicas de <xref:System.Net.HttpWebRequest>, converta a **WebRequest** para uma referência de **HttpWebRequest**.</span><span class="sxs-lookup"><span data-stu-id="26fef-114">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebRequest>, cast the **WebRequest** to an **HttpWebRequest** reference.</span></span> <span data-ttu-id="26fef-115">O exemplo de código a seguir mostra como definir a propriedade <xref:System.Net.HttpWebRequest.UserAgent%2A> específica de HTTP.</span><span class="sxs-lookup"><span data-stu-id="26fef-115">The following code example shows how to set the HTTP-specific <xref:System.Net.HttpWebRequest.UserAgent%2A> property.</span></span>  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -53,7 +53,7 @@ ms.locfileid: "53129461"
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
     ```  
   
-3.  <span data-ttu-id="d0bd5-116">Especifique um método de protocolo que permite que os dados sejam enviados com uma solicitação, tal como o método HTTP **POST**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-116">Specify a protocol method that permits data to be sent with a request, such as the HTTP **POST** method.</span></span>  
+3.  <span data-ttu-id="26fef-116">Especifique um método de protocolo que permite que os dados sejam enviados com uma solicitação, tal como o método HTTP **POST**.</span><span class="sxs-lookup"><span data-stu-id="26fef-116">Specify a protocol method that permits data to be sent with a request, such as the HTTP **POST** method.</span></span>  
   
     ```csharp  
     request.Method = "POST";  
@@ -63,7 +63,7 @@ ms.locfileid: "53129461"
     request.Method = "POST"  
     ```  
   
-4.  <span data-ttu-id="d0bd5-117">Defina a propriedade **ContentLength**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-117">Set the **ContentLength** property.</span></span>  
+4.  <span data-ttu-id="26fef-117">Defina a propriedade **ContentLength**.</span><span class="sxs-lookup"><span data-stu-id="26fef-117">Set the **ContentLength** property.</span></span>  
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -73,7 +73,7 @@ ms.locfileid: "53129461"
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  <span data-ttu-id="d0bd5-118">Defina a propriedade **ContentType** para um valor apropriado.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-118">Set the **ContentType** property to an appropriate value.</span></span>  
+5.  <span data-ttu-id="26fef-118">Defina a propriedade **ContentType** para um valor apropriado.</span><span class="sxs-lookup"><span data-stu-id="26fef-118">Set the **ContentType** property to an appropriate value.</span></span>  
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -83,7 +83,7 @@ ms.locfileid: "53129461"
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  <span data-ttu-id="d0bd5-119">Obtenha o fluxo que mantém dados de solicitação chamando o método <xref:System.Net.WebRequest.GetRequestStream%2A>.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-119">Get the stream that holds request data by calling the <xref:System.Net.WebRequest.GetRequestStream%2A> method.</span></span>  
+6.  <span data-ttu-id="26fef-119">Obtenha o fluxo que mantém dados de solicitação chamando o método <xref:System.Net.WebRequest.GetRequestStream%2A>.</span><span class="sxs-lookup"><span data-stu-id="26fef-119">Get the stream that holds request data by calling the <xref:System.Net.WebRequest.GetRequestStream%2A> method.</span></span>  
   
     ```csharp  
     Stream dataStream = request.GetRequestStream ();  
@@ -93,7 +93,7 @@ ms.locfileid: "53129461"
     Stream dataStream = request.GetRequestStream ()  
     ```  
   
-7.  <span data-ttu-id="d0bd5-120">Grave os dados no objeto <xref:System.IO.Stream> retornado por este método.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-120">Write the data to the <xref:System.IO.Stream> object returned by this method.</span></span>  
+7.  <span data-ttu-id="26fef-120">Grave os dados no objeto <xref:System.IO.Stream> retornado por este método.</span><span class="sxs-lookup"><span data-stu-id="26fef-120">Write the data to the <xref:System.IO.Stream> object returned by this method.</span></span>  
   
     ```csharp  
     dataStream.Write (byteArray, 0, byteArray.Length);  
@@ -103,7 +103,7 @@ ms.locfileid: "53129461"
     dataStream.Write (byteArray, 0, byteArray.Length)  
     ```  
   
-8.  <span data-ttu-id="d0bd5-121">Feche o fluxo da solicitação chamando o método **Stream.Close**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-121">Close the request stream by calling the **Stream.Close** method.</span></span>  
+8.  <span data-ttu-id="26fef-121">Feche o fluxo da solicitação chamando o método **Stream.Close**.</span><span class="sxs-lookup"><span data-stu-id="26fef-121">Close the request stream by calling the **Stream.Close** method.</span></span>  
   
     ```csharp  
     dataStream.Close ();  
@@ -113,7 +113,7 @@ ms.locfileid: "53129461"
     dataStream.Close ()  
     ```  
   
-9. <span data-ttu-id="d0bd5-122">Envie a solicitação para o servidor chamando <xref:System.Net.WebRequest.GetResponse%2A>.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-122">Send the request to the server by calling <xref:System.Net.WebRequest.GetResponse%2A>.</span></span> <span data-ttu-id="d0bd5-123">Esse método retorna um objeto que contém a resposta do servidor.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-123">This method returns an object containing the server's response.</span></span> <span data-ttu-id="d0bd5-124">O tipo do objeto <xref:System.Net.WebResponse> retornado é determinado pelo esquema do URI da solicitação.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-124">The returned <xref:System.Net.WebResponse> object's type is determined by the scheme of the request's URI.</span></span>  
+9. <span data-ttu-id="26fef-122">Envie a solicitação para o servidor chamando <xref:System.Net.WebRequest.GetResponse%2A>.</span><span class="sxs-lookup"><span data-stu-id="26fef-122">Send the request to the server by calling <xref:System.Net.WebRequest.GetResponse%2A>.</span></span> <span data-ttu-id="26fef-123">Esse método retorna um objeto que contém a resposta do servidor.</span><span class="sxs-lookup"><span data-stu-id="26fef-123">This method returns an object containing the server's response.</span></span> <span data-ttu-id="26fef-124">O tipo do objeto <xref:System.Net.WebResponse> retornado é determinado pelo esquema do URI da solicitação.</span><span class="sxs-lookup"><span data-stu-id="26fef-124">The returned <xref:System.Net.WebResponse> object's type is determined by the scheme of the request's URI.</span></span>  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -124,9 +124,9 @@ ms.locfileid: "53129461"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="d0bd5-125">Depois de terminar de usar um objeto <xref:System.Net.WebResponse>, você deve fechá-lo chamando o método <xref:System.Net.WebResponse.Close%2A>.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-125">After you are finished with a <xref:System.Net.WebResponse> object, you must close it by calling the <xref:System.Net.WebResponse.Close%2A> method.</span></span> <span data-ttu-id="d0bd5-126">Alternativamente, se você obteve o fluxo de resposta do objeto de resposta, você pode fechar o fluxo chamando o método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-126">Alternatively, if you have gotten the response stream from the response object, you can close the stream by calling the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d0bd5-127">Se você não fechar a resposta ou o fluxo, o seu aplicativo poderá ficar sem conexões para o servidor e, nesse caso, ficará incapaz de processar solicitações adicionais.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-127">If you do not close the response or the stream, your application can run out of connections to the server and become unable to process additional requests.</span></span>  
+    >  <span data-ttu-id="26fef-125">Depois de terminar de usar um objeto <xref:System.Net.WebResponse>, você deve fechá-lo chamando o método <xref:System.Net.WebResponse.Close%2A>.</span><span class="sxs-lookup"><span data-stu-id="26fef-125">After you are finished with a <xref:System.Net.WebResponse> object, you must close it by calling the <xref:System.Net.WebResponse.Close%2A> method.</span></span> <span data-ttu-id="26fef-126">Alternativamente, se você obteve o fluxo de resposta do objeto de resposta, você pode fechar o fluxo chamando o método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="26fef-126">Alternatively, if you have gotten the response stream from the response object, you can close the stream by calling the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="26fef-127">Se você não fechar a resposta ou o fluxo, o seu aplicativo poderá ficar sem conexões para o servidor e, nesse caso, ficará incapaz de processar solicitações adicionais.</span><span class="sxs-lookup"><span data-stu-id="26fef-127">If you do not close the response or the stream, your application can run out of connections to the server and become unable to process additional requests.</span></span>  
   
-10. <span data-ttu-id="d0bd5-128">Você pode acessar as propriedades da **WebResponse** ou converter a **WebResponse** para uma instância específica de protocolo para ler as propriedades específicas de protocolo.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-128">You can access the properties of the **WebResponse** or cast the **WebResponse** to a protocol-specific instance to read protocol-specific properties.</span></span> <span data-ttu-id="d0bd5-129">Por exemplo, para acessar as propriedades específicas de HTTP de <xref:System.Net.HttpWebResponse>, converta a **WebResponse** para uma referência de **HttpWebResponse**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-129">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebResponse>, cast the **WebResponse** to an **HttpWebResponse** reference.</span></span>  
+10. <span data-ttu-id="26fef-128">Você pode acessar as propriedades da **WebResponse** ou converter a **WebResponse** para uma instância específica de protocolo para ler as propriedades específicas de protocolo.</span><span class="sxs-lookup"><span data-stu-id="26fef-128">You can access the properties of the **WebResponse** or cast the **WebResponse** to a protocol-specific instance to read protocol-specific properties.</span></span> <span data-ttu-id="26fef-129">Por exemplo, para acessar as propriedades específicas de HTTP de <xref:System.Net.HttpWebResponse>, converta a **WebResponse** para uma referência de **HttpWebResponse**.</span><span class="sxs-lookup"><span data-stu-id="26fef-129">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebResponse>, cast the **WebResponse** to an **HttpWebResponse** reference.</span></span>  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -136,7 +136,7 @@ ms.locfileid: "53129461"
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
     ```  
   
-11. <span data-ttu-id="d0bd5-130">Para obter o fluxo que contém os dados de resposta enviados pelo servidor, chame o método <xref:System.Net.WebResponse.GetResponseStream%2A> da **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-130">To get the stream containing response data sent by the server, call the <xref:System.Net.WebResponse.GetResponseStream%2A> method of the **WebResponse**.</span></span>  
+11. <span data-ttu-id="26fef-130">Para obter o fluxo que contém os dados de resposta enviados pelo servidor, chame o método <xref:System.Net.WebResponse.GetResponseStream%2A> da **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="26fef-130">To get the stream containing response data sent by the server, call the <xref:System.Net.WebResponse.GetResponseStream%2A> method of the **WebResponse**.</span></span>  
   
     ```csharp  
     Stream data = response.GetResponseStream;  
@@ -146,7 +146,7 @@ ms.locfileid: "53129461"
     Dim data As Stream = response.GetResponseStream  
     ```  
   
-12. <span data-ttu-id="d0bd5-131">Depois de ler os dados da resposta ou você deve fechar o fluxo de resposta usando o método **Stream.Close** ou fechar a resposta usando o método **WebResponse.Close**.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-131">After reading the data from the response, you must either close the response stream using the **Stream.Close** method or close the response using the **WebResponse.Close** method.</span></span> <span data-ttu-id="d0bd5-132">Não é necessário chamar o método **Close** tanto no fluxo de resposta quanto na **WebResponse**, mas fazer isso não é prejudicial.</span><span class="sxs-lookup"><span data-stu-id="d0bd5-132">It is not necessary to call the **Close** method on both the response stream and the **WebResponse**, but doing so is not harmful.</span></span>  
+12. <span data-ttu-id="26fef-131">Depois de ler os dados da resposta ou você deve fechar o fluxo de resposta usando o método **Stream.Close** ou fechar a resposta usando o método **WebResponse.Close**.</span><span class="sxs-lookup"><span data-stu-id="26fef-131">After reading the data from the response, you must either close the response stream using the **Stream.Close** method or close the response using the **WebResponse.Close** method.</span></span> <span data-ttu-id="26fef-132">Não é necessário chamar o método **Close** tanto no fluxo de resposta quanto na **WebResponse**, mas fazer isso não é prejudicial.</span><span class="sxs-lookup"><span data-stu-id="26fef-132">It is not necessary to call the **Close** method on both the response stream and the **WebResponse**, but doing so is not harmful.</span></span>  
   
     ```csharp  
     response.Close();  
@@ -156,7 +156,7 @@ ms.locfileid: "53129461"
     response.Close()  
     ```  
   
-## <a name="example"></a><span data-ttu-id="d0bd5-133">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d0bd5-133">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="26fef-133">Exemplo</span><span class="sxs-lookup"><span data-stu-id="26fef-133">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -255,9 +255,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d0bd5-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d0bd5-134">See Also</span></span>  
- [<span data-ttu-id="d0bd5-135">Criar solicitações de Internet</span><span class="sxs-lookup"><span data-stu-id="d0bd5-135">Creating Internet Requests</span></span>](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [<span data-ttu-id="d0bd5-136">Usando fluxos na rede</span><span class="sxs-lookup"><span data-stu-id="d0bd5-136">Using Streams on the Network</span></span>](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [<span data-ttu-id="d0bd5-137">Acessando a Internet por meio de um proxy</span><span class="sxs-lookup"><span data-stu-id="d0bd5-137">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [<span data-ttu-id="d0bd5-138">Solicitando dados</span><span class="sxs-lookup"><span data-stu-id="d0bd5-138">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)  
- [<span data-ttu-id="d0bd5-139">Como solicitar dados usando a classe WebRequest</span><span class="sxs-lookup"><span data-stu-id="d0bd5-139">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+## <a name="see-also"></a><span data-ttu-id="26fef-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="26fef-134">See also</span></span>
+- [<span data-ttu-id="26fef-135">Criar solicitações de Internet</span><span class="sxs-lookup"><span data-stu-id="26fef-135">Creating Internet Requests</span></span>](../../../docs/framework/network-programming/creating-internet-requests.md)
+- [<span data-ttu-id="26fef-136">Usando fluxos na rede</span><span class="sxs-lookup"><span data-stu-id="26fef-136">Using Streams on the Network</span></span>](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [<span data-ttu-id="26fef-137">Acessando a Internet por meio de um proxy</span><span class="sxs-lookup"><span data-stu-id="26fef-137">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [<span data-ttu-id="26fef-138">Solicitando dados</span><span class="sxs-lookup"><span data-stu-id="26fef-138">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)
+- [<span data-ttu-id="26fef-139">Como: Solicitar dados usando a classe WebRequest</span><span class="sxs-lookup"><span data-stu-id="26fef-139">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
