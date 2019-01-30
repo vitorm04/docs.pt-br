@@ -1,5 +1,5 @@
 ---
-title: Como usar SpinWait para implementar uma operação bifásica de espera
+title: 'Como: Usar SpinWait para implementar uma operação bifásica de espera'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb2fbf5e0a310156fdc6fac5fe736692e8ec133
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 52b9164546d2061a65c79fb167b14543b0dae5a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576506"
 ---
-# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Como usar SpinWait para implementar uma operação bifásica de espera
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Como: Usar SpinWait para implementar uma operação bifásica de espera
 O exemplo a seguir mostra como usar um objeto <xref:System.Threading.SpinWait?displayProperty=nameWithType> para implementar uma operação de espera de duas fases. Na primeira fase, o objeto de sincronização, um `Latch`, gira por alguns ciclos enquanto verifica se o bloqueio ficou disponível. Na segunda fase, se o bloqueio ficar disponível, o método `Wait` retorna sem usar <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> para executar sua espera; caso contrário, `Wait` executa a espera.  
   
 ## <a name="example"></a>Exemplo  
@@ -32,5 +32,5 @@ O exemplo a seguir mostra como usar um objeto <xref:System.Threading.SpinWait?di
   
 ## <a name="see-also"></a>Consulte também
 
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)
 - [Objetos e recursos de threading](../../../docs/standard/threading/threading-objects-and-features.md)

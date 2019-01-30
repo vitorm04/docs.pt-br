@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127544"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066344"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -91,28 +91,35 @@ No SDK do .NET Core 2.1, todas as operações de ferramentas usam o comando `dot
 
 ## <a name="roll-forward"></a>Efetuar roll forward
 
-Todos os aplicativos .NET Core iniciados com o .NET Core 2.0 efetuam roll forward automaticamente para a *versão secundária* mais recente instalada em um sistema.
+Do .NET Core 2.0 em diante, todos os aplicativos .NET Core efetuam roll forward automaticamente para a última *versão secundária* instalada em um sistema.
 
 A partir do .NET Core 2.0, se a versão do .NET Core com a qual um aplicativo foi criado não estiver presente no tempo de execução, o aplicativo será executado automaticamente com a *versão secundária* do .NET Core instalada mais recente. Em outras palavras, se um aplicativo for criado com o .NET Core 2.0, e o .NET Core 2.0 não estiver presente no sistema do host, mas o .NET Core 2.1 estiver, o aplicativo será executado com o .NET Core 2.1.
 
 > [!IMPORTANT]
-> Esse comportamento de roll-forward não se aplica a versões prévias. Nem é aplicado às versões principais. Por exemplo, um aplicativo .NET Core 1.0 não efetua roll-forward para .NET Core 2.0 ou .NET Core 2.1.
+> Esse comportamento de roll-forward não se aplica a versões prévias. Por padrão, ele também não se aplica a versões principais, mas isso pode ser alterado com as configurações abaixo.
 
-Também é possível desabilitar o roll-forward para a versão secundária de três maneiras:
+Modifique esse comportamento alterando a configuração de roll forward em nenhuma estrutura compartilhada candidata. As configurações disponíveis são:
+- `0` – desabilitar o comportamento de roll forward da versão secundária. Com essa configuração, um aplicativo criado para o .NET Core 2.0.0 efetuará roll forward para o .NET Core 2.0.1, mas não para o .NET Core 2.2.0 ou o .NET Core 3.0.0.
+- `1` – habilitar o comportamento de roll forward da versão secundária. Esse é o valor padrão para a configuração. Com essa configuração, um aplicativo criado para o .NET Core 2.0.0 efetuará roll forward para o .NET Core 2.0.1 ou o .NET Core 2.2.0, dependendo de qual estiver instalado, mas não efetuará roll forward para o .NET Core 3.0.0.
+- `2` – habilitar o comportamento de roll forward das versões secundária e principal. Se essa opção estiver definida, até mesmo versões principais diferentes serão consideradas e, portanto, um aplicativo criado para o .NET Core 2.0.0 efetuará roll forward para o .NET Core 3.0.0.
 
-- Defina a variável de ambiente `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` para 0.
+Modifique essa configuração de uma das três maneiras:
 
-- Adicione a linha a seguir ao arquivo runtimeconfig.json:
+- Defina a variável de ambiente `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` com o valor desejado.
+
+- Adicione a seguinte linha com o valor desejado ao arquivo `runtimeconfig.json`:
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Ao usar [ferramentas da CLI do .NET Core](../tools/index.md), inclua a opção a seguir com um comando .NET Core, como `run`:
+- Ao usar as [ferramentas da CLI do .NET Core](../tools/index.md), adicione a seguinte opção com o valor desejado a um comando do .NET Core como `run`:
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+O roll forward da versão de patch é independente dessa configuração e é feito após a aplicação de qualquer roll forward potencial da versão secundária ou principal.
 
 ## <a name="deployment"></a>Implantação
 
@@ -239,6 +246,6 @@ No Linux e no macOS, só é possível configurar <xref:System.Net.Http.HttpClien
 
 ## <a name="see-also"></a>Consulte também
 
-* [Novidades do .NET Core](index.md)  
-* [Novos recursos no EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-* [Novidades do ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+- [Novidades do .NET Core](index.md)
+- [Novos recursos no EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)
+- [Novidades do ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

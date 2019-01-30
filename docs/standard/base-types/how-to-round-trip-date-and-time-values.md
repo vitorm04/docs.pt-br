@@ -1,5 +1,5 @@
 ---
-title: Como aplicar uma viagem de ida e volta a valores de data e hora
+title: 'Como: Valores de data e hora de viagem de ida e volta'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628182"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Como aplicar uma viagem de ida e volta a valores de data e hora
+# <a name="how-to-round-trip-date-and-time-values"></a>Como: Valores de data e hora de viagem de ida e volta
 Em muitos aplicativos, um valor de data e hora destina-se a identificar sem ambiguidade um único ponto no tempo. Este tópico mostra como salvar e restaurar um valor <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> para que o valor restaurado identifique o mesmo horário que o valor salvo.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Para fazer uma viagem de ida e volta de um valor DateTime  
@@ -101,6 +101,6 @@ Em muitos aplicativos, um valor de data e hora destina-se a identificar sem ambi
   
 ## <a name="see-also"></a>Consulte também
 
-- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

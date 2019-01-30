@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454389"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494555"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core e software livre
 Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra como você pode encontrar mais informações. Para obter a lista completa de tópicos sobre o .NET Core, visite o [Guia do .NET Core](../../core/index.md).
@@ -22,7 +22,7 @@ Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra 
   
  Estas são as principais características do .NET Core:  
   
--   **Plataforma cruzada:** o .NET Core fornece uma funcionalidade essencial para implementação de recursos de aplicativo necessários, e reutilização desse código independentemente de seu destino de plataforma. No momento, ele oferece suporte aos três principais sistemas operacionais (SO): Windows, Linux e macOS. Você pode escrever aplicativos e bibliotecas que são executados sem modificações em sistemas operacionais com suporte. Para ver a lista de sistemas operacionais com suporte, visite [Roteiro do .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
+-   **Plataforma cruzada:** o .NET Core fornece uma funcionalidade essencial para implementação de recursos de aplicativo necessários, e reutilização desse código independentemente de seu destino de plataforma. Atualmente, ele dá suporte a três principais sistemas operacionais: Windows, Linux e macOS. Você pode escrever aplicativos e bibliotecas que são executados sem modificações em sistemas operacionais com suporte. Para ver a lista de sistemas operacionais com suporte, visite [Roteiro do .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
   
 -   **Software livre:** o .NET Core é um dos muitos projetos sob a administração do [.NET Foundation](https://www.dotnetfoundation.org/) e está disponível no [GitHub](https://github.com/).  Ter o .NET Core como um projeto de código-fonte aberto promove um processo de desenvolvimento mais transparente e uma comunidade ativa e dedicada.  
   
@@ -45,7 +45,7 @@ Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra 
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
-## <a name="see-also"></a>Consulte também  
-- [Home page do .NET Core](https://www.microsoft.com/net/core)  
-- [Guia do .NET Core](../../core/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Home page do .NET Core](https://www.microsoft.com/net/core)
+- [Guia do .NET Core](../../core/index.md)
 - [Documentação do ASP.NET Core](/aspnet/core/)

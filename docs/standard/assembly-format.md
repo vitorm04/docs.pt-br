@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 219e2872ab58980ef7b4bce8e901341d8893a1a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f713c06fa6749c70bc3f87e8cda81114f153a095
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567244"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065889"
 ---
 # <a name="net-assembly-file-format"></a>Formato de arquivo do Assembly .NET
 

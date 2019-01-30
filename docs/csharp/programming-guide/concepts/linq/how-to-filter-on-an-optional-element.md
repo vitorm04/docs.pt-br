@@ -1,15 +1,15 @@
 ---
-title: Como filtrar em um elemento opcional (C#)
+title: 'Como: Filtrar em um elemento opcional (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: c781db261dbf673af7a11150971956b4c07da774
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1aeb234365fa5d02911f70bb70a860258ce62f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540095"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>Como filtrar em um elemento opcional (C#)
+# <a name="how-to-filter-on-an-optional-element-c"></a>Como: Filtrar em um elemento opcional (C#)
 Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML. A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele. No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.  
   
 ## <a name="example"></a>Exemplo  
@@ -97,9 +97,9 @@ Child Four Text
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
-- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
-- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
+- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Operações de projeção (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

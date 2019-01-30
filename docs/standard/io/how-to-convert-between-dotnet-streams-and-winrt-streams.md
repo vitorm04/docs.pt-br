@@ -1,5 +1,5 @@
 ---
-title: 'Como converter entre fluxos do .NET Framework e do Windows Runtime '
+title: 'Como: Fazer a conversão entre fluxos do .NET Framework e fluxos do Windows Runtime'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492750"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Como converter entre fluxos do .NET Framework e do Windows Runtime 
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Como: Fazer a conversão entre fluxos do .NET Framework e fluxos do Windows Runtime
 
 O .NET Framework para aplicativos da Windows Store é um subconjunto do .NET Framework completo. Devido a requisitos de segurança e outros requisitos dos aplicativos da Windows Store, você não pode usar o conjunto completo de APIs do .NET Framework para abrir e ler arquivos. Para saber mais, confira [Visão geral do .NET para aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). No entanto, talvez você queira usar APIs do .NET Framework para outras operações de manipulação de fluxos. Para manipular esses fluxos, talvez você ache necessário converter entre um tipo de fluxo do .NET Framework, como <xref:System.IO.MemoryStream> ou <xref:System.IO.FileStream>, e um fluxo do Windows Runtime, como <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> ou <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
@@ -79,6 +79,6 @@ Os fluxos do .NET Framework não oferecem suporte a clonagem, mesmo após a conv
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Início Rápido: Lendo e gravando arquivos (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [Visão geral dos aplicativos .NET para Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [.NET para aplicativos da Windows Store – APIs com suporte](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Início Rápido: Lendo e gravando um arquivo (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [Visão geral dos aplicativos .NET para Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [.NET para aplicativos da Windows Store – APIs com suporte](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

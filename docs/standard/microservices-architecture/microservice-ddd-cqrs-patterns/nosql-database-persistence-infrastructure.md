@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 720c33fb4af197198f8ee1a21c5e1dc6dad24ce3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150851"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066279"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Usar bancos de dados NoSQL como infraestrutura de persistência
 
@@ -151,7 +151,7 @@ Um benefício claro de usar a API do MongoDB é que a solução pode ser executa
 
 Para obter mais comparações entre o simples uso do MongoDB ou do Cosmos DB na nuvem, consulte [Benefícios de usar o Azure Cosmos DB, nesta página](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction). 
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analisar sua abordagem para aplicativos de produção: API do MongoDB em relação à API do Cosmos DB
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analise sua abordagem para aplicativos de produção: API do MongoDB vs. API do Cosmos DB
 
 No eShopOnContainers, estamos usando a API do MongoDB porque nossa prioridade era basicamente ter um ambiente de Desenvolvimento/Teste consistente usando um banco de dados NoSQL que também pudesse funcionar com o Azure Cosmos DB.
 
@@ -161,7 +161,7 @@ Você também pode usar clusters do MongoDB como o banco de dados de produção 
 
 Basicamente, isso é apenas um aviso de isenção de responsabilidade informando que você não deve usar sempre a API do MongoDB no Azure Cosmos DB, como fizemos no eShopOnContainers, porque essa foi uma opção conveniente para contêineres do Linux. A decisão deve ser baseada as necessidades específicas e nos testes que você precisa fazer para o aplicativo de produção.
 
-### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>O código: usar a API MongoDB em aplicativos .NET Core
+### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>O código: Usar a API do MongoDB em aplicativos .NET Core
 
 A API do MongoDB para .NET baseia-se em pacotes NuGet que você precisa adicionar nos projetos, como no projeto Locations.API mostrado na figura a seguir.
 
@@ -279,7 +279,7 @@ services:
 
 ```
 
-A variável de ambiente `ConnectionString` é resolvida desta forma: se a variável global `ESHOP_AZURE_COSMOSDB` estiver definida no arquivo `.env` com a cadeia de conexão do Azure Cosmos DB, ela o usará para acessar o banco de dados Azure Cosmos DB na nuvem. Se não estiver definido, ele pegará o valor de mongodb://nosql.data e usará o contêiner do mongodb de desenvolvimento.
+A variável de ambiente `ConnectionString` é resolvida desta forma: Se a variável global `ESHOP_AZURE_COSMOSDB` estiver definida no arquivo `.env` com a cadeia de conexão do Azure Cosmos DB, ela a usará para acessar o banco de dados do Azure Cosmos DB na nuvem. Se não estiver definido, ele pegará o valor de mongodb://nosql.data e usará o contêiner do mongodb de desenvolvimento.
 
 O código a seguir mostra o arquivo `.env` com a variável de ambiente global da cadeia de conexão do Azure Cosmos DB, conforme implementado no eShopOnContainers:
 
@@ -317,12 +317,12 @@ services:
   [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 - **Vaughn Vernon. O repositório de agregação de design orientado por domínio ideal?** \
-  [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+  <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
-- **Introdução ao Azure Cosmos DB: API para o MongoDB**  \
+- **Introdução ao Azure Cosmos DB: API para MongoDB**  \
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
-- **Azure Cosmos DB: criar um aplicativo Web da API MongoDB com o .NET e o portal do Azure**  \
+- **Azure Cosmos DB: Criar um aplicativo Web da API do MongoDB com o .NET e o portal do Azure**  \
   [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet*](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 - **Usar o emulador do Azure Cosmos DB para desenvolvimento e teste local**  \
@@ -337,7 +337,7 @@ services:
 - **A imagem do Docker do MongoDB (contêiner do Linux e do Windows)**  \
   [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
-- **Usar o MongoChef (Studio 3T) com um Azure Cosmos DB: API de conta do MongoDB**  \
+- **Usar o MongoChef (Studio 3T) com um Azure Cosmos DB: Conta da API do MongoDB**  \
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 >[!div class="step-by-step"]

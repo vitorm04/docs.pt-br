@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8219888b7944a19b100f73aab3713c09fd93f45b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569934"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Criar arquivos de recursos para aplicativos de área de trabalho
 Você pode incluir recursos, como cadeias de caracteres, imagens ou dados de objetos em arquivos de recursos para torná-los facilmente disponíveis no seu aplicativo. O .NET Framework tem cinco maneiras de criar arquivos de recursos:  
@@ -196,9 +196,9 @@ csc greeting.cs -resource:GreetingResources.resources
   
  Se você estiver adicionando recursos localizados, deve atribuir o mesmo nome do arquivo raiz do arquivo de recurso principal, devendo também designar a cultura no nome do arquivo. Por exemplo, se você adicionar um arquivo de recurso denominado Resources.resx, também pode criar arquivos de recursos chamados Resources.en-US.resx e fr Resources.fr-FR.resx para armazenar recursos para as culturas do Inglês (Estados Unidos) e Francês (França), respetivamente. Também deve designar a cultura padrão do seu aplicativo. Essa é a cultura em que os recursos são usados se não existirem recursos localizados encontrados para uma determinada cultura. Para especificar a cultura padrão, no Solution Explorer no Visual Studio, clique com botão direito no nome do projeto, aponte para Aplicativo, clique em **Informações de Assembly** e selecione a idioma/cultura apropriada na lista de **Idioma Neutro**.  
   
- No momento da compilação, o VIsual Studio converte primeiro os arquivos .resx em um projeto para os arquivos de recurso binários (.resources) e armazena-os num subdiretório do diretório obj do projeto. O Visual Studio incorpora quaisquer arquivos de recurso que não contenham recursos localizados no assembly principal que é gerado pelo projeto. Se os arquivos de recurso contém os recursos localizados, o Visual Studio insere-os em assemblies satélites separados para cada cultura localizada. Em seguida, armazena cada assembly satélite em um diretório cujo nome corresponde à cultura localizada. Por exemplo, os recursos localizados do Inglês (Estados Unidos) são armazenados em um assembly satélite no subdiretório en-US.  
+ No momento da compilação, o VIsual Studio converte primeiro os arquivos .resx em um projeto para os arquivos de recurso binários (.resources) e armazena-os num subdiretório do diretório obj do projeto. O Visual Studio incorpora quaisquer arquivos de recurso que não contenham recursos localizados no assembly principal que é gerado pelo projeto. Se os arquivos de recurso contém os recursos localizados, o Visual Studio insere-os em assemblies satélites separados para cada cultura localizada. Em seguida, ele armazena cada assembly satélite em um diretório cujo nome corresponde à cultura localizada. Por exemplo, os recursos localizados do Inglês (Estados Unidos) são armazenados em um assembly satélite no subdiretório en-US.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Resources>  
- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)  
- [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Resources>
+- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
+- [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

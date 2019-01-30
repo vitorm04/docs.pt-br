@@ -1,5 +1,5 @@
 ---
-title: Como escrever um loop Parallel.For simples
+title: 'Como: Escrever um loop Parallel.For simples'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b2ebf679816684e68a1c13d660ef9fc54e3a175
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574918"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Como escrever um loop Parallel.For simples
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Como: Escrever um loop Parallel.For simples
 
 Este tópico contém dois exemplos que ilustram o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. O primeiro usa a sobrecarga do método <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> e o segundo usa a sobrecarga <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, as duas sobrecargas mais simples do método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Você pode usar essas duas sobrecargas do método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando não for preciso cancelar o loop, dividir as iterações do loop ou manter qualquer estado local do thread.
 

@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143595"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066245"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projetar um modelo de domínio de microsserviço
 
@@ -82,16 +82,17 @@ O EF Core 2.0 inclui o recurso [Entidades de Propriedade](https://blogs.msdn.mic
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Martin Fowler. Padrão de objeto de valor**
+- **Martin Fowler. Padrão de objeto de valor** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Objeto de valor**
+- **Objeto de valor** \
   [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
-- **Objetos de valor no Desenvolvimento Orientado por Testes**
+- **Objetos de valor no Desenvolvimento Orientado por Testes** \
   [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre objetos de valor) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Design orientado por domínio: Lidando com a complexidade no núcleo do software.** (Livro; inclui uma discussão sobre objetos de valor) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>O padrão de agregação
 
@@ -134,14 +135,14 @@ Para identificar e trabalhar com agregações é necessário fazer pesquisas e t
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Vaughn Vernon. Design de agregação eficaz – parte I: modelando uma única agregação** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon. Design de agregação efetivo – parte I: Modelando uma única agregação** (de <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Design de agregação eficaz – parte II: fazendo com que agregações trabalhem em conjunto** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon. Design de agregação efetivo – parte II: Fazendo com que agregações trabalhem em conjunto** (de <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Design de agregação eficaz – parte III: obtendo insights por meio da descoberta** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon. Design de agregação efetivo – parte III: Obtendo insights por meio da descoberta** (de <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. Padrões de design tático em DDD** \
   [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)

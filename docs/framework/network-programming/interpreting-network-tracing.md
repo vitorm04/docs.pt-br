@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576519"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretando o rastreamento de rede
 Quando o rastreamento de rede está habilitado, você pode usar o rastreamento para capturar as chamadas que seu aplicativo faz para membros de classe <xref:System.Net> diversos. A saída dessas chamadas pode ser semelhante aos exemplos a seguir.  
@@ -26,7 +26,7 @@ Quando o rastreamento de rede está habilitado, você pode usar o rastreamento p
   
  No exemplo anterior, [588] é o identificador exclusivo do thread atual. (4357) e (4387) são os carimbos de data/hora que indicam o número de milissegundos decorridos desde que o aplicativo foi iniciado. Os dados após o carimbo de data/hora mostram o aplicativo entrando e saindo do método **Socket.Send**. O objeto executando o método **Send** tem 33574638 como seu identificador exclusivo. O rastreamento de saída do método inclui o valor retornado (que é 61 no exemplo anterior).  
   
- Rastreamentos de rede podem capturar o tráfego de rede que é enviado e recebido pelo seu aplicativo usando os protocolos de nível de aplicativo como o protocolo HTTP. Esses dados podem ser capturados como texto e, opcionalmente, como dados hexadecimais. Dados hexadecimais estão disponíveis quando você especifica **includehex** como o valor do atributo **tracemode**. (Para obter informações detalhadas sobre esse atributo, consulte [Como configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) O rastreamento de exemplo a seguir foi gerado usando **includehex**.  
+ Rastreamentos de rede podem capturar o tráfego de rede que é enviado e recebido pelo seu aplicativo usando os protocolos de nível de aplicativo como o protocolo HTTP. Esses dados podem ser capturados como texto e, opcionalmente, como dados hexadecimais. Dados hexadecimais estão disponíveis quando você especifica **includehex** como o valor do atributo **tracemode**. (Para obter informações detalhadas sobre esse atributo, confira [Como: Configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) O rastreamento de exemplo a seguir foi gerado usando **includehex**.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -44,7 +44,7 @@ Quando o rastreamento de rede está habilitado, você pode usar o rastreamento p
   
  `Connection: Close`  
   
-## <a name="see-also"></a>Consulte também  
- [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Como configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a>Consulte também
+- [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Como: Configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)

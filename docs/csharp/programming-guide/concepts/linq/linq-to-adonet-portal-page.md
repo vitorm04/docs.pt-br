@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (página do portal)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: d65f041751a9418d0eebd3f92fd33a414cbed699
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 51bca1cae25cf20244b183946964a3de14a2d796
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502007"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (página do portal)
 O [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] permite que você realize consultas em qualquer objeto enumerável em [!INCLUDE[vstecado](~/includes/vstecado-md.md)] usando o modelo de programação [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 > [!NOTE]
->  A documentação do [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] está localizada na seção ADO.NET do SDK do .NET Framework: [LINQ e o ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
+>  A documentação do [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] está localizada na seção ADO.NET do SDK do .NET Framework: [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  Há três tecnologias separadas do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] do ADO.NET: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. O [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] fornece consultas mais sofisticadas e otimizadas do que o <xref:System.Data.DataSet>, o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] permite que você consulte diretamente os esquemas de banco de dados do SQL Server e o [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] permite que você consulte um [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)].  
   
@@ -36,5 +36,5 @@ O [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] permite que você realiz
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)  
-- [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
+- [LINQ (consulta integrada à linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

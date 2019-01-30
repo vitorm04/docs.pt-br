@@ -1,17 +1,17 @@
 ---
-title: 'Mitigação: método X509CertificateClaimSet.FindClaims'
+title: 'Mitigação: Método X509CertificateClaimSet.FindClaims'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b927ed2e68ddea537f87b692d5c3a949234f81f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccc24cd494866c087860144f1720988ccfc2dfa8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536432"
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigação: método X509CertificateClaimSet.FindClaims
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigação: Método X509CertificateClaimSet.FindClaims
 Começando com aplicativos que direcionam o [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], o método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> tentará corresponder o argumento `claimType` com todas as entradas DNS em seu campo SAN.  
   
 ## <a name="impact"></a>Impacto  
@@ -36,5 +36,5 @@ Começando com aplicativos que direcionam o [!INCLUDE[net_v461](../../../include
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+## <a name="see-also"></a>Consulte também
+- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)

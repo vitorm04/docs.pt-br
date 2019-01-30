@@ -1,5 +1,5 @@
 ---
-title: Como carregar assemblies em um domínio de aplicativo
+title: 'Como: Carregar assemblies em um domínio do aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c6b816c3a2c4f684993117deb38b40f4436a627c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653795"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Como carregar assemblies em um domínio de aplicativo
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Como: Carregar assemblies em um domínio do aplicativo
 Há várias maneiras de carregar um assembly em um domínio de aplicativo. A maneira recomendada é usar o método <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` no Visual Basic) da classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Outras maneiras que os assemblies podem ser carregados incluem:  
   
 -   O método <xref:System.Reflection.Assembly.LoadFrom%2A> da classe <xref:System.Reflection.Assembly> carrega um assembly dado seu local do arquivo. O carregamento de assemblies com esse método usa um contexto de carga diferente.  
   
--   Os métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> carregam um assembly no contexto de somente reflexão. Os assemblies carregados neste contexto podem ser examinados, mas não executados, permitindo o exame dos assemblies que visam outras plataformas. Consulte [Como carregar assemblies no contexto de somente reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   Os métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> carregam um assembly no contexto de somente reflexão. Os assemblies carregados neste contexto podem ser examinados, mas não executados, permitindo o exame dos assemblies que visam outras plataformas. Confira [Como carregar assemblies no contexto somente de reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 > [!NOTE]
 >  O contexto de somente reflexão é uma novidade no .NET Framework versão 2.0.  
@@ -46,10 +46,10 @@ Há várias maneiras de carregar um assembly em um domínio de aplicativo. A man
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
-- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)  
-- [Reflexão](../../../docs/framework/reflection-and-codedom/reflection.md)  
-- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)  
-- [Como carregar assemblies no contexto somente reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+## <a name="see-also"></a>Consulte também
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
+- [Reflexão](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)
+- [Como: Carregar assemblies no contexto somente de reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domínios do aplicativo e assemblies](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f319ef94a5a0f1a5239a2f506386dbc15f0505ef
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: bad63bbc8e221f306e5807f51fbbb8eb4761d0fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599173"
 ---
 # <a name="multifile-assemblies"></a>Assemblies de vários arquivos
 
@@ -43,5 +43,5 @@ Depois de criar o assembly, você pode assinar o arquivo que contém o manifesto
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como Compilar um Assembly de Vários Arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Como: Criar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

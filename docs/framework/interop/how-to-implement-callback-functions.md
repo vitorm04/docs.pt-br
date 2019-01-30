@@ -1,5 +1,5 @@
 ---
-title: Como implementar funções de retorno de chamada
+title: 'Como: Implementar funções de retorno de chamada'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718670"
 ---
-# <a name="how-to-implement-callback-functions"></a>Como implementar funções de retorno de chamada
+# <a name="how-to-implement-callback-functions"></a>Como: Implementar funções de retorno de chamada
 O procedimento e o exemplo a seguir demonstram como um aplicativo gerenciado, usando invocação de plataforma, pode imprimir o valor do identificador para cada janela no computador local. Especificamente, o procedimento e o exemplo usam a função **EnumWindows** para percorrer a lista de janelas e uma função de retorno de chamada gerenciada (chamada CallBack) para imprimir o valor do identificador da janela.  
   
 ### <a name="to-implement-a-callback-function"></a>Para implementar uma função de retorno de chamada  
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de retorno de chamada](../../../docs/framework/interop/callback-functions.md)  
- [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Consulte também
+- [Funções de retorno de chamada](../../../docs/framework/interop/callback-functions.md)
+- [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)

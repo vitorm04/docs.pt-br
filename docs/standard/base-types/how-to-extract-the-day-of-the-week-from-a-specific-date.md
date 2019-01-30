@@ -1,5 +1,5 @@
 ---
-title: Como extrair o dia da semana de uma data específica
+title: 'Como: Extrair o dia da semana de uma data específica'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58676b1726496a33496b10bbd3befba82aea4434
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537966"
 ---
-# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Como extrair o dia da semana de uma data específica
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Como: Extrair o dia da semana de uma data específica
 O .NET Framework facilita a verificação da posição numérica do dia da semana em uma determinada data e a exibição do nome do dia localizado em uma determinada data. O valor enumerado que indica o dia da semana correspondente a uma determinada data está disponível na propriedade <xref:System.DateTime.DayOfWeek%2A> ou <xref:System.DateTimeOffset.DayOfWeek%2A>. Em contrapartida, para recuperar o nome do dia da semana é necessário realizar uma operação de formatação que pode ser executada com a chamada de um método de formatação, como o método `ToString` ou <xref:System.String.Format%2A?displayProperty=nameWithType> de valor de data e hora. Este tópico mostra como executar essas operações de formatação.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Para extrair um número que indique o dia da semana em uma determinada data  
@@ -53,7 +53,7 @@ O .NET Framework facilita a verificação da posição numérica do dia da seman
   
 2.  Você pode extrair o nome de dia da semana abreviado da cultura atual ou de uma cultura específica:  
   
-    1.  Para extrair o nome de dia da semana abreviado da cultura atual, chame o método de instância <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> do valor de data e hora e informe a cadeia de caracteres "ddd" como o parâmetro `format`. O exemplo a seguir ilustra a chamada do método <xref:System.DateTime.ToString%28System.String%29>.  
+    1.  Para extrair o nome de dia da semana abreviado da cultura atual, chame o método de instância <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> do valor de data e hora e informe a cadeia de caracteres "ddd" como o parâmetro `format`. O exemplo a seguir ilustra a chamada para o método <xref:System.DateTime.ToString%28System.String%29>.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
@@ -102,6 +102,6 @@ O .NET Framework facilita a verificação da posição numérica do dia da seman
   
 ## <a name="see-also"></a>Consulte também
 
-- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

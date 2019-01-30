@@ -1,15 +1,15 @@
 ---
-title: Como filtrar em um atributo (XPath-LINQ to XML) (C#)
+title: 'Como: Filtrar em um atributo (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 9d99387be6683dcc46d36b5fdefbcd09f998eab1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b9f3d18bbfe773d782239d67e8f43bdf4ac52d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603788"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Como filtrar em um atributo (XPath-LINQ to XML) (C#)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Como: Filtrar em um atributo (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.  
   
  A expressão XPath é:  
@@ -19,7 +19,7 @@ Este tópico mostra como obter os elementos descendentes com um nome especificad
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza os elementos dos descendentes com o nome de `Address`, e com um atributo de `Type` com um valor de “enviar”.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Várias ordens de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

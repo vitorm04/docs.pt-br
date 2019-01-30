@@ -1,207 +1,168 @@
 ---
-title: Implantar aplicativos .NET Core com ferramentas de CLI (interface de linha de comando)
-description: Aprender a implantar um aplicativo .NET Core com ferramentas de CLI (interface de linha de comando)
-author: rpetrusha
-ms.author: ronpet
-ms.date: 09/05/2018
+title: Publicar aplicativos .NET Core com a CLI
+description: Saiba como publicar um aplicativo .NET Core com as ferramentas da CLI (interface de linha de comando) do SDK do .NET Core.
+author: thraka
+ms.author: adegeo
+ms.date: 01/16/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503996"
 ---
-# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Implantar aplicativos .NET Core com ferramentas de CLI (interface de linha de comando)
+# <a name="publish-net-core-apps-with-the-cli"></a>Publicar aplicativos .NET Core com a CLI
 
-Você pode implantar um aplicativo .NET Core como uma *implantação dependente de estrutura*, que inclui os binários do seu aplicativo, mas depende da presença do .NET Core no sistema de destino, ou como uma *implantação autocontida*, que inclui os binários do seu aplicativo e do .NET Core. Para obter uma visão geral, consulte [Implantação de aplicativos .NET Core](index.md).
+Este artigo demonstra como você pode publicar seu aplicativo .NET Core por meio da linha de comando. O .NET Core fornece três maneiras de publicar seus aplicativos. A implantação dependente de estrutura produz um arquivo .dll multiplataforma que usa o tempo de execução do .NET Core instalado localmente. O executável dependente de estrutura produz um executável específico da plataforma que usa o tempo de execução do .NET Core instalado localmente. O executável autossuficiente produz um executável específico da plataforma e inclui uma cópia local do tempo de execução do .NET Core.
 
-As seções a seguir mostram como usar [ferramentas de interface de linha de comando do .NET Core](../tools/index.md) para criar os seguintes tipos de implantações:
+Para obter uma visão geral desses modos de publicação, confira [Implantação de aplicativos .NET Core](index.md). 
 
-- Implantação dependente de estrutura
-- Implantação dependente de estrutura com dependências de terceiros
-- Implantação autocontida
-- Implantação autocontida com dependências de terceiros
+Procurando uma ajuda rápida de como usar a CLI? A tabela a seguir mostra alguns exemplos de como publicar o aplicativo. Especifique a estrutura de destino com o parâmetro `-f <TFM>` ou editando o arquivo de projeto. Para obter mais informações, confira [Noções básicas de publicação](#publishing-basics).
 
-Ao trabalhar na linha de comando, você pode usar um editor de programa de sua escolha. Se o editor de programa for o [Visual Studio Code](https://code.visualstudio.com), você poderá abrir um console de comando dentro do ambiente do Visual Studio Code selecionando **Exibir** > **Terminal Integrado**.
+| Modo de publicação | Versão do SDK | Comando |
+| ------------ | ----------- | ------- |
+| Implantação dependente de estrutura | 2.x | `dotnet publish -c Release` |
+| Executável dependente de estrutura | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0* | `dotnet publish -c Release` |
+| Implantação autocontida      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+
+>[!IMPORTANT]
+>\*Ao usar a versão 3.0 do SDK, o executável dependente de estrutura será o modo de publicação padrão durante a execução do comando `dotnet publish` básico. Isso se aplica somente a projetos direcionados ao **.NET Core 2.1** ou ao **.NET Core 3.0**.
+
+## <a name="publishing-basics"></a>Noções básicas de publicação
+
+A configuração `<TargetFramework>` do arquivo de projeto especifica a estrutura de destino padrão quando o aplicativo é publicado. Altere a estrutura de destino para qualquer [TFM](../../standard/frameworks.md) (Moniker da Estrutura de Destino) válido. Por exemplo, se o projeto usa `<TargetFramework>netcoreapp2.2</TargetFramework>`, um binário direcionado ao .NET Core 2.2 é criado. O TFM especificado nessa configuração é o destino padrão usado pelo comando [`dotnet publish`][dotnet-publish].
+
+Caso deseje definir mais de uma estrutura como destino, defina a configuração `<TargetFrameworks>` com mais de um valor TFM separado por ponto-e-vírgula. Publique uma das estruturas com o comando `dotnet publish -f <TFM>`. Por exemplo, se você tem `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` e executa `dotnet publish -f netcoreapp2.1`, um binário direcionado ao .NET Core 2.1 é criado.
+
+A menos que seja definido de outro modo, o diretório de saída do comando [`dotnet publish`][dotnet-publish] é `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. O modo **CONFIGURAÇÃO DE BUILD** padrão é **Depuração**, a menos que seja alterado com o parâmetro `-c`. Por exemplo, `dotnet publish -c Release -f netcoreapp2.1` publica em `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+
+Se você usa o SDK do .NET Core 3.0, o modo de publicação padrão para aplicativos direcionados ao .NET Core versões 2.1, 2.2 ou 3.0 é o executável dependente de estrutura.
+
+Se você usa o SDK do .NET Core 2.1, o modo de publicação padrão para aplicativos direcionados ao .NET Core versões 2.1 ou 2.2 é a implantação dependente de estrutura.
+
+### <a name="native-dependencies"></a>Dependências nativas
+
+Se o aplicativo tiver dependências nativas, ele poderá não ser executado em um sistema operacional diferente. Por exemplo, se o aplicativo usar a API nativa do Win32, ele não será executado no macOS ou no Linux. Você precisará fornecer um código específico da plataforma e compilar um executável para cada plataforma. 
+
+Considere também que, se uma biblioteca referenciada tiver uma dependência nativa, o aplicativo poderá não ser executado em todas as plataformas. No entanto, é possível que um pacote NuGet referenciado tenha incluído versões específicas da plataforma para lidar com as dependências nativas necessárias para você.
+
+Ao distribuir um aplicativo com dependências nativas, talvez você precise usar a opção `dotnet publish -r <RID>` para especificar a plataforma de destino na qual deseja publicar. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
+
+Mais informações sobre binários específicos da plataforma são abordadas nas seções [Executável dependente de estrutura](#framework-dependent-executable) e [Implantação autossuficiente](#self-contained-deployment).
+
+## <a name="sample-app"></a>Aplicativo de exemplo
+
+Use o aplicativo a seguir para explorar os comandos de publicação. O aplicativo é criado pela execução dos seguintes comandos no terminal:
+
+```dotnetcli
+mkdir apptest1
+cd apptest1
+dotnet new console
+dotnet add package Figgle
+```
+
+O arquivo `Program.cs` ou `Program.vb` gerado pelo modelo de console precisa ser alterado para o seguinte:
+
+```csharp
+using System;
+
+namespace apptest1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"));
+        }
+    }
+}
+```
+```vb
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
+    End Sub
+End Module
+```
+
+Quando você executa o aplicativo ([`dotnet run`][dotnet-run]), a seguinte saída é exibida:
+
+```terminal
+  _   _      _ _         __        __         _     _ _
+ | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+ |_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                     |/
+```
 
 ## <a name="framework-dependent-deployment"></a>Implantação dependente de estrutura
 
-Implantar uma implantação dependente de estrutura sem dependências de terceiros significa simplesmente compilar, testar e publicar o aplicativo. Um exemplo simples criado em C# ilustra o processo.
+Para a CLI do SDK do .NET Core 2.x, a FDD (implantação dependente de estrutura) é o modo padrão para o comando `dotnet publish` básico.
 
-1. Crie um diretório de projeto.
+Quando você publica o aplicativo como uma FDD, um arquivo `<PROJECT-NAME>.dll` é criado na pasta `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Para executar o aplicativo, navegue para a pasta de saída e use o comando `dotnet <PROJECT-NAME>.dll`.
 
-   Crie um diretório para seu projeto e torne-o o diretório atual.
+O aplicativo está configurado para ser direcionado a uma versão específica do .NET Core. O tempo de execução do .NET Core de destino deve estar no computador em que você deseja executar o aplicativo. Por exemplo, se o aplicativo for direcionado ao .NET Core 2.2, qualquer computador no qual o aplicativo é executado precisará ter o tempo de execução do .NET Core 2.2 instalado. Conforme indicado na seção [Noções básicas de publicação](#publishing-basics), você pode editar o arquivo de projeto para alterar a estrutura de destino padrão ou para definir mais de uma estrutura como destino.
 
-1. Crie o projeto.
+A publicação de uma FDD cria um aplicativo que efetua roll forward automaticamente para o último patch de segurança do .NET Core disponível no sistema que executa o aplicativo. Para obter mais informações sobre a associação de versão no tempo de compilação, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-   Na linha de comando, digite [dotnet new console](../tools/dotnet-new.md) para criar um novo projeto de console em C# ou [dotnet new console -lang vb](../tools/dotnet-new.md) para criar um novo projeto de console do Visual Basic nesse diretório.
+## <a name="framework-dependent-executable"></a>Executável dependente de estrutura
 
-1. Adicione o código-fonte do aplicativo.
+Para a CLI do SDK do .NET Core 3.x, o FDE (executável dependente de estrutura) é o modo padrão para o comando `dotnet publish` básico. Você não precisa especificar outros parâmetros, desde que queira definir o sistema operacional atual como destino.
 
-   Abra o arquivo *Program.cs* ou *Program.vb* no editor e substitua o código gerado automaticamente com o código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+Nesse modo, um host do executável específico da plataforma é criado para hospedar o aplicativo multiplataforma. Esse modo é semelhante ao FDD, pois o FDD exige um host na forma do comando `dotnet`. O nome de arquivo executável do host varia de acordo com a plataforma e recebe um nome semelhante a `<PROJECT-FILE>.exe`. Execute esse executável diretamente em vez de chamar `dotnet <PROJECT-FILE>.dll`, o que ainda é uma forma aceitável de executar o aplicativo.
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+O aplicativo está configurado para ser direcionado a uma versão específica do .NET Core. O tempo de execução do .NET Core de destino deve estar no computador em que você deseja executar o aplicativo. Por exemplo, se o aplicativo for direcionado ao .NET Core 2.2, qualquer computador no qual o aplicativo é executado precisará ter o tempo de execução do .NET Core 2.2 instalado. Conforme indicado na seção [Noções básicas de publicação](#publishing-basics), você pode editar o arquivo de projeto para alterar a estrutura de destino padrão ou para definir mais de uma estrutura como destino.
 
-1. Atualize as ferramentas e as dependências do projeto.
+A publicação de um FDE cria um aplicativo que efetua roll forward automaticamente para o último patch de segurança do .NET Core disponível no sistema que executa o aplicativo. Para obter mais informações sobre a associação de versão no tempo de compilação, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-   Execute o comando [dotnet restore](../tools/dotnet-restore.md) ([veja observação](#dotnet-restore-note)) para restaurar as dependências especificadas no projeto.
+Você precisará (exceto para o .NET Core 3.x quando você definir a plataforma atual como destino) usar as seguintes opções com o comando `dotnet publish` para publicar um FDE:
 
-1. Crie um build de depuração do seu aplicativo.
+- `-r <RID>`  
+  Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
 
-   Use o comando [dotnet build](../tools/dotnet-build.md) para compilar o aplicativo ou o comando [dotnet run](../tools/dotnet-run.md) para compilá-lo e executá-lo.
+- `--self-contained false`  
+  Essa opção instrui o SDK do .NET Core a criar um executável como um FDE.
 
-1. Implante seu aplicativo.
+Sempre que você usa a opção `-r`, o caminho da pasta de saída é alterado para: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-   Depois de ter depurado e testado o programa, crie a implantação usando o seguinte comando:
+Se você usar o [aplicativo de exemplo](#sample-app), execute `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Esse comando cria o seguinte executável: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-      ```console
-      dotnet publish -f netcoreapp2.1 -c Release
-      ```
-   Isso cria uma versão de Lançamento (em vez de Depuração) de seu aplicativo. Os arquivos resultantes são colocados em um diretório chamado *publish*, que está em um subdiretório do diretório *bin* do projeto.
+> [!Note]
+> Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). Para obter mais informações sobre o **modo invariável de globalização** e como habilitá-lo, confira [Modo invariável de globalização do .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-   Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não distribui-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
+## <a name="self-contained-deployment"></a>Implantação autocontida
 
-   Você pode implantar o conjunto completo de arquivos de aplicativo da maneira que desejar. Por exemplo, você pode empacotá-los em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha.
+Quando você publica uma SCD (implantação autossuficiente), o SDK do .NET Core cria um executável específico da plataforma. A publicação de uma SCD inclui todos os arquivos do .NET Core necessários para executar o aplicativo, mas não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Essas dependências precisam estar presentes no sistema antes da execução do aplicativo. 
 
-1. Executar seu aplicativo
+A publicação de uma SCD cria um aplicativo que não efetua roll forward para o último patch de segurança disponível do .NET Core. Para obter mais informações sobre a associação de versão no tempo de compilação, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
-   Uma vez instalado, os usuários podem executar seu aplicativo usando o comando `dotnet` e fornecendo o nome de arquivo de aplicativo, como `dotnet fdd.dll`.
+É necessário usar as seguintes opções com o comando `dotnet publish` para publicar uma SCD:
 
-   Além dos binários do aplicativo, o instalador deverá também agrupar o instalador da estrutura compartilhada ou procurar por ele como um pré-requisito como parte da instalação do aplicativo.  A instalação da estrutura compartilhada requer acesso de Administrador/raiz.
+- `-r <RID>`  
+  Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Implantação dependente de estrutura com dependências de terceiros
+- `--self-contained true`  
+  Essa opção instrui o SDK do .NET Core a criar um executável como uma SCD.
 
-Implantar uma implantação dependente de estrutura com uma ou mais dependências de terceiros requer que as dependências estejam disponíveis para seu projeto. São necessárias duas etapas adicionais antes de executar o comando `dotnet restore` ([veja observação](#dotnet-restore-note)):
+> [!Note]
+> Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). Para obter mais informações sobre o **modo invariável de globalização** e como habilitá-lo, confira [Modo invariável de globalização do .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-1. Adicione referências para as bibliotecas de terceiros necessárias à seção `<ItemGroup>` do arquivo *csproj*. A seção `<ItemGroup>` a seguir contém uma dependência no [Json.NET](https://www.newtonsoft.com/json) como uma biblioteca de terceiros:
-
-      ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-      ```
-
-1. Se você ainda não o fez, baixe o pacote NuGet contendo a dependência de terceiros. Para baixar o pacote, execute o comando `dotnet restore` ([veja observação](#dotnet-restore-note)) depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
-
-Observe que uma implantação dependente de estrutura com dependências de terceiros tem a mesma portabilidade que suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Tempo de Execução)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
-
-## <a name="simpleSelf"></a> Implantação autocontida sem dependências de terceiros
-
-Implantar uma implantação autocontida sem dependências de terceiros inclui a criação do projeto, a modificação do arquivo *csproj*, a compilação, os testes e a publicação do aplicativo. Um exemplo simples criado em C# ilustra o processo. O exemplo mostra como criar uma implantação autocontida usando o [utilitário dotnet](../tools/dotnet.md) da linha de comando.
-
-1. Crie um diretório para o projeto.
-
-   Crie um diretório para seu projeto e torne-o o diretório atual.
-
-1. Crie o projeto.
-
-   Na linha de comando, digite [dotnet new console](../tools/dotnet-new.md) para criar um novo projeto de console em C# naquele diretório.
-
-1. Adicione o código-fonte do aplicativo.
-
-   Abra o arquivo *Program.cs* no editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-1. Defina as plataformas às quais seu aplicativo se destinará.
-
-   Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de tempo de execução) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução.
-
-   Por exemplo, a seção `<PropertyGroup>` a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
-
-     ```xml
-     <PropertyGroup>
-         <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-     </PropertyGroup>
-     ```
-
-   Observe que o elemento `<RuntimeIdentifiers>` pode aparecer em qualquer `<PropertyGroup>` em seu arquivo *csproj*. Um arquivo *csproj* de exemplo completo aparece mais adiante nesta seção.
-
-1. Atualize as ferramentas e as dependências do projeto.
-
-   Execute o comando [dotnet restore](../tools/dotnet-restore.md) ([veja observação](#dotnet-restore-note)) para restaurar as dependências especificadas no projeto.
-
-1. Determine se você deseja usar o modo de invariável de globalização.
-
-   Especialmente se seu aplicativo for destinado ao Linux, será possível reduzir o tamanho total da sua implantação usando o [modo invariável de globalização](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). O modo invariável de globalização é útil para aplicativos que não são conhecidos globalmente e que podem usar as convenções de formatação, de maiúsculas e minúsculas e a comparação de cadeia de caracteres e ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture).
-
-   Para habilitar o modo invariável, clique com o botão direito do mouse no seu projeto (não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj** ou **Editar SCD.vbproj**. Em seguida, adicione as seguintes linhas realçadas ao arquivo:
-
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
-
-1. Crie um build de depuração do seu aplicativo.
-
-   Na linha de comando, use o comando [dotnet build](../tools/dotnet-build.md).
-
-1. Depois de ter depurado e testado o programa, crie os arquivos a serem implantados com seu aplicativo para cada plataforma à qual ele se destina.
-
-   Use o comando `dotnet publish` para as duas plataformas de destino da seguinte maneira:
-
-      ```console
-      dotnet publish -c Release -r win10-x64
-      dotnet publish -c Release -r osx.10.11-x64
-      ```
-
-   Isso cria uma versão de Lançamento (em vez de Depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado *publish* que está em um subdiretório de *.\bin\Release\netcoreapp2.1\<identificador_de_tempo_de_execução>* do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
-
-Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não empacotá-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
-
-Implante os arquivos publicados na maneira que desejar. Por exemplo, você pode empacotá-los em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha.
-
-A seguir está o arquivo *csproj* completo para esse projeto.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
-```
-
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>Implantação autocontida com dependências de terceiros
-
-Implantar uma implantação autocontida com uma ou mais dependências de terceiros envolve adicionar as dependências. São necessárias duas etapas adicionais antes de executar o comando `dotnet restore` ([veja observação](#dotnet-restore-note)):
-
-1. Adicione referências a quaisquer bibliotecas de terceiros à seção `<ItemGroup>` de seu arquivo *csproj*. A seção `<ItemGroup>` a seguir usa Json.NET como uma biblioteca de terceiros.
-
-    ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-    ```
-
-1. Se você ainda não o fez, baixe o pacote NuGet que contém a dependência de terceiros para seu sistema. Para disponibilizar a dependência para seu aplicativo, execute o comando `dotnet restore` ([veja observação](#dotnet-restore-note)) depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
-
-A seguir está o arquivo *csproj* completo para esse projeto:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-</Project>
-```
-
-Quando você implanta seu aplicativo, todas as dependências de terceiros usadas em seu aplicativo também contém os arquivos do aplicativo. As bibliotecas de terceiros não são necessárias no sistema em que o aplicativo está em execução.
-
-Observe que você só pode implantar uma implantação autocontida com uma biblioteca de terceiros para plataformas compatíveis com essa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em uma implantação dependente de estrutura, em que as dependências nativas devem ser compatíveis com a plataforma para a qual o aplicativo é implantado.
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="see-also"></a>Consulte também
 
-* [Implantação de um aplicativo .NET Core](index.md)
-* [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+- [Visão geral da implantação de aplicativos .NET Core](index.md)
+- [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+
+[dotnet-publish]: ../tools/dotnet-publish.md
+[dotnet-run]: ../tools/dotnet-run.md

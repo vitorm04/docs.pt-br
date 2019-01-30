@@ -1,5 +1,5 @@
 ---
-title: 'Mitigação: protocolos TLS'
+title: 'Mitigação: Protocolos TLS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5d37326d0278225146d217624508e7c7738375b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abfbea052072f0b90c9d018b520b67878d235701
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506804"
 ---
-# <a name="mitigation-tls-protocols"></a>Mitigação: protocolos TLS
-A partir do .NET Framework 4.6, as classes <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> têm permissão para usar um dos três protocolos a seguir: Tls1.0, Tls1.1 ou Tls 1.2. Não há suporte para o protocolo SSL 3.0 e a criptografia RC4.  
+# <a name="mitigation-tls-protocols"></a>Mitigação: Protocolos TLS
+Do .NET Framework 4.6 em diante, as classes <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> têm permissão para usar um dos três seguintes protocolos: TLS 1.0, TLS 1.1 ou TLS 1.2. Não há suporte para o protocolo SSL 3.0 e a criptografia RC4.  
   
 ## <a name="impact"></a>Impacto  
  Essa alteração afeta:  
@@ -27,7 +27,7 @@ A partir do .NET Framework 4.6, as classes <xref:System.Net.ServicePointManager?
 ## <a name="mitigation"></a>Redução  
  A mitigação recomendada é fazer upgrade do aplicativo do lado do servidor para Tls1.0, Tls1.1 ou Tls 1.2. Se não for viável ou se os aplicativos cliente estiverem desfeitos, a classe <xref:System.AppContext> poderá ser usada para recusar esse recurso de duas maneiras:  
   
--   De modo programático, usando um trecho de código como o seguinte:  
+-   De modo programático, usando um snippet de código como o seguinte:  
   
      [!code-csharp[AppCompat.SSLProtocols#1](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.sslprotocols/cs/program.cs#1)]
      [!code-vb[AppCompat.SSLProtocols#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.sslprotocols/vb/module1.vb#1)]  
@@ -42,5 +42,5 @@ A partir do .NET Framework 4.6, as classes <xref:System.Net.ServicePointManager?
   
  No entanto, observe que não é recomendável recusar o comportamento padrão, pois isso torna o aplicativo menos seguro.  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>Consulte também
+- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

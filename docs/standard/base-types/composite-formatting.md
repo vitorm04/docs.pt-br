@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517676"
 ---
 # <a name="composite-formatting"></a>Formatação composta
 
@@ -67,7 +67,7 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Vários itens de formato podem fazer referência ao mesmo elemento na lista de objetos ao especificar o mesmo especificador de parâmetro. Por exemplo, você pode formatar o mesmo valor numérico em formato hexadecimal, científico e numérico especificando uma cadeia de formato de composição como "0x{0:X} {0:E} {0:N}", conforme demonstrado no exemplo a seguir.  
+ Vários itens de formato podem fazer referência ao mesmo elemento na lista de objetos ao especificar o mesmo especificador de parâmetro. Por exemplo, você pode formatar o mesmo valor numérico em formato hexadecimal, científico e numérico especificando uma cadeia de caracteres de formato composto como: "0x{0:X} {0:E} {0:N}", como mostrado no exemplo a seguir.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -161,15 +161,15 @@ O recurso de formatação de composição tem suporte de métodos como:
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [Interpolação de cadeia de caracteres (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [Interpolação de cadeia de caracteres (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)  
-- [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [Cadeias de caracteres de formato TimeSpan padrão](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [Cadeias de caracteres de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [Interpolação de cadeia de caracteres (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [Interpolação de cadeia de caracteres (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Cadeias de caracteres de formato TimeSpan padrão](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [Cadeias de caracteres de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Cadeias de Caracteres de Formato de Enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)

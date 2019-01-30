@@ -1,15 +1,15 @@
 ---
-title: 'Arquivo XML de exemplo: várias ordens de compra em um namespace2'
+title: 'Arquivo XML de exemplo: Várias ordens de compra em um Namespace2'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 2c4812aa1c15223c7d2a65fa21f6c505e21e0bae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d5985fbfae543a6123d523a2caf4ec9ffc99a13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600148"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Arquivo XML de Exemplo: Vários pedidos de compra em um namespace
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Arquivo XML de exemplo: Várias ordens de compra em um namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém várias ordens de compra. XML é em um namespace.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  

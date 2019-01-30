@@ -1,15 +1,15 @@
 ---
-title: Como computar valores de coluna em um arquivo de texto CSV (LINQ) (C#)
+title: 'Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3a4bd410bc0d01e835132f7752970417be66941b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585832"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Como computar valores de coluna em um arquivo de texto CSV (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (C#)
 Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv. Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.  
   
 ### <a name="to-create-the-source-file"></a>Para criar o arquivo de origem  
@@ -163,5 +163,5 @@ class SumColumns
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

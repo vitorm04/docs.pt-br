@@ -1,15 +1,15 @@
 ---
-title: Como localizar descendentes com um nome de elemento específico (C#)
+title: 'Como: Localizar descendentes com um nome de elemento específico (C#)'
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: 6c5e035b4ee0168a0c41a34754314e18d089b1ef
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11f13dfc61e837a923cb9709301d89ff6d2149dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530383"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Como localizar descendentes com um nome de elemento específico (C#)
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Como: Localizar descendentes com um nome de elemento específico (C#)
 Às vezes, você deseja localizar todos os descendentes com um nome específico. Você poderia escrever um código para iterar por todos os descendentes, mas é mais fácil usar o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Exemplo  
@@ -93,5 +93,5 @@ Some text that is broken up into multiple segments.
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

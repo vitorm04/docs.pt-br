@@ -1,15 +1,15 @@
 ---
-title: Como validar usando XSD (LINQ to XML) (C#)
+title: 'Como: Validar usando o XSD (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: e58005d80cf763f773efa67530c14d199b0b5bfb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eea274380cd9b1a601059c12ee7bf654dff10437
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604282"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Como validar usando XSD (LINQ to XML) (C#)
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Como: Validar usando o XSD (LINQ to XML) (C#)
 O namespace <xref:System.Xml.Schema> contém métodos de extensão que facilitam a validação de uma árvore XML em um arquivo XSD. Para obter mais informações, consulte a documentação do método <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Exemplo  
@@ -76,11 +76,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir valida que um documento XML de [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) é válido de acordo com o esquema de [Arquivo XSD de exemplo: clientes e pedidos](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md). Ele altera o documento XML de origem. Ele altera o atributo `CustomerID` no primeiro cliente. Depois da alteração, os pedidos se referirão a um cliente que não existe, portanto, o documento XML não será mais validado.  
+ O seguinte exemplo valida que o documento XML de [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) é válido de acordo com o esquema de [Arquivo XSD de exemplo: Clientes e ordens](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md). Ele altera o documento XML de origem. Ele altera o atributo `CustomerID` no primeiro cliente. Depois da alteração, os pedidos se referirão a um cliente que não existe, portanto, o documento XML não será mais validado.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- Este exemplo usa o seguinte esquema XSD: [Arquivo XSD de exemplo: clientes e pedidos](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md).  
+ Este exemplo usa o seguinte esquema XSD: [Arquivo XSD de exemplo: Clientes e ordens](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md).  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  
@@ -122,5 +122,5 @@ custOrdDoc did not validate
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Xml.Schema.Extensions.Validate%2A>  
+- <xref:System.Xml.Schema.Extensions.Validate%2A>
 - [Criando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

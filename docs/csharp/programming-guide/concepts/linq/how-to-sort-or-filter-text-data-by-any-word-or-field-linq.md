@@ -1,20 +1,20 @@
 ---
-title: Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)
+title: 'Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 46a6c81a2f6e937bbd567dd4ce1b1e448ca073db
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b2378a3f9d589640d50ca3cc80d5e82ba386bd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747967"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)
 O exemplo a seguir mostra como classificar linhas de texto estruturado, como valores separados por vírgulas, por qualquer campo na linha. O campo pode ser especificado dinamicamente em tempo de execução. Suponha que os campos em scores.csv representam o número de ID do aluno, seguido por uma série de quatro resultados de teste.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Para criar um arquivo que contém dados  
   
-1.  Copie os dados de scores.csv do tópico [Como: unir conteúdo de arquivos diferentes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salve-os em sua pasta de solução.  
+1.  Copie os dados de scores.csv do tópico [Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salve-o na pasta da solução.  
   
 ## <a name="example"></a>Exemplo  
   

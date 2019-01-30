@@ -1,15 +1,15 @@
 ---
-title: Como contar ocorrências de uma palavra em uma cadeia de caracteres (LINQ) (C#)
+title: 'Como: Contar as ocorrências de uma palavra em uma cadeia de caracteres (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 48eda99970744a659a803f52bb3a3c499390f5c8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c63a2f2f0ce2bde6cb24f05839073699f1bbbfda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558716"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Como contar ocorrências de uma palavra em uma cadeia de caracteres (LINQ) (C#)
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Como: Contar as ocorrências de uma palavra em uma cadeia de caracteres (LINQ) (C#)
 Este exemplo mostra como usar uma consulta LINQ para contar as ocorrências de uma palavra especificada em uma cadeia de caracteres. Observe que para executar a contagem, primeiro o método <xref:System.String.Split%2A> é chamado para criar uma matriz de palavras. Há um custo de desempenho para o método <xref:System.String.Split%2A>. Se for a única operação na cadeia de caracteres for contar as palavras, você deverá considerar o uso dos métodos <xref:System.Text.RegularExpressions.Regex.Matches%2A> ou <xref:System.String.IndexOf%2A> em vez dele. No entanto, se o desempenho não for um problema crítico ou se você já tiver dividido a sentença para executar outros tipos de consulta nela, faz sentido usar LINQ para contar as palavras ou frases também.  
   
 ## <a name="example"></a>Exemplo  

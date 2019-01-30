@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f11928388dba9b0e9b442578bfb7b6f751c2e172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5c80ba473b0080a1368c82949c765820239ef25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715732"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Expondo componentes do .NET Framework para COM
 A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado são atividades distintas para desenvolvedores. Esta seção descreve várias dicas para escrever um código gerenciado que interopera com clientes COM:  
@@ -50,6 +50,6 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
   
      Um assembly de nome forte pode ser instalado no cache de assembly global e exige uma assinatura de seu fornecedor. Os assemblies que não têm nome forte devem ser instalados no diretório do aplicativo do cliente.  
   
-## <a name="see-also"></a>Consulte também  
- [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)  
- [Amostra de interoperabilidade COM: cliente COM e servidor .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+## <a name="see-also"></a>Consulte também
+- [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)
+- [Amostra de interoperabilidade COM: Cliente COM e servidor .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

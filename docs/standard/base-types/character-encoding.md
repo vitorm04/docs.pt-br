@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 55eb1d713c25314877fffd8a683ce5a8d9516d92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649395"
 ---
 # <a name="character-encoding-in-net"></a>Codificação de caracteres no .NET
 Os caracteres são entidades abstratas que podem ser representadas de muitas maneiras diferentes. Uma codificação de caracteres é um sistema que emparelha cada caractere em um conjunto de caracteres com suporte com algum valor que representa esse caractere. Por exemplo, o código Morse é uma codificação de caracteres que emparelha cada caractere do alfabeto romano com um padrão de pontos e traços adequados para transmissão por linhas telegráficas. Uma codificação de caracteres para computadores emparelha cada caractere em um conjunto de caracteres com suporte com um valor numérico que representa esse caractere. Uma codificação de caracteres tem dois componentes distintos:  
@@ -267,9 +267,9 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Text.Encoder>  
-- <xref:System.Text.Decoder>  
-- <xref:System.Text.DecoderFallback>  
-- <xref:System.Text.Encoding>  
-- <xref:System.Text.EncoderFallback>  
+- <xref:System.Text.Encoder>
+- <xref:System.Text.Decoder>
+- <xref:System.Text.DecoderFallback>
+- <xref:System.Text.Encoding>
+- <xref:System.Text.EncoderFallback>
 - [Globalização e localização](../../../docs/standard/globalization-localization/index.md)

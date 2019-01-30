@@ -1,5 +1,5 @@
 ---
-title: Como excluir repositórios no armazenamento isolado
+title: 'Como: Excluir repositórios no armazenamento isolado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfb6111b080b7c8c359458e3fd1dc99cb0ff3c36
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 19a671cac609e79088956ecb4324ebb0a25fb941
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547391"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a>Como excluir repositórios no armazenamento isolado
+# <a name="how-to-delete-stores-in-isolated-storage"></a>Como: Excluir repositórios no armazenamento isolado
 A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece dois métodos para excluir arquivos de armazenamento isolado:  
   
 -   O método de instância <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> não recebe qualquer argumento e exclui o armazenamento que o chama. Nenhuma permissão é necessária para essa operação. Qualquer código que possa acessar o armazenamento pode excluir qualquer ou todos os dados dentro dele.  
@@ -40,5 +40,5 @@ A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece dois méto
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)

@@ -1,5 +1,5 @@
 ---
-title: Como usar pipes anônimos para comunicação entre processos locais
+title: 'Como: Usar pipes anônimos para comunicação entre processos locais'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 810b29b4abde174e3634a03d5c7b5e0e43de11b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47234803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637762"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Como usar pipes anônimos para comunicação entre processos locais
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Como: Usar pipes anônimos para comunicação entre processos locais
 Os pipes anônimos fornecem comunicação entre processos em um computador local. Eles oferecem menos funcionalidades que pipes nomeados, mas também exigem menos sobrecarga. Você pode usar pipes anônimos para facilitar a comunicação entre processos em um computador local. Você não pode usar pipes anônimos para comunicações através de uma rede.  
   
  Para implementar pipes anônimos, use as classes <xref:System.IO.Pipes.AnonymousPipeServerStream> e <xref:System.IO.Pipes.AnonymousPipeClientStream>.  
@@ -47,5 +47,5 @@ Os pipes anônimos fornecem comunicação entre processos em um computador local
   
 ## <a name="see-also"></a>Consulte também
 
-- [Pipes](../../../docs/standard/io/pipe-operations.md)  
-- [Como usar pipes nomeados para comunicação entre processos na rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Pipes](../../../docs/standard/io/pipe-operations.md)
+- [Como: Usar pipes nomeados para comunicação entre processos na rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Mitigação: verificações de dois-pontos no caminho'
+title: 'Mitigação: Verificações de dois-pontos no caminho'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a54220a90a5120d13c89232d30ab40140c324097
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 741bb73280d9e81fc1865867152ab1243e9dd53c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494672"
 ---
-# <a name="mitigation-path-colon-checks"></a>Mitigação: verificações de dois-pontos no caminho
+# <a name="mitigation-path-colon-checks"></a>Mitigação: Verificações de dois-pontos no caminho
 Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], várias alterações foram feitas para dar suporte aos caminhos anteriormente sem suporte (em termos de comprimento e formato). Em particular, as verificações da sintaxe adequada do separador de unidade (os dois-pontos) foram corrigidas.  
   
 ## <a name="impact"></a>Impacto  
@@ -32,5 +32,5 @@ Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../inclu
     </runtime>  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a>Consulte também
+- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

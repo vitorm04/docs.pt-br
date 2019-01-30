@@ -1,5 +1,5 @@
 ---
-title: Como ler e gravar em um arquivo de dados recém-criado
+title: 'Como: Ler e gravar em um arquivo de dados recém-criado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65c56a11531f705b7e047e435ec575969d39a616
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4f51042564158cfd7924164ce2b1a0fcc9d2658d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45592900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562824"
 ---
-# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Como ler e gravar em um arquivo de dados recém-criado
+# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Como: Ler e gravar em um arquivo de dados recém-criado
 As classes <xref:System.IO.BinaryWriter> e <xref:System.IO.BinaryReader?displayProperty=nameWithType> são usadas para gravar e ler dados em vez de cadeias de caracteres. O exemplo a seguir demonstra como gravar e ler dados de um fluxo de arquivo novo e vazio chamado `Test.data`. Depois de criar o arquivo de dados no diretório atual, os objetos <xref:System.IO.BinaryWriter> e <xref:System.IO.BinaryReader> associados são criados e o objeto <xref:System.IO.BinaryWriter> é usado para gravar os inteiros de 0 a 10 para `Test.data`, que deixa o ponteiro de arquivo no final do arquivo. Depois de definir o ponteiro de arquivo de volta para a origem, o objeto <xref:System.IO.BinaryReader> lê o conteúdo especificado.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,15 +35,15 @@ As classes <xref:System.IO.BinaryWriter> e <xref:System.IO.BinaryReader?displayP
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO.BinaryReader>  
-- <xref:System.IO.BinaryWriter>  
-- <xref:System.IO.FileStream>  
-- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
-- <xref:System.IO.SeekOrigin>  
-- [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Como abrir e acrescentar a um arquivo de log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Como ler caracteres de uma cadeia de caracteres](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [Como gravar caracteres em uma cadeia de caracteres](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.BinaryReader>
+- <xref:System.IO.BinaryWriter>
+- <xref:System.IO.FileStream>
+- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>
+- <xref:System.IO.SeekOrigin>
+- [Como: Enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Como: Abrir um arquivo de log e fazer acréscimos a ele](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Como: Ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Como: Gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Como: Ler caracteres de uma cadeia de caracteres](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [Como: Gravar caracteres em uma cadeia de caracteres](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: a51d87aeef8d39356af10d526db63b7b16b9ca58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9849c64b30ed1021c12f34a7920104537292197a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628455"
 ---
 # <a name="using-streams-on-the-network"></a>Usando fluxos na rede
 Os recursos de rede são representados no .NET Framework como fluxos. Tratando os fluxos de forma genérica, o .NET Framework oferece as seguintes funcionalidades:  
@@ -102,6 +102,6 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Como solicitar dados usando a classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
- [Solicitando dados](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Solicitar dados usando a classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+- [Solicitando dados](../../../docs/framework/network-programming/requesting-data.md)

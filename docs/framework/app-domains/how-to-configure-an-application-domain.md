@@ -1,5 +1,5 @@
 ---
-title: Como configurar um domínio de aplicativo
+title: 'Como: Configurar um domínio do aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8989d7695f44b0cd2e8b0ce3ec8bd74a6e802102
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534560"
 ---
-# <a name="how-to-configure-an-application-domain"></a>Como configurar um domínio de aplicativo
+# <a name="how-to-configure-an-application-domain"></a>Como: Configurar um domínio do aplicativo
 Você pode fornecer o Common Language Runtime com informações de configuração para um novo domínio de aplicativo usando a classe <xref:System.AppDomainSetup>. Ao criar seus próprios domínios de aplicativo, a propriedade mais importante é <xref:System.AppDomainSetup.ApplicationBase%2A>. As outras propriedades **AppDomainSetup** são usadas principalmente por hosts de tempo de execução para configurar um domínio de aplicativo específico.  
   
  A propriedade **ApplicationBase** define o diretório raiz do aplicativo. Quando o tempo de execução precisar atender a uma solicitação de tipo, ele investigará em busca do assembly que contém o tipo no diretório especificado pela propriedade **ApplicationBase**.  
@@ -33,6 +33,6 @@ Você pode fornecer o Common Language Runtime com informações de configuraçã
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Consulte também  
-- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)  
+## <a name="see-also"></a>Consulte também
+- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
 - [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)

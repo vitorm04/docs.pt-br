@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: 39955d86085b49ef503ea9ed531df9feafa648ac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f45afd277818d7e1658751f2aae0b2153c940eee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617506"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (opções do compilador C#)
 Essa opção adiciona um módulo criado com a opção target:module para a compilação atual.  
@@ -44,9 +44,9 @@ Essa opção adiciona um módulo criado com a opção target:module para a compi
 csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)  
-- [Assemblies de vários arquivos](../../../framework/app-domains/multifile-assemblies.md)  
-- [Como Compilar um Assembly de Vários Arquivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Assemblies de vários arquivos](../../../framework/app-domains/multifile-assemblies.md)
+- [Como: Criar um assembly de vários arquivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 8a299ba0bfb2d6f49b449e2f1e567a06d09da49e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e17f332365aeeb26601763f9459dccc8d6a078af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572507"
 ---
-# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)
+# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Passo a passo: Filtrando a saída de My.Application.Log (Visual Basic)
 Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes. Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.  
   
 ## <a name="getting-started"></a>Guia de Introdução  
@@ -41,7 +41,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 6.  Feche o aplicativo.  
   
-     Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window). Para obter informações sobre o local do arquivo de log do aplicativo, consulte [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+     Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window). Para obter informações sobre a localização do arquivo de log do aplicativo, confira [Passo a passo: Determinando o local em que My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
     >  Por padrão, o aplicativo libera a saída do arquivo de log quando é fechado.  
@@ -73,7 +73,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 1.  Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e selecione **Abrir**.  
   
-     -ou-  
+     - ou -  
   
      Se não houver nenhum arquivo app.config:  
   
@@ -148,7 +148,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 1.  Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.  
   
-     -ou-  
+     - ou -  
   
      Se não houver nenhum arquivo app.config:  
   
@@ -247,10 +247,10 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
  Para obter mais informações sobre como alterar as configurações de log após a implantação, consulte [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [Instruções passo a passo: alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [Instruções passo a passo: criando ouvintes de log personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- [Como gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [Opções de rastreamento](../../../../framework/debug-trace-profile/trace-switches.md)  
- [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+## <a name="see-also"></a>Consulte também
+- [Passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Passo a passo: alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Passo a passo: criando ouvintes de log personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [Como: gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Opções de rastreamento](../../../../framework/debug-trace-profile/trace-switches.md)
+- [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)

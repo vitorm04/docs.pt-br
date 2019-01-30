@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202914"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066396"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Depurador de Linha de Comando do .NET Framework)
 O Depurador de Linha de Comando do .NET Framework ajuda fornecedores de ferramentas e desenvolvedores de aplicativos na localização e na correção de bugs em programas com o Common Language Runtime do .NET Framework como destino. Essa ferramenta usa a API de depuração do tempo de execução para fornecer serviços de depuração. É possível usar MDbg.exe para depurar apenas o código gerenciado; não há suporte para depurar o código não gerenciado.  
@@ -52,12 +52,12 @@ MDbg [ProgramName[arguments]] [options]
 |**fo**[**reach**] [*OtherCommand*]|Executa um comando em todos os threads. *OtherCommand* é um comando válido que opera no thread, **foreach** *OtherCommand* executa o mesmo comando em todos os threads.|  
 |**f**[**unceval**] [`-ad` *Num*] *functionName* [*args ...* ]|Executa uma avaliação da função no thread ativo atual em que a função a ser avaliada é *functionName*. O nome da função deve ser totalmente qualificado, incluindo namespaces.<br /><br /> A opção `-ad` especifica o domínio do aplicativo a ser usado para resolver a função. Se a opção `-ad` não for especificada, o domínio do aplicativo para resolução assumirá como padrão o domínio do aplicativo em que o thread usado na avaliação da função está localizado.<br /><br /> Se a função que está sendo avaliada não for estática, o primeiro parâmetro passado deverá ser um ponteiro `this`. Todos os domínios de aplicativo são pesquisados em busca de argumentos para a avaliação da função.<br /><br /> Para solicitar um valor de um domínio do aplicativo, anteceda a variável com o módulo e o nome de domínio do módulo; por exemplo, `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`. Esse comando avalia a função `System.Object.ToString` no domínio do aplicativo `0`. Como o método `ToString` é uma função de instância, o primeiro parâmetro deve ser um ponteiro `this`.|  
 |**g**[**o**]|Faz o programa continuar até encontrar um ponto de interrupção, o programa sai ou um evento (por exemplo, uma exceção sem tratamento) faz o programa parar.|  
-|**h**[**elp**] [*command*]<br /><br /> -ou-<br /><br /> **?** [*command*]|Exibe uma descrição de todos os comandos ou uma descrição detalhada de um comando especificado.|  
+|**h**[**elp**] [*command*]<br /><br /> - ou -<br /><br /> **?** [*command*]|Exibe uma descrição de todos os comandos ou uma descrição detalhada de um comando especificado.|  
 |**ig**[**nore**] [*event*]|Faz o depurador parar somente em exceções sem tratamento.|  
 |**int**[**ercept**] *FrameNumber*|Reverte o depurador para um número de quadro especificado.<br /><br /> Se o depurador encontrar uma exceção, use esse comando para reverter o depurador para o número de quadro especificado. É possível alterar o estado do programa usando o comando **set** e continuar usando o comando **go**.|  
 |**k**[**ill**]|Para o processo ativo.|  
 |**l**[**ist**] [*modules* &#124; *appdomains* &#124; *assemblies*]|Exibe os módulos carregados, os domínios de aplicativo ou os assemblies.|  
-|**lo**[**ad**] *assemblyName*|Carrega uma extensão da seguinte maneira: o assembly especificado é carregado e uma tentativa é feita para, em seguida, executar o método estático `LoadExtension` com base no tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
+|**lo**[**ad**] *assemblyName*|Carrega uma extensão da seguinte maneira: O assembly especificado é carregado e, em seguida, é feita uma tentativa de executar o método estático `LoadExtension` por meio do tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
 |**log** [*eventType*]|Defina ou exiba os eventos que serão registrados em log.|  
 |**mo**[**de**] [*option on/off*]|Define opções de depurador diferentes. Use `mode` sem opções para obter uma lista dos modos de depuração e suas configurações atuais.|  
 |**mon**[**itorInfo**] *monitorReference*|Exibe informações de bloqueio do monitor do objeto.|  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**sh**[**ow**] [*lines*]|Especifica o número de linhas que serão mostradas.|  
 |**s**[**tep**]|Move a execução para a próxima função na linha atual ou move para a próxima linha se não houver função a ser realizada.|  
 |**su**[**spend**] [\* &#124; [~]*threadNumber*]|Suspende o thread atual ou o thread especificado pelo parâmetro *threadNumber*.  Se *threadNumber* for especificado como `*`, o comando se aplicará a todos os threads. Se o número do thread começar com `~`, o comando se aplicará a todos os threads, exceto o especificado por *threadNumber*. Os threads suspensos são excluídos da execução quando o processo é executado pelo comando **go** ou **step**. Se não houver threads não suspensos no processo e você emitir o comando **go**, o processo não continuará. Nesse caso, pressione CTRL-C para interromper o processo.|  
-|**sy**[**mbol**] *commandName* [*commandValue*]|Especifica um dos comandos a seguir:<br /><br /> -   `symbol path` [`"``value``"`] – Exibe ou define o caminho de símbolo atual.<br />-   `symbol addpath` `"` `value` `"` – Adiciona ao caminho de símbolo atual.<br />-   `symbol reload` [`"``module``"`] – Recarrega todos os símbolos ou os símbolos do módulo especificado.<br />-   `symbol list` [`module`] – Mostra os símbolos carregados atualmente para todos os módulos ou o módulo especificado.|  
+|**sy**[**mbol**] *commandName* [*commandValue*]|Especifica um dos comandos a seguir:<br /><br /> -   `symbol path` [`"value"`] – Exibe ou define o caminho de símbolo atual.<br />-   `symbol addpath` `"value"` – Adiciona ao caminho de símbolo atual.<br />-   `symbol reload` [`"module"`] – Recarrega todos os símbolos ou os símbolos do módulo especificado.<br />-   `symbol list` [`module`] – Mostra os símbolos carregados atualmente para todos os módulos ou o módulo especificado.|  
 |**t**[**hread**] [*newThread*] [-*nick nickname*`]`|O comando de thread sem parâmetros exibe todos os threads gerenciados no processo atual. Os threads costumam ser identificados pelos números de thread; se o thread tiver um apelido atribuído, o apelido será exibido no lugar. É possível usar o parâmetro `-nick` para atribuir um apelido a um thread.<br /><br /> -   **thread** `-nick` *threadName* atribui um apelido ao thread em execução no momento.<br /><br /> Os apelidos não podem ser números. Se o thread atual já tiver um apelido atribuído, o apelido anterior será substituído pelo novo. Se o novo apelido for uma cadeia de caracteres vazia (""), o apelido do thread atual será excluído e nenhum apelido novo será atribuído ao thread.|  
 |**u**[**p**]|Move o registro de ativação ativo para cima.|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|Imprime a variável acompanhada por um identificador. O identificador pode ser especificado por nome ou endereço.|  
@@ -106,6 +106,6 @@ mdbg>
   
 ## <a name="examples"></a>Exemplos  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)  
- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Consulte também
+- [Ferramentas](../../../docs/framework/tools/index.md)
+- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

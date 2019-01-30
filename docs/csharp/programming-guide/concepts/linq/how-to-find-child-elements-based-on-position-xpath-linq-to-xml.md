@@ -1,15 +1,15 @@
 ---
-title: Como localizar elementos filho com base na posição (XPath-LINQ to XML) (C#)
+title: 'Como: Localizar elementos filho com base na posição (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 5d62418fe6d89c8dc5c7ddb4975404f1a7e0aa2d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d9cf80b5d5edfe995196751b4f769ed6088d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577422"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Como localizar elementos filho com base na posição (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Como: Localizar elementos filho com base na posição (XPath-LINQ to XML) (C#)
 Às vezes você deseja localizar elementos com base em sua posição. Você pode desejar localizar o segundo elemento, ou você talvez queira localizar o terceiro através do quinto elemento.  
   
  A expressão XPath é:  
@@ -21,7 +21,7 @@ ms.locfileid: "43517087"
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza o segundo a quarto elemento de `Test` . O resultado é uma coleção de elementos.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: configuração de teste (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Configuração de teste (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  

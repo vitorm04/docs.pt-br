@@ -1,5 +1,5 @@
 ---
-title: Como personalizar uma política de cache baseada em tempo
+title: 'Como: Personalizar uma política de cache baseada em tempo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 1a9e0d3197dcba63ef5497613e216a96868a03da
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9d1eef073588f45e70170fcf46766b53f99bed8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505793"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a>Como personalizar uma política de cache baseada em tempo
+# <a name="how-to-customize-a-time-based-cache-policy"></a>Como: Personalizar uma política de cache baseada em tempo
 Ao criar uma política de cache baseada em tempo, você pode personalizar o comportamento do cache especificando valores para a idade máxima, atualização mínima, desatualização máxima ou data de sincronização do cache. O objeto <xref:System.Net.Cache.HttpRequestCachePolicy> fornece vários construtores que permitem especificar combinações válidas desses valores.  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Para criar uma política de cache baseada em tempo que usa uma data de sincronização do cache  
@@ -114,9 +114,9 @@ CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)  
- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]
+## <a name="see-also"></a>Consulte também
+- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)
+- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]

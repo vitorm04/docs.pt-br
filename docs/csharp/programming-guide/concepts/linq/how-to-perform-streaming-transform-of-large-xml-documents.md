@@ -1,25 +1,25 @@
 ---
-title: Como executar a transformação de streaming de grandes documentos XML (C#)
+title: 'Como: Executar a transformação de streaming de documentos XML grandes (C#)'
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: f837117bec2bac615e4cbd822c1110f648d32ce8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8ddd7e25cf160526b741db5769a78682970c3724
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524670"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Como executar a transformação de streaming de grandes documentos XML (C#)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Como: Executar a transformação de streaming de documentos XML grandes (C#)
 Às vezes você precisa transformar grandes arquivos XML e escrever seu aplicativo de modo que os requisitos de memória do aplicativo sejam previsíveis. Se você tentar preencher uma árvore XML com um arquivo XML muito grande, seu uso de memória será proporcional ao tamanho do arquivo (isto é, excessivo). Portanto, você deve usar uma técnica de streaming em vez disso.  
   
  As técnicas de streaming são melhor aplicadas em situações onde você precisa processar o documento de origem apenas uma vez e você pode processar os elementos na ordem do documento. Determinados operadores de consulta padrão, como <xref:System.Linq.Enumerable.OrderBy%2A>, iteram sua origem, coletam todos os dados, classificam e, em seguida, geram finalmente o primeiro item na sequência. Observe que se você usar um operador de consulta que materializa sua origem antes de gerar o primeiro item, você não manterá um requisito pequeno de memória para seu aplicativo.  
   
- Mesmo se você usar a técnica descrita em [Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se você tentar montar uma árvore XML que contém o documento transformado, o uso de memória será muito grande.  
+ Mesmo se você usar a técnica descrita em [Como: Transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se você tentar montar uma árvore XML que contenha o documento transformado, o uso de memória será muito grande.  
   
  Há duas principais abordagens. Uma abordagem é usar as características de processamento adiado de <xref:System.Xml.Linq.XStreamingElement>. Outra abordagem é criar <xref:System.Xml.XmlWriter> e usar os recursos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gravar os elementos em um <xref:System.Xml.XmlWriter>. Este tópico demonstra as duas abordagens.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir compila no exemplo em [Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ O seguinte exemplo se baseia no exemplo descrito em [Como: Transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
  Este exemplo usa os recursos de execução adiada de <xref:System.Xml.Linq.XStreamingElement> para transmitir a saída. Este exemplo pode transformar um documento muito grande mantendo um requisito pequeno de memória.  
   
@@ -189,7 +189,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir também compila no exemplo em [Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ O seguinte exemplo também se baseia no exemplo descrito em [Como: Transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
  Este exemplo usa o recurso de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gravar os elementos em um <xref:System.Xml.XmlWriter>. Este exemplo pode transformar um documento muito grande mantendo um requisito pequeno de memória.  
   

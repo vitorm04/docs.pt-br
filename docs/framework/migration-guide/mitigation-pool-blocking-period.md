@@ -1,17 +1,17 @@
 ---
-title: 'Mitigação: período de bloqueio de pool'
+title: 'Mitigação: Período de bloqueio do pool'
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e402ba9cb5de8e85ce6912e2e5b760ef340c2cf4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1021cf66c7091e699efac72fc9e614f30910398b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645100"
 ---
-# <a name="mitigation-pool-blocking-period"></a>Mitigação: período de bloqueio de pool
+# <a name="mitigation-pool-blocking-period"></a>Mitigação: Período de bloqueio do pool
 O pool de conexão no período de bloqueio foi removido para conexões com bancos de dados SQL do Azure.  
   
 ## <a name="additional-description"></a>Descrição adicional  
@@ -33,5 +33,5 @@ O pool de conexão no período de bloqueio foi removido para conexões com banco
   
  É possível restaurar o comportamento anterior definindo a propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> como `PoolBlockingPeriod.AlwaysBlock`.  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a>Consulte também
+- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)

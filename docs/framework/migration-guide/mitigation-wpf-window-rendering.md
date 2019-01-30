@@ -1,17 +1,17 @@
 ---
-title: 'Mitigação: renderização de janela WPF'
+title: 'Mitigação: Renderização de janela WPF'
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a91839ff12109b84c563dcd3fabd078f75dad9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71e1829716e0a9d5fc63692ca84c8bfefe4cefef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663460"
 ---
-# <a name="mitigation-wpf-window-rendering"></a>Mitigação: renderização de janela WPF
+# <a name="mitigation-wpf-window-rendering"></a>Mitigação: Renderização de janela WPF
 No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] em execução no Windows 8 e superior, a janela inteira é renderizada sem distorção quando ela se estende para fora da exibição única em um cenário de vários monitores.  
   
 ## <a name="impact"></a>Impacto  
@@ -38,5 +38,5 @@ No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] em execução no Windows
   
 -   Definindo a propriedade <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> como `true` na inicialização do aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>Consulte também
+- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
