@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661861"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
 Para implantar seu aplicativo .NET Framework com êxito, você deve entender como o Common Language Runtime localiza e associa aos assemblies que compõem seu aplicativo. Por padrão, o tempo de execução tenta associar com a versão exata de um assembly com o qual o aplicativo foi criado. Esse comportamento padrão pode ser substituído pelas configurações do arquivo de configuração.  
@@ -138,7 +138,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Em terceiro lugar, o tempo de execução examina o arquivo de configuração do computador. Esse arquivo, chamado Machine.config, reside no computador local no subdiretório Config do diretório raiz em que o tempo de execução está instalado. Esse arquivo pode ser usado por administradores para especificar restrições de associação de assembly que são locais no computador. As configurações no arquivo de configuração do computador têm precedência sobre todas as outras definições de configuração. No entanto, isso não significa que todas as definições de configuração devem ser colocadas nesse arquivo. A versão de determinada pelo arquivo de política de administrador é final e não pode ser substituída. As substituições especificadas no arquivo Machine.config afetam todos os aplicativos. Para obter mais informações sobre os arquivos de configuração, consulte [Configuring Apps by Using Configuration Files](../../../docs/framework/configure-apps/index.md) (Configurando aplicativos usando arquivos de configuração).  
   
 <a name="step2"></a>   
-## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Etapa 2: Verificando se há assemblies referenciados anteriormente  
+## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Etapa 2: Verificando assemblies referenciados anteriormente  
  Se o assembly solicitado também foi solicitado em chamadas anteriores, o Common Language Runtime usa o assembly que já está carregado. Isso pode ter ramificações ao nomear os assemblies que compõem um aplicativo. Para obter mais informações sobre a nomeação de assemblies, consulte [Assembly Names](../../../docs/framework/app-domains/assembly-names.md) (Nomes de assembly).  
   
  Se uma solicitação anterior para o assembly falhou, as solicitações subsequentes para o assembly falharão imediatamente sem tentar carregar o assembly. Desde o .NET Framework versão 2.0, as falhas de associação de assembly são armazenadas em cache e as informações em cache são usadas para determinar se deve-se tentar carregar o assembly.  
@@ -147,11 +147,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 >  Para reverter para o comportamento do .NET Framework versões 1.0 e 1.1, que não armazenavam as falhas de associação em cache, inclua o [elemento \<disableCachingBindingFailures>](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) no arquivo de configuração.  
   
 <a name="step3"></a>   
-## <a name="step-3-checking-the-global-assembly-cache"></a>Etapa 3: Verificando o cache de assemblies global  
+## <a name="step-3-checking-the-global-assembly-cache"></a>Etapa 3: Verificando o cache de assembly global  
  Para assemblies de nome forte, o processo de associação continua procurando no cache de assembly global. O cache de assembly global armazena os assemblies que podem ser usados por vários aplicativos em um computador. Todos os assemblies no cache de assembly global devem ter nomes fortes.  
   
 <a name="step4"></a>   
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Etapa 4: Localizando o assembly por meio de codebases ou sondagem  
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Etapa 4: Localizando o assembly por meio de bases de código ou investigação  
  Depois de determinar a versão do assembly correta usando as informações na referência do assembly realizando a chamada e nos arquivos de configuração e após ela ter feito check-in do cache de assembly global (somente para assemblies de nome forte), o Common Language Runtime tenta localizar o assembly. O processo de localização de um assembly envolve as seguintes etapas:  
   
 1.  Se um elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento for encontrado no arquivo de configuração de aplicativo, o tempo de execução verificará o local especificado. Se uma correspondência for encontrada, esse assembly será usado e nenhuma investigação ocorrerá. Se o assembly não for encontrado lá, a solicitação de associação falhará.  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Por exemplo, se o Assembly1 fizer referência ao Assembly2 e o Assembly1 tiver sido baixado de `http://www.code.microsoft.com/utils`, esse local será considerado uma dica sobre onde encontrar o Assembly2.dll. Em seguida, o tempo de execução procura pelo assembly em `http://www.code.microsoft.com/utils/Assembly2.dll` e `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Se Assembly2 não for encontrado em um desses locais, o tempo de execução de consultará o Windows Installer.  
   
-## <a name="see-also"></a>Consulte também  
-- [Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Consulte também
+- [Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Implantação](../../../docs/framework/deployment/index.md)

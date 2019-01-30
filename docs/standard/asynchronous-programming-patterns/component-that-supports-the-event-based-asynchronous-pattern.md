@@ -1,5 +1,5 @@
 ---
-title: Como implementar um componente compatível com o padrão assíncrono baseado em evento
+title: 'Como: Implementar um componente compatível com o padrão assíncrono baseado em evento'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745461"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Como implementar um componente compatível com o padrão assíncrono baseado em evento
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Como: Implementar um componente compatível com o padrão assíncrono baseado em evento
 Se você estiver escrevendo uma classe com algumas operações que possam causar atrasos notáveis, considere a opção de fornecer funcionalidade assíncrona Implementando a [visão geral de padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
  Este passo a passo ilustra como criar um componente que implemente o Padrão Assíncrono Baseado em Evento. Ele é implementado usando classes auxiliares do namespace <xref:System.ComponentModel?displayProperty=nameWithType>, o que garante que o componente funcione corretamente em qualquer modelo de aplicativo, incluindo [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], aplicativos de Windows Forms e aplicativos de Console. Esse componente também é projetável com um controle <xref:System.Windows.Forms.PropertyGrid> e seus próprios designers personalizados.  
@@ -48,7 +48,7 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
   
 -   Implementar métodos Iniciar e Cancelar  
   
- Para copiar o código deste tópico como uma única lista, confira [Como implementar um cliente do Padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Para copiar o código deste tópico como uma única listagem, confira [Como: Implementar um cliente do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>Criar o componente  
  A primeira etapa é criar o componente que implementará o Padrão Assíncrono Baseado em Evento.  
@@ -176,7 +176,7 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
  O método `CalculateWorker` é encapsulado em um representante e é invocado de forma assíncrona com uma chamada para `BeginInvoke`.  
   
 > [!NOTE]
->  O relatório de progresso é implementado no método `BuildPrimeNumberList`. Em computadores rápidos, eventos `ProgressChanged` podem ser gerados em sucessão rápida. O thread de cliente, em que esses eventos são gerados, deve ser capaz de lidar com essa situação. O código de interface do usuário pode ser inundado com mensagens e impossível de acompanhar, o que resulta no comportamento de travamento. Para uma interface de usuário de exemplo que manipula essa situação, confira [Como implementar um cliente do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  O relatório de progresso é implementado no método `BuildPrimeNumberList`. Em computadores rápidos, eventos `ProgressChanged` podem ser gerados em sucessão rápida. O thread de cliente, em que esses eventos são gerados, deve ser capaz de lidar com essa situação. O código de interface do usuário pode ser inundado com mensagens e impossível de acompanhar, o que resulta no comportamento de travamento. Para obter uma interface do usuário de exemplo que lida com essa situação, confira [Como: Implementar um cliente do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Para executar o cálculo de número primo de forma assíncrona:  
   
@@ -242,7 +242,7 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
   
  O componente `PrimeNumberCalculator` agora está concluído e pronto para uso.  
   
- Para um cliente de exemplo que usa o componente `PrimeNumberCalculator`, confira [Como implementar um cliente do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Para obter um cliente de exemplo que usa o componente `PrimeNumberCalculator`, confira [Como: Implementar um cliente do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você pode preencher este exemplo escrevendo `CalculatePrime`, o equivalente síncrono do método `CalculatePrimeAsync`. Isso tornará o componente `PrimeNumberCalculator` totalmente compatível com o Padrão Assíncrono baseado em Evento.  
@@ -253,6 +253,6 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como executar uma operação em segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
-- [EAP (Padrão Assíncrono baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Como: Executar uma operação em segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [EAP (Padrão Assíncrono baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
