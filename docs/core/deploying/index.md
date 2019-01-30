@@ -5,6 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
+ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266904"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
@@ -60,7 +66,7 @@ Ela também apresenta algumas desvantagens:
 
 - O tamanho do seu pacote de implantação é relativamente grande, visto que você precisa incluir o .NET Core, bem como seu aplicativo e suas dependências de terceiros.
 
-  A partir do .NET Core 2.0, você pode reduzir o tamanho da sua implantação em sistemas Linux em aproximadamente 28 MB usando o [*modo invariável de globalização*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) do .NET Core. Normalmente, o .NET Core no Linux se baseia nas [bibliotecas de ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) para suporte à globalização. No modo invariável, as bibliotecas não são incluídas na implantação e todas as culturas se comportam como a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  A partir do .NET Core 2.0, você pode reduzir o tamanho da sua implantação em sistemas Linux em aproximadamente 28 MB usando o [*modo invariável de globalização*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) do .NET Core. Normalmente, o .NET Core no Linux se baseia nas [bibliotecas de ICU](http://icu-project.org) para suporte à globalização. No modo invariável, as bibliotecas não são incluídas na implantação e todas as culturas se comportam como a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Implantar vários aplicativos .NET Core autocontidos em um sistema pode consumir um volume significativo de espaço em disco, visto que cada aplicativo duplica os arquivos do .NET Core.
 
