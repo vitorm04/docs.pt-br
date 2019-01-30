@@ -1,5 +1,5 @@
 ---
-title: Como persistir e restaurar propriedades de escopo do aplicativo em sessões de aplicativo
+title: 'Como: Persistir e restaurar propriedades de escopo do aplicativo em sessões de aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,22 @@ helpviewer_keywords:
 - properties [WPF], restoring
 - application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-ms.openlocfilehash: ff95833920ead040f1812637721fdd402186898c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c64b13717a427bf7ad8f9cab0a450162ad0c6cde
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550092"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204691"
 ---
-# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Como persistir e restaurar propriedades de escopo do aplicativo em sessões de aplicativo
-Este exemplo mostra como persistir as propriedades de escopo de aplicativo quando um aplicativo é desligado e como restaurar propriedades de escopo de aplicativo quando um aplicativo é a próximo inicialização.  
+# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Como: Persistir e restaurar propriedades de escopo do aplicativo em sessões de aplicativo
+Este exemplo mostra como persistir as propriedades de escopo do aplicativo quando um aplicativo é desligado, e como restaurar propriedades de escopo do aplicativo quando um aplicativo é próxima iniciar.  
   
 ## <a name="example"></a>Exemplo  
- O aplicativo persiste propriedades do escopo do aplicativo e restaura-as de armazenamento isolado. Armazenamento isolado é uma área de armazenamento protegido que pode ser usada com segurança por aplicativos sem permissão de acesso de arquivo.  
+ O aplicativo persiste as propriedades do escopo do aplicativo e restaura-los do armazenamento isolado. Armazenamento isolado é uma área de armazenamento protegido que pode ser usada com segurança por aplicativos sem permissão de acesso de arquivo.  O *App. XAML* arquivo define a `App_Startup` método como o manipulador para o <xref:System.Windows.Application.Startup?displayProperty=nameWithType> evento e o `App_Exit` método como o manipulador para o <xref:System.Windows.Application.Exit?displayProperty=nameWithType> evento, conforme mostrado nas linhas realçadas do primeiro exemplo. O segundo exemplo mostra uma parte do *App.xaml.cs* e *VB* arquivos que destaca o código para o `App_Startup` método, que restaura as propriedades de escopo do aplicativo e o `App_Exit` método, que salva as propriedades de escopo do aplicativo.
+ 
   
- [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+ [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]
   
- [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind1)]
- [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]  
-[!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind2)]
-[!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind2)]  
-[!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind3)]
-[!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind3)]
+ [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=17-55)]
+ [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]
+ 
