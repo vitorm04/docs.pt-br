@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;TypeParameter&gt; (.NET Nativo)
+title: <TypeParameter> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79e7a61f66a29ad4eeca1c6413b87d4b9ee9632e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b478f963156a2c8f189bbbdbc027927df8974dc2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644333"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263557"
 ---
-# <a name="lttypeparametergt-element-net-native"></a>Elemento &lt;TypeParameter&gt; (.NET Nativo)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter > (.NET nativo)
 Aplica a política ao tipo representado por um argumento Type passado para um método.  
   
 ## <a name="syntax"></a>Sintaxe  

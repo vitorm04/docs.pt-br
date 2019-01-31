@@ -2,20 +2,20 @@
 title: Protocolos de transação versão 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: d2a50e798af47dd4f80f149362f2afffbab007f6
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066353"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258013"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolos de transação versão 1.0
 Versão 1 do Windows Communication Foundation (WCF) implementa a versão 1.0 dos protocolos WS-Coordination e de transações de WS-Atomic. Para obter mais informações sobre a versão 1.1, consulte [protocolos de transação](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Especificação/documento|Link|  
 |-----------------------------|----------|  
-|WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
-|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
+|WS-Coordination|<http://specs.xmlsoap.org/ws/2004/10/wscoor/wscoor.pdf>|  
+|WS-AtomicTransaction|<http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf>|  
   
  Interoperabilidade nessas especificações de protocolo é necessária em dois níveis: entre aplicativos e gerenciadores de transações (consulte a figura a seguir). Especificações descrevem em detalhes os formatos de mensagem e a mensagem do exchange para ambos os níveis de interoperabilidade. Determinados segurança, confiabilidade e codificações para troca de aplicativo para aplicam como fazem para troca de aplicativo regular. No entanto, a interoperabilidade bem-sucedida entre gerenciadores de transações requer contrato de ligação específica, porque ele geralmente não é configurado pelo usuário.  
   

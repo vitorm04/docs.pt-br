@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;AttributeImplies&gt; (.NET Nativo)
+title: <AttributeImplies> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f4e12f690d685f58b69483631aa0e93c9902636
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5412e323b1c4930d7e17d09faa174885611884
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696809"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254971"
 ---
-# <a name="ltattributeimpliesgt-element-net-native"></a>Elemento &lt;AttributeImplies&gt; (.NET Nativo)
+# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > (.NET nativo)
 Define a política para os elementos de código ao qual o atributo recipiente é aplicado.  
   
 ## <a name="syntax"></a>Sintaxe  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;segurança&gt; de &lt;customBinding&gt;'
+title: <security> De <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: c80a4a34d5315dbc5a22d3953fee437ebe2e938f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 552b28c4e4368ec4a01502a1df65cb46aa17c05d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573438"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258052"
 ---
-# <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;segurança&gt; de &lt;customBinding&gt;
+# <a name="security-of-custombinding"></a>\<segurança > de \<customBinding >
 Especifica as opções de segurança para uma associação personalizada.  
   
  \<system.serviceModel>  

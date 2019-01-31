@@ -1,5 +1,5 @@
 ---
-title: 'Como: Manipular uma tabela&#39;por meio da propriedade Columns'
+title: 'Como: Manipular colunas de uma tabela por meio da propriedade Columns'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tables [WPF], manipulating columns
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
-ms.openlocfilehash: f560e85888b5617f545082d47d124163d492ec00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3327b59cb8c387cb554206d1b17c2cd7002ef80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655804"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258091"
 ---
-# <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Como: Manipular uma tabela&#39;por meio da propriedade Columns
+# <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>Como: Manipular colunas de uma tabela por meio da propriedade Columns
 Este exemplo demonstra algumas das operações mais comuns que podem ser executadas em colunas de uma tabela por meio de <xref:System.Windows.Documents.Table.Columns%2A> propriedade.  
   
 ## <a name="example"></a>Exemplo  

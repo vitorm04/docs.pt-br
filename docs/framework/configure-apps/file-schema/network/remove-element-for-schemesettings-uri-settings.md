@@ -1,15 +1,15 @@
 ---
-title: '&lt;remover&gt; elemento para schemeSettings (configurações de Uri)'
+title: Elemento <remove> para schemeSettings (configurações de Uri)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: 2a2ef83ac57c1978a0022a9c989aa03eeae8a71f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd137c86d7373947f57364c13eb3875cba46b269
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552821"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262608"
 ---
-# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;remover&gt; elemento para schemeSettings (configurações de Uri)
+# <a name="remove-element-for-schemesettings-uri-settings"></a>\<Remover > elemento para schemeSettings (configurações de Uri)
 Remove uma definição de esquema para um nome de esquema.  
   
  \<configuration>  

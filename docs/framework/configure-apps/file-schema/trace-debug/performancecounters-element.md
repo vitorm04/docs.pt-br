@@ -1,5 +1,5 @@
 ---
-title: '&lt;performanceCounters&gt; elemento'
+title: Elemento <performanceCounters>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - performanceCounters element
 - <perfomanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-ms.openlocfilehash: 5afa38a98aa6ea0901849b01d6b1030d079f218e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: e893b0cedcfcce2ca17d0c02c5e3e30f4221ff6f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083971"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262657"
 ---
-# <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; elemento
+# <a name="performancecounters-element"></a>\<performanceCounters > elemento
 Especifica o tamanho da memória global compartilhada por contadores de desempenho.  
   
  \<configuration>  

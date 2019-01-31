@@ -1,15 +1,15 @@
 ---
-title: '&lt;bindingElementExtensions&gt;'
+title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 1b843f2986a0020b8ce079e58bf9865a0b3d402d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2a3af093949c1d724fdea13655bbb80fe71048
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569895"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270451"
 ---
-# <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
+# <a name="bindingelementextensions"></a>\<bindingElementExtensions>
 Esta seção permite o uso de um elemento de associação personalizada de um computador ou arquivo de configuração do aplicativo. Você pode adicionar um elemento de associação personalizado a essa coleção usando o `add` palavra-chave e a configuração o `type` atributo do elemento a ser uma extensão de elemento de associação, bem como o `name` de atributo para o elemento de associação personalizada.  
   
  As extensões de associação permitem ao usuário criar elementos de associação definidas pelo usuário para uso como parte de ligações personalizadas. Programaticamente, uma extensão de associação é um tipo que implementa a classe abstrata <xref:System.ServiceModel.Channels.BindingElement>. No arquivo de configuração, o `bindingElementExtensions` seção é usada para definir um elemento de extensão.  

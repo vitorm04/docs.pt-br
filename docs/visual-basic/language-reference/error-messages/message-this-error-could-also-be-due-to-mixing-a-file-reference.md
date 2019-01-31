@@ -1,5 +1,5 @@
 ---
-title: '&lt;mensagem&gt; esse erro também pode ser devido à mistura de uma referência de arquivo com uma referência de projeto ao assembly &#39; &lt;assemblyname&gt;&#39;'
+title: <message> Este erro também poderia ocorrer devido à mistura de uma referência de arquivo com uma referência de projeto ao assembly '<assemblyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: d4fb2a8985a21ecea5056b83d2766e8dc468180d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f28327b4df5b15f368f736e7402179227035a06e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528986"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272546"
 ---
-# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;mensagem&gt; esse erro também pode ser devido à mistura de uma referência de arquivo com uma referência de projeto ao assembly &#39; &lt;assemblyname&gt;&#39;
+# <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<mensagem > Esse erro também pode ser devido à mistura de uma referência de arquivo com uma referência de projeto ao assembly '\<assemblyname >'
 \<mensagem > Esse erro também pode ser devido à mistura de uma referência de arquivo com uma referência de projeto ao assembly '\<assemblyname >. Nesse caso, tente substituir a referência de arquivo para '\<assemblyfilename >' no projeto '\<projectname1 >' com uma referência de projeto a '\<projectname2 >'.  
   
  O código em seu projeto acessa um membro de outro projeto, mas a configuração de sua solução não permite que o compilador do Visual Basic resolver a referência.  

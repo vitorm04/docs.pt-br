@@ -1,21 +1,21 @@
 ---
-title: '&lt;cancelRequestedQueries&gt; do WCF'
+title: <cancelRequestedQueries> do WCF
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 9cf2761bdab36d95b5077e36174565659230b512
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a9364fc53c7eb62a240206f6c81bd434b25c3f40
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145439"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289465"
 ---
-# <a name="ltcancelrequestedqueriesgt-of-wcf"></a>&lt;cancelRequestedQueries&gt; do WCF
+# <a name="cancelrequestedqueries-of-wcf"></a>\<cancelRequestedQueries> of WCF
 Representa uma coleção de consultas que são usados para controlar solicitações cancelar uma atividade filho pela atividade pai. A consulta é necessária para um participante de rastreamento inscrever-se para Cancelar solicitação objetos de registro.  
   
 Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<Acompanhamento >  
+\<tracking>  
 \<perfis > \<trackingProfile >  
 \<workflow>  
 \<cancelRequestedQueries>  

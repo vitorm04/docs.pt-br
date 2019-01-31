@@ -1,5 +1,5 @@
 ---
-title: Classe delegate &#39; &lt;classname&gt; &#39; não tem método Invoke, portanto, uma expressão desse tipo não pode ser o destino de uma chamada de método
+title: Classe Delegate '<classname>' não tem nenhum método Invoke. Portanto, uma expressão desse tipo não pode ser o destino de uma chamada de método
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30220
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: d5421ea05968a221bbbf8f52a575550d1bca3cb2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8339d038f845b8568f31f3068a98ccccf580aeae
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653149"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286644"
 ---
-# <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Classe delegate &#39; &lt;classname&gt; &#39; não tem método Invoke, portanto, uma expressão desse tipo não pode ser o destino de uma chamada de método
+# <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Classe delegate\<classname >' não tem método Invoke, portanto, uma expressão desse tipo não pode ser o destino de uma chamada de método
 Uma chamada para `Invoke` através de um delegado falhou porque `Invoke` não está implementado na classe de delegado.  
   
  **ID do erro:** BC30220  

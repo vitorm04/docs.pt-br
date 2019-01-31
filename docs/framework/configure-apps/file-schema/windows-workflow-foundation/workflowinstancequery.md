@@ -1,16 +1,16 @@
 ---
-title: '&lt;workflowInstanceQuery&gt;'
+title: <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
-ms.openlocfilehash: bef9ddcee2e373f4588d6aed06b7c51e4c6ed4b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7541ddcf4df8135d82b1f7f5ae2c02f031090e17
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662043"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275052"
 ---
-# <a name="ltworkflowinstancequerygt"></a>&lt;workflowInstanceQuery&gt;
+# <a name="workflowinstancequery"></a>\<workflowInstanceQuery>
 Representa uma consulta que controla as alterações de ciclo de vida de instância de fluxo de trabalho como um evento iniciado ou concluído.  
   
  Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

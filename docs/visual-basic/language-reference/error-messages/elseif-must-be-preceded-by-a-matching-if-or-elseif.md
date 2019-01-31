@@ -1,5 +1,5 @@
 ---
-title: '&#39;#ElseIf&#39; deve ser precedido por uma correspondência &#39;#If&#39; ou &#39;#ElseIf&#39;'
+title: "'#ElseIf' deve ser precedido por um '#If' ou '#ElseIf' correspondente"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30014
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: 1e63595ee573e9356f6870a02b2131897c725baf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6fa76b2aba45e3455cef6ceafc0f737ef56225d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505777"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271545"
 ---
-# <a name="39elseif39-must-be-preceded-by-a-matching-39if39-or-39elseif39"></a>&#39;#ElseIf&#39; deve ser precedido por uma correspondência &#39;#If&#39; ou &#39;#ElseIf&#39;
+# <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#ElseIf' deve ser precedido por um '#If' ou '#ElseIf' correspondente
 `#ElseIf` é uma diretiva de compilação condicional. Uma `#ElseIf` cláusula deve ser precedida por uma correspondência `#If` ou `#ElseIf` cláusula.  
   
  **ID do erro:** BC30014  

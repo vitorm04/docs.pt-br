@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;Property&gt; (.NET Nativo)
+title: <Property> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74fd4fa1387836e12d186a604f6996254eabf956
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c29cbfbd1c84d267e129bf97d4e9126c772d06d6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549412"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279104"
 ---
-# <a name="ltpropertygt-element-net-native"></a>Elemento &lt;Property&gt; (.NET Nativo)
+# <a name="property-element-net-native"></a>\<Propriedade > (.NET nativo)
 Aplica a política de reflexão de tempo de execução a uma propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  

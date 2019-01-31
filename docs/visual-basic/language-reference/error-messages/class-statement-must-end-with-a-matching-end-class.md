@@ -1,5 +1,5 @@
 ---
-title: '&#39;Classe de&#39; instrução deve terminar com uma correspondência &#39;End Class&#39;'
+title: Instrução 'Class' deve finalizar com 'End Class' correspondente
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30481
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 4e80ce58048bfa7f2fecc65e7167479df07bf57c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 572e1d74810aad6d24e6eefc8d37729f5dc950c9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715074"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286943"
 ---
-# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Classe de&#39; instrução deve terminar com uma correspondência &#39;End Class&#39;
+# <a name="class-statement-must-end-with-a-matching-end-class"></a>Instrução 'Class' deve finalizar com 'End Class' correspondente
 `Class` é usado para iniciar um `Class` block; portanto, ele só pode aparecer no início do bloco, com uma correspondência `End Class` terminando o bloco de instrução. Ou você tem um redundantes `Class` instrução, ou você não ter terminado sua `Class` bloco com `End Class`.  
   
  **ID do erro:** BC30481  

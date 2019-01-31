@@ -1,5 +1,5 @@
 ---
-title: '&#39;Personalizado&#39; modificador não é válido em eventos declarados sem tipos delegados explícitos'
+title: O modificador 'Custom' não é válido em eventos declarados sem tipos delegados explícitos
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31122
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c909973ef1c00cb01179b0e5527dfecd6f41e577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1b57ccdaa9e04c837ecf7572bc164683a934b2d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574775"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273511"
 ---
-# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;Personalizado&#39; modificador não é válido em eventos declarados sem tipos delegados explícitos
+# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>O modificador 'Custom' não é válido em eventos declarados sem tipos delegados explícitos
 Ao contrário de um evento não-personalizado, uma `Custom Event` declaração requer um `As` cláusula após o nome do evento que especifica explicitamente o tipo de delegado para o evento.  
   
  Os eventos não-personalizados podem ser definidos com um `As` cláusula e explícito tipo delegado, ou com um parâmetro de lista imediatamente após o nome do evento.  

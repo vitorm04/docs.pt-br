@@ -1,15 +1,15 @@
 ---
-title: '&lt;estados&gt; do WCF, &lt;workflowInstanceQuery&gt;'
+title: <states> of WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: 56e3c6ce5c86e468c9a4dd63021264703ab75b02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fad6f9c8871f79e4a1e26c893eed86ba168f6d01
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540813"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281457"
 ---
-# <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>&lt;estados&gt; do WCF, &lt;workflowInstanceQuery&gt;
+# <a name="states-of-wcf-workflowinstancequery"></a>\<estados > do WCF, \<workflowInstanceQuery >
 
 Representa uma coleção de estados inscritos da instância do fluxo de trabalho controladas quando os registros de rastreamento são criados.  
   

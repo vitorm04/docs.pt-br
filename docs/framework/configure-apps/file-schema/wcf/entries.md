@@ -1,15 +1,15 @@
 ---
-title: '&lt;Entradas&gt;'
+title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 33f98cb4b138307622a14463ce5a3008058b6e31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c4c7fa4f778642d549deebce6e7476f4da13a0d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587054"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283680"
 ---
-# <a name="ltentriesgt"></a>&lt;Entradas&gt;
+# <a name="entries"></a>\<entries>
 Uma entrada de roteamento que contêm mapeamentos entre os filtros de roteamento e os pontos de extremidade para enviar mensagens para quando o filtro corresponde ao destino.  
   
  \<system.serviceModel>  

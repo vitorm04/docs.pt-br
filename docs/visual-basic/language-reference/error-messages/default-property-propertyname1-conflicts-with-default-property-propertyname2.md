@@ -1,5 +1,5 @@
 ---
-title: Propriedade padrão &#39; &lt;propertyname1&gt; &#39; está em conflito com a propriedade padrão &#39; &lt;propertyname2&gt; &#39; em &#39; &lt;classname&gt; &#39;e, portanto, deve ser declarado como &#39;sombras&#39;
+title: A propriedade padrão '<propertyname1>' está em conflito com a propriedade padrão '<propertyname2>' em '<classname>' e por isso deve ser declarada como 'Shadows'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40007
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: 3099467fa3c5a162c13c9235fb8d55375953ba3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc75b01532ffb112622d7f9bc837490c627883b3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521420"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270361"
 ---
-# <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>Propriedade padrão &#39; &lt;propertyname1&gt; &#39; está em conflito com a propriedade padrão &#39; &lt;propertyname2&gt; &#39; em &#39; &lt;classname&gt; &#39;e, portanto, deve ser declarado como &#39;sombras&#39;
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Propriedade padrão '\<propertyname1 >' está em conflito com a propriedade padrão '\<propertyname2 >' em '\<classname >' e deve ser declarado 'como Shadows'
 Uma propriedade é declarada com o mesmo nome de uma propriedade definida na classe base. Nessa situação, a propriedade nessa classe deve sombrear a propriedade de classe base.  
   
  Esta mensagem é um aviso. `Shadows` será considerado por padrão. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  

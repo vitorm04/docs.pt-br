@@ -1,5 +1,5 @@
 ---
-title: Referência obrigatória ao assembly &#39; &lt;assemblyname&gt; &#39; que contém a classe base &#39; &lt;classname&gt;&#39;
+title: Referência obrigatória ao assembly '<assemblyname>' que contém a classe base '<classname>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30007
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: f2aa8f1f05ce15bd25992b7f1851854952108813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54848fdbd2547fe021f0386843f9666760396cb0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506258"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273274"
 ---
-# <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a>Referência obrigatória ao assembly &#39; &lt;assemblyname&gt; &#39; que contém a classe base &#39; &lt;classname&gt;&#39;
+# <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>Referência obrigatória ao assembly '\<assemblyname >' que contém a classe base\<classname >'
 Referência obrigatória ao assembly '\<assemblyname >' que contém a classe base\<classname >'. Adicione uma ao seu projeto.  
   
  A classe é definida em uma biblioteca de vínculo dinâmico (DLL) ou assembly que não é referenciado diretamente em seu projeto. O compilador do Visual Basic exige uma referência para evitar ambiguidade no caso da classe é definida em mais de uma DLL ou assembly.  

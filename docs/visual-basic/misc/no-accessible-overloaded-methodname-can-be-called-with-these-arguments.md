@@ -1,17 +1,17 @@
 ---
-title: Não acessível '&lt;methodname&gt;' pode ser chamado com estes argumentos sem uma conversão redutora
+title: Não acessível '<methodname>' pode ser chamado com estes argumentos sem uma conversão redutora
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
-ms.openlocfilehash: 40a88ef091a73d3165278ccda33452d3866af535
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e82a66c4c8885653b81a879ffd8afd3e6bfbaa49
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639569"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260392"
 ---
-# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Não acessível '&lt;methodname&gt;' pode ser chamado com estes argumentos sem uma conversão redutora
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Não acessível '\<methodname >' pode ser chamado com estes argumentos sem uma conversão redutora
 Um método sobrecarregado foi chamado, mas nenhum método foi compatível com a lista de argumentos fornecidos sem uma conversão de estreitamento.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
