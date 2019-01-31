@@ -1,15 +1,15 @@
 ---
-title: '&lt;filtros&gt; de &lt;roteamento&gt;'
+title: <filters> De <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 468c10bc06b60f80ce93cf413c02582fe3861f70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2c735a19c4cece16dcb77e3ec548eb2d39ec18
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704427"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272651"
 ---
-# <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;filtros&gt; de &lt;roteamento&gt;
+# <a name="filters-of-routing"></a>\<Filtros > de \<roteamento >
 
 Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas.
 

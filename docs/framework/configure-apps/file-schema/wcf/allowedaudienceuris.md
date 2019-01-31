@@ -1,15 +1,15 @@
 ---
-title: '&lt;allowedAudienceUris&gt;'
+title: <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 0f4dc73d-d95d-4193-9755-7df4cf2b8e1c
-ms.openlocfilehash: 5d1c1207486be3c6bfe25e7862a5674106ec5214
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d079c0a03f0c88bab04e3fe2e857e0be4d3af11e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498054"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283602"
 ---
-# <a name="ltallowedaudienceurisgt"></a>&lt;allowedAudienceUris&gt;
+# <a name="allowedaudienceuris"></a>\<allowedAudienceUris>
 Representa uma coleção de URIs de destino para o qual o <xref:System.IdentityModel.Tokens.SamlSecurityToken> token de segurança pode ser direcionado para ser considerado válido por um <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instância.  
   
  \<system.ServiceModel>  

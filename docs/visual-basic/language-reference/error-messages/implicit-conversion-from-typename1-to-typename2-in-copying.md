@@ -1,5 +1,5 @@
 ---
-title: Conversão implícita de &#39; &lt;typename1&gt; &#39; para &#39; &lt;typename2&gt; &#39; na cópia do valor de &#39;ByRef&#39; parâmetro &#39; &lt; ParameterName&gt; &#39; para o argumento correspondente.
+title: Conversão implícita de '<typename1>' em '<typename2>' ao copiar o valor do parâmetro 'ByRef' '<parametername>' para o argumento correspondente.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537226"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279611"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>Conversão implícita de &#39; &lt;typename1&gt; &#39; para &#39; &lt;typename2&gt; &#39; na cópia do valor de &#39;ByRef&#39; parâmetro &#39; &lt; ParameterName&gt; &#39; para o argumento correspondente.
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Conversão implícita de '\<typename1 >' para '\<typename2 >' ao copiar o valor do parâmetro 'ByRef' '\<parametername >' para o argumento correspondente.
 Um procedimento é chamado com um [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argumento de um tipo diferente do seu parâmetro correspondente.  
   
  Se você passar um argumento `ByRef`, Visual Basic, às vezes, copia o valor do argumento para uma variável local no procedimento em vez de passar uma referência. Nesse caso, quando o procedimento retorna, Visual Basic deve, em seguida, copie o valor da variável local volta para o argumento no código de chamada.  

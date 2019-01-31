@@ -1,16 +1,16 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206159"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277518"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 Especifica uma coleção de manipuladores de token de segurança que são registrados com o ponto de extremidade.  
   
  \<system.identityModel>  
@@ -44,13 +44,13 @@ Especifica uma coleção de manipuladores de token de segurança que são regist
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Adiciona um manipulador de token de segurança para a coleção de manipulador de token.|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Limpa todos os manipuladores de token de segurança da coleção de manipulador de token.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Remove um manipulador de token de segurança da coleção de manipulador de token.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornece configuração para a coleção de manipuladores de token.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornece configuração para a coleção de manipuladores de token.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
   
 ## <a name="remarks"></a>Comentários  
  Você pode especificar uma ou mais coleções nomeadas de manipuladores de token de segurança em uma configuração de serviço. Você pode especificar um nome para uma coleção usando o `name` atributo. Os únicos nomes que as alças da estrutura são "ActAs" e "OnBehalfOf". Se existirem manipuladores nessas coleções, eles são usados por um serviço de token de segurança (STS) em vez dos manipuladores padrão durante o processamento `ActAs` e `OnBehalfOf` tokens.  

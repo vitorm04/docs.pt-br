@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;ImpliesType&gt; (.NET Nativo)
+title: <ImpliesType> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1739c2a5e15d4c120d487c849819b6439afabade
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065967"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288009"
 ---
-# <a name="ltimpliestypegt-element-net-native"></a>Elemento &lt;ImpliesType&gt; (.NET Nativo)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType > (.NET nativo)
 Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.  
   
 ## <a name="syntax"></a>Sintaxe  

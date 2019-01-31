@@ -1,5 +1,5 @@
 ---
-title: Tipo de &#39; &lt;typename&gt; &#39; não está definido
+title: O tipo '<typename>' não está definido
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30002
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 8e303a9ac6529fbbc818c94497a16463897fb0c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80a3d31a8a46ce616be2dd2ab27faf0af04876f2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496121"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275058"
 ---
-# <a name="type-39lttypenamegt39-is-not-defined"></a>Tipo de &#39; &lt;typename&gt; &#39; não está definido
+# <a name="type-typename-is-not-defined"></a>Tipo de '\<typename >' não está definido
 A instrução faz referência a um tipo que não foi definida. Você pode definir um tipo em uma instrução de declaração, como `Enum`, `Structure`, `Class`, ou `Interface`.  
   
  **ID do erro:** BC30002  

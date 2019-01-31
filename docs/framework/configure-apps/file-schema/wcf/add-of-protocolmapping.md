@@ -1,15 +1,15 @@
 ---
-title: '&lt;adicionar&gt; &lt;protocolMapping&gt;'
+title: <add> De <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: ce970b9ef71e2a28de680926f96f83500948619b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18b50ec2d848bc6bb920fb8f630ac7703654b286
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632810"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280729"
 ---
-# <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;adicionar&gt; &lt;protocolMapping&gt;
+# <a name="add-of-protocolmapping"></a>\<Adicionar > de \<protocolMapping >
 Representa um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e uma associação do Windows Communication Foundation (WCF). Durante a criação de pontos de extremidade padrão em tempo de execução, o WCF analisa os mapeamentos configurados e decide em qual associação a ser usado para um determinado endereço de base.  
   
  \<system.serviceModel>  

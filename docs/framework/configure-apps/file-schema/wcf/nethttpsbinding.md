@@ -1,15 +1,15 @@
 ---
-title: '&lt;netHttpsBinding&gt;'
+title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: ef3e77e610230ea29d1ba410d38bfa2dade601b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82d1d68a8d6c4954b47509db2adaf88f88ae625d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554251"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275776"
 ---
-# <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
+# <a name="nethttpsbinding"></a>\<netHttpsBinding>
 Representa uma associação que um serviço do Windows Communication Foundation (WCF) pode usar para configurar e expor pontos de extremidade que podem se comunicar por HTTPS. Quando usado com um contrato duplex, soquetes da Web será usado, caso contrário, o HTTPS será usado.  
   
  Elemento raiz  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;segurança&gt; de &lt;webHttpBinding&gt;'
+title: <security> De <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 966dcba7c70419cfb7ca62016b4ee1d24df29827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f714ffb89d5ff990239bd1a02ffaeead4ad7d91
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502020"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278792"
 ---
-# <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;segurança&gt; de &lt;webHttpBinding&gt;
+# <a name="security-of-webhttpbinding"></a>\<segurança > de \<webHttpBinding >
 Especifica os requisitos de segurança para um ponto de extremidade configurado com um [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  \<system.ServiceModel>  

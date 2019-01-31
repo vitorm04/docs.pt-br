@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alterar o provedor criptográfico para um certificado X.509&#39;s de chave privada'
+title: 'Como: Alterar o provedor criptográfico para a chave privada de um certificado X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 40c98d17a52643f451ec01bc8b97c60f2b011b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce2ce082f41700b1b86786abfa2dfe4a673fd6e0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498967"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265942"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Como: Alterar o provedor criptográfico para um certificado X.509&#39;s de chave privada
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Como: Alterar o provedor criptográfico para a chave privada de um certificado X.509
 Este tópico mostra como alterar o provedor criptográfico usado para fornecer a chave privada de um certificado X.509 e como integrar o provedor a estrutura de segurança do Windows Communication Foundation (WCF). Para obter mais informações sobre como usar certificados, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  A estrutura de segurança do WCF fornece uma maneira de introduzir novos tipos de token de segurança, conforme descrito em [como: Criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Também é possível usar um token personalizado para substituir tipos de token fornecido pelo sistema existentes.  

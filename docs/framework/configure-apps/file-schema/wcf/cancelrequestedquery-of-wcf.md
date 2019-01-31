@@ -1,15 +1,15 @@
 ---
-title: '&lt;cancelRequestedQuery&gt; de WCF'
+title: <cancelRequestedQuery> do WCF
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 72fd23097760375738c2116b4535940873436986
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6157e63761efa954744ab08ea6c66535def514
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498262"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281327"
 ---
-# <a name="ltcancelrequestedquerygt-of-wcf"></a>&lt;cancelRequestedQuery&gt; de WCF
+# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery> of WCF
 
 Representa uma consulta que é usada para controlar solicitações cancelar uma atividade filho pela atividade pai. A consulta é necessária para um participante de rastreamento inscrever-se para Cancelar solicitação objetos de registro.  
   

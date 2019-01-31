@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;Directives&gt; (.NET Nativo)
+title: <Directives> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 497ec1a432352e3b9f50bd94e03e95e98edcfd55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14eac92a2f3e5ed5d93f4e608f7d42b13849036e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725631"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254165"
 ---
-# <a name="ltdirectivesgt-element-net-native"></a>Elemento &lt;Directives&gt; (.NET Nativo)
+# <a name="directives-element-net-native"></a>\<Diretivas > (.NET nativo)
 O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET nativo.  
   
  `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 

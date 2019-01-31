@@ -1,5 +1,5 @@
 ---
-title: Função &#39; &lt;procedurename&gt; &#39; &#39;t retorna um valor em todos os caminhos de código
+title: A função '<procedurename>' não retorna um valor em todos os caminhos de código
 ms.date: 07/20/2015
 f1_keywords:
 - bc42105
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: b6cc5143aafb6c2554b183a1fc5fb3b1331ec5d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552184"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281054"
 ---
-# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Função &#39; &lt;procedurename&gt; &#39; &#39;t retorna um valor em todos os caminhos de código
+# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Função '\<procedurename >' não retorna um valor em todos os caminhos de código
 Função '\<procedurename >' não retorna um valor em todos os caminhos de código. Está faltando uma instrução 'Return'?  
   
  Um `Function` procedimento tem pelo menos um caminho possível pelo seu código que não retorna um valor.  

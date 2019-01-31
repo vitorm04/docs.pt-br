@@ -1,15 +1,15 @@
 ---
-title: '&lt;segurança&gt; de &lt;msmqIntegrationBinding&gt;'
+title: <security> De <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: db263148a5a0993b546ffdd565ae7cf2edef580c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ceda00615ae579edb0360006bb70acd11716ce6a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493775"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275165"
 ---
-# <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;segurança&gt; de &lt;msmqIntegrationBinding&gt;
+# <a name="security-of-msmqintegrationbinding"></a>\<segurança > de \<msmqIntegrationBinding >
 Define as configurações de segurança de transporte para o canal de integração de enfileiramento de mensagens (MSMQ).  
   
  \<system.ServiceModel>  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;activityStateQueries&gt; do WCF'
+title: <activityStateQueries> do WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 6b21ad3f5487a924309b8bee6b9ac972f23bdc66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9c78b6929b4550204a22fe2e2786891b516a818
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701931"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265318"
 ---
-# <a name="ltactivitystatequeriesgt-of-wcf"></a>&lt;activityStateQueries&gt; do WCF
+# <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries > do WCF
 
 Representa uma coleção de consultas que são usados para controlar as alterações do ciclo de vida das atividades que compõem uma instância de fluxo de trabalho. Por exemplo, você talvez queira manter o controle de toda vez que a atividade de "Enviar email" termina dentro de uma instância de fluxo de trabalho. Essa consulta é necessária para um participante de rastreamento para se inscrever em objetos de registro de estado de atividade. Os estados disponíveis para assinar são especificados em ActivityStates.
 

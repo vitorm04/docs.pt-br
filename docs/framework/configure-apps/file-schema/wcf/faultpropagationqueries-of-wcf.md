@@ -1,26 +1,26 @@
 ---
-title: '&lt;faultPropagationQueries&gt; do WCF'
+title: <faultPropagationQueries> do WCF
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: 77a38f8474b5e2ac8634d6ea91bc80c6044ff3ed
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bc016827c5bb243bc83dbb53c1eda7eec1bfd8c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144958"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280391"
 ---
-# <a name="ltfaultpropagationqueriesgt-of-wcf"></a>&lt;faultPropagationQueries&gt; do WCF
+# <a name="faultpropagationqueries-of-wcf"></a>\<faultPropagationQueries> of WCF
 
 Representa uma coleção de consultas que são usados para controlar o tratamento de falhas que ocorrem dentro de uma atividade.  Esse evento ocorre sempre que um FaultHandler processa uma falha. Você deve usar essa consulta para controlar o tratamento de falhas que ocorrem dentro de uma atividade. A consulta é necessária para um participante de rastreamento assinar os registros de propagação de falhas.  
   
 Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<Acompanhamento >  
-\<perfis de >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
 \<workflow>  
-\<faultPropagationQueries >  
+\<faultPropagationQueries>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ nenhuma.
 
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](faultpropagationquery-of-wcf.md)|Uma consulta que é usada para controlar o tratamento de falhas que ocorrem dentro de uma atividade.  Esse evento ocorre sempre que um FaultHandler processa uma falha.|  
+|[\<faultPropagationQuery>](faultpropagationquery-of-wcf.md)|Uma consulta que é usada para controlar o tratamento de falhas que ocorrem dentro de uma atividade.  Esse evento ocorre sempre que um FaultHandler processa uma falha.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

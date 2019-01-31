@@ -1,17 +1,17 @@
 ---
-title: '&#39;Dir&#39; função deve ser chamada primeiro com um &#39;PathName&#39; argumento'
+title: A função 'Dir' deve ser chamada primeiro com um argumento 'PathName'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrDIR_IllegalCall
 ms.assetid: 7b5d149f-be91-4ac3-8262-86a360894e7d
-ms.openlocfilehash: f7e9ef9cc6309f24ae9f8963e910b41180c029b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 828c715d9aaceef17d030113e7eda302f025ca9d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518482"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282576"
 ---
-# <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a>&#39;Dir&#39; função deve ser chamada primeiro com um &#39;PathName&#39; argumento
+# <a name="dir-function-must-first-be-called-with-a-pathname-argument"></a>A função 'Dir' deve ser chamada primeiro com um argumento 'PathName'
 Uma chamada inicial para o `Dir` função não inclui o `PathName` argumento. A primeira chamada para `Dir` deve incluir uma `PathName`, as chamadas subsequentes, mas para `Dir` não precisa incluir parâmetros para recuperar o próximo item.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

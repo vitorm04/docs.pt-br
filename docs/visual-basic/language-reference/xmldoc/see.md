@@ -1,18 +1,18 @@
 ---
-title: '&lt;consulte&gt; (Visual Basic)'
+title: <see> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: afc67d744a04f404a275077ecac42556c963d472
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9faf1ec7211493b8c0058439e9a6e3bcb293ea99
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721871"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289517"
 ---
-# <a name="ltseegt-visual-basic"></a>&lt;consulte&gt; (Visual Basic)
+# <a name="see-visual-basic"></a>\<Consulte > (Visual Basic)
 Especifica um link para outro membro.  
   
 ## <a name="syntax"></a>Sintaxe  

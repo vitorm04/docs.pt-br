@@ -1,5 +1,5 @@
 ---
-title: '&lt;Desmarque&gt; elemento para &lt;appSettings&gt;'
+title: Elemento <clear> para <appSettings>
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: bc52e3149c213925ea64a8421ee65befeea4161e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b6a48d1fdab3cbccf40aaa77731a658f533eeba
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184212"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278572"
 ---
 # <a name="clear-element-for-appsettings"></a>\<Limpar > elemento para \<appSettings >
 
@@ -22,7 +22,7 @@ Limpa as configurações de aplicativo personalizadas.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Limpar >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintaxe
 

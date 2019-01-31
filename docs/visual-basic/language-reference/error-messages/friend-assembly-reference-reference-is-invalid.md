@@ -1,5 +1,5 @@
 ---
-title: Referência de assembly Friend &lt;referência&gt; é inválido
+title: A referência de assembly amigável <reference> é inválida.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31535
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: cdedcc18aa82f6efd8c52cdca5d915d7d78e269f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff2cdbebe13f6224209ef8da62600c99348c911b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611924"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286813"
 ---
-# <a name="friend-assembly-reference-ltreferencegt-is-invalid"></a>Referência de assembly Friend &lt;referência&gt; é inválido
+# <a name="friend-assembly-reference-reference-is-invalid"></a>Referência de assembly Friend \<referência > é inválido
 Referência de assembly Friend \<referência > é inválido. O nome forte assinado em assemblies deve especificar uma chave pública em suas declarações InternalsVisibleTo.  
   
  O nome do assembly passado para o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> construtor de atributo identifica um assembly de nome forte, mas ele não inclui um `PublicKey` atributo.  

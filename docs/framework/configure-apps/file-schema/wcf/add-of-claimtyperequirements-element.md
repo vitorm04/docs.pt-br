@@ -1,15 +1,15 @@
 ---
-title: '&lt;adicionar&gt; elemento &lt;claimTypeRequirements&gt;'
+title: <add> de <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: fb5e723f6cff9f6e573a45a1dabe008beb9399e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6971837ef2e68de54179daaf225394b9de769987
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687305"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275581"
 ---
-# <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;adicionar&gt; elemento &lt;claimTypeRequirements&gt;
+# <a name="add-of-claimtyperequirements-element"></a>\<Adicionar > de \<claimTypeRequirements > elemento
 Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada. Por exemplo, serviços de estado os requisitos de credenciais de entrada, que devem ter um determinado conjunto de tipos de declaração.  
   
  \<system.ServiceModel>  
