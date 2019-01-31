@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt; elemento para &lt;configuração&gt;'
+title: Elemento <assemblyBinding> para <configuration>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: 12065d8bc484f7bbf77ae18c67df1de0845167b2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: f5992a6085c32d37f56319cf8b2c361542c441e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083893"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257317"
 ---
-# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="c9671-102">\<assemblyBinding > elemento para \<configuration ></span><span class="sxs-lookup"><span data-stu-id="c9671-102">\<assemblyBinding> element for \<configuration></span></span>
+# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="172f1-102">\<assemblyBinding > elemento para \<configuration ></span><span class="sxs-lookup"><span data-stu-id="172f1-102">\<assemblyBinding> element for \<configuration></span></span>
 
-<span data-ttu-id="c9671-103">Especifica a diretiva de ligação de assembly no nível de configuração.</span><span class="sxs-lookup"><span data-stu-id="c9671-103">Specifies assembly binding policy at the configuration level.</span></span>
+<span data-ttu-id="172f1-103">Especifica a diretiva de ligação de assembly no nível de configuração.</span><span class="sxs-lookup"><span data-stu-id="172f1-103">Specifies assembly binding policy at the configuration level.</span></span>
 
-<span data-ttu-id="c9671-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="c9671-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="c9671-105">&nbsp;&nbsp;**\<assemblyBinding>**</span><span class="sxs-lookup"><span data-stu-id="c9671-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
+<span data-ttu-id="172f1-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="172f1-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="172f1-105">&nbsp;&nbsp;**\<assemblyBinding>**</span><span class="sxs-lookup"><span data-stu-id="172f1-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c9671-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c9671-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="172f1-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="172f1-106">Syntax</span></span>
 
 ```xml
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
@@ -29,34 +29,34 @@ ms.locfileid: "55083893"
 </assemblyBinding>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="c9671-107">Atributo</span><span class="sxs-lookup"><span data-stu-id="c9671-107">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="172f1-107">Atributo</span><span class="sxs-lookup"><span data-stu-id="172f1-107">Attribute</span></span>
 
-|           | <span data-ttu-id="c9671-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="c9671-108">Description</span></span> |
+|           | <span data-ttu-id="172f1-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="172f1-108">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="c9671-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="c9671-109">**xmlns**</span></span> | <span data-ttu-id="c9671-110">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="c9671-110">Required attribute.</span></span><br><br><span data-ttu-id="c9671-111">Especifica o namespace XML necessário para a associação de assembly.</span><span class="sxs-lookup"><span data-stu-id="c9671-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="c9671-112">Use a cadeia de caracteres "urn: schemas-microsoft-v1" como o valor.</span><span class="sxs-lookup"><span data-stu-id="c9671-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
+| <span data-ttu-id="172f1-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="172f1-109">**xmlns**</span></span> | <span data-ttu-id="172f1-110">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="172f1-110">Required attribute.</span></span><br><br><span data-ttu-id="172f1-111">Especifica o namespace XML necessário para a associação de assembly.</span><span class="sxs-lookup"><span data-stu-id="172f1-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="172f1-112">Use a cadeia de caracteres "urn: schemas-microsoft-v1" como o valor.</span><span class="sxs-lookup"><span data-stu-id="172f1-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="c9671-113">Elemento pai</span><span class="sxs-lookup"><span data-stu-id="c9671-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="172f1-113">Elemento pai</span><span class="sxs-lookup"><span data-stu-id="172f1-113">Parent element</span></span>
 
-|     | <span data-ttu-id="c9671-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="c9671-114">Description</span></span> |
+|     | <span data-ttu-id="172f1-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="172f1-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="c9671-115">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="c9671-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="c9671-116">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c9671-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="172f1-115">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="172f1-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="172f1-116">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="172f1-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-element"></a><span data-ttu-id="c9671-117">Elemento filho</span><span class="sxs-lookup"><span data-stu-id="c9671-117">Child element</span></span>
+## <a name="child-element"></a><span data-ttu-id="172f1-117">Elemento filho</span><span class="sxs-lookup"><span data-stu-id="172f1-117">Child element</span></span>
 
-|     | <span data-ttu-id="c9671-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="c9671-118">Description</span></span> |
+|     | <span data-ttu-id="172f1-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="172f1-118">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="c9671-119">**\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="c9671-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="c9671-120">Especifica um arquivo de configuração a ser incluído.</span><span class="sxs-lookup"><span data-stu-id="c9671-120">Specifies a configuration file to include.</span></span> |
+| [<span data-ttu-id="172f1-119">**\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="172f1-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="172f1-120">Especifica um arquivo de configuração a ser incluído.</span><span class="sxs-lookup"><span data-stu-id="172f1-120">Specifies a configuration file to include.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="c9671-121">Comentários</span><span class="sxs-lookup"><span data-stu-id="c9671-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="172f1-121">Comentários</span><span class="sxs-lookup"><span data-stu-id="172f1-121">Remarks</span></span>
 
-<span data-ttu-id="c9671-122">O [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento simplifica o gerenciamento de assemblies de componente, permitindo que os arquivos de configuração de aplicativo para incluir o assembly de arquivos de configuração locais bem conhecidos, em vez de duplicar as definições de configuração de assembly.</span><span class="sxs-lookup"><span data-stu-id="c9671-122">The [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
+<span data-ttu-id="172f1-122">O [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento simplifica o gerenciamento de assemblies de componente, permitindo que os arquivos de configuração de aplicativo para incluir o assembly de arquivos de configuração locais bem conhecidos, em vez de duplicar as definições de configuração de assembly.</span><span class="sxs-lookup"><span data-stu-id="172f1-122">The [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c9671-123">O  **\<linkedConfiguration >** elemento não tem suporte para aplicativos com manifestos do Windows lado a lado.</span><span class="sxs-lookup"><span data-stu-id="c9671-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
+> <span data-ttu-id="172f1-123">O  **\<linkedConfiguration >** elemento não tem suporte para aplicativos com manifestos do Windows lado a lado.</span><span class="sxs-lookup"><span data-stu-id="172f1-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c9671-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c9671-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="172f1-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="172f1-124">Example</span></span>
 
-<span data-ttu-id="c9671-125">O exemplo a seguir mostra como incluir um arquivo de configuração no disco rígido local:</span><span class="sxs-lookup"><span data-stu-id="c9671-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
+<span data-ttu-id="172f1-125">O exemplo a seguir mostra como incluir um arquivo de configuração no disco rígido local:</span><span class="sxs-lookup"><span data-stu-id="172f1-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
 
 ```xml
 <configuration>
@@ -66,6 +66,6 @@ ms.locfileid: "55083893"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c9671-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c9671-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="172f1-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="172f1-126">See also</span></span>
 
-- [<span data-ttu-id="c9671-127">Esquema de arquivo de configuração para o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c9671-127">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="172f1-127">Esquema de arquivo de configuração para o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="172f1-127">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
