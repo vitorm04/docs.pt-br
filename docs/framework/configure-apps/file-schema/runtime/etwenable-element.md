@@ -1,5 +1,5 @@
 ---
-title: '&lt;etwEnable&gt; elemento'
+title: Elemento <etwEnable>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
@@ -7,60 +7,60 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 788eee71c718c003110ad8242505f2d7868e836c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd6d6d9e192fdf43ba9436cda54920bdeba9ab64
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506921"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279169"
 ---
-# <a name="ltetwenablegt-element"></a><span data-ttu-id="728d2-102">&lt;etwEnable&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="728d2-102">&lt;etwEnable&gt; Element</span></span>
-<span data-ttu-id="728d2-103">Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) para eventos de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="728d2-103">Specifies whether to enable event tracing for Windows (ETW) for common language runtime events.</span></span>  
+# <a name="etwenable-element"></a><span data-ttu-id="ffc60-102">\<etwEnable > elemento</span><span class="sxs-lookup"><span data-stu-id="ffc60-102">\<etwEnable> Element</span></span>
+<span data-ttu-id="ffc60-103">Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) para eventos de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="ffc60-103">Specifies whether to enable event tracing for Windows (ETW) for common language runtime events.</span></span>  
   
- <span data-ttu-id="728d2-104">\<Configuração > elemento</span><span class="sxs-lookup"><span data-stu-id="728d2-104">\<configuration> Element</span></span>  
-<span data-ttu-id="728d2-105">\<tempo de execução > elemento</span><span class="sxs-lookup"><span data-stu-id="728d2-105">\<runtime> Element</span></span>  
-<span data-ttu-id="728d2-106">\<etwEnabled></span><span class="sxs-lookup"><span data-stu-id="728d2-106">\<etwEnabled></span></span>  
+ <span data-ttu-id="ffc60-104">\<Configuração > elemento</span><span class="sxs-lookup"><span data-stu-id="ffc60-104">\<configuration> Element</span></span>  
+<span data-ttu-id="ffc60-105">\<tempo de execução > elemento</span><span class="sxs-lookup"><span data-stu-id="ffc60-105">\<runtime> Element</span></span>  
+<span data-ttu-id="ffc60-106">\<etwEnabled></span><span class="sxs-lookup"><span data-stu-id="ffc60-106">\<etwEnabled></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="728d2-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="728d2-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ffc60-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ffc60-107">Syntax</span></span>  
   
 ```xml  
 <etwEnable enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="728d2-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="728d2-108">Attributes and Elements</span></span>  
- <span data-ttu-id="728d2-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="728d2-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ffc60-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="ffc60-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ffc60-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="ffc60-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="728d2-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="728d2-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ffc60-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="ffc60-110">Attributes</span></span>  
   
-|<span data-ttu-id="728d2-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="728d2-111">Attribute</span></span>|<span data-ttu-id="728d2-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="728d2-112">Description</span></span>|  
+|<span data-ttu-id="ffc60-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="ffc60-111">Attribute</span></span>|<span data-ttu-id="ffc60-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="ffc60-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="728d2-113">habilitado</span><span class="sxs-lookup"><span data-stu-id="728d2-113">enabled</span></span>|<span data-ttu-id="728d2-114">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="728d2-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="728d2-115">Especifica se o ETW deve ser habilitado.</span><span class="sxs-lookup"><span data-stu-id="728d2-115">Specifies whether ETW should be enabled.</span></span>|  
+|<span data-ttu-id="ffc60-113">habilitado</span><span class="sxs-lookup"><span data-stu-id="ffc60-113">enabled</span></span>|<span data-ttu-id="ffc60-114">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="ffc60-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="ffc60-115">Especifica se o ETW deve ser habilitado.</span><span class="sxs-lookup"><span data-stu-id="ffc60-115">Specifies whether ETW should be enabled.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="728d2-116">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="728d2-116">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="ffc60-116">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="ffc60-116">enabled Attribute</span></span>  
   
-|<span data-ttu-id="728d2-117">Valor</span><span class="sxs-lookup"><span data-stu-id="728d2-117">Value</span></span>|<span data-ttu-id="728d2-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="728d2-118">Description</span></span>|  
+|<span data-ttu-id="ffc60-117">Valor</span><span class="sxs-lookup"><span data-stu-id="ffc60-117">Value</span></span>|<span data-ttu-id="ffc60-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="ffc60-118">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="728d2-119">true</span><span class="sxs-lookup"><span data-stu-id="728d2-119">true</span></span>|<span data-ttu-id="728d2-120">Habilite o ETW.</span><span class="sxs-lookup"><span data-stu-id="728d2-120">Enable ETW.</span></span> <span data-ttu-id="728d2-121">Esse é o padrão para as versões de sistemas operacionais do Windows Vista e Windows Server 2008 a partir do Windows.</span><span class="sxs-lookup"><span data-stu-id="728d2-121">This is the default for versions of Windows beginning with the Windows Vista and Windows Server 2008 operating systems.</span></span>|  
-|<span data-ttu-id="728d2-122">false</span><span class="sxs-lookup"><span data-stu-id="728d2-122">false</span></span>|<span data-ttu-id="728d2-123">Desabilite o ETW.</span><span class="sxs-lookup"><span data-stu-id="728d2-123">Disable ETW.</span></span> <span data-ttu-id="728d2-124">Esse é o padrão para versões anteriores do Windows.</span><span class="sxs-lookup"><span data-stu-id="728d2-124">This is the default for earlier versions of Windows.</span></span>|  
+|<span data-ttu-id="ffc60-119">true</span><span class="sxs-lookup"><span data-stu-id="ffc60-119">true</span></span>|<span data-ttu-id="ffc60-120">Habilite o ETW.</span><span class="sxs-lookup"><span data-stu-id="ffc60-120">Enable ETW.</span></span> <span data-ttu-id="ffc60-121">Esse é o padrão para as versões de sistemas operacionais do Windows Vista e Windows Server 2008 a partir do Windows.</span><span class="sxs-lookup"><span data-stu-id="ffc60-121">This is the default for versions of Windows beginning with the Windows Vista and Windows Server 2008 operating systems.</span></span>|  
+|<span data-ttu-id="ffc60-122">false</span><span class="sxs-lookup"><span data-stu-id="ffc60-122">false</span></span>|<span data-ttu-id="ffc60-123">Desabilite o ETW.</span><span class="sxs-lookup"><span data-stu-id="ffc60-123">Disable ETW.</span></span> <span data-ttu-id="ffc60-124">Esse é o padrão para versões anteriores do Windows.</span><span class="sxs-lookup"><span data-stu-id="ffc60-124">This is the default for earlier versions of Windows.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="728d2-125">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="728d2-125">Child Elements</span></span>  
- <span data-ttu-id="728d2-126">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="728d2-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ffc60-125">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="ffc60-125">Child Elements</span></span>  
+ <span data-ttu-id="ffc60-126">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="ffc60-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="728d2-127">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="728d2-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ffc60-127">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="ffc60-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="728d2-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="728d2-128">Element</span></span>|<span data-ttu-id="728d2-129">Descrição</span><span class="sxs-lookup"><span data-stu-id="728d2-129">Description</span></span>|  
+|<span data-ttu-id="ffc60-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="ffc60-128">Element</span></span>|<span data-ttu-id="ffc60-129">Descrição</span><span class="sxs-lookup"><span data-stu-id="ffc60-129">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="728d2-130">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="728d2-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="728d2-131">Contém informações sobre associação do assembly e coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="728d2-131">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="ffc60-130">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ffc60-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="ffc60-131">Contém informações sobre associação do assembly e coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="ffc60-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="728d2-132">Comentários</span><span class="sxs-lookup"><span data-stu-id="728d2-132">Remarks</span></span>  
- <span data-ttu-id="728d2-133">Começando com o Windows Vista, o ETW é habilitado por padrão.</span><span class="sxs-lookup"><span data-stu-id="728d2-133">Beginning with Windows Vista, ETW is enabled by default.</span></span> <span data-ttu-id="728d2-134">Use esse elemento para desabilitar o ETW para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="728d2-134">Use this element to disable ETW for an application.</span></span> <span data-ttu-id="728d2-135">Em versões anteriores do Windows, use esse elemento para habilitar o ETW para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="728d2-135">In earlier versions of Windows, use this element to enable ETW for an application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ffc60-132">Comentários</span><span class="sxs-lookup"><span data-stu-id="ffc60-132">Remarks</span></span>  
+ <span data-ttu-id="ffc60-133">Começando com o Windows Vista, o ETW é habilitado por padrão.</span><span class="sxs-lookup"><span data-stu-id="ffc60-133">Beginning with Windows Vista, ETW is enabled by default.</span></span> <span data-ttu-id="ffc60-134">Use esse elemento para desabilitar o ETW para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ffc60-134">Use this element to disable ETW for an application.</span></span> <span data-ttu-id="ffc60-135">Em versões anteriores do Windows, use esse elemento para habilitar o ETW para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ffc60-135">In earlier versions of Windows, use this element to enable ETW for an application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="728d2-136">ETW pode ser habilitado ou desabilitado globalmente em um servidor usando uma configuração do registro.</span><span class="sxs-lookup"><span data-stu-id="728d2-136">ETW can be enabled or disabled globally on a server by using a registry setting.</span></span> <span data-ttu-id="728d2-137">Ver [controlando o log do .NET Framework](../../../../../docs/framework/performance/controlling-logging.md).</span><span class="sxs-lookup"><span data-stu-id="728d2-137">See [Controlling .NET Framework Logging](../../../../../docs/framework/performance/controlling-logging.md).</span></span>  
+>  <span data-ttu-id="ffc60-136">ETW pode ser habilitado ou desabilitado globalmente em um servidor usando uma configuração do registro.</span><span class="sxs-lookup"><span data-stu-id="ffc60-136">ETW can be enabled or disabled globally on a server by using a registry setting.</span></span> <span data-ttu-id="ffc60-137">Ver [controlando o log do .NET Framework](../../../../../docs/framework/performance/controlling-logging.md).</span><span class="sxs-lookup"><span data-stu-id="ffc60-137">See [Controlling .NET Framework Logging](../../../../../docs/framework/performance/controlling-logging.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="728d2-138">Exemplo</span><span class="sxs-lookup"><span data-stu-id="728d2-138">Example</span></span>  
- <span data-ttu-id="728d2-139">O exemplo a seguir mostra como habilitar o rastreamento ETW para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="728d2-139">The following example shows how to enable ETW tracing for an application.</span></span>  
+## <a name="example"></a><span data-ttu-id="ffc60-138">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ffc60-138">Example</span></span>  
+ <span data-ttu-id="ffc60-139">O exemplo a seguir mostra como habilitar o rastreamento ETW para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ffc60-139">The following example shows how to enable ETW tracing for an application.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,7 +70,7 @@ ms.locfileid: "54506921"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="728d2-140">Consulte também</span><span class="sxs-lookup"><span data-stu-id="728d2-140">See also</span></span>
-- [<span data-ttu-id="728d2-141">Esquema de configurações do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="728d2-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="728d2-142">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="728d2-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="728d2-143">Controlando o log no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="728d2-143">Controlling .NET Framework Logging</span></span>](../../../../../docs/framework/performance/controlling-logging.md)
+## <a name="see-also"></a><span data-ttu-id="ffc60-140">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ffc60-140">See also</span></span>
+- [<span data-ttu-id="ffc60-141">Esquema de configurações do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="ffc60-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="ffc60-142">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="ffc60-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="ffc60-143">Controlando o log no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ffc60-143">Controlling .NET Framework Logging</span></span>](../../../../../docs/framework/performance/controlling-logging.md)

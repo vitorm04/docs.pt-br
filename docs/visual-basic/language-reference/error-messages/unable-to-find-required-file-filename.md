@@ -1,5 +1,5 @@
 ---
-title: Não é possível localizar o arquivo &#39; &lt;nome de arquivo&gt;&#39;
+title: Não é possível localizar o arquivo '<filename>' obrigatório
 ms.date: 07/20/2015
 f1_keywords:
 - bc30655
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: ac391dd9e95f3d8c9dde00ba90e26bcdf468d62b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b86c80fb810619adff8d9cc627cf3d70fb958652
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511128"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282562"
 ---
-# <a name="unable-to-find-required-file-39ltfilenamegt39"></a><span data-ttu-id="09183-102">Não é possível localizar o arquivo &#39; &lt;nome de arquivo&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="09183-102">Unable to find required file &#39;&lt;filename&gt;&#39;</span></span>
-<span data-ttu-id="09183-103">Um arquivo que é exigido pelo Visual Studio está faltando ou danificado.</span><span class="sxs-lookup"><span data-stu-id="09183-103">A file that is required by Visual Studio is missing or damaged.</span></span>  
+# <a name="unable-to-find-required-file-filename"></a><span data-ttu-id="fe0c7-102">Não é possível localizar o arquivo necessário '\<filename >'</span><span class="sxs-lookup"><span data-stu-id="fe0c7-102">Unable to find required file '\<filename>'</span></span>
+<span data-ttu-id="fe0c7-103">Um arquivo que é exigido pelo Visual Studio está faltando ou danificado.</span><span class="sxs-lookup"><span data-stu-id="fe0c7-103">A file that is required by Visual Studio is missing or damaged.</span></span>  
   
- <span data-ttu-id="09183-104">**ID do erro:** BC30655</span><span class="sxs-lookup"><span data-stu-id="09183-104">**Error ID:** BC30655</span></span>  
+ <span data-ttu-id="fe0c7-104">**ID do erro:** BC30655</span><span class="sxs-lookup"><span data-stu-id="fe0c7-104">**Error ID:** BC30655</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="09183-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="09183-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fe0c7-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="fe0c7-105">To correct this error</span></span>  
   
--   <span data-ttu-id="09183-106">Reinstale o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="09183-106">Reinstall Visual Studio.</span></span>  
+-   <span data-ttu-id="fe0c7-106">Reinstale o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fe0c7-106">Reinstall Visual Studio.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09183-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="09183-107">See also</span></span>
-- [<span data-ttu-id="09183-108">Fale conosco</span><span class="sxs-lookup"><span data-stu-id="09183-108">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="fe0c7-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fe0c7-107">See also</span></span>
+- [<span data-ttu-id="fe0c7-108">Fale conosco</span><span class="sxs-lookup"><span data-stu-id="fe0c7-108">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
