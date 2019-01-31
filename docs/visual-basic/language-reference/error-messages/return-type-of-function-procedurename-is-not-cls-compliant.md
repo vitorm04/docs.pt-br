@@ -1,5 +1,5 @@
 ---
-title: Tipo de retorno da função &#39; &lt;procedurename&gt; &#39; não é compatível com CLS
+title: O tipo de retorno da função '<procedurename>' não é compatível com CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40027
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: b7704ee63031c38f708a2243e84b880c25fcf819
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5e746981d10ba8e662aebf86f67f08856ba37199
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243775"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260509"
 ---
-# <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>Tipo de retorno da função &#39; &lt;procedurename&gt; &#39; não é compatível com CLS
+# <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>Tipo de retorno da função '\<procedurename >' não é compatível com CLS
 Um `Function` procedimento está marcado como `<CLSCompliant(True)>` , mas retorna um tipo que está marcado como `<CLSCompliant(False)>`, não está marcada ou não se qualifica porque ele é um tipo incompatível.  
   
  Para obter um procedimento para estar em conformidade com o [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele deve usar somente tipos compatíveis com CLS. Isso se aplica os tipos de parâmetros, o tipo de retorno e os tipos de todas as suas variáveis locais.  

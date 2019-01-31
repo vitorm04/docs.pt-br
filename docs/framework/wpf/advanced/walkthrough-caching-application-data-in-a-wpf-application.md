@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513718"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480056"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Passo a passo: Cache de dados de aplicativo em um aplicativo WPF
-O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.
+O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.
 
  O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornece classes que permitem que você use o cache em aplicativos do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Essas classes estão localizadas no <xref:System.Runtime.Caching> namespace.
 
@@ -218,7 +218,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Se nenhuma informação de remoção ou de expiração for fornecida, o padrão é <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, que significa que as entradas de cache nunca expiram com base apenas em um tempo absoluto. Em vez disso, as entradas de cache expiram somente quando há pressão de memória. Como uma melhor prática, você deve sempre fornecer explicitamente uma expiração absoluta ou alternativa.
+     Se nenhuma informação de remoção ou de expiração for fornecida, o padrão é <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, que significa que as entradas de cache nunca expiram com base apenas em um tempo absoluto. Em vez disso, as entradas de cache expiram somente quando há pressão de memória. Como prática recomendada, você deve sempre fornecer explicitamente absoluta ou uma expiração deslizante.
 
 7.  Dentro do bloco `if/then` e depois do código adicionado na etapa anterior, adicione o seguinte código para criar uma coleção para os caminhos de arquivo que você deseja monitorar e para adicionar o caminho do arquivo de texto à coleção:
 
@@ -254,7 +254,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      O carimbo de data/hora é adicionado para que você possa ver quando a entrada de cache expira.
@@ -296,7 +296,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
      O conteúdo em cache do arquivo de texto é exibido em uma caixa de mensagem. Observe o carimbo de data/hora no arquivo.
 
-3.  Feche a caixa de mensagem e, em seguida, clique em **Obter Cache** novamente **.**
+3.  Feche a caixa de mensagem e, em seguida, clique em **Obter Cache** novamente.
 
      O carimbo de data/hora está inalterado. Isso indica que o conteúdo em cache está exibido.
 
@@ -306,7 +306,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
 5.  Em um editor de texto, abra o arquivo de texto que você criou. Não faça nenhuma alteração ainda.
 
-6.  Feche a caixa de mensagem e, em seguida, clique em **Obter Cache** novamente **.**
+6.  Feche a caixa de mensagem e, em seguida, clique em **Obter Cache** novamente.
 
      Observe o carimbo de data/hora novamente.
 
