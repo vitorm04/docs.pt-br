@@ -1,15 +1,15 @@
 ---
-title: '&lt;ponto de extremidade&gt; do &lt;cliente&gt;'
+title: <endpoint> De <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598298"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287762"
 ---
-# <a name="ltendpointgt-of-ltclientgt"></a>&lt;ponto de extremidade&gt; do &lt;cliente&gt;
+# <a name="endpoint-of-client"></a>\<ponto de extremidade > do \<cliente >
 Especifica o contrato, associação e propriedades de endereço do ponto de extremidade de canal, que é usado pelos clientes para se conectar aos pontos de extremidade de serviço no servidor.  
   
  \<system.ServiceModel>  

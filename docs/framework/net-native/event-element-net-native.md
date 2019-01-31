@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;Event&gt; (.NET Native)
+title: <Event> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11cc51eb12edc36331bd7a2d3bb1ecfdc267985e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5d778ca30aa29ba883552f97e061fb1dde8d73e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536744"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287567"
 ---
-# <a name="lteventgt-element-net-native"></a>Elemento &lt;Event&gt; (.NET Native)
+# <a name="event-element-net-native"></a>\<Evento > (.NET nativo)
 Aplica a política de reflexão de tempo de execução a um evento.  
   
 ## <a name="syntax"></a>Sintaxe  
