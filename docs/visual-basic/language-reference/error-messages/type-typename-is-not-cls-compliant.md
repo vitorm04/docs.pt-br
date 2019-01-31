@@ -1,5 +1,5 @@
 ---
-title: Tipo &lt;typename&gt; não é compatível com CLS
+title: O tipo <typename> não é compatível com CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40041
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: 9911b4fe7b88996f17cb5e9eec7d4a5f2c254b76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 243f51b3e6c798c82fdbe7b28557c4f96c728bf2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594602"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281717"
 ---
-# <a name="type-lttypenamegt-is-not-cls-compliant"></a>Tipo &lt;typename&gt; não é compatível com CLS
+# <a name="type-typename-is-not-cls-compliant"></a>Tipo \<typename > não é compatível com CLS
 Uma variável, propriedade ou função de retorno é declarada com um tipo de dados que não é compatível com CLS.  
   
- Para um aplicativo ser compatível com o [independência da linguagem e componentes independentes da linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele deve usar somente tipos compatíveis com CLS.  
+ Para um aplicativo esteja em conformidade com o [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele deve usar somente tipos compatíveis com CLS.  
   
  Os seguintes tipos de dados do Visual Basic não são compatíveis com CLS:  
   
@@ -33,6 +33,6 @@ Uma variável, propriedade ou função de retorno é declarada com um tipo de da
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Se seu aplicativo precisa para ser compatível com CLS, altere o tipo de dados desse elemento para o tipo compatível com CLS mais próximo. Por exemplo, no lugar de `UInteger` você poderá usar `Integer` se você não precisar que o intervalo de valores acima de 2.147.483.647. Se você precisar de intervalo estendido, você pode substituir `UInteger` com `Long`.  
+-   Se seu aplicativo precisa ser compatível com CLS, altere o tipo de dados desse elemento para o tipo compatível com CLS mais próximo. Por exemplo, no lugar de `UInteger` talvez você possa usar `Integer` se você não precisar que o intervalo de valores acima de 2.147.483.647. Se você precisar de intervalo estendido, você pode substituir `UInteger` com `Long`.  
   
--   Se seu aplicativo não precisa ser compatível com CLS, você não precisa alterar nada. Você deve conhecer sua incompatibilidade, no entanto.
+-   Se seu aplicativo não precisa ser compatível com CLS, você não precisará alterar nada. Você deve estar atento a sua falta de conformidade, no entanto.

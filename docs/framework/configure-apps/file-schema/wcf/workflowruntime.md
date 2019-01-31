@@ -1,15 +1,15 @@
 ---
-title: '&lt;workflowRuntime&gt;'
+title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: 5560d74a5c69a01a2e05d4c2461a280244e4cd0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c99f932bf086806861b5eec3392d8a0acd7f2fc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580610"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254861"
 ---
-# <a name="ltworkflowruntimegt"></a>&lt;workflowRuntime&gt;
+# <a name="workflowruntime"></a>\<workflowRuntime>
 Especifica configurações para uma instância de <xref:System.Workflow.Runtime.WorkflowRuntime> para hospedar os serviços do Windows Communication Foundation (WCF) baseados em fluxo de trabalho.  
   
  \<system.ServiceModel>  
