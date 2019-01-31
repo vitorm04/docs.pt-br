@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;Application&gt; (.NET Nativo)
+title: <Application> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 557b8a91c969a4c7e7b7a10c2117659a75ef9008
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537281"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270804"
 ---
-# <a name="ltapplicationgt-element-net-native"></a>Elemento &lt;Application&gt; (.NET Nativo)
+# <a name="application-element-net-native"></a>\<Aplicativo > (.NET nativo)
 Serve como um contêiner para tipos em todo o aplicativo e membros de tipo cujos metadados estão disponível para reflexão no tempo de execução e aplica-se à política de reflexão no tempo de execução a todos os elementos de programa em um aplicativo.  
   
  Elemento \<Directives>  

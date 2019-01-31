@@ -1,15 +1,15 @@
 ---
-title: '&lt;contractTypeNames&gt;'
+title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: 2c3f501f44d9e3c601e654041eb9d5a7de8a0a07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8f2b600b700a19cf587a6c8c4cc3f0e851edbd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626765"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261271"
 ---
-# <a name="ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt;
+# <a name="contracttypenames"></a>\<contractTypeNames>
 Uma seção de configuração que especifica uma lista de nomes de tipo de contrato, que são os nomes de contrato de serviços que está sendo pesquisados, e os critérios normalmente usados durante a pesquisa para um serviço. Se mais de um nome de contrato for especificado, somente pontos de extremidade correspondentes a todos os contratos responderá. Observe que no Windows Communication Foundation (WCF), um ponto de extremidade pode apenas suporta um contrato.  
   
  \<system.ServiceModel>  

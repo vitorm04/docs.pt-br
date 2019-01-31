@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;expressão&gt; &#39; não pode ser usado como restrição de tipo'
+title: "'<expression>' não pode ser usado como restrição de tipo"
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d5035daa1ff3da4d7d3bac7c95ef8e8379b3f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742127"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264668"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;expressão&gt; &#39; não pode ser usado como restrição de tipo
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<expressão >' não pode ser usado como restrição de tipo
 Uma lista de restrições inclui uma expressão que não representa uma restrição válida em um parâmetro de tipo.  
   
  Uma lista de restrição impõe requisitos o argumento de tipo passado para o parâmetro de tipo. Você pode especificar os requisitos a seguir em qualquer combinação:  

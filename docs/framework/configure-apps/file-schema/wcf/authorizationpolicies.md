@@ -1,15 +1,15 @@
 ---
-title: '&lt;authorizationPolicies&gt;'
+title: <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 5b367489-54d7-408b-8f56-cb157dd68eaf
-ms.openlocfilehash: 7648c221a61efb99b4dc486f9b4d121439632c63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8ca43a7b633d7d19dd37ceb0ff64075931b6c5c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519548"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254752"
 ---
-# <a name="ltauthorizationpoliciesgt"></a>&lt;authorizationPolicies&gt;
+# <a name="authorizationpolicies"></a>\<authorizationPolicies>
 Esta seção de configuração contém uma coleção de tipos de política de autorização, que podem ser adicionados usando o `add` palavra-chave. Cada política de autorização contém um único necessário `policyType` atributo que é uma cadeia de caracteres. O atributo especifica uma política de autorização, que possibilita a transformação de um conjunto de declarações de entrada em outro conjunto de declarações. Controle de acesso pode ser concedido ou negado com base nisso. Para obter mais informações sobre como funciona uma política de autorização, consulte <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e [política de autorização](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Consulte também

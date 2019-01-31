@@ -1,5 +1,5 @@
 ---
-title: Nome da &lt;namespacename&gt; no namespace raiz &lt;fullnamespacename&gt; não é compatível com CLS
+title: O nome <namespacename> no namespace raiz <fullnamespacename> não é compatível com CLS
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40039
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 8d35268891711ca7f2a7f5ec47be425e342dccd7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5afdcc98b7acb1927c9b0735a69fbe64c3d8e60
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642523"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268710"
 ---
-# <a name="name-ltnamespacenamegt-in-the-root-namespace-ltfullnamespacenamegt-is-not-cls-compliant"></a>Nome da &lt;namespacename&gt; no namespace raiz &lt;fullnamespacename&gt; não é compatível com CLS
+# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nome da \<namespacename > no namespace raiz \<fullnamespacename > não é compatível com CLS
 Um assembly é marcado como `<CLSCompliant(True)>`, mas um elemento do nome do namespace raiz começa com um sublinhado (`_`).  
   
  Um elemento de programação pode conter um ou mais sublinhados, mas to estar em conformidade com o [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele não deve começar com um sublinhado. Ver [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  

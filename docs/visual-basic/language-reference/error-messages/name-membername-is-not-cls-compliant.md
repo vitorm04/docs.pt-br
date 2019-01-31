@@ -1,5 +1,5 @@
 ---
-title: Nome da &lt;membername&gt; não é compatível com CLS
+title: O nome <membername> não é compatível com CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40031
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: b950be530eb80fd1c65b48e1625eb344c642d260
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74b625cc3a60e591417530c6a6229c01666038e2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626362"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271246"
 ---
-# <a name="name-ltmembernamegt-is-not-cls-compliant"></a>Nome da &lt;membername&gt; não é compatível com CLS
+# <a name="name-membername-is-not-cls-compliant"></a>Nome \<membername > não é compatível com CLS
 Um assembly é marcado como `<CLSCompliant(True)>` , mas expõe um membro com um nome que começa com um sublinhado (`_`).  
   
  Um elemento de programação pode conter um ou mais sublinhados, mas to estar em conformidade com o [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele não deve começar com um sublinhado. Ver [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  

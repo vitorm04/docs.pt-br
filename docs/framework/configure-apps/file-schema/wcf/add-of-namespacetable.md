@@ -1,15 +1,15 @@
 ---
-title: '&lt;adicionar&gt; &lt;namespaceTable&gt;'
+title: <add> De <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 1d3b61fa6653b3910e65b95fa96fd0657e72bf7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e463ffa87e67bc5f100f9acf38ace6450b0ce40
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632881"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268698"
 ---
-# <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;adicionar&gt; &lt;namespaceTable&gt;
+# <a name="add-of-namespacetable"></a>\<Adicionar > de \<namespaceTable >
 Representa um elemento de configuração que contém um namespace para o prefixo de mapeamento que pode ser usado em filtros de XPath para roteamento.  
   
  \<system.serviceModel>  

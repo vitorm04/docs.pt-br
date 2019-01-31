@@ -1,5 +1,5 @@
 ---
-title: Módulo &lt;palavra-chave&gt; (Visual Basic)
+title: Módulo <keyword> (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: 3b4b09469a3f22b5e5c7faa98d5db7b3522ed236
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa798e8a2c82bdf204edb1812b0020f874b1e978
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586469"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257690"
 ---
-# <a name="module-ltkeywordgt-visual-basic"></a>Módulo &lt;palavra-chave&gt; (Visual Basic)
+# <a name="module-keyword-visual-basic"></a>Módulo \<palavra-chave > (Visual Basic)
 Especifica que um atributo no início de um arquivo de origem se aplica ao módulo assembly atual.  
   
 ## <a name="remarks"></a>Comentários  

@@ -1,21 +1,21 @@
 ---
-title: '&lt;claimsAuthorizationManager&gt;'
+title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: a745339cffdada56a9b7f27f3f879b9d437c2da2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195548"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268087"
 ---
-# <a name="ltclaimsauthorizationmanagergt"></a>&lt;claimsAuthorizationManager&gt;
+# <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
 Registra um Gerenciador de autorização de declarações para as declarações de entrada.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<o claimsAuthorizationManager >  
+\<claimsAuthorizationManager>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ Registra um Gerenciador de autorização de declarações para as declarações 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
   
 ## <a name="remarks"></a>Comentários  
  O comportamento padrão fornecido por meio de <xref:System.Security.Claims.ClaimsAuthorizationManager> classe sempre autoriza as declarações de entrada. Se nenhum `type` atributo for especificado ou se o `type` atributo especifica a <xref:System.Security.Claims.ClaimsAuthorizationManager> classe, o `<claimsAuthorizationManager>` elemento não tem elementos filho. Você pode especificar o `type` atributo para registrar um tipo derivado do <xref:System.Security.Claims.ClaimsAuthorizationManager> classe para implementar comportamento personalizado. Classes derivadas podem dar suporte a configuração por meio de elementos filho do `<claimsAuthorizationManager>` elemento, substituindo o <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> método para lidar com esses elementos. O esquema definido para os elementos filho é até o designer da classe.  

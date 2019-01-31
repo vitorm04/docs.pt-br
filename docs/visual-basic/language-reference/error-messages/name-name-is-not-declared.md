@@ -1,5 +1,5 @@
 ---
-title: Nome &#39; &lt;nome&gt; &#39; não está declarado
+title: O nome '<name>' não é declarado
 ms.date: 10/10/2018
 f1_keywords:
 - bc30451
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: e52b93980cfc2d162d35b86bd93ce9eeb9875c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574814"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260119"
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>Nome &#39; &lt;nome&gt; &#39; não está declarado
+# <a name="name-name-is-not-declared"></a>Nome de '\<nome >' não está declarado
 Uma declaração se refere a um elemento de programação, mas o compilador não pode localizar um elemento com esse nome exato.  
   
  **ID do erro:** BC30451  

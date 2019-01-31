@@ -1,5 +1,5 @@
 ---
-title: '&lt;legacyImpersonationPolicy&gt; Element'
+title: Elemento <legacyImpersonationPolicy>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 196aaa35561cba7925bcd005474cccb393494250
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a731a54771f3ac589031e856539ba0c21ca22778
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699877"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270482"
 ---
-# <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; Element
+# <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > elemento
 Especifica que a identidade do Windows não flua entre pontos assíncronos, independentemente das configurações de fluxo para o contexto de execução no thread atual.  
   
  \<configuration>  

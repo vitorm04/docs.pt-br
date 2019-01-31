@@ -1,5 +1,5 @@
 ---
-title: '&lt;requiredRuntime&gt; elemento'
+title: Elemento <requiredRuntime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 66de3e30ce862cd317e80ea267bf22ce728aca82
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222123"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254724"
 ---
-# <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; elemento
+# <a name="requiredruntime-element"></a>\<requiredRuntime > elemento
 
 Especifica que o aplicativo dá suporte apenas à versão 1.0 do Common Language Runtime. Esse elemento foi preterido e não deve mais ser usado. O [ `supportedRuntime` ](supportedruntime-element.md) elemento deve ser usado em vez disso.
 
-\<Configuração > \<inicialização > \<requiredRuntime >
+\<configuration> \<startup> \<requiredRuntime>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -86,4 +86,4 @@ O exemplo a seguir mostra como especificar a versão de tempo de execução em u
 
 - [Esquema de configurações de inicialização](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Como: Configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Como: configurar um aplicativo para dar suporte ao .NET Framework 4 ou a versões posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

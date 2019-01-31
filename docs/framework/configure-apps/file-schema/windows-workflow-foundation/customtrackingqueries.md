@@ -1,16 +1,16 @@
 ---
-title: '&lt;customTrackingQueries&gt;'
+title: <customTrackingQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e9e732d-911d-45a3-a569-4b5e9cd1ffbe
-ms.openlocfilehash: 757bbe500ec3edccef465b7ff23b2c974e4a5011
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4689e55962cd32d738682129aaa0612a4684384
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598835"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264624"
 ---
-# <a name="ltcustomtrackingqueriesgt"></a>&lt;customTrackingQueries&gt;
+# <a name="customtrackingqueries"></a>\<customTrackingQueries>
 Representa uma coleção de consultas que são usados para controlar os eventos que você define em suas atividades de código. A consulta é necessária para um participante de rastreamento assinar registros personalizados de rastreamento.  
   
  Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

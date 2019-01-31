@@ -1,15 +1,15 @@
 ---
-title: '&lt;rastreamento&gt; de WCF'
+title: <tracking> do WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 52efc1b5284c2a64eae30ea18995e5ee761dc2e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddaf6f7871b4d10961b615f74d1ed49dd76d379a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582598"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268243"
 ---
-# <a name="lttrackinggt-of-wcf"></a>&lt;rastreamento&gt; de WCF
+# <a name="tracking-of-wcf"></a>\<Acompanhamento > do WCF
 Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.  
   
  Para obter mais informações no controle de fluxo de trabalho e sua configuração, consulte [fluxo de trabalho, controle e rastreamento](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [Configurando o rastreamento para um fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  

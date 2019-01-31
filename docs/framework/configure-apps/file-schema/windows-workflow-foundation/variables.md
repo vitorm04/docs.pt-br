@@ -1,16 +1,16 @@
 ---
-title: '&lt;variáveis&gt;'
+title: <variables>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: da0fd144-dda9-4613-b650-fe6325076513
-ms.openlocfilehash: c3861eb02d7b19bde6932c67c3d5d19b82fd8fcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff568c267331538fb9be0e6cb40eebbca44d882
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520525"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276543"
 ---
-# <a name="ltvariablesgt"></a>&lt;variáveis&gt;
+# <a name="variables"></a>\<variables>
 Representa uma coleção de variáveis associadas a essa consulta de atividade.  
   
  Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

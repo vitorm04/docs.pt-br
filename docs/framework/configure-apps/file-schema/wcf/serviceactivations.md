@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceActivations&gt;'
+title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 5da05c7b6a9685b9e34b3181ce8e0bd31ccd052b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a091ecfbc0f4773ece620f93a9f21c219fcccb6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704950"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256698"
 ---
-# <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
+# <a name="serviceactivations"></a>\<serviceActivations>
 Um elemento de configuração que permite adicionar configurações que definem as configurações de ativação de serviço virtual que são mapeados para seus tipos de serviço do Windows Communication Foundation (WCF). Isso torna possível para ativar serviços hospedados no WAS / IIS sem um arquivo. svc.  
   
  \<system.ServiceModel>  

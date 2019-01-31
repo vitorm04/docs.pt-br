@@ -1,5 +1,5 @@
 ---
-title: '&lt;rede&gt; (configurações de rede)'
+title: Elemento <network> (configurações de rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 7270cee07bea50aa50dc191ac957132e2794c0bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67743ccf2fa14117814160aeb7624c2be4eea364
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599252"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257853"
 ---
-# <a name="ltnetworkgt-element-network-settings"></a>&lt;rede&gt; (configurações de rede)
+# <a name="network-element-network-settings"></a>\<rede > (configurações de rede)
 Configura as opções de rede para um servidor de transporte protocolo SMTP (Simple Mail) externo.  
   
  \<configuration>  

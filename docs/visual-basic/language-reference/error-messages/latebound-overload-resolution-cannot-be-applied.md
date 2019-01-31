@@ -1,5 +1,5 @@
 ---
-title: Resolução de sobrecarga com associação tardia não pode ser aplicada a &#39; &lt;procedurename&gt; &#39; porque a instância de acesso é um tipo de interface
+title: Não é possível aplicar a resolução de sobrecarga com associação tardia a '<procedurename>' porque a instância de acesso é um tipo de interface
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651507"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272625"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Resolução de sobrecarga com associação tardia não pode ser aplicada a &#39; &lt;procedurename&gt; &#39; porque a instância de acesso é um tipo de interface
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Resolução de sobrecarga com associação tardia não pode ser aplicada a '\<procedurename >' porque a instância de acesso é um tipo de interface
 O compilador está tentando resolver uma referência a uma propriedade ou procedimento sobrecarregado, mas a referência falha porque um argumento é do tipo `Object` e o objeto da referência tem o tipo de dados de uma interface. O `Object` argumento força o compilador a resolver a referência de associação tardia.  
   
  Nessas circunstâncias, o compilador resolve a sobrecarga por meio da classe de implementação, em vez de por meio da interface subjacente. Se a classe renomeia uma das versões sobrecarregadas, o compilador não considera essa versão como uma sobrecarga porque seu nome é diferente. Isso por sua vez faz com que o compilador deverá ignorar a versão renomeada quando ela pode ter sido a escolha correta para resolver a referência.  
