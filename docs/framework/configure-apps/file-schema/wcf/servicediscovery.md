@@ -1,24 +1,24 @@
 ---
-title: '&lt;serviceDiscovery&gt;'
+title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 73943f5f962a6963809e2c65ce8593f6181559f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 564410fdc4085cc3ed14c394006551cddb028910
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587327"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267866"
 ---
-# <a name="ltservicediscoverygt"></a><span data-ttu-id="5b72b-102">&lt;serviceDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="5b72b-102">&lt;serviceDiscovery&gt;</span></span>
-<span data-ttu-id="5b72b-103">Especifica a detectabilidade de pontos de extremidade de serviço.</span><span class="sxs-lookup"><span data-stu-id="5b72b-103">Specifies the discoverability of service endpoints.</span></span>  
+# <a name="servicediscovery"></a><span data-ttu-id="d3be1-101">\<serviceDiscovery></span><span class="sxs-lookup"><span data-stu-id="d3be1-101">\<serviceDiscovery></span></span>
+<span data-ttu-id="d3be1-102">Especifica a detectabilidade de pontos de extremidade de serviço.</span><span class="sxs-lookup"><span data-stu-id="d3be1-102">Specifies the discoverability of service endpoints.</span></span>  
   
- <span data-ttu-id="5b72b-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="5b72b-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="5b72b-105">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="5b72b-105">\<behaviors></span></span>  
-<span data-ttu-id="5b72b-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="5b72b-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="5b72b-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="5b72b-107">\<behavior></span></span>  
-<span data-ttu-id="5b72b-108">\<serviceDiscovery></span><span class="sxs-lookup"><span data-stu-id="5b72b-108">\<serviceDiscovery></span></span>  
+ <span data-ttu-id="d3be1-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="d3be1-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d3be1-104">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="d3be1-104">\<behaviors></span></span>  
+<span data-ttu-id="d3be1-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="d3be1-105">\<serviceBehaviors></span></span>  
+<span data-ttu-id="d3be1-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="d3be1-106">\<behavior></span></span>  
+<span data-ttu-id="d3be1-107">\<serviceDiscovery></span><span class="sxs-lookup"><span data-stu-id="d3be1-107">\<serviceDiscovery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b72b-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5b72b-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3be1-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d3be1-108">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -39,30 +39,30 @@ ms.locfileid: "54587327"
 </behaviors>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5b72b-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="5b72b-110">Attributes and Elements</span></span>  
- <span data-ttu-id="5b72b-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="5b72b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d3be1-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="d3be1-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="d3be1-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="d3be1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5b72b-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="5b72b-112">Attributes</span></span>  
- <span data-ttu-id="5b72b-113">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="5b72b-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d3be1-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="d3be1-111">Attributes</span></span>  
+ <span data-ttu-id="d3be1-112">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="d3be1-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="5b72b-114">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="5b72b-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d3be1-113">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="d3be1-113">Child Elements</span></span>  
   
-|<span data-ttu-id="5b72b-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="5b72b-115">Element</span></span>|<span data-ttu-id="5b72b-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="5b72b-116">Description</span></span>|  
+|<span data-ttu-id="d3be1-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="d3be1-114">Element</span></span>|<span data-ttu-id="d3be1-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="d3be1-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5b72b-117">\<announcementEndpoint></span><span class="sxs-lookup"><span data-stu-id="5b72b-117">\<announcementEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|<span data-ttu-id="5b72b-118">Uma coleção de pontos de extremidade de comunicado.</span><span class="sxs-lookup"><span data-stu-id="5b72b-118">A collection of announcement endpoints.</span></span> <span data-ttu-id="5b72b-119">Use esta seção para especificar os pontos de extremidade a ser usado para enviar mensagens de comunicado.</span><span class="sxs-lookup"><span data-stu-id="5b72b-119">Use this section to specify the endpoints to use for sending announcement messages.</span></span>|  
-|[<span data-ttu-id="5b72b-120">\<discoveryEndpoint></span><span class="sxs-lookup"><span data-stu-id="5b72b-120">\<discoveryEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|<span data-ttu-id="5b72b-121">Uma coleção de pontos de extremidade de descoberta.</span><span class="sxs-lookup"><span data-stu-id="5b72b-121">A collection of discovery endpoints.</span></span> <span data-ttu-id="5b72b-122">Use esta seção para especificar os pontos de extremidade no qual escutar as mensagens de descoberta.</span><span class="sxs-lookup"><span data-stu-id="5b72b-122">Use this section to specify the endpoints on which to listen for the discovery messages.</span></span>|  
+|[<span data-ttu-id="d3be1-116">\<announcementEndpoint></span><span class="sxs-lookup"><span data-stu-id="d3be1-116">\<announcementEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|<span data-ttu-id="d3be1-117">Uma coleção de pontos de extremidade de comunicado.</span><span class="sxs-lookup"><span data-stu-id="d3be1-117">A collection of announcement endpoints.</span></span> <span data-ttu-id="d3be1-118">Use esta seção para especificar os pontos de extremidade a ser usado para enviar mensagens de comunicado.</span><span class="sxs-lookup"><span data-stu-id="d3be1-118">Use this section to specify the endpoints to use for sending announcement messages.</span></span>|  
+|[<span data-ttu-id="d3be1-119">\<discoveryEndpoint></span><span class="sxs-lookup"><span data-stu-id="d3be1-119">\<discoveryEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|<span data-ttu-id="d3be1-120">Uma coleção de pontos de extremidade de descoberta.</span><span class="sxs-lookup"><span data-stu-id="d3be1-120">A collection of discovery endpoints.</span></span> <span data-ttu-id="d3be1-121">Use esta seção para especificar os pontos de extremidade no qual escutar as mensagens de descoberta.</span><span class="sxs-lookup"><span data-stu-id="d3be1-121">Use this section to specify the endpoints on which to listen for the discovery messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="5b72b-123">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="5b72b-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d3be1-122">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="d3be1-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="5b72b-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="5b72b-124">Element</span></span>|<span data-ttu-id="5b72b-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="5b72b-125">Description</span></span>|  
+|<span data-ttu-id="d3be1-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="d3be1-123">Element</span></span>|<span data-ttu-id="d3be1-124">Descrição</span><span class="sxs-lookup"><span data-stu-id="d3be1-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5b72b-126">\<behavior></span><span class="sxs-lookup"><span data-stu-id="5b72b-126">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="5b72b-127">Especifica um elemento de comportamento.</span><span class="sxs-lookup"><span data-stu-id="5b72b-127">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="d3be1-125">\<behavior></span><span class="sxs-lookup"><span data-stu-id="d3be1-125">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="d3be1-126">Especifica um elemento de comportamento.</span><span class="sxs-lookup"><span data-stu-id="d3be1-126">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5b72b-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="5b72b-128">Remarks</span></span>  
- <span data-ttu-id="5b72b-129">Quando adicionado à configuração de comportamento do serviço, este elemento de configuração faz com que todos os pontos de extremidade de serviço detectável.</span><span class="sxs-lookup"><span data-stu-id="5b72b-129">When added to the service’s behavior configuration, this configuration element makes all of the endpoints of that service discoverable.</span></span> <span data-ttu-id="5b72b-130">Você pode configurar os recursos de descoberta de tais pontos de extremidade usando o [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) ou [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) elementos filho.</span><span class="sxs-lookup"><span data-stu-id="5b72b-130">You can further configure the discovery features of such endpoints by using the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) or [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) child elements.</span></span> <span data-ttu-id="5b72b-131">Use o [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) seção para configurar os anúncios, especificando a configuração de ponto de extremidade a ser usado para enviar comunicados de serviço (online/Hello e offline/até logo).</span><span class="sxs-lookup"><span data-stu-id="5b72b-131">Use the [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) section to configure the announcements by specifying the endpoint configuration to be use to send service announcements (online/Hello and offline/Bye).</span></span> <span data-ttu-id="5b72b-132">Use o [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) seção para especificar manualmente o ponto de extremidade para escutar as mensagens de descoberta.</span><span class="sxs-lookup"><span data-stu-id="5b72b-132">Use the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) section to manually specify the endpoint on which to listen for the discovery messages.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d3be1-127">Comentários</span><span class="sxs-lookup"><span data-stu-id="d3be1-127">Remarks</span></span>  
+ <span data-ttu-id="d3be1-128">Quando adicionado à configuração de comportamento do serviço, este elemento de configuração faz com que todos os pontos de extremidade de serviço detectável.</span><span class="sxs-lookup"><span data-stu-id="d3be1-128">When added to the service’s behavior configuration, this configuration element makes all of the endpoints of that service discoverable.</span></span> <span data-ttu-id="d3be1-129">Você pode configurar os recursos de descoberta de tais pontos de extremidade usando o [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) ou [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) elementos filho.</span><span class="sxs-lookup"><span data-stu-id="d3be1-129">You can further configure the discovery features of such endpoints by using the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) or [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) child elements.</span></span> <span data-ttu-id="d3be1-130">Use o [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) seção para configurar os anúncios, especificando a configuração de ponto de extremidade a ser usado para enviar comunicados de serviço (online/Hello e offline/até logo).</span><span class="sxs-lookup"><span data-stu-id="d3be1-130">Use the [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) section to configure the announcements by specifying the endpoint configuration to be use to send service announcements (online/Hello and offline/Bye).</span></span> <span data-ttu-id="d3be1-131">Use o [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) seção para especificar manualmente o ponto de extremidade para escutar as mensagens de descoberta.</span><span class="sxs-lookup"><span data-stu-id="d3be1-131">Use the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) section to manually specify the endpoint on which to listen for the discovery messages.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5b72b-133">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5b72b-133">Example</span></span>  
- <span data-ttu-id="5b72b-134">O exemplo de configuração a seguir especifica que o CalculatorService seja detectável e, opcionalmente, especifica o ponto de extremidade de comunicado a ser usado.</span><span class="sxs-lookup"><span data-stu-id="5b72b-134">The following configuration example specifies that the CalculatorService to be discoverable, and optionally specifies the announcement endpoint to be used.</span></span>  
+## <a name="example"></a><span data-ttu-id="d3be1-132">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d3be1-132">Example</span></span>  
+ <span data-ttu-id="d3be1-133">O exemplo de configuração a seguir especifica que o CalculatorService seja detectável e, opcionalmente, especifica o ponto de extremidade de comunicado a ser usado.</span><span class="sxs-lookup"><span data-stu-id="d3be1-133">The following configuration example specifies that the CalculatorService to be discoverable, and optionally specifies the announcement endpoint to be used.</span></span>  
   
 ```xml  
 <services>
@@ -85,5 +85,5 @@ ms.locfileid: "54587327"
 </behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5b72b-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b72b-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3be1-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d3be1-134">See also</span></span>
 - <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

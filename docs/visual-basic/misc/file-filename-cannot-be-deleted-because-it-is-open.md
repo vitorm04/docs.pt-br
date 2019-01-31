@@ -1,24 +1,24 @@
 ---
-title: Arquivo '&lt;filename&gt;' não pode ser excluído porque ele está aberto
+title: Arquivo '<filename>' não pode ser excluído porque ele está aberto
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-ms.openlocfilehash: ed2b24c3a4419d3dd269f20444e1feeff48627c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8c6cbf9682a1b46d44edb94dea8a092e74216e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746254"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254334"
 ---
-# <a name="file-ltfilenamegt-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="f815b-102">Arquivo '&lt;filename&gt;' não pode ser excluído porque ele está aberto</span><span class="sxs-lookup"><span data-stu-id="f815b-102">File '&lt;filename&gt;' cannot be deleted because it is open</span></span>
-<span data-ttu-id="f815b-103">Uma exclusão está sendo tentada em um arquivo aberto.</span><span class="sxs-lookup"><span data-stu-id="f815b-103">A deletion is being attempted on an open file.</span></span>  
+# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="01c48-102">Arquivo '\<filename >' não pode ser excluído porque ele está aberto</span><span class="sxs-lookup"><span data-stu-id="01c48-102">File '\<filename>' cannot be deleted because it is open</span></span>
+<span data-ttu-id="01c48-103">Uma exclusão está sendo tentada em um arquivo aberto.</span><span class="sxs-lookup"><span data-stu-id="01c48-103">A deletion is being attempted on an open file.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f815b-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f815b-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="01c48-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="01c48-104">To correct this error</span></span>  
   
--   <span data-ttu-id="f815b-105">Feche o arquivo antes de excluí-lo.</span><span class="sxs-lookup"><span data-stu-id="f815b-105">Close the file before deleting it.</span></span>  
+-   <span data-ttu-id="01c48-105">Feche o arquivo antes de excluí-lo.</span><span class="sxs-lookup"><span data-stu-id="01c48-105">Close the file before deleting it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f815b-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f815b-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01c48-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="01c48-106">See also</span></span>
 
-- [<span data-ttu-id="f815b-107">My.Computer.FileSystem.DeleteFile</span><span class="sxs-lookup"><span data-stu-id="f815b-107">My.Computer.FileSystem.DeleteFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
-- [<span data-ttu-id="f815b-108">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="f815b-108">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [<span data-ttu-id="01c48-107">My.Computer.FileSystem.DeleteFile</span><span class="sxs-lookup"><span data-stu-id="01c48-107">My.Computer.FileSystem.DeleteFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
+- [<span data-ttu-id="01c48-108">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="01c48-108">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
