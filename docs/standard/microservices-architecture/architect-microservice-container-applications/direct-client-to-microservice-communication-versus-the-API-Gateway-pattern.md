@@ -3,13 +3,13 @@ title: Padrão de gateway de API versus comunicação direta de cliente com micr
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030536"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675446"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -25,7 +25,7 @@ Uma abordagem possível é usar uma arquitetura de comunicação direta de clien
 
 Nessa abordagem, cada microsserviço tem um ponto de extremidade público, às vezes, com uma porta TCP diferente para cada microsserviço. Um exemplo de uma URL para um serviço específico pode ser a URL a seguir no Azure:
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 Em um ambiente de produção com base em um cluster, essa URL mapearia para o balanceador de carga usado no cluster, que, por sua vez, distribui as solicitações entre os microsserviços. Em ambientes de produção, você pode ter um ADC (Controlador de Entrega de Aplicativo) como o [Gateway de Aplicativo do Azure](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) entre os microsserviços e a Internet. Isso funciona como uma camada transparente que não executa balanceamento de carga, mas protege seus serviços ao oferecer terminação SSL. Isso aumenta a carga de seus hosts descarregando terminação SSL com uso intensivo de CPU e outras tarefas de roteamento para o Gateway de Aplicativo do Azure. Em qualquer caso, um balanceador de carga e ADC são transparentes de um ponto de vista da arquitetura do aplicativo lógico.
 
@@ -134,7 +134,7 @@ O [Gerenciamento de API do Azure](https://azure.microsoft.com/services/api-manag
 
 **Figura 4-14**. Usando o Gerenciamento de API do Azure para o Gateway de API
 
-Neste caso, ao usar um produto como o Gerenciamento de API do Azure, o fato de que você pode ter um único Gateway de API não é tão arriscado, pois esses tipos de Gateways de API são "mais finos", o que significa que não implementam código C# personalizado que pode evoluir para um componente monolítico. Esses produtos funcionam como um proxy reverso para a comunicação de entrada, em que você também pode filtrar as APIs dos microsserviços internos e aplicar a autorização às APIs publicadas nessa única camada.
+Neste caso, ao usar um produto como o Gerenciamento de API do Azure, o fato de que você pode ter um único Gateway de API não é tão arriscado, pois esses tipos de Gateways de API são "mais finos", o que significa que não implementam código C# personalizado que pode evoluir para um componente monolítico. 
 
 Os produtos de Gateway de API costumam atuar como um proxy reverso para comunicação de entrada, em que você também pode filtrar as APIs dos microsserviços internos e aplicar a autorização para as APIs publicadas nessa camada única.
 

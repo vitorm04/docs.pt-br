@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 3a615bd1db3742787a5fb41ea5b309dd72746e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53908a21e573b7ac7d8347ebfe7f11202612fae1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492471"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675095"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estrutura geral de um programa em C# (Guia de Programação em C#)
 Os programas C# podem consistir em um ou mais arquivos. Cada arquivo pode conter zero ou mais namespaces. Um namespace pode conter tipos como classes, estruturas, interfaces, enumerações e delegados, além de outros namespaces. A seguir está o esqueleto de um programa em C# que contém todos esses elementos.  
@@ -39,4 +39,3 @@ Para obter mais informações, veja [Noções básicas](~/_csharplang/spec/basic
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Por dentro de um programa em C#](../../../csharp/programming-guide/inside-a-program/index.md)
 - [Referência de C#](../../../csharp/language-reference/index.md)
-- [Aplicativos de exemplo C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
