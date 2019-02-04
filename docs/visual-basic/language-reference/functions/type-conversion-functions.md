@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743537"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674874"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funções de conversão do tipo (Visual Basic)
 Essas funções são compilado embutido, o que significa que o código de conversão faz parte do código que avalia a expressão. Às vezes, não há nenhuma chamada para um procedimento para realizar a conversão, o que melhora o desempenho. Cada função impõe uma expressão para um tipo de dados específico.  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Tipo de Dados Duplo](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1, 79769313486231570E + 308 a - 4.94065645841246544-324 para valores negativos; 4.94065645841246544-324 1.79769313486231570 + 308 para valores positivos.|  
 |`CDec`|[Tipo de Dados Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-79.228.162.514.264.337.593.543.950.335 para números de escala de zero, ou seja, os números sem casas decimais. Para números com 28 casas decimais, o intervalo é + /-7,9228162514264337593543950335. O menor número possível de diferente de zero é 0,0000000000000000000000000001 (+ /-1E-28).|  
 |`CInt`|[Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2.147.483.648) por meio <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2.147.483.647); são arredondados para partes fracionárias.<sup> 1</sup> <br/><br/>Começando com 15,8 do Visual Basic, Visual Basic otimiza o desempenho de ponto flutuante para conversão de número inteiro com o `CInt` função; consulte a [comentários](#remarks) seção para obter mais informações. Consulte a [CInt exemplo](#cint-example) seção para obter um exemplo. |  
-|`CLng`|[Tipo de Dados Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9.223.372.036.854.775.808) por meio <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); são arredondados para partes fracionárias.<sup> 1</sup><br/><br/>Começando com 15,8 do Visual Basic, Visual Basic otimiza o desempenho de ponto flutuante para conversão de inteiro de 64 bits com o `CLng` função; consulte a [comentários](#remarks) seção para obter mais informações. Consulte a [CInt exemplo](#cint-example) seção para obter um exemplo.|  
+|`CLng`|[Tipo de Dados Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9.223.372.036.854.775.808) por meio <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); são arredondados para partes fracionárias.<sup> 1</sup><br/><br/>Começando com 15,8 do Visual Basic, Visual Basic otimiza o desempenho de ponto flutuante para conversão de inteiro de 64 bits com o `CLng` função; consulte a [comentários](#remarks) seção para obter mais informações. Consulte a [CInt exemplo](#cint-example) seção para obter um exemplo.|  
 |`CObj`|[Tipo de Dados Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualquer expressão válida.|  
 |`CSByte`|[Tipo de Dados SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (de -128) por meio <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); são arredondados para partes fracionárias.<sup> 1</sup><br/><br/>Começando com 15,8 do Visual Basic, Visual Basic otimiza o desempenho de ponto flutuante para conversão de byte assinado com o `CSByte` função; consulte a [comentários](#remarks) seção para obter mais informações. Consulte a [CInt exemplo](#cint-example) seção para obter um exemplo.|  
 |`CShort`|[Tipo de Dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32.768) por meio <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767); são arredondados para partes fracionárias.<sup> 1</sup><br/><br/>Começando com 15,8 do Visual Basic, Visual Basic otimiza o desempenho de ponto flutuante para conversão de inteiro de 16 bits com o `CShort` função; consulte a [comentários](#remarks) seção para obter mais informações. Consulte a [CInt exemplo](#cint-example) seção para obter um exemplo.|  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a389403d58bb0b4fb4f98e25d2c9a6b2cf337281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264617"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674770"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > elemento
 Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.  
@@ -75,5 +75,5 @@ Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 ## <a name="see-also"></a>Consulte também
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Como: Desabilitar a coleta de lixo simultânea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [Para desabilitar a coleta de lixo simultânea](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Coleta de lixo de estação de trabalho ou de servidor](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

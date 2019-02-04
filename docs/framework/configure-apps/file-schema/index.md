@@ -21,12 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 37600331ac52add60a98c9fd573591dc34b94f5f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083958"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674900"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Esquema de arquivos de configuração para o .NET Framework
 
@@ -75,10 +75,10 @@ Para obter informações sobre os tipos, o formato e o local dos arquivos de con
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Esquema de configurações remotas](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) Descreve os elementos que configuram aplicativos clientes e para servidores que implementam a comunicação remota.
+[Esquema de configurações remotas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) Descreve os elementos que configuram aplicativos clientes e para servidores que implementam a comunicação remota.
 
-[Esquema de configurações do ASP.NET](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) Descreve os elementos que controlam o comportamento de aplicativos Web do ASP.NET.
+[Esquema de configurações do ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) Descreve os elementos que controlam o comportamento de aplicativos Web do ASP.NET.
 
-[Esquema de configurações de serviços Web](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) Descreve os elementos que controlam o comportamento dos serviços Web do ASP.NET e de seus clientes.
+[Esquema de configurações de serviços Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) Descreve os elementos que controlam o comportamento dos serviços Web do ASP.NET e de seus clientes.
 
-[Configurando aplicativos do .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) Descreve como configurar a segurança, associação de assembly e a comunicação remota no .NET Framework.
+[Configurando aplicativos do .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) Descreve como configurar a segurança, associação de assembly e a comunicação remota no .NET Framework.
