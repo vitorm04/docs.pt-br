@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fd1cfa8c3391861b87e8aec718b63287c1225263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bb0e3ff0d021e9923f2e1bd8ced882c6a263d15
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733942"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738559"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Passo a passo: Validando senhas complexas (Visual Basic)
 Esse método verifica se há algumas características de senha forte e atualiza um parâmetro de cadeia de caracteres com informações sobre em quais verificações de senha falha.  
@@ -31,7 +31,7 @@ Esse método verifica se há algumas características de senha forte e atualiza 
 -   Acesso aos membros do namespace <xref:System.Text.RegularExpressions>. Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Segurança  
- Se você estiver movendo a senha em uma rede, você precisa usar um método seguro para a transferência de dados. Para obter mais informações, consulte [ASP.NET Web Application Security](https://msdn.microsoft.com/library/330a99hc).  
+ Se você estiver movendo a senha em uma rede, você precisa usar um método seguro para a transferência de dados. Para obter mais informações, consulte [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Você pode melhorar a precisão do `ValidatePassword` função adicionando verificações de complexidade adicional:  
   
@@ -45,4 +45,4 @@ Esse método verifica se há algumas características de senha forte e atualiza 
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Text.RegularExpressions.Regex>
-- [Segurança de aplicativo Web ASP .NET](https://msdn.microsoft.com/library/330a99hc)
+- [Segurança de aplicativo Web ASP .NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

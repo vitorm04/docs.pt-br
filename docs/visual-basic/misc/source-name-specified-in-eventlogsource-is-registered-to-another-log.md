@@ -2,12 +2,12 @@
 title: Nome da fonte especificado em EventLogSource está registrado em um log diferente daquele especificado em EventLogName
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
-ms.openlocfilehash: 4de98bef87b871036c3c5730ff09cf94c1df2918
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f6cff95129c5a8f1c7cb8d5a1597fdc4bc98c6e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584565"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738858"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>Nome da fonte especificado em EventLogSource está registrado em um log diferente daquele especificado em EventLogName
 O `EventLog` está tentando fazer referência a uma fonte que está registrada em um log diferente. Se você estiver escrevendo entradas para um log de eventos, você deve especificar o <xref:System.Diagnostics.EventLog.Source%2A> propriedade. O <xref:System.Diagnostics.EventLog.Source%2A> propriedade registra seu componente com o log de eventos como uma fonte válida de entradas. Uma única fonte pode ser associado (e, portanto, gravar entradas) apenas um log de eventos por vez.  
@@ -19,7 +19,7 @@ O `EventLog` está tentando fazer referência a uma fonte que está registrada e
 -   Verifique se que a fonte é registrada no log correto. Para fazer isso, use o <xref:System.Diagnostics.EventLog.CreateEventSource%2A> método ou uma de suas sobrecargas para especificar uma cadeia de caracteres que identifica exclusivamente o seu componente para o log de eventos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Administrando os Logs de eventos](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
-- [Referências de Log de eventos](https://msdn.microsoft.com/library/4af0661c-6c96-49f4-961d-b26ed9bc3e87)
-- [Como: Adicionar seu aplicativo como uma fonte de entradas de Log de eventos](https://msdn.microsoft.com/library/948ff920-a739-4e66-a191-ee951512d42c)
-- [Como: Remover uma fonte de evento](https://msdn.microsoft.com/library/bc66c900-4b8a-426a-b8e2-17031a20167e)
+- [Administrando os Logs de eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
+- [Referências de Log de eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/k43k9z2a(v=vs.90))
+- [Como: Adicionar seu aplicativo como uma fonte de entradas de Log de eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/xz73e171(v=vs.90))
+- [Como: Remover uma fonte de evento](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/k57466fc(v=vs.90))

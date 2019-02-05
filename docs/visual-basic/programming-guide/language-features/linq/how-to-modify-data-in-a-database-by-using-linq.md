@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: bcc56e1f7a36c705aec6750b76a4ad5d99fe7101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88597e5cfa1db46e147b829c8ffc634697cecc7e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658410"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739482"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Como: Modificar dados em um banco de dados usando LINQ (Visual Basic)
 Consultas integradas à linguagem de consulta (LINQ) tornam fácil acessar as informações de banco de dados e modificar valores no banco de dados.  
@@ -165,4 +165,4 @@ Consultas integradas à linguagem de consulta (LINQ) tornam fácil acessar as in
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Métodos DataContext (Designer Relacional de Objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+- [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

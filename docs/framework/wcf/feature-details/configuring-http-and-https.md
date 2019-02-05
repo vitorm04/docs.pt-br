@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635660"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738923"
 ---
 # <a name="configuring-http-and-https"></a>Configurando HTTP e HTTPS
 Os serviços e os clientes WCF podem se comunicar por HTTP e HTTPS. As configurações de HTTP/HTTPS são definidas usando o IIS (Serviços de Informações da Internet) ou uma ferramenta de linha de comando. Quando um serviço WCF é hospedado no IIS HTTP ou HTTPS, as configurações podem ser definidas no IIS (usando a ferramenta inetmgr.exe). Se um serviço WCF for auto-hospedado, as configurações de HTTP ou HTTPS serão definidas usando uma ferramenta de linha de comando.  
@@ -33,7 +33,7 @@ Os serviços e os clientes WCF podem se comunicar por HTTP e HTTPS. As configura
  O seguinte mostra a sintaxe do comando Httpcfg com a opção `set urlacl`  
   
 ```console  
-httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
+httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /a ACL  
 ```  
   
  O parâmetro `/u` é obrigatório ao usar `set urlacl`. Ele usa uma cadeia de caracteres que contém uma URL totalmente qualificada, que funciona como a chave do registro da reserva que está sendo feita.  

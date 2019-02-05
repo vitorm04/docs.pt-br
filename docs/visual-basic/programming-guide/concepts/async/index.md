@@ -2,12 +2,12 @@
 title: Programação assíncrona com Async e Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: e142e400d2c4e0f0d8520569cac483a47c80648a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 731657e0834eb8fc2b724cda40ee721c98111c14
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667200"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739027"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programação assíncrona com Async e Await (Visual Basic)
 É possível evitar gargalos de desempenho e aprimorar a resposta geral do seu aplicativo usando a programação assíncrona. No entanto, as técnicas tradicionais para escrever aplicativos assíncronos podem ser complicadas, dificultando sua escrita, depuração e manutenção.  
@@ -243,7 +243,7 @@ Await Task_MethodAsync()
 |[Fluxo de controle em programas assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|Rastreia em detalhes o fluxo de controle por meio de uma sucessão de expressões de espera em um programa assíncrono.|[Exemplo de Async: fluxo de controle em programas assíncronos](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
 |[Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|Mostra como adicionar a seguinte funcionalidade à sua solução assíncrona:<br /><br /> -   [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [Cancelar tarefas assíncronas após um período (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [Iniciar várias tarefas assíncronas e processá-las na conclusão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Exemplo de Async: ajuste do seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
 |[Tratando a reentrada em aplicativos assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|Mostra como manipular casos em que uma operação assíncrona ativa é reiniciada enquanto está em execução.||  
-|[WhenAny: ponte entre o .NET Framework e o Windows Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|Mostra como criar uma ponte entre tipos Task no .NET Framework e IAsyncOperations no [!INCLUDE[wrt](~/includes/wrt-md.md)], para que você possa usar o <xref:System.Threading.Tasks.Task.WhenAny%2A> com um método [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemplo de Async: ponte entre o .NET e o Windows Runtime (AsTask e WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
+|[WhenAny: ponte entre o .NET Framework e o Windows Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Mostra como criar uma ponte entre tipos Task no .NET Framework e IAsyncOperations no [!INCLUDE[wrt](~/includes/wrt-md.md)], para que você possa usar o <xref:System.Threading.Tasks.Task.WhenAny%2A> com um método [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemplo de Async: ponte entre o .NET e o Windows Runtime (AsTask e WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
 |Cancelamento de Async: ponte entre o .NET Framework e o Windows Runtime|Mostra como criar uma ponte entre tipos Task no .NET Framework e IAsyncOperations no [!INCLUDE[wrt](~/includes/wrt-md.md)], para que você possa usar o <xref:System.Threading.CancellationTokenSource> com um método [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemplo de Async: ponte entre o .NET e o Windows Runtime (AsTask e Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
 |[Usando o Async para acessar arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|Lista e demonstra as vantagens de usar async e await para acessar arquivos.||  
 |[TAP (Padrão Assíncrono Baseado em Tarefa)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|Descreve um novo padrão de assincronia no .NET Framework. O padrão baseia-se nos tipos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>.||  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e31bc2f9a0b20ce168004fa3ea2210d39a23761e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065850"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738611"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Como: Chamar uma função do Windows que use tipos não assinados (Visual Basic)
 Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de tipos de inteiro sem sinal, você pode acessar esses membros com o Visual Basic.  
@@ -75,7 +75,7 @@ Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de 
     >  Fazer uma chamada para código não gerenciado, como a interface de programação de aplicativo (API) do Windows expõe seu código possíveis riscos de segurança.  
   
     > [!IMPORTANT]
-    >  Chamar a API do Windows requer a permissão de código não gerenciado, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Chamar a API do Windows requer a permissão de código não gerenciado, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
 - [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)

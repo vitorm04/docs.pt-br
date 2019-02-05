@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: fb150298562c1ec91f73f3c8075f4f8a4fc20b27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ced9e2ab71ccb00c9ce3495e38d895a7104fdde
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679520"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738650"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Como: Definir um operador (Visual Basic)
 Se você tiver definido uma classe ou estrutura, você pode definir o comportamento de um operador padrão (como `*`, `<>`, ou `And`) quando um ou ambos os operandos é do tipo de sua classe ou estrutura.  
@@ -36,7 +36,6 @@ Se você tiver definido uma classe ou estrutura, você pode definir o comportame
   
  [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
   
- Para obter mais informações e exemplos, consulte [Sobrecarga de operador no Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
 ## <a name="see-also"></a>Consulte também
 - [Procedimentos de Operador](./operator-procedures.md)

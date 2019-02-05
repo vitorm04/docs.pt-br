@@ -1,18 +1,18 @@
 ---
-title: Como criar certificados temporários para uso durante o desenvolvimento
+title: 'Como: Criar certificados temporários para uso durante o desenvolvimento'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698578"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738624"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como criar certificados temporários para uso durante o desenvolvimento
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como: Criar certificados temporários para uso durante o desenvolvimento
 
 Ao desenvolver um serviço seguro ou o cliente usando o Windows Communication Foundation (WCF), muitas vezes é necessário fornecer um certificado X.509 a ser usado como uma credencial. O certificado normalmente faz parte de uma cadeia de certificados com uma autoridade raiz encontrado no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você definir o escopo de um conjunto de certificados onde normalmente na autoridade raiz é de sua organização ou a unidade de negócios. Para emular isso em tempo de desenvolvimento, você pode criar dois certificados para satisfazer os requisitos de segurança. A primeira é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis, e o segundo certificado é criado a partir do primeiro e é colocado no repositório pessoal do Local do computador local ou o repositório pessoal das Local do usuário atual. Este tópico explica as etapas para criar esses dois certificados usando o Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet.
 
@@ -62,7 +62,7 @@ Depois de criar um certificado autoassinado, você pode instalá-lo no repositó
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Para instalar um certificado autoassinado em autoridades de certificação raiz confiáveis
 
-1. Abra o snap-in de certificado. Para obter mais informações, confira [Como exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
+1. Abra o snap-in de certificado. Para obter mais informações, confira [Como: Exibir certificados com o Snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Abra a pasta para armazenar o certificado, ou o **computador Local** ou o **usuário atual**.
 
@@ -70,7 +70,7 @@ Depois de criar um certificado autoassinado, você pode instalá-lo no repositó
 
 4. Com o botão direito do **certificados** pasta e clique em **todas as tarefas**, em seguida, clique em **importação**.
 
-5. Siga o assistente na tela instruções para importar o TempCa.cer no repositório.
+5. Siga o assistente na tela instruções para importar o RootCA.pfx no repositório.
 
 ## <a name="using-certificates-with-wcf"></a>Usar certificados com o WCF
 
@@ -115,5 +115,5 @@ Certifique-se de excluir quaisquer certificados de autoridade raiz temporária d
 ## <a name="see-also"></a>Consulte também
 
 - [Trabalhando com certificados](working-with-certificates.md)
-- [Como exibir certificados com o Snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Como: Exibir certificados com o Snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protegendo serviços e clientes](securing-services-and-clients.md)

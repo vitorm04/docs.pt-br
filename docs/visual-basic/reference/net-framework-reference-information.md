@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 7e1370ad27072bcbdd4b80125f94a0cc0aaac8f9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36603b7d517e0c6576e9b70fad2cbee8027acad0
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511071"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739105"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>Informações de referência do .NET Framework (Visual Basic)
 Este tópico fornece links para informações sobre como trabalhar com o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteca de classes.  
@@ -28,9 +28,6 @@ Este tópico fornece links para informações sobre como trabalhar com o [!INCLU
   
  [Ferramentas](../../framework/tools/index.md)  
  Descreve as ferramentas que você pode usar para desenvolver, configurar e implantar aplicativos usando tecnologias do .NET Framework.  
-  
- [Exemplos do .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- Fornece links para aplicativos de exemplo que demonstram tecnologias .NET Framework.  
   
  [Navegador de API do .NET](../../../api/index.md)  
  Fornece sintaxe, exemplos de código e informações relacionadas a cada classe nos namespaces do .NET Framework.

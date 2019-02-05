@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5222d51ff2f60dd31ec52a8d5d6d52f37e02443
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524047"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739196"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introdução a LINQ no Visual Basic
 Consulta integrada à linguagem (LINQ) adiciona recursos de consulta para o Visual Basic e fornece recursos simples e eficientes quando você trabalha com todos os tipos de dados. Em vez de enviar uma consulta para um banco de dados a serem processados ou trabalhar com diferentes sintaxes de consulta para cada tipo de dados que você está procurando, o LINQ apresenta consultas como parte da linguagem Visual Basic. Ele usa uma sintaxe unificada independentemente do tipo de dados.  
@@ -240,7 +240,7 @@ Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos 
   
  [Como: Localizar o valor mínimo ou máximo em um resultado de consulta](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
- [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
+ [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>Capítulos do livro em destaque  
  [Capítulo 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) em [programação Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  

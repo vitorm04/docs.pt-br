@@ -2,12 +2,12 @@
 title: Log de eventos do sistema não pode ser excluído.
 ms.date: 07/20/2015
 ms.assetid: 26ca8819-4ce5-49c6-98f3-27fe9e2e8e3d
-ms.openlocfilehash: adae713306412ffa315ed6a5ccc990e81835552f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c2d03b0e9c27c0cc935963251006cfe83f11aba
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509542"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739118"
 ---
 # <a name="system-event-log-cannot-be-deleted"></a>Log de eventos do sistema não pode ser excluído.
 Tentativa de excluir o log de eventos do sistema, não pode ser excluído. O log do sistema rastreia eventos do sistema, como falhas de hardware e de inicialização do sistema.  
@@ -19,5 +19,5 @@ Tentativa de excluir o log de eventos do sistema, não pode ser excluído. O log
 -   Não tente excluir o log de eventos do sistema.  
   
 ## <a name="see-also"></a>Consulte também
-- [Administrando os Logs de eventos](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
-- [Como: Criar e remover os Logs de eventos personalizados](https://msdn.microsoft.com/library/af9b7da0-80c7-46ac-b7f7-897063ddd503)
+- [Administrando os Logs de eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
+- [Como: Criar e remover os Logs de eventos personalizados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/49dwckkz(v=vs.90))

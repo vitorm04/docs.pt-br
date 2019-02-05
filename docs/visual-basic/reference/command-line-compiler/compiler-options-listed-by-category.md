@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 9c46d557df35d575b28cc5843f82670613f62f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7e81715b396580208fd7bbbb797a7c93301503d
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551612"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738897"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opções de compilador do Visual Basic listadas por categoria
 O compilador de linha de comando do Visual Basic é fornecido como uma alternativa para compilar programas de dentro do ambiente de desenvolvimento integrado (IDE) do Visual Studio. O exemplo a seguir é uma lista das opções de linha de comando do compilador Visual Basic classificadas por categoria funcional.  
@@ -83,7 +83,7 @@ O compilador de linha de comando do Visual Basic é fornecido como uma alternati
   
 |Opção|Finalidade|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especifique a versão de idioma: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especificar a versão do idioma: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Impõe a declaração explícita de variáveis.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Impõe semântica de tipo estrito.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Especifica se as comparações de cadeia de caracteres devem ser binário ou usam a semântica de texto específica de localidade.|  
@@ -124,10 +124,8 @@ O compilador de linha de comando do Visual Basic é fornecido como uma alternati
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Especifica que o compilador deve compilar sem uma referência à biblioteca de tempo de execução do Visual Basic, ou com uma referência a uma biblioteca de tempo de execução específico.|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identifica um definidos pelo usuário aplicativo arquivo manifesto Win32 a ser inserido no arquivo PE (executável portátil) de um projeto.|  
 |`-parallel[+&#124;-]`|Especifica se deve o build simultâneo deve ser usado (+).|  
-|`-checksumalgorithm:<alg>`|Especifique o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Valores com suporte são: SHA1 (padrão) ou SHA256.|  
+|`-checksumalgorithm:<alg>`|Especifique o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores compatíveis são: SHA1 (padrão) ou SHA256.|  
   
 ## <a name="see-also"></a>Consulte também
 - [Opções do compilador do Visual Basic listadas em ordem alfabética](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [Introdução ao Designer de Projeto](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))
-- [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [Opções do compilador de C# listadas por categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+- [Gerenciar propriedades do projeto e da solução](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
