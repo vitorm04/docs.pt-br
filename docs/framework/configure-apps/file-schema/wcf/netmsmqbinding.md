@@ -2,12 +2,12 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 5e2bf7fc95df085718729cf0a217ae3b8c7ece9b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 22303a81d32369e77f745d32ff1f66e21a3c3156
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277674"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759399"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding>
 Define uma associação enfileirada adequada para comunicação entre computadores.  
@@ -91,7 +91,7 @@ Define uma associação enfileirada adequada para comunicação entre computador
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define as restrições na complexidade das mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições na complexidade das mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  

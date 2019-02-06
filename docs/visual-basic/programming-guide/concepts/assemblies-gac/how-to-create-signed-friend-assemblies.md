@@ -2,12 +2,12 @@
 title: 'Como: Criar Assemblies amigáveis assinados (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 02acda34783afceaeb83d0d0752e5247747b5337
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 699c3de3c246be0bafdcc66ca7fd82384dc66d92
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667278"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758866"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Como: Criar Assemblies amigáveis assinados (Visual Basic)
 Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes. Os dois assemblies devem ter nomes fortes. Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.  
@@ -16,7 +16,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
   
 1.  Abra um prompt de comando.  
   
-2.  Use a seguinte sequência de comandos com a ferramenta Nome Forte para gerar um keyfile e exibir sua chave pública. Para obter mais informações, consulte [Sn.exe (ferramenta de nome forte)][Sn.exe (ferramenta de nome forte)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
+2.  Use a seguinte sequência de comandos com a ferramenta Nome Forte para gerar um keyfile e exibir sua chave pública. Para obter mais informações, consulte [Sn.exe (ferramenta de nome forte)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
     1.  Gere uma chave de nome forte para este exemplo e armazene-a no arquivo FriendAssemblies.snk:  
   
@@ -90,6 +90,6 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
 - [Assemblies amigáveis (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Como: Criar Assemblies amigáveis não assinados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [Sn.exe (ferramenta nome forte)] [Sn.exe (ferramenta nome forte)](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Sn.exe (ferramenta nome forte)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [Criar e usar assemblies de nomes fortes](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)

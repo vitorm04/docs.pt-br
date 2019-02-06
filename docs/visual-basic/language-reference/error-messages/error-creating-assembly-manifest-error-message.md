@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 86c1fabe1116e5b5d7e81022777f861f6d57e3e6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266475"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758359"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>Erro ao criar o manifesto do assembly: \<mensagem de erro >
 O compilador do Visual Basic chama o vinculador de Assembly (Al.exe, também conhecido como Alink) para gerar um assembly com um manifesto. O vinculador reportou um erro no estágio de pré-emissão da criação do assembly.  
@@ -29,6 +29,6 @@ O compilador do Visual Basic chama o vinculador de Assembly (Al.exe, também con
   
 ## <a name="see-also"></a>Consulte também
 - [Como: assinar um assembly com um nome forte](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
-- [Página de assinatura, Designer de projeto](/visualstudio/ide/reference/signing-page-project-designer)
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+- [Página de Assinatura, Designer de Projeto](/visualstudio/ide/reference/signing-page-project-designer)
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Fale conosco](/visualstudio/ide/talk-to-us)

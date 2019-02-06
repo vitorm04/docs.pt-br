@@ -2,12 +2,12 @@
 title: Elemento <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: ac10dbdb7267eb4f1a83ccad7cc5605fa588aa6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 63b6e62b55759c47a7b453b3db7d91e0bc430b2d
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271229"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758749"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > elemento
 Especifica opções de autenticação para remetentes de mensagens ponto a ponto.  
@@ -107,6 +107,6 @@ Especifica opções de autenticação para remetentes de mensagens ponto a ponto
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Autenticação de mensagem de canal par](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [Autenticação personalizada de canal par](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [Autenticação de mensagem de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Autenticação personalizada de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

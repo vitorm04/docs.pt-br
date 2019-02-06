@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5b69d6add9a01b890cdcc1c6f3be1b1d35f3cd78
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083503"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758983"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como: Criar uma política de editor
 Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma versão mais recente de um assembly, incluindo um arquivo de política do publicador com o assembly atualizado. O arquivo de política de publicador Especifica as configurações de base de código e redirecionamento de assembly e usa o mesmo formato que o arquivo de configuração do aplicativo. O arquivo de política de publicador é compilado em um assembly e colocado no cache de assembly global.  
@@ -103,8 +103,7 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
 ## <a name="see-also"></a>Consulte também
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurando aplicativos](../../../docs/framework/configure-apps/index.md)
-- [Configuração de aplicativos .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Configurando aplicativos usando arquivos de configuração](../../../docs/framework/configure-apps/index.md)
 - [Esquema de configurações do tempo de execução](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
