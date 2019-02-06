@@ -13,7 +13,7 @@ ms.locfileid: "53142743"
 ---
 # <a name="docker-containers-images-and-registries"></a>Registros, imagens e contêineres do Docker
 
-Ao usar o Docker, você cria um aplicativo ou serviço e o pacote-lo e suas dependências em uma imagem de contêiner. Uma imagem é uma representação estática do aplicativo ou do serviço e de sua configuração e dependências.
+Ao usar o Docker, você cria um aplicativo ou serviço e o empacota com suas dependências em uma imagem de contêiner. Uma imagem é uma representação estática do aplicativo ou do serviço e de sua configuração e dependências.
 
 Para executar o aplicativo ou o serviço, uma instância da imagem do aplicativo é criada para criar um contêiner, que estará em execução no host do Docker. Inicialmente, os contêineres são testados em um ambiente de desenvolvimento ou em um computador.
 
