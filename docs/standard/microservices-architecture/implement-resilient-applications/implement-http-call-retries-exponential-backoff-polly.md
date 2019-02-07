@@ -3,13 +3,13 @@ title: Implementar repetições de chamadas HTTP com retirada exponencial com a 
 description: Saiba como tratar falhas de HTTP com a Polly e o HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362750"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479640"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementar repetições de chamadas HTTP com retirada exponencial com o HttpClientFactory e políticas da Polly
 
@@ -21,9 +21,9 @@ No entanto, pode ser muito complexo usar a biblioteca Polly com seu próprio có
 
 As etapas a seguir mostram como você pode usar repetições de HTTP com a Polly integrada ao HttpClientFactory, que foi explicado na seção anterior.
 
-**Referenciar os pacotes do ASP.NET Core 2.1**
+**Referenciar os pacotes do ASP.NET Core 2.2**
 
-Seu projeto precisa estar usando os pacotes NuGet do ASP.NET Core 2.1. Normalmente, o metapacote `AspNetCore` e o pacote de extensão `Microsoft.Extensions.Http.Polly` são necessários.
+O `HttpClientFactory` está disponível no .NET Core 2.1 em diante. No entanto, é recomendável que você use os últimos pacotes do ASP.NET Core 2.2 do NuGet em seu projeto. Normalmente, o metapacote `AspNetCore` e o pacote de extensão `Microsoft.Extensions.Http.Polly` são necessários.
 
 **Configurar um cliente com a política de repetição da Polly, na inicialização**
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146570"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479770"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Visão geral dos primitivos de sincronização
 
@@ -112,7 +112,7 @@ O comportamento de um <xref:System.Threading.EventWaitHandle> que foi assinalado
 
 No Windows, você pode usar <xref:System.Threading.EventWaitHandle> para a sincronização entre processos. Para fazer isso, crie uma instância <xref:System.Threading.EventWaitHandle> que representa um evento de sincronização do sistema nomeado usando um dos [construtores EventWaitHandle](<xref:System.Threading.EventWaitHandle.%23ctor%2A>) que especificam um nome ou o método <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType>.
 
-Para obter mais informações, veja os artigos [EventWaitHandle](eventwaithandle.md), [AutoResetEvent](autoresetevent.md) e [ManualResetEvent e ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md). Para a referência de API, veja <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.AutoResetEvent>, <xref:System.Threading.ManualResetEvent> e <xref:System.Threading.ManualResetEventSlim>.
+Para obter mais informações, confira o artigo [EventWaitHandle](eventwaithandle.md). Para a referência de API, veja <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.AutoResetEvent>, <xref:System.Threading.ManualResetEvent> e <xref:System.Threading.ManualResetEventSlim>.
 
 ### <a name="countdownevent-class"></a>Classe CountdownEvent
 

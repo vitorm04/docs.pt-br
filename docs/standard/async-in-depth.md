@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492827"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285019"
 ---
 # <a name="async-in-depth"></a>Assincronia detalhada
 
 Escrever código assíncrono vinculado à CPU ou à E/S é simples usando o modelo assíncrono baseado em Tarefas do .NET. O modelo é exposto pelos tipos `Task` e `Task<T>` e pelas palavras-chave `async` e `await` no C# e no Visual Basic. (Recursos específicos a um idioma podem ser encontrados na seção [Consulte também](#see-also)). Este artigo explica como usar a assincronia do .NET e fornece informações sobre a estrutura de assincronia usada nos bastidores.
 
-## <a name="task-and-tasklttgt"></a>Task e Task&lt;T&gt;
+## <a name="task-and-taskt"></a>Task e Task\<T>
 
 Tarefas são constructos usados para implementar o que é conhecido como o [modelo de promessa de simultaneidade](https://en.wikipedia.org/wiki/Futures_and_promises).  Em resumo, elas oferecem a você uma “promessa” de que o trabalho será concluído em um momento posterior, permitindo que você coordene a promessa com uma API limpa.
 
@@ -114,7 +114,7 @@ Mais importante, como o trabalho vinculado à E/S passa praticamente nenhum temp
 
 Além disso, distribuir o trabalho para o thread de interface do usuário (como atualizar uma interface do usuário) é muito simples com os métodos `async` e não requer trabalho extra (como chamar um delegado thread-safe).
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Aprofundamento em Task e Task&lt;T&gt; para uma operação vinculada à CPU
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Aprofundamento em Task e Task\<T> para uma operação vinculada à CPU
 
 O código `async` vinculado à CPU é um pouco diferente do código `async` vinculado à E/S.  Como o trabalho é feito na CPU, não há como contornar a dedicação de um thread à computação.  O uso de `async` e `await` fornece uma maneira simples de interagir com thread em segundo plano e manter o chamador do método assíncrono responsivo.  Observe que isso não fornece nenhuma proteção para dados compartilhados.  Se você estiver usando dados compartilhados, ainda precisará aplicar uma estratégia de sincronização apropriada.
 

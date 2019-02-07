@@ -4,12 +4,12 @@ description: Descubra como usar o ML.NET em um cenário de classificação multi
 ms.date: 01/24/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6f01357906fd4398f68dadfb35dbce816f4302c0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: a951e884a7494b0dcc808fc3dafbfadebc5577dc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066191"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254984"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutorial: Use o ML.NET em um cenário de classificação multiclasse para classificar problemas do GitHub.
 
@@ -106,6 +106,8 @@ Tarefas de classificação são frequentemente de um dos seguintes tipos:
 
 * Binário: A ou B.
 * Multiclasse: várias categorias que podem ser previstas usando um único modelo.
+
+Para esse tipo de problema, use uma tarefa de classificação Multiclasse, como a previsão de categoria do problema pode ser uma das várias categorias (multiclasse), em vez de apenas duas (binário).
 
 ## <a name="create-a-console-application"></a>Criar um aplicativo de console
 

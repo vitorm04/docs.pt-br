@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7124271c0118800883d4beb68591f8591ac43dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520705"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283511"
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Como: Determinar o nome totalmente qualificado de um assembly
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Como: Determinar o nome totalmente qualificado de um assembly
 Para descobrir o nome totalmente qualificado de um assembly no cache de assembly global, use a Ferramenta Cache de Assembly Global ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Confira [Como Exibir o conteúdo do cache de assembly global](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Para assemblies que não estão no cache de assembly global, você pode obter o nome totalmente qualificado do assembly de várias maneiras: pode usar código para produzir a saída de informações para o console ou para uma variável ou pode usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar os metadados do assembly, que contêm o nome totalmente qualificado.  

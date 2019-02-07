@@ -5,22 +5,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: acbf45b5ccd4fcb9cb1c23b843072c2abdeeca25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2909040cc0cd38494ef0ffa16a4f361ca73925c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685939"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204282"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>Atributo cref (Guia de Programação em C#)
-O atributo `cref` em uma marca de documentação XML significa “referência de código”. Ele especifica que o texto interno da marca é um elemento de código, como um tipo, método ou propriedade. Ferramentas de documentação, como o [Sandcastle](https://github.com/EWSoftware/SHFB), usam os atributos `cref` para gerar automaticamente os hiperlinks para a página em que o tipo ou membro está documentado.  
+O atributo `cref` em uma marca de documentação XML significa “referência de código”. Ele especifica que o texto interno da marca é um elemento de código, como um tipo, método ou propriedade. Ferramentas de documentação, como o [DocFX](https://dotnet.github.io/docfx/) e o [Sandcastle](https://github.com/EWSoftware/SHFB), usam os atributos `cref` para gerar automaticamente os hiperlinks para a página em que o tipo ou o membro está documentado.  
   
 ## <a name="example"></a>Exemplo  
  A exemplo a seguir mostra os atributos `cref` usados em marcas [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
   
  [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- Quando compilado, o programa produz o seguinte arquivo XML. Observe que o atributo `cref` do método `GetZero`, por exemplo, foi transformado em `"M:TestNamespace.TestClass.GetZero"` pelo compilador. O prefixo “M:” significa “método” e é uma convenção reconhecida por ferramentas de documentação como o Sandcastle. Para obter uma lista completa de prefixos, consulte [Processando o Arquivo XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
+ Quando compilado, o programa produz o seguinte arquivo XML. Observe que o atributo `cref` do método `GetZero`, por exemplo, foi transformado em `"M:TestNamespace.TestClass.GetZero"` pelo compilador. O prefixo "M:" significa "método" e é uma convenção reconhecida por ferramentas de documentação como o DocFX e o Sandcastle. Para obter uma lista completa de prefixos, consulte [Processando o Arquivo XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   
 ```xml  
 <?xml version="1.0"?>  

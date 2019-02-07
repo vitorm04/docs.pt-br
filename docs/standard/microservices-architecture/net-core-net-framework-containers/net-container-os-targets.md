@@ -3,13 +3,13 @@ title: Para qual sistema operacional direcionar com os contêineres do .NET
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Para qual sistema operacional direcionar com os contêineres do .NET
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147194"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479861"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Para qual sistema operacional direcionar com os contêineres do .NET
 
@@ -38,21 +38,21 @@ Ao adicionar o nome de imagem ao seu arquivo Dockerfile, é possível selecionar
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.1-runtime</td>
-<td>Várias arquiteturas .NET Core 2.1: dá suporte ao Linux e ao Windows Nano Server dependendo do host do Docker.</td>
+<td>microsoft/dotnet:2.2-runtime</td>
+<td>.NET Core 2.2 de várias arquiteturas: Dá suporte ao Linux e ao Windows Nano Server dependendo do host do Docker.</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime</td>
-<td><p>Várias arquiteturas ASP.NET Core 2.1: dá suporte ao Linux e ao Windows Nano Server dependendo do host do Docker.</p>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime</td>
+<td><p>ASP.NET Core 2.2 de várias arquiteturas: Dá suporte ao Linux e ao Windows Nano Server dependendo do host do Docker.</p>
 <p>A imagem aspnetcore tem algumas otimizações para ASP.NET Core.</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-alpine</td>
-<td>Tempo de execução do .NET Core 2.1 – somente na distribuição do Linux Alpine</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>.NET Core 2.2 somente em tempo de execução na distribuição do Linux Alpine</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
-<td>Tempo de execução do .NET Core 2.1 – somente no Windows Nano Server (Windows Server versão 1803)</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>.NET Core 2.2 somente em tempo de execução no Windows Nano Server (Windows Server versão 1803)</td>
 </tr>
 </tbody>
 </table>

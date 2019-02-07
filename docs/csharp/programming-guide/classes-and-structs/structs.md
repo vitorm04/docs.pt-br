@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 609169d4624802f679f9661b7aa0596403cc48e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240379"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261606"
 ---
 # <a name="structs-c-programming-guide"></a>Structs (Guia de Programação em C#)
 
@@ -28,8 +28,8 @@ Os structs compartilham a maioria da mesma sintaxe que as classes. O nome da str
 - Diferentemente das classes, os structs podem ser instanciados sem usar um operador `new`.  
 - Os structs podem declarar construtores que têm parâmetros. 
 - Um struct não pode herdar de outra estrutura ou classe e ele não pode ser a base de uma classe. Todos os structs herdam diretamente do <xref:System.ValueType>, que herda do <xref:System.Object>.  
-- Um struct pode implementar interfaces.  
-- Um struct pode ser usado como um tipo que permite valor nulo e pode receber um valor nulo.  
+- Um struct pode implementar interfaces. 
+- Um struct não pode ser `null`, e uma variável de struct não pode receber `null`, a menos que a variável seja declarada como um tipo que permite valor nulo.
   
 ## <a name="related-sections"></a>Seções relacionadas  
 

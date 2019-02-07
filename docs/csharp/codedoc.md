@@ -3,12 +3,12 @@ title: Documentando seu código com comentários em XML
 description: Saiba como documentar seu código com comentários de documentação XML e gerar um arquivo de documentação XML em tempo de compilação.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 15bdd65b96159b4c9b6eb45016f8bdde58c1efe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576194"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271350"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
 
@@ -53,7 +53,7 @@ A biblioteca de exemplo dá suporte a quatro operações aritméticas principais
 Agora, você quer poder criar um documento de referência de API do seu código para desenvolvedores de terceiros que usam sua biblioteca, mas não têm acesso ao código-fonte.
 Como já foi mencionado, as marcas da documentação XML podem ser usadas para isso. Agora, você será apresentado às marcas XML padrão que têm suporte do compilador de C#.
 
-### <a name="ltsummarygt"></a>&lt;summary&gt;
+### <a name="summary"></a>\<summary>
 
 A marca `<summary>` adiciona informações sucintas sobre um tipo ou membro.
 Vou demonstrar seu uso adicionando-a à definição de classe `Math` e ao primeiro método `Add`. Fique à vontade para aplicá-la ao restante de seu código.
@@ -62,27 +62,27 @@ Vou demonstrar seu uso adicionando-a à definição de classe `Math` e ao primei
 
 A marca `<summary>` é muito importante e é recomendável inclui-la, porque seu conteúdo é a principal fonte de informações sobre o tipo ou membro no IntelliSense ou em um documento de referência de API.
 
-### <a name="ltremarksgt"></a>&lt;remarks&gt;
+### <a name="remarks"></a>\<remarks>
 
 A marca `<remarks>` complementa as informações sobre tipos ou membros que a marca `<summary>` fornece. Neste exemplo, você apenas a adiciona à classe.
 
 [!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-### <a name="ltreturnsgt"></a>&lt;returns&gt;
+### <a name="returns"></a>\<returns>
 
 A marca `<returns>` descreve o valor retornado de uma declaração de método.
 Assim como antes, o exemplo a seguir ilustra a marca `<returns>` no primeiro método `Add`. É possível fazer o mesmo em outros métodos.
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-### <a name="ltvaluegt"></a>&lt;value&gt;
+### <a name="value"></a>\<valor>
 
 A marca `<value>` é semelhante à marca `<returns>`, exceto pelo fato de você usá-la para propriedades.
 Supondo que sua biblioteca `Math` tivesse uma propriedade estática chamada `PI`, você usaria essa marca desta forma:
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-### <a name="ltexamplegt"></a>&lt;example&gt;
+### <a name="example"></a>\<example>
 
 Você usa a marca `<example>` para incluir um exemplo em sua documentação XML.
 Isso envolve o uso da marca `<code>` filho.
@@ -91,14 +91,14 @@ Isso envolve o uso da marca `<code>` filho.
 
 A marca `code` preserva quebras de linha e recuos para exemplos mais longos.
 
-### <a name="ltparagt"></a>&lt;para&gt;
+### <a name="para"></a>\<para>
 
 Você usa a marca `<para>` para formatar o conteúdo dentro de sua marca pai. Normalmente, `<para>` é usado dentro de uma marcação, como `<remarks>` ou `<returns>`, para dividir o texto em parágrafos.
 Você pode formatar o conteúdo da marcação `<remarks>` para a definição de classe.
 
 [!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-### <a name="ltcgt"></a>&lt;c&gt;
+### <a name="c"></a>\<c>
 
 Ainda com relação à formatação, use a marca `<c>` para marcar parte do texto como código.
 Ela é semelhante à marca `<code>`, mas embutida. Ela é útil quando você deseja mostrar um exemplo de código rápido como parte do conteúdo da marca.
@@ -106,7 +106,7 @@ Vamos atualizar a documentação para a classe `Math`.
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-### <a name="ltexceptiongt"></a>&lt;exception&gt;
+### <a name="exception"></a>\<exception>
 
 Usando a marca `<exception>`, você informa os desenvolvedores de que um método pode lançar exceções específicas.
 Observando sua biblioteca `Math`, você pode ver que ambos os métodos `Add` lançarão uma exceção se uma determinada condição for atendida. Algo menos óbvio, porém, é que o método inteiro `Divide` também será lançado se o parâmetro `b` for zero. Agora, adicione a documentação de exceção a esse método.
@@ -116,7 +116,7 @@ Observando sua biblioteca `Math`, você pode ver que ambos os métodos `Add` lan
 O atributo `cref` representa uma referência a uma exceção que está disponível no ambiente de compilação atual.
 Pode ser qualquer tipo definido no projeto ou um assembly referenciado. O compilador emitirá um aviso se o valor não puder ser resolvido.
 
-### <a name="ltseegt"></a>&lt;see&gt;
+### <a name="see"></a>\<see>
 
 A marca `<see>` permite criar um link clicável para uma página de documentação para outro elemento de código. Em nosso próximo exemplo, criaremos um link clicável entre os dois métodos `Add`.
 
@@ -125,7 +125,7 @@ A marca `<see>` permite criar um link clicável para uma página de documentaç�
 O `cref` é um atributo **obrigatório** que representa uma referência para um tipo ou seu membro que está disponível no ambiente de compilação atual.
 Pode ser qualquer tipo definido no projeto ou um assembly referenciado.
 
-### <a name="ltseealsogt"></a>&lt;seealso&gt;
+### <a name="seealso"></a>\<seealso>
 
 Você usa a marca `<seealso>` da mesma forma que usaria a marca `<see>`. A única diferença é que seu conteúdo normalmente é colocado em uma seção "Consulte também". Aqui, adicionaremos uma marca `seealso` ao método inteiro `Add` para fazer referência a outros métodos na classe que aceitam parâmetros inteiros:
 
@@ -134,33 +134,33 @@ Você usa a marca `<seealso>` da mesma forma que usaria a marca `<see>`. A únic
 O atributo `cref` representa uma referência para um tipo ou seu membro que está disponível no ambiente de compilação atual.
 Pode ser qualquer tipo definido no projeto ou um assembly referenciado.
 
-### <a name="ltparamgt"></a>&lt;param&gt;
+### <a name="param"></a>\<param>
 
 Você usa a marca `<param>` para descrever os parâmetros de um método. Aqui está um exemplo do método duplo `Add`: O parâmetro que a marca descreve é especificado no atributo `name` **necessário**.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-### <a name="lttypeparamgt"></a>&lt;typeparam&gt;
+### <a name="typeparam"></a>\<typeparam>
 
 Use a marca `<typeparam>` exatamente como a marca `<param>`, mas para declarações de método ou de tipo genérico para descrever um parâmetro genérico.
 Adicione um método genérico rápido à sua classe `Math` para verificar se uma quantidade é maior que outra.
 
 [!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-### <a name="ltparamrefgt"></a>&lt;paramref&gt;
+### <a name="paramref"></a>\<paramref>
 
 Às vezes, você pode estar descrevendo o que um método faz, no que poderia ser uma marcação `<summary>` e talvez queira fazer uma referência a um parâmetro. A marcação `<paramref>` é excelente para exatamente isso. Vamos atualizar o resumo de nosso método `Add` de base dupla. Assim como a marca `<param>`, o nome do parâmetro é especificado no atributo `name` **obrigatório**.
 
 [!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-### <a name="lttypeparamrefgt"></a>&lt;typeparamref&gt;
+### <a name="typeparamref"></a>\<typeparamref>
 
 Use a marca `<typeparamref>` exatamente como a marca `<paramref>`, mas para declarações de método ou de tipo genérico para descrever um parâmetro genérico.
 É possível usar o mesmo método genérico criado anteriormente.
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;list&gt;
+### <a name="list"></a>\<list>
 
 Use a marca `<list>` para formatar informações de documentação como uma lista ordenada, uma lista não ordenada ou uma tabela.
 Crie uma lista não ordenada de cada operação matemática a que sua biblioteca `Math` dá suporte.
@@ -179,7 +179,7 @@ No seu código, você pode gerar um site de documentação detalhada completo co
 Há tanta informação para ser analisada que será um pesadelo para qualquer desenvolvedor que desejar contribuir para esse código.
 Felizmente, há uma marca XML que pode ajudá-lo a lidar com isso:
 
-### <a name="ltincludegt"></a>&lt;include&gt;
+### <a name="include"></a>\<include>
 
 A marcação `<include>` permite fazer referência a comentários em um arquivo XML separado que descrevem os tipos e membros em seu código-fonte, em vez de colocar comentários de documentação diretamente em seu arquivo de código-fonte.
 

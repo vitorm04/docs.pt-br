@@ -1,6 +1,6 @@
 ---
 title: 'Como: Compactar e extrair arquivos'
-ms.date: 06/06/2018
+ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,67 +12,71 @@ helpviewer_keywords:
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35bf549dc4dcd5e12e3580c2357b64dcc42905b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a4ea4c32f5b73b283a5982f16e55a4d078171c1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650935"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254997"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Como: Compactar e extrair arquivos
 
-O namespace <xref:System.IO.Compression> contém os seguintes tipos para compactar e descompactar arquivos e fluxos. Você também pode usar esses tipos para ler e modificar o conteúdo de um arquivo compactado:
+O namespace <xref:System.IO.Compression> contém os seguintes tipos para compactar e descompactar arquivos e fluxos. Use também esses tipos para ler e modificar o conteúdo de um arquivo compactado.
 
 - <xref:System.IO.Compression.ZipFile>
-
 - <xref:System.IO.Compression.ZipArchive>
-
 - <xref:System.IO.Compression.ZipArchiveEntry>
-
 - <xref:System.IO.Compression.DeflateStream>
-
 - <xref:System.IO.Compression.GZipStream>
 
-Os exemplos a seguir mostram algumas das funções que você pode executar ao trabalhar com arquivos compactados.
+Os exemplos a seguir mostram algumas das operações que você pode executar com arquivos compactados.
 
-## <a name="example-1---create-and-extract-a-zip-file"></a>Exemplo 1 - Criar e extrair um arquivo .zip
+## <a name="example-1-create-and-extract-a-zip-file"></a>Exemplo 1: Criar e extrair um arquivo .zip
 
-O exemplo a seguir mostra como criar e extrair um arquivo compactado que tenha uma extensão de nome de arquivo .zip usando a classe <xref:System.IO.Compression.ZipFile>. Ele compacta o conteúdo de uma pasta em um novo arquivo .zip e extrai o conteúdo para uma nova pasta. Para usar a classe <xref:System.IO.Compression.ZipFile>, você deve fazer referência ao assembly `System.IO.Compression.FileSystem` em seu projeto.
+O exemplo a seguir mostra como criar e extrair um arquivo *.zip* compactado usando a classe <xref:System.IO.Compression.ZipFile>. O exemplo compacta o conteúdo de uma pasta em um novo arquivo *.zip* e extrai o zip para uma nova pasta. 
+
+Para executar a amostra, crie uma pasta *Iniciar* na pasta do programa e popule-a com arquivos a serem zipados. 
+
+Se você receber o erro de build "O nome 'ZipFile' não existe no contexto atual", adicione uma referência ao assembly `System.IO.Compression.FileSystem` ao projeto.
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
 
-## <a name="example-2---extract-specific-file-extensions"></a>Exemplo 2 - Extrair extensões de arquivo específicas
+## <a name="example-2-extract-specific-file-extensions"></a>Exemplo 2: Extrair extensões de arquivo específicas
 
-O exemplo a seguir mostra como iterar pelo conteúdo de um arquivo .zip e extrair os arquivos que tenham uma extensão .txt. Ele usa a classe <xref:System.IO.Compression.ZipArchive> para acessar um arquivo .zip existente, e a classe <xref:System.IO.Compression.ZipArchiveEntry> para inspecionar as entradas individuais no arquivo compactado. Ele usa um método de extensão (<xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A>) para o objeto <xref:System.IO.Compression.ZipArchiveEntry>. O método de extensão está disponível na classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>. Para usar a classe <xref:System.IO.Compression.ZipFileExtensions>, você deve fazer referência ao assembly `System.IO.Compression.FileSystem` em seu projeto.
+O próximo exemplo itera pelo conteúdo de um arquivo *.zip* existente e extrai os arquivos que têm uma extensão *.txt*. Ele usa a classe <xref:System.IO.Compression.ZipArchive> para acessar o zip e a classe <xref:System.IO.Compression.ZipArchiveEntry> para inspecionar as entradas individuais. O método de extensão <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para o objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponível na classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>. 
+
+Para executar a amostra, coloque um arquivo *.zip* chamado *result.zip* na pasta do programa. Quando solicitado, forneça um nome de pasta na qual extrair. 
+
+Se você receber o erro de build "O nome 'ZipFile' não existe no contexto atual", adicione uma referência ao assembly `System.IO.Compression.FileSystem` ao projeto.
+
+Se você receber o erro "O tipo 'ZipArchive' é definido em um assembly que não é referenciado", adicione uma referência ao `System.IO.Compression` assembly ao projeto. 
 
 > [!IMPORTANT]
-> Ao descompactar os arquivos, você deve procurar caminhos de arquivos maliciosos que possam escapar do diretório em que deseja descompactar. Isso é conhecido como um ataque de passagem de caminho.
-
-O exemplo a seguir demonstra como verificar caminhos de arquivos maliciosos e fornece uma maneira segura de descompactar:
+> Ao descompactar os arquivos, você precisa procurar caminhos de arquivos maliciosos que possam escapar do diretório no qual deseja descompactar. Isso é conhecido como um ataque de passagem de caminho. O exemplo a seguir demonstra como verificar caminhos de arquivos maliciosos e fornece uma maneira segura de descompactação.
 
 [!code-csharp[System.IO.Compression.ZipArchive#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]
 
-## <a name="example-3---add-a-new-file-to-an-existing-zip-file"></a>Exemplo 3 - Adicionar um novo arquivo para um arquivo. zip existente
+## <a name="example-3-add-a-file-to-an-existing-zip"></a>Exemplo 3: Adicionar um arquivo a um zip existente
 
-O exemplo a seguir usa a classe <xref:System.IO.Compression.ZipArchive> para acessar um arquivo .zip existente, e adiciona um novo arquivo ao arquivo compactado. O novo arquivo é compactado quando você o adiciona ao arquivo .zip.
+O exemplo a seguir usa a classe <xref:System.IO.Compression.ZipArchive> para acessar um arquivo *.zip* existente e adiciona um arquivo a ele. O novo arquivo é compactado quando você o adiciona ao zip existente.
 
 [!code-csharp[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]
 
-## <a name="example-4---compress-and-decompress-a-directory-of-gz-files"></a>Exemplo 4 - Compactar e descompactar um diretório de arquivos .gz
+## <a name="example-4-compress-and-decompress-gz-files"></a>Exemplo 4: Compactar e descompactar arquivos .gz
 
-Você também pode usar as classes <xref:System.IO.Compression.GZipStream> e <xref:System.IO.Compression.DeflateStream> para compactar e descompactar dados. Elas usam o mesmo algoritmo de compactação. Objetos <xref:System.IO.Compression.GZipStream> compactados que são gravados em um arquivo que tem uma extensão .gz podem ser descompactados usando várias ferramentas comuns, além dos métodos fornecidos por <xref:System.IO.Compression.GZipStream>. O exemplo a seguir mostra como compactar e descompactar um diretório de arquivos usando a classe <xref:System.IO.Compression.GZipStream>:
+Você também pode usar as classes <xref:System.IO.Compression.GZipStream> e <xref:System.IO.Compression.DeflateStream> para compactar e descompactar dados. Elas usam o mesmo algoritmo de compactação. Você pode descompactar objetos <xref:System.IO.Compression.GZipStream> que são gravados em um arquivo *.gz* usando muitas ferramentas comuns. O exemplo a seguir mostra como compactar e descompactar um diretório de arquivos usando a classe <xref:System.IO.Compression.GZipStream>:
 
 [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
 [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.IO.Compression.ZipArchive>
-- <xref:System.IO.Compression.ZipFile>
-- <xref:System.IO.Compression.ZipArchiveEntry>
-- <xref:System.IO.Compression.DeflateStream>
-- <xref:System.IO.Compression.GZipStream>
+- <xref:System.IO.Compression.ZipArchive>  
+- <xref:System.IO.Compression.ZipFile>  
+- <xref:System.IO.Compression.ZipArchiveEntry>  
+- <xref:System.IO.Compression.DeflateStream>  
+- <xref:System.IO.Compression.GZipStream>  
 - [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)

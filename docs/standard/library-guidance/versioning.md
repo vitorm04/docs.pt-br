@@ -4,12 +4,12 @@ description: Recomendações de melhores práticas para controle de versão de b
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169593"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204737"
 ---
 # <a name="versioning"></a>Controle de versão
 
@@ -87,7 +87,7 @@ A versão de arquivo do assembly é usada para exibir uma versão de arquivo no 
 
 ### <a name="assembly-informational-version"></a>Versão informativa do assembly
 
-A versão informativa do assembly é usada para registrar informações adicionais de versão e não tem nenhum efeito sobre o comportamento de tempo de execução. Configurar esta versão é opcional. Se você estiver usando SourceLink, essa versão será definida na compilação com a versão do pacote NuGet além de uma versão de controle do código-fonte. Por exemplo, `1.0.0-beta1+204ff0a` inclui o hash de confirmação do código-fonte do qual o assembly foi criado. Para obter mais informações, veja [SourceLink](./sourcelink.md).
+A versão informativa do assembly é usada para registrar informações adicionais de versão e não tem nenhum efeito sobre o comportamento de tempo de execução. Configurar esta versão é opcional. Se você estiver usando o Source Link, essa versão será definida no build com a versão do pacote NuGet, além de uma versão de controle do código-fonte. Por exemplo, `1.0.0-beta1+204ff0a` inclui o hash de confirmação do código-fonte do qual o assembly foi criado. Para obter mais informações, confira [Source Link](./sourcelink.md).
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>

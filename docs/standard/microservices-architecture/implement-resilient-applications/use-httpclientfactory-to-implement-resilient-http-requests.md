@@ -3,13 +3,13 @@ title: Usar HttpClientFactory implementar solicitações HTTP resilientes
 description: Saiba como usar o HttpClientFactory, disponível desde o .NET Core 2.1, para a criação de instâncias de `HttpClient`, facilitando o uso em seus aplicativos.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 6af30ae3b5111e026be6ec89d266338b88cf22b2
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: 73faa847dae2f844784ae5d85ce905b7e1e64cd0
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362635"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479809"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usar HttpClientFactory implementar solicitações HTTP resilientes
 
@@ -25,7 +25,7 @@ Portanto, `HttpClient` deve ser instanciado uma única vez e reutilizado durante
 
 Mas há um segundo problema com o `HttpClient` que pode ocorrer quando ele é usado como um objeto singleton ou estático. Nesse caso, um `HttpClient` singleton ou estático não respeita as alterações de DNS, conforme é explicado neste [problema no repositório do GitHub do .NET Core](https://github.com/dotnet/corefx/issues/11224). 
 
-Para resolver esses problemas mencionados e simplificar o gerenciamento das instâncias do `HttpClient` com mais facilidade, o .NET Core 2.1 oferece um novo `HttpClientFactory` que também pode ser usado para implementar chamadas HTTP resilientes, integrando a Polly a ele.   
+Para resolver esses problemas mencionados e facilitar o gerenciamento das instâncias do `HttpClient`, o .NET Core 2.1 introduziu um novo `HttpClientFactory` que também pode ser usado para implementar chamadas HTTP resilientes pela integração do Polly a ele.   
 
 ## <a name="what-is-httpclientfactory"></a>O que é o HttpClientFactory
 
@@ -157,7 +157,7 @@ Até este ponto, o código mostrado está apenas executando solicitações HTTP 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Usando HttpClientFactory no .NET Core 2.1**\
+- **Usando HttpClientFactory no .NET Core**\
   [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **Repositório HttpClientFactory do GitHub**\

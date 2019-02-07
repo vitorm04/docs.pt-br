@@ -10,22 +10,24 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa91bb22de6492815f79bfd50e1fefc800c6047
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586507"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479562"
 ---
 # <a name="managed-threading-basics"></a>Noções básicas de threading gerenciado
-Os cinco primeiros tópicos desta seção foram projetados para ajudá-lo a determinar quando usar threading gerenciado e explicar alguns recursos básicos. Para obter informações sobre as classes que fornecem recursos adicionais, confira [Recursos e objetos de threading](../../../docs/standard/threading/threading-objects-and-features.md) e [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+
+Os cinco primeiros tópicos desta seção destinam-se a ajudá-lo a determinar quando usar o threading gerenciado e explicar algumas funcionalidades básicas. Para obter informações sobre as classes que fornecem recursos adicionais, confira [Recursos e objetos de threading](../../../docs/standard/threading/threading-objects-and-features.md) e [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
  O restante dos tópicos desta seção abordam tópicos avançados, incluindo a interação de threading gerenciado com o sistema operacional Windows.  
   
 > [!NOTE]
 >  No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a biblioteca de paralelismo de tarefas e o PLINQ fornecem APIs para o paralelismo de tarefa e dados em programas multithreading. Para obter mais informações, consulte [Programação paralela](../../../docs/standard/parallel-programming/index.md).  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a>Nesta seção
+
  [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)  
  São discutidas as vantagens e desvantagens de vários threads e são descritos os cenários em que você pode criar threads ou usar threads de pool.  
   
@@ -34,9 +36,6 @@ Os cinco primeiros tópicos desta seção foram projetados para ajudá-lo a dete
   
  [Sincronizando dados para multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  São descritas as estratégias para sincronizar dados em classes que serão usadas com vários threads.  
-  
- [Estados de thread gerenciado](../../../docs/standard/threading/managed-thread-states.md)  
- São descritos os estados básicos de threads e é explicado como detectar se um thread está em execução.  
   
  [Threads em primeiro plano e em segundo plano](../../../docs/standard/threading/foreground-and-background-threads.md)  
  São explicadas as diferenças entre os threads de primeiro plano e segundo plano.  
@@ -47,20 +46,22 @@ Os cinco primeiros tópicos desta seção foram projetados para ajudá-lo a dete
  [Thread.Suspend, coleta de lixo e pontos seguros](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
  São descritas a suspensão de threads e a coleta de lixo.  
   
- [Armazenamento local de thread: campos estáticos relativos a thread e slots de dados](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [Armazenamento local de thread: Campos estáticos relativos a thread e slots de dados](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  São descritos os mecanismos de armazenamento relativos a threads.  
   
  [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
  É descrito como operações assíncronas ou síncronas de longa execução podem ser canceladas usando um token de cancelamento.  
   
-## <a name="reference"></a>Referência  
+## <a name="reference"></a>Referência
+
  <xref:System.Threading.Thread>  
  Fornece documentação de referência para a classe **Thread**, que representa um thread gerenciado, seja ele proveniente de código não gerenciado ou criado em um aplicativo gerenciado.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  É fornecida uma maneira segura de implementar multithreading juntamente com objetos de interface do usuário.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas
+
  [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  São descritas as classes gerenciadas usadas para sincronizar as atividades de vários threads.  
   

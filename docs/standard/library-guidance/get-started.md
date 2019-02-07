@@ -4,12 +4,12 @@ description: Introdução à criação de bibliotecas do .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145719"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204633"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -29,9 +29,9 @@ A melhor maneira de criar pacotes do NuGet para bibliotecas do .NET de código-f
 
 O NuGet torna fácil usar pacotes existentes ao criar uma biblioteca do .NET. Saiba mais sobre as origens comuns de atrito de dependências do NuGet e como evitá-las.
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[Source Link](./sourcelink.md)
 
-O SourceLink é uma ótima ferramenta que permite que os usuários da sua biblioteca do .NET intervir em seu código-fonte durante a depuração. Este artigo é uma visão geral do que é SourceLink e por que você deve usá-lo.
+O Source Link é uma ótima ferramenta que permite aos usuários da biblioteca .NET intervir no código-fonte durante a depuração. Este artigo é uma visão geral do que é o Source Link e por que você deve usá-lo.
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[Publicação](./publish-nuget-package.md)
 

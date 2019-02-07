@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127843"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675472"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -31,7 +31,7 @@ Em resumo, eventos de domínio ajudam você a expressar, explicitamente, as regr
 
 É importante garantir que, assim como uma transação de banco de dados, todas as operações relacionadas a um evento de domínio sejam concluídas com êxito ou nenhuma delas seja.
 
-Os eventos de domínio são parecidos com eventos do estilo de mensagens, com uma diferença importante. Com sistema de mensagens real, enfileiramento de mensagens, agentes de mensagens ou com um barramento de serviço que use AMPQ, a mensagem é sempre enviada de forma assíncrona e é comunicada entre processos e computadores. Isso é útil para a integração de vários contextos delimitados, microsserviços ou até mesmo aplicativos diferentes. No entanto, com os eventos de domínio, ao acionar um evento na operação de domínio em execução no momento, você deseja que os efeitos colaterais ocorram dentro do mesmo domínio.
+Os eventos de domínio são parecidos com eventos do estilo de mensagens, com uma diferença importante. Com mensagens reais, enfileiramento de mensagens, agentes de mensagens ou um barramento de serviço que usa o AMQP, uma mensagem é sempre enviada de forma assíncrona e comunicada entre processos e computadores. Isso é útil para a integração de vários contextos delimitados, microsserviços ou até mesmo aplicativos diferentes. No entanto, com os eventos de domínio, ao acionar um evento na operação de domínio em execução no momento, você deseja que os efeitos colaterais ocorram dentro do mesmo domínio.
 
 Os eventos de domínio e seus efeitos colaterais (as ações disparadas depois que são gerenciadas por manipuladores de eventos) devem ocorrer quase imediatamente, geralmente em processo, e dentro do mesmo domínio. Assim, os eventos de domínio podem ser síncronos ou assíncronos. Os eventos de integração, no entanto, devem sempre ser assíncronos.
 
@@ -132,7 +132,7 @@ Conforme observado anteriormente, uma característica importante de eventos é q
 
 A próxima pergunta é: como acionar um evento de domínio para que ele alcance os respectivos manipuladores de eventos? Você pode usar várias abordagens.
 
-Udi Dahan originalmente propôs (em várias postagens relacionadas, como, [Domain Events – Take 2 (Eventos de domínio – tomada 2)](http://udidahan.com/2008/08/25/domain-events-take-2/)) o uso de uma classe estática para gerenciar e acionar eventos. Isso incluiria uma classe estática chamada DomainEvents, que geraria eventos de domínio assim que fosse chamada, usando uma sintaxe como: `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard escreveu uma postagem no blog ([Strengthening your domain: Domain Events (Fortalecendo seu domínio: eventos de domínio)](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) que recomenda uma abordagem semelhante.
+Udi Dahan originalmente propôs (em várias postagens relacionadas, como, [Domain Events – Take 2 (Eventos de domínio – tomada 2)](http://udidahan.com/2008/08/25/domain-events-take-2/)) o uso de uma classe estática para gerenciar e acionar eventos. Isso incluiria uma classe estática chamada DomainEvents, que geraria eventos de domínio assim que fosse chamada, usando uma sintaxe como: `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard escreveu uma postagem no blog ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) (Reforçando seu domínio: eventos de domínio)) que recomenda uma abordagem semelhante.
 
 No entanto, quando a classe dos eventos de domínio é estática, ela também faz a expedição imediata aos manipuladores. Isso torna o teste e a depuração mais difíceis, pois os manipuladores de eventos com a lógica de efeitos colaterais são executados imediatamente após o evento ser acionado. Ao testar e depurar, você quer se concentrar somente no que está acontecendo nas classes de agregação atuais; você não deseja ser redirecionado repentinamente para outros manipuladores de eventos de efeitos colaterais relacionados a outras agregações ou lógica de aplicativo. É por isso as outras abordagens evoluíram, conforme explicado na próxima seção.
 
@@ -218,7 +218,7 @@ Executar uma única transação entre agregações em vez de depender de consist
 
 > Não é esperado que toda regra que abrange Agregações esteja atualizada em todos os momentos. Por meio de processamento de eventos, processamento em lote ou de outros mecanismos de atualização, outras dependências podem ser resolvidas dentro de um período específico. (página 128)
 
-Vaughn Vernon diz o seguinte no [Effective Aggregate Design. Part II: Making Aggregates Work Together (Design de agregação eficaz, parte 2: fazer com que agregações trabalhem em conjunto)](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon diz o seguinte no [Effective Aggregate Design. Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Design de agregação efetivo – parte 2: fazendo com que agregações trabalhem em conjunto):
 
 > Portanto, se a execução de um comando em uma instância de agregação exigir que as regras de negócio adicionais sejam executadas em uma ou mais agregações, use consistência eventual \[...\] Há uma maneira prática para dar suporte à consistência eventual em um modelo de DDD. Um método de agregação publica um evento de domínio que é entregue no momento exato a um ou mais assinantes assíncronos.
 
@@ -355,10 +355,10 @@ Conforme mencionado, use eventos de domínio para implementar explicitamente os 
 - **Jimmy Bogard. Um padrão de eventos de domínio melhor** \
   [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
-- **Vaughn Vernon. Design de agregação eficaz parte II: fazendo com que agregações trabalhem em conjunto** \
+- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \ (Design de agregação efetivo – parte 2: fazendo com que agregações trabalhem em conjunto)
   [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Reforçando seu domínio: eventos de domínio** \
+- **Jimmy Bogard. Strengthening your domain: Domain Events** \ (Reforçando seu domínio: eventos de domínio)
   [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
 - **Tony Truong. Exemplo de padrão de eventos de domínio** \

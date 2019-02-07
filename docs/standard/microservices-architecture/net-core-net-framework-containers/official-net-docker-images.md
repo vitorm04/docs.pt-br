@@ -3,13 +3,13 @@ title: Imagens oficiais do .NET Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Imagens oficiais do .NET Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131372"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479601"
 ---
 # <a name="official-net-docker-images"></a>Imagens oficiais do .NET Docker
 
@@ -31,13 +31,13 @@ Por que várias imagens? Ao desenvolver, criar e executar aplicativos em contêi
 
 ### <a name="during-development-and-build"></a>Durante o desenvolvimento e o build
 
-Durante o desenvolvimento, o que é importante é a velocidade em que é possível iterar alterações e a capacidade de depurá-las. O tamanho da imagem não é tão importante quanto a capacidade de fazer alterações em seu código e ver as alterações rapidamente. Algumas ferramentas e "contêineres de agentes de build" usam a imagem de desenvolvimento do .NET Core (*microsoft/dotnet:2.1-sdk*) durante o processo de build e de desenvolvimento. Ao compilar dentro de um contêiner do Docker, os aspectos importantes são os elementos necessários a fim de compilar seu aplicativo. Isso inclui o compilador e quaisquer outras dependências do .NET.
+Durante o desenvolvimento, o que é importante é a velocidade em que é possível iterar alterações e a capacidade de depurá-las. O tamanho da imagem não é tão importante quanto a capacidade de fazer alterações em seu código e ver as alterações rapidamente. Algumas ferramentas e "contêineres de agentes de build" usam a imagem de desenvolvimento do .NET Core (*microsoft/dotnet:2.2-sdk*) durante o processo de build e desenvolvimento. Ao compilar dentro de um contêiner do Docker, os aspectos importantes são os elementos necessários a fim de compilar seu aplicativo. Isso inclui o compilador e quaisquer outras dependências do .NET.
 
 Por que este tipo de imagem de build é importante? Você não implanta essa imagem em produção. Em vez disso, é uma imagem usada para criar o conteúdo inserido em uma imagem de produção. Essa imagem seria usada em seu ambiente de CI (integração contínua) ou no ambiente de build ao usar builds do Docker Multi-stage.
 
 ### <a name="in-production"></a>Em produção
 
-O que é importante na produção é a rapidez com que é possível implantar e iniciar seus contêineres com base em uma imagem do .NET Core de produção. Portanto, a imagem somente em tempo de execução baseada em *microsoft/dotnet:2.1-aspnetcore-runtime* é pequena, então ela pode percorrer rapidamente a rede do seu Registro do Docker para seus hosts do Docker. O conteúdo está pronto para ser executado, habilitando o tempo mais rápido possível da inicialização do contêiner ao processamento de resultados. No modelo do Docker, não há necessidade de compilação de código C\#, como há quando você executa dotnet build ou dotnet publish ao usar o contêiner de build.
+O que é importante na produção é a rapidez com que é possível implantar e iniciar seus contêineres com base em uma imagem do .NET Core de produção. Portanto, a imagem somente em tempo de execução baseada em *microsoft/dotnet:2.2-aspnetcore-runtime* é pequena, de modo que ela consegue percorrer rapidamente a rede do Registro do Docker para os hosts do Docker. O conteúdo está pronto para ser executado, habilitando o tempo mais rápido possível da inicialização do contêiner ao processamento de resultados. No modelo do Docker, não há necessidade de compilação de código C\#, como há quando você executa dotnet build ou dotnet publish ao usar o contêiner de build.
 
 Nesta imagem otimizada você colocar somente os binários e outro conteúdo necessário para executar o aplicativo. Por exemplo, o conteúdo criado pelo dotnet publish contém apenas os binários do .NET compilados, imagens e arquivos .js e .css. Ao longo do tempo, você verá imagens que contêm pacotes pré-compilados (compilação de IL para nativa que ocorre em tempo de execução).
 
@@ -47,8 +47,8 @@ Quando você explorar os repositórios de imagem do .NET no Hub do Docker, encon
 
 | Image                                       | Comentários                                                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core, somente com tempo de execução e otimizações de ASP.NET Core, no Linux e no Windows (várias arquiteturas) |
-| microsoft/dotnet:**2.1-sdk**                | .NET Core, com SDKs incluídos, no Linux e no Windows (várias arquiteturas)                                  |
+| microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core, somente com tempo de execução e otimizações de ASP.NET Core, no Linux e no Windows (várias arquiteturas) |
+| microsoft/dotnet:**2.2-sdk**                | .NET Core, com SDKs incluídos, no Linux e no Windows (várias arquiteturas)                                  |
 
 >[!div class="step-by-step"]
 >[Anterior](net-container-os-targets.md)

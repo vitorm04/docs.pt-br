@@ -1,5 +1,5 @@
 ---
-title: '&lt;summary&gt; – Guia de Programação em C#'
+title: <summary> – Guia de Programação em C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 5447b9ea129c26fdbb9effe1a3aeac6d7290764a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4f05e80fff386a5b0628c01605784c32d7ddaf5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740028"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261299"
 ---
-# <a name="ltsummarygt-c-programming-guide"></a>&lt;summary&gt; (Guia de Programação em C#)
+# <a name="summary-c-programming-guide"></a>\<summary> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -28,11 +28,11 @@ ms.locfileid: "54740028"
  Um resumo do objeto.  
   
 ## <a name="remarks"></a>Comentários  
- A marca \<summary> deve ser usada para descrever um tipo ou um membro de tipo. Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) para adicionar mais informações a uma descrição de tipo. Use o [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para habilitar ferramentas de documentação como [Sandcastle](https://github.com/EWSoftware/SHFB) a criarem hiperlinks internos para páginas de documentação para elementos de código.  
+ A marca \<summary> deve ser usada para descrever um tipo ou um membro de tipo. Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) para adicionar mais informações a uma descrição de tipo. Use o [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para habilitar ferramentas de documentação como o [DocFX](https://dotnet.github.io/docfx/) e o [Sandcastle](https://github.com/EWSoftware/SHFB) para criar hiperlinks internos para páginas de documentação em elementos de código.  
   
  O texto da marca \<summary> é a única fonte de informações sobre o tipo no IntelliSense e também é exibido na janela Pesquisador de Objetos.  
   
- Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo. Para criar a documentação final baseada no arquivo gerado pelo compilador, você pode criar uma ferramenta personalizada ou usar uma ferramenta como o [Sandcastle](https://github.com/EWSoftware/SHFB).  
+ Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo. Para criar a documentação final com base no arquivo gerado pelo compilador, crie uma ferramenta personalizada ou use uma ferramenta como o [DocFX](https://dotnet.github.io/docfx/) ou o [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  

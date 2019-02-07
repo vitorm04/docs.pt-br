@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192610"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674575"
 ---
 # <a name="application-domains"></a>Domínios de aplicativo
 
@@ -48,7 +48,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
     > [!NOTE]
     >  Você não pode descarregar assemblies ou tipos individuais. Apenas um domínio completo pode ser descarregado.  
   
--   O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto sendo chamado, a compilação poderá falhar com uma exceção de tipo **System.IO.FileNotFound**. Confira [Remote Objects](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58) (Objetos remotos) para obter mais detalhes. O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+-   O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto que está sendo chamado, a compilação poderá falhar com uma exceção do tipo <xref:System.IO.FileNotFoundException>. Para obter mais informações, confira [Objetos remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   O escopo do comportamento do código é dado pelo aplicativo no qual ele é executado. Em outras palavras, o domínio do aplicativo fornece definições de configuração, como as políticas de versão do aplicativo, o local de qualquer assembly remoto acessado e informações sobre onde localizar assemblies carregados no domínio.  
   

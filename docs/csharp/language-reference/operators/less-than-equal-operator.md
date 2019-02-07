@@ -1,5 +1,5 @@
 ---
-title: Operador &lt;= – Referência de C#
+title: Operador <= – Referência de C#
 ms.custom: seodec18
 ms.date: 12/18/2018
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: 30f42de68667756a8233fef4241bfd74ed4eff2a
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: cb11a746d36cc22ab2341e28a7efba3c0b3510eb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656083"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256999"
 ---
-# <a name="lt-operator-c-reference"></a>&lt;Operador = (Referência de C#)
+# <a name="-operator-c-reference"></a>\<Operador = (Referência de C#)
 
 O operador relacional “menor ou igual a” `<=` retornará `true` se o primeiro operando for menor ou igual ao segundo operando; caso contrário, `false`. Todos os tipos numéricos e de enumeração são compatíveis com o operador `<=`. No caso dos operandos do mesmo tipo de [enum](../keywords/enum.md), os valores correspondentes do tipo integral subjacente são comparados.
 
