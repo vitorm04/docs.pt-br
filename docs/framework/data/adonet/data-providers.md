@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c4b656d1ee7edcdc7e0e5cd41f7d57266ad5ad26
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066214"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828352"
 ---
 # <a name="net-framework-data-providers"></a>Provedores de dados .NET Framework
 Um provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] é usado para se conectar a um banco de dados, executar comandos e recuperar resultados. Os resultados são processados diretamente, colocados no <xref:System.Data.DataSet> para serem expostos ao usuário conforme o necessário, combinados com os dados de várias fontes ou colocados remotamente entre camadas. Os provedores de dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] são leves, criando uma camada mínima entre a fonte de dados e o código, aumentando o desempenho sem sacrificar a funcionalidade.  
@@ -24,7 +24,7 @@ Um provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para ODBC|Para fontes de dados expostas usando ODBC. Usa o namespace <xref:System.Data.Odbc>.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para Oracle|Para fontes de dados Oracle. O provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle oferece suporte a um cliente de software Oracle versão 8.1.7 e posterior, e usa o namespace <xref:System.Data.OracleClient>.|  
 |Provedor EntityClient|Fornece acesso a dados para aplicativos de Modelo de Dados de Entidade (EDM). Usa o namespace <xref:System.Data.EntityClient>.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para o SQL Server Compact 4.0.|Fornece acesso a dados para o Microsoft SQL Server Compact 4.0. Usa o [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) namespace.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para o SQL Server Compact 4.0.|Fornece acesso a dados para o Microsoft SQL Server Compact 4.0. Usa o [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) namespace.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Os objetos principais de provedores de dados .NET Framework  
  A tabela a seguir descreve os quatro objetos principais que compõem um provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  

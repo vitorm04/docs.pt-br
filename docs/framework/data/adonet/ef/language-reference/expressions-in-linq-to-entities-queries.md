@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: f449e7d5626d4a8c9709ae2cb4c026869d1e2dc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec61a295f50fa64c484902ed811a627a22ee1c7
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661770"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828040"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Expressões em consultas LINQ to Entities
 Uma expressão é um fragmento de código que pode ser avaliado como um único valor, objeto, método ou namespace. As expressões podem conter um valor literal, uma chamada de método, um operador e seus operandos ou um nome simples. Os nomes simples podem ser o nome de uma variável, um membro de tipo, um parâmetro de método, um namespace ou um tipo. As expressões podem usar operadores que, por sua vez, usam outras expressões como parâmetros ou chamadas de métodos cujos parâmetros são, por sua vez, outras chamadas de métodos. Portanto, as expressões podem variar de simples a muito complexas.  
@@ -34,7 +34,7 @@ Uma expressão é um fragmento de código que pode ser avaliado como um único v
   
  [Expressões de inicialização](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
- [Propriedades de navegação](https://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
+ [Relações, as propriedades de navegação e chaves estrangeiras](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>Consulte também
 - [Entity Framework do ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)
