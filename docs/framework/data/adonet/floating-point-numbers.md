@@ -2,12 +2,12 @@
 title: Números de ponto flutuante
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 8f5985576e966f1a853c9ee8d7bfef4b9bf6fc40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589367"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903964"
 ---
 # <a name="floating-point-numbers"></a>Números de ponto flutuante
 Este tópico descreve alguns dos problemas que os desenvolvedores geralmente encontram ao trabalhar com números de ponto flutuantes em [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Esses problemas são causados pela maneira como que os computadores armazenam números de ponto flutuante e não são específicas para um provedor específico, como <xref:System.Data.SqlClient> ou <xref:System.Data.OracleClient>.  
@@ -19,5 +19,5 @@ Este tópico descreve alguns dos problemas que os desenvolvedores geralmente enc
  Para solucionar problemas com a comparação de igualdade, considere a possibilidade de codificação do seu aplicativo para que as variações nos dígitos menos significantes são ignoradas. Por exemplo, em vez de comparar para ver se os dois números são iguais, subtrai um número de outro número. Se a diferença for dentro de uma margem aceitável de arredondamento, seu aplicativo pode tratar os números como se eles forem iguais.  
   
 ## <a name="see-also"></a>Consulte também
-- [Por que números de ponto flutuante podem perder a precisão](https://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Por que números de ponto flutuante podem perder a precisão](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

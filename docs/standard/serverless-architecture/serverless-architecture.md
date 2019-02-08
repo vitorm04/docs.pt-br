@@ -4,16 +4,16 @@ description: Exploração de várias arquiteturas e aplicativos que são compat�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150297"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904788"
 ---
 # <a name="serverless-architecture"></a>Arquitetura sem servidor
 
-Há muitas abordagens para usando arquiteturas sem servidor. Este capítulo explora os exemplos de arquiteturas comuns que se integram sem servidor. Ele também aborda questões que podem apresentar desafios adicionais ou exigir maior consideração ao implementar sem servidor. Por fim, vários exemplos de design são fornecidas que ilustram vários casos de uso sem servidor.
+Há muitas abordagens para usar [sem servidor](http://azure.com/serverless) arquiteturas. Este capítulo explora os exemplos de arquiteturas comuns que se integram sem servidor. Ele também aborda questões que podem apresentar desafios adicionais ou exigir maior consideração ao implementar sem servidor. Por fim, vários exemplos de design são fornecidas que ilustram vários casos de uso sem servidor.
 
 Hosts sem servidor geralmente usam um existentes baseados em contêiner ou a camada do PaaS para gerenciar as instâncias sem servidor. Por exemplo, o Azure Functions se baseia [serviço de aplicativo do Azure](https://docs.microsoft.com/azure/app-service/). O serviço de aplicativo é usado para expandir as instâncias e gerenciar o tempo de execução que executa o código do Azure Functions. Para funções com base em Windows, as execuções de host como PaaS e escalas de reduzir o tempo de execução do .NET. Para funções com base em Linux, o host utiliza contêineres.
 

@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 87b29db0cc093b195361ef34086f41038c181bef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507311"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903616"
 ---
 # <a name="adonet"></a>ADO.NET
 O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para desenvolvedores do .NET Framework. O ADO.NET fornece um conjunto rico de componentes para criar aplicativos distribuídos e de compartilhamento de dados. Faz parte do .NET Framework, fornecendo acesso a dados de aplicativo relacionais e XML. O ADO.NET oferece suporte a uma variedade de necessidades de desenvolvimento, incluindo a criação de clientes front-end de banco de dados e objetos comerciais de camada intermediária usados por aplicativos, ferramentas, linguagens ou navegadores da Internet.  
@@ -44,23 +44,20 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
  Descreve os recursos e os comportamentos que são específicos ao Provedor de Dados .NET Framework para Oracle.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [PAVE Security in Native and .NET Framework Code](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)  
- Fornece links para tópicos de segurança para o Visual Studio, o .NET Framework e criptografia.  
+ [Consulta integrada à linguagem (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ Fornece links para tópicos do LINQ e exemplos usando C#.  
   
- [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- Fornece links para exemplos e tópicos do LINQ.  
+ [Consulta integrada à linguagem (LINQ) – Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Fornece links para tópicos LINQ e exemplos usando o Visual Basic.  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
  Descreve como usar o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para implantar serviços de dados na Web ou em uma intranet que implementa o Open Data Protocol (OData).  
   
- [Tecnologias de desenvolvimento principais](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ [Guia de desenvolvimento do .NET Framework](../../development-guide.md)  
  Fornece links para informações sobre tarefas padrão de desenvolvimento no .NET Framework.  
   
- [Tecnologias de desenvolvimento avançadas](https://msdn.microsoft.com/library/a493kdy6.aspx)  
- Fornece links para obter informações sobre tarefas e técnicas sofisticadas de desenvolvimento no .NET Framework.  
-  
- [Exemplos e início rápido](https://msdn.microsoft.com/library/ms184422.aspx)  
- Fornece listagens completas de todos os exemplos e exemplos do QuickStart associados com o .NET Framework.  
+ [Exemplos e tutoriais](../../../samples-and-tutorials/index.md)  
+ Fornece uma lista de tutoriais e amostras do .NET.
   
 ## <a name="see-also"></a>Consulte também
 - [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

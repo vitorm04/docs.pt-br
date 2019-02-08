@@ -2,12 +2,12 @@
 title: Recursos do Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: 24ee9225b8e19eac93554d2243aac0cafd5e9ef0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2579a3b7108a6a0a4b5f86cfa02a25a825a160de
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522447"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903663"
 ---
 # <a name="entity-framework-resources"></a>Recursos do Entity Framework
 Os seguintes recursos externos fornecem informações e suporte para criando aplicativos do Entity Framework.  
@@ -31,4 +31,4 @@ Os seguintes recursos externos fornecem informações e suporte para criando apl
 - [Visão geral do Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)
 - [Terminologia do Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)
-- [ADO.NET Entity Data Model Tools](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) (Ferramentas de modelo de dados de entidade do ADO.NET)
+- [Ferramentas de modelo de dados de entidade ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

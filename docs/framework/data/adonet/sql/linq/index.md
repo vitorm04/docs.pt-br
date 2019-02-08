@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 141505eed8e76bb5f9811b5d2bdc166885905cde
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a951256d0804c214016de04457cc1869b595f
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196824"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904291"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é um componente do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versão 3.5 que fornece uma infraestrutura de tempo de execução para gerenciar dados relacionais como objetos.  
@@ -35,8 +35,11 @@ ms.locfileid: "50196824"
  Fornece links para amostras do Visual Basic e c#.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- Apresenta uma visão geral das tecnologias [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ [Consulta integrada à linguagem (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
+ Fornece uma visão geral das tecnologias LINQ do C#.
+ 
+ [Consulta integrada à linguagem (LINQ) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Fornece uma visão geral das tecnologias LINQ no Visual Basic.
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Descreve [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] tecnologias para usuários do Visual Basic.  

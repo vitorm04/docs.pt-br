@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612815"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904138"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -38,7 +38,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
 -   Criptografar seções de arquivos de configuração usando configuração protegida.  
   
-     O ASP.NET fornece um recurso chamado configuração protegida que permite criptografar informações confidenciais em um arquivo de configuração. Embora esse recurso tenha sido basicamente projetado para ASP.NET, você também pode usá-lo para criptografar seções de arquivos de configuração em aplicativos do Windows. Para obter uma descrição detalhada dos novos recursos de configuração protegida, consulte [Criptografando informações de configuração usando configuração protegida](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+     O ASP.NET fornece um recurso chamado configuração protegida que permite criptografar informações confidenciais em um arquivo de configuração. Embora esse recurso tenha sido basicamente projetado para ASP.NET, você também pode usá-lo para criptografar seções de arquivos de configuração em aplicativos do Windows. Para obter uma descrição detalhada dos novos recursos de configuração protegida, consulte [Criptografando informações de configuração usando configuração protegida](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
 -   Armazenar cadeias de conexão em arquivos de configuração protegida.  
   
@@ -98,7 +98,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
      Os ataques de injeção de SQL podem ser executados em [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornecendo entrada mal-intencionada para valores que são usados em um predicado de consulta e em nomes de parâmetro. Para evitar o risco de injeção de SQL, você nunca deve combinar a entrada do usuário com o texto de comando de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     As consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceitam parâmetros em todas as partes onde literais são aceitos. Você deve usar consultas parametrizadas, em vez de injetar literais de um agente externo diretamente na consulta. Você também deve considerar usar métodos do construtor de consulta para construir com segurança [Entity SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     As consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceitam parâmetros em todas as partes onde literais são aceitos. Você deve usar consultas parametrizadas, em vez de injetar literais de um agente externo diretamente na consulta. Você também deve considerar o uso [métodos de construtor de consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) para construir o Entity SQL com segurança.  
   
 -   Ataques de injeção de [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
@@ -132,7 +132,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  As considerações de segurança a seguir se aplicam ao gerar e trabalhar com tipos de entidade.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Não compartilhe um ObjectContext entre domínios do aplicativo.  
- O compartilhamento de um <xref:System.Data.Objects.ObjectContext> com mais de um domínio do aplicativo pode expor informações na cadeia de conexão. Em vez disso, transfira objetos serializados ou grafos de objetos para o outro domínio do aplicativo e depois anexe esses objetos a um <xref:System.Data.Objects.ObjectContext> nesse domínio do aplicativo. Para obter mais informações, consulte [serializar objetos](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ O compartilhamento de um <xref:System.Data.Objects.ObjectContext> com mais de um domínio do aplicativo pode expor informações na cadeia de conexão. Em vez disso, transfira objetos serializados ou grafos de objetos para o outro domínio do aplicativo e depois anexe esses objetos a um <xref:System.Data.Objects.ObjectContext> nesse domínio do aplicativo. Para obter mais informações, consulte [serializar objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
 #### <a name="prevent-type-safety-violations"></a>Evite violações de segurança de tipos.  
  Se a segurança de tipo for violada, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não poderá garantir a integridade dos dados em objetos. As violações de segurança de tipo podem ocorrer se você permitir que aplicativos não confiáveis sejam executados com segurança de acesso do código de confiança total.  

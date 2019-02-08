@@ -2,15 +2,15 @@
 title: LINQ para exemplos de DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 8e6cce8ba79cad42ade6ac373631094f9e2d4e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae43111a5b56e1edf3e1b4089902a8ca1d822d0d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634526"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903806"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ para exemplos de DataSet
-Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] exemplos que usam os operadores de consulta padrão de programação. O <xref:System.Data.DataSet> usado nesses exemplos é preenchido usando o `FillDataSet` método, que é especificado em [Carregando dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obter mais informações, consulte [visão geral de operadores de consulta padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Esta seção fornece LINQ para exemplos de programação de conjunto de dados que usam os operadores de consulta padrão. O <xref:System.Data.DataSet> usado nesses exemplos é preenchido usando o `FillDataSet` método, que é especificado em [Carregando dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obter mais informações, consulte [visão geral de operadores de consulta padrão (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) ou [visão geral de operadores padrão consulta (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Exemplos de expressões de consulta](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
