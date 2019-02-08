@@ -3,12 +3,12 @@ title: Guia de conteúdo do ML.NET
 description: Saiba como criar soluções de IA personalizadas e integrá-las aos seus aplicativos do .NET usando o ML.NET.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550455"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826248"
 ---
 # <a name="mlnet-content-guide"></a>Guia de conteúdo do ML.NET
 
@@ -31,7 +31,7 @@ Para entender os conceitos básicos, veja [Conceitos básicos do treinamento de 
 
 [Classificar os problemas do GitHub usando um modelo de classificação multiclasse](tutorials/github-issue-classification.md) mostra como criar um aplicativo que determina o rótulo de Área de um problema do GitHub.
 
-[Previsão do valor da corrida do táxi usando um modelo de regressão](tutorials/taxi-fare.md) mostra como criar um aplicativo de previsão que usa diversos fatores de dados históricos para determinar a resposta.
+[Previsão de preços usando um modelo de regressão](tutorials/taxi-fare.md) mostra como criar um aplicativo de previsão que usa diversos fatores de dados históricos para determinar a resposta.
 
 [Classificação de flores íris por características ](tutorials/iris-clustering.md) mostra como usar um modelo de clustering para analisar o conjunto de dados da íris. 
 

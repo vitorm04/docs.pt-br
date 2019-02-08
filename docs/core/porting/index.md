@@ -2,14 +2,14 @@
 title: Portabilidade de código do .NET Framework para o .NET Core
 description: Entenda o processo de compatibilidade e descubra ferramentas que podem ser úteis ao realizar a portabilidade de um projeto do .NET Framework para o .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266566"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903564"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Faça a portabilidade do seu código do .NET Framework para o .NET Core
 
@@ -37,8 +37,6 @@ Este é o processo que recomendamos que você realize ao fazer a portabilidade d
 
 5. Execute seu plano de portabilidade.
 
-## <a name="tools-to-help"></a>Ferramentas para ajudar
-
 A lista a seguir mostra as ferramentas que podem ser úteis para usar durante o processo de portabilidade:
 
 * Analisador de Portabilidade do .NET – [ferramenta de linha de comando](https://github.com/Microsoft/dotnet-apiport/releases) ou [Extensão do Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), uma cadeia de ferramentas que pode gerar um relatório sobre a portabilidade do seu código entre o .NET Framework e .NET Core, com detalhamento dos problemas assembly por assembly. Para obter mais informações, consulte [Analisador de Portabilidade do .NET](../../standard/analyzers/portability-analyzer.md).
@@ -51,4 +49,4 @@ Além disso, você pode tentar fazer a portabilidade de soluções menores ou pr
 > CsprojToVs2017 é uma ferramenta de terceiros. Não há nenhuma garantia de que ela funcionará para todos os seus projetos, e isso pode causar alterações sutis no comportamento que dependem de você. CsprojToVs2017 deve ser usada como um _ponto de partida_ que automatize as funções básicas que podem ser automatizadas. Não é uma solução garantida para a migração de formatos de arquivo de projeto.
 
 >[!div class="step-by-step"]
->[Avançar](third-party-deps.md)
+>[Avançar](net-framework-tech-unavailable.md)

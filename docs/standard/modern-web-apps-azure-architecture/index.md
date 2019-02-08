@@ -3,13 +3,13 @@ title: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure
 description: Um guia que fornece diretrizes de ponta a ponta para a criação de aplicativos Web monolíticos usando o ASP.NET Core e o Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148100"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827858"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Arquitetar Aplicativos Web Modernos com o ASP.NET Core e o Azure
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018, Microsoft Corporation
+Copyright © 2019, Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida ou transmitida de nenhuma forma nem por nenhum meio sem a permissão por escrito do publicador.
 
@@ -43,7 +43,7 @@ Todas as outras marcas e logotipos são propriedade de seus respectivos propriet
 
 Autor:
 
-> **Steve Smith (@ardalis)**, Consultor de Arquitetura de Software, [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** – Arquiteto de software e instrutor – [Ardalis.com](https://ardalis.com)
 
 Editores:
 
@@ -63,11 +63,11 @@ O .NET Core e o ASP.NET Core oferecem várias vantagens sobre o desenvolvimento 
 
 - Controle de versão lado a lado para versões do .NET por aplicativo no mesmo servidor.
 
-Aplicativos .NET tradicionais poderão dar suporte a esses requisitos, porém o ASP.NET Core e .NET Core foram otimizados para proporcionar suporte aprimorado para os cenários acima.
+Aplicativos .NET tradicionais poderão dar suporte a vários desses requisitos, porém o ASP.NET Core e .NET Core foram otimizados para proporcionar suporte aprimorado para os cenários acima.
 
 Cada vez mais empresas estão optando por hospedar seus aplicativos Web na nuvem usando serviços como o Microsoft Azure. Considere hospedar seu aplicativo na nuvem se os seguintes itens forem importantes para seu aplicativo ou organização:
 
-- Investimento reduzido nos custos de data center (hardware, software, espaço, utilitários, etc.)
+- Investimento reduzido nos custos de data center (hardware, software, espaço, utilitários, gerenciamento de servidor, etc.)
 
 - Preços flexíveis (pague com base no uso, não pela capacidade ociosa).
 
@@ -81,7 +81,7 @@ A criação de aplicativos Web com o ASP.NET Core, hospedados no Azure, oferece 
 
 ## <a name="purpose"></a>Finalidade
 
-Este guia fornece diretrizes ponta a ponta para a compilação de aplicativos Web monolíticos usando o ASP.NET Core e o Azure.
+Este guia fornece diretrizes ponta a ponta para a compilação de aplicativos Web *monolíticos* usando o ASP.NET Core e o Azure. Nesse contexto, "monolítico" refere-se ao fato de que esses aplicativos são implantados como uma única unidade, não como uma coleção de serviços e aplicativos em interação.
 
 Este guia é um complemento do ["_Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres_"](../microservices-architecture/index.md) que se concentra mais no Docker, em microsserviços e na implantação de contêineres para hospedar aplicativos empresariais.
 
