@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: a3b35c28dc9b764b99b73440a1526176293e10a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19849f318d07a11fe0d894f7f0a68cd37f1ee249
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514745"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825778"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que permite aos desenvolvedores escreverem consultas no modelo conceitual do Entity Framework usando Visual Basic ou Visual C#. As consultas no Entity Framework são representadas por consultas de árvore de comando, que são executadas no contexto de objeto. O LINQ to Entities converte consultas do LINQ (Consulta Integrada à Linguagem) para consultas de árvore de comando, executa as consultas no Entity Framework e retorna os objetos que podem ser usados pelo Entity Framework e pelo LINQ. Veja a seguir o processo para criar e executar uma consulta LINQ to Entities:  
@@ -90,6 +90,7 @@ O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que 
   
 ## <a name="see-also"></a>Consulte também
 - [Problemas conhecidos e considerações no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [Consulta integrada à linguagem (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Consulta integrada à linguagem (LINQ) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [Entity Framework do ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)

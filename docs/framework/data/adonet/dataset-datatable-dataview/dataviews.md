@@ -2,12 +2,12 @@
 title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 4731b0c94f9ecd03dc3d1229f27cb8ede7e0e203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592894"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825869"
 ---
 # <a name="dataviews"></a>DataViews
 Um <xref:System.Data.DataView> permite que você crie diferentes exibições dos dados armazenados em um <xref:System.Data.DataTable>, um recurso que é geralmente usado em aplicativos de vinculação de dados. Usando um **DataView**, você pode expor os dados em uma tabela com diferentes ordens de classificação, e você pode filtrar os dados por estado de linha ou com base em uma expressão de filtro.  
@@ -44,10 +44,10 @@ Um <xref:System.Data.DataView> permite que você crie diferentes exibições dos
  Descreve como usar um **DataViewManager** gerenciem **DataView** configurações para cada tabela em um **conjunto de dados**.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Aplicativos Web ASP.NET](https://msdn.microsoft.com/library/a812d7b7-049e-4234-a4c2-6acf690301f6)  
+ [Aplicativos Web ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  Fornece visões gerais e detalhadas, procedimentos passo a passo para criar aplicativos ASP.NET, Web Forms e serviços Web.  
   
- [Aplicativos do Windows](https://msdn.microsoft.com/library/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
+ [Aplicativos do Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Fornece informações detalhadas sobre como trabalhar com Windows Forms e aplicativos de console.  
   
  [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  

@@ -1,6 +1,6 @@
 ---
 title: ISOSDacInterface Interface
-ms.date: 01/16/2019
+ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface Interface
 api.location:
@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5e037cf6fb88fff4886733ff4152dca0a827e0a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491022"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827923"
 ---
 # <a name="isosdacinterface-interface"></a>ISOSDacInterface Interface
 
@@ -32,7 +32,9 @@ Fornece métodos auxiliares para acessar dados de `SOS`.
 
 | Método                                                                                                               | Descrição                                                                                                                   |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | Obtém os dados para o determinado [MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md). |
+| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | Obtém os dados para o ponteiro de MethodDesc determinado. |
+| [GetMethodDescPtrFromIP](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescptrfromip-method.md) | Recupera o ponteiro do MethodDesc correspondente o método que contém o endereço de determinada instrução nativos. |
+| [GetModuleData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmoduledata-method.md)| Busca os dados correspondentes para o módulo carregado em um determinado endereço. |
 
 ## <a name="remarks"></a>Comentários
 

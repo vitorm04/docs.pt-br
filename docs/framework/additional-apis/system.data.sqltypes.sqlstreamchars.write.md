@@ -1,7 +1,7 @@
 ---
 title: Método SqlStreamChars.Write (Char [], Int32, Int32) (SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/20/2018
 ms.technology:
 - dotnet-data
@@ -13,14 +13,14 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: dd9bb691f6d07f4875d684eef76d6329667003af
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: e2b0d2c4e68ffa0c0b9e745a15dbb8c79659008c
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221902"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826025"
 ---
-# <a name="sqlstreamcharswritechar-int32-int32-method"></a>Método SqlStreamChars.Write (Char [], Int32, Int32)
+# <a name="sqlstreamcharswritechar-int32-int32-method"></a>SqlStreamChars.Write(Char[], Int32, Int32) Method
 
 Quando substituído em uma classe derivada, grava uma sequência de caracteres no fluxo atual e avança a posição atual dentro desse fluxo pelo número de caracteres gravados. O assembly que contém este método tem uma relação de amigo com SQLAccess.dll. Ele é destinado a uso pelo SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido pelo banco de dados.
 

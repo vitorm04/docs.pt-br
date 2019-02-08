@@ -2,19 +2,19 @@
 title: Cadeias de caracteres de Conexão no ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30972edb7877127eb2e4c60f7e6377e4d893aecc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497453"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826467"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Cadeias de caracteres de Conexão no ADO.NET Entity Framework
 Uma cadeia de conexão contém informações de inicialização que são passadas como parâmetros de um provedor de dados para uma fonte de dados. A sintaxe depende do provedor de dados, e a cadeia de conexão é analisada durante a tentativa de abrir uma conexão. As cadeias de conexão usadas por Entity Framework contêm informações usadas para conectar ao provedor de dados ADO.NET subjacente que dá suporte a Entity Framework. Elas também contêm informações sobre os arquivos de modelo e de mapeamento necessários.  
   
  A cadeia de conexão é usada pelo provedor EntityClient ao acessar metadados de modelo e de mapeamento e ao se conectar à fonte de dados. A cadeia de conexão pode ser acessada ou definida por meio da propriedade <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. A classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> pode ser usada para construir ou acessar programaticamente parâmetros na cadeia de conexão. Para obter mais informações, confira [Como: Compilar uma cadeia de Conexão EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
- O [ferramentas de modelo de dados de entidade](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) gerar uma cadeia de caracteres de conexão é armazenada no arquivo de configuração do aplicativo. O <xref:System.Data.Objects.ObjectContext> recupera essas informações de conexão automaticamente ao criar consultas de objeto. O <xref:System.Data.EntityClient.EntityConnection> usado por uma instância <xref:System.Data.Objects.ObjectContext> pode ser acessado a partir da propriedade <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obter mais informações, consulte [Gerenciando conexões e transações](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ O [ferramentas de modelo de dados de entidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) gerar uma cadeia de caracteres de conexão é armazenada no arquivo de configuração do aplicativo. O <xref:System.Data.Objects.ObjectContext> recupera essas informações de conexão automaticamente ao criar consultas de objeto. O <xref:System.Data.EntityClient.EntityConnection> usado por uma instância <xref:System.Data.Objects.ObjectContext> pode ser acessado a partir da propriedade <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obter mais informações, consulte [Gerenciando conexões e transações](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
 
 ## <a name="connection-string-syntax"></a>Sintaxe da cadeia de conexão
 
@@ -31,7 +31,7 @@ A tabela a seguir lista os nomes válidos para valores de palavra-chave na propr
 |`Metadata`|Necessária quando a palavra-chave `Name` não é especificada. Uma lista de diretórios, arquivos e locais de recursos delimitados por pipe na qual procurar informações de metadados e mapeamento. A seguir está um exemplo:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Os espaços em branco em cada lado do separador de pipe são ignorados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.|  
 |`Name`|O aplicativo pode, opcionalmente, especificar o nome da conexão em um arquivo de configuração do aplicativo que forneça os valores de cadeia de conexão de palavra-chave-valor necessários. Nesse caso, não é possível fornecê-los diretamente na cadeia de conexão. A palavra-chave `Name` não é permitida em um arquivo de configuração.<br /><br /> Quando a palavra-chave `Name` não é incluída na cadeia de conexão, um valor não vazio para a palavra-chave Provider é necessário.<br /><br /> Essa palavra-chave é mutuamente excludente com todos as outras palavras-chave de cadeia de conexão.|  
   
- A seguir está um exemplo de uma cadeia de conexão para o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) armazenados no arquivo de configuração do aplicativo:  
+ A seguir está um exemplo de uma cadeia de conexão para o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) armazenados no arquivo de configuração do aplicativo:  
   
   
   
@@ -111,5 +111,5 @@ Metadata=.\
 ## <a name="see-also"></a>Consulte também
 - [Trabalhando com Provedores de Dados](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
 - [Considerações de implantação](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Gerenciando conexões e transações](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Gerenciando conexões e transações](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)

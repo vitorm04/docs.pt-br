@@ -2,12 +2,12 @@
 title: Considerações sobre migração (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 14f71de4a05c821ec21bf018fe2e2383d747c41b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13f9b97435665138f78db6a481d27172d3253679
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575613"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827897"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considerações sobre migração (Entity Framework)
 O [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework fornece vários benefícios para um aplicativo existente. Um dos mais importantes desses benefícios é a capacidade de usar um modelo conceitual para separar as estruturas de dados usadas pelo aplicativo no esquema da fonte de dados. Isso permite que você faça alterações futuras facilmente no modelo de armazenamento ou na própria fonte de dados sem fazer alterações de compensação no aplicativo. Para obter mais informações sobre os benefícios de usar o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consulte [visão geral do Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) e [modelo de dados de entidade](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -29,7 +29,7 @@ O [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 
  O caminho para migração de um aplicativo existente para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] depende do tipo do aplicativo e da estratégia de acesso dos dados existentes. No entanto, você sempre deve executar as seguintes tarefas ao migrar um aplicativo existente para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
->  Todas essas tarefas são executadas automaticamente quando você usar as ferramentas de modelo de dados de entidade a partir do Visual Studio 2008. Para obter mais informações, confira [Como: Use o Assistente de modelo de dados de entidade](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Todas essas tarefas são executadas automaticamente quando você usar as ferramentas de modelo de dados de entidade a partir do Visual Studio 2008. Para obter mais informações, confira [Como: Use o Assistente de modelo de dados de entidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 1.  Atualizar o aplicativo.  
   
@@ -37,12 +37,12 @@ O [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 
   
 2.  Definir os modelos e o mapeamento.  
   
-     O modelo e os arquivos de mapeamento definem entidades no modelo conceitual; estruturas na fonte de dados, como tabelas, procedimentos armazenados e modos de exibição; e o mapeamento entre as entidades e estruturas da fonte de dados. Para obter mais informações, confira [Como: Definir o modelo e arquivos de mapeamento manualmente](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+     O modelo e os arquivos de mapeamento definem entidades no modelo conceitual; estruturas na fonte de dados, como tabelas, procedimentos armazenados e modos de exibição; e o mapeamento entre as entidades e estruturas da fonte de dados. Para obter mais informações, confira [Como: Definir o modelo e arquivos de mapeamento manualmente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)).  
   
-     Os tipos definidos no modelo de armazenamento devem corresponder ao nome dos objetos na fonte de dados. Se o aplicativo existente expuser dados como objetos, você deverá garantir que as entidades e as propriedades definidas no modelo conceitual correspondam aos nomes dessas classes e propriedades de dados existentes. Para obter mais informações, confira [Como: Personalizar a modelagem e arquivos de mapeamento para trabalhar com objetos personalizados](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
+     Os tipos definidos no modelo de armazenamento devem corresponder ao nome dos objetos na fonte de dados. Se o aplicativo existente expuser dados como objetos, você deverá garantir que as entidades e as propriedades definidas no modelo conceitual correspondam aos nomes dessas classes e propriedades de dados existentes. Para obter mais informações, confira [Como: Personalizar a modelagem e arquivos de mapeamento para trabalhar com objetos personalizados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100)).  
   
     > [!NOTE]
-    >  O Designer de Modelo de Dados de Entidade pode ser usado para renomear entidades no modelo conceitual para que correspondam aos objetos existentes. Para obter mais informações, consulte [Entity Data Model Designer](https://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf).  
+    >  O Designer de Modelo de Dados de Entidade pode ser usado para renomear entidades no modelo conceitual para que correspondam aos objetos existentes. Para obter mais informações, consulte [Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)).  
   
 3.  Definir a cadeia de conexão.  
   
@@ -50,10 +50,10 @@ O [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 
   
 4.  Configure o projeto do Visual Studio.  
   
-     As referências a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] assemblies e o modelo e mapeamento de arquivos devem ser adicionados ao projeto do Visual Studio. Você pode adicionar esses arquivos de mapeamento ao projeto para garantir que sejam implantados com o aplicativo no local indicado na cadeia de conexão. Para obter mais informações, confira [Como: Configurar manualmente um projeto do Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     As referências a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] assemblies e o modelo e mapeamento de arquivos devem ser adicionados ao projeto do Visual Studio. Você pode adicionar esses arquivos de mapeamento ao projeto para garantir que sejam implantados com o aplicativo no local indicado na cadeia de conexão. Para obter mais informações, confira [Como: Configurar manualmente um projeto do Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Considerações para aplicativos com objetos existentes  
- A partir do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dá suporte a POCO (objetos CLR “básicos”), também chamados de objetos com ignorância de persistência. Na maioria dos casos, os objetos existentes podem trabalhar com o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fazendo alterações secundárias. Para obter mais informações, consulte [trabalhando com entidades POCO](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Também é possível migrar um aplicativo para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e usar as classes de dados que são geradas pelas ferramentas do Entity Framework. Para obter mais informações, confira [Como: Use o Assistente de modelo de dados de entidade](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+ A partir do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dá suporte a POCO (objetos CLR “básicos”), também chamados de objetos com ignorância de persistência. Na maioria dos casos, os objetos existentes podem trabalhar com o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fazendo alterações secundárias. Para obter mais informações, consulte [trabalhando com entidades POCO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Também é possível migrar um aplicativo para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e usar as classes de dados que são geradas pelas ferramentas do Entity Framework. Para obter mais informações, confira [Como: Use o Assistente de modelo de dados de entidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Considerações para aplicativos que usam provedores ADO.NET  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] provedores, como o SqlClient, permitem que você consultar uma fonte de dados para retornar dados tabulares. Dados também podem ser carregados em um [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] conjunto de dados. A lista a seguir descreve as considerações para a atualização de um aplicativo que usa um provedor [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] existente:  
@@ -74,26 +74,26 @@ O [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 
   
  Se seu aplicativo enumerar os resultados de uma consulta para exibir dados em um <xref:System.Windows.Forms.DataGridView> ou em outro tipo de controle que dê suporte a vinculação de dados, você poderá alterar seu aplicativo para associar o controle ao resultado de um <xref:System.Data.Objects.ObjectQuery%601>.  
   
- Para obter mais informações, consulte [objetos de associação aos controles](https://msdn.microsoft.com/library/2fd34855-929b-4303-a91e-4bb69d958f2b).  
+ Para obter mais informações, consulte [objetos de associação aos controles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
  Controles de fonte de dados do [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
- O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclui um controle de fonte de dados projetado para simplificar a vinculação de dados em [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] aplicativos da Web. Para obter mais informações, consulte [controle de fonte de dados do Entity Framework](https://msdn.microsoft.com/library/1f09af00-9578-4744-a029-765710a3c83f).  
+ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclui um controle de fonte de dados projetado para simplificar a vinculação de dados em [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] aplicativos da Web. Para obter mais informações, consulte [visão geral do controle de servidor Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Outras considerações  
  A seguir estão as considerações que podem se aplicar quando você migra tipos específicos de aplicativos para o Entity Framework.  
   
  Aplicativos que expõem serviços de dados.  
- Os serviços e aplicativos Web baseados no WCF (Windows Communication Foundation) expõem dados de uma fonte de dados subjacente usando um formato de mensagem XML de solicitação/resposta. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dá suporte à serialização de objetos de entidade usando serialização binária, XML ou de contrato de dados WCF. A serialização binária e do WCF dão suporte à serialização completa de gráficos de objetos. Para obter mais informações, consulte [criando aplicativos de N camadas](https://msdn.microsoft.com/library/9439d2ba-6b5f-44e8-be65-8a442d922cbb).  
+ Os serviços e aplicativos Web baseados no WCF (Windows Communication Foundation) expõem dados de uma fonte de dados subjacente usando um formato de mensagem XML de solicitação/resposta. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dá suporte à serialização de objetos de entidade usando serialização binária, XML ou de contrato de dados WCF. A serialização binária e do WCF dão suporte à serialização completa de gráficos de objetos. Para obter mais informações, consulte [criando aplicativos de N camadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100)).  
   
  Aplicativos que usam dados XML.  
  A serialização de objetos permite que você crie serviços de dados do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Esses serviços fornecem dados a aplicativos que consomem dados XML, como aplicativos de Internet baseados em AJAX. Nesses casos, considere usar o [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Esses serviços de dados são baseados no modelo de dados de entidade e fornecem acesso dinâmico para dados de entidade usando ações de REST Representational State Transfer () HTTP padrão, como GET, PUT e POSTAM. Para obter mais informações, consulte [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md).  
   
- O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não dá suporte a um tipo de dados XML nativo. Isso significa que quando uma entidade é mapeada para uma tabela com uma coluna XML, a propriedade equivalente da entidade para a coluna XML é uma cadeia de caracteres. Os objetos podem ser desconectados e serializados como XML. Para obter mais informações, consulte [serializar objetos](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não dá suporte a um tipo de dados XML nativo. Isso significa que quando uma entidade é mapeada para uma tabela com uma coluna XML, a propriedade equivalente da entidade para a coluna XML é uma cadeia de caracteres. Os objetos podem ser desconectados e serializados como XML. Para obter mais informações, consulte [serializar objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
- Se seu aplicativo exigir a capacidade de consultar dados XML, você ainda poderá tirar proveito dos benefícios de consultas LINQ usando o LINQ to XML. Para obter mais informações, consulte [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
+ Se seu aplicativo exigir a capacidade de consultar dados XML, você ainda poderá tirar proveito dos benefícios de consultas LINQ usando o LINQ to XML. Para obter mais informações, consulte [LINQ to XML](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb387098(v=vs.110)).  
   
  Aplicativos que mantêm o estado.  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Aplicativos Web com frequência devem manter o estado de uma página da Web ou de uma sessão de usuário. Objetos em um <xref:System.Data.Objects.ObjectContext> instância pode ser armazenada no estado de exibição do cliente ou no estado de sessão no servidor, e posteriormente recuperada e anexados novamente a um novo contexto de objeto. Para obter mais informações, consulte [anexando e desanexando objetos](https://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Aplicativos Web com frequência devem manter o estado de uma página da Web ou de uma sessão de usuário. Objetos em um <xref:System.Data.Objects.ObjectContext> instância pode ser armazenada no estado de exibição do cliente ou no estado de sessão no servidor, e posteriormente recuperada e anexados novamente a um novo contexto de objeto. Para obter mais informações, consulte [anexando e desanexando objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
 - [Considerações de implantação](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)

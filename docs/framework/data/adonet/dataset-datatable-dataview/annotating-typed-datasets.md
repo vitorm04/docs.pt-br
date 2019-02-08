@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629599"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825726"
 ---
 # <a name="annotating-typed-datasets"></a>Anotando DataSets tipados
 As anotações permitem que você modifique os nomes dos elementos em seu <xref:System.Data.DataSet> tipado sem modificar o esquema subjacente. Modificar os nomes dos elementos no esquema subjacente causaria tipado **conjunto de dados** para se referir a objetos que não existe na fonte de dados, bem como de perder uma referência para os objetos que existem na fonte de dados.  
@@ -74,7 +74,7 @@ As anotações permitem que você modifique os nomes dos elementos em seu <xref:
 |**Pai** acessador|TableNameRow|typedParent|  
 |**Conjunto de dados** eventos|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Usar digitado **DataSet** anotações, você deve incluir o seguinte **xmlns** referência em seu esquema XSD (linguagem) de definição de esquema XML. (Para criar um xsd de tabelas do banco de dados, consulte <xref:System.Data.DataSet.WriteXmlSchema%2A> ou [trabalhando com conjuntos de dados no Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ Usar digitado **DataSet** anotações, você deve incluir o seguinte **xmlns** referência em seu esquema XSD (linguagem) de definição de esquema XML. Para criar um xsd de tabelas do banco de dados, consulte <xref:System.Data.DataSet.WriteXmlSchema%2A> ou [trabalhando com conjuntos de dados no Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  

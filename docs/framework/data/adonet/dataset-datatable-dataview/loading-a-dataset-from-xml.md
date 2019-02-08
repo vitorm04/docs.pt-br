@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 7fb00046eb9ab92ed2514cd7615c41ea40124de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594909"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827598"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Carregando um DataSet a partir de XML
 O conteúdo de um <xref:System.Data.DataSet> ADO.NET pode ser criado de um fluxo ou documento XML. Além disso, com o .NET Framework, você tem grande flexibilidade sobre quais informações são carregadas do XML e como o esquema ou estrutura relacional do <xref:System.Data.DataSet> é criado.  
   
- Para preencher uma <xref:System.Data.DataSet> com dados de XML, use o **ReadXml** método da <xref:System.Data.DataSet> objeto. O **ReadXml** método lê de um arquivo, um fluxo ou um **XmlReader**e utiliza como argumentos a origem do XML mais um recurso opcional **XmlReadMode** argumento. (Para obter mais informações sobre o **XmlReader**, consulte [NIB: Lendo dados XML com XmlTextReader](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) O **ReadXml** método lê o conteúdo do fluxo XML ou documento e carrega o <xref:System.Data.DataSet> com os dados. Ele também criará o esquema relacional do <xref:System.Data.DataSet> dependendo a **XmlReadMode** especificado e se existe ou não um esquema relacional já.  
+ Para preencher uma <xref:System.Data.DataSet> com dados de XML, use o **ReadXml** método da <xref:System.Data.DataSet> objeto. O **ReadXml** método lê de um arquivo, um fluxo ou um **XmlReader**e utiliza como argumentos a origem do XML mais um recurso opcional **XmlReadMode** argumento. Para obter mais informações sobre o **XmlReader**, consulte [leitura de dados XML com XmlTextReader](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). O **ReadXml** método lê o conteúdo do fluxo XML ou documento e carrega o <xref:System.Data.DataSet> com os dados. Ele também criará o esquema relacional do <xref:System.Data.DataSet> dependendo a **XmlReadMode** especificado e se existe ou não um esquema relacional já.  
   
  A tabela a seguir descreve as opções para o **XmlReadMode** argumento.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 0d238ceb4f96905031cb4a30f50727050381277e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084491"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826675"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Como: Localizar Assemblies usando DEVPATH
 Talvez os desenvolvedores queiram certificar-se de que um assembly compartilhado que elas estão criando funciona corretamente com vários aplicativos. Em vez de continuamente colocar o assembly no cache de assembly global durante o ciclo de desenvolvimento, o desenvolvedor pode criar uma variável de ambiente DEVPATH que aponta para o diretório de saída de compilação para o assembly.  
@@ -44,4 +44,5 @@ Talvez os desenvolvedores queiram certificar-se de que um assembly compartilhado
 >  Use essa configuração somente em tempo de desenvolvimento. O tempo de execução não verifica as versões de assemblies de nome forte encontrados no DEVPATH. Ela simplesmente usa o assembly primeiro que ele localiza.  
   
 ## <a name="see-also"></a>Consulte também
-- [Configuração de aplicativos .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+
+- [Configurando aplicativos usando arquivos de configuração](index.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: febeceefc48d54f52c132e78eaf236b6548656f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee0624c7f06fba93f17dc23b63a76e4e8e11a1e0
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514719"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826688"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Como: Chamar funções definidas em consultas
 Este tópico descreve como chamar funções que são definidas no modelo conceitual de dentro das consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] .  
   
- O procedimento a seguir fornece um contorno de alto nível para chamar uma função do definida em uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] . O exemplo a seguir fornece mais detalhes sobre as etapas no procedimento. O procedimento presume que você definiu uma função no modelo conceitual. Para obter mais informações, confira [Como: Definir funções personalizadas no modelo conceitual](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
+ O procedimento a seguir fornece um contorno de alto nível para chamar uma função do definida em uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] . O exemplo a seguir fornece mais detalhes sobre as etapas no procedimento. O procedimento presume que você definiu uma função no modelo conceitual. Para obter mais informações, confira [Como: Definir funções personalizadas no modelo conceitual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>Para chamar uma função definida no modelo conceitual  
   
@@ -24,9 +24,9 @@ Este tópico descreve como chamar funções que são definidas no modelo conceit
 2.  Chamar a função em uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] .  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como chamar uma função que é definida no modelo conceitual de uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] . O exemplo usa o modelo de escola. Para obter informações sobre o modelo de escola, consulte [criando o banco de dados de exemplo School](https://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) e [gerando a. edmx de escola arquivo](https://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
+ O exemplo a seguir demonstra como chamar uma função que é definida no modelo conceitual de uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] . O exemplo usa o modelo de escola. Para obter informações sobre o modelo de escola, consulte [criando o banco de dados de exemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) e [gerando a. edmx de escola arquivo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
   
- A função a seguir o modelo conceitual retorna o número de anos como um instrutor foi contratado. Para obter informações sobre como adicionar a função a um modelo conceitual, consulte [como: Definir funções personalizadas no modelo conceitual](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
+ A função a seguir o modelo conceitual retorna o número de anos como um instrutor foi contratado. Para obter informações sobre como adicionar a função a um modelo conceitual, consulte [como: Definir funções personalizadas no modelo conceitual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).)  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
@@ -43,7 +43,7 @@ Este tópico descreve como chamar funções que são definidas no modelo conceit
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral do arquivo. edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [Visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [Chamando funções em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
 - [Como: Chamar funções definidas pelo modelo como métodos de objeto](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)

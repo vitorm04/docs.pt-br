@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 84c0319c49534cc9a09ffd15d9a07b8ec18882b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a22a4ec4ed508a06e385d954a8ed5b9e9ff6a9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728733"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825583"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Gerando DataSets fortemente tipados
 Considerando um esquema XML que está em conformidade com o padrão da linguagem XSD, você pode gerar um <xref:System.Data.DataSet> fortemente tipado usando a ferramenta XSD.exe fornecida com o [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
   
- (Para criar um xsd de tabelas do banco de dados, consulte <xref:System.Data.DataSet.WriteXmlSchema%2A> ou [trabalhando com conjuntos de dados no Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ (Para criar um xsd de tabelas do banco de dados, consulte <xref:System.Data.DataSet.WriteXmlSchema%2A> ou [trabalhando com conjuntos de dados no Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
  O código a seguir mostra a sintaxe para gerar uma **conjunto de dados** usando essa ferramenta.  
   
