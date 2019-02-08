@@ -1189,7 +1189,7 @@
 ## [Tutoriais](machine-learning/tutorials/index.md)
 ### [Análise de sentimento (classificação binária)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Classificação de problemas (classificação multiclasse)](machine-learning/tutorials/github-issue-classification.md)
-### [Previsão do valor da corrida do táxi (regressão)](machine-learning/tutorials/taxi-fare.md)
+### [Previsão de preços (regressão)](machine-learning/tutorials/taxi-fare.md)
 ### [Flores Iris (clustering)](machine-learning/tutorials/iris-clustering.md)
 ## [Guias de instruções](machine-learning/how-to-guides/index.md)
 ### Preparar dados
@@ -1200,7 +1200,7 @@
 #### [Carregar dados de arquivo de texto](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [Pré-processar dados com normalizadores](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### Treinar, avaliar e explicar o modelo
-#### [Treinar o modelo com dados que não estão em um arquivo de texto](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [Modelo de treinamento com fontes de dados em tempo real](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [Treinar o modelo usando validação cruzada](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [Inspecionar valores de dados de pipeline intermediários](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Treinar o modelo de regressão](machine-learning/how-to-guides/train-regression-model-ml-net.md)
