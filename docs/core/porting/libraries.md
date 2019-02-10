@@ -2,14 +2,14 @@
 title: Portabilidade de bibliotecas para o .NET Core
 description: Saiba como realizar a portabilidade de projetos de biblioteca do .NET Framework para o .NET Core.
 author: cartermp
-ms.date: 07/14/2017
+ms.date: 12/7/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169671"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904696"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portabilidade de bibliotecas do .NET Framework para o .NET Core
 
@@ -40,38 +40,6 @@ Este artigo descreve as alterações adicionadas aos arquivos de projeto como pa
 
 [Portabilidade para .NET Core – análise de suas dependências de terceiros](~/docs/core/porting/third-party-deps.md)   
 Este tópico discute a portabilidade das dependências de terceiros e o que fazer quando uma dependência de pacote do NuGet não é executada no .NET Core.
-
-## <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologias do .NET Framework não disponíveis no .NET Core
-
-Várias tecnologias disponíveis para as bibliotecas do .NET Framework não estão disponíveis para uso com o .NET Core, como AppDomains, Comunicação Remota, CAS (Segurança de acesso do código) e Transparência de segurança. Se suas bibliotecas dependerem de uma ou várias dessas tecnologias, considere as abordagens alternativas descritas abaixo. Se você quiser saber mais sobre compatibilidade de API, a equipe do CoreFX mantém uma [Lista de alterações comportamentais/quebras de compatibilidade e APIs preteridas/herdadas](https://github.com/dotnet/corefx/wiki/ApiCompat) no GitHub.
-
-Só porque uma API ou tecnologia não está implementada no momento, não significa que ela não tem suporte intencionalmente. Registre um problema em [problemas no repositório dotnet/corefx](https://github.com/dotnet/corefx/issues) no GitHub para solicitar APIs e tecnologias específicas. [As solicitações de portabilidade nos problemas](https://github.com/dotnet/corefx/labels/port-to-core) são marcadas com o rótulo `port-to-core`.
-
-### <a name="appdomains"></a>AppDomains
-
-Os AppDomains isolam os aplicativos uns dos outros. Os AppDomains exigem suporte de tempo de execução e geralmente são muito caros. Eles não são implementados no .NET Core. Não pretendemos adicionar esse recurso no futuro. Para isolamento de código, recomendamos como alternativa o uso de processos separados ou contêineres. Para o carregamento dinâmico de assemblies, recomendamos a nova classe <xref:System.Runtime.Loader.AssemblyLoadContext>.
-
-Para facilitar a migração de código do .NET Framework, expomos algumas das APIs <xref:System.AppDomain> exibidas no .NET Core. Algumas das APIs funcionam normalmente (por exemplo, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), alguns membros não fazem nada (por exemplo, <xref:System.AppDomain.SetCachePath%2A>) e alguns geram <xref:System.PlatformNotSupportedException> (por exemplo, <xref:System.AppDomain.CreateDomain%2A>). Verifique os tipos que você usa na [fonte de referência de `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) no [repositório dotnet/corefx do GitHub](https://github.com/dotnet/corefx) selecionando o branch que corresponde à sua versão implementada.
-
-### <a name="remoting"></a>Comunicação Remota
-
-A Comunicação Remota do .NET foi identificada como uma arquitetura problemática. Ela é usada para comunicação entre AppDomains, o que não tem mais suporte. Além disso, a Comunicação Remota exige suporte de tempo de execução, o que é caro para manter. Por esses motivos, a Comunicação Remota do .NET não tem suporte no .NET Core, e não planejamos adicionar suporte para ela no futuro.
-
-Para comunicação entre processos, considere mecanismos IPC (comunicação entre processos) como uma alternativa à Comunicação Remota, tais como a classe <xref:System.IO.Pipes> ou <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
-
-Entre computadores, use uma solução baseada em rede como alternativa. De preferência, use um protocolo de texto sem formatação de sobrecarga baixa, como HTTP. O [servidor Web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), o servidor Web usado pelo ASP.NET Core, é uma opção. Considere também o uso de <xref:System.Net.Sockets> para cenários entre computadores baseados em rede. Para obter mais opções, confira [Projetos de desenvolvedor de software livre do .NET: Mensagens](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
-
-### <a name="code-access-security-cas"></a>CAS (Segurança de Acesso do Código)
-
-A área restrita, que depende do tempo de execução ou da estrutura para restringir quais recursos um aplicativo gerenciado ou biblioteca usa ou executa, [não tem suporte no .NET Framework](~/docs/framework/misc/code-access-security.md) e, portanto, também não tem suporte no .NET Core. Acreditamos que há muitos casos no .NET Framework e no tempo de execução nos quais uma elevação de privilégios ocorre a fim de continuar a tratar CAS como um limite de segurança. Além disso, a CAS complica mais a implementação e geralmente tem implicações de desempenho de exatidão em aplicativos que não pretendem usá-la.
-
-Use limites de segurança fornecidos pelo sistema operacional, como virtualização, contêineres ou contas de usuário para executar processos com o conjunto mínimo de privilégios.
-
-### <a name="security-transparency"></a>Transparência de Segurança
-
-Assim como a CAS, a Transparência de Segurança permite a separação do código em área restrita do código crítico de segurança de uma forma declarativa, mas [não têm mais suporte como um limite de segurança](~/docs/framework/misc/security-transparent-code.md). Esse recurso é amplamente usado pelo Silverlight. 
-
-Use limites de segurança fornecidos pelo sistema operacional, como virtualização, contêineres ou contas de usuário para executar processos com o conjunto mínimo de privilégios.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Redirecionar seu código do .NET Framework para o .NET Framework 4.7.2
 
@@ -163,3 +131,6 @@ Por fim, o esforço de portabilidade depende muito de como seu código do .NET F
 1. Selecione a próxima camada de código para portabilidade e repita as etapas anteriores.
 
 Se você começar a partir da base de sua biblioteca, progredir externamente e testar cada camada conforme necessário, a portabilidade será um processo sistemático no qual os problemas ficam isolados a uma camada de código por vez.
+
+>[!div class="step-by-step"]
+>[Avançar](project-structure.md)
