@@ -2,12 +2,12 @@
 title: Introdução à Integração do SQL Server CLR
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 215230486cb3e1ebee4cb40280b91c8bf9f6c799
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcfc43a68fb8bcacd4a14d6b94a932d656635d55
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714926"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092573"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Introdução à Integração do SQL Server CLR
 O CLR (Common Language Runtime) é o coração do Microsoft .NET Framework e fornece o ambiente de execução para todo o código do .NET Framework. O código que é executado dentro do CLR é conhecido como código gerenciado. O CLR fornece várias funções e serviços necessários para a execução do programa, incluindo a compilação just-in-time (JIT), alocação e gerenciamento de memória, imposição de segurança de tipo, manipulação de exceção, gerenciamento de segmento e segurança.  
@@ -66,6 +66,5 @@ GO
 -   [Depurando objetos de banco de dados CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>Consulte também
-- [Criando objetos do SQL Server 2005 em código gerenciado](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
 - [Segurança de acesso do código e o ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

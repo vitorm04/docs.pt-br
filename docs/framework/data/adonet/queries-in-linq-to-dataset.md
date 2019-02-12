@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 8c5f94cb7f815e4aebef10d930843971219baef6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 461ff195ab4f147f98c7bc2ac83f5e8f12edc4c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623112"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093262"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Consultas no LINQ to DataSet
 Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalmente, as consultas são expressas em uma linguagem de consulta especializada, como o SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que consultam. O [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferece um modelo mais simples e consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], você sempre trabalha com objetos de programação.  
@@ -29,7 +29,7 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] as consultas podem ser formuladas em duas sintaxes diferentes: sintaxe de expressão consulta e sintaxe de consulta com base em método.  
   
 ### <a name="query-expression-syntax"></a>Sintaxe de expressão de consulta  
- As expressões de consulta são uma sintaxe declarativa de consulta. Essa sintaxe permite que um desenvolvedor escreva consultas no C# ou no Visual Basic em um formato semelhante ao SQL. Usando a sintaxe de expressão de consulta, você pode executar até operações complexas de filtragem, ordenação e agrupamento em fontes de dados com o mínimo de código. Para obter mais informações, consulte [expressões de consulta LINQ](https://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4) e [operações básicas de consulta (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
+ As expressões de consulta são uma sintaxe declarativa de consulta. Essa sintaxe permite que um desenvolvedor escreva consultas no C# ou no Visual Basic em um formato semelhante ao SQL. Usando a sintaxe de expressão de consulta, você pode executar até operações complexas de filtragem, ordenação e agrupamento em fontes de dados com o mínimo de código. Para obter mais informações, consulte [expressões de consulta LINQ](../../../csharp/linq/index.md#query-expression-overview) e [operações básicas de consulta (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
   
  A sintaxe de expressão de consulta é nova no C# 3.0 e no [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]. No entanto, o CLR (Common Language Runtime do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] não pode ler a própria sintaxe de expressão de consulta. Portanto, em tempo de compilação, as expressões de consulta são convertidas em algo que o CLR não compreende: chamadas de método. Esses métodos são chamados da *operadores de consulta padrão*. Como desenvolvedor, você tem a opção de chamá-los diretamente usando a sintaxe do método, em vez de usar a sintaxe de consulta. Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Para obter mais informações sobre os operadores de consulta padrão, consulte [visão geral de operadores de consulta padrão](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   

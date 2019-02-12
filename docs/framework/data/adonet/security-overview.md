@@ -2,12 +2,12 @@
 title: Segurança 2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 24da83af6876e9bbb23c7978db6b9413ec00d8ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570480"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091793"
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que um desenvolvedor pode garantir que um aplicativo está protegido contra todos os ataques, porque é impossível prever quais tipos de novas tecnologias de ataques futuros trará. Por outro lado, apenas porque ninguém tem falhas de segurança ainda descobertos (ou publicado) em um sistema não significa que nenhum existir ou podem existir. Você precisa planejar a segurança durante a fase de design do projeto, bem como para planejar como segurança será mantida durante a vida útil do aplicativo.  
@@ -89,7 +89,7 @@ Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que u
 |Recurso|Descrição|  
 |--------------|-----------------|  
 |[SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)|Fornece uma visão geral de segurança do SQL Server com cenários de aplicativos que fornecem diretrizes para criar aplicativos ADO.NET seguros que direcionam SQL Server.|  
-|[Recomendações para estratégias de acesso a dados](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Fornece recomendações para acessar dados e executar operações de banco de dados.|  
+|[Recomendações para estratégias de acesso a dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fornece recomendações para acessar dados e executar operações de banco de dados.|  
   
 ## <a name="security-policy-and-administration"></a>Diretiva de segurança e administração  
  Administrar incorretamente a política de CAS (segurança) de acesso do código potencialmente poderá criar vulnerabilidades de segurança. Depois que um aplicativo é implantado, técnicas para monitorar a segurança devem ser usadas e os riscos avaliados como novas ameaças surgem.  
@@ -98,11 +98,11 @@ Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que u
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[NIB: Gerenciamento de política de segurança](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fornece informações sobre como criar e administrar a política de segurança.|  
-|[NIB: Práticas recomendadas de política de segurança](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Fornece links que descrevem como administrar a política de segurança.|  
+|[Gerenciamento de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Fornece informações sobre como criar e administrar a política de segurança.|  
+|[Práticas recomendadas de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Fornece links que descrevem como administrar a política de segurança.|  
   
 ## <a name="see-also"></a>Consulte também
 - [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [PAVE Security in Native and .NET Framework Code](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)
+- [Segurança no .NET](../../../standard/security/index.md)
 - [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -2,12 +2,12 @@
 title: Guia de Programação
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 3a6dad5237c149186a91637ec98efd6f7f315c4d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799652"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093432"
 ---
 # <a name="programming-guide"></a>Guia de Programação
 Esta seção contém informações sobre como criar e usar o modelo de objeto do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Se você estiver usando o Visual Studio, você também pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para executar muitas dessas mesmas tarefas.  
@@ -40,5 +40,8 @@ Esta seção contém informações sobre como criar e usar o modelo de objeto do
  [Procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  Inclui links para tópicos que ilustram como usar procedimentos armazenados.  
   
- [Introdução ao LINQ](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
- Fornece recursos o iniciarão no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+ [Introdução ao LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)  
+ Fornece recursos para ajudá-lo a começar a aprender sobre o LINQ para SQL usando C#.
+
+ [Introdução ao LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ Fornece recursos para ajudá-lo a começar a aprender sobre o LINQ to SQL usando o Visual Basic.

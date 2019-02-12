@@ -2,12 +2,12 @@
 title: Exemplos de consulta
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211860"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093756"
 ---
 # <a name="query-examples"></a>Exemplos de consulta
 Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Os desenvolvedores que usam o Visual Studio podem encontrar muitos outros exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
@@ -65,8 +65,11 @@ Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdli
  Fornece exemplos de combinação `select` com outros recursos (por exemplo, *tipos anônimos*) para formar projeções de consulta.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visão Geral de Operadores de Consulta Padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- Explica o conceito de operadores de consulta padrão.  
+ [Visão geral de operadores de consulta padrão (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Explica o conceito de operadores de consulta padrão usando o C#.  
+  
+ [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Explica o conceito de operadores de consulta padrão usando o Visual Basic.  
   
  [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Explica como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa conceitos que se aplicam às consultas.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d7ab227a19eeb9bf054700f8d932b75cf3c1ddc9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 361582866dabf51665e1dc94fdc49e8710d8ad3e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772735"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091819"
 ---
 # <a name="create-the-data-service"></a>Criar o serviço de dados
 
@@ -52,7 +52,7 @@ Neste tópico, você cria um serviço de dados de exemplo que usa o WCF Data Ser
 
 5. Conectar-se o modelo de dados no banco de dados de uma das seguintes etapas e, em seguida, clique em **próxima**:
 
-    -   Se você não tiver uma conexão de banco de dados já configurada, clique em **nova Conexão** e criar uma nova conexão. Para obter mais informações, consulte [como: criar conexões com bancos de dados do SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Esta instância do SQL Server deve ter o banco de dados de exemplo Northwind anexado.
+    -   Se você não tiver uma conexão de banco de dados já configurada, clique em **nova Conexão** e criar uma nova conexão. Para obter mais informações, confira [Como: Criar conexões com bancos de dados do SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Esta instância do SQL Server deve ter o banco de dados de exemplo Northwind anexado.
 
          \- ou -
 
@@ -103,4 +103,4 @@ Você criou com êxito um novo serviço de dados que expõe um feed de OData com
 
 ## <a name="see-also"></a>Consulte também
 
-- [Ferramentas de modelo de dados de entidade ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [Ferramentas de modelo de dados de entidade ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

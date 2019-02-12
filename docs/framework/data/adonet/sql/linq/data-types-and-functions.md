@@ -2,12 +2,12 @@
 title: Tipos de dados e funções
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711889"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091429"
 ---
 # <a name="data-types-and-functions"></a>Tipos de dados e funções
 Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para membros, construções e conversões do CLR (Common Language Runtime). Os membros e as construções com suporte estão disponíveis para uso em suas consultas LINQ to SQL.  
@@ -34,4 +34,3 @@ Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para mem
 ## <a name="see-also"></a>Consulte também
 - [Tipos incompatíveis CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Biblioteca de classes do .NET framework no Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855277"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092495"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Depuração, rastreamento e criação de perfil
 Para depurar um aplicativo do .NET Framework, o compilador e o ambiente de tempo de execução devem ser configurados para habilitar um depurador a anexar ao aplicativo e gerar símbolos e mapas de linha, se possível, para o aplicativo a respectiva MSIL (Microsoft Intermediate Language) correspondente. Após um aplicativo gerenciado ter sido depurado, o perfil dele pode ser criado para aprimorar o desempenho. A criação de perfil avalia e descreve as linhas do código-fonte que geram o código executado com mais frequência e quanto tempo demora para executá-las.  
@@ -47,7 +47,7 @@ Para depurar um aplicativo do .NET Framework, o compilador e o ambiente de tempo
  Descreve os contadores que você pode usar para controlar o desempenho de um aplicativo.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Depurando aplicativos ASP.NET e AJAX](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ [Depurar aplicativos ASP.NET ou ASP.NET Core no Visual Studio](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
  Fornece os pré-requisitos e as instruções sobre como depurar um aplicativo ASP.NET durante o desenvolvimento ou depois da implantação.  
   
  [Guia de desenvolvimento](../../../docs/framework/development-guide.md)  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 2d1b88d25c5c2e94d86c1fed53c472e2b0af493e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0cfb9273603850d2451245b81f1bb651f16d56
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643644"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094055"
 ---
 # <a name="retrieving-binary-data"></a>Recuperando dados binários
 Por padrão, o **DataReader** carrega dados de entrada como uma linha assim que uma linha inteira de dados está disponível. Os blobs precisam de tratamento diferente, no entanto, porque podem conter gigabytes de dados que não podem ser contidos em uma única linha. O **ExecuteReader** método tem uma sobrecarga que levará um <xref:System.Data.CommandBehavior> argumento para modificar o comportamento padrão do **DataReader**. Você pode passar <xref:System.Data.CommandBehavior.SequentialAccess> para o **ExecuteReader** método para modificar o comportamento padrão do **DataReader** para que, em vez de carregar linhas de dados, ele carregará dados sequencialmente conforme ela é recebida. Isso é ideal para carregar BLOBs ou outras estruturas grandes de dados. Observe que esse comportamento pode depender da sua fonte de dados. Por exemplo, retornar um BLOB do Microsoft Access carregará o BLOB inteiro que está sendo carregado na memória, em vez de em sequência à medida que é recebido.  
@@ -154,6 +154,5 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Trabalhando com DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [SQL Server Binary and Large-Value Data](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

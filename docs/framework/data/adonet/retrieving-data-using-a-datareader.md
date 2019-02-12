@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083841"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093275"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Recuperar dados usando um DataReader
 Para recuperar dados usando um **DataReader**, crie uma instância das **comando** do objeto e, em seguida, crie um **DataReader** chamando **ExecuteReader**  para recuperar linhas de uma fonte de dados. O **DataReader** fornece um fluxo não armazenado em buffer de dados que permite que a lógica procedural processe com eficiência os resultados de uma fonte de dados em sequência. O **DataReader** é uma boa opção quando você estiver recuperando grandes quantidades de dados porque os dados não é armazenado em cache na memória.
@@ -258,7 +258,6 @@ adapter.Fill(ds);
 >  Para evitar uma **OverflowException**, é recomendável que você também pode manipular qualquer conversão do tipo NUMBER Oracle em um tipo válido do .NET Framework antes de armazenar o valor em um <xref:System.Data.DataRow>. Você pode usar o <xref:System.Data.Common.DataAdapter.FillError> evento para determinar se um **OverflowException** ocorreu. Para obter mais informações sobre o <xref:System.Data.Common.DataAdapter.FillError> eventos, consulte [manipulação de eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Trabalhando com DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)

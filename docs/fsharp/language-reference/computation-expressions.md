@@ -2,12 +2,12 @@
 title: Expressões de computação
 description: Saiba como criar uma sintaxe conveniente para criar cálculos F# que pode ser sequenciado e combinados usando o controle construções de fluxo e associações.
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610691"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093509"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -218,6 +218,7 @@ A tabela a seguir descreve os métodos que podem ser usados em uma classe de con
 |`Yield`|`'T -> M<'T>`|Chamado para `yield` expressões em expressões de computação.|
 |`YieldFrom`|`M<'T> -> M<'T>`|Chamado para `yield!` expressões em expressões de computação.|
 |`Zero`|`unit -> M<'T>`|Chamado para vazio `else` ramificações de `if...then` expressões em expressões de computação.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica que a expressão de computação é passado para o `Run` membro como uma cotação. Ele converte todas as instâncias de um cálculo em uma cotação.|
 
 Muitos dos métodos em uma classe de construtor usam e retornam um `M<'T>` constructo, que geralmente é um tipo definido separadamente que caracteriza o tipo de computações sendo combinados, por exemplo, `Async<'T>` para fluxos de trabalho assíncronos e `Seq<'T>` para fluxos de trabalho da sequência. As assinaturas desses métodos habilitá-los a serem combinados e aninhados uns com os outros, para que o objeto de fluxo de trabalho retornado por uma construção que pode ser passado para o próximo. O compilador, quando ele analisa uma expressão de computação, converte a expressão em uma série de chamadas de função aninhada usando os métodos na tabela anterior e o código na expressão de cálculo.
 

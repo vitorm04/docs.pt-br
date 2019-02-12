@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 6b3a951256d0804c214016de04457cc1869b595f
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904291"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092222"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é um componente do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versão 3.5 que fornece uma infraestrutura de tempo de execução para gerenciar dados relacionais como objetos.  
@@ -47,11 +47,11 @@ ms.locfileid: "55904291"
  [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Links para o portal do [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  
   
- [LINQ to SQL Walkthroughs](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374) (Passo a passo do LINQ to SQL)  
+ [LINQ to SQL Walkthroughs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90)) (Passo a passo do LINQ to SQL)  
  Lista tutoriais disponíveis para o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)  
  Descreve como baixar bancos de dados de exemplo usados na documentação.  
   
- [Visão geral da tecnologia LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [Visão geral do controle de servidor Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
  Descreve como o controle <xref:System.Web.UI.WebControls.LinqDataSource> expõe o [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] para desenvolvedores Web por meio da arquitetura de controle de fonte de dados [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697342"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093834"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Porque o carregamento e a serialização de dados binários grandes dessa maneira podem afetar o desempenho, o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define um mecanismo para recuperar dados binários independentes da entidade à qual ele pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.  
@@ -89,7 +89,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
   
  Para obter mais informações, consulte [transferência de mensagens de Streaming](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) e [cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Por padrão, os Serviços de Informações da Internet (IIS) também limita o tamanho das solicitações a 4 MB. Para habilitar o serviço de dados receba fluxos maiores que 4MB quando em execução no IIS, você também deve definir a `maxRequestLength` atributo do [httpRuntime Element (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) no `<system.web />` seção de configuração, como como mostrado no exemplo a seguir:  
+ Por padrão, os Serviços de Informações da Internet (IIS) também limita o tamanho das solicitações a 4 MB. Para habilitar o serviço de dados receba fluxos maiores que 4MB quando em execução no IIS, você também deve definir a `maxRequestLength` atributo do [httpRuntime Element (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) no `<system.web />` seção de configuração, como como mostrado no exemplo a seguir:  
   
   
   
@@ -119,7 +119,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
   
 -   Ao implementar os métodos <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> ou o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, você deve usar os valores eTag e Content-Type fornecidos como parâmetros do método. Não defina cabeçalhos eTag ou Content-Type na implementação do provedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   Por padrão, o cliente envia fluxos binários grandes usando uma codificação de transferência HTTP em partes. Porque o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server não oferece suporte a esse tipo de codificação, você não pode usar esse servidor Web para hospedar um serviço de dados de streaming que deve aceitar fluxos binários grandes. Para obter mais informações sobre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, consulte [servidores Web no Visual Studio para projetos Web ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Por padrão, o cliente envia fluxos binários grandes usando uma codificação de transferência HTTP em partes. Porque o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server não oferece suporte a esse tipo de codificação, você não pode usar esse servidor Web para hospedar um serviço de dados de streaming que deve aceitar fluxos binários grandes. Para obter mais informações sobre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, consulte [servidores Web no Visual Studio para projetos Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Requisitos de controle de versão  

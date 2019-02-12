@@ -1,13 +1,13 @@
 ---
 title: F#diretrizes de formatação de código
 description: Aprenda diretrizes de formatação F# código.
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254815"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093613"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#diretrizes de formatação de código
 
@@ -354,7 +354,7 @@ type PostalAddress =
     }
 ```
 
-Colocar o token de abertura em uma nova linha e o token de fechamento em uma nova linha é preferencial se você está declarando a implementações de interface ou membros no registro:
+Colocar o token de abertura em uma nova linha e o token de fechamento em uma nova linha é preferível se você está declarando a implementações de interface ou membros no registro:
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -389,7 +389,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Colocando a abertura guias do token em uma nova linha, o conteúdo em um escopo, e o token de fechamento em uma nova linha é preferencial se você for:
+Colocando a abertura guias do token em uma nova linha, o conteúdo em um escopo, e o token de fechamento em uma nova linha é preferível se você for:
 
 * Movimentação de registros no código com escopos diferentes de recuo
 * Direcionando-os em uma função
@@ -423,6 +423,42 @@ let foo a =
 ```
 
 As mesmas regras se aplicam para elementos list e array.
+
+## <a name="formatting-copy-and-update-record-expressions"></a>Expressões de registro de atualização e cópia de formatação
+
+Uma expressão de registro de atualização e cópia ainda é um registro, diretrizes semelhantes se aplicam.
+
+Expressões curtas podem caber em uma única linha:
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+Expressões mais longas devem usar as novas linhas:
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+E, como com as diretrizes de registro, você talvez queira dedicar linhas separadas para as chaves e recuar um escopo para a direita com a expressão. Observe que em alguns casos especiais, como quebra automática de um valor com um recurso opcional sem parênteses, talvez você precise manter uma chave em uma única linha:
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>Formatando listas e matrizes
 
@@ -759,7 +795,7 @@ Quando aplicado a um parâmetro, elas devem estar na mesma linha e separados por
 
 ## <a name="formatting-literals"></a>Literais de formatação
 
-[F#literais](../language-reference/literals.md) usando o `Literal` atributo deve deve colocar o atributo em sua própria linha e usar a nomenclatura camelCase:
+[F#literais](../language-reference/literals.md) usando o `Literal` atributo deve colocar o atributo em sua própria linha e usar a nomenclatura camelCase:
 
 ```fsharp
 [<Literal>]

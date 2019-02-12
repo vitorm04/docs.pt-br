@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: c54ea70049544e5205613ab76eb810798513fab2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cea3d57442d330b662335326c5b8ffd78d276ef2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680212"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093743"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalização de feed (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor dados como um feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dá suporte a formatos Atom e notação JSON (JavaScript Object) para feeds de dados. Quando você usa um feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fornece um método padrão para serializar os dados, como entidades e relações, em um formato XML que pode ser incluído no corpo da mensagem HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define um mapeamento de propriedade de entidade padrão entre os dados contidos em entidades e os elementos do Atom. Para obter mais informações, consulte [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -42,7 +42,7 @@ ms.locfileid: "54680212"
  Para obter mais informações, confira [Como: Personalizar Feeds com o provedor do Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Porque não há suporte para extensões para o modelo de dados pelo Designer de entidade, você deve modificar manualmente o arquivo XML que contém o modelo de dados. Para obter mais informações sobre o arquivo. edmx são geradas pelo [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ferramentas, consulte [visão geral do arquivo. edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Porque não há suporte para extensões para o modelo de dados pelo Designer de entidade, você deve modificar manualmente o arquivo XML que contém o modelo de dados. Para obter mais informações sobre o arquivo. edmx são geradas pelo [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ferramentas, consulte [. edmx visão geral do arquivo (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).  
   
 ### <a name="custom-feed-attributes"></a>Atributos de Feed personalizados  
  A tabela a seguir mostra os atributos XML que personalizar feeds que podem ser adicionados para o linguagem de definição de esquema conceitual (CSDL) que define o modelo de dados. Esses atributos são equivalentes às propriedades do <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> usado com o provedor de reflexão.  

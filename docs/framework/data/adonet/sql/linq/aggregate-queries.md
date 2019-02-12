@@ -2,12 +2,12 @@
 title: Consultas de agregação
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858686"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094120"
 ---
 # <a name="aggregate-queries"></a>Consultas de agregação
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte aos operadores de agregação `Average`, `Count`, `Max`, `Min` e `Sum`. Observe as seguintes características dos operadores de agregação no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -18,7 +18,7 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suport
   
 -   As consultas de agregação geralmente retornam um número em vez de uma coleção.  
   
-     Para obter mais informações, consulte [operações de agregação](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
+     Para obter mais informações, consulte [operações de agregação](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
 -   Você não pode chamar agregações em tipos anônimos.  
   

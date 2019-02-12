@@ -2,12 +2,12 @@
 title: Habilitando o acesso entre bancos de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 785f1a1bb66af0fade84444c0484acb17368ccf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b98d06e3f8ff8e34530be8e9ffbf13a788f3147
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596872"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093847"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Habilitando o acesso entre bancos de dados no SQL Server
 O encadeamento de propriedade entre bancos de dados ocorre quando um procedimento em um banco de dados depende dos objetos em outro banco de dados. Uma cadeia de propriedade entre bancos de dados funciona como a cadeia de propriedade dentro de um único banco de dados, exceto que uma cadeia de propriedade exige que todos os proprietários de objetos sejam mapeados para a mesma conta de logon. Se o objeto de origem no banco de dados de origem e os objetos de destino nos bancos de dados de destino forem de propriedade da mesma conta de logon, o SQL Server não verificará permissões nos objetos de destino.  
@@ -48,7 +48,7 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Estendendo a representação de banco de dados com EXECUTE AS](https://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) e [opção Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)Manuais Online do SQL Server.|Tópicos descrevem como configurar o encadeamento de bancos de dados para uma instância do SQL Server.|  
+|[Estendendo a representação de banco de dados com EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) e [opção Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|Artigos descrevem como configurar o encadeamento de bancos de dados para uma instância do SQL Server.|  
   
 ## <a name="see-also"></a>Consulte também
 - [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380ebeaa4c6265cccfe0e264884f509292b31eab
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709150"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093288"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Cenários de aplicativos (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dá suporte a um conjunto principal de cenários para expor e consumir dados como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Este tópico aponta os tópicos relevantes a esses cenários.  
@@ -37,11 +37,11 @@ ms.locfileid: "54709150"
 -   [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)  
   
  Consuma um feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] em um aplicativo cliente baseado no Silverlight.  
- -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
 -   [Operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Como: Associar dados do serviço de dados a controles (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Como: Associar dados do serviço de dados a controles (cliente do Silverlight)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))  
   
  Consuma um feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] em um aplicativo cliente baseado no AJAX.  
  -   [Usando um serviço de dados em um aplicativo cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "54709150"
   
 -   [Operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  Expor e consumir um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed com um objeto binário grande que seja acessado e alterado como um fluxo.  
  -   [Provedor de streaming](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

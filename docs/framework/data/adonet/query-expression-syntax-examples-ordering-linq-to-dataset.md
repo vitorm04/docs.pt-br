@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 653a4a97-1e4a-4b2d-8d24-7dbe1f2a5c84
-ms.openlocfilehash: a9f3939985f0ab608d50f7cbff4a9dcf3285545b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 442ae0cfaf93fbd7d7fd20a1867909206cca3b21
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643748"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093899"
 ---
 # <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a>Exemplos de sintaxe de expressão de consulta: Ordenação (LINQ to DataSet)
 Os exemplos neste tópico demonstram como usar <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, e métodos de <xref:System.Linq.Enumerable.ThenByDescending%2A> para ver <xref:System.Data.DataSet> e para ordenar os resultados usando a sintaxe da expressão de consulta.  
@@ -67,4 +67,5 @@ Os exemplos neste tópico demonstram como usar <xref:System.Linq.Enumerable.Orde
 ## <a name="see-also"></a>Consulte também
 - [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Visão Geral de Operadores de Consulta Padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Visão geral de operadores de consulta padrão (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

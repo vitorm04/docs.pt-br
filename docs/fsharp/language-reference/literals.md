@@ -1,13 +1,13 @@
 ---
 title: Literais
 description: Saiba mais sobre os tipos de literais no F# linguagem de programação.
-ms.date: 05/16/2016
-ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/08/2019
+ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612446"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092157"
 ---
 # <a name="literals"></a>Literais
 
@@ -41,7 +41,7 @@ A tabela a seguir mostra os tipos de literais no F#. Caracteres que representam 
 |Cadeia de Caracteres|Cadeia de caracteres Unicode|nenhum|`"text\n"`<br /><br />ou<br /><br />`@"c:\filename"`<br /><br />ou<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />ou<br /><br />`"string1" + "string2"`<br /><br />Consulte também [cadeias de caracteres](Strings.md).|
 |byte|Caractere ASCII|B|`'a'B`|
 |byte[]|Cadeia de caracteres ASCII|B|`"text"B`|
-|Cadeia de caracteres ou byte]|cadeia de caracteres textual|prefixo @|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
+|Cadeia de caracteres ou byte]|cadeia de caracteres textual|@ prefix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Comentários
 
@@ -51,16 +51,16 @@ Como de F# 3.1, você pode usar o `+` entrar para combinar literais de cadeia de
 
 ```fsharp
 [<Literal>]
-let literal1 = "a" + "b"
+let Literal1 = "a" + "b"
 
 [<Literal>]
-let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let literal2 = 1 ||| 64
+let Literal2 = 1 ||| 64
 
 [<Literal>]
-let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 Não é permitido o uso de outros operadores bit a bit.
@@ -76,8 +76,8 @@ Em expressões de correspondência, identificadores que começam com caracteres 
 Inteiros com sinal de 32 bits também podem ser especificados em octal, hexadecimal ou binário usando um `0x`, `0o` ou `0b` do prefixo, respectivamente.
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>Sublinhados em literais numéricos

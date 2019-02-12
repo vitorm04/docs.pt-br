@@ -2,12 +2,12 @@
 title: LINQ to SQL de n camadas com serviços da Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623606"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092716"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL de n camadas com serviços da Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é projetado principalmente para uso na camada intermediária em uma camada de acesso de dados flexível (DAL) como um serviço Web. Se a camada de apresentação é uma página da Web ASP.NET, então você usa o controle de servidor Web de <xref:System.Web.UI.WebControls.LinqDataSource> para gerenciar a transferência de dados entre a interface do usuário e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na camada intermediária. Se a camada de apresentação não é uma página ASP.NET, então a camada intermediária e a camada de apresentação devem fazer qualquer trabalho adicional para gerenciar serialização e desserialização de dados.  
@@ -38,4 +38,4 @@ ms.locfileid: "54623606"
   
 ## <a name="see-also"></a>Consulte também
 - [Aplicativos de N camadas e remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
-- [NIB: Visão geral do controle de servidor Web LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+- [Visão geral do controle de servidor Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

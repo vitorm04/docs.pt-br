@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: e80d01c01ed0b2558c86aefea0f554926f40e509
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42eb0a417659776b2cd2fffa9d2fd62e58a4a176
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573654"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091975"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency em um aplicativo ASP.NET
 O exemplo nesta seção mostra como usar <xref:System.Data.SqlClient.SqlDependency> indiretamente, aproveitando o ASP.NET <xref:System.Web.Caching.SqlCacheDependency> objeto. O <xref:System.Web.Caching.SqlCacheDependency> objeto usa um <xref:System.Data.SqlClient.SqlDependency> para ouvir as notificações e atualizar corretamente o cache.  
@@ -47,7 +47,7 @@ O exemplo nesta seção mostra como usar <xref:System.Data.SqlClient.SqlDependen
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  Adicione dois métodos auxiliares, `GetConnectionString` e `GetSQL`. A cadeia de conexão definida usa a segurança integrada. Você precisará verificar se a conta que você está usando tem as permissões de banco de dados necessários e que o banco de dados de exemplo, **AdventureWorks**, tem notificações habilitadas. Para obter mais informações, consulte [especial considerações sobre quando usar notificações de consulta](https://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
+5.  Adicione dois métodos auxiliares, `GetConnectionString` e `GetSQL`. A cadeia de conexão definida usa a segurança integrada. Você precisará verificar se a conta que você está usando tem as permissões de banco de dados necessários e que o banco de dados de exemplo, **AdventureWorks**, tem notificações habilitadas.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

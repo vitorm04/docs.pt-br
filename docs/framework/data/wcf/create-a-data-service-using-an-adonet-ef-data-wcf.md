@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 294c579c366c1abf0b9a328f7480d1b29e2cb8e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2adf4fe0d510f65db5bded715f084a4d7e016b6
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675595"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093093"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Como: Criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework (WCF Data Services)
 
@@ -45,7 +45,7 @@ O [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] também fornece um
 
 9. Clique em **concluir** para concluir o assistente.
 
-     Isso cria um modelo de dados padrão com base no banco de dados específico. O [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] permite personalizar o modelo de dados. Para obter mais informações, consulte [Tarefas](https://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).
+     Isso cria um modelo de dados padrão com base no banco de dados específico. O [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] permite personalizar o modelo de dados. Para obter mais informações, consulte [tarefas de ferramentas de modelo de dados de entidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Para criar o serviço de dados usando o novo modelo de dados
 

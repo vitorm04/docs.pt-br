@@ -2,12 +2,12 @@
 title: Funções de servidor e banco de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643072"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091806"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Funções de servidor e banco de dados no SQL Server
 Todas as versões do SQL Server usam segurança baseada em função, o que permite que você atribua permissões para uma função ou grupo de usuários, em vez de usuários individuais. O servidor fixo e as funções de banco de dados fixas têm um conjunto fixo de permissões atribuídas a eles.  
@@ -27,8 +27,8 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Funções de nível de servidor](/sql/relational-databases/security/authentication-access/server-level-roles) e [permissões de funções de servidor fixas](https://msdn.microsoft.com/library/ms175892.aspx) nos Manuais Online do SQL Server|Descreve as funções de servidor fixas e as permissões associadas a eles no SQL Server.|  
-|[Funções de nível de banco de dados](/sql/relational-databases/security/authentication-access/database-level-roles) e [permissões de funções de banco de dados fixa](https://msdn.microsoft.com/library/ms189612.aspx) nos Manuais Online do SQL Server|Descreve funções de banco de dados fixas e as permissões associadas a elas|  
+|[Funções de nível de servidor](/sql/relational-databases/security/authentication-access/server-level-roles)|Descreve as funções de servidor fixas e as permissões associadas a eles no SQL Server.|  
+|[Funções de nível de banco de dados](/sql/relational-databases/security/authentication-access/database-level-roles)|Descreve funções de banco de dados fixas e as permissões associadas a elas|  
   
 ## <a name="database-roles-and-users"></a>Funções e usuários do banco de dados  
  Os logons devem ser mapeados para contas de usuário do banco de dados para funcionar com objetos de banco de dados. Os usuários do banco de dados podem então ser adicionados às funções de banco de dados, herdando todos os conjuntos de permissões associados a essas funções. Todas as permissões podem ser concedidas.  
@@ -58,8 +58,8 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Controle de acesso e identidade](https://msdn.microsoft.com/library/bb510418.aspx) nos Manuais Online do SQL Server|Contém links para tópicos que descrevem entidades de segurança, funções, credenciais, protegíveis e permissões.|  
-|[Entidades de segurança](/sql/relational-databases/security/authentication-access/principals-database-engine) nos Manuais Online do SQL Server|Descreve as entidades de segurança e contém links para tópicos que descrevem funções de servidor e banco de dados.|  
+|[Introdução às permissões do mecanismo de banco de dados](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contém links para tópicos que descrevem entidades de segurança, funções, credenciais, protegíveis e permissões.|  
+|[Entidades de segurança](/sql/relational-databases/security/authentication-access/principals-database-engine)|Descreve as entidades de segurança e contém links para tópicos que descrevem funções de servidor e banco de dados.|  
   
 ## <a name="see-also"></a>Consulte também
 - [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)

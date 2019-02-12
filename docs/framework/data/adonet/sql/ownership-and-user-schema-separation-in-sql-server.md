@@ -2,12 +2,12 @@
 title: Propriedade e separação do esquema do usuário no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: adeed5ff4961a33d8f7d330941a5680f11a88b96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694796"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092599"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriedade e separação do esquema do usuário no SQL Server
 Um conceito central de segurança do SQL Server é que os proprietários de objetos têm permissões irrevogáveis administrá-los. Você não pode remover os privilégios de um proprietário de objeto e não pode eliminar usuários de um banco de dados se eles possuírem objetos nele.  
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Separação do esquema de usuário](https://msdn.microsoft.com/library/ms190387.aspx) nos Manuais Online do SQL Server|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
+|[Separação do esquema de usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
   
 ## <a name="see-also"></a>Consulte também
 - [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)

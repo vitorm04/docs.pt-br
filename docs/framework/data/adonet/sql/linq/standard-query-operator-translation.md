@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588568"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093925"
 ---
 # <a name="standard-query-operator-translation"></a>Conversão padrão de operador de consulta
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte operadores de consulta padrão em comandos SQL. O processador de consultas do banco de dados determina a semântica de execução de conversão SQL.  
   
- Operadores de consulta padrão são definidos em relação a *sequências*. É uma sequência *ordenados* e depende da identidade de referência para cada elemento da sequência. Para obter mais informações, consulte [visão geral de operadores de consulta padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Operadores de consulta padrão são definidos em relação a *sequências*. É uma sequência *ordenados* e depende da identidade de referência para cada elemento da sequência. Para obter mais informações, consulte [visão geral de operadores de consulta padrão (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) ou [visão geral de operadores padrão consulta (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  SQL trata principalmente *desordenados conjuntos de valores*. A ordenação normalmente é indicada explicitamente, uma operação de pós-processamento que é aplicada ao resultado final de uma consulta em vez de aos resultados intermediários. A identidade é definida por valores. Por esse motivo, as consultas SQL são supostas a manipular multisets (*recipientes*) em vez de *define*.  
   
@@ -64,7 +64,8 @@ ORDER BY [t0].[CustomerID]
   
  Torna-se óbvio que qualquer ordenação especificada precisa ser consistente quando <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> são encadeados juntos. Caso contrário, os resultados serão indefinidos.  
   
- <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> são definidos para argumentos inteiros não negativos, argumentos integrais constantes baseados na especificação de operador de consulta padrão.  
+ 
+  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> são definidos para argumentos inteiros não negativos, argumentos integrais constantes baseados na especificação de operador de consulta padrão.  
   
 ### <a name="operators-with-no-translation"></a>Operadores sem a conversão  
  Os seguintes métodos não são convertidos pelo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. O motivo mais comum é a diferença entre multisets e sequências não ordenados.  

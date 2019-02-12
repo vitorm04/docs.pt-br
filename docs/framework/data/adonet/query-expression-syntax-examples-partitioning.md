@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
-ms.openlocfilehash: 8897f2a9fa497a043a34c7cd6fc65959fa612d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4782566136a8698ed40fd34c0a8a442503c20cb
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725344"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092885"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>Exemplos de sintaxe de expressão de consulta: Particionamento (LINQ to DataSet)
 Os exemplos neste tópico demonstram como usar os métodos <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A> para consultar um <xref:System.Data.DataSet> usando a sintaxe de expressão de consulta.  
@@ -45,4 +45,5 @@ Os exemplos neste tópico demonstram como usar os métodos <xref:System.Linq.Enu
 ## <a name="see-also"></a>Consulte também
 - [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Visão Geral de Operadores de Consulta Padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Visão geral de operadores de consulta padrão (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

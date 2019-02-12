@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a711ad4779b8c932436ce1886b1a93dda849a94
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743030"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093951"
 ---
 # <a name="enabling-query-notifications"></a>Habilitando notificações de consulta
 Os aplicativos que consomem notificações de consulta têm um conjunto comum de requisitos. Sua fonte de dados deve ser configurada corretamente para dar suporte a notificações de consulta SQL e o usuário deve ter as permissões corretas de cliente e servidor.  
@@ -28,25 +28,25 @@ Os aplicativos que consomem notificações de consulta têm um conjunto comum de
 ## <a name="query-notifications-requirements"></a>Requisitos de notificações de consulta  
  As notificações de consulta têm suporte apenas para as instruções SELECT que atendem uma lista de requisitos específicos. A tabela a seguir fornece links para a documentação sobre Service Broker e Notificações de Consulta nos Manuais Online do SQL Server.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Documentação do SQL Server**  
   
--   [Criando uma consulta para notificação](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Criando uma consulta para notificação](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Considerações de segurança para o Service Broker](https://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Considerações de segurança para o Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [Segurança e proteção (Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Segurança e proteção (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Considerações de segurança para serviços de notificações](https://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Considerações de segurança para serviços de notificações](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [Permissões de notificação de consulta](https://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Permissões de notificação de consulta](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Considerações internacionais para Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Considerações internacionais para Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [Considerações de Design de solução (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Considerações de Design de solução (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [InfoCenter do desenvolvedor do Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [InfoCenter do desenvolvedor do Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Guia do desenvolvedor (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Guia do desenvolvedor (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Habilitando notificações de consulta para executar código de exemplo  
  Para habilitar o Service Broker na **AdventureWorks** banco de dados usando o SQL Server Management Studio, execute a seguinte instrução Transact-SQL:  
