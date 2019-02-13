@@ -6,7 +6,7 @@ ms.author: wiwagn
 ms.date: 09/21/2017
 ms.openlocfilehash: 1efb2fa567bd452f0a0a5ee5afb6f759511e4145
 ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53151298"
