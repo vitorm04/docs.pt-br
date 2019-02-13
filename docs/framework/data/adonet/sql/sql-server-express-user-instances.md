@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664077"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093808"
 ---
 # <a name="sql-server-express-user-instances"></a>Instâncias de usuário do SQL Server Express
 O Microsoft SQL Server Express Edition (SQL Server Express) dá suporte ao recurso de instância de usuário, que somente está disponível quando é usado o Provedor de Dados .NET Framework para SQL Server (`SqlClient`). Uma instância de usuário é uma instância separada do Mecanismo de Banco de Dados SQL Server Express que é gerado por uma instância pai. As instâncias de usuário permitem que usuários que não são administradores em seus computadores locais anexem e conectem-se aos bancos de dados SQL Server Express. Cada instância é executada no contexto de segurança do usuário individual, uma instância por usuário.  
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   Qualquer aplicativo de usuário único onde compartilhar dados não é necessário.  
   
--   Implantação do ClickOnce. Se o .NET Framework 2.0 (ou posterior) e o SQL Server Express já estiver instalado no computador de destino, o pacote de instalação baixado como resultado de uma ação de ClickOnce poderá ser instalado e usado por usuários não administrativos. Observe que um administrador deve instalar o SQL Server Express se isso for parte da instalação. Para obter mais informações, consulte [implantação de ClickOnce para o Windows Forms aplicativos](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Implantação do ClickOnce. Se o .NET Framework 2.0 (ou posterior) e o SQL Server Express já estiver instalado no computador de destino, o pacote de instalação baixado como resultado de uma ação de ClickOnce poderá ser instalado e usado por usuários não administrativos. Observe que um administrador deve instalar o SQL Server Express se isso for parte da instalação. Para obter mais informações, consulte [implantação de ClickOnce para o Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
 -   ASP.NET dedicado hospedado usando a Autenticação do Windows. Uma única instância do SQL Server Express pode ser hospedada em uma intranet. O aplicativo conecta-se usando a conta ASPNET do Windows, não usando representação. As instâncias de usuário não devem ser usadas para os cenários de hospedagem compartilhados ou de terceiros onde todos os aplicativos compartilhariam a mesma instância de usuário e não permanecessem isolados entre si.  
   
