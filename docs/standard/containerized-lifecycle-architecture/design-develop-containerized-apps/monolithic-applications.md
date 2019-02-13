@@ -1,15 +1,15 @@
 ---
 title: Aplicativos monolíticos
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+description: Entenda os conceitos principais para implantar aplicativos monolíticos em contêineres.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743263"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221349"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -21,7 +21,7 @@ A entidade que faz uma coisa só um contêiner e faz isso em um processo, a segu
 
 ![](./media/image1.png)
 
-Figura 4-1: um exemplo de arquitetura de aplicativos monolíticos
+Figura 4-1: Um exemplo de arquitetura de aplicativos monolíticos
 
 A desvantagem dessa abordagem vem se ou quando o aplicativo cresce, a necessidade de dimensioná-lo. Se o aplicativo inteiro for dimensionado, isso não será realmente um problema. No entanto, na maioria dos casos, algumas partes do aplicativo são os pontos de redução que exigem o dimensionamento, enquanto outros componentes são usados com menos.
 
@@ -35,13 +35,13 @@ Da perspectiva de infraestrutura, cada servidor pode executar vários aplicativo
 
 ![](./media/image2.png)
 
-Figura 4-2: um host executando vários aplicativos/contêineres
+Figura 4-2: Um host executando vários aplicativos/contêineres
 
 Você pode implantar aplicativos monolíticos no Azure por meio de VMs dedicadas para cada instância. Usando o [conjuntos de dimensionamento de VM do Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), você pode dimensionar as VMs com facilidade. Os [Serviços de Aplicativos do Azure](https://azure.microsoft.com/services/app-service/) podem executar aplicativos monolíticos e dimensionar instâncias com facilidade, sem a necessidade de gerenciar as VMs. Desde 2016, os serviços de aplicativo do Azure pode executar instâncias únicas de contêineres do Docker, também, simplificando a implantação. E, usando o Docker, você pode implantar uma única VM como um host do Docker e executar várias instâncias. Usando o balanceador do Azure, conforme ilustrado na Figura 4-3, você pode gerenciar o dimensionamento.
 
 ![](./media/image3.png)
 
-Figura 4-3: vários hosts escalando horizontalmente um único aplicativo apps/contêineres do Docker
+Figura 4-3: Vários hosts escalando horizontalmente um único aplicativo apps/contêineres do Docker
 
 Você pode gerenciar a implantação em vários hosts por meio de técnicas de implantação tradicionais. Você pode gerenciar os hosts do Docker usando comandos como `docker run` manualmente, por meio da automação, como os pipelines de CD (entrega contínua), o que vamos explicar mais tarde neste livro eletrônico.
 
@@ -65,7 +65,7 @@ Agora, no entanto, (novembro de 2016, anunciado na Microsoft Connect 2016) e con
 
 ![](./media/image4.png)
 
-Figura 4-4: publicar um contêiner no serviço de aplicativo do Azure de aplicativos do Visual Studio/contêineres
+Figura 4-4: Publicar um contêiner no serviço de aplicativo do Azure de aplicativos do Visual Studio/contêineres
 
 Figura 4-4 também mostra que o fluxo de publicação envia uma imagem por meio de um registro de contêiner, que pode ser o registro de contêiner do Azure (um registro próximo às implantações no Azure e protegido por contas e grupos do Active Directory do Azure) ou qualquer outro registro do Docker como os registros de Hub do Docker ou locais.
 

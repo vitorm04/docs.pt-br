@@ -1,15 +1,15 @@
 ---
 title: Introdução aos contêineres e ao Docker
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+description: Obtenha uma visão geral de alto nível dos principais benefícios de usar o Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 547a76b46a319cd1b8403505ce3da618123b490e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148815"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218691"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introdução aos contêineres e ao Docker
 

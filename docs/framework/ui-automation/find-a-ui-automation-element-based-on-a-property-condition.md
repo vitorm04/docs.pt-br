@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a80ca015a3bed202e80a93f487d37278ed03439d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08bf454ef5514af2c7c056ad90db247792a5d61c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740379"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221102"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>Localizar um elemento de automação de interface do usuário com base na condição de uma propriedade
 > [!NOTE]
@@ -33,6 +33,6 @@ ms.locfileid: "54740379"
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Exemplo de Item de Menu ExpandCollapsePattern e InvokePattern](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+- [Exemplo de Item de Menu ExpandCollapsePattern e InvokePattern](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771636(v=vs.90))
 - [Obtendo elementos de automação de interface do usuário](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
 - [Usar a propriedade AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)

@@ -1,17 +1,17 @@
 ---
-title: Guia de Introdução ao .NET Native
+title: Guia de Introdução ao .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd46266286687881956e5de31963ac5957dede84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641571"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220946"
 ---
-# <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Native
+# <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Nativo
 Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou migrando um aplicativo existente da Windows Store, siga o mesmo conjunto de procedimentos. Para criar um aplicativo [!INCLUDE[net_native](../../../includes/net-native-md.md)], siga estas etapas:  
   
 1.  [Desenvolver um aplicativo UWP (da Plataforma Universal do Windows) que direciona o Windows 10](#Step1) e testar os builds de depuração do aplicativo para garantir que ele funcione corretamente.  
@@ -114,7 +114,7 @@ Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou m
   
 ## <a name="see-also"></a>Consulte também
 - [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [NIB: Instalação do .NET Native e configuração](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)
+- [Configuração e instalação do .NET nativa](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)

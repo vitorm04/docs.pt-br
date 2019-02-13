@@ -1,15 +1,15 @@
 ---
 title: Registros, imagens e contêineres do Docker
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+description: Saiba o papel importante que registros desempenham gerais na maneira como Docker de implantação de aplicativos.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: af235280c985d20f9e6a2ee6096edbe6c3aad63a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
+ms.date: 11/23/2018
+ms.openlocfilehash: 7a2e20e09561a5cc91aa29059fb8d19a14205bb5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142743"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221193"
 ---
 # <a name="docker-containers-images-and-registries"></a>Registros, imagens e contêineres do Docker
 
@@ -35,4 +35,4 @@ Registros de imagem privados, hospedados localmente ou na nuvem, são recomendad
 
 >[!div class="step-by-step"]
 >[Anterior](docker-terminology.md)
->[Próximo](Docker-application-lifecycle/index.md)
+>[Próximo](road-to-modern-applications-based-on-containers.md)

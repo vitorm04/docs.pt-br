@@ -1,15 +1,15 @@
 ---
 title: Ambiente de desenvolvimento para aplicativos do Docker
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+description: Obtenha a conhecer as opções de ferramenta mais importante do desenvolvimento que dão suporte ao ciclo de vida do desenvolvimento Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152403"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219991"
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente de desenvolvimento para aplicativos do Docker
 
@@ -47,5 +47,5 @@ Você pode desenvolver aplicativos do Docker e ferramentas da Microsoft com ling
 Basicamente, você pode usar qualquer linguagem moderna compatível com o Docker no Linux ou Windows.
 
 >[!div class="step-by-step"]
->[Anterior](orchestrate-high-scalability-availability.md)
+>[Anterior](deploy-azure-kubernetes-service.md)
 >[Próximo](docker-apps-inner-loop-workflow.md)

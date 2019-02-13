@@ -1,16 +1,16 @@
 ---
 title: Ferramentas do Visual Studio para Docker no Windows
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+description: Obtenha as ferramentas do Docker disponíveis no Visual Studio 2017 versão 15.7 e posteriores de saber.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/12/2018
+ms.date: 11/23/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a373a8ebfef605b9845a684d3987355f8841aa1b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151207"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219536"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Usando ferramentas do Visual Studio para Docker (Visual Studio no Windows)
 

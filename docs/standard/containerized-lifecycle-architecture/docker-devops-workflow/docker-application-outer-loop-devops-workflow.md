@@ -1,15 +1,15 @@
 ---
 title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo do Docker
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+description: Conheça as etapas de "loop externo" do fluxo de trabalho de DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143643"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220933"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo do Docker
 
@@ -235,4 +235,4 @@ Somente quando o monitoramento e diagnóstico é 100 por cento dentro do domíni
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)
->[Próximo](../run-manage-monitor-docker-environments/index.md)
+>[Próximo](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

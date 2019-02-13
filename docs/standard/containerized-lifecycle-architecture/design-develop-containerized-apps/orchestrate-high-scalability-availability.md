@@ -1,15 +1,15 @@
 ---
-title: Orquestrando microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+title: Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
+description: Aplicativos de produção real precisam ser implantados e gerenciados com orquestradores que lidam com a integridade, a carga de trabalho e ciclos de vida de todos os contêineres.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/19/2017
-ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 749b613ac847c57eb993bff90b36f02a0b39477f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126894"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221154"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Orquestrando microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
@@ -31,7 +31,7 @@ De um arquitetura e desenvolvimento ponto de Vista, se você estiver criando gra
 
 -   **Clusters e orquestradores** quando você precisar dimensionar – os aplicativos em vários hosts do Docker, como com um aplicativo grande baseado em microsserviços, é fundamental ser capaz de gerenciar todos esses hosts como um único cluster por abstraindo a complexidade da plataforma subjacente. Esse é o que os clusters de contêiner e orquestradores fornecem. Exemplos de orquestradores são Docker Swarm, Mesosphere DC/OS, Kubernetes (os três primeiros disponíveis por meio do serviço de contêiner do Azure) e Azure Service Fabric.
 
--   **Agendadores** *agendamento* significa ter a capacidade de um administrador para iniciar contêineres em um cluster para que elas também fornecem uma interface do usuário. Um agendador de cluster tem diversas responsabilidades: usar os recursos de cluster com eficiência, para definir as restrições fornecidas pelo usuário, com eficiência os contêineres de balanceamento de carga em nós ou hosts e para ser robusto contra erros, fornecendo alto disponibilidade.
+-   **Agendadores** *agendamento* significa ter a capacidade de um administrador para iniciar contêineres em um cluster para que elas também fornecem uma interface do usuário. O agendador do cluster tem diversas responsabilidades: usar os recursos de cluster de forma eficiente, definir as restrições fornecidas pelo usuário, balancear a carga dos contêineres em nós ou hosts de maneira eficaz, ser robusto contra erros e, ao mesmo tempo, oferecer alta disponibilidade.
 
 Os conceitos de "cluster" e "agendador" estão intimamente relacionados, então os produtos oferecidos por diferentes fornecedores geralmente têm as duas capacidades. Tabela 4-1 mostra a plataforma mais importante e opções de software para clusters e agendadores. Geralmente, esses clusters são oferecidos em nuvens públicas, como o Azure.
 
@@ -147,7 +147,7 @@ Com relação a contêineres no Service Fabric, você também pode implantar ser
 
 Figura 4-11: Microsserviço de negócios com vários serviços (contêineres) no Service Fabric
 
-No entanto, os contêineres chamados "sidecar" (dois contêineres que devem ser implantados juntos como parte de um serviço lógico) também são possíveis no Service Fabric. O mais importante é que um microsserviço de negócios é o limite lógico em torno de vários elementos coesos. Em muitos casos, pode ser um único serviço com um único modelo de dados, mas em alguns outros casos, você pode ter vários serviços físicos, também.
+No entanto, os contêineres chamados “sidecar” (dois contêineres que devem ser implantados juntos como parte de um serviço lógico) também são possíveis no Service Fabric. O mais importante é que um microsserviço de negócios é o limite lógico em torno de vários elementos coesos. Em muitos casos, pode ser um único serviço com um único modelo de dados, mas em alguns outros casos, você pode ter vários serviços físicos, também.
 
 No momento deste texto (abril de 2017), no Service Fabric não é possível implantar SF de serviços confiáveis com estado em contêineres — você pode implantar apenas os contêineres de convidado, serviços sem monitoração de estado ou serviços de ator em contêineres. Mas observe que você pode misturar serviços em processos e serviços em contêineres no mesmo aplicativo do Service Fabric, conforme mostrado na Figura 4 a 12.
 
@@ -181,4 +181,4 @@ Observe que os contêineres do Docker são sem estado. Se você desejar implemen
 
 >[!div class="step-by-step"]
 >[Anterior](soa-applications.md)
->[Próximo](docker-apps-development-environment.md)
+>[Próximo](deploy-azure-kubernetes-service.md)

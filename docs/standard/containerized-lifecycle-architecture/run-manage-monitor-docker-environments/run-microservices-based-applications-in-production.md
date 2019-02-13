@@ -1,15 +1,15 @@
 ---
 title: Executar aplicativos compostos e baseados em microsserviços em ambientes de produção
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+description: Conheça os principais componentes para executar aplicativos baseados em contêiner na produção
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: bd8b84f788ce013dfe25199dac34e3c59aa35284
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126296"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220957"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Executar aplicativos compostos e baseados em microsserviços em ambientes de produção
 

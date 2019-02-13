@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540657"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219835"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do .NET Framework ou aplicativos que processam um grande volume de dados, como arquivos ou bancos de dados. Essas dicas vêm da nova gravação de compiladores do C# e do Visual Basic em código gerenciado, e este artigo inclui diversos exemplos reais do compilador do C#. 
@@ -37,7 +37,7 @@ Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do
  Estabeleça metas de desempenho para experiências ou cenários importantes do cliente no aplicativo e gravar testes para avaliar o desempenho. Investigue testes com falha aplicando o método científico: use perfis para orientá-lo, crie hipóteses sobre qual seria o problema e teste as hipóteses com um experimento ou uma alteração feita no código. Estabeleça medidas de desempenho de linha de base com o passar do tempo, usando testes regulares para que seja possível isolar as alterações que causam regressões no desempenho. Abordando o trabalho de desempenho de maneira rigorosa, você evitará a perda de tempo com atualizações desnecessárias de código. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fato 3: Boas ferramentas fazem toda a diferença  
- As boas ferramentas permitem chegar rapidamente aos maiores problemas de desempenho (CPU, memória ou disco) e ajudam a alocar o código que causa esses gargalos. A Microsoft fornece uma variedade de ferramentas de desempenho, como [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Ferramenta de Análise do Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
+ As boas ferramentas permitem chegar rapidamente aos maiores problemas de desempenho (CPU, memória ou disco) e ajudam a alocar o código que causa esses gargalos. A Microsoft fornece uma variedade de ferramentas de desempenho, como [Profiler do Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView é uma ferramenta gratuita e incrivelmente eficiente que ajuda você a se concentrar em problemas intensos, como E/S de disco, eventos de GC e memória. Capture eventos [ETW](../../../docs/framework/wcf/samples/etw-tracing.md) (Rastreamento de Eventos para Windows) relacionados ao desempenho e exiba informações por aplicativo, processo, pilha e thread com facilidade. O PerfView mostra quanto e que tipo de memória o aplicativo aloca, além de quais funções ou pilhas de chamadas contribuem para a quantidade de alocações da memória. Para obter detalhes, consulte os tópicos avançados da ajuda, as demonstrações e os vídeos incluídos com a ferramenta (como os [tutoriais do PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) no Channel 9). 
   
@@ -466,9 +466,8 @@ class Compilation { /*...*/
 - [Vídeo de apresentação deste tópico](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Guia do iniciante à criação de perfil de desempenho](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Desempenho](../../../docs/framework/performance/index.md)
-- [Dicas de desempenho do .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Dicas de desempenho do .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Ferramenta de análise de desempenho do Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [Encontre afunilamentos de aplicativos com o Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [Canal 9 tutoriais do PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [O SDK do .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
 - [repositório do roslyn/dotnet no GitHub](https://github.com/dotnet/roslyn)

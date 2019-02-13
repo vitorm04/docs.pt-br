@@ -1,15 +1,15 @@
 ---
 title: Introdução à plataforma e ferramentas da Microsoft para aplicativos em contêineres
-description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+description: Obtenha saber as ofertas da Microsoft para dar suporte ao ciclo de vida de aplicativos de Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 0e883041624f99d51b49994f02f3a42fc945a96d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152325"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219575"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introdução à plataforma Microsoft e ferramentas para aplicativos em contêineres
 
