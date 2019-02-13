@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 556da93d6237836dc32fc3f6715909593907ba74
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168982"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738728"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>C# de teste de unidade no .NET Core usando dotnet test e xUnit
 
@@ -66,7 +66,7 @@ Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a 
     /PrimeService.Tests
 ```
 
-Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projeto usando [`dotnet new xunit`](../tools/dotnet-new.md). Esse comando cria um projeto de teste que usa o xUnit como a biblioteca de teste. O modelo gerado configura o executor de teste no arquivo *PrimeServiceTests.csproj* semelhante ao código a seguir:
+Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projeto usando [`dotnet new xunit`](../tools/dotnet-new.md). Esse comando cria um projeto de teste que usa o [xUnit](https://xunit.github.io/) como a biblioteca de teste. O modelo gerado configura o executor de teste no arquivo *PrimeServiceTests.csproj* semelhante ao código a seguir:
 
 ```xml
 <ItemGroup>
@@ -172,4 +172,5 @@ Continue iterando adicionando mais testes, mais teorias e mais código na biblio
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
+- [Site oficial do xUnit.net](https://xunit.github.io)
 - [Lógica do controlador de teste no ASP.NET Core](/aspnet/core/mvc/controllers/testing)

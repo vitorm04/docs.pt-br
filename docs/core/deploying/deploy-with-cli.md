@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503996"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826454"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicar aplicativos .NET Core com a CLI
 
@@ -38,11 +38,11 @@ Procurando uma ajuda rápida de como usar a CLI? A tabela a seguir mostra alguns
 
 ## <a name="publishing-basics"></a>Noções básicas de publicação
 
-A configuração `<TargetFramework>` do arquivo de projeto especifica a estrutura de destino padrão quando o aplicativo é publicado. Altere a estrutura de destino para qualquer [TFM](../../standard/frameworks.md) (Moniker da Estrutura de Destino) válido. Por exemplo, se o projeto usa `<TargetFramework>netcoreapp2.2</TargetFramework>`, um binário direcionado ao .NET Core 2.2 é criado. O TFM especificado nessa configuração é o destino padrão usado pelo comando [`dotnet publish`][dotnet-publish].
+A configuração `<TargetFramework>` do arquivo de projeto especifica a estrutura de destino padrão quando o aplicativo é publicado. Altere a estrutura de destino para qualquer [TFM](../../standard/frameworks.md) (Moniker da Estrutura de Destino) válido. Por exemplo, se o projeto usa `<TargetFramework>netcoreapp2.2</TargetFramework>`, um binário direcionado ao .NET Core 2.2 é criado. O TFM especificado nessa configuração é o destino padrão usado pelo comando [`dotnet publish`](../tools/dotnet-publish.md).
 
 Caso deseje definir mais de uma estrutura como destino, defina a configuração `<TargetFrameworks>` com mais de um valor TFM separado por ponto-e-vírgula. Publique uma das estruturas com o comando `dotnet publish -f <TFM>`. Por exemplo, se você tem `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` e executa `dotnet publish -f netcoreapp2.1`, um binário direcionado ao .NET Core 2.1 é criado.
 
-A menos que seja definido de outro modo, o diretório de saída do comando [`dotnet publish`][dotnet-publish] é `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. O modo **CONFIGURAÇÃO DE BUILD** padrão é **Depuração**, a menos que seja alterado com o parâmetro `-c`. Por exemplo, `dotnet publish -c Release -f netcoreapp2.1` publica em `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Se não estiver definido de outro modo, o diretório de saída do comando [`dotnet publish`](../tools/dotnet-publish.md) será `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. O modo **CONFIGURAÇÃO DE BUILD** padrão é **Depuração**, a menos que seja alterado com o parâmetro `-c`. Por exemplo, `dotnet publish -c Release -f netcoreapp2.1` publica em `myfolder/bin/Release/netcoreapp2.1/publish/`. 
 
 Se você usa o SDK do .NET Core 3.0, o modo de publicação padrão para aplicativos direcionados ao .NET Core versões 2.1, 2.2 ou 3.0 é o executável dependente de estrutura.
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-Quando você executa o aplicativo ([`dotnet run`][dotnet-run]), a seguinte saída é exibida:
+Quando você executa o aplicativo ([`dotnet run`](../tools/dotnet-run.md)), a seguinte saída é exibida:
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ A publicação de uma SCD cria um aplicativo que não efetua roll forward para o
 
 - [Visão geral da implantação de aplicativos .NET Core](index.md)
 - [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

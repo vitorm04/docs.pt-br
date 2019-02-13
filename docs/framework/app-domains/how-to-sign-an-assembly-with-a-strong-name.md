@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 963923951b3f3c288506cf339cd8a15f27792af3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599212"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826896"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como: assinar um assembly com um nome forte
 Há vários modos de assinar um assembly com um nome forte:  
@@ -42,6 +42,9 @@ Há vários modos de assinar um assembly com um nome forte:
 3.  Marque a caixa **Assinar o assembly**.  
   
 4.  Na caixa **Escolher um arquivo de chave com nome forte**, selecione **\<Procurar…>** e, em seguida, navegue até o arquivo de chave. Para criar um novo arquivo de chave, selecione **\<Novo…>** e digite o nome na caixa de diálogo **Criar Chave de Nome Forte**.  
+  
+> [!NOTE]
+>  Para [assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md), escolha um arquivo de chave pública.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Para criar e assinar um assembly com um nome forte usando o Vinculador de Assembly.  
   

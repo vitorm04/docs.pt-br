@@ -1,24 +1,24 @@
 ---
-title: Prever as tarifas de táxi em Nova York usando um aprendiz de regressão com o ML.NET
-description: Preveja as tarifas usando um aprendiz de regressão com o ML.NET.
+title: Prever os preços usando um aprendiz de regressão com o ML.NET
+description: Prever os preços usando um aprendiz de regressão com o ML.NET.
 author: aditidugar
 ms.author: johalex
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333779"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828391"
 ---
-# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Tutorial: Prever as tarifas de táxi em Nova York usando um aprendiz de regressão com o ML.NET
+# <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Prever os preços usando um aprendiz de regressão com o ML.NET
 
 > [!NOTE]
 > Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, confira a [Introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Este tutorial ilustra como usar o ML.NET para criar um [modelo de regressão](../resources/glossary.md#regression) para prever tarifas de táxi em Nova York.
+Este tutorial ilustra como usar o ML.NET para criar uma [modelo de regressão](../resources/glossary.md#regression) para prever preços. Nesse caso, as tarifas de táxi na cidade de Nova York.
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]

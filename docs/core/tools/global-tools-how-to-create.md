@@ -4,16 +4,16 @@ description: Descreve como criar uma Ferramenta Global. A Ferramenta Global é u
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144567"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826415"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Criar uma Ferramenta Global do .NET Core usando a CLI do .NET Core
 
-Este artigo ensina a criar e empacotar uma ferramenta Global do .NET Core. A CLI do .NET Core permite que você crie um aplicativo de console como uma Ferramenta Global, o que outras pessoas podem instalar e executar facilmente. Ferramentas Globais do .NET Core são pacotes NuGet que são instalados por meio da CLI do .NET Core. Para obter mais informações sobre as Ferramentas Globais, veja [Visão geral de Ferramentas Globais do .NET Core][global-tool-info].
+Este artigo ensina a criar e empacotar uma ferramenta Global do .NET Core. A CLI do .NET Core permite que você crie um aplicativo de console como uma Ferramenta Global, o que outras pessoas podem instalar e executar facilmente. Ferramentas Globais do .NET Core são pacotes NuGet que são instalados por meio da CLI do .NET Core. Para obter mais informações sobre as Ferramentas Globais, confira [Visão geral das Ferramentas Globais do .NET Core](global-tools.md).
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
@@ -170,7 +170,7 @@ Agora que você tem um pacote, instale a ferramenta desse pacote:
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
-O parâmetro `--add-source` instrui a CLI do .NET Core a usar temporariamente a pasta `./nupkg` (nossa pasta `<PackageOutputPath>`) como uma fonte adicional de feed para pacotes NuGet. Para obter mais informações sobre a instalação das Ferramentas Globais, veja [Visão geral de Ferramentas Globais do .NET Core][global-tool-info].
+O parâmetro `--add-source` instrui a CLI do .NET Core a usar temporariamente a pasta `./nupkg` (nossa pasta `<PackageOutputPath>`) como uma fonte adicional de feed para pacotes NuGet. Para obter mais informações sobre a instalação das Ferramentas Globais, confira [Visão geral das Ferramentas Globais do .NET Core](global-tools.md).
 
 Se a instalação for bem-sucedida, será exibida uma mensagem mostrando o comando usado para chamar a ferramenta e a versão instalada, de maneira semelhante ao seguinte exemplo:
 
@@ -191,5 +191,3 @@ Quando terminar suas experiências com a ferramenta, você poderá removê-la co
 ```console
 dotnet tool uninstall -g botsay
 ```
-
-[global-tool-info]: global-tools.md

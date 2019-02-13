@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: baaa2676865c475e331ec889e7b10ae326b552fa
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 9a43f9407d530224b5ad4775ef3a8c0ef2a9fe27
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675082"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828404"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Novidades do .NET Core 3.0 (Versão Prévia 2)
 
@@ -20,11 +20,12 @@ Este artigo descreve as novidades do .NET Core 3.0 (Versão Prévia 2). Um dos m
 
 O .NET Core 3.0 adiciona suporte para C# 8.0.
 
-[Baixe e comece a usar agora mesmo o .NET Core 3 Versão Prévia 2](https://aka.ms/netcore3download) no Windows, no Mac e no Linux. Veja todos os detalhes da versão nas [Notas sobre a versão do .NET Core 3 Versão Prévia 2](https://aka.ms/netcore3releasenotes).
+[Baixe e comece a trabalhar com o .NET Core 3.0 Versão Prévia 2](https://aka.ms/netcore3download) agora no Windows, no Mac e no Linux. Veja detalhes completos sobre a versão nas [notas sobre a versão do .NET Core 3.0 Versão Prévia 2](https://aka.ms/netcore3releasenotes).
 
-Para obter mais informações sobre o que foi lançado com a Versão Prévia 1, confira o [comunicado sobre o .NET Core 3.0 Versão Prévia 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/).
+Para obter mais informações sobre o que foi lançado com cada versão, confira os seguintes avisos:
 
-Para obter mais informações sobre o que foi lançado com a Versão Prévia 2, confira o [comunicado sobre o .NET Core 3.0 Versão Prévia 1]().
+- [Comunicado do .NET Core 3.0 Versão Prévia 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [Comunicado do .NET Core 3.0 Versão Prévia 2](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
@@ -308,7 +309,7 @@ Compartilhe seus comentários nos repositórios [dotnet/winforms](https://github
 
 O [MSIX](https://docs.microsoft.com/windows/msix/) é um novo formato de pacote do aplicativo do Windows. Ele pode ser usado para implantar aplicativos da área de trabalho do .NET Core 3.0 no Windows 10.
 
-O [Projeto de Empacotamento de Aplicativos do Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019 Preview 2, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/#self-contained-deployments-scd).
+O [Projeto de Empacotamento de Aplicativos do Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019 Preview 2, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/index.md#self-contained-deployments-scd).
 
 >Observação: O arquivo de projeto do .NET Core precisa especificar os tempos de execução compatíveis na propriedade `<RuntimeIdentifiers>`:
 ```xml
