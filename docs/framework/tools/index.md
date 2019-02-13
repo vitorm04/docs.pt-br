@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041480"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220095"
 ---
 # <a name="net-framework-tools"></a>Ferramentas do .NET Framework
 A ferramentas do .NET Framework facilitam a criação, a implantação e o gerenciamento de aplicativos e componentes com o .NET Framework como destino.  
@@ -129,7 +129,7 @@ A maioria das ferramentas do .NET Framework descritas nesta seção é instalada
  Ajuda a localizar os recursos de interface do usuário (arquivos .resx ou .resources) usados pelo Windows Forms. É possível converter cadeias de caracteres e, em seguida, dimensionar, mover e ocultar controles para acomodar as cadeias de caracteres localizadas.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Ferramentas](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [ferramentas WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  Inclui ferramentas como a Conformidade do isXPS (isXPS.exe) e ferramentas de criação de perfil de desempenho.  
   
  [Ferramentas do Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
