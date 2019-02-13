@@ -3,17 +3,17 @@ title: Escolha entre aplicativos Web tradicionais e aplicativos de página únic
 description: Saiba como escolher entre aplicativos Web tradicionais e SPAs (aplicativos de única página) ao criar aplicativos Web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 01/30/2019
+ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745297"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825739"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Escolher entre aplicativos Web tradicionais e SPAs (aplicativos de página única)
 
-> "Lei de Atwood: qualquer aplicativo que pode ser escrito em JavaScript será, em última análise, escrito em JavaScript."  
+> "Lei de Atwood: qualquer aplicativo que possa ser escrito em JavaScript será, em última análise, escrito em JavaScript."  
 > _\- Jeff Atwood_
 
 Há duas abordagens gerais para a criação de aplicativos Web hoje: os aplicativos Web tradicionais que executam a maior parte da lógica do aplicativo no servidor e os SPAs (aplicativos de página única) que executam a maior parte da lógica da interface do usuário em um navegador da Web, comunicando-se com o servidor Web principalmente por meio de APIs Web. Uma abordagem híbrida também é possível, e a mais simples é hospedar um ou mais subaplicativos avançados semelhantes ao SPA dentro de um aplicativo Web tradicional maior.
@@ -38,9 +38,13 @@ Além disso, as estruturas de SPA exigem um maior conhecimento em arquitetura e 
 
 As melhorias na experiência do usuário possibilitadas pelo modelo do SPA devem ser avaliadas em relação a essas considerações.
 
+## <a name="razor-components"></a>Componentes Razor
+
+O ASP.NET Core 3.0 apresenta um novo modelo para a criação de uma interface do usuário sofisticada, interativa e combinável, chamado de Componentes Razor. Os Componentes Razor permitem que os desenvolvedores criem uma interface do usuário com o Razor no servidor e que esse código seja entregue ao navegador e executado no lado do cliente usando uma biblioteca JavaScript chamada WebAssembly. O ASP.NET Core 3.0 ainda está em desenvolvimento, mas aguarde mais informações sobre essa tecnologia na atualização 3.0 deste livro eletrônico. Para obter mais informações sobre os Componentes Razor (chamado de Blazor), confira [Get started with Blazor (Introdução ao Blazor)](https://blazor.net/docs/get-started.html).
+
 ## <a name="when-to-choose-traditional-web-apps"></a>Quando escolher aplicativos Web tradicionais
 
-Veja a seguir uma explicação mais detalhada dos motivos para escolher aplicativos Web tradicionais mencionados anteriormente.
+A seguir há uma explicação mais detalhada dos motivos já mencionados para escolher os aplicativos Web tradicionais.
 
 **Seu aplicativo tem requisitos simples do lado do cliente, possivelmente somente leitura**
 

@@ -3,13 +3,13 @@ title: Arquiteturas comuns de aplicativo Web
 description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Explore as arquiteturas comuns para aplicativos Web
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 3b0b109b0910eb5763ecab228115b7bc932d4a10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129929"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826727"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -87,7 +87,7 @@ Conforme o aplicativo precisar ser aumentado, soluções de implantação mais r
 
 Internamente, a organização desse projeto em vários projetos com base na responsabilidade melhora a facilidade de manutenção do aplicativo.
 
-Essa unidade pode ser escalada verticalmente ou expandida para aproveitar a escalabilidade sob demanda baseada em nuvem. Escalar verticalmente significa adicionar mais CPU, memória, espaço em disco ou outros recursos aos servidores que hospedam o aplicativo. Escalar horizontalmente significa adicionar mais instâncias desses servidores, sejam servidores físicos, sejam máquinas virtuais. Quando o aplicativo é hospedado em várias instâncias, um balanceador de carga é usado para atribuir solicitações a instâncias individuais do aplicativo.
+Essa unidade pode ser escalada verticalmente ou expandida para aproveitar a escalabilidade sob demanda baseada em nuvem. Escalar verticalmente significa adicionar mais CPU, memória, espaço em disco ou outros recursos aos servidores que hospedam o aplicativo. Escalar horizontalmente significa adicionar mais instâncias desses servidores, sejam eles servidores físicos, máquinas virtuais ou contêineres. Quando o aplicativo é hospedado em várias instâncias, um balanceador de carga é usado para atribuir solicitações a instâncias individuais do aplicativo.
 
 A abordagem mais simples para dimensionar um aplicativo Web no Azure é configurar o dimensionamento manualmente no Plano do Serviço de Aplicativo do aplicativo. A Figura 5-6 mostra a tela apropriada do painel do Azure para configurar a quantidade de instâncias que atendem um aplicativo.
 
@@ -212,9 +212,9 @@ Implantar atualizações como imagens do Docker é muito mais rápido e eficient
 
 Como os contêineres são inerentemente imutáveis por design, você nunca precisa se preocupar com VMs corrompidas, enquanto os scripts de atualização podem esquecer de levar em conta alguma configuração específica ou um arquivo deixado no disco.
 
-_Você pode usar contêineres do Docker para a implantação monolítica de aplicativos Web mais simples. Isso melhora os pipelines de integração contínua e de implantação contínua e ajuda a obter êxito na implantação de produção. Não existe mais "funciona no meu computador, por que não funciona na produção?"_
+Você pode usar contêineres do Docker para a implantação monolítica de aplicativos Web mais simples. Isso melhora os pipelines de integração contínua e de implantação contínua e ajuda a obter êxito na implantação de produção. Não se pode mais dizer "funciona no meu computador, por que não funciona na produção?"
 
-Uma arquitetura baseada em microsserviços tem muitos benefícios, mas esses benefícios são fornecidos ao custo do aumento da complexidade. Em alguns casos, os custos superam os benefícios e a melhor opção é um aplicativo de implantação monolítica em execução em um único contêiner ou em alguns contêineres.
+Uma arquitetura baseada em microsserviços tem muitos benefícios, mas esses benefícios são fornecidos ao custo do aumento da complexidade. Em alguns casos, os custos superam os benefícios, portanto, um aplicativo de implantação monolítica em execução em um único contêiner ou em alguns contêineres é uma opção melhor.
 
 Um aplicativo monolítico não pode ser facilmente decomposto em microsserviços bem separados. Os microsserviços devem funcionar independentemente uns dos outros para fornecer um aplicativo mais resiliente. Se você não puder entregar fatias independentes de recurso do aplicativo, separá-las apenas aumentará a complexidade.
 
@@ -224,7 +224,7 @@ No início do desenvolvimento de um aplicativo, você pode não ter uma ideia cl
 
 A separação de um aplicativo em vários processos distintos também apresenta sobrecarga. É mais complexo separar recursos em processos diferentes. Os protocolos de comunicação tornam-se mais complexos. Em vez de chamadas de método, você deve usar a comunicação assíncrona entre serviços. Ao passar para uma arquitetura de microsserviços, você precisa adicionar muitos dos blocos de construção implementados na versão de microsserviços do aplicativo eShopOnContainers: manipulação de barramento de eventos, resiliência e novas tentativas de mensagem, consistência eventual e muito mais.
 
-O [aplicativo de referência eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) muito mais simples dá suporte ao uso de único contêiner monolítico. O aplicativo inclui dois aplicativos Web: um usando o MVC tradicional e outro usando Razor Pages. Ambos podem ser iniciados na raiz da solução com os comandos `docker-compose build` e `docker-compose up`. Esse comando configura contêineres separados para cada instância da Web, usando o `Dockerfile` encontrado na raiz de cada projeto Web e executa cada contêiner em uma porta separada. Você pode baixar o código-fonte desse aplicativo do GitHub e executá-lo localmente. Até mesmo esse aplicativo monolítico beneficia-se de ser implantado em um ambiente do contêiner.
+O [aplicativo de referência eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) muito mais simples dá suporte ao uso de único contêiner monolítico. O aplicativo inclui um aplicativo Web com exibições de MVC, APIs Web e Razor Pages tradicionais. Este aplicativo pode ser iniciado na raiz da solução com os comandos `docker-compose build` e `docker-compose up`. Esse comando configura um contêiner para a instância da Web usando o `Dockerfile` encontrado na raiz do projeto Web e executa o contêiner em uma porta especificada. Você pode baixar o código-fonte desse aplicativo do GitHub e executá-lo localmente. Até mesmo esse aplicativo monolítico beneficia-se de ser implantado em um ambiente do contêiner.
 
 Por exemplo, a implantação em contêineres significa que cada instância do aplicativo é executada no mesmo ambiente. Isso inclui o ambiente de desenvolvedor no qual os testes e o desenvolvimento iniciais ocorrem. A equipe de desenvolvimento pode executar o aplicativo em um ambiente em contêineres que corresponda ao ambiente de produção.
 
@@ -236,24 +236,14 @@ Por fim, colocar o aplicativo em contêineres força uma separação entre a ló
 
 O projeto `eShopOnWeb` é executado no .NET Core. Portanto, ele pode ser executado em contêineres baseados em Linux ou em Windows. Observe que, para a implantação do Docker, você deseja usar o mesmo tipo de host para o SQL Server. Os contêineres baseados em Linux permitem o uso de um espaço menor e são preferenciais.
 
-Você pode usar o Visual Studio 2017 para adicionar suporte ao Docker a um aplicativo existente clicando com o botão direito do mouse em um projeto no **Gerenciador de Soluções** e escolhendo **Adicionar** > **Suporte ao Docker**. Isso adiciona os arquivos necessários e modifica o projeto para usá-los. O exemplo `eShopOnWeb` atual já têm esses arquivos.
+Você pode usar o Visual Studio 2017 ou posterior para adicionar o suporte ao Docker a um aplicativo existente clicando com o botão direito do mouse em um projeto no **Gerenciador de Soluções** e escolhendo **Adicionar** > **Suporte ao Docker**. Isso adiciona os arquivos necessários e modifica o projeto para usá-los. O exemplo `eShopOnWeb` atual já têm esses arquivos.
 
-O arquivo `docker-compose.yml` no nível da solução contém informações sobre quais imagens devem ser criadas e quais contêineres devem ser iniciados. O arquivo permite que você use o comando `docker-compose` para iniciar as duas versões do aplicativo Web ao mesmo tempo. Você também pode usá-lo para configurar dependências, como um contêiner de banco de dados separado.
+O arquivo `docker-compose.yml` no nível da solução contém informações sobre quais imagens devem ser criadas e quais contêineres devem ser iniciados. O arquivo permite que você use o comando `docker-compose` para iniciar vários aplicativos ao mesmo tempo. Nesse caso, ele está iniciando apenas o projeto Web. Você também pode usá-lo para configurar dependências, como um contêiner de banco de dados separado.
 
 ```yml
 version: '3'
 
 services:
-  eshopwebrazor:
-    image: eshopwebrazor
-    build:
-      context: .
-      dockerfile: src/WebRazorPages/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5107:5107"
-
   eshopwebmvc:
     image: eshopwebmvc
     build:
@@ -270,28 +260,27 @@ networks:
       name: nat
 ```
 
-O arquivo `docker-compose.yml` referencia o `Dockerfile` nos projetos `Web` e `WebRazorPages`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Dockerfile` do `WebRazorPages`:
+O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Dockerfile` do `Web`:
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.1.300-preview1 AS build
-RUN npm install -g bower@1.8.4
-WORKDIR /src
+COPY *.sln .
 COPY . .
-WORKDIR /src/src/WebRazorPages
-RUN dotnet restore -nowarn:msb3202,nu1503
-RUN dotnet build --no-restore -c Release -o /app
+WORKDIR /app/src/Web
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
+COPY --from=build /app/src/Web/out ./
+
+# Optional: Set this here if not setting it from docker-compose.yml
+# ENV ASPNETCORE_ENVIRONMENT Development
+
+ENTRYPOINT ["dotnet", "Web.dll"]
 ```
 
 ### <a name="troubleshooting-docker-problems"></a>Solução de problemas do Docker
@@ -300,10 +289,9 @@ Depois que você iniciar a execução do aplicativo em contêineres, ele continu
 
 Observe que a execução de contêineres do Docker pode ser associada a portas, que caso contrário, você tentaria usar em seu ambiente de desenvolvimento. Se você tentar executar ou depurar um aplicativo usando a mesma porta, como um contêiner do Docker em execução, ocorrerá um erro informando que o servidor não pôde ser associado a essa porta. Mais uma vez, parar o contêiner deverá resolver o problema.
 
-Para adicionar o suporte ao Docker no aplicativo usando o Visual Studio, verifique se o Docker está em execução. O assistente não será executado corretamente se o Docker não estiver em execução quando o assistente for iniciado. Além disso, o assistente examinará sua escolha de contêiner atual para adicionar o suporte ao Docker correto. Se você desejar adicionar suporte para contêineres do Windows, será necessário executar o assistente enquanto o Docker estiver em execução com contêineres do Windows configurados. Se você desejar adicionar suporte para contêineres do Linux, será necessário executar o assistente enquanto o Docker estiver em execução com contêineres do Linux configurados.
+Para adicionar o suporte ao Docker ao aplicativo usando o Visual Studio, verifique se o Docker Desktop está em execução. Quando você iniciar o assistente, ele não será executado corretamente se o Docker Desktop não estiver em execução. Além disso, o assistente examinará sua escolha de contêiner atual para adicionar o suporte ao Docker correto. Se você desejar adicionar o suporte para os Contêineres do Windows, será necessário executar o assistente enquanto o Docker Desktop estiver em execução, com os Contêineres do Windows configurados. Se você desejar adicionar suporte para contêineres do Linux, será necessário executar o assistente enquanto o Docker estiver em execução com contêineres do Linux configurados.
 
-> ### <a name="references--common-web-architectures"></a>Referências – arquiteturas comuns da Web
->
+### <a name="references--common-web-architectures"></a>Referências – arquiteturas comuns da Web
 > - **A Arquitetura Limpa**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **A Arquitetura Cebola**  

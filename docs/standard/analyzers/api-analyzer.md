@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696878"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759126"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -55,7 +55,7 @@ Os avisos podem ser suprimidos clicando com o botão direito do mouse no membro 
 
 ### <a name="suppressing-warnings-locally"></a>Como suprimir avisos localmente
 
-Para suprimir avisos localmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico* \<ID de diagnóstico >** > **na Fonte**. A política de pré-processamento de aviso [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) é adicionada ao código-fonte no escopo definido: !["Captura de tela de código enquadrado com #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
+Para suprimir avisos localmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico* \<ID de diagnóstico >** > **na Fonte**. A diretiva de pré-processador de aviso [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) é adicionada ao código-fonte no escopo definido: !["Captura de tela do código enquadrado com o aviso #pragma desabilitado"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Como suprimir avisos globalmente
 
@@ -112,5 +112,5 @@ O usuário decide como o diagnóstico deve ser tratado: como avisos, erros, suge
 
 ## <a name="see-also"></a>Consulte também
 
-* Postagem de blog [Introduzindo o analisador de API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
-* Vídeo de demonstração no YouTube [Analisador de API](https://youtu.be/eeBEahYXGd0).
+- Postagem de blog [Introduzindo o analisador de API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
+- Vídeo de demonstração no YouTube [Analisador de API](https://youtu.be/eeBEahYXGd0).

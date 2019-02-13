@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d692f440354583e645606def4303f0c7c8f1e777
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679926"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093587"
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
 Os eventos no .NET Framework são baseados no modelo de representante. O modelo de representante segue o padrão de design do observador, que permite a um assinante se registrar em um provedor e receber notificações dele. Um remetente de eventos envia uma notificação por push de que um evento ocorreu e um receptor de eventos recebe essa notificação e define uma resposta. Este artigo descreve os principais componentes do modelo de representante, como consumir eventos em aplicativos e como implementar eventos no código.  
@@ -71,7 +71,7 @@ Os eventos no .NET Framework são baseados no modelo de representante. O modelo 
  [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Manipuladores de Eventos Estáticos e Dinâmicos  
- O .NET Framework permite que os assinantes se registrem para receber notificações de eventos de modo estático ou dinâmico. Os manipuladores de eventos estáticos permanecem em vigor por toda a vida da classe cujos eventos eles manipulam. Os manipuladores de eventos dinâmicos são ativados e desativados explicitamente durante a execução do programa, geralmente em resposta a alguma lógica de programa condicional. Por exemplo, eles podem ser usados se as notificações de eventos forem necessárias apenas sob determinadas condições, ou se um aplicativo fornecer vários manipuladores de eventos e as condições de tempo de execução definirem o apropriado para uso. O exemplo na seção anterior mostra como adicionar dinamicamente um manipulador de eventos. Para saber mais, confira [Eventos em C#](../../visual-basic/programming-guide/language-features/events/index.md) e [Eventos no Visual Basic](../../csharp/programming-guide/events/index.md).  
+ O .NET Framework permite que os assinantes se registrem para receber notificações de eventos de modo estático ou dinâmico. Os manipuladores de eventos estáticos permanecem em vigor por toda a vida da classe cujos eventos eles manipulam. Os manipuladores de eventos dinâmicos são ativados e desativados explicitamente durante a execução do programa, geralmente em resposta a alguma lógica de programa condicional. Por exemplo, eles podem ser usados se as notificações de eventos forem necessárias apenas sob determinadas condições, ou se um aplicativo fornecer vários manipuladores de eventos e as condições de tempo de execução definirem o apropriado para uso. O exemplo na seção anterior mostra como adicionar dinamicamente um manipulador de eventos. Para obter mais informações, veja [Eventos](../../visual-basic/programming-guide/language-features/events/index.md) (no Visual Basic) e [Eventos](../../csharp/programming-guide/events/index.md) (em C#).  
   
 ## <a name="raising-multiple-events"></a>Acionando vários eventos  
  Se sua classe acionar vários eventos, o compilador vai gerar um campo por instância de representante de evento. Se o número de eventos for grande, o custo de armazenamento de um campo por representante pode não ser aceitável. Para esses casos, o .NET Framework fornece propriedades de evento que você pode usar com outra estrutura de dados de sua escolha para armazenar representantes de eventos.  

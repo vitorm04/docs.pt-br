@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf9b842243cd7b9ae244688b0da348f63b68f08a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a1cf3ea782752f750f3545a28699a8bc325e4a5
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492033"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903891"
 ---
 # <a name="introduction-to-plinq"></a>Introdução ao PLINQ
 ## <a name="what-is-a-parallel-query"></a>O que é uma Consulta Paralela?  
- A LINQ (Consulta Integrada à Linguagem) foi introduzida no [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Ele apresenta um modelo unificado para consultar qualquer fonte de dados <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> de uma maneira de tipo seguro. LINQ to Objects é o nome para consultas LINQ executadas em coleções na memória, como <xref:System.Collections.Generic.List%601> e matrizes. Este artigo pressupõe que você tenha uma compreensão básica de LINQ. Para saber mais, veja [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ A LINQ (Consulta Integrada à Linguagem) foi introduzida no [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Ele apresenta um modelo unificado para consultar qualquer fonte de dados <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> de uma maneira de tipo seguro. LINQ to Objects é o nome para consultas LINQ executadas em coleções na memória, como <xref:System.Collections.Generic.List%601> e matrizes. Este artigo pressupõe que você tenha uma compreensão básica de LINQ. Para obter mais informações, confira [LINQ (consulta integrada à linguagem) – C#](../../csharp/programming-guide/concepts/linq/index.md) ou [LINQ (consulta integrada à linguagem) – Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).  
   
  PLINQ (Parallel LINQ) é uma implementação paralela da LINQ padrão. Uma consulta PLINQ, em muitas formas, é semelhante a uma consulta não paralela de LINQ to Objects. As consultas PLINQ, assim como as consultas sequenciais [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], operam em qualquer fonte de dados na memória <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601> e adiam a execução, o que significa que não começam a execução até que a consulta seja enumerada. A principal diferença é que a PLINQ tenta fazer uso integral de todos os processadores no sistema. Ela faz isso particionando a fonte de dados em segmentos e então executando a consulta em cada segmento em threads de trabalho separados em paralelo em vários processadores. Em muitos casos, a execução paralela significa que a consulta é executada de forma significativamente mais rápida.  
   

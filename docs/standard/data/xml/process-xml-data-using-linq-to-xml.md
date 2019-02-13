@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26d763884cc392a08e8cef7f5321d23f1c52a7fa
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502164"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903520"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>Dados XML do processo usando LINQ to XML
 LINQ to XML é o novo modelo no .NET Framework versão 3.5 para processar dados XML. LINQ to XML permite que os desenvolvedores de tudo o que esperariam com dados XML: consultando, modificando, criando, salvar, e serialização documentos XML. A mentira real das vantagens dos recursos de consulta e de design.  
@@ -19,7 +19,7 @@ LINQ to XML é o novo modelo no .NET Framework versão 3.5 para processar dados 
   
  LINQ to XML aproveita a tecnologia language-integrated de consulta (LINQ) no .NET Framework versão 3.5. LINQ estende a sintaxe de linguagem C# e Visual Basic para fornecer recursos poderosos de consulta que podem ser estendidos potencialmente qualquer armazenamento de dados.  
   
- Veja [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) para conferir uma discussão detalhada de seu uso, e consulte [LINQ (consulta integrada à linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) para obter uma visão geral da estrutura de LINQ.  
+ Para obter uma discussão detalhada sobre o uso, confira [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). Para obter uma visão geral da estrutura da LINQ, confira [LINQ (consulta integrada à linguagem) – C#](../../../csharp/programming-guide/concepts/linq/index.md) ou [LINQ (consulta integrada à linguagem) – Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
 ## <a name="see-also"></a>Consulte também
 

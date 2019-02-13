@@ -3,13 +3,13 @@ title: Processo de desenvolvimento para o Azure
 description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Processo de desenvolvimento para o Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152587"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827468"
 ---
 # <a name="development-process-for-azure"></a>Processo de desenvolvimento para o Azure
 
@@ -88,11 +88,11 @@ O desenvolvimento de seu aplicativo ASP.NET Core para implantação no Azure nã
 
 Sempre que estiver pronto para compartilhar o código com sua equipe, envie por push as alterações do repositório de origem local para o repositório de origem compartilhado de sua equipe. Se você estiver trabalhando em um branch personalizado, esta etapa geralmente envolverá a mesclagem do código em um branch compartilhado (talvez por meio de uma [solicitação de pull](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Etapa 3. Servidor de build: integração contínua. compilar, testar, agrupar
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Etapa 3. Servidor de build: Integração contínua. compilar, testar, agrupar
 
 Um novo build é disparado no servidor de build sempre que uma nova confirmação é feita no repositório de códigos compartilhados do aplicativo. Como parte do processo de CI, esse build deve compilar o aplicativo por completo e executar testes automatizados para confirmar se tudo está funcionando conforme esperado. O resultado final do processo de CI deve ser uma versão empacotada do aplicativo Web, pronta para implantação.
 
-#### <a name="step-4-build-server-continuous-delivery"></a>Etapa 4. Servidor de build: entrega contínua
+#### <a name="step-4-build-server-continuous-delivery"></a>Etapa 4. Servidor de build: Entrega contínua
 
 Depois que um build for bem-sucedido, o processo de CD selecionará os artefatos de build produzidos. Isso incluirá um pacote de implantação da Web. O servidor de build implantará esse pacote no Serviço de Aplicativo do Azure, substituindo o serviço existente pelo recém-criado. Normalmente, esta etapa é direcionada a um ambiente de preparo, mas alguns aplicativos são implantados diretamente em produção por meio de um processo de CD.
 

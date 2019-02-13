@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086756"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739456"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Instruções passo a passo da linguagem Visual Basic
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -47,9 +47,6 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Implementando a herança com objetos COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Demonstra como usar o Visual Basic 6.0 para criar um objeto COM contendo uma classe e, em seguida, usá-la como uma classe base em Visual Basic.  
   
- [Multithreading](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- Mostra como criar um aplicativo multi-threaded que pesquisa um arquivo de texto para ocorrências de uma palavra.  
-  
  [Determinando onde My.Application.Log grava informações](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  Descreve as configurações `My.Application.Log` padrão e como determinar as configurações para seu aplicativo.  
   
@@ -80,5 +77,5 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Mantendo um objeto no Visual Studio](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Demonstra como criar um objeto simples e manter seus dados em um arquivo.  
   
- [Suporte test-first com o recurso de geração do uso](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Passo a passo: suporte para Test-First com o recurso “Gerar com base no uso”](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Demonstra como realizar o desenvolvimento de test-first, no qual você primeiro escreve testes de unidade e, em seguida, escreve o código-fonte para fazer os testes terem êxito.
