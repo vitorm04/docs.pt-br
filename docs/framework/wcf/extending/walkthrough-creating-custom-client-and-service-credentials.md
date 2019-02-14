@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: a21c32547b1bd612196daf8be54cf85c373a7ff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681736"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261525"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Passo a passo: Criação de credenciais de serviço e personalizadas do cliente
 Este tópico mostra como implementar personalizadas do cliente e credenciais de serviço e como usar credenciais personalizadas do código do aplicativo.  
@@ -23,8 +23,6 @@ Este tópico mostra como implementar personalizadas do cliente e credenciais de 
 -   Executar como uma fábrica para <xref:System.IdentityModel.Selectors.SecurityTokenManager> implementações.  
   
  Tanto a <xref:System.ServiceModel.Description.ClientCredentials> e o <xref:System.ServiceModel.Description.ServiceCredentials> classes herdam de abstrata <xref:System.ServiceModel.Security.SecurityCredentialsManager> classe que define o contrato para retornar o <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
-  
- Para obter mais informações sobre as classes de credenciais e como elas se encaixam na arquitetura de segurança do WCF, consulte [arquitetura de segurança](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  As implementações padrão fornecidas no WCF dão suporte os tipos de credenciais fornecidas pelo sistema e criar o Gerenciador de token que é capaz de lidar com esses tipos de credenciais de segurança.  
   

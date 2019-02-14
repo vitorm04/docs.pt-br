@@ -2,12 +2,12 @@
 title: Tratamento de erros
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695550"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261139"
 ---
 # <a name="error-handling"></a>Tratamento de erros
 ## <a name="error-handling-in-windows-communication-foundation"></a>Tratamento de erro no Windows Communication Foundation  
@@ -22,7 +22,7 @@ ms.locfileid: "54695550"
   
  Blocos de aplicativos têm como objetivo incorporar práticas recomendadas usadas e fornecer uma abordagem comum para em todo o aplicativo de tratamento de exceções. Por outro lado, os manipuladores de erro personalizada e contratos de falha desenvolvidos por conta própria também podem ser muito útil. Por exemplo, manipuladores de erro personalizadas fornecem uma excelente oportunidade para promover automaticamente todas as exceções para FaultExceptions e também para adicionar recursos de registro em log para seu aplicativo.  
   
- Para obter mais informações, consulte [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
+ Para obter mais informações, consulte [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Lidando com exceções esperadas  
  O curso apropriado da ação é capturar exceções esperadas em cada operação ou um ponto de extensibilidade relevantes, decidir se pode ser recuperadas e retornar a falha personalizada apropriada em uma FaultException\<T >  

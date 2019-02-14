@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: ce2ce082f41700b1b86786abfa2dfe4a673fd6e0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4e11dd90d1cc57f3f2f559c22e1548b8fbcedaea
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265942"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261906"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Como: Alterar o provedor criptográfico para a chave privada de um certificado X.509
 Este tópico mostra como alterar o provedor criptográfico usado para fornecer a chave privada de um certificado X.509 e como integrar o provedor a estrutura de segurança do Windows Communication Foundation (WCF). Para obter mais informações sobre como usar certificados, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -87,4 +87,3 @@ Este tópico mostra como alterar o provedor criptográfico usado para fornecer a
 - [Como: Criar um autenticador de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
 - [Como: Criar um provedor de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
 - [Como: Criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
-- [Arquitetura de segurança](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

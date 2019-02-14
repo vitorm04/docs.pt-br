@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717396"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261346"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo de configuração fornece a flexibilidade de fornecer o ponto de extremidade e os dados de comportamento de serviço no ponto de implantação, em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
@@ -91,7 +91,7 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
   
 -   `contract`. Especifica a interface que define o contrato. Essa é a interface implementada no tipo CLR (Common Language Runtime) especificado pelo atributo `name` do elemento `service`.  
   
--   [\<ponto de extremidade > Referência de elemento](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>O \<associações > elemento  
  O elemento `bindings` contém as especificações de todas as associações que podem ser usadas por qualquer ponto de extremidade definido em qualquer serviço.  
@@ -101,7 +101,7 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
 ### <a name="the-binding-element"></a>O \<associação > elemento  
  O `binding` elementos contidos na `bindings` elemento pode ser uma das associações fornecidas pelo sistema (consulte [System-Provided ligações](../../../docs/framework/wcf/system-provided-bindings.md)) ou uma associação personalizada (consulte [ligações personalizadas](../../../docs/framework/wcf/extending/custom-bindings.md)). O elemento `binding` tem um atributo `name` que correlaciona a associação ao ponto de extremidade especificado no atributo `bindingConfiguration` do elemento `endpoint`. Se nenhum nome for especificado, a associação corresponderá ao padrão desse tipo de associação.  
   
- Para obter mais informações sobre como configurar serviços e clientes, consulte [Configurando o Windows Communication Foundation aplicativos](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+Para obter mais informações sobre como configurar serviços e clientes, consulte [Configurando WCF services](configuring-services.md).
   
  [\<binding>](../../../docs/framework/misc/binding.md)  
   
@@ -264,6 +264,6 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
   
 ## <a name="see-also"></a>Consulte também
 - [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)
-- [Configuring Windows Communication Foundation Applications](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a) (Configurando aplicativos do Windows Communication Foundation)
+- [Configurando serviços WCF](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
 - [\<binding>](../../../docs/framework/misc/binding.md)

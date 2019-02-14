@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: acf2e02479e66c6b2304b47340f19b665922cf5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df45f943da62624b92d483851e788dad0e240f47
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638733"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261122"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Como: criar um autenticador de token de segurança personalizadas
 Este tópico mostra como criar um autenticador de token de segurança personalizada e como integrá-lo com um Gerenciador de token de segurança personalizada. Um autenticador de token de segurança valida o conteúdo de um token de segurança fornecido com uma mensagem de entrada. Se a validação for bem-sucedida, o autenticador retorna uma coleção de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instâncias que, quando avaliado, retorna um conjunto de declarações.  
   
- Para usar um autenticador de token de segurança personalizadas no Windows Communication Foundation (WCF), você deve primeiro criar segurança e credenciais personalizadas do Gerenciador de token implementações. Para obter mais informações sobre a criação de credenciais personalizadas e uma segurança Gerenciador de token, consulte [passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Para obter mais informações sobre credenciais, o Gerenciador de token de segurança e as classes de provedor e o autenticador, consulte [arquitetura de segurança](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Para usar um autenticador de token de segurança personalizadas no Windows Communication Foundation (WCF), você deve primeiro criar segurança e credenciais personalizadas do Gerenciador de token implementações. Para obter mais informações sobre a criação de credenciais personalizadas e uma segurança Gerenciador de token, consulte [passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).
   
 ## <a name="procedures"></a>Procedimentos  
   
@@ -65,4 +65,3 @@ Este tópico mostra como criar um autenticador de token de segurança personaliz
 - <xref:System.IdentityModel.Tokens.UserNameSecurityToken>
 - [Passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Como: Criar um provedor de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Arquitetura de segurança](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
