@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a99d42b4d61f3270b50e0c4698683cf89458ec9c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 31973559411c5269fc1a5ba0cc743153ff356dae
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180187"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305669"
 ---
 # <a name="accessibility"></a>Acessibilidade
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  A [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] é a nova estrutura de acessibilidade do [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Ela atende às necessidades de produtos de tecnologia assistencial e de estruturas de teste automatizado, fornecendo acesso programático a informações sobre a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Além disso, a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite que os desenvolvedores de controle e de aplicativo disponibilizem seus produtos.  
   
@@ -34,4 +34,4 @@ ms.locfileid: "50180187"
  [UI Automation Specification and Community Promise](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md) (Especificação e promessa da comunidade da Automação da Interface do Usuário)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Exemplos de acessibilidade](https://msdn.microsoft.com/library/ms771315.aspx)
+- [Exemplos de acessibilidade](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 

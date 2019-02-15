@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 52077103277cdc4d32dfe3e44fcccffeec20295e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6b0412afc972871c056a565620acee801bbdaf
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706859"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304577"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
@@ -158,4 +158,4 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 - [Acessar objetos inseridos usando automação de interface do usuário](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
 - [Expor o conteúdo de uma tabela usando automação de interface do usuário](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
 - [Percorrer texto usando automação de interface do usuário](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
-- [Pesquisa de TextPattern e exemplo de seleção](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+- [Pesquisa de TextPattern e exemplo de seleção](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)

@@ -2,12 +2,12 @@
 title: Tokens com suporte
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 0214479c40e41da64c1cd2ea59837008ffecdb04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 899c6ecabafb1bd0487b989c6da8963dd07945cf
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656538"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304148"
 ---
 # <a name="supporting-tokens"></a>Tokens com suporte
 O que dão suporte a Tokens que demonstra como adicionar tokens adicionais a uma mensagem que usa WS-Security. O exemplo adiciona um token de segurança binário X.509, além de um token de segurança do nome de usuário. O token é passado em um cabeçalho de mensagem do WS-Security do cliente para o serviço e parte da mensagem é assinado com a chave privada associada ao token de segurança x. 509 para provar a posse do certificado X.509 para o receptor. Isso é útil no caso de quando há um requisito de ter várias declarações associadas com uma mensagem para autentica ou autoriza o remetente. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
@@ -429,7 +429,7 @@ iisreset
   
 2.  Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
-3.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ##### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo entre máquinas  
   
@@ -457,7 +457,7 @@ iisreset
   
 12. No servidor, execute ImportClientCert.bat, isso importa o certificado do cliente do arquivo CER para o repositório de LocalMachine - TrustedPeople.  
   
-13. No computador cliente, inicie Client.exe em uma janela do prompt de comando. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. No computador cliente, inicie Client.exe em uma janela do prompt de comando. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ##### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   

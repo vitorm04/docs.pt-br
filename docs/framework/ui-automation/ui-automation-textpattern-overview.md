@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c905dfbb0fffcf37c8b196e883003ea70e509b2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea03c037312ffdb66146dc0461e157c230aafcd2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534310"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304044"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Visão geral de TextPattern de automação da interface do usuário
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "54534310"
  Expondo o conteúdo textual de um controle é feito por meio do uso do <xref:System.Windows.Automation.TextPattern> padrão de controle, que representa o conteúdo de um contêiner de texto como um fluxo de texto. Por sua vez, <xref:System.Windows.Automation.TextPattern> requer o suporte do <xref:System.Windows.Automation.Text.TextPatternRange> classe para expor os atributos de formato e estilo. <xref:System.Windows.Automation.Text.TextPatternRange> dá suporte a <xref:System.Windows.Automation.TextPattern> representando contíguas ou múltiplos disjuntos texto em um contêiner de texto com uma coleção de <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> e <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> pontos de extremidade. <xref:System.Windows.Automation.Text.TextPatternRange> dá suporte à funcionalidade, como seleção, comparação, recuperação e passagem.  
   
 > [!NOTE]
->  O <xref:System.Windows.Automation.TextPattern> classes não fornecem um meio para inserir ou modificar o texto. No entanto, dependendo do controle, isso pode ser feito pelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> ou por meio de entrada direta do teclado. Consulte a [TextPattern inserir texto exemplo](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) para obter um exemplo.  
+> O <xref:System.Windows.Automation.TextPattern> classes não fornecem um meio para inserir ou modificar o texto. No entanto, dependendo do controle, isso pode ser feito pelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> ou por meio de entrada direta do teclado. Consulte a [TextPattern inserir texto exemplo](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) para obter um exemplo.  
   
  A funcionalidade descrita nesta visão geral é vital para fornecedores de tecnologia assistencial e seus usuários finais. Tecnologias assistenciais podem usar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para coletar informações de formatação para o usuário de texto completo e fornecer navegação programática e seleção de texto por <xref:System.Windows.Automation.Text.TextUnit> (caractere, palavra, linha ou parágrafo).  
   
@@ -136,4 +136,4 @@ O exemplo a seguir ilustra um conjunto de pontos iniciais e finais.
 - [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Estrutura de serviços de texto](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)
+- [Estrutura de serviços de texto](/windows/desktop/api/_tsf/)

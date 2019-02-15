@@ -2,12 +2,12 @@
 title: Configuração simplificada
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22595a3d428da9dbd3cb8b6e67ca8b40bf39d457
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498353"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305617"
 ---
 # <a name="simplified-configuration"></a>Configuração simplificada
 Configurar serviços Windows Communication Foundation (WCF) pode ser uma tarefa complexa. Há muitas opções diferentes e nem sempre é fácil determinar quais configurações são necessárias. Enquanto os arquivos de configuração de aumentam a flexibilidade dos serviços WCF, eles também são a fonte para muitos difíceis de encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] resolve esses problemas e fornece uma maneira de reduzir o tamanho e a complexidade da configuração de serviço.  
@@ -118,5 +118,5 @@ Configurar serviços Windows Communication Foundation (WCF) pode ser uma tarefa 
 - [Configurando associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Configurando associações fornecidas pelo sistema](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Configurando serviços](../../../docs/framework/wcf/configuring-services.md)
-- [Configuring Windows Communication Foundation Applications](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a) (Configurando aplicativos do Windows Communication Foundation)
+- [Configurando serviços WCF](configuring-services.md)
 - [Configurando serviços do WCF em código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

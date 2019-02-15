@@ -1,17 +1,18 @@
 ---
-title: Configurando serviços
+title: Configurando serviços WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 1246ce5056c17641e10bb96f79b60090d6f43b89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2435d5c4592de60e07b60f1bf749f2421c798535
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525047"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303589"
 ---
-# <a name="configuring-services"></a>Configurando serviços
+# <a name="configuring-wcf-services"></a>Configurando serviços WCF
+
 Depois que você tiver projetado e implementado o contrato de serviço, você está pronto para configurar seu serviço. Isso é onde você pode definir e personalizar como o serviço é exposto aos clientes, incluindo especificando o endereço em que ele pode ser encontrado, o transporte e ele usa para enviar e receber mensagens e o tipo de segurança requer a codificação de mensagem.  
   
  Configuração como utilizado aqui inclui todas as maneiras, imperativa no código ou usando um arquivo de configuração, no qual você pode definir e personalizar vários aspectos de um serviço, como especificando seus endereços de ponto de extremidade, os transportes usados e seus esquemas de segurança. Na prática, gravar a configuração é a principal parte da programação de aplicativos do WCF.  

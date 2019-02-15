@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
-ms.openlocfilehash: 820e03064d331e852a224e1f989685d7a77983db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f1110880b7a8d4bcef40bcb66bcade6597a15dc
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603021"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303355"
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>Como: Adicionar um valor de saída da animação a um valor inicial de animação
 Este exemplo mostra como adicionar um valor de saída da animação a um valor inicial de animação.  
@@ -25,5 +25,4 @@ Este exemplo mostra como adicionar um valor de saída da animação a um valor i
 - [Acumular valores de animação durante ciclos de repetição](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Animação e tempo](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Tópicos explicativos de animação e tempo](animation-and-timing-how-to-topics.md)

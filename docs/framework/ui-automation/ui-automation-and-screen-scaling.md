@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8de1d1b1f2bfe385a815eb6147b79a1dc2be0206
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717552"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304889"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automação da Interface do Usuário e Escala da Tela
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "54717552"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Essa função faz todo o processo [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-ciente, o que significa que todas as janelas que pertencem ao processo são fora de escala. No [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), por exemplo, as quatro janelas que compõem o retângulo de realce estão localizadas em coordenadas físicas obtidas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], não nas coordenadas lógicas. Se o exemplo não fosse [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-ciente, o realce poderia ser desenhado nas coordenadas lógicas na área de trabalho, o que resulta na colocação incorreta em um não-96 - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ambiente.  
+     Essa função faz com que todo o processo de reconhecimento de dpi, que significa que todas as janelas que pertencem ao processo são fora de escala. No [exemplo de marca-texto](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), por exemplo, as quatro janelas que compõem o retângulo de realce estão localizadas nas coordenadas físicas obtidas de automação de interface do usuário, não nas coordenadas lógicas. Se o exemplo não estava cientes de dpi, o realce poderia ser desenhado nas coordenadas lógicas na área de trabalho, o que resulta na colocação incorreta em um ambiente de não-96-dpi.  
   
 2.  Para obter as coordenadas do cursor, chame o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] função `GetPhysicalCursorPos`. O exemplo a seguir mostra como declarar e usar essa função.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "54717552"
  Se seu aplicativo realiza a comunicação direta entre processos com não - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-com suporte a aplicativos, talvez seja necessário converter entre coordenadas lógicas e físicas usando o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funções `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Consulte também
-- [Exemplo de marca-texto](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+- [Exemplo de marca-texto](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)
