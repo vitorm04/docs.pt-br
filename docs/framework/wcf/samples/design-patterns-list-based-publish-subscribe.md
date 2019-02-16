@@ -2,12 +2,12 @@
 title: 'Padrões de design: Publicação-assinatura baseada em lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 87151cb8e50f526838565b22088f117941d6ab98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717877"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333385"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Padrões de design: Publicação-assinatura baseada em lista
 Este exemplo ilustra o padrão baseado em lista publicar-assinar, implementado como um programa do Windows Communication Foundation (WCF).  
@@ -124,7 +124,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Executar Datasource.exe de \datasource\bin\\, sob a pasta de idioma específico. Atividade de origem de dados é exibida na janela do console. Depois que a fonte de dados envia informações ao serviço, ela deve ser passada para cada cliente.  
   
-4.  Se o cliente, fonte de dados e programas de serviço não ficam capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se o cliente, fonte de dados e programas de serviço não ficam capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo entre máquinas  
   

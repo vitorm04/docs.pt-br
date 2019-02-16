@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589863"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333346"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding padrão
 Este exemplo demonstra o uso do <xref:System.ServiceModel.NetTcpBinding> associação. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o serviço é hospedado internamente. O cliente e o serviço são aplicativos de console.  
@@ -26,7 +26,7 @@ Este exemplo demonstra o uso do <xref:System.ServiceModel.NetTcpBinding> associa
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado na `binding` atributo do [ \<ponto de extremidade >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento, conforme mostrado no seguinte exemplo de configuração.  
+ A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado na `binding` atributo do [ \<ponto de extremidade >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento, conforme mostrado no seguinte exemplo de configuração.  
   
 ```xml  
 <endpoint address=""  

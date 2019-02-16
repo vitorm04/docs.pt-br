@@ -2,12 +2,12 @@
 title: Procedimento de configuração único para exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583384"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333450"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimento de configuração único para exemplos do Windows Communication Foundation
 A maioria dos exemplos do Windows Communication Foundation (WCF) é hospedada em serviços de informações da Internet (IIS) e executar a partir de um diretório virtual comum. Este procedimento de configuração única cria uma pasta no disco; Ele também adiciona um diretório virtual IIS chamado **ServiceModelSamples**.
@@ -25,7 +25,7 @@ A maioria dos exemplos do Windows Communication Foundation (WCF) é hospedada em
   
 3.  Se o Visual Studio 2012 não está instalado e seu sistema operacional não é Windows Server 2008 SP2 ou posterior, instale [251798 Hotfix](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Execute os comandos a seguir. Para obter mais informações sobre por que esses comandos devem ser executados, consulte [IIS serviço hospedado não](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Execute os comandos a seguir. Para obter mais informações sobre por que esses comandos devem ser executados, consulte [IIS serviço hospedado não](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  Se o IIS for reinstalado, os comandos a seguir precisará ser executado novamente.

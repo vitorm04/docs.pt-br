@@ -2,12 +2,12 @@
 title: Pontos de extremidade de serviço e endereçamento de fila
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613916"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332514"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem serviços leiam de filas e como pontos de extremidade de serviço são mapeados para as filas. Como lembrete, a ilustração a seguir mostra clássico, implantação de aplicativo na fila do Windows Communication Foundation (WCF).  
@@ -46,7 +46,7 @@ Este tópico discute como os clientes atendem serviços leiam de filas e como po
   
  O endereço da fila é usado como o URI de escuta pelo ouvinte para ler mensagens do. Em outras palavras, o endereço da fila é equivalente a soquete TCP de porta de escuta.  
   
- Um ponto de extremidade que lê uma fila deve especificar o endereço da fila usando o mesmo esquema especificado anteriormente ao abrir o ServiceHost. Para obter exemplos, consulte [associação de MSMQ Net](../../../../docs/framework/wcf/samples/net-msmq-binding.md) e [mensagem de enfileiramento de mensagens de associação exemplos de integração](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
+ Um ponto de extremidade que lê uma fila deve especificar o endereço da fila usando o mesmo esquema especificado anteriormente ao abrir o ServiceHost. Para obter exemplos, consulte [associação de MSMQ Net](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Vários contratos em uma fila  
  Mensagens em uma fila podem implementar contratos diferentes. Nesse caso, é essencial que uma das seguintes opções é verdadeira para ler e processar todas as mensagens com êxito:  

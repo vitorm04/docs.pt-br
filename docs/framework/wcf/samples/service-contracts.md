@@ -2,12 +2,12 @@
 title: Contratos de serviço
 ms.date: 03/30/2017
 ms.assetid: 9e34b694-aa56-45b3-8dd1-2616705b4fc5
-ms.openlocfilehash: 0d44b6d0a996834c923dafee6cb6319c9dc87fd2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e6e4deaf3c5023f28f76983e6b7dfe2e24182c11
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520599"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332059"
 ---
 # <a name="service-contracts"></a>Contratos de serviço
 Esta seção contém exemplos que demonstram os contratos de serviço no Windows Communication Foundation (WCF).  
@@ -27,9 +27,6 @@ Esta seção contém exemplos que demonstram os contratos de serviço no Windows
   
  [Fluxo](../../../../docs/framework/wcf/samples/stream.md)  
  Demonstra o uso de fluxo de comunicação de modo de transferência.  
-  
- [Assíncrono](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)  
- Demonstra como um cliente pode acessar uma operação de serviço assincronamente e como um serviço pode implementar suas operações de forma assíncrona.  
   
  [Falhas de XmlSerializer](../../../../docs/framework/wcf/samples/xmlserializer-faults.md)  
  Demonstra como se comunicar informações de erro de um serviço de um cliente usando o <xref:System.Xml.Serialization.XmlSerializer>.

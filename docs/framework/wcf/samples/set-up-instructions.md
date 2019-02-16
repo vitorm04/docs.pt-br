@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: b5c57b7b7fa2fe72d0fbad6d7fcf5aa17f2abad8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fc68759e3057b6a1fd2a2ca4e0bffe81cea5f095
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529572"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333424"
 ---
 # <a name="set-up-instructions"></a>Instruções de configuração
 Este conjunto de tópicos descreve como configurar os serviços que são necessários para executar um serviço do Windows Communication Foundation (WCF).  
@@ -37,11 +37,8 @@ Este conjunto de tópicos descreve como configurar os serviços que são necess�
  [Executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  Descreve as etapas para executar os exemplos do WCF no mesmo computador e entre computadores.  
   
- [Habilitando serviços ponto a ponto](https://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
- Descreve as etapas para instalar o componente do Windows Peer-to-Peer, o resolvedor interno para serviços de mensagens ponto a ponto.  
-  
  [Instalando o Enfileiramento de Mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  Descreve as etapas para instalar o enfileiramento de mensagens.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Dicas de solução de problemas para obter exemplos WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -2,12 +2,12 @@
 title: Mensagens de segurança que usam a segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747941"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332333"
 ---
 # <a name="securing-messages-using-transport-security"></a>Mensagens de segurança que usam a segurança de transporte
 Esta seção aborda a segurança de transporte de enfileiramento de mensagens (MSMQ) que você pode usar para proteger as mensagens enviadas para uma fila.  
@@ -97,6 +97,6 @@ Esta seção aborda a segurança de transporte de enfileiramento de mensagens (M
  Os algoritmos com suporte são `MD5`, `SHA1`, `SHA256` e `SHA512`. O padrão é `SHA1`.  
   
 ## <a name="see-also"></a>Consulte também
-- [Enfileiramento de mensagens](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [Visão geral de filas](queues-overview.md)
 - [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

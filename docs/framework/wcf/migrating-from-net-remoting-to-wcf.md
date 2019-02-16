@@ -2,12 +2,12 @@
 title: Migrando de .NET Remoting para o WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415969"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333060"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrando de .NET Remoting para o WCF
 Este artigo descreve como migrar um aplicativo que usa o .NET Remoting para usar o Windows Communication Foundation (WCF). Ele compara conceitos semelhantes entre esses produtos e, em seguida, descreve como realizar vários cenários comuns de comunicação remota no WCF.  
@@ -207,11 +207,7 @@ public class WCFCustomer
   
  O atributo [DataContract] identifica esse tipo como um que pode ser serializado e desserializado entre cliente e servidor. O atributo [DataMember] identifica as propriedades individuais ou campos para serializar.  
   
- Quando o WCF envia um objeto em camadas, ele serializa somente os valores e cria uma nova instância do objeto na camada de. Qualquer interação com os valores do objeto ocorre apenas localmente – eles não se comunicam com a outra camada de que fazer os forma como os objetos .NET Remoting por referência. Para mais informações, consulte os seguintes tópicos:  
-  
--   [Serialização e desserialização](./feature-details/serialization-and-deserialization.md)  
-  
--   [Serialização no Windows Communication Foundation](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ Quando o WCF envia um objeto em camadas, ele serializa somente os valores e cria uma nova instância do objeto na camada de. Qualquer interação com os valores do objeto ocorre apenas localmente – eles não se comunicam com a outra camada de que fazer os forma como os objetos .NET Remoting por referência. Para obter mais informações, consulte [serialização e desserialização](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Recursos de tratamento de exceção  
   

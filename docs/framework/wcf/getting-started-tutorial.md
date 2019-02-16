@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491357"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332241"
 ---
 # <a name="getting-started-tutorial"></a>Guia de introdução ao tutorial
 Os tópicos contidos nesta seção destinam-se a fornecer uma exposição rápida para o Windows Communication Foundation (WCF) experiência de programação. Eles devem ser concluídos na ordem da lista que se encontra na parte inferior deste tópico. Trabalhar com este tutorial fornece uma compreensão introdutória das etapas necessárias para criar o cliente e um serviço WCF aplicativos. Um serviço expõe um ou mais pontos de extremidade, sendo que cada um deles expõe uma ou mais operações de serviço. O *ponto de extremidade* de um serviço Especifica um endereço em que o serviço pode ser encontrado, uma associação que contém as informações que descrevem como um cliente deve se comunicar com o serviço e um contrato que define a funcionalidade fornecida pelo serviço a seus clientes.
@@ -22,7 +22,7 @@ Os tópicos contidos nesta seção destinam-se a fornecer uma exposição rápid
 
 Os tópicos nesta seção pressupõem que você esteja usando o Visual Studio como ambiente de desenvolvimento. Se você estiver usando outro ambiente de desenvolvimento, ignore as instruções específicas do Visual Studio.
 
-Para aplicativos de exemplo que podem ser baixados no seu disco rígido e executar, consulte os tópicos [exemplos do Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Para este tópico, consulte, em particular, o [Introdução ao](../../../docs/framework/wcf/samples/getting-started-sample.md).
+Para aplicativos de exemplo que podem ser baixados no seu disco rígido e executar, consulte os tópicos [exemplos do Windows Communication Foundation (WCF)](./samples/index.md). Para este tópico, consulte, em particular, o [Introdução ao](../../../docs/framework/wcf/samples/getting-started-sample.md).
 
 Para obter informações mais detalhadas sobre a criação de serviços e clientes, consulte [programação WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md).
 
@@ -58,7 +58,7 @@ Para obter informações mais detalhadas sobre a criação de serviços e client
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-- [Amostras do Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Exemplos do Windows Communication Foundation (WCF)](./samples/index.md)
 - [Ciclo de vida de programação básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 
 ## <a name="see-also"></a>Consulte também

@@ -2,12 +2,12 @@
 title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485934"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332813"
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 O exemplo de transporte UDP demonstra como implementar UDP unicast e multicast como um transporte personalizado do Windows Communication Foundation (WCF). O exemplo descreve o procedimento recomendado para a criação de um transporte personalizado no WCF, usando a estrutura de canais e seguir as práticas recomendadas do WCF. As etapas para criar um transporte personalizado são da seguinte maneira:  
@@ -52,15 +52,15 @@ O exemplo de transporte UDP demonstra como implementar UDP unicast e multicast c
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Ciclo de vida do objeto de ICommunicationObject e o WCF  
  O WCF possui uma máquina de estado comum que é usada para gerenciar o ciclo de vida de objetos, como <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, e <xref:System.ServiceModel.Channels.IChannelListener> que são usados para comunicação. Há cinco estados em que esses objetos de comunicação podem existir. Esses estados são representados pelo <xref:System.ServiceModel.CommunicationState> enumeração e são da seguinte maneira:  
   
--   Criado: Esse é o estado de um <xref:System.ServiceModel.ICommunicationObject> quando ela é instanciada pela primeira vez. Nenhuma entrada/saída (e/s) ocorre nesse estado.  
+-   Criado: Este é o estado de um <xref:System.ServiceModel.ICommunicationObject> quando ela é instanciada pela primeira vez. Nenhuma entrada/saída (e/s) ocorre nesse estado.  
   
--   Abrindo: Estado de transição de objetos para isso quando <xref:System.ServiceModel.ICommunicationObject.Open%2A> é chamado. Neste momento as propriedades são transformadas em imutáveis e podem começar a entrada/saída. Essa transição é válida somente do estado criado.  
+-   Ao abrir: Transição de objetos a esse estado quando <xref:System.ServiceModel.ICommunicationObject.Open%2A> é chamado. Neste momento as propriedades são transformadas em imutáveis e podem começar a entrada/saída. Essa transição é válida somente do estado criado.  
   
--   Aberta: A transição de objetos nesse estado quando o processo de abertura é concluída. Essa transição é válida somente do estado de abertura. Neste ponto, o objeto é totalmente pode ser usado para transferência.  
+-   Aberto: Transição de objetos nesse estado quando o processo de abertura é concluída. Essa transição é válida somente do estado de abertura. Neste ponto, o objeto é totalmente pode ser usado para transferência.  
   
--   Fechamento: Estado de transição de objetos para isso quando <xref:System.ServiceModel.ICommunicationObject.Close%2A> é chamado para um desligamento normal. Essa transição é válida somente de estado aberto.  
+-   Fechamento: Transição de objetos a esse estado quando <xref:System.ServiceModel.ICommunicationObject.Close%2A> é chamado para um desligamento normal. Essa transição é válida somente de estado aberto.  
   
--   Fechado: No fechada objetos de estado não são mais utilizáveis. Em geral, mais alta configuração ainda será acessível para inspeção, mas nenhuma comunicação pode ocorrer. Esse estado é equivalente ao que está sendo descartado.  
+-   Fechado: No fechado objetos de estado não são mais utilizáveis. Em geral, mais alta configuração ainda será acessível para inspeção, mas nenhuma comunicação pode ocorrer. Esse estado é equivalente ao que está sendo descartado.  
   
 -   Com falha: No estado com falha, os objetos são acessíveis para inspeção, mas não é mais utilizável. Quando ocorre um erro não recuperável, o objeto faz a transição para esse estado. A transição válida apenas desse estado é para o `Closed` estado.  
   
@@ -255,7 +255,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Adicionar uma associação padrão  
  Nosso elemento de associação pode ser usado de duas maneiras a seguir:  
   
--   Por meio de uma ligação personalizada: uma ligação personalizada permite que o usuário criar sua próprias associação com base em um conjunto arbitrário de elementos de associação.  
+-   Por meio de uma ligação personalizada: Uma associação personalizada permite ao usuário criar sua próprias associação com base em um conjunto arbitrário de elementos de associação.  
   
 -   Usando uma associação fornecida pelo sistema que inclui nosso elemento de associação. O WCF fornece uma série dessas associações definidas pelo sistema, como `BasicHttpBinding`, `NetTcpBinding`, e `WsHttpBinding`. Cada uma dessas vinculações está associada um perfil bem definido.  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>O serviço de teste do UDP e o cliente  
- Código de teste para usar esse transporte de exemplo está disponível nos diretórios UdpTestService e UdpTestClient. O código de serviço consiste em dois testes — um teste configura as associações e pontos de extremidade do código e o outro faz isso por meio da configuração. Ambos os testes usam dois pontos de extremidade. Um ponto de extremidade usa o `SampleUdpProfileBinding` com [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) definido como `true`. Outro ponto de extremidade usa uma associação personalizada com `UdpTransportBindingElement`. Isso é equivalente a usar `SampleUdpProfileBinding` com [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) definido como `false`. Ambos os testes de criarem um serviço, adicionar um ponto de extremidade para cada associação, abra o serviço e aguarde até que o usuário pressionar ENTER antes de fechar o serviço.  
+ Código de teste para usar esse transporte de exemplo está disponível nos diretórios UdpTestService e UdpTestClient. O código de serviço consiste em dois testes — um teste configura as associações e pontos de extremidade do código e o outro faz isso por meio da configuração. Ambos os testes usam dois pontos de extremidade. Um ponto de extremidade usa o `SampleUdpProfileBinding` com [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) definido como `true`. Outro ponto de extremidade usa uma associação personalizada com `UdpTransportBindingElement`. Isso é equivalente a usar `SampleUdpProfileBinding` com [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) definido como `false`. Ambos os testes de criarem um serviço, adicionar um ponto de extremidade para cada associação, abra o serviço e aguarde até que o usuário pressionar ENTER antes de fechar o serviço.  
   
  Quando você inicia o aplicativo de serviço de teste, você verá a saída a seguir.  
   

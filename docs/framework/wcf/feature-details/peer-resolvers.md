@@ -2,12 +2,12 @@
 title: Resolvedor peer
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: b16358d05b9e457b4542e41297908e225885dad9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496839"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333372"
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
 Para se conectar a uma malha, um nó par exige que os endereços IP dos outros nós. Endereços IP são obtidos por entrar em contato com um serviço de resolvedor, que usa a ID de malha e retorna uma lista de endereços correspondentes a nós registrados com essa ID de malha. O resolvedor mantém uma lista de endereços registrados, que será criado, fazendo com que cada nó na malha registrar com o serviço.  
@@ -32,7 +32,7 @@ Para se conectar a uma malha, um nó par exige que os endereços IP dos outros n
 > [!NOTE]
 >  Ao usar redes locais e improvisadas com um resolvedor personalizado, é altamente recomendável que os aplicativos usando ou que dão suporte a redes de local de link ou improvisadas incluem lógica que seleciona um único endereço de vínculo local para usar ao se conectar. Isso impede que qualquer confusão potencialmente causado por computadores com vários endereços de vínculo local. Acordo com isso, Peer Channel dá suporte somente a um único endereço de vínculo local a qualquer momento. Você pode especificar esse endereço com o `ListenIpAddress` propriedade no <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor de pares personalizado Peer Channel](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor de pares personalizado Peer Channel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [O custompeerresolverservice: Registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

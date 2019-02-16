@@ -2,17 +2,17 @@
 title: Serviço de AJAX com exemplo de JSON e XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8e112a75d537927d7a099d2988c1219515e2c1a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632290"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332332"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Serviço de AJAX com exemplo de JSON e XML
 Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para criar um serviço de Asynchronous JavaScript and XML (AJAX) que retorna dados de objeto notação JSON (JavaScript) ou XML. Você pode acessar um serviço AJAX usando código JavaScript de um cliente de navegador da Web. Este exemplo se baseia a [serviço de AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo.  
   
- Ao contrário de outros exemplos de AJAX, este exemplo usa o ASP.NET AJAX e o <xref:System.Web.UI.ScriptManager> controle. Com alguma configuração adicional, os serviços WCF AJAX podem ser acessados de qualquer página HTML por meio de JavaScript e este cenário é mostrado aqui. Para obter um exemplo de como usar o WCF com o ASP.NET AJAX, consulte [amostras do AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).
+ Ao contrário de outros exemplos de AJAX, este exemplo usa o ASP.NET AJAX e o <xref:System.Web.UI.ScriptManager> controle. Com alguma configuração adicional, os serviços WCF AJAX podem ser acessados de qualquer página HTML por meio de JavaScript e este cenário é mostrado aqui. Para obter um exemplo de como usar o WCF com o ASP.NET AJAX, consulte [amostras do AJAX](ajax.md).
   
  Este exemplo mostra como alternar o tipo de resposta de uma operação entre JSON e XML. Essa funcionalidade está disponível independentemente do serviço é configurado para ser acessado por ASP.NET AJAX ou por uma página de cliente HTML/JavaScript.  
   
