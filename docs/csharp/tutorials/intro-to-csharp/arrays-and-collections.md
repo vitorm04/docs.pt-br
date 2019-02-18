@@ -3,12 +3,12 @@ title: Trabalhar com coleções – Introdução ao tutorial do C#
 description: Aprenda C# explorando a Coleção de lista neste tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205276"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261265"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Saiba como gerenciar coleções de dados usando o tipo de lista genérico
 
@@ -19,9 +19,6 @@ Este tutorial espera que você tenha um computador que possa usar para desenvolv
 ## <a name="a-basic-list-example"></a>Um exemplo de lista básica
 
 Crie um diretório chamado **list-tutorial**. Torne-o o diretório atual e execute `dotnet new console`.
-
-> [!NOTE]
-> Se você acabou de concluir [Introdução ao .NET em 10 minutos](https://www.microsoft.com/net), continue usando o aplicativo myApp que você acabou de criar.
 
 Abra **Program.cs** em seu editor favorito e substitua o código existente pelo seguinte:
 

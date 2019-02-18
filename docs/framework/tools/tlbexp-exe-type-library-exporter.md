@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d10e93af4172e6759cbe04f88e54b6e1db995efa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76a4a3b91e88e1532e79eea256621ee149c320ea
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679000"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219471"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de Biblioteca de Tipos)
 O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os tipos definidos em um assembly do Common Language Runtime.  
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Tlbexp.exe ignora o campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>.  
   
- Como as bibliotecas de tipos não podem acomodar todas as informações encontradas em assemblies, Tlbexp.exe pode descartar alguns dados durante o processo de exportação. Para ver uma explicação do processo de transformação e a identificação da origem de cada informação emitida para uma biblioteca de tipos, consulte [Resumo da Conversão do Assembly em Biblioteca de Tipos](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Como as bibliotecas de tipos não podem acomodar todas as informações encontradas em assemblies, Tlbexp.exe pode descartar alguns dados durante o processo de exportação. Para ver uma explicação do processo de transformação e a identificação da origem de cada informação emitida para uma biblioteca de tipos, consulte [Resumo da Conversão do Assembly em Biblioteca de Tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
   
  O Exportador da Biblioteca de Tipos exporta métodos com parâmetros <xref:System.TypedReference> como `VARIANT`, mesmo que o objeto <xref:System.TypedReference> não tenha significado no código não gerenciado. Quando você exportar métodos com parâmetros <xref:System.TypedReference>, o Exportador da Biblioteca de Tipos não gerará um aviso ou um erro, e o código não gerenciado que usa a biblioteca de tipos resultante não será executado corretamente.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Regasm.exe (Ferramenta de Registro de Assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Resumo da conversão de assemblies em bibliotecas de tipos](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)
+- [Resumo da conversão de assemblies em bibliotecas de tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

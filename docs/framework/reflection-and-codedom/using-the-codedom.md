@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50ff6e2baaee683674f82cff178eeef7b7e43de4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486206"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219588"
 ---
 # <a name="using-the-codedom"></a>Usando o CodeDOM
 O CodeDOM fornece tipos que representam muitos dos tipos mais comuns de elementos de código-fonte. Você pode criar um programa que cria um modelo de código-fonte usando elementos do CodeDOM para montar um grafo de objeto. Este grafo de objeto pode ser renderizado como código-fonte usando um gerador de código CodeDOM para uma linguagem de programação com suporte. O CodeDOM também pode ser usado para compilar o código-fonte em um assembly binário.  
@@ -123,8 +123,8 @@ O CodeDOM fornece tipos que representam muitos dos tipos mais comuns de elemento
  Agora o <xref:System.CodeDom.CodeCompileUnit> chamado `compileUnit` contém o grafo CodeDOM para um programa Olá, Mundo simples. Para obter informações sobre como gerar e compilar o código de um grafo CodeDOM, consulte [Gerando código-fonte e compilando um programa de um grafo CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md).  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>Mais informações sobre a compilação de um grafo CodeDOM  
- O CodeDOM dá suporte a muitos tipos comuns de elementos de código encontrados em linguagens de programação que dão suporte ao Common Language Runtime. O CodeDOM não foi projetado para fornecer elementos para representar todos os recursos de linguagem de programação possíveis. Código que não pode ser representado facilmente com elementos do CodeDOM pode ser encapsulado em um <xref:System.CodeDom.CodeSnippetExpression>, <xref:System.CodeDom.CodeSnippetStatement>, <xref:System.CodeDom.CodeSnippetTypeMember> ou <xref:System.CodeDom.CodeSnippetCompileUnit>. No entanto, trechos de código não podem ser convertidos para outras linguagens automaticamente pelo CodeDOM.  
+ O CodeDOM dá suporte a muitos tipos comuns de elementos de código encontrados em linguagens de programação que dão suporte ao Common Language Runtime. O CodeDOM não foi projetado para fornecer elementos para representar todos os recursos de linguagem de programação possíveis. Código que não pode ser representado facilmente com elementos do CodeDOM pode ser encapsulado em um <xref:System.CodeDom.CodeSnippetExpression>, <xref:System.CodeDom.CodeSnippetStatement>, <xref:System.CodeDom.CodeSnippetTypeMember> ou <xref:System.CodeDom.CodeSnippetCompileUnit>. No entanto, snippets não podem ser convertidos para outras linguagens automaticamente pelo CodeDOM.  
   
  Para obter a documentação para cada um dos tipos do CodeDOM, consulte a documentação de referência para o namespace <xref:System.CodeDom>.  
   
- Para uma verificação rápida para localizar o elemento de CodeDOM que representa um tipo específico de elemento de código, consulte a [Referência rápida do CodeDOM](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524).
+ Para uma verificação rápida para localizar o elemento de CodeDOM que representa um tipo específico de elemento de código, consulte a [Referência rápida do CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)).
