@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 703f60f48e1e569e0ffcab66ff7ccc91d4a49514
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058458"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093548"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabela de conversões numéricas implícitas (Referência de C#)
 
@@ -40,7 +40,7 @@ A tabela a seguir mostra as conversões implícitas predefinidas entre tipos num
   
 - Não há nenhuma conversão implícita para os tipos `char`, `byte` e `sbyte`.  
 
-- Não há nenhuma conversão implícita dos tipos `char`, `double` e `decimal`.
+- Não há nenhuma conversão implícita dos tipos `double` e `decimal`.
   
 - Não há nenhuma conversão implícita entre os tipos `decimal` e `float` ou os tipos `double`.  
   

@@ -3,12 +3,12 @@ title: Tipos de tupla – Guia C#
 description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155126"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332748"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla do C# #
 
@@ -82,7 +82,7 @@ Há duas condições nas quais os possíveis nomes de campos não são projetado
 
 Essas condições evitam a ambiguidade. Esses nomes causariam ambiguidade se fossem usados como nomes de campo em uma tupla. Nenhuma dessas condições causa erros de tempo de compilação. Em vez disso, os elementos sem nomes projetados não terão nomes semânticos projetados para eles.  Os exemplos a seguir demonstram essas condições:
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Essas situações não causam erros de compilador porque essa seria uma alteração significativa nos códigos escritos com C# 7.0, em que as projeções de nome de campo de tupla não estavam disponíveis.
 
@@ -90,29 +90,31 @@ Essas situações não causam erros de compilador porque essa seria uma alteraç
 
 Começando com o C# 7.3, os tipos de tupla oferecem suporte aos operadores `==` e `!=`. Esses operadores comparam cada membro do argumento da esquerda com cada membro do argumento da direita na ordem. Essas comparações são de curto-circuito. Elas interromperão a avaliação de membros assim que um par não for igual. O código a seguir exemplifica o uso de `==`, mas todas as regras de comparação se aplicam a `!=`. O exemplo de código a seguir mostra uma comparação de igualdade de dois pares de inteiros:
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 Há várias regras que tornam os testes de igualdade de tuplas mais convenientes. A igualdade de tupla executa [conversões lifted](~/_csharplang/spec/conversions.md#lifted-conversion-operators) se uma das tuplas for uma tupla que permite valor nulo, conforme mostrado no código a seguir:
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 A igualdade de tupla também executa conversões implícitas em cada membro de ambas as tuplas. Esses incluem conversões lifted, conversões widening ou outras conversões implícitas. Os exemplos a seguir mostram que um inteiro de uma tupla 2 pode ser comparado a um longo de tupla 2 devido à conversão implícita do inteiro para um longo:
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 Os nomes dos membros da tupla não participam em testes de igualdade. No entanto, se um dos operandos for uma tupla literal com nomes explícitos, o compilador gera o aviso CS8383 caso os nomes não correspondam aos nomes do outro operando.
 No caso em que ambos os operandos são literais de tupla, o aviso é no operando à direita, conforme mostrado no exemplo a seguir:
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 Por fim, as tuplas podem conter tuplas aninhadas. A igualdade de tupla compara a "forma" de cada operando por meio de tuplas aninhadas, conforme mostrado no exemplo a seguir:
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+É um erro de tempo de compilação comparar duas tuplas por igualdade (ou desigualdade) quando elas têm formas diferentes. O compilador não tentará nenhuma desconstrução das tuplas aninhadas para compará-las.
 
 ## <a name="assignment-and-tuples"></a>Atribuição e tuplas
 
-A linguagem oferece suporte à atribuição entre tipos de tuplas que têm o mesmo número de elementos, em que cada elemento do lado direito pode ser convertido implicitamente em seu elemento correspondente do lado esquerdo. Outras conversões não são consideradas para atribuições. Vamos examinar os tipos de atribuições que são permitidos entre tipos de tupla.
+A linguagem oferece suporte à atribuição entre tipos de tuplas que têm o mesmo número de elementos, em que cada elemento do lado direito pode ser convertido implicitamente em seu elemento correspondente do lado esquerdo. Outras conversões não são consideradas para atribuições. É um erro de tempo de compilação atribuir uma tupla a outra quando elas têm formas diferentes. O compilador não tentará nenhuma desconstrução das tuplas aninhadas para atribuí-las.
+Vamos examinar os tipos de atribuições que são permitidos entre tipos de tupla.
 
 Considere estas variáveis usadas nos exemplos a seguir:
 
@@ -146,7 +148,7 @@ Um dos usos mais comuns de tuplas é como um valor retornado do método. Vamos e
 > Esses exemplos calculam o desvio padrão de exemplo não corrigido.
 > A fórmula do desvio padrão de exemplo corrigida dividiria a soma das diferenças da média ao quadrado por (N-1) em vez de N, como o método de extensão `Average` faz. Consulte um texto sobre estatísticas para obter mais detalhes sobre as diferenças entre essas fórmulas para desvio padrão.
 
-O código anterior segue a fórmula típica para o desvio padrão. Ele produz a resposta correta, mas é uma implementação ineficiente. Esse método enumera a sequência de duas vezes: uma vez para produzir a média e uma vez para produzir a média do quadrado da diferença da média.
+O código anterior segue a fórmula típica para o desvio padrão. Ele produz a resposta correta, mas é uma implementação ineficiente. Esse método enumera a sequência duas vezes: uma vez para produzir a média, e uma vez para produzir a média do quadrado da diferença da média.
 (Lembre-se de que consultas LINQ são avaliadas lentamente, então o cálculo das diferenças da média e a média dessas diferenças compõem apenas uma enumeração.)
 
 Há uma alternativa fórmula que calcula o desvio padrão usando apenas uma enumeração da sequência.  Esse cálculo produz dois valores conforme enumera a sequência: a soma de todos os itens na sequência e a soma de cada valor ao quadrado:

@@ -1,45 +1,51 @@
 ---
 title: '>>Operador = – Referência de C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - '>>=_CSharpKeyword'
 helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: 8cc341c14ee1b90fde2abb369c187e57b4ce5c00
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 51914bb5e9ebffd5d868528b5a8d3072a956cea6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278974"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220907"
 ---
 # <a name="-operator-c-reference"></a>Operador >>= (Referência de C#)
 
 O operador de atribuição de deslocamento para a direita.
 
-## <a name="remarks"></a>Comentários
-
-Uma expressão da forma
+Uma expressão que usa o operador `>>=`, como
 
 ```csharp
 x >>= y
 ```
 
-é avaliada como
+equivale a
 
 ```csharp
 x = x >> y
 ```
 
-exceto que `x` é avaliado apenas uma vez. O [operador >>](right-shift-operator.md) desloca `x` para a direita em um valor especificado pelo `y`.
+exceto que `x` é avaliado apenas uma vez.
 
-O operador >>= não pode ser sobrecarregado diretamente, mas tipos definidos pelo usuário podem sobrecarregar o [operador >>](right-shift-operator.md) (consulte [operador](../keywords/operator.md)).
+O [operador `>>`](right-shift-operator.md) desloca o primeiro operando à direita pelo número de bits definido pelo seu segundo operando.
 
-## <a name="example"></a>Exemplo
+O exemplo a seguir demonstra o uso do operador `>>=`:
 
-[!code-csharp[csRefOperators#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#11)]
+[!code-csharp-interactive[right shift assignment](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#RightShiftAssignment)]
+
+## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
+
+Se um tipo definido pelo usuário [sobrecarregar](../keywords/operator.md) o [operador `>>`](right-shift-operator.md), o operador de atribuição à direita `>>=` ficará implicitamente sobrecarregado. Um tipo definido pelo usuário não pode sobrecarregar explicitamente o operador de atribuição à direita.
+
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, veja a seção [Atribuição composta](~/_csharplang/spec/expressions.md#compound-assignment) na [especificação da linguagem C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Consulte também
 

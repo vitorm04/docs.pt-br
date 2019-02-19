@@ -1,7 +1,7 @@
 ---
 title: '! Operador – referência do C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/14/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
@@ -9,24 +9,26 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 464bd658c9bf430191d84d3d5ad8d57173ab87c5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333220"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303706"
 ---
 # <a name="-operator-c-reference"></a>! operator (Referência de C#)
 
-O operador de negação lógica (`!`) é um operador unário que nega seu operando. Ele é definido para `bool` e retornará `true` se e somente se, o operando for `false`.
+O operador de negação lógica `!` é um operador unário que calcula a negação lógica do operando [bool](../keywords/bool.md). Ou seja, ele produz `true` se o operando for `false` e `false`, se o operando for `true`:
 
-## <a name="remarks"></a>Comentários
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalNegationExamples.cs#Example)]
 
-Os tipos definidos pelo usuário podem sobrecarregar o operador `!` (consulte [operador](../keywords/operator.md)).
+## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-## <a name="example"></a>Exemplo
+Tipos definidos pelo usuário podem [sobrecarregar](../keywords/operator.md) o operador `!`.
 
-[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Saiba mais na seção [Operador de negação lógica](~/_csharplang/spec/expressions.md#logical-negation-operator) na [especificação da linguagem C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Consulte também
 
