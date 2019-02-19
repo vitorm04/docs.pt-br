@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1227cbf85e72570bcb08f7f13168392b7c7b60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592569"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093678"
 ---
 # <a name="overview-of-the-net-framework"></a>Visão geral do .NET Framework
 
@@ -87,7 +87,7 @@ Como você esperaria de uma biblioteca de classes orientada a objeto, os tipos d
 
 - Aplicativos orientados a serviço usando o WCF (Windows Communication Foundation). Confira [Aplicativos orientados a serviço com WCF](../../../docs/framework/wcf/index.md).
 
-- Aplicativos habilitados para fluxo de trabalho usando o Windows Workflow Foundation (WF). Confira [Compilação de fluxos de trabalho no .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Aplicativos habilitados para fluxo de trabalho usando o Windows Workflow Foundation (WF). Confira [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
 As classes Windows Forms são um conjunto abrangente de tipos reutilizáveis que simplificam muito o desenvolvimento de GUI Windows. Se criar um aplicativo Web Form do ASP.NET, você poderá usar as classes Web Forms.
 
@@ -97,5 +97,5 @@ As classes Windows Forms são um conjunto abrangente de tipos reutilizáveis que
 - [Guia de instalação](../../../docs/framework/install/index.md)
 - [Guia de desenvolvimento](../../../docs/framework/development-guide.md)
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Exemplos do .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)
+- [Exemplos e tutoriais do .NET](../../samples-and-tutorials/index.md)
 - [Biblioteca de classes .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

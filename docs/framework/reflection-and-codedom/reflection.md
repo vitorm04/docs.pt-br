@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453077"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221230"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflexão no .NET Framework
-As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=nameWithType> permitem que você obtenha informações sobre os [assemblies](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) carregados e os tipos definidos neles, como [classes](../../../docs/standard/base-types/common-type-system.md#classes), [interfaces](../../../docs/standard/base-types/common-type-system.md#interfaces) e [tipos de valor](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.  
+As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=nameWithType> permitem que você obtenha informações sobre os [assemblies](../app-domains/assemblies-in-the-common-language-runtime.md) carregados e os tipos definidos neles, como [classes](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) e [tipos de valor](../../csharp/language-reference/keywords/value-types.md). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.
   
  O carregador [Common Language Runtime](../../../docs/standard/clr.md) gerencia os [domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md), que constituem limites definidos em torno de objetos que têm o mesmo escopo de aplicativo. Esse gerenciamento inclui carregar cada assembly no domínio do aplicativo apropriado e controlar o layout da memória da hierarquia de tipo em cada assembly.  
   
@@ -77,10 +77,10 @@ As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Ty
 |[Reflexão e tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Explica como a reflexão trata os parâmetros de tipo e argumentos de tipo de tipos genéricos e métodos genéricos.|  
 |[Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)|Descreve as regras que determinam até que nível a reflexão pode ser usada para descobrir informações de tipo e tipos de acesso.|  
 |[Dynamically Loading and Using Types](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md) (Carregando e usando tipos dinamicamente)|Descreve a interface de associação personalizada de reflexão que dá suporte à associação tardia.|  
-|[Como carregar assemblies no contexto somente reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Descreve o contexto de carregamento de somente reflexão. Mostra como carregar um assembly, como testar o contexto e como examinar os atributos aplicados a um assembly no contexto de somente reflexão.|  
+|[Como: Carregar assemblies no contexto somente de reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Descreve o contexto de carregamento de somente reflexão. Mostra como carregar um assembly, como testar o contexto e como examinar os atributos aplicados a um assembly no contexto de somente reflexão.|  
 |[Acessando atributos personalizados](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Demonstra o uso de reflexão para consultar a existência do atributo e os valores.|  
 |[Especificando nomes de tipo totalmente qualificados](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Descreve o formato dos nomes de tipo totalmente qualificados nos termos da BNF (forma de Backus-Naur) e a sintaxe necessária para especificar os caracteres especiais, os nomes de assembly, os ponteiros, as referências e as matrizes.|  
-|[Como conectar um delegado usando a reflexão](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Explica como criar um delegado para um método e conectar o delegado a um evento. Explica como criar um método de manipulação de eventos em tempo de execução usando <xref:System.Reflection.Emit.DynamicMethod>.|  
+|[Como: Conectar um delegado usando a reflexão](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Explica como criar um delegado para um método e conectar o delegado a um evento. Explica como criar um método de manipulação de eventos em tempo de execução usando <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Emissão de métodos e assemblies dinâmicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Explica como gerar métodos dinâmicos e assemblies dinâmicos.|  
   
 ## <a name="reference"></a>Referência  

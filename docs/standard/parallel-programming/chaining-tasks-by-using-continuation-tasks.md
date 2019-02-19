@@ -1,6 +1,6 @@
 ---
 title: Encadeando tarefas com tarefas de continuação
-ms.date: 03/30/2017
+ms.date: 02/11/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77be620180f1e19c01f47d8ab5cabe3e7d021aca
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129657"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219900"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadeando tarefas com tarefas de continuação
-Na programação assíncrona, é muito comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, isso foi feito usando os métodos de retorno de chamada. Na Biblioteca de Tarefas Paralelas, a mesma funcionalidade é fornecida pelas *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona invocada por outra tarefa, que é conhecida como a *antecessora*, quando a antecessora termina.  
+Na programação assíncrona, é comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, continuações foram feitas usando os métodos de retorno de chamada. Na Biblioteca de Tarefas Paralelas, a mesma funcionalidade é fornecida pelas *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona invocada por outra tarefa, que é conhecida como a *antecessora*, quando a antecessora termina.  
   
- As continuações são relativamente fáceis de usar, mas mesmo assim são muito poderosas e flexíveis. Por exemplo, você pode:  
+ As continuações são relativamente fáceis de usar, mas mesmo assim são poderosas e flexíveis. Por exemplo, você pode:  
   
 -   Passe dados da antecessora para a continuação.  
   
@@ -44,7 +44,10 @@ Na programação assíncrona, é muito comum para uma operação assíncrona, ap
  Uma continuação é um <xref:System.Threading.Tasks.Task> e não bloqueia o thread em que é iniciada. Chame o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> para bloquear até que a tarefa de continuação seja concluída.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Criação de uma continuação para uma única antecessora  
- Você cria uma continuação que é executada quando seu antecessor é concluído chamando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. O exemplo a seguir mostra o padrão básico (para esclarecer, o tratamento de exceções é omitido). Ela executa uma tarefa antecessora, `taskA`, que retorna um objeto <xref:System.DayOfWeek> que indica o nome do dia da semana atual. Quando a antecessora é concluída, a tarefa de continuação, `continuation`, recebe a antecessora e exibe uma cadeia de caracteres que inclui seu resultado.  
+ Você cria uma continuação que é executada quando seu antecessor é concluído chamando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. O exemplo a seguir mostra o padrão básico (para esclarecer, o tratamento de exceções é omitido). Ela executa uma tarefa antecessora, `taskA`, que retorna um objeto <xref:System.DayOfWeek> que indica o nome do dia da semana atual. Quando a antecessora é concluída, a tarefa de continuação, `continuation`, recebe a antecessora e exibe uma cadeia de caracteres que inclui seu resultado. 
+
+> [!NOTE]
+> Os exemplos de C# neste artigo usam o modificador `async` no método `Main`. Este recurso está disponível no C# 7.1 e versões posteriores. As versões anteriores geram [`CS5001`](../../csharp/misc/cs5001.md) ao compilar este código de exemplo. Você precisará definir a versão da linguagem de programação para C# 7.1 ou mais recente. Você pode aprender como configurar a versão da linguagem de programação no artigo sobre [configuração da versão da linguagem](../../csharp/language-reference/configure-language-version.md).
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
@@ -82,13 +85,13 @@ Na programação assíncrona, é muito comum para uma operação assíncrona, ap
 ## <a name="canceling-a-continuation"></a>Cancelamento de uma continuação  
  A propriedade <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> de uma continuação é definida como <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> nas seguintes situações:  
   
--   Gera uma exceção <xref:System.OperationCanceledException> em resposta a uma solicitação de cancelamento. Assim como acontece com qualquer tarefa, se a exceção contiver o mesmo token que foi passado para a continuação, ela será tratada como uma confirmação do cancelamento cooperativa.  
+-   Gera uma exceção <xref:System.OperationCanceledException> em resposta a uma solicitação de cancelamento. Assim como acontece com qualquer tarefa, se a exceção contiver o mesmo token que foi passado para a continuação, ela será tratada como uma confirmação do cancelamento cooperativo.  
   
 -   A continuação recebe um <xref:System.Threading.CancellationToken?displayProperty=nameWithType> cuja propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> é `true`. Nesse caso, a continuação não é iniciada e faz a transição para o estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.  
   
 -   A continuação nunca é executada porque a condição definida por seu argumento <xref:System.Threading.Tasks.TaskContinuationOptions> não foi atendida. Por exemplo, se um antecessor entrar em um estado <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>, sua continuação que recebeu a opção <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> não será executada, mas fará a transição para o estado <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
   
- Se uma tarefa e sua continuação representam duas partes da mesma operação lógica, você pode passar o mesmo token de cancelamento para as duas tarefas, conforme mostrado no exemplo a seguir. Ele consiste em uma antecessora que gera uma lista de inteiros divisíveis por 33, que é passada para a continuação. Por sua vez, a continuação exibe a lista. A antecessora e a continuação pausam regularmente por intervalos aleatórios. Além disso, um objeto <xref:System.Threading.Timer?displayProperty=nameWithType> é usado para executar o método `Elapsed` após um intervalo de tempo limite de cinco segundos. Isso chama o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>, o que faz com que a tarefa em execução no momento chame o método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType>. O método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> é chamado ou não quando o antecessor ou sua continuação está em execução, dependendo da duração das pausas geradas aleatoriamente. Se a antecessora for cancelada, a continuação não será iniciada. Se a antecessora não for cancelada, o token ainda poderá ser usado para cancelar a continuação.  
+ Se uma tarefa e sua continuação representam duas partes da mesma operação lógica, você pode passar o mesmo token de cancelamento para as duas tarefas, conforme mostrado no exemplo a seguir. Ele consiste em uma antecessora que gera uma lista de inteiros divisíveis por 33, que é passada para a continuação. Por sua vez, a continuação exibe a lista. A antecessora e a continuação pausam regularmente por intervalos aleatórios. Além disso, um objeto <xref:System.Threading.Timer?displayProperty=nameWithType> é usado para executar o método `Elapsed` após um intervalo de tempo limite de cinco segundos. Este exemplo chama o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>, o que faz com que a tarefa em execução no momento chame o método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType>. O método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> é chamado ou não quando o antecessor ou sua continuação está em execução, dependendo da duração das pausas geradas aleatoriamente. Se a antecessora for cancelada, a continuação não será iniciada. Se a antecessora não for cancelada, o token ainda poderá ser usado para cancelar a continuação.  
   
  [!code-csharp[TPL_Continuations#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/cancellation1.cs#3)]
  [!code-vb[TPL_Continuations#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/cancellation1.vb#3)]  
@@ -103,7 +106,7 @@ Na programação assíncrona, é muito comum para uma operação assíncrona, ap
  As continuações descartadas não serão iniciadas.  
   
 ## <a name="continuations-and-child-tasks"></a>Continuações e tarefas filhas  
- Uma continuação não é executada até que a antecessora e todas suas tarefas filhas anexadas sejam concluídas. A continuação não espera a conclusão de tarefas filhas desanexadas. Os dois exemplos a seguir ilustram tarefas filhas anexadas e desanexadas de uma antecessora que cria uma continuação. No exemplo a seguir, a continuação é executada somente após a conclusão de todas as tarefas filhas e executar o exemplo várias vezes produzirá uma saída idêntica em todas elas. Observe que o exemplo inicia o antecessor chamando o método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>, pois, por padrão, o método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> cria uma tarefa pai de opção de criação de tarefa cujo padrão é <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>.  
+ Uma continuação não é executada até que a antecessora e todas suas tarefas filhas anexadas sejam concluídas. A continuação não espera a conclusão de tarefas filhas desanexadas. Os dois exemplos a seguir ilustram tarefas filhas anexadas e desanexadas de uma antecessora que cria uma continuação. No exemplo a seguir, a continuação é executada somente após a conclusão de todas as tarefas filhas e executar o exemplo várias vezes produzirá uma saída idêntica em todas elas. O exemplo inicia o antecessor chamando o método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>, pois, por padrão, o método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> cria uma tarefa pai de opção de criação de tarefa cujo padrão é <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>.  
   
  [!code-csharp[TPL_Continuations#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/attached1.cs#9)]
  [!code-vb[TPL_Continuations#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/attached1.vb#9)]  

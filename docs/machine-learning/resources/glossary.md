@@ -3,12 +3,12 @@ title: Glossário de aprendizado de máquina – ML.NET
 description: Um glossário de termos essenciais sobre o aprendizado de máquina, que são úteis ao criar seus modelos personalizados no ML.NET.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415371"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092430"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
@@ -16,7 +16,7 @@ A lista a seguir é uma compilação de termos essenciais sobre o aprendizado de
 
 ## <a name="accuracy"></a>Precisão
 
-Na [classificação](#classification), a precisão consiste no número de itens classificados corretamente dividido pelo número total de itens no conjunto de testes. Varia de 0 (menos preciso) a 1 (mais preciso). A precisão é uma das métricas de avaliação do desempenho do seu modelo. Considere isso em conjunção com [precisão](#precision), [recall](#recall)e [F-score](#f-score).
+Na [classificação](#classification), a precisão consiste no número de itens classificados corretamente dividido pelo número total de itens no conjunto de testes. Varia de 0 (menos preciso) a 1 (mais preciso). A precisão é uma das métricas de avaliação do desempenho do modelo. Considere isso em conjunção com [precisão](#precision), [recall](#recall)e [F-score](#f-score).
 
 ## <a name="area-under-the-curve-auc"></a>Área sob a curva (AUC)
 

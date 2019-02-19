@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540555"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220972"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Visão geral do Dynamic Language Runtime
 
@@ -80,7 +80,7 @@ Exemplos de linguagens desenvolvidos usando o DLR incluem:
 
  O DLR agrega um conjunto de serviços ao CLR para melhorar o suporte a linguagens dinâmicas. Tais serviços incluem os seguintes:
 
--   Árvores de expressão. O DLR usa árvores de expressão para representar a semântica da linguagem. Para tal, o DLR tem árvores de expressão LINQ estendidos para incluir o fluxo de controle, a atribuição e outros nós de modelagem de linguagem. Para obter mais informações, consulte [Árvores de Expressão](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).
+-   Árvores de expressão. O DLR usa árvores de expressão para representar a semântica da linguagem. Para tal, o DLR tem árvores de expressão LINQ estendidos para incluir o fluxo de controle, a atribuição e outros nós de modelagem de linguagem. Para obter mais informações, consulte [Árvores de expressão (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) ou [Árvores de expressão (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
 -   Cache de site de chamada. Um *site de chamada dinâmico* é um local no código em que você executa uma operação como `a + b` ou `a.b()` em objetos dinâmicos. O DLR armazena em cache as características de `a` e `b` (geralmente os tipos desses objetos) e informações sobre a operação. Se uma operação tiver sido executada anteriormente, o DLR recupera todas as informações necessárias do cache para expedição rápida.
 
@@ -96,5 +96,6 @@ O DLR usa associadores em sites de chamada para se comunicar não apenas com o .
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Common Language Runtime](../../../docs/standard/clr.md)
-- [Árvores de Expressão](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [Árvores de expressão (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Árvores de expressão (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Passo a passo: Criar e usar objetos dinâmicos](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

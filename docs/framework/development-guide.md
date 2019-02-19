@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123755"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092950"
 ---
 # <a name="net-framework-development-guide"></a>Guia de Desenvolvimento do .NET Framework
 Esta seção explica como criar, configurar, depurar, proteger e implantar aplicativos .NET Framework. Esta seção também fornece informações sobre áreas de tecnologia como programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
@@ -79,5 +79,5 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Ferramentas](../../docs/framework/tools/index.md)  
  Descreve as ferramentas que ajudam a desenvolver, configurar e implantar aplicativos usando tecnologias do .NET Framework.  
   
- [Exemplos do .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- Fornece links para a Galeria de Exemplos de Código do MSDN com exemplos de aplicativos que demonstram tecnologias .NET Framework.
+ [Exemplos e tutoriais do .NET](../samples-and-tutorials/index.md)  
+ Fornece links para exemplos e tutoriais que ajudam você a aprender sobre o .NET.

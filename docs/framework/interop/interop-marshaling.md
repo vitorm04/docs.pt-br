@@ -1,5 +1,5 @@
 ---
-title: marshaling de interoperabilidade
+title: Realizando marshaling de interoperabilidade
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, COM interop
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453249"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221245"
 ---
-# <a name="interop-marshaling"></a>marshaling de interoperabilidade
+# <a name="interop-marshaling"></a>Realizando marshaling de interoperabilidade
 <a name="top"></a> O marshaling de interoperabilidade controla como os dados são passados em argumentos de método e valores retornados entre memória gerenciada e não gerenciada e durante chamadas. O marshaling de interoperabilidade é uma atividade de tempo de execução executada pelo serviço de marshaling do Common Language Runtime.  
   
  A maioria dos tipos de dados têm representações comuns tanto na memória gerenciada quanto na não gerenciada. O marshaler de interoperabilidade manipula esses tipos para você. Outros tipos podem ser ambíguos ou não representados em absoluto na memória gerenciada.  
@@ -148,12 +148,12 @@ Chamadas remotas através de firewalls usando SOAP ou a classe TcpChannel
 |[Comportamento de marshaling padrão](default-marshaling-behavior.md)|Descreve as regras que o serviço de marshaling de interoperabilidade usa para realizar marshaling de dados.|  
 |[Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)|Descreve como declarar parâmetros de método e passar argumentos para funções exportadas por bibliotecas não gerenciadas.|  
 |[Realizando marshaling em dados com interoperabilidade COM](marshaling-data-with-com-interop.md)|Descreve como personalizar os wrappers COM para alterar o comportamento de marshaling.|  
-|[Como: migrar código DCOM gerenciado para o WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descreve como migrar do DCOM para o WCF.|  
-|[Como mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)|Descreve como mapear exceções personalizadas para HRESULTs e fornece o mapeamento completo de cada HRESULT para a respectiva classe de exceção comparável no .NET Framework.|  
-|[Interoperação usando tipos genéricos](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Descreve quais ações têm suporte ao usar tipos genéricos para interoperabilidade COM.|  
+|[Como: Migrar código DCOM gerenciado para o WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descreve como migrar do DCOM para o WCF.|  
+|[Como: Mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)|Descreve como mapear exceções personalizadas para HRESULTs e fornece o mapeamento completo de cada HRESULT para a respectiva classe de exceção comparável no .NET Framework.|  
+|[Interoperação usando tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Descreve quais ações têm suporte ao usar tipos genéricos para interoperabilidade COM.|  
 |[Interoperação com código não gerenciado](index.md)|Descreve os serviços de interoperabilidade fornecidos pelo Common Language Runtime.|  
 |[Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Fornece links para obter mais informações sobre como incorporar componentes COM no aplicativo do .NET Framework.|  
-|[Considerações sobre design para interoperação](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Fornece dicas para escrever componentes COM integrados.|  
+|[Considerações sobre design para interoperação](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Fornece dicas para escrever componentes COM integrados.|  
   
  [Voltar ao início](#top)  
   
