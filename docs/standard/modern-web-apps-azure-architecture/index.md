@@ -4,13 +4,8 @@ description: Um guia que fornece diretrizes de ponta a ponta para a criação de
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827858"
 ---
+
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Arquitetar Aplicativos Web Modernos com o ASP.NET Core e o Azure
 
 ![imagem da capa](./media/cover.png)
@@ -107,7 +102,7 @@ Fique à vontade para encaminhar este guia para sua equipe para ajudar a garanti
 ## <a name="references"></a>Referências
 
 - **Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor**  
-  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
 >[Avançar](modern-web-applications-characteristics.md)
