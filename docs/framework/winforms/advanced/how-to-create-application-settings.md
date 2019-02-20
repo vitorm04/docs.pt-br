@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558950"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441353"
 ---
 # <a name="how-to-create-application-settings"></a>Como: Criar configurações de aplicativo
 Usando código gerenciado, é possível criar novas configurações de aplicativo e associá-las a propriedades no seu formulário ou aos controles de formulário, para que essas configurações sejam carregadas e salvas automaticamente no tempo de execução.  
   
  No procedimento a seguir, você criar manualmente uma classe wrapper que deriva de <xref:System.Configuration.ApplicationSettingsBase>. Uma propriedade publicamente acessível é adicionada a essa classe para cada configuração de aplicativo que você desejar expor.  
   
- Também é possível executar esse procedimento usando o mínimo de código possível no designer do Visual Studio.  Consulte também [como: Criar configurações de aplicativo usando o Designer](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Também é possível executar esse procedimento usando o mínimo de código possível no designer do Visual Studio.  Consulte também [como: Criar configurações de aplicativo usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/wabtadw6(v=vs.100)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Criar novas configurações de aplicativo com programação  
   

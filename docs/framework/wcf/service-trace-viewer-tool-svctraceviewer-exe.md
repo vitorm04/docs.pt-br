@@ -2,12 +2,12 @@
 title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510592"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442887"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclar facilmente, exibir e filtrar as mensagens de rastreamento no log de forma que você possa diagnosticar, reparar e verificar problemas de serviço do WCF.  
@@ -452,4 +452,4 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 ## <a name="see-also"></a>Consulte também
 - [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Rastreamento de atividades e propagação para correlação de rastreamento de ponta a ponta](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+- [Rastreamento ponta a ponta](./diagnostics/tracing/end-to-end-tracing.md)

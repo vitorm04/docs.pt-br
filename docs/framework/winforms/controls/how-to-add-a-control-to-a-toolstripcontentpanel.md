@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: 646451be26e8e6e833b9b204aee722aa3e8a5666
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 193ad1e8c85e0b8830eb4f6efcb87a154b82949f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584656"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442445"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Como: Adicionar um controle a um ToolStripContentPanel
 Você pode adicionar programaticamente um ou mais controles para um <xref:System.Windows.Forms.ToolStripContentPanel>.  
@@ -28,7 +28,7 @@ Você pode adicionar programaticamente um ou mais controles para um <xref:System
   
 -   Referências aos assemblies System, System. Data e System.  
   
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Confira também [Como: Compilar e executar um exemplo de código completa do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) ou [caixa de diálogo de tarefas do ToolStripContainer](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.ToolStripContentPanel>

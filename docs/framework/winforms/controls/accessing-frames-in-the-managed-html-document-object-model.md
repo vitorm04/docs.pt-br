@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: d90c2d7f8be2448e1d4f10410b27bc5132cdb16a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e42a4f63245c16bddc219f6fff8205121f6d705c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653821"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443218"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acessando quadros no Document Object Model HTML gerenciado
 Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter seus próprios documentos HTML distintos. Usar quadros facilita a criação de páginas HTML na qual uma ou mais partes da página permanecem estáticas, como uma barra de navegação, enquanto outros quadros alterar seu conteúdo constantemente.  
@@ -38,8 +38,6 @@ Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter s
   
  Essa regra também se aplica a janelas abertas usando o <xref:System.Windows.Forms.HtmlWindow.Open%2A> e <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> métodos. Se a janela aberta estiver em um domínio diferente da página hospedada no <xref:System.Windows.Forms.WebBrowser> controle, você não poderá mover a janela ou examinar seu conteúdo. Essas restrições também serão aplicadas se você usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir um site da Web que é diferente do site da Web usado para implantar seu aplicativo baseado em Windows Forms. Se você usar [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] tecnologia de implantação para instalar o aplicativo do site da Web A e você usar o <xref:System.Windows.Forms.WebBrowser> para exibir o site da Web B, você não será capaz de dados de acesso do site B.  
   
- Para obter mais informações sobre scripts entre sites, consulte [sobre script Cross-Frame e segurança](https://msdn.microsoft.com/library/ms533028.aspx).  
-  
 ## <a name="see-also"></a>Consulte também
-- [Elemento de quadro &#124; objeto de quadro](https://msdn.microsoft.com/library/ms535250.aspx)
+- [\<quadro > elemento](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
 - [Usando o Modelo de Objeto do Documento HTML gerenciado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

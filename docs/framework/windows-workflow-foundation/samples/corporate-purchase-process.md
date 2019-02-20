@@ -2,12 +2,12 @@
 title: Processo de compra corporativo
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837174"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442237"
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
 Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.
@@ -94,7 +94,8 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 |PurchaseProcessHost.cs|Implementação de um host para o fluxo de trabalho. O host abstrai os detalhes de fluxo de trabalho e é usado em todos os aplicativos cliente carregar, executar, e interagir com as instâncias de fluxo de trabalho de `PurchaseProcess` .|  
 |PurchaseProcessWorkflow.cs|Uma atividade que contém a definição de fluxo de trabalho do processo de compra (deriva de <xref:System.Activities.Activity>).<br /><br /> As atividades que derivam de <xref:System.Activities.Activity> compor a funcionalidade montando atividades personalizados existentes e atividades de biblioteca de atividade de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] . Montar as atividades é a maneira mais básica de criar a funcionalidade personalizada.|  
 |WaitForVendorProposal.cs|Esta atividade personalizado é derivado de <xref:System.Activities.NativeActivity> e cria-se um indexador que deve ser nomeado que posteriormente por um fornecedor para enviar a proposta.<br /><br /> As atividades que derivam de <xref:System.Activities.NativeActivity>, como aqueles que derivam de <xref:System.Activities.CodeActivity>, criam a funcionalidade imperativa substituindo <xref:System.Activities.NativeActivity.Execute%2A>, mas também têm acesso a qualquer funcionalidade de tempo de execução de fluxo de trabalho com <xref:System.Activities.ActivityContext> que é passado para o método de `Execute` . Este contexto tem suporte para agendar e as atividades filhos cancelar, configurando sem persistem as zonas (blocos de execução durante o tempo de execução não persiste os dados de fluxo de trabalho, como dentro de transações atômicas), e objetos de <xref:System.Activities.Bookmark> (alças para continuar fluxos de trabalho em pausa).|  
-|TrackingParticipant.cs|<xref:System.Activities.Tracking.TrackingParticipant> que recebe todos os eventos de rastreamento e o salva em um arquivo de texto.<br /><br /> Os participantes de rastreamento são adicionados à instância do fluxo de trabalho como extensões.|  
+|TrackingParticipant.cs|
+  <xref:System.Activities.Tracking.TrackingParticipant> que recebe todos os eventos de rastreamento e o salva em um arquivo de texto.<br /><br /> Os participantes de rastreamento são adicionados à instância do fluxo de trabalho como extensões.|  
 |XmlWorkflowInstanceStore.cs|Um personalizado <xref:System.Runtime.DurableInstancing.InstanceStore> que salva aplicativos de fluxo de trabalho para arquivos XML.|  
 |XmlPersistenceParticipant.cs|Um personalizado <xref:System.Activities.Persistence.PersistenceParticipant> que salva uma instância do aplicativo de propostas para um arquivo XML.|  
 |AsyncResult.cs/CompletedAsyncResult.cs|O auxiliar classe implementando o padrão assíncrono para componentes de persistência.|  
@@ -108,7 +109,7 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 |RequestForProposal|Uma solicitação para propostas (RFP) é um convite para que fornecedores enviem propostas em uma mercadorias ou em um determinado serviço.|  
 |VendorProposal|Uma proposta enviada por um fornecedor a um RFP concrete.|  
 |VendorRepository|O armazenamento de fornecedores. Essa implementação contém uma coleção de memória das instâncias de fornecedor e métodos para expor essas instâncias.|  
-|RfpRepository|O armazenamento de solicitações para propostas. Essa implementação contém usa Linq para XML consulte o arquivo XML de aplicativos de propostas gerados pela persistência esquematizada. Essa classe implementa [System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx).|  
+|RfpRepository|O armazenamento de solicitações para propostas. Essa implementação contém usa Linq para XML consulte o arquivo XML de aplicativos de propostas gerados pela persistência esquematizada. |  
 |IOHelper|Essa classe trata todos os problemas de I/O-related (pastas, os caminhos, e assim por diante).|  
   
 ### <a name="web-client"></a>Clientes web  
@@ -127,7 +128,7 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 |Formulário|Descrição|  
 |-|-|  
 |NewRfp|Cria e envia uma nova solicitação para propostas.|  
-|ShowProposals|Mostrar todas as solicitações ativos e concluídas para propostas. **Observação:** talvez você precise clicar o **atualizar** botão na interface do usuário para ver as alterações na tela depois de criar ou modificar uma solicitação de proposta.|  
+|ShowProposals|Mostrar todas as solicitações ativos e concluídas para propostas. **Observação:**  Você talvez precise clicar o **Refresh** botão na interface do usuário para ver as alterações na tela depois de criar ou modificar uma solicitação de proposta.|  
 |SubmitProposal|Obter uma proposta de um fornecedor em uma solicitação concreta para propostas. Essa janela é usada por fornecedores.|  
 |ViewRfp|Mostrar todas as informações sobre uma solicitação para propostas (propostas recebidas, datas, valores, e outras informações.) Essa janela é usada somente pelo criador de solicitação para propostas.|  
   
@@ -155,20 +156,20 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 ### <a name="web-client-options"></a>Opções de cliente web  
   
--   **Criar um novo RFP&lt;1**: cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
+-   **Criar um novo RFP&lt;1**: Cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
   
--   **Atualizar**: atualiza a lista de RFPs ativo e concluído na janela principal.  
+-   **Atualizar**: Atualiza a lista de RFPs ativo e concluído na janela principal.  
   
--   **Modo de exibição**: mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não for concluído.)  
+-   **Exibir**: Mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não for concluído.)  
   
--   Exibir como: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.  
+-   Exiba como: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.  
   
 ### <a name="winforms-client-options"></a>Opções de cliente de WinForms  
   
--   **Criar RFP**: cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
+-   **Criar RFP**: Cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
   
--   **Atualizar**: atualiza a lista de RFPs ativo e concluído na janela principal.  
+-   **Atualizar**: Atualiza a lista de RFPs ativo e concluído na janela principal.  
   
--   **Exibir RFP**: mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
+-   **Exibir RFP**: Mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
   
 -   **Conectar-se como**: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: a920a81cbcb3ef097cf5ff72233c74b612c2bc64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 964597f2e47cee8f61111a684375e73e8a13107d
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645555"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442341"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
 Aplicativos do Windows Forms e controles podem interoperar com aplicativos não gerenciados, com algumas restrições. As seções a seguir descrevem os cenários e as configurações com suporte em controles e aplicativos do Windows Forms e aqueles que não têm suporte.  
@@ -58,8 +58,8 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
 ## <a name="see-also"></a>Consulte também
 - [Windows Forms e Aplicativos Não Gerenciados](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Interoperabilidade COM em Aplicativos .NET Framework](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Exemplos de interoperabilidade COM](https://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)
+- [Interoperabilidade COM em Aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [Exemplos de interoperabilidade COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
 - [Aximp.exe (Importador de Controle ActiveX do Windows Forms)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Expondo componentes do .NET Framework ao COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Empacotando um assembly para COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)

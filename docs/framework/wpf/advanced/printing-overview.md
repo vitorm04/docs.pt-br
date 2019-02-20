@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef88c9c2a7569be518794ee9083d1bf5c266d975
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695602"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442055"
 ---
 # <a name="printing-overview"></a>Visão geral da impressão
 Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando o Windows Presentation Foundation (WPF) têm um novo conjunto avançado de gerenciamento de sistema de impressão e imprimir [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Com o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alguns desses aprimoramentos do sistema de impressão também estão disponíveis para os desenvolvedores que criam aplicativos do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e desenvolvedores que usam código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e o caminho de impressão [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -29,7 +29,7 @@ Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando o Windo
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>Sobre XPS  
- O [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] é um formato de documento eletrônico, um formato de arquivo de spool e uma linguagem de descrição de página. É um formato de documento aberto que usa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] e outros padrões do setor para criar documentos multiplataforma. O [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] simplifica o processo pelo qual os documentos digitais são criados, compartilhados, impressos, exibidos e arquivados. Para obter informações adicionais sobre [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], consulte o [Site da Web do XPS](https://www.microsoft.com/xps).  
+ O [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] é um formato de documento eletrônico, um formato de arquivo de spool e uma linguagem de descrição de página. É um formato de documento aberto que usa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] e outros padrões do setor para criar documentos multiplataforma. O [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] simplifica o processo pelo qual os documentos digitais são criados, compartilhados, impressos, exibidos e arquivados. Para saber mais sobre [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], consulte [documentos XPS](/windows/desktop/printdocs/documents).  
   
  Várias técnicas para impressão de conteúdo com base em [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] usando o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são demonstradas em [Imprimir arquivos XPS de forma programática](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Talvez seja útil consultar esses exemplos durante o exame do conteúdo contido neste tópico. (Os desenvolvedores de código não gerenciado devem consultar a documentação para o [função MXDC_ESCAPE](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). Os desenvolvedores de formulários do Windows devem usar o [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] no <xref:System.Drawing.Printing> namespace que não oferece suporte completo [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] caminho de impressão, mas dá suporte a um caminho de impressão híbrido de GDI para XPS. Consulte **Arquitetura de caminho de impressão** abaixo).  
   
@@ -144,6 +144,6 @@ Para aplicativos que não exigem a funcionalidade ou suporte [!INCLUDE[TLA2#tla_
 - <xref:System.Printing.PrintQueue>
 - [Tópicos de instruções](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
 - [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [XPS](https://www.microsoft.com/xps)
+- [Documentos XPS](/windows/desktop/printdocs/documents)
 - [Serialização e armazenamento de documentos](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
 - [Microsoft XPS Document conversor (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

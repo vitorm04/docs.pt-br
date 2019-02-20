@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f838f94698375eca27027c4769fcc5f54f96528c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195616"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443179"
 ---
 # <a name="helpprovider-component-windows-forms"></a>Componente HelpProvider (Windows Forms)
 Os formulários do Windows `HelpProvider` componente é usado para associar um arquivo de ajuda a Ajuda HTML 1.x (um arquivo. chm, produzido com o HTML Help Workshop, ou um arquivo. htm) com seu aplicativo baseado em Windows.  
@@ -33,4 +33,4 @@ Os formulários do Windows `HelpProvider` componente é usado para associar um a
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
- Consulte também [sistemas de Ajuda em aplicativos do Windows Forms](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).
+ Consulte também [sistemas de Ajuda em aplicativos do Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).

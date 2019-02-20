@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726436"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441197"
 ---
 # <a name="printing-how-to-topics"></a>Tópicos explicativos de impressão
 Os tópicos nesta seção demonstram como usar os recursos de impressão e gerenciamento do sistema de impressão incluídas no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bem como o novo caminho de impressão do [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
@@ -52,4 +52,4 @@ Os tópicos nesta seção demonstram como usar os recursos de impressão e geren
 - <xref:System.Printing.Interop>
 - [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)
 - [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [XPS](https://www.microsoft.com/xps)
+- [Documentos XPS](/windows/desktop/printdocs/documents)

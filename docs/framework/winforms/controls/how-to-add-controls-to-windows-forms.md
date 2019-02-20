@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611352"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443166"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Como: Adicionar controles ao Windows Forms
 A maioria dos formulários é projetada adicionando controles à superfície do formulário para definir uma interface do usuário (IU). Um *controle* é um componente em um formulário usado para exibir informações ou aceitar a entrada do usuário. Para obter mais informações sobre controles, consulte [Controles do Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
@@ -24,7 +24,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
   
 ### <a name="to-draw-a-control-on-a-form"></a>Desenhar um controle em um formulário  
   
-1.  Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  Na **Caixa de ferramentas**, clique no controle que você deseja adicionar ao formulário.  
   
@@ -37,7 +37,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
   
 ### <a name="to-drag-a-control-to-a-form"></a>Arrastar um controle para um formulário  
   
-1.  Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  Na **Caixa de ferramentas**, clique no controle que você deseja e arraste-o para o formulário.  
   

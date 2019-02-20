@@ -2,12 +2,12 @@
 title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 29fc675e0eee37bac7cd6a9e309fa68b29bf28c8
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202283"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442874"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 Dustin Metzgar
@@ -21,11 +21,11 @@ Dustin Metzgar
  O desempenho componente de fluxo de trabalho individual disparou por pedidos de magnitude entre WF3 e WF4.  Isso deixa a lacuna entre os serviços do Windows Communication Foundation (WCF) de mão-codificados e serviços de fluxo de trabalho WCF para ser muito pequeno.  A latência de fluxo de trabalho foi reduzida significativamente em WF4.  O desempenho de persistência gerado por um fator de 2,5 - 3,0.  Monitoramento da integridade por meio de acompanhamento de fluxo de trabalho tem significativamente menos sobrecarga.  Essas são razões de migrar ou peso a adotar WF4 em seus aplicativos.
 
 ## <a name="terminology"></a>Terminologia
- A versão de [!INCLUDE[wf1](../../../includes/wf1-md.md)] introduziu em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] será chamada como WF4 para o restante deste tópico.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi introduzido dentro. A rede e 3,0 tem algumas revisões menores com [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. A versão de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] de base de fluxo de trabalho será chamada como WF3 para o restante deste tópico. WF3 é enviado em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] lado a lado com WF4. Para obter mais informações sobre como migrar os artefatos WF3 a WF4, consulte: [guia de migração do Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313)
+ A versão de [!INCLUDE[wf1](../../../includes/wf1-md.md)] introduziu em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] será chamada como WF4 para o restante deste tópico.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi introduzido dentro. A rede e 3,0 tem algumas revisões menores com [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. A versão de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] de base de fluxo de trabalho será chamada como WF3 para o restante deste tópico. WF3 é enviado em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] lado a lado com WF4. Para obter mais informações sobre como migrar os artefatos WF3 a WF4, consulte: [Guia de migração do Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313)
 
  Windows Communication Foundation (WCF) é um modelo de programação unificado da Microsoft para a criação de aplicativos orientados a serviço. Foi introduzido principalmente como parte. A rede 3,0 juntamente com WF3 e agora é um dos componentes-chave de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
 
- Windows Server AppFabric é um conjunto de tecnologias integrados que tornam mais fácil criar, redimensionar e gerenciar Web e aplicativos compostos que executam no IIS. Fornece ferramentas para monitorar e gerenciar serviços e fluxos de trabalho. Para obter mais informações, consulte [do Windows Server AppFabric](https://msdn.microsoft.com/windowsserver/ee695849.aspx)
+ Windows Server AppFabric é um conjunto de tecnologias integrados que tornam mais fácil criar, redimensionar e gerenciar Web e aplicativos compostos que executam no IIS. Fornece ferramentas para monitorar e gerenciar serviços e fluxos de trabalho. Para obter mais informações, consulte [do Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Objetivos
  O objetivo deste tópico é mostrar as características de desempenho de WF4 com os dados medidas para diferentes cenários. Também fornece comparações detalhadas entre WF4 e WF3, e mostra o grandes aprimoramentos que foram feitas nessa nova revisão. Os cenários e os dados apresentados neste artigo determinam o custo subjacentes de diferentes aspectos de WF4 e de WF3. Esses dados são úteis para entender as características de desempenho de WF4 e podem ser úteis em migrações de planejamento de WF3 a WF4 ou WF4 de uso durante o desenvolvimento de aplicativos. No entanto, cuidado deve ser recolhido as conclusões desenhadas de dados apresentados neste artigo. O desempenho de um aplicativo de fluxo de trabalho composto é altamente dependente em como o fluxo de trabalho é implementado e como os diferentes componentes são integrados. Se deve abranger cada aplicativo para determinar as características de desempenho do aplicativo.
@@ -109,7 +109,8 @@ Dustin Metzgar
  O fluxo de trabalho da sequência contém uma atividade de <xref:System.Activities.Statements.While> com uma atividade filho no loop que não executa qualquer trabalho.
 
 ### <a name="replicator-compared-to-parallelforeach"></a>Replicator comparou a ParallelForEach
- <xref:System.Workflow.Activities.ReplicatorActivity> em WF3 tem modos de execução sequencial e paralela.  No modo sequencial, o desempenho da atividade é semelhante a <xref:System.Workflow.Activities.WhileActivity>.  <xref:System.Workflow.Activities.ReplicatorActivity> é mais útil para execução paralela.  O WF4 analógico para essa é a atividade de <xref:System.Activities.Statements.ParallelForEach%601> .
+ <xref:System.Workflow.Activities.ReplicatorActivity> em WF3 tem modos de execução sequencial e paralela.  No modo sequencial, o desempenho da atividade é semelhante a <xref:System.Workflow.Activities.WhileActivity>.  
+  <xref:System.Workflow.Activities.ReplicatorActivity> é mais útil para execução paralela.  O WF4 analógico para essa é a atividade de <xref:System.Activities.Statements.ParallelForEach%601> .
 
  O diagrama a seguir mostra os fluxos de trabalho usados para esse teste. O trabalho WF3 estão à esquerda e o trabalho WF4 estão à direita.
 
@@ -143,7 +144,8 @@ class WorkScope :
     }
 ```
 
- O manipulador de falha se destina a atividade de `WorkScope` . O fluxo de trabalho WF4 é igualmente simplista.  <xref:System.Activities.Statements.CompensableActivity> tem um corpo e um manipulador de compensação.  Um explícito compensa é seguir na sequência.  A atividade de atividade de corpo e do manipulador de compensação é ambas são implementações:
+ O manipulador de falha se destina a atividade de `WorkScope` . O fluxo de trabalho WF4 é igualmente simplista.  
+  <xref:System.Activities.Statements.CompensableActivity> tem um corpo e um manipulador de compensação.  Um explícito compensa é seguir na sequência.  A atividade de atividade de corpo e do manipulador de compensação é ambas são implementações:
 
 ```
 public sealed class CompensableActivityEmptyCompensation : CodeActivity
@@ -303,7 +305,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Uma das tendências claras observar no gráfico é que se aninhar relativamente tem impacto mínimo sobre o uso de memória em WF3 e em WF4.  O impacto o mais significativa de memória do número de atividades em um determinado fluxo de trabalho.  Dado os dados da sequência 1000, a sequência complexa 5 profundidade 5, e profundidade complexa 7 variações da sequência 1, é claro como o número de atividades inserir milhares, increase de uso de memória ficar mais visível.  Em casos extremos sequência 1 (profundidade 7) onde há atividades de ~29K, WF4 estiver usando quase 79% menos memória que WF3.
 
 ### <a name="multiple-workflow-definitions-test"></a>Vários teste das definições de fluxo de trabalho
- Medir a memória pela definição de fluxo de trabalho é dividido em dois diferentes teste devido às opções disponíveis para hospedar fluxos de trabalho em WF3 e em WF4.  Os testes são rodados de maneira diferente do teste de complexidade de fluxo de trabalho que um fluxo de trabalho já está citado como exemplo e executado somente uma vez por definição.  Isso ocorre porque a definição de fluxo de trabalho e seu host permanecem em memória para o tempo de vida de Appdomain.  A memória usado executando uma determinada instância de fluxo de trabalho deve ser removida durante a coleta de lixo.  A orientação de migração para WF4 contém informações mais detalhadas sobre as opções de hospedagem. Para obter mais informações, consulte [livro de receitas de migração de WF: hospedagem de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkID=153313).
+ Medir a memória pela definição de fluxo de trabalho é dividido em dois diferentes teste devido às opções disponíveis para hospedar fluxos de trabalho em WF3 e em WF4.  Os testes são rodados de maneira diferente do teste de complexidade de fluxo de trabalho que um fluxo de trabalho já está citado como exemplo e executado somente uma vez por definição.  Isso ocorre porque a definição de fluxo de trabalho e seu host permanecem em memória para o tempo de vida de Appdomain.  A memória usado executando uma determinada instância de fluxo de trabalho deve ser removida durante a coleta de lixo.  A orientação de migração para WF4 contém informações mais detalhadas sobre as opções de hospedagem. Para obter mais informações, consulte [livro de receitas de migração de WF: Hospedagem de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkID=153313).
 
  Criar várias definições de fluxo de trabalho para um teste de definição de fluxo de trabalho pode ser feita em várias maneiras.  Por exemplo, um pode usar a geração de código para criar um conjunto de 1000 fluxos de trabalho que são idênticos exceto no nome e para salvar cada um desses fluxos de trabalho em arquivos separados.  Essa abordagem foi tirada para teste console- hospedado.  Em WF3, a classe de <xref:System.Workflow.Runtime.WorkflowRuntime> foi usada para executar as definições de fluxo de trabalho.  WF4 pode usar <xref:System.Activities.WorkflowApplication> para criar uma instância única de fluxo de trabalho ou usar diretamente <xref:System.Activities.WorkflowInvoker> para executar a atividade como se fosse um chamada de método.  <xref:System.Activities.WorkflowApplication> é um host de uma única instância de fluxo de trabalho e tem mais próximo uma paridade recurso a <xref:System.Workflow.Runtime.WorkflowRuntime> de modo que é usado neste teste.
 
@@ -424,7 +426,7 @@ public class Workflow1 : Activity
 
  Quando WF4 não possui um provedor de rastreamento SQL, AppFabric faz.  A abordagem de rastreamento SQL de AppFabric é assinar eventos de ETW com um serviço do Windows que processa em lotes os eventos e os escrevam a uma tabela SQL criada para inserções rápido possível.  Um trabalho separados sai os dados da tabela e reformam-nos nas tabelas de relatório que podem ser exibidas no painel de AppFabric.  Isso significa que um lote de eventos de rastreamento é tratado independente de fluxo de trabalho proveniente de e portanto não tenha que aguardar um ponto de persistência antes de ser gravado.
 
- Os eventos de ETW podem ser gravados com ferramentas como o logman ou o xperf.  O arquivo de compacto ETL pode ser exibido com uma ferramenta como o xperfview ou ser convertido em um formato mais legível, como XML, com tracerpt.  Em WF3, a única opção para obter eventos de rastreamento sem um base de dados SQL é criar um serviço personalizado de rastreamento. Para obter mais informações sobre o ETW, consulte [os serviços WCF e rastreamento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [rastreamento de eventos para Windows](https://msdn.microsoft.com/library/ff190903.aspx).
+ Os eventos de ETW podem ser gravados com ferramentas como o logman ou o xperf.  O arquivo de compacto ETL pode ser exibido com uma ferramenta como o xperfview ou ser convertido em um formato mais legível, como XML, com tracerpt.  Em WF3, a única opção para obter eventos de rastreamento sem um base de dados SQL é criar um serviço personalizado de rastreamento. Para obter mais informações sobre o ETW, consulte [os serviços WCF e rastreamento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [rastreamento de eventos - aplicativos do Windows](/windows/desktop/etw/event-tracing-portal).
 
  Ativar o rastreamento de fluxo de trabalho irá afetar o desempenho em vários níveis.  A marca de nível abaixo usar a ferramenta de logman para consumir eventos de rastreamento de ETW e para gravar-los a um arquivo de ETL.  O custo de rastreamento SQL em AppFabric não está no escopo deste artigo.  O perfil básico de rastreamento, também usado em AppFabric, é mostrada nessa marca de nível.  Também estão incluídos o custo de acompanhar somente eventos de monitoramento de integridade.  Esses eventos são úteis para solucionar problemas e determinar a taxa média do sistema.
 
