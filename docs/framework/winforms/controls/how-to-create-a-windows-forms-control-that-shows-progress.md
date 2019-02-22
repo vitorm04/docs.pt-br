@@ -10,12 +10,12 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: c474419d1b60d8dbc937e77251b877efca2709b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb3048d837f6f1ffe2d9733cab3eb11fc4d066d3
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594701"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583895"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Como: Criar um controle de formulários do Windows que mostre o progresso
 O exemplo de código a seguir mostra um controle personalizado chamado `FlashTrackBar` que pode ser usado para mostrar ao usuário o nível ou o andamento de um aplicativo. Ele usa um gradiente para representar visualmente o progresso.  
@@ -93,5 +93,5 @@ O exemplo de código a seguir mostra um controle personalizado chamado `FlashTra
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Estendendo o suporte ao tempo de design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Noções básicas sobre o desenvolvimento de controles dos Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

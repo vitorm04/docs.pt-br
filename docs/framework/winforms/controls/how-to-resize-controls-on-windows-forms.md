@@ -9,12 +9,12 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 12112c5910291d657ae57d770667c6a20d6b966d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d74b382230b2ab11bb9fce8d6314e3a0e533572
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659037"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583401"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Como: Redimensionar controles nos Windows Forms
 Você pode redimensionar controles individuais, e você pode redimensionar vários controles de tipos iguais ou diferentes, tais como <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controles.  
@@ -38,4 +38,4 @@ Você pode redimensionar controles individuais, e você pode redimensionar vári
 - [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
-- [Como: Redimensionar Formulários do Windows usando o Designer](https://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)
+- [Como: Redimensionar Formulários do Windows usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

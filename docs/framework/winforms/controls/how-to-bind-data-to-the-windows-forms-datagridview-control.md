@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d9b72766ce2e93472a07eebdf7bf59cc7b0328d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220561"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584051"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Como: Associar dados ao controle DataGridView do Windows Forms
 
 O <xref:System.Windows.Forms.DataGridView> controle é compatível com o modelo de associação de dados do Windows Forms padrão, para que ele possa se associar a uma variedade de fontes de dados. Normalmente, você associa a um <xref:System.Windows.Forms.BindingSource> que gerencia a interação com a fonte de dados. O <xref:System.Windows.Forms.BindingSource> pode ser qualquer fonte de dados do Windows Forms, que oferece excelente flexibilidade ao escolher ou modificar a localização dos seus dados. Para obter mais informações sobre fontes de dados do <xref:System.Windows.Forms.DataGridView> controle dá suporte, consulte a [visão geral do controle DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
 
-O Visual Studio tem amplo suporte para vinculação de dados ao controle DataGridView. Para obter mais informações, confira [Como: Associar dados ao controle DataGridView do Windows Forms usando o Designer](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
+O Visual Studio tem amplo suporte para vinculação de dados ao controle DataGridView. Para obter mais informações, confira [Como: Associar dados ao controle DataGridView do Windows Forms usando o Designer](bind-data-to-the-datagrid-using-the-designer.md).  
 
 Para se conectar a um controle DataGridView aos dados:
 
@@ -40,7 +40,7 @@ Este exemplo requer:
 
 - Referências aos assemblies System, System, System. Data e System. XML.  
 
-Para compilar e executar esse exemplo, cole o código para o *Form1* arquivo de código em um novo projeto Windows Forms.  Para obter mais informações, confira [Como: Compilar e executar um exemplo de código completo do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)). Para obter informações sobre a criação do C# ou a linha de comando do Visual Basic, consulte [linha de comando compilando com csc.exe](/csharp/language-reference/compiler-options/command-line-building-with-csc-exe) ou [compilar da linha de comando](/visual-basic/reference/command-line-compiler/building-from-the-command-line).  
+Para compilar e executar esse exemplo, cole o código para o *Form1* arquivo de código em um novo projeto Windows Forms. Para obter informações sobre a criação do C# ou a linha de comando do Visual Basic, consulte [linha de comando compilando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou [compilar da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 Preencher o `connectionString` variável no exemplo com os valores para sua conexão de banco de dados de exemplo Northwind do SQL Server. Autenticação do Windows, também chamado de segurança integrada, é uma maneira mais segura para conectar-se ao banco de dados que o armazenamento de uma senha na cadeia de conexão. Para obter mais informações sobre a segurança de conexão, consulte [proteger as informações de conexão](../../data/adonet/protecting-connection-information.md).  
 

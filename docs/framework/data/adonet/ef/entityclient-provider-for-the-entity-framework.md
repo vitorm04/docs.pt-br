@@ -2,12 +2,12 @@
 title: Provedor EntityClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: b094f6d0fbd7c1dc8d56fc43a05fc4d22a80e981
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ac14840145fb3faca0f6243037c8b27be31f5c7f
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826441"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583973"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Provedor EntityClient para Entity Framework
 O provedor EntityClient é um provedor de dados usado por aplicativos Entity Framework para acessar dados descritos em um modelo conceitual. Para obter informações sobre modelos conceituais, consulte [modelagem e mapeamento](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). O EntityClient usa outros provedores de dados .NET Framework para acessar a fonte de dados. Por exemplo, o EntityClient usa o Provedor de Dados .NET Framework para SQL Server (SqlClient) ao acessar um banco de dados do SQL Server. Para obter informações sobre o provedor SqlClient, consulte [SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). O provedor EntityClient é implementado no namespace <xref:System.Data.EntityClient>.  
@@ -24,13 +24,12 @@ O provedor EntityClient é um provedor de dados usado por aplicativos Entity Fra
   
  O exemplo a seguir cria uma <xref:System.Data.EntityClient.EntityCommand> objeto e atribui uma [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultar texto para seu <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> propriedade. Isso [!INCLUDE[esql](../../../../../includes/esql-md.md)] consulta solicita os produtos ordenados pelo preço de lista no modelo conceitual. O código a seguir não tem nenhum conhecimento do modelo de armazenamento.  
   
- `EntityCommand cmd = conn.CreateCommand();`  
-  
- `cmd.CommandText = @"` `SELECT VALUE p`  
-  
- `FROM AdventureWorksEntities.Product AS p`  
-  
- `ORDER BY p.ListPrice ";`  
+ ```csharp
+EntityCommand cmd = conn.CreateCommand();
+cmd.CommandText = @"SELECT VALUE p
+  FROM AdventureWorksEntities.Product AS p
+  ORDER BY p.ListPrice";
+```
   
 ## <a name="executing-queries"></a>Executando consultas  
  Quando uma consulta é executada, ela é analisada e convertida em uma árvore de comandos canônica. Todo processamento subsequente é executado na árvore de comandos. A árvore de comandos é o meio de comunicação entre <xref:System.Data.EntityClient> e o provedor de dados [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] subjacente, como <xref:System.Data.SqlClient>.  
