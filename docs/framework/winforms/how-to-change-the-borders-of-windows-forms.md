@@ -8,19 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 32e5eb60d09eca895a1fa4584c5af5a302e81ff0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5efda369b2059afd350fc947b706fb9f4c27ae14
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558651"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664439"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Como: Alterar as bordas de formulários do Windows
 Você tem vários estilos de borda para escolher quando estiver determinando a aparência e comportamento dos Windows Forms. Alterando o <xref:System.Windows.Forms.Form.FormBorderStyle%2A> propriedade, você pode controlar o comportamento de redimensionamento do formulário. Além disso, definindo o <xref:System.Windows.Forms.Form.FormBorderStyle%2A> afeta como a barra de legenda é exibida, bem como quais botões podem aparecer nela. Para obter mais informações, consulte <xref:System.Windows.Forms.FormBorderStyle>.  
   
  Há um suporte abrangente para esta tarefa no Visual Studio.  
   
- Confira também [Como: Alterar as bordas dos Windows Forms usando o Designer](https://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).  
+ Confira também [Como: Alterar as bordas dos Windows Forms usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yettzh3e(v=vs.100)).  
   
 ### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>Para definir o estilo de borda dos Windows Forms de maneira programática  
   
@@ -39,7 +39,7 @@ Você tem vários estilos de borda para escolher quando estiver determinando a a
        System::Windows::Forms::FormBorderStyle::FixedDialog;  
     ```  
   
-     Consulte também [como: Criar caixas de diálogo em tempo de Design](https://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).  
+     Consulte também [como: Criar caixas de diálogo em tempo de Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/55cz5x2c(v=vs.100)).  
   
      Além disso, se você escolheu um estilo de borda para o formulário que fornece botões opcionais **Minimizar** e **Maximizar**, é possível especificar se deseja que um ou os dois botões sejam funcionais. Esses botões são úteis quando quiser controlar de perto a experiência do usuário. Os botões **Minimizar** e **Maximizar** são habilitados por padrão e sua funcionalidade é manipulada por meio da janela **Propriedades**.  
   

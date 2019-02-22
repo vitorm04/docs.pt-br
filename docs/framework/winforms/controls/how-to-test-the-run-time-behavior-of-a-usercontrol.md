@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506362"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664413"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Como: Testar o comportamento de tempo de execução de um UserControl
 Quando você desenvolve um <xref:System.Windows.Forms.UserControl>, você precisa testar seu comportamento de tempo de execução. É possível criar um projeto de aplicativo separado do Windows e colocar o controle em um formulário de teste, porém esse procedimento é inconveniente. Uma maneira mais rápida e fácil é usar o **Contêiner de teste de UserControl** fornecido pelo Visual Studio. Esse contêiner de teste é iniciado diretamente do seu projeto de biblioteca de controles do Windows.  
@@ -29,7 +29,7 @@ Quando você desenvolve um <xref:System.Windows.Forms.UserControl>, você precis
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Testar o comportamento de tempo de execução de um UserControl  
   
-1.  Crie um projeto de biblioteca de controles do Windows chamado **TestContainerExample**. Para obter detalhes, consulte [Modelo da Biblioteca de Controles do Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Crie um projeto de biblioteca de controles do Windows chamado **TestContainerExample**. Para obter detalhes, consulte [Modelo da Biblioteca de Controles do Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  No **Designer de formulários do Windows**, arraste um <xref:System.Windows.Forms.Label> controlar dos **caixa de ferramentas** na superfície de design do controle.  
   
@@ -41,7 +41,7 @@ Quando você desenvolve um <xref:System.Windows.Forms.UserControl>, você precis
   
 6.  Feche o contêiner de teste.  
   
-7.  Adicione outro controle de usuário ao projeto **TestContainerExample**. Para obter detalhes, consulte [NIB: como: Adicionar itens existentes a um projeto](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Adicione outro controle de usuário ao projeto **TestContainerExample**. Para obter detalhes, confira [Como: Adicionar itens existentes a um projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
   
 8.  No **Designer de formulários do Windows**, arraste um <xref:System.Windows.Forms.Button> controlar dos **caixa de ferramentas** na superfície de design do controle.  
   
@@ -54,7 +54,7 @@ Quando você desenvolve um <xref:System.Windows.Forms.UserControl>, você precis
   
 #### <a name="to-test-user-controls-from-another-project"></a>Testar controles de outro projeto  
   
-1.  Crie um projeto de biblioteca de controles do Windows chamado **TestContainerExample2**. Para obter detalhes, consulte [Modelo da Biblioteca de Controles do Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Crie um projeto de biblioteca de controles do Windows chamado **TestContainerExample2**. Para obter detalhes, consulte [Modelo da Biblioteca de Controles do Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  No **Designer de formulários do Windows**, arraste um <xref:System.Windows.Forms.RadioButton> controlar dos **caixa de ferramentas** na superfície de design do controle.  
   
@@ -71,4 +71,4 @@ Quando você desenvolve um <xref:System.Windows.Forms.UserControl>, você precis
 - [Como: Criar controles compostos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [Passo a passo: Criando um controle composto com o Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Passo a passo: Criando um controle composto com VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Designer de Controle de Usuário](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+- [Designer de Controle de Usuário](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 29ed138f80705539b96f82898e50e80dd0e3cb16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527023"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664755"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funcionalidade de arrastar e soltar no Windows Forms
-O Windows Forms incluem um conjunto de métodos, eventos e classes que implementam o comportamento do tipo "arrastar e soltar". Este tópico fornece uma visão geral do suporte a arrastar e soltar no Windows Forms.  Consulte também [Operações do tipo "arrastar e soltar" e suporte à área de transferência](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+O Windows Forms incluem um conjunto de métodos, eventos e classes que implementam o comportamento do tipo "arrastar e soltar". Este tópico fornece uma visão geral do suporte a arrastar e soltar no Windows Forms.  Consulte também [Operações do tipo "arrastar e soltar" e suporte à área de transferência](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Realizando operações do tipo "arrastar e soltar"  
  Para executar uma operação de arrastar e soltar, use o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método da <xref:System.Windows.Forms.Control> classe. Para obter mais informações sobre como uma operação de arrastar e soltar é executada, consulte <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Para obter o retângulo que o ponteiro do mouse deve ser arrastado antes do início de uma operação de arrastar e soltar, use o <xref:System.Windows.Forms.SystemInformation.DragSize%2A> propriedade do <xref:System.Windows.Forms.SystemInformation> classe.  

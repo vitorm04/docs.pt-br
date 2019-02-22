@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679312"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664920"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acesso mais seguro a arquivos e dados no Windows Forms
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permissões para ajudar a proteger recursos e dados. Onde seu aplicativo pode ler ou gravar dados depende das permissões concedidas ao aplicativo. Quando seu aplicativo é executado em um ambiente de confiança parcial, talvez você não tenha acesso aos seus dados ou talvez você precise alterar a maneira como você acessa os dados.  
@@ -351,7 +351,7 @@ public void Write()
 ## <a name="database-access"></a>Acesso ao banco de dados  
  As permissões necessárias para acessar um banco de dados variam de acordo com o provedor de banco de dados. No entanto, somente os aplicativos que estão executando com as permissões apropriadas podem acessar um banco de dados por meio de uma conexão de dados. Para obter mais informações sobre as permissões necessárias para acessar um banco de dados, consulte [Segurança de Acesso ao Código e ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Se você não pode acessar um banco de dados diretamente, porque você deseja que o aplicativo seja executado em confiança parcial, você pode usar um serviço Web como um meio alternativo para acessar seus dados. Um serviço Web é um componente de software que pode ser acessado programaticamente através de uma rede. Com os serviços Web, aplicativos podem compartilhar dados entre zonas de grupos de códigos. Por padrão, a aplicativos na intranet local e zonas da Internet têm o direito de acessar seus sites de origem, que permite a chamar um serviço Web hospedado no mesmo servidor. Para obter mais informações, consulte [Serviços Web em ASP.NET AJAX](https://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) ou [Windows Communication Foundation](https://msdn.microsoft.com/library/ms735119.aspx).  
+ Se você não pode acessar um banco de dados diretamente, porque você deseja que o aplicativo seja executado em confiança parcial, você pode usar um serviço Web como um meio alternativo para acessar seus dados. Um serviço Web é um componente de software que pode ser acessado programaticamente através de uma rede. Com os serviços Web, aplicativos podem compartilhar dados entre zonas de grupos de códigos. Por padrão, a aplicativos na intranet local e zonas da Internet têm o direito de acessar seus sites de origem, que permite a chamar um serviço Web hospedado no mesmo servidor. Para obter mais informações, consulte [Serviços Web em ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) ou [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Acesso ao Registro  
  O <xref:System.Security.Permissions.RegistryPermission> classe controla o acesso ao registro do sistema operacional. Por padrão, somente aplicativos que estão sendo executados localmente podem acessar o Registro.  <xref:System.Security.Permissions.RegistryPermission> somente concede à aplicação o direito de tentar o acesso ao registro; ele não garante acesso terá êxito, porque o sistema operacional reforça ainda a segurança do registro.  

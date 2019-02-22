@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573959"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664738"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Fontes de dados com suporte do Windows Forms
 Tradicionalmente, a associação de dados era usada nos aplicativos para tirar proveito dos dados armazenados em bancos de dados. Com a associação de dados do Windows Forms, você pode acessar dados de bancos de dados, bem como dados em outras estruturas, como matrizes e coleções, desde que certos requisitos mínimos sejam atendidos.  
@@ -37,7 +37,7 @@ Tradicionalmente, a associação de dados era usada nos aplicativos para tirar p
  Windows Forms dá suporte a propriedades de controle de associação de dados a propriedades públicas na instância de um objeto usando o <xref:System.Windows.Forms.Binding> tipo. Windows Forms também oferece suporte a controles de lista com base de associação, como um <xref:System.Windows.Forms.ListControl> a um objeto de instância quando um <xref:System.Windows.Forms.BindingSource> é usado.  
   
  Matriz ou coleção  
- Para atuar como uma fonte de dados, uma lista deve implementar o <xref:System.Collections.IList> interface, um exemplo seria uma matriz que é uma instância do <xref:System.Array> classe. Para obter mais informações sobre matrizes, consulte [como: Criar uma matriz de objetos (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Para atuar como uma fonte de dados, uma lista deve implementar o <xref:System.Collections.IList> interface, um exemplo seria uma matriz que é uma instância do <xref:System.Array> classe. Para obter mais informações sobre matrizes, consulte [como: Criar uma matriz de objetos (Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100)).  
   
  Em geral, você deve usar <xref:System.ComponentModel.BindingList%601> quando você cria listas de objetos para associação de dados. <xref:System.ComponentModel.BindingList%601> é uma versão genérica de <xref:System.ComponentModel.IBindingList> interface. O <xref:System.ComponentModel.IBindingList> interface estende o <xref:System.Collections.IList> interface Adicionando propriedades, métodos e eventos necessários para a associação de dados bidirecional.  
   

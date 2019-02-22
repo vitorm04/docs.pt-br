@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 042861b2d79d0b638600a5463673fb922f3b4881
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543520"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664387"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Passo a passo: Implementando um formulário que usa uma operação em segundo plano
 Se você tiver uma operação que levará muito tempo para ser concluída, e não desejar sua interface do usuário (UI) para parar de responder ou "parada", você pode usar o <xref:System.ComponentModel.BackgroundWorker> classe para executar a operação em outro thread.  
@@ -57,7 +57,7 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 5.  Renomeie o primeiro <xref:System.Windows.Forms.Button> controle `startAsyncButton` e defina as <xref:System.Windows.Forms.Control.Text%2A> propriedade `Start Async`. Renomeie o segundo <xref:System.Windows.Forms.Button> controle `cancelAsyncButton`e defina as <xref:System.Windows.Forms.Control.Text%2A> propriedade `Cancel Async`. Defina suas <xref:System.Windows.Forms.Control.Enabled%2A> propriedade para `false`.  
   
-6.  Criar um manipulador de eventos para ambos os <xref:System.Windows.Forms.Button> dos controles <xref:System.Windows.Forms.Control.Click> eventos. Para obter detalhes, consulte [como: Criar manipuladores de eventos usando o Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Criar um manipulador de eventos para ambos os <xref:System.Windows.Forms.Button> dos controles <xref:System.Windows.Forms.Control.Click> eventos. Para obter detalhes, confira [Como: Criar manipuladores de eventos usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
 7.  Arraste uma <xref:System.Windows.Forms.Label> controlar do **caixa de ferramentas** para o formulário e renomeie- `resultLabel`.  
   
@@ -75,7 +75,7 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Como implementar manipuladores de evento assíncrono  
   
-1.  No **propriedades** janela, com o <xref:System.ComponentModel.BackgroundWorker> componente ainda selecionado, clique no **eventos** botão. Clique duas vezes o <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para criar manipuladores de eventos. Para obter mais informações sobre como usar manipuladores de eventos, consulte [como: Criar manipuladores de eventos usando o Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  No **propriedades** janela, com o <xref:System.ComponentModel.BackgroundWorker> componente ainda selecionado, clique no **eventos** botão. Clique duas vezes o <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para criar manipuladores de eventos. Para obter mais informações sobre como usar manipuladores de eventos, consulte [como: Criar manipuladores de eventos usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
 2.  Crie um novo método, chamado `ComputeFibonacci`, no formulário. Esse método faz o trabalho real e ele será executado em segundo plano. Esse código demonstra a implementação recursiva do algoritmo de Fibonacci, que é notavelmente ineficiente, demorando mais tempo para concluir o cálculo de números maiores. Ele é usado aqui para fins ilustrativos, para mostrar uma operação que pode introduzir longos atrasos em seu aplicativo.  
   
