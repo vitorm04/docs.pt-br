@@ -19,7 +19,7 @@ Em cenários de microsserviço, normalmente a autenticação é manipulada centr
 
 **Figura 9-1**. Autenticação centralizada com um Gateway de API
 
-Se os serviços puderem ser acessados diretamente, um serviço de autenticação como o Azure Active Directory ou um microsserviço de autenticação dedicado agindo como um STS (serviço de token de segurança) poderá ser usado para autenticar os usuários. As decisões de confiança são compartilhadas entre os serviços com tokens de segurança ou cookies. (Esses tokens podem ser compartilhados entre aplicativos, se necessário, no ASP.NET Core com [serviços de proteção de dados](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications).) Esse padrão é ilustrado na Figura 9-2.
+Se os serviços puderem ser acessados diretamente, um serviço de autenticação como o Azure Active Directory ou um microsserviço de autenticação dedicado agindo como um STS (serviço de token de segurança) poderá ser usado para autenticar os usuários. As decisões de confiança são compartilhadas entre os serviços com tokens de segurança ou cookies. Esses tokens podem ser compartilhados entre aplicativos do ASP.NET Core, se necessário, ao implementar o [compartilhamento de cookies](/aspnet/core/security/cookie-sharing). Esse padrão é ilustrado na Figura 9-2.
 
 ![Quando os microsserviços são acessados diretamente, a confiança, que inclui autenticação e autorização, é tratada por um token de segurança emitido por um microsserviço dedicado, compartilhado entre os microsserviços.](./media/image2.png)
 
@@ -271,7 +271,7 @@ O middleware de autenticação de portador do JWT também pode dar suporte a cen
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - **Compartilhamento de cookies entre aplicativos** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **Introdução ao Identity** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
@@ -285,7 +285,7 @@ O middleware de autenticação de portador do JWT também pode dar suporte a cen
 - **Michell Anicas. Uma introdução ao OAuth 2** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (repositório do GitHub para provedores do ASP.NET OAuth.) \
+- **AspNet.Security.OAuth.Providers** (repositório do GitHub para provedores do ASP.NET OAuth) \
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Danny Strockis. Integrando o Azure AD em um aplicativo Web do ASP.NET Core** \
