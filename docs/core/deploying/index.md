@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266904"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
@@ -30,7 +24,7 @@ Para uma FDD, seu aplicativo é implantado apenas em dependências de terceiros.
 
 Implantar uma FDD traz uma série de vantagens:
 
-- Você não precisa definir previamente em quais sistemas operacionais de destino o aplicativo .NET Core será executado. Como o .NET Core usa um formato comum de arquivo PE comum para executáveis e bibliotecas independentemente do sistema operacional, ele pode executar seu aplicativo independentemente do sistema operacional subjacente. Para obter mais informações sobre o formato de arquivo PE, consulte [Formato de Arquivo do Assembly .NET](../../standard/assembly-format.md).
+- Você não precisa definir previamente em quais sistemas operacionais de destino o aplicativo .NET Core será executado. Como o .NET Core usa um formato comum de arquivo PE comum para executáveis e bibliotecas independentemente do sistema operacional, ele pode executar seu aplicativo independentemente do sistema operacional subjacente. Para obter mais informações sobre o formato de arquivo PE, consulte [Formato de Arquivo do Assembly .NET](../../standard/assembly/file-format.md).
 
 - O tamanho do seu pacote de implantação é pequeno. Você deve implantar apenas o aplicativo e as respectivas dependências, mas não o .NET Core em si.
 
