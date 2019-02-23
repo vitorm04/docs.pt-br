@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 09e778f89f58556a53f19b4c89e3d82ed94cd64b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 641fe7aa752e9c1a4e4fb10d2a454b1d977a0c7e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614153"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746303"
 ---
 # <a name="property-animation-techniques-overview"></a>Visão geral das técnicas de animação da propriedade
 Este tópico descreve as diferentes abordagens para animar propriedades: storyboards, animações locais, relógios e animações por quadro.  
@@ -58,7 +58,7 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.EventTrigger>|Sim|Sim|Sim|Sim|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e uma propriedade <xref:System.Windows.Trigger>|Não|Sim|Sim|Sim|[Disparar uma animação quando o valor de uma propriedade é alterado](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como: Disparar uma animação quando dados forem alterados](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como: Disparar uma animação quando dados forem alterados](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
 |Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sim|Não|Não|Não|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Para obter mais informações sobre <xref:System.Windows.Media.Animation.Storyboard> objetos, consulte a [visão geral de Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  

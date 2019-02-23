@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ec32f5c365162883797b3f3f9ece4305dce7551
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533540"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747658"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Passo a passo: Serializando coleções de tipos padrão com a DesignerSerializationVisibilityAttribute
 Seus controles personalizados às vezes exporão uma coleção como uma propriedade. Este passo a passo demonstra como usar o <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> classe para controlar como uma coleção é serializada em tempo de design. Aplicando o <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valor à sua propriedade de coleção garante que a propriedade será serializada.  
   
- Para copiar o código neste tópico como uma única lista, consulte [como: Serializar coleções de tipos padrão com DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
+ Para copiar o código deste tópico como uma única listagem, confira [Como: Serializar coleções de tipos padrão com DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).  
   
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -36,9 +36,9 @@ Seus controles personalizados às vezes exporão uma coleção como uma propried
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Para criar um controle com uma coleção serializável  
   
-1.  Crie um projeto de Biblioteca de Controle do Windows chamado `SerializationDemoControlLib`. Para obter mais informações, consulte [Modelo de Biblioteca de Controle do Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Crie um projeto de Biblioteca de Controle do Windows chamado `SerializationDemoControlLib`. Para obter mais informações, consulte [Modelo de Biblioteca de Controle do Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  Renomeie `UserControl1` como `SerializationDemoControl`. Para obter mais informações, confira [Como: Renomear identificadores](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Renomeie `UserControl1` como `SerializationDemoControl`. Para obter mais informações, consulte [um símbolo de código refatoração Renomear](/visualstudio/ide/reference/rename).  
   
 3.  No **propriedades** janela, defina o valor da <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> propriedade `10`.  
   
@@ -129,16 +129,16 @@ Seus controles personalizados às vezes exporão uma coleção como uma propried
 ## <a name="next-steps"></a>Próximas etapas  
  Se você souber como serializar uma coleção de tipos padrão, considere integrar seus controles personalizados mais profundamente no ambiente de tempo de design. Os tópicos a seguir descrevem como aprimorar a integração do tempo de design de seus controles personalizados:  
   
--   [Arquitetura de tempo de design](https://msdn.microsoft.com/library/4881917b-628f-4689-b872-472e4f8a4e3a)  
+-   [Arquitetura de tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
   
 -   [Atributos em controles dos Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
   
--   [Visão geral da serialização do designer](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
+-   [Visão geral da serialização do designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
 -   [Passo a passo: Criando um controle de formulários do Windows que tira proveito dos recursos de tempo de Design do Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [Visão geral da serialização do designer](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
-- [Como: Serializar coleções de tipos padrão com DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [Visão geral da serialização do designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Como: Serializar coleções de tipos padrão com DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
 - [Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

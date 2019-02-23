@@ -6,12 +6,12 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c0ad0b644c0af6a4e0982b1437291e923ca79cc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499868"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745399"
 ---
 # <a name="timer-component-windows-forms"></a>Componente Temporizador (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.Timer> é um componente que gera um evento em intervalos regulares. Esse componente foi projetado para um ambiente do Windows Forms.  
@@ -23,7 +23,7 @@ Os formulários do Windows <xref:System.Windows.Forms.Timer> é um componente qu
  [Limitações da propriedade de intervalo do componente temporizador dos Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
  Descreve as limitações conhecidas do intervalo do temporizador que podem afetar como você pode usá-lo.  
   
- [Como executar procedimentos em intervalos definidos com o componente temporizador dos Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ [Como: Executar procedimentos em intervalos definidos com o componente de temporizador do Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
  Descreve como reagir a intervalos em seus aplicativos baseados em Windows atingiu o tempo limite.  
   
 ## <a name="reference"></a>Referência  
@@ -36,6 +36,3 @@ Os formulários do Windows <xref:System.Windows.Forms.Timer> é um componente qu
 ## <a name="related-sections"></a>Seções relacionadas  
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
-  
- [Controle Timer para usuários do Visual Basic 6.0](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
- Descreve como a funcionalidade de temporizador foi alterado no Visual Basic em comparação com versões anteriores.

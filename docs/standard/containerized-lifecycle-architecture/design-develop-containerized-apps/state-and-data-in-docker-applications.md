@@ -3,51 +3,69 @@ title: Estado e dados em aplicativos do Docker
 description: Aprenda a opção disponível para salvar o estado em aplicativos em contêineres.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 9d924f0fffca73b57626910bc3c3ca95b4478300
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218743"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745992"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado e dados em aplicativos do Docker
 
-Um primitivo de contêineres é imutabilidade. Quando comparado a uma VM, os contêineres não desaparecerem como uma ocorrência comum. Uma VM pode falhar em várias formas de processos inativos, sobrecarga da CPU ou um disco cheio ou com falha. Ainda assim, esperamos que a VM esteja disponível e unidades RAID são comuns para garantir que falhas de unidade mantêm os dados.
+Na maioria dos casos, você pode considerar um contêiner uma instância de um processo. Um processo não mantém o estado persistente. Enquanto um contêiner pode gravar em seu armazenamento local, supondo que uma instância permanecerá indefinidamente é como presumir que um único local na memória será durável. Imagens de contêiner, assim como processos, devem ser consideradas ter várias instâncias, e eles serão eventualmente eliminados; Se forem gerenciadas com um orquestrador de contêiner, deve-se assumir que eles podem ser movidos de um nó ou VM para outro.
 
-No entanto, contêineres forem considerados instâncias dos processos. Um processo não mantém o estado durável. Mesmo que um contêiner pode gravar em seu armazenamento local, supondo que a instância permanecerá indefinidamente seria equivalente a supondo que uma cópia única de memória será durável. Você deve presumir que os contêineres, como processos, são duplicados, eliminado, ou, quando gerenciados com um orquestrador de contêiner, eles podem ser movidos.
+As soluções a seguir são usadas para gerenciar dados persistentes em aplicativos do Docker:
 
-Docker usa um recurso conhecido como um *sistema de arquivos de sobreposição* implementar um processo de cópia na gravação que armazena qualquer informações atualizadas sobre o sistema de arquivos raiz de um contêiner, em comparação comparado a imagem original na qual ele se baseia. Essas alterações serão perdidas se o contêiner for excluído posteriormente do sistema. Um contêiner, portanto, não tem armazenamento persistente por padrão. Embora seja possível salvar o estado de um contêiner, criação de um sistema em torno disso seria em conflito com o princípio de arquitetura do contêiner.
+Do host do Docker, como [Volumes do Docker](https://docs.docker.com/engine/admin/volumes/):
 
-Para gerenciar dados persistentes em aplicativos do Docker, há soluções comuns:
+- **Volumes** são armazenados em uma área do sistema de arquivos de host que é gerenciado pelo Docker.
 
--   [**Volumes de dados**](https://docs.docker.com/engine/tutorials/dockervolumes/) esses remontam ao host, conforme observado apenas.
+- **Associar montagens** pode mapear para qualquer pasta no sistema de arquivos do host, portanto, o acesso não pode ser controlado a partir de um processo de Docker e pode representar um risco de segurança como um contêiner pode acessar as pastas de sistema operacional confidenciais.
 
--   [**Contêineres de volume de dados**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) eles fornecem armazenamento compartilhado em vários contêineres, usando um contêiner externo que pode ciclo.
+- **Montagens tmpfs** são como pastas virtuais que só existem na memória do host e nunca são gravadas no sistema de arquivos.
 
--   [**Plug-ins de volume**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) esses montagem volumes em locais remotos, fornecendo a persistência de longo prazo.
+Do armazenamento remoto:
 
--   **Fontes de dados remotas** exemplos incluem bancos de dados SQL e não-SQL ou armazenar em cache serviços, como o Redis.
+- [O armazenamento do Azure](https://azure.microsoft.com/documentation/services/storage/) oferece armazenamento geograficamente distribuído, fornecendo uma boa solução de persistência de longo prazo para contêineres.
 
--   [**O armazenamento do Azure**](https://docs.microsoft.com/azure/storage/) isso fornece a plataforma de distribuição geográfica como um armazenamento de serviço (PaaS), fornecendo o melhor dos contêineres de persistência de longo prazo como.
+- Bancos de dados relacionais remotos, como [banco de dados SQL](https://azure.microsoft.com/services/sql-database/), como bancos de dados NoSQL [do Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), ou serviços, como armazenar em cache [Redis](https://redis.io/).
 
-Volumes de dados são especialmente designados diretórios dentro de um ou mais contêineres que ignoram o [sistema de arquivos de união](https://docs.docker.com/glossary/?term=Union%20file%20system). Volumes de dados são projetados para manter os dados, independentemente do ciclo de vida do contêiner. Docker, portanto, nunca exclui automaticamente volumes quando você remove um contêiner, nem será volumes "coleta de lixo" que não são mais referenciados por um contêiner ele. Sistema operacional do host pode procurar e editar os dados em qualquer volume livremente, que é apenas outro motivo para usar volumes de dados com moderação.
+Do contêiner do Docker:
 
-Um [contêiner de volume de dados](https://docs.docker.com/glossary/?term=volume) é uma melhoria em relação a volumes de dados regulares. Ele é essencialmente um contêiner inativo que tem um ou mais volumes de dados criados dentro dele (conforme descrito anteriormente). O contêiner de volume de dados dá acesso aos contêineres de um ponto de montagem central. A vantagem desse método de acesso é que abstrai o local dos dados originais, tornando o contêiner de dados de um ponto de montagem lógico. Ele também permite acessar os volumes de contêiner de dados para serem criados e destruídos, mantendo os dados persistentes em um contêiner dedicado de contêineres de "aplicativo".
+- O Docker oferece um recurso chamado *sistema de arquivos de sobreposição*. Esse recurso implementa uma tarefa de cópia na gravação que armazena informações atualizadas para o sistema de arquivos raiz do contêiner. Essas informações "apresenta na parte superior de" a imagem original na qual o contêiner se baseia. Se o contêiner for excluído do sistema, essas alterações serão perdidas. Portanto, embora seja possível salvar o estado de um contêiner em seu armazenamento local, criando um sistema baseado neste recurso entraria em conflito com a premissa de design de contêiner, que é sem monitoração de estado por padrão.
 
-Figura 4-5 mostra que os volumes Docker regulares podem ser colocados em armazenamento fora dos contêineres de si, mas dentro dos limites físicos de servidor/VM do host. *Volumes docker não tem a capacidade de usar um volume de um host de servidor/VM para outro*.
+- No entanto, os Volumes Docker agora é a maneira preferencial para lidar com dados locais no Docker. Se você precisar de mais informações sobre o armazenamento em contêineres, verificar [drivers de armazenamento do Docker](https://docs.docker.com/engine/userguide/storagedriver/) e [sobre drivers de armazenamento, contêineres e imagens](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/).
 
-![](./media/image5.png)
+O exemplo a seguir fornece detalhes adicionais sobre essas opções.
 
-Figura 4-5: Volumes de dados e fontes de dados externas para aplicativos de contêineres/contêineres
+**Volumes** são diretórios mapeados do sistema operacional do host para diretórios em contêineres. Quando o código no contêiner tem acesso ao diretório, o acesso é, na verdade, a um diretório no sistema operacional host. Esse diretório não está vinculado ao tempo de vida do contêiner em si, sendo que o diretório é gerenciado pelo Docker e isolado em relação à funcionalidade básica do computador host. Assim, os volumes de dados são projetados para persistir dados independentemente do tempo de vida do contêiner. Se você excluir um contêiner ou uma imagem do host do Docker, os dados persistentes no volume de dados não serão excluídos.
 
-Devido à incapacidade de gerenciar dados compartilhados entre contêineres executados em hosts físicos separados, é recomendável que você não use volumes para dados de negócios, a menos que o host do Docker é uma host fixa/VM, porque ao usar contêineres do Docker em um orquestrador, contêineres devem ser movidos de um para outro host, dependendo das otimizações a ser executada pelo cluster.
+Volumes podem ser nomeados ou anônimos (o padrão). Volumes nomeados são a evolução dos **Contêineres de Volume de Dados** e facilitam o compartilhamento de dados entre contêineres. Volumes também dão suporte a drivers de volume que permitem que você armazene dados em hosts remotos, entre outras opções.
 
-Portanto, os volumes de dados regulares são um bom mecanismo para trabalhar com arquivos de rastreamento, arquivos temporais ou qualquer conceito semelhante que não afetarão a consistência dos dados de negócios se ou quando seus contêineres são movidos entre vários hosts.
+**Associar montagens** estiveram disponíveis por um longo tempo e permitir que o mapeamento de qualquer pasta para um ponto de montagem em um contêiner. Montagens de associação têm mais limitações que os volumes e alguns problemas de segurança importantes, por isso os volumes são a opção recomendada.
 
-[Plug-ins de volume](https://docs.docker.com/engine/extend/plugins_volume/) fornecem dados em todos os hosts em um cluster. Embora nem todos os plug-ins de volume sejam criados igualmente, o plug-ins de volume normalmente fornecem armazenamento externo persistente confiável externalizado dos contêineres imutáveis.
+**`tmpfs` monta** são pastas virtuais que live apenas na memória do host e nunca são gravadas no sistema de arquivos. Elas são rápidas e seguras, mas usam a memória e destinam-se somente a dados não persistentes.
 
-Fontes de dados remotas e caches, como banco de dados SQL, DocumentDB ou um cache remoto como o Redis seria o mesmo que o desenvolvimento sem contêineres. Essa é uma das maneiras preferenciais e comprovadas, para armazenar dados de aplicativo de negócios.
+Conforme mostrado na Figura 4-5, os volumes Docker regulares podem ser armazenados fora dos contêineres de si, mas dentro dos limites físicos do servidor host ou VM. No entanto, contêineres do Docker não podem acessar um volume de um servidor host ou VM para outro. Em outras palavras, com esses volumes, não é possível gerenciar os dados compartilhados entre contêineres executados em diferentes hosts do Docker, embora ele pode ser obtido com um driver de volume que dá suporte a hosts remotos.
+
+![Volumes podem ser compartilhados entre contêineres, mas apenas no mesmo host, a menos que você use um driver remoto que dá suporte a hosts remotos. ](./media/image5.png)
+
+**Figura 4-5**. Volumes e fontes de dados externas para aplicativos baseados em contêiner
+
+Além disso, quando gerenciados por um orquestrador, contêineres do Docker podem se "mover" entre os hosts de acordo com as otimizações realizadas pelo cluster. Portanto, não é recomendável usar volumes de dados para dados de negócios. Mas eles são um bom mecanismo para trabalhar com arquivos de rastreamento, arquivos temporais ou similares, que não afetarão a consistência dos dados de negócios.
+
+**Fontes de dados remotas e ferramentas de cache** como o Banco de Dados SQL do Azure, o Azure Cosmos DB ou um cache remoto como o Redis podem ser usados em aplicativos em contêineres da mesma forma que são usados durante o desenvolvimento sem contêineres. Essa é uma forma comprovada de armazenar dados de aplicativo de negócios.
+
+**Armazenamento do Azure.** Dados de negócios geralmente precisam ser colocado em recursos externos ou bancos de dados, como o armazenamento do Azure. O armazenamento do Azure fornece os seguintes serviços na nuvem:
+
+- O Armazenamento de Blobs armazena dados de objeto não estruturados. Um blob pode ser qualquer tipo de texto ou dados binários, como documentos ou arquivos de mídia (imagens, áudio e vídeo). O Armazenamento de Blobs também é conhecido como armazenamento de objeto.
+
+- O armazenamento de arquivos oferece armazenamento compartilhado para aplicativos herdados que usam o protocolo SMB padrão. Os serviços de nuvem e as máquinas virtuais do Azure podem compartilhar dados de arquivos em vários componentes de aplicativo por meio de compartilhamentos montados. Aplicativos locais podem acessar dados de arquivo em um compartilhamento por meio da API de REST do serviço de arquivo.
+
+- O Armazenamento de Tabelas armazena conjuntos de dados estruturados. O Armazenamento de Tabelas é um armazenamento de dados do atributo-chave NoSQL, que permite o rápido desenvolvimento e acesso a grandes quantidades de dados.
+
+**Bancos de dados relacionais e bancos de dados NoSQL.** Há muitas opções de bancos de dados externos, de bancos de dados relacionais, como SQL Server, PostgreSQL, Oracle ou bancos de dados NoSQL, como Azure Cosmos DB, MongoDB, etc. Esses bancos de dados não forem ser explicado como parte deste guia, pois são completamente um tópico diferente.
 
 >[!div class="step-by-step"]
 >[Anterior](monolithic-applications.md)

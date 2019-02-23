@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: b3b009d7c25e813a73fe4f32c3eced632b052f13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e88383126c1fb618b2a2a96bdf5998560864af50
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543468"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746436"
 ---
 # <a name="annotations-overview"></a>Visão geral de anotações
 Escrever anotações ou comentários em documentos em papel é uma atividade tão comum que quase não valorizamos. Essas anotações ou comentários são "anotações" que adicionamos a um documento para sinalizar informações ou realçar itens de interesse para referência posterior. Embora gravar anotações em documentos impressos seja fácil e um lugar comum, a capacidade de adicionar comentários pessoais aos documentos eletrônicos normalmente é muito limitada, quando sequer está disponível.  
@@ -75,4 +75,4 @@ Escrever anotações ou comentários em documentos em papel é uma atividade tã
 - [Visão geral de ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
 - [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)
 - [Visão geral do documento de fluxo](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Como: Adicionar um comando a um MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [Como: Adicionar um comando a um MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

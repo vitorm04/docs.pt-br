@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 2079d4b4f6bedcc30c4826f8798729c5c9263751
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 120e2ecdf5869200fa9280ce3fc0a2a3a76c667f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648083"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748317"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implantando um aplicativo do WPF (WPF)
 Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, eles precisam ser implantados. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e o .NET Framework incluem várias tecnologias de implantação. A tecnologia de implantação que é usada para implantar um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende do tipo de aplicativo. Este tópico fornece uma breve visão geral de cada tecnologia de implantação e como elas são usadas em conjunto com os requisitos de implantação de cada tipo de aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -44,7 +44,7 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
   
  O [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] simplifica a instalação e a desinstalação de aplicativos, mas não fornece recursos para garantir que os aplicativos instalados sejam mantidos atualizados do ponto de vista do controle de versão.  
   
- Para obter mais informações sobre o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)], consulte [Implantação do Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
+ Para obter mais informações sobre o Windows Installer, consulte [implantação do Windows Installer](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Implantação do ClickOnce  
@@ -99,7 +99,7 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
 > [!NOTE]
 >  Para obter mais informações sobre manifestos de aplicativo e de implantação, consulte [Compilando um aplicativo WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
   
- Esses arquivos são produzidos quando um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é criado. Para obter mais informações, confira [Como: Criar um novo projeto de aplicativo de navegador WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f). Assim como as páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] somente marcação, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] normalmente são publicados em um servidor Web e exibidos usando [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
+ Esses arquivos são produzidos quando um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é criado. Para obter mais informações, confira [Como: Criar um novo projeto de aplicativo de navegador WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Assim como as páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] somente marcação, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] normalmente são publicados em um servidor Web e exibidos usando [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] pode ser implantado em clientes usando qualquer uma das técnicas de implantação. No entanto, [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] é recomendável por fornecer os seguintes recursos:  
   

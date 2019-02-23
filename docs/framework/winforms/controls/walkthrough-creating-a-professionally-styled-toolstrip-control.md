@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714887"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746238"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Passo a passo: Criando um controle ToolStrip com estilo profissional
 Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla uma aparência e comportamento profissional escrevendo sua própria classe que deriva de <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
@@ -30,7 +30,7 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
   
  Quando tiver terminado, você terá um controle de cliente personalizado reutilizável com a aparência profissional de um controle do Microsoft Office XP.  
   
- Para copiar o código neste tópico como uma única lista, consulte [como: Criar um controle ToolStrip com estilo profissional](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
+ Para copiar o código deste tópico como uma única listagem, confira [Como: Criar um controle ToolStrip com estilo profissional](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -49,7 +49,7 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
   
 2.  No **Gerenciador de Soluções**, exclua o controle padrão do projeto excluindo o arquivo de origem denominado "UserControl1.cs" ou "UserControl1.vb", dependendo da linguagem de sua escolha.  
   
-     Para obter mais informações, consulte [NIB: como: Remover, apagar e excluir itens](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Para obter mais informações, confira [Como: Remover, apagar e excluir itens](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Adicione um novo <xref:System.Windows.Forms.UserControl> de item para o **StackViewLibrary** projeto. Dê ao novo arquivo de origem o nome base `StackView`.  
   
@@ -121,7 +121,7 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
   
 8.  Renomeie o manipulador de eventos `mailStackButton_Click` como `stackButton_Click`.  
   
-     Para obter mais informações, confira [Como: Renomear um identificador (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Para obter mais informações, consulte [um símbolo de código refatoração Renomear](/visualstudio/ide/reference/rename).  
   
 9. Adicione o seguinte código ao manipulador de eventos `stackButton_Click`.  
   
@@ -135,7 +135,7 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
 12. Repita as etapas 10 e 11 para os controles `contactsStackButton` e `tasksStackButton`.  
   
 ## <a name="defining-icons"></a>Definindo ícones  
- Cada botão `StackView` tem um ícone associado. Para sua conveniência, cada ícone é representado como uma cadeia de caracteres codificada em Base64, que é desserializada antes de um <xref:System.Drawing.Bitmap> é criado a partir dele. Em um ambiente de produção, armazene dados de bitmap como um recurso e seus ícones serão exibidos no Designer de Formulários do Windows. Para obter mais informações, confira [Como: Adicionar imagens de plano de fundo ao Windows Forms](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Cada botão `StackView` tem um ícone associado. Para sua conveniência, cada ícone é representado como uma cadeia de caracteres codificada em Base64, que é desserializada antes de um <xref:System.Drawing.Bitmap> é criado a partir dele. Em um ambiente de produção, armazene dados de bitmap como um recurso e seus ícones serão exibidos no Designer de Formulários do Windows. Para obter mais informações, confira [Como: Adicionar imagens de plano de fundo ao Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dff9f95f(v=vs.100)).  
   
 #### <a name="to-define-icons"></a>Para definir ícones  
   

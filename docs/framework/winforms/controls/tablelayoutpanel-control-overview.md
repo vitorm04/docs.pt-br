@@ -11,12 +11,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
-ms.openlocfilehash: a54223c45c7e896676a9b27274bb8feb4acd27e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0971fd02e27ea718af7fafe2404cd77d5946e25
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568511"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748681"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>Visão geral do controle TableLayoutPanel
 O <xref:System.Windows.Forms.TableLayoutPanel> controle organiza seu conteúdo em uma grade. Como o layout é executado tanto em tempo de design quanto em tempo de execução, ele pode ser alterado dinamicamente à medida que o ambiente do aplicativo muda. Assim, os controles no painel têm a capacidade de redimensionar proporcionalmente, portanto ele pode responder a alterações como o redimensionamento do controle pai ou à alteração de comprimento do texto devido à localização.  
@@ -39,7 +39,7 @@ O <xref:System.Windows.Forms.TableLayoutPanel> controle organiza seu conteúdo e
   
 3.  [Como: Editar colunas e linhas em um controle TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4.  [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](https://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.FlowLayoutPanel>

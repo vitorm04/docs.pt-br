@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-ms.openlocfilehash: 9a27c377e2993c1e67ada508071698a541cec660
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: a6da3f58fc6e999f5196cf5d8d3fd00f1098fc50
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305435"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745847"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>Como: Especificar HandoffBehavior entre animações de storyboard
 Este exemplo mostra como especificar o comportamento de entrega entre animações de storyboard. O <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> propriedade de <xref:System.Windows.Media.Animation.BeginStoryboard> Especifica como novas animações interagem com quaisquer outras existentes já aplicadas a uma propriedade.  
@@ -24,5 +24,4 @@ Este exemplo mostra como especificar o comportamento de entrega entre animaçõe
 - <xref:System.Windows.Media.Animation.BeginStoryboard>
 - <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
 - [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Animação e tempo](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
 - [Tópicos explicativos de animação e tempo](animation-and-timing-how-to-topics.md)

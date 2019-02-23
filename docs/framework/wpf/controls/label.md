@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0ff63027777cd0637238512f01663fe0d81d47ed
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500289"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746896"
 ---
 # <a name="label"></a>Rotular
 <xref:System.Windows.Controls.Label> os controles geralmente fornecem informações no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Historicamente, um <xref:System.Windows.Controls.Label> continha apenas texto, mas, como o <xref:System.Windows.Controls.Label> que acompanha [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é uma <xref:System.Windows.Controls.ContentControl>, ele pode conter texto ou um <xref:System.Windows.UIElement>.  
   
  Um <xref:System.Windows.Controls.Label> fornece suporte visual e funcional para chaves de acesso. Ele é frequentemente usado para habilitar o acesso rápido do teclado para controles, como um <xref:System.Windows.Controls.TextBox>. Para atribuir uma <xref:System.Windows.Controls.Label> para um <xref:System.Windows.Controls.Control>, defina o <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> propriedade para o controle que deve receber o foco quando o usuário pressiona a tecla de acesso.  
   
- A imagem a seguir mostra uma <xref:System.Windows.Controls.Label> "Temas" que tem como alvo um <xref:System.Windows.Controls.ComboBox>.  Quando o usuário pressiona, o <xref:System.Windows.Controls.ComboBox> recebe o foco.  Para obter mais informações, consulte [como: definir a propriedade de destino de um rótulo](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ A imagem a seguir mostra uma <xref:System.Windows.Controls.Label> "Temas" que tem como alvo um <xref:System.Windows.Controls.ComboBox>.  Quando o usuário pressiona, o <xref:System.Windows.Controls.ComboBox> recebe o foco.  Para obter mais informações, confira [Como: Defina a propriedade de destino de um rótulo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
  ![Propriedades de exibição mostra rotulado pelo uso](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como Definir a Propriedade de Destino de um Rótulo](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Como: Criar um controle que tem uma chave de acesso e disposição do texto](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Label>

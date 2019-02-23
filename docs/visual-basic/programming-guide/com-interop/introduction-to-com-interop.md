@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 68e750fccd988a9cf7e08b4e7169bd2385d48e1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734851"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745593"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introdução à interoperabilidade COM (Visual Basic)
 O modelo de objeto de componente (COM) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Embora os objetos COM tenham sido fundamentais para o Windows por muitos anos de programação, os aplicativos projetados para o common language runtime (CLR) oferecem várias vantagens.  
@@ -38,7 +38,7 @@ O modelo de objeto de componente (COM) permite que um objeto exponha sua funcion
   
 -   Permissões necessárias para o assembly ser executado corretamente.  
   
- Para obter mais informações sobre assemblies de manifestos de assembly, consulte [Assemblies e Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Para obter mais informações sobre assemblies de manifestos de assembly, consulte [Assemblies no .NET](../../../standard/assembly/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>Importando e exportando as bibliotecas de tipos  
  O Visual Studio contém um utilitário, Tlbimp, que lhe permite importar informações de uma biblioteca de tipos em um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativo. Você pode gerar bibliotecas de tipos de assemblies usando o utilitário Tlbexp.  
@@ -57,7 +57,7 @@ O modelo de objeto de componente (COM) permite que um objeto exponha sua funcion
 - [Passo a passo: implementação de herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Interoperação com código não gerenciado](../../../framework/interop/index.md)
 - [Solução de problemas de Interoperabilidade](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [Assemblies e o Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblies no .NET](../../../standard/assembly/index.md)
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Marshaling de interoperabilidade](../../../framework/interop/interop-marshaling.md)

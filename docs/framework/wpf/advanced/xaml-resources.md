@@ -7,18 +7,18 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a72d70d6fd0753677f2e9635a05a60d33fec
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718657"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748265"
 ---
 # <a name="xaml-resources"></a>Recursos XAML
 Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicativo. Exemplos de recursos incluem pincéis e estilos. Esta visão geral descreve como usar recursos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Você também pode criar e acessar recursos por meio de código ou de forma intercambiável entre o código e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obter mais informações, consulte [recursos e código](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
   
 > [!NOTE]
->  Os arquivos de recurso descritos neste tópico são diferentes do que os arquivos de recurso descrito em [recurso de aplicativo do WPF, conteúdo e arquivos de dados](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) e diferentes dos recursos inseridos ou vinculados descritos na [ Gerenciando recursos de aplicativo (.NET)](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  Os arquivos de recurso descritos neste tópico são diferentes do que os arquivos de recurso descrito em [recurso de aplicativo do WPF, conteúdo e arquivos de dados](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) e diferentes dos recursos inseridos ou vinculados descritos [gerenciar Recursos de aplicativo (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
   
 <a name="usingresources"></a>   

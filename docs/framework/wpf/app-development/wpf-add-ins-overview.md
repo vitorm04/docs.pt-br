@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662732"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746556"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 <a name="Introduction"></a> O .NET Framework inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que dão suporte à extensibilidade de suplementos. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também precisam exibam interfaces de usuário que são fornecidas pelos suplementos. Este tópico mostra como o WPF aumenta a modelo suplemento do .NET Framework para habilitar estes cenários, a arquitetura por trás, seus benefícios e suas limitações.  
@@ -100,7 +100,7 @@ ms.locfileid: "54662732"
 -   Tem o <xref:System.SerializableAttribute> atributo aplicado.  
   
 > [!NOTE]
->  Para obter mais informações sobre a criação de objetos do .NET Framework que devem ser remotos, consulte [tornando os objetos em remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Para obter mais informações sobre a criação de objetos do .NET Framework que devem ser remotos, consulte [tornando os objetos em remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
   
  Os tipos de UI WPF não são remotos. Para resolver o problema, o WPF estende o modelo do .NET Framework suplemento para habilitar o WPF UI criadas por suplementos a ser exibida de aplicativos host. Esse suporte é fornecido pelo WPF por dois tipos: o <xref:System.AddIn.Contract.INativeHandleContract> interface e dois métodos estáticos implementados pela <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Em um nível elevado, esses tipos e métodos são usados da seguinte maneira:  
   
@@ -286,6 +286,6 @@ ms.locfileid: "54662732"
 - <xref:System.LoaderOptimizationAttribute>
 - [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domínios do aplicativo](../../../../docs/framework/app-domains/application-domains.md)
-- [Visão geral de comunicação remota do .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [Tornando os objetos em remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Visão geral de comunicação remota do .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Tornando os objetos em remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Tópicos de instruções](../../../../docs/framework/wpf/app-development/how-to-topics.md)

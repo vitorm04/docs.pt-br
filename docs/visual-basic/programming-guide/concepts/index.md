@@ -2,12 +2,6 @@
 title: Conceitos de Programação (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147230"
 ---
 # <a name="programming-concepts-visual-basic"></a>Conceitos de Programação (Visual Basic)
 Esta seção explica conceitos de programação na linguagem do Visual Basic.  
@@ -16,7 +10,7 @@ Esta seção explica conceitos de programação na linguagem do Visual Basic.
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Assemblies e o cache de assembly global (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Descreve como criar e usar um assemblies.|  
+|[Assemblies no .NET](../../../standard/assembly/index.md)|Descreve como criar e usar um assemblies.|  
 |[Programação assíncrona com Async e Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Descreve como criar soluções assíncronas usando palavras-chave [Async](../../../visual-basic/language-reference/modifiers/async.md) e [Await](../../../visual-basic/language-reference/operators/await-operator.md). Inclui um passo a passo.|  
 |[Visão geral de atributos (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.|  
 |[Informações do chamador (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Descreve como obter informações sobre o chamador de um método. Essas informações incluem o caminho do arquivo e o número de linha do código-fonte e o nome do membro do chamador.|  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1174e9ab7988f674d709b00ec73b48041398a1be
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492679"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748252"
 ---
 # <a name="storyboards-overview"></a>Visão geral de storyboards
 Este tópico mostra como usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar e aplicar animações. Ele descreve como manipular interativamente <xref:System.Windows.Media.Animation.Storyboard> objetos e descreve a sintaxe de direcionamento indireto de propriedade.  
@@ -63,7 +63,7 @@ Este tópico mostra como usar <xref:System.Windows.Media.Animation.Storyboard> o
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.EventTrigger>|Sim|Sim|Sim|Sim|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e uma propriedade <xref:System.Windows.Trigger>|Não|Sim|Sim|Sim|[Disparar uma animação quando o valor de uma propriedade é alterado](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como: Disparar uma animação quando dados forem alterados](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como: Disparar uma animação quando dados forem alterados](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
 |Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sim|Não|Não|Não|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  O exemplo a seguir usa uma <xref:System.Windows.Media.Animation.Storyboard> animar o <xref:System.Windows.FrameworkElement.Width%2A> de uma <xref:System.Windows.Shapes.Rectangle> elemento e o <xref:System.Windows.Media.SolidColorBrush.Color%2A> de um <xref:System.Windows.Media.SolidColorBrush> usado para pintar que <xref:System.Windows.Shapes.Rectangle>.  

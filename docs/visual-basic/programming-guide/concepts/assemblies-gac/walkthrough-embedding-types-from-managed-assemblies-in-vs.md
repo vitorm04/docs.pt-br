@@ -2,12 +2,12 @@
 title: 'Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245453"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747538"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studio (Visual Basic)
 Se você inserir informações de um assembly gerenciado de nome forte, você poderá acoplar vagamente tipos em um aplicativo para atingir a independência de versão. Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca gerenciada sem precisar ser recompilado para cada versão.  
@@ -222,8 +222,8 @@ End Function
   
 6.  No Explorador de Arquivos, abra a pasta do caminho de saída (por exemplo, C:\TypeEquivalenceSample). Clique duas vezes em TypeEquivalenceClient.exe para executar o programa. O programa refletirá a nova versão do assembly TypeEquivalenceRuntime sem ter sido recompilado.  
   
-## <a name="see-also"></a>Consulte também  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Assemblies e o cache de assembly global (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Consulte também
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)
+- [Assemblies no .NET](../../../../standard/assembly/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 8e90535739adb4f7f8a88f91e301c2db121241a7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: a498ec6f79c68ca924525fe837f356f097b01fd1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759334"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746024"
 ---
 # <a name="-keyfile"></a>-keyfile
 Especifica um arquivo que contém uma chave ou par de chaves para dar um nome forte de um assembly.  
@@ -52,7 +52,7 @@ vbc -keyfile:myfile.sn input.vb
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Assemblies e o Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblies no .NET](../../../standard/assembly/index.md)
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-referência (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

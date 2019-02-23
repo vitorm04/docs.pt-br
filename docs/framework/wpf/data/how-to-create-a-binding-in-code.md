@@ -8,12 +8,12 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 5b086629b6144a92e9a5eeecdd6adb1ca1bad27a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af87f1d6b8c4ee781c65d5a75872e8a72a02390
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610728"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747697"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>Como: Criar uma associação em código
 Este exemplo mostra como criar e definir um <xref:System.Windows.Data.Binding> no código.  
@@ -31,7 +31,7 @@ Este exemplo mostra como criar e definir um <xref:System.Windows.Data.Binding> n
  [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- Para ver o exemplo de código completo, confira [Exemplo de associação somente de código](https://msdn.microsoft.com/library/764aaf0b-2216-4941-9548-9c98da18d1a6).  
+ Para ver o exemplo de código completo, confira [Exemplo de associação somente de código](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90)).  
   
  Em vez de chamar <xref:System.Windows.FrameworkElement.SetBinding%2A>, você pode usar o <xref:System.Windows.Data.BindingOperations.SetBinding%2A> método estático do <xref:System.Windows.Data.BindingOperations> classe. O exemplo a seguir, chamadas <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> em vez de <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> para associar `myText` para `myDataProperty`.  
   

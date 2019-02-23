@@ -4,16 +4,16 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152559"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746410"
 ---
 # <a name="what-about-cloud-native-applications"></a>E quanto aos aplicativos nativos de nuvem?
 
-Embora [nativos de nuvem](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) aplicativos não são o foco principal deste guia, é útil ter uma compreensão desse nível de maturidade de modernização e distingui-lo de aplicativos otimizados para a nuvem.
+Embora [nativos de nuvem](https://azure.microsoft.com/overview/cloudnative/) aplicativos não são o foco principal deste guia, é útil ter uma compreensão desse nível de maturidade de modernização e distingui-lo de aplicativos otimizados para a nuvem.
 
 Figura 4-3 posiciona aplicativos nativos de nuvem em que os níveis de maturidade de modernização do aplicativo:
 
@@ -23,7 +23,7 @@ Figura 4-3 posiciona aplicativos nativos de nuvem em que os níveis de maturidad
 
 O nível de maturidade de modernização nativos de nuvem normalmente exige novos investimentos de desenvolvimento. Mover para o nível de nuvem nativa normalmente é orientada pela necessidade de negócios para modernizar aplicativos tanto quanto possíveis melhorar drasticamente a escala em aplicativos grandes, criando subsistemas autônomos (microsserviços) que podem ser implantados e escala independentemente de outras áreas do aplicativo enquanto reduz os custos em agilidade longo prazo e aumento de evolução das partes do aplicativo esses autônomos que fornecem significativa competir vantagens. 
 
-Os principais pilares da [nativos de nuvem](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) aplicativos são baseados em abordagens de arquitetura de microsserviços, que podem evoluir com agilidade e dimensionar aos limites que seriam difícil de atingir em uma arquitetura monolítica implantada em qualquer uma ambiente de nuvem ou locais.
+Dos principais pilares de aplicativos nativos de nuvem se baseiam em abordagens de arquitetura de microsserviços, que podem evoluir com agilidade e dimensionar aos limites que seriam difícil de atingir em uma arquitetura monolítica, implantada no local ou de nuvem ambiente.
 
 Figura 4-4 mostra as principais características do modelo nativos da nuvem.  
 
@@ -33,19 +33,19 @@ Figura 4-4 mostra as principais características do modelo nativos da nuvem.
 
 Além disso, você pode estender aplicativos web modernos básico e aplicativos nativos de nuvem com a adição de outros serviços, como IoT, aprendizado de máquina (ML) e a inteligência artificial (AI). Você pode usar qualquer um desses serviços para estender qualquer uma das abordagens possíveis otimizada para a nuvem.
 
-A diferença fundamental em aplicativos no nível nativo de nuvem é a arquitetura de aplicativo. [Nativo de nuvem](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) aplicativos são, por definição, os aplicativos baseados em microsserviços. Aplicativos nativos de nuvem exigem arquiteturas especiais, tecnologias e plataformas, em comparação comparadas um aplicativo web monolítico ou aplicativo de N camadas tradicional.
+A diferença fundamental em aplicativos no nível nativo de nuvem é a arquitetura de aplicativo. Aplicativos nativos de nuvem são, por definição, os aplicativos baseados em microsserviços. Aplicativos nativos de nuvem exigem arquiteturas especiais, tecnologias e plataformas, em comparação comparadas um aplicativo web monolítico ou aplicativo de N camadas tradicional.
 
 ## <a name="cloud-native-applications-details"></a>Detalhes de aplicativos nativos de nuvem
 
-[Nativo de nuvem](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) é um estado mais avançado ou maduro para aplicativos grandes e de missão crítica. Aplicativos nativos de nuvem geralmente exigem a arquitetura e design que são criados do zero, em vez de ao modernizar aplicativos existentes. A principal diferença entre um aplicativo nativo de nuvem e um aplicativo web otimizada para a nuvem mais simples é a recomendação de uso de arquiteturas de microsserviços em uma abordagem nativos da nuvem. Otimização para nuvem aplicativos também podem ser aplicativos web monolíticos ou aplicativos de N camadas.
+Nativo de nuvem é um estado mais avançado ou maduro para aplicativos grandes e de missão crítica. Aplicativos nativos de nuvem geralmente exigem a arquitetura e design que são criados do zero, em vez de ao modernizar aplicativos existentes. A principal diferença entre um aplicativo nativo de nuvem e um aplicativo web otimizada para a nuvem mais simples é a recomendação de uso de arquiteturas de microsserviços em uma abordagem nativos da nuvem. Otimização para nuvem aplicativos também podem ser aplicativos web monolíticos ou aplicativos de N camadas.
 
-O [aplicativo de doze fatores](https://12factor.net/) (uma coleção de padrões que estão intimamente relacionadas às abordagens de microsserviços) também é considerada um requisito para [nativos de nuvem](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) arquiteturas de aplicativo.
+O [aplicativo de doze fatores](https://12factor.net/) (uma coleção de padrões que estão intimamente relacionadas às abordagens de microsserviços) também é considerada um requisito para arquiteturas de aplicativos nativos de nuvem.
 
 O [Foundation de computação nativa de nuvem (CNCF)](https://www.cncf.io/) é um promotor primário dos princípios nativos da nuvem. A Microsoft é uma [membro o CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
 Para um exemplo de definição e para obter mais informações sobre as características de aplicativos nativos de nuvem, consulte o artigo da Gartner [como arquitetar e desenvolver aplicativos nativos de nuvem](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Para obter orientações específicas da Microsoft sobre como implementar um aplicativo nativo de nuvem, consulte [microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
 
-O fator mais importante a considerar se você migrar um aplicativo completo para o [nativos de nuvem](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) modelo é que você deve refazer a arquitetura para uma arquitetura baseada em microsserviços. Claramente, isso exige um investimento significativo em desenvolvimento devido à grande processo de refatoração envolvido. Geralmente, essa opção é escolhida para aplicativos de missão crítica que precisam de novos níveis de escalabilidade e agilidade de longo prazo. Mas, você pode começar a mover na direção nativos de nuvem adicionando microsserviços para apenas alguns novos cenários e, eventualmente, refatorar o aplicativo totalmente como microsserviços. Essa é uma abordagem incremental que é a melhor opção para alguns cenários.
+O fator mais importante a considerar se você migrar um aplicativo completo para o modelo nativos de nuvem é que você deve refazer a arquitetura para uma arquitetura baseada em microsserviços. Claramente, isso exige um investimento significativo em desenvolvimento devido à grande processo de refatoração envolvido. Geralmente, essa opção é escolhida para aplicativos de missão crítica que precisam de novos níveis de escalabilidade e agilidade de longo prazo. Mas, você pode começar a mover na direção nativos de nuvem adicionando microsserviços para apenas alguns novos cenários e, eventualmente, refatorar o aplicativo totalmente como microsserviços. Essa é uma abordagem incremental que é a melhor opção para alguns cenários.
 
 ## <a name="what-about-microservices"></a>E sobre os microsserviços? 
 

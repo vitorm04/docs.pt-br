@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: edb639f25970c6946eb33c68dd5a99cad566d4a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23f0ac8ff2a92fb96fbb7c69d87b01ed02b3b6b1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584773"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746319"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Como: Classificar e filtrar dados ADO.NET com o Windows Forms componente BindingSource
 Você pode expor a classificação e filtragem de capacidade do <xref:System.Windows.Forms.BindingSource> controlar por meio de <xref:System.Windows.Forms.BindingSource.Sort%2A> e <xref:System.Windows.Forms.BindingSource.Filter%2A> propriedades. Você pode aplicar a classificação simples quando a fonte de dados subjacente é uma <xref:System.ComponentModel.IBindingList>, e você pode aplicar a filtragem e classificação quando a fonte de dados é avançada um <xref:System.ComponentModel.IBindingListView>. O <xref:System.Windows.Forms.BindingSource.Sort%2A> propriedade requer standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sintaxe: uma cadeia de caracteres que representa o nome de uma coluna de dados na fonte de dados seguido `ASC` ou `DESC` para indicar se a lista deve ser classificada em ordem crescente ou decrescente. Você pode definir a classificação avançada ou a classificação em várias colunas separando cada coluna com um separador de vírgula. O <xref:System.Windows.Forms.BindingSource.Filter%2A> propriedade usa uma expressão de cadeia de caracteres.  
@@ -56,5 +56,5 @@ Você pode expor a classificação e filtragem de capacidade do <xref:System.Win
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
-- [Como: Instalar os bancos de dados](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+- [Como: Instalar os bancos de dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
 - [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)

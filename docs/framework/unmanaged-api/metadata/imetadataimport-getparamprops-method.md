@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685523"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745914"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Método IMetaDataImport::GetParamProps
 Obtém os valores de metadados para o parâmetro referenciado pelo ParamDef especificado token.  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out] O tamanho retornado em caracteres largos da `szName`.  
   
  `pdwAttr`  
- [out] Um ponteiro para os sinalizadores de atributo associado ao parâmetro.  
+ [out] Um ponteiro para os sinalizadores de atributo associado ao parâmetro. Esse é um bitmask de `CorParamAttr` valores.  
   
  `pdwCPlusTypeFlag`  
  [out] Um ponteiro para um sinalizador que especifica que o parâmetro é um <xref:System.ValueType>.  
@@ -75,6 +75,10 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out] O tamanho de `ppValue` em caracteres largos ou zero se `ppValue` não mantém uma cadeia de caracteres.  
   
+## <a name="remarks"></a>Comentários
+
+Os valores de sequência no `pulSequence` começam com 1 para parâmetros. Um valor de retorno tem um número de sequência igual a 0.
+
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   

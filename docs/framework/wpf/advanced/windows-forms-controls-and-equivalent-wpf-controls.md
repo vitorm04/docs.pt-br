@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: 591831898ebb1fb699dd9f87231d5861884132ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e98a850e6846c73c4df698e2a5414481611bb63d
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602983"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748564"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Controles dos Windows Forms e controles WPF equivalentes
 Muitos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] têm controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalentes, mas alguns controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não têm equivalentes em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tópico compara os tipos de controle fornecidos pelas duas tecnologias.  
@@ -87,7 +87,7 @@ Muitos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-wi
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Desenvolvedores de formulários do WPF Designer for Windows](https://msdn.microsoft.com/library/47ad0909-e89b-4996-b4ac-874d929f94ca)
+- [Desenvolvedores de formulários do WPF Designer for Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cc165605(v=vs.100))
 - [Passo a passo: Hospedando um controle de formulários do Windows no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
 - [Passo a passo: Hospedando um controle composto do WPF nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611972"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747013"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "54611972"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Criando um novo aplicativo de navegador XAML (XBAP)  
- A maneira mais simples para criar um novo projeto XBAP é com o Microsoft Visual Studio. Ao criar um novo projeto, selecione **Aplicativo de Navegador do WPF** na lista de modelos. Para obter mais informações, confira [Como: Criar um novo projeto de aplicativo de navegador WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ A maneira mais simples para criar um novo projeto XBAP é com o Microsoft Visual Studio. Ao criar um novo projeto, selecione **Aplicativo de Navegador do WPF** na lista de modelos. Para obter mais informações, confira [Como: Criar um novo projeto de aplicativo de navegador WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).  
   
  Quando você executa o projeto XBAP, ele é aberto em uma janela do navegador, em vez de uma janela autônoma. Quando você depura o XBAP no Visual Studio, o aplicativo é executado com permissão de zona da Internet e, portanto, gerará exceções de segurança se essas permissões forem excedidas. Para obter mais informações, consulte [Segurança](../../../../docs/framework/wpf/security-wpf.md) e [Segurança de confiança parcial do WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 24899d8a2184c73b50902de4a30c39327576ded1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441197"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747350"
 ---
 # <a name="printing-how-to-topics"></a>Tópicos explicativos de impressão
 Os tópicos nesta seção demonstram como usar os recursos de impressão e gerenciamento do sistema de impressão incluídas no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bem como o novo caminho de impressão do [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
@@ -30,9 +30,6 @@ Os tópicos nesta seção demonstram como usar os recursos de impressão e geren
   
  [Enumerar um subconjunto de filas de impressão](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Instruções para gerar uma lista de impressoras que contém certas características.  
-  
- [NOTINBUILD: Como: Estender o esquema de impressão e criar novas Classes de sistema de impressão](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- Longa discussão sobre como programadores de código gerenciado podem estender o Esquema de Impressão para dispositivos de impressão ou impressoras especiais com características novas ou incomuns.  
   
  [Obter propriedades do objeto do sistema de impressão sem reflexão](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
  Instruções sobre como descobrir as propriedades do objeto do sistema de impressão no tempo de execução e seus tipos.  

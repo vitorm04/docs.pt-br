@@ -5,12 +5,12 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0afc1aba32852406b975cc65ab4d4bff334d3ff7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518801"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745457"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>Controle SplitContainer (Windows Forms)
 O controle `SplitContainer` dos Windows Forms pode ser considerado uma composição; são dois painéis separados por uma barra móvel. Quando o ponteiro do mouse passa sobre a barra, ele muda de forma para mostrar que a barra é móvel.  
@@ -24,16 +24,16 @@ O controle `SplitContainer` dos Windows Forms pode ser considerado uma composiç
  [Visão geral do controle SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  Apresenta o controle `SplitContainer` e descreve as propriedades, métodos e eventos mais usados.  
   
- [Como definir o comportamento de redimensionamento e posicionamento em uma janela dividida](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Como: Definir redimensionamento e posicionamento de comportamento em uma janela dividida](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
  Descreve como controlar o separador dentro do controle `SplitContainer`.  
   
- [Como dividir uma janela horizontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
+ [Como: Dividir uma janela horizontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
  Descreve como controlar a orientação do separador dentro do controle `SplitContainer`.  
   
- [Como criar uma interface do usuário multipainel com o Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Como: Criar uma Interface do usuário Multipainel com Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Cria uma interface do usuário em vários painéis que é semelhante à usada no Microsoft Outlook.  
   
- Consulte também [Como dividir uma janela horizontalmente usando o Designer](how-to-split-a-window-horizontally-using-the-designer.md), [Como criar uma Interface no estilo Windows Explorer em um Windows Form](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [Como criar uma Interface do usuário multipainéis com Windows Forms usando o Designer](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
+ Consulte também [como: Dividir uma janela horizontalmente usando o Designer](how-to-split-a-window-horizontally-using-the-designer.md), [como: Criar uma Interface no estilo Explorer do Windows em um Windows Form](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), [como: Criar uma Interface do usuário Multipainel com Windows Forms usando o Designer](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Referência  
  Classe <xref:System.Windows.Forms.SplitContainer>  

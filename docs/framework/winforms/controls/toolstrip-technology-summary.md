@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94b061b6c403c22fc7eed4ca3632f3165693e868
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736000"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747133"
 ---
 # <a name="toolstrip-technology-summary"></a>Resumo da tecnologia de ToolStrip
 Este tópico resume as informações sobre o controle `ToolStrip` e as classes que dão suporte ao seu uso.  
@@ -63,26 +63,26 @@ Este tópico resume as informações sobre o controle `ToolStrip` e as classes q
 ### <a name="task-dialog-boxes"></a>Caixas de diálogo da tarefa  
  No Visual Studio, clicar na smart tag em um controle no designer exibe uma lista de tarefas para ter acesso fácil a muitos comandos usados com frequência.  
   
--   [Caixa de diálogo de tarefas do MenuStrip](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Caixa de diálogo de tarefas do MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [Caixa de diálogo de tarefas do ToolStrip](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [Caixa de diálogo de tarefas do ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [Caixa de diálogo de tarefas do ContextMenuStrip](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   [Caixa de diálogo de tarefas do ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [Caixa de diálogo de tarefas do StatusStrip](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   [Caixa de diálogo de tarefas do StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [Caixa de diálogo de tarefas do ToolStripContainer](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   [Caixa de diálogo de tarefas do ToolStripContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Editores de coleção de itens  
  No Visual Studio, quando você clica em **Editar itens** na lista de tarefas ou clica com o botão direito do mouse no controle e seleciona **Editar Itens** no menu de atalho, o editor de coleção para o controle é exibido. Editores de coleção permitem adicionar, remover e reordenar os itens que o controle contém. Você também pode exibir e alterar as propriedades para o controle e os itens do controle.  
   
--   [Editor de coleção de itens do MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Editor de coleção de itens do MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Editor de coleção de itens StatusStrip](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [Editor de coleção de itens StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [Editor de coleção de itens ContextMenuStrip](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [Editor de coleção de itens ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [Editor de coleção de itens ToolStrip](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [Editor de coleção de itens ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Hospedagem de controles  
  O <xref:System.Windows.Forms.ToolStripControlHost> classe fornece wrappers internos para <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, e <xref:System.Windows.Forms.ToolStripProgressBar> controles. Você também pode hospedar qualquer outro controle existente ou COM em um <xref:System.Windows.Forms.ToolStripControlHost>.  

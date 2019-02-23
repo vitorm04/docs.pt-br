@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543848"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748577"
 ---
 # <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos
 Um nível de renderização define um nível de funcionalidade de hardware de gráficos e de desempenho para um dispositivo que executa um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -90,7 +90,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 |Conteúdo rasterizado que utiliza <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualquer conteúdo renderizado utilizando o <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> método de <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
 |Conteúdo lado a lado que usa <xref:System.Windows.Media.TileBrush>|Qualquer conteúdo ladrilhado no qual o <xref:System.Windows.Media.TileBrush.TileMode%2A> propriedade do <xref:System.Windows.Media.TileBrush> é definido como <xref:System.Windows.Media.TileMode.Tile>.|  
 |Superfícies que excedam o tamanho máximo de textura do hardware de gráficos|Para a maioria dos hardwares gráficos, superfícies grandes tem 2048x2048 ou 4096x4096 pixels de tamanho.|  
-|Qualquer operação cujo requisito de RAM de vídeo excede a memória do hardware de gráficos|Você pode monitorar o uso de memória RAM de vídeo do aplicativo usando a ferramenta Perforator incluída no [pacote de desempenho WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) no SDK do Windows.|  
+|Qualquer operação cujo requisito de RAM de vídeo excede a memória do hardware de gráficos|Você pode monitorar o uso de memória RAM de vídeo do aplicativo usando a ferramenta Perforator incluída no [pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) no SDK do Windows.|  
 |Janelas em camadas|Janelas em camadas permitem que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos renderizem o conteúdo na tela em uma janela não retangular. Em sistemas operacionais que oferecem suporte a WDDM Windows Display Driver Model (WDDM), como [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] e [!INCLUDE[win7](../../../../includes/win7-md.md)] em janelas em camadas são aceleradas por hardware. Em outros sistemas, como [!INCLUDE[winxp](../../../../includes/winxp-md.md)], janelas em camadas são renderizadas por software sem aceleração de hardware.<br /><br /> Você pode habilitar janelas em camadas no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definindo a seguinte <xref:System.Windows.Window> propriedades:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
@@ -117,7 +117,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 |Perforator|Use para analisar o comportamento de renderização.|  
 |Visual Profiler|Utilize para criar perfil do uso de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] serviços, como layout e manipulação de eventos, pelos elementos na árvore visual.|  
   
- O pacote de desempenho WPF fornece uma exibição gráfica rica em dados de desempenho. Para obter mais informações sobre ferramentas de desempenho do WPF, consulte [Pacote de desempenho WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
+ O pacote de desempenho WPF fornece uma exibição gráfica rica em dados de desempenho. Para obter mais informações sobre ferramentas de desempenho do WPF, consulte [Pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)).  
   
 ### <a name="directx-diagnostic-tool"></a>Ferramenta de diagnóstico do DirectX  
  A ferramenta de diagnóstico [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], Dxdiag.exe, foi projetada para ajudá-lo a solucionar problemas relacionados a [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. A pasta de instalação padrão para a ferramenta de diagnóstico [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] é:  
@@ -133,6 +133,6 @@ Janela principal da Ferramenta de diagnóstico do DirectX
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Pacote de desempenho WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [Pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Configurações do Registro de renderização dos elementos gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Dicas e truques de animação](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

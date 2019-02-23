@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: b4c5001e671db9d615f3bcbc0a35b7b36b45bb01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d32b98fce3cf5e4fe82745c3d0ba8992ee75339e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506856"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746199"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Passo a passo: Hospedando um controle composto do WPF 3D nos Windows Forms
 
@@ -51,7 +51,7 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
 ## <a name="create-the-host-project"></a>Criar o projeto de host
 
-1.  Adicionar um **aplicativo WPF (.NET Framework)** projeto chamado `WpfUserControlHost` à solução. Para obter mais informações, confira [Como: Criar um novo projeto de aplicativo do WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
+1.  Adicionar um **aplicativo WPF (.NET Framework)** projeto chamado `WpfUserControlHost` à solução. Para obter mais informações, confira [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 2.  Na **Gerenciador de soluções**, adicione uma referência ao assembly WindowsFormsIntegration, que é chamado WindowsFormsIntegration.
 

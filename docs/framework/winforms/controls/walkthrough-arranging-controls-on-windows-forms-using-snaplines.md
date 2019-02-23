@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543218"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748028"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O Designer de Formulários do Windows fornece várias ferramentas de layout para fazer isso. Um dos mais importantes é a <xref:System.Windows.Forms.Design.Behavior.SnapLine> recurso.  
@@ -154,7 +154,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
   
 1.  Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** para seu formulário.  
   
-2.  Redimensionar o <xref:System.Windows.Forms.Button> controle capturando uma das alças de dimensionamento e arrastando o canto. Para obter detalhes, consulte [como: Redimensionar controles nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+2.  Redimensionar o <xref:System.Windows.Forms.Button> controle capturando uma das alças de dimensionamento e arrastando o canto. Para obter detalhes, confira [Como: Redimensionar controles nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
   
 3.  Arraste a alça de dimensionamento até que um do <xref:System.Windows.Forms.Button> bordas do controle é alinhado com outro controle. Observe que uma guia de alinhamento aparece. Observe também que a alça de dimensionamento se encaixa na posição indicada pela guia de alinhamento.  
   
@@ -222,7 +222,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>Para desabilitar as guias de alinhamento no ambiente de design  
   
-1.  No menu **Ferramentas**, abra a caixa de diálogo **Opções**. Abra a caixa de diálogo do Designer de Formulários do Windows. Para obter detalhes, consulte [General, Windows Forms Designer, Options Dialog Box](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834) (Designer de Formulários do Windows, caixa de diálogo Opções).  
+1.  No menu **Ferramentas**, abra a caixa de diálogo **Opções**. Abra a caixa de diálogo do Designer de Formulários do Windows. Para obter detalhes, consulte [General, Windows Forms Designer, Options Dialog Box](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)) (Designer de Formulários do Windows, caixa de diálogo Opções).  
   
 2.  Selecione o nó **Geral**. Na seção **Modo de Layout**, altere a seleção de **SnapLines** para **SnapToGrid**.  
   
