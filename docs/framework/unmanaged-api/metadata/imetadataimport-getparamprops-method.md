@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685523"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745914"
 ---
-# <a name="imetadataimportgetparamprops-method"></a><span data-ttu-id="4bffd-102">Método IMetaDataImport::GetParamProps</span><span class="sxs-lookup"><span data-stu-id="4bffd-102">IMetaDataImport::GetParamProps Method</span></span>
-<span data-ttu-id="4bffd-103">Obtém os valores de metadados para o parâmetro referenciado pelo ParamDef especificado token.</span><span class="sxs-lookup"><span data-stu-id="4bffd-103">Gets metadata values for the parameter referenced by the specified ParamDef token.</span></span>  
+# <a name="imetadataimportgetparamprops-method"></a><span data-ttu-id="510f5-102">Método IMetaDataImport::GetParamProps</span><span class="sxs-lookup"><span data-stu-id="510f5-102">IMetaDataImport::GetParamProps Method</span></span>
+<span data-ttu-id="510f5-103">Obtém os valores de metadados para o parâmetro referenciado pelo ParamDef especificado token.</span><span class="sxs-lookup"><span data-stu-id="510f5-103">Gets metadata values for the parameter referenced by the specified ParamDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4bffd-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4bffd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="510f5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="510f5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetParamProps (  
@@ -44,46 +44,50 @@ HRESULT GetParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4bffd-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4bffd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="510f5-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="510f5-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="4bffd-106">[in] Um token de ParamDef que representa o parâmetro para retornar metadados.</span><span class="sxs-lookup"><span data-stu-id="4bffd-106">[in] A ParamDef token that represents the parameter to return metadata for.</span></span>  
+ <span data-ttu-id="510f5-106">[in] Um token de ParamDef que representa o parâmetro para retornar metadados.</span><span class="sxs-lookup"><span data-stu-id="510f5-106">[in] A ParamDef token that represents the parameter to return metadata for.</span></span>  
   
  `pmd`  
- <span data-ttu-id="4bffd-107">[out] Um ponteiro para um token MethodDef que representa o método que utiliza o parâmetro.</span><span class="sxs-lookup"><span data-stu-id="4bffd-107">[out] A pointer to a MethodDef token representing the method that takes the parameter.</span></span>  
+ <span data-ttu-id="510f5-107">[out] Um ponteiro para um token MethodDef que representa o método que utiliza o parâmetro.</span><span class="sxs-lookup"><span data-stu-id="510f5-107">[out] A pointer to a MethodDef token representing the method that takes the parameter.</span></span>  
   
  `pulSequence`  
- <span data-ttu-id="4bffd-108">[out] A posição ordinal do parâmetro na lista de argumentos de método.</span><span class="sxs-lookup"><span data-stu-id="4bffd-108">[out] The ordinal position of the parameter in the method argument list.</span></span>  
+ <span data-ttu-id="510f5-108">[out] A posição ordinal do parâmetro na lista de argumentos de método.</span><span class="sxs-lookup"><span data-stu-id="510f5-108">[out] The ordinal position of the parameter in the method argument list.</span></span>  
   
  `szName`  
- <span data-ttu-id="4bffd-109">[out] Um buffer para armazenar o nome do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="4bffd-109">[out] A buffer to hold the name of the parameter.</span></span>  
+ <span data-ttu-id="510f5-109">[out] Um buffer para armazenar o nome do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="510f5-109">[out] A buffer to hold the name of the parameter.</span></span>  
   
  `cchName`  
- <span data-ttu-id="4bffd-110">[in] O tamanho solicitado em caracteres largos da `szName`.</span><span class="sxs-lookup"><span data-stu-id="4bffd-110">[in] The requested size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="510f5-110">[in] O tamanho solicitado em caracteres largos da `szName`.</span><span class="sxs-lookup"><span data-stu-id="510f5-110">[in] The requested size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="4bffd-111">[out] O tamanho retornado em caracteres largos da `szName`.</span><span class="sxs-lookup"><span data-stu-id="4bffd-111">[out] The returned size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="510f5-111">[out] O tamanho retornado em caracteres largos da `szName`.</span><span class="sxs-lookup"><span data-stu-id="510f5-111">[out] The returned size in wide characters of `szName`.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="4bffd-112">[out] Um ponteiro para os sinalizadores de atributo associado ao parâmetro.</span><span class="sxs-lookup"><span data-stu-id="4bffd-112">[out] A pointer to any attribute flags associated with the parameter.</span></span>  
+ <span data-ttu-id="510f5-112">[out] Um ponteiro para os sinalizadores de atributo associado ao parâmetro.</span><span class="sxs-lookup"><span data-stu-id="510f5-112">[out] A pointer to any attribute flags associated with the parameter.</span></span> <span data-ttu-id="510f5-113">Esse é um bitmask de `CorParamAttr` valores.</span><span class="sxs-lookup"><span data-stu-id="510f5-113">This is a bitmask of `CorParamAttr` values.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="4bffd-113">[out] Um ponteiro para um sinalizador que especifica que o parâmetro é um <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="4bffd-113">[out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.</span></span>  
+ <span data-ttu-id="510f5-114">[out] Um ponteiro para um sinalizador que especifica que o parâmetro é um <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="510f5-114">[out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="4bffd-114">[out] Um ponteiro para uma cadeia de caracteres constante retornado pelo parâmetro.</span><span class="sxs-lookup"><span data-stu-id="4bffd-114">[out] A pointer to a constant string returned by the parameter.</span></span>  
+ <span data-ttu-id="510f5-115">[out] Um ponteiro para uma cadeia de caracteres constante retornado pelo parâmetro.</span><span class="sxs-lookup"><span data-stu-id="510f5-115">[out] A pointer to a constant string returned by the parameter.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="4bffd-115">[out] O tamanho de `ppValue` em caracteres largos ou zero se `ppValue` não mantém uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4bffd-115">[out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.</span></span>  
+ <span data-ttu-id="510f5-116">[out] O tamanho de `ppValue` em caracteres largos ou zero se `ppValue` não mantém uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="510f5-116">[out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4bffd-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4bffd-116">Requirements</span></span>  
- <span data-ttu-id="4bffd-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4bffd-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="510f5-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="510f5-117">Remarks</span></span>
+
+<span data-ttu-id="510f5-118">Os valores de sequência no `pulSequence` começam com 1 para parâmetros.</span><span class="sxs-lookup"><span data-stu-id="510f5-118">The sequence values in `pulSequence` begin with 1 for parameters.</span></span> <span data-ttu-id="510f5-119">Um valor de retorno tem um número de sequência igual a 0.</span><span class="sxs-lookup"><span data-stu-id="510f5-119">A return value has a sequence number of 0.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="510f5-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="510f5-120">Requirements</span></span>  
+ <span data-ttu-id="510f5-121">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="510f5-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4bffd-118">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4bffd-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="510f5-122">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="510f5-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4bffd-119">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4bffd-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="510f5-123">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="510f5-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4bffd-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bffd-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="510f5-124">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="510f5-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4bffd-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4bffd-121">See also</span></span>
-- [<span data-ttu-id="4bffd-122">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="4bffd-122">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="4bffd-123">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="4bffd-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="510f5-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="510f5-125">See also</span></span>
+- [<span data-ttu-id="510f5-126">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="510f5-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="510f5-127">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="510f5-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
