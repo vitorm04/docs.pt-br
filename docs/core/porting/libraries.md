@@ -2,14 +2,14 @@
 title: Portabilidade de bibliotecas para o .NET Core
 description: Saiba como realizar a portabilidade de projetos de biblioteca do .NET Framework para o .NET Core.
 author: cartermp
-ms.date: 12/7/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904696"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745554"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portabilidade de bibliotecas do .NET Framework para o .NET Core
 
@@ -26,7 +26,7 @@ Este artigo pressupõe que você:
 
 Você também deve se familiarizar com o conteúdo dos tópicos a seguir:
 
-[.NET Standard](~/docs/standard/net-standard.md)   
+[.NET Standard](../../standard/net-standard.md)\
 Este tópico descreve a especificação formal de APIs do .NET que devem estar disponíveis em todas as implementações do .NET.
 
 [Pacotes, metapacotes e estruturas](~/docs/core/packages.md)   

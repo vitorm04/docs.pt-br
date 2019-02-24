@@ -5,12 +5,12 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.custom: seodec18
-ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63fc441d045f62abc6776cac56571a971d64fefd
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129695"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583869"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Como remover o SDK e o Tempo de Execução do .NET Core
 
@@ -158,7 +158,7 @@ Se instalou o .NET Core usando um gerenciador de pacotes, você usará esse mesm
 - [apt-get(8)](https://linux.die.net/man/8/apt-get) é usado por sistemas baseados em Debian, incluindo o Ubuntu.
 - [yum(8)](https://linux.die.net/man/8/yum) é usado no Fedora, CentOS e Oracle Linux.
 - [zypper(8)](https://en.opensuse.org/SDB:Zypper_manual_(plain)) é usado no openSUSE e no SLES (SUSE Linux Enterprise System).
-- [dnf(8)](https://dnf.readthedocs.io/latest/command_ref.html) é usado no Fedora.
+- [dnf(8)](https://dnf.readthedocs.io/en/latest/command_ref.html) é usado no Fedora.
 
 Em quase todos os casos, o comando para remover um pacote é `remove`.
 
