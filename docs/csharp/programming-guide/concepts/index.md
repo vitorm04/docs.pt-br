@@ -1,13 +1,7 @@
 ---
-title: Conceitos de programação (C#)
+title: 'Conceitos de programação (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143177"
 ---
 # <a name="programming-concepts-c"></a>Conceitos de programação (C#)
 Esta seção explica conceitos de programação na linguagem C#.  
@@ -16,7 +10,7 @@ Esta seção explica conceitos de programação na linguagem C#.
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Assemblies e o cache de assembly global (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)|Descreve como criar e usar um assemblies.|  
+|[Assemblies no .NET](../../../standard/assembly/index.md)|Descreve como criar e usar um assemblies.|  
 |[Programação assíncrona com async e await (C#)](../../../csharp/programming-guide/concepts/async/index.md)|Descreve como criar soluções assíncronas usando as palavras-chave [async](../../../csharp/language-reference/keywords/async.md) e [await](../../../csharp/language-reference/keywords/await.md) no C#. Inclui um passo a passo.|  
 |[Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)|Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.|  
 |[Informações do chamador (C#)](../../../csharp/programming-guide/concepts/caller-information.md)|Descreve como obter informações sobre o chamador de um método. Essas informações incluem o caminho do arquivo e o número de linha do código-fonte e o nome do membro do chamador.|  

@@ -65,7 +65,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
 ## <a name="platform-sections"></a>Seções da plataforma  
  [Domínios do aplicativo](../../framework/app-domains/application-domains.md)  
   
- [Assemblies e o Cache de Assembly Global](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [Assemblies no .NET](../../standard/assembly/index.md)  
   
  [Atributos](../../csharp/programming-guide/concepts/attributes/index.md)  
   
