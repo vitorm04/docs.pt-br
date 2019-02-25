@@ -50,7 +50,7 @@ ms.locfileid: "55204880"
   
 |Caractere com escape|Descrição|Padrão|Correspondências|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Corresponde a um caractere de sino, \u0007.|`\a`|"\u0007" em "Error!" + ‘\u0007’|  
+|`\a`|Corresponde a um caractere de sino, \u0007.|`\a`|"\u0007" em "Error!" + '\u0007'|  
 |`\b`|Em uma classe de caractere, corresponde a um backspace, \ u0008.|`[\b]{3,}`|"\b\b\b\b" em "\b\b\b\b"|  
 |`\t`|Corresponde a uma tabulação, \u0009.|`(\w+)\t`|"item1\t", "item2\t" em "item1\titem2\t"|  
 |`\r`|Corresponde a um retorno de carro, \u000D. (`\r` não é equivalente ao caractere newline, `\n`.)|`\r\n(\w+)`|"\r\nThese" em "\r\nThese are\ntwo lines."|  
@@ -58,10 +58,10 @@ ms.locfileid: "55204880"
 |`\f`|Corresponde a um avanço de página, \u000C.|`[\f]{2,}`|"\f\f\f" em "\f\f\f"|  
 |`\n`|Corresponde a uma nova linha, \u000A.|`\r\n(\w+)`|"\r\nThese" em "\r\nThese are\ntwo lines."|  
 |`\e`|Corresponde a um escape, \u001B.|`\e`|"\x001B" em "\x001B"|  
-|`\` *nnn*|Usa representação octal para especificar um caractere (*nnn* consiste em dois ou três dígitos).|`\w\040\w`|“a b”, “c d” em “a bc d”|  
-|`\x` *nn*|Usa representação hexadecimal para especificar um caractere (*nn* consiste exatamente em dois dígitos).|`\w\x20\w`|“a b”, “c d” em “a bc d”|  
+|`\` *nnn*|Usa representação octal para especificar um caractere (*nnn* consiste em dois ou três dígitos).|`\w\040\w`|"a b", "c d" em "a bc d"|  
+|`\x` *nn*|Usa representação hexadecimal para especificar um caractere (*nn* consiste exatamente em dois dígitos).|`\w\x20\w`|"a b", "c d" em "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|Corresponde ao caractere de controle ASCII especificado por *X* ou *x*, em que *X* ou *x* é a letra do caractere de controle.|`\cC`|"\x0003" em "\x0003" (Ctrl-C)|  
-|`\u` *nnnn*|Corresponde a um caractere Unicode usando representação hexadecimal (exatamente quatro dígitos, como representado por *nnnn*).|`\w\u0020\w`|“a b”, “c d” em “a bc d”|  
+|`\u` *nnnn*|Corresponde a um caractere Unicode usando representação hexadecimal (exatamente quatro dígitos, como representado por *nnnn*).|`\w\u0020\w`|"a b", "c d" em "a bc d"|  
 |`\`|Quando seguido por um caractere que não é reconhecido como um caractere de escape nesta e em outras tabelas deste tópico, corresponde a esse caractere. Por exemplo, `\*` é igual a `\x2A`, e `\.` é igual a `\x2E`. Isso permite que o mecanismo de expressões regulares remova ambiguidades de elementos da linguagem (como \* ou ?) e caracteres literais (representados por `\*` ou `\?`).|`\d+[\+-x\*]\d+`|"2+2" e "3\*9" em "(2+2) \* 3\*9"|  
   
  [Voltar ao início](#top)  
@@ -92,11 +92,11 @@ ms.locfileid: "55204880"
   
 |Asserção|Descrição|Padrão|Correspondências|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Por padrão, a correspondência precisa começar no início da cadeia de caracteres. No modo multilinha, precisa começar no início da linha.|`^\d{3}`|“901” em “901-333-”|  
-|`$`|Por padrão, a correspondência deve ocorrer no fim da cadeia de caracteres ou antes de `\n` no fim da cadeia de caracteres. No modo multilinha, deve antes do fim da linha ou antes de `\n` no fim da linha.|`-\d{3}$`|“-333” em “-901-333”|  
-|`\A`|A correspondência deve ocorrer no início da cadeia de caracteres.|`\A\d{3}`|“901” em “901-333-”|  
-|`\Z`|A correspondência deve ocorrer no final da cadeia de caracteres ou antes de `\n` no final da cadeia de caracteres.|`-\d{3}\Z`|“-333” em “-901-333”|  
-|`\z`|A correspondência deve ocorrer no final da cadeia de caracteres.|`-\d{3}\z`|“-333” em “-901-333”|  
+|`^`|Por padrão, a correspondência precisa começar no início da cadeia de caracteres. No modo multilinha, precisa começar no início da linha.|`^\d{3}`|"901" em "901-333-"|  
+|`$`|Por padrão, a correspondência deve ocorrer no fim da cadeia de caracteres ou antes de `\n` no fim da cadeia de caracteres. No modo multilinha, deve antes do fim da linha ou antes de `\n` no fim da linha.|`-\d{3}$`|"-333" em "-901-333"|  
+|`\A`|A correspondência deve ocorrer no início da cadeia de caracteres.|`\A\d{3}`|"901" em "901-333-"|  
+|`\Z`|A correspondência deve ocorrer no final da cadeia de caracteres ou antes de `\n` no final da cadeia de caracteres.|`-\d{3}\Z`|"-333" em "-901-333"|  
+|`\z`|A correspondência deve ocorrer no final da cadeia de caracteres.|`-\d{3}\z`|"-333" em "-901-333"|  
 |`\G`|A correspondência deve ocorrer no ponto em que a correspondência anterior foi encerrada.|`\G\(\d\)`|"(1)", "(3)", "(5)" in "(1)(3)(5)[7](9\)"|  
 |`\b`|A correspondência deve ocorrer em um limite entre um caractere `\w` (alfanumérico) e um caractere `\W` (não alfanumérico).|`\b\w+\s\w+\b`|"them theme", "them them" em "them theme them them"|  
 |`\B`|A correspondência não deve ocorrer em um limite `\b`.|`\Bend\w*\b`|"ends", "ender" em "end sends endure lender"|  
@@ -114,7 +114,7 @@ ms.locfileid: "55204880"
 |`(?<` *nome1* `-` *nome2* `>` *subexpressão* `)`|Especifica uma definição de grupo de balanceamento. Para saber mais, confira a seção "Definição de grupo de balanceamento" em [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" em "3+2^((1-3)\*(3-1))"|  
 |`(?:` *subexpression* `)`|Define um grupo de não captura.|`Write(?:Line)?`|"WriteLine" em "Console.WriteLine()"<br /><br /> "Write" em "Console.Write(value)"|  
 |`(?imnsx-imnsx:` *subexpression* `)`|Aplica ou desabilita as opções especificadas em *subexpressão*. Para obter mais informações, consulte [Opções de expressões regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" em "A12xl A12XL a12xl"|  
-|`(?=` *subexpression* `)`|Asserções lookahead positivas de largura zero.|`\w+(?=\.)`|"is", "ran" e "out" em "He is. The dog ran. The sun is out.”|  
+|`(?=` *subexpression* `)`|Asserções lookahead positivas de largura zero.|`\w+(?=\.)`|"is", "ran" e "out" em "He is. The dog ran. The sun is out."|  
 |`(?!` *subexpression* `)`|Asserções lookahead negativas de largura zero.|`\b(?!un)\w+\b`|"sure", "used" em "unsure sure unity used"|  
 |`(?<=` *subexpression* `)`|Asserção lookbehind positiva de largura zero.|`(?<=19)\d{2}\b`|"99", "50", "05" em "1851 1999 1950 1905 2003"|  
 |`(?<!` *subexpression* `)`|Asserção lookbehind negativa de largura zero.|`(?<!19)\d{2}\b`|"51", "03" em "1851 1999 1950 1905 2003"|  
