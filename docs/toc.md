@@ -270,6 +270,7 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## Novidades no C#
+### [C# 8.0 – versão prévia 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1](csharp/whats-new/csharp-7-1.md)
@@ -766,7 +767,7 @@
 ##### [Operador ^](visual-basic/language-reference/operators/exponentiation-operator.md)
 ##### [Operador ^=](visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 ##### [Operador ?()](visual-basic/language-reference/operators/null-conditional-operators.md)
-##### [?. ??](visual-basic/language-reference/operators/null-conditional-operators.md)
+##### [Operador ?.](visual-basic/language-reference/operators/null-conditional-operators.md)
 ##### [Operador AddressOf](visual-basic/language-reference/operators/addressof-operator.md)
 ##### [Operador And](visual-basic/language-reference/operators/and-operator.md)
 ##### [Operador AndAlso](visual-basic/language-reference/operators/andalso-operator.md)
