@@ -3,12 +3,12 @@ title: Documentando seu código com comentários em XML
 description: Saiba como documentar seu código com comentários de documentação XML e gerar um arquivo de documentação XML em tempo de compilação.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271350"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583700"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
 
@@ -194,9 +194,9 @@ Agora que você tem seus comentários XML em um arquivo separado, vamos ver como
 
 E aqui está: nosso código voltou a ser legível e nenhuma informação de documentação foi perdida.
 
-O atributo `filename` representa o nome do arquivo XML que contém a documentação.
+O atributo `file` representa o nome do arquivo XML que contém a documentação.
 
-O atributo `path` representa uma consulta [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) para o `tag name` presente no `filename` especificado.
+O atributo `path` representa uma consulta [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) para o `tag name` presente no `file` especificado.
 
 O atributo `name` representa o especificador de nome na marca que precede os comentários.
 
