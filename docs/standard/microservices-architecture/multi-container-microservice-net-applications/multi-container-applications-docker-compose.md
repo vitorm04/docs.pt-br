@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145248"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442224"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml 
 
@@ -452,13 +452,13 @@ A equipe do .NET está realizando um trabalho importante para tornar o .NET Core
 
 2.  **Build**: a prioridade é compilar o aplicativo e inclui os binários e outras dependências para otimizar os binários.
 
-3.  **Produção**: quando o foco é a rápida implantação e inicialização de contêineres; portanto, essas imagens são limitadas aos binários e ao conteúdo necessário para executar o aplicativo.
+3.  **Produção**: quando o foco é implantar e iniciar contêineres rapidamente. Assim, essas imagens são limitadas aos binários e ao conteúdo necessário para executar o aplicativo.
 
 Para conseguir isso, a equipe do .NET fornece três variantes básicas em [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (no Hub do Docker):
 
 1.  **sdk**: para os cenários de desenvolvimento e build.
 2.  **runtime**: para o cenário de produção e
-3.  **runtime-deps**: para o cenário de produção de [aplicativos autossuficientes](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd).
+3.  **runtime-deps**: para o cenário de produção de [aplicativos autossuficientes](../../../core/deploying/index.md#self-contained-deployments-scd).
 
 As imagens de tempo de execução também fornecem configuração automática de aspnetcore\_urls para a porta 80 e do cache pré-gerado para imagem nativa de assemblies; para ajudar na obtenção de uma inicialização mais rápida.
 
@@ -468,7 +468,7 @@ As imagens de tempo de execução também fornecem configuração automática de
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **Criando Imagens do Docker para .NET Core Applications** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[Anterior](data-driven-crud-microservice.md)

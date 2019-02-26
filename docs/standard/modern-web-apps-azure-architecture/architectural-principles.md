@@ -3,13 +3,13 @@ title: Princípios de arquitetura
 description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Princípios de arquitetura
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828092"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442978"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
@@ -99,21 +99,10 @@ O requisito de que as classes tenham um dos recursos ou comportamentos acima adi
 
 No mínimo, os aplicativos Web individuais devem tentar ser seu próprio contexto limitado, com seu próprio repositório de persistência para seu modelo de negócios, em vez de compartilhar um banco de dados com outros aplicativos. A comunicação entre contextos limitados ocorre por meio de interfaces programáticas, em vez de por meio de um banco de dados compartilhado, o que permite que a lógica de negócios e os eventos ocorram em resposta às alterações feitas. Os contextos limitados são mapeados estreitamente aos microsserviços, que também são idealmente implementados como seus próprios contextos limitados individuais.
 
-> ### <a name="references--modern-web-applications"></a>Referências – Aplicativos Web modernos
-> - **Separação de interesses**  
-> <https://deviq.com/separation-of-concerns/>
-> - **Encapsulamento**  
-> <https://deviq.com/encapsulation/>
-> - **Princípio da inversão de dependência**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Princípio de Dependências Explícitas**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **Don't Repeat Yourself**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **Ignorância de persistência**  
-> <https://deviq.com/persistence-ignorance/>
-> - **Contexto limitado**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>Recursos adicionais
+
+* [JAVA Design Patterns: Principles](https://java-design-patterns.com/principles/) (Padrões de design do JAVA: princípios)
+* [Contexto limitado](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Anterior](choose-between-traditional-web-and-single-page-apps.md)

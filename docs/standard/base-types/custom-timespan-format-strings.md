@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c75f9ffe17d04ad4b8e41a6e1402a3cf4be7e07f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0681ff9c59e77650654495ecd6e6d9f9ded82517
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722706"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665089"
 ---
 # <a name="custom-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan personalizado
 
@@ -54,7 +54,7 @@ As sequências de formato <xref:System.TimeSpan> personalizado são usadas tamb�
 |"s", "%s"|O número de segundos inteiros no intervalo de tempo que não são incluídos como parte das horas, dias ou minutos. Segundos de dígito único não têm um zero à esquerda.<br /><br /> Para saber mais: [O especificador de formato personalizado "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
 |"ss"|O número de segundos inteiros no intervalo de tempo que não são incluídos como parte das horas, dias ou minutos.  Segundos de dígito único têm um zero à esquerda.<br /><br /> Para saber mais: [O especificador de formato personalizado "ss"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
 |"f", "%f"|Os décimos de segundo em um intervalo de tempo.<br /><br /> Para saber mais: [O especificador de formato personalizado "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
-|"ff"|Os centésimos de segundo em um intervalo de tempo.<br /><br /> Mais informações: [Especificador de formato personalizado "FF"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
+|"ff"|Os centésimos de segundo em um intervalo de tempo.<br /><br /> Para saber mais: [O especificador de formato personalizado "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
 |"fff"|Os milissegundos em um intervalo de tempo.<br /><br /> Para saber mais: [O especificador de formato personalizado "fff"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|
 |"ffff"|Os décimos de milésimos de segundo em um intervalo de tempo.<br /><br /> Para saber mais: [O especificador de formato personalizado "ffff"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06.8954|
 |"fffff"|As centenas de milésimos de segundo em um intervalo de tempo.<br /><br /> Para saber mais: [O especificador de formato personalizado "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
@@ -68,7 +68,7 @@ As sequências de formato <xref:System.TimeSpan> personalizado são usadas tamb�
 |"FFFFFF"|Os milionésimos de segundo em um intervalo de tempo. Zeros à direita fracionais não são exibidos.<br /><br /> Para saber mais: [O especificador de formato personalizado "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|Os décimos de milionésimos de segundo em um intervalo de tempo. Zeros à direita fracionais ou sete dígitos zero não são exibidos.<br /><br /> Para saber mais: [O especificador de formato personalizado "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03,19|
 |'*string*'|Delimitador de cadeia de caracteres literal.<br /><br /> Para saber mais: [Outros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
-|\\|O caractere de escape.<br /><br /> Para saber mais: [Outros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|&#92;|O caractere de escape.<br /><br /> Para saber mais: [Outros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Qualquer outro caractere|Qualquer outro caractere sem escape é interpretado como um especificador de formato personalizado.<br /><br /> Mais informações: [Outros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
 <a name="dSpecifier"></a> 
@@ -105,7 +105,7 @@ O exemplo a seguir usa esses O especificadores de formato para exibir a represen
 
 <a name="hSpecifier"></a> 
 
-## <a name="the-h-custom-format-specifier"></a>Especificador de formato personalizado "h"
+## <a name="the-h-custom-format-specifier"></a>O Especificador de Formato Personalizado "h"
 O especificador de formato personalizado "h" fornece o valor da propriedade <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, que representa o número de horas inteiras no intervalo de tempo que não são contadas como parte do componente de dia. Ele retorna um valor de cadeia de caracteres de um dígito se o valor da propriedade <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> for de 0 a 9 e retorna um valor de cadeia de caracteres de dois dígitos se o valor da propriedade <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> for de 10 a 23.
 
 Se o especificador de formato personalizado "h" for usado sozinho, especifique "%h" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir fornece uma ilustração.
@@ -248,7 +248,7 @@ O exemplo a seguir usa o especificador de formato personalizado "FF" para exibir
 
 <a name="f3Specifier"></a> 
 
-## <a name="the-fff-custom-format-specifier"></a>Especificador de formato personalizado "fff"
+## <a name="the-fff-custom-format-specifier"></a>O Especificador de Formato Personalizado "fff"
 O especificador de formato personalizado "fff" (com três caracteres "f") gera os milissegundos em um intervalo de tempo. Em uma operação de formatação, os dígitos fracionários restantes são truncados. Em uma operação de análise que chama o método <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, a cadeia de caracteres de entrada deve conter exatamente três dígitos fracionários.
 
 O exemplo a seguir usa o especificador de formato personalizado "fff" para exibir os milissegundos em um valor de <xref:System.TimeSpan>. "fff" é usado primeiro como o especificador de formato único e, depois, combinado com o especificador "s" em uma cadeia de caracteres de formato personalizado.
@@ -296,7 +296,7 @@ O exemplo a seguir usa o especificador de formato personalizado "ffffff" para ex
 
 <a name="f7Specifier"></a> 
 
-## <a name="the-fffffff-custom-format-specifier"></a>Especificador de formato personalizado "fffffff"
+## <a name="the-fffffff-custom-format-specifier"></a>O Especificador de Formato Personalizado "fffffff"
 O especificador de formato personalizado "fffffff" (com sete caracteres "f") gera os décimos de milionésimos de segundo (ou o número fracionário de marcadores) em um intervalo de tempo. Em uma operação de análise que chama o método <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, a cadeia de caracteres de entrada deve conter exatamente sete dígitos fracionários.
 
 O exemplo a seguir usa o especificador de formato personalizado "fffffff" para exibir o número fracionário de marcadores em um valor de <xref:System.TimeSpan>. Ele é usado primeiro como o especificador de formato único e, depois, combinado com o especificador "s" em uma cadeia de caracteres de formato personalizado.
@@ -322,7 +322,7 @@ O exemplo a seguir usa o especificador de formato personalizado "F" para exibir 
 
 <a name="FF_Specifier"></a> 
 
-## <a name="the-ff-custom-format-specifier"></a>Especificador de formato personalizado "FF"
+## <a name="the-ff-custom-format-specifier"></a>O Especificador de Formato Personalizado "FF"
 O especificador de formato personalizado "FF" gera os centésimos de segundo em um intervalo de tempo. Em uma operação de formatação, os dígitos fracionários restantes são truncados. Se houver zeros fracionários à direita, eles não serão incluídos na cadeia de caracteres de resultado. Em uma operação de análise que chama o método <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, a presença de décimos e centésimos de um segundo dígito é opcional.
 
 O exemplo a seguir usa o especificador de formato personalizado "FF" para exibir os centésimos de segundo em um valor de <xref:System.TimeSpan>. Ele também usa este especificador de formato personalizado em uma operação de análise.
@@ -334,7 +334,7 @@ O exemplo a seguir usa o especificador de formato personalizado "FF" para exibir
 
 <a name="F3_Specifier"></a> 
 
-## <a name="the-fff-custom-format-specifier"></a>Especificador de formato personalizado "FFF"
+## <a name="the-fff-custom-format-specifier"></a>O Especificador de Formato Personalizado "FFF"
 O especificador de formato personalizado "FFF" (com três caracteres "F") gera os milissegundos em um intervalo de tempo. Em uma operação de formatação, os dígitos fracionários restantes são truncados. Se houver zeros fracionários à direita, eles não serão incluídos na cadeia de caracteres de resultado. Em uma operação de análise que chama o método <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, a presença do dígito de décimos, centésimos e milésimos de segundo é opcional.
 
 O exemplo a seguir usa o especificador de formato personalizado "FFF" para exibir os milésimos de segundo em um valor de <xref:System.TimeSpan>. Ele também usa este especificador de formato personalizado em uma operação de análise.
@@ -346,7 +346,7 @@ O exemplo a seguir usa o especificador de formato personalizado "FFF" para exibi
 
 <a name="F4_Specifier"></a> 
 
-## <a name="the-ffff-custom-format-specifier"></a>Especificador de formato personalizado "FFFF"
+## <a name="the-ffff-custom-format-specifier"></a>O Especificador de Formato Personalizado "FFFF"
 O especificador de formato personalizado "FFFF" (com quatro caracteres "f") gera os décimos de milésimos de segundo em um intervalo de tempo. Em uma operação de formatação, os dígitos fracionários restantes são truncados. Se houver zeros fracionários à direita, eles não serão incluídos na cadeia de caracteres de resultado. Em uma operação de análise que chama o método <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, a presença do dígito de décimos, centésimos, milésimos e décimos de milésimos de segundo é opcional.
 
 O exemplo a seguir usa o especificador de formato personalizado "FFFF" para exibir os décimos de milésimos de segundo em um valor de <xref:System.TimeSpan>. Ele também usa o especificador de formato personalizado "FFFF" em uma operação de análise.
@@ -382,7 +382,7 @@ O exemplo a seguir usa o especificador de formato personalizado "FFFFFF" para ex
 
 <a name="F7_Specifier"></a> 
 
-## <a name="the-fffffff-custom-format-specifier"></a>Especificador de formato personalizado "FFFFFFF"
+## <a name="the-fffffff-custom-format-specifier"></a>O Especificador de Formato Personalizado "FFFFFFF"
 O especificador de formato personalizado "FFFFFFF" (com sete caracteres "F") gera os décimos de milionésimos de segundo (ou o número fracionário de marcadores) em um intervalo de tempo. Se houver zeros fracionários à direita, eles não serão incluídos na cadeia de caracteres de resultado. Em uma operação de análise que chama o método <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, a presença dos sete dígitos fracionários na cadeia de entrada é opcional.
 
 O exemplo a seguir usa o especificador de formato personalizado "FFFFFFF" para exibir as partes fracionárias de um segundo em um valor de <xref:System.TimeSpan>. Ele também usa este especificador de formato personalizado em uma operação de análise.
