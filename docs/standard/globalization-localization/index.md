@@ -16,7 +16,7 @@ ms.author: ronpet
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizando e localizando aplicativos do .NET
 
-O desenvolvimento de um [aplicativo pronto para o mundo](https://msdn.microsoft.com/goglobal/bb978433.aspx), incluindo um aplicativo que possa ser localizado em um ou mais idiomas, envolve três etapas: globalização, análise de possibilidade de localização e localização.
+O desenvolvimento de um aplicativo que possa ser usado em todo o mundo, incluindo ser localizado em um ou mais idiomas, envolve três etapas: a globalização, a análise da possibilidade de localização e a localização em si.
 
 [Globalização](globalization.md)
 
