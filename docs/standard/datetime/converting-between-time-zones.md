@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78f25b657e6cb103797e13e98c3dd61a80003dc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701814"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835337"
 ---
 # <a name="converting-times-between-time-zones"></a>Convertendo horários entre fusos horários
 
@@ -27,7 +27,7 @@ Está se tornando cada vez mais importante para qualquer aplicativo que trabalha
 
 ## <a name="converting-to-coordinated-universal-time"></a>Convertendo para o Tempo Universal Coordenado
 
-O UTC (Tempo Universal Coordenado) é um padrão de tempo atômico de alta precisão. Os fusos horários do mundo são expressos como deslocamentos positivos ou negativos com relação ao UTC. Sendo assim, o UTC fornece uma espécie de hora livre de fuso horário ou com fuso horário neutro. O uso da hora em UTC é recomendado quando a portabilidade da data e hora entre computadores é importante. (Para obter detalhes e as melhores práticas usando datas e horas, consulte [codificando as práticas recomendadas usando DateTime no .NET Framework](https://msdn.microsoft.com/library/ms973825.aspx).) Converter fusos horários individuais em UTC facilita comparações de hora.
+O UTC (Tempo Universal Coordenado) é um padrão de tempo atômico de alta precisão. Os fusos horários do mundo são expressos como deslocamentos positivos ou negativos com relação ao UTC. Sendo assim, o UTC fornece uma espécie de hora livre de fuso horário ou com fuso horário neutro. O uso da hora em UTC é recomendado quando a portabilidade da data e hora entre computadores é importante. (Para obter detalhes e as melhores práticas usando datas e horas, consulte [codificando as práticas recomendadas usando DateTime no .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10)).) Converter fusos horários individuais em UTC facilita comparações de hora.
 
 > [!NOTE]
 > Você também pode serializar um <xref:System.DateTimeOffset> estrutura para representar sem ambiguidade um único ponto no tempo. Porque <xref:System.DateTimeOffset> objetos armazenarem um valor de data e hora junto com seu deslocamento do UTC, eles sempre representam um ponto específico no tempo em relação ao UTC.

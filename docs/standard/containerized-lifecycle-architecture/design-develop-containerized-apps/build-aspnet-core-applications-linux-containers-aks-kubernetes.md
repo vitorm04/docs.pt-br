@@ -3,15 +3,15 @@ title: Criar aplicativos ASP.NET Core 2.1 implantados como contêineres do Linux
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: b03b6fab9dcd53e97c2bc4d7e5c958ca4b931077
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/25/2019
+ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221452"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835506"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-akskubernetes-orchestrator"></a>Criar aplicativos ASP.NET Core 2.1 implantados como contêineres do Linux para o orchestrator AKS/Kubernetes
+# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Criar aplicativos ASP.NET Core 2.1 implantados como contêineres do Linux em um orquestrador AKS/Kubernetes
 
 Serviços de Kubernetes do Azure (AKS) é gerenciado Kubernetes orquestrações os serviços do Azure que simplificam o gerenciamento e implantação de contêiner.
 
@@ -35,11 +35,11 @@ Este exemplo usa um projeto simples que baseia-se com base em um modelo de API d
 
 **Figura 4 a 36**. Criando um aplicativo ASP.NET Core
 
-Para criar o projeto de exemplo, você precisa selecionar **arquivo** > **New** > **projeto** no Visual Studio. Em seguida, você verá uma lista de modelos de vários tipos de projetos, onde você tem a ser procurado **Web** > **.NET Core** no painel à esquerda. Neste exemplo, selecione **aplicativo Web ASP.NET Core**.
+Para criar o projeto de exemplo no Visual Studio, selecione **arquivo** > **New** > **projeto**, selecione o **Web**tipos de projeto no painel esquerdo, seguido por **aplicativo Web ASP.NET Core**.
 
-Na próxima caixa de diálogo, verifique se você tiver selecionado o .NET Core e ASP.NET Core 2.1 como a estrutura de destino a superior na máquina, conforme mostrado na Figura 4-37 e, em seguida, selecione a opção de API, para criar um aplicativo de API Web ASP.NET Core.
+Visual Studio contém modelos para projetos web. Para nosso exemplo, selecione **API** para criar um aplicativo de API Web ASP.NET.
 
-O .NET Core 2.1 está incluído no Visual Studio 2017 versão 15.7.0 ou superior e é automaticamente instalado e configurado para você quando você seleciona os **desenvolvimento de plataforma cruzada do .NET Core** carga de trabalho durante a instalação.
+Verifique se você selecionou ASP.NET Core 2.1 como a estrutura. .NET core 2.1 está incluído na última versão do Visual Studio 2017 e é automaticamente instalado e configurado para você quando você instala o Visual Studio 2017.
 
 ![Visual Studio caixa de diálogo para selecionar o tipo de um aplicativo Web do ASP.NET Core com a opção de API selecionada.](media/create-web-api-application.png)
 
@@ -47,25 +47,25 @@ O .NET Core 2.1 está incluído no Visual Studio 2017 versão 15.7.0 ou superior
 
 Se você tiver qualquer versão anterior do .NET Core, você pode baixar e instalar a versão 2.1 do <https://www.microsoft.com/net/download/core#/sdk>.
 
-Você pode adicionar suporte ao Docker ao criar o projeto na etapa anterior, ou posterior, se for necessário depois de iniciar o projeto. Para adicionar o suporte ao Docker após a criação do projeto, clique com botão direito no arquivo de projeto na **Gerenciador de soluções** e selecione **Add** > **suporte ao Docker** em o menu de contexto.
+Você pode adicionar suporte ao Docker ao criar o projeto ou posteriormente, portanto, você pode "colocar no Docker" seu projeto a qualquer momento. Para adicionar suporte ao Docker após a criação do projeto, clique com botão direito no nó do projeto no Gerenciador de soluções e selecione **Add** > **suporte ao Docker** no menu de contexto.
 
 ![Opção de menu de contexto para adicionar suporte ao Docker a um projeto existente: Clique com botão direito (no projeto) > Adicionar > suporte do Docker.](media/add-docker-support-to-project.png)
 
 **Figura 4-38**. Adicionando suporte ao Docker ao projeto existente
 
-Para concluir a adição de suporte ao Docker, você tem a opção de Windows ou Linux. Nesse caso, selecione **Linux**, porque o AKS não dá suporte a contêineres do Windows (como o final de 2018).
+Para concluir a adição de suporte ao Docker, você pode escolher Windows ou Linux. Nesse caso, selecione **Linux**, porque o AKS não dá suporte a contêineres do Windows (como o final de 2018).
 
 ![Caixa de diálogo de opção para selecionar o sistema operacional de destino para o Dockerfile.](media/select-linux-docker-support.png)
 
 **Figura 4-39**. Selecionando os contêineres do Linux.
 
-Com estas etapas simples, você terá seu aplicativo ASP.NET Core 2.1 em execução em um contêiner do Linux.
+Com estas etapas simples, você precisa de seu aplicativo ASP.NET Core 2.1 em execução em um contêiner do Linux.
 
 Como você pode ver, a integração entre o Visual Studio 2017 e o Docker é totalmente orientada à produtividade do desenvolvedor.
 
-Agora você pode pressionar **F5** para compilar e executar seu aplicativo.
+Agora você pode executar seu aplicativo com o **F5** da chave ou usando o **reproduzir** botão.
 
-Depois de executar o projeto, você pode listar as imagens usando o `docker images` comando. Você deve ver o `mssampleapplication` imagem criada com a implantação automática do nosso projeto no Visual Studio 2017.
+Depois de executar o projeto, você pode listar as imagens usando o `docker images` comando. Você deve ver o `mssampleapplication` imagem criada pela implantação automática do nosso projeto no Visual Studio 2017.
 
 ```console
 docker images
@@ -77,17 +77,17 @@ docker images
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>Registre-se a solução no registro de contêiner do Azure
 
-Carregar a imagem em qualquer registro do Docker, como [registro de contêiner do Azure (ACR)](https://azure.microsoft.com/services/container-registry/) ou Hub do Docker para que as imagens podem ser implantadas no cluster AKS de que o registro. Nesse caso, estamos está carregando a imagem no registro de contêiner do Azure.
+Carregar a imagem em qualquer registro do Docker, como [registro de contêiner do Azure (ACR)](https://azure.microsoft.com/services/container-registry/) ou Hub do Docker, portanto, as imagens podem ser implantadas no cluster AKS de que o registro. Nesse caso, estamos está carregando a imagem no registro de contêiner do Azure.
 
 ### <a name="create-the-image-in-release-mode"></a>Criar a imagem no modo de versão
 
-Criar a imagem no **versão** modo (pronto para produção) alterando a versão, conforme mostrado aqui e pressione F5 para executar o aplicativo novamente.
+Agora, vamos criar a imagem no **Release** modo (pronto para produção), alterando para **versão**, conforme mostrado na Figura 4-41 e a execução do aplicativo, como fizemos antes.
 
 ![Opção de barra de ferramentas no VS para compilar no modo de versão.](media/select-release-mode.png)
 
 **Figura 4-41**. Selecionar modo de versão
 
-Se você executar o `docker image` comando, você verá as duas imagens criadas. Um para `debug` e outro para `release` modo.
+Se você executar o `docker image` comando, você verá as duas imagens criadas, um para `debug` e o outro para `release` modo.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Criar uma nova marca para a imagem
 
@@ -111,13 +111,13 @@ az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:l
 
 Em ambos os casos, você obterá o nome. Em nosso exemplo, `mssampleacr.azurecr.io`.
 
-Agora você pode marcar a imagem, levando a imagem mais recente (imagem de versão), com o seguinte comando:
+Agora você pode marcar a imagem, levando a imagem mais recente (a imagem de versão), com o comando:
 
 ```console
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Depois de executar o `docker tag` de comando, liste as imagens com o `docker images` comando. Você deve ver a imagem com a nova marca.
+Depois de executar o `docker tag` de comando, liste as imagens com o `docker images` comando e você deverá ver a imagem com a nova marca.
 
 ![Console de saída do comando de imagens do docker.](media/tagged-docker-images-list.png)
 
@@ -143,7 +143,7 @@ Você pode ver abaixo o resultado que deve ser obter quando o processo for concl
 
 **Figura 4-46**. Exibição de nós
 
-A próxima etapa é implantar seu contêiner em seu cluster AKS Kubernetes. Para que você precisa de um arquivo (**implantar o arquivo. yml**) que, nesse caso, contém:
+A próxima etapa é implantar seu contêiner em seu cluster AKS Kubernetes. Para fazer isso, você precisa de um arquivo (**implantar o arquivo. yml**) que contém o seguinte:
 
 ```yml
 apiVersion: apps/v1beta1

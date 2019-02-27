@@ -45,5 +45,4 @@ Esta seção fornece diretrizes para a criação de bibliotecas que estendem e i
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral](../../../docs/framework/get-started/overview.md)
-- [Roteiro para o .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Guia de desenvolvimento](../../../docs/framework/development-guide.md)

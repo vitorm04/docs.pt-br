@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 4be6f3b06a0e9ab16469ad9a7f9e78799cc2e637
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edbb5521069caaa83dc24ca03af510d8e12f1b11
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513666"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836520"
 ---
 # <a name="drawing-objects-overview"></a>Visão geral dos objetos de desenho
 Este tópico apresenta <xref:System.Windows.Media.Drawing> objetos e descreve como usá-los para desenhar formas, bitmaps, texto e mídia de forma eficiente. Use <xref:System.Windows.Media.Drawing> objetos ao criar clip-art, pintar com um <xref:System.Windows.Media.DrawingBrush>, ou use <xref:System.Windows.Media.Visual> objetos.  
@@ -180,12 +180,12 @@ Ordem das operações do DrawingGroup
   
 |Propriedade|Descrição|Ilustração|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Altera a opacidade de partes selecionadas do <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Controlar a opacidade de um desenho](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![Um DrawingGroup com uma máscara de opacidade](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Altera uniformemente a opacidade do <xref:System.Windows.Media.DrawingGroup> conteúdo. Use essa propriedade para tornar um <xref:System.Windows.Media.Drawing> transparente ou parcialmente transparente. Para obter um exemplo, consulte [ Aplicar uma máscara de opacidade a um desenho](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![DrawingGroups com diferentes configurações de opacidade](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Aplica-se um <xref:System.Windows.Media.Effects.BitmapEffect> para o <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Aplicar um efeito de bitmap em um desenho](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5).|![DrawingGroup com um BlurBitmapEffect](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Recorta a <xref:System.Windows.Media.DrawingGroup> o conteúdo para uma região você descreve como usar um <xref:System.Windows.Media.Geometry>. Para obter um exemplo, consulte [ Recortar um desenho](https://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058) .|![DrawingGroup com uma região de recorte definida](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Altera a opacidade de partes selecionadas do <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Controlar a opacidade de um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748242(v=vs.90)).|![Um DrawingGroup com uma máscara de opacidade](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Altera uniformemente a opacidade do <xref:System.Windows.Media.DrawingGroup> conteúdo. Use essa propriedade para tornar um <xref:System.Windows.Media.Drawing> transparente ou parcialmente transparente. Para obter um exemplo, consulte [ Aplicar uma máscara de opacidade a um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms753195(v=vs.90)).|![DrawingGroups com diferentes configurações de opacidade](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Aplica-se um <xref:System.Windows.Media.Effects.BitmapEffect> para o <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Aplicar um efeito de bitmap em um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752341(v=vs.90)).|![DrawingGroup com um BlurBitmapEffect](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Recorta a <xref:System.Windows.Media.DrawingGroup> o conteúdo para uma região você descreve como usar um <xref:System.Windows.Media.Geometry>. Para obter um exemplo, consulte [ Recortar um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743068(v=vs.90)) .|![DrawingGroup com uma região de recorte definida](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|Ajusta os pixels independentes de dispositivo aos pixels do dispositivo, conforme as diretrizes especificadas. Essa propriedade é útil para assegurar que gráficos detalhados minuciosamente sejam renderizados com nitidez em monitores de baixo DPI. Para obter um exemplo, consulte [Instruções: aplicar um GuidelineSet a um desenho](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md).|![Um DrawingGroup com e sem um GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Transforma o <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Aplicar uma transformação a um desenho](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd).|![Um DrawingGroup girado](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Transforma o <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Aplicar uma transformação a um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms742304(v=vs.90)).|![Um DrawingGroup girado](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>Exibir um desenho como uma imagem  

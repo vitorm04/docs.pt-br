@@ -2,12 +2,12 @@
 title: Diretiva x:Member
 ms.date: 03/30/2017
 ms.assetid: 4d8394ef-644c-4331-b6c5-be855d392980
-ms.openlocfilehash: dfc08d79bd8206269807d88d2c659f13be487276
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 66d34ad6bc5b6bb98eba6219130035dc413b486f
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177705"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835324"
 ---
 # <a name="xmember-directive"></a>Diretiva x:Member
 Declara um membro XAML na marcação.  
@@ -38,4 +38,4 @@ Declara um membro XAML na marcação.
  Para dar suporte a um uso prático de `x:Members` como um meio para especificar definições de membro na marcação, os membros devem ser associados a uma classe que pode ser modificada. O modelo desejado é que `x:Members` existe como um membro de um tipo que especifica um `x:Class`. No entanto, o mecanismo para a associação de tipos e membros ou para a produção de definições de membro dinâmico não tem suporte no nível de serviços de XAML do .NET Framework. Isso é deixado para estruturas individuais que têm modelos de aplicativos que dão suporte a definições de membro de XAML. Normalmente, ações de build do MSBUILD que o XAML e qualquer um de compilação de marcação integração-lo com code-behind ou produzir puro do XAML assemblies são necessários para dar suporte a esse recurso.  
   
 ## <a name="xproperty-for-windows-workflow-foundation"></a>Propriedade: x para Windows Workflow Foundation  
- Para o Windows Workflow Foundation, `x:Property` define os membros de uma atividade personalizada composta inteiramente em XAML ou XAML – definido membros dinâmicos para um designer de atividade com code-behind. `x:Class` também deve ser especificado no elemento raiz da produção de XAML. Isso não é um requisito no nível de serviços de XAML do .NET Framework, mas se torna uma necessidade quando a produção de XAML é carregada pelas ações de build do MSBUILD que dão suporte a atividades personalizadas e XAML do Windows Workflow Foundation em geral. Windows Workflow Foundation não usa o nome do tipo XAML puro como seu valor pretendido para o `x:Property` `Type` de atributo e, em vez disso, usa uma convenção de que não está documentada aqui. Para obter mais informações, consulte [criação dinâmica de atividade](https://msdn.microsoft.com/library/dd807392.aspx).
+ Para o Windows Workflow Foundation, `x:Property` define os membros de uma atividade personalizada composta inteiramente em XAML ou XAML – definido membros dinâmicos para um designer de atividade com code-behind. `x:Class` também deve ser especificado no elemento raiz da produção de XAML. Isso não é um requisito no nível de serviços de XAML do .NET Framework, mas se torna uma necessidade quando a produção de XAML é carregada pelas ações de build do MSBUILD que dão suporte a atividades personalizadas e XAML do Windows Workflow Foundation em geral. Windows Workflow Foundation não usa o nome do tipo XAML puro como seu valor pretendido para o `x:Property` `Type` de atributo e, em vez disso, usa uma convenção de que não está documentada aqui. Para obter mais informações, consulte [criação de DynamicActivity](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).

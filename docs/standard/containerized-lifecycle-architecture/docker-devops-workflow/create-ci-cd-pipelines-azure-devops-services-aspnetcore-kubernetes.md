@@ -3,13 +3,13 @@ title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo do 
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 7a98c34bfdbbdc9b34a04c891ca031f454ac4396
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221455"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834960"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Criando pipelines de CI/CD nos serviços de DevOps do Azure para um aplicativo .NET Core 2.0 em contêineres e implantar um cluster Kubernetes
 
@@ -23,20 +23,20 @@ Figura 5 a 12, você pode ver o cenário de DevOps de ponta a ponta que abrange 
 
 Conforme mostrado na Figura 5-13, a primeira fase é o pipeline de build/CI. Nos serviços de DevOps do Azure, você pode criar pipelines de build/CD que compilar o código, criar as imagens do Docker e enviar por push para um registro de Docker, como o Hub do Docker ou registro de contêiner do Azure.
 
-![](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Exibição de navegador do DevOps do Azure, definição de tarefa do processo de compilação.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
 **Figura 5-13**. Pipeline de build/CI no DevOps do Azure criando imagens do Docker e enviar imagens por push para um registro de Docker
 
 A segunda fase é criar um pipeline de lançamento/implantação. Nos serviços de DevOps do Azure, você pode facilmente criar um pipeline de implantação, direcionando um cluster Kubernetes usando as tarefas de Kubernetes para os serviços de DevOps do Azure, conforme mostrado na Figura 5-14.
 
-![Implantar o MVC](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
+![Exibição de navegador do DevOps do Azure, implante a definição de tarefa do Kubernetes.](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
 **Figura 5-14**. Pipeline de lançamento/CD na implantação de serviços de DevOps do Azure para um cluster Kubernetes
 
 > [! Instruções passo a passo] Implantando eShopModernized para Kubernetes:
 >
 > Para obter uma explicação detalhada de pipelines do Azure DevOps CI/CD, implantação de Kubernetes, consulte esta postagem: \
->[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
 >[Anterior](docker-application-outer-loop-devops-workflow.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640440"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836338"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estratégia de segurança do WPF - segurança da plataforma
 Embora o Windows Presentation Foundation (WPF) fornece uma variedade de serviços de segurança, ele também utiliza os recursos de segurança da plataforma subjacente, que inclui o sistema operacional, o [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], e [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Essas camadas são combinadas para fornecer [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] um modelo de segurança forte e defesa em profundidade que tenta evitar pontos únicos de falha, conforme mostrado na figura a seguir:  
@@ -50,7 +50,7 @@ Embora o Windows Presentation Foundation (WPF) fornece uma variedade de serviço
   
  Historicamente, os estouros de buffer tem sido a causa de diversas explorações de segurança de alto impacto. Um estouro de buffer ocorre quando um invasor aproveita uma vulnerabilidade de código que permite a injeção de um código mal-intencionado escrito além dos limites de um buffer. Em seguida, isso permite que um invasor sequestre o processo no qual o código está em execução, substituindo o endereço de retorno de uma função para fazer com que o código do invasor seja executado. O resultado é um código mal-intencionado que executa um código arbitrário com os mesmos privilégios do processo sequestrado.  
   
- Em um alto nível, o sinalizador do compilador /GS protege contra alguns possíveis estouros de buffer injetando um cookie de segurança especial para proteger o endereço de retorno de uma função que tem buffers de cadeia de caracteres local. Após o retorno de uma função, o cookie de segurança é comparado com seu valor anterior. Se o valor tiver sido alterado, poderá ter ocorrido um estouro de buffer e o processo será interrompido com uma condição de erro. A interrupção do processo impede a execução do código potencialmente mal-intencionado. Ver [/GS (Buffer Security Check)](https://msdn.microsoft.com/library/8dbf701c.aspx) para obter mais detalhes.  
+ Em um alto nível, o sinalizador do compilador /GS protege contra alguns possíveis estouros de buffer injetando um cookie de segurança especial para proteger o endereço de retorno de uma função que tem buffers de cadeia de caracteres local. Após o retorno de uma função, o cookie de segurança é comparado com seu valor anterior. Se o valor tiver sido alterado, poderá ter ocorrido um estouro de buffer e o processo será interrompido com uma condição de erro. A interrupção do processo impede a execução do código potencialmente mal-intencionado. Ver [/GS (Buffer Security Check)](/cpp/build/reference/gs-buffer-security-check) para obter mais detalhes.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] é compilado com o sinalizador /GS para adicionar outra camada de defesa para [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos.  
   
@@ -174,7 +174,7 @@ Embora o Windows Presentation Foundation (WPF) fornece uma variedade de serviço
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Implantação do ClickOnce  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] é uma tecnologia de implantação abrangente que está incluído no .NET Framework e integra [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (consulte [visão geral da implantação de ClickOnce](https://msdn.microsoft.com/library/142dbbz4.aspx) para obter informações detalhadas). Autônomo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos podem ser implantados usando [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], enquanto aplicativos hospedados pelo navegador devem ser implantados com [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] é uma tecnologia de implantação abrangente que está incluído no .NET Framework e integra [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (consulte [ClickOnce segurança e implantação](/visualstudio/deployment/clickonce-security-and-deployment) para obter informações detalhadas). Autônomo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos podem ser implantados usando [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], enquanto aplicativos hospedados pelo navegador devem ser implantados com [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
  Aplicativos implantados usando [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] recebem uma camada adicional de segurança ao longo [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; basicamente, [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] aplicativos implantados solicitam as permissões que eles precisam. Eles recebem somente as permissões se eles não excedem o conjunto de permissões para a zona da qual o aplicativo é implantado. Ao reduzir o conjunto de permissões para somente aquelas que são necessárias, mesmo que elas sejam menos do que as fornecidas pelo conjunto de permissões da zona de inicialização, o número de recursos aos quais o aplicativo tem acesso é reduzido ao mínimo necessário. Consequentemente, se o aplicativo for sequestrado, o potencial de danos ao computador cliente será reduzido.  
   
@@ -210,9 +210,6 @@ Embora o Windows Presentation Foundation (WPF) fornece uma variedade de serviço
   
 ## <a name="see-also"></a>Consulte também
 - [Noções básicas de segurança do Microsoft Internet Explorer 6 no Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Compreendendo e trabalhando no modo protegido do Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)
-- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
-- [Guia de segurança do Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
 - [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)
 - [Segurança](../../../docs/framework/wpf/security-wpf.md)
 - [Segurança parcialmente confiável do WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)

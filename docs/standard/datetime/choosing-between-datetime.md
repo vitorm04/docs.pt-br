@@ -32,7 +32,7 @@ Os aplicativos .NET que usam informações de data e hora são muito diferentes 
 
 * Para refletir uma data abstrata e um tempo que não está vinculado a uma hora e local específicos (por exemplo, a maioria das lojas em um uma cadeia internacional abre em dias da semana às 9h).
 
-* Para recuperar informações de data e hora de fontes fora do .NET, normalmente em que as informações de data e hora são armazenadas em um tipo simples de dados.
+* Para recuperar informações de data e hora de fontes fora do .NET, normalmente em que as informações de data e hora são armazenadas em um simples tipo de dados.
 
 * Para identificar um único ponto no tempo de maneira única e não ambígua. Alguns aplicativos exigem que uma data e hora não seja ambígua somente no sistema host; outros exigem que ela não seja ambígua entre sistemas (ou seja, uma data serializada em um sistema pode ser significativamente desserializada e usada em outro sistema em qualquer lugar do mundo).
 
@@ -63,7 +63,7 @@ A estrutura <xref:System.DateTime> é adequada para aplicativos que fazem o segu
 
 * Recuperar informações de data e hora de fontes fora do .NET, como bancos de dados SQL. Normalmente, essas fontes armazenam informações de data e hora em um formato simples que é compatível com a estrutura <xref:System.DateTime>.
 
-*  Realizar aritmética de data e hora, mas em que há preocupações com resultados gerais. Por exemplo, em uma operação de adição que soma seis meses a uma data e hora determinada, geralmente não é importante se o resultado é ajustado para horário de verão.
+* Realizar aritmética de data e hora, mas em que há preocupações com resultados gerais. Por exemplo, em uma operação de adição que soma seis meses a uma data e hora determinada, geralmente não é importante se o resultado é ajustado para horário de verão.
 
 A menos que um determinado valor <xref:System.DateTime> represente o UTC, esse valor de data e hora geralmente é ambíguo ou limitado na sua portabilidade. Por exemplo, se um valor <xref:System.DateTime> representa a hora local, ele é portátil dentro desse fuso horário local (ou seja, se o valor for desserializado em outro sistema no mesmo fuso horário, esse valor ainda identificará, de forma não ambígua, um único ponto no tempo). Fora do fuso horário local, o valor <xref:System.DateTime> pode ter várias interpretações. Se a propriedade <xref:System.DateTime.Kind%2A> do valor é <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, ele será ainda menos portátil: agora é ambíguo dentro do mesmo fuso horário e, possivelmente, até mesmo no mesmo sistema no qual ele foi serializado pela primeira vez. Esse valor identificará um único ponto no tempo de forma não ambígua somente se um valor <xref:System.DateTime> representar um UTC, independentemente do sistema ou do fuso horário no qual o valor é usado.
 
@@ -72,11 +72,11 @@ A menos que um determinado valor <xref:System.DateTime> represente o UTC, esse v
 
 ## <a name="the-datetimeoffset-structure"></a>A estrutura DateTimeOffset
 
-A estrutura <xref:System.DateTimeOffset> representa um valor de data e hora, junto com um deslocamento que indica quanto o valor difere do UTC. Portanto, o valor sempre identifica um único ponto no tempo de forma não ambígua.
+O <xref:System.DateTimeOffset> estrutura representa um valor de data e hora, junto com um deslocamento que indica quanto o valor difere do UTC. Portanto, o valor sempre identifica sem ambiguidade um único ponto no tempo.
 
 O tipo <xref:System.DateTimeOffset> inclui toda a funcionalidade do tipo <xref:System.DateTime> junto com o reconhecimento de fuso horário. Isso o torna adequado para aplicativos que fazem o seguinte:
 
-*  Identificam de maneira única e não ambígua um único ponto no tempo. O tipo <xref:System.DateTimeOffset> pode ser usado para definir sem ambiguidade o significado de "agora", para registrar os tempos de transação, para registrar os tempos de eventos do sistema ou do aplicativo e para registrar os tempos de criação e modificação do arquivo.
+* Identificam de maneira única e não ambígua um único ponto no tempo. O tipo <xref:System.DateTimeOffset> pode ser usado para definir sem ambiguidade o significado de "agora", para registrar os tempos de transação, para registrar os tempos de eventos do sistema ou do aplicativo e para registrar os tempos de criação e modificação do arquivo.
 
 * Realizar aritmética geral de data e hora.
 
@@ -96,7 +96,7 @@ A saída mostra que cada valor de data e hora nesse exemplo pode pertencer a pel
 
 A estrutura <xref:System.TimeSpan> representa um intervalo de tempo. Seus dois usos típicos são:
 
-* Refletir o intervalo de tempo entre dois valores de data e hora. Por exemplo, subtrair um valor <xref:System.DateTime> de outro e retornar um valor <xref:System.TimeSpan>.
+* Refletir o intervalo de tempo entre dois valores de data e hora. Por exemplo, subtrair um <xref:System.DateTime> valor de outro retorna um <xref:System.TimeSpan> valor.
 
 * Calcular o tempo decorrido. Por exemplo, a propriedade <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> retorna um valor <xref:System.TimeSpan> que reflete o intervalo de tempo decorrido desde a chamada de um método <xref:System.Diagnostics.Stopwatch> que começa a medir o tempo decorrido.
 
