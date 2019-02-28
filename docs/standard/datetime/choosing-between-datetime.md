@@ -32,7 +32,7 @@ Os aplicativos .NET que usam informações de data e hora são muito diferentes 
 
 * Para refletir uma data abstrata e um tempo que não está vinculado a uma hora e local específicos (por exemplo, a maioria das lojas em um uma cadeia internacional abre em dias da semana às 9h).
 
-* Para recuperar informações de data e hora de fontes fora do .NET, normalmente em que as informações de data e hora são armazenadas em um simples tipo de dados.
+* Para recuperar informações de data e hora de fontes fora do .NET, normalmente em que as informações de data e hora são armazenadas em um tipo simples de dados.
 
 * Para identificar um único ponto no tempo de maneira única e não ambígua. Alguns aplicativos exigem que uma data e hora não seja ambígua somente no sistema host; outros exigem que ela não seja ambígua entre sistemas (ou seja, uma data serializada em um sistema pode ser significativamente desserializada e usada em outro sistema em qualquer lugar do mundo).
 
@@ -72,7 +72,7 @@ A menos que um determinado valor <xref:System.DateTime> represente o UTC, esse v
 
 ## <a name="the-datetimeoffset-structure"></a>A estrutura DateTimeOffset
 
-O <xref:System.DateTimeOffset> estrutura representa um valor de data e hora, junto com um deslocamento que indica quanto o valor difere do UTC. Portanto, o valor sempre identifica sem ambiguidade um único ponto no tempo.
+A estrutura <xref:System.DateTimeOffset> representa um valor de data e hora, junto com um deslocamento que indica quanto o valor difere do UTC. Portanto, o valor sempre identifica um único ponto no tempo de forma não ambígua.
 
 O tipo <xref:System.DateTimeOffset> inclui toda a funcionalidade do tipo <xref:System.DateTime> junto com o reconhecimento de fuso horário. Isso o torna adequado para aplicativos que fazem o seguinte:
 
@@ -96,7 +96,7 @@ A saída mostra que cada valor de data e hora nesse exemplo pode pertencer a pel
 
 A estrutura <xref:System.TimeSpan> representa um intervalo de tempo. Seus dois usos típicos são:
 
-* Refletir o intervalo de tempo entre dois valores de data e hora. Por exemplo, subtrair um <xref:System.DateTime> valor de outro retorna um <xref:System.TimeSpan> valor.
+* Refletir o intervalo de tempo entre dois valores de data e hora. Por exemplo, subtrair um valor <xref:System.DateTime> de outro e retornar um valor <xref:System.TimeSpan>.
 
 * Calcular o tempo decorrido. Por exemplo, a propriedade <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> retorna um valor <xref:System.TimeSpan> que reflete o intervalo de tempo decorrido desde a chamada de um método <xref:System.Diagnostics.Stopwatch> que começa a medir o tempo decorrido.
 
