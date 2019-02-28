@@ -15,7 +15,7 @@ Usando interfaces, você pode, por exemplo, incluir o comportamento de várias f
   
 Você define uma interface usando a palavra-chave [interface](../../language-reference/keywords/interface.md). como mostrado no exemplo a seguir.  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 O nome da struct deve ser um [nome do identificador](../inside-a-program/identifier-names.md) válido em C#. Por convenção, os nomes de interface começam com uma letra maiúscula `I`.
 

@@ -1,16 +1,10 @@
 ---
 title: Tutoriais do .NET Core
-description: Siga os tutoriais para aprender como criar aplicativos e bibliotecas do .NET Core no Windows, Mac e Linux.
+description: 'Siga os tutoriais para aprender como criar aplicativos e bibliotecas do .NET Core no Windows, Mac e Linux.'
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168735"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Confira estes tutoriais para conhecer o .NET Core e as ferramentas do SDK do .NET Core
 
@@ -25,7 +19,6 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Building a class library with Visual Basic](vb-library-with-visual-studio.md) (Criando uma biblioteca de classes com o Visual Basic)
 - [Testing a class library](testing-library-with-visual-studio.md) (Testando uma biblioteca de classes)
 - [Consuming a class library](consuming-library-with-visual-studio.md) (Consumindo uma biblioteca de classes)
-- [Compilando uma solução completa do .NET Core no Windows](using-on-windows-full-solution.md)
 - [Azure Cosmos DB: introdução ao .NET Core e à API do SQL](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Criando aplicativos Web com o Visual Studio Code
@@ -48,7 +41,6 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Teste de unidade no .NET Core usando dotnet test](../testing/unit-testing-with-dotnet-test.md)
 - [Teste de unidade com o MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
 - [Desenvolvendo Bibliotecas com as Ferramentas de Plataforma Cruzada](libraries.md)
-- [Como Gerenciar Versões de Dependência de Pacote para o .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hospedando o .NET Core com base no código nativo](netcore-hosting.md)
 - [Create a custom template for dotnet new](create-custom-template.md) (Criar um modelo personalizado para dotnet new)
 
