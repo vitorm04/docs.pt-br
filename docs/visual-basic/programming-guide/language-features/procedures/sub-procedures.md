@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638113"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977572"
 ---
 # <a name="sub-procedures-visual-basic"></a>Subprocedimentos (Visual Basic)
 Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub` e `End Sub` instruções. O `Sub` procedimento executa uma tarefa e, em seguida, retorna o controle para o código de chamada, mas não retorna um valor para o código de chamada.  
@@ -66,11 +66,11 @@ Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub
 ### <a name="illustration-of-declaration-and-call"></a>Ilustração da declaração e chamada  
  O seguinte `Sub` procedimento informa o operador do computador qual tarefa o aplicativo está prestes a executar e também exibe um carimbo de data / hora. Em vez de duplicar esse código no início de cada tarefa, o aplicativo apenas chama `tellOperator` de vários locais. Cada chamada passa uma cadeia de caracteres a `task` argumento que identifica a tarefa que está sendo iniciada.  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  O exemplo a seguir mostra uma chamada típica para `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Procedimentos](./index.md)

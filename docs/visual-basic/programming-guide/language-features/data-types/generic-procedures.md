@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6b7d6a560f2f374c17e011479d6e2e458f9c1ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574307"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976519"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedimentos genéricos no Visual Basic
 Um *procedimento genérico*, também chamado um *método genérico*, é um procedimento definido pelo menos um parâmetro de tipo. Isso permite que o código de chamada personalizar os tipos de dados para seus requisitos de cada vez que ele chama o procedimento.  
@@ -29,7 +29,7 @@ Um *procedimento genérico*, também chamado um *método genérico*, é um proce
 ## <a name="type-inference"></a>Inferência de tipos  
  Você pode chamar um procedimento genérico sem fornecer quaisquer argumentos de tipo em todos os. Se você chamá-lo dessa forma, o compilador tentará determinar os tipos de dados apropriado para passar para os argumentos de tipo do procedimento. Isso é chamado *inferência de tipo*. O código a seguir mostra uma chamada na qual o compilador infere que ele deve passar o tipo `String` para o parâmetro de tipo `t`.  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
  Se o compilador não é possível inferir os argumentos de tipo do contexto de sua chamada, ele relatará um erro. Uma possível causa desse erro é uma incompatibilidade de classificação de matriz. Por exemplo, suponha que você definir um parâmetro normal como uma matriz de um parâmetro de tipo. Se você chamar o procedimento genérico fornecendo uma matriz de uma classificação diferente (número de dimensões), a incompatibilidade faz com que a inferência de tipo falhar. O código a seguir mostra uma chamada em que uma matriz bidimensional é passada para um procedimento que espera uma matriz unidimensional.  
   
@@ -53,14 +53,14 @@ End Sub
  O exemplo a seguir define um genérico `Function` procedimento para localizar um elemento específico em uma matriz. Ele define um parâmetro de tipo e usa-o para construir os dois parâmetros na lista de parâmetros.  
   
 ### <a name="code"></a>Código  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Comentários  
  O exemplo anterior requer a capacidade de comparar `searchValue` com cada elemento de `searchArray`. Para garantir essa capacidade, ela restringe o parâmetro de tipo `T` para implementar o <xref:System.IComparable%601> interface. O código usa o <xref:System.IComparable%601.CompareTo%2A> método em vez do `=` operador, porque não há nenhuma garantia de que um argumento de tipo fornecido para `T` dá suporte a `=` operador.  
   
  Você pode testar o `findElement` procedimento com o código a seguir.  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
  As chamadas anteriores para `MsgBox` exibir "0", "1" e "-1", respectivamente.  
   

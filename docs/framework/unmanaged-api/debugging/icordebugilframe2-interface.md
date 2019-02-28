@@ -1,5 +1,5 @@
 ---
-title: Interface1 ICorDebugILFrame2
+title: Interface ICorDebugILFrame2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0996fee88d37bbc826a4e012dc44ea9005008ae4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e82238fbd617d56feb5c71c6161b6fd206b8b5b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575509"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970851"
 ---
-# <a name="icordebugilframe2-interface1"></a>Interface1 ICorDebugILFrame2
+# <a name="icordebugilframe2-interface"></a>Interface ICorDebugILFrame2
+
 Uma extensão lógica da interface ICorDebugILFrame.  
   
 ## <a name="methods"></a>Métodos  

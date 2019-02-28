@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734033"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970955"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Como: Criar uma propriedade (Visual Basic)
 Coloque uma definição de propriedade entre um `Property` instrução e um `End Property` instrução. Nessa definição você define uma `Get` procedimento, uma `Set` procedimento, ou ambos. Todo o código da propriedade está situado nesses procedimentos.  
@@ -54,11 +54,11 @@ Coloque uma definição de propriedade entre um `Property` instrução e um `End
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria uma propriedade de leitura/gravação que armazena um nome completo como dois nomes constituintes, o nome e o sobrenome. Quando o código de chamada lê `fullName`, o `Get` procedimento combina as duas partes e retorna o nome completo. Quando o código de chamada atribui um novo nome completo, o `Set` procedimento tenta dividi-lo em duas partes. Se não encontrar um espaço, ele armazena tudo como o nome.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  O exemplo a seguir mostra chamadas típicas para os procedimentos de propriedade de `fullName`. A primeira chamada define o valor da propriedade e a segunda chamada irá recuperá-lo.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Procedimentos](./index.md)

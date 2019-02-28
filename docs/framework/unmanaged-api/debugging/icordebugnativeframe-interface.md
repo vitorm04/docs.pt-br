@@ -1,5 +1,5 @@
 ---
-title: ICorDebugNativeFrame Interface1
+title: Interface ICorDebugNativeFrame
 ms.date: 03/30/2017
 api_name:
 - ICorDebugNativeFrame
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c923b54f791cd8ff794538d4687ca0329e62c87e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbdb17bcd502b75da0a73d9a36cf36d6564320bc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547021"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975479"
 ---
-# <a name="icordebugnativeframe-interface1"></a>ICorDebugNativeFrame Interface1
+# <a name="icordebugnativeframe-interface"></a>Interface ICorDebugNativeFrame
+
 Uma implementação especializada de ICorDebugFrame usada para quadros nativos.  
   
 ## <a name="methods"></a>Métodos  

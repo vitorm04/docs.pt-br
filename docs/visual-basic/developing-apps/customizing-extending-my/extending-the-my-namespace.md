@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: fafeb6cd47ebab5dd8f197b27d1aee9d7573e6ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de3403be4a23283d27887c149ed62df37e13c334
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717723"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975375"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Estendendo o namespace My no Visual Basic
 O `My` namespace no Visual Basic expõe propriedades e métodos que permitem que você facilmente aproveitar o poder do .NET Framework. O `My` namespace simplifica problemas comuns de programação, reduzindo frequentemente uma tarefa difícil para uma única linha de código. Além disso, o `My` namespace é totalmente extensível para que você possa personalizar o comportamento de `My` e adicionar novos serviços para sua hierarquia para se adaptar às necessidades do aplicativo específico. Este tópico descreve como personalizar membros existentes da `My` namespace e como adicionar suas próprias classes personalizadas para o `My` namespace.  
@@ -41,7 +41,7 @@ O `My` namespace no Visual Basic expõe propriedades e métodos que permitem que
   
  Por exemplo, suponha que você usa frequentemente a `My.User` objeto para acessar o contexto de segurança atual para o usuário que executa seu aplicativo. No entanto, sua empresa usa um objeto de usuário personalizada para expor informações adicionais e recursos para usuários dentro da empresa. Nesse cenário, você pode substituir o valor padrão de `My.User.CurrentPrincipal` propriedade com uma instância do seu próprio objeto de entidade de segurança personalizada, conforme mostrado no exemplo a seguir.  
   
- [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
+ [!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]  
   
  Definindo o `CurrentPrincipal` propriedade no `My.User` objeto altera a identidade sob a qual o aplicativo é executado. O `My.User` objeto, por sua vez, retorna informações sobre o usuário especificado mais recentemente.  
   
@@ -50,7 +50,7 @@ O `My` namespace no Visual Basic expõe propriedades e métodos que permitem que
   
  Por exemplo, o exemplo a seguir adiciona uma propriedade chamada `DnsServerIPAddresses` para o `My.Computer` objeto.  
   
- [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
+ [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]  
   
 ##  <a name="addingcustom"></a> Adicionando objetos personalizados para o Meu Namespace  
  Embora o `My` namespace fornece soluções para várias tarefas comuns de programação, você poderá encontrar as tarefas que o `My` namespace não aborda. Por exemplo, seu aplicativo pode acessar os serviços de diretório personalizado para dados de usuário, ou seu aplicativo pode usar assemblies que não são instalados por padrão com o Visual Basic. Você pode estender o `My` namespace para incluir soluções personalizadas para tarefas comuns que são específicas para seu ambiente. O `My` namespace pode ser facilmente estendido para adicionar novos membros para atender às crescentes necessidades do aplicativo. Além disso, você pode implantar seu `My` extensões do namespace para outros desenvolvedores como um modelo do Visual Basic.  
@@ -58,20 +58,20 @@ O `My` namespace no Visual Basic expõe propriedades e métodos que permitem que
 ###  <a name="addingtonamespace"></a> A adição de membros para o Meu Namespace  
  Porque `My` é um namespace como qualquer outro namespace, você pode adicionar propriedades de nível superior a ele, simplesmente adicionando um módulo e especificando um `Namespace` de `My`. Anote o módulo com o `HideModuleName` atributo conforme mostrado no exemplo a seguir. O `HideModuleName` atributo garante que o IntelliSense não exibirá o nome do módulo quando ele exibe os membros do `My` namespace.  
   
- [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
+ [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]  
   
  Para adicionar membros ao `My` namespace, adicione propriedades conforme necessário para o módulo. Para cada propriedade adicionada para o `My` namespace, adicione um campo particular do tipo `ThreadSafeObjectProvider(Of T)`, onde o tipo é o tipo retornado pela sua propriedade personalizada. Esse campo é usado para criar instâncias de objeto de thread-safe a ser retornado pela propriedade chamando o `GetInstance` método. Como resultado, cada thread que está acessando a propriedade estendida recebe sua própria instância do tipo retornado. O exemplo a seguir adiciona uma propriedade chamada `SampleExtension` que é do tipo `SampleExtension` para o `My` namespace:  
   
- [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
+ [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]  
   
 ##  <a name="addingevents"></a> Adicionando eventos a objetos My personalizados  
  Você pode usar o `My.Application` objeto para expor os eventos para o personalizado `My` objetos, estendendo a `MyApplication` classe parcial no `My` namespace. Para projetos baseados em Windows, você pode clicar duas vezes o **meu projeto** nó em seu projeto no **Gerenciador de soluções**. No Visual Basic **Designer de projeto**, clique no `Application` guia e, em seguida, clique o `View Application Events` botão. Será criado um novo arquivo chamado ApplicationEvents. Ele contém o código a seguir para estender o `MyApplication` classe.  
   
- [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
+ [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]  
   
  Você pode adicionar manipuladores de eventos para o personalizado `My` objetos, adicionando manipuladores de eventos personalizados para o `MyApplication` classe. Eventos personalizados permitem que você adicione o código que será executado quando um manipulador de eventos é adicionado, removido, ou o evento é gerado. Observe que o `AddHandler` de código para um evento personalizado é executado somente se o código é adicionado por um usuário para manipular o evento. Por exemplo, considere que o `SampleExtension` objeto da seção anterior tem um `Load` eventos que você deseja adicionar um manipulador de eventos personalizado. O exemplo de código a seguir mostra um manipulador de eventos personalizado chamado `SampleExtensionLoad` que será invocado quando o `My.SampleExtension.Load` evento ocorre. Quando o código é adicionado ao lidar com o novo `My.SampleExtensionLoad` evento, o `AddHandler` parte desse código de evento personalizado é executado. O `MyApplication_SampleExtensionLoad` método está incluído no exemplo de código para mostrar um exemplo de um manipulador de eventos que manipula o `My.SampleExtensionLoad` eventos. Observe que o `SampleExtensionLoad` eventos estarão disponíveis quando você seleciona o **Meus eventos de aplicativo** opção na lista suspensa à esquerda acima do Editor de código quando você estiver editando o arquivo ApplicationEvents VB.  
   
- [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
+ [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]  
   
 ##  <a name="design"></a> Diretrizes de design  
  Ao desenvolver extensões para o `My` namespace, use as seguintes diretrizes para ajudar a minimizar os custos de manutenção de seus componentes de extensão.  
