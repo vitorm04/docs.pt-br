@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 4b8ffbe018872c3ae467fb9bf15e3b03595fd640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659768"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979821"
 ---
 # <a name="directcast-operator-visual-basic"></a>Operador DirectCast (Visual Basic)
 Apresenta uma operação de conversão de tipo com base em herança ou implementação.  
@@ -37,7 +37,7 @@ Apresenta uma operação de conversão de tipo com base em herança ou implement
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra dois usos do `DirectCast`, que falha em tempo de execução e outra que obter êxito.  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
  No exemplo anterior, o tempo de execução do tipo de `q` é `Double`. `CType` é bem-sucedida pois `Double` pode ser convertido em `Integer`. No entanto, a primeira `DirectCast` falhar no tempo de execução porque o tempo de execução do tipo de `Double` não tem nenhuma relação de herança com `Integer`, mesmo que exista uma conversão. A segunda `DirectCast` é bem-sucedida pois ele converte do tipo <xref:System.Windows.Forms.Form> digitar <xref:System.Windows.Forms.Control>, do qual <xref:System.Windows.Forms.Form> herda.  
   

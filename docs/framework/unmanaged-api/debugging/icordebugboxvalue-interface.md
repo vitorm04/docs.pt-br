@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBoxValue Interface1
+title: Interface ICorDebugBoxValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBoxValue
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 549f3f782d544c967838206804640b577da2f877
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7238574334b599c7922693c7e9a476a51785491
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699006"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967315"
 ---
-# <a name="icordebugboxvalue-interface1"></a>ICorDebugBoxValue Interface1
+# <a name="icordebugboxvalue-interface"></a>Interface ICorDebugBoxValue
+
 Uma subclasse de "ICorDebugHeapValue" que representa um objeto de classe de valor Demarcado.  
   
 ## <a name="methods"></a>Métodos  

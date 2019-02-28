@@ -3,14 +3,14 @@ title: Introdução ao uso do armazenamento de tabelas do AzureF#
 description: Store dados estruturados na nuvem usando o armazenamento de tabela do Azure ou Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152067"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966002"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e usando a API de tabela do Azure Cosmos DBF# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e a API de tabela do Azure Cosmos DB usando F\#
 
 Armazenamento de tabela do Azure é um serviço que armazena dados NoSQL estruturados na nuvem. Armazenamento de tabelas é um repositório de chaves/atributos com um design sem esquema. Como o armazenamento de tabela é sem esquema, é fácil adaptar seus dados conforme as necessidades do seu aplicativo evoluem. Acesso a dados é rápido e econômico para todos os tipos de aplicativos. Armazenamento de tabela normalmente é significativamente mais baixo custo que o SQL tradicional para volumes de dados semelhantes.
 

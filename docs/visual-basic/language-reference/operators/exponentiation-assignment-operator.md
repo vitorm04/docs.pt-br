@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: 73705df376284edd9d8f20baaf4306c41b1d3943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efea38d7da13b67490f498658e7739929517dba2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699721"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964911"
 ---
 # <a name="-operator-visual-basic"></a>Operador ^= (Visual Basic)
 Gera o valor de uma variável ou propriedade à potência de uma expressão e atribui o resultado de volta para a variável ou propriedade.  
@@ -47,7 +47,7 @@ variableorproperty ^= expression
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `^=` operador para gerar o valor de um `Integer` variável à potência de uma segunda variável e atribui o resultado à primeira variável.  
   
- [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Operador ^](../../../visual-basic/language-reference/operators/exponentiation-operator.md)

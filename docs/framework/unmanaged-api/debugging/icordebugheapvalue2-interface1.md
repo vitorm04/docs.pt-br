@@ -1,5 +1,5 @@
 ---
-title: Interface1 ICorDebugHeapValue2
+title: Interface ICorDebugHeapValue2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 447fd8c7a6c52cdebc39ffd9c62cea5890c18c3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 497f17302416ffa13b6f91559549963f4d293b5f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499321"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966561"
 ---
-# <a name="icordebugheapvalue2-interface1"></a>Interface1 ICorDebugHeapValue2
+# <a name="icordebugheapvalue2-interface"></a>Interface ICorDebugHeapValue2
+
 Uma extensão de ICorDebugHeapValue que fornece suporte para o common language runtime (CLR) trata.  
   
 ## <a name="methods"></a>Métodos  

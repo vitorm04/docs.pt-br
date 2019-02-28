@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: f5222d51ff2f60dd31ec52a8d5d6d52f37e02443
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739196"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973620"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introdução a LINQ no Visual Basic
 Consulta integrada à linguagem (LINQ) adiciona recursos de consulta para o Visual Basic e fornece recursos simples e eficientes quando você trabalha com todos os tipos de dados. Em vez de enviar uma consulta para um banco de dados a serem processados ou trabalhar com diferentes sintaxes de consulta para cada tipo de dados que você está procurando, o LINQ apresenta consultas como parte da linguagem Visual Basic. Ele usa uma sintaxe unificada independentemente do tipo de dados.  
@@ -26,12 +26,12 @@ Consulta integrada à linguagem (LINQ) adiciona recursos de consulta para o Visu
   
  Por exemplo, o exemplo de código a seguir mostra uma consulta LINQ que retorna uma lista de clientes de uma coleção e os agrupa com base em sua localização.  
   
- [!code-vb[VbVbalrIntroToLINQ#1](codesnippet/VisualBasic/introduction-to-linq_1.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#1)]  
   
 ## <a name="running-the-examples"></a>Como executar os exemplos  
  Para executar os exemplos na introdução e nos [estrutura de uma consulta LINQ](#structure-of-a-linq-query) seção, inclua o código a seguir, que retorna uma lista de clientes e pedidos.  
   
- [!code-vb[VbVbalrIntroToLINQ#31](codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#31)]  
   
 ## <a name="linq-providers"></a>Provedores de LINQ  
  Um *provedor LINQ* mapeia suas consultas LINQ do Visual Basic para a fonte de dados que está sendo consultada. Quando você escreve uma consulta LINQ, o provedor leva essa consulta e converte em comandos que a fonte de dados será capaz de executar. O provedor também converte dados da origem para os objetos que compõem o resultado da consulta. Por fim, ele converte objetos em dados quando você envia atualizações para a fonte de dados.  
@@ -50,23 +50,23 @@ Consulta integrada à linguagem (LINQ) adiciona recursos de consulta para o Visu
   
  Uma expressão de consulta começa com um `From` cláusula. Essa cláusula identifica os dados de origem para uma consulta e as variáveis que são usadas para se referir a cada elemento da fonte de dados individualmente. Essas variáveis são denominadas *variáveis de alcance* ou *variáveis de iteração*. O `From` cláusula é necessária para uma consulta, exceto para `Aggregate` consultas, em que o `From` cláusula é opcional. Depois que o escopo e a fonte da consulta são identificados na `From` ou `Aggregate` cláusulas, você pode incluir qualquer combinação de cláusulas de consulta para refinar a consulta. Para obter detalhes sobre cláusulas de consulta, consulte operadores de consulta de LINQ do Visual Basic, mais adiante neste tópico. Por exemplo, a consulta a seguir identifica um conjunto de dados do cliente como o `customers` variável e uma variável de iteração chamada `cust`.  
   
- [!code-vb[VbVbalrIntroToLINQ#2](codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
  Este exemplo é uma consulta válida por si só; No entanto, a consulta se torna muito mais poderosa quando você adicionar mais cláusulas de consulta para refinar os resultados. Por exemplo, você pode adicionar um `Where` cláusula para filtrar o resultado por um ou mais valores. Expressões de consulta são uma única linha de código; Você apenas pode acrescentar cláusulas de consulta adicionais ao final da consulta. Você pode dividir uma consulta em várias linhas de texto para melhorar a legibilidade, usando o caractere de sublinhado (\_) o caractere de continuação de linha. O exemplo de código a seguir mostra um exemplo de uma consulta que inclui um `Where` cláusula.  
   
- [!code-vb[VbVbalrIntroToLINQ#3](codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#3)]  
   
  Outra cláusula de consulta poderosa é a `Select` cláusula, que permite retornar somente os campos selecionados da fonte de dados. Consultas LINQ retornam coleções enumeráveis de objetos fortemente tipados. Uma consulta pode retornar uma coleção de tipos anônimos ou tipos nomeados. Você pode usar o `Select` cláusula para retornar apenas um único campo da fonte de dados. Quando você fizer isso, o tipo da coleção retornada é o tipo daquele campo único. Você também pode usar o `Select` cláusula para retornar vários campos da fonte de dados. Quando você fizer isso, o tipo da coleção retornada é um novo tipo anônimo. Você também pode combinar os campos retornados pela consulta para os campos de um tipo nomeado especificado. O exemplo de código a seguir mostra uma expressão de consulta que retorna uma coleção de tipos anônimos que possuem membros preenchidos com dados dos campos da fonte de dados selecionados.  
   
- [!code-vb[VbVbalrIntroToLINQ#4](codesnippet/VisualBasic/introduction-to-linq_5.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#4)]  
   
  Consultas LINQ também podem ser usadas para combinar várias fontes de dados e retornar um único resultado. Isso pode ser feito com um ou mais `From` cláusulas, ou usando o `Join` ou `Group Join` cláusulas de consulta. O exemplo de código a seguir mostra uma expressão de consulta que combina dados de cliente e pedido e retorna uma coleção de tipos anônimas contendo dados do cliente e pedido.  
   
- [!code-vb[VbVbalrIntroToLINQ#5](codesnippet/VisualBasic/introduction-to-linq_6.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#5)]  
   
  Você pode usar o `Group Join` cláusula para criar um resultado de consulta hierárquico que contém uma coleção de objetos customer. Cada objeto customer tem uma propriedade que contém uma coleção de todos os pedidos desse cliente. O exemplo de código a seguir mostra uma expressão de consulta que combina dados de cliente e pedido como um resultado hierárquico e retorna uma coleção de tipos anônimos. A consulta retorna um tipo que inclui um `CustomerOrders` propriedade que contém uma coleção de dados de pedidos do cliente. Ele também inclui um `OrderTotal` propriedade que contém a soma dos totais para todos os pedidos desse cliente. (Esta consulta é equivalente a um LEFT OUTER JOIN).  
   
- [!code-vb[VbVbalrIntroToLINQ#6](codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
  Há várias adicionais operadores de consulta LINQ que você pode usar para criar expressões de consulta eficiente. A próxima seção deste tópico discute as várias cláusulas de consulta que você pode incluir em uma expressão de consulta. Para obter detalhes sobre cláusulas de consulta do Visual Basic, consulte [consultas](../../../../visual-basic/language-reference/queries/index.md).  
   
@@ -78,13 +78,13 @@ As classes de <xref:System.Linq> namespace e em outros namespaces que dão supor
 
 Qualquer um [ `From` cláusula](../../../../visual-basic/language-reference/queries/from-clause.md) ou um `Aggregate` cláusula é necessária para iniciar uma consulta. Um `From` cláusula Especifica uma coleção de origem e uma variável de iteração para uma consulta. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#7](codesnippet/VisualBasic/introduction-to-linq_8.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>cláusula Select
 
 Opcional. Um [ `Select` cláusula](../../../../visual-basic/language-reference/queries/select-clause.md) declara um conjunto de variáveis de iteração para uma consulta. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#8](codesnippet/VisualBasic/introduction-to-linq_9.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
 Se um `Select` cláusula não for especificada, as variáveis de iteração para a consulta consistem as variáveis de iteração especificadas pela `From` ou `Aggregate` cláusula.
 
@@ -92,83 +92,83 @@ Se um `Select` cláusula não for especificada, as variáveis de iteração para
 
 Opcional. Um [ `Where` cláusula](../../../../visual-basic/language-reference/queries/where-clause.md) Especifica uma condição de filtragem para uma consulta. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#9](codesnippet/VisualBasic/introduction-to-linq_10.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
 ### <a name="order-by-clause"></a>Cláusula Order By]
 
 | Opcional. Uma [ `Order By` cláusula](../../../../visual-basic/language-reference/queries/order-by-clause.md) Especifica a ordem de classificação para colunas em uma consulta. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#10](codesnippet/VisualBasic/introduction-to-linq_11.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>cláusula Join
 
 Opcional. Um [ `Join` cláusula](../../../../visual-basic/language-reference/queries/join-clause.md) combina duas coleções em uma única coleção. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#11](codesnippet/VisualBasic/introduction-to-linq_12.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>cláusula Group By
 
 Opcional. Um [ `Group By` cláusula](../../../../visual-basic/language-reference/queries/group-by-clause.md) agrupa os elementos de um resultado de consulta. Ele pode ser usado para aplicar funções de agregação a cada grupo. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#12](codesnippet/VisualBasic/introduction-to-linq_13.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>cláusula Group Join
 
 Opcional. Um [ `Group Join` cláusula](../../../../visual-basic/language-reference/queries/group-join-clause.md) combina duas coleções em uma única coleção hierárquica. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#13](codesnippet/VisualBasic/introduction-to-linq_14.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>cláusula Aggregate
 
 Qualquer um [ `Aggregate` cláusula](../../../../visual-basic/language-reference/queries/aggregate-clause.md) ou um `From` cláusula é necessária para iniciar uma consulta. Um `Aggregate` cláusula aplica um ou mais funções de agregação a uma coleção. Por exemplo, você pode usar o `Aggregate` cláusula para calcular uma soma de todos os elementos retornados por uma consulta, como o exemplo a seguir faz.
 
-[!code-vb[VbVbalrIntroToLINQ#14](codesnippet/VisualBasic/introduction-to-linq_15.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
 Você também pode usar o `Aggregate` cláusula para modificar uma consulta. Por exemplo, você pode usar o `Aggregate` cláusula para executar um cálculo em uma coleção relacionada de consulta. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#15](codesnippet/VisualBasic/introduction-to-linq_16.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>cláusula Let
 
 Opcional. Um [ `Let` cláusula](../../../../visual-basic/language-reference/queries/let-clause.md) calcula um valor e o atribui a uma nova variável na consulta. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#16](codesnippet/VisualBasic/introduction-to-linq_17.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>cláusula Distinct
 
 Opcional. Um `Distinct` cláusula restringe os valores da variável de iteração atual para eliminar valores duplicados nos resultados da consulta. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#17](codesnippet/VisualBasic/introduction-to-linq_18.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>cláusula Skip
 
 Opcional. Um [ `Skip` cláusula](../../../../visual-basic/language-reference/queries/skip-clause.md) ignora um número especificado de elementos em uma coleção e retorna os elementos restantes. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#18](codesnippet/VisualBasic/introduction-to-linq_19.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>cláusula Skip While
 
 Opcional. Um [ `Skip While` cláusula](../../../../visual-basic/language-reference/queries/skip-while-clause.md) ignora elementos em uma coleção, desde que uma condição especificada seja `true` e, em seguida, retorna os elementos restantes. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#19](codesnippet/VisualBasic/introduction-to-linq_20.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>cláusula Take
 
 Opcional. Um [ `Take` cláusula](../../../../visual-basic/language-reference/queries/take-clause.md) retorna um número especificado de elementos contíguos do início de uma coleção. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#20](codesnippet/VisualBasic/introduction-to-linq_21.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>cláusula Take While
 
 Opcional. Um [ `Take While` cláusula](../../../../visual-basic/language-reference/queries/take-while-clause.md) inclui elementos em uma coleção, desde que uma condição especificada seja `true` e ignora os elementos restantes. Por exemplo:
 
-[!code-vb[VbVbalrIntroToLINQ#21](codesnippet/VisualBasic/introduction-to-linq_22.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
 ## <a name="use-additional-linq-query-features"></a>Usar recursos adicionais de consulta LINQ  
   
 Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos enumeráveis e consultáveis fornecidos pelo LINQ. Você pode usar esses recursos adicionais, chamando um operador de consulta específica no resultado de uma expressão de consulta. Por exemplo, o exemplo a seguir usa o <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> método para combinar os resultados das duas consultas em um resultado da consulta. Ele usa o <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> método para retornar o resultado da consulta como uma lista genérica.
   
- [!code-vb[VbVbalrIntroToLINQ#22](codesnippet/VisualBasic/introduction-to-linq_23.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#22)]  
   
  Para obter detalhes sobre recursos adicionais do LINQ, consulte [visão geral de operadores de consulta padrão](../../concepts/linq/standard-query-operators-overview.md).  
   
@@ -207,7 +207,7 @@ Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos 
   
  O exemplo de código a seguir mostra como criar um elemento XML, acessar seus subelementos e atributos e consultar o conteúdo do elemento usando LINQ.  
   
- [!code-vb[VbXmlSamples#8](../../../language-reference/operators/codesnippet/VisualBasic/introduction-to-linq_24.vb)]  
+ [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
  Para obter mais informações, consulte [XML](../xml/index.md).  
   

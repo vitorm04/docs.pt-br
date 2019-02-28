@@ -21,12 +21,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: bc0b5037dc4e728a45dfdeb97c1b6aff449fcf2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9770574a1b25f37dcc91c1d0374340f762700be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551004"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968342"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Instrução Select...Case (Visual Basic)
 Executa um dos vários grupos de instruções, dependendo do valor de uma expressão.  
@@ -80,7 +80,7 @@ End Select
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa uma `Select Case` construção para escrever uma linha correspondente ao valor da variável `number`. A segunda `Case` declaração contém o valor que corresponde ao valor atual do `number`, portanto, a instrução que grava "entre 6 e 8, inclusive" é executada.  
   
- [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>

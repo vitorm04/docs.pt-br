@@ -2,12 +2,12 @@
 title: Fatias (F#)
 description: Saiba mais sobre como usar fatias existentes F# tipos de dados e como definir seus próprios fatias para outros tipos de dados.
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746700"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970098"
 ---
 # <a name="slices"></a>Fatias
 
@@ -95,7 +95,7 @@ O F# biblioteca principal não define `GetSlice`para matrizes 3D. Se você quise
 
 O F# biblioteca principal define fatias para um conjunto limitado de tipos. Se você quiser definir fatias para mais tipos de dados, você pode fazer isso na definição de tipo em si ou em uma extensão de tipo.
 
-Por exemplo, aqui está como você pode definir fatias para o <xref:System.ArraySegment`1> classe para permitir a manipulação de dados conveniente:
+Por exemplo, aqui está como você pode definir fatias para o <xref:System.ArraySegment%601> classe para permitir a manipulação de dados conveniente:
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Use inlining para evitar a conversão boxing se for necessário
 
-Se você estiver definindo fatias para um tipo que é, na verdade, um struct, recomendamos que você `inline` o `GetSlice` membro. O F# compilador otimizará os argumentos opcionais, evitando as alocações de heap como resultado da divisão. Isso é extremamente importante para construções de divisão, como <xref:System.Span`1> que não pode ser ser alocados no heap.
+Se você estiver definindo fatias para um tipo que é, na verdade, um struct, recomendamos que você `inline` o `GetSlice` membro. O F# compilador otimizará os argumentos opcionais, evitando as alocações de heap como resultado da divisão. Isso é extremamente importante para construções de divisão, como <xref:System.Span%601> que não podem ser alocados no heap.
 
 ```fsharp
 open System

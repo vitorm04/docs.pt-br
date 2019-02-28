@@ -1,15 +1,9 @@
 ---
-title: Referência do F# Interativo (fsi.exe)
-description: Saiba como F# interativo (fsi.exe) é usado para executar F# de código interativamente no console ou para executar F# scripts.
+title: 'Referência do F# Interativo (fsi.exe)'
+description: 'Saiba como F# interativo (fsi.exe) é usado para executar F# de código interativamente no console ou para executar F# scripts.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611055"
 ---
-# <a name="interactive-programming-with-f"></a>Programação interativa com F# #
+# <a name="interactive-programming-with-f"></a>Programação interativa com F\#
 
 > [!NOTE]
 > Atualmente, este artigo descreve somente a experiência para Windows.  Ele será reescrito.
@@ -44,7 +38,7 @@ Se você tiver um projeto aberto que faça referência a algumas bibliotecas, po
 Você pode controlar os argumentos de linha de comando do F# interativo (opções) ajustando as configurações. No menu **Ferramentas**, selecione **Opções...** e expanda **Ferramentas do F#**. As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits**, que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits. Essa configuração determina se você deseja executar a versão de 64 bits dedicada do fsi.exe ou do fsianycpu.exe, que usa a arquitetura de máquina para determinar se deve ser executada como um processo de 32 ou 64 bits.
 
 
-## <a name="scripting-with-f"></a>Scripts com F# #
+## <a name="scripting-with-f"></a>Scripts com F\#
 Os scripts usam a extensão de arquivo **.fsx** ou **.fsscript**. Em vez de compilar o código-fonte e executar o conjunto compilado posteriormente, é possível executar apenas **fsi.exe** e especificar o nome do arquivo do script de código-fonte do F# e o F# interativo lerá o código e o executará em tempo real.
 
 

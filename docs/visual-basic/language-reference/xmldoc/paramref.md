@@ -5,12 +5,12 @@ helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 1ef8d76699534a7408912424bcdea651d8314364
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3e889f97565f7961ce975f41e9ec4c85a4d0d2c6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283979"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965964"
 ---
 # <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
 Formata uma palavra como um parâmetro.  
@@ -33,7 +33,7 @@ Formata uma palavra como um parâmetro.
 ## <a name="example"></a>Exemplo  
  Este exemplo usa o `<paramref>` marca para referir-se a `id` parâmetro.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/paramref_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)

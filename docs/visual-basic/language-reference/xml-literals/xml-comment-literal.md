@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 96a7281cde546c3077cf15c625c6e09d2d0ee46f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f8526c4b67b7d975b11f6ef5dada2b45bb6b1df
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624665"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964169"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literal de comentário XML (Visual Basic)
 Um valor literal que representa um <xref:System.Xml.Linq.XComment> objeto.  
@@ -53,7 +53,7 @@ Um valor literal que representa um <xref:System.Xml.Linq.XComment> objeto.
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um comentário XML que contém o texto "Este é um comentário".  
   
- [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-comment-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Xml.Linq.XComment>

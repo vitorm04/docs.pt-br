@@ -1,16 +1,16 @@
 ---
-title: Introdução ao armazenamento de arquivos do Azure usando F#
+title: Introdução ao uso do armazenamento de arquivos do AzureF#
 description: Store dados de arquivos na nuvem com o armazenamento de arquivos do Azure e montar o compartilhamento de arquivos de nuvem de uma máquina virtual do Azure (VM) ou de um aplicativo local que executa o Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e772da5f81d2e6827295d0dfe150934a415eb3bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569337"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969590"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Introdução ao armazenamento de arquivos do Azure usando F# #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Introdução ao armazenamento de arquivos do Azure usando F\#
 
 O armazenamento de arquivos do Azure é um serviço que oferece compartilhamentos de arquivos na nuvem usando o padrão [protocolo de bloco de mensagens de servidor (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Há suporte para SMB 2.1 e SMB 3.0. Com o armazenamento de arquivos do Azure, você pode migrar aplicativos herdados que dependem de compartilhamentos de arquivo para o Azure rapidamente e sem regravações caras. Aplicativos em execução em máquinas virtuais do Azure ou serviços de nuvem ou de clientes locais podem montar um compartilhamento de arquivos na nuvem, exatamente como um aplicativo de desktop monta um compartilhamento SMB típico. Qualquer número de componentes de aplicativos pode, em seguida, montar e acessar o compartilhamento de armazenamento de arquivos simultaneamente.
 
@@ -21,9 +21,9 @@ Para obter uma visão geral conceitual de armazenamento de arquivos, consulte [o
 Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/storage-create-storage-account).
 Você também precisará sua chave de acesso de armazenamento para esta conta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Criar Script de F# e o início da F# interativo
+## <a name="create-an-f-script-and-start-f-interactive"></a>Criar um F# Script e iniciar F# interativo
 
-Os exemplos neste artigo podem ser usados em um aplicativo do F# ou um script F#. Para criar um script F#, crie um arquivo com o `.fsx` extensão, por exemplo `files.fsx`, em seu ambiente de desenvolvimento do F#.
+Os exemplos neste artigo podem ser usados em qualquer um uma F# aplicativo ou um F# script. Para criar um F# script, crie um arquivo com o `.fsx` extensão, por exemplo `files.fsx`, no seu F# ambiente de desenvolvimento.
 
 Em seguida, use um [Gerenciador de pacotes](package-management.md) tais como [Paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) para instalar o `WindowsAzure.Storage` pacote e referência `WindowsAzure.Storage.dll` em seu script usando um `#r`diretiva.
 

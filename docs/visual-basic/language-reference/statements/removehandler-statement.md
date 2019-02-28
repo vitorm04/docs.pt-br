@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: 27cdd2753507c6fc4d5c5041607e2ccb425b81b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e53398f97cbd320c0c98250ac5abbc2e4e98027
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560614"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981030"
 ---
 # <a name="removehandler-statement"></a>Instrução RemoveHandler
 Remove a associação entre um evento e um manipulador de eventos.  
@@ -39,7 +39,7 @@ RemoveHandler event, AddressOf eventhandler
 >  Para eventos personalizados, o `RemoveHandler` instrução invoca o evento `RemoveHandler` acessador. Para obter mais informações sobre eventos personalizados, consulte [declaração de evento](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Exemplo  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Instrução AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)

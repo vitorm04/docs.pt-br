@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612015"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981446"
 ---
 # <a name="string-functions-visual-basic"></a>Funções da cadeia de caracteres (Visual Basic)
 A tabela a seguir lista as funções que o Visual Basic oferece para pesquisar e manipular cadeias de caracteres.  
@@ -51,27 +51,27 @@ A tabela a seguir lista as funções que o Visual Basic oferece para pesquisar e
 ## <a name="example"></a>Exemplo  
  Este exemplo usa o `UCase` função para retornar uma versão em maiusculas de uma cadeia de caracteres.  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo usa o `LTrim` função para retirar espaços à esquerda e o `RTrim` de espaços de função para retirar à direita de uma variável de cadeia de caracteres. Ele usa o `Trim` função para retirar ambos os tipos de espaços.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo usa o `Mid` função retornar um número especificado de caracteres de uma cadeia de caracteres.  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo usa `Len` para retornar o número de caracteres em uma cadeia de caracteres.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo usa o `InStr` função para retornar a posição da primeira ocorrência de uma cadeia de caracteres dentro de outra.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra vários usos da `Format` função para formatar valores usando os `String` formatos e formatos definidos pelo usuário. Para o separador de data (`/`), separador de hora (`:`) e os indicadores AM/PM (`t` e `tt`), a saída formatada real exibida pelo seu sistema depende de configurações de localidade que o código está usando. Quando horas e datas são exibidas no ambiente de desenvolvimento, o formato de hora abreviada e o formato de data abreviada da localidade do código são usadas.  
@@ -79,7 +79,7 @@ A tabela a seguir lista as funções que o Visual Basic oferece para pesquisar e
 > [!NOTE]
 >  Para localidades que usam um relógio de 24 horas, os indicadores AM/PM (`t` e `tt`) não exibem nada.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)

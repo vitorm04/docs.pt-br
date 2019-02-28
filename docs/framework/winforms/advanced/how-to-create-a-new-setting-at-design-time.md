@@ -5,17 +5,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 160d4a9f560479b3a66b2cf4d7712b24551fabee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558692"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964235"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Como: Criar uma nova configuração em tempo de Design
 Você pode criar uma nova configuração em tempo de design usando o designer de configurações. O designer de configurações é uma interface no estilo de grade que permite que você crie novas configurações e especifique propriedades para essas configurações. Você deve especificar o nome, valor, tipo e escopo para as novas configurações. Depois de criar uma configuração, é acessível no código.  
   
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Para criar uma nova configuração em tempo de designC#  
+### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Para criar uma nova configuração em tempo de design em C\#
   
 1.  Na **Gerenciador de soluções**, expanda o **propriedades** nó do projeto.  
   

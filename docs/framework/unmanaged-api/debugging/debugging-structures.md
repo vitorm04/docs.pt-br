@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828365"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965222"
 ---
 # <a name="debugging-structures"></a>Estruturas de depuração
+
 Esta seção descreve as estruturas não gerenciadas que a API de depuração usa.
 
 ## <a name="in-this-section"></a>Nesta seção
@@ -25,7 +26,7 @@ Esta seção descreve as estruturas não gerenciadas que a API de depuração us
 
  [Estrutura CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) define a versão do produto do common language runtime (CLR) para fins de depuração.
 
- [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) representa um único bloco de código na memória.
+ [Estrutura CodeChunkInfo](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) representa um único bloco de código na memória.
 
  [COR_ACTIVE_FUNCTION](cor-active-function-structure.md) contém informações sobre as funções que estão atualmente ativas nos quadros de um thread.
 
@@ -71,9 +72,8 @@ Esta seção descreve as estruturas não gerenciadas que a API de depuração us
 
  [Estrutura StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) fornece um contexto simple que pode ser usado no lugar de uma completa `CONTEXT` estrutura.
 
-
-
 ## <a name="related-sections"></a>Seções relacionadas
+
  [Depurando coclasses](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 
  [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

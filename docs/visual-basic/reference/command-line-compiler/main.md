@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1e636da1d277f80f58268b24b69802006eb8315
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638776"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966275"
 ---
 # <a name="-main"></a>-main
 Especifica a classe ou o módulo que contém o procedimento `Sub Main`.  
@@ -33,7 +33,7 @@ Especifica a classe ou o módulo que contém o procedimento `Sub Main`.
   
  Quando `location` é uma classe que herda <xref:System.Windows.Forms.Form>, o compilador fornece um padrão `Main` procedimento que inicia o aplicativo se a classe não tem nenhum `Main` procedimento. Isso permite que você compilar o código na linha de comando que foi criado no ambiente de desenvolvimento.  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Para definir - principal no ambiente de desenvolvimento integrado do Visual Studio  
   

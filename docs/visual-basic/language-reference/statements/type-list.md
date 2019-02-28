@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655069"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968264"
 ---
 # <a name="type-list-visual-basic"></a>Lista de tipos (Visual Basic)
 Especifica o *parâmetros de tipo* para um *genérico* elemento de programação. Vários parâmetros são separados por vírgulas. A seguir está a sintaxe para um parâmetro de tipo.  
@@ -80,17 +80,17 @@ Especifica o *parâmetros de tipo* para um *genérico* elemento de programação
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra uma definição de uma classe de dicionário genéricas, incluindo uma função em esqueleto para adicionar uma nova entrada ao dicionário.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Exemplo  
  Porque `dictionary` é genérico, o código que usa a ele pode criar uma variedade de objetos dele, cada um tendo a mesma funcionalidade mas agindo em outro tipo de dados. O exemplo a seguir mostra uma linha de código que cria uma `dictionary` do objeto com `String` entradas e `Integer` chaves.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a definição de esqueleto equivalente gerada pelo exemplo anterior.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: d74e1f7aaaa22d68c49f4e40ca557511a48e0554
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bb34eb810f6e2d0b0d631f5891e3e65aa0b170f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525021"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981394"
 ---
 # <a name="mod-operator-visual-basic"></a>Operador Mod (Visual Basic)
 Divide dois números e retorna apenas o resto.  
@@ -93,12 +93,12 @@ End Module
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `Mod` operador dividir dois números e retornar somente o resto. Se o número for um número de ponto flutuante, o resultado é um número de ponto flutuante que representa o restante.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra a imprecisão potencial de operandos de ponto flutuantes. Na primeira instrução, os operandos forem `Double`, e 0.2 é uma fração binária infinitamente de repetição com um valor armazenado de 0.20000000000000001. Na segunda instrução, o literal de caractere de tipo `D` força a ambos os operandos para `Decimal`, e 0.2 tem uma representação exata.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 5a931199ff8d09412d536a173f3cd12e451def64
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845974"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979808"
 ---
 # <a name="synclock-statement"></a>Instrução SyncLock
 Adquire um bloqueio exclusivo para um bloco de instrução antes de executar o bloco.  
@@ -81,13 +81,13 @@ End SyncLock
  Se o `simpleMessageList` classe compartilhada de uma lista de mensagens entre todas as suas instâncias, as variáveis `messagesList` e `messagesLast` deve ser declarado como `Shared`. Nesse caso, a variável `messagesLock` também deve ser `Shared`, de modo que seria um único objeto de bloqueio usado por cada instância.  
   
 ### <a name="code"></a>Código  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>Descrição  
  O exemplo a seguir usa threads e `SyncLock`. Desde que o `SyncLock` declaração estiver presente, o bloco de instrução é uma seção crítica e `balance` nunca se torna um número negativo. Você pode comentar a `SyncLock` e `End SyncLock` instruções para ver o efeito de omitindo o `SyncLock` palavra-chave.  
   
 ### <a name="code"></a>Código  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
   
 ### <a name="comments"></a>Comentários  
   

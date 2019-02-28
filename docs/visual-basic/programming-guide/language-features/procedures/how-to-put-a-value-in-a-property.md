@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: d40ca98f94f410bb20c8df0e7f1a3f216cf53bf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34348d57db0875d9c2c6192ac754b4f83f515ac4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589159"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965456"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Como: Inserir um valor em uma propriedade (Visual Basic)
 Você pode armazenar um valor em uma propriedade, colocando o nome da propriedade no lado esquerdo de uma instrução de atribuição.  
@@ -26,7 +26,7 @@ Você pode armazenar um valor em uma propriedade, colocando o nome da propriedad
   
      O exemplo a seguir define o valor do Visual Basic `TimeOfDay` propriedade para o meio-dia, implicitamente chamando seu `Set` procedimento.  
   
-     [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
+     [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
 2.  Se a propriedade utiliza argumentos, siga o nome da propriedade com parênteses para incluir a lista de argumentos. Se não houver nenhum argumento, você pode, opcionalmente, omitir os parênteses.  
   

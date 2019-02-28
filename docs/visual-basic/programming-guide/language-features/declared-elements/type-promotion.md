@@ -10,33 +10,33 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721872"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969187"
 ---
 # <a name="type-promotion-visual-basic"></a>Promoção de tipos (Visual Basic)
 Quando você declara um elemento de programação em um módulo, o Visual Basic promove seu escopo para o namespace que contém o módulo. Isso é conhecido como *promoção de tipos*.  
   
  O exemplo a seguir mostra uma definição de um módulo e dois membros de módulo.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
  Dentro de `projModule`, programação elementos declarados no nível de módulo são promovidos para `projNamespace`. No exemplo anterior, `basicEnum` e `innerClass` são promovidos, mas `numberSub` não é, pois ele não está declarado no nível de módulo.  
   
 ## <a name="effect-of-type-promotion"></a>Efeito da promoção de tipo  
  O efeito da promoção de tipos é que uma cadeia de caracteres de qualificação não precisa incluir o nome do módulo. O exemplo a seguir faz duas chamadas para o procedimento no exemplo anterior.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
  No exemplo anterior, a primeira chamada usa cadeias de caracteres de qualificação completa. No entanto, isso não é necessário devido a promoção de tipos. A segunda chamada também acessa os membros do módulo sem incluir `projModule` nas cadeias de caracteres de qualificação.  
   
 ## <a name="defeat-of-type-promotion"></a>Derrota da promoção de tipo  
  Se o namespace já tiver um membro com o mesmo nome como um membro de módulo, a promoção de tipos é derrotada por esse módulo associado. O exemplo a seguir mostra uma definição de módulo dentro do mesmo namespace e uma enumeração.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
  No exemplo anterior, o Visual Basic não é possível promover a classe `abc` para `thisNameSpace` porque já existe uma enumeração com o mesmo nome no nível de namespace. Para acessar `abcSub`, você deve usar a cadeia de caracteres de qualificação completa `thisNamespace.thisModule.abc.abcSub`. No entanto, a classe `xyz` ainda for promovido, e você pode acessar `xyzSub` com a cadeia de caracteres mais curta qualificação `thisNamespace.xyz.xyzSub`.  
   
@@ -45,7 +45,7 @@ Quando você declara um elemento de programação em um módulo, o Visual Basic 
   
  **Consequências.** Derrota da promoção de tipo de uma definição parcial pode causar resultados inesperados e até mesmo os erros de compilador. O exemplo a seguir mostra o esqueleto de definições parciais de uma classe, um dos quais é dentro de um módulo.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
  No exemplo anterior, o desenvolvedor pode esperar o compilador para mesclar as duas definições parciais de `sampleClass`. No entanto, o compilador não considera a promoção para a definição parcial dentro `sampleModule`. Como resultado, ele tenta compilar duas classes separados e distintas, ambas chamadas `sampleClass` , mas com caminhos diferentes de qualificação.  
   

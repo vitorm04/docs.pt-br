@@ -11,12 +11,12 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 70bbfef54d3f716e0e7463a39ee15e8480066695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5a0a3420d86df67e38df390ce98fbbe43c69459
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603008"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981342"
 ---
 # <a name="orelse-operator-visual-basic"></a>Operador OrElse (Visual Basic)
 Executa uma disjunção lógica inclusiva em duas expressões de curto-circuito.  
@@ -57,14 +57,14 @@ result = expression1 OrElse expression2
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `OrElse` operador para executar uma disjunção lógica em duas expressões. O resultado é um `Boolean` valor que representa se uma das duas expressões são true. Se a primeira expressão é `True`, a segunda não será avaliada.  
   
- [!code-vb[VbVbalrOperators#37](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
   
  O exemplo anterior produz resultados `True`, `True`, e `False` , respectivamente. No cálculo da `firstCheck`, a segunda expressão é avaliada não porque a primeira já é `True`. No entanto, a segunda expressão é avaliada no cálculo de `secondCheck`.  
   
 ## <a name="example"></a>Exemplo  
  A exemplo a seguir mostra um `If`... `Then` instrução que contém duas chamadas de procedimento. Se a primeira chamada retorna `True`, o segundo procedimento não é chamado. Isso pode produzir resultados inesperados se o segundo procedimento executa tarefas importantes que sempre devem ser executadas quando essa seção do código é executado.  
   
- [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Operadores lógicos/bit a bit (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
