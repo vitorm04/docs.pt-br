@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123664"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665024"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a>Passo a passo: criar um aplicativo de serviço Windows
+# <a name="walkthrough-create-a-windows-service-app"></a>Passo a passo: Criar um aplicativo de serviço Windows
 
 Este artigo demonstra como criar um aplicativo de serviço Windows simples no Visual Studio que escreve mensagens em um log de eventos.
 
@@ -86,7 +86,7 @@ No editor do código, localize o método <xref:System.ServiceProcess.ServiceBase
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Um aplicativo de serviço foi projetado para executado a longo prazo, por isso ele geralmente controla ou monitora algo no sistema. O monitoramento é configurado no método <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. No entanto, o <xref:System.ServiceProcess.ServiceBase.OnStart%2A> não realiza, de fato, o monitoramento. O método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> deve ser retornado ao sistema operacional depois que a operação do serviço tiver começado. Ele não deve fazer loop para sempre nem bloqueios. Para configurar um mecanismo de pesquisa simples, você pode usar o componente <xref:System.Timers.Timer?displayProperty=nameWithType> da seguinte forma: no método <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, defina os parâmetros no componente e, em seguida, defina a propriedade <xref:System.Timers.Timer.Enabled%2A> como `true`. O temporizador gera eventos no seu código periodicamente, no tempo em que seu serviço faria o monitoramento. Você pode usar o código a seguir para fazer isso:
+Um aplicativo de serviço foi projetado para executado a longo prazo, por isso ele geralmente controla ou monitora algo no sistema. O monitoramento é configurado no método <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. No entanto, o <xref:System.ServiceProcess.ServiceBase.OnStart%2A> não realiza, de fato, o monitoramento. O método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> deve ser retornado ao sistema operacional depois que a operação do serviço tiver começado. Ele não deve fazer loop para sempre nem bloqueios. Para configurar um mecanismo simples de sondagem, use o componente <xref:System.Timers.Timer?displayProperty=nameWithType>, da seguinte maneira: No método <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, defina parâmetros no componente e, em seguida, defina a propriedade <xref:System.Timers.Timer.Enabled%2A> como `true`. O temporizador gera eventos no seu código periodicamente, no tempo em que seu serviço faria o monitoramento. Você pode usar o código a seguir para fazer isso:
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -296,7 +296,7 @@ Antes de executar um serviço Windows, é necessário instalá-lo, o que o regis
     > [!IMPORTANT]
     > A conta <xref:System.ServiceProcess.ServiceAccount.LocalSystem> tem amplas permissões, incluindo a capacidade de gravar no log de eventos. Use essa conta com cuidado, pois ela pode aumentar o risco de ataques de software mal-intencionado. Para outras tarefas, pense em usar a conta <xref:System.ServiceProcess.ServiceAccount.LocalService>, que atua como um usuário não privilegiado no computador local e apresenta credenciais anônimas a qualquer servidor remoto. Este exemplo falhará se você tentar usar a conta <xref:System.ServiceProcess.ServiceAccount.LocalService>, pois ele precisa de permissão para gravar no log de eventos.
 
-Para obter mais informações sobre instaladores, confira [Como adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
+Para saber mais sobre os instaladores, consulte [Como adicionar instaladores ao seu aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
 
 ## <a name="optional-set-startup-parameters"></a>(Opcional) Defina os parâmetros de inicialização
 
@@ -431,7 +431,7 @@ Agora que você criou o serviço Windows, poderá instalá-lo. Para instalar um 
 
     Se o processo de **installutil.exe** relatar falha, verifique o log de instalação para saber o motivo. Por padrão o log está na mesma pasta que o executável do serviço. A instalação poderá falhar se a classe <xref:System.ComponentModel.RunInstallerAttribute> não estiver presente na classe `ProjectInstaller`, se o atributo não estiver definido como **true** ou se a classe `ProjectInstaller` não for marcada **pública**.
 
-Para obter mais informações, confira [Como instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+Para obter mais informações, confira [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Iniciar e executar o serviço
 
@@ -452,7 +452,7 @@ Para obter mais informações, confira [Como instalar e desinstalar serviços](.
 1. Abra o **Visualizador de Eventos** começando a digitar **Visualizador de Eventos** na caixa de pesquisa na barra de tarefas do Windows e, em seguida, selecionando **Visualizador de Eventos** nos resultados da pesquisa.
 
    > [!TIP]
-   > No Visual Studio, é possível acessar logs de eventos abrindo **Gerenciador de Servidores** (Teclado: **Ctrl**+**Alt**+**S**) e expandindo o nó **Logs de Eventos** no computador local.
+   > No Visual Studio, acesse os logs de eventos abrindo o **Gerenciador de Servidores** (teclado: **CTRL**+**Alt**+**S**) e expandindo o nó **Logs de Eventos** para o computador local.
 
 2. No **Visualizador de Eventos**, expanda **Logs de Aplicativos e Serviços**.
 
@@ -472,11 +472,11 @@ Para obter mais informações, confira [Como instalar e desinstalar serviços](.
     installutil.exe /u MyNewService.exe
     ```
 
-   Se o serviço for desinstalado com êxito, **installutil.exe** relatará que seu serviço foi removido com sucesso. Para obter mais informações, confira [Como instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Se o serviço for desinstalado com êxito, **installutil.exe** relatará que seu serviço foi removido com sucesso. Para obter mais informações, confira [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Agora que você criou o serviço, crie um programa de instalação autônomo que outras pessoas possam usar para instalar seu serviço Windows. O ClickOnce não dá suporte a serviços Windows, mas é possível usar o [WiX Toolset](http://wixtoolset.org/) para criar um instalador para um serviço Windows. Para ver outras ideias, confira [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client) (Criar um pacote do instalador).
+Agora que você criou o serviço, crie um programa de instalação autônomo que outras pessoas possam usar para instalar seu serviço Windows. O ClickOnce não dá suporte a serviços Windows, mas é possível usar o [WiX Toolset](http://wixtoolset.org/) para criar um instalador para um serviço Windows. Para ver outras ideias, confira [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop) (Criar um pacote do instalador).
 
 Você pode explorar o uso de um componente <xref:System.ServiceProcess.ServiceController>, que permite que você envie comandos ao serviço que instalou.
 
@@ -486,5 +486,5 @@ Você pode explorar o uso de um componente <xref:System.ServiceProcess.ServiceCo
 
 - [Aplicativos do serviço Windows](../../../docs/framework/windows-services/index.md)
 - [Introdução aos aplicativos do serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Como depurar aplicativos de serviço Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Serviços (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [Como: Depurar aplicativos do serviço Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Serviços (Windows)](/windows/desktop/Services/services)

@@ -4,12 +4,12 @@ description: Aprenda conceitos de teste de unidade no C# e .NET Core por meio de
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 00be8c2fdef88861cc1119b1593155e027a3ade5
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307208"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747977"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Teste de unidade em C# com NUnit e .NET Core
 
@@ -42,7 +42,7 @@ Torne *PrimeService* o diretório atual e execute o seguinte comando para criar 
 dotnet new classlib
 ```
 
-Renomeie *Class1.cs* como *PrimeService.cs*. Para usar o TDD (Desenvolvimento Orientado por Testes), você cria uma implementação com falha da classe `PrimeService`:
+Renomeie *Class1.cs* como *PrimeService.cs*. Crie uma implementação com falha da classe `PrimeService`:
 
 ```csharp
 using System;
@@ -117,7 +117,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>Criando o primeiro teste
 
-A abordagem de TDD pede a criação de um teste com falha para fazê-lo passar e depois a repetição do processo. No diretório *PrimeService.Tests*, renomeie o arquivo *UnitTest1.cs* para *PrimeService_IsPrimeShould.cs* e substitua todo o seu conteúdo pelo código a seguir:
+Escreva um teste com falha, faça-o ser aprovado e, em seguida, repita o processo. No diretório *PrimeService.Tests*, renomeie o arquivo *UnitTest1.cs* para *PrimeService_IsPrimeShould.cs* e substitua todo o seu conteúdo pelo código a seguir:
 
 ```csharp
 using NUnit.Framework;

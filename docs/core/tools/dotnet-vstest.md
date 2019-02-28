@@ -3,12 +3,12 @@ title: Comando dotnet vstest
 description: O comando dotnet vstest compila um projeto e todas as suas dependências.
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169008"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747723"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -43,7 +43,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Console` para executar testes automatizados de unidade e testes de aplicativo de IU codificado.
+O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Console` para executar testes automatizados de unidade.
 
 ## <a name="arguments"></a>Arguments
 
@@ -73,11 +73,11 @@ Arquitetura da plataforma de destino usada para a execução de teste. Os valore
 
 `--Framework|/Framework:<Framework Version>`
 
-Versão do .NET Framework de destino usada na execução de teste. Alguns exemplos de valores válidos são `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Outros valores compatíveis são `Framework35`, `Framework40`, `Framework45`, `FrameworkCore10` e `FrameworkUap10`.
+Versão do .NET Framework de destino usada na execução de teste. Alguns exemplos de valores válidos são `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Outros valores com suporte são `Framework40`, `Framework45`, `FrameworkCore10` e `FrameworkUap10`.
 
 `--Parallel|/Parallel`
 
-Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Defina um número explícito de núcleos com um arquivo de configurações.
+Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número explícito de núcleos definindo a propriedade MaxCpuCount sob o nó RunConfiguration no arquivo runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -162,11 +162,11 @@ Arquitetura da plataforma de destino usada para a execução de teste. Os valore
 
 `--Framework|/Framework:<Framework Version>`
 
-Versão do .NET Framework de destino usada na execução de teste. Alguns exemplos de valores válidos são `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Outros valores com suporte são `Framework35`, `Framework40`, `Framework45` e `FrameworkCore10`.
+Versão do .NET Framework de destino usada na execução de teste. Alguns exemplos de valores válidos são `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Outros valores com suporte são `Framework40`, `Framework45` e `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Defina um número explícito de núcleos com um arquivo de configurações.
+Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número explícito de núcleos definindo a propriedade MaxCpuCount sob o nó RunConfiguration no arquivo runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -238,11 +238,11 @@ Arquitetura da plataforma de destino usada para a execução de teste. Os valore
 
 `--Framework|/Framework:<Framework Version>`
 
-Versão do .NET Framework de destino usada na execução de teste. Alguns exemplos de valores válidos são `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Outros valores com suporte são `Framework35`, `Framework40`, `Framework45` e `FrameworkCore10`.
+Versão do .NET Framework de destino usada na execução de teste. Alguns exemplos de valores válidos são `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Outros valores com suporte são `Framework40`, `Framework45` e `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Defina um número explícito de núcleos com um arquivo de configurações.
+Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número explícito de núcleos definindo a propriedade MaxCpuCount sob o nó RunConfiguration no arquivo runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

@@ -2,12 +2,12 @@
 title: 'Como: Criar e usar assemblies usando a linha de comando (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 3b582f3959ed4c703123fab99e98bedda0a0a3a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df22d52ad71b2a98d7e85f4c2002091b97d87b21
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623828"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746883"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Como: Criar e usar assemblies usando a linha de comando (C#)
 Um assembly ou uma DLL (biblioteca de vínculo dinâmico), está vinculada ao seu programa em tempo de execução. Para demonstrar a compilação e uso de uma DLL, considere o seguinte cenário:  
@@ -125,5 +125,5 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
-- [Assemblies e o cache de assembly global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblies no .NET](../../../../standard/assembly/index.md)
 - [Criando uma classe para conter funções de DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

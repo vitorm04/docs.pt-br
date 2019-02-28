@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2b0668b1d55afc331484339d579752646ffa88b
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546982"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442406"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opções do compilador de C# listadas por categoria
 
@@ -54,7 +54,8 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[-reference](reference-compiler-option.md)|Importa metadados de um arquivo que contém um assembly.|
 |-analyzer|Executar os analisadores com basse nesse assembly (forma abreviada: /a)|
 |-additionalfile|Nomeia outros arquivos que não afetam diretamente a geração de código, mas podem ser usados por analisadores para produzir erros ou avisos.|
-
+|-embed|Insere todos os arquivos de origem no PDB.|
+|-embed:\<file list>|Insere arquivos específicos no PDB.|
 ## <a name="debuggingerror-checking"></a>Verificação de depuração/erros
 
 |Opção|Finalidade|

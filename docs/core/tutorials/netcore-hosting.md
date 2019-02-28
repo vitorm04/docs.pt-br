@@ -4,12 +4,12 @@ description: Saiba como hospedar o tempo de execução do .NET Core a partir do 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: deeda8b166d8a22aac88be313d2555e4b9fa5a1c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 994cc82745d2c473f1126eae9a889c899f5e741a
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415514"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583843"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o tempo de execução do .NET a partir de seu código nativo
 
@@ -29,7 +29,7 @@ Você também desejará ter um aplicativo .NET Core simples com o qual testará 
 Há duas APIs diferentes que podem ser usadas para hospedar o .NET Core. Este documento (e seus [exemplos](https://github.com/dotnet/samples/tree/master/core/hosting) associados) abrange as duas opções.
 
 * O método preferencial de hospedar o tempo de execução do .NET Core é com a API [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h). Essa API expõe funções para iniciar e interromper facilmente o tempo de execução e invocar o código gerenciado (iniciando um exe gerenciado ou chamando métodos estáticos gerenciados).
-* O .NET Core também pode ser hospedado com a interface `ICLRRuntimeHost2` na [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h). Essa API é mais antiga que a CoreClrHost.h, portanto, talvez você já tenha visto hosts mais antigos usando-a. Ela ainda funciona e permite um pouco mais controle sobre o processo de hospedagem do que a CoreClrHost. No entanto, agora, na maioria dos cenários, a CoreClrHost.h é preferida devido às suas APIs mais simples.
+* O .NET Core também pode ser hospedado com a interface `ICLRRuntimeHost4` na [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h). Essa API é mais antiga que a CoreClrHost.h, portanto, talvez você já tenha visto hosts mais antigos usando-a. Ela ainda funciona e permite um pouco mais controle sobre o processo de hospedagem do que a CoreClrHost. No entanto, agora, na maioria dos cenários, a CoreClrHost.h é preferida devido às suas APIs mais simples.
 
 ## <a name="sample-hosts"></a>Hosts de exemplo
 Há [hosts de exemplo](https://github.com/dotnet/samples/tree/master/core/hosting) que demonstram as etapas descritas nos tutoriais abaixo disponíveis no repositório dotnet/samples do GitHub. Os comentários nos exemplos associam claramente as etapas numeradas destes tutoriais aos pontos em que elas são executadas no exemplo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
@@ -64,7 +64,7 @@ Depois de carregar a biblioteca CoreCLR, a próxima etapa é obter referências 
 
 ### <a name="step-3---prepare-runtime-properties"></a>Etapa 3 – Preparar as propriedades do tempo de execução
 
-Antes de iniciar o tempo de execução, é necessário preparar algumas propriedades para especificar o comportamento (especialmente em relação ao carregador de assembly). 
+Antes de iniciar o tempo de execução, é necessário preparar algumas propriedades para especificar o comportamento (especialmente em relação ao carregador de assembly).
 
 As propriedades comuns incluem:
 
@@ -96,7 +96,7 @@ Com o tempo de execução iniciado, o host pode chamar o código gerenciado. Iss
 
 Neste exemplo, agora o host pode chamar `managedDelegate` para executar o método `ManagedWorker.DoWork`.
 
-Como alternativa, a função `coreclr_execute_assembly` pode ser usada para iniciar um executável gerenciado. Essa API usa um caminho de assembly e a matriz de argumentos como parâmetros de entrada. Ela carrega o assembly nesse caminho e invoca seu método principal. 
+Como alternativa, a função `coreclr_execute_assembly` pode ser usada para iniciar um executável gerenciado. Essa API usa um caminho de assembly e a matriz de argumentos como parâmetros de entrada. Ela carrega o assembly nesse caminho e invoca seu método principal.
 
 ```C++
 int hr = executeAssembly(
@@ -116,12 +116,12 @@ Por fim, quando o host concluir a execução do código gerenciado, o tempo de e
 
 Lembre-se de descarregar a biblioteca CoreCLR usando `FreeLibrary` (no Windows) ou `dlclose` (no Linux/Mac).
 
-## <a name="creating-a-host-using-mscoreeh"></a>Criando um host usando a Mscoree.h
+## <a name="create-a-host-using-mscoreeh"></a>Criar um host usando Mscoree.h
 
-Como já mencionado, a CoreClrHost.h agora é o método preferencial de hospedar o tempo de execução do .NET Core. A interface `ICLRRuntimeHost2` ainda pode ser usada, no entanto, se as interfaces de CoreClrHost.h não forem suficientes (se os sinalizadores de inicialização não padrão forem necessários, por exemplo, ou se um AppDomainManager for necessário no domínio padrão). Estas instruções mostrarão como hospedar o .NET Core usando a mscoree.h.
+Como já mencionado, a CoreClrHost.h agora é o método preferencial de hospedar o tempo de execução do .NET Core. A interface `ICLRRuntimeHost4` ainda pode ser usada, no entanto, se as interfaces de CoreClrHost.h não forem suficientes (se os sinalizadores de inicialização não padrão forem necessários, por exemplo, ou se um AppDomainManager for necessário no domínio padrão). Estas instruções mostrarão como hospedar o .NET Core usando a mscoree.h.
 
 ### <a name="a-note-about-mscoreeh"></a>Uma observação sobre mscoree.h
-A interface de hospedagem `ICLRRuntimeHost2` do .NET Core é definida em [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL). Uma versão de cabeçalho deste arquivo (mscoree.h), que o host precisará referenciar, é produzida por meio da MIDL durante o build do [tempo de execução do .NET Core](https://github.com/dotnet/coreclr/). Se você não desejar compilar o tempo de execução do .NET Core, mscoree.h também estará disponível como um [cabeçalho predefinido](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc) no repositório dotnet/coreclr. Encontre [instruções sobre como compilar o tempo de execução do .NET Core](https://github.com/dotnet/coreclr#building-the-repository) no repositório GitHub. 
+A interface de hospedagem `ICLRRuntimeHost4` do .NET Core é definida em [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL). Uma versão de cabeçalho deste arquivo (mscoree.h), que o host precisará referenciar, é produzida por meio da MIDL durante o build do [tempo de execução do .NET Core](https://github.com/dotnet/coreclr/). Se você não desejar compilar o tempo de execução do .NET Core, mscoree.h também estará disponível como um [cabeçalho predefinido](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc) no repositório dotnet/coreclr. Encontre [instruções sobre como compilar o tempo de execução do .NET Core](https://github.com/dotnet/coreclr#building-the-repository) no repositório GitHub.
 
 ### <a name="step-1---identify-the-managed-entry-point"></a>Etapa 1 – Identificar o ponto de entrada gerenciado
 Depois de referenciar os cabeçalhos necessários ([mscoree.h](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc/mscoree.h) e stdio.h, por exemplo), uma das primeiras coisas que um host do .NET Core deverá fazer é localizar o ponto de entrada gerenciado que será usado. Em nosso host de exemplo, isso é feito apenas usando o primeiro argumento de linha de comando de nosso host como o caminho para um binário gerenciado cujo método `main` será executado.
@@ -129,7 +129,7 @@ Depois de referenciar os cabeçalhos necessários ([mscoree.h](https://github.co
 [!code-cpp[NetCoreHost#1](~/samples/core/hosting/HostWithMscoree/host.cpp#1)]
 
 ### <a name="step-2---find-and-load-coreclr"></a>Etapa 2 – Localizar e carregar a CoreCLR
-As APIs do tempo de execução do .NET Core estão localizadas em *CoreCLR.dll* (no Windows). Para obter nossa interface de hospedagem (`ICLRRuntimeHost2`), é necessário localizar e carregar *CoreCLR.dll*. É responsabilidade do host definir uma convenção de como ele localizará *CoreCLR.dll*. Alguns hosts esperam que o arquivo esteja presente em um local conhecido em todo o computador (como *%programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*). Outros esperam que *CoreCLR.dll* seja carregado de um local próximo do próprio host ou do aplicativo a ser hospedado. Outros ainda poderão consultar uma variável de ambiente para localizar a biblioteca.
+As APIs do tempo de execução do .NET Core estão localizadas em *CoreCLR.dll* (no Windows). Para obter nossa interface de hospedagem (`ICLRRuntimeHost4`), é necessário localizar e carregar *CoreCLR.dll*. É responsabilidade do host definir uma convenção de como ele localizará *CoreCLR.dll*. Alguns hosts esperam que o arquivo esteja presente em um local conhecido em todo o computador (como *%programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*). Outros esperam que *CoreCLR.dll* seja carregado de um local próximo do próprio host ou do aplicativo a ser hospedado. Outros ainda poderão consultar uma variável de ambiente para localizar a biblioteca.
 
 No Linux ou no Mac, a biblioteca básica em tempo de execução é *libcoreclr.so* ou *libcoreclr.dylib*, respectivamente.
 
@@ -137,13 +137,13 @@ Nosso host de exemplo investiga alguns locais comuns para *CoreCLR.dll*. Depois 
 
 [!code-cpp[NetCoreHost#2](~/samples/core/hosting/HostWithMscoree/host.cpp#2)]
 
-### <a name="step-3---get-an-iclrruntimehost2-instance"></a>Etapa 3 – Obter uma instância de ICLRRuntimeHost2
-A interface de hospedagem `ICLRRuntimeHost2` é recuperada pela chamada a `GetProcAddress` (ou `dlsym` no Linux/Mac) em `GetCLRRuntimeHost` e, em seguida, pela invocação dessa função. 
+### <a name="step-3---get-an-iclrruntimehost4-instance"></a>Etapa 3 – Obter uma instância de ICLRRuntimeHost4
+A interface de hospedagem `ICLRRuntimeHost4` é recuperada pela chamada a `GetProcAddress` (ou `dlsym` no Linux/Mac) em `GetCLRRuntimeHost` e, em seguida, pela invocação dessa função.
 
 [!code-cpp[NetCoreHost#3](~/samples/core/hosting/HostWithMscoree/host.cpp#3)]
 
-### <a name="step-4---setting-startup-flags-and-starting-the-runtime"></a>Etapa 4 – Configurando sinalizadores de inicialização e iniciando o tempo de execução
-Com um `ICLRRuntimeHost2` em mãos, agora podemos especificar sinalizadores de inicialização em todo o tempo de execução e iniciar o tempo de execução. Os sinalizadores de inicialização determinam qual GC (coletor de lixo) será usado (simultâneo ou de servidor), se usaremos um único AppDomain ou vários AppDomains e qual política de otimização do carregador será usada (para o carregamento de assemblies de domínio neutro).
+### <a name="step-4---set-startup-flags-and-start-the-runtime"></a>Etapa 4 – Configurar sinalizadores de inicialização e iniciar o tempo de execução
+Com um `ICLRRuntimeHost4` em mãos, agora podemos especificar sinalizadores de inicialização em todo o tempo de execução e iniciar o tempo de execução. Os sinalizadores de inicialização determinam qual GC (coletor de lixo) será usado (simultâneo ou de servidor), se usaremos um único AppDomain ou vários AppDomains e qual política de otimização do carregador será usada (para o carregamento de assemblies de domínio neutro).
 
 [!code-cpp[NetCoreHost#4](~/samples/core/hosting/HostWithMscoree/host.cpp#4)]
 
@@ -175,12 +175,12 @@ Em nosso [host de exemplo simples](https://github.com/dotnet/samples/tree/master
 [!code-cpp[NetCoreHost#6](~/samples/core/hosting/HostWithMscoree/host.cpp#6)]
 
 ### <a name="step-6---create-the-appdomain"></a>Etapa 6 – Criar o AppDomain
-Depois que todos os sinalizadores e as propriedades de AppDomain forem preparados, `ICLRRuntimeHost2::CreateAppDomainWithManager` poderá ser usado para configurar o AppDomain. Opcionalmente, essa função usa um nome de assembly totalmente qualificado e um nome de tipo a ser usado como o gerenciador de AppDomain do domínio. Um gerenciador de AppDomain pode permitir que um host controle alguns aspectos do comportamento de AppDomain e pode fornecer pontos de entrada para iniciar o código gerenciado se o host não pretende invocar o código do usuário diretamente.   
+Depois que todos os sinalizadores e as propriedades de AppDomain forem preparados, `ICLRRuntimeHost4::CreateAppDomainWithManager` poderá ser usado para configurar o AppDomain. Opcionalmente, essa função usa um nome de assembly totalmente qualificado e um nome de tipo a ser usado como o gerenciador de AppDomain do domínio. Um gerenciador de AppDomain pode permitir que um host controle alguns aspectos do comportamento de AppDomain e pode fornecer pontos de entrada para iniciar o código gerenciado se o host não pretende invocar o código do usuário diretamente.
 
 [!code-cpp[NetCoreHost#7](~/samples/core/hosting/HostWithMscoree/host.cpp#7)]
 
 ### <a name="step-7---run-managed-code"></a>Etapa 7 – Executar o código gerenciado
-Com um AppDomain em execução, agora o host pode começar a execução do código gerenciado. A maneira mais fácil de fazer isso é usar `ICLRRuntimeHost2::ExecuteAssembly` para invocar um método de ponto de entrada de um assembly gerenciado. Observe que essa função funciona apenas em cenários de domínio único.
+Com um AppDomain em execução, agora o host pode começar a execução do código gerenciado. A maneira mais fácil de fazer isso é usar `ICLRRuntimeHost4::ExecuteAssembly` para invocar um método de ponto de entrada de um assembly gerenciado. Observe que essa função funciona apenas em cenários de domínio único.
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
@@ -189,23 +189,23 @@ Outra opção, caso `ExecuteAssembly` não atenda às necessidades do host, é u
 ```C++
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
-  domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
-  L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                  // Target entry point (static method)
-  (INT_PTR*)&pfnDelegate);
+    domainId,
+    L"HW, Version=1.0.0.0, Culture=neutral", // Target managed assembly
+    L"ConsoleApplication.Program",           // Target managed type
+    L"Main",                                 // Target entry point (static method)
+    (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);
 ```
 
 ### <a name="step-8---clean-up"></a>Etapa 8 – Limpar
-Por fim, o host deverá executar uma limpeza descarregando AppDomains, interrompendo o tempo de execução e liberando a referência `ICLRRuntimeHost2`.
+Por fim, o host deverá executar uma limpeza descarregando AppDomains, interrompendo o tempo de execução e liberando a referência `ICLRRuntimeHost4`.
 
 [!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
 
 ## <a name="conclusion"></a>Conclusão
-Depois que o host for criado, você poderá testá-lo executando-o por meio da linha de comando e passando os argumentos esperados pelo host (como o aplicativo gerenciado a ser executado para o host de exemplo mscoree). Ao especificar o aplicativo .NET Core a ser executado pelo host, lembre-se de usar o arquivo .dll produzido por `dotnet build`. Os executáveis (arquivos .exe) produzidos por `dotnet publish` para aplicativos autossuficientes são, na verdade, o host padrão do .NET Core (para que o aplicativo possa ser iniciado diretamente na linha de comando nos principais cenários). O código de usuário é compilado em uma dll com o mesmo nome. 
+Depois que o host for criado, você poderá testá-lo executando-o por meio da linha de comando e passando os argumentos esperados pelo host (como o aplicativo gerenciado a ser executado para o host de exemplo mscoree). Ao especificar o aplicativo .NET Core a ser executado pelo host, lembre-se de usar o arquivo .dll produzido por `dotnet build`. Os executáveis (arquivos .exe) produzidos por `dotnet publish` para aplicativos autossuficientes são, na verdade, o host padrão do .NET Core (para que o aplicativo possa ser iniciado diretamente na linha de comando nos principais cenários). O código de usuário é compilado em uma dll com o mesmo nome.
 
 Se as coisas não funcionarem no começo, verifique novamente se *coreclr.dll* está disponível no local esperado pelo host, se todas as bibliotecas do Framework necessárias estão na lista de TPA e se o número de bit de CoreCLR (32 ou 64 bits) corresponde a como o host foi compilado.
 
-A hospedagem do tempo de execução do .NET Core é um cenário avançado do qual muitos desenvolvedores não precisarão. No entanto, para aqueles que precisam inicializar o código gerenciado de um processo nativo ou que precisam de mais controle sobre o comportamento do tempo de execução do .NET Core, ela pode ser muito útil. Como o .NET Core pode ser executado lado a lado consigo mesmo, é possível até mesmo criar hosts que inicializam e iniciam várias versões do tempo de execução do .NET Core e executam aplicativos em todos eles no mesmo processo. 
+A hospedagem do tempo de execução do .NET Core é um cenário avançado do qual muitos desenvolvedores não precisarão. No entanto, para aqueles que precisam inicializar o código gerenciado de um processo nativo ou que precisam de mais controle sobre o comportamento do tempo de execução do .NET Core, ela pode ser muito útil. Como o .NET Core pode ser executado lado a lado consigo mesmo, é possível até mesmo criar hosts que inicializam e iniciam várias versões do tempo de execução do .NET Core e executam aplicativos em todos eles no mesmo processo.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635657"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663893"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opções do compilador C#)
 Especifica qual versão do CLR (Common Language Runtime) pode executar o assembly.  
@@ -36,6 +36,8 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
   
 -   O **ARM** compila seu assembly para que ele seja executado em um computador que tem um processador ARM (Advanced RISC Machine).  
   
+-   **ARM64** compila o assembly para execução pelo CLR de 64 bits em um computador que tem um processador ARM (Máquina RISC Avançada) que dá suporte ao conjunto de instruções A64.  
+
 -   **x64** compila o assembly para ser executado pelo CLR de 64 bits em um computador que dá suporte ao conjunto de instruções AMD64 ou EM64T.  
   
 -   **x86** compila o assembly para ser executado pelo CLR compatível com x86 de 32 bits.  

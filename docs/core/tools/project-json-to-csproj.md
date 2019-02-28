@@ -4,12 +4,12 @@ description: Veja um mapeamento entre os elementos project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682846"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747405"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Um mapeamento entre as propriedades de project.json e csproj
 
@@ -39,7 +39,7 @@ O novo formato, \*.csproj, é um formato baseado em XML. O exemplo a seguir most
 }
 ```
 
-Não há mais suporte. Em csproj, isso é determinado pelo nome de arquivo do projeto, que é definido como o nome do diretório. Por exemplo, `MyProjectName.csproj`.
+Não há mais suporte. Em csproj, isso é determinado pelo nome de arquivo do projeto, que normalmente corresponde ao nome do diretório. Por exemplo, `MyProjectName.csproj`.
 
 Por padrão, o nome de arquivo do projeto também especifica o valor das propriedades `<AssemblyName>` e `<PackageId>`.
 

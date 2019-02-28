@@ -3,12 +3,12 @@ title: Tipos e variáveis do C# - um tour pela linguagem C#
 description: Saiba mais sobre como definir tipos e declarar variáveis em C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129513"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583947"
 ---
 # <a name="types-and-variables"></a>Tipos e variáveis
 
@@ -57,20 +57,20 @@ O processamento de cadeia de caracteres e caracteres em C# usa codificação Uni
 Isso resume os tipos numéricos do C#.
 
 * Integral assinado
-    - `sbyte`: 8 bits, intervalo de -128 a 127
-    - `short`: 16 bits, intervalo de –32.768 a 32.767
-    - `int`: 32 bits, intervalo de –2.147.483.648 a 2.147.483.647
-    - `long`: 64 bits, intervalo de –9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
+    - `sbyte`:  8 bits, intervalo de -128 a 127
+    - `short`: 16 bits, intervalo de -32.768 a 32.767
+    - `int`  : 32 bits, intervalo de -2.147.483.648 a 2.147.483.647
+    - `long`: 64 bits, intervalo de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
 * Integral sem sinal
-    - `byte`   : 8 bits, intervalo de 0 a 255
+    - `byte`   :  8 bits, intervalo de 0 a 255
     - `ushort`: 16 bits, intervalo de 0 a 65.535
     - `uint`   : 32 bits, intervalo de 0 a 4.294.967.295
-    - `ulong`: 64 bits, intervalo de 0 a 18.446.744.073.709.551.615
+    - `ulong`  : 64 bits, intervalo de 0 a 18.446.744.073.709.551.615
 * Ponto flutuante
-    - `float`: 32 bits, intervalo de 1,5 × 10<sup>−45</sup> a 3,4 × 10<sup>38</sup>, precisão de 7 dígitos
-    - `double`: 64 bits, intervalo de 5,0 × 10<sup>−324</sup> a 1,7 × 10<sup>308</sup>, precisão de 15 dígitos
+    - `float`  : 32 bits, intervalo de 1,5 × 10<sup>-45</sup> a 3.4 × 10<sup>38</sup>, precisão de 7 dígitos
+    - `double`: 64 bits, intervalo de 5,0 × 10<sup>-324</sup> a 1,7x 10<sup>308</sup>, precisão de 15 dígitos
 * Decimal
-    - `decimal`: 128 bits, intervalo de pelos menos –7,9 × 10<sup>−28</sup> a 7,9 × 10<sup>28</sup>, com precisão de pelo menos 28 dígitos
+    - `decimal`: 128 bits, intervalo de pelos menos -7,9 × 10<sup>-28</sup> a 7,9 × 10<sup>28</sup>, com precisão de pelo menos 28 dígitos
     
 Os programas em C# usam *declarações de tipos* para criar novos tipos. Uma declaração de tipo especifica o nome e os membros do novo tipo. Cinco das categorias do C# de tipos são tipos definidos pelo usuário: tipos de classe, tipos struct, tipos de interface, tipos enum e tipos delegados.
 

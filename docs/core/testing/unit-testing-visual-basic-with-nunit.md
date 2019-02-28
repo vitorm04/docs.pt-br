@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2c8a6b86dd66b13faa242f94cf11cb940986fbd0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239142"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746870"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do .NET Core do Visual Basic usando dotnet test e NUnit
 
@@ -44,7 +44,7 @@ Torne *PrimeService* o diretório atual e execute o seguinte comando para criar 
 dotnet new classlib -lang VB
 ```
 
-Renomeie *Class1.VB* para *PrimeService.VB*. Para usar o TDD (Desenvolvimento Orientado por Testes), você cria uma implementação com falha da classe `PrimeService`:
+Renomeie *Class1.VB* para *PrimeService.VB*. Crie uma implementação com falha da classe `PrimeService`:
 
 ```vb
 Imports System
@@ -116,7 +116,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 
 ## <a name="creating-the-first-test"></a>Criando o primeiro teste
 
-A abordagem de TDD pede a criação de um teste com falha para fazê-lo passar e depois a repetição do processo. No diretório *PrimeService.Tests*, renomeie o arquivo *UnitTest1.vb* para *PrimeService_IsPrimeShould.VB* e substitua todo o seu conteúdo pelo seguinte código:
+Escreva um teste com falha, faça-o ser aprovado e, em seguida, repita o processo. No diretório *PrimeService.Tests*, renomeie o arquivo *UnitTest1.vb* para *PrimeService_IsPrimeShould.VB* e substitua todo o seu conteúdo pelo seguinte código:
 
 ```vb
 Imports NUnit.Framework

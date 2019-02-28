@@ -3,15 +3,15 @@ title: Agrupar flores íris usando um aprendiz de clustering – ML.NET
 description: Saiba como usar o ML.NET em um cenário de clustering
 author: pkulikov
 ms.author: johalex
-ms.date: 01/11/2019
+ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093600"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664465"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Agrupar flores íris usando um aprendiz de clustering com o ML.NET
 
@@ -84,7 +84,7 @@ Remova a definição de classe existente e adicione o código a seguir, que defi
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` é a classe de dados de entrada e tem definições de cada característica provenientes do conjunto de dados. Use o atributo [Column](xref:Microsoft.ML.Data.ColumnAttribute) para especificar os índices das colunas de origem no arquivo de conjunto de dados.
+`IrisData` é a classe de dados de entrada e tem definições de cada característica provenientes do conjunto de dados. Use o atributo [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) para especificar os índices das colunas de origem no arquivo de conjunto de dados.
 
 A classe `ClusterPrediction` representa a saída do modelo de clustering aplicado a uma instância de `IrisData`. Use o atributo [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) para associar os campos `PredictedClusterId` e `Distances` às colunas **PredictedLabel** e **Score**, respectivamente. No caso da tarefa clustering, essas colunas têm o seguinte significado:
 
@@ -127,7 +127,7 @@ Adicione o seguinte código ao método `Main` para configurar a forma de carrega
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Observe que os nomes de coluna e os índices correspondem ao esquema definido pela classe `IrisData`. O valor <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> especifica o tipo `float`.
+Use o método [`CreateTextLoader` genérico](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) para inferir o esquema do conjunto de dados da definição de classe `IrisData`.
 
 Use a instância <xref:Microsoft.ML.Data.TextLoader> criada para criar uma instância <xref:Microsoft.Data.DataView.IDataView>, que representa a fonte de dados do conjunto de dados de treinamento:
 
