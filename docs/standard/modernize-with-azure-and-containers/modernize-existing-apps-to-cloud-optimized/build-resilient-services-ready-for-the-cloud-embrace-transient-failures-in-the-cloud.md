@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128850"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971826"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Compile serviços resilientes prontos para a nuvem: Adotar falhas transitórias na nuvem
 
@@ -35,7 +35,7 @@ Um aplicativo resiliente semelhante à mostrada na Figura 4 a 9 deve implementar
 
 Você pode usar essas técnicas nos recursos HTTP e nos recursos de banco de dados. Na Figura 4 a 9, o aplicativo se baseia em uma arquitetura de camada 3, portanto, você precisa dessas técnicas no nível de serviços (HTTP) e no nível da camada de dados (TCP). Em um aplicativo monolítico que usa apenas uma camada de aplicativo único, além do banco de dados (sem serviços adicionais nem microsserviços), tratamento de falhas transitórias no nível de conexão do banco de dados pode ser suficiente. Nesse cenário, é necessária apenas uma configuração específica de conexão de banco de dados.
 
-Quando a implementação da comunicação resiliente que acessam o banco de dados, dependendo da versão do .NET que você está usando, pode ser simples (por exemplo, [com o Entity Framework 6 ou posterior](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx), ele é apenas uma questão de configurar o conexão de banco de dados). Ou, talvez seja necessário usar bibliotecas adicionais, como o [Transient Fault Handling Application Block](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (para versões anteriores do .NET), ou até mesmo implementar sua própria biblioteca.
+Quando a implementação da comunicação resiliente que acessam o banco de dados, dependendo da versão do .NET que você está usando, pode ser simples (por exemplo, [com o Entity Framework 6 ou posterior](/ef/ef6/fundamentals/connection-resiliency/retry-logic). Ele é apenas uma questão de configurar a conexão de banco de dados). Ou, talvez seja necessário usar bibliotecas adicionais, como o [Transient Fault Handling Application Block](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (para versões anteriores do .NET), ou até mesmo implementar sua própria biblioteca.
 
 Ao implementar novas tentativas HTTP e os disjuntores, a recomendação para .NET é usar o [Polly](https://github.com/App-vNext/Polly) biblioteca, que tem como alvo o .NET Framework 4.0, .NET Framework 4.5 e .NET Standard 1.1, que inclui suporte ao .NET Core.
 
@@ -49,11 +49,11 @@ Para saber como implementar estratégias para tratar falhas parciais na nuvem, c
 
 -   **Entity Framework conexão resiliência e lógica de repetição (versão 6 e posterior)**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
 -   **O Transient Fault Handling Application Block**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
 -   **Biblioteca Polly para comunicação resiliente de HTTP**
 

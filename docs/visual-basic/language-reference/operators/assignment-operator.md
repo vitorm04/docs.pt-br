@@ -8,12 +8,12 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: 58dcdfd21fd8701c6ac391672e768819f696aab9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6d34802f5f82373d0e8176f3b732a327c55d01
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643540"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964988"
 ---
 # <a name="-operator-visual-basic"></a>Operador = (Visual Basic)
 Atribui um valor a uma variável ou propriedade.  
@@ -43,7 +43,7 @@ variableorproperty = value
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra o operador de atribuição. O valor à direita é atribuído à variável à esquerda.  
   
- [!code-vb[VbVbalrOperators#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Operador &=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)

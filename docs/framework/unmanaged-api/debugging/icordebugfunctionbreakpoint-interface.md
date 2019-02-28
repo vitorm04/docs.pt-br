@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunctionBreakpoint Interface1
+title: Interface ICorDebugFunctionBreakpoint
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunctionBreakpoint
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8403873fb7bc15e3109821bf738d7b68e20f878
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c3c11d3b6a6daec7b35377ef24557dd5077af21
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662680"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977715"
 ---
-# <a name="icordebugfunctionbreakpoint-interface1"></a>ICorDebugFunctionBreakpoint Interface1
+# <a name="icordebugfunctionbreakpoint-interface"></a>Interface ICorDebugFunctionBreakpoint
+
 Estende a interface ICorDebugBreakpoint para dar suporte a pontos de interrupção em funções.  
   
 ## <a name="methods"></a>Métodos  

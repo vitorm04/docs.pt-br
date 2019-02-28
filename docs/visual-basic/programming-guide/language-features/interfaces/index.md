@@ -2,17 +2,11 @@
 title: Interfaces (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic code, interfaces
-- interfaces [Visual Basic], Visual Basic
-- interfaces
-- interfaces [Visual Basic]
+  - 'Visual Basic code, interfaces'
+  - 'interfaces [Visual Basic], Visual Basic'
+  - interfaces
+  - 'interfaces [Visual Basic]'
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 8380778398495fe9948e6a0eb19b535656a575f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654416"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 As *interfaces* definem as propriedades, os métodos e os eventos que as classes podem implementar. As interfaces permitem definir as funcionalidades como pequenos grupos de propriedades, de métodos e de eventos estreitamente relacionados. Isso reduz os problemas de compatibilidade, uma vez que é possível desenvolver implementações avançadas para as interfaces sem arriscar o código existente. Você pode adicionar novas funcionalidades a qualquer momento desenvolvendo interfaces e implementações adicionais.  
@@ -37,7 +31,7 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
  Por exemplo, o código a seguir define uma interface com uma função, uma propriedade e um evento.  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementando interfaces  
  Palavra reservada do Visual Basic `Implements` é usado de duas maneiras. A instrução `Implements` significa que uma classe ou estrutura implementa uma interface. A palavra-chave `Implements` significa que um membro de classe ou um membro da estrutura implementa um membro de interface específico.  
@@ -50,7 +44,7 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
  Por exemplo, o código a seguir mostra como declarar uma sub-rotina chamada `Sub1` que implementa um método de uma interface:  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
+ [!code-vb[VbVbalrOOP#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#69)]  
   
  Os tipos de parâmetro e de retorno do membro implementado devem corresponder à propriedade da interface ou à declaração do membro na interface. A maneira mais comum de implementar um elemento de uma interface é com um membro que tem o mesmo nome que a interface, conforme mostrado no exemplo anterior.  
   
@@ -58,7 +52,7 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
  Ao usar `Implements`, você também pode escrever um único método que implementa vários métodos definidos em uma interface, como no exemplo a seguir:  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
+ [!code-vb[VbVbalrOOP#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#70)]  
   
  Você pode usar um membro particular para implementar um membro de interface. Quando um membro particular implementa um membro de uma interface, esse membro fica disponível por meio da interface, embora não esteja disponível diretamente em variáveis de objeto para a classe.  
   
@@ -67,15 +61,15 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
  O exemplo a seguir define duas interfaces. A segunda interface, `Interface2`, herda `Interface1` e define uma propriedade e um método adicionais.  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
+ [!code-vb[VbVbalrOOP#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#39)]  
   
  O exemplo a seguir implementa `Interface1`, a interface definida no exemplo anterior:  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
+ [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
  O exemplo final implementa `Interface2`, incluindo um método herdado de `Interface1`:  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
+ [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
  Você pode implementar uma propriedade readonly com uma propriedade readwrite (ou seja, você não precisa declará-la como readonly na classe sendo implementada).  Implementar uma interface significa implementar pelo menos os membros que a interface declara, mas você pode oferecer mais funcionalidades, como permitir que a propriedade seja gravável.  
   
@@ -83,5 +77,5 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Instruções passo a passo: criando e implementando interfaces](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Fornece um procedimento detalhado que o guiará pelo processo de definição e de implementação de sua própria interface.|  
+|[Passo a passo: criação e implementação de interfaces](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Fornece um procedimento detalhado que o guiará pelo processo de definição e de implementação de sua própria interface.|  
 |[Variação em Interfaces Genéricas](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|

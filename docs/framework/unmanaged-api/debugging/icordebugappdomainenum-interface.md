@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomainEnum Interface1
+title: Interface ICorDebugAppDomainEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomainEnum
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3759be77cd6e6265eb8328669c88225067b99bfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c340eb76f3c1c570aa0c9ffa1d461f33d330175
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509708"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981498"
 ---
-# <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum Interface1
+# <a name="icordebugappdomainenum-interface"></a>Interface ICorDebugAppDomainEnum
+
 Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` começando no próximo local na enumeração de valores. Essa interface é uma subclasse de "ICorDebugEnum".  
   
 ## <a name="methods"></a>Métodos  

@@ -2,14 +2,14 @@
 title: Programação assíncrona
 description: Saiba como F# programação assíncrona é realizada por meio de um modelo de programação de nível de linguagem que é o idioma natural e fácil de usar.
 ms.date: 06/20/2016
-ms.openlocfilehash: e18697708741eef066a76bbffe35882f3639bb68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614474"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980081"
 ---
-# <a name="async-programming-in-f"></a>Programação em assíncronaF# #
+# <a name="async-programming-in-f"></a>Programação assíncrona em F\#
 
 > [!NOTE]
 > Algumas imprecisões foram descobertos neste artigo.  Ele está sendo regravado.  Ver [problema #666](https://github.com/dotnet/docs/issues/666) para saber mais sobre as alterações.
@@ -53,7 +53,7 @@ Há algumas construções sintáticas que vale a pena observar:
 
 Além disso, normal `let`, `use`, e `do` palavras-chave podem ser usadas junto com as versões assíncronas, assim como fariam em uma função normal.
 
-## <a name="how-to-start-async-code-in-f"></a>Como iniciar o código assíncrono noF# #
+## <a name="how-to-start-async-code-in-f"></a>Como iniciar o código assíncrono no F\#
 
 Como mencionado anteriormente, o código assíncrono é uma especificação de trabalho a ser feito em outro contexto que deve ser iniciada explicitamente. Aqui estão duas maneiras principais de fazer isso:
 
@@ -152,7 +152,7 @@ for html in htmlList do
 
  F#do compilador é muito estrito, tornando praticamente impossível fazer alguma coisa um problema, como executar código de "async" de forma síncrona. Se você se deparar com um aviso, que é um sinal de que o código não será executado como você acha que ele será. Se você pode deixar o compilador feliz, seu código provavelmente será executado conforme o esperado.
 
-## <a name="for-the-cvb-programmer-looking-into-f"></a>Para o C#programador /VB analisandoF# #
+## <a name="for-the-cvb-programmer-looking-into-f"></a>Para o C#programador /VB procurando em F\#
 
 Esta seção pressupõe que você esteja familiarizado com o modelo de async no C#/VB. Se não, [assíncrono de programação em C# ](../../../csharp/async.md) é um ponto de partida.
 

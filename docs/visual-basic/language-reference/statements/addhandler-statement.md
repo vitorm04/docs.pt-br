@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: 6ed6f3d4fd77d714ab554d641c0c0fc4f403bbf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd57f63b5741822de7b11c1fafe90452a767aa34
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715095"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965638"
 ---
 # <a name="addhandler-statement"></a>Instrução AddHandler
 Associa um evento com um manipulador de eventos em tempo de execução.  
@@ -42,7 +42,7 @@ AddHandler event, AddressOf eventhandler
 >  Para eventos personalizados, o `AddHandler` instrução invoca o evento `AddHandler` acessador. Para obter mais informações sobre eventos personalizados, consulte [declaração de evento](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Exemplo  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Instrução RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)

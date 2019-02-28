@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 00a08bd3bd1f866cec883b6591b03ebd9d858b90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f6f0362fcec170e677d153ad9f936a5c2e55ad7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552249"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981199"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Como: Rótulo de instruções (Visual Basic)
 Blocos de instrução são compostos de linhas de código delimitado por vírgulas. Linhas de código precedida por um inteiro ou cadeia de caracteres de identificação são consideradas *rotulado*. Rótulos de instrução são usados para marcar uma linha de código para identificá-lo para uso com instruções de como `On Error Goto`.  
@@ -32,7 +32,7 @@ Blocos de instrução são compostos de linhas de código delimitado por vírgul
   
      Por exemplo, as seguintes linhas de código são rotuladas com `Jump` e `120`, respectivamente:  
   
-     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)

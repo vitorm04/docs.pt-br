@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: c467b46347539a3cc6c4abfabc368ce494985b95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d9055796687f828cc173a78feb9918cbf70bbd8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560926"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976363"
 ---
 # <a name="order-by-clause-visual-basic"></a>Cláusula Order By (Visual Basic)
 Especifica a ordem de classificação para um resultado da consulta.  
@@ -38,17 +38,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## <a name="example"></a>Exemplo  
  A seguinte consulta de expressão usa uma `From` cláusula para declarar uma variável de intervalo `book` para o `books` coleção. O `Order By` cláusula classifica o resultado da consulta por preço em ordem (o padrão) crescente. Livros com o mesmo preço são classificados por título em ordem crescente. O `Select` cláusula seleciona o `Title` e `Price` propriedades como valores retornados pela consulta.  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>Exemplo  
  A seguinte consulta de expressão usa o `Order By` cláusula para classificar o resultado da consulta por preço em ordem decrescente. Livros com o mesmo preço são classificados por título em ordem crescente.  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>Exemplo  
  A seguinte consulta de expressão usa um `Select` cláusula para selecionar o título do livro, preço, data da publicação e autor. Em seguida, ele preenche os `Title`, `Price`, `PublishDate`, e `Author` campos da variável de intervalo para o novo escopo. O `Order By` cláusula ordena a nova variável de intervalo pelo nome do autor, título do livro e preço. Cada coluna é classificada na ordem padrão (crescente).  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

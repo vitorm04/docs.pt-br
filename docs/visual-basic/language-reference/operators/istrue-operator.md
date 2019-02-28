@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: 780e67cf54c0bec230d5b052b877cf97a76d3f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ec1a20e815ad38c2fdd984b9f9c35247dae81a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641116"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971306"
 ---
 # <a name="istrue-operator-visual-basic"></a>Operador IsTrue (Visual Basic)
 Determina se uma expressão é `True`.  
@@ -42,7 +42,7 @@ Determina se uma expressão é `True`.
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir define o contorno de uma estrutura que inclui as definições para o `IsFalse` e `IsTrue` operadores.  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Operador IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)

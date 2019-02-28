@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587548"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980458"
 ---
 # <a name="new-operator-visual-basic"></a>Operador New (Visual Basic)
 Apresenta uma `New` cláusula para criar uma nova instância de objeto, especifica uma restrição de construtor em um parâmetro de tipo, ou identifica um `Sub` procedimento como um construtor de classe.  
@@ -26,11 +26,11 @@ Apresenta uma `New` cláusula para criar uma nova instância de objeto, especifi
   
  Você pode usar um `New` cláusula em uma instrução de declaração ou uma instrução de atribuição. Quando a instrução é executado, ele chama o construtor apropriado da classe especificada, passando quaisquer argumentos fornecidos por você. O exemplo a seguir demonstra isso com a criação de instâncias de um `Customer` classe que tem dois construtores, um que não usa nenhum parâmetro e um que utiliza um parâmetro de cadeia de caracteres.  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
  Uma vez que as matrizes são classes, `New` pode criar uma nova instância de matriz, conforme mostrado nos exemplos a seguir.  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
  O common language runtime (CLR) lançará um <xref:System.OutOfMemoryException> erro se não houver memória suficiente para criar a nova instância.  
   

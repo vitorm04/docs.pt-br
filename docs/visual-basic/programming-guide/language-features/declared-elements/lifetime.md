@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667382"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976038"
 ---
 # <a name="lifetime-in-visual-basic"></a>Tempo de vida no Visual Basic
 O *tempo de vida* de um elemento declarado é o período de tempo durante o qual ele está disponível para uso. As variáveis são os únicos elementos que têm o tempo de vida. Para essa finalidade, o compilador trata os parâmetros de procedimento e função retorna como casos especiais de variáveis. O tempo de vida de uma variável representa o período de tempo durante o qual ele pode conter um valor. Seu valor pode mudar durante sua vida útil, mas ele sempre contém algum valor.  
@@ -58,7 +58,7 @@ O *tempo de vida* de um elemento declarado é o período de tempo durante o qual
  O exemplo a seguir declara uma variável com o [estático](../../../../visual-basic/language-reference/modifiers/static.md) palavra-chave. (Observe que não é necessário o `Dim` palavra-chave quando o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) usa um modificador como `Static`.)  
   
 ### <a name="code"></a>Código  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Comentários  
  No exemplo anterior, a variável `applesSold` continua existindo depois do procedimento `runningTotal` retorna para o código de chamada. Na próxima vez que `runningTotal` é chamado, `applesSold` retém seu valor calculado anteriormente.  

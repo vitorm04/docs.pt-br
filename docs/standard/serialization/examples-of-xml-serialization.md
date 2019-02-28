@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: fd01842bdb3a3b168c00e0366dd6fe4c2daf7121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204802"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974361"
 ---
 # <a name="examples-of-xml-serialization"></a>Exemplos de Serialização XML
 A serialização XML pode ter mais de um formulário, de simples a complexo. Por exemplo, é possível serializar uma classe que consiste apenas em propriedades e campos públicos, conforme mostrado em [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md). Os seguintes exemplos de código manipulam vários cenários avançados, incluindo como usar a serialização XML para gerar um fluxo XML que está de acordo com um documento de Esquema XML (XSD) específico.  
@@ -119,7 +119,7 @@ private void SerializeNode(string filename){
 ```  
   
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>Serializando uma classe que contém um campo que retorna um objeto complexo  
- Se uma propriedade ou um campo retornar um objeto complexo (como uma matriz ou uma instância de classe), o [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) o converterá em um elemento aninhado dentro do documento XML principal. Por exemplo, a primeira classe no exemplo de código a seguir retorna uma instância da segunda classe.  
+ Se uma propriedade ou um campo retornar um objeto complexo (como uma matriz ou uma instância da classe), <xref:System.Xml.Serialization.XmlSerializer> o converterá em elemento aninhado dentro do documento XML principal. Por exemplo, a primeira classe no exemplo de código a seguir retorna uma instância da segunda classe.  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -767,6 +767,6 @@ public class Test
 - [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [Atributos que controlam a serialização XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [Classe XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

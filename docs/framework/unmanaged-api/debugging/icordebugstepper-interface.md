@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepper Interface1
+title: Interface ICorDebugStepper
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1f796e665a4e403d2d2b5a15837dd8bb8bf47ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bd650178c787440941b9fd9a84b1e85c55aac61
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631341"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973711"
 ---
-# <a name="icordebugstepper-interface1"></a>ICorDebugStepper Interface1
+# <a name="icordebugstepper-interface"></a>Interface ICorDebugStepper
 Representa uma etapa na execução do código que é realizada por um depurador, serve como um identificador entre a emissão e a conclusão de um comando e fornece uma maneira de cancelar uma etapa.  
   
 ## <a name="methods"></a>Métodos  

@@ -2,12 +2,12 @@
 title: Conceitos de serialização
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: f16de0e95f7520e377dc9920743261ad6019e430
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 649c4475aa8dcfc657b7591a0068dbfa4af918ca
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583754"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976532"
 ---
 # <a name="serialization-concepts"></a>Conceitos de serialização
 Por que você deveria usar serialização? As duas razões mais importantes são persistir o estado de um objeto para uma mídia de armazenamento para que uma cópia exata possa ser recriada em uma etapa posterior e enviar o objeto por valor de um domínio de aplicativo para outro. Por exemplo, a serialização é usada para salvar o estado da sessão no ASP.NET e copiar objetos para a área de transferência no Windows Forms. Ela também é usada remotamente para passar objetos por valor de um domínio de aplicativo para outro.
@@ -30,7 +30,7 @@ Quando um objeto deriva de `MarshalByRefObject`, uma referência de objeto é pa
  [Serialização binária](../../../docs/standard/serialization/binary-serialization.md)  
  Descreve o mecanismo de serialização binária que está incluído com o Common Language Runtime.  
   
- [Objetos remotos](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Comunicação remota do .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  Descreve os vários métodos de comunicação disponíveis no .NET Framework para comunicações remotas.  
   
  [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

@@ -5,29 +5,29 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: 496df36242c6b43e7e3ec94ce675d11177e8b466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653011"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967836"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Compilação condicional no Visual Basic
-Em *compilação condicional*, determinados blocos de código em um programa são compilados seletivamente, enquanto outros são ignorados.  
+Na *compilação condicional*, blocos específicos de código em um programa são compilados seletivamente, enquanto outros são ignorados.  
   
- Por exemplo, você talvez queira escrever declarações de depuração que comparam a velocidade das abordagens diferentes para a mesma tarefa de programação, ou você talvez queira localizar um aplicativo para vários idiomas. Instruções de compilação condicional são projetadas para execução durante o tempo de compilação, não em tempo de execução.  
+ Por exemplo, você talvez queira escrever declarações de depuração que comparam a velocidade das diferentes abordagens para a mesma tarefa de programação, ou você talvez queira localizar um aplicativo para vários idiomas. Instruções de compilação condicional são projetadas para execução durante o tempo de compilação, não em tempo de execução.  
   
- Denota blocos de código para serem condicionalmente compilados com o `#If...Then...#Else` diretiva. Por exemplo, para criar o francês e alemão versões do mesmo aplicativo o mesmo código-fonte, você deve inserir segmentos de código específico da plataforma em `#If...Then` instruções que usam constantes predefinidas `FrenchVersion` e `GermanVersion`. O exemplo a seguir demonstra como:  
+ Você denota blocos de código seja compilado condicionalmente com o `#If...Then...#Else` diretiva. Por exemplo, para criar o francês e alemão versões do mesmo aplicativo no mesmo código-fonte, você deve inserir segmentos de código específico da plataforma na `#If...Then` instruções usando as constantes predefinidas `FrenchVersion` e `GermanVersion`. O exemplo a seguir demonstra como:  
   
- [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#5)]  
   
- Se você definir o valor de `FrenchVersion` constante de compilação condicional para `True` em tempo de compilação, o código condicional para a versão francesa é compilado. Se você definir o valor de `GermanVersion` constante para `True`, o compilador usa a versão em alemão. Se não for definido como `True`, o código no último `Else` bloco é executado.  
+ Se você definir o valor da `FrenchVersion` constante de compilação condicional para `True` em tempo de compilação, o código condicional para a versão em francês é compilado. Se você definir o valor de `GermanVersion` constante a ser `True`, o compilador usa a versão em alemão. Se nenhum dos dois for definido como `True`, o código no último `Else` execução do bloco.  
   
 > [!NOTE]
->  Preenchimento automático será não funcionará quando a edição de código e usando diretivas de compilação condicional se o código não for parte da ramificação atual.  
+>  Preenchimento automático será não funcionará quando a edição de código e usar diretivas de compilação condicional, se o código não faz parte do branch atual.  
   
 ## <a name="declaring-conditional-compilation-constants"></a>Declarando constantes de compilação condicional  
- Você pode definir constantes de compilação condicional de uma das três maneiras:  
+ Você pode definir as constantes de compilação condicional em uma das três maneiras:  
   
 -   No **Designer de projeto**  
   
@@ -35,31 +35,31 @@ Em *compilação condicional*, determinados blocos de código em um programa sã
   
 -   Em seu código  
   
- Constantes de compilação condicional tem um escopo especial e não podem ser acessados de código padrão. O escopo de uma constante de compilação condicional é dependente da maneira que ele está definido. A tabela a seguir lista o escopo das constantes declaradas usando cada uma das três maneiras mencionadas acima.  
+ Constantes de compilação condicional têm um escopo especial e não podem ser acessados de código padrão. O escopo de uma constante de compilação condicional é dependendo da forma que ele está definido. A tabela a seguir lista o escopo das constantes declaradas usando cada uma das três maneiras mencionadas acima.  
   
-|Configuração de constante|Escopo de constante|  
+|Como a constante é definida|Escopo de constante|  
 |---|---|  
 |**Designer de projeto**|Público para todos os arquivos no projeto|  
-|Linha de comando|Público para todos os arquivos passadas para o compilador de linha de comando|  
-|`#Const` instrução em código|Para o arquivo no qual ela é declarada privada|  
+|Linha de comando|Público para todos os arquivos passados para o compilador de linha de comando|  
+|`#Const` instrução no código|Privado para o arquivo no qual ela é declarada|  
   
 |Para definir constantes no Designer de projeto|  
 |---|  
-|-A antes de criar o arquivo executável, definir constantes **Project Designer** seguindo as etapas fornecidas em [gerenciamento de projeto e propriedades da solução](/visualstudio/ide/managing-project-and-solution-properties).|  
+|-A antes de criar seu arquivo executável, definir constantes na **Designer de projeto** seguindo as etapas fornecidas [propriedades de solução e gerenciando projetos](/visualstudio/ide/managing-project-and-solution-properties).|  
   
 |Para definir constantes na linha de comando|  
 |---|  
-|-Usar o **/d** switch entre constantes de compilação condicional, como no exemplo a seguir:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Nenhum espaço é necessário entre a **/d** switch e a primeira constante. Para obter mais informações, consulte [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Declarações de linha de comando substituem declarações inseridas no **Project Designer**, mas não apaga-los. Os argumentos definidos **Project Designer** permanecem em vigor para compilações subsequentes.<br />     Ao escrever constantes no próprio código, existem regras rígidas quanto seu posicionamento, como seu escopo é todo o módulo no qual eles são declarados.|  
+|– Use o **/d** switch para inserir as constantes de compilação condicional, como no exemplo a seguir:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Nenhum espaço é necessário entre o **/d** switch e a primeira constante. Para obter mais informações, consulte [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Declarações de linha de comando substituem as declarações inseridas na **Designer de projeto**, mas não apagados. Argumentos definidos **Designer de projeto** permanecem em vigor para as compilações subsequentes.<br />     Ao escrever constantes no próprio código, existem regras rígidas sobre seu posicionamento, como seu escopo é todo o módulo no qual eles são declarados.|  
   
-|Definir constantes em seu código|  
+|Para definir constantes em seu código|  
 |---|  
-|-Coloca as constantes no bloco de declaração do módulo no qual eles são usados. Isso ajuda a manter seu código organizados e fáceis de ler.|  
+|-Coloque as constantes no bloco de declaração do módulo no qual eles são usados. Isso ajuda a manter seu código organizado e fácil de ler.|  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
 |Título|Descrição|  
 |---|---|  
-|[Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Fornece sugestões para tornar o seu código fácil de ler e manter.|  
+|[Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Fornece sugestões para tornar mais fácil de ler e manter o seu código.|  
   
 ## <a name="reference"></a>Referência  
  [Diretiva #Const](../../../visual-basic/language-reference/directives/const-directive.md)  

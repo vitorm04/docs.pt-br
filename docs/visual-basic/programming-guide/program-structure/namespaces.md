@@ -16,26 +16,26 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: e48d28535b9e8cd022f7a4f14e620a4db93ff69f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6a93124789d629b1d1a953345d4b0b02a8c6ffa6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748073"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977247"
 ---
 # <a name="namespaces-in-visual-basic"></a>Namespaces no Visual Basic
 Namespaces organizam objetos definidos em um assembly. Os assemblies podem conter vários namespaces, que por sua vez pode conter outros namespaces. Namespaces evitar a ambiguidade e simplificar as referências ao usar grupos grandes de objetos, como bibliotecas de classes.  
   
  Por exemplo, o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] define o <xref:System.Windows.Forms.ListBox> classe o <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. O fragmento de código a seguir mostra como declarar uma variável usando o nome totalmente qualificado para esta classe:  
   
- [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
+ [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Evitando conflitos de nome  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] um problema às vezes chamado de endereço de namespaces *poluição de namespace*, no qual o desenvolvedor de uma biblioteca de classes é dificultado pelo uso de nomes semelhantes em outra biblioteca. Esses conflitos com os componentes existentes às vezes são chamados *conflitos de nome*.  
   
  Por exemplo, se você criar uma nova classe chamada `ListBox`, você pode usá-lo dentro de seu projeto sem qualificação. No entanto, se você quiser usar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> classe no mesmo projeto, você deve usar uma referência totalmente qualificada para tornar a referência exclusiva. Se a referência não for exclusiva, o Visual Basic gera um erro informando que o nome é ambíguo. O exemplo de código a seguir demonstra como declarar esses objetos:  
   
- [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
+ [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
  A ilustração a seguir mostra duas hierarquias de namespace, os dois que contém um objeto chamado `ListBox`.  
   
@@ -48,17 +48,17 @@ Namespaces organizam objetos definidos em um assembly. Os assemblies podem conte
 ## <a name="fully-qualified-names"></a>Nomes totalmente qualificados  
  Nomes totalmente qualificados são referências de objeto que são prefixadas com o nome do namespace no qual o objeto é definido. Você pode usar objetos definidos em outros projetos, se você criar uma referência à classe (escolhendo **adicionar referência** da **projeto** menu) e, em seguida, use o nome totalmente qualificado para o objeto em seu código. O fragmento de código a seguir mostra como usar o nome totalmente qualificado para um objeto do namespace do projeto para outro:  
   
- [!code-vb[VbVbalrApplication#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_3.vb)]  
+ [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
   
  Nomes totalmente qualificados impedem a nomeação entra em conflito porque eles possibilitam que o compilador determine qual objeto está sendo usado. No entanto, os nomes em si podem obter longo e complicado. Para contornar esse problema, você pode usar o `Imports` instrução para definir um *alias*— um nome abreviado, você pode usar no lugar do nome totalmente qualificado. Por exemplo, o exemplo de código a seguir cria aliases para dois nomes totalmente qualificados e usa esses aliases para definir dois objetos.  
   
- [!code-vb[VbVbalrApplication#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_4.vb)]  
+ [!code-vb[VbVbalrApplication#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#9)]  
   
- [!code-vb[VbVbalrApplication#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_5.vb)]  
+ [!code-vb[VbVbalrApplication#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#10)]  
   
  Se você usar o `Imports` instrução sem um alias, você pode usar todos os nomes em que o namespace sem qualificação, fornecidas são exclusivos para o projeto. Se o projeto contiver `Imports` instruções para os namespaces que contêm itens com o mesmo nome, você deve qualificar totalmente esse nome quando você usá-lo. Suponha, por exemplo, seu projeto continha os dois seguintes `Imports` instruções:  
   
- [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
+ [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
  Se você tentar usar `Class1` sem qualificá-lo completamente, Visual Basic gera um erro informando que o nome `Class1` é ambíguo.  
   
@@ -105,7 +105,7 @@ End Namespace
   
  Os exemplos a seguir usam o `Global` palavra-chave para declarar um namespace fora do namespace raiz para o projeto.  
   
- [!code-vb[VbVbalrApplication#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_7.vb)]  
+ [!code-vb[VbVbalrApplication#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#22)]  
   
  Em uma declaração de namespace, `Global` não pode ser aninhado em outro namespace.  
   
@@ -117,7 +117,7 @@ End Namespace
   
  Se o `Global` palavra-chave não estava presente na declaração de namespace, <xref:System.Text.StringBuilder> não pôde ser acessado sem especificar `Global.System.Text.StringBuilder`. Para um projeto chamado `ConsoleApplication1`, faz referência às `System.Text` acessaria `ConsoleApplication1.System.Text` se o `Global` palavra-chave não foi usado.  
   
- [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_8.vb)]  
+ [!code-vb[VbVbalrApplication#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#21)]  
   
 ## <a name="see-also"></a>Consulte também
 

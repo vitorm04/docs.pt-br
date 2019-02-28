@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595572"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978495"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
 Um *tipo genérico* é um único elemento de programação que se adapta ao executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe genérica ou um procedimento, você não precisa definir uma versão separada para cada tipo de dados para os quais você talvez queira executar essa funcionalidade.  
@@ -55,7 +55,7 @@ Chave de fenda definido como uma ferramenta genérica
   
  Por exemplo, você talvez queira criar e usar uma classe de fila que opera em um tipo de dados específico, como `String`. Você pode declarar essa classe de <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, como mostra o exemplo a seguir.  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
  Agora você pode usar `stringQ` para trabalhar exclusivamente com `String` valores. Porque `stringQ` é específico para `String` em vez de ser generalizado para `Object` valores, você não tenha tardia associação ou conversão de tipos. Isso economiza tempo de execução e reduz os erros de tempo de execução.  
   
@@ -64,17 +64,17 @@ Chave de fenda definido como uma ferramenta genérica
 ## <a name="example-of-a-generic-class"></a>Exemplo de uma classe genérica  
  O exemplo a seguir mostra uma definição de uma classe genérica.  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
  No esqueleto anterior, `t` é um *parâmetro de tipo*, ou seja, um espaço reservado para um tipo de dados que você fornece ao declarar a classe. Em outro lugar no seu código, você pode declarar as várias versões do `classHolder` , fornecendo vários tipos de dados para `t`. O exemplo a seguir mostra duas declarações desse tipo.  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
  As declarações anteriores declaram *classes construídas*, no qual um tipo específico substitui o parâmetro de tipo. Essa substituição é propagada por todo o código dentro da classe construída. O exemplo a seguir mostra o que o `processNewItem` procedimento parece em `integerClass`.  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- Para obter um exemplo mais completo, consulte [como: Definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Para obter um exemplo mais completo, confira [Como: Definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Elementos de programação qualificados  
  Você pode definir e usar delegados, estruturas, interfaces, procedimentos e as classes genéricas. Observe que o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] define várias classes genéricas, estruturas e interfaces que representam os elementos genéricos comumente usados. O <xref:System.Collections.Generic?displayProperty=nameWithType> namespace fornece dicionários, listas, filas e pilhas. Antes de definir seu próprio elemento genérico, confira se ele já está disponível em <xref:System.Collections.Generic?displayProperty=nameWithType>.  
@@ -110,7 +110,7 @@ Chave de fenda definido como uma ferramenta genérica
 ### <a name="example-of-a-constraint"></a>Exemplo de uma restrição  
  O exemplo a seguir mostra uma definição de uma classe com uma restrição que requer o argumento de tipo para implementar <xref:System.IComparable>.  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
  Se o código subsequente tenta construir uma classe de `itemManager` fornecendo um tipo que não implementa <xref:System.IComparable>, o compilador sinaliza um erro.  
   
@@ -132,7 +132,7 @@ Chave de fenda definido como uma ferramenta genérica
 ### <a name="example-of-multiple-constraints"></a>Exemplo de várias restrições  
  O exemplo a seguir mostra uma definição de uma classe genérica com uma lista de restrições no parâmetro de tipo. No código que cria uma instância dessa classe, o argumento de tipo deve implementar ambas as <xref:System.IComparable> e <xref:System.IDisposable> interfaces, ser um tipo de referência e expor um construtor sem parâmetros acessível.  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>Termos importantes  
  Tipos genéricos apresentam e usam os seguintes termos:  

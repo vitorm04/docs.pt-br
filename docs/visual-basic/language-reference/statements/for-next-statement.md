@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746267"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968719"
 ---
 # <a name="fornext-statement-visual-basic"></a>Instrução For...Next (Visual Basic)
 Repete um grupo de instruções um número de vezes especificado.  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  No exemplo a seguir, o `index` variável começa com um valor de 1 e é incrementada a cada iteração do loop, terminando quando o valor da `index` atinge 5.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  No exemplo a seguir, o `number` variável começa em 2 e é reduzido por 0,25 em cada iteração do loop, terminando quando o valor da `number` chegar a 0. O `Step` argumento de `-.25` reduz o valor por 0,25 em cada iteração do loop.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  Um [enquanto... Finalizar instrução While](../../../visual-basic/language-reference/statements/while-end-while-statement.md) ou [fazer... Instrução de loop](../../../visual-basic/language-reference/statements/do-loop-statement.md) funciona bem quando você não sabe com antecedência quantas vezes para executar as instruções no loop. No entanto, quando você pretende executar o loop de um número específico de vezes, um `For`... `Next` loop é uma opção melhor. Quando você entra pela primeira vez no loop, você determinar o número de iterações.  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>Loops aninhados  
  Você pode aninhar `For` loops, colocando um loop dentro de outra. O exemplo a seguir demonstra aninhada `For`... `Next` estruturas que têm valores diferentes. O loop externo cria uma cadeia de caracteres para cada iteração do loop. Loop interno decrementa uma variável de contador de loop para cada iteração do loop.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  Ao aninhar loops, cada loop deve ter um único `counter` variável.  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir remove todos os elementos de uma lista genérica. Em vez de um [para cada um... Próxima instrução](../../../visual-basic/language-reference/statements/for-each-next-statement.md), o exemplo mostra um `For`... `Next` que itera em ordem decrescente. O exemplo usa essa técnica porque o `removeAt` método faz com que elementos após o elemento removido tenham um valor de índice mais baixo.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir itera por meio de uma enumeração que é declarada usando um [instrução Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, os parâmetros da instrução usam uma classe que tem as sobrecargas de operador para o `+`, `-`, `>=`, e `<=` operadores.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Collections.Generic.List%601>

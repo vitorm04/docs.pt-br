@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 3d8134b43320003a6425cf284162d3d627b177c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb99213287cda5ce7f9c3afe2998efb02ec68a03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623545"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979067"
 ---
 # <a name="const-statement-visual-basic"></a>Instrução Const (Visual Basic)
 Declara e define uma ou mais constantes.  
@@ -90,12 +90,12 @@ Const constantlist
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `Const` instrução para declarar constantes para uso no lugar de valores literais.  
   
- [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]  
   
 ## <a name="example"></a>Exemplo  
  Se você definir uma constante com o tipo de dados `Object`, o compilador do Visual Basic fornece a ele o tipo da `initializer`, em vez de `Object`. No exemplo a seguir, a constante `naturalLogBase` tem o tipo de tempo de execução `Decimal`.  
   
- [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]  
   
  O exemplo anterior usa o <xref:System.Type.ToString%2A> método na <xref:System.Type> objeto retornado pela [operador GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), pois <xref:System.Type> não pode ser convertido em `String` usando `CStr`.  
   

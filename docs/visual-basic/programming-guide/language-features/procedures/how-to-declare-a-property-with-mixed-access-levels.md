@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: b10f679d735d21ba0002c8a3f4e230836298d4e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514251"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972575"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Como: Declarar uma propriedade com níveis de acesso mistos (Visual Basic)
 Se você quiser que o `Get` e `Set` procedimentos de uma propriedade para ter diferentes níveis de acesso, você pode usar o nível mais permissivo na `Property` instrução e o nível mais restritivo em qualquer um os `Get` ou `Set` instrução. Você pode usar níveis de acesso mistos em uma propriedade quando você deseja certas partes do código para ser capaz de obter o valor da propriedade e determinadas outras partes do código para ser capaz de alterar o valor.  
@@ -30,7 +30,7 @@ Se você quiser que o `Get` e `Set` procedimentos de uma propriedade para ter di
   
 3.  Não especifique um nível de acesso em outro procedimento de propriedade. Ele pressupõe que o nível de acesso declarado no `Property` instrução. Você pode restringir o acesso em apenas um dos procedimentos de propriedade.  
   
-     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
      No exemplo anterior, o `Get` procedimento tem o mesmo `Protected` acesso como a própria propriedade, enquanto o `Set` procedimento tem `Private` acesso. Uma classe derivada de `employee` pode ler os `salary` valor, mas apenas o `employee` classe pode defini-lo.  
   

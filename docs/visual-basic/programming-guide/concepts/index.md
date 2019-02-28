@@ -1,16 +1,16 @@
 ---
-title: Conceitos de Programação (Visual Basic)
-ms.date: 07/20/2015
+title: Conceitos de programação – Visual Basic
+ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
 ---
 # <a name="programming-concepts-visual-basic"></a>Conceitos de Programação (Visual Basic)
+
 Esta seção explica conceitos de programação na linguagem do Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Assemblies no .NET](../../../standard/assembly/index.md)|Descreve como criar e usar um assemblies.|  
 |[Programação assíncrona com Async e Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Descreve como criar soluções assíncronas usando palavras-chave [Async](../../../visual-basic/language-reference/modifiers/async.md) e [Await](../../../visual-basic/language-reference/operators/await-operator.md). Inclui um passo a passo.|  
 |[Visão geral de atributos (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.|  
 |[Informações do chamador (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Descreve como obter informações sobre o chamador de um método. Essas informações incluem o caminho do arquivo e o número de linha do código-fonte e o nome do membro do chamador.|  
@@ -27,4 +27,5 @@ Esta seção explica conceitos de programação na linguagem do Visual Basic.
   
 |||  
 |---|---|  
+|[Assemblies no .NET](../../../standard/assembly/index.md)|Descreve como criar e usar um assemblies.|  
 |[Dicas de desempenho](../../../framework/performance/performance-tips.md) | Discute várias regras básicas que podem ajudá-lo a aumentar o desempenho do seu aplicativo.|

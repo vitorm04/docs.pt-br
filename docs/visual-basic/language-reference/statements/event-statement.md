@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653613"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966067"
 ---
 # <a name="event-statement"></a>Instrução Event
 Declara um evento definido pelo usuário.  
@@ -82,7 +82,7 @@ End Event
 ## <a name="remarks"></a>Comentários  
  Depois que o evento foi declarado, use o `RaiseEvent` instrução para gerar o evento. Um evento típico pode ser declarado e levantado conforme os fragmentos a seguir:  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
   
 > [!NOTE]
 >  Você pode declarar argumentos de evento, assim como faria argumentos dos procedimentos, com as seguintes exceções: eventos não podem ter argumentos, nomeados `ParamArray` argumentos, ou `Optional` argumentos. Eventos não têm valores de retorno.  
@@ -106,11 +106,11 @@ End Event
   
  Adicionar um `WithEvents` à seção declarations da variável a `Form1` classe:  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
  Adicione o seguinte código para o código para `Form1`. Substituir qualquer procedimentos duplicados que podem existir, tal como `Form_Load` ou `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  Pressione F5 para executar o exemplo anterior e clique no botão rotulado **iniciar**. A primeira caixa de texto começa a contagem regressiva de segundos. Depois de decorrido o tempo total (10 segundos), a primeira caixa de texto exibe "Concluído".  
   
@@ -125,7 +125,7 @@ End Event
 - [Instrução RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Instrução Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Como: Declarar eventos personalizados para conservar memória](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Como: Declarar eventos personalizados para conservar a memória](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
 - [Como: Declarar eventos personalizados para evitar bloqueio](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
 - [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)

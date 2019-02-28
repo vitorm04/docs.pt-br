@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread Interface1
+title: Interface ICorDebugThread
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be30e91e017390befd26ada37daa0fc902bdaee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f2223230b18f175427bfbfeaa46bf1406d8c7e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617493"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976350"
 ---
-# <a name="icordebugthread-interface1"></a>ICorDebugThread Interface1
+# <a name="icordebugthread-interface"></a>Interface ICorDebugThread
 Representa um thread em um processo. O tempo de vida de uma instância `ICorDebugThread` é igual ao tempo de vida do thread que ela representa.  
   
 ## <a name="methods"></a>Métodos  

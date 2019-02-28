@@ -1,16 +1,16 @@
 ---
-title: Introdução ao armazenamento de filas do Azure usando F#
+title: Introdução ao uso do armazenamento de filas do AzureF#
 description: As filas do Azure fornecem uma mensagem assíncrona e confiável entre componentes do aplicativo. Permite que mensagens de nuvem os componentes do aplicativo para dimensionar de modo independente.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 14bbc657f965fc262d2a83b1fdf982fe5e75d55e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569406"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974270"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>Introdução ao armazenamento de filas do Azure usando F# #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>Introdução ao armazenamento de filas do Azure usando F\#
 
 O armazenamento de filas do Azure fornece mensagens entre componentes de aplicativos na nuvem. Na criação de aplicativos para escala, componentes de aplicativos geralmente são desassociados, para que possam ser dimensionados independentemente. Armazenamento de filas fornece mensagens assíncronas para a comunicação entre componentes de aplicativos, se eles estão em execução na nuvem, na área de trabalho, em um servidor local ou em um dispositivo móvel. O armazenamento de fila também dá suporte a gerenciamento de tarefas assíncronas e criação de fluxos de trabalho do processo.
 
@@ -25,9 +25,9 @@ Para obter uma visão geral conceitual do armazenamento de filas, consulte [o gu
 Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/storage-create-storage-account).
 Você também precisará sua chave de acesso de armazenamento para esta conta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Criar Script de F# e o início da F# interativo
+## <a name="create-an-f-script-and-start-f-interactive"></a>Criar um F# Script e iniciar F# interativo
 
-Os exemplos neste artigo podem ser usados em um aplicativo do F# ou um script F#. Para criar um script F#, crie um arquivo com o `.fsx` extensão, por exemplo `queues.fsx`, em seu ambiente de desenvolvimento do F#.
+Os exemplos neste artigo podem ser usados em qualquer um uma F# aplicativo ou um F# script. Para criar um F# script, crie um arquivo com o `.fsx` extensão, por exemplo `queues.fsx`, no seu F# ambiente de desenvolvimento.
 
 Em seguida, use um [Gerenciador de pacotes](package-management.md) tais como [Paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) para instalar o `WindowsAzure.Storage` pacote e referência `WindowsAzure.Storage.dll` em seu script usando um `#r`diretiva.
 

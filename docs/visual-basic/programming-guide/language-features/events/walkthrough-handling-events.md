@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2af8fe5557e452db1ef3a72de35582b18117cc30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553731"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974140"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Passo a passo: Manipulação de eventos (Visual Basic)
 Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O primeiro tópico, [passo a passo: Declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), mostra como declarar e acionar eventos. Esta seção usa o formulário e a classe esse passo a passo para mostrar como manipular eventos quando eles ocorrem.  
@@ -25,7 +25,7 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 1.  Coloque o seguinte código no `Form1`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
      O `WithEvents` palavra-chave especifica que a variável `mWidget` é usada para manipular eventos de um objeto. Você pode especificar o tipo de objeto, fornecendo o nome da classe da qual o objeto será criado.  
   
@@ -47,13 +47,13 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 3.  Adicione o seguinte código ao manipulador de eventos do `mWidget_PercentDone`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Sempre que o `PercentDone` é gerado, o procedimento de evento exibe a porcentagem concluída em um `Label` controle. O `DoEvents` método permite que o rótulo a ser redesenhado e também fornece ao usuário a oportunidade de clicar o **Cancelar** botão.  
   
 4.  Adicione o seguinte código para o `Button2_Click` manipulador de eventos:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
  Se o usuário clica o **Cancelar** botão durante a `LongTask` estiver em execução, o `Button2_Click` eventos é executado assim que o `DoEvents` instrução permite o processamento de evento ocorra. A variável de nível de classe `mblnCancel` é definido como `True`e o `mWidget_PercentDone` eventos, em seguida, testa-lo e define o `ByRef Cancel` argumento `True`.  
   
@@ -70,7 +70,7 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 3.  Adicione o seguinte código para o `Form1_Load` procedimento de evento para criar o `Widget`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
  Quando esse código é executado, o Visual Basic cria um `Widget` do objeto e conecta seus eventos para os procedimentos de evento associados `mWidget`. Partir desse ponto, sempre que o `Widget` gera sua `PercentDone` evento, o `mWidget_PercentDone` procedimento de evento é executado.  
   
@@ -78,7 +78,7 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 -   Adicione o seguinte código ao manipulador de eventos do `Button1_Click`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
  Antes do `LongTask` método é chamado, o rótulo que exibe o percentual de conclusão deve ser inicializado e o nível de classe `Boolean` sinalizador para cancelar o método deve ser definido como `False`.  
   
@@ -107,7 +107,7 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 -   Adicione a seguinte linha de código para o `Button1_Click` procedimento, logo após a linha que lê `mWidget.LongTask(12.2, 0.33)`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
  O código anterior cria um novo `Widget` cada vez que o botão é clicado. Assim que o `LongTask` método é concluído, a referência para o `Widget` é liberado e o `Widget` é destruído.  
   

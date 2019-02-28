@@ -2,14 +2,14 @@
 title: O que é o F#
 description: Saiba mais sobre o que o F# é linguagem de programação e o que é a programação em F# como. Saiba mais sobre tipos de dados avançados, funções e como elas se encaixam.
 ms.date: 08/03/2018
-ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43863290"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966946"
 ---
-# <a name="what-is-f"></a>O que é o F# #
+# <a name="what-is-f"></a>O que é F\#
 
 F# é uma linguagem de programação funcional que torna mais fácil escrever código correto e sustentável.
 
@@ -123,4 +123,4 @@ Em vez de escrever código que é orientada a objeto, em F#, você irá geralmen
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre um conjunto maior de recursos do F#, confira a [Tour do F#](tour.md).
+Para saber mais sobre um conjunto maior de F# recursos, confira o [ F# Tour](tour.md).

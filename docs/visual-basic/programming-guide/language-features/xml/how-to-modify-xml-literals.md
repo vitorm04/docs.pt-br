@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 7a01fdc9d0541b5d277c2f283e25e9a1cef3b862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e11c1ed4cfe4edc1c88dbbff2e9f555b1a028c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636333"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974712"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>Como: Modificar literais XML (Visual Basic)
 Visual Basic fornece maneiras convenientes para modificar literais XML. Você pode adicionar ou excluir elementos e atributos, e você também pode substituir um elemento existente com um novo elemento XML. Este tópico fornece vários exemplos de como modificar um literal do XML existente.  
@@ -22,7 +22,7 @@ Visual Basic fornece maneiras convenientes para modificar literais XML. Você po
   
      O exemplo de código a seguir atualiza o valor de todos os \<preço > elementos em um documento XML.  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
+     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]  
   
      A seguir mostra o XML de origem de exemplo e de que este exemplo de código XML modificado.  
   
@@ -65,7 +65,7 @@ Visual Basic fornece maneiras convenientes para modificar literais XML. Você po
   
 1.  Para adicionar um atributo a um literal XML, primeiro obtenha uma referência ao XML literal. Em seguida, você pode adicionar um atributo, adicionando uma nova propriedade de eixo de atributo XML. Você também pode adicionar um novo <xref:System.Xml.Linq.XAttribute> objeto para o XML literal usando o <xref:System.Xml.Linq.XContainer.Add%2A> método. O exemplo a seguir mostra as duas opções.  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
+     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]  
   
      A seguir mostra o XML de origem de exemplo e de que este exemplo de código XML modificado.  
   
@@ -111,7 +111,7 @@ Visual Basic fornece maneiras convenientes para modificar literais XML. Você po
   
      O exemplo a seguir mostra exemplos de cada uma dessas técnicas.  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
+     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]  
   
      A seguir mostra o XML de origem de exemplo e de que este exemplo de código XML modificado.  
   
@@ -155,7 +155,7 @@ Visual Basic fornece maneiras convenientes para modificar literais XML. Você po
   
 1.  Para remover um elemento ou atributo de um literal XML, obtenha uma referência ao elemento ou atributo e chame o `Remove` método, conforme mostrado no exemplo a seguir.  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
+     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]  
   
      A seguir mostra o XML de origem de exemplo e de que este exemplo de código XML modificado.  
   
@@ -203,7 +203,7 @@ Visual Basic fornece maneiras convenientes para modificar literais XML. Você po
   
      O exemplo de código a seguir substitui todos os \<descrição > elementos com um \<abstrata > elemento. O conteúdo do \<descrição > elemento é preservado na nova \<abstrata > elemento usando o <xref:System.Xml.Linq.XContainer.Nodes%2A> propriedade do \<descrição > <xref:System.Xml.Linq.XElement> objeto.  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
+     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]  
   
      A seguir mostra o XML de origem de exemplo e de que este exemplo de código XML modificado.  
   

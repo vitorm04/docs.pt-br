@@ -1,5 +1,5 @@
 ---
-title: Interface1 ICorDebugStepper2
+title: Interface ICorDebugStepper2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b7e91430b970e8a14e0c126b1b7ae2cb123d4eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69adabbe5bb607e00d383c8bd80d9e150608890e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712870"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970397"
 ---
-# <a name="icordebugstepper2-interface1"></a>Interface1 ICorDebugStepper2
+# <a name="icordebugstepper2-interface"></a>Interface ICorDebugStepper2
 Fornece suporte para apenas meu código (JMC) de depuração.  
   
 ## <a name="methods"></a>Métodos  

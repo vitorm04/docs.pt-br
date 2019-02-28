@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 9916c7197b260436a447a84b22df9b76dc5af4cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654874"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976480"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrução On Error (Visual Basic)
 Permite que uma rotina de tratamento de erros e especifica o local da rotina dentro de um procedimento; também pode ser usado para desabilitar uma rotina de tratamento de erros.  
@@ -76,7 +76,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="throw-statement"></a>Instrução Throw  
  Um erro que é gerado com o `Err.Raise` método define o `Exception` propriedade para uma instância recém-criada do <xref:System.Exception> classe. Para dar suporte a gerar exceções derivadas dos tipos de exceção, um `Throw` instrução tem suporte na linguagem. Isso leva um único parâmetro que é a instância de exceção seja lançada. O exemplo a seguir mostra como esses recursos podem ser usados com a suporte de manipulação de exceção existente:  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
  Observe que o `On Error GoTo` instrução intercepta todos os erros, independentemente da classe de exceção.  
   
@@ -94,7 +94,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Para impedir que o código de tratamento de erros em execução quando nenhum erro tiver ocorrido, coloque um `Exit Sub`, `Exit Function`, ou `Exit Property` instrução imediatamente antes da rotina de tratamento de erros, como no seguinte fragmento:  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]  
   
  Aqui, o código de tratamento de erro segue o `Exit Sub` instrução e precede o `End Sub` instrução para separá-lo do fluxo do procedimento. Você pode colocar o código de tratamento de erros em qualquer lugar em um procedimento.  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Se você criar um objeto que acessa outros objetos, você deve tentar tratar os erros sem tratamento que passam de volta. Se você não pode mapear os códigos de erro no `Err.Number` para um dos seus próprios erros e, em seguida, passe-os de volta para o chamador de seu objeto. Você deve especificar seu erro ao adicionar seu código de erro para o `VbObjectError` constante. Por exemplo, se seu código de erro é 1052, atribuí-lo da seguinte maneira:  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]  
   
 > [!CAUTION]
 >  Erros do sistema durante as chamadas para bibliotecas de vínculo dinâmico (DLLs) do Windows não geram exceções e não podem ser interceptados com a interceptação de erros do Visual Basic. Ao chamar funções de DLL, você deve verificar cada valor de retorno de êxito ou falha (de acordo com as especificações de API) e em caso de falha, verifique o valor `Err` do objeto `LastDLLError` propriedade.  

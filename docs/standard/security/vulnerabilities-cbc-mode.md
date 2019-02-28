@@ -4,12 +4,12 @@ description: Saiba como detectar e atenuar as vulnerabilidades de medição de t
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066163"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974283"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de medição de tempo com a descriptografia simétrica de modo CBC usando preenchimento
 
@@ -92,7 +92,7 @@ Aplicativos que não é possível alterar seu formato de mensagens, mas executar
   - Isso também não impede que a recuperação de texto sem formatação em situações em que o invasor pode forçar o mesmo texto não criptografado a ser criptografado várias vezes com um deslocamento de mensagem diferente.
 - Portão de avaliação de uma chamada de descriptografia para Umedeça o sinal de medição de tempo:
   - O cálculo de tempo de espera deve ter no mínimo que excede a quantidade máxima de tempo que a operação de descriptografia levaria para qualquer segmento de dados que contém o preenchimento.
-  - Cálculos de tempo devem ser feitos de acordo com as diretrizes [adquirindo carimbos de data / hora de alta resolução](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), não usando <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujeito a roll-over/estouro) ou subtrair dois carimbos de hora do sistema (sujeito a ajuste de NTP erros).
+  - Cálculos de tempo devem ser feitos de acordo com as diretrizes [adquirindo carimbos de data / hora de alta resolução](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), não usando <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujeito a roll-over/estouro) ou subtrair dois carimbos de hora do sistema (sujeito a ajuste de NTP erros).
   - Cálculos de tempo devem ser inclui a operação de descriptografia, incluindo todas as exceções potenciais em gerenciado ou aplicativos de C++, não apenas preenchidos no final.
   - Se o êxito ou falha tiver sido determinada ainda, a porta de medição de tempo precisa retornar falha quando ela expirar.
 - Serviços que estão executando a descriptografia não autenticada devem ter em vigor para detectar que uma inundação de mensagens "inválidas" chegou por meio de monitoramento.
@@ -103,7 +103,7 @@ Aplicativos que não é possível alterar seu formato de mensagens, mas executar
 Para programas criados em relação a criptografia do Windows: Biblioteca de próxima geração (CNG):
 
 - É a chamada de descriptografia [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), especificando o `BCRYPT_BLOCK_PADDING` sinalizador.
-- O identificador de chave foi inicializado chamando [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) com [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) definido como `BCRYPT_CHAIN_MODE_CBC`.
+- O identificador de chave foi inicializado chamando [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) com [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) definido como `BCRYPT_CHAIN_MODE_CBC`.
   - Uma vez que `BCRYPT_CHAIN_MODE_CBC` é o padrão, afetado código pode não ter atribuído qualquer valor para `BCRYPT_CHAINING_MODE`.
 
 Para programas criados em relação a API criptográfica do Windows mais antigos:

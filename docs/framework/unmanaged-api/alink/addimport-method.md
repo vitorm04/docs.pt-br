@@ -1,5 +1,5 @@
 ---
-title: Método1 AddImport
+title: Método AddImport
 ms.date: 03/30/2017
 api_name:
 - AddImport
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2daed0450e04137621788e830bbedb467bd57c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95a434cc365e12aa19d164951726ddad8945f60d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706333"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974127"
 ---
-# <a name="addimport-method1"></a>Método1 AddImport
+# <a name="addimport-method"></a>Método AddImport
 Adiciona importações ao assembly.  
   
 ## <a name="syntax"></a>Sintaxe  

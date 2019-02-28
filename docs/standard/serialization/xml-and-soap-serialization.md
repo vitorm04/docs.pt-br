@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179423"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965612"
 ---
 # <a name="xml-and-soap-serialization"></a>Serialização XML e SOAP
 
@@ -31,10 +31,10 @@ Para serializar e desserializar objetos, use a classe <xref:System.Xml.Serializa
 [Apresentando a serialização XML](introducing-xml-serialization.md)  
 Fornece uma definição geral de serialização, particularmente da serialização XML.
 
-[Como serializar um objeto](how-to-serialize-an-object.md)  
+[Como: Serializar um objeto](how-to-serialize-an-object.md)  
 Fornece instruções passo a passo para serializar um objeto.
 
-[Como desserializar um objeto](how-to-deserialize-an-object.md)  
+[Como: Desserializar um objeto](how-to-deserialize-an-object.md)  
 Fornece instruções passo a passo para desserializar um objeto.
 
 [Exemplos de serialização XML](examples-of-xml-serialization.md)  
@@ -49,22 +49,22 @@ Descreve como controlar a serialização usando atributos.
 [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)  
 Lista os atributos que são usados para controlar a serialização XML.
 
-[Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+[Como: Especifique um nome de elemento alternativo para um Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
 Apresenta um cenário avançado de como gerar vários fluxos XML substituindo a serialização.
 
-[Como controlar a serialização de classes derivadas](how-to-control-serialization-of-derived-classes.md)  
+[Como: Controlam a serialização de Classes derivadas](how-to-control-serialization-of-derived-classes.md)  
 Fornece um exemplo de como controlar a serialização de classes derivadas.
 
-[Como qualificar elementos XML e nomes de atributos XML](how-to-qualify-xml-element-and-xml-attribute-names.md)  
+[Como: Qualificar elementos XML e nomes de atributo XML](how-to-qualify-xml-element-and-xml-attribute-names.md)  
 Descreve como definir e controlar a maneira como namespaces XML são usados no fluxo XML.
 
 [Serialização XML com Serviços Web XML](xml-serialization-with-xml-web-services.md)  
 Explica como a serialização XML é usada em serviços Web XML.
 
-[Como serializar um objeto como um fluxo XML codificado para SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+[Como: Serializar um objeto como um Stream do XML codificado em SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
 Descreve como usar o <xref:System.Xml.Serialization.XmlSerializer> classe para criar fluxos XML SOAP codificados que estão em conformidade com a seção 5 do documento do World Wide Web Consortium (W3C) [simples objeto Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/).
 
-[Como substituir a serialização XML de SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)  
+[Como: Substituir a serialização de XML de SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)  
 Descreve o processo para substituir a serialização XML de objetos, como mensagens SOAP.
 
 [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)  
@@ -84,10 +84,7 @@ Adiciona tipos que são usados pela classe <xref:System.Xml.Serialization.XmlSch
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Tecnologias de desenvolvimento avançadas](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
-Fornece links para obter mais informações sobre tarefas e técnicas sofisticadas de desenvolvimento no .NET Framework.
-
-[Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+[Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))  
 Fornece tópicos que descrevem e explicam como programar serviços Web XML usando ASP.NET.
 
 ## <a name="see-also"></a>Consulte também

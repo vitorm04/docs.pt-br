@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 18becfe05da27e538c5c294b26e0bb7aa19cad2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce0010762374baf5b19ab2e64f50e12fefda2dee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506414"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966953"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Como: Criar um procedimento que retorna um valor (Visual Basic)
 Você usa um `Function` procedimento retornar um valor para o código de chamada.  
@@ -30,11 +30,11 @@ Você usa um `Function` procedimento retornar um valor para o código de chamada
   
      O seguinte `Function` procedimento calcula o lado mais longo, ou hipotenusa de um triângulo, considerando os valores para os dois lados.  
   
-     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
      O exemplo a seguir mostra uma chamada típica para `hypotenuse`.  
   
-     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Consulte também
 - [Procedimentos](./index.md)

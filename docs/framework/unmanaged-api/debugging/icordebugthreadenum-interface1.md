@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThreadEnum Interface1
+title: Interface ICorDebugThreadEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThreadEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 100dc6c83c7c1d45ddb2ea0396c5115c4d79a7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b620357967d5d22148f64a3258fbb8dc52361d86
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560354"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981719"
 ---
-# <a name="icordebugthreadenum-interface1"></a>ICorDebugThreadEnum Interface1
+# <a name="icordebugthreadenum-interface"></a>Interface ICorDebugThreadEnum
 Implementa métodos ICorDebugEnum e enumera matrizes de ICorDebugThread.  
   
 ## <a name="methods"></a>Métodos  

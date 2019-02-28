@@ -1,15 +1,15 @@
 ---
-title: Zkratka
+title: Byrefs
 description: Saiba mais sobre byref e tipos byref no F#, que são usados para programação de nível baixo.
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611575"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976545"
 ---
-# <a name="byrefs"></a>Zkratka
+# <a name="byrefs"></a>Byrefs
 
 F#tem duas principais áreas de recurso que lidam no espaço de programação de nível baixo:
 
@@ -105,7 +105,7 @@ Todas essas regras juntas significam que o proprietário de um `inref` ponteiro 
 
 A finalidade de `outref<'T>` é para indicar que o ponteiro só deve ser lidos do. Inesperadamente, `outref<'T>` permite ler subjacente valor apesar do nome. Isso é para fins de compatibilidade. Semanticamente, `outref<'T>` não é diferente de `byref<'T>`.
 
-### <a name="interop-with-c"></a>Interoperabilidade com c# #
+### <a name="interop-with-c"></a>Interoperabilidade com C\#
 
 C# é compatível com o `in ref` e `out ref` palavras-chave, além de `ref` retorna. A tabela a seguir mostra como F# interpreta o que C# emite:
 

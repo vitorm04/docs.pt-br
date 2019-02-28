@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ee30e885a08d3e8302d7b6083c1c65e525006c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617296"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973425"
 ---
 # <a name="redim-statement-visual-basic"></a>Instrução ReDim (Visual Basic)
 Realoca espaço de armazenamento para uma variável de matriz.  
@@ -88,7 +88,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir aumenta o tamanho da última dimensão de uma matriz dinâmica sem perder todos os dados existentes na matriz e, em seguida, diminui o tamanho com perda de dados parcial. Por fim, ele diminui o tamanho de volta para seu valor original e reinicializa todos os elementos da matriz.  
   
- [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
  O `Dim` instrução cria uma nova matriz com três dimensões. Cada dimensão é declarado com um limite de 10, portanto, o índice de matriz para cada dimensão pode variar de 0 a 10. Na discussão a seguir, três dimensões são chamadas de camada, linha e coluna.  
   

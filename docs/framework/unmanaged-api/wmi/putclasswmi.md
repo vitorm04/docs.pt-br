@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614504"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972801"
 ---
 # <a name="putclasswmi-function"></a>Função PutClassWmi
 Cria uma nova classe ou atualiza uma existente.  
@@ -49,7 +49,7 @@ HRESULT PutClassWmi (
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se definido, o WMI não armazena qualquer qualificador com o tipo corrigido. </br> Se não for definido, supõe-se que esse objeto não está localizado, e todos os qualificadores são storedwith dessa instância. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se definido, o WMI não armazena qualquer qualificador com o tipo corrigido. <br> Se não for definido, supõe-se que esse objeto não está localizado, e todos os qualificadores são storedwith dessa instância. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Crie a classe se ele não existir ou substituí-lo se ele já existir. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Atualize a classe. A classe deve existir para a chamada seja bem-sucedida. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Crie a classe. A chamada falhará se a classe já existe. |

@@ -2,15 +2,9 @@
 title: Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 3db3c49427765249f7d6c5ac394f8b239cd40fa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592517"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 Uma parte importante do Visual Basic é a capacidade de criar aplicativos Windows Forms executados localmente nos computadores dos usuários. Você pode usar o Visual Studio para criar o aplicativo e interface do usuário usando Windows Forms. Um aplicativo Windows Forms se baseia nas classes do <xref:System.Windows.Forms> namespace.  
@@ -46,7 +40,7 @@ Uma parte importante do Visual Basic é a capacidade de criar aplicativos Window
   
 |Para|Consulte|  
 |--------|---------|  
-|Criar um novo aplicativo Windows Forms com Visual Studio|[Passo a passo: Criando um formulário do Windows simples](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Criar um novo aplicativo Windows Forms com Visual Studio|[Tutorial 1: Criar um visualizador de imagens](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Usar controles em formulários|[Como: Adicionar controles ao Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Criar gráficos com <xref:System.Drawing>|[Introdução à Programação de Elementos Gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Criar controles personalizados|[Como: Herdar da classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], developing applications
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
-ms.openlocfilehash: 5340c137842591bb1f4408392e02329fb2a491ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56d79691a216f87c847474ce4340b454850b9b11
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651624"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969694"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>Executando tarefas com My.Application, My.Computer e My.User (Visual Basic)
 Os três centrais `My` objetos que fornecem funcionalidades de acesso a informações e comumente usadas estão `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), e `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). Você pode usar esses objetos para acessar as informações que estão relacionadas ao aplicativo atual, o que o aplicativo está instalado no computador ou o usuário atual do aplicativo, respectivamente.  
@@ -22,19 +22,19 @@ Os três centrais `My` objetos que fornecem funcionalidades de acesso a informa�
 ## <a name="myapplication-mycomputer-and-myuser"></a>My. Application, My. Computer e My. User  
  Os exemplos a seguir demonstram como informações podem ser recuperados usando `My`.  
   
- [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_1.vb)]  
+ [!code-vb[VbVbcnMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#1)]  
   
- [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_2.vb)]  
+ [!code-vb[VbVbcnMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#2)]  
   
  Além de recuperar informações, os membros expostos através desses três objetos também permitem que você executar métodos relacionados a esse objeto. Por exemplo, você pode acessar uma variedade de métodos para manipular arquivos ou atualizar o registro por meio de `My.Computer`.  
   
  E/s de arquivos é significativamente mais fácil e mais rápido com `My`, que inclui uma variedade de métodos e propriedades para manipular arquivos, diretórios e unidades. O <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> objeto permite que você leia grandes estruturas de arquivos que têm delimitadas ou campos de largura fixa. Este exemplo abre o `TextFieldParser` `reader` e o usa para ler de `C:\TestFolder1\test1.txt`.  
   
- [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#23)]  
   
  `My.Application` permite que você alterar a cultura do seu aplicativo. O exemplo a seguir demonstra como esse método pode ser chamado.  
   
- [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
+ [!code-vb[VbVbcnMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
