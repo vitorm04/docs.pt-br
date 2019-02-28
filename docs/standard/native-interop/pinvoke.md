@@ -4,12 +4,12 @@ description: Saiba como chamar funções nativas via P/Invoke no .NET.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: f243fee2b246afff36732d469c6295d7e4b2fd87
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411347"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981251"
 ---
 # <a name="platform-invoke-pinvoke"></a>Invocação de plataforma (P/Invoke)
 
@@ -242,5 +242,5 @@ Os exemplos anteriores dependem de parâmetros e, em ambos os casos, os parâmet
 ## <a name="more-resources"></a>Mais recursos
 
 *   [PInvoke.net wiki](https://www.pinvoke.net/) uma wiki excelente com informações sobre as APIs comuns do Win32 e como chamá-las.
-*   [P/Invoke no MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
+*   [P/Invoke no MSDN](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [Documentação do Mono no P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)
