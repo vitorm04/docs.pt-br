@@ -7,77 +7,77 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: ee3bcd1358536e6fd9bed5c4fec7845fdf441d86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe91e0062ac35859a3b85eb080d16fb88a6f9aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723479"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972775"
 ---
-# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a><span data-ttu-id="f7941-102">Passo a passo: Criptografando e descriptografando cadeias de caracteres no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f7941-102">Walkthrough: Encrypting and Decrypting Strings in Visual Basic</span></span>
-<span data-ttu-id="f7941-103">Este passo a passo mostra como usar o <xref:System.Security.Cryptography.DESCryptoServiceProvider> classe para criptografar e descriptografar cadeias de caracteres usando a versão do CSP (provedor) de serviço criptográfico do Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algoritmo.</span><span class="sxs-lookup"><span data-stu-id="f7941-103">This walkthrough shows you how to use the <xref:System.Security.Cryptography.DESCryptoServiceProvider> class to encrypt and decrypt strings using the cryptographic service provider (CSP) version of the Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algorithm.</span></span> <span data-ttu-id="f7941-104">A primeira etapa é criar uma classe de invólucro simples que encapsula o algoritmo 3DES e armazena os dados criptografados como uma cadeia de caracteres codificado em base 64.</span><span class="sxs-lookup"><span data-stu-id="f7941-104">The first step is to create a simple wrapper class that encapsulates the 3DES algorithm and stores the encrypted data as a base-64 encoded string.</span></span> <span data-ttu-id="f7941-105">Em seguida, esse wrapper é usado para armazenar com segurança dados particulares do usuário em um arquivo de texto publicamente acessível.</span><span class="sxs-lookup"><span data-stu-id="f7941-105">Then, that wrapper is used to securely store private user data in a publicly accessible text file.</span></span>  
+# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a><span data-ttu-id="cc636-102">Passo a passo: Criptografando e descriptografando cadeias de caracteres no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cc636-102">Walkthrough: Encrypting and Decrypting Strings in Visual Basic</span></span>
+<span data-ttu-id="cc636-103">Este passo a passo mostra como usar o <xref:System.Security.Cryptography.DESCryptoServiceProvider> classe para criptografar e descriptografar cadeias de caracteres usando a versão do CSP (provedor) de serviço criptográfico do Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algoritmo.</span><span class="sxs-lookup"><span data-stu-id="cc636-103">This walkthrough shows you how to use the <xref:System.Security.Cryptography.DESCryptoServiceProvider> class to encrypt and decrypt strings using the cryptographic service provider (CSP) version of the Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algorithm.</span></span> <span data-ttu-id="cc636-104">A primeira etapa é criar uma classe de invólucro simples que encapsula o algoritmo 3DES e armazena os dados criptografados como uma cadeia de caracteres codificado em base 64.</span><span class="sxs-lookup"><span data-stu-id="cc636-104">The first step is to create a simple wrapper class that encapsulates the 3DES algorithm and stores the encrypted data as a base-64 encoded string.</span></span> <span data-ttu-id="cc636-105">Em seguida, esse wrapper é usado para armazenar com segurança dados particulares do usuário em um arquivo de texto publicamente acessível.</span><span class="sxs-lookup"><span data-stu-id="cc636-105">Then, that wrapper is used to securely store private user data in a publicly accessible text file.</span></span>  
   
- <span data-ttu-id="f7941-106">Você pode usar criptografia para proteger segredos do usuário (por exemplo, senhas) e fazer com que as credenciais não pode ser lido por usuários não autorizados.</span><span class="sxs-lookup"><span data-stu-id="f7941-106">You can use encryption to protect user secrets (for example, passwords) and to make credentials unreadable by unauthorized users.</span></span> <span data-ttu-id="f7941-107">Isso pode proteger a identidade de um usuário autorizado seja roubada, qual protege os ativos do usuário e fornece não-repúdio.</span><span class="sxs-lookup"><span data-stu-id="f7941-107">This can protect an authorized user's identity from being stolen, which protects the user's assets and provides non-repudiation.</span></span> <span data-ttu-id="f7941-108">A criptografia também pode proteger dados de um usuário que está sendo acessado por usuários não autorizados.</span><span class="sxs-lookup"><span data-stu-id="f7941-108">Encryption can also protect a user's data from being accessed by unauthorized users.</span></span>  
+ <span data-ttu-id="cc636-106">Você pode usar criptografia para proteger segredos do usuário (por exemplo, senhas) e fazer com que as credenciais não pode ser lido por usuários não autorizados.</span><span class="sxs-lookup"><span data-stu-id="cc636-106">You can use encryption to protect user secrets (for example, passwords) and to make credentials unreadable by unauthorized users.</span></span> <span data-ttu-id="cc636-107">Isso pode proteger a identidade de um usuário autorizado seja roubada, qual protege os ativos do usuário e fornece não-repúdio.</span><span class="sxs-lookup"><span data-stu-id="cc636-107">This can protect an authorized user's identity from being stolen, which protects the user's assets and provides non-repudiation.</span></span> <span data-ttu-id="cc636-108">A criptografia também pode proteger dados de um usuário que está sendo acessado por usuários não autorizados.</span><span class="sxs-lookup"><span data-stu-id="cc636-108">Encryption can also protect a user's data from being accessed by unauthorized users.</span></span>  
   
- <span data-ttu-id="f7941-109">Para obter mais informações, consulte [Serviços Criptográficos](../../../../standard/security/cryptographic-services.md).</span><span class="sxs-lookup"><span data-stu-id="f7941-109">For more information, see [Cryptographic Services](../../../../standard/security/cryptographic-services.md).</span></span>  
+ <span data-ttu-id="cc636-109">Para obter mais informações, consulte [Serviços Criptográficos](../../../../standard/security/cryptographic-services.md).</span><span class="sxs-lookup"><span data-stu-id="cc636-109">For more information, see [Cryptographic Services](../../../../standard/security/cryptographic-services.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="f7941-110">O Rijndael (agora conhecido como criptografia AES [AES]) e algoritmos DES triplo (3DES) fornecem uma segurança maior do que o DES porque eles são mais intensos de computação.</span><span class="sxs-lookup"><span data-stu-id="f7941-110">The Rijndael (now referred to as Advanced Encryption Standard [AES]) and Triple Data Encryption Standard (3DES) algorithms provide greater security than DES because they are more computationally intensive.</span></span> <span data-ttu-id="f7941-111">Para obter mais informações, consulte <xref:System.Security.Cryptography.DES> e <xref:System.Security.Cryptography.Rijndael>.</span><span class="sxs-lookup"><span data-stu-id="f7941-111">For more information, see <xref:System.Security.Cryptography.DES> and <xref:System.Security.Cryptography.Rijndael>.</span></span>  
+>  <span data-ttu-id="cc636-110">O Rijndael (agora conhecido como criptografia AES [AES]) e algoritmos DES triplo (3DES) fornecem uma segurança maior do que o DES porque eles são mais intensos de computação.</span><span class="sxs-lookup"><span data-stu-id="cc636-110">The Rijndael (now referred to as Advanced Encryption Standard [AES]) and Triple Data Encryption Standard (3DES) algorithms provide greater security than DES because they are more computationally intensive.</span></span> <span data-ttu-id="cc636-111">Para obter mais informações, consulte <xref:System.Security.Cryptography.DES> e <xref:System.Security.Cryptography.Rijndael>.</span><span class="sxs-lookup"><span data-stu-id="cc636-111">For more information, see <xref:System.Security.Cryptography.DES> and <xref:System.Security.Cryptography.Rijndael>.</span></span>  
   
-### <a name="to-create-the-encryption-wrapper"></a><span data-ttu-id="f7941-112">Para criar o wrapper de criptografia</span><span class="sxs-lookup"><span data-stu-id="f7941-112">To create the encryption wrapper</span></span>  
+### <a name="to-create-the-encryption-wrapper"></a><span data-ttu-id="cc636-112">Para criar o wrapper de criptografia</span><span class="sxs-lookup"><span data-stu-id="cc636-112">To create the encryption wrapper</span></span>  
   
-1.  <span data-ttu-id="f7941-113">Criar o `Simple3Des` classe para encapsular os métodos de criptografia e descriptografia.</span><span class="sxs-lookup"><span data-stu-id="f7941-113">Create the `Simple3Des` class to encapsulate the encryption and decryption methods.</span></span>  
+1.  <span data-ttu-id="cc636-113">Criar o `Simple3Des` classe para encapsular os métodos de criptografia e descriptografia.</span><span class="sxs-lookup"><span data-stu-id="cc636-113">Create the `Simple3Des` class to encapsulate the encryption and decryption methods.</span></span>  
   
-     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_1.vb)]  
+     [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
-2.  <span data-ttu-id="f7941-114">Adicionar uma importação do namespace de criptografia para o início do arquivo que contém o `Simple3Des` classe.</span><span class="sxs-lookup"><span data-stu-id="f7941-114">Add an import of the cryptography namespace to the start of the file that contains the `Simple3Des` class.</span></span>  
+2.  <span data-ttu-id="cc636-114">Adicionar uma importação do namespace de criptografia para o início do arquivo que contém o `Simple3Des` classe.</span><span class="sxs-lookup"><span data-stu-id="cc636-114">Add an import of the cryptography namespace to the start of the file that contains the `Simple3Des` class.</span></span>  
   
-     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_2.vb)]  
+     [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
-3.  <span data-ttu-id="f7941-115">No `Simple3Des` de classe, adicione um campo particular para armazenar o provedor de serviços de criptografia 3DES.</span><span class="sxs-lookup"><span data-stu-id="f7941-115">In the `Simple3Des` class, add a private field to store the 3DES cryptographic service provider.</span></span>  
+3.  <span data-ttu-id="cc636-115">No `Simple3Des` de classe, adicione um campo particular para armazenar o provedor de serviços de criptografia 3DES.</span><span class="sxs-lookup"><span data-stu-id="cc636-115">In the `Simple3Des` class, add a private field to store the 3DES cryptographic service provider.</span></span>  
   
-     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_3.vb)]  
+     [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
-4.  <span data-ttu-id="f7941-116">Adicione um método particular que cria uma matriz de bytes de um comprimento especificado do hash da chave especificada.</span><span class="sxs-lookup"><span data-stu-id="f7941-116">Add a private method that creates a byte array of a specified length from the hash of the specified key.</span></span>  
+4.  <span data-ttu-id="cc636-116">Adicione um método particular que cria uma matriz de bytes de um comprimento especificado do hash da chave especificada.</span><span class="sxs-lookup"><span data-stu-id="cc636-116">Add a private method that creates a byte array of a specified length from the hash of the specified key.</span></span>  
   
-     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_4.vb)]  
+     [!code-vb[VbVbalrStrings#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#41)]  
   
-5.  <span data-ttu-id="f7941-117">Adicione um construtor para inicializar o provedor de serviços de criptografia 3DES.</span><span class="sxs-lookup"><span data-stu-id="f7941-117">Add a constructor to initialize the 3DES cryptographic service provider.</span></span>  
+5.  <span data-ttu-id="cc636-117">Adicione um construtor para inicializar o provedor de serviços de criptografia 3DES.</span><span class="sxs-lookup"><span data-stu-id="cc636-117">Add a constructor to initialize the 3DES cryptographic service provider.</span></span>  
   
-     <span data-ttu-id="f7941-118">O `key` parâmetro controla a `EncryptData` e `DecryptData` métodos.</span><span class="sxs-lookup"><span data-stu-id="f7941-118">The `key` parameter controls the `EncryptData` and `DecryptData` methods.</span></span>  
+     <span data-ttu-id="cc636-118">O `key` parâmetro controla a `EncryptData` e `DecryptData` métodos.</span><span class="sxs-lookup"><span data-stu-id="cc636-118">The `key` parameter controls the `EncryptData` and `DecryptData` methods.</span></span>  
   
-     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_5.vb)]  
+     [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
-6.  <span data-ttu-id="f7941-119">Adicione um método público que criptografa uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="f7941-119">Add a public method that encrypts a string.</span></span>  
+6.  <span data-ttu-id="cc636-119">Adicione um método público que criptografa uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="cc636-119">Add a public method that encrypts a string.</span></span>  
   
-     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_6.vb)]  
+     [!code-vb[VbVbalrStrings#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#42)]  
   
-7.  <span data-ttu-id="f7941-120">Adicione um método público que descriptografa uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="f7941-120">Add a public method that decrypts a string.</span></span>  
+7.  <span data-ttu-id="cc636-120">Adicione um método público que descriptografa uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="cc636-120">Add a public method that decrypts a string.</span></span>  
   
-     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_7.vb)]  
+     [!code-vb[VbVbalrStrings#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#43)]  
   
-     <span data-ttu-id="f7941-121">A classe de wrapper agora pode ser usada para proteger os ativos do usuário.</span><span class="sxs-lookup"><span data-stu-id="f7941-121">The wrapper class can now be used to protect user assets.</span></span> <span data-ttu-id="f7941-122">Neste exemplo, ele é usado para armazenar com segurança dados particulares do usuário em um arquivo de texto publicamente acessível.</span><span class="sxs-lookup"><span data-stu-id="f7941-122">In this example, it is used to securely store private user data in a publicly accessible text file.</span></span>  
+     <span data-ttu-id="cc636-121">A classe de wrapper agora pode ser usada para proteger os ativos do usuário.</span><span class="sxs-lookup"><span data-stu-id="cc636-121">The wrapper class can now be used to protect user assets.</span></span> <span data-ttu-id="cc636-122">Neste exemplo, ele é usado para armazenar com segurança dados particulares do usuário em um arquivo de texto publicamente acessível.</span><span class="sxs-lookup"><span data-stu-id="cc636-122">In this example, it is used to securely store private user data in a publicly accessible text file.</span></span>  
   
-### <a name="to-test-the-encryption-wrapper"></a><span data-ttu-id="f7941-123">Para testar o wrapper de criptografia</span><span class="sxs-lookup"><span data-stu-id="f7941-123">To test the encryption wrapper</span></span>  
+### <a name="to-test-the-encryption-wrapper"></a><span data-ttu-id="cc636-123">Para testar o wrapper de criptografia</span><span class="sxs-lookup"><span data-stu-id="cc636-123">To test the encryption wrapper</span></span>  
   
-1.  <span data-ttu-id="f7941-124">Em uma classe separada, adicione um método que usa o wrapper `EncryptData` método para criptografar uma cadeia de caracteres e gravá-lo para o usuário da pasta Meus documentos.</span><span class="sxs-lookup"><span data-stu-id="f7941-124">In a separate class, add a method that uses the wrapper's `EncryptData` method to encrypt a string and write it to the user's My Documents folder.</span></span>  
+1.  <span data-ttu-id="cc636-124">Em uma classe separada, adicione um método que usa o wrapper `EncryptData` método para criptografar uma cadeia de caracteres e gravá-lo para o usuário da pasta Meus documentos.</span><span class="sxs-lookup"><span data-stu-id="cc636-124">In a separate class, add a method that uses the wrapper's `EncryptData` method to encrypt a string and write it to the user's My Documents folder.</span></span>  
   
-     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_8.vb)]  
+     [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
-2.  <span data-ttu-id="f7941-125">Adicione um método que lê a cadeia de caracteres criptografada do usuário da pasta Meus documentos e descriptografa a cadeia de caracteres com o wrapper `DecryptData` método.</span><span class="sxs-lookup"><span data-stu-id="f7941-125">Add a method that reads the encrypted string from the user's My Documents folder and decrypts the string with the wrapper's `DecryptData` method.</span></span>  
+2.  <span data-ttu-id="cc636-125">Adicione um método que lê a cadeia de caracteres criptografada do usuário da pasta Meus documentos e descriptografa a cadeia de caracteres com o wrapper `DecryptData` método.</span><span class="sxs-lookup"><span data-stu-id="cc636-125">Add a method that reads the encrypted string from the user's My Documents folder and decrypts the string with the wrapper's `DecryptData` method.</span></span>  
   
-     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_9.vb)]  
+     [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
-3.  <span data-ttu-id="f7941-126">Adicionar código de interface do usuário para chamar o `TestEncoding` e `TestDecoding` métodos.</span><span class="sxs-lookup"><span data-stu-id="f7941-126">Add user interface code to call the `TestEncoding` and `TestDecoding` methods.</span></span>  
+3.  <span data-ttu-id="cc636-126">Adicionar código de interface do usuário para chamar o `TestEncoding` e `TestDecoding` métodos.</span><span class="sxs-lookup"><span data-stu-id="cc636-126">Add user interface code to call the `TestEncoding` and `TestDecoding` methods.</span></span>  
   
-4.  <span data-ttu-id="f7941-127">Execute o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f7941-127">Run the application.</span></span>  
+4.  <span data-ttu-id="cc636-127">Execute o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="cc636-127">Run the application.</span></span>  
   
-     <span data-ttu-id="f7941-128">Quando você testar o aplicativo, observe que ele não descriptografa os dados se você fornecer a senha incorreta.</span><span class="sxs-lookup"><span data-stu-id="f7941-128">When you test the application, notice that it will not decrypt the data if you provide the wrong password.</span></span>  
+     <span data-ttu-id="cc636-128">Quando você testar o aplicativo, observe que ele não descriptografa os dados se você fornecer a senha incorreta.</span><span class="sxs-lookup"><span data-stu-id="cc636-128">When you test the application, notice that it will not decrypt the data if you provide the wrong password.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7941-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f7941-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc636-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cc636-129">See also</span></span>
 - <xref:System.Security.Cryptography>
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>
 - <xref:System.Security.Cryptography.DES>
 - <xref:System.Security.Cryptography.TripleDES>
 - <xref:System.Security.Cryptography.Rijndael>
-- [<span data-ttu-id="f7941-130">Serviços criptográficos</span><span class="sxs-lookup"><span data-stu-id="f7941-130">Cryptographic Services</span></span>](../../../../standard/security/cryptographic-services.md)
+- [<span data-ttu-id="cc636-130">Serviços criptográficos</span><span class="sxs-lookup"><span data-stu-id="cc636-130">Cryptographic Services</span></span>](../../../../standard/security/cryptographic-services.md)

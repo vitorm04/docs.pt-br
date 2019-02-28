@@ -9,51 +9,51 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a78189a6b82100665ac07b9d7c89590613ec1e1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4b23bb2d81d1f5272a5813123681da7406c3368
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745617"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980329"
 ---
-# <a name="is-operator-visual-basic"></a><span data-ttu-id="8cbb2-102">Operador Is (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8cbb2-102">Is Operator (Visual Basic)</span></span>
-<span data-ttu-id="8cbb2-103">Compara duas variáveis de referência de objeto.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-103">Compares two object reference variables.</span></span>  
+# <a name="is-operator-visual-basic"></a><span data-ttu-id="a9152-102">Operador Is (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9152-102">Is Operator (Visual Basic)</span></span>
+<span data-ttu-id="a9152-103">Compara duas variáveis de referência de objeto.</span><span class="sxs-lookup"><span data-stu-id="a9152-103">Compares two object reference variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8cbb2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8cbb2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9152-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a9152-104">Syntax</span></span>  
   
 ```  
 result = object1 Is object2  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="8cbb2-105">Partes</span><span class="sxs-lookup"><span data-stu-id="8cbb2-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="a9152-105">Partes</span><span class="sxs-lookup"><span data-stu-id="a9152-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="8cbb2-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-106">Required.</span></span> <span data-ttu-id="8cbb2-107">Qualquer `Boolean` valor.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-107">Any `Boolean` value.</span></span>  
+ <span data-ttu-id="a9152-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="a9152-106">Required.</span></span> <span data-ttu-id="a9152-107">Qualquer `Boolean` valor.</span><span class="sxs-lookup"><span data-stu-id="a9152-107">Any `Boolean` value.</span></span>  
   
  `object1`  
- <span data-ttu-id="8cbb2-108">Necessário.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-108">Required.</span></span> <span data-ttu-id="8cbb2-109">Qualquer `Object` nome.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-109">Any `Object` name.</span></span>  
+ <span data-ttu-id="a9152-108">Necessário.</span><span class="sxs-lookup"><span data-stu-id="a9152-108">Required.</span></span> <span data-ttu-id="a9152-109">Qualquer `Object` nome.</span><span class="sxs-lookup"><span data-stu-id="a9152-109">Any `Object` name.</span></span>  
   
  `object2`  
- <span data-ttu-id="8cbb2-110">Necessário.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-110">Required.</span></span> <span data-ttu-id="8cbb2-111">Qualquer `Object` nome.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-111">Any `Object` name.</span></span>  
+ <span data-ttu-id="a9152-110">Necessário.</span><span class="sxs-lookup"><span data-stu-id="a9152-110">Required.</span></span> <span data-ttu-id="a9152-111">Qualquer `Object` nome.</span><span class="sxs-lookup"><span data-stu-id="a9152-111">Any `Object` name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8cbb2-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="8cbb2-112">Remarks</span></span>  
- <span data-ttu-id="8cbb2-113">O `Is` operador determina se duas referências de objeto se referem ao mesmo objeto.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-113">The `Is` operator determines if two object references refer to the same object.</span></span> <span data-ttu-id="8cbb2-114">No entanto, ele não realiza comparações de valor.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="8cbb2-115">Se `object1` e `object2` fazem referência à mesma instância de objeto, `result` é `True`; caso contrário, `result` é `False`.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a9152-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="a9152-112">Remarks</span></span>  
+ <span data-ttu-id="a9152-113">O `Is` operador determina se duas referências de objeto se referem ao mesmo objeto.</span><span class="sxs-lookup"><span data-stu-id="a9152-113">The `Is` operator determines if two object references refer to the same object.</span></span> <span data-ttu-id="a9152-114">No entanto, ele não realiza comparações de valor.</span><span class="sxs-lookup"><span data-stu-id="a9152-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="a9152-115">Se `object1` e `object2` fazem referência à mesma instância de objeto, `result` é `True`; caso contrário, `result` é `False`.</span><span class="sxs-lookup"><span data-stu-id="a9152-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span></span>  
   
- <span data-ttu-id="8cbb2-116">`Is` também pode ser usado com o `TypeOf` palavra-chave para tornar um `TypeOf`... `Is` expressão, que testa se uma variável de objeto é compatível com um tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span></span>  
+ <span data-ttu-id="a9152-116">`Is` também pode ser usado com o `TypeOf` palavra-chave para tornar um `TypeOf`... `Is` expressão, que testa se uma variável de objeto é compatível com um tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="a9152-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8cbb2-117">O `Is` palavra-chave também é usado no [selecione... Instrução de caso](../../../visual-basic/language-reference/statements/select-case-statement.md).</span><span class="sxs-lookup"><span data-stu-id="8cbb2-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span></span>  
+>  <span data-ttu-id="a9152-117">O `Is` palavra-chave também é usado no [selecione... Instrução de caso](../../../visual-basic/language-reference/statements/select-case-statement.md).</span><span class="sxs-lookup"><span data-stu-id="a9152-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8cbb2-118">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8cbb2-118">Example</span></span>  
- <span data-ttu-id="8cbb2-119">O exemplo a seguir usa o `Is` operador para comparar pares de referências de objeto.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-119">The following example uses the `Is` operator to compare pairs of object references.</span></span> <span data-ttu-id="8cbb2-120">Os resultados são atribuídos a um `Boolean` valor representando se os dois objetos são idênticos.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span></span>  
+## <a name="example"></a><span data-ttu-id="a9152-118">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a9152-118">Example</span></span>  
+ <span data-ttu-id="a9152-119">O exemplo a seguir usa o `Is` operador para comparar pares de referências de objeto.</span><span class="sxs-lookup"><span data-stu-id="a9152-119">The following example uses the `Is` operator to compare pairs of object references.</span></span> <span data-ttu-id="a9152-120">Os resultados são atribuídos a um `Boolean` valor representando se os dois objetos são idênticos.</span><span class="sxs-lookup"><span data-stu-id="a9152-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span></span>  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- <span data-ttu-id="8cbb2-121">Conforme demonstrado no exemplo anterior, você pode usar o `Is` operador para o teste de associação antecipada e tardia em objetos.</span><span class="sxs-lookup"><span data-stu-id="8cbb2-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span></span>  
+ <span data-ttu-id="a9152-121">Conforme demonstrado no exemplo anterior, você pode usar o `Is` operador para o teste de associação antecipada e tardia em objetos.</span><span class="sxs-lookup"><span data-stu-id="a9152-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cbb2-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8cbb2-122">See also</span></span>
-- [<span data-ttu-id="8cbb2-123">Operador TypeOf</span><span class="sxs-lookup"><span data-stu-id="8cbb2-123">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [<span data-ttu-id="8cbb2-124">Operador IsNot</span><span class="sxs-lookup"><span data-stu-id="8cbb2-124">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [<span data-ttu-id="8cbb2-125">Operadores de comparação no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8cbb2-125">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [<span data-ttu-id="8cbb2-126">Precedência do operador no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8cbb2-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="8cbb2-127">Operadores Listados por Funcionalidade</span><span class="sxs-lookup"><span data-stu-id="8cbb2-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="8cbb2-128">Operadores e Expressões</span><span class="sxs-lookup"><span data-stu-id="8cbb2-128">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9152-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a9152-122">See also</span></span>
+- [<span data-ttu-id="a9152-123">Operador TypeOf</span><span class="sxs-lookup"><span data-stu-id="a9152-123">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [<span data-ttu-id="a9152-124">Operador IsNot</span><span class="sxs-lookup"><span data-stu-id="a9152-124">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="a9152-125">Operadores de comparação no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a9152-125">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="a9152-126">Precedência do operador no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a9152-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="a9152-127">Operadores Listados por Funcionalidade</span><span class="sxs-lookup"><span data-stu-id="a9152-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="a9152-128">Operadores e Expressões</span><span class="sxs-lookup"><span data-stu-id="a9152-128">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
