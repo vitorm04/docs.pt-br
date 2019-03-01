@@ -4,12 +4,6 @@ description: Resume a API não gerenciada do .NET Framework para informações d
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069505"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI (Instrumentação de Gerenciamento do Windows) e Contadores de Desempenho (Referência de API Não Gerenciada)
 
@@ -73,5 +67,6 @@ A API inclui as seguintes funções:
 | [Função VerifyClient](verifyclientkey.md) | Garante que a chave do cliente tenha a segurança correta. |
 | [Função WritePropertyValue](writepropertyvalue.md) | Grava um número especificado de bytes em uma propriedade identificada por um identificador de propriedade. |
 
- ## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
+
 [Referência de API não gerenciada](../index.md) 

@@ -15,7 +15,7 @@ Os recursos de manipulação de exceção da linguagem C# ajudam você a lidar c
   
  Neste exemplo, um método testa a divisão por zero e captura o erro. Sem a manipulação de exceção, esse programa encerraria com um **DivideByZeroException não resolvido**.  
   
- [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#18)]  
   
 ## <a name="exceptions-overview"></a>Visão geral sobre exceções  
  As exceções têm as seguintes propriedades:  
