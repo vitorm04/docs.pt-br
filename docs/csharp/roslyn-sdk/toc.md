@@ -2,7 +2,7 @@
 ## [Entender o modelo de API do compilador](compiler-api-model.md)
 ## [Trabalhar com sintaxe](work-with-syntax.md)
 ## [Trabalhar com semântica](work-with-semantics.md)
-## [Trabalhar com um espaço de trabalho](work-with-workspace.md)
+## [Trabalhar com um workspace](work-with-workspace.md)
 ## [Explorar código com o visualizador de sintaxe](syntax-visualizer.md)
 ## Inícios Rápidos
 ### [Análise sintática](get-started/syntax-analysis.md)
@@ -41,6 +41,6 @@
 <!--
 ## How to guides
 -->
-<!-- Look at the samples, and determinine which 
+<!-- Look at the samples, and determine which 
     are "How To" vs. Samples. -->
     
