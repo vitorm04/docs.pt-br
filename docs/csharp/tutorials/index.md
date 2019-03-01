@@ -1,19 +1,13 @@
 ---
-title: Tutoriais do C#
-description: Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.
+title: 'Tutoriais do C#'
+description: 'Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.'
 ms.date: 10/25/2018
-ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084661"
 ---
 # <a name="c-tutorials"></a>Tutoriais do C#
 
 Bem-vindo aos tutoriais do C#. Eles começam com lições interativas que podem ser executadas em seu navegador. Os tutoriais posteriores e os tutoriais mais avançados ajudam você a trabalhar com as ferramentas de desenvolvimento do .NET para criar programas em C# em seu computador.
 
-## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriais interativos de introdução ao C# #
+## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriais interativos de introdução ao C#
 
 As primeiras lições explicam os conceitos de C# usando pequenos snippets de código. Você aprenderá os conceitos básicos da sintaxe de C# e como trabalhar com tipos de dados como cadeias de caracteres, números e valores boolianos. É tudo interativo e você começará a gravar e executar o código em questão de minutos. Estas primeiras lições não exigem conhecimento prévio de programação ou da linguagem C#.
 
@@ -47,7 +41,7 @@ Este tutorial pressupõe a conclusão das lições listadas acima.
 
 Todos os tutoriais de introdução posteriores à lição Olá, Mundo estão disponíveis em seu próprio ambiente de desenvolvimento local. No final de cada tutorial, você decidirá se deseja continuar com a próxima lição online ou no próprio computador. Há links para ajudar você a configurar seu ambiente e continuar com o próximo tutorial no computador.
 
-## <a name="explore-new-features-in-c"></a>Explore novos recursos no C# #
+## <a name="explore-new-features-in-c"></a>Explore novos recursos no C\#
 
 Experimente os novos recursos no [C# 6](../whats-new/csharp-6.md) nesta [exploração interativa](exploration/csharp-6.yml).
 
