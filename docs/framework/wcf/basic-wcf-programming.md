@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: 7ae35ebeae030cc925f6c787c550941ed268e427
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261782"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251073"
 ---
 # <a name="basic-wcf-programming"></a>Programação de WCF básica
 Esta seção apresenta os conceitos básicos para a criação de aplicativos do Windows Communication Foundation (WCF).  
