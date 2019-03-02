@@ -1,178 +1,45 @@
 ---
-title: 'Como: Abrir arquivos usando o componente OpenFileDialog'
-ms.date: 03/30/2017
+title: 'Como: Abrir arquivos com o componente OpenFileDialog'
+ms.date: 02/11/2019
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], opening files
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: 87e7640da76205341b9e95310314800ac9dbfe30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f297b557e86c13c00a57a2033ba4cd61753b3d0b
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678805"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202646"
 ---
-# <a name="how-to-open-files-using-the-openfiledialog-component"></a><span data-ttu-id="941db-102">Como: Abrir arquivos usando o componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="941db-102">How to: Open Files Using the OpenFileDialog Component</span></span>
-<span data-ttu-id="941db-103">O <xref:System.Windows.Forms.OpenFileDialog> componente permite que os usuários pesquisem as pastas do seu computador ou em qualquer computador na rede e selecione um ou mais arquivos para abrir.</span><span class="sxs-lookup"><span data-stu-id="941db-103">The <xref:System.Windows.Forms.OpenFileDialog> component allows users to browse the folders of their computer or any computer on the network and select one or more files to open.</span></span> <span data-ttu-id="941db-104">A caixa de diálogo retorna o caminho e o nome do arquivo que o usuário selecionou na caixa de diálogo.</span><span class="sxs-lookup"><span data-stu-id="941db-104">The dialog box returns the path and name of the file the user selected in the dialog box.</span></span>  
+# <a name="how-to-open-files-with-the-openfiledialog"></a><span data-ttu-id="17b71-102">Como: Abrir arquivos com OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="17b71-102">How to: Open files with the OpenFileDialog</span></span> 
+
+<span data-ttu-id="17b71-103">O <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> componente abre a caixa de diálogo do Windows para procurar e selecionar os arquivos.</span><span class="sxs-lookup"><span data-stu-id="17b71-103">The <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> component opens the Windows dialog box for browsing and selecting files.</span></span> <span data-ttu-id="17b71-104">Para abrir e ler os arquivos selecionados, você pode usar o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> método, ou crie uma instância da <xref:System.IO.StreamReader?displayProperty=nameWithType> classe.</span><span class="sxs-lookup"><span data-stu-id="17b71-104">To open and read the selected files, you can use the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> method, or create an instance of the <xref:System.IO.StreamReader?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="17b71-105">Os exemplos a seguir mostram as duas abordagens.</span><span class="sxs-lookup"><span data-stu-id="17b71-105">The following examples show both approaches.</span></span> 
+
+<span data-ttu-id="17b71-106">No .NET Framework, para obter ou definir a <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade requer um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe.</span><span class="sxs-lookup"><span data-stu-id="17b71-106">In .NET Framework, to get or set the <xref:System.Windows.Forms.FileDialog.FileName%2A> property requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="17b71-107">Os exemplos executam um <xref:System.Security.Permissions.FileIOPermission> permissão verificar e pode lançar uma exceção devido a privilégios insuficientes se executado em um contexto de confiança parcial.</span><span class="sxs-lookup"><span data-stu-id="17b71-107">The examples run a <xref:System.Security.Permissions.FileIOPermission> permission check, and can throw an exception due to insufficient privileges if run in a partial-trust context.</span></span> <span data-ttu-id="17b71-108">Para obter mais informações, consulte [Noções básicas sobre segurança de acesso do código](../../../../docs/framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="17b71-108">For more information, see [Code access security basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>
+
+<span data-ttu-id="17b71-109">Você pode compilar e executar esses exemplos que os aplicativos do .NET Framework a C# ou a linha de comando do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="17b71-109">You can build and run these examples as .NET Framework apps from the C# or Visual Basic command line.</span></span> <span data-ttu-id="17b71-110">Para obter mais informações, consulte [linha de comando compilando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou [compilar da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span><span class="sxs-lookup"><span data-stu-id="17b71-110">For more information, see [Command-line building with csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) or [Build from the command line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span></span> 
+
+<span data-ttu-id="17b71-111">Começando com o .NET Core 3.0, você pode também compilar e executar os exemplos de como os aplicativos .NET Core do Windows de uma pasta que tem um .NET Core Windows Forms  *\<nome da pasta >. csproj* arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="17b71-111">Starting with .NET Core 3.0, you can also build and run the examples as Windows .NET Core apps from a folder that has a .NET Core Windows Forms *\<folder name>.csproj* project file.</span></span> 
+
+## <a name="example-read-a-file-as-a-stream-with-streamreader"></a><span data-ttu-id="17b71-112">Exemplo: Ler um arquivo como um fluxo com um StreamReader</span><span class="sxs-lookup"><span data-stu-id="17b71-112">Example: Read a file as a stream with StreamReader</span></span>  
   
- <span data-ttu-id="941db-105">Depois que o usuário tiver selecionado o arquivo a ser aberto, há duas abordagens para o mecanismo de abertura do arquivo.</span><span class="sxs-lookup"><span data-stu-id="941db-105">Once the user has selected the file to be opened, there are two approaches to the mechanism of opening the file.</span></span> <span data-ttu-id="941db-106">Se você preferir trabalhar com fluxos de arquivos, você pode criar uma instância da <xref:System.IO.StreamReader> classe.</span><span class="sxs-lookup"><span data-stu-id="941db-106">If you prefer to work with file streams, you can create an instance of the <xref:System.IO.StreamReader> class.</span></span> <span data-ttu-id="941db-107">Como alternativa, você pode usar o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método para abrir o arquivo selecionado.</span><span class="sxs-lookup"><span data-stu-id="941db-107">Alternately, you can use the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method to open the selected file.</span></span>  
-  
- <span data-ttu-id="941db-108">O primeiro exemplo a seguir envolve uma <xref:System.Security.Permissions.FileIOPermission> verificação de permissão (conforme descrito na "Observação de segurança" abaixo), mas fornece a você acesso ao nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="941db-108">The first example below involves a <xref:System.Security.Permissions.FileIOPermission> permission check (as described in the "Security Note" below), but gives you access to the filename.</span></span> <span data-ttu-id="941db-109">É possível usar essa técnica do Computador Local, da Intranet e zonas da Internet.</span><span class="sxs-lookup"><span data-stu-id="941db-109">You can use this technique from the Local Machine, Intranet, and Internet zones.</span></span> <span data-ttu-id="941db-110">O segundo método também faz um <xref:System.Security.Permissions.FileIOPermission> verificação de permissão, mas é mais adequado para aplicativos nas zonas da Intranet ou Internet.</span><span class="sxs-lookup"><span data-stu-id="941db-110">The second method also does a <xref:System.Security.Permissions.FileIOPermission> permission check, but is better suited for applications in the Intranet or Internet zones.</span></span>  
-  
-### <a name="to-open-a-file-as-a-stream-using-the-openfiledialog-component"></a><span data-ttu-id="941db-111">Abrir um arquivo como um fluxo usando o componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="941db-111">To open a file as a stream using the OpenFileDialog component</span></span>  
-  
-1.  <span data-ttu-id="941db-112">Exiba a caixa de diálogo **Abrir Arquivo** e chame um método para abrir o arquivo selecionado pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="941db-112">Display the **Open File** dialog box and call a method to open the file selected by the user.</span></span>  
-  
-     <span data-ttu-id="941db-113">Uma abordagem é usar o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para exibir a caixa de diálogo Abrir arquivo e usar uma instância da <xref:System.IO.StreamReader> classe para abrir o arquivo.</span><span class="sxs-lookup"><span data-stu-id="941db-113">One approach is to use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the Open File dialog box, and use an instance of the <xref:System.IO.StreamReader> class to open the file.</span></span>  
-  
-     <span data-ttu-id="941db-114">O exemplo a seguir usa o <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos para abrir uma instância da <xref:System.Windows.Forms.OpenFileDialog> componente.</span><span class="sxs-lookup"><span data-stu-id="941db-114">The example below uses the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler to open an instance of the <xref:System.Windows.Forms.OpenFileDialog> component.</span></span> <span data-ttu-id="941db-115">Quando um arquivo é escolhido e o usuário clica em **OK**, o arquivo selecionado na caixa de diálogo será aberto.</span><span class="sxs-lookup"><span data-stu-id="941db-115">When a file is chosen and the user clicks **OK**, the file selected in the dialog box opens.</span></span> <span data-ttu-id="941db-116">Nesse caso, os conteúdos serão exibidos em uma caixa de mensagem, apenas para mostrar que o fluxo de arquivo foi lido.</span><span class="sxs-lookup"><span data-stu-id="941db-116">In this case, the contents are displayed in a message box, just to show that the file stream has been read.</span></span>  
-  
-    > [!IMPORTANT]
-    >  <span data-ttu-id="941db-117">Para obter ou definir a <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade, seu assembly requer um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe.</span><span class="sxs-lookup"><span data-stu-id="941db-117">To get or set the <xref:System.Windows.Forms.FileDialog.FileName%2A> property, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="941db-118">Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes.</span><span class="sxs-lookup"><span data-stu-id="941db-118">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="941db-119">Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../docs/framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="941db-119">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
-  
-     <span data-ttu-id="941db-120">O exemplo supõe que seu formulário tem um <xref:System.Windows.Forms.Button> controle e um <xref:System.Windows.Forms.OpenFileDialog> componente.</span><span class="sxs-lookup"><span data-stu-id="941db-120">The example assumes your form has a <xref:System.Windows.Forms.Button> control and an <xref:System.Windows.Forms.OpenFileDialog> component.</span></span>  
-  
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
-         Dim sr As New System.IO.StreamReader(OpenFileDialog1.FileName)  
-         MessageBox.Show(sr.ReadToEnd)  
-         sr.Close()  
-       End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
-       {  
-          System.IO.StreamReader sr = new   
-             System.IO.StreamReader(openFileDialog1.FileName);  
-          MessageBox.Show(sr.ReadToEnd());  
-          sr.Close();  
-       }  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          if(openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
-          {  
-             System::IO::StreamReader ^ sr = gcnew  
-                System::IO::StreamReader(openFileDialog1->FileName);  
-             MessageBox::Show(sr->ReadToEnd());  
-             sr->Close();  
-          }  
-       }  
-    ```  
-  
-     <span data-ttu-id="941db-121">(Visual c# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="941db-121">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
-  
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
-  
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="941db-122">Para obter mais informações sobre a leitura de fluxos de arquivos, consulte <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.Read%2A>.</span><span class="sxs-lookup"><span data-stu-id="941db-122">For more information about reading from file streams, see <xref:System.IO.FileStream.BeginRead%2A> and <xref:System.IO.FileStream.Read%2A>.</span></span>  
-  
-### <a name="to-open-a-file-as-a-file-using-the-openfiledialog-component"></a><span data-ttu-id="941db-123">Abrir um arquivo como um arquivo usando o componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="941db-123">To open a file as a file using the OpenFileDialog component</span></span>  
-  
-1.  <span data-ttu-id="941db-124">Use o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para exibir a caixa de diálogo e o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método para abrir o arquivo.</span><span class="sxs-lookup"><span data-stu-id="941db-124">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box and the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method to open the file.</span></span>  
-  
-     <span data-ttu-id="941db-125">O <xref:System.Windows.Forms.OpenFileDialog> do componente <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método retorna os bytes que compõem o arquivo.</span><span class="sxs-lookup"><span data-stu-id="941db-125">The <xref:System.Windows.Forms.OpenFileDialog> component's <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method returns the bytes that compose the file.</span></span> <span data-ttu-id="941db-126">Esses bytes oferecem um fluxo de leitura.</span><span class="sxs-lookup"><span data-stu-id="941db-126">These bytes give you a stream to read from.</span></span> <span data-ttu-id="941db-127">No exemplo a seguir, uma <xref:System.Windows.Forms.OpenFileDialog> componente é instanciado com um filtro de "cursor", permitindo que o usuário escolher somente arquivos com a extensão de nome de arquivo`.cur`.</span><span class="sxs-lookup"><span data-stu-id="941db-127">In the example below, an <xref:System.Windows.Forms.OpenFileDialog> component is instantiated with a "cursor" filter on it, allowing the user to choose only files with the file name extension`.cur`.</span></span> <span data-ttu-id="941db-128">Se um arquivo `.cur` for escolhido, o cursor do formulário será definido como o cursor selecionado.</span><span class="sxs-lookup"><span data-stu-id="941db-128">If a`.cur` file is chosen, the form's cursor is set to the selected cursor.</span></span>  
-  
-    > [!IMPORTANT]
-    >  <span data-ttu-id="941db-129">Para chamar o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método, seu assembly requer um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe.</span><span class="sxs-lookup"><span data-stu-id="941db-129">To call the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="941db-130">Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes.</span><span class="sxs-lookup"><span data-stu-id="941db-130">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="941db-131">Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../docs/framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="941db-131">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
-  
-     <span data-ttu-id="941db-132">O exemplo supõe que seu formulário tem um <xref:System.Windows.Forms.Button> controle.</span><span class="sxs-lookup"><span data-stu-id="941db-132">The example assumes your form has a <xref:System.Windows.Forms.Button> control.</span></span>  
-  
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       ' Displays an OpenFileDialog so the user can select a Cursor.  
-       Dim openFileDialog1 As New OpenFileDialog()  
-       openFileDialog1.Filter = "Cursor Files|*.cur"  
-       openFileDialog1.Title = "Select a Cursor File"  
-  
-       ' Show the Dialog.  
-       ' If the user clicked OK in the dialog and   
-       ' a .CUR file was selected, open it.  
-       If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
-         ' Assign the cursor in the Stream to the Form's Cursor property.  
-         Me.Cursor = New Cursor(openFileDialog1.OpenFile())  
-       End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       // Displays an OpenFileDialog so the user can select a Cursor.  
-       OpenFileDialog openFileDialog1 = new OpenFileDialog();  
-       openFileDialog1.Filter = "Cursor Files|*.cur";  
-       openFileDialog1.Title = "Select a Cursor File";  
-  
-       // Show the Dialog.  
-       // If the user clicked OK in the dialog and  
-       // a .CUR file was selected, open it.  
-        if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
-       {  
-          // Assign the cursor in the Stream to the Form's Cursor property.  
-          this.Cursor = new Cursor(openFileDialog1.OpenFile());  
-       }  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          // Displays an OpenFileDialog so the user can select a Cursor.  
-          OpenFileDialog ^ openFileDialog1 = new OpenFileDialog();  
-          openFileDialog1->Filter = "Cursor Files|*.cur";  
-          openFileDialog1->Title = "Select a Cursor File";  
-  
-          // Show the Dialog.  
-          // If the user clicked OK in the dialog and  
-          // a .CUR file was selected, open it.  
-          if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
-          {  
-             // Assign the cursor in the Stream to  
-             // the Form's Cursor property.  
-             this->Cursor = gcnew  
-                System::Windows::Forms::Cursor(  
-                openFileDialog1->OpenFile());  
-          }  
-       }  
-    ```  
-  
-     <span data-ttu-id="941db-133">(Visual c# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="941db-133">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
-  
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
-  
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
-  
-## <a name="see-also"></a><span data-ttu-id="941db-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="941db-134">See also</span></span>
+<span data-ttu-id="17b71-113">O exemplo a seguir usa o Windows Forms <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos para abrir o <xref:System.Windows.Forms.OpenFileDialog> com o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método.</span><span class="sxs-lookup"><span data-stu-id="17b71-113">The following example uses the Windows Forms <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler to open the <xref:System.Windows.Forms.OpenFileDialog> with the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span> <span data-ttu-id="17b71-114">Depois que o usuário escolhe um arquivo e seleciona **Okey**, uma instância da <xref:System.IO.StreamReader> classe lê o arquivo e exibe seu conteúdo na caixa de texto do formulário.</span><span class="sxs-lookup"><span data-stu-id="17b71-114">After the user chooses a file and selects **OK**, an instance of the <xref:System.IO.StreamReader> class reads the file and displays its contents in the form's text box.</span></span> <span data-ttu-id="17b71-115">Para obter mais informações sobre a leitura de fluxos de arquivos, consulte <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> e <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="17b71-115">For more information about reading from file streams, see <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> and <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>.</span></span>  
+
+ [!code-csharp[OpenFileDialog#1](../../../../samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#1](../../../../samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
+
+## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a><span data-ttu-id="17b71-116">Exemplo: Abrir um arquivo de uma seleção filtrada com OpenFile</span><span class="sxs-lookup"><span data-stu-id="17b71-116">Example: Open a file from a filtered selection with OpenFile</span></span> 
+
+<span data-ttu-id="17b71-117">O exemplo a seguir usa o <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos para abrir o <xref:System.Windows.Forms.OpenFileDialog> com um filtro que mostra apenas os arquivos de texto.</span><span class="sxs-lookup"><span data-stu-id="17b71-117">The following example uses the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler to open the <xref:System.Windows.Forms.OpenFileDialog> with a filter that shows only text files.</span></span> <span data-ttu-id="17b71-118">Depois que o usuário escolhe um arquivo de texto e seleciona **Okey**, o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método é usado para abrir o arquivo no bloco de notas.</span><span class="sxs-lookup"><span data-stu-id="17b71-118">After the user chooses a text file and selects **OK**, the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method is used to open the file in Notepad.</span></span>
+
+ [!code-csharp[OpenFileDialog#2](../../../../samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#2](../../../../samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
+
+## <a name="see-also"></a><span data-ttu-id="17b71-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="17b71-119">See also</span></span>
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [<span data-ttu-id="941db-135">Componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="941db-135">OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+- [<span data-ttu-id="17b71-120">Componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="17b71-120">OpenFileDialog component</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
