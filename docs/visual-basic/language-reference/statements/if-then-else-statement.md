@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: ceca58b2d69d72e079a9f2e2791f7f586c459167
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aeffdc842730a1be8160cd8db8e4c2aa849e94cc
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743641"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201723"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>Instrução If...Then... (Visual Basic)
 Execute um grupo de instruções condicionalmente, dependendo do valor de uma expressão.  
@@ -104,7 +104,7 @@ Este artigo inclui vários exemplos que ilustram usos do `If`... `Then`... `Else
  
  O exemplo a seguir ilustra o uso da sintaxe de várias linhas de `If`... `Then`... `Else` instrução.  
   
- [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb?highlight=11,14,17,19)]
+ [!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
 
 ## <a name="nested-syntax-example"></a>Exemplo de sintaxe aninhados
 
@@ -112,13 +112,13 @@ Este artigo inclui vários exemplos que ilustram usos do `If`... `Then`... `Else
 
  O exemplo a seguir contém aninhada `If`... `Then`... `Else` instruções.  
   
- [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb?highlight=14,15,17,19,20,21,23,25,26,28)]
+ [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
 ## <a name="single-line-syntax-example"></a>Exemplo de sintaxe de linha única
   
 <a name="single-line"></a> O exemplo a seguir ilustra o uso da sintaxe de linha única.  
   
- [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb?highlight=18)]
+ [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
   
 ## <a name="see-also"></a>Consulte também
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>

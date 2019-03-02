@@ -2,18 +2,18 @@
 title: Localizando texto em documentos do Word (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 5ab6d337fdf20684027cef3a41fe367bbedd4ee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ee052f140f7db5c3c53e116d8b295b120436f6f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720857"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200969"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Localizando texto em documentos do Word (Visual Basic)
 Este tópico estende as consultas anteriores para fazer algo útil: localizar todas as ocorrências de uma cadeia de caracteres no documento.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo processa um documento de WordprocessingML, para localizar todas as ocorrências de uma parte específica de texto no documento. Para fazer isso, usamos uma consulta encontrar a cadeia de caracteres “hello world”. Este exemplo cria nos exemplos anteriores neste tutorial. A nova consulta é chamada nos comentários no código a seguir.  
+ Este exemplo processa um documento de WordprocessingML para localizar todas as ocorrências de uma parte específica de texto no documento. Para fazer isso, usamos uma consulta encontrar a cadeia de caracteres “hello world”. Este exemplo cria nos exemplos anteriores neste tutorial. A nova consulta é chamada nos comentários no código a seguir.  
   
  Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o código-fonte Office documento Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   

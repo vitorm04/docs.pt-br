@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976480"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203737"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrução On Error (Visual Basic)
 Permite que uma rotina de tratamento de erros e especifica o local da rotina dentro de um procedimento; também pode ser usado para desabilitar uma rotina de tratamento de erros.  
@@ -111,7 +111,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="example"></a>Exemplo  
  Este primeiro exemplo usa o `On Error GoTo` instrução para especificar o local de uma rotina de tratamento de erros dentro de um procedimento. No exemplo, uma tentativa de dividir por zero gera o erro número 6. O erro é tratado na rotina de tratamento de erros e controle, em seguida, retorne para a instrução que causou o erro. O `On Error GoTo 0` instrução desativa a interceptação de erro. Em seguida, a `On Error Resume Next` instrução é usada para adiar a interceptação de erros para que o contexto para o erro gerado pela próxima instrução pode ser conhecido para determinados. Observe que `Err.Clear` é usado para limpar o `Err` propriedades do objeto depois que o erro é tratado.  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

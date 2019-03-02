@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: def49bc4264f2cae8e17d5f00ff12ad41674da2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540605"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212515"
 ---
 # <a name="service-identity-and-authentication"></a>Identidade e autenticação de serviço
-Um serviço *identidade de ponto de extremidade*é um valor gerado do serviço de descrição de linguagem WSDL (Web Services). Esse valor, propagada para qualquer cliente, é usado para autenticar o serviço. Depois que o cliente inicia uma comunicação para um ponto de extremidade e o serviço autentica para o cliente, o cliente compara o valor de identidade do ponto de extremidade com o valor real retornado o processo de autenticação de ponto de extremidade. Se elas corresponderem, o cliente terá certeza que ele entrou em contato o ponto de extremidade de serviço esperada. Isso funciona como uma proteção contra *phishing* , impedindo que um cliente que está sendo redirecionado para um ponto de extremidade hospedado por um serviço mal-intencionado.  
+Um serviço *identidade de ponto de extremidade* é um valor gerado do serviço de descrição de linguagem WSDL (Web Services). Esse valor, propagada para qualquer cliente, é usado para autenticar o serviço. Depois que o cliente inicia uma comunicação para um ponto de extremidade e o serviço autentica para o cliente, o cliente compara o valor de identidade do ponto de extremidade com o valor real retornado o processo de autenticação de ponto de extremidade. Se elas corresponderem, o cliente terá certeza que ele entrou em contato o ponto de extremidade de serviço esperada. Isso funciona como uma proteção contra *phishing* , impedindo que um cliente que está sendo redirecionado para um ponto de extremidade hospedado por um serviço mal-intencionado.  
   
  Para um aplicativo de exemplo que demonstra a configuração de identidade, consulte [exemplo de identidade de serviço](../../../../docs/framework/wcf/samples/service-identity-sample.md). Para obter mais informações sobre pontos de extremidade e endereços de ponto de extremidade, consulte [endereços](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   

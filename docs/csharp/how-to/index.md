@@ -1,14 +1,9 @@
 ---
-title: Artigos de instruções (Guia de C#)
+title: 'Artigos de instruções (Guia de C#)'
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260185"
 ---
+
 # <a name="how-to-c"></a>Instruções (C#)
 
 Na seção de Instruções do guia de C#, é possível encontrar respostas rápidas para perguntas comuns. Em alguns casos, os artigos podem ser listados em várias seções. Queremos facilitar que sejam localizados por vários caminhos de pesquisa. 
@@ -113,7 +108,7 @@ O LINQ permite que você grave códigos para consultar qualquer fonte de dados c
 - [Classifique os elementos de uma fonte de dados](../programming-guide/concepts/linq/how-to-sort-elements.md).
 - [Classifique os elementos em múltiplas chaves](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md).
 - [Controle o tipo de uma projeção](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md).
-- [Conte ocorrências de um valor em uma sequência de origem](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
+- [Conte as ocorrências de um valor em uma sequência de origem](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
 - [Calcule valores intermediários](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md).
 - [Mescle dados de várias fontes](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md).
 - [Encontre a diferença de conjunto entre duas sequências](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md).

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7185802a3857fcd73c63d097090a2a7809f65279
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03be79e6300afa6d25a005b0a21b8c2bf15d27be
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825921"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202269"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>Interface IXCLRDataMethodInstance
 
@@ -33,7 +33,7 @@ Fornece métodos para consultar informações sobre uma instância de método.
 | Método                                                                                                                  | Descrição                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | Obtém a IL às informações de mapeamento de endereço. |
-| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Obtém o endereço do ponto de entrada mais representativo para a compilação nativa de todos os pontos de entrada possíveis para um método... |
+| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Obtém o endereço do ponto de entrada mais representativo para a compilação nativa de todos os pontos de entrada possíveis para um método. |
 
 
 ## <a name="remarks"></a>Comentários

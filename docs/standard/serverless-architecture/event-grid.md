@@ -4,12 +4,12 @@ description: A grade de eventos do Azure é uma solução sem servidor para entr
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145857"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212177"
 ---
 # <a name="event-grid"></a>Grade de eventos
 
@@ -98,7 +98,7 @@ Uma grande vantagem de usar a grade de eventos é que as mensagens automática p
 |  | Microsoft.Resources.ResourceDeleteSuccess | Gerado quando uma operação de exclusão do recurso é bem-sucedida. |
 |  | Microsoft.Resources.ResourceDeleteFailure | Gerado quando uma operação de exclusão de recurso falha. |
 | | Microsoft.Resources.ResourceDeleteCancel | Gerado quando uma operação de exclusão do recurso é cancelada. Esse evento ocorre quando uma implantação de modelo é cancelada. |
-| Armazenamento de BLOBs | Microsoft.Storage.BlobCreated | Gerado quando um blob é criado. |
+| Armazenamento de Blobs | Microsoft.Storage.BlobCreated | Gerado quando um blob é criado. |
 | | Microsoft.Storage.BlobDeleted | Gerado quando um blob é excluído. |
 | Hubs de eventos | Microsoft.EventHub.CaptureFileCreated | Gerado quando um arquivo de captura é criado.
 | Hub IoT | Microsoft.Devices.DeviceCreated | Publicado quando um dispositivo é registrado para um hub IoT. |
@@ -124,7 +124,7 @@ Neste capítulo, você aprendeu sobre a plataforma do Azure sem servidor que é 
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Análise do Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure: Traga o seu aplicativo para a nuvem com o Azure Functions sem servidor](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Grade de Eventos do Azure](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Grade de Eventos do Azure](https://docs.microsoft.com/azure/event-grid/overview)
 * [Esquema de evento de grade de eventos do Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Hubs de eventos do Azure](https://docs.microsoft.com/azure/event-hubs)
 * [Documentação de funções do Azure](https://docs.microsoft.com/azure/azure-functions)

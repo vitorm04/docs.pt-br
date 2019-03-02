@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332241"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200878"
 ---
 # <a name="getting-started-tutorial"></a>Guia de introdução ao tutorial
 Os tópicos contidos nesta seção destinam-se a fornecer uma exposição rápida para o Windows Communication Foundation (WCF) experiência de programação. Eles devem ser concluídos na ordem da lista que se encontra na parte inferior deste tópico. Trabalhar com este tutorial fornece uma compreensão introdutória das etapas necessárias para criar o cliente e um serviço WCF aplicativos. Um serviço expõe um ou mais pontos de extremidade, sendo que cada um deles expõe uma ou mais operações de serviço. O *ponto de extremidade* de um serviço Especifica um endereço em que o serviço pode ser encontrado, uma associação que contém as informações que descrevem como um cliente deve se comunicar com o serviço e um contrato que define a funcionalidade fornecida pelo serviço a seus clientes.
@@ -33,7 +33,7 @@ Para obter informações mais detalhadas sobre a criação de serviços e client
 
  [Como: Implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 
- Descreve como implementar um contrato de serviço. Após ser definido, um contrato deve ser implementado com uma classe de serviço.
+ Descreve como implementar um contrato de serviço. Quando um contrato é definido, ele deve ser implementado com uma classe de serviço.
 
  [Como: Hospedar e executar um serviço básico](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 

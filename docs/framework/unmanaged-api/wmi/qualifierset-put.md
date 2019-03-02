@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694133"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201151"
 ---
 # <a name="qualifiersetput-function"></a>Função QualifierSet_Put
 Grava o qualificador nomeado e o valor. O novo qualificador substitui o valor anterior do mesmo nome. Se o qualificador não existir, ele é criado. 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | O qualificador pode ser substituído em uma classe derivada ou instância. **Esse é o valor padrão.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | O qualificador é propagado para instâncias. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | O qualificador é propagado para classes derivadas. |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | O qualificador não pode ser substituído em uma instância ou classe derivada. |
-| `WBEM_FLAVOR_AMENDED | 0x80 | O qualificador é localizado. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | O qualificador não pode ser substituído em uma instância ou classe derivada. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | O qualificador é localizado. |
 
 ## <a name="return-value"></a>Valor retornado
 
