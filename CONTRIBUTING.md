@@ -107,7 +107,7 @@ Seu tópico também conterá links para a amostra. Crie um link diretamente para
 
 Para saber mais, confira o [Leiame da amostra](https://github.com/dotnet/samples/blob/master/README.md).
 
-## <a name="the-c-interactive-experience"></a>A experiência interativa em C# #
+## <a name="the-c-interactive-experience"></a>A experiência interativa em C#
 
 Códigos de exemplo curtos em C# podem usar a marcação de linguagem `csharp-interactive` para especificar uma amostra em C# executada no navegador. (Código de exemplos embutidos usam a marcação `csharp-interactive`. Para snippets incluídos da fonte, use a marcação `code-csharp-interactive`.) Esses códigos de exemplo exibem uma janela de código e uma janela de saída no artigo. A janela de saída exibe qualquer resultado da execução do código interativo depois que o usuário tiver executado a amostra. 
 

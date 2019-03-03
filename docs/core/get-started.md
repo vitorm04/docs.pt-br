@@ -4,12 +4,12 @@ description: Encontre recursos para aprender a criar aplicativos .NET Core no Wi
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121248"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977156"
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
@@ -84,4 +84,4 @@ Comece a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a pass
 
 Confira o artigo [Pré-requisitos do desenvolvimento para macOS](macos-prerequisites.md) para obter uma lista das versões do OS X/macOS com suporte.
 
-***
+---

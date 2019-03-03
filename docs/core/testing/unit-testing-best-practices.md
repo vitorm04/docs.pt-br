@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 79c8e216126353bdf5fca34baf432496aacb93ce
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151521"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836247"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
@@ -18,7 +18,7 @@ Há diversas vantagens para escrever testes de unidade; eles ajudam com a regres
 
 Neste guia, você aprenderá algumas melhores práticas ao escrever testes de unidade para manter seus testes resilientes e fáceis de entender.
 
-Por [John Reese](https://reesespieces.io) com agradecimentos especiais a [Roy Osherove](http://osherove.com/)
+Por [John Reese](https://reese.dev) com agradecimentos especiais a [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Por que o teste de unidade?
 

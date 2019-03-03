@@ -4,12 +4,12 @@ description: Saiba como criar bibliotecas do .NET Core usando ferramentas da CLI
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169359"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212060"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Desenvolvendo bibliotecas com as Ferramentas de Plataforma Cruzada
 
@@ -58,9 +58,9 @@ Você tem três opções principais ao direcionar para o .NET Standard, dependen
     ```
 
 2. Você pode usar uma versão inferior ou superior do .NET Standard, modificando o valor no nó `TargetFramework` do arquivo de projeto.
-    
+
     Versões do .NET Standard são compatíveis com versões anteriores. Isso significa que as bibliotecas `netstandard1.0` são executadas em plataformas `netstandard1.1` e superior. No entanto, não há compatibilidade com versões posteriores: plataformas inferiores do .NET Standard não podem fazer referência às superiores. Isso significa que as bibliotecas `netstandard1.0` não podem fazer de referência a bibliotecas direcionadas a `netstandard1.1` ou superior. Selecione a versão Standard com a combinação de suporte a APIs e plataformas ideal para suas necessidades. É recomendável `netstandard1.4` por enquanto.
-    
+
 3. Se desejar direcionar para o .NET Framework versões 4.0 ou inferior ou se desejar usar uma API disponível no .NET Framework, mas não no .NET Standard (por exemplo, `System.Drawing`), leia as seções a seguir para aprender a usar multiplataformas.
 
 ## <a name="how-to-target-the-net-framework"></a>Como direcionar o .NET Framework
@@ -131,7 +131,7 @@ O arquivo de projeto seria semelhante a:
 Você notará três alterações importantes aqui:
 
 1. O nó `TargetFramework` foi substituído pelo `TargetFrameworks` e três TFMs são expressas dentro.
-1. Há um nó `<ItemGroup>` para o destino `net40 ` extraindo um que o .NET Framework referencia.
+1. Há um nó `<ItemGroup>` para o destino `net40` extraindo um que o .NET Framework referencia.
 1. Há um nó `<ItemGroup>` para o destino `net45` extraindo dois que o .NET Framework referencia.
 
 O sistema de build reconhece os seguintes símbolos do pré-processador usados nas diretivas `#if`:
@@ -256,7 +256,7 @@ Cada um deles contém arquivos `.dll` para cada destino.
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Verifique se o xUnit é executado por meio da execução do comando `dotnet test`. Se você optar por usar o MSTest, o executor de console do MSTest deverá ser executado.
-    
+
 E pronto. Agora você pode testar sua biblioteca em todas as plataformas usando as ferramentas de linha de comando. É muito simples testar sua biblioteca agora que está tudo configurado:
 
 1. Faça alterações na sua biblioteca.
@@ -321,7 +321,7 @@ Isso adicionará os três projetos acima e um arquivo de solução que os vincul
 A melhor maneira de fazer referência a um projeto é usar a CLI do .NET Core para adicionar uma referência de projeto. Dos diretórios dos projetos **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp**, você pode executar o seguinte comando:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Os arquivos de projeto para **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** agora farão referência a **AwesomeLibrary.Core** como um destino `ProjectReference`.  Você pode verificar isso inspecionando os arquivos de projeto e vendo o seguinte neles:
