@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578100"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836559"
 ---
 # <a name="observer-design-pattern"></a>Padrão de design do observador
 O padrão de design do observador permite a um assinante se registrar em um provedor e receber notificações dele. Ele é adequado para qualquer cenário que requer a notificação por push. O padrão define um *provedor* (também conhecido como *assunto* ou *observável*) e zero, um ou mais *observadores*. Observadores registram-se com o provedor e, sempre que uma condição, evento ou alteração de estado predefinido ocorrer, o provedor notificará automaticamente todos os observadores chamando um dos seus métodos. Nessa chamada de método, o provedor também pode fornecer informações sobre o estado atual para observadores. No .NET Framework, o padrão de design de observador é aplicado ao implementar as interfaces genéricas <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. O parâmetro de tipo genérico representa o tipo que fornece informações de notificação.  
@@ -46,7 +46,7 @@ O padrão de design do observador permite a um assinante se registrar em um prov
 -   Um objeto que contém os dados que o provedor envia para seus observadores. O tipo desse objeto corresponde ao parâmetro de tipo genérico das interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Embora esse objeto possa ser o mesmo que a implementação de <xref:System.IObservable%601>, geralmente ele é um tipo separado.  
   
 > [!NOTE]
->  Além de implementar o padrão de design do observador, pode ser interessante explorar bibliotecas que são criadas usando as interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Por exemplo, [Extensões Reativas para .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) consistem em um conjunto de métodos de extensão e operadores de sequência padrão LINQ para oferecer suporte à programação assíncrona.  
+>  Além de implementar o padrão de design do observador, pode ser interessante explorar bibliotecas que são criadas usando as interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Por exemplo, [Extensões Reativas para .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) consistem em um conjunto de métodos de extensão e operadores de sequência padrão LINQ para oferecer suporte à programação assíncrona.  
   
 ## <a name="implementing-the-pattern"></a>Implementando o padrão  
  O exemplo a seguir usa o padrão de design do observador para implementar um sistema de informações de coleta de bagagem de aeroporto. Uma classe `BaggageInfo` fornece informações sobre voos que chegam e as esteiras onde as bagagens de cada voo estão disponíveis para retirada. Isso é mostrado no exemplo a seguir.  
@@ -93,5 +93,5 @@ O padrão de design do observador permite a um assinante se registrar em um prov
 |Título|Descrição|  
 |-----------|-----------------|  
 |[Práticas recomendadas para o padrão de design do observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)|São descritas as práticas recomendadas ao desenvolver aplicativos que implementam o padrão de design do observador.|  
-|[Como implementar um provedor](../../../docs/standard/events/how-to-implement-a-provider.md)|É fornecida uma implementação passo a passo de um provedor para uma aplicativo de monitoramento de temperatura.|  
-|[Como implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md)|É fornecida uma implementação passo a passo de um observador para uma aplicativo de monitoramento de temperatura.|
+|[Como: Implementar um provedor](../../../docs/standard/events/how-to-implement-a-provider.md)|É fornecida uma implementação passo a passo de um provedor para uma aplicativo de monitoramento de temperatura.|  
+|[Como: Implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md)|É fornecida uma implementação passo a passo de um observador para uma aplicativo de monitoramento de temperatura.|

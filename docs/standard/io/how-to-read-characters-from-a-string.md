@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01d5fb2e4f785a4a510715b58e95d310a6ffa4e2
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675342"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835194"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Como: Ler caracteres de uma cadeia de caracteres
 Os exemplos de código a seguir mostram como ler caracteres de forma síncrona ou assíncrona de uma cadeia de caracteres.  
@@ -42,7 +42,7 @@ Os exemplos de código a seguir mostram como ler caracteres de forma síncrona o
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
 - [E/S assíncrona de arquivo](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [Como: Criar uma listagem de diretório](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+- [Como: Criar uma listagem de diretório](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [Como: Ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
 - [Como: Abrir um arquivo de log e fazer acréscimos a ele](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
 - [Como: Ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  

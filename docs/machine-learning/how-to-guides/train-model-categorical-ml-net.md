@@ -1,14 +1,14 @@
 ---
 title: Aplicar a engenharia de recursos ao treinamento de modelo em dados categóricos – ML.NET
 description: Saiba como aplicar a engenharia de recursos ao treinamento de modelo de aprendizado de máquina em dados categóricos com o ML.NET
-ms.date: 02/06/2018
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c24840ee89917d270bcbacbcf36905b4ee82a4aa
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092079"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968407"
 ---
 # <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a>Aplicar a engenharia de recursos ao treinamento de modelo em dados categóricos – ML.NET
 

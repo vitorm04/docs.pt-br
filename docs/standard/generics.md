@@ -4,12 +4,12 @@ description: Saiba como os genéricos atuam como modelos de código que permitem
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 1d1899d482738bc6cc9f638b6a74eab8d4ca70c1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121175"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835285"
 ---
 # <a name="generic-types-overview"></a>Visão geral de tipos genéricos
 
@@ -68,5 +68,4 @@ Uma vantagem adicional de o tempo de execução saber o tipo de seu genérico é
 
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução aos genéricos C#](https://msdn.microsoft.com/library/ms379564.aspx)
 - [Guia de Programação em C# – Genéricos](../../docs/csharp/programming-guide/generics/index.md)

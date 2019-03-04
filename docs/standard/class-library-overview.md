@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555174"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970565"
 ---
 # <a name="net-class-library-overview"></a>Visão geral da biblioteca de classes do .NET
 
@@ -96,8 +96,8 @@ As implementações do .NET incluem classes, interfaces, delegados e tipos de va
 ||<xref:System.UInt16>|Um inteiro de 16 bits sem sinal.<br /><br /> Não compatível com CLS.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|Um inteiro sem sinal de 32 bits.<br /><br /> Não compatível com CLS.|**UInteger**|**uint**|**unsigned int**<br /> - ou -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Um inteiro sem sinal de 64 bits.<br /><br /> Não compatível com CLS.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|Ponto flutuante|<xref:System.Single>|Um número de ponto flutuante de precisão simples (32 bits).|**Simples**|**float**|**float**|**float32**</br> ou</br>**single**|  
-||<xref:System.Double>|Um número de ponto flutuante de precisão dupla (64 bits).|**Duplo**|**double**|**double**|**float**</br> ou </br> **double**|  
+|Ponto flutuante|<xref:System.Single>|Um número de ponto flutuante de precisão simples (32 bits).|**Simples**|**float**|**float**|**float32**<br> ou<br>**single**|  
+||<xref:System.Double>|Um número de ponto flutuante de precisão dupla (64 bits).|**Duplo**|**double**|**double**|**float**<br> ou <br> **double**|  
 |Lógico|<xref:System.Boolean>|Um valor booliano (verdadeiro ou falso).|**Booliano**|**bool**|**bool**|**bool**|  
 |Outros|<xref:System.Char>|Um caractere Unicode (16 bits).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Um valor decimal (128 bits).|**Decimal**|**decimal**|**Decimal**|**decimal**|  

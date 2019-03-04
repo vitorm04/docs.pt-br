@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506713"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979951"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
@@ -62,7 +62,7 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 |"G" ou "g"|Geral|Resultado: A mais compacta entre notação de ponto fixo ou científica.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número de dígitos significativos.<br /><br /> Especificador de precisão padrão: Depende do tipo numérico.<br /><br /> Para saber mais: [O especificador de formato geral ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" ou "n"|Número|Resultado: Dígitos integrais e decimais, separadores de grupo e um separador decimal com sinal negativo opcional.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número desejado de casas decimais.<br /><br /> Especificador de precisão padrão: Definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [O especificador de formato numérico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" ou "p"|Porcentagem|Resultado: Número multiplicado por 100 e exibido com um sinal de porcentagem.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número desejado de casas decimais.<br /><br /> Especificador de precisão padrão: Definido por <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [O especificador de formato de porcentagem ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" ou "r"|Ida e volta|Resultado: Uma cadeia de caracteres que pode ir e voltar para um número idêntico.<br /><br /> Compatível com: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Observação: Recomendado apenas para o tipo <xref:System.Numerics.BigInteger>. Para os tipos <xref:System.Double>, use "G17"; para os tipos <xref:System.Single>, use "G9". </br> Especificador de precisão: Ignorado.<br /><br /> Para saber mais: [O especificador de formato de viagem de ida e volta ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"R" ou "r"|Ida e volta|Resultado: Uma cadeia de caracteres que pode ir e voltar para um número idêntico.<br /><br /> Compatível com: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Observação: Recomendado apenas para o tipo <xref:System.Numerics.BigInteger>. Para os tipos <xref:System.Double>, use "G17"; para os tipos <xref:System.Single>, use "G9". <br> Especificador de precisão: Ignorado.<br /><br /> Para saber mais: [O especificador de formato de viagem de ida e volta ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" ou "x"|Hexadecimal|Resultado: Uma cadeia de caracteres hexadecimal.<br /><br /> Compatível com: Somente tipos integrais.<br /><br /> Especificador de precisão: Número de dígitos na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador de formato hexadecimal ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |Qualquer outro caractere único|Especificador desconhecido|Resultado: Gera uma <xref:System.FormatException> em tempo de execução.||  
   
@@ -282,7 +282,7 @@ Quando usado com um valor <xref:System.Single>, o especificador de formato "G9" 
  [Voltar à tabela](#table)  
   
 <a name="RFormatString"></a>   
-## <a name="the-round-trip-r-format-specifier"></a>O Especificador de formato de ida e volta ("R")  
+## <a name="the-round-trip-r-format-specifier"></a>O Especificador de Formato da Viagem de Ida e Volta ("R")  
  O especificador de formato de ida e volta ("R") tenta garantir que um valor numérico convertido em uma cadeia de caracteres seja analisado com o mesmo valor numérico. Esse formato é compatível apenas com os tipos <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.  
 
 Para valores <xref:System.Double>, o especificador de formato "R" em alguns casos falha em realizar a viagem de ida e volta com êxito do valor original. Para os valores <xref:System.Double> e <xref:System.Single>, ele também oferece desempenho relativamente baixo. Em vez disso, recomendamos que você use o especificador de formato ["G17"](#GFormatString) para os valores <xref:System.Double> e o especificador de formato ["G9"](#GFormatString) para realizar a viagem de ida e volta dos valores <xref:System.Single>.

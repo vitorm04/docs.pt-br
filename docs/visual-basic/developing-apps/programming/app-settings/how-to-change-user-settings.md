@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-ms.openlocfilehash: 3cf50f838124539dc774574cd1ad0b629d01a9ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e93dbf453b831bb28707250466ea928bfe9a716
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688166"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976376"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>Como: Alterar configurações de usuário no Visual Basic
 Você pode alterar uma configuração do usuário atribuindo um novo valor à propriedade da configuração no objeto `My.Settings`.  
@@ -25,7 +25,7 @@ Você pode alterar uma configuração do usuário atribuindo um novo valor à pr
 ## <a name="example"></a>Exemplo  
  Este exemplo altera o valor da configuração do usuário `Nickname`.  
   
- [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#7)]  
   
  Para que esse exemplo funcione, seu aplicativo deve ter uma configuração do usuário `Nickname`, do tipo `String`.  
   

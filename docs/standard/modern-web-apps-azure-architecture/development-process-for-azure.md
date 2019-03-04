@@ -4,19 +4,19 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827468"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202100"
 ---
 # <a name="development-process-for-azure"></a>Processo de desenvolvimento para o Azure
 
 > _"Com a nuvem, pessoas e pequenas empresas podem estalar os dedos e configurar serviços de nível empresarial instantaneamente."_  
 > _- Roy Stephan_
 
- ## <a name="vision"></a>Visão
+## <a name="vision"></a>Visão
 
 > *Desenvolva aplicativos ASP.NET Core bem projetados como desejar, usando o Visual Studio ou a CLI do dotnet e o Visual Studio Code ou seu editor escolhido.*
 

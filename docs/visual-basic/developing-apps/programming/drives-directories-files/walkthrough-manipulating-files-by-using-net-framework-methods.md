@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 89645c489cb9f21ffe415fb7c02ae09fca9a7444
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56d753c9bb4e3585049eb98929774ac810d8ed40
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505699"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978170"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Passo a passo: Manipulando arquivos usando métodos do .NET Framework (Visual Basic)
 Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a classe <xref:System.IO.StreamReader>, verificar se um arquivo está sendo acessado, pesquisar uma cadeia de caracteres dentro de um arquivo lido com uma instância da classe <xref:System.IO.StreamReader> e gravar em um arquivo usando a classe <xref:System.IO.StreamWriter>.  
@@ -57,32 +57,32 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 2.  Como o aplicativo faz referência ao namespace <xref:System.IO>, adicione as seguintes instruções ao início do seu código, antes da declaração de classe para o formulário, que inicia `Public Class Form1`.  
   
-     [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#35)]  
   
      Antes de gravar no arquivo, você precisa criar uma instância de uma classe <xref:System.IO.StreamWriter>.  
   
 3.  No menu **Exibição**, escolha **Designer** para voltar para o **Designer de Formulários do Windows**. Clique duas vezes no botão `Submit` para criar um manipulador de eventos <xref:System.Windows.Forms.Control.Click> para o botão e adicione o código a seguir.  
   
-     [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
 > [!NOTE]
 >  O IDE (ambiente de desenvolvimento integrado) do Visual Studio retornará ao Editor de código e posicionará o ponto de inserção dentro do manipulador de eventos, no qual você deve adicionar o código.  
   
 1.  Para gravar o arquivo, use o método <xref:System.IO.StreamWriter.Write%2A> da classe <xref:System.IO.StreamWriter>. Adicione o código a seguir diretamente após `Dim fw As StreamWriter`. Você não precisa se preocupar se uma exceção será gerada caso o arquivo não seja encontrado, porque ele será criado se ainda não existir.  
   
-     [!code-vb[VbVbcnMyFileSystem#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]  
   
 2.  Certifique-se de que o usuário não possa enviar uma entrada em branco adicionando o código a seguir diretamente após `Dim ReadString As String`.  
   
-     [!code-vb[VbVbcnMyFileSystem#38](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#38)]  
   
 3.  Como este é uma diário, o usuário desejará atribuir uma data a cada entrada. Insira o código a seguir após `fw = New StreamWriter("C:\MyDiary.txt", True)` para definir a variável `Today` como a data atual.  
   
-     [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]  
   
 4.  Por fim, anexe o código para limpar a <xref:System.Windows.Forms.TextBox>. Adicione o seguinte código ao evento <xref:System.Windows.Forms.Control.Click> do botão `Clear`.  
   
-     [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]  
   
 ## <a name="adding-display-features-to-the-diary"></a>Adicionando recursos de exibição ao diário  
  Nesta seção, você adiciona um recurso que exibe a última entrada em `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Você também pode adicionar uma <xref:System.Windows.Forms.ComboBox> que exiba várias entradas e a partir da qual um usuário pode selecionar uma entrada para exibir o `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Uma instância da classe <xref:System.IO.StreamReader> é lida de `MyDiary.txt`. Como a classe <xref:System.IO.StreamWriter>, o <xref:System.IO.StreamReader> deve ser usado com arquivos de texto.  
@@ -100,7 +100,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 1.  A `PickEntries`<xref:System.Windows.Forms.ComboBox> é usada para exibir as datas em que um usuário envia cada entrada, para que o usuário possa selecionar uma entrada de uma data específica. Crie um identificador de evento <xref:System.Windows.Forms.Control.Click> para o botão `GetEntries` e adicione o seguinte código.  
   
-     [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]  
   
 2.  Para testar seu código, pressione F5 para compilar o aplicativo e, então, clique em **Obter entradas**. Clique na seta do menu suspenso no <xref:System.Windows.Forms.ComboBox> para exibir as datas de entrada.  
   
@@ -108,7 +108,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 1.  Crie um manipulador de eventos <xref:System.Windows.Forms.Control.Click> para o botão `Display` e adicione o seguinte código.  
   
-     [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_8.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]  
   
 2.  Para testar seu código, pressione F5 para compilar o aplicativo e, então, envie uma entrada. Clique em **Obter Entradas**, selecione uma entrada da <xref:System.Windows.Forms.ComboBox> e clique em **Exibir**. Os conteúdos da entrada selecionada são exibidos no `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
   
@@ -127,23 +127,23 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 1.  Adicione o seguinte código ao evento <xref:System.Windows.Forms.Control.Click> do botão `Display` , depois de `DisplayEntry.Text = ReadString`.  
   
-     [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_9.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]  
   
 2.  Crie um manipulador de eventos <xref:System.Windows.Forms.Control.Click> para o botão `DeleteEntry` e adicione o seguinte código.  
   
-     [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_10.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]  
   
 3.  Quando um usuário exibe uma entrada, o botão `EditEntry` fica habilitado. Adicione o seguinte código ao evento <xref:System.Windows.Forms.Control.Click> do botão `Display`, depois de `DisplayEntry.Text = ReadString`.  
   
-     [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_11.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]  
   
 4.  Crie um manipulador de eventos <xref:System.Windows.Forms.Control.Click> para o botão `EditEntry` e adicione o seguinte código.  
   
-     [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_12.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]  
   
 5.  Crie um manipulador de eventos <xref:System.Windows.Forms.Control.Click> para o botão `SubmitEdit` e adicione o seguinte código  
   
-     [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_13.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]  
   
  Para testar seu código, pressione F5 para compilar o aplicativo. Clique em **Obter Entradas**, selecione uma entrada e clique em **Exibir**. A entrada aparece na `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Clique em **Editar entrada**. A entrada aparece na `Entry`<xref:System.Windows.Forms.TextBox>. Edite a entrada na `Entry`<xref:System.Windows.Forms.TextBox> e clique em **Enviar Edição**. Abra o arquivo `MyDiary.txt` para confirmar a correção. Agora, selecione uma entrada e clique em **Excluir entrada**. Quando o <xref:System.Windows.Forms.MessageBox> solicita confirmação, clique em **OK**. Feche o aplicativo e abra `MyDiary.txt` para confirmar a exclusão.  
   
