@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 55b1829537224118de9870fa696ec2b1689d5066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603060"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981576"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guia de Programação em C#)
 
@@ -20,11 +20,11 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
   
  A seguinte instrução de C# contém um único operador unário e um operando único. O operador de incremento, `++`, modifica o valor do operando `y`.  
   
- [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#5)]  
   
  A seguinte instrução de C# contém dois operadores binários, cada um com dois operandos. O operador de atribuição, `=`, contém a variável inteira `y` e a expressão `2 + 3` como operandos. A expressão `2 + 3` em si consiste no operador de adição e dois operandos, `2` e `3`.  
   
- [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>Operadores, avaliação e precedência de operador
 

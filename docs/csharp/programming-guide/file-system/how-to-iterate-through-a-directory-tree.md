@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613838"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976324"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Como: iterar em uma árvore de diretório (Guia de Programação em C#)
 A expressão "iterar uma árvore de diretório" significa acessar cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada, em qualquer profundidade. Você não precisa necessariamente abrir cada arquivo. Você pode recuperar apenas o nome do arquivo ou subdiretório como um `string`, ou então você pode recuperar informações adicionais na forma de um objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> ou <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -41,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  As exceções específicas que são tratadas, bem como as ações específicas que são executadas em cada arquivo ou pasta, são fornecidas apenas como exemplo. Você deve modificar este código para atender às suas necessidades específicas. Consulte os comentários no código para obter mais informações.  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como iterar em arquivos e pastas em uma árvore de diretório sem o uso de recursão. Essa técnica usa o tipo de coleção genérico <xref:System.Collections.Generic.Stack%601>, que é uma pilha UEPS (último a entrar, primeiro a sair).  
   
  As exceções específicas que são tratadas, bem como as ações específicas que são executadas em cada arquivo ou pasta, são fornecidas apenas como exemplo. Você deve modificar este código para atender às suas necessidades específicas. Consulte os comentários no código para obter mais informações.  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  Geralmente, é muito demorado testar cada pasta para determinar se seu aplicativo tem permissão para abri-la. Portanto, o exemplo de código apenas coloca essa parte da operação em um bloco `try/catch`. É possível modificar o bloco `catch` para que, quando lhe for negado acesso a uma pasta, você possa tentar elevar as permissões e acessá-la novamente. Como regra, capture apenas as exceções que você puder manipular sem deixar seu aplicativo em um estado desconhecido.  
   

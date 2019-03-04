@@ -3,12 +3,12 @@ title: Executar árvores de expressão
 description: Saiba mais sobre como executar árvores de expressão, convertendo-as em instruções de IL (linguagem intermediária) executáveis.
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207378"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201840"
 ---
 # <a name="executing-expression-trees"></a>Executar árvores de expressão
 
@@ -109,7 +109,7 @@ private static Func<int, int> CreateBoundResource()
 
 O delegado retornado desse método fechou sobre o objeto `constant`, que foi descartado. (Foi descartado, porque foi declarado em uma instrução `using`). 
 
-Agora, ao executar o delegado retornado desse método, uma `ObjecctDisposedException` será lançada no ponto de execução.
+Agora, ao executar o delegado retornado desse método, uma `ObjectDisposedException` será lançada no ponto de execução.
 
 Parece realmente estranho ter um erro de tempo de execução que representa um constructo de tempo de compilação, mas esse é o mundo em que entramos quando trabalhamos com árvores de expressão.
 

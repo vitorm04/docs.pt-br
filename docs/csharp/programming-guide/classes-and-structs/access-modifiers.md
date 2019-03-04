@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 7c20292a906ecfbf08311a616e05a02cd8f8a25c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5fbf74f30e5fc6abd9e1c5542eaadc7e3fcf552
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731693"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977559"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificadores de acesso (Guia de Programação em C#)
 Todos os tipos e membros de tipo têm um nível de acessibilidade, que controla se podem ser usados de outro código no seu assembly ou outros assemblies. Você pode usar os modificadores de acesso a seguir para especificar a acessibilidade de um tipo ou membro quando você o declarar:  
@@ -33,7 +33,7 @@ Todos os tipos e membros de tipo têm um nível de acessibilidade, que controla 
   
  Os exemplos a seguir demonstram como especificar modificadores de acesso em um tipo e membro:  
   
- [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
  Nem todos os modificadores de acesso podem ser usados por todos os tipos ou membros em todos os contextos e, em alguns casos, a acessibilidade de um membro de tipo é restrita pela acessibilidade do seu tipo recipiente. As seções a seguir fornecem mais detalhes sobre a acessibilidade.  
   
@@ -59,7 +59,7 @@ Todos os tipos e membros de tipo têm um nível de acessibilidade, que controla 
   
  Para definir o nível de acesso para um membro de classe ou de struct, adicione a palavra-chave apropriada à declaração do membro, como mostrado o exemplo a seguir.  
   
- [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
 >  O nível de acessibilidade interno protegido significa protegido OU interno, não protegido E interno. Em outras palavras, um membro interno protegido pode ser acessado de qualquer classe no mesmo assembly, incluindo as classes derivadas. Para limitar a acessibilidade para apenas classes derivadas no mesmo assembly, declare a classe em si como interna e declare seus membros como protegidos. Além disso, a partir do C# 7.2, você pode usar o modificador de acesso protegido privado para obter o mesmo resultado sem a necessidade de tornar a classe de conteúdo interna.  

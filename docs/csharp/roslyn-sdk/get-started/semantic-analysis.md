@@ -3,12 +3,12 @@ title: Introdução à análise semântica
 description: Este tutorial fornece uma visão geral de como trabalhar com análise semântica usando o SDK do .NET Compiler.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 669f11377edfa707133f7ad8df72117942d504fa
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484612"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202568"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introdução à análise semântica
 
@@ -22,7 +22,7 @@ Você deverá instalar o **SDK do .NET Compiler Platform**:
 
 ## <a name="understanding-compilations-and-symbols"></a>Noções básicas sobre compilações e símbolos
 
-Conforme você trabalha mais com o SDK do .NET Compiler, você se familiariza com as distinções entre a API de Sintaxe e a API de Semântica. A **API de Sintaxe** permite que você examine a _estrutura_ de um programa. Muitas vezes, no entanto, você deseja as informações sobre a semântica ou _significado_ de um programa. Enquanto um trecho ou arquivo de código livre VB ou C# pode ser analisado sintaticamente de modo isolado, não faz sentido fazer a esmo perguntas como "qual é o tipo dessa variável". O significado de um nome de tipo pode ser dependente de referências de assembly, importações de namespace ou outros arquivos de código. Essas perguntas são respondidas usando-se a **API de Semântica**, especificamente a classe <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>.
+Conforme você trabalha mais com o SDK do .NET Compiler, você se familiariza com as distinções entre a API de Sintaxe e a API de Semântica. A **API de Sintaxe** permite que você examine a _estrutura_ de um programa. Muitas vezes, no entanto, você deseja as informações sobre a semântica ou _significado_ de um programa. Enquanto um snippet ou arquivo de código livre VB ou C# pode ser analisado sintaticamente de modo isolado, não faz sentido fazer a esmo perguntas como "qual é o tipo dessa variável". O significado de um nome de tipo pode ser dependente de referências de assembly, importações de namespace ou outros arquivos de código. Essas perguntas são respondidas usando-se a **API de Semântica**, especificamente a classe <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>.
 
 Uma instância de <xref:Microsoft.CodeAnalysis.Compilation> é análoga a um único projeto conforme visto pelo compilador e representa tudo o que é necessário para compilar um programa Visual Basic ou C#. A **compilação** inclui o conjunto de arquivos de origem a serem compilados, referências de assembly e opções de compilador. Você pode avaliar o significado do código usando todas as outras informações neste contexto. Um <xref:Microsoft.CodeAnalysis.Compilation> permite que você encontre **símbolos** – entidades como tipos, namespaces, membros e variáveis aos quais os nomes e outras expressões se referem. O processo de associar nomes e expressões com **símbolos** é chamado de **associação**.
 
@@ -117,7 +117,7 @@ Para concluir este tutorial, criaremos uma consulta LINQ que criará uma sequên
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-Essa sequência de origem contém todos os membros, incluindo propriedades e campos, portanto, filtre-a usando o método <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> para localizar elementos que são objetos <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType>:
+Essa sequência de origem contém todos os membros, incluindo propriedades e campos, portanto, filtre-a usando o método <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> para localizar elementos que são objetos <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType>:
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 

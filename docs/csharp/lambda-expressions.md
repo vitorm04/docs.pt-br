@@ -5,14 +5,14 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 642422a4cc077ffebb5ee6db9d7ffb937fc1e173
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183120"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212346"
 ---
-# <a name="lambda-expressions"></a>Expressões lambda #
+# <a name="lambda-expressions"></a>Expressões lambda
 
 Uma *expressão lambda* é um bloco de código (uma expressão ou um bloco de instruções) que é tratado como um objeto. Ela pode ser passada como um argumento para métodos e também pode ser retornada por chamadas de método. As expressões lambda são usadas amplamente para:
 
@@ -32,7 +32,7 @@ Ou pode passá-la diretamente como um argumento de método:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>Lambdas de expressão ##
+## <a name="expression-lambdas"></a>Lambdas de expressão
 
  Uma expressão lambda com uma expressão no lado direito do operador => é chamada de *lambda de expressão*. Os lambdas de expressão são usados amplamente na construção de [árvores de expressão](expression-trees.md). Uma expressão lambda retorna o resultado da expressão e tem o seguinte formato básico:
 
@@ -54,7 +54,7 @@ Normalmente, o compilador usa a inferência de tipos na determinação de tipos 
 
 Observe no exemplo anterior que o corpo de uma expressão lambda pode consistir de uma chamada de método. No entanto, se você estiver criando árvores de expressão que serão avaliadas fora do .NET Framework, como no SQL Server ou no EF (Entity Framework), você deverá evitar o uso de chamadas de método em expressões lambda, pois os métodos podem não ter significado fora do contexto da implementação do .NET. Se você optar por usar chamadas de método nesse caso, certifique-se de testá-las cuidadosamente para garantir que as chamadas de método possam ser resolvidas com êxito.
 
-## <a name="statement-lambdas"></a>Lambdas de instrução ##
+## <a name="statement-lambdas"></a>Lambdas de instrução
 
 Um lambda de instrução lembra um lambda de expressão, exceto que as instruções estão incluídas entre chaves:
 
@@ -68,7 +68,7 @@ O corpo de uma instrução lambda pode consistir de qualquer número de instruç
 
 Lambdas de instrução, como métodos anônimos, não podem ser usados para criar árvores de expressão.
 
-## <a name="async-lambdas"></a>Lambdas assíncronos ##
+## <a name="async-lambdas"></a>Lambdas assíncronos
 
 Você pode facilmente criar expressões e instruções lambda que incorporem processamento assíncrono, ao usar as palavras-chaves [async](language-reference/keywords/async.md) e [await](language-reference/keywords/await.md). Por exemplo, o exemplo chama um método `ShowSquares` que é executado de forma assíncrona.
 
@@ -76,7 +76,7 @@ Você pode facilmente criar expressões e instruções lambda que incorporem pro
 
 Para obter mais informações sobre como criar e usar os métodos assíncronos, consulte [Programação assíncrona com async e await](programming-guide/concepts/async/index.md).
 
-## <a name="lambda-expressions-and-tuples"></a>Expressões lambda e tuplas ##
+## <a name="lambda-expressions-and-tuples"></a>Expressões lambda e tuplas
 
 Começando com o C# 7.0, a linguagem C# fornece suporte interno para tuplas. Você pode fornecer uma tupla como um argumento para uma expressão lambda e a expressão lambda também pode retornar uma tupla. Em alguns casos, o compilador do C# usa a inferência de tipos para determinar os tipos dos componentes da tupla.
 
@@ -90,7 +90,7 @@ Normalmente, os campos de uma tupla são chamados de `Item1`, `Item2`, etc. No e
 
 Para obter mais informações sobre o suporte de tuplas no C#, consulte [Tipos de tupla do C#](tuples.md).
 
-## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas com os operadores de consulta padrão ##
+## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas com os operadores de consulta padrão
 
 O LINQ to Objects, entre outras implementações, tem um parâmetro de entrada cujo tipo faz parte da família de delegados genéricos <xref:System.Func%601>. Esses delegados usam parâmetros de tipo para definir o número e o tipo de parâmetros de entrada e o tipo de retorno do delegado. delegados `Func` são muito úteis para encapsular expressões definidas pelo usuário aplicadas a cada elemento em um conjunto de dados de origem. Por exemplo, considere o delegado <xref:System.Func%601>, cuja sintaxe é:
 
@@ -118,7 +118,7 @@ O exemplo a seguir especifica vários parâmetros de entrada, colocando-os entre
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
-## <a name="type-inference-in-lambda-expressions"></a>Inferência de tipos em expressões lambda ##
+## <a name="type-inference-in-lambda-expressions"></a>Inferência de tipos em expressões lambda
 
 Ao escrever lambdas, você geralmente não precisa especificar um tipo para os parâmetros de entrada porque o compilador pode inferir o tipo com base no corpo lambda, nos tipos de parâmetro e em outros fatores, conforme descrito na especificação da linguagem C#. Para a maioria dos operadores de consulta padrão, a primeira entrada é o tipo dos elementos na sequência de origem. Se você estiver consultando um `IEnumerable<Customer>`, a variável de entrada será inferida para ser um objeto `Customer`, o que significa que você terá acesso aos seus métodos e propriedades:
 
@@ -134,7 +134,7 @@ As regras gerais para a inferência de tipos para lambdas são:
 
 Observe que as expressões lambda em si não têm um tipo porque o sistema de tipo comum não possui conceito intrínseco da "expressão lambda". No entanto, às vezes é conveniente falar informalmente do "tipo" de uma expressão lambda. Nesses casos, o tipo se refere ao tipo delegado ou tipo <xref:System.Linq.Expressions.Expression> ao qual a expressão lambda é convertida.
 
-## <a name="variable-scope-in-lambda-expressions"></a>Escopo variável em expressões lambda ##
+## <a name="variable-scope-in-lambda-expressions"></a>Escopo variável em expressões lambda
 
 As lambdas podem se referir a *variáveis externas* (consulte [Métodos anônimos](programming-guide/statements-expressions-operators/anonymous-methods.md)) que estão no escopo do método que define a função lambda ou no escopo do tipo que contém a expressão lambda. As variáveis que são capturadas dessa forma são armazenadas para uso na expressão lambda mesmo que de alguma outra forma elas saíssem do escopo e fossem coletadas como lixo. Uma variável externa deve ser definitivamente atribuída para que possa ser consumida em uma expressão lambda. O exemplo a seguir demonstra estas regras.
 
@@ -152,7 +152,7 @@ As lambdas podem se referir a *variáveis externas* (consulte [Métodos anônimo
 
 - Uma expressão lambda não poderá conter uma instrução `goto`, `break` ou `continue` que está dentro da função lambda se o destino da instrução jump estiver fora do bloco. Também será um erro ter uma instrução jump fora do bloco da função lambda se o destino estiver dentro do bloco.
 
-## <a name="see-also"></a>Consulte também ##
+## <a name="see-also"></a>Consulte também
 
 - [LINQ (Consulta Integrada à Linguagem)](../standard/using-linq.md)
 - [Métodos anônimos](programming-guide/statements-expressions-operators/anonymous-methods.md)

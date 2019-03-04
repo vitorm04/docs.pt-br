@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710346"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977039"
 ---
-# <a name="is-c-reference"></a>is (Referência de C#) #
+# <a name="is-c-reference"></a>is (Referência de C#)
 
 Verifica se um objeto é compatível com um determinado tipo ou (começando com o C# 7.0) testa uma expressão em relação a um padrão.
 
-## <a name="testing-for-type-compatibility"></a>Testando a compatibilidade de tipo ##
+## <a name="testing-for-type-compatibility"></a>Testando a compatibilidade de tipo
 
 A palavra-chave `is` avalia a compatibilidade de tipo em tempo de execução. Ela determina se uma instância de objeto ou o resultado de uma expressão pode ser convertido em um tipo especificado. Ela tem a sintaxe
 
@@ -56,7 +56,7 @@ A palavra-chave `is` gera um aviso de tempo de compilação caso seja conhecido 
 
 Começando com o C# 7.0, você pode usar a correspondência de padrões com o [padrão de tipo](#type) para escrever códigos mais concisos que usam a instrução `is`.
 
-## <a name="pattern-matching-with-is"></a>Correspondência de padrões com `is` ##
+## <a name="pattern-matching-with-is"></a>Correspondência de padrões com `is`
 
 Começando com o C# 7.0, as instruções `is` e [switch](../../../csharp/language-reference/keywords/switch.md) permitem a correspondência de padrões. A palavra-chave `is` dá suporte aos seguintes padrões:
 
@@ -104,7 +104,7 @@ O código equivalente sem correspondência de padrões requer uma atribuição s
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Padrão constante ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Padrão constante
 
 Ao executar a correspondência de padrões com o padrão constante, `is` testa se uma expressão é igual a uma constante especificada. No C# 6 e em versões anteriores, o padrão constante tem suporte da instrução [switch](switch.md). Começando com o C# 7.0, ele também é compatível com a instrução `is`. A sintaxe é:
 

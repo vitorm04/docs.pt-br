@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: 9ba4b81db0ea352f82127a838ab6b13f09d259e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f882bcdf5c1d9b8c81531c0fe37a3ee27c2e3a0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650974"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965405"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Benefícios dos genéricos (Guia de Programação em C#)
 Os genéricos oferecem a solução para uma limitação em versões anteriores do Common Language Runtime da linguagem C# em que a generalização é realizada por tipos de conversão de e para o tipo base universal <xref:System.Object>. Ao criar uma classe genérica, é possível criar uma coleção fortemente tipada em tempo de compilação.  
   
  As limitações do uso de classes de coleção não genéricas não podem ser demonstradas ao escrever um pequeno programa que use a classe de coleção <xref:System.Collections.ArrayList> da biblioteca de classes do .NET. Uma instância da classe <xref:System.Collections.ArrayList> pode armazenar qualquer referência ou tipo de valor.  
   
- [!code-csharp[csProgGuideGenerics#4](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#4)]  
   
  Porém, essa conveniência gera um custo. Qualquer tipo de referência ou valor que é adicionado a um <xref:System.Collections.ArrayList> é implicitamente upcast para <xref:System.Object>. Se os itens forem tipos de valor, será necessário que eles sejam convertidos ao serem adicionados à lista e desconvertidos ao serem recuperados. Tanto a conversão quanto as operações de conversão boxing e unboxing diminuem o desempenho; o efeito das conversões boxing e unboxing podem ser muito significativos em cenários em que é necessário iterar em coleções grandes.  
   
  A outra limitação é a falta de verificação de tipo em tempo de compilação, pois uma <xref:System.Collections.ArrayList> converte tudo para <xref:System.Object>; não é possível evitar que o código cliente faça algo como isto no tempo de compilação:  
   
- [!code-csharp[csProgGuideGenerics#5](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#5)]  
   
  Embora seja perfeitamente aceitável e por vezes intencional, se você estiver criando uma coleção heterogênea, é mais provável que combinar cadeias de caracteres e `ints` em uma única <xref:System.Collections.ArrayList> seja um erro de programação e esse erro não será detectado até o tempo de execução.  
   
@@ -31,7 +31,7 @@ Os genéricos oferecem a solução para uma limitação em versões anteriores d
   
  O que <xref:System.Collections.ArrayList> e outras classes semelhantes precisam é uma maneira de o código cliente especificar, em uma base por instância, o tipo de dados específico que pretende usar. Isso eliminaria a necessidade do upcast para <xref:System.Object> e possibilitaria ao compilador a realização da verificação de tipo. Em outras palavras, <xref:System.Collections.ArrayList> precisa de um parâmetro de tipo. Isso é exatamente o que os genéricos oferecem. Na coleção genérica <xref:System.Collections.Generic.List%601>, no namespace <xref:System.Collections.Generic>, a mesma operação de adição de itens à coleção é semelhante a:  
   
- [!code-csharp[csProgGuideGenerics#6](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#6)]  
   
  Para código cliente, a única sintaxe adicionada com <xref:System.Collections.Generic.List%601> em comparação com <xref:System.Collections.ArrayList> é o argumento de tipo na declaração e na instanciação. Como compensação por essa complexidade na codificação, é possível criar uma lista que não só é mais segura do que <xref:System.Collections.ArrayList>, mas também é significativamente mais rápida, especialmente quando os itens da lista são tipos de valor.  
   
