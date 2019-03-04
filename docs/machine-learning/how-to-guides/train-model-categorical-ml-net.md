@@ -1,33 +1,33 @@
 ---
 title: Aplicar a engenharia de recursos ao treinamento de modelo em dados categóricos – ML.NET
 description: Saiba como aplicar a engenharia de recursos ao treinamento de modelo de aprendizado de máquina em dados categóricos com o ML.NET
-ms.date: 02/06/2018
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c24840ee89917d270bcbacbcf36905b4ee82a4aa
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092079"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968407"
 ---
-# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="1625d-103">Aplicar a engenharia de recursos ao treinamento de modelo em dados categóricos – ML.NET</span><span class="sxs-lookup"><span data-stu-id="1625d-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
+# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="cb856-103">Aplicar a engenharia de recursos ao treinamento de modelo em dados categóricos – ML.NET</span><span class="sxs-lookup"><span data-stu-id="cb856-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
 
-<span data-ttu-id="1625d-104">Você precisa converter os dados não float em tipos de dados `float`, pois todos os `learners` do ML.NET esperam as funcionalidades como um `float vector`.</span><span class="sxs-lookup"><span data-stu-id="1625d-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="cb856-104">Você precisa converter os dados não float em tipos de dados `float`, pois todos os `learners` do ML.NET esperam as funcionalidades como um `float vector`.</span><span class="sxs-lookup"><span data-stu-id="cb856-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="1625d-105">Se o conjunto de dados contiver dados `categorical` (por exemplo, “enum”), o ML.NET oferecerá várias maneiras de convertê-lo em recursos:</span><span class="sxs-lookup"><span data-stu-id="1625d-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
+<span data-ttu-id="cb856-105">Se o conjunto de dados contiver dados `categorical` (por exemplo, “enum”), o ML.NET oferecerá várias maneiras de convertê-lo em recursos:</span><span class="sxs-lookup"><span data-stu-id="cb856-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
 
-- <span data-ttu-id="1625d-106">Codificação one-hot</span><span class="sxs-lookup"><span data-stu-id="1625d-106">One-hot encoding</span></span>
-- <span data-ttu-id="1625d-107">Codificação one-hot baseada em hash</span><span class="sxs-lookup"><span data-stu-id="1625d-107">Hash-based one-hot encoding</span></span>
-- <span data-ttu-id="1625d-108">Codificação binária (converter o índice de categorias em uma sequência de bits e usar os bits como recursos)</span><span class="sxs-lookup"><span data-stu-id="1625d-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
+- <span data-ttu-id="cb856-106">Codificação one-hot</span><span class="sxs-lookup"><span data-stu-id="cb856-106">One-hot encoding</span></span>
+- <span data-ttu-id="cb856-107">Codificação one-hot baseada em hash</span><span class="sxs-lookup"><span data-stu-id="cb856-107">Hash-based one-hot encoding</span></span>
+- <span data-ttu-id="cb856-108">Codificação binária (converter o índice de categorias em uma sequência de bits e usar os bits como recursos)</span><span class="sxs-lookup"><span data-stu-id="cb856-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
 
-<span data-ttu-id="1625d-109">Uma `one-hot encoding` poderá ser um desperdício se algumas categorias tiverem cardinalidade muito alta (muitos valores diferentes, com um pequeno conjunto ocorrendo com frequência).</span><span class="sxs-lookup"><span data-stu-id="1625d-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="1625d-110">Nesse caso, reduza o número de slots para codificar com seleção de recursos com base na contagem.</span><span class="sxs-lookup"><span data-stu-id="1625d-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
+<span data-ttu-id="cb856-109">Uma `one-hot encoding` poderá ser um desperdício se algumas categorias tiverem cardinalidade muito alta (muitos valores diferentes, com um pequeno conjunto ocorrendo com frequência).</span><span class="sxs-lookup"><span data-stu-id="cb856-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="cb856-110">Nesse caso, reduza o número de slots para codificar com seleção de recursos com base na contagem.</span><span class="sxs-lookup"><span data-stu-id="cb856-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
 
-<span data-ttu-id="1625d-111">Inclua personalização categórica diretamente no pipeline de aprendizado do ML.NET para garantir que a transformação categórica:</span><span class="sxs-lookup"><span data-stu-id="1625d-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
+<span data-ttu-id="cb856-111">Inclua personalização categórica diretamente no pipeline de aprendizado do ML.NET para garantir que a transformação categórica:</span><span class="sxs-lookup"><span data-stu-id="cb856-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
 
-- <span data-ttu-id="1625d-112">seja “treinada” somente nos dados de treinamento, e não nos dados de teste;</span><span class="sxs-lookup"><span data-stu-id="1625d-112">is only 'trained' on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="1625d-113">seja aplicada corretamente aos novos dados recebidos, sem pré-processamento extra em tempo de previsão.</span><span class="sxs-lookup"><span data-stu-id="1625d-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
+- <span data-ttu-id="cb856-112">seja “treinada” somente nos dados de treinamento, e não nos dados de teste;</span><span class="sxs-lookup"><span data-stu-id="cb856-112">is only 'trained' on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="cb856-113">seja aplicada corretamente aos novos dados recebidos, sem pré-processamento extra em tempo de previsão.</span><span class="sxs-lookup"><span data-stu-id="cb856-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
 
-<span data-ttu-id="1625d-114">O exemplo a seguir ilustra o tratamento categórico para o [conjunto de dados do censo de adultos](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="1625d-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="cb856-114">O exemplo a seguir ilustra o tratamento categórico para o [conjunto de dados do censo de adultos](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="cb856-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
 
 ```console
 Label   Workclass   education   marital-status  occupation  relationship    ethnicity   sex native-country-region   age fnlwgt  education-num   capital-gain    capital-loss    hours-per-week
