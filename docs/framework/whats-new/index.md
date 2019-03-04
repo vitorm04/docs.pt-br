@@ -1041,6 +1041,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - O Designer de Atividades do Fluxograma ou outros Designers de Atividade de Fluxo de Trabalho podem exibir todos os objetos em seus locais padrão em vez de valores de propriedade anexados.
 
+<a name="clickonce-1" />
 
 ### <a name="clickonce"></a>ClickOnce
 

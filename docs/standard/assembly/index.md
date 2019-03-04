@@ -48,11 +48,12 @@ Os assemblies formam a unidade fundamental de implantação, controle de versão
 
 ## <a name="see-also"></a>Consulte também
 
- - [Formato de arquivo do assembly .NET](file-format.md)  
+ - [Formato de arquivo do assembly .NET](file-format.md)
  - [Assemblies no Common Language Runtime](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  - [Assemblies Amigáveis (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [Assemblies amigáveis (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [Como: carregar e descarregar assemblies (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Como: como carregar e descarregar assemblies (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
+ - [Como: usar e depurar a Capacidade de descarregamento de assembly no .NET Core](unloadability-howto.md)
  - [Como: determinar se um arquivo é um assembly (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
  - [Como: determinar se um arquivo é um assembly (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
