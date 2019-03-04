@@ -2,12 +2,12 @@
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo foi atualizado com a versão prévia 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 874420775215502ebdacb8420b3fe0e027d6660f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1aa5a200f84b35fda3c33a900655249d07000e8e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747616"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835428"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -119,13 +119,13 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
         // other cases removed for brevity...
         _ => 0M
     };
-    ```
+```
 
-Pattern matching creates a concise syntax for expressing this algorithm.
+A correspondência de padrão cria uma sintaxe concisa para expressar esse algoritmo.
 
-### Tuple patterns
+### <a name="tuple-patterns"></a>Padrões de tupla
 
-Some algorithms depend on multiple inputs. **Tuple patterns** allow you to switch based on multiple values expressed as a [tuple](../tuples.md).  The following code shows a switch expression for the game *rock, paper, scissors*:
+Alguns algoritmos dependem de várias entradas. **Padrões de tupla** permitem que você alterne com base em vários valores, expressadas como uma [tupla](../tuples.md).  O código a seguir mostra uma expressão de comutador para o jogo *pedra, papel, tesoura*:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -139,13 +139,13 @@ public static string RockPaperScissors(string first, string second)
         ("scissors", "paper") => "scissors cuts paper. Scissors wins.",
         (_, _) => "tie"
     };
-    ```
+```
 
-The messages indicate the winner. The discard case represents the three combinations for ties, or other text inputs.
+As mensagens indicam o vencedor. O caso de descarte representa três combinações para empates ou outras entradas de texto.
 
-### Positional patterns
+### <a name="positional-patterns"></a>Padrões posicionais
 
-Some types include a `Deconstruct` method that deconstructs its properties into discrete variables. When a `Deconstruct` method is accessible, you can use **positional patterns** to inspect properties of the object and use those properties for a pattern.  Consider the following `Point` class that includes a `Deconstruct` method to create discrete variables for `X` and `Y`:
+Alguns tipos incluem um método `Deconstruct` que desconstrói suas propriedades em variáveis discretas. Quando um método `Deconstruct` é acessível, você pode usar **padrões posicionais** para inspecionar as propriedades do objeto e usar essas propriedades para um padrão.  Considere a seguinte classe `Point`, que inclui um método `Deconstruct` para criar variáveis discretas para `X` e `Y`:
 
 ```csharp
 public class Point

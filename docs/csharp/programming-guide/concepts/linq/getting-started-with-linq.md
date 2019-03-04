@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 585bbd9a9fbc78029911dac8af4c1ad3eebe35b0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339313"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970695"
 ---
-# <a name="getting-started-with-linq-in-c"></a>Introdução a LINQ em C#
+# <a name="getting-started-with-linq-in-c"></a>Introdução a LINQ em C\#
 Esta seção contém informações básicas que ajudarão você a compreender o restante da documentação e dos exemplos do LINQ.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -39,11 +39,11 @@ Esta seção contém informações básicas que ajudarão você a compreender o 
  [Recursos do C# que dão suporte a LINQ](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
  Descreve os constructos da linguagem adicionados ao C# 3.0 que dão suporte à LINQ.  
   
- [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Passo a passo: Escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  Instruções passo a passo para criar um projeto LINQ em C#, adicionando uma fonte de dados simples e realizando algumas operações básicas de consulta.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ (consulta integrada à linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  Fornece links para tópicos que explicam as tecnologias LINQ.  
   
  [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  

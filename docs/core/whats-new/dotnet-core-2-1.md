@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e28ff83d673951a978e24d9c89621fbbe950f50e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066344"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975201"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -131,7 +131,7 @@ A publicação autocontida depende de versões de tempo de execução no NuGet.o
 
 Com o uso do SDK do .NET Core 2.0, os aplicativos autocontidos são publicados com o tempo de execução do .NET Core 2.0.0, a menos que uma versão diferente seja especificada por meio da propriedade `RuntimeFrameworkVersion`. Com esse novo comportamento, você não precisará mais definir essa propriedade para selecionar uma versão de tempo de execução maior para um aplicativo autocontido. A abordagem mais fácil daqui para frente é sempre publicar com o SDK do .NET Core 2.1 (v 2.1.300).
 
-Para obter mais informações, consulte [Roll forward de tempo de execução de implantação autossuficiente](../deploying/runtime-patch-selection.md).
+Veja mais informações em [Efetuar roll forward de tempo de execução de implantação autossuficiente](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Pacote de Compatibilidade do Windows
 
 Ao transmitir código existente do .NET Framework para o .NET Core, você pode usar o [Pacote de Compatibilidade do Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Ele fornece acesso 20.000 APIs a mais do que as disponíveis no .NET Core. Essas APIs incluem tipos no namespace <xref:System.Drawing?displayProperty=nameWithType>, a classe <xref:System.Diagnostics.EventLog>, WMI, contadores de desempenho, Windows Services e os tipos de registro e membros do Windows.

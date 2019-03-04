@@ -3,12 +3,12 @@ title: Padrões de evento .NET padrão
 description: Saiba mais sobre como criar padrões de evento .NET e como criar origens de evento padrão, bem como assinar e processar os eventos padrão em seu código.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129396"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201242"
 ---
 # <a name="standard-net-event-patterns"></a>Padrões de evento .NET padrão
 
@@ -47,7 +47,7 @@ Em seguida, precisamos criar a declaração de evento na classe FileSearcher. O 
 
 Vamos preencher a classe FileSearcher para pesquisar arquivos que correspondam a um padrão e acionar o evento correto quando uma correspondência for descoberta.
 
-[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>Definindo e acionando eventos semelhantes a campo
 
@@ -69,7 +69,7 @@ O código fora da classe não pode acionar o evento nem executar outras operaç�
 
 ## <a name="returning-values-from-event-subscribers"></a>Valor retornados de assinantes de evento
 
-Sua versão simples está funcionando bem. Vamos adicionar outro recurso: cancelamento.
+Sua versão simples está funcionando bem. Vamos adicionar outro recurso: Cancelamento.
 
 Quando você acionar o evento encontrado, os ouvintes devem ser capazes de parar o processamento, se esse arquivo for aquele que era procurado.
 

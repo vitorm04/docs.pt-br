@@ -4,12 +4,12 @@ description: Este tópico explica como compilar uma solução do .NET Core que i
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7f06a0b9ae9eeb9ff9020641c6f12744725f30f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c515c3771f8204bbc7b6944f81fed463c309bc3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727749"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203396"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
 

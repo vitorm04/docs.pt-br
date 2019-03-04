@@ -1,21 +1,23 @@
 ---
 title: Selecionar a versão da linguagem C# – Guia do C#
 description: Configure o compilador para executar a validação de sintaxe usando uma versão específica de compilador
-ms.date: 05/24/2018
-ms.openlocfilehash: 9b91e62168ced0f373e1a55def8b279dc64833d8
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 02/28/2019
+ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207837"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212021"
 ---
 # <a name="select-the-c-language-version"></a>Selecionar a versão da linguagem C#
 
-O compilador C# usa como padrão a última versão principal da linguagem que foi liberada. Você pode optar por compilar qualquer projeto usando uma nova versão de ponto da linguagem. A escolha de uma versão mais recente da linguagem permite que o projeto use as últimas funcionalidades da linguagem. Em outros cenários, talvez você precise validar se um projeto é compilado por completo ao usar uma versão mais antiga da linguagem.
+O compilador C# determina uma versão da linguagem padrão com base na estrutura de destino ou nas estruturas de seu projeto. Quando seu projeto se destina a uma estrutura de visualização que tem uma versão da linguagem correspondente da visualização, a versão de linguagem usada é a de visualização. Quando seu projeto não tem como alvo uma estrutura de visualização, a versão de linguagem usada é a versão secundária mais recente.
 
-Essa funcionalidade separa a decisão de instalar novas versões do SDK e das ferramentas no ambiente de desenvolvimento da decisão de incorporar novas funcionalidades da linguagem em um projeto. Instale o último SDK e as últimas ferramentas no computador de build. Cada projeto pode ser configurado para usar uma versão específica da linguagem de seu build.
+Por exemplo, durante o período de visualização do .NET Core 3.0, qualquer projeto que tem como alvo `netcoreapp3.0` ou `netstandard2.1` (ambas na visualização) usará a linguagem C# 8.0 (também em visualização). Projetos direcionados para qualquer versão de lançamento usarão o C# 7.3 (a versão lançada mais recente). Esse comportamento significa que qualquer projeto direcionado ao .NET Framework usará a versão mais recente (C# 7.3). 
 
-Há várias maneiras de definir a versão da linguagem:
+Essa funcionalidade separa a decisão de instalar novas versões do SDK e das ferramentas no ambiente de desenvolvimento da decisão de incorporar novas funcionalidades da linguagem em um projeto. Instale o último SDK e as últimas ferramentas no computador de build. Cada projeto pode ser configurado para usar uma versão específica da linguagem de seu build. O comportamento padrão significa que os recursos de linguagem que se baseiam em novos tipos ou novo comportamento CLR são habilitados somente quando os projetos se destinam a essas estruturas.
+
+Você pode substituir o comportamento padrão especificando uma versão da linguagem. Há várias maneiras de definir a versão da linguagem:
 
 - Depender de uma [ação rápida do Visual Studio](#visual-studio-quick-action).
 - Definir a versão da linguagem na [interface do usuário do Visual Studio](#set-the-language-version-in-visual-studio).
@@ -61,20 +63,20 @@ O valor `latest` usa a última versão secundária da linguagem C#. Os valores v
 
 |Valor|Significado|
 |------------|-------------|
-|default|O compilador aceita toda a sintaxe de linguagem válida da versão principal mais recente à qual dá suporte.|
-|ISO-1|O compilador aceita somente a sintaxe incluída no ISO/IEC 23270:2003 C# (1.0/1.2) |
-|ISO-2|O compilador aceita somente a sintaxe incluída no ISO/IEC 23270:2006 C# (2.0) |
-|3|O compilador aceita somente a sintaxe incluída no C# 3.0 ou inferior.|
-|4|O compilador aceita somente a sintaxe incluída no C# 4.0 ou inferior.|
-|5|O compilador aceita somente a sintaxe incluída no C# 5.0 ou inferior.|
-|6|O compilador aceita somente a sintaxe incluída no C# 6.0 ou inferior.|
-|7|O compilador aceita somente a sintaxe incluída no C# 7.0 ou inferior.|
-|7.1|O compilador aceita somente a sintaxe incluída no C# 7.1 ou inferior.|
-|7.2|O compilador aceita somente a sintaxe incluída no C# 7.2 ou inferior.|
+|versão prévia|O compilador aceita todas as sintaxes de linguagem válidas da versão prévia mais recente.|
+|mais recente|O compilador aceita a sintaxe da versão lançada mais recente do compilador (incluindo a versão secundária).|
+|latestMajor|O compilador aceita a sintaxe da versão principal mais recente lançada do compilador.|
+|8.0|O compilador aceita somente a sintaxe incluída no C# 8.0 ou inferior.|
 |7.3|O compilador aceita somente a sintaxe incluída no C# 7.3 ou inferior.|
-|mais recente|O compilador aceita toda a sintaxe de linguagem à qual dá suporte.|
-
-As cadeias de caracteres especiais `default` e `latest` são resolvidas nas últimas versões da linguagem principal (C# 7.0) e secundária (C# 7.3) instaladas no computador de build, respectivamente.
+|7.2|O compilador aceita somente a sintaxe incluída no C# 7.2 ou inferior.|
+|7.1|O compilador aceita somente a sintaxe incluída no C# 7.1 ou inferior.|
+|7|O compilador aceita somente a sintaxe incluída no C# 7.0 ou inferior.|
+|6|O compilador aceita somente a sintaxe incluída no C# 6.0 ou inferior.|
+|5|O compilador aceita somente a sintaxe incluída no C# 5.0 ou inferior.|
+|4|O compilador aceita somente a sintaxe incluída no C# 4.0 ou inferior.|
+|3|O compilador aceita somente a sintaxe incluída no C# 3.0 ou inferior.|
+|ISO-2|O compilador aceita somente a sintaxe incluída no ISO/IEC 23270:2006 C# (2.0) |
+|ISO-1|O compilador aceita somente a sintaxe incluída no ISO/IEC 23270:2003 C# (1.0/1.2) |
 
 ## <a name="configure-multiple-projects"></a>Configurar vários projetos
 

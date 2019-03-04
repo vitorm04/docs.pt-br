@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 030d71f95947e98d9f269095908b0431c2192430
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623385"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202867"
 ---
 # <a name="how-to-search-strings"></a>Como pesquisar cadeias de caracteres
 
@@ -43,7 +43,7 @@ O exemplo de código a seguir procura a palavra "the" ou "their" em uma oração
 
 O padrão de pesquisa descreve o texto pelo qual procurar. A tabela a seguir descreve cada elemento desse padrão de pesquisa. (A tabela abaixo usa a `\` única, que deve ser escapada como `\\` em uma cadeia de caracteres C#).
 
-| {1&gt;padrão&lt;1}  | Significado     |
+| padrão  | Significado     |
 | -------- |-------------|
 | the      | corresponder ao texto "the" |
 | (eir)?   | corresponder a 0 ou 1 ocorrência de "eir" |
@@ -58,7 +58,7 @@ O padrão de pesquisa descreve o texto pelo qual procurar. A tabela a seguir des
 
 O código a seguir usa expressões regulares para validar o formato de cada cadeia de caracteres em uma matriz. A validação requer que cada cadeia de caracteres tenha a forma de um número de telefone no qual os três grupos de dígitos são separados por traços, os dois primeiros grupos contêm três dígitos e o terceiro grupo contém quatro dígitos. O padrão de pesquisa usa a expressão regular `^\\d{3}-\\d{3}-\\d{4}$`. Para obter mais informações, consulte [Linguagem de expressões regulares – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| {1&gt;padrão&lt;1}  | Significado                             |
+| padrão  | Significado                             |
 | -------- |-------------------------------------|
 | ^        | corresponde ao início da cadeia de caracteres |
 | \d{3}    | corresponde a exatamente 3 caracteres de dígitos  |

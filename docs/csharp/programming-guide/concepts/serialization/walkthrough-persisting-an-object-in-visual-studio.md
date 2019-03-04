@@ -1,14 +1,14 @@
 ---
 title: 'Passo a passo: Persistindo um objeto usando o C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512444"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975817"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>Passo a passo: Persistindo um objeto usando o C# #
+# <a name="walkthrough-persisting-an-object-using-c"></a>Passo a passo: persistir um objeto usando o C\#
 
 Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.
 

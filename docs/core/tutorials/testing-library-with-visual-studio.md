@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362685"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201320"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testar uma biblioteca .NET Standard com o .NET Core no Visual Studio 2017
 
@@ -163,7 +163,7 @@ Sua execução de teste não apresentou falhas, mas altere-a um pouco para que u
 
    ![Janela Gerenciador de Testes mostrando a falha de asserção Is False](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. Remova o código que foi adicionado (`"Error", `) e execute o teste novamente. Os testes serão aprovados.
+1. Desfaça as modificações feitas na etapa 1 e remova a cadeia de caracteres "Error". Execute novamente o teste, e eles serão aprovados.
 
 ## <a name="testing-the-release-version-of-the-library"></a>Testar a versão de lançamento da biblioteca
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 9088393f61d300ee76e56e320bec17b4a79bfebb
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333389"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835584"
 ---
 # <a name="-operator-c-reference"></a>Operador [] (referência do C#)
 
@@ -69,3 +69,4 @@ Para obter mais informações, confira as seções [Acesso de elemento](~/_cshar
 - [Indexadores](../../programming-guide/indexers/index.md)
 - [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Atributos](../../programming-guide/concepts/attributes/index.md)
+- [Operadores ?. e ?[]](null-conditional-operators.md)

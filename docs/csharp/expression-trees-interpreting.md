@@ -3,12 +3,12 @@ title: Interpretando Expressões
 description: Aprenda como escrever código para examinar a estrutura de um árvore de expressão.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506413"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201970"
 ---
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
@@ -353,7 +353,7 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-Este código representa uma possível implementação da função *fatorial* matemática. A maneira como escrevi este código destaca duas limitações da criação de árvores de expressão atribuindo expressões lambda a expressões. Primeiro, lambdas de instrução não são permitidos. Isso significa que eu não posso usar loops, blocos, instruções if/else e outras estruturas de controle comuns em C#. Estou limitado ao uso de expressões. Em segundo lugar, não posso chamar recursivamente a mesma expressão.
+Este código representa uma possível implementação da função *fatorial* matemática. A maneira como escrevi este código destaca duas limitações da criação de árvores de expressão atribuindo expressões lambda a Expressões. Primeiro, lambdas de instrução não são permitidos. Isso significa que eu não posso usar loops, blocos, instruções if/else e outras estruturas de controle comuns em C#. Estou limitado ao uso de expressões. Em segundo lugar, não posso chamar recursivamente a mesma expressão.
 Eu poderia se ela já fosse um delegado, mas não posso chamá-la em sua forma de árvore de expressão. Na seção [criando árvores de expressão](expression-trees-building.md), você aprenderá técnicas para superar essas limitações.
 
 

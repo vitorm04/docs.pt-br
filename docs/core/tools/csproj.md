@@ -3,12 +3,12 @@ title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 792ec6e5570afd5ecfad483d2a0551df10c61a95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748004"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981524"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -45,11 +45,14 @@ O principal motivo disso é reduzir a desordem no arquivo de projeto. Os padrõe
 
 A seguinte tabela mostra qual elemento e quais [globs](https://en.wikipedia.org/wiki/Glob_(programming)) são incluídos e excluídos do SDK: 
 
-| Elemento           | Incluir glob                              | Excluir glob                                                  | Remover glob                |
+| Elemento           | Incluir glob                                | Excluir glob                                                    | Remover glob                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compilar           | \*\*/\*.cs (ou outras extensões de linguagem) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/D                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                        |
-| Nenhuma              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| Nenhum              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+
+> [!NOTE]
+> **Excluir glob** sempre exclui as pastas `./bin` e `./obj`, representadas pelas propriedades `$(BaseOutputPath)` e `$(BaseIntermediateOutputPath)` do MSBuild, respectivamente. Como um todo, todas as exclusões são representadas por `$(DefaultItemExcludes)`.
 
 Se você tiver globs no projeto e tentar compilá-lo usando o SDK mais novo, receberá o seguinte erro:
 
@@ -208,7 +211,7 @@ Um valor booliano que especifica se o cliente deve solicitar que o consumidor ac
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-Uma expressão de licença SPDX ou caminho até um arquivo de licença dentro do pacote, geralmente mostrado em interfaces do usuário bem como em nuget.org.
+Um [identificador de licença SPDX](https://spdx.org/licenses/) ou uma expressão. Por exemplo, `Apache-2.0`.
 
 Aqui está a lista completa dos [identificadores de licença SPDX](https://spdx.org/licenses/). O NuGet.org aceita apenas licenças aprovadas por OSI ou FSF ao usar expressão de tipo de licença.
 
@@ -236,23 +239,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Caminho até um arquivo de licença dentro do pacote, se você estiver usando uma licença que não tenha recebido um identificador SPDX, ou for uma licença personalizada, (caso contrário, `PackageLicenseExpression` tem preferência)
 
-> [!NOTE]
-> Somente um dentre `PackageLicenseExpression`, `PackageLicenseFile` e `PackageLicenseUrl` pode ser especificado por vez.
-
-### <a name="packagelicenseurl"></a>PackageLicenseUrl
-
-Uma URL para a licença aplicável ao pacote. (_preterida desde o Visual Studio 15.9.4, SDK 2.1.502 e 2.2.101 do .NET_)
-
-### <a name="packagelicenseexpression"></a>PackageLicenseExpression
-
-Um [identificador de licença SPDX](https://spdx.org/licenses/) ou uma expressão, ou seja, `Apache-2.0`.
-
-Substitui `PackageLicenseUrl`, não pode ser combinado com `PackageLicenseFile` e exige o Visual Studio 15.9.4, o SDK 2.1.502 ou 2.2.101 do .NET, ou mais recente.
-
-### <a name="packagelicensefile"></a>PackageLicenseFile
-
-Um caminho para o arquivo de licença no disco, relativo ao arquivo de projeto, ou seja, `LICENSE.txt`.
-
 Substitui `PackageLicenseUrl`, não pode ser combinado com `PackageLicenseExpression` e exige o Visual Studio 15.9.4, o SDK 2.1.502 ou 2.2.101 do .NET, ou mais recente.
 
 Você precisará garantir o fornecimento do arquivo de licença adicionando-o explicitamente ao projeto. Exemplo de uso:
@@ -264,6 +250,12 @@ Você precisará garantir o fornecimento do arquivo de licença adicionando-o ex
   <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
 </ItemGroup>
 ```
+
+### <a name="packagelicenseurl"></a>PackageLicenseUrl
+
+Uma URL para a licença aplicável ao pacote. (_preterida desde o Visual Studio 15.9.4, SDK 2.1.502 e 2.2.101 do .NET_)
+
+
 ### <a name="packageiconurl"></a>PackageIconUrl
 Uma URL para uma imagem 64x64 com a tela de fundo transparente a ser usada como o ícone do pacote na exibição de interface do usuário.
 

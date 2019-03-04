@@ -3,14 +3,14 @@ title: Interpolação de cadeias de caracteres em C#
 description: Saiba como incluir resultados de expressão formatada em uma cadeia de caracteres de resultado em C# com a interpolação de cadeia de caracteres.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 702a586d6a1d6844e7f5efb14a86ec635d41445c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727853"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976051"
 ---
-# <a name="string-interpolation-in-c"></a>Interpolação de cadeias de caracteres em C# #
+# <a name="string-interpolation-in-c"></a>Interpolação de cadeias de caracteres em C\#
 
 Este tutorial mostra como usar a [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) para formatar e incluir resultados de expressão em uma cadeia de caracteres de resultado. Os exemplos pressupõem que você esteja familiarizado com os conceitos básicos do C# e a formatação de tipos do .NET. Se você não estiver familiarizado com a interpolação de cadeia de caracteres ou com a formatação de tipos do .NET, confira primeiro o [tutorial interativo sobre a interpolação de cadeia de caracteres](../tutorials/intro-to-csharp/interpolated-strings.yml). Para obter mais informações sobre como formatar tipos no .NET, confira o tópico [Formatando tipos no .NET](../../standard/base-types/formatting-types.md).
 

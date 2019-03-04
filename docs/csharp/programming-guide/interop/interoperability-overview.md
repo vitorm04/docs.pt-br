@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 499efae13a0805ba161cd9db160d697b496183c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502060"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974699"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -30,7 +30,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
 ## <a name="c-interop"></a>Interoperabilidade C++  
  Você pode usar a interoperabilidade do C++, também conhecida como IJW (It Just Works), para encapsular uma classe de C++ nativa, de forma que ela possa ser consumida pelo código que é criado no C# ou em outra linguagem do .NET Framework. Para fazer isso, você deve escrever código C++ para encapsular um componente nativo DLL ou COM. Ao contrário de outras linguagens do .NET Framework, o [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] tem suporte de interoperabilidade que permite que o código gerenciado e não gerenciado seja localizado no mesmo aplicativo e até no mesmo arquivo. Então, você compila o código C++ usando a opção do compilador **/clr** para produzir um assembly gerenciado. Finalmente, você adiciona uma referência ao assembly no seu projeto do C# e usa os objetos encapsulados, assim como usaria outras classes gerenciadas.  
   
-## <a name="exposing-com-components-to-c"></a>Expondo componentes COM ao C#  
+## <a name="exposing-com-components-to-c"></a>Expondo componentes COM ao C\#
  Você pode consumir um componente COM de um projeto do C#. As etapas gerais são as seguintes:  
   
 1.  Localize um componente COM para usar e registre-o. Use regsvr32.exe para registrar ou cancelar o registro de uma DLL do COM.  

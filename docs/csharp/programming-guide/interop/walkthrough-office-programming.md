@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 4b20b45ee18c22ed864972dc20cd72247ed3db2c
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 3dce7e4bce0b056437445b92f52f6c6360844289
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219367"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966132"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Passo a passo: Programação do Office (C# e Visual Basic)
 O Visual Studio oferece funcionalidades no C# e no Visual Basic que melhoram a programação do Microsoft Office. As funcionalidades úteis do C# incluem argumentos nomeados e opcionais e valores retornados do tipo `dynamic`. Na programação COM, você pode omitir a palavra-chave `ref` e obter acesso a propriedades indexadas. As funcionalidades do Visual Basic incluem propriedades autoimplementadas, instruções em expressões lambda e inicializadores de coleção.
@@ -63,9 +63,9 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 2.  Adicione as seguintes instruções `Imports` (Visual Basic) ou diretivas `using` (C#) à parte superior do arquivo de código, se elas ainda não estiverem presentes.  
   
-     [!code-csharp[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+     [!code-csharp[csOfficeWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#1)]
 
-     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
+     [!code-vb[csOfficeWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#1)]
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>Para criar uma lista de contas bancárias  
   
@@ -73,23 +73,23 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 2.  Substitua a definição da classe `Account` pelo código a seguir. As definições de classe usam *propriedades autoimplementadas*. Para obter mais informações, consulte [Propriedades autoimplementadas](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
-     [!code-csharp[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+     [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
-     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
+     [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]  
   
 3.  Para criar uma lista `bankAccounts` que contém duas contas, adicione o seguinte código ao método `ThisAddIn_Startup` em *ThisAddIn.vb* ou *ThisAddIn.cs*. As declarações de lista usam *inicializadores de coleção*. Para obter mais informações, consulte [Inicializadores de coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
-     [!code-csharp[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+     [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
-     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
+     [!code-vb[csOfficeWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#3)]  
   
 ### <a name="to-export-data-to-excel"></a>Para exportar dados para o Excel  
   
 1.  No mesmo arquivo, adicione o método a seguir para a classe `ThisAddIn`. O método configura uma planilha do Excel e exporta dados para ela.  
   
-     [!code-csharp[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+     [!code-csharp[csOfficeWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#4)]
 
-     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
+     [!code-vb[csOfficeWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#4)]  
   
      Dois novos recursos do C# são usados neste método. Esses dois recursos já existem no Visual Basic.  
   
@@ -99,11 +99,11 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
     -   As propriedades `Range` e `Offset` do objeto [Range](<xref:Microsoft.Office.Interop.Excel.Range>) usam o recurso de *propriedades indexadas*. Este recurso permite consumir essas propriedades de tipos COM usando a sintaxe típica do C# a seguir. Propriedades indexadas também permitem que você use a propriedade `Value` do objeto `Range`, eliminando a necessidade de usar a propriedade `Value2`. A propriedade `Value` é indexada, mas o índice é opcional. Argumentos opcionais e propriedades indexadas trabalham juntos no exemplo a seguir.  
   
-         [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
+         [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   
          Em versões anteriores da linguagem, a sintaxe especial a seguir é obrigatória.  
   
-         [!code-csharp[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
+         [!code-csharp[csOfficeWalkthrough#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#6)]  
   
          Não é possível criar propriedades indexadas de sua preferência. O recurso dá suporte apenas ao consumo de propriedades indexadas existentes.  
   
@@ -111,15 +111,15 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 2.  Adicione o seguinte código no final de `DisplayInExcel` para ajustar as larguras das colunas para adequar o conteúdo.  
   
-     [!code-csharp[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+     [!code-csharp[csOfficeWalkthrough#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#7)]
 
-     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
+     [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]  
   
      Essas adições demonstram outro recurso no C#: tratar valores `Object` retornados de hosts COM como o Office, como se eles tivessem o tipo [dinâmico](../../../csharp/language-reference/keywords/dynamic.md). Isso acontece automaticamente quando **Inserir Tipos de Interoperabilidade** está definido como o valor padrão, `True` ou, de forma equivalente, quando o assembly é referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md). O tipo `dynamic` permite a vinculação posterior, já disponível no Visual Basic, e evita a conversão explícita necessária no Visual C# 2008 e em versões anteriores da linguagem.  
   
      Por exemplo, `excelApp.Columns[1]` retorna um `Object` e `AutoFit` é um método [Range](<xref:Microsoft.Office.Interop.Excel.Range>) do Excel. Sem `dynamic`, você deve converter o objeto retornado em `excelApp.Columns[1]` como uma instância de `Range` antes de chamar o método `AutoFit`.  
   
-     [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
+     [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]  
   
      Para obter mais informações sobre como inserir tipos de interoperabilidade, consulte os procedimentos "Para localizar a referência de PIA" e "Para restaurar a dependência de PIA" posteriormente neste tópico. Para obter mais informações sobre `dynamic`, consulte [dynamic](../../../csharp/language-reference/keywords/dynamic.md) ou [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -127,9 +127,9 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 1.  Adicione o código a seguir no final do método `ThisAddIn_StartUp`. A chamada para `DisplayInExcel` contém dois argumentos. O primeiro argumento é o nome da lista de contas a ser processada. O segundo argumento é uma expressão lambda com várias linhas que define como os dados deverão ser processados. Os valores `ID` e `balance` de cada conta serão exibidos em células adjacentes e a linha será exibida em vermelho se o equilíbrio for menor do que zero. Para obter mais informações, consulte [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-     [!code-csharp[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+     [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
-     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
+     [!code-vb[csOfficeWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#9)]  
   
 2.  Para executar o programa, pressione F5. Uma planilha do Excel é exibida contendo os dados das contas.  
   
@@ -137,9 +137,9 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 1.  Adicione o código a seguir ao final do método `ThisAddIn_StartUp` para criar um documento do Word que contém um link para a pasta de trabalho do Excel.  
   
-     [!code-csharp[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+     [!code-csharp[csOfficeWalkthrough#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#10)]
 
-     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
+     [!code-vb[csOfficeWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#10)]  
   
      Esse código demonstra vários dos novos recursos no C#: a capacidade para omitir a palavra-chave `ref` em programação COM, argumentos nomeados e argumentos opcionais. Esses recursos já existem no Visual Basic. O método [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) tem sete parâmetros, que são definidos como parâmetros de referência opcionais. Argumentos opcionais e nomeados permitem designar os parâmetros que você deseja acessar pelo nome e enviar argumentos apenas para esses parâmetros. Neste exemplo, os argumentos são enviados para indicar que deve ser criado um link para a pasta de trabalho na área de transferência (parâmetro `Link`), e que o link será exibido no documento do Word como um ícone (parâmetro `DisplayAsIcon`). O Visual C# permite também que você omita a palavra-chave `ref` nesses argumentos.
   
@@ -205,7 +205,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 - [Expressões lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Expressões lambda [C#]](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Como: usar propriedades indexadas na programação para interoperabilidade COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [Passo a passo: inserindo informações de tipo dos Microsoft Office Assemblies no Visual Studio (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [Passo a passo: inserir informações de tipo de assemblies do Microsoft Office no Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [Passo a passo: inserindo tipos de assemblies gerenciados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [Passo a passo: criando seu primeiro suplemento do VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)

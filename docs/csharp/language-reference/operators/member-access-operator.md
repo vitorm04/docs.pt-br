@@ -1,7 +1,7 @@
 ---
 title: . Operador – referência do C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/25/2019
 f1_keywords:
 - ._CSharpKeyword
 helpviewer_keywords:
@@ -9,47 +9,46 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: a59f69d0349a054c8c2a5b701b8f63df113a6580
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2661676d53deb874c5e5a90b4443b301730e09df
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333714"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836455"
 ---
 # <a name="-operator-c-reference"></a>. operator (Referência de C#)
 
-O operador ponto (`.`) é usado para o acesso de membro. O operador ponto especifica um membro de um tipo ou namespace. Por exemplo, o operador ponto é usado para acessar métodos específicos dentro das bibliotecas de classes do .NET Framework:
+O ponto, `.`, normalmente é usado para acesso de membro.
 
-[!code-csharp[csRefOperators#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#16)]
+Use o token `.` para acessar um membro de um namespace ou um tipo, como demonstram os exemplos a seguir:
 
-Por exemplo, considere a seguinte classe:
+- Use `.` para acessar um namespace aninhado dentro de um namespace, como mostra o exemplo a seguir de uma [diretiva `using`](../keywords/using-directive.md):
 
-[!code-csharp[csRefOperators#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#17)]
+  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#NestedNamespace)]
 
-[!code-csharp[csRefOperators#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#18)]
+- Use `.` para formar um *nome qualificado* para acessar um tipo dentro de um namespace, como mostra o código a seguir:
 
-A variável `s` tem dois membros, `a` e `b`. Para acessá-los, use o operador ponto:
+  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#QualifiedName)]
 
-[!code-csharp[csRefOperators#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#19)]
+  Use a [diretiva `using`](../keywords/using-directive.md) para tornar opcional o uso de nomes qualificados.
 
-O ponto é usado também para formar nomes qualificados, que são nomes que especificam o namespace ou interface, por exemplo, à qual eles pertencem.
+- Use `.` para acessar [membros de tipo](../../programming-guide/classes-and-structs/index.md#members), estático e não-estático, como mostra o código a seguir:
 
-[!code-csharp[csRefOperators#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#20)]
+  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#TypeMemberAccess)]
 
-A diretiva using torna algumas qualificações de nome opcionais:
+Também pode-se usar `.` para invocar um [método de extensão](../../programming-guide/classes-and-structs/extension-methods.md).
 
-[!code-csharp[csRefOperators#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#21)]
+## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-Mas quando um identificador é ambíguo, ele deve ser qualificado:
-
-[!code-csharp[csRefOperators#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#22)]
+O operador `.` não pode ser sobrecarregado.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Saiva mais na seção [Acesso de membro](~/_csharplang/spec/expressions.md#member-access) na [especificação da linguagem C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Operadores do C#](index.md)
+- [Operadores ?. e ?[]](null-conditional-operators.md)

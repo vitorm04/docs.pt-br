@@ -3,12 +3,12 @@ title: Expressões C# - um tour pela linguagem C#
 description: expressões, operandos e operadores são blocos de compilação da linguagem C#
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154928"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212086"
 ---
 # <a name="expressions"></a>Expressões
 
@@ -28,49 +28,49 @@ A maioria dos operadores pode ser *sobrecarregada*. A sobrecarga de operador per
 O item a seguir resume os operadores do C#, listando as categorias de operador em ordem de precedência da mais alta para a mais baixa. Operadores na mesma categoria têm a mesma precedência. Em cada categoria está uma lista de expressões da categoria juntamente com a descrição do tipo de expressão.
 
 * Primária
-    - `x.m`: acesso de membro
-    - `x(...)`: invocação de método e delegado
-    - `x[...]`: acesso de matriz e indexador
-    - `x++`: pós-incremento
-    - `x--`: pós-decremento
-    - `new T(...)`: criação de objeto e delegado
-    - `new T(...){...}`: criação de objeto com inicializador
-    - `new {...}`: inicializador de objeto anônimo
-    - `new T[...]`: criação de matriz
-    - `typeof(T)`: obter objeto <xref:System.Type> para `T`
-    - `checked(x)`: avaliar expressão no contexto marcado
-    - `unchecked(x)`: avaliar expressão no contexto desmarcado
-    - `default(T)`: obter valor padrão do tipo `T`
-    - `delegate {...}`: função anônima (método anônimo)
+    - `x.m`: Acesso de membros
+    - `x(...)`: Invocação de método e delegado
+    - `x[...]`: Acesso de matriz e indexador
+    - `x++`: Pós-incremento
+    - `x--`: Pós-decremento
+    - `new T(...)`: Criação de objeto e delegado
+    - `new T(...){...}`: Criação de objeto com inicializador
+    - `new {...}`:  Inicializador de objeto anônimo
+    - `new T[...]`: Criação de matriz
+    - `typeof(T)`: Obter objeto <xref:System.Type> para `T`
+    - `checked(x)`: Avalia expressão no contexto selecionado
+    - `unchecked(x)`: Avalia expressão no contexto desmarcado
+    - `default(T)`: Obter valor padrão do tipo `T`
+    - `delegate {...}`: Função anônima (método anônimo)
 * Unário
-    - `+x`: identidade
-    - `-x`: negação
-    - `!x`: negação lógica
-    - `~x`: negação bit a bit
-    - `++x`: pré-incremento
-    - `--x`: pré-decremento
-    - `(T)x`: converter explicitamente `x` no tipo `T`
-    - `await x`: aguardar assincronamente `x` para concluir
+    - `+x`: Identidade
+    - `-x`: Negação
+    - `!x`: Negação lógica
+    - `~x`: Negação bit a bit
+    - `++x`: Pré-incremento
+    - `--x`: Pré-decremento
+    - `(T)x`: Converter explicitamente `x` no tipo `T`
+    - `await x`: Aguardar assincronamente `x` para concluir
 * Multiplicativo
-    - `x * y`: multiplicação
-    - `x / y`: divisão
-    - `x % y`: resto
+    - `x * y`: Multiplicação
+    - `x / y`: Divisão
+    - `x % y`: Restante
 * Aditivo
-    - `x + y`: adição, concatenação de cadeia de caracteres, combinação de delegados
-    - `x – y`: subtração, remoção de delegado
+    - `x + y`: Adição, concatenação de cadeia de caracteres, combinação de delegados
+    - `x – y`: Subtração, remoção de delegado
 * Shift
     - `x << y`: Shift esquerdo
     - `x >> y`: Shift direito
 * Teste de tipo e relacional
-    - `x < y`: é menor que
-    - `x > y`: é maior que
-    - `x <= y`: é menor que ou igual a
-    - `x >= y`: é maior que ou igual a
-    - `x is T`: retornará `true` se `x` for um `T`, caso contrário, `false`
-    - `x as T`: retornará `x` digitado como `T` ou `null` se `x` não for um `T`
+    - `x < y`: Menor que
+    - `x > y`: Maior que
+    - `x <= y`: Menor ou igual a
+    - `x >= y`: Maior que ou igual a
+    - `x is T`: Retorna `true` se `x` for um `T`, caso contrário, `false`
+    - `x as T`: Retorna `x` digitado como `T` ou `null`, se `x` não for um `T`
 * Igualdade
-    - `x == y`: igual a
-    - `x != y`: não é igual a
+    - `x == y`: Igual a
+    - `x != y`: Diferente de
 * AND lógico
     - `x & y`: AND bit a bit inteiro, AND lógico booliano
 * XOR lógico
@@ -78,19 +78,19 @@ O item a seguir resume os operadores do C#, listando as categorias de operador e
 * OR lógico
     - `x | y`: OR bit a bit inteiro, OR lógico booliano
 * AND condicional
-    - `x && y`: avaliará `y` somente se `x` não for `false`
+    - `x && y`: Avalia `y` somente se `x` não for `false`
 * OR condicional
-    - `x || y`: avaliará `y` somente se `x` não for `true`
+    - `x || y`: Avalia `y` somente se `x` não for `true`
 * Coalescência nula
-    - `x ?? y`: avaliará como `y` se `x` for nulo, caso contrário, como `x`
+    - `x ?? y`: Avalia como `y` se `x` for nulo, caso contrário, como `x`
 * Condicional
-    - `x ? y : z`: avaliará `y` se `x` for `true`, `z` se `x` for `false`
+    - `x ? y : z`: Avalia `y` se `x` for `true`, `z` se `x` for `false`
 * Atribuição ou função anônima
-    - `x = y`: atribuição
-    - `x op= y`: atribuição composta; operadores com suporte
+    - `x = y`: Atribuição
+    - `x op= y`: Atribuição composta; operadores com suporte
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: função anônima (expressão lambda)
+    - `(T x) => y`: Função anônima (expressão lambda)
 
->[!div class="step-by-step"]
->[Anterior](types-and-variables.md)
->[Próximo](statements.md)
+> [!div class="step-by-step"]
+> [Anterior](types-and-variables.md)
+> [Próximo](statements.md)

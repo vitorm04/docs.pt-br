@@ -3,14 +3,14 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186222"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981927"
 ---
-# <a name="the-history-of-c"></a>O histórico da linguagem C# #
+# <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
 Este artigo fornece um histórico de cada versão principal da linguagem C#. A equipe C# continua a inovar e a adicionar novos recursos. Os status detalhados do recurso de linguagem, incluindo os recursos considerados para as versões futuras, podem ser encontrados [no repositório dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) no GitHub.
 

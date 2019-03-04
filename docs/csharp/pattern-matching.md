@@ -3,14 +3,14 @@ title: Correspondência de padrões – Guia de C#
 description: Saiba mais sobre expressões de correspondência de padrões em C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522020"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969967"
 ---
-# <a name="pattern-matching"></a>Correspondência padrão #
+# <a name="pattern-matching"></a>Correspondência padrão
 
 Os padrões testam um valor que tem uma determinada *forma* e podem *extrair* informações do valor quando ele tem a forma correspondente. A correspondência de padrões fornece uma sintaxe mais concisa para algoritmos que você já usa atualmente. Você já cria algoritmos de correspondência de padrões usando a sintaxe existente. Você escreve instruções `if` ou `switch` que testam os valores. Então, quando essas instruções correspondem, você extrai e usa informações desse valor. Os novos elementos de sintaxe são extensões para as instruções com as quais você já está familiarizado: `is` e `switch`. Essas novas extensões combinam o teste de um valor e a extração dessas informações.
 
@@ -36,7 +36,7 @@ Antes do C# 7.0, você precisaria testar cada tipo de uma série de instruções
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-O código acima é uma expressão clássica do *padrão de tipo*: você está testando uma variável para determinar seu tipo e adotando uma ação diferente com base no tipo.
+O código acima é uma expressão clássica do *padrão de tipo*: Você está testando uma variável para determinar seu tipo e adotando uma ação diferente com base nesse tipo.
 
 Esse código se torna mais simples usando extensões para a expressão `is` para atribuir uma variável se o teste tiver êxito:
 
@@ -111,7 +111,7 @@ O comportamento especial para o padrão `null` é interessante porque a constant
 
 A introdução de `var` como uma das expressões de correspondência introduz novas regras à correspondência de padrão.
 
-A primeira regra é de que a declaração `var` segue as regras de inferência de tipos normais: o tipo é inferido como tipo estático da expressão switch. Com base nessa regra, o tipo sempre é correspondente.
+A primeira regra é que a declaração `var` segue as regras de inferência de tipos normais: O tipo é inferido para ser o tipo estático da expressão de troca. Com base nessa regra, o tipo sempre é correspondente.
 
 A segunda regra é que uma declaração `var` não tem a verificação de nulos que outras expressões do tipo padrão incluem. Isso significa que a variável pode ser nula e uma verificação de nulos é necessária nesse caso.
 

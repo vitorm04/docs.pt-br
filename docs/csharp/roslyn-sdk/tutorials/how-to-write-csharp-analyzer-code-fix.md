@@ -1,16 +1,16 @@
 ---
-title: 'Tutorial: escrever seu primeiro analisador e correção de código'
+title: 'Tutorial: crie seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397992"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201892"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: escrever seu primeiro analisador e correção de código
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: crie seu primeiro analisador e correção de código
 
 O SDK da .NET Compiler Platform fornece as ferramentas necessárias para criar avisos personalizados destinados ao C# ou código do Visual Basic. Seu **analisador** contém código que reconhece as violações da sua regra. Sua **correção de código** contém o código que corrige a violação. As regras que você implementar podem ser qualquer coisa, incluindo estrutura do código, estilo de codificação, convenções de nomenclatura e muito mais. O .NET Compiler Platform fornece a estrutura para executar análise conforme os desenvolvedores escrevem o código, bem como todos os recursos de interface do usuário do Visual Studio para corrigir o código: mostrar rabiscos no editor, popular a Lista de Erros do Visual Studio, criar as sugestões da "lâmpada" e mostrar a visualização avançada das correções sugeridas.
 
@@ -282,7 +282,7 @@ Em seguida, substitua `TestMethod2` com esse teste que garante que um diagnósti
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,

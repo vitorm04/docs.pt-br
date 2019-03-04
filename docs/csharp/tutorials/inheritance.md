@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 6db3db3ebe3e1934a8e74212692f07158b88b1d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717513"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836637"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-Em alguns casos, uma classe derivada *deve* substituir a implementação da classe base. Membros de classe base marcados com a palavra-chave [abstrato](../language-reference/keywords/abstract.md) exigem que as classes derivadas os substituam. A tentativa de compilar o exemplo a seguir gera um erro do compilador CS0534, "<class> não implementa o membro abstrato herdado <member>', pois a classe `B` não fornece uma implementação para `A.Method1`.
+Em alguns casos, uma classe derivada *deve* substituir a implementação da classe base. Membros de classe base marcados com a palavra-chave [abstrato](../language-reference/keywords/abstract.md) exigem que as classes derivadas os substituam. A tentativa de compilar o exemplo a seguir gera um erro do compilador CS0534, a "&lt;classe&gt; não implementa o membro abstrato herdado &lt;membro&gt;", pois a classe `B` não fornece uma implementação para `A.Method1`.
 
 ```csharp
 public abstract class A

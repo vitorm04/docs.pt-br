@@ -3,14 +3,14 @@ title: Tutorial Números em C# – introdução ao C#
 description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 52feb91fc011902f1e30f6b747512a7e0908bfbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197451"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978612"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C# #
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C\#
 
 Este tutorial ensina sobre os tipos numéricos em C# de maneira interativa. Você escreverá pequenas quantidades de código, depois compilará e executará esse código. O tutorial contém uma série de lições que exploram números e operações matemáticas em C#. Estas lições ensinam os princípios básicos da linguagem C#.
 

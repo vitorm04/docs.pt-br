@@ -2,14 +2,14 @@
 title: Escopo de namespace padrão em C#1
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 77345bfb2a4814c8cd38405c4481bea86fa84823
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc86e2e58eb936106807aba21b2953f52101cbc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613851"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979704"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>Escopo de namespace padrão em C#
+# <a name="scope-of-default-namespaces-in-c"></a>Escopo de namespace padrão em C\#
 Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas. Se você tiver XML que é em um namespace padrão, você ainda deve declarar uma variável de <xref:System.Xml.Linq.XNamespace> , e combina-o com o nome local para fazer um nome qualificado para ser usado na consulta.  
   
  Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.  

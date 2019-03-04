@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589304"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203104"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como: definir a igualdade de valor para um tipo (Guia de Programação em C#)
 Quando você define uma classe ou struct, decide se faz sentido criar uma definição personalizada de igualdade de valor (ou equivalência) para o tipo. Normalmente, você implementa igualdade de valor quando objetos do tipo devem ser adicionados a uma coleção de algum tipo ou quando seu objetivo principal é armazenar um conjunto de campos ou propriedades. Você pode basear sua definição de igualdade de valor em uma comparação de todos os campos e propriedades no tipo ou pode basear a definição em um subconjunto. Mas, em ambos os casos e em classes e struct, sua implementação deve seguir as cinco garantias de equivalência:  
@@ -41,14 +41,14 @@ Quando você define uma classe ou struct, decide se faz sentido criar uma defini
   
 4.  Substitua <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> para que os dois objetos que têm a igualdade de valor produzam o mesmo código hash.  
   
-5.  Opcionais: para dar suporte às definições para “maior que” ou “menor que”, implemente a interface <xref:System.IComparable%601> para seu tipo e também sobrecarregue os operadores [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
+5.  Opcional: para dar suporte às definições para “maior que” ou “menor que”, implemente a interface <xref:System.IComparable%601> para seu tipo e também sobrecarregue os operadores [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
   
  O primeiro exemplo a seguir mostra uma implementação da classe. O segundo exemplo mostra uma implementação de struct.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar a igualdade de valor em uma classe (tipo de referência).  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  Em classes (tipo de referência), a implementação padrão de ambos os métodos <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> executa uma comparação de igualdade de referência, não uma verificação de igualdade de valor. Quando um implementador substitui o método virtual, o objetivo é fornecer semântica de igualdade de valor.  
   
@@ -57,7 +57,7 @@ Quando você define uma classe ou struct, decide se faz sentido criar uma defini
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar a igualdade de valor em um struct (tipo de valor):  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  Para estruturas, a implementação padrão de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (que é a versão substituída em <xref:System.ValueType?displayProperty=nameWithType>) executa uma verificação de igualdade de valor por meio de reflexão para comparar os valores de cada campo no tipo. Quando um implementador substitui o método `Equals` virtual em uma estrutura, a finalidade é fornecer uma maneira mais eficiente de executar a verificação de igualdade de valor e, opcionalmente, basear a comparação em algum subconjunto dos campos ou propriedades do struct.  
   
