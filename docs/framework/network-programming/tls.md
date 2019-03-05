@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b08d119c0c7edb71ceab5c763c1359bf4c90cfec
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415891"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212528"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Melhores práticas do TLS (Transport Layer Security) com o .NET Framework
 
@@ -237,7 +237,7 @@ Você pode usar o registro para um controle refinado sobre os protocolos que seu
 
 Comece com a chave do Registro do `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Sob essa chave, é possível criar qualquer subchave no conjunto `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` e `TLS 1.2`. Em cada uma dessas subchaves, é possível criar subchaves `Client` e/ou `Server`. Em `Client` e `Server`, é possível criar valores DWORD `DisabledByDefault` (0 ou 1) e `Enabled` (0 ou 0xFFFFFFFF).
 
-## <a name="the-schusestrongcrypto-flag"></a>O sinalizador SCH_USE_STRONG_CRYPTO
+## <a name="the-sch_use_strong_crypto-flag"></a>O sinalizador SCH_USE_STRONG_CRYPTO
 
 Quando ele é habilitado (por padrão, por uma opção `AppContext` ou pelo Registro do Windows), o .NET Framework usa o sinalizador `SCH_USE_STRONG_CRYPTO` quando seu aplicativo solicita o protocolo de segurança TLS. O sinalizador `SCH_USE_STRONG_CRYPTO` pode ser habilitado por padrão, com a opção `AppContext` ou com o Registro. O sistema operacional passa o sinalizador para o `Schannel` para instruí-lo a desativar algoritmos criptográficos fracos conhecidos, pacotes de codificação e versões do protocolo TLS/SSL que possam ser habilitadas para uma melhor interoperabilidade. Para obter mais informações, consulte:
 
@@ -270,10 +270,10 @@ Para habilitar ou reabilitar o TLS 1.2 e/ou o TLS 1.1 em um sistema compatível 
 
 | **Sistema operacional** | **Suporte ao TLS 1.2** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | Com suporte e habilitado por padrão. |
-| Windows 8.1</br>Windows Server 2012 R2 | Com suporte e habilitado por padrão. |
-| Windows 8.0</br>Windows Server 2012 | Com suporte e habilitado por padrão. |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | Com suporte, mas não habilitado por padrão. Veja a página da Web [Configurações do Registro do TLS (protocolo TLS)](/windows-server/security/tls/tls-registry-settings) para obter detalhes sobre como habilitar o TLS 1.2. |
+| Windows 10<br>Windows Server 2016 | Com suporte e habilitado por padrão. |
+| Windows 8.1<br>Windows Server 2012 R2 | Com suporte e habilitado por padrão. |
+| Windows 8.0<br>Windows Server 2012 | Com suporte e habilitado por padrão. |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | Com suporte, mas não habilitado por padrão. Veja a página da Web [Configurações do Registro do TLS (protocolo TLS)](/windows-server/security/tls/tls-registry-settings) para obter detalhes sobre como habilitar o TLS 1.2. |
 | Windows Server 2008 | O suporte ao protocolo TLS 1.2 e TLS 1.1 requer uma atualização. Confira [Atualizar para adicionar suporte ao protocolo TLS 1.1 e TLS 1.2 no Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Sem suporte. |
 
@@ -285,10 +285,10 @@ Esta tabela mostra a atualização do sistema operacional que você precisará p
 
 | **Sistema operacional** | **Atualização mínima necessária para dar suporte ao TLS 1.2 com .NET Framework 3.5** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | [Atualização cumulativa do Windows 10 Versão 1511 e do Windows Server 2016 Technical Preview 4: 10 de maio de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
-| Windows 8.1</br>Windows Server 2012 R2 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5 no Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 8.0</br>Windows Server 2012 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5 no Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5.1 no Windows 7 SP1 e Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 10<br>Windows Server 2016 | [Atualização cumulativa do Windows 10 Versão 1511 e do Windows Server 2016 Technical Preview 4: 10 de maio de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 8.1<br>Windows Server 2012 R2 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5 no Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 8.0<br>Windows Server 2012 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5 no Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5.1 no Windows 7 SP1 e Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 2.0 SP2 no Windows Vista SP2 e Server 2008 SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | Sem suporte |
 

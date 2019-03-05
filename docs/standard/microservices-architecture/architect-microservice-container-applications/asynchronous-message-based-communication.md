@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços do .NET para Aplicativos .NET em Con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148893"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969356"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -77,7 +77,7 @@ Um desafio ao implementar uma arquitetura orientada a eventos em vários micross
 
 - Usando [mineração do log de transações](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Usando o padrão [Event Sourcing](https://msdn.microsoft.com/library/dn589792.aspx) completo.
+- Usando o padrão [Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
 
 - Usando o [Padrão de caixa de saída](http://gistlabs.com/2014/05/the-outbox/): uma tabela de banco de dados transacional como uma fila de mensagens que será a base de um componente do criador do evento que criará e publicará o evento.
 

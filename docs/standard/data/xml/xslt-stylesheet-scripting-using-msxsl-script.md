@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267294"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835246"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Script de folha de estilos XSLT usando \<msxsl:script>
 A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usando o elemento `script`.  
@@ -45,7 +45,7 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  Para obter a evidência do assembly, use `this.GetType().Assembly.Evidence`. Para obter a evidência de um Uniform Resource Identifier (URI), use `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Se você usar os métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que utilizam um <xref:System.Xml.XmlResolver> mas nenhum `Evidence`, a zona de segurança para o assembly usará como padrão a confiança total. Para saber mais, veja <xref:System.Security.SecurityZone> e [Conjuntos de permissões nomeadas](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Se você usar os métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que utilizam um <xref:System.Xml.XmlResolver> mas nenhum `Evidence`, a zona de segurança para o assembly usará como padrão a confiança total. Para saber mais, veja <xref:System.Security.SecurityZone> e [Conjuntos de permissões nomeadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  As funções podem ser declaradas no elemento `msxsl:script`. A tabela a seguir mostra os namespaces que têm suporte por padrão. Você pode usar as classes fora dos namespaces listados. No entanto, essas classes devem ser totalmente qualificadas.  
   

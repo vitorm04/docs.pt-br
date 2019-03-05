@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513419"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971943"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Armadilhas em potencial em dados e paralelismo da tarefa
 Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> podem melhorar consideravelmente o desempenho em comparação com consultas sequenciais comuns. No entanto, o trabalho de paralelizar o loop apresenta complexidade que pode levar a problemas que, em código sequencial, não são tão comuns ou não são encontrados. Este tópico lista algumas práticas a serem evitadas ao escrever loops paralelos.  
@@ -52,10 +52,10 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
 >  Você pode testar isso sozinho inserindo algumas chamadas para <xref:System.Console.WriteLine%2A> nas suas consultas. Embora esse método seja usado nos exemplos de documentação para fins de demonstração, não o use em loops paralelos, a menos que seja necessário.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Esteja ciente de questões de afinidade de thread  
- Algumas tecnologias, por exemplo, interoperabilidade COM para componentes de um único segmento (STA), Windows Forms e Windows Presentation Foundation (WPF), impõem restrições de afinidade de thread que exigem que o código seja executado em um thread específico. Por exemplo, tanto no Windows Forms quanto no WPF, um controle só pode ser acessado no thread em que foi criado. Por exemplo, isso significa que você não pode atualizar um controle de lista de um loop paralelo, a menos que você configure o agendador de thread para agendar o trabalho somente no thread da interface do usuário. Para obter mais informações, confira [Como: Agendar o trabalho no thread de interface do usuário](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Algumas tecnologias, por exemplo, interoperabilidade COM para componentes de um único segmento (STA), Windows Forms e Windows Presentation Foundation (WPF), impõem restrições de afinidade de thread que exigem que o código seja executado em um thread específico. Por exemplo, tanto no Windows Forms quanto no WPF, um controle só pode ser acessado no thread em que foi criado. Por exemplo, isso significa que você não pode atualizar um controle de lista de um loop paralelo, a menos que você configure o agendador de thread para agendar o trabalho somente no thread da interface do usuário. Para obter mais informações, confira [Especificação de um contexto de sincronização](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Tenha cuidado ao aguardar delegados que são chamados por Parallel.Invoke  
- Em determinadas circunstâncias, a biblioteca de paralelismo de tarefas embutirá uma tarefa, ou seja, ela será executada na tarefa no thread em execução no momento. (Para saber mais, confira [Agendadores de Tarefas](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)). Em certos casos, essa otimização de desempenho pode resultar em deadlock. Por exemplo, duas tarefas podem executar o mesmo código de delegado, o qual sinaliza quando ocorre um evento e, em seguida, aguarda a sinalização da outra tarefa. Se a segunda tarefa for embutida no mesmo thread que a primeira, e a primeira entrar em um estado de Espera, a segunda tarefa nunca poderá sinalizar o evento. Para evitar isso, especifique um tempo limite para a operação de Espera, ou use constructos de thread explícitos para ajudar a garantir que uma tarefa não possa bloquear a outra.  
+ Em determinadas circunstâncias, a biblioteca de paralelismo de tarefas embutirá uma tarefa, ou seja, ela será executada na tarefa no thread em execução no momento. (Para saber mais, confira [Agendadores de Tarefas](xref:System.Threading.Tasks.TaskScheduler)). Em certos casos, essa otimização de desempenho pode resultar em deadlock. Por exemplo, duas tarefas podem executar o mesmo código de delegado, o qual sinaliza quando ocorre um evento e, em seguida, aguarda a sinalização da outra tarefa. Se a segunda tarefa for embutida no mesmo thread que a primeira, e a primeira entrar em um estado de Espera, a segunda tarefa nunca poderá sinalizar o evento. Para evitar isso, especifique um tempo limite para a operação de Espera, ou use constructos de thread explícitos para ajudar a garantir que uma tarefa não possa bloquear a outra.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Não suponha que iterações para ForEach, For e ForAll sempre sejam executadas em paralelo  
  É importante ter em mente que iterações individuais em um loop <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> ou <xref:System.Linq.ParallelEnumerable.ForAll%2A> podem, mas não necessariamente têm que, ser executadas em paralelo. Portanto, você deve evitar gravar qualquer código que dependa da correção na execução paralela de iterações ou na execução de iterações em qualquer classificação específica. Por exemplo, esse código é provavelmente um deadlock:  

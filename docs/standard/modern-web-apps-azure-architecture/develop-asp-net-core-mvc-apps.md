@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827871"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978326"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -172,7 +172,7 @@ Outra abordagem para desacoplar o aplicativo dos detalhes de implementação é 
 
 ### <a name="feature-organization"></a>Organização do recurso
 
-Por padrão, os aplicativos ASP.NET Core organizam sua estrutura de pastas para incluir Controladores e Exibições e, frequentemente, ViewModels. Em geral, o código do lado do cliente para dar suporte a essas estruturas do lado do servidor é armazenado separadamente na pasta wwwroot. No entanto, os aplicativos grandes podem enfrentar problemas com essa organização, pois o trabalho em um recurso específico geralmente exige o salto entre essas pastas. Isso fica cada vez mais difícil à medida que aumenta o número de arquivos e subpastas em cada pasta, resultando em uma grande quantidade de rolagem pelo Gerenciador de Soluções. Uma solução para esse problema é organizar o código do aplicativo por _recurso_, em vez de por tipo de arquivo. Esse estilo organizacional normalmente é conhecido como pastas de recurso ou [fatias de recurso](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx) (veja também: [Fatias verticais](https://deviq.com/vertical-slices/)).
+Por padrão, os aplicativos ASP.NET Core organizam sua estrutura de pastas para incluir Controladores e Exibições e, frequentemente, ViewModels. Em geral, o código do lado do cliente para dar suporte a essas estruturas do lado do servidor é armazenado separadamente na pasta wwwroot. No entanto, os aplicativos grandes podem enfrentar problemas com essa organização, pois o trabalho em um recurso específico geralmente exige o salto entre essas pastas. Isso fica cada vez mais difícil à medida que aumenta o número de arquivos e subpastas em cada pasta, resultando em uma grande quantidade de rolagem pelo Gerenciador de Soluções. Uma solução para esse problema é organizar o código do aplicativo por _recurso_, em vez de por tipo de arquivo. Esse estilo organizacional normalmente é conhecido como pastas de recurso ou [fatias de recurso](https://msdn.microsoft.com/magazine/mt763233.aspx) (veja também: [Fatias verticais](https://deviq.com/vertical-slices/)).
 
 O ASP.NET Core MVC é compatível com Áreas para essa finalidade. Usando áreas, você pode criar conjuntos separados de pastas de Controladores e Exibições (bem como os modelos associados) em cada pasta de Área. A Figura 7-1 mostra uma estrutura de pastas de exemplo, usando Áreas.
 
@@ -311,7 +311,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Leia mais sobre como implementar filtros e baixe uma amostra funcional no artigo do MSDN [Filtros do ASP.NET Core MVC do mundo real](https://msdn.microsoft.com/magazine/mt767699.aspx).
+Leia mais sobre como implementar filtros e baixe uma amostra funcional no artigo do MSDN: [Filtros do ASP.NET Core MVC do mundo real](https://msdn.microsoft.com/magazine/mt767699.aspx).
 
 > ### <a name="references--structuring-applications"></a>Referências – estruturando aplicativos
 >

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692958"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836416"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
 <a name="top"></a> Covariância e contravariância são termos que fazem referência à capacidade de usar um tipo mais derivado (mais específico) ou menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
@@ -112,7 +112,7 @@ ms.locfileid: "54692958"
 > [!NOTE]
 >  O último parâmetro de tipo genérico dos delegados genéricos `Func` especifica o tipo do valor de retorno na assinatura do delegado. É covariante (palavra-chave `out`), enquanto os outros parâmetros de tipo genéricos são contravariantes (palavra-chave `in`).  
   
- O código a seguir ilustra isso. O primeiro trecho de código define uma classe chamada `Base`, uma classe chamada `Derived` que herda `Base` e outra classe com um método `static` (`Shared` no Visual Basic) chamado `MyMethod`. O método usa uma instância de `Base` e retorna uma instância de `Derived`. (Se o argumento é uma instância de `Derived`, `MyMethod` o retorna; se o argumento é uma instância de `Base`, `MyMethod` retorna uma nova instância de `Derived`.) Em `Main()`, o exemplo cria uma instância de `Func<Base, Derived>` (`Func(Of Base, Derived)` no Visual Basic) que representa `MyMethod` e a armazena na variável `f1`.  
+ O código a seguir ilustra isso. O primeiro trecho de código define uma classe chamada `Base`, uma classe chamada `Derived` que herda `Base` e outra classe com um método `static` (`Shared` no Visual Basic) chamado `MyMethod`. O método usa uma instância de `Base` e retorna uma instância de `Derived`. (Se o argumento for uma instância de `Derived`, `MyMethod` o retorna; se o argumento for uma instância de `Base`, `MyMethod` retorna uma nova instância de `Derived`.) Em `Main()`, o exemplo cria uma instância de `Func<Base, Derived>` (`Func(Of Base, Derived)` no Visual Basic) que representa `MyMethod` e a armazena na variável `f1`.  
   
  [!code-csharp[CoContravarianceDelegates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#2)]
  [!code-vb[CoContravarianceDelegates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#2)]  
@@ -135,7 +135,7 @@ ms.locfileid: "54692958"
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Variação em delegados genéricos e não genéricos  
  No código anterior, a assinatura de `MyMethod` corresponde exatamente à assinatura do delegado genérico construído: `Func<Base, Derived>` (`Func(Of Base, Derived)` no Visual Basic). O exemplo mostra que esse delegado genérico pode ser armazenado em variáveis ou parâmetros do método que têm tipos de parâmetro mais derivados e tipos de retorno menos derivados, desde que todos os tipos de delegados sejam construídos do tipo de delegado genérico <xref:System.Func%602>.  
   
- Este é um aspecto importante. Os efeitos da covariância e da contravariância nos parâmetros de tipo de delegados genéricos são semelhantes aos efeitos da covariância e da contravariância na associação comum de delegação (consulte [Variância em delegados](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). No entanto, a variância na associação de delegados funciona com todos os tipos de delegados, e não apenas com tipos de delegados genéricos com parâmetros de tipo variantes. Além disso, a variância na associação de delegados possibilita a um método a ser associado a qualquer delegado que tenha os tipos de parâmetro mais restritivos e um tipo de retorno menos restritivo, enquanto que a atribuição de delegados genéricos só funciona quando ambos os tipos de delegados são construídos da mesma definição de tipo genérico.  
+ Este é um aspecto importante. Os efeitos da covariância e da contravariância nos parâmetros de tipo de delegados genéricos são semelhantes aos efeitos da covariância e da contravariância na associação comum de delegação (confira [Variância em delegados (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) e [Variância em delegados (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)). No entanto, a variância na associação de delegados funciona com todos os tipos de delegados, e não apenas com tipos de delegados genéricos com parâmetros de tipo variantes. Além disso, a variância na associação de delegados possibilita a um método a ser associado a qualquer delegado que tenha os tipos de parâmetro mais restritivos e um tipo de retorno menos restritivo, enquanto que a atribuição de delegados genéricos só funciona quando ambos os tipos de delegados são construídos da mesma definição de tipo genérico.  
   
  O exemplo a seguir mostra os efeitos combinados da variância na associação de delegados e a variância em parâmetros de tipo genéricos. O exemplo define uma hierarquia de tipo que inclui três tipos, do menos derivado (`Type1`) para o mais derivado (`Type3`). A variância na associação comum de delegados é usada para associar um método a um tipo de parâmetro `Type1` e um tipo de retorno `Type3` a um representante genérico com um tipo de parâmetro `Type2` e um tipo de retorno `Type2`. O delegado genérico resultante é então atribuído a outra variável cujo tipo de delegado genérico possui um parâmetro de tipo `Type3` e tipo de retorno `Type1`, usando a covariância e a contravariância de parâmetros de tipo genéricos. A segunda atribuição requer que o tipo de variável e o tipo de delegado sejam construídos a partir da mesma definição de tipo genérico, nesse caso, <xref:System.Func%602>.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54692958"
   
  O Visual Basic e o C# e não permitem que você viole as regras de uso de parâmetros de tipo covariantes e contravariantes nem adicionar anotações de covariância e de contravariância aos parâmetros de tipo de tipos que não sejam interfaces e delegados. O [Assembler de MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md) não executa essas verificações, mas uma <xref:System.TypeLoadException> é gerada quando você tenta carregar um tipo que viola as regras.  
   
- Para saber mais e obter um exemplo de código, consulte [Variação em interfaces genéricas](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Para obter mais informações e códigos de exemplo, confira [Variação em interfaces genéricas (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Variação em interfaces genéricas (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
  [Voltar ao início](#top)  
   
@@ -192,4 +192,5 @@ ms.locfileid: "54692958"
 
 - [Covariância e contravariância (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Covariância e contravariância (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [Variação em Delegações](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+- [Variação em delegados (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Variação em delegados (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

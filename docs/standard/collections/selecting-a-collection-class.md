@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd40e35c001318f7e5e685a68fd591b253cbf051
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620078"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836364"
 ---
 # <a name="selecting-a-collection-class"></a>Selecionando uma classe de coleção
 Certifique-se de escolher sua classe de coleção com cuidado. A utilização do tipo errado pode restringir o uso da coleção. Em geral, evite usar os tipos no namespace <xref:System.Collections>, a menos que o seu foco seja especificamente o .NET Framework versão 1.1. As versões genéricas e simultâneas das coleções são as preferíveis devido à maior segurança de tipo e outras melhorias.  
@@ -75,7 +75,7 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
     -   Além disso, é possível usar qualquer uma das classes genéricas de coleção no namespace <xref:System.Collections.Generic> como coleções de cadeias de caracteres fortemente tipadas especificando a classe <xref:System.String> para seus argumentos de tipo genérico.  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects e PLINQ  
- O LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. As consultas LINQ fornecem um padrão comum para acessar dados, são geralmente mais concisas e legíveis que os loops padrão `foreach` e fornecem capacidades de filtragem, ordenação e agrupamento. Para obter mais informações, consulte [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ O LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. As consultas LINQ fornecem um padrão comum para acessar dados, são geralmente mais concisas e legíveis que os loops padrão `foreach` e fornecem capacidades de filtragem, ordenação e agrupamento. Para obter mais informações, confira [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) e [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
   
  PLINQ fornece uma implementação paralela de LINQ to Objects que pode oferecer uma execução de consulta mais rápida em muitos cenários, por meio do uso mais eficiente dos computadores de vários núcleos. Para obter mais informações, consulte [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

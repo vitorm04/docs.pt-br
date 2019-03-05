@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479898"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251008"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quando escolher o .NET Framework para os contêineres do Docker
 
@@ -23,7 +23,7 @@ Na maioria dos casos desse cenário, não será necessário migrar seus aplicati
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Usando bibliotecas .NET de terceiros ou pacotes NuGet não disponíveis para o .NET Core
 
-Bibliotecas de terceiros estão rapidamente adotando o [.NET Standard](../../net-standard.md), que permite o compartilhamento de código em todas as versões do .NET, incluindo o .NET Core. Com a Biblioteca 2.0 e posterior do .NET Standard, a compatibilidade da superfície de API tornou-se significativamente maior e, nos .NET Core 2.x, os aplicativos também podem referenciar diretamente bibliotecas do .NET Framework existentes (consulte [compat shim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
+Bibliotecas de terceiros estão rapidamente adotando o [.NET Standard](../../net-standard.md), que permite o compartilhamento de código em todas as versões do .NET, incluindo o .NET Core. Com a Biblioteca 2.0 e posterior do .NET Standard, a compatibilidade da superfície de API tornou-se significativamente maior e, nos .NET Core 2.x, os aplicativos também podem referenciar diretamente bibliotecas do .NET Framework existentes (confira [.NET Framework 4.6.1 com suporte para .NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)).
 
 Além disso, o [Pacote de Compatibilidade do Windows](../../../core/porting/windows-compat-pack.md) foi lançado em novembro de 2017 para estender a superfície de API disponível para .NET Standard 2.0 no Windows. Este pacote permite recompilar a maioria do código existente para o .NET Standard 2.x com pouca ou nenhuma modificação para ser executado no Windows.
 
