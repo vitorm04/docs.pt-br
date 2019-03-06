@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: 3fadba2fe8036fc558e18f80bd7cb1ffc977b762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632108"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374421"
 ---
 # <a name="planning-for-application-performance"></a>Planejando-se para desempenho do aplicativo
 O sucesso de alcançar suas metas de desempenho depende de quão bem você desenvolve sua estratégia de desempenho. O planejamento é o primeiro estágio no desenvolvimento de qualquer produto. Este tópico descreve algumas regras bastante simples para desenvolver uma boa estratégia de desempenho.  
@@ -33,12 +33,12 @@ O sucesso de alcançar suas metas de desempenho depende de quão bem você desen
  Controles do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são inerentemente extensíveis permitindo ampla personalização de sua aparência sem alterar o comportamento do controle. Ao aproveitar estilos, modelos de dados e modelos de controle, você pode criar e incrementalmente aprimorar um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] personalizável que se adapta às suas necessidades de desempenho.  
   
 ## <a name="see-also"></a>Consulte também
-- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Aproveitando o hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento do objeto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Recursos do aplicativo](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Outras recomendações de desempenho](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
+- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Layout e design](optimizing-performance-layout-and-design.md)
+- [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento do objeto](optimizing-performance-object-behavior.md)
+- [Recursos do aplicativo](optimizing-performance-application-resources.md)
+- [Texto](optimizing-performance-text.md)
+- [Associação de dados](optimizing-performance-data-binding.md)
+- [Outras recomendações de desempenho](optimizing-performance-other-recommendations.md)

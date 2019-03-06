@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: 6cd3e125b5b1a97f5851d4d1845e3e9e384e3d16
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a2453ae7fad56205ae06835d8710ca126bba17c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748551"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369728"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Como: Usar um dicionário de recursos de escopo do aplicativo
 Este exemplo mostra como definir e usar um dicionário de recursos personalizado de escopo do aplicativo.  
@@ -24,25 +24,25 @@ Este exemplo mostra como definir e usar um dicionário de recursos personalizado
   
  Se você tiver vários recursos que você definir usando <xref:System.Windows.Application.Resources%2A>, em vez disso, você pode usar um dicionário de recurso personalizado para armazenar esses recursos e definir <xref:System.Windows.Application.Resources%2A> com ele em vez disso. O exemplo a seguir mostra como declarar um dicionário de recurso personalizado usando XAML.
   
- [!code-xaml[HOWTOResourceDictionaries#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MyResourceDictionary.xaml#1)]  
+ [!code-xaml[HOWTOResourceDictionaries#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MyResourceDictionary.xaml#1)]  
   
  Trocar dicionários de recursos inteiros usando <xref:System.Windows.Application.Resources%2A> permite dar suporte a temas de escopo do aplicativo, onde cada tema é encapsulado por um único dicionário de recursos. O exemplo a seguir mostra como definir o <xref:System.Windows.ResourceDictionary>.  
   
- [!code-xaml[HOWTOResourceDictionaries#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/App.xaml#2)]  
+ [!code-xaml[HOWTOResourceDictionaries#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/App.xaml#2)]  
   
  A seguir mostra como você pode obter os recursos de escopo do aplicativo de dicionário de recursos exposto pelo <xref:System.Windows.Application.Resources%2A> em XAML.  
   
- [!code-xaml[HOWTOResourceDictionaries#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MainWindow.xaml#4)]  
+ [!code-xaml[HOWTOResourceDictionaries#4](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MainWindow.xaml#4)]  
   
  O exemplo seguinte mostra como é possível também obter os recursos em código.  
   
- [!code-csharp[HOWTOResourceDictionaries#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MainWindow.xaml.cs#3)]
- [!code-vb[HOWTOResourceDictionaries#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToResourceDictionaries/VB/MainWindow.xaml.vb#3)]  
+ [!code-csharp[HOWTOResourceDictionaries#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MainWindow.xaml.cs#3)]
+ [!code-vb[HOWTOResourceDictionaries#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HowToResourceDictionaries/VB/MainWindow.xaml.vb#3)]  
   
  Há duas considerações a fazer ao usar <xref:System.Windows.Application.Resources%2A>. Primeiro, o dicionário *chave* é um objeto, então você deve usar exatamente a mesma instância de objeto quando ambos definem e obtêm um valor da propriedade. (Note que a chave faz distinção entre maiúsculas e minúsculas ao usar uma cadeia de caracteres.) Segundo, o dicionário *valor* é um objeto, então você precisará converter o valor para o tipo desejado ao obter um valor de propriedade.  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
-- [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Dicionários de recursos mesclados](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)
+- [Recursos XAML](../advanced/xaml-resources.md)
+- [Dicionários de recursos mesclados](../advanced/merged-resource-dictionaries.md)

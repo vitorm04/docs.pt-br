@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 42573304d6f3d6d145887fa7289f9b5ec019f521
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701541"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379140"
 ---
 # <a name="listview-overview"></a>Visão geral de ListView
 O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para exibir um conjunto de itens de dados em diferentes layouts ou modos de exibição. Por exemplo, talvez um usuário queira exibir itens de dados em uma tabela e classificar suas colunas.  
@@ -29,31 +29,31 @@ O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para
   
  O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.GridView> para um <xref:System.Windows.Controls.ListView> controle que exibe informações de funcionários.  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  A ilustração a seguir mostra como os dados são exibidos no exemplo anterior.  
   
- ![ListView com saída de GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView com saída de GridView](./media/listviewgridview.JPG "ListViewGridView")  
   
- Você pode criar um modo de exibição personalizado definindo uma classe que herda o <xref:System.Windows.Controls.ViewBase> classe. O <xref:System.Windows.Controls.ViewBase> classe fornece a infraestrutura que você precisa criar uma exibição personalizada. Para obter mais informações sobre como criar uma exibição personalizada, consulte [Criar um modo de exibição personalizado para um ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+ Você pode criar um modo de exibição personalizado definindo uma classe que herda o <xref:System.Windows.Controls.ViewBase> classe. O <xref:System.Windows.Controls.ViewBase> classe fornece a infraestrutura que você precisa criar uma exibição personalizada. Para obter mais informações sobre como criar uma exibição personalizada, consulte [Criar um modo de exibição personalizado para um ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="BindingDatatoaListView"></a>   
 ## <a name="binding-data-to-a-listview"></a>Associando dados a um ListView  
  Use o <xref:System.Windows.Controls.ItemsControl.Items%2A> e <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedades para especificar itens para um <xref:System.Windows.Controls.ListView> controle. O exemplo a seguir define o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade em uma coleção de dados que é chamada `EmployeeInfoDataSource`.  
   
- [!code-xaml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
+ [!code-xaml[ListViewCode#ItemsSource](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
   
  Em um <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> objetos associados a campos de dados especificado. O exemplo a seguir associa um <xref:System.Windows.Controls.GridViewColumn> objeto para um campo de dados, especificando um <xref:System.Windows.Data.Binding> para o <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> propriedade.  
   
- [!code-csharp[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
- [!code-vb[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
- [!code-xaml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
+ [!code-csharp[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
+ [!code-vb[ListViewCode#GridViewColumnProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
+ [!code-xaml[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
   
  Você também pode especificar uma <xref:System.Windows.Data.Binding> como parte de um <xref:System.Windows.DataTemplate> definição que você usa para estilizar as células em uma coluna. No exemplo a seguir, o <xref:System.Windows.DataTemplate> que é identificado com um <xref:System.Windows.ResourceKey> define o <xref:System.Windows.Data.Binding> para um <xref:System.Windows.Controls.GridViewColumn>. Observe que este exemplo não define o <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> porque isso substitui a associação especificada pelo <xref:System.Windows.DataTemplate>.  
   
- [!code-xaml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewCellTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
- [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
+ [!code-xaml[ListViewTemplate#CellTemplateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 <a name="StylingaListView"></a>   
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>Estilizando uma ListView que implemente um GridView  
@@ -65,7 +65,7 @@ O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para
   
  Para evitar problemas de alinhamento entre células em uma <xref:System.Windows.Controls.GridView>, não use o <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para definir propriedades ou adicionar conteúdo que afeta a largura de um item em um <xref:System.Windows.Controls.ListView>. Por exemplo, um problema de alinhamento pode ocorrer quando você define o <xref:System.Windows.FrameworkElement.Margin%2A> propriedade no <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>. Para especificar propriedades ou definir o conteúdo que afeta a largura de itens em uma <xref:System.Windows.Controls.GridView>, use as propriedades do <xref:System.Windows.Controls.GridView> classe e suas classes relacionadas, tais como <xref:System.Windows.Controls.GridViewColumn>.  
   
- Para obter mais informações sobre como usar <xref:System.Windows.Controls.GridView> e suas classes de suporte, consulte [visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md).  
+ Para obter mais informações sobre como usar <xref:System.Windows.Controls.GridView> e suas classes de suporte, consulte [visão geral de GridView](gridview-overview.md).  
   
  Se você definir um <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para um <xref:System.Windows.Controls.ListView> controlam e também definem um <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, você deve incluir um <xref:System.Windows.Controls.ContentPresenter> no estilo para que o <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> funcione corretamente.  
   
@@ -86,6 +86,6 @@ O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
-- [Visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Controles](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [Visão geral de GridView](gridview-overview.md)
+- [Tópicos de instruções](listview-how-to-topics.md)
+- [Controles](../advanced/optimizing-performance-controls.md)

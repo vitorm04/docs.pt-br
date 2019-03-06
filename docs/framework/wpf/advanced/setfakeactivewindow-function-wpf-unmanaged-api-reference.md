@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: a69118be-63b0-445c-9fb6-ab8cc958e531
-ms.openlocfilehash: cf2cdce9da4f10ca91df5a7e04ca207ba76db5a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 914c035fe3454e4ec1cea7baf3e6d5fbfd50a783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507276"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354174"
 ---
 # <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a>Função SetFakeActiveWindow (referência de API não gerenciada WPF)
 Essa API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente do seu código.  
@@ -33,11 +33,11 @@ void __stdcall SetFakeActiveWindow(
  Um identificador de janela.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Ver [requisitos de sistema do .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Ver [requisitos de sistema do .NET Framework](../../get-started/system-requirements.md).  
   
  **DLL:** PresentationHost_v0400.dll  
   
  **Versão do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência de API não gerenciada do WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [Referência de API não gerenciada do WPF](wpf-unmanaged-api-reference.md)

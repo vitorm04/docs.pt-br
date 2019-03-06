@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Border
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
-ms.openlocfilehash: 0ee7ae6598feacee282cc283b82e20390418b4c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551040"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368071"
 ---
 # <a name="border"></a>Borda
-O exemplo a seguir demonstra como alterar as propriedades de dinamicamente o <xref:System.Windows.Controls.Border> elemento.  
+O exemplo a seguir demonstra como alterar dinamicamente as propriedades do <xref:System.Windows.Controls.Border> elemento.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Animar um valor de BorderThickness](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+ [Animar um valor de BorderThickness](how-to-animate-a-borderthickness-value.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Decorator>  
@@ -27,6 +27,6 @@ O exemplo a seguir demonstra como alterar as propriedades de dinamicamente o <xr
  <xref:System.Windows.Controls.Border>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Visão geral de painéis](panels-overview.md)  
   
- [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [Visão geral de alinhamento, margens e preenchimento](../advanced/alignment-margins-and-padding-overview.md)

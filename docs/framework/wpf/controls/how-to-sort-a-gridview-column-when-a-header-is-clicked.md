@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b636842b1d41e17b09f02b7b9a6f7aa47eb4cdd1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694081"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365406"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Como: Classificar uma coluna GridView quando um cabeçalho é clicado
 Este exemplo mostra como criar uma <xref:System.Windows.Controls.ListView> controle que implementa um <xref:System.Windows.Controls.GridView> exibir modo e classifica os dados de conteúdo quando um usuário clica em um cabeçalho de coluna.  
@@ -226,6 +226,6 @@ End Sub
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Visão geral de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Visão geral de ListView](listview-overview.md)
+- [Visão geral de GridView](gridview-overview.md)
+- [Tópicos de instruções](listview-how-to-topics.md)

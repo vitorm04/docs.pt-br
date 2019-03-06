@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632896"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367603"
 ---
 # <a name="weak-event-patterns"></a>Padrões de evento fraco
 Em aplicativos, é possível que manipuladores que estão anexados a origens de eventos não sejam destruídos em coordenação com o objeto de ouvinte que anexou o manipulador à origem. Essa situação pode levar a vazamentos de memória. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta um padrão de design que pode ser usado para resolver esse problema, fornecendo uma classe de gerenciamento dedicada para determinados eventos e implementando uma interface em ouvintes para o evento. Esse padrão de design é conhecido como o *padrão de evento fraco*.  
@@ -96,7 +96,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
      Essa classe herda a <xref:System.Windows.WeakEventManager> classe.  
   
-     [!code-csharp[WeakEvents#WeakEventManagerTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
+     [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
 2.  Substitua o nome `SomeEventWeakEventManager` pelo seu próprio nome.  
   
@@ -133,5 +133,5 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
-- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Visão geral de eventos roteados](routed-events-overview.md)
+- [Visão geral da vinculação de dados](../data/data-binding-overview.md)

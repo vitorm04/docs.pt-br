@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: d30e414dd83e596da6415cc455c599820a22f3e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b131ce444a91e518f6372b7aeac603687141b262
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689949"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360935"
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Como: Animar a espessura de uma borda usando quadros-chave
 Este exemplo mostra como animar a <xref:System.Windows.Controls.Control.BorderThickness%2A> propriedade de um <xref:System.Windows.Controls.Border>.  
@@ -25,7 +25,7 @@ Este exemplo mostra como animar a <xref:System.Windows.Controls.Control.BorderTh
   
 3.  Durante os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> classe para diminuir a espessura da borda. Quadros-chave spline, como aqueles derivam <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> criam uma transição variável entre valores de acordo com os valores da <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> propriedade. Neste quadro-chave, a animação começa lentamente e acelera exponencialmente na direção do final do segmento de tempo.  
   
- [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   
  Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
@@ -33,6 +33,6 @@ Este exemplo mostra como animar a <xref:System.Windows.Controls.Control.BorderTh
 - <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>
-- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Tópicos explicativos sobre quadros-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
-- [Animar um valor de BorderThickness](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)
+- [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
+- [Tópicos explicativos sobre quadros-chave](key-frame-animation-how-to-topics.md)
+- [Animar um valor de BorderThickness](../controls/how-to-animate-a-borderthickness-value.md)

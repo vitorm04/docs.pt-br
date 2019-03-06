@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: d0873656e71df928ac3bd5a767b5e15d2f2c7836
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80b873e81acc243ff61257bc305c4f782b5bf867
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591452"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351822"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Como: Redimensionar uma tela usando um elevador
 Este exemplo mostra como usar um <xref:System.Windows.Controls.Primitives.Thumb> controle para redimensionar um <xref:System.Windows.Controls.Canvas> controle.  
@@ -28,21 +28,21 @@ Este exemplo mostra como usar um <xref:System.Windows.Controls.Primitives.Thumb>
   
  A exemplo a seguir mostra uma <xref:System.Windows.Controls.Primitives.Thumb> controle que é o elemento filho de um <xref:System.Windows.Controls.Canvas> controle. O manipulador de eventos para seus <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> evento fornece a lógica para mover o <xref:System.Windows.Controls.Primitives.Thumb> e redimensione o <xref:System.Windows.Controls.Canvas>. Os manipuladores de eventos para o <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> e <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> evento alterar a cor do <xref:System.Windows.Controls.Primitives.Thumb> durante uma operação de arrastar. O exemplo a seguir define o <xref:System.Windows.Controls.Primitives.Thumb>.  
   
- [!code-xaml[Thumb#thumb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
+ [!code-xaml[Thumb#thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
  A exemplo a seguir mostra a <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> manipulador de eventos que move os <xref:System.Windows.Controls.Primitives.Thumb> e redimensiona o <xref:System.Windows.Controls.Canvas> em resposta a um movimento do mouse.  
   
- [!code-csharp[Thumb#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
+ [!code-csharp[Thumb#2](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
   
  A exemplo a seguir mostra o <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> manipulador de eventos.  
   
- [!code-csharp[Thumb#DragStartedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragstartedhandler)]
- [!code-vb[Thumb#DragStartedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragstartedhandler)]  
+ [!code-csharp[Thumb#DragStartedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragstartedhandler)]
+ [!code-vb[Thumb#DragStartedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragstartedhandler)]  
   
  A exemplo a seguir mostra o <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> manipulador de eventos.  
   
- [!code-csharp[Thumb#DragCompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
- [!code-vb[Thumb#DragCompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
+ [!code-csharp[Thumb#DragCompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
+ [!code-vb[Thumb#DragCompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
   
  Para o exemplo completo, consulte [Exemplo de funcionalidade de arrastar do elevador](https://go.microsoft.com/fwlink/?LinkID=160042).  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863729"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361181"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>APIs de suporte à hospedagem de navegador do WPF nativa
 A hospedagem de aplicações [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] em navegadores da Web é facilitada por um servidor de documento ativo (também conhecido como DocObject) registrado no host WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] pode ativar e integrar diretamente com um documento ativo. Para hospedar documentos XBAPs e XAML Flexível em navegadores Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] fornece um plug-in NPAPI, que oferece um ambiente de hospedagem semelhante ao [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documento ativo como faz o [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Entretanto, a maneira mais fácil de hospedar documentos XBAPs e XAML em outros navegadores e aplicativos independentes é através do controle do navegador da Web do Internet Explorer. O controle do Navegador da Web fornece o complexo ambiente de hospedagem do servidor de documento ativo, mas permite que seu próprio host personalize e amplie esse ambiente e se comunique diretamente com o servidor de documento ativo atual.  
@@ -32,5 +32,5 @@ enum PresentationHostCommands {
  PHCMDID_TABINTO instrui o PresentationHost a mudar o foco para o primeiro ou último elemento que pode ser focado em seu conteúdo, dependendo do estado da tecla Shift.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  
- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+ [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
+ [IWpfHostSupport](iwpfhostsupport.md)

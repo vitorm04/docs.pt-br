@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c78af112e9239143c4854e34e9b6aa8e99344ec3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e92eea9677731756bdbfcbdcfac1531861fb5dce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623645"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361337"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>Método IXCLRDataMethodDefinition::StartEnumInstances
 
@@ -37,11 +37,13 @@ HRESULT StartEnumInstances(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>Parâmetros
 
-`appDomain` [in] Um AppDomain para a enumeração.
+`appDomain`\
+[in] Um AppDomain para a enumeração.
 
-`handle` [out] Um identificador para enumerar as instâncias.
+`handle`\
+[out] Um identificador para enumerar as instâncias.
 
 ## <a name="remarks"></a>Comentários
 
@@ -56,6 +58,6 @@ O método fornecido é parte do `IXCLRDataMethodDefinition` de interface e corre
 
 ## <a name="see-also"></a>Consulte também
 
-- [Enumeração CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
+- [Enumeração CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Depuração](index.md)
+- [Interface IXCLRDataMethodDefinition](ixclrdatamethoddefinition-interface.md)

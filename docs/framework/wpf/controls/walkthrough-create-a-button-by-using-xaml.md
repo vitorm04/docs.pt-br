@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606777"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377081"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Passo a passo: Criar um botão usando XAML
 O objetivo deste passo a passo é aprender a criar um botão animado para uso em um aplicativo do Windows Presentation Foundation (WPF). Este passo a passo usa estilos e um modelo para criar um recurso de botão personalizado que permite a reutilização de código e separação da lógica do botão da declaração do botão. Este passo a passo é escrito inteiramente em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
->  Este passo a passo orienta você pelas etapas para criar o aplicativo, digitando ou copiando e colando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ao Microsoft Visual Studio. Se você prefere aprender a usar uma ferramenta de design (Microsoft Expression Blend) para criar o mesmo aplicativo, consulte [Criar um botão, usando o Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
+>  Este passo a passo orienta você pelas etapas para criar o aplicativo, digitando ou copiando e colando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ao Microsoft Visual Studio. Se você prefere aprender a usar uma ferramenta de design (Microsoft Expression Blend) para criar o mesmo aplicativo, consulte [Criar um botão, usando o Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
   
  A figura a seguir mostra os botões concluídos.  
   
- ![Botões personalizados criados com XAML](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+ ![Botões personalizados criados com XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-basic-buttons"></a>Criar botões básicos  
  Vamos começar criando um novo projeto e adicionando alguns botões à janela.  
@@ -49,12 +49,12 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
   
      Pressione F5 para executar o aplicativo. Você deverá ver um conjunto de botões parecido com a figura a seguir.  
   
-     ![Três botões básicos](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
+     ![Três botões básicos](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
   
      Agora que você criou os botões básicos, o trabalho no arquivo Window1.xaml está concluído. O restante do passo a passo se concentrará no arquivo app.xaml, definindo estilos e um modelo para os botões.  
   
 ## <a name="set-basic-properties"></a>Definir propriedades básicas  
- Em seguida, vamos definir algumas propriedades para controlar a aparência e o layout desses botões. Em vez de definir propriedades em cada botão, você usará recursos para definir propriedades de botão para todo o aplicativo. Os recursos de aplicativo são conceitualmente semelhantes à [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)] externa para páginas da Web. No entanto, os recursos são muito mais eficientes do que a [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)], como você verá no final deste passo a passo. Para saber mais sobre recursos, consulte [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Em seguida, vamos definir algumas propriedades para controlar a aparência e o layout desses botões. Em vez de definir propriedades em cada botão, você usará recursos para definir propriedades de botão para todo o aplicativo. Os recursos de aplicativo são conceitualmente semelhantes à [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)] externa para páginas da Web. No entanto, os recursos são muito mais eficientes do que a [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)], como você verá no final deste passo a passo. Para saber mais sobre recursos, consulte [Recursos XAML](../advanced/xaml-resources.md).  
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Usar estilos para definir propriedades básicas nos botões  
   
@@ -72,7 +72,7 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
     </Application>  
     ```  
   
-     O escopo do recurso é determinado pelo local em que você define o recurso. A definição de recursos em `Application.Resources` no arquivo app.xaml permite que o recurso seja usado de qualquer local no aplicativo. Para saber mais sobre como definir o escopo de seus recursos, consulte [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     O escopo do recurso é determinado pelo local em que você define o recurso. A definição de recursos em `Application.Resources` no arquivo app.xaml permite que o recurso seja usado de qualquer local no aplicativo. Para saber mais sobre como definir o escopo de seus recursos, consulte [Recursos XAML](../advanced/xaml-resources.md).  
   
 2.  **Criar um estilo e definir valores de propriedade básicas com ele:** Adicione a seguinte marcação para o `Application.Resources` bloco. Essa marcação cria um <xref:System.Windows.Style> que se aplica a todos os botões no aplicativo, definindo o <xref:System.Windows.FrameworkElement.Width%2A> dos botões como 90 e a <xref:System.Windows.FrameworkElement.Margin%2A> como 10:  
   
@@ -87,9 +87,9 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
   
      O <xref:System.Windows.Style.TargetType%2A> propriedade especifica que o estilo se aplica a todos os objetos do tipo <xref:System.Windows.Controls.Button>. Cada <xref:System.Windows.Setter> define um valor de propriedade diferentes para o <xref:System.Windows.Style>. Portanto, neste ponto, cada botão no aplicativo tem uma largura de 90 e uma margem de 10.  Se você pressionar F5 para executar o aplicativo, você verá a seguinte janela.  
   
-     ![Botões com uma largura de 90 e uma margem de 10](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
+     ![Botões com uma largura de 90 e uma margem de 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
   
-     Há muito mais que você pode fazer com estilos, incluindo uma variedade de maneiras de ajustar quais objetos são direcionados, especificando valores da propriedade complexos e até mesmo usar estilos como entrada para outros estilos. Para obter mais informações, consulte [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+     Há muito mais que você pode fazer com estilos, incluindo uma variedade de maneiras de ajustar quais objetos são direcionados, especificando valores da propriedade complexos e até mesmo usar estilos como entrada para outros estilos. Para obter mais informações, consulte [Estilo e modelagem](styling-and-templating.md).  
   
 3.  **Defina um valor de propriedade de estilo para um recurso:** Recursos proporcionam uma maneira simples de reutilizar objetos normalmente definidos e valores. É especialmente útil definir valores complexos usando recursos para tornar seu código mais modular. Adicione a seguinte marcação realçada ao app.xaml.  
   
@@ -112,7 +112,7 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
   
      Pressione F5 para executar o aplicativo. Ele deverá ter a seguinte aparência.  
   
-     ![Botões com uma tela de fundo gradiente](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
+     ![Botões com uma tela de fundo gradiente](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
   
 ## <a name="create-a-template-that-defines-the-look-of-the-button"></a>Criar um modelo que define a aparência do botão  
  Nesta seção, você cria um modelo que personaliza a aparência (apresentação) do botão. A apresentação do botão é composta de vários objetos, incluindo retângulos e outros componentes, para dar uma aparência exclusiva ao botão.  
@@ -165,7 +165,7 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
   
      Pressione F5 para executar o aplicativo. Ele deverá ter a seguinte aparência.  
   
-     ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
+     ![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
 3.  **Adicione um efeito de vidro ao modelo:** Em seguida, você adicionará o vidro. Primeiro, você cria alguns recursos que produzem um efeito de gradiente de vidro. Adicione esses recursos de gradiente em qualquer local no bloco `Application.Resources`:  
   
@@ -244,7 +244,7 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
   
      Observe que o <xref:System.Windows.UIElement.Opacity%2A> do retângulo com o `x:Name` propriedade de "glassCube" é 0, portanto, quando você executar o exemplo, você não vir o retângulo de vidro sobreposto na parte superior. Isso é assim porque depois adicionaremos gatilhos ao modelo para quando o usuário interagir com o botão. No entanto, você pode ver o botão de aparência agora, alterando o <xref:System.Windows.UIElement.Opacity%2A> valor para 1 e executando o aplicativo. Veja a figura a seguir. Antes de prosseguir para a próxima etapa, altere o <xref:System.Windows.UIElement.Opacity%2A> volta para 0.  
   
-     ![Botões personalizados criados com XAML](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+     ![Botões personalizados criados com XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-button-interactivity"></a>Criar interatividade de botão  
  Nesta seção, você criará gatilhos de propriedade e gatilhos de evento para alterar os valores da propriedade e executar animações em resposta às ações do usuário, como mover o ponteiro do mouse sobre o botão e clicar.  
@@ -396,7 +396,7 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
   
      Há duas animações que são acionadas quando o ponteiro passa sobre o botão (<xref:System.Windows.UIElement.MouseEnter> é gerado). Essas animações reduzem o retângulo de vidro ao longo dos eixos X e Y. Observe as propriedades sobre o <xref:System.Windows.Media.Animation.DoubleAnimation> elementos — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>. O <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Especifica que a animação ocorre por meio segundo, e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Especifica que o vidro se encolhe em 10%.  
   
-     O segundo gatilho de evento (<xref:System.Windows.UIElement.MouseLeave>) simplesmente para o primeiro. Quando você para um <xref:System.Windows.Media.Animation.Storyboard>, todas as propriedades animadas retornam aos seus valores padrão. Portanto, quando o usuário move o ponteiro para fora do botão, o botão volta à forma que estava antes de o ponteiro do mouse ser passado sobre o botão. Para obter mais informações sobre animações, consulte [Visão geral de animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+     O segundo gatilho de evento (<xref:System.Windows.UIElement.MouseLeave>) simplesmente para o primeiro. Quando você para um <xref:System.Windows.Media.Animation.Storyboard>, todas as propriedades animadas retornam aos seus valores padrão. Portanto, quando o usuário move o ponteiro para fora do botão, o botão volta à forma que estava antes de o ponteiro do mouse ser passado sobre o botão. Para obter mais informações sobre animações, consulte [Visão geral de animação](../graphics-multimedia/animation-overview.md).  
   
 5.  **Adicione uma animação para quando o botão é clicado:** A etapa final é adicionar um gatilho para quando o usuário clica no botão. Adicione a seguinte marcação em qualquer local dentro do bloco `ControlTemplate.Triggers`:  
   
@@ -432,8 +432,8 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
 -   Personalizou comportamento para os botões em resposta às ações do usuário (como <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) que incluiu efeitos de animação.  
   
 ## <a name="see-also"></a>Consulte também
-- [Criar um botão usando o Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Visão geral dos efeitos de bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+- [Criar um botão usando o Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Estilo e modelagem](styling-and-templating.md)
+- [Visão geral da animação](../graphics-multimedia/animation-overview.md)
+- [Visão geral da pintura com cores sólidas e gradientes](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Visão geral dos efeitos de bitmap](../graphics-multimedia/bitmap-effects-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562583"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377039"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Estilos para foco em controles e FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece dois mecanismos paralelos para alterar a aparência visual de um controle quando ele recebe o foco do teclado. O primeiro mecanismo é usar setters de propriedade para propriedades como <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dentro do estilo ou modelo que é aplicado ao controle. O segundo mecanismo é fornecer um estilo separado como o valor do <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriedade; o "estilo visual de foco" cria uma árvore visual separada para um adorno que é desenhado na parte superior do controle, em vez de alterar a árvore visual do controle ou outra interface de usuário elemento ao substituí-la. Este tópico aborda os cenários em que cada um desses mecanismos é apropriado.  
@@ -25,7 +25,7 @@ ms.locfileid: "54562583"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>Comportamento de estilo visual de foco padrão  
- Os estilos visuais de foco funcionam apenas quando a ação do foco foi iniciada pelo teclado. Qualquer ação do mouse ou alteração de foco por programação desabilita o modo de estilos visuais de foco. Para obter mais informações sobre as distinções entre os modos de foco, consulte [Visão geral do foco](../../../../docs/framework/wpf/advanced/focus-overview.md).  
+ Os estilos visuais de foco funcionam apenas quando a ação do foco foi iniciada pelo teclado. Qualquer ação do mouse ou alteração de foco por programação desabilita o modo de estilos visuais de foco. Para obter mais informações sobre as distinções entre os modos de foco, consulte [Visão geral do foco](focus-overview.md).  
   
  Os temas dos controles incluem um comportamento de estilo visual de foco padrão que se torna o estilo visual de foco para todos os controles no tema. Esse estilo de tema é identificado pelo valor da chave estática <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>. Ao declarar seu próprio estilo visual de foco no nível do aplicativo, você pode substituir esse comportamento de estilo padrão dos temas. Como alternativa, se você definir o tema inteiro, deverá usar essa mesma chave para definir o estilo para o comportamento padrão para o tema inteiro.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54562583"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>Alternativas ao uso de um estilo visual de foco  
  Para situações em que usar um estilo visual de foco não é apropriado, porque você está estilizando apenas controles únicos ou porque deseja maior controle em relação ao modelo de controle, há muitas outras propriedades acessíveis e técnicas que podem criar comportamento visual em resposta às alterações no foco.  
   
- Os gatilhos, os setters e os setters de evento são discutidos em detalhes em [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md). A manipulação de eventos roteados é discutida em [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Os gatilhos, os setters e os setters de evento são discutidos em detalhes em [Estilo e modelagem](../controls/styling-and-templating.md). A manipulação de eventos roteados é discutida em [Visão geral de eventos roteados](routed-events-overview.md).  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  Se você estiver interessado especificamente em foco do teclado, o <xref:System.Windows.UIElement.IsKeyboardFocused%2A> propriedade de dependência pode ser usada para uma propriedade <xref:System.Windows.Trigger>. Um gatilho de propriedade em um estilo ou modelo é uma técnica mais apropriada para definir um comportamento de foco do teclado que é especificamente para um único controle e que pode não corresponder visualmente ao comportamento de foco do teclado para outros controles.  
@@ -78,6 +78,6 @@ ms.locfileid: "54562583"
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Visão geral do foco](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [Visão geral da entrada](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Estilo e modelagem](../controls/styling-and-templating.md)
+- [Visão geral do foco](focus-overview.md)
+- [Visão geral da entrada](input-overview.md)

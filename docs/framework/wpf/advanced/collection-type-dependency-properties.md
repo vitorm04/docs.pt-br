@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: 21f260262d434ffe3685b226193f2d6cd2125549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548424"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354889"
 ---
 # <a name="collection-type-dependency-properties"></a>Propriedades de dependência do tipo de coleção
 Este tópico fornece diretrizes e padrões sugeridos para como implementar uma propriedade de dependência em que o tipo da propriedade é um tipo de coleção.  
@@ -32,20 +32,20 @@ Este tópico fornece diretrizes e padrões sugeridos para como implementar uma p
   
  Considere o exemplo a seguir. A seção do exemplo a seguir mostra a definição da classe `Aquarium`. A classe define a propriedade de dependência do tipo de coleção `AquariumObjects`, que usa genéricos <xref:System.Collections.Generic.List%601> de tipo com um <xref:System.Windows.FrameworkElement> restrição de tipo. No <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> chamadas para a propriedade de dependência, os metadados estabelecem o valor de padrão para um novo genérico <xref:System.Collections.Generic.List%601>.  
   
- [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
- [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
  No entanto, se você apenas deixar o código como mostrado, aquele valor padrão de lista será compartilhado para todas as instâncias de `Aquarium`. Se você tiver executado o seguinte código de teste, que destina-se a mostrar como você poderia instanciar duas instâncias separadas de `Aquarium` e adicionado um único `Fish` diferente para cada um deles, você verá um resultado surpreendente:  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
- [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
+ [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
+ [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
  Em vez de cada coleção ter uma contagem de um, cada conjunto possui uma contagem de dois. Isso ocorre porque cada `Aquarium` adicionou `Fish` à coleção de valores padrão, o que resultou de uma única chamada a construtor nos metadados e, portanto, é compartilhado entre todas as instâncias. Essa situação quase nunca é o que você deseja.  
   
  Para corrigir esse problema, você deve redefinir o valor da propriedade de dependência da coleção para uma instância única, como parte da chamada do construtor de classe. Como a propriedade é uma propriedade de dependência somente leitura, use o <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> método para defini-la, usando o <xref:System.Windows.DependencyPropertyKey> que é acessível somente dentro da classe.  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
- [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
+ [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
+ [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
  Agora, se você executasse novamente esse mesmo código de teste, você poderia ver resultados mais esperados, no qual cada `Aquarium` daria suporte à sua própria coleção única.  
   
@@ -58,8 +58,8 @@ Este tópico fornece diretrizes e padrões sugeridos para como implementar uma p
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.FreezableCollection%601>
-- [XAML e classes personalizadas para WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Metadados de propriedade da dependência](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [XAML e classes personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)
+- [Visão geral da vinculação de dados](../data/data-binding-overview.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Propriedades de dependência personalizada](custom-dependency-properties.md)
+- [Metadados de propriedade da dependência](dependency-property-metadata.md)

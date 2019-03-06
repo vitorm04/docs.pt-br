@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543521"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370951"
 ---
 # <a name="events-how-to-topics"></a>Tópicos explicativos de eventos
-Os tópicos nesta seção descrevem como usar eventos em WPF.  
+Os tópicos nesta seção descrevem como usar eventos no WPF.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Adicionar um manipulador de eventos usando código](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [Manipular um evento roteado](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Criar um evento roteado personalizado](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [Localizar o elemento de origem em um manipulador de eventos](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [Adicionar tratamento de classes para um evento roteado](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+ [Adicionar um manipulador de eventos usando código](how-to-add-an-event-handler-using-code.md)  
+ [Manipular um evento roteado](how-to-handle-a-routed-event.md)  
+ [Criar um evento roteado personalizado](how-to-create-a-custom-routed-event.md)  
+ [Localizar o elemento de origem em um manipulador de eventos](how-to-find-the-source-element-in-an-event-handler.md)  
+ [Adicionar tratamento de classes para um evento roteado](how-to-add-class-handling-for-a-routed-event.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.RoutedEvent>  

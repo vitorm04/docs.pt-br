@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: cf9f714878cd1b0b179dc1ced44e3dcfe7c2f9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517585"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376111"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Como: Criar e associar a um ObservableCollection
 Este exemplo mostra como criar e associar a uma coleção que deriva de <xref:System.Collections.ObjectModel.ObservableCollection%601> classe, que é uma classe de coleção que oferece notificações quando itens são adicionados ou removidos.  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- Você pode tornar a coleção disponível para associação da mesma maneira que faria com outros objetos de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], conforme descrito em [Tornar dados disponíveis para associação em XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md). Por exemplo, você pode instanciar a coleção em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e especificar a coleção como um recurso, como mostrado aqui:  
+ Você pode tornar a coleção disponível para associação da mesma maneira que faria com outros objetos de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], conforme descrito em [Tornar dados disponíveis para associação em XAML](how-to-make-data-available-for-binding-in-xaml.md). Por exemplo, você pode instanciar a coleção em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e especificar a coleção como um recurso, como mostrado aqui:  
   
 ```xaml  
 <Window  
@@ -136,13 +136,13 @@ End Class
  A definição de `NameItemTemplate` não é mostrada aqui.  
   
 > [!NOTE]
->  Os objetos em sua coleção devem atender aos requisitos descritos na [Visão geral da origem da associação](../../../../docs/framework/wpf/data/binding-sources-overview.md). Em particular, se você estiver usando <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:System.Windows.Data.BindingMode.TwoWay> (por exemplo, você deseja que seu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] atualizar quando as propriedades da fonte são alteradas dinamicamente), você deve implementar um mecanismo de notificação de alteração de propriedade adequado, como o <xref:System.ComponentModel.INotifyPropertyChanged>interface.  
+>  Os objetos em sua coleção devem atender aos requisitos descritos na [Visão geral da origem da associação](binding-sources-overview.md). Em particular, se você estiver usando <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:System.Windows.Data.BindingMode.TwoWay> (por exemplo, você deseja que seu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] atualizar quando as propriedades da fonte são alteradas dinamicamente), você deve implementar um mecanismo de notificação de alteração de propriedade adequado, como o <xref:System.ComponentModel.INotifyPropertyChanged>interface.  
   
- Para obter mais informações, consulte a seção Associando a coleções na [Visão geral de associação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Para obter mais informações, consulte a seção Associando a coleções na [Visão geral de associação de dados](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Classificar dados em uma exibição](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
-- [Filtrar dados em uma exibição](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
-- [Classificar e agrupar dados usando uma exibição em XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Classificar dados em uma exibição](how-to-sort-data-in-a-view.md)
+- [Filtrar dados em uma exibição](how-to-filter-data-in-a-view.md)
+- [Classificar e agrupar dados usando uma exibição em XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Visão geral da vinculação de dados](data-binding-overview.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

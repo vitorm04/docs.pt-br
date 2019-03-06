@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 012590a21ac24b1146c30405c9872355a4b50802
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 623ff5d14db6ae9cc5999aa184b81d6b22f4b201
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627246"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365003"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Chamado por PresentationHost.exe para obter mensagens de erro e andamento personalizadas do host, se implementado.  
@@ -41,9 +41,9 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
  HRESULT: Ignorado.  
   
 ## <a name="remarks"></a>Comentários  
- Um aplicativo host pode ter um tema específico com o qual as interfaces do usuário padrão do PresentationHost.exe podem não estar em conformidade. Se esse for o caso, o aplicativo host poderá implementar [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md) para retornar as interfaces do usuário de erro e de andamento para PresentationHost.exe. PresentationHost.exe sempre chamará [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md) antes de usar suas interfaces do usuário padrão.  
+ Um aplicativo host pode ter um tema específico com o qual as interfaces do usuário padrão do PresentationHost.exe podem não estar em conformidade. Se esse for o caso, o aplicativo host poderá implementar [GetCustomUI](getcustomui.md) para retornar as interfaces do usuário de erro e de andamento para PresentationHost.exe. PresentationHost.exe sempre chamará [GetCustomUI](getcustomui.md) antes de usar suas interfaces do usuário padrão.  
   
  Essa função é chamada uma vez durante a inicialização do PresentationHost.  
   
 ## <a name="see-also"></a>Consulte também
-- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+- [IWpfHostSupport](iwpfhostsupport.md)

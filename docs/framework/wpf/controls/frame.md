@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Frame control [WPF]
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
-ms.openlocfilehash: b65fa2b011e1be04b1e6a16b41566c4a07ad33ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552039"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371899"
 ---
 # <a name="frame"></a>Quadro
 O <xref:System.Windows.Controls.Frame> controle dá suporte à navegação de conteúdo dentro do conteúdo. <xref:System.Windows.Controls.Frame> pode ser hospedado por um elemento raiz como <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, ou como uma ilha de uma árvore de conteúdo que pertence a um elemento raiz.  
@@ -23,4 +23,4 @@ O <xref:System.Windows.Controls.Frame> controle dá suporte à navegação de co
  <xref:System.Windows.Controls.Frame>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral de navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+ [Visão geral de navegação](../app-development/navigation-overview.md)

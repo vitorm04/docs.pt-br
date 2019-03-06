@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036020"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362001"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Facilitando a depuração no .NET de uma imagem
 
@@ -34,7 +34,7 @@ Em alguns casos, talvez você queira alterar o comportamento do compilador JIT p
 
 Por exemplo, se o assembly que você deseja depurar é chamado *MyApp.exe*, em seguida, você pode criar um arquivo de texto chamado *MyApp*, na mesma pasta do *MyApp.exe*, que contém Estas três linhas:
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ Para um build de varejo, os compiladores não definir qualquer **DebuggableAttri
 O **DebuggableAttribute** aplica-se a um assembly inteiro por vez e não a módulos individuais dentro do assembly. Ferramentas de desenvolvimento, portanto, deverão anexar atributos personalizados ao token de metadados de assembly se um assembly já tiver sido criado ou então anexá-los à classe chamada **System.Runtime.CompilerServices.AssemblyAttributesGoHere**. A ferramenta ALink promoverá esses **DebuggableAttribute** atributos de cada módulo ao assembly que eles se tornam parte do. Se houver um conflito, a operação ALink falhará.
 
 > [!NOTE]
-> Na versão 1.0 do .NET Framework, o compilador do Microsoft Visual C++ adiciona o **DebuggableAttribute** quando as opções do compilador **/clr** e **/Zi** são especificadas. Na versão 1.1 do .NET Framework, você deverá adicionar o **DebugabbleAttribute** manualmente no seu código ou usar a opção de vinculador **/ASSEMBLYDEBUG**.
+> Na versão 1.0 do .NET Framework, o compilador do Microsoft Visual C++ adiciona o **DebuggableAttribute** quando as opções do compilador **/clr** e **/Zi** são especificadas. Na versão 1.1 do .NET Framework, você deverá adicionar o **DebuggableAttribute** manualmente no seu código ou usar o **/ASSEMBLYDEBUG** a opção de vinculador.
 
 ## <a name="see-also"></a>Consulte também
 

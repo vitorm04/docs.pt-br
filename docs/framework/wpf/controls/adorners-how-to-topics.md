@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
-ms.openlocfilehash: ba81f8e2d603ee2e734e5afd14182e95804fe69e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550079"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359244"
 ---
 # <a name="adorners-how-to-topics"></a>Tópicos explicativos de adornos
 Os exemplos a seguir demonstram como realizar tarefas comuns usando o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework adorno.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Implementar um adorno](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [Associar um adorno a um elemento](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [Adornar os filhos de um painel](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [Remover um adorno de um elemento](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [Remover todos os adornos de um elemento](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+ [Implementar um adorno](how-to-implement-an-adorner.md)  
+ [Associar um adorno a um elemento](how-to-bind-an-adorner-to-an-element.md)  
+ [Adornar os filhos de um painel](how-to-adorn-the-children-of-a-panel.md)  
+ [Remover um adorno de um elemento](how-to-remove-an-adorner-from-an-element.md)  
+ [Remover todos os adornos de um elemento](how-to-remove-all-adorners-from-an-element.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: e70367d199ece207589d67ee38cb71f0cdda5b11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32efbd44579622fddba95d162261633a1af6d277
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684092"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364574"
 ---
 # <a name="drawings"></a>Desenhos
 <xref:System.Windows.Media.Drawing> objetos são usados para desenhar formas, imagens ou texto de forma eficiente. Desenhos são usados ao pintar com um <xref:System.Windows.Media.DrawingBrush> ou a programação com <xref:System.Windows.Media.Visual> objetos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral dos objetos de desenho](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
-  [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
+ [Visão geral dos objetos de desenho](drawing-objects-overview.md)  
+  [Tópicos de instruções](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.Drawing>
-- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Elementos gráficos e geração de imagens 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)
+- [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Elementos gráficos e multimídia](index.md)

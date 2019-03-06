@@ -7,19 +7,19 @@ helpviewer_keywords:
 - element tree [WPF]
 - serialization [WPF]
 ms.assetid: 2d8ef436-d559-4c3e-86de-5a160d5f87d2
-ms.openlocfilehash: df643dbbf1c873841f035dcfd2c0cf11878e2e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7227e61dd8140ec9b1560fbc12e4ba4dd3e0d843
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543368"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372432"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>Tópicos explicativos da árvore de elementos e da serialização
 Os tópicos nesta seção descrevem como usar a árvore de elementos do WPF.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Localizar um elemento pelo nome](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
- [Substituir a árvore lógica](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
+ [Localizar um elemento pelo nome](how-to-find-an-element-by-its-name.md)  
+ [Substituir a árvore lógica](how-to-override-the-logical-tree.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.LogicalTreeHelper>  

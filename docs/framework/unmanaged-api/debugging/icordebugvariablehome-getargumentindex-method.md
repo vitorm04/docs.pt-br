@@ -10,54 +10,60 @@ api_type:
 f1_keywords:
 - ICorDebugVariableHome::GetArgumentIndex
 helpviewer_keywords:
-- ICorDebugVariableHome::GetArgumentiIndex method [.NET Framework debugging]
+- ICorDebugVariableHome::GetArgumentIndex method [.NET Framework debugging]
 - GetArgumentIndex method, ICorDebugVariableHome interface [.NET Framework debugging]
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163704bf9a71ceda04bdfd73f9ca676c19d8a62c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2457dff3063e47f1fb9d040caac1bc08441e1739
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526634"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366823"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>Método ICorDebugVariableHome::GetArgumentIndex
-Obtém o índice de um argumento de função.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-HRESULT GetArgumentIndex(  
-    [out] ULONG32* pArgumentIndex  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `pArgumentIndex`  
- [out] Um ponteiro para o índice do argumento.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O método retorna os valores a seguir.  
-  
-|Valor|Descrição|  
-|-----------|-----------------|  
-|`S_OK`|A chamada de método retornou um índice de argumento válido.|  
-|`E_FAIL`|O atual [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instância representa uma variável local.|  
-  
-## <a name="remarks"></a>Comentários  
- O índice do argumento pode ser usado para recuperar metadados para esse argumento.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** CorDebug.idl, CorDebug.h  
-  
- **Biblioteca:** CorGuids.lib  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
-  
+
+Obtém o índice de um argumento de função.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT GetArgumentIndex(
+    [out] ULONG32* pArgumentIndex
+);
+```
+
+## <a name="parameters"></a>Parâmetros
+
+`pArgumentIndex`\
+[out] Um ponteiro para o índice do argumento.
+
+## <a name="return-value"></a>Valor de retorno
+
+O método retorna os valores a seguir.
+
+|Valor|Descrição|
+|-----------|-----------------|
+|`S_OK`|A chamada de método retornou um índice de argumento válido.|
+|`E_FAIL`|O atual [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instância representa uma variável local.|
+
+## <a name="remarks"></a>Comentários
+
+O índice do argumento pode ser usado para recuperar metadados para esse argumento.
+
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** CorDebug.idl, CorDebug.h
+
+**Biblioteca:** CorGuids.lib
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

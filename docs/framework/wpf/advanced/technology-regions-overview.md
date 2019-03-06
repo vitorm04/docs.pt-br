@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 978cd428989aa76f82f01711ccfa566b57352f48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fc325f1b4bb4eca73e051732810c9d9853ff4d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695735"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352474"
 ---
 # <a name="technology-regions-overview"></a>Visão geral das regiões de tecnologia
 Se várias tecnologias de apresentação forem usadas em um aplicativo, como WPF, Win32 ou DirectX, elas deverão compartilhar as áreas de renderização em uma janela de nível superior comum. Este tópico descreve problemas que podem influenciar a apresentação e a entrada para seu aplicativo de interoperação do WPF.  
@@ -25,23 +25,23 @@ Se várias tecnologias de apresentação forem usadas em um aplicativo, como WPF
 ### <a name="region-examples"></a>Exemplos de região  
  A ilustração a seguir mostra um aplicativo que combina [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cada tecnologia usa seu próprio conjunto de pixels separado, sem sobreposição e não tem problemas de região.  
   
- ![Uma janela que não tem problemas de espaço aéreo](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
+ ![Uma janela que não tem problemas de espaço aéreo](./media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
   
  Suponha que esse aplicativo usa a posição do ponteiro do mouse para criar uma animação que tenta renderizar sobre qualquer uma dessas três regiões. Não importa qual tecnologia era responsável pela animação em si, essa tecnologia violaria a região das outras duas. A ilustração a seguir mostra uma tentativa de renderizar um círculo do WPF em uma região do Win32.  
   
- ![Diagrama de interoperabilidade](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
+ ![Diagrama de interoperabilidade](./media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
   
  Outra violação ocorrerá se você tenta usar a transparência/combinação alfa entre tecnologias diferentes.  Na ilustração a seguir, a caixa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viola as regiões [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] e [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Como os pixels naquela caixa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são semitransparentes, eles teriam de ser propriedade conjunta por [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o que não é possível.  Portanto, essa é outra violação e não pode ser compilada.  
   
- ![Diagrama de interoperabilidade](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
+ ![Diagrama de interoperabilidade](./media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
   
  Os três exemplos anteriores usaram regiões retangulares. No entanto, formas diferentes podem ser usadas.  Por exemplo, uma região pode ter um espaço. A ilustração a seguir mostra uma região [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] com um espaço retangular. Esse é o tamanho das regiões [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] combinadas.  
   
- ![Diagrama de interoperabilidade](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
+ ![Diagrama de interoperabilidade](./media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
   
  As regiões também podem ser totalmente não retangulares ou ter qualquer forma descrita por um HRGN [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (região).  
   
- ![Diagrama de interoperabilidade](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
+ ![Diagrama de interoperabilidade](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
   
 ## <a name="transparency-and-top-level-windows"></a>Transparência e janelas de nível superior  
  O gerenciador de janelas no Windows, de fato, processa apenas HWNDs [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Portanto, cada [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> é um HWND. O <xref:System.Windows.Window> HWND deve seguir as regras gerais para qualquer HWND. Neste HWND, o código [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode fazer tudo o que as [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gerais do [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fazem. Mas, para que haja interações com outros HWNDs na área de trabalho, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve obedecer às regras de processamento e renderização do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dá suporte para janelas não retangulares usando as [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] do [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]— HRGNs para janelas não retangulares e janelas em camadas para uma versão alfa por pixel.  
@@ -61,6 +61,6 @@ Se várias tecnologias de apresentação forem usadas em um aplicativo, como WPF
 -   Se seu aplicativo for executado no [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], as janelas em camadas na parte superior das superfícies do [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] cintilarão quando o aplicativo [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] for renderizado.  (A sequência de processamento real consiste no [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ocultar a janela em camadas e, em seguida, o [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] desenhar e então, o [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] colocar a janela em camadas novamente).  As janelas em camadas não [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também têm essa limitação.  
   
 ## <a name="see-also"></a>Consulte também
-- [Interoperação do WPF e do Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Passo a passo: Hospedando um relógio do WPF no Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)
-- [Hospedando conteúdo Win32 no WPF](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
+- [Passo a passo: Hospedando um relógio do WPF no Win32](walkthrough-hosting-a-wpf-clock-in-win32.md)
+- [Hospedando conteúdo Win32 no WPF](hosting-win32-content-in-wpf.md)

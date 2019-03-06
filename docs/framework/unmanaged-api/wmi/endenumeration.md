@@ -16,35 +16,35 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f80503277d6a5d748dffa7783a19c6353b2e7f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65904da9efea90d31960d71ae0da8c81dffeccf1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505114"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351392"
 ---
 # <a name="endenumeration-function"></a>Função EndEnumeration
-Encerra uma sequência de enumeração iniciada com uma chamada para o [função BeginEnumeration](beginenumeration.md).  
+
+Encerra uma sequência de enumeração iniciada com uma chamada para o [função BeginEnumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 HRESULT EndEnumeration (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr
+);
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`vFunc`  
+`vFunc`\
 [in] Esse parâmetro é usado.
 
-`ptr`  
+`ptr`\
 [in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
-
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -54,19 +54,21 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-  
+
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) método.
 
 Uma chamada para o `EndEnumeration` função não é necessária, mas é recomendável porque ele libera recursos associados com a enumeração. No entanto, os recursos são desalocados automaticamente quando a próxima enumeração for iniciada ou o objeto seja liberado.
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** WMINet_Utils.idl
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 886a436f845aa4ba9662e75cbc9e534e915a4cfa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480056"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361168"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Passo a passo: Cache de dados de aplicativo em um aplicativo WPF
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.
@@ -322,12 +322,12 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 ## <a name="code-example"></a>Exemplo de código
  Depois de concluir este passo a passo, o código para o projeto que você criou será parecido com o exemplo a seguir.
 
- [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
- [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
+ [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
+ [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching>
-- [Cache em aplicativos do .NET Framework](../../../../docs/framework/performance/caching-in-net-framework-applications.md)
+- [Cache em aplicativos do .NET Framework](../../performance/caching-in-net-framework-applications.md)

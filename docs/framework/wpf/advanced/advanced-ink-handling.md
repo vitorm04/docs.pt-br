@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539021"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367863"
 ---
 # <a name="advanced-ink-handling"></a>Tratamento de tinta avançado
-O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] acompanha o <xref:System.Windows.Controls.InkCanvas>, e é um elemento que você pode colocar em seu aplicativo para iniciar imediatamente a coletar e exibir tinta. No entanto, se o <xref:System.Windows.Controls.InkCanvas> controle não fornece um nível de controle fino o suficiente, você pode manter controle em um nível mais alto ao personalizar suas próprias classes de coleção e tinta renderização usando <xref:System.Windows.Input.StylusPlugIns>.  
+O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é fornecido com o <xref:System.Windows.Controls.InkCanvas>, e é um elemento que você pode colocar em seu aplicativo para iniciar imediatamente a coletar e exibir tinta. No entanto, se o <xref:System.Windows.Controls.InkCanvas> controle não fornece um nível de controle fino o suficiente, você pode manter o controle em um nível mais alto ao personalizar sua própria coleção de tintas e classes de renderização de tinta usando <xref:System.Windows.Input.StylusPlugIns>.  
   
- O <xref:System.Windows.Input.StylusPlugIns> classes fornecem um mecanismo para implementar o controle de baixo nível sobre <xref:System.Windows.Input.Stylus> de entrada e renderização dinâmica de tinta. O <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornece um mecanismo para implementar o comportamento personalizado e aplicá-lo para o fluxo de dados provenientes do dispositivo de estilo para o desempenho ideal. O <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, uma <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, permite que você personalize dinâmica renderização de dados de tinta em tempo real o que significa que o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> desenha tinta digital imediatamente como <xref:System.Windows.Input.StylusPoint> dados são gerados para que ele apareça "fluir" da caneta dispositivo.  
+ O <xref:System.Windows.Input.StylusPlugIns> classes fornecem um mecanismo para implementar o controle de baixo nível sobre <xref:System.Windows.Input.Stylus> de entrada e renderizar a tinta dinamicamente. O <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornece um mecanismo para que você possa implementar comportamento personalizado e aplicá-lo para o fluxo de dados provenientes do dispositivo de caneta para desempenho ideal. O <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, especializado <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, permite que você personalize dinamicamente os dados de tinta de renderização em tempo real o que significa que o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> desenha tinta digital imediatamente conforme <xref:System.Windows.Input.StylusPoint> dados são gerados, para que ela pareça "fluir" da caneta dispositivo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tinta de renderização personalizada](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Interceptando entrada na caneta](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Criando um controle de entrada de tinta](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [O modelo de threading da tinta](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Tinta de renderização personalizada](custom-rendering-ink.md)  
+  [Interceptando entrada na caneta](intercepting-input-from-the-stylus.md)  
+  [Criando um controle de entrada de tinta](creating-an-ink-input-control.md)  
+  [O modelo de threading da tinta](the-ink-threading-model.md)

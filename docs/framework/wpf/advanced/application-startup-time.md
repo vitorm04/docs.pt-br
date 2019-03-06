@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527322"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379101"
 ---
 # <a name="application-startup-time"></a>Tempo de inicialização do aplicativo
 A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode variar consideravelmente. Este tópico descreve diversas técnicas para reduzir o tempo de inicialização percebido e real de um aplicativo do WPF (Windows Presentation Foundation).  
@@ -24,7 +24,7 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  A inicialização a quente ocorre quando a maioria das páginas dos componentes principais do CLR (Common Language Runtime) já está carregada na memória, o que economiza tempo valioso de acesso a disco. É por isso que um aplicativo gerenciado é iniciado mais rapidamente quando é executado pela segunda vez.  
   
 ## <a name="implement-a-splash-screen"></a>Implementar uma tela inicial  
- Em casos em que há um atraso significativo e inevitável entre o início de um aplicativo e a exibição da primeira interface do usuário, otimize o tempo de inicialização percebido através de uma *tela inicial*. Essa abordagem exibe uma imagem quase que imediatamente após o usuário iniciar o aplicativo. Quando o aplicativo estiver pronto para exibir sua primeira interface do usuário, a tela inicial desaparece. A partir de [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], você pode usar o <xref:System.Windows.SplashScreen> classe para implementar uma tela inicial. Para obter mais informações, consulte [Adicionar uma tela inicial a um aplicativo do WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Em casos em que há um atraso significativo e inevitável entre o início de um aplicativo e a exibição da primeira interface do usuário, otimize o tempo de inicialização percebido através de uma *tela inicial*. Essa abordagem exibe uma imagem quase que imediatamente após o usuário iniciar o aplicativo. Quando o aplicativo estiver pronto para exibir sua primeira interface do usuário, a tela inicial desaparece. A partir de [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], você pode usar o <xref:System.Windows.SplashScreen> classe para implementar uma tela inicial. Para obter mais informações, consulte [Adicionar uma tela inicial a um aplicativo do WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Você também pode implementar sua própria tela inicial, usando gráficos do Win32 nativos. Exiba sua implementação antes do <xref:System.Windows.Application.Run%2A> método é chamado.  
   
@@ -53,7 +53,7 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  Considere a possibilidade de evitar a configuração do aplicativo. Por exemplo, se um aplicativo tem requisitos de configuração simples e tem metas de tempo de inicialização estritas, as entradas de Registro ou um arquivo INI simples pode ser uma alternativa de inicialização mais rápida.  
   
 ## <a name="utilize-the-gac"></a>Utilizar o GAC  
- Se um assembly não estiver instalado no GAC (cache de assembly global), haverá atrasos causados pela verificação de hash de assemblies de nomes fortes e pela validação da imagem de Ngen, se uma imagem nativa desse assembly estiver disponível no computador. A verificação de nome forte é ignorada para todos os assemblies instalados no GAC. Para obter mais informações, consulte [Gacutil.exe (ferramenta de cache de assembly global)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+ Se um assembly não estiver instalado no GAC (cache de assembly global), haverá atrasos causados pela verificação de hash de assemblies de nomes fortes e pela validação da imagem de Ngen, se uma imagem nativa desse assembly estiver disponível no computador. A verificação de nome forte é ignorada para todos os assemblies instalados no GAC. Para obter mais informações, consulte [Gacutil.exe (ferramenta de cache de assembly global)](../../tools/gacutil-exe-gac-tool.md).  
   
 ## <a name="use-ngenexe"></a>Usar Ngen.exe  
  Considere usar o gerador de imagem nativa (Ngen.exe) em seu aplicativo. O uso do Ngen.exe significa negociar o consumo de CPU por mais acesso ao disco, porque a imagem nativa gerada pelo Ngen.exe é, provavelmente, maior que a imagem MSIL.  
@@ -67,14 +67,14 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
 ### <a name="ngen-and-clickonce"></a>Ngen e ClickOnce  
  A maneira como você planeja implantar seu aplicativo também pode fazer diferença no tempo de carregamento. A implantação de aplicativo do [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] não dá suporte ao Ngen. Se você decidir usar o Ngen.exe para o seu aplicativo, terá que usar outro mecanismo de implantação, como o Windows Installer.  
   
- Para obter mais informações, consulte [Ngen.exe (Gerador de Imagens Nativas)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Para obter mais informações, consulte [Ngen.exe (Gerador de Imagens Nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>Troca de base e colisões de endereço de DLL  
  Se você usar o Ngen.exe, lembre-se de que a troca de base poderá ocorrer quando as imagens nativas forem carregadas na memória. Se uma DLL não for carregada como seu endereço básico preferido, porque esse intervalo de endereços já está alocado, o carregador do Windows carregará a DLL em outro endereço, o que poderá ser uma operação demorada.  
   
  Você pode usar a ferramenta de despejo de endereço virtual (Vadump.exe) para verificar se há módulos nos quais todas as páginas são particulares. Se esse for o caso, o módulo poderá ter tido a base trocada para um endereço diferente. Portanto, suas páginas não podem ser compartilhadas.  
   
- Para obter mais informações sobre como definir o endereço básico, consulte [Ngen.exe (Gerador de Imagens Nativas)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Para obter mais informações sobre como definir o endereço básico, consulte [Ngen.exe (Gerador de Imagens Nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="optimize-authenticode"></a>Otimizar Authenticode  
  A verificação de Authenticode aumenta o tempo de inicialização. Os assemblies assinados por Authenticode precisam ser verificados com a AC (autoridade de certificação). Essa verificação pode ser demorada, porque pode exigir a conexão com a rede várias vezes para baixar as listas atuais de revogação de certificados. Ela também verifica se há uma cadeia completa de certificados válidos no caminho para uma raiz confiável. Isso pode significar vários segundos de atraso enquanto o assembly está sendo carregado.  
@@ -91,7 +91,7 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
 </configuration>  
 ```  
   
- Para obter mais informações, consulte [Elemento \<generatePublisherEvidence >](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Para obter mais informações, consulte [Elemento \<generatePublisherEvidence >](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Comparar o desempenho no Windows Vista  
  O gerenciador de memória no Windows Vista tem uma tecnologia chamada SuperFetch. O SuperFetch analisa os padrões de uso de memória ao longo do tempo para determinar o conteúdo de memória ideal para um usuário específico. Ele funciona continuamente para manter esse conteúdo em todos os momentos.  
@@ -127,6 +127,6 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [Adicionar uma tela inicial a um aplicativo WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (Gerador de Imagens Nativas)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [Elemento \<generatePublisherEvidence >](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [Adicionar uma tela inicial a um aplicativo WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (Gerador de Imagens Nativas)](../../tools/ngen-exe-native-image-generator.md)
+- [Elemento \<generatePublisherEvidence >](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

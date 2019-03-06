@@ -2,12 +2,12 @@
 title: Tratando a reentrada em aplicativos assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 6187b3a519da2930136aab8df9451f757079c2a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535613"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374877"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Tratando a reentrada em aplicativos assíncronos (Visual Basic)
 Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possivelmente, evitar a reentrância, que se refere à reinserção de uma operação assíncrona antes de ela ser concluída. Se você não identificar e tratar as possibilidades de reentrância, isso poderá causar resultados inesperados.  
@@ -29,7 +29,7 @@ Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possi
 > [!NOTE]
 >  Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
-##  <a name="BKMK_RecognizingReentrancy"></a> Reconhecendo a reentrância  
+## <a name="BKMK_RecognizingReentrancy"></a> Reconhecendo a reentrância  
  No exemplo deste tópico, os usuários escolhem um botão **Iniciar** para iniciar um aplicativo assíncrono que baixa uma série de sites e calcula o número total de bytes baixados. Uma versão síncrona do exemplo responderia da mesma forma, independentemente de quantas vezes um usuário escolhesse o botão porque, após a primeira vez, o thread da interface do usuário ignora esses eventos até que o aplicativo conclua a execução. Em um aplicativo assíncrono, no entanto, o thread da interface do usuário continua a responder e você pode reinserir a operação assíncrona antes que ele seja concluído.  
   
  O exemplo a seguir mostra a saída esperada, caso o usuário escolha o botão **Iniciar** apenas uma vez. É exibida uma lista dos sites baixados com o tamanho, em bytes, de cada site. O número total de bytes é exibido no final.  
@@ -86,7 +86,7 @@ TOTAL bytes returned:  890591
   
  Você pode examinar o código que produz esta saída fazendo a rolagem até o final deste tópico. Você pode fazer experimentos com o código baixando a solução em seu computador local e, em seguida, executar o projeto WebsiteDownload ou usar o código no final deste tópico para criar seu próprio projeto. Para obter mais informações e instruções, consulte [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample).  
   
-##  <a name="BKMK_HandlingReentrancy"></a> Tratando a reentrância  
+## <a name="BKMK_HandlingReentrancy"></a> Tratando a reentrância  
  É possível tratar a reentrância de várias maneiras, dependendo do que você deseja que seu aplicativo faça. Este tópico apresenta os exemplos a seguir:  
   
 -   [Desabilitar o botão Iniciar](#BKMK_DisableTheStartButton)  
@@ -101,10 +101,10 @@ TOTAL bytes returned:  890591
   
      Permitir que todas as operações solicitadas sejam executadas de forma assíncrona, mas coordenar a exibição da saída, de forma que os resultados de cada operação apareçam juntos e em ordem.  
   
-###  <a name="BKMK_DisableTheStartButton"></a> Desabilitar o botão Iniciar  
+### <a name="BKMK_DisableTheStartButton"></a> Desabilitar o botão Iniciar  
  Você pode bloquear o botão **Iniciar** enquanto uma operação estiver em execução, desabilitando o botão na parte superior do manipulador de eventos `StartButton_Click`. Você pode reativar o botão de dentro um bloco `Finally` quando a operação for concluída para que os usuários possam executar o aplicativo novamente.  
   
- O código a seguir mostra essas alterações, que estão marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico, ou você pode baixar o aplicativo concluído em [exemplos assíncronos: Reentrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é DisableStartButton.  
+ O código a seguir mostra essas alterações, que estão marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico, ou você pode baixar o aplicativo concluído em [exemplos assíncronos: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é DisableStartButton.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -129,12 +129,12 @@ End Sub
   
  Como resultado das alterações, o botão não responderá enquanto `AccessTheWebAsync` estiver baixando os sites, para que o processo não possa ser reinserido.  
   
-###  <a name="BKMK_CancelAndRestart"></a> Cancelar e reiniciar a operação  
+### <a name="BKMK_CancelAndRestart"></a> Cancelar e reiniciar a operação  
  Em vez de desabilitar o botão **Iniciar**, você pode manter o botão ativo, mas, se o usuário escolher esse botão novamente, cancele a operação que já está em execução e permita que a operação iniciada mais recentemente continue.  
   
  Para obter mais informações sobre cancelamento, consulte [ajuste fino de seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Você também pode baixar o aplicativo concluído em [exemplos assíncronos: Reentrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.  
+ Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Baixe também o aplicativo concluído em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.  
   
 1.  Declare uma variável <xref:System.Threading.CancellationTokenSource>, `cts`, que está no escopo para todos os métodos.  
   
@@ -284,7 +284,7 @@ TOTAL bytes returned:  890591
   
  Para eliminar as listas parciais, remova a marca de comentário da primeira linha de código em `StartButton_Click`, para limpar a caixa de texto sempre que o usuário reiniciar a operação.  
   
-###  <a name="BKMK_RunMultipleOperations"></a> Executar várias operações e colocar a saída na fila  
+### <a name="BKMK_RunMultipleOperations"></a> Executar várias operações e colocar a saída na fila  
  Este terceiro exemplo é mais complicado pois o aplicativo iniciará outra operação assíncrona a cada vez que o usuário escolher o botão **Iniciar** e todas as operações serão executadas até a conclusão. Todas as operações solicitadas baixam sites da lista de maneira assíncrona, mas a saída das operações será apresentada sequencialmente. Ou seja, a atividade de download real é intercalada, conforme mostrado na saída em [Reconhecendo a reentrância](#BKMK_RecognizingReentrancy), mas a lista de resultados para cada grupo é apresentada separadamente.  
   
  As operações compartilham uma <xref:System.Threading.Tasks.Task> global, `pendingWork`, que serve como um gatekeeper para o processo de exibição.  
@@ -527,15 +527,15 @@ End Function
   
      Depois que um grupo insere o `StartButton_Click`, a operação não conclui uma expressão await até que a operação insira `FinishOneGroupAsync`. Portanto, nenhuma outra operação pode obter controle durante esse segmento de código.  
   
-##  <a name="BKMD_SettingUpTheExample"></a> Examinar e executar o aplicativo de exemplo  
+## <a name="BKMD_SettingUpTheExample"></a> Examinar e executar o aplicativo de exemplo  
  Para entender melhor o aplicativo de exemplo, você pode baixá-lo, compilá-lo ou examinar o código ao final deste tópico sem implementar o aplicativo.  
   
 > [!NOTE]
 >  Para executar o exemplo como um aplicativo da área de trabalho do WPF (Windows Presentation Foundation), você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
-###  <a name="BKMK_DownloadingTheApp"></a> Baixar o aplicativo  
+### <a name="BKMK_DownloadingTheApp"></a> Baixar o aplicativo  
   
-1.  Baixe o arquivo compactado de [exemplos assíncronos: Reentrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
+1.  Baixe o arquivo compactado em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
 2.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
@@ -547,7 +547,7 @@ End Function
   
 6.  Escolha as teclas CTRL+F5 para compilar e executar o projeto.  
   
-###  <a name="BKMK_BuildingTheApp"></a> Compilando o aplicativo  
+### <a name="BKMK_BuildingTheApp"></a> Compilando o aplicativo  
  A seção a seguir fornece o código para compilar o exemplo como um aplicativo do WPF.  
   
 ##### <a name="to-build-a-wpf-app"></a>Para compilar um aplicativo do WPF  

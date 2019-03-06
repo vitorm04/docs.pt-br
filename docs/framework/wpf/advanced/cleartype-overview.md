@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719216"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355149"
 ---
 # <a name="cleartype-overview"></a>Visão geral de ClearType
 Este tópico fornece uma visão geral da tecnologia [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] encontrada no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -28,12 +28,12 @@ Este tópico fornece uma visão geral da tecnologia [!INCLUDE[TLA#tla_ct](../../
   
  Os dois exemplos a seguir mostram como os glifos podem começar em qualquer fronteira subpixel quando o posicionamento de subpixel é usado. O exemplo à esquerda é renderizado utilizando a versão anterior do renderizador [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], que não utilizava o posicionamento de subpixel. O exemplo à direita é renderizado utilizando a nova versão do renderizador [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], que usa o posicionamento de subpixel. Observe como cada **e** e **l** na imagem da direita é renderizado de modo ligeiramente diferente porque cada um começa em um subpixel diferente. Ao exibir o texto na tela em seu tamanho normal, essa diferença não é percebida por causa do alto contraste da imagem do glifo. Isso só é possível por causa de filtros de cor sofisticados que são incorporados na [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Texto exibido com duas versões do ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![Texto exibido com duas versões do ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 Texto exibido com versões anteriores e posteriores do ClearType  
   
  Os dois exemplos a seguir comparam a saída do renderizador [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] anterior com a nova versão do renderizador [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. O posicionamento subpixel, exibido à direita, aumenta muito o espaçamento dos tipos na tela, especialmente em tamanhos pequenos, nos quais a diferença entre um subpixel e um pixel inteiro representa uma parte significativa da largura do glifo. Observe que o espaçamento entre as letras é mais uniforme na segunda imagem. O benefício cumulativo do posicionamento de subpixel na aparência geral de uma tela de texto é muito maior e representa uma evolução significativa na tecnologia [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Texto exibido com a versão anterior do ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![Texto exibido com a versão anterior do ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 Texto com versões anteriores e posteriores do ClearType  
   
 <a name="y-direction_antialiasing"></a>   
@@ -42,14 +42,14 @@ Texto com versões anteriores e posteriores do ClearType
   
  O exemplo a seguir mostra o efeito de não ter nenhuma suavização da direção y. Nesse caso, as bordas irregulares na parte superior e inferior da letra são aparentes.  
   
- ![Texto com bordas irregulares em curvas superficiais](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![Texto com bordas irregulares em curvas superficiais](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Texto com bordas irregulares em curvas superficiais  
   
  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece suavização no nível da direção y para atenuar qualquer borda irregular. Isso é particularmente importante para melhorar a legibilidade de idiomas do Leste Asiático, nos quais os ideogramas têm uma quantidade praticamente igual de curvas superficiais horizontais e verticais.  
   
  O exemplo a seguir mostra o efeito da suavização da direção y. Nesse caso, as partes superior e inferior da letra mostram uma curva suave.  
   
- ![Texto com y do ClearType&#45;direção&#45;alias](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Texto com y do ClearType&#45;direção&#45;alias](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Texto com suavização da direção y do ClearType  
   
 <a name="hardware_acceleration"></a>   
@@ -67,4 +67,4 @@ Texto com suavização da direção y do ClearType
  [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Consulte também
-- [Configurações do Registro ClearType](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+- [Configurações do Registro ClearType](cleartype-registry-settings.md)

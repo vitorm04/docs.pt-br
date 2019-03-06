@@ -7,12 +7,12 @@ helpviewer_keywords:
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: e2356113457e8c9a6737132e9779e49c05a23d77
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd17dfeea85e2b404f7a284f93faceec63145b1f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149777"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355006"
 ---
 # <a name="how-to-create-a-complex-grid"></a>Como criar uma grade complexa
 
@@ -24,11 +24,11 @@ O exemplo a seguir define oito linhas e oito colunas usando o <xref:System.Windo
 
 O exemplo usa gradientes verticais para <xref:System.Windows.Shapes.Shape.Fill%2A> as colunas e linhas para melhorar a legibilidade do calendário e a apresentação visual. Com o estilo <xref:System.Windows.Controls.TextBlock> elementos representam as datas e os dias da semana. <xref:System.Windows.Controls.TextBlock> elementos são posicionados absolutamente em suas células usando a <xref:System.Windows.FrameworkElement.Margin%2A> propriedade e propriedades de alinhamento que são definidas no estilo para o aplicativo.
 
-[!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
+[!code-xaml[GridComplex#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
 
 A imagem a seguir mostra o controle resultante, um calendário personalizável:
 
-![Captura de tela do controle resultante](./media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
+![Captura de tela do controle resultante](././media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
 
 ## <a name="see-also"></a>Consulte também
 

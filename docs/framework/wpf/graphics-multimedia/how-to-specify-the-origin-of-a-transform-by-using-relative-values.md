@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: 55007575435ada809b8fba43d08abdd2ce9ddd73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570610"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352562"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Como: Especificar a origem de uma transformação usando valores relativos
 Este exemplo mostra como usar valores relativos para especificar a origem de um <xref:System.Windows.UIElement.RenderTransform%2A> que é aplicado a um <xref:System.Windows.FrameworkElement>.  
@@ -23,23 +23,23 @@ Este exemplo mostra como usar valores relativos para especificar a origem de um 
   
  A ilustração a seguir mostra o resultado da transformação do seguinte exemplo.  
   
- ![Um botão transformado com RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![Um botão transformado com RenderTransform](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 Uma rotação de 45 graus no sentido horário usando a propriedade RenderTransform  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  O exemplo a seguir também usa um <xref:System.Windows.Media.RotateTransform> girar uma <xref:System.Windows.Controls.Button> 45 graus no sentido horário; no entanto, este exemplo define o <xref:System.Windows.UIElement.RenderTransformOrigin%2A> do botão para (0,5, 0,5). Como resultado, a rotação é aplicada ao centro do botão em vez de seu canto superior esquerdo.  
   
  A ilustração a seguir mostra o resultado da transformação do seguinte exemplo.  
   
- ![Um botão transformado sobre seu centro](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![Um botão transformado sobre seu centro](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 Uma rotação de 45 graus usando a propriedade RenderTransform com um RenderTransformOrigin de (0,5, 0,5)  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- Para obter mais informações sobre como transformar <xref:System.Windows.FrameworkElement> objetos, consulte a [visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+ Para obter mais informações sobre como transformar <xref:System.Windows.FrameworkElement> objetos, consulte a [visão geral de transformações](transforms-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.Transform>
-- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Visão geral de transformações](transforms-overview.md)
+- [Tópicos de instruções](transformations-how-to-topics.md)

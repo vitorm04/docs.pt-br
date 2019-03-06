@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 5cccc89c8346358bc4f719e1b089a181dd81f970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58d7e5848ccd62b889b8a7645c08a35822b3352
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579765"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352718"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Passo a passo: Hospedando um relógio do WPF no Win32
 Para colocar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicativos, usam <xref:System.Windows.Interop.HwndSource>, que fornece o HWND que contém seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo. Primeiro, você cria o <xref:System.Windows.Interop.HwndSource>, dando a ele parâmetros semelhantes a CreateWindow.  Em seguida, você informa o <xref:System.Windows.Interop.HwndSource> sobre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo que você deseja dentro dele.  Finalmente, você obtém o HWND do <xref:System.Windows.Interop.HwndSource>. Este passo a passo ilustra como criar um misto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicativo que reimplementa o sistema operacional **Date and Time Properties** caixa de diálogo.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Consulte [Interoperação Win32 e WPF](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ Consulte [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md).  
   
 ## <a name="how-to-use-this-tutorial"></a>Como usar esse tutorial  
  Este tutorial mostra as etapas importantes de produção de um aplicativo de interoperação. O tutorial é feito por uma amostra [exemplo de interoperação de relógio do Win32](https://go.microsoft.com/fwlink/?LinkID=160051), mas esse exemplo é reflete o produto final. Este tutorial documenta as etapas como se você estivesse iniciando com um [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] projeto de sua preferência, talvez um projeto pré-existente e você estivesse adicionando hospedado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ao seu aplicativo. Você pode comparar seu produto final com [exemplo de interoperação de relógio do Win32](https://go.microsoft.com/fwlink/?LinkID=160051).  
@@ -25,11 +25,11 @@ Para colocar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-win
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Um passo a passo do Windows Presentation Framework no Win32 (HwndSource)  
  O gráfico a seguir mostra o produto final desejado deste tutorial:  
   
- ![Caixa de diálogo Propriedades de Data e Hora](../../../../docs/framework/wpf/advanced/media/interoparch06.PNG "InteropArch06")  
+ ![Caixa de diálogo Propriedades de Data e Hora](./media/interoparch06.PNG "InteropArch06")  
   
  Você pode recriar esta caixa de diálogo com a criação de C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project no [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]e usando o editor de caixa de diálogo para criar o seguinte:  
   
- ![Caixa de diálogo Propriedades de Data e Hora](../../../../docs/framework/wpf/advanced/media/interoparch07.PNG "InteropArch07")  
+ ![Caixa de diálogo Propriedades de Data e Hora](./media/interoparch07.PNG "InteropArch07")  
   
  (Não é necessário usar [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] usar <xref:System.Windows.Interop.HwndSource>, e você não precisará usar C++ para escrever [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programas, mas isso é uma maneira bastante comum de fazê-lo e funciona bem para uma explicação do tutorial em passos).  
   
@@ -213,19 +213,19 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  Aqui está a marcação:  
   
- [!code-xaml[Win32Clock#AllClockXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
+ [!code-xaml[Win32Clock#AllClockXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
   
  E aqui está o code-behind que acompanha:  
   
- [!code-csharp[Win32Clock#AllClockCS](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
+ [!code-csharp[Win32Clock#AllClockCS](~/samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
   
  O resultado final se parece com:  
   
- ![Caixa de diálogo Propriedades de Data e Hora](../../../../docs/framework/wpf/advanced/media/interoparch08.PNG "InteropArch08")  
+ ![Caixa de diálogo Propriedades de Data e Hora](./media/interoparch08.PNG "InteropArch08")  
   
  Para comparar seu resultado final com o código que produziu a captura de tela, consulte [exemplo de interoperação de relógio do Win32](https://go.microsoft.com/fwlink/?LinkID=160051).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Interop.HwndSource>
-- [Interoperação do WPF e do Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
 - [Exemplo de interoperação de relógio do Win32](https://go.microsoft.com/fwlink/?LinkID=160051)

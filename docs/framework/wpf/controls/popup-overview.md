@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 693c4d0cf0847b90379d409427b173b2c4740311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616791"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358464"
 ---
 # <a name="popup-overview"></a>Visão geral do pop-up
 O <xref:System.Windows.Controls.Primitives.Popup> controle fornece uma maneira de exibir o conteúdo em uma janela separada que flutua sobre a janela do aplicativo atual em relação a um elemento designado ou tela coordenada. Este tópico apresenta o <xref:System.Windows.Controls.Primitives.Popup> controlar e fornece informações sobre seu uso.  
@@ -22,27 +22,27 @@ O <xref:System.Windows.Controls.Primitives.Popup> controle fornece uma maneira d
  Um <xref:System.Windows.Controls.Primitives.Popup> controle exibe conteúdo em uma janela separada em relação a um elemento ou ponto na tela. Quando o <xref:System.Windows.Controls.Primitives.Popup> estiver visível, o <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> estiver definida como `true`.  
   
 > [!NOTE]
->  Um <xref:System.Windows.Controls.Primitives.Popup> não abre automaticamente quando o ponteiro do mouse se move sobre seu objeto pai. Se você quiser que um <xref:System.Windows.Controls.Primitives.Popup> para abrir automaticamente, use o <xref:System.Windows.Controls.ToolTip> ou <xref:System.Windows.Controls.ToolTipService> classe. Para obter mais informações, consulte [Visão geral de ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+>  Um <xref:System.Windows.Controls.Primitives.Popup> não abre automaticamente quando o ponteiro do mouse se move sobre seu objeto pai. Se você quiser que um <xref:System.Windows.Controls.Primitives.Popup> para abrir automaticamente, use o <xref:System.Windows.Controls.ToolTip> ou <xref:System.Windows.Controls.ToolTipService> classe. Para obter mais informações, consulte [Visão geral de ToolTip](tooltip-overview.md).  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>Criar um pop-up  
  O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.Primitives.Popup> controle que é o elemento filho de um <xref:System.Windows.Controls.Button> controle. Porque uma <xref:System.Windows.Controls.Button> pode ter apenas um elemento filho, este exemplo coloca o texto para o <xref:System.Windows.Controls.Button> e o <xref:System.Windows.Controls.Primitives.Popup> controles em um <xref:System.Windows.Controls.StackPanel>. O conteúdo do <xref:System.Windows.Controls.Primitives.Popup> aparece em uma <xref:System.Windows.Controls.TextBlock> controle, que exibe seu texto em uma janela separada que flutua sobre a janela do aplicativo próximo relacionado <xref:System.Windows.Controls.Button> controle.  
   
- [!code-xaml[PopupSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
+ [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
- [!code-xaml[PopupSimple#CreatePopupCodeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
+ [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>Controles que implementam um pop-up  
  Você pode criar <xref:System.Windows.Controls.Primitives.Popup> controles em outros controles. Os seguintes controles implementam o <xref:System.Windows.Controls.Primitives.Popup> controle para usos específicos:  
   
--   <xref:System.Windows.Controls.ToolTip>. Se você quiser criar uma dica de ferramenta para um elemento, use o <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService> classes. Para obter mais informações, consulte [Visão geral de ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>. Se você quiser criar uma dica de ferramenta para um elemento, use o <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService> classes. Para obter mais informações, consulte [Visão geral de ToolTip](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Se você quiser criar um menu de contexto para um elemento, use o <xref:System.Windows.Controls.ContextMenu> controle. Para mais informações, consulte [Visão geral do ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>. Se você quiser criar um menu de contexto para um elemento, use o <xref:System.Windows.Controls.ContextMenu> controle. Para mais informações, consulte [Visão geral do ContextMenu](contextmenu-overview.md).  
   
 -   <xref:System.Windows.Controls.ComboBox>. Se você quiser criar um controle de seleção que tenha uma caixa de lista suspensa que pode ser mostrado ou oculto, use o <xref:System.Windows.Controls.ComboBox> controle.  
   
--   <xref:System.Windows.Controls.Expander>. Se você quiser criar um controle que exibe um cabeçalho com uma área recolhível que exibe conteúdo, use o <xref:System.Windows.Controls.Expander> controle. Para mais informações, consulte [Visão geral do expansor](../../../../docs/framework/wpf/controls/expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>. Se você quiser criar um controle que exibe um cabeçalho com uma área recolhível que exibe conteúdo, use o <xref:System.Windows.Controls.Expander> controle. Para mais informações, consulte [Visão geral do expansor](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Aparência e comportamento de pop-up  
@@ -74,13 +74,13 @@ O <xref:System.Windows.Controls.Primitives.Popup> controle fornece uma maneira d
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Definindo a posição de pop-up  
- Você pode posicionar um pop-up, definindo o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> propriedades. Para mais informações, consulte [Comportamento de posicionamento de pop-up](../../../../docs/framework/wpf/controls/popup-placement-behavior.md). Quando <xref:System.Windows.Controls.Primitives.Popup> é exibido na tela, ele não se reposicionará o pai estiver reposicionado.  
+ Você pode posicionar um pop-up, definindo o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> propriedades. Para mais informações, consulte [Comportamento de posicionamento de pop-up](popup-placement-behavior.md). Quando <xref:System.Windows.Controls.Primitives.Popup> é exibido na tela, ele não se reposicionará o pai estiver reposicionado.  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>Personalizando o posicionamento do pop-up  
  Você pode personalizar o posicionamento de um <xref:System.Windows.Controls.Primitives.Popup> controle especificando um conjunto de coordenadas que são relativas a <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> onde você deseja que o <xref:System.Windows.Controls.Primitives.Popup> seja exibido.  
   
- Para personalizar o posicionamento, defina as <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriedade para <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Em seguida, defina uma <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegado que retorna um conjunto de pontos possíveis para posicionamento e eixos principais (em ordem de preferência) para o <xref:System.Windows.Controls.Primitives.Popup>. O ponto que mostra a maior parte do <xref:System.Windows.Controls.Primitives.Popup> é selecionado automaticamente. Para ver um exemplo, consulte [Especificar uma posição de pop-up personalizada](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
+ Para personalizar o posicionamento, defina as <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriedade para <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Em seguida, defina uma <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegado que retorna um conjunto de pontos possíveis para posicionamento e eixos principais (em ordem de preferência) para o <xref:System.Windows.Controls.Primitives.Popup>. O ponto que mostra a maior parte do <xref:System.Windows.Controls.Primitives.Popup> é selecionado automaticamente. Para ver um exemplo, consulte [Especificar uma posição de pop-up personalizada](how-to-specify-a-custom-popup-position.md).  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>Pop-up e árvore visual  
@@ -96,5 +96,5 @@ O <xref:System.Windows.Controls.Primitives.Popup> controle fornece uma maneira d
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Tópicos de instruções](popup-how-to-topics.md)
+- [Tópicos de instruções](tooltip-how-to-topics.md)

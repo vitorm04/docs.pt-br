@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663200"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364431"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Como: Enganchar um comando em um controle com suporte de comando
 O exemplo a seguir mostra como conectar um <xref:System.Windows.Input.RoutedCommand> a um <xref:System.Windows.Controls.Control> que tem o suporte interno para o comando.  Para um exemplo completo que interliga comandos a várias fontes, consulte o exemplo de [Criar um exemplo de RoutedCommand personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
@@ -31,11 +31,11 @@ O exemplo a seguir mostra como conectar um <xref:System.Windows.Input.RoutedComm
   
  Um <xref:System.Windows.Controls.MenuItem> é criado e sua propriedade <xref:System.Windows.Controls.MenuItem.Command%2A> é definida como o comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A>.  O <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> não está explicitamente definido como o objeto <xref:System.Windows.Controls.TextBox>.  Quando o <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> não está definido, o destino para o comando é o elemento que tem o foco do teclado.  Se o elemento que tem o foco do teclado não dá suporte ao comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> ou não pode executar o comando Colar no momento (a área de transferência está vazia, por exemplo), o <xref:System.Windows.Controls.MenuItem> fica esmaecido.  
   
- [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
+ [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
- [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
- [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
+ [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
+ [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Enganchar um comando em um controle sem suporte a comandos](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+- [Visão geral de comandos](commanding-overview.md)
+- [Enganchar um comando em um controle sem suporte a comandos](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

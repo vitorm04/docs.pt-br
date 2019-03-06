@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 23bf0a88b3dc16491fbd520683385c65a58a7f6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72441e53d21df47d34a0600dafdf0b4b04c11cad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696549"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352367"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Como: Detectar quando o texto em um TextBox foi alterado
 Este exemplo mostra uma maneira de usar o <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> evento para executar um método sempre que o texto em um <xref:System.Windows.Controls.TextBox> controle foi alterado.  
@@ -28,13 +28,13 @@ Este exemplo mostra uma maneira de usar o <xref:System.Windows.Controls.Primitiv
 ## <a name="example"></a>Exemplo  
  No [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] que define seu <xref:System.Windows.Controls.TextBox> controlar, especifique o <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> atributo com um valor que corresponda ao nome de método do manipulador de eventos.  
   
- [!code-xaml[TextBox_MiscCode#_TextChangedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextChangedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
   
 ## <a name="example"></a>Exemplo  
  Em que a classe code-behind para o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que contém o <xref:System.Windows.Controls.TextBox> controle que você deseja monitorar alterações, inserir um método a ser chamado sempre que o <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> evento é acionado.  Esse método deve ter uma assinatura que corresponde ao que é esperado pelo <xref:System.Windows.Controls.TextChangedEventHandler> delegar.  
   
- [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
- [!code-vb[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]  
+ [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
+ [!code-vb[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]  
   
  O manipulador de eventos é chamado sempre que o conteúdo do <xref:System.Windows.Controls.TextBox> controle for alterado, por um usuário ou programaticamente.  
   
@@ -44,5 +44,5 @@ Este exemplo mostra uma maneira de usar o <xref:System.Windows.Controls.Primitiv
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Controls.TextChangedEventArgs>
-- [Visão geral de TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [Visão geral de RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [Visão geral de TextBox](textbox-overview.md)
+- [Visão geral de RichTextBox](richtextbox-overview.md)

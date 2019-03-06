@@ -8,18 +8,18 @@ helpviewer_keywords:
 - content [WPF], Grid control
 - Grid control [WPF]
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
-ms.openlocfilehash: cffc1d078bffaa14326d279eb82f8ff040187145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0be95d84aa1b4b8b05e623f9012664de1a401a6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551015"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352133"
 ---
 # <a name="grid"></a>Grade
 O <xref:System.Windows.Controls.Grid> elemento é usado para posicionar precisamente o conteúdo em linhas e colunas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tópicos de instruções](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
+ [Tópicos de instruções](grid-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ O <xref:System.Windows.Controls.Grid> elemento é usado para posicionar precisam
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Visão geral de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Visão geral de ScrollViewer](scrollviewer-overview.md)

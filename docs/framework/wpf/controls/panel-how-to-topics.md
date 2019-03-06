@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0cb1e0b569fb69adf1e474ca3666d5e387274ce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747912"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366238"
 ---
 # <a name="panel-how-to-topics"></a>Tópicos explicativos do painel
 Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Panel> elemento e relacionados [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criar um elemento de painel personalizado](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [Substituir o método OnRender do painel](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [Definir as propriedades de altura de um elemento](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [Definir as propriedades de largura de um elemento](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [Criar um elemento de painel personalizado](how-to-create-a-custom-panel-element.md)  
+ [Substituir o método OnRender do painel](how-to-override-the-panel-onrender-method.md)  
+ [Definir as propriedades de altura de um elemento](how-to-set-the-height-properties-of-an-element.md)  
+ [Definir as propriedades de largura de um elemento](how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Panel>  
@@ -39,8 +39,8 @@ Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Pa
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Visão geral de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Visão geral de ScrollViewer](scrollviewer-overview.md)

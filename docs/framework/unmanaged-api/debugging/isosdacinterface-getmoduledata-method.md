@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 80b15f076dfe7a7bbbe7e28d9d68f01255e47202
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b0edd459deaf68040e05209c6ecf2cb7cae12e8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828577"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369945"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>Método ISOSDacInterface::GetModuleData
 
@@ -39,9 +39,11 @@ HRESULT GetModuleData(
 
 ### <a name="parameters"></a>Parâmetros
 
-`moduleAddr` [in] O endereço do módulo para recuperar informações para.
+`moduleAddr`\
+[in] O endereço do módulo para recuperar informações para.
 
-`data` [out] O [DacpModuleData estrutura](dacpmoduledata-structure.md) para conter as informações do módulo carregado.
+`data`\
+[out] O [DacpModuleData estrutura](dacpmoduledata-structure.md) para conter as informações do módulo carregado.
 
 
 ## <a name="remarks"></a>Comentários
@@ -57,5 +59,5 @@ O método fornecido é parte do `ISOSDacInterface` de interface e corresponde ao
 
 ## <a name="see-also"></a>Consulte também
 
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface Interface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Depuração](index.md)
+- [ISOSDacInterface Interface](isosdacinterface-interface.md)

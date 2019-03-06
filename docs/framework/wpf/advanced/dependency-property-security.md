@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: eb27f3c902a0fb783d26d14d1ce494eebcffb999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532143"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364808"
 ---
 # <a name="dependency-property-security"></a>Segurança de propriedade da dependência
 As propriedades da dependência geralmente devem ser consideradas como propriedades públicas. A natureza do sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] impede que a capacidade de dar garantias de segurança sobre um valor da propriedade de dependência.  
@@ -27,7 +27,7 @@ As propriedades da dependência geralmente devem ser consideradas como proprieda
   
  Se você estiver escrevendo suas próprias propriedades de dependência, você deve declarar os wrappers e o <xref:System.Windows.DependencyProperty> identificador de campo como membros públicos, para que os chamadores não obter errônea informações sobre o nível de acesso da propriedade (por causa de seu repositório está sendo implementado como uma propriedade de dependência).  
   
- Para uma propriedade de dependência personalizada, você pode registrar sua propriedade como uma propriedade de dependência somente leitura, e isso fornece um meio eficaz de impedir que uma propriedade que está sendo definida por qualquer pessoa que não possui uma referência para o <xref:System.Windows.DependencyPropertyKey> para essa propriedade. Para obter mais informações, consulte [Propriedades de dependência somente leitura](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md).  
+ Para uma propriedade de dependência personalizada, você pode registrar sua propriedade como uma propriedade de dependência somente leitura, e isso fornece um meio eficaz de impedir que uma propriedade que está sendo definida por qualquer pessoa que não possui uma referência para o <xref:System.Windows.DependencyPropertyKey> para essa propriedade. Para obter mais informações, consulte [Propriedades de dependência somente leitura](read-only-dependency-properties.md).  
   
 > [!NOTE]
 >  Declarando uma <xref:System.Windows.DependencyProperty> privada de campo de identificador não é proibida e em termos conceituais pode ser usado para ajudar a reduzir o namespace imediatamente exposto de uma classe personalizada, mas essa propriedade não deve ser considerada "privada" no mesmo sentido que o [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] definições de idioma definem nível de acesso, por razões descritas na próxima seção.  
@@ -40,4 +40,4 @@ As propriedades da dependência geralmente devem ser consideradas como proprieda
  Aplicar uma demanda para um <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> e esperar a falha de validação em uma falha de demanda para impedir que uma propriedade que está sendo definido não é um mecanismo de segurança adequado. Invalidação de valor definido imposta por meio do <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> podem também ser suprimidos por chamadores mal-intencionados se eles estiverem operando dentro do domínio de aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
-- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Propriedades de dependência personalizada](custom-dependency-properties.md)

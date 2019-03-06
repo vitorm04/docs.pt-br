@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 2a20dc95467df4baedce2f4acc63f0c029f178c6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 378ebd5a402006d7e7a88029ced62f812f620aeb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748486"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377736"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Passo a passo: Associando a dados em aplicativos híbridos
 Associando uma fonte de dados a um controle é essencial para fornecer aos usuários acesso a dados subjacentes, se você estiver usando [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este passo a passo mostra como você pode usar a vinculação de dados em aplicativos híbridos que incluam [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles.  
@@ -67,7 +67,7 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 5.  Nomeie o padrão <xref:System.Windows.Controls.Grid> elemento `mainGrid` atribuindo a <xref:System.Windows.FrameworkElement.Name%2A> propriedade.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
+     [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
 ## <a name="defining-the-data-template"></a>Definindo o modelo de dados  
  A lista mestra de clientes é exibida em um <xref:System.Windows.Controls.ListBox> controle. O exemplo de código a seguir define uma <xref:System.Windows.DataTemplate> objeto nomeado `ListItemsTemplate` que controla a árvore visual do <xref:System.Windows.Controls.ListBox> controle. Isso <xref:System.Windows.DataTemplate> é atribuído para o <xref:System.Windows.Controls.ListBox> do controle <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> propriedade.  
@@ -76,7 +76,7 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 -   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
+     [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>Especificando o layout do formulário  
  O layout do formulário é definido por uma grade com três linhas e três colunas. <xref:System.Windows.Controls.Label> controles são fornecidos para identificar cada coluna na tabela Customers.  
@@ -85,13 +85,13 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 -   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
+     [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Para configurar os controles de Rótulo  
   
 -   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
+     [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
 ## <a name="specifying-data-bindings"></a>Especificando associações de dados  
  A lista mestra de clientes é exibida em um <xref:System.Windows.Controls.ListBox> controle. O anexo `ListItemsTemplate` associa um <xref:System.Windows.Controls.TextBlock> o controle para o `ContactName` campo do banco de dados.  
@@ -104,7 +104,7 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
      O <xref:System.Windows.Data.Binding> classe associa o <xref:System.Windows.Controls.TextBox> controles para os campos apropriados no banco de dados.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
+     [!code-xaml[WPFWithWFAndDatabinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
 ## <a name="displaying-data-by-using-interoperation"></a>Exibindo dados usando interoperação  
  Os pedidos correspondentes ao cliente selecionado são exibidos em uma <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> controle chamado `dataGridView1`. O `dataGridView1` controle é associado à fonte de dados no arquivo code-behind. Um <xref:System.Windows.Forms.Integration.WindowsFormsHost> controle é o pai deste [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle.  
@@ -113,7 +113,7 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 -   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
+     [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>Adicionando a fonte de dados ao projeto  
  Com o Visual Studio, você pode facilmente adicionar uma fonte de dados ao seu projeto. Este procedimento adiciona um conjunto de dados fortemente tipado ao seu projeto. Várias outras classes de suporte, como adaptadores de tabela para cada uma das tabelas escolhidas, também são adicionadas.  
@@ -139,15 +139,15 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
      Esse código declara o <xref:System.Windows.Forms.BindingSource> componente e classes auxiliares associadas que se conectam ao banco de dados.  
   
-     [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
-     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
+     [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
+     [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
 3.  Copie o seguinte código para o construtor.
 
      Esse código cria e inicializa o <xref:System.Windows.Forms.BindingSource> componente.
 
-     [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
-     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
+     [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
+     [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
 4.  Abra MainWindow.xaml.
 
@@ -161,15 +161,15 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
 
      Esse código atribui a <xref:System.Windows.Forms.BindingSource> componente como o contexto de dados e preenche o `Customers` e `Orders` objetos de adaptador.
 
-     [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
-     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
+     [!code-csharp[WPFWithWFAndDatabinding#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
+     [!code-vb[WPFWithWFAndDatabinding#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
 
 9. Copie o seguinte código para o `MainWindow` definição de classe.
 
      Este método trata o <xref:System.Windows.Data.CollectionView.CurrentChanged> eventos e atualiza o item atual da ligação de dados.
 
-     [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
-     [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
+     [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
+     [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
   
 10. Pressione F5 para compilar e executar o aplicativo.  
   
@@ -178,5 +178,5 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Vinculação de dados no exemplo de aplicativos híbridos](https://go.microsoft.com/fwlink/?LinkID=159983)
-- [Passo a passo: Hospedando um controle composto do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Passo a passo: Hospedando um controle composto do WPF nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Passo a passo: Hospedando um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Passo a passo: Hospedando um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

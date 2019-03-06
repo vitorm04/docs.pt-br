@@ -1,5 +1,5 @@
 ---
-title: Função GetPropertyOrigin (referência de API Unmnaged)
+title: Função GetPropertyOrigin (referência de API não gerenciada)
 description: A função GetPropertyOrigin determina a classe em que uma propriedade é declarada.
 ms.date: 11/06/2017
 api_name:
@@ -16,41 +16,42 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b61c0359b8b18cb5082b1739defc65371476af25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42e5cd6ee438b33fd07fd7c3242cc3c2a6513dd9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529914"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368867"
 ---
 # <a name="getpropertyorigin-function"></a>Função GetPropertyOrigin
+
 Determina a classe na qual uma propriedade é declarada.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 HRESULT GetPropertyOrigin (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszMethodName,
    [out] BSTR*              pstrClassName
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`vFunc`  
+`vFunc`\
 [in] Esse parâmetro é usado.
 
-`ptr`  
+`ptr`\
 [in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
-`wszMethodName`  
-[in] O nome da propriedade para o objeto cuja classe proprietária está sendo solicitado. 
+`wszMethodName`\
+[in] O nome da propriedade para o objeto cuja classe proprietária está sendo solicitado.
 
-`pstrClassName`  
+`pstrClassName`\
 [out] Recebe o nome da classe que é proprietário da propriedade.
 
 ## <a name="return-value"></a>Valor retornado
@@ -64,7 +65,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-  
+
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) método.
@@ -73,12 +74,14 @@ Porque uma classe pode herdar as propriedades de um ou mais classes base, os des
 
 O `pstrClassName` parâmetro não deve apontar para um válido `BSTR` antes da função é chamada como esta é uma `out` parâmetro; esse ponteiro não é desalocado depois que a função retorna.
 
-## <a name="requirements"></a>Requisitos  
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** WMINet_Utils.idl
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265344"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368162"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Novidades do WPF versão 4.5
 <a name="introduction"></a> Este tópico contém informações sobre os recursos novos e aprimorados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versão 4.5.  
@@ -115,15 +115,15 @@ ms.locfileid: "55265344"
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Suporte aprimorado para estabelecer uma referência fraca em um evento  
- Implementar o padrão de evento fraco agora é mais fácil porque os assinantes de eventos podem participar dele sem implementar uma interface adicional.  Genérica <xref:System.Windows.WeakEventManager> classe também permite que os assinantes participem no padrão de evento fraco se um dedicado <xref:System.Windows.WeakEventManager> não existe para um determinado evento.  Para obter mais informações, consulte [Padrões de evento fraco](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ Implementar o padrão de evento fraco agora é mais fácil porque os assinantes de eventos podem participar dele sem implementar uma interface adicional.  Genérica <xref:System.Windows.WeakEventManager> classe também permite que os assinantes participem no padrão de evento fraco se um dedicado <xref:System.Windows.WeakEventManager> não existe para um determinado evento.  Para obter mais informações, consulte [Padrões de evento fraco](../advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Novos métodos para a classe Dispatcher  
- A classe Dispatcher define novos métodos para operações síncronas e assíncronas.  Síncronos <xref:System.Windows.Threading.Dispatcher.Invoke%2A> método define sobrecargas que usam uma <xref:System.Action> ou <xref:System.Func%601> parâmetro. O novo método assíncrono <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, também usa um <xref:System.Action> ou <xref:System.Func%601> como o parâmetro de retorno de chamada e retorna um <xref:System.Windows.Threading.DispatcherOperation> ou <xref:System.Windows.Threading.DispatcherOperation%601>.   O <xref:System.Windows.Threading.DispatcherOperation> e <xref:System.Windows.Threading.DispatcherOperation%601> classes definem um <xref:System.Threading.Tasks.Task> propriedade.  Quando você chama <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, você pode usar o `await` palavra-chave com qualquer um os <xref:System.Windows.Threading.DispatcherOperation> ou associado <xref:System.Threading.Tasks.Task>. Se você precisar aguardar de forma síncrona a <xref:System.Threading.Tasks.Task> que é retornado por um <xref:System.Windows.Threading.DispatcherOperation> ou <xref:System.Windows.Threading.DispatcherOperation%601>, chame o <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> método de extensão. Chamar <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> resultará em um deadlock se a operação está na fila em um thread de chamada. Para obter mais informações sobre como usar um <xref:System.Threading.Tasks.Task> para executar operações assíncronas, consulte [paralelismo de tarefas (Task Parallel Library)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
+ A classe Dispatcher define novos métodos para operações síncronas e assíncronas.  Síncronos <xref:System.Windows.Threading.Dispatcher.Invoke%2A> método define sobrecargas que usam uma <xref:System.Action> ou <xref:System.Func%601> parâmetro. O novo método assíncrono <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, também usa um <xref:System.Action> ou <xref:System.Func%601> como o parâmetro de retorno de chamada e retorna um <xref:System.Windows.Threading.DispatcherOperation> ou <xref:System.Windows.Threading.DispatcherOperation%601>.   O <xref:System.Windows.Threading.DispatcherOperation> e <xref:System.Windows.Threading.DispatcherOperation%601> classes definem um <xref:System.Threading.Tasks.Task> propriedade.  Quando você chama <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, você pode usar o `await` palavra-chave com qualquer um os <xref:System.Windows.Threading.DispatcherOperation> ou associado <xref:System.Threading.Tasks.Task>. Se você precisar aguardar de forma síncrona a <xref:System.Threading.Tasks.Task> que é retornado por um <xref:System.Windows.Threading.DispatcherOperation> ou <xref:System.Windows.Threading.DispatcherOperation%601>, chame o <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> método de extensão. Chamar <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> resultará em um deadlock se a operação está na fila em um thread de chamada. Para obter mais informações sobre como usar um <xref:System.Threading.Tasks.Task> para executar operações assíncronas, consulte [paralelismo de tarefas (Task Parallel Library)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Extensões de marcação para eventos  
  WPF 4.5 dá suporte a extensões de marcação de eventos.  Embora o WPF não define uma extensão de marcação a ser usado para eventos, terceiros são capazes de criar uma extensão de marcação que pode ser usada com eventos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Novidades no .NET Framework](../../../../docs/framework/whats-new/index.md)
+- [Novidades no .NET Framework](../../whats-new/index.md)

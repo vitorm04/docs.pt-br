@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974803"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363469"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Expressões lambda (Visual Basic)
 Um *expressão lambda* é uma função ou sub-rotina sem um nome que pode ser usada sempre que um representante é válido. Expressões lambda podem ser funções ou sub-rotinas e podem ser uma linha ou várias linhas. Você pode passar valores do escopo atual para uma expressão lambda.  
@@ -109,7 +109,7 @@ End Class
   
  Para obter mais informações sobre como criar e usar os métodos assíncronos, consulte [programação assíncrona com Async e Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a> Contexto  
+## <a name="context"></a> Contexto  
  Uma expressão lambda compartilha seu contexto com o escopo dentro do qual ele está definido. Ele tem os mesmos direitos de acesso que qualquer código escrito no escopo de contenção. Isso inclui acesso a variáveis de membro, funções e sub-rotinas, `Me`, parâmetros e variáveis locais no escopo de contenção.  
   
  Acesso a variáveis locais e parâmetros no escopo de contenção pode ultrapassar o tempo de vida desse escopo. Desde que um delegado referindo-se a uma expressão lambda não está disponível para coleta de lixo, o acesso às variáveis no ambiente original é mantido. No exemplo a seguir, a variável `target` é local para `makeTheGame`, o método no qual a expressão lambda `playTheGame` está definido. Observe que a expressão lambda retornado, atribuído a `takeAGuess` na `Main`, ainda tem acesso à variável local `target`.  

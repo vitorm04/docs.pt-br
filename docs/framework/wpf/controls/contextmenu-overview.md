@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: f1ef0f166908cce3f6c6e39819561a7ec3756a7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d3677021e38c10d38c0e5ed5e5de1824397db50
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595741"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357359"
 ---
 # <a name="contextmenu-overview"></a>Visão geral de ContextMenu
 O <xref:System.Windows.Controls.ContextMenu> classe representa o elemento que expõe a funcionalidade por meio de um contexto específico <xref:System.Windows.Controls.Menu>. Normalmente, um usuário expõe o <xref:System.Windows.Controls.ContextMenu> no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] clicando com o botão do mouse. Este tópico apresenta os <xref:System.Windows.Controls.ContextMenu> elemento e fornece exemplos de como usá-lo no [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e código.  
@@ -28,10 +28,10 @@ O <xref:System.Windows.Controls.ContextMenu> classe representa o elemento que ex
 ## <a name="creating-contextmenus"></a>Criando ContextMenus  
  Os exemplos a seguir mostram como criar um <xref:System.Windows.Controls.ContextMenu> com submenus. O <xref:System.Windows.Controls.ContextMenu> controles são anexados aos controles de botão.  
   
- [!code-xaml[ContextMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
+ [!code-xaml[ContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
   
- [!code-csharp[ContextMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#2)]
- [!code-vb[ContextMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#2)]  
+ [!code-csharp[ContextMenu#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ContextMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#2)]  
   
 <a name="applying_styles_to_contextmenu"></a>   
 ## <a name="applying-styles-to-a-contextmenu"></a>Aplicando estilos a um ContextMenu  
@@ -67,6 +67,6 @@ O <xref:System.Windows.Controls.ContextMenu> classe representa o elemento que ex
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.Menu>
 - <xref:System.Windows.Controls.MenuItem>
-- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)
-- [Estilos e modelos ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)
+- [ContextMenu](contextmenu.md)
+- [Estilos e modelos ContextMenu](contextmenu-styles-and-templates.md)
 - [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

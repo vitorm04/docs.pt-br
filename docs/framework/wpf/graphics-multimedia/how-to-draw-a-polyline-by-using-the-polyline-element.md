@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: c4aab17958180710c392491a27cc22fa006f8c5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35981f6d5a47ea5d5e024efe714b52103938eddf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688968"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378171"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Como: Desenhar uma polilinha usando o elemento Polyline
 Este exemplo mostra como desenhar uma polilinha, que é uma série de linhas conectadas, usando o <xref:System.Windows.Shapes.Polyline> elemento.  
@@ -28,7 +28,7 @@ Este exemplo mostra como desenhar uma polilinha, que é uma série de linhas con
 ## <a name="example"></a>Exemplo  
  Em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], sintaxe válida para os pontos é uma lista delimitada por espaço de pares de coordenadas x e y, separados por vírgulas.  
   
- [!code-xaml[drawingwithshapeelements#PolylineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
+ [!code-xaml[drawingwithshapeelements#PolylineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
   
  Embora este exemplo usa uma <xref:System.Windows.Controls.Canvas> para conter as polilinhas, você pode usar elementos polyline (e todos os outros elementos de forma) com qualquer <xref:System.Windows.Controls.Panel> ou <xref:System.Windows.Controls.Control> que dá suporte a conteúdo não textual.  
   
@@ -39,4 +39,4 @@ Este exemplo mostra como desenhar uma polilinha, que é uma série de linhas con
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>
 - [Exemplo de elementos de forma](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)

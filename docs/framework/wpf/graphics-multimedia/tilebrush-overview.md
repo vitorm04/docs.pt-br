@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8013bacf6c4d33ce89fc287e625ce8c8fb6c3ef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683015"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369936"
 ---
 # <a name="tilebrush-overview"></a>Visão geral de TileBrush
 <xref:System.Windows.Media.TileBrush> objetos oferecem uma grande quantidade de controle sobre como uma área é pintada com uma imagem <xref:System.Windows.Media.Drawing>, ou <xref:System.Windows.Media.Visual>. Este tópico descreve como usar <xref:System.Windows.Media.TileBrush> recursos para obter mais controle sobre como uma <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> pinta uma área.  
@@ -21,7 +21,7 @@ ms.locfileid: "54683015"
   
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Para entender esse tópico, é útil entender como usar os recursos básicos do <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> classe. Para obter uma introdução a esses tipos, consulte a [pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Para entender esse tópico, é útil entender como usar os recursos básicos do <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> classe. Para obter uma introdução a esses tipos, consulte a [pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md).  
   
 <a name="tilebrush"></a>   
 ## <a name="painting-an-area-with-tiles"></a>Pintando uma área com blocos  
@@ -29,10 +29,10 @@ ms.locfileid: "54683015"
   
  Pintar uma área com um pincel de bloco envolve três componentes: o conteúdo, o bloco de base e a área de saída.  
   
- ![Componentes de TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
+ ![Componentes de TileBrush](./media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
 Componentes de um TileBrush com um único bloco  
   
- ![Componentes de um TileBrush lado a lado](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
+ ![Componentes de um TileBrush lado a lado](./media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
 Componentes de um TileBrush com um TileMode de bloco  
   
  A área de saída é a área que está sendo pintada, como o <xref:System.Windows.Shapes.Shape.Fill%2A> de um <xref:System.Windows.Shapes.Ellipse> ou o <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button>. As próximas seções descrevem os outros dois componentes de um <xref:System.Windows.Media.TileBrush>.  
@@ -63,14 +63,14 @@ Componentes de um TileBrush com um TileMode de bloco
   
  A imagem a seguir ilustra as diferentes <xref:System.Windows.Media.TileBrush.Stretch%2A> configurações.  
   
- ![Diferentes configurações de alongamento de TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![Diferentes configurações de alongamento de TileBrush](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
   
  No exemplo a seguir, o conteúdo de um <xref:System.Windows.Media.ImageBrush> é definido para que ele não seja alongado para preencher a área de saída.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
   
  Por padrão, um <xref:System.Windows.Media.TileBrush> gera um único bloco (o bloco de base) e alonga esse bloco para preencher completamente a área de saída. Você pode alterar o tamanho e posição do bloco base, definindo a <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriedades.  
   
@@ -80,21 +80,21 @@ Componentes de um TileBrush com um TileMode de bloco
   
  A ilustração a seguir mostra a diferença na saída entre um <xref:System.Windows.Media.TileBrush> com relativas versus absolutas <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>. Observe que cada ilustração mostra um padrão lado a lado. A seção a seguir descreve como especificar o padrão de bloco.  
   
- ![Unidades de visor absolutas e relativas](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
+ ![Unidades de visor absolutas e relativas](./media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
   
  No exemplo a seguir, uma imagem é usada para criar um bloco que tem largura e altura de 50%. O bloco de base está localizado em (0,0) da área de saída.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
   
  O exemplo a seguir define os blocos de um <xref:System.Windows.Media.ImageBrush> para 25 por 25 pixels independentes de dispositivo. Porque o <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> são absolutos, o <xref:System.Windows.Media.ImageBrush> blocos sempre são 25 por 25 pixels, independentemente do tamanho da área que está sendo pintada.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
   
 <a name="tilingbehavior"></a>   
 ### <a name="tiling-behavior"></a>Comportamento de agrupamento lado a lado  
@@ -112,22 +112,22 @@ Componentes de um TileBrush com um TileMode de bloco
   
  A imagem a seguir ilustra os modos diferentes de preenchimento lado a lado.  
   
- ![Configurações diferentes de TileMode de TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
+ ![Configurações diferentes de TileMode de TileBrush](./media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
   
  No exemplo a seguir, uma imagem é usada para pintar um retângulo que tem 100 pixels de largura e 100 pixels de altura. Definindo o pincel <xref:System.Windows.Media.TileBrush.Viewport%2A> tiver sido definido para 0,0,0.25,0.25, bloco de base do pincel é feito para ser 1 e 4 da área de saída. O pincel <xref:System.Windows.Media.TileBrush.TileMode%2A> é definido como <xref:System.Windows.Media.TileMode.FlipXY>. de modo que ele preenche o retângulo com linhas de blocos.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
-- [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)
+- [Tópicos de instruções](brushes-how-to-topics.md)
+- [Visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md)
 - [Exemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Exemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

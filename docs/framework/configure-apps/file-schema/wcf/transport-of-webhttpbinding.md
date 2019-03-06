@@ -3,11 +3,11 @@ title: <transport> De <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
 ms.openlocfilehash: d2c7ee3512ddeefae6e5551a58b3bab76742ed30
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286410"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363400"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<transporte > de \<webHttpBinding >
 Define as configurações de segurança de nível de transporte para um ponto de extremidade de serviço configurado para receber solicitações HTTP.  

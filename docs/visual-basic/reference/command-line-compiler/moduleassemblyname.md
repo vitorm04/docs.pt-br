@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: f88a0001bb2ba55c0a3eac3ed208f14292d86734
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a16dd616c8a38dea4bd1779e4feea779b3a18e2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745658"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375292"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Especifica o nome do assembly do qual esse módulo fará parte.  
@@ -37,7 +37,7 @@ Especifica o nome do assembly do qual esse módulo fará parte.
   
 -   O assembly referenciado concedeu acesso de assembly amigável para o assembly no qual o módulo será compilado.  
   
- Para obter mais informações sobre como criar um módulo, consulte [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obter mais informações sobre assemblies amigáveis, consulte [Assemblies amigáveis](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Para obter mais informações sobre como criar um módulo, consulte [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obter mais informações sobre assemblies amigáveis, consulte [Assemblies amigáveis](../../../standard/assembly/friend-assemblies.md).  
   
 > [!NOTE]
 >  O `-moduleassemblyname` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível apenas quando você compila em um prompt de comando.  
@@ -51,4 +51,4 @@ Especifica o nome do assembly do qual esse módulo fará parte.
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Assemblies no .NET](../../../standard/assembly/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Assemblies Amigáveis](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Assemblies Amigáveis](../../../standard/assembly/friend-assemblies.md)

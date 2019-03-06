@@ -2,12 +2,12 @@
 title: Atributos comuns (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690898"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375396"
 ---
 # <a name="common-attributes-visual-basic"></a>Atributos comuns (Visual Basic)
 Este tópico descreve os atributos que são mais comumente usados em programas em Visual Basic.  
@@ -22,7 +22,7 @@ Este tópico descreve os atributos que são mais comumente usados em programas e
   
 -   [Atributos do Visual Basic](#VB)  
   
-##  <a name="Global"></a> Atributos globais  
+## <a name="Global"></a> Atributos globais  
  A maioria dos atributos são aplicados aos elementos específicos de linguagem, como classes ou métodos. No entanto, alguns atributos são globais. Eles se aplicam a um assembly inteiro ou módulo. Por exemplo, o atributo <xref:System.Reflection.AssemblyVersionAttribute> pode ser usado para inserir informações de versão em um assembly, desta maneira:  
   
 ```vb  
@@ -74,7 +74,7 @@ Este tópico descreve os atributos que são mais comumente usados em programas e
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Define um atributo personalizado que especifica uma configuração de assembly (como comercial ou de depuração) para um manifesto do assembly. assembly.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Define um alias amigável padrão para um manifesto do assembly|  
   
-##  <a name="Obsolete"></a> Atributo obsoleto  
+## <a name="Obsolete"></a> Atributo obsoleto  
  O atributo `Obsolete` marca uma entidade programa como não recomendada para uso. Cada uso de uma entidade marcada como obsoleta gerará subsequentemente um aviso ou erro, dependendo de como o atributo é configurado. Por exemplo:  
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  O atributo `Obsolete` é um atributo de uso único e pode ser aplicado a qualquer entidade que permite atributos. `Obsolete` é um alias para <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a> Atributo condicional  
+## <a name="Conditional"></a> Atributo condicional  
  O atributo `Conditional` torna a execução de um método dependente de um identificador de pré-processamento. O atributo `Conditional` é um alias para <xref:System.Diagnostics.ConditionalAttribute> e pode ser aplicado a um método ou uma classe de atributo.  
   
  Neste exemplo, `Conditional` é aplicado a um método para habilitar ou desabilitar a exibição de informações de diagnóstico específicas do programa:  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> Atributos de informações do chamador  
+## <a name="CallerInfo"></a> Atributos de informações do chamador  
  Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número de linha no código-fonte e o nome do membro do chamador.  
   
  Para obter informações do chamador do membro, você usa os atributos que são aplicados aos parâmetros opcionais. Cada parâmetro opcional especifica um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
@@ -222,7 +222,7 @@ End Class
   
  Para obter mais informações sobre os atributos de informações do chamador, consulte [informações do chamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a> Atributos do Visual Basic  
+## <a name="VB"></a> Atributos do Visual Basic  
  A tabela a seguir lista os atributos que são específicos para o Visual Basic.  
   
 |Atributo|Finalidade|  

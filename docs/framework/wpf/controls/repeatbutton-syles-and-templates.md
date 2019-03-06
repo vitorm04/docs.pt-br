@@ -1,51 +1,46 @@
 ---
-title: Estilos e modelos de expansor
+title: Estilos e modelos RepeatButton
 ms.date: 03/30/2017
 helpviewer_keywords:
-- styles [WPF], Expander
-- ControlTemplate [WPF], Expander
-- templates [WPF], Expander
-- Expander [WPF], styles and templates
-- states [WPF], Expander
-- parts [WPF], Expander
-ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: ba31543a21b13817bfd7ea5740d15afcae25fdeb
+- RepeatButton [WPF], styles and templates
+- styles [WPF], RepeatButton
+- templates [WPF], RepeatButton
+- parts [WPF], RepeatButton
+- ControlTemplate [WPF], RepeatButton
+- states [WPF], RepeatButton
+ms.assetid: fd340743-f44f-4990-9077-085301469670
+ms.openlocfilehash: 6a71e944d66d4f389261a65beafec5eef792e17c
 ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366810"
+ms.locfileid: "57354837"
 ---
-# <a name="expander-styles-and-templates"></a>Estilos e modelos de expansor
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Expander> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+# <a name="repeatbutton-syles-and-templates"></a>Estilos e modelos RepeatButton
+Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Primitives.RepeatButton> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="expander-parts"></a>Partes de expansor  
- O <xref:System.Windows.Controls.Expander> controle não tem nenhuma parte nomeada.  
+## <a name="repeatbutton-parts"></a>Partes de RepeatButton  
+ O <xref:System.Windows.Controls.Primitives.RepeatButton> controle não tem nenhuma parte nomeada.  
   
-## <a name="expander-states"></a>Estados de expansor  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Expander> controle.  
+## <a name="repeatbutton-states"></a>Estados de RepeatButton  
+ A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Primitives.RepeatButton> controle.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
 |MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o controle.|  
+|Pressionado|CommonStates|O controle é pressionado.|  
 |Disabled|CommonStates|O controle está desabilitado.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  
-|Expandido|ExpansionStates|O controle é expandido.|  
-|Recolhido|ExpansionStates|O controle não estiver expandido.|  
-|ExpandDown|ExpandDirectionStates|O controle se expande para baixo.|  
-|ExpandUp|ExpandDirectionStates|Expande o controle para cima.|  
-|ExpandLeft|ExpandDirectionStates|O controle se expande para a esquerda.|  
-|ExpandRight|ExpandDirectionStates|O controle se expande à direita.|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
 |InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
 |InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
-## <a name="expander-controltemplate-example"></a>Exemplo de ControlTemplate de expansor  
- O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.Expander> controle.  
+## <a name="repeatbutton-controltemplate-example"></a>Exemplo de ControlTemplate de RepeatButton  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.Primitives.RepeatButton> controle.  
   
- [!code-xaml[ControlTemplateExamples#Expander](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
+ [!code-xaml[ControlTemplateExamples#RepeatButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#repeatbutton)]  
   
  O exemplo anterior usa um ou mais dos seguintes recursos.  
   

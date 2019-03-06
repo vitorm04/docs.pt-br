@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: ed1f7781453503682648d740b57dd7af0a1715c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524124"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376359"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicialização de elementos de objeto que não estejam em uma árvore de objetos
 Alguns aspectos da inicialização de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] são deixados para processos que normalmente dependem de aquele elemento estar conectado à árvore lógica ou à árvore visual. Este tópico descreve as etapas que podem ser necessárias para inicializar um elemento que não está conectado a nenhuma árvore.  
@@ -39,10 +39,10 @@ Alguns aspectos da inicialização de [!INCLUDE[TLA#tla_winclient](../../../../i
   
  O exemplo ilustra apenas a função principal. As funções `Rasterize` e `Save` (não mostradas) são funções utilitárias que cuidam do processamento de imagens e E/S.  
   
- [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
- [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
+ [!code-csharp[InitializeElements#Main](~/samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
+ [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Árvores no WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Árvores no WPF](trees-in-wpf.md)
+- [Visão geral de renderização de gráficos do WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Visão geral de XAML (WPF)](xaml-overview-wpf.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 74853733b1fb7f023d9f192d3e862dbf6875ecda
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 82c4531ac16e8b4bf7ac45bc01eb7128b9507ab5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828580"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358529"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Método ISOSDacInterface::GetMethodDescPtrFromIP
 
@@ -37,11 +37,13 @@ HRESULT GetMethodDescPtrFromIP(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>Parâmetros
 
-`ip` [in] Um endereço dentro do método em tempo de execução.
+`ip`\
+[in] Um endereço dentro do método em tempo de execução.
 
-`ppMD` [out] O endereço do `MethodDesc` para o método específico.
+`ppMD`\
+[out] O endereço do `MethodDesc` para o método específico.
 
 ## <a name="remarks"></a>Comentários
 
@@ -56,5 +58,5 @@ O método fornecido faz parte dos [ `ISOSDacInterface` interface](isosdacinterfa
 
 ## <a name="see-also"></a>Consulte também
 
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface Interface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Depuração](index.md)
+- [ISOSDacInterface Interface](isosdacinterface-interface.md)
