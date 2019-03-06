@@ -1,5 +1,5 @@
 ---
-title: Como obter e definir a janela principal do aplicativo
+title: 'Como: Obter e definir a janela principal do aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-ms.openlocfilehash: ae70b482eba8fb4e0bf587def06bb90d751a4312
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea8333aa82f1159afb438215940ee1e7c2605e96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547976"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373550"
 ---
-# <a name="how-to-get-and-set-the-main-application-window"></a>Como obter e definir a janela principal do aplicativo
+# <a name="how-to-get-and-set-the-main-application-window"></a>Como: Obter e definir a janela principal do aplicativo
 Este exemplo mostra como obter e definir a janela principal do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- A primeira <xref:System.Windows.Window> instanciado em um WPF Windows Presentation Foundation () aplicativo é definido automaticamente pelo <xref:System.Windows.Application> como a janela principal do aplicativo. A primeira <xref:System.Windows.Window> para ser instanciado será provavelmente ser a janela que é especificada como a inicialização [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (consulte <xref:System.Windows.Application.StartupUri%2A>).  
+ A primeira <xref:System.Windows.Window> que é instanciado em um Windows Presentation Foundation (WPF) aplicativo é definido automaticamente pelo <xref:System.Windows.Application> como a janela principal do aplicativo. A primeira <xref:System.Windows.Window> ser instanciado provavelmente mais ser a janela que é especificada como o tipo de inicialização [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (consulte <xref:System.Windows.Application.StartupUri%2A>).  
   
- A primeira <xref:System.Windows.Window> também pode ser instanciado usando o código. Um exemplo é abrir uma janela durante a inicialização do aplicativo, como o seguinte:  
+ A primeira <xref:System.Windows.Window> também pode ser instanciada usando código. Um exemplo é abrir uma janela durante a inicialização do aplicativo, como o seguinte:  
   
- [!code-csharp[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/App.xaml.cs#firstwindowusingcodecodebehind)]
- [!code-vb[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/application.xaml.vb#firstwindowusingcodecodebehind)]  
+ [!code-csharp[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/App.xaml.cs#firstwindowusingcodecodebehind)]
+ [!code-vb[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/application.xaml.vb#firstwindowusingcodecodebehind)]  
   
- Às vezes, a primeira instanciado <xref:System.Windows.Window> é na verdade não a janela principal do aplicativo, por exemplo, uma tela inicial. Nesse caso, você pode especificar a janela principal do aplicativo usando marcação semelhante ao seguinte:  
+ Às vezes, a primeira é instanciado <xref:System.Windows.Window> é, na verdade, não a janela principal do aplicativo, por exemplo, uma tela inicial. Nesse caso, você pode especificar a janela principal do aplicativo usando marcação semelhante ao seguinte:  
   
- [!code-xaml[ApplicationMainWindowSnippets#SetApplicationMainWindowXAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ApplicationMainWindowSnippets/XAML/App.xaml#setapplicationmainwindowxaml)]  
+ [!code-xaml[ApplicationMainWindowSnippets#SetApplicationMainWindowXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/ApplicationMainWindowSnippets/XAML/App.xaml#setapplicationmainwindowxaml)]  
   
- Se a janela principal é especificada automaticamente ou manualmente, você pode obter a janela principal do <xref:System.Windows.Application.MainWindow%2A> usando o seguinte código, como o seguinte:  
+ Se a janela principal for especificada automática ou manualmente, você pode obter a janela principal do <xref:System.Windows.Application.MainWindow%2A> usando o seguinte código, semelhante ao seguinte:  
   
- [!code-csharp[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationMainWindowSnippets/CSharp/App.xaml.cs#getapplicationmainwindowcode)]
- [!code-vb[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationMainWindowSnippets/visualbasic/application.xaml.vb#getapplicationmainwindowcode)]
+ [!code-csharp[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationMainWindowSnippets/CSharp/App.xaml.cs#getapplicationmainwindowcode)]
+ [!code-vb[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationMainWindowSnippets/visualbasic/application.xaml.vb#getapplicationmainwindowcode)]

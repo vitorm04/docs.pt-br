@@ -7,39 +7,39 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710755"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362897"
 ---
 # <a name="xaml-in-wpf"></a>XAML no WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] é uma linguagem de marcação declarativa de aplicativos de programação. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementa a implementação do processador aXAML e fornece suporte de linguagem XAML. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos são implementados, de modo que eles possam fornecer o tipo necessário fazer para obter uma representação de XAML. Em geral, você pode criar a maior parte do seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da interface do usuário do aplicativo na marcação XAML.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Sintaxe XAML em detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [Code-behind e XAML no WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [XAML e classes personalizadas para WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Extensões de marcação e XAML do WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Namespaces XAML e mapeamento de namespace para XAML WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [Namescopes XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
- [Modelos e estilos embutidos](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [Espaço em branco em XAML de processamento](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [TypeConverters e XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [Entidades e XAML de caractere XML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [Recursos da linguagem (x:) do namespace de XAML](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [Extensões XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Recursos de linguagem da compatibilidade de marcação (mc:)](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)  
+ [Visão geral de XAML (WPF)](xaml-overview-wpf.md)  
+ [Sintaxe XAML em detalhes](xaml-syntax-in-detail.md)  
+ [Code-behind e XAML no WPF](code-behind-and-xaml-in-wpf.md)  
+ [XAML e classes personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)  
+ [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md)  
+ [Namespaces XAML e mapeamento de namespace para XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [Namescopes XAML WPF](wpf-xaml-namescopes.md)  
+ [Modelos e estilos embutidos](inline-styles-and-templates.md)  
+ [Espaço em branco em XAML de processamento](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [TypeConverters e XAML](typeconverters-and-xaml.md)  
+ [Entidades e XAML de caractere XML](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [Namespace de XAML (x) Recursos de linguagem](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [Extensões XAML WPF](wpf-xaml-extensions.md)  
+ [Compatibilidade de marcação (mc:) Recursos de linguagem](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Arquitetura do WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [Elementos base](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Árvore de elementos e serialização](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Propriedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Eventos](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Entrada](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Recursos](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Modelo de threading](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Arquitetura do WPF](wpf-architecture.md)  
+  [Elementos base](base-elements.md)  
+  [Árvore de elementos e serialização](element-tree-and-serialization.md)  
+  [Propriedades](properties-wpf.md)  
+  [Eventos](events-wpf.md)  
+  [Entrada](input-wpf.md)  
+  [Recursos](resources-wpf.md)  
+  [Estilo e modelagem](../controls/styling-and-templating.md)  
+  [Modelo de threading](threading-model.md)

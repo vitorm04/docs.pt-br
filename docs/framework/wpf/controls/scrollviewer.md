@@ -9,19 +9,19 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671974"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367097"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 O <xref:System.Windows.Controls.ScrollViewer> controle cria uma região rolável na qual o conteúdo pode ser rolado horizontalmente ou verticalmente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+ [Visão geral de ScrollViewer](scrollviewer-overview.md)  
+ [Tópicos de instruções](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -29,5 +29,5 @@ O <xref:System.Windows.Controls.ScrollViewer> controle cria uma região rolável
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Visão geral de painéis](panels-overview.md)
+- [Layout](../advanced/layout.md)

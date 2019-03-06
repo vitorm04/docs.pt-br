@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 6ee440d91bf241949923074dfd5163a49cfd9979
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740951"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378204"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Compartilhando loops de mensagem entre Win32 e WPF
 Este tópico descreve como implementar um loop de mensagem para interoperação com [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], usando existente de exposição de loop em mensagem <xref:System.Windows.Threading.Dispatcher> ou criando um loop de mensagem separado no [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] lado de seu código de interoperação.  
@@ -64,6 +64,6 @@ Este tópico descreve como implementar um loop de mensagem para interoperação 
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [Interoperação do WPF e do Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Modelo de threading](../../../../docs/framework/wpf/advanced/threading-model.md)
-- [Visão geral da entrada](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
+- [Modelo de threading](threading-model.md)
+- [Visão geral da entrada](input-overview.md)

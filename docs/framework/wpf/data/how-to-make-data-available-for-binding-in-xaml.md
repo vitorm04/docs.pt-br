@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 95871b6a8d11ad4086735bd3315c360885d027dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f024ddd0be023f77408e3106bc0a4465d068074
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358282"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Como: Disponibilizar dados para associação em XAML
 Este tópico discute várias maneiras que você pode tornar dados disponíveis para associação em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], dependendo das necessidades do seu aplicativo.  
@@ -21,13 +21,13 @@ Este tópico discute várias maneiras que você pode tornar dados disponíveis p
 ## <a name="example"></a>Exemplo  
  Se você tiver um objeto [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] que deseja associar de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], uma maneira de disponibilizar o objeto para associação será defini-lo como um recurso e conceder um `x:Key` a ele. No exemplo a seguir, temos um objeto `Person` com uma propriedade de cadeia de caracteres denominada `PersonName`. O `Person` objeto (na linha mostrada realçada que contém o `<src>` elemento) é definido no namespace chamado `SDKSample`.  
   
- [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
+ [!code-xaml[SimpleBinding#Instantiation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
  Em seguida, você pode associar o <xref:System.Windows.Controls.TextBlock> controle para o objeto no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], como a linha destacada, que contém o `<TextBlock>` mostra do elemento. 
   
  Como alternativa, você pode usar o <xref:System.Windows.Data.ObjectDataProvider> classe, como no exemplo a seguir:  
   
- [!code-xaml[ObjectDataProvider}](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
+ [!code-xaml[ObjectDataProvider}](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
   
  Definir a associação da mesma forma, como a linha realçada que contém o `<TextBlock>` mostra do elemento.  
   
@@ -35,13 +35,13 @@ Este tópico discute várias maneiras que você pode tornar dados disponíveis p
   
  No entanto, se estiver associando a um objeto que já foi criado, será necessário definir o `DataContext` no código, como no exemplo a seguir.  
   
- [!code-csharp[ADODataSet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ADODataSet#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- Para acessar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados para associação usando o <xref:System.Windows.Data.XmlDataProvider> classe, consulte [associar a dados XML usando um XMLDataProvider e consultas XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md). Para acessar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados para associação usando o <xref:System.Windows.Data.ObjectDataProvider> classe, consulte [associar a XDocument, XElement ou LINQ para resultados de consulta XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
+ Para acessar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados para associação usando o <xref:System.Windows.Data.XmlDataProvider> classe, consulte [associar a dados XML usando um XMLDataProvider e consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md). Para acessar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados para associação usando o <xref:System.Windows.Data.ObjectDataProvider> classe, consulte [associar a XDocument, XElement ou LINQ para resultados de consulta XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
   
- Para obter informações sobre várias maneiras que você pode especificar os dados que você está associando a, consulte [especificar a origem da associação](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md). Para obter informações sobre a quais tipos de dados é possível associar ou como implementar seus próprios objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] para associação, consulte [Visão geral de fontes de associação](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ Para obter informações sobre várias maneiras que você pode especificar os dados que você está associando a, consulte [especificar a origem da associação](how-to-specify-the-binding-source.md). Para obter informações sobre a quais tipos de dados é possível associar ou como implementar seus próprios objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] para associação, consulte [Visão geral de fontes de associação](binding-sources-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Visão geral da vinculação de dados](data-binding-overview.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: f6d043dc2975770fe9111c6266096eefb3fe15b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671688"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373394"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Como: Criar um evento roteado personalizado
 Para o evento personalizado dar suporte ao roteamento de eventos, você precisa registrar um <xref:System.Windows.RoutedEvent> usando o <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> método. Este exemplo demonstra as noções básicas da criação de um evento roteado personalizado.  
@@ -25,16 +25,16 @@ Para o evento personalizado dar suporte ao roteamento de eventos, você precisa 
   
  Observe também que esse exemplo basicamente implementa uma subclasse inteira de <xref:System.Windows.Controls.Button>; essa subclasse é criada como um assembly separado e, em seguida, instanciado como uma classe personalizada em um diferente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] página. Isso serve é para ilustrar o conceito que controles de subclasse podem ser inseridos em árvores compostas por outros controles e que nessa situação, eventos personalizados nesses controles têm exatamente os mesmos recursos de roteamento de eventos que qualquer elemento [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nativo.  
   
- [!code-csharp[RoutedEventCustom#CustomClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
- [!code-vb[RoutedEventCustom#CustomClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
+ [!code-csharp[RoutedEventCustom#CustomClass](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
+ [!code-vb[RoutedEventCustom#CustomClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
   
- [!code-xaml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
+ [!code-xaml[RoutedEventCustom#Page](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
   
  Eventos por túnel são criados da mesma maneira, mas com <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> definido como <xref:System.Windows.RoutingStrategy.Tunnel> na chamada de registro. Por convenção, eventos de túnel em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são prefixados com a palavra “Visualização”.  
   
- Para ver um exemplo de como eventos de propagação funcionam, consulte [Manipular um evento roteado](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
+ Para ver um exemplo de como eventos de propagação funcionam, consulte [Manipular um evento roteado](how-to-handle-a-routed-event.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Visão geral da entrada](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Visão geral da criação de controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Visão geral de eventos roteados](routed-events-overview.md)
+- [Visão geral da entrada](input-overview.md)
+- [Visão geral da criação de controle](../controls/control-authoring-overview.md)

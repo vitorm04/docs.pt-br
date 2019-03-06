@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5184db00b10b53011f24c5096b470608e84546b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e863f14676acc84f4d9f59d0898dee5b291bd30f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567419"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366030"
 ---
 # <a name="ixclrdatamodulegetversionid-method"></a>Método IXCLRDataModule::GetVersionId
 
@@ -36,9 +36,10 @@ HRESULT GetVersionId(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>Parâmetros
 
-`vid` [out] Identificador de versão do módulo.
+`vid`\
+[out] Identificador de versão do módulo.
 
 ## <a name="remarks"></a>Comentários
 
@@ -53,5 +54,5 @@ O método fornecido é parte do `IXCLRDataModule` de interface e corresponde ao 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [Depuração](index.md)
+- [Interface IXCLRDataModule](ixclrdatamodule-interface.md)

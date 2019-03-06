@@ -3,11 +3,11 @@ title: <transport> De <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: 4d84d99660e4804a5eff2e343ba01c2983520b8f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280989"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379725"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<transporte > de \<netHttpBinding >
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  

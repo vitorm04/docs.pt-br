@@ -6,12 +6,12 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: 6977410a596a943a23c3841e80edf4cfed1bf6b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7beaf4370f115a3995c9ca23bb0022bd5b269193
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644931"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364106"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Como: Pintar uma área com um pincel de sistema
 O <xref:System.Windows.SystemColors> classe fornece acesso a pincéis do sistema e cores, como <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, e <xref:System.Windows.SystemColors.DesktopBrush%2A>. Um pincel de sistema é um <xref:System.Windows.Media.SolidColorBrush> objeto que pinta uma área com a cor especificada do sistema. Um pincel do sistema sempre produz um preenchimento sólido; ele não pode ser usado para criar um gradiente.  
@@ -34,19 +34,19 @@ O <xref:System.Windows.SystemColors> classe fornece acesso a pincéis do sistema
   
      Obtém uma referência dinâmica para o <xref:System.Windows.Media.Color> estrutura de cor especificada do sistema.  
   
- Uma cor do sistema é um <xref:System.Windows.Media.Color> estrutura que pode ser usada para configurar um pincel. Por exemplo, você pode criar um gradiente usando cores do sistema definindo a <xref:System.Windows.Media.GradientStop.Color%2A> propriedades de um <xref:System.Windows.Media.LinearGradientBrush> paradas de gradiente do objeto com as cores do sistema. Por exemplo, consulte [usar cores do sistema em um gradiente](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
+ Uma cor do sistema é um <xref:System.Windows.Media.Color> estrutura que pode ser usada para configurar um pincel. Por exemplo, você pode criar um gradiente usando cores do sistema definindo a <xref:System.Windows.Media.GradientStop.Color%2A> propriedades de um <xref:System.Windows.Media.LinearGradientBrush> paradas de gradiente do objeto com as cores do sistema. Por exemplo, consulte [usar cores do sistema em um gradiente](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa uma referência de pincel de sistema dinâmico para definir a tela de fundo de um botão.  
   
- [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  
   
  O exemplo a seguir usa uma referência de pincel de sistema estático para definir a tela de fundo de um botão.  
   
- [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorDesktopBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemBrushExample.xaml#graphicsmmstaticsystemcolordesktopbrushexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorDesktopBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemBrushExample.xaml#graphicsmmstaticsystemcolordesktopbrushexamplewholepage)]  
   
- Para obter um exemplo que mostra como usar uma cor do sistema em um gradiente, consulte [usar cores do sistema em um gradiente](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
+ Para obter um exemplo que mostra como usar uma cor do sistema em um gradiente, consulte [usar cores do sistema em um gradiente](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Usar cores do sistema em um gradiente](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)
-- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Usar cores do sistema em um gradiente](how-to-use-system-colors-in-a-gradient.md)
+- [Visão geral da pintura com cores sólidas e gradientes](painting-with-solid-colors-and-gradients-overview.md)

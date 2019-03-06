@@ -6,12 +6,12 @@ helpviewer_keywords:
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: f8133ac4fcd01e08f41861b7a441e9ff1325f6ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df5632aa3d3c7dbc2442cabe1f4db7a850a1bd54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698317"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353940"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Como: Preservar a taxa de proporção de uma imagem usada como um plano de fundo
 Este exemplo mostra como usar o <xref:System.Windows.Media.TileBrush.Stretch%2A> propriedade de um <xref:System.Windows.Media.ImageBrush> para preservar a taxa de proporção da imagem.  
@@ -23,17 +23,17 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.TileBrush.Stretch%2A>
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa dois <xref:System.Windows.Media.ImageBrush> objetos para pintar dois retângulos. Cada retângulo tem 300 por 150 pixels, e cada um contém uma imagem de 300 por 300 pixels. O <xref:System.Windows.Media.TileBrush.Stretch%2A> propriedade do primeiro pincel é definida como <xref:System.Windows.Media.Stretch.Uniform>e o <xref:System.Windows.Media.TileBrush.Stretch%2A> propriedade do segundo pincel é definida como <xref:System.Windows.Media.Stretch.UniformToFill>.  
   
- [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
+ [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
   
  A ilustração a seguir mostra a saída do primeiro pincel, que tem um <xref:System.Windows.Media.TileBrush.Stretch%2A> configuração de <xref:System.Windows.Media.Stretch.Uniform>.  
   
- ![ImageBrush com alongamento uniforme](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
+ ![ImageBrush com alongamento uniforme](./media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
   
  A ilustração a seguir mostra a saída do segundo pincel, que tem um <xref:System.Windows.Media.TileBrush.Stretch%2A> configuração de <xref:System.Windows.Media.Stretch.UniformToFill>.  
   
- ![ImageBrush com alongamento UniformToFill](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
+ ![ImageBrush com alongamento UniformToFill](./media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
   
- Observe que o <xref:System.Windows.Media.TileBrush.Stretch%2A> propriedade comporta-se identicamente para os outros <xref:System.Windows.Media.TileBrush> objetos, ou seja, para <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush>. Para obter mais informações sobre <xref:System.Windows.Media.ImageBrush> e o outro <xref:System.Windows.Media.TileBrush> objetos, consulte [pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Observe que o <xref:System.Windows.Media.TileBrush.Stretch%2A> propriedade comporta-se identicamente para os outros <xref:System.Windows.Media.TileBrush> objetos, ou seja, para <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush>. Para obter mais informações sobre <xref:System.Windows.Media.ImageBrush> e o outro <xref:System.Windows.Media.TileBrush> objetos, consulte [pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md).  
   
  Observe também que, embora o <xref:System.Windows.Media.TileBrush.Stretch%2A> propriedade aparece para especificar como o <xref:System.Windows.Media.TileBrush> conteúdo ajusta-se para sua área de saída, ela na verdade especifica como o <xref:System.Windows.Media.TileBrush> de conteúdo é alongado para preencher seu bloco base. Para obter mais informações, consulte <xref:System.Windows.Media.TileBrush>.  
   
@@ -41,4 +41,4 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.TileBrush.Stretch%2A>
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.TileBrush>
-- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)

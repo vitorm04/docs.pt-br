@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: c443451a0fd9fffec97377efc611e0ccfe534f06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8180064d1a500ea17568f6790e13398524eb5f36
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606719"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365679"
 ---
 # <a name="datetime-xaml-syntax"></a>Sintaxe DateTime (XAML)
 Alguns controles, como <xref:System.Windows.Controls.Calendar> e <xref:System.Windows.Controls.DatePicker>, têm propriedades que usam o <xref:System.DateTime> tipo. Embora você normalmente especifique uma data ou horário inicial para esses controles no code-behind no tempo de execução, você poderá especificar uma data ou horário inicial na linguagem XAML. O analisador de XAML WPF lida com a análise de <xref:System.DateTime> valores usando uma sintaxe de texto interna do XAML. Este tópico descreve as especificações de <xref:System.DateTime> sintaxe de texto XAML.  
@@ -75,4 +75,4 @@ Alguns controles, como <xref:System.Windows.Controls.Calendar> e <xref:System.Wi
  Conforme mencionado anteriormente, uma <xref:System.DateTime> XAML pode ser especificado como qualquer cadeia de caracteres que é aceitável como entrada para <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Isso inclui outros formatos formalizados (por exemplo <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>) e os formatos que não são formalizados como um determinado <xref:System.Globalization.DateTimeFormatInfo> formulário. Por exemplo, o formulário `YYYY/mm/dd` é aceitável como entrada para <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Este tópico não tenta descrever todos os formatos possíveis do trabalho e, como alternativa, recomenda o padrão de data abreviada como uma prática padrão.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Visão geral de XAML (WPF)](xaml-overview-wpf.md)

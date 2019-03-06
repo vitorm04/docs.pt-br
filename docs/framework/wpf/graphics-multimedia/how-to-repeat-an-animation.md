@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: 358400c07ec2e96401d95929cbdd22784db630f9
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: a098c912289f59f8be48edeec0f066b7f94b9fda
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305136"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353993"
 ---
 # <a name="how-to-repeat-an-animation"></a>Como: Repetir uma animação
 Este exemplo mostra como usar o <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriedade de um <xref:System.Windows.Media.Animation.Timeline> para controlar o comportamento de repetição de uma animação.  
@@ -24,13 +24,13 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.Animation.Timeline.Re
   
  O exemplo a seguir mostra como usar o <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriedade para controlar o comportamento de repetição de uma animação. O exemplo anima a <xref:System.Windows.FrameworkElement.Width%2A> propriedade de cinco retângulos com cada retângulo usando um tipo diferente de comportamento de repetição.  
   
- [!code-xaml[timingbehaviors_snip#RepeatBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/RepeatBehaviorExample.xaml#repeatbehaviorwholepage)]  
+ [!code-xaml[timingbehaviors_snip#RepeatBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/RepeatBehaviorExample.xaml#repeatbehaviorwholepage)]  
   
  Para o exemplo completo, consulte [Exemplo de comportamento do tempo de animação](https://go.microsoft.com/fwlink/?LinkID=159970).  
   
 ## <a name="see-also"></a>Consulte também
-- [Acumular valores de animação durante ciclos de repetição](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)
-- [Especificar se uma linha do tempo é revertida automaticamente](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)
+- [Acumular valores de animação durante ciclos de repetição](how-to-accumulate-animation-values-during-repeat-cycles.md)
+- [Especificar se uma linha do tempo é revertida automaticamente](how-to-specify-whether-a-timeline-automatically-reverses.md)
 - [Tópicos explicativos de animação e tempo](animation-and-timing-how-to-topics.md)
-- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral da animação](animation-overview.md)
 - [Amostra de comportamento de tempo da animação](https://go.microsoft.com/fwlink/?LinkID=159970)

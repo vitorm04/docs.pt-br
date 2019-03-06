@@ -6,12 +6,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 9e5adcce85c4ca4863d28784a7d7f61c441a06c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce59cbc834d84d19ec7f8d6d3d32b545c537173c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588438"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364665"
 ---
 # <a name="-imports-visual-basic"></a>-Importa (Visual Basic)
 Importa namespaces de um assembly especificado.  
@@ -38,10 +38,16 @@ Importa namespaces de um assembly especificado.
 |1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Referências**.<br />3.  Insira o nome do namespace na caixa ao lado de **Adicionar importação de usuário** botão.<br />4.  Clique o **Adicionar importação de usuário** botão.|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila quando `/imports:system.globalization` for especificado. Sem ele, compilação bem-sucedida requer que um `Imports System.Globalization` instrução ser incluído no início do arquivo de código fonte ou a propriedade ser totalmente qualificada como `System.Globalization.CultureInfo.CurrentCulture.Name`. 
-  
- [!code-vb[imports example](codesnippet/VisualBasic/imports_2.vb)]  
-  
+ O código a seguir compila quando `/imports:system.globalization` for especificado. Sem ele, compilação bem-sucedida requer que um `Imports System.Globalization` instrução ser incluído no início do arquivo de código fonte ou a propriedade ser totalmente qualificada como `System.Globalization.CultureInfo.CurrentCulture.Name`.
+
+```vb
+Module Example
+   Public Sub Main()
+      Console.WriteLine($"The current culture is {CultureInfo.CurrentCulture.Name}")
+   End Sub
+End Module
+```
+
 ## <a name="see-also"></a>Consulte também
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Referências e a Instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

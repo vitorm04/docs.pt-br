@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo de expressão regular: Verificação de HREFs'
+title: 'Exemplo de Expressão Regular: Verificação de HREFs'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582834"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975960"
 ---
-# <a name="regular-expression-example-scanning-for-hrefs"></a>Exemplo de expressão regular: Verificação de HREFs
+# <a name="regular-expression-example-scanning-for-hrefs"></a>Exemplo de Expressão Regular: Verificação de HREFs
 O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os valores href="…" e suas localizações na cadeia de caracteres.  
   
 ## <a name="the-regex-object"></a>O objeto Regex  
@@ -44,7 +44,7 @@ O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os 
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
 |`=`|Corresponder ao sinal de igual.|  
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Corresponde a um dos seguintes itens, sem atribuir o resultado a um grupo capturado:<br /> <ul><li><p>Um sinal de aspas ou apóstrofo, seguido por zero ou mais ocorrências de qualquer caractere que não seja um sinal de aspas ou apóstrofo, seguido por um sinal de aspas ou apóstrofo. O grupo chamado `1` está incluído nesse padrão.</p></li><li><p>Um ou mais caracteres diferentes de espaço em branco. O grupo chamado `1` está incluído nesse padrão.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Corresponde a um dos seguintes itens, sem atribuir o resultado a um grupo capturado:<br /> <ul><li><p>Um sinal de aspas ou apóstrofo, seguido por zero ou mais ocorrências de qualquer caractere que não seja um sinal de aspas ou apóstrofo, seguido por um sinal de aspas ou apóstrofo. O grupo chamado `1` está incluído nesse padrão.</p></li><li><p>Um ou mais caracteres diferentes de espaço em branco. O grupo chamado `1` está incluído nesse padrão.</p></li></ul>|  
 |`(?<1>[^"']*)`|Atribuir zero ou mais ocorrências de qualquer caractere diferente de aspas simples ou apóstrofe ao grupo de captura chamado `1`.|  
 |`(?<1>\S+)`|Atribuir um ou mais caracteres diferentes de espaço em branco ao grupo de captura chamado `1`.|  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: aa8d1a33fb415b986bc5e058f5d198c221f9f489
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493157"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352757"
 ---
 # <a name="multimedia-overview"></a>Visão geral de multimídia
 Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permitem a integração de áudio e vídeo em seus aplicativos para aprimorar a experiência do usuário. Este tópico apresenta os recursos de multimídia do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -21,9 +21,9 @@ Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ## <a name="media-api"></a>API de mídia  
  O <xref:System.Windows.Controls.MediaElement> e <xref:System.Windows.Media.MediaPlayer> classes são usadas para apresentar o conteúdo de áudio ou vídeo. Essas classes podem ser controladas interativamente ou por um relógio. Essas classes podem ser usadas no controle do [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 para reprodução de mídia. A classe que você usa, dependendo do cenário.  
   
- <xref:System.Windows.Controls.MediaElement> é um <xref:System.Windows.UIElement> que dá suporte a [Layout](../../../../docs/framework/wpf/advanced/layout.md) e pode ser consumido como o conteúdo de vários controles. Também é útil em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], assim como código. <xref:System.Windows.Media.MediaPlayer>, por outro lado, foi projetado para <xref:System.Windows.Media.Drawing> objetos e não tem suporte de layout. Mídia carregada usando um <xref:System.Windows.Media.MediaPlayer> só pode ser apresentada usando um <xref:System.Windows.Media.VideoDrawing> ou interagindo diretamente com um <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer> não pode ser usado em XAML.  
+ <xref:System.Windows.Controls.MediaElement> é um <xref:System.Windows.UIElement> que dá suporte a [Layout](../advanced/layout.md) e pode ser consumido como o conteúdo de vários controles. Também é útil em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], assim como código. <xref:System.Windows.Media.MediaPlayer>, por outro lado, foi projetado para <xref:System.Windows.Media.Drawing> objetos e não tem suporte de layout. Mídia carregada usando um <xref:System.Windows.Media.MediaPlayer> só pode ser apresentada usando um <xref:System.Windows.Media.VideoDrawing> ou interagindo diretamente com um <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer> não pode ser usado em XAML.  
   
- Para obter mais informações sobre objetos de desenho e contexto de desenho, consulte [visão geral de objetos de desenho](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Para obter mais informações sobre objetos de desenho e contexto de desenho, consulte [visão geral de objetos de desenho](drawing-objects-overview.md).  
   
 > [!NOTE]
 >  Ao distribuir mídia com seu aplicativo, você não pode usar um arquivo de mídia como um recurso do projeto. Em seu arquivo de projeto, em vez disso, você deve definir o tipo de mídia como `Content` e defina `CopyToOutputDirectory` para `PreserveNewest` ou `Always`.  
@@ -49,7 +49,7 @@ Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
  Para controlar a reprodução de mídia no modo independente, métodos de controle do objeto de mídia podem ser usados. Os métodos de controle disponíveis são <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, e <xref:System.Windows.Controls.MediaElement.Stop%2A>. Para <xref:System.Windows.Controls.MediaElement>, controle interativo usando esses métodos só está disponível quando o <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> é definido como <xref:System.Windows.Controls.MediaState.Manual>. Esses métodos não estão disponíveis quando o objeto de mídia está no modo relógio.  
   
- Consulte [Controlar um MediaElement (executar, pausar, parar, volume e velocidade)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md) para obter um exemplo de modo independente.  
+ Consulte [Controlar um MediaElement (executar, pausar, parar, volume e velocidade)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md) para obter um exemplo de modo independente.  
   
 ### <a name="clock-mode"></a>Modo relógio  
  No modo relógio, uma <xref:System.Windows.Media.MediaTimeline> reprodução de mídia de unidades. O modo relógio tem as seguintes características:  
@@ -62,15 +62,15 @@ Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
  Para controlar a reprodução de mídia no modo relógio, o <xref:System.Windows.Media.Animation.ClockController> métodos de controle devem ser usados. Um <xref:System.Windows.Media.Animation.ClockController> é obtida a <xref:System.Windows.Media.Animation.ClockController> propriedade do <xref:System.Windows.Media.MediaClock>. Se você tentar usar os métodos de controle de um <xref:System.Windows.Controls.MediaElement> ou <xref:System.Windows.Media.MediaPlayer> do objeto no modo relógio, uma <xref:System.InvalidOperationException> será lançada.  
   
- Consulte a [Visão geral da Animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) para obter mais informações sobre linhas do tempo e relógios.  
+ Consulte a [Visão geral da Animação](animation-overview.md) para obter mais informações sobre linhas do tempo e relógios.  
   
- Consulte [controlar um MediaElement usando um Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md) para obter um exemplo de modo relógio.  
+ Consulte [controlar um MediaElement usando um Storyboard](how-to-control-a-mediaelement-by-using-a-storyboard.md) para obter um exemplo de modo relógio.  
   
 <a name="mediaelement"></a>   
 ## <a name="mediaelement-class"></a>Classe MediaElement  
  Adicionando mídia a um aplicativo é tão simple quanto adicionar um <xref:System.Windows.Controls.MediaElement> o controle para o [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do aplicativo e fornecendo um <xref:System.Uri> na mídia que você deseja incluir. Todos os tipos de mídia com suporte ao [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 têm suporte em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. O exemplo a seguir mostra um uso simple dos <xref:System.Windows.Controls.MediaElement> em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
- [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
+ [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
   
  Neste exemplo, mídia será executada automaticamente assim que ele é carregada. Depois que a mídia tenha terminado sua execução, a mídia é fechada e todos os recursos de mídia são liberados (incluindo a memória de vídeo). Esse é o comportamento padrão do <xref:System.Windows.Controls.MediaElement> do objeto e é controlado pela <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> e <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> propriedades.  
   
@@ -108,11 +108,11 @@ Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ### <a name="displaying-a-mediaplayer"></a>Exibindo um MediaPlayer  
  Tecnicamente, um <xref:System.Windows.Media.MediaPlayer> não pode ser exibido porque não tem nenhuma representação física. No entanto, ele pode ser usado para apresentar a mídia em um <xref:System.Windows.Media.Drawing> usando o <xref:System.Windows.Media.VideoDrawing> classe. O exemplo a seguir demonstra o uso de um <xref:System.Windows.Media.VideoDrawing> para exibir a mídia.  
   
- [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
+ [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- Consulte a [visão geral de objetos de desenho](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md) para obter mais informações sobre <xref:System.Windows.Media.Drawing> objetos.  
+ Consulte a [visão geral de objetos de desenho](drawing-objects-overview.md) para obter mais informações sobre <xref:System.Windows.Media.Drawing> objetos.  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.DrawingGroup>
-- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+- [Layout](../advanced/layout.md)
+- [Tópicos de instruções](audio-and-video-how-to-topics.md)

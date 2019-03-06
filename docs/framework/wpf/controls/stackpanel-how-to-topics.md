@@ -7,20 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555114"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351262"
 ---
 # <a name="stackpanel-how-to-topics"></a>Tópicos explicativos StackPanel
 Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.StackPanel> elemento para empilhar conteúdo horizontalmente ou verticalmente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Escolher entre StackPanel e DockPanel](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [Criar um StackPanel](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [Alinhar horizontal ou verticalmente o conteúdo em um StackPanel](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [Escolher entre StackPanel e DockPanel](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [Criar um StackPanel](how-to-create-a-stackpanel.md)  
+ [Alinhar horizontal ou verticalmente o conteúdo em um StackPanel](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.St
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Visão geral de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Visão geral de ScrollViewer](scrollviewer-overview.md)

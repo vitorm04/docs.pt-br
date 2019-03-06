@@ -2,15 +2,15 @@
 title: Desenvolvimento de serviço de fluxo de trabalho de primeiro contrato
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 10129fcb40d86d1ca7e42bce68b072e9118bcc88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519487"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373056"
 ---
 # <a name="contract-first-workflow-service-development"></a>Desenvolvimento de serviço de fluxo de trabalho de primeiro contrato
-Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], recursos do Windows Workflow Foundation (WF) melhor integração entre serviços web e fluxos de trabalho na forma de desenvolvimento de fluxo de trabalho do contrato, primeiro. A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que você crie o contrato no código primeiro. A ferramenta em seguida gera automaticamente um modelo de atividade na caixa de ferramentas para as operações no contrato. Este tópico fornece uma visão geral de como as atividades e as propriedades em um mapa do serviço de fluxo de trabalho para os atributos de um contrato de serviço. Para obter um exemplo passo a passo de criação de um serviço de fluxo de trabalho do contrato, primeiro, consulte [como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], recursos do Windows Workflow Foundation (WF) uma melhor integração entre serviços da web e fluxos de trabalho na forma de desenvolvimento de fluxo de trabalho de primeiro contrato. A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que você crie o contrato no código primeiro. A ferramenta em seguida gera automaticamente um modelo de atividade na caixa de ferramentas para as operações no contrato. Este tópico fornece uma visão geral de como as atividades e as propriedades em um mapa do serviço de fluxo de trabalho para os atributos de um contrato de serviço. Para obter um exemplo passo a passo da criação de um serviço de fluxo de trabalho de primeiro contrato, consulte [como: Criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Neste tópico  
   
@@ -26,13 +26,13 @@ Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], recursos do
   
     -   [Atributos de contrato de falha](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
--   [Informações de implementação e suporte adicional](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [Suporte adicional e informações de implementação](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
   
     -   [Recursos de contrato de serviço sem suporte](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Geração de atividades de mensagens configuradas](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [Geração de atividades configuradas de mensagem](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a> Mapeamento de atributos de contrato de serviço para atributos de fluxo de trabalho  
+## <a name="MappingAttributes"></a> Mapeamento de atributos de contrato de serviço para atributos de fluxo de trabalho  
  As tabelas nas seções a seguir especificam os atributos de WCF diferentes e as propriedades e como eles são mapeados para as atividades e as propriedades de mensagem em um fluxo de trabalho de primeiro contrato.  
   
 -   [Atributos de contrato de serviço](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -45,27 +45,27 @@ Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], recursos do
   
 -   [Atributos de contrato de falha](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a> Atributos de contrato de serviço  
+### <a name="ServiceContract"></a> Atributos de contrato de serviço  
   
 |Nome da Propriedade|Com suporte|Descrição|Validação de WF|  
 |-------------------|---------------|-----------------|-------------------|  
 |CallbackContract|Não|Obtém ou define o tipo de contrato de retorno de chamada quando o contrato é do tipo duplex.|(N/D)|  
 |ConfigurationName|Não|Obtém ou define o nome usado para localizar o serviço em um arquivo de configuração do aplicativo.|(N/D)|  
 |HasProtectionLevel|Sim|Obtém um valor que indica se o membro tem um nível de proteção atribuído.|Receive.ProtectionLevel não pode ser nulo.|  
-|Nome|Sim|Obtém ou define o nome para o \<portType > no WSDL Web Services Description Language () do elemento.|Receive.ServiceContractName.LocalName deve corresponder.|  
-|Namespace|Sim|Obtém ou define o namespace a \<portType > no WSDL Web Services Description Language () do elemento.|Receive.ServiceContractName.NameSpace deve corresponder|  
+|Nome|Sim|Obtém ou define o nome para o \<portType > na descrição de linguagem WSDL (Web Services) do elemento.|Receive.ServiceContractName.LocalName deve corresponder.|  
+|Namespace|Sim|Obtém ou define o namespace do \<portType > na descrição de linguagem WSDL (Web Services) do elemento.|Receive.ServiceContractName.NameSpace deve corresponder|  
 |ProtectionLevel|Sim|Especifica se a associação para o contrato deve oferecer suporte ao valor da propriedade ProtectionLevel.|Receive.ProtectionLevel deve corresponder.|  
 |SessionMode|Não|Obtém ou define se as sessões são permitidas, não são permitidas ou são necessárias.|(N/D)|  
 |TypeId|Não|Quando implementado em uma classe derivada, obtém um identificador exclusivo para este atributo. (Herdada de atributo.)|(N/D)|  
   
  Inserir o corpo da subseção aqui.  
   
-###  <a name="OperationContract"></a> Atributos de contrato de operação  
+### <a name="OperationContract"></a> Atributos de contrato de operação  
   
 |Nome da Propriedade|Com suporte|Descrição|Validação de WF|  
 |-------------------|---------------|-----------------|-------------------|  
 |Ação|Sim|Obtém ou define a ação WS-Addressing da mensagem de solicitação.|Receive.Action deve corresponder.|  
-|AsyncPattern|Não|Indica que uma operação é implementada de forma assíncrona usando Begin\<methodName > e End\<methodName > par de métodos em um contrato de serviço.|(N/D)|  
+|AsyncPattern|Não|Indica que uma operação é implementada de forma assíncrona usando um Begin\<methodName > e End\<methodName > par de métodos em um contrato de serviço.|(N/D)|  
 |HasProtectionLevel|Sim|Obtém um valor que indica se as mensagens para essa operação devem ser criptografadas, assinadas ou ambos.|Receive.ProtectionLevel não pode ser nulo.|  
 |IsInitiating|Não|Obtém ou define um valor que indica se o método implementa uma operação que pode iniciar uma sessão no servidor (se essa sessão existir).|(N/D)|  
 |IsOneWay|Sim|Obtém ou define um valor que indica se uma operação retorna uma mensagem de resposta.|(Nenhum SendReply para este Receive OR nenhum ReceiveReply para este Send).|  
@@ -75,7 +75,7 @@ Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], recursos do
 |ReplyAction|Sim|Obtém ou define o valor da ação de SOAP para a mensagem de resposta da operação.|SendReply.Action deve corresponder.|  
 |TypeId|Não|Quando implementado em uma classe derivada, obtém um identificador exclusivo para este atributo. (Herdada de atributo.)|(N/D)|  
   
-###  <a name="MessageContract"></a> Atributos de contrato de mensagem  
+### <a name="MessageContract"></a> Atributos de contrato de mensagem  
   
 |Nome da Propriedade|Com suporte|Descrição|Validação de WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -86,7 +86,7 @@ Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], recursos do
 |WrapperName|Sim|Obtém ou define o nome do elemento wrapper do corpo da mensagem.|Sem validação (Receive.Content e SendReply.Content devem corresponder ao tipo do contrato de mensagem).|  
 |WrapperNamespace|Não|Obtém ou define o namespace do elemento wrapper do corpo da mensagem.|(N/D)|  
   
-###  <a name="DataContract"></a> Atributos de contrato de dados  
+### <a name="DataContract"></a> Atributos de contrato de dados  
   
 |Nome da Propriedade|Com suporte|Descrição|Validação de WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -95,7 +95,7 @@ Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], recursos do
 |Namespace|Sim|Obtém ou define o namespace para o contrato de dados para o tipo.|Sem validação (Receive.Content e SendReply.Content devem corresponder ao tipo do contrato de mensagem).|  
 |TypeId|Não|Quando implementado em uma classe derivada, obtém um identificador exclusivo para este atributo. (Herdada de atributo.)|(N/D)|  
   
-###  <a name="FaultContract"></a> Atributos de contrato de falha  
+### <a name="FaultContract"></a> Atributos de contrato de falha  
   
 |Nome da Propriedade|Com suporte|Descrição|Validação de WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -107,27 +107,28 @@ Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], recursos do
 |ProtectionLevel|Não|Especifica o nível de proteção que a falha de SOAP exige da associação.|(N/D)|  
 |TypeId|Não|Quando implementado em uma classe derivada, obtém um identificador exclusivo para este atributo. (Herdada de atributo.)|(N/D)|  
   
-##  <a name="AdditionalSupport"></a> Informações de implementação e suporte adicional  
+## <a name="AdditionalSupport"></a> Suporte adicional e informações de implementação  
   
 -   [Recursos de contrato de serviço sem suporte](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Geração de atividades de mensagens configuradas](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [Geração de atividades configuradas de mensagem](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a> Recursos de contrato de serviço sem suporte  
+### <a name="UnsupportedFeatures"></a> Recursos de contrato de serviço sem suporte  
   
 -   O uso de tarefas de TPL (Task Parallel Library) nos contratos não tem suporte.  
   
 -   A herança em contratos de serviço não tem suporte.  
   
-###  <a name="ActivityGeneration"></a> Geração de atividades de mensagens configuradas  
+### <a name="ActivityGeneration"></a> Geração de atividades configuradas de mensagem  
  Dois métodos estáticos públicos são adicionados às atividades <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply> para dar suporte à geração de atividades de mensagens pré-configuradas ao usar serviços de fluxo de trabalho de primeiro contrato.  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
 -   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
- A atividade gerada por esses métodos deve passar a validação do contrato e, consequentemente, esses métodos são usados internamente como parte da lógica de validação para <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>. <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> e <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> são todos pré-configurados para corresponder ao contrato importado. Na página de propriedades de conteúdo para as atividades no designer de fluxo de trabalho, o **mensagem** ou **parâmetros** seções também são pré-configurados para coincidir com o contrato.  
+ A atividade gerada por esses métodos deve passar a validação do contrato e, consequentemente, esses métodos são usados internamente como parte da lógica de validação para <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>. 
+  <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> e <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> são todos pré-configurados para corresponder ao contrato importado. Na página de propriedades de conteúdo para as atividades no designer de fluxo de trabalho, o **mensagem** ou **parâmetros** seções também são pré-configuradas para corresponder ao contrato.  
   
- Falha WCF contratos também são manipulados, retornando um conjunto separado de configurado <xref:System.ServiceModel.Activities.SendReply> atividades para cada uma das falhas que aparecem no <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.  
+ Falha do WCF contratos também são manipulados retornando um conjunto separado de configurados <xref:System.ServiceModel.Activities.SendReply> atividades para cada uma das falhas que aparecem na <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.  
   
- Para outras partes do <xref:System.ServiceModel.Description.OperationDescription> que não é suportado pelos serviços do WF hoje (por exemplo, WebGet/WebInvoke comportamentos ou comportamentos de operação personalizada), a API irá ignorar esses valores como parte da geração e configuração. Nenhuma exceção será gerada.
+ Para outras partes do <xref:System.ServiceModel.Description.OperationDescription> que não são suportados pelos serviços WF hoje ' (por exemplo, os comportamentos WebGet/WebInvoke ou comportamentos de operação personalizada), a API ignorará esses valores como parte da geração e da configuração. Nenhuma exceção será gerada.

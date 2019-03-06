@@ -2,12 +2,12 @@
 title: 'Passo a passo: Acessando a Web usando Async e Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709488"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379114"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Passo a passo: Acessando a Web usando Async e Await (Visual Basic)
 É possível escrever programas assíncronos de forma mais fácil e intuitiva usando funcionalidades async/await. Você pode escrever código assíncrono que se parece com código síncrono e deixar que o compilador trate das complicadas continuações e funções de retorno de chamada que um código assíncrono normalmente envolve.  
@@ -47,7 +47,7 @@ ms.locfileid: "54709488"
 ## <a name="prerequisites"></a>Pré-requisitos  
  O Visual Studio 2012 ou posterior deve estar instalado em seu computador. Para obter mais informações, consulte o [site da Microsoft](https://go.microsoft.com/fwlink/?LinkId=235233).  
   
-###  <a name="CreateWPFApp"></a> Criar um aplicativo WPF  
+### <a name="CreateWPFApp"></a> Criar um aplicativo WPF  
   
 1.  Inicie o Visual Studio.  
   
@@ -61,8 +61,8 @@ ms.locfileid: "54709488"
   
      O novo projeto aparece no **Gerenciador de Soluções**.  
   
-##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> Projetar um MainWindow WPF simples  
+## <a name="BKMK_DesignWPFMainWin"></a>   
+### <a name="MainWindow"></a> Projetar um MainWindow WPF simples  
   
 1.  No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
   
@@ -90,8 +90,8 @@ ms.locfileid: "54709488"
   
      Para obter mais informações sobre o Designer XAML do WPF, consulte [Criando uma interface do usuário usando o Designer XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
   
-##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> Adicionar uma referência  
+## <a name="BKMK_AddReference"></a>   
+### <a name="AddRef"></a> Adicionar uma referência  
   
 1.  No **Gerenciador de Soluções**, realce o nome do projeto.  
   
@@ -107,8 +107,8 @@ ms.locfileid: "54709488"
   
 6.  Escolha o botão **OK** para fechar a caixa de diálogo.  
   
-##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> Para adicionar instruções Imports necessárias  
+## <a name="BKMK_AddStatesandDirs"></a>   
+### <a name="ImportsState"></a> Para adicionar instruções Imports necessárias  
   
 1.  Na **Gerenciador de soluções**, abra o menu de atalho para XAML. vb e, em seguida, escolha **Exibir código**.  
   
@@ -120,8 +120,8 @@ ms.locfileid: "54709488"
     Imports System.IO  
     ```  
   
-##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> Criar um aplicativo síncrono  
+## <a name="BKMK_CreatSynchApp"></a>   
+### <a name="synchronous"></a> Criar um aplicativo síncrono  
   
 1.  Na janela de design, MainWindow. XAML, clique duas vezes o **inicie** botão para criar o `startButton_Click` manipulador de eventos no XAML. vb.  
   
@@ -221,8 +221,8 @@ ms.locfileid: "54709488"
     End Sub  
     ```  
   
-##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> Testar a solução síncrona  
+## <a name="BKMK_TestSynchSol"></a>   
+### <a name="testSynch"></a> Testar a solução síncrona  
   
 1.  Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.  
   
@@ -247,8 +247,8 @@ ms.locfileid: "54709488"
   
      Observe que são necessários alguns segundos para exibir as contagens. Durante esse tempo, o thread da interface do usuário é bloqueado enquanto espera que os recursos solicitados sejam baixados. Como resultado, você não pode mover, maximizar, minimizar ou até mesmo fechar a janela de exibição após escolher o botão **Iniciar**. Esses esforços falham até que as contagens de bytes comecem a aparecer. Se um site não estiver respondendo, você não terá nenhuma indicação de qual site falhou. É difícil até mesmo parar de esperar e fechar o programa.  
   
-##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> Converter GetURLContents em um método assíncrono  
+## <a name="BKMK_ConvertGtBtArr"></a>   
+### <a name="GetURLContents"></a> Converter GetURLContents em um método assíncrono  
   
 1.  Para converter a solução síncrona em uma solução assíncrona, o melhor lugar para começar é em `GetURLContents`, porque é pelas chamadas para o método <xref:System.Net.HttpWebRequest.GetResponse%2A> de <xref:System.Net.HttpWebRequest> e para o método <xref:System.IO.Stream.CopyTo%2A> de <xref:System.IO.Stream> que o aplicativo acessa a Web. O .NET Framework facilita a conversão fornecendo versões assíncronas dos dois métodos.  
   
@@ -329,8 +329,8 @@ ms.locfileid: "54709488"
   
      Com essas poucas alterações, a conversão de `GetURLContents` em um método assíncrono é concluída.  
   
-##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> Converter SumPageSizes em um método assíncrono  
+## <a name="BKMK_ConvertSumPagSzs"></a>   
+### <a name="SumPageSizes"></a> Converter SumPageSizes em um método assíncrono  
   
 1.  Repita as etapas do procedimento anterior para `SumPageSizes`. Primeiro, altere a chamada para `GetURLContents` para uma chamada assíncrona.  
   
@@ -369,8 +369,8 @@ ms.locfileid: "54709488"
   
      A conversão de `SumPageSizes` em `SumPageSizesAsync` está concluída.  
   
-##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> Converter startButton_Click em um método assíncrono  
+## <a name="BKMK_Cnvrtbttn1"></a>   
+### <a name="startButton"></a> Converter startButton_Click em um método assíncrono  
   
 1.  No manipulador de eventos, altere o nome do método chamado de `SumPageSizes` para `SumPageSizesAsync`, se ainda não tiver feito isso.  
   
@@ -415,8 +415,8 @@ ms.locfileid: "54709488"
   
      A conversão do projeto de um processamento síncrono em um assíncrono está concluída.  
   
-##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> Testar a solução assíncrona  
+## <a name="BKMK_testAsynchSolution"></a>   
+### <a name="testAsynch"></a> Testar a solução assíncrona  
   
 1.  Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.  
   
@@ -426,8 +426,8 @@ ms.locfileid: "54709488"
   
     -   Mais importante, o thread da interface do usuário não é bloqueado durante os downloads. Você pode mover ou redimensionar a janela enquanto os recursos da Web estão sendo baixados, contados e exibido. Se um dos sites estiver lento ou não estiver respondendo, você poderá cancelar a operação escolhendo o botão **Fechar** (o x no campo vermelho no canto superior direito).  
   
-##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> Substituir o método GetURLContentsAsync por um método .NET Framework  
+## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
+### <a name="GetURLContentsAsync"></a> Substituir o método GetURLContentsAsync por um método .NET Framework  
   
 1.  O .NET Framework 4.5 fornece vários métodos assíncronos que você pode usar. Um deles, o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> de <xref:System.Net.Http.HttpClient>, faz exatamente o que é necessário para este passo a passo. Você pode usá-lo em vez do método `GetURLContentsAsync` que criou em um procedimento anterior.  
   
@@ -452,7 +452,7 @@ ms.locfileid: "54709488"
   
      O comportamento desta versão do projeto deve corresponder ao comportamento que o procedimento "Testar a solução assíncrona" descreve, mas com ainda menos esforço para você.  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> Exemplo  
+## <a name="BKMK_CompleteCodeExamples"></a> Exemplo  
  O código a seguir contém o exemplo completo da conversão de uma solução síncrona em uma solução assíncrona usando o método `GetURLContentsAsync` assíncrono que você escreveu. Observe que ele se assemelha muito à solução síncrona original.  
   
 ```vb  

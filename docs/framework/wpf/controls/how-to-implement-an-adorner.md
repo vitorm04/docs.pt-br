@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], implementing
 ms.assetid: 56ae32b6-0599-455c-b52f-2ff97e6f1ec2
-ms.openlocfilehash: f34bdeb87d0bf34a998f9b2e2fb6c42aedec5063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53a25396ba5d8a5c78e850e636b7c882c03d5152
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591676"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362637"
 ---
 # <a name="how-to-implement-an-adorner"></a>Como: Implementar um adorno
 Este exemplo mostra uma implementação mínima de adorno.  
@@ -26,8 +26,8 @@ Este exemplo mostra uma implementação mínima de adorno.
  Um adorno personalizado é criado implementando uma classe que herda de abstrata <xref:System.Windows.Documents.Adorner> classe.  O adorno de exemplo simplesmente adorna os cantos de um <xref:System.Windows.UIElement> com círculos, substituindo o <xref:System.Windows.UIElement.OnRender%2A> método.  
   
 ### <a name="code"></a>Código  
- [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
- [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de adornos](../../../../docs/framework/wpf/controls/adorners-overview.md)
+- [Visão geral de adornos](adorners-overview.md)

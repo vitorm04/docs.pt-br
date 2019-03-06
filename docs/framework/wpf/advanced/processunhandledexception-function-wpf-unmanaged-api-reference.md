@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 495ce5f6-bb4d-4b30-807a-c3c35f1ca95c
-ms.openlocfilehash: 73480f7cd8be7bcb5296782a8503eb689442a14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3997415c19483a69e66d8fe68c6ec9241f7ad0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578634"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356189"
 ---
 # <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>Função ProcessUnhandledException (referência de API não gerenciada WPF)
 Essa API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente do seu código.  
@@ -33,7 +33,7 @@ void __stdcall ProcessUnhandledException(
  A mensagem de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Ver [requisitos de sistema do .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Ver [requisitos de sistema do .NET Framework](../../get-started/system-requirements.md).  
   
  **DLL:**  
   
@@ -44,4 +44,4 @@ void __stdcall ProcessUnhandledException(
  **Versão do .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência de API não gerenciada do WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [Referência de API não gerenciada do WPF](wpf-unmanaged-api-reference.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-ms.openlocfilehash: 458ba2fe23ecde28b3eb15400e7a9fa49c4cca68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13353212589f99c9ad735761af60ab3eff6c9ad8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622527"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357580"
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Como: Escolher entre StackPanel e DockPanel
 Este exemplo mostra como escolher entre usar um <xref:System.Windows.Controls.StackPanel> ou um <xref:System.Windows.Controls.DockPanel> quando você empilhar conteúdo em um <xref:System.Windows.Controls.Panel>.  
@@ -26,12 +26,12 @@ Este exemplo mostra como escolher entre usar um <xref:System.Windows.Controls.St
   
  O exemplo a seguir demonstra essa diferença chave entre <xref:System.Windows.Controls.DockPanel> e <xref:System.Windows.Controls.StackPanel>.  
   
- [!code-cpp[StackPanelOvw4#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
- [!code-csharp[StackPanelOvw4#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
- [!code-vb[StackPanelOvw4#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
- [!code-xaml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
+ [!code-cpp[StackPanelOvw4#1](~/samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
+ [!code-csharp[StackPanelOvw4#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
+ [!code-vb[StackPanelOvw4#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
+ [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.DockPanel>
-- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Visão geral de painéis](panels-overview.md)

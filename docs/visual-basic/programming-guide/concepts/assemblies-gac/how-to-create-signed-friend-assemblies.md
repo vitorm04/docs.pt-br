@@ -2,12 +2,12 @@
 title: 'Como: Criar Assemblies amigáveis assinados (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: f0c36d6b134e1c742905ca9081bf3d44e5fe369f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 20d1bb571d9cd354ea3f3dba560743da00c8bf22
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748720"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359010"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Como: Criar Assemblies amigáveis assinados (Visual Basic)
 Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes. Os dois assemblies devem ter nomes fortes. Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.  
@@ -87,7 +87,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
-- [Assemblies amigáveis (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Assemblies Amigáveis](../../../../standard/assembly/friend-assemblies.md)
 - [Como: Criar Assemblies amigáveis não assinados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (ferramenta nome forte)](../../../../framework/tools/sn-exe-strong-name-tool.md))

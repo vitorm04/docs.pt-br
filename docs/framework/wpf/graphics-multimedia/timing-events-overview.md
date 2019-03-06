@@ -8,48 +8,48 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 58861a036d95fcef41da455b25ad71d6e6afaef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726813"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379569"
 ---
 # <a name="timing-events-overview"></a>Visão geral dos eventos de tempo
 Este tópico descreve como usar os cinco eventos de tempo disponíveis no <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> objetos.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Para entender este tópico, você deve entender como criar e usar animações. Para se familiarizar com a animação, consulte o [visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Para entender este tópico, você deve entender como criar e usar animações. Para se familiarizar com a animação, consulte o [visão geral da animação](animation-overview.md).  
   
  Há várias maneiras de animar propriedades no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Usando objetos de storyboard** (marcação e código): Você pode usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar e distribuir animações para um ou mais objetos. Por exemplo, consulte [animar uma propriedade usando um Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).  
+-   **Usando objetos de storyboard** (marcação e código): Você pode usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar e distribuir animações para um ou mais objetos. Por exemplo, consulte [animar uma propriedade usando um Storyboard](how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Usando animações locais** (somente código): Você pode aplicar <xref:System.Windows.Media.Animation.AnimationTimeline> objetos diretamente para as propriedades que eles animam. Para obter um exemplo, consulte [Animar uma propriedade sem usar um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+-   **Usando animações locais** (somente código): Você pode aplicar <xref:System.Windows.Media.Animation.AnimationTimeline> objetos diretamente para as propriedades que eles animam. Para obter um exemplo, consulte [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
--   **Usando relógios** (somente código): Explicitamente, você pode gerenciar a criação de relógios e distribuir os relógios de animação por conta própria.  Por exemplo, consulte [animar uma propriedade usando um AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).  
+-   **Usando relógios** (somente código): Explicitamente, você pode gerenciar a criação de relógios e distribuir os relógios de animação por conta própria.  Por exemplo, consulte [animar uma propriedade usando um AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
   
  Porque você pode usá-los na marcação e código, os exemplos nesta visão geral usam <xref:System.Windows.Media.Animation.Storyboard> objetos. No entanto, os conceitos descritos podem ser aplicados aos outros métodos de animação de propriedades.  
   
 ### <a name="what-is-a-clock"></a>O que é um relógio?  
- Uma linha do tempo, por si só, não faz nada além de descrever um segmento de tempo. É a linha do tempo <xref:System.Windows.Media.Animation.Clock> objeto que faz o trabalho real: ele mantém o estado de tempo de execução relacionado à temporização para a linha do tempo. Na maioria dos casos, como ao usar storyboards, um relógio é criado automaticamente para a linha do tempo. Você também pode criar uma <xref:System.Windows.Media.Animation.Clock> explicitamente, usando o <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> método. Para obter mais informações sobre <xref:System.Windows.Media.Animation.Clock> objetos, consulte a [animação e visão geral do sistema de temporização](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Uma linha do tempo, por si só, não faz nada além de descrever um segmento de tempo. É a linha do tempo <xref:System.Windows.Media.Animation.Clock> objeto que faz o trabalho real: ele mantém o estado de tempo de execução relacionado à temporização para a linha do tempo. Na maioria dos casos, como ao usar storyboards, um relógio é criado automaticamente para a linha do tempo. Você também pode criar uma <xref:System.Windows.Media.Animation.Clock> explicitamente, usando o <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> método. Para obter mais informações sobre <xref:System.Windows.Media.Animation.Clock> objetos, consulte a [animação e visão geral do sistema de temporização](animation-and-timing-system-overview.md).  
   
 ## <a name="why-use-events"></a>Por que usar eventos?  
  Com exceção de uma (busca alinhada ao último tique), todas as operações de tempo interativas são assíncronas. Não há nenhuma maneira de saber exatamente quando elas serão executadas. Isso pode ser um problema quando você tiver outro código que depende de sua operação de tempo. Suponha que você queira parar uma linha do tempo que anima um retângulo. Após a linha do tempo parar, você altera a cor do retângulo.  
   
- [!code-csharp[events_procedural#NeedForEventsFragment](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
- [!code-vb[events_procedural#NeedForEventsFragment](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
+ [!code-csharp[events_procedural#NeedForEventsFragment](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
+ [!code-vb[events_procedural#NeedForEventsFragment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
   
  No exemplo anterior, a segunda linha de código pode ser executada antes que o storyboard pare. Isso acontece porque a interrupção é uma operação assíncrona. Dizer a uma linha do tempo ou relógio para parar cria uma "solicitação de parada" que não é processada até o próximo tique do mecanismo de tempo.  
   
  Para executar comandos após a conclusão de uma linha do tempo, use eventos de tempo. No exemplo a seguir, um manipulador de eventos é usado para alterar a cor de um retângulo após o fim da reprodução do storyboard.  
   
- [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
- [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
-[!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
-[!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
+ [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
+ [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
+[!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
+[!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- Para obter um exemplo mais completo, consulte [alterações de estado de receber notificação quando um relógio](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md).  
+ Para obter um exemplo mais completo, consulte [alterações de estado de receber notificação quando um relógio](how-to-receive-notification-when-clock-state-changes.md).  
   
 ## <a name="public-events"></a>Eventos Públicos  
  O <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> classes fornecem cinco eventos de tempo. A tabela a seguir lista esses eventos e as condições que os disparam.  
@@ -77,6 +77,6 @@ Este tópico descreve como usar os cinco eventos de tempo disponíveis no <xref:
  Quando você se registrar para o <xref:System.Windows.Media.Animation.Timeline.Completed> evento em uma linha do tempo, por exemplo, você está realmente dizendo ao sistema para se registrar para o <xref:System.Windows.Media.Animation.Clock.Completed> eventos de cada relógio que é criado para a linha do tempo. No código, você deve registrar este evento antes do <xref:System.Windows.Media.Animation.Clock> é criado para essa linha do tempo; caso contrário, você não receberá a notificação. Isso acontece automaticamente no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; o analisador registra automaticamente para o evento antes do <xref:System.Windows.Media.Animation.Clock> é criado.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral da animação e do sistema de tempo](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Visão geral dos comportamentos de tempo](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)
+- [Visão geral da animação](animation-overview.md)
+- [Visão geral dos comportamentos de tempo](timing-behaviors-overview.md)

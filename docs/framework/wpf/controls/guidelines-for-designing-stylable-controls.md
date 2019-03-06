@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545024"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352978"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Diretrizes para criar controles com estilo
 Este documento resume um conjunto de práticas recomendadas a serem consideradas ao criar um controle que você deseja que seja fácil de criar estilos e modelos. Nós chegamos a este conjunto de práticas recomendadas por meio de muitas tentativas e erros ao trabalhar nos estilos de controle de tema do conjunto de controles internos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aprendemos que uma definição de estilo bem-sucedida é tanto uma função de um modelo de objeto com um bom design quanto é do próprio estilo. O público-alvo deste documento é o autor do controle, não os autores de estilo.  
@@ -27,7 +27,7 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
   
 -   Modelos de dados.  
   
- Para obter uma introdução à definição de estilo e de modelo, consulte [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md) (Definição de estilo e de modelo).  
+ Para obter uma introdução à definição de estilo e de modelo, consulte [Styling and Templating](styling-and-templating.md) (Definição de estilo e de modelo).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>Antes de começar: Entendendo seu controle  
@@ -119,5 +119,5 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
 -   **Os estilos de tema não precisam ter a semântica de "layout" consistente entre todos os temas**. Por exemplo, o estilo padrão não precisa garantir que um controle ocupará a mesma quantidade de tamanho em todos os temas ou garantir que um controle terá as mesmas margens de conteúdo/preenchimento em todos os temas.  
   
 ## <a name="see-also"></a>Consulte também
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Visão geral da criação de controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Estilo e modelagem](styling-and-templating.md)
+- [Visão geral da criação de controle](control-authoring-overview.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b63615e6a54ca6a07e26ebf33b613f2a27d7ac3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683608"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364405"
 ---
 # <a name="coropenflags-enumeration"></a>Enumeração CorOpenFlags
 Contém valores de sinalizadores que controlam o comportamento dos metadados ao abrir arquivos de manifesto.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|Indica se o arquivo deve ser aberto para leitura e se uma chamada para `QueryInterface` para um [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) não pode ser feita.|  
 |`ofTakeOwnership`|Indica que a memória foi alocada usando uma chamada para [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) e será liberada pelos metadados.|  
 |`ofNoTypeLib`|Obsoleto. Este sinalizador é ignorado.|  
-|`ofNoTransform`|Indica se as transformações automáticas de arquivos .winmd devem ser desabilitadas. Em outras palavras, a projeção de um tipo de Tempo de Execução do Windows para um tipo de .NET Framework deve ser desabilitada. Para obter mais informações, consulte [sob o escopo com o .NET e o tempo de execução do Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Indica se as transformações automáticas de arquivos .winmd devem ser desabilitadas. Em outras palavras, a projeção de um tipo de Tempo de Execução do Windows para um tipo de .NET Framework deve ser desabilitada. Para obter mais informações, consulte [tempo de execução do Windows e o CLR - sob os bastidores com o .NET e o tempo de execução do Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Reservado para uso interno.|  
 |`ofReserved2`|Reservado para uso interno.|  
 |`ofReserved`|Reservado para uso interno.|  

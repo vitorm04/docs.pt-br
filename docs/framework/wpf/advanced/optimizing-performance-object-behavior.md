@@ -11,12 +11,12 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 45e93e1ce7d4cca21019cd0be4547bdaa220c301
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631211"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352679"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Otimizando desempenho: Comportamento do objeto
 O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ajudará você a fazer o balanceamento correto entre desempenho e funcionalidade.  
@@ -27,16 +27,16 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Não remover manipuladores de eventos em objetos poderá manter os objetos ativos  
  O delegado que um objeto passa para seu evento é, efetivamente, uma referência a esse objeto. Portanto, os manipuladores de eventos podem manter objetos ativos por mais tempo que o esperado. Ao realizar a limpeza de um objeto que tenha sido registrado para escutar um evento de objeto, é essencial remover esse delegado antes de liberar o objeto. Manter objetos desnecessários ativos aumenta o uso de memória do aplicativo. Isso é especialmente verdadeiro quando o objeto é a raiz de uma árvore lógica ou de uma árvore visual.  
   
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] apresenta um padrão fraco de ouvinte de eventos para eventos que podem ser úteis em situações em que as relações de tempo de vida do objeto, entre a origem e o ouvinte, são difíceis de controlar. Alguns eventos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existentes usam esse padrão. Se estiver implementando objetos com eventos personalizados, esse padrão poderá ser útil para você. Para obter detalhes, consulte [Padrões de evento fracos](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] apresenta um padrão fraco de ouvinte de eventos para eventos que podem ser úteis em situações em que as relações de tempo de vida do objeto, entre a origem e o ouvinte, são difíceis de controlar. Alguns eventos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existentes usam esse padrão. Se estiver implementando objetos com eventos personalizados, esse padrão poderá ser útil para você. Para obter detalhes, consulte [Padrões de evento fracos](weak-event-patterns.md).  
   
  Há várias ferramentas, como o Criador de Perfil CLR e o Visualizador de Conjunto de Trabalho, que podem fornecer informações sobre o uso de memória de um processo especificado. O Criador de Perfil CLR inclui várias exibições muito úteis do perfil de alocação, incluindo um histograma de tipos alocados, grafos de alocação e de chamadas, uma linha do tempo mostrando coletas de lixo de várias gerações e o estado resultante do heap gerenciado após essas coletas, além de uma árvore de chamadas mostrando as cargas de assembly e alocações por método. Para obter mais informações, consulte [Centro de desenvolvedores do .NET Framework](https://go.microsoft.com/fwlink/?LinkId=117435).  
   
 <a name="DPs_and_Objects"></a>   
 ## <a name="dependency-properties-and-objects"></a>Propriedades de dependência e objetos  
- Em geral, ao acessar uma propriedade de dependência de um <xref:System.Windows.DependencyObject> não é mais lento do que acessar um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] propriedade. Enquanto há uma pequena sobrecarga de desempenho para configurar um valor da propriedade, obter um valor é tão rápido quanto obter o valor de uma propriedade do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. O fato de as propriedades de dependência darem suporte a recursos robustos, como vinculação de dados, animação, herança e estilos é a compensação pela pequena sobrecarga de desempenho. Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Em geral, ao acessar uma propriedade de dependência de um <xref:System.Windows.DependencyObject> não é mais lento do que acessar um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] propriedade. Enquanto há uma pequena sobrecarga de desempenho para configurar um valor da propriedade, obter um valor é tão rápido quanto obter o valor de uma propriedade do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. O fato de as propriedades de dependência darem suporte a recursos robustos, como vinculação de dados, animação, herança e estilos é a compensação pela pequena sobrecarga de desempenho. Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](dependency-properties-overview.md).  
   
 ### <a name="dependencyproperty-optimizations"></a>Otimizações de DependencyProperty  
- Você deve definir as propriedades de dependência em seu aplicativo com muito cuidado. Se sua <xref:System.Windows.DependencyProperty> afeta somente renderizar as opções de metadados de tipo, em vez de outras opções de metadados, como <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, você deve marcá-la como tal, substituindo seus metadados. Para obter mais informações sobre como substituir ou obter metadados de propriedades, consulte [Metadados de propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ Você deve definir as propriedades de dependência em seu aplicativo com muito cuidado. Se sua <xref:System.Windows.DependencyProperty> afeta somente renderizar as opções de metadados de tipo, em vez de outras opções de metadados, como <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, você deve marcá-la como tal, substituindo seus metadados. Para obter mais informações sobre como substituir ou obter metadados de propriedades, consulte [Metadados de propriedades de dependência](dependency-property-metadata.md).  
   
  Talvez seja mais eficiente fazer com que um manipulador de alterações de propriedade invalide as passagens de medida, organização e renderização manualmente se nem todas as alterações de propriedade afetarem, na verdade, a medida, a organização e a renderização. Por exemplo, você pode decidir renderizar novamente uma tela de fundo apenas quando um valor for maior que um limite definido. Nesse caso, seu manipulador de alteração de propriedade só invalidaria a renderização quando o valor excedesse o limite definido.  
   
@@ -54,14 +54,14 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
   
 <a name="Freezable_Objects"></a>   
 ## <a name="freezable-objects"></a>Objetos congeláveis  
- Um <xref:System.Windows.Freezable> é um tipo especial de objeto que tem dois estados: descongelado e congelado. Congelar objetos sempre que possível melhora o desempenho do seu aplicativo e reduz seu conjunto de trabalho. Para obter mais informações, consulte a [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Um <xref:System.Windows.Freezable> é um tipo especial de objeto que tem dois estados: descongelado e congelado. Congelar objetos sempre que possível melhora o desempenho do seu aplicativo e reduz seu conjunto de trabalho. Para obter mais informações, consulte a [Visão geral de objetos congeláveis](freezable-objects-overview.md).  
   
  Cada <xref:System.Windows.Freezable> tem um <xref:System.Windows.Freezable.Changed> evento que é gerado sempre que ele é alterado. No entanto, as notificações de alteração são dispendiosas em termos de desempenho do aplicativo.  
   
  Considere o exemplo a seguir em que cada <xref:System.Windows.Shapes.Rectangle> usa o mesmo <xref:System.Windows.Media.Brush> objeto:  
   
- [!code-csharp[Performance#PerformanceSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
- [!code-vb[Performance#PerformanceSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
+ [!code-csharp[Performance#PerformanceSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
+ [!code-vb[Performance#PerformanceSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
   
  Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um manipulador de eventos para o <xref:System.Windows.Media.SolidColorBrush> do objeto <xref:System.Windows.Freezable.Changed> evento para invalidar os <xref:System.Windows.Shapes.Rectangle> do objeto <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade. Nesse caso, cada vez que o <xref:System.Windows.Media.SolidColorBrush> tiver que disparar seu <xref:System.Windows.Freezable.Changed> evento é necessário para invocar a função de retorno de chamada para cada <xref:System.Windows.Shapes.Rectangle>— o acúmulo dessas invocações de função de retorno de chamada impõe uma penalidade de desempenho significativa. Além disso, adicionar e remover manipuladores neste ponto exigiria muito do desempenho, já que o aplicativo teria que percorrer toda a lista para fazer isso. Se seu cenário de aplicativo nunca muda de <xref:System.Windows.Media.SolidColorBrush>, você estará pagando o custo de manutenção <xref:System.Windows.Freezable.Changed> manipuladores de eventos desnecessariamente.  
   
@@ -74,28 +74,28 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
   
  O exemplo de código a seguir demonstra esse conceito:  
   
- [!code-csharp[Performance#PerformanceSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet3)]
- [!code-vb[Performance#PerformanceSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
+ [!code-csharp[Performance#PerformanceSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet3)]
+ [!code-vb[Performance#PerformanceSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
   
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Manipuladores alterados em Congeláveis descongelados podem manter objetos ativos  
  O delegado que um objeto passa para um <xref:System.Windows.Freezable> do objeto <xref:System.Windows.Freezable.Changed> evento é efetivamente uma referência a esse objeto. Portanto, <xref:System.Windows.Freezable.Changed> manipuladores de eventos podem manter objetos ativos mais do que o esperado. Ao executar a limpeza de um objeto que tenha sido registrado para escutar uma <xref:System.Windows.Freezable> do objeto <xref:System.Windows.Freezable.Changed> eventos, é essencial remover esse delegado antes de liberar o objeto.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também interliga <xref:System.Windows.Freezable.Changed> eventos internamente. Por exemplo, todas as propriedades de dependência que levam <xref:System.Windows.Freezable> como um valor escutarão <xref:System.Windows.Freezable.Changed> eventos automaticamente. O <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade, que usa um <xref:System.Windows.Media.Brush>, ilustra esse conceito.  
   
- [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
- [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
+ [!code-csharp[Performance#PerformanceSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
+ [!code-vb[Performance#PerformanceSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
   
  Na atribuição de `myBrush` para `myRectangle.Fill`, um representante apontando de volta para o <xref:System.Windows.Shapes.Rectangle> objeto será adicionado para o <xref:System.Windows.Media.SolidColorBrush> do objeto <xref:System.Windows.Freezable.Changed> eventos. Isso significa que o código a seguir, na verdade, não torna o `myRect` qualificado para a coleta de lixo:  
   
- [!code-csharp[Performance#PerformanceSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
- [!code-vb[Performance#PerformanceSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
+ [!code-csharp[Performance#PerformanceSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
+ [!code-vb[Performance#PerformanceSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
   
  Nesse caso `myBrush` ainda está mantendo `myRectangle` ativo e irá chamá-lo de volta quando ele dispara seu <xref:System.Windows.Freezable.Changed> eventos. Observe que atribuir `myBrush` para o <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade de uma nova <xref:System.Windows.Shapes.Rectangle> simplesmente adicionará outro manipulador de eventos para `myBrush`.  
   
  A maneira recomendada para limpar esses tipos de objetos é remover o <xref:System.Windows.Media.Brush> do <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade, que por sua vez removerá o <xref:System.Windows.Freezable.Changed> manipulador de eventos.  
   
- [!code-csharp[Performance#PerformanceSnippet6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
- [!code-vb[Performance#PerformanceSnippet6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
+ [!code-csharp[Performance#PerformanceSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
+ [!code-vb[Performance#PerformanceSnippet6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>Virtualização da interface do usuário  
@@ -111,12 +111,12 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>Consulte também
-- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planejando para desempenho do aplicativo](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Aproveitando o hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Recursos do aplicativo](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Outras recomendações de desempenho](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
+- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Layout e design](optimizing-performance-layout-and-design.md)
+- [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
+- [Recursos do aplicativo](optimizing-performance-application-resources.md)
+- [Texto](optimizing-performance-text.md)
+- [Associação de dados](optimizing-performance-data-binding.md)
+- [Outras recomendações de desempenho](optimizing-performance-other-recommendations.md)

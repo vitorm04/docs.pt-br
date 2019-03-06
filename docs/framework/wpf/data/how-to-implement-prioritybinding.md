@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: 0eb14b3f3859983ba4ba0436ab5a0fab9fda5006
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745299"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354590"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Como: Implementar PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funciona especificando uma lista de associações. A lista de associações é ordenada da prioridade mais alta para a prioridade mais baixa. Se a associação de maior prioridade retornar um valor com êxito quando ele é processado, nunca haverá a necessidade de processar as outras associações na lista. Pode ser o caso de a associação de maior prioridade levar muito tempo para ser avaliada, a próxima prioridade mais alta que retorna um valor com sucesso será usada até que uma associação de uma prioridade mais alta retorne um valor com êxito.  
@@ -29,12 +29,12 @@ ms.locfileid: "56745299"
 > [!NOTE]
 >  Este exemplo tem fins apenas demonstrativos. As diretrizes de [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] recomendam não definir propriedades que são ordens de magnitude mais lentas do que seria um conjunto de campos. Para obter mais informações, consulte [escolhendo entre propriedades e métodos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
- [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
- [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
+ [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
  O <xref:System.Windows.Controls.TextBlock.Text%2A> propriedade associa ao acima `AsyncDS` usando <xref:System.Windows.Data.PriorityBinding>:  
   
- [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
  Quando o mecanismo de associação processa o <xref:System.Windows.Data.Binding> objetos, ela começa com a primeira <xref:System.Windows.Data.Binding>, que é associado a `SlowestDP` propriedade. Quando isso <xref:System.Windows.Data.Binding> é processado, ele não retorna um valor com sucesso porque ele está suspenso por 5 segundos, portanto, a próxima <xref:System.Windows.Data.Binding> elemento é processado. A próxima <xref:System.Windows.Data.Binding> não retorna um valor com êxito porque ele está suspenso por 3 segundos. O mecanismo de associação, em seguida, move para a próxima <xref:System.Windows.Data.Binding> elemento, que é associado a `FastDP` propriedade. Isso <xref:System.Windows.Data.Binding> retorna o valor "Valor rápido". O <xref:System.Windows.Controls.TextBlock> agora mostra o valor "Valor rápido".  
   
@@ -46,5 +46,5 @@ ms.locfileid: "56745299"
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Visão geral da vinculação de dados](data-binding-overview.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

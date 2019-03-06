@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: d7a73c6590ca2df00c77a3a7255f2064a8676c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677219"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378792"
 ---
 # <a name="how-to-clone-a-printer"></a>Como: Clonar uma impressora
 A maioria das empresas comprará várias impressoras do mesmo modelo em algum momento. Normalmente, elas são instaladas com configurações praticamente idênticas. Instalar cada impressora pode ser um processo demorado e sujeito a erros. O <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> namespace e o <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe que são expostos com o Microsoft .NET Framework possibilita a instalação instantânea de qualquer número de filas de impressão adicionais que são clonadas de uma fila de impressa existente.  
@@ -52,8 +52,8 @@ A maioria das empresas comprará várias impressoras do mesmo modelo em algum mo
   
  Veja um exemplo abaixo.  
   
- [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
- [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Printing.IndexedProperties>
@@ -61,5 +61,5 @@ A maioria das empresas comprará várias impressoras do mesmo modelo em algum mo
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documentos no WPF](documents-in-wpf.md)
+- [Visão Geral da Impressão](printing-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: b2f771f124cee6ad52ea841006a6749408540048
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 116a847d4f7b0591e823416cf5744e68d689c6ee
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746066"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378074"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Passo a passo: Localizando um aplicativo híbrido
 
@@ -48,7 +48,7 @@ A primeira etapa é criar o [!INCLUDE[TLA#tla_winforms](../../../../includes/tla
 
 2.  Adicionar um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> elemento chamado `SimpleControl` ao projeto.
 
-3.  Use o <xref:System.Windows.Forms.Integration.ElementHost> controle para colocar um `SimpleControl` elemento no formulário. Para obter mais informações, confira [Passo a passo: Hospedando um controle composto do WPF 3D nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3.  Use o <xref:System.Windows.Forms.Integration.ElementHost> controle para colocar um `SimpleControl` elemento no formulário. Para obter mais informações, confira [Passo a passo: Hospedando um controle composto do WPF 3D nos Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Adicionando conteúdo localizável
 
@@ -60,7 +60,7 @@ Em seguida, você adicionará uma [!INCLUDE[TLA#tla_winforms](../../../../includ
 
 2.  Defina o conteúdo do <xref:System.Windows.Controls.Button> controlar usando o código a seguir.
 
-     [!code-xaml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
+     [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
 3.  Na **Gerenciador de soluções**, clique duas vezes em **Form1** abri-lo no Designer de formulários do Windows.
 
@@ -92,7 +92,7 @@ O Designer de Formulários do Windows fornece configurações para habilitar a l
 
 7.  Copie o seguinte código para o `Form1` construtor, antes de chamar `InitializeComponent`.
 
-     [!code-csharp[LocalizingWpfInWf#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
+     [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
 8.  Na **Gerenciador de soluções**, clique com botão direito **LocalizingWpfInWf** e clique em **descarregar projeto**.
 
@@ -128,7 +128,7 @@ Você pode mapear o conteúdo localizável para assemblies de recursos usando id
 
 3.  Na **Gerenciador de soluções**, clique duas vezes em **Simplecontrol** para abri-lo no Editor de códigos. Você verá que o `msbuild` comando tiver adicionado o `Uid` a todos os elementos de atributo. Isso facilita a localização por meio da atribuição de identificadores de recurso.
 
-     [!code-xaml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
+     [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
 4.  Pressione **F6** para compilar a solução.
 
@@ -138,7 +138,7 @@ O conteúdo localizado é armazenado em um recurso somente *assembly satélite*.
 
 ### <a name="to-produce-a-satellite-assembly"></a>Para produzir um assembly satélite
 
-1.  Copie LocBaml.exe para sua pasta do projeto obj\Debug. Para obter mais informações, consulte [localizar um aplicativo](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).
+1.  Copie LocBaml.exe para sua pasta do projeto obj\Debug. Para obter mais informações, consulte [localizar um aplicativo](how-to-localize-an-application.md).
 
 2.  Na janela do Prompt de Comando, use o seguinte comando para extrair cadeias de caracteres de recurso em um arquivo temporário.
 
@@ -176,6 +176,6 @@ O conteúdo localizado é armazenado em um recurso somente *assembly satélite*.
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Localizar um aplicativo](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+- [Localizar um aplicativo](how-to-localize-an-application.md)
 - [Passo a passo: Localizando Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

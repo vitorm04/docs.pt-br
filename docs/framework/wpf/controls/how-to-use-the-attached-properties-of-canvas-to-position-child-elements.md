@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
-ms.openlocfilehash: a0d0bc51466ee18e09eeffe80a568d277280248c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a34bac644bd0fa4c15d76d72d0502b311c49d018
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682039"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365328"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Como: Usar as propriedades anexas de tela para posicionar elementos filho
 Este exemplo mostra como usar as propriedades anexas de <xref:System.Windows.Controls.Canvas> para posicionar elementos filho.  
@@ -23,9 +23,9 @@ Este exemplo mostra como usar as propriedades anexas de <xref:System.Windows.Con
  O exemplo a seguir adiciona quatro <xref:System.Windows.Controls.Button> elementos como elementos filho de um pai <xref:System.Windows.Controls.Canvas>. Cada elemento é representado por um <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, e <xref:System.Windows.Controls.Canvas.Top%2A>.
 Cada <xref:System.Windows.Controls.Button> é posicionado em relação ao pai <xref:System.Windows.Controls.Canvas> e de acordo com seu valor atribuído da propriedade.  
   
- [!code-cpp[CanvasAttachedProperties#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
- [!code-csharp[CanvasAttachedProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]
- [!code-vb[CanvasAttachedProperties#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
+ [!code-cpp[CanvasAttachedProperties#1](~/samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
+ [!code-csharp[CanvasAttachedProperties#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]
+ [!code-vb[CanvasAttachedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Controls.Canvas>
@@ -34,6 +34,6 @@ Cada <xref:System.Windows.Controls.Button> é posicionado em relação ao pai <x
 - <xref:System.Windows.Controls.Canvas.Right%2A>
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Button>
-- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
-- [Visão geral das propriedades anexadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Visão geral de painéis](panels-overview.md)
+- [Tópicos de instruções](canvas-how-to-topics.md)
+- [Visão geral das propriedades anexadas](../advanced/attached-properties-overview.md)

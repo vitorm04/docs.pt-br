@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: 64d5ede4dcbe50beeec22ca7782d1dc8c24a27f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b59cd1c1ec2ee058811996c92e4b215c8872ff0b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372809"
 ---
 # <a name="images"></a>Imagens
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece suporte interno para vários formatos de imagem, renderização de imagem de alta fidelidade e extensibilidade de codec.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral da geração de imagens](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+ [Visão geral da geração de imagens](imaging-overview.md)  
+ [Tópicos de instruções](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Image>  
@@ -31,5 +31,5 @@ ms.locfileid: "54687213"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Consulte também
-- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Elementos gráficos e geração de imagens 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Elementos gráficos e multimídia](index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: interromper um carregamento da página'
+title: 'Como: Parar carregamento de uma página'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - stopping pages from loading [WPF]
 - loading [WPF], stopping
 ms.assetid: e2b695b0-517e-462c-8ccf-90cc8d6ba864
-ms.openlocfilehash: e5cd7d1b881b816636c3acdd4d33565304ca9b63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5694bb2cb6c618cd84bad3dc893ae3855e44892
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357840"
 ---
-# <a name="how-to-stop-a-page-from-loading"></a>Como: interromper um carregamento da página
-Este exemplo mostra como chamar o <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> método pare de navegação para o conteúdo antes de concluir que está sendo baixado.  
+# <a name="how-to-stop-a-page-from-loading"></a>Como: Parar carregamento de uma página
+Este exemplo mostra como chamar o <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> método parar a navegação para o conteúdo antes de concluir a que está sendo baixado.  
   
 ## <a name="example"></a>Exemplo  
- <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> Interrompe o download do conteúdo solicitado e faz com que o <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> evento ser gerado.  
+ <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> Interrompe o download do conteúdo solicitado e faz com que o <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> evento seja acionado.  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateStopLoadingCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatestoploadingcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateStopLoadingCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatestoploadingcode)]
+ [!code-csharp[HOWTONavigationSnippets#NavigateStopLoadingCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatestoploadingcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateStopLoadingCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatestoploadingcode)]

@@ -7,28 +7,28 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
-ms.openlocfilehash: 2fb3472456e709c0f9f395789fd42ed38a3d2ed7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544282"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352380"
 ---
 # <a name="input-and-commands-how-to-topics"></a>Tópicos explicativos de entrada e comandos
-Os tópicos nesta seção descrevem como usar a infraestrutura de entrada e comando no Windows Presentation Foundation (WPF).  
+Os tópicos nesta seção descrevem como usar a infra-estrutura de entrada e comando no Windows Presentation Foundation (WPF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Habilitar um comando](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [Alterar o tipo de cursor](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [Alterar a cor de um elemento usando eventos de foco](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [Aplicar um FocusVisualStyle a um controle](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [Detectar quando a tecla Enter é pressionada](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [Criar um efeito de sobreposição usando eventos](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [Fazer um objeto seguir o ponteiro do mouse](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [Criar um RoutedCommand](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [Implementar ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Enganchar um comando em um controle sem suporte a comandos](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [Interligar um comando a um controle com suporte de comando](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+ [Habilitar um comando](how-to-enable-a-command.md)  
+ [Alterar o tipo de cursor](how-to-change-the-cursor-type.md)  
+ [Alterar a cor de um elemento usando eventos de foco](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [Aplicar um FocusVisualStyle a um controle](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [Detectar quando a tecla Enter é pressionada](how-to-detect-when-the-enter-key-pressed.md)  
+ [Criar um efeito de sobreposição usando eventos](how-to-create-a-rollover-effect-using-events.md)  
+ [Fazer um objeto seguir o ponteiro do mouse](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [Criar um RoutedCommand](how-to-create-a-routedcommand.md)  
+ [Implementar ICommandSource](how-to-implement-icommandsource.md)  
+ [Enganchar um comando em um controle sem suporte a comandos](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [Interligar um comando a um controle com suporte de comando](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.UIElement>  

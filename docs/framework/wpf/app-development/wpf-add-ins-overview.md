@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746556"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365835"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 <a name="Introduction"></a> O .NET Framework inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que dão suporte à extensibilidade de suplementos. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também precisam exibam interfaces de usuário que são fornecidas pelos suplementos. Este tópico mostra como o WPF aumenta a modelo suplemento do .NET Framework para habilitar estes cenários, a arquitetura por trás, seus benefícios e suas limitações.  
@@ -56,7 +56,7 @@ ms.locfileid: "56746556"
   
 -   **Comunicação**: Permitindo que os suplementos e aplicativos host se comuniquem entre si por limites de isolamento pela chamada de métodos e transmissão de dados.  
   
--   **Gerenciamento de tempo de vida**: Carregar e descarregar domínios de aplicativos e processos de uma maneira limpa e previsível (consulte [domínios de aplicativo](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Gerenciamento de tempo de vida**: Carregar e descarregar domínios de aplicativos e processos de uma maneira limpa e previsível (consulte [domínios de aplicativo](../../app-domains/application-domains.md)).  
   
 -   **Controle de versão**: Garantindo que os aplicativos host e suplementos podem se comunicar quando novas versões de ambos são criadas.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746556"
   
 6.  O aplicativo host exibe retornado <xref:System.Windows.FrameworkElement>.  
   
- Para obter um exemplo que demonstra como implementar um suplemento que retorna uma interface do usuário, consulte [criar um suplemento que retorna uma interface do usuário](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Para obter um exemplo que demonstra como implementar um suplemento que retorna uma interface do usuário, consulte [criar um suplemento que retorna uma interface do usuário](how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>O suplemento é uma interface do usuário  
@@ -148,7 +148,7 @@ ms.locfileid: "56746556"
   
 6.  O aplicativo host exibe retornado <xref:System.Windows.FrameworkElement>.  
   
- Para obter um exemplo que demonstra como implementar um suplemento que é uma interface do usuário, consulte [criar um suplemento que é uma interface do usuário](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Para obter um exemplo que demonstra como implementar um suplemento que é uma interface do usuário, consulte [criar um suplemento que é uma interface do usuário](how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Retornando múltiplas interfaces do usuário de um suplemento  
@@ -219,7 +219,7 @@ ms.locfileid: "56746556"
   
 -   No lado do aplicativo host, o WPF reempacota os <xref:System.Windows.Interop.HwndSource> como uma classe interna do WPF que deriva <xref:System.Windows.Interop.HwndHost> e consome <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> para o aplicativo host.  
   
- <xref:System.Windows.Interop.HwndHost> existe para exibir as interfaces do usuário, identificados por identificadores de janela WPF de interfaces do usuário. Para obter mais informações, consulte [Interoperação Win32 e WPF](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> existe para exibir as interfaces do usuário, identificados por identificadores de janela WPF de interfaces do usuário. Para obter mais informações, consulte [Interoperação Win32 e WPF](../advanced/wpf-and-win32-interoperation.md).  
   
  Em resumo, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> existem para permitir que o identificador de janela para uma UI do WPF a ser passado de um suplemento para um aplicativo host, onde ele é encapsulado por um <xref:System.Windows.Interop.HwndHost> e exibidas da interface do usuário do aplicativo host.  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746556"
   
 -   Interfaces de usuário em suplementos exibidos a partir de um aplicativo host não respeitam o comportamento de recorte do aplicativo host.  
   
--   O conceito de *espaço aéreo* em cenários de interoperabilidade também se aplica a suplementos (consulte [Visão geral das regiões de tecnologia](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
+-   O conceito de *espaço aéreo* em cenários de interoperabilidade também se aplica a suplementos (consulte [Visão geral das regiões de tecnologia](../advanced/technology-regions-overview.md)).  
   
 -   Serviços de interface do usuário de um aplicativo host, como herança de recursos, associação de dados e comandos, não estão automaticamente disponíveis para o suplemento interfaces do usuário. Para fornecer esses serviços para o suplemento, você precisa atualizar o pipeline.  
   
--   Uma interface de usuário não pode ser girada, dimensionada, distorcida ou contrário é afetado por uma transformação (consulte [visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Uma interface de usuário não pode ser girada, dimensionada, distorcida ou contrário é afetado por uma transformação (consulte [visão geral de transformações](../graphics-multimedia/transforms-overview.md)).  
   
 -   Conteúdo dentro de interfaces do usuário do suplemento que é renderizado por operações de desenho a <xref:System.Drawing> namespace pode incluir combinação alfa. No entanto, uma interface de usuário e o aplicativo de host da interface do usuário que o contém devem ser 100% opaco; em outras palavras, o `Opacity` propriedade nos dois deve ser definida como 1.  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746556"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Otimização do desempenho  
- Por padrão, quando vários domínios de aplicativo são usados, os vários assemblies do .NET Framework necessários para cada aplicativo são todos carregados no domínio do aplicativo. Como resultado, o tempo necessário para criar novos domínios de aplicativo e iniciar aplicativos neles pode afetar o desempenho. No entanto, o .NET Framework fornece uma maneira de reduzir os tempos de inicialização instruindo os aplicativos a compartilhar assemblies entre domínios de aplicativo se eles já estiverem carregados. Você pode fazer isso usando o <xref:System.LoaderOptimizationAttribute> atributo, que deve ser aplicado ao método de ponto de entrada (`Main`). Nesse caso, você deve usar apenas código para implementar sua definição de aplicativo (consulte [Visão geral de gerenciamento do aplicativo](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Por padrão, quando vários domínios de aplicativo são usados, os vários assemblies do .NET Framework necessários para cada aplicativo são todos carregados no domínio do aplicativo. Como resultado, o tempo necessário para criar novos domínios de aplicativo e iniciar aplicativos neles pode afetar o desempenho. No entanto, o .NET Framework fornece uma maneira de reduzir os tempos de inicialização instruindo os aplicativos a compartilhar assemblies entre domínios de aplicativo se eles já estiverem carregados. Você pode fazer isso usando o <xref:System.LoaderOptimizationAttribute> atributo, que deve ser aplicado ao método de ponto de entrada (`Main`). Nesse caso, você deve usar apenas código para implementar sua definição de aplicativo (consulte [Visão geral de gerenciamento do aplicativo](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.LoaderOptimizationAttribute>
 - [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Domínios do aplicativo](../../../../docs/framework/app-domains/application-domains.md)
+- [Domínios do aplicativo](../../app-domains/application-domains.md)
 - [Visão geral de comunicação remota do .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Tornando os objetos em remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Tópicos de instruções](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [Tópicos de instruções](how-to-topics.md)

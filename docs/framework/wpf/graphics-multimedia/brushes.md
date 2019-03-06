@@ -8,24 +8,24 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557258"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366719"
 ---
 # <a name="brushes"></a>Pincéis
 Os tópicos a seguir descrevem como usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pincéis para "pintar" conteúdo na tela  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de pincéis do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Visão geral da transformação de pincel](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Visão geral de máscaras da opacidade](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Visão geral de TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [Visão geral de pincéis do WPF](wpf-brushes-overview.md)  
+ [Visão geral da transformação de pincel](brush-transformation-overview.md)  
+ [Visão geral de máscaras da opacidade](opacity-masks-overview.md)  
+ [Visão geral da pintura com cores sólidas e gradientes](painting-with-solid-colors-and-gradients-overview.md)  
+ [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)  
+ [Visão geral de TileBrush](tilebrush-overview.md)  
+ [Tópicos de instruções](brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Media.Brush>  
@@ -41,6 +41,6 @@ Os tópicos a seguir descrevem como usar [!INCLUDE[TLA#tla_winclient](../../../.
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Elementos gráficos e multimídia](index.md)  
   
- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)

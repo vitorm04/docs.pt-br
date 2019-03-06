@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510801"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366381"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Como: Criar um suplemento que seja uma interface do usuário
 Este exemplo mostra como criar um suplemento que é um Windows Presentation Foundation (WPF) que é hospedado por um aplicativo autônomo do WPF.  
@@ -27,7 +27,7 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
   
 -   Conhecimento do .NET Framework suplemento do modelo, incluindo o pipeline, suplemento e desenvolvimento de host. Se você estiver familiarizado com esses conceitos, consulte [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para obter um tutorial que demonstra a implementação de um pipeline, um suplemento e um aplicativo host, consulte [passo a passo: Criando um aplicativo extensível](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Conhecimento das extensões do WPF para o modelo de suplemento do .NET Framework. Ver [visão geral dos suplementos do WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+-   Conhecimento das extensões do WPF para o modelo de suplemento do .NET Framework. Ver [visão geral dos suplementos do WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Exemplo  
  Para criar um suplemento é uma UI do WPF requer código específico para cada segmento de pipeline, o suplemento e o aplicativo host.  
@@ -37,13 +37,13 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementando o segmento de pipeline de contrato  
  Quando um suplemento é uma interface do usuário, o contrato para o suplemento deve implementar <xref:System.AddIn.Contract.INativeHandleContract>. No exemplo, `IWPFAddInContract` implementa <xref:System.AddIn.Contract.INativeHandleContract>, conforme mostrado no código a seguir.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementando o segmento de pipeline de exibição de suplemento  
  Como o suplemento é implementado como uma subclasse do <xref:System.Windows.FrameworkElement> tipo, o modo de exibição também deve subclasse <xref:System.Windows.FrameworkElement>. O código a seguir mostra a exibição do suplemento do contrato, implementada como a `WPFAddInView` classe.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  Aqui, o modo de exibição é derivado de <xref:System.Windows.Controls.UserControl>. Consequentemente, a interface do suplemento também deve derivar de <xref:System.Windows.Controls.UserControl>.  
   
@@ -51,12 +51,12 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementando o segmento de pipeline do adaptador no lado do suplemento  
  Enquanto o contrato é um <xref:System.AddIn.Contract.INativeHandleContract>, o suplemento é um <xref:System.Windows.FrameworkElement> (conforme especificado pelo segmento de pipeline de exibição do suplemento). Portanto, o <xref:System.Windows.FrameworkElement> deve ser convertido em um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento. Esse trabalho é executado pelo adaptador do lado do suplemento chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, conforme mostrado no código a seguir.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- No suplemento do modelo em que um suplemento retorna uma interface do usuário (consulte [criar um suplemento que retorna uma interface do usuário](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), o adaptador de suplemento converte as <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> também deve ser chamado nesse modelo, embora você precise implementar um método do qual escrever o código para chamá-lo. Você pode fazer isso por meio da substituição <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementar o código que chama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se o código que está chamando <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> está esperando um <xref:System.AddIn.Contract.INativeHandleContract>. Nesse caso, o chamador será o adaptador do lado do host, que é abordado em uma seção mais adiante.  
+ No suplemento do modelo em que um suplemento retorna uma interface do usuário (consulte [criar um suplemento que retorna uma interface do usuário](how-to-create-an-add-in-that-returns-a-ui.md)), o adaptador de suplemento converte as <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> também deve ser chamado nesse modelo, embora você precise implementar um método do qual escrever o código para chamá-lo. Você pode fazer isso por meio da substituição <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementar o código que chama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se o código que está chamando <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> está esperando um <xref:System.AddIn.Contract.INativeHandleContract>. Nesse caso, o chamador será o adaptador do lado do host, que é abordado em uma seção mais adiante.  
   
 > [!NOTE]
->  Você também precisa substituir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> nesse modelo para habilitar tabulações entre o aplicativo de host da interface do usuário e da interface do usuário do suplemento. Para obter mais informações, consulte "Adicionar limitações de WPF" em [visão geral de suplementos WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+>  Você também precisa substituir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> nesse modelo para habilitar tabulações entre o aplicativo de host da interface do usuário e da interface do usuário do suplemento. Para obter mais informações, consulte "Adicionar limitações de WPF" em [visão geral de suplementos WPF](wpf-add-ins-overview.md).  
   
  Como o adaptador do lado do suplemento implementa uma interface que deriva de <xref:System.AddIn.Contract.INativeHandleContract>, você também precisa implementar <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, embora isso seja ignorado quando <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> é substituído.  
   
@@ -106,4 +106,4 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
   
 ## <a name="see-also"></a>Consulte também
 - [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Visão geral dos suplementos do WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [Visão geral dos suplementos do WPF](wpf-add-ins-overview.md)

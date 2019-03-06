@@ -7,19 +7,19 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671259"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379153"
 ---
 # <a name="path-markup-syntax"></a>Sintaxe de marcação do caminho
-Caminhos são discutidos [formas e desenho básico no WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e o [visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), no entanto, este tópico descreve em detalhes a poderosa e complexa mini-linguagem você pode usar para especificar o caminho geometrias mais eficiência usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+Caminhos são discutidos [formas e desenho básico no WPF Overview](shapes-and-basic-drawing-in-wpf-overview.md) e o [visão geral de geometria](geometry-overview.md), no entanto, este tópico descreve em detalhes a poderosa e complexa mini-linguagem você pode usar para especificar o caminho geometrias mais eficiência usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Para entender esse tópico, você deve estar familiarizado com os recursos básicos do <xref:System.Windows.Media.Geometry> objetos. Para obter mais informações, consulte o [visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Para entender esse tópico, você deve estar familiarizado com os recursos básicos do <xref:System.Windows.Media.Geometry> objetos. Para obter mais informações, consulte o [visão geral de geometria](geometry-overview.md).  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Mini-linguagens de PathFigureCollection e StreamGeometry  
@@ -27,15 +27,15 @@ Caminhos são discutidos [formas e desenho básico no WPF Overview](../../../../
   
 -   Você usar o <xref:System.Windows.Media.StreamGeometry> mini-linguagem ao definir uma propriedade do tipo <xref:System.Windows.Media.Geometry>, como o <xref:System.Windows.UIElement.Clip%2A> propriedade de uma <xref:System.Windows.UIElement> ou o <xref:System.Windows.Shapes.Path.Data%2A> propriedade de um <xref:System.Windows.Shapes.Path> elemento. O exemplo a seguir usa a sintaxe de atributo para criar um <xref:System.Windows.Media.StreamGeometry>.  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
 -   Você usa o <xref:System.Windows.Media.PathFigureCollection> mini-linguagem a <xref:System.Windows.Media.PathGeometry.Figures%2A> propriedade de um <xref:System.Windows.Media.PathGeometry>. O exemplo a seguir usa uma sintaxe de atributo para criar uma <xref:System.Windows.Media.PathFigureCollection> para um <xref:System.Windows.Media.PathGeometry>.  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
  Como você pode ver nos exemplos anteriores, as duas mini-linguagens são muito semelhantes. Sempre é possível usar um <xref:System.Windows.Media.PathGeometry> em qualquer situação onde você poderia usar um <xref:System.Windows.Media.StreamGeometry>; portanto, qual deles devo usar? Usar um <xref:System.Windows.Media.StreamGeometry> quando você não precisa modificar o caminho após criá-la; use um <xref:System.Windows.Media.PathGeometry> se você precisar modificar o caminho.  
   
- Para obter mais informações sobre as diferenças entre <xref:System.Windows.Media.PathGeometry> e <xref:System.Windows.Media.StreamGeometry> objetos, consulte o [visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Para obter mais informações sobre as diferenças entre <xref:System.Windows.Media.PathGeometry> e <xref:System.Windows.Media.StreamGeometry> objetos, consulte o [visão geral de geometria](geometry-overview.md).  
   
 ### <a name="a-note-about-white-space"></a>Uma observação sobre o espaço em branco  
  Para resumir, um único espaço é mostrado na seção de sintaxe que segue, mas vários espaços também são aceitos sempre que um único espaço é mostrado.  
@@ -229,6 +229,6 @@ Uma letra maiuscula `V` indica que `y` é um valor absoluto; uma minúscula `v` 
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
-- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+- [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Visão geral de geometria](geometry-overview.md)
+- [Tópicos de instruções](geometries-how-to-topics.md)

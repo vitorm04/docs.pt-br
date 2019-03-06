@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: 73ac80786b95c214cbba5924301b21f9c6e32837
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379270"
 ---
 # <a name="framework-property-metadata"></a>Metadados de propriedade de estrutura
 Opções de metadados de propriedades de Framework são relatadas para as propriedades dos elementos de objeto consideradas a nível de estrutura do WPF na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] arquitetura. Em geral a designação de nível de estrutura WPF implica que recursos, como renderização, vinculação de dados e refinamentos do sistema são tratados pela [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] apresentação [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] e executáveis. Metadados de propriedade de estrutura é consultado por esses sistemas para determinar características específicas de recurso de propriedades de elemento específico.  
@@ -19,7 +19,7 @@ Opções de metadados de propriedades de Framework são relatadas para as propri
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Este tópico pressupõe que você entende as propriedades de dependência da perspectiva de um consumidor de propriedades de dependência existentes nas classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e que leu a [Visão geral das propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Você também deve ter lido [metadados de propriedade de dependência](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ Este tópico pressupõe que você entende as propriedades de dependência da perspectiva de um consumidor de propriedades de dependência existentes nas classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e que leu a [Visão geral das propriedades de dependência](dependency-properties-overview.md). Você também deve ter lido [metadados de propriedade de dependência](dependency-property-metadata.md).  
   
 <a name="What_Is_Communicated_by_Framework_Property"></a>   
 ## <a name="what-is-communicated-by-framework-property-metadata"></a>O que é comunicado por metadados de propriedades de estrutura  
@@ -32,11 +32,11 @@ Opções de metadados de propriedades de Framework são relatadas para as propri
 -   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Por padrão, as propriedades de dependência não herdam valores. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> permite que o caminho de herança também viagem para uma árvore visual, que é necessária para alguns cenários de composição de controle.  
   
     > [!NOTE]
-    >  O termo "herda" no contexto de valores de propriedade significa algo específico para propriedades de dependência; Isso significa que elementos filho podem herdar o valor da propriedade de dependência real de elementos pai por causa de uma funcionalidade de nível de estrutura WPF do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de propriedade. Não tem nada a ver diretamente com herança de tipo e membros de código gerenciado por tipos derivados. Para obter detalhes, consulte [Herança do valor da propriedade](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+    >  O termo "herda" no contexto de valores de propriedade significa algo específico para propriedades de dependência; Isso significa que elementos filho podem herdar o valor da propriedade de dependência real de elementos pai por causa de uma funcionalidade de nível de estrutura WPF do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de propriedade. Não tem nada a ver diretamente com herança de tipo e membros de código gerenciado por tipos derivados. Para obter detalhes, consulte [Herança do valor da propriedade](property-value-inheritance.md).  
   
--   Relatar características de associação de dados (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). Por padrão, as propriedades de dependência na estrutura dão suporte à vinculação de dados, com um comportamento de associação unidirecional. Você poderá desabilitar a vinculação de dados se não houvesse nenhum cenário para isso qualquer tipo (porque elas devem ser flexível e extensível, existem muitos exemplos de tais propriedades no padrão [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]). Você pode configurar a associação para ter um padrão bidirecional para as propriedades que liga os comportamentos de um controle entre seus componentes (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> é um exemplo) ou onde a associação bidirecional é a situação comum e esperada pelos usuários (<xref:System.Windows.Controls.TextBox.Text%2A> é um exemplo). Alterar os metadados relacionados a vinculação de dados somente influencia o padrão; em uma base por associação esse padrão sempre pode ser alterado. Para obter detalhes sobre modos de associação e associação em geral, consulte [visão geral de vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Relatar características de associação de dados (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). Por padrão, as propriedades de dependência na estrutura dão suporte à vinculação de dados, com um comportamento de associação unidirecional. Você poderá desabilitar a vinculação de dados se não houvesse nenhum cenário para isso qualquer tipo (porque elas devem ser flexível e extensível, existem muitos exemplos de tais propriedades no padrão [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]). Você pode configurar a associação para ter um padrão bidirecional para as propriedades que liga os comportamentos de um controle entre seus componentes (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> é um exemplo) ou onde a associação bidirecional é a situação comum e esperada pelos usuários (<xref:System.Windows.Controls.TextBox.Text%2A> é um exemplo). Alterar os metadados relacionados a vinculação de dados somente influencia o padrão; em uma base por associação esse padrão sempre pode ser alterado. Para obter detalhes sobre modos de associação e associação em geral, consulte [visão geral de vinculação de dados](../data/data-binding-overview.md).  
   
--   Relatar se as propriedades devem ser registradas no diário por aplicativos ou serviços que dão suporte ao registro no diário (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Para elementos gerais, o registro no diário não está habilitado por padrão, mas ele é habilitado seletivamente para certos controles de entrada do usuário. Esta propriedade destina-se a ser lida pelos serviços de diário incluindo a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementação do registro no diário e normalmente é definida em controles de usuário, como seleções pelo usuário em listas que devem ser persistentes entre etapas de navegação. Para obter informações sobre o diário, consulte [visão geral da navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   Relatar se as propriedades devem ser registradas no diário por aplicativos ou serviços que dão suporte ao registro no diário (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Para elementos gerais, o registro no diário não está habilitado por padrão, mas ele é habilitado seletivamente para certos controles de entrada do usuário. Esta propriedade destina-se a ser lida pelos serviços de diário incluindo a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementação do registro no diário e normalmente é definida em controles de usuário, como seleções pelo usuário em listas que devem ser persistentes entre etapas de navegação. Para obter informações sobre o diário, consulte [visão geral da navegação](../app-development/navigation-overview.md).  
   
 <a name="Reading_FrameworkPropertyMetadata"></a>   
 ## <a name="reading-frameworkpropertymetadata"></a>Leitura do FrameworkPropertyMetadata  
@@ -74,6 +74,6 @@ Opções de metadados de propriedades de Framework são relatadas para as propri
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
-- [Metadados de propriedade da dependência](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Metadados de propriedade da dependência](dependency-property-metadata.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Propriedades de dependência personalizada](custom-dependency-properties.md)

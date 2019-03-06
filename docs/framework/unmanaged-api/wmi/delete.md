@@ -16,37 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0590c639e7cc6622c2283bfa609ccb31d7ce7e2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1a26db7785a8a378fa541308ecc6aee30fa87ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720568"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367105"
 ---
 # <a name="delete-function"></a>Excluir função
+
 Exclui a propriedade especificada e todos os seus qualificadores de uma definição de classe do CIM.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 HRESULT Delete (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
-   [in] LPCWSTR           wszName 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
+   [in] LPCWSTR           wszName
+);
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`vFunc`  
+`vFunc`\
 [in] Esse parâmetro é usado.
 
-`ptr`  
+`ptr`\
 [in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
-`wszName`  
+`wszName`\
 [in] O nome da propriedade a ser excluída. `wszName` deve ser um ponteiro para um válido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor retornado
@@ -57,24 +58,26 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Ocorreu um erro não especificado. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | A propriedade não pode ser excluída. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszzName` é inválido. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` é inválido. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | A propriedade especificada não existe. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente para concluir a operação. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | A propriedade é herdada de uma classe base. |
 | `WBEM_E_SYSTEM_PROPERTY` | | A propriedade é uma propriedade do sistema. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | A função excluída de um valor padrão de substituição para a classe atual. O valor padrão para essa propriedade na classe pai foi reactiviated. | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | A função excluída de um valor padrão de substituição para a classe atual. O valor padrão para essa propriedade na classe pai foi reativado. |
 
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) método.
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** WMINet_Utils.idl
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670310"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352328"
 ---
 # <a name="drawings-how-to-topics"></a>Tópicos explicativos de desenhos
 Os tópicos nesta seção descrevem como usar <xref:System.Windows.Media.Drawing> objetos para desenhar formas, imagens ou texto.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Aplicar um GuidelineSet a um desenho](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [Criar um desenho composto](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [Criar um GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [Desenhar uma imagem usando ImageDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [Executar mídia usando um VideoDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [Usar um desenho como uma fonte de imagem](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+ [Aplicar um GuidelineSet a um desenho](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [Criar um desenho composto](how-to-create-a-composite-drawing.md)  
+  [Criar um GeometryDrawing](how-to-create-a-geometrydrawing.md)  
+  [Desenhar uma imagem usando ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)  
+  [Executar mídia usando um VideoDrawing](how-to-play-media-using-a-videodrawing.md)  
+  [Usar um desenho como uma fonte de imagem](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.Drawing>
-- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)
+- [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Elementos gráficos e multimídia](index.md)

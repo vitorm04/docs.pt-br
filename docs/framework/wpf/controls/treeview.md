@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: 392e59ca7bfa4c0fe8eb85b085a27b7c03df1c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d041c287fe88a2d44920848bc14cae97a70b3f0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556247"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355110"
 ---
 # <a name="treeview"></a>TreeView
 O <xref:System.Windows.Controls.TreeView> controle exibe informações em uma estrutura hierárquica usando nós recolhíveis.  
   
- A ilustração a seguir está um exemplo de um <xref:System.Windows.Controls.TreeView> controle aninhou <xref:System.Windows.Controls.TreeViewItem> controles.  
+ A ilustração a seguir está um exemplo de uma <xref:System.Windows.Controls.TreeView> controle aninhou <xref:System.Windows.Controls.TreeViewItem> controles.  
   
- ![Ilustração de TreeView](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")  
+ ![Ilustração de TreeView](./media/treeviewillustration.JPG "TreeViewIllustration")  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de TreeView](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [Visão geral de TreeView](treeview-overview.md)  
+ [Tópicos de instruções](treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [Visão geral de modelagem dos dados](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [Visão geral da vinculação de dados](../data/data-binding-overview.md)  
+  [Visão geral de modelagem dos dados](../data/data-templating-overview.md)

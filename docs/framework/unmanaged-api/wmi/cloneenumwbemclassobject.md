@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52edc72e3714ceaf8cc92f272da6a374eb324dad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac85ed86ea968fa945e07f95db8977a33c5d12a6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661640"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367096"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>Função CloneEnumWbemClassObject
-Faz uma cópia lógica de um enumerador, mantendo sua posição atual em uma enumeração.  
-  
+Faz uma cópia lógica de um enumerador, mantendo sua posição atual em uma enumeração.
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```
 HRESULT CloneEnumWbemClassObject (
    [out] IEnumWbemClassObject**  ppEnum, 
    [in] DWORD                    authLevel,
@@ -40,29 +40,29 @@ HRESULT CloneEnumWbemClassObject (
    [in] BSTR                     strPassword,
    [in BSTR]                     strAuthority 
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`ppEnum`  
+`ppEnum`\
 [out] Recebe um ponteiro para um novo [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
 
-`authLevel`  
+`authLevel`\
 [in] O nível de autorização.
 
-`impLevel` [in] O nível de representação.
+`impLevel`\
+[in] O nível de representação.
 
-`pCurrentEnumWbemClassObject`  
+`pCurrentEnumWbemClassObject`\
 [out] Um ponteiro para o [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) instância a ser clonado.
 
-`strUser`   
+`strUser`\
 [in] O nome de usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
-`strPassword`   
+`strPassword`\
 [in] A senha. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
-`strAuthority`   
-[in] O nome de domínio do usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
+`strAuthority`\ [in] o nome de domínio do usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -75,12 +75,12 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível concluir a operação. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada) de procedimento remoto entre o processo atual e a WMI falhou. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-  
+
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) método.
 
-Esse método faz apenas uma cópia de "melhor esforço". Devido à natureza dinâmica de muitos objetos CIM, é possível que o novo enumerador não enumera o mesmo conjunto de objetos que o enumerador de código-fonte.  
+Esse método faz apenas uma cópia de "melhor esforço". Devido à natureza dinâmica de muitos objetos CIM, é possível que o novo enumerador não enumera o mesmo conjunto de objetos que o enumerador de código-fonte.
 
 Se a chamada de função falhar, você pode obter informações adicionais sobre erros chamando o [GetErrorInfo](geterrorinfo.md) função.
 
@@ -88,12 +88,13 @@ Se a chamada de função falhar, você pode obter informações adicionais sobre
 
 Por exemplo, consulte o [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) método.
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Cabeçalho:** WMINet_Utils.idl
+
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

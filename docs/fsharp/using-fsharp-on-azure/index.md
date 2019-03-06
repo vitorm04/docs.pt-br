@@ -4,6 +4,7 @@ description: 'Guia para o uso de serviços do Azure comF#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>Usando F# no Azure
 
 F# é uma excelente linguagem para programação em nuvem e é usada com frequência para escrever aplicativos da Web, serviços de nuvem, microsserviços hospedados em nuvem e para processamento de dados escalonável.
@@ -87,7 +88,7 @@ Os Hubs de Notificação do Azure podem ser usados com F# de duas maneiras:
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Implementação de WebHooks no Azure com F\#
 
-Um [Webhook](https://en.wikipedia.org/wiki/Webhook) é um retorno de chamada disparado por meio de uma solicitação da Web. os Webhooks são usados por sites, como o GitHub, para eventos de sinal. 
+Um [Webhook](https://en.wikipedia.org/wiki/Webhook) é um retorno de chamada disparado por meio de uma solicitação da Web. os Webhooks são usados por sites, como o GitHub, para eventos de sinal.
 
 Os Webhooks podem ser implementados em F# e hospedados no Azure por meio de um [Azure Function em F# com uma associação de Webhook](/azure/azure-functions/functions-bindings-http-webhook).
 

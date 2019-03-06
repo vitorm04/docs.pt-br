@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: c9ac784223a76d7bf10a888617c0d3d25c916c10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702958"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357926"
 ---
 # <a name="adorners-overview"></a>Visão geral de adornos
 Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado para fornecer dicas visuais para um usuário. Entre outros usos, adornos podem ser usados para adicionar alças funcionais a elementos ou para fornecer informações de estado sobre um controle.  
@@ -50,12 +50,12 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
   
  O exemplo a seguir mostra uma classe que implementa um adorno simples. O adorno de exemplo simplesmente adorna os cantos de um <xref:System.Windows.UIElement> com círculos.  
   
- [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
- [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
  A imagem a seguir mostra o SimpleCircleAdorner aplicado a um <xref:System.Windows.Controls.TextBox>.  
   
- ![Exemplo de adornos: Uma TextBox adornada](../../../../docs/framework/wpf/controls/media/adornedtextbox.png "AdornedTextBox")  
+ ![Exemplo de adornos: Uma TextBox adornada](./media/adornedtextbox.png "AdornedTextBox")  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>Comportamento de renderização para adornos  
@@ -70,7 +70,7 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
   
  Para habilitar o teste de clique passagem de elementos em um adorno, defina o teste de clique <xref:System.Windows.UIElement.IsHitTestVisible%2A> propriedade para **falso** no adorno.  Para obter mais informações sobre teste de clique, consulte  
   
- [Teste de clique na camada visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md).  
+ [Teste de clique na camada visual](../graphics-multimedia/hit-testing-in-the-visual-layer.md).  
   
 <a name="adorn_single_element"></a>   
 ## <a name="adorning-a-single-uielement"></a>Adornado um único UIElement  
@@ -82,8 +82,8 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
   
  O exemplo a seguir associa um SimpleCircleAdorner (mostrado acima) para um <xref:System.Windows.Controls.TextBox> nomeado *myTextBox*.  
   
- [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
- [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
 >  No momento, não há suporte para usar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para associar um adorno a outro elemento.  
@@ -98,12 +98,12 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
   
  O exemplo a seguir associa um SimpleCircleAdorner (mostrado acima) aos filhos de um <xref:System.Windows.Controls.StackPanel> nomeado *myStackPanel*.  
   
- [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
- [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Visão geral dos objetos de desenho](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)
+- [Visão geral de formas e desenho básico no WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Pintando com imagens, desenhos e visuais](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Visão geral dos objetos de desenho](../graphics-multimedia/drawing-objects-overview.md)
+- [Tópicos de instruções](adorners-how-to-topics.md)

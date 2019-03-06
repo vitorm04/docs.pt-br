@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d43467a0f3ff94eb7903b808e192230e6c0ff1e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 763e698c7149de0fee61770e601032a4160b839f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561056"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378568"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>Método ISymUnmanagedReader::GetSymAttribute
 Obtém um atributo personalizado com base em seu nome. Ao contrário de atributos personalizados de metadados, os atributos personalizados são mantidos no repositório de símbolos.  
@@ -56,7 +56,7 @@ HRESULT GetSymAttribute (
  [out] Um ponteiro para a variável que recebe os dados de atributo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro...  
+ S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  

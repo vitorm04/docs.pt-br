@@ -2,12 +2,12 @@
 title: Iteradores (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 6c03292155057ad9e202fb728cebab9e8a373640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e090106dbedbeb9fb0d6c272deb0299ca5fac56
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587746"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359114"
 ---
 # <a name="iterators-visual-basic"></a>Iteradores (Visual Basic)
 Um *iterador* pode ser usado para percorrer coleções, como listas e matrizes.  
@@ -63,7 +63,7 @@ End Function
 > [!NOTE]
 >  Para todos os exemplos no tópico, exceto o exemplo iterador simples, inclua [importações](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instruções para o `System.Collections` e `System.Collections.Generic` namespaces.  
   
-##  <a name="BKMK_SimpleIterator"></a> Iterador simples  
+## <a name="BKMK_SimpleIterator"></a> Iterador simples  
  O exemplo a seguir tem um único `Yield` instrução que está dentro de um [para... Próxima](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Em `Main`, cada iteração do corpo da instrução `For Each` cria uma chamada à função iteradora, que avança para a próxima instrução `Yield`.  
   
 ```vb  
@@ -88,7 +88,7 @@ As System.Collections.Generic.IEnumerable(Of Integer)
 End Function  
 ```  
   
-##  <a name="BKMK_CollectionClass"></a> Criando uma classe de coleção  
+## <a name="BKMK_CollectionClass"></a> Criando uma classe de coleção  
  No exemplo a seguir, a classe `DaysOfTheWeek` implementa a interface <xref:System.Collections.IEnumerable>, que requer um método <xref:System.Collections.IEnumerable.GetEnumerator%2A>. O compilador chama implicitamente o método `GetEnumerator`, que retorna um <xref:System.Collections.IEnumerator>.  
   
  O `GetEnumerator` método retorna cada cadeia de caracteres um por vez, usando o `Yield` instrução e um `Iterator` modificador é na declaração da função.  
@@ -213,7 +213,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a> Blocos try  
+## <a name="BKMK_TryBlocks"></a> Blocos try  
  Visual Basic permite que um `Yield` instrução em de `Try` block de um [tente... Catch... Instrução Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Um `Try` bloco tem um `Yield` instrução pode ter `Catch` bloqueia e pode ter um `Finally` bloco.  
   
  O exemplo a seguir inclui `Try`, `Catch`, e `Finally` blocos em uma função de iterador. O `Finally` bloco na função de iterador será executado antes do `For Each` iteração termina.  
@@ -253,7 +253,7 @@ End Function
   
  Se o `For Each` corpo (em vez do método de iterador) lança uma exceção, uma `Catch` bloco na função de iterador não é executado, mas um `Finally` bloco na função de iterador será executado. Um `Catch` bloco dentro de uma função de iterador captura somente exceções que ocorrem dentro da função de iterador.  
   
-##  <a name="BKMK_AnonymousMethods"></a> Métodos anônimos  
+## <a name="BKMK_AnonymousMethods"></a> Métodos anônimos  
  No Visual Basic, uma função anônima pode ser uma função de iterador. O exemplo a seguir ilustra essa situação.  
   
 ```vb  
@@ -303,7 +303,7 @@ End Function
   
  Se a validação for em vez disso, dentro da função de iterador, a validação não pode ser executada antes do início da primeira iteração do `For Each` corpo.  
   
-##  <a name="BKMK_GenericList"></a> Usando iteradores com uma lista genérica  
+## <a name="BKMK_GenericList"></a> Usando iteradores com uma lista genérica  
  No exemplo a seguir, a classe `Stack(Of T)` genérica implementa a interface genérica <xref:System.Collections.Generic.IEnumerable%601>. O método `Push` atribui valores a uma matriz do tipo `T`. O método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> retorna os valores da matriz usando a instrução `Yield`.  
   
  Além do método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> genérico, o método <xref:System.Collections.IEnumerable.GetEnumerator%2A> não genérico também deve ser implementado. Isso ocorre porque <xref:System.Collections.Generic.IEnumerable%601> herda de <xref:System.Collections.IEnumerable>. A implementação não genérica adia a implementação genérica.  
@@ -413,7 +413,7 @@ Public Class Stack(Of T)
 End Class  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a> Informações de sintaxe  
+## <a name="BKMK_SyntaxInformation"></a> Informações de sintaxe  
  Um iterador pode ocorrer como um método ou como um acessador `get`. Um iterador não pode ocorrer em um evento, um construtor de instância, um construtor estático ou um destruidor estático.  
   
  Deve existir uma conversão implícita do tipo de expressão na instrução `Yield`, para o tipo de retorno do iterador.  
@@ -422,7 +422,7 @@ End Class
   
  No Visual Basic, "Yield" não é uma palavra reservada e tem um significado especial somente quando ele é usado em uma `Iterator` método ou `get` acessador.  
   
-##  <a name="BKMK_Technical"></a> Implementação técnica  
+## <a name="BKMK_Technical"></a> Implementação técnica  
  Embora você escreva um iterador como um método, o compilador o traduz em uma classe aninhada que é, na verdade, uma máquina de estado. Essa classe mantém o controle da posição do iterador enquanto o loop `For Each...Next` no código cliente continuar.  
   
  Para ver o que o compilador faz, você pode usar a ferramenta Ildasm.exe para exibir o código Microsoft Intermediate Language que é gerado para um método iterador.  
@@ -435,7 +435,7 @@ End Class
   
  Para obter mais informações, consulte o [especificação da linguagem Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
   
-##  <a name="BKMK_UseOfIterators"></a> Uso de iteradores  
+## <a name="BKMK_UseOfIterators"></a> Uso de iteradores  
  Os iteradores permitem que você mantenha a simplicidade de um loop `For Each` quando for necessário usar um código complexo para preencher uma sequência de lista. Isso pode ser útil quando você quiser fazer o seguinte:  
   
 -   Modificar a sequência de lista após a primeira iteração de loop `For Each`.  

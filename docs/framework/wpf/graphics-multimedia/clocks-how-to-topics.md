@@ -9,20 +9,20 @@ helpviewer_keywords:
 - clocks [WPF], animation
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
-ms.openlocfilehash: f2888f28ad7723b7390d0e2339c2117e64e84ecd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554801"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361441"
 ---
 # <a name="clocks-how-to-topics"></a>Tópicos explicativos de relógios
 Os tópicos a seguir descrevem como usar um <xref:System.Windows.Media.Animation.Clock> objeto para manter informações de estado de tempo para um <xref:System.Windows.Media.Animation.Timeline>.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Animar uma propriedade usando um AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
- [Controlar interativamente um relógio](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
- [Buscar um relógio de forma síncrona](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  
+ [Animar uma propriedade usando um AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [Controlar interativamente um relógio](how-to-interactively-control-a-clock.md)  
+ [Buscar um relógio de forma síncrona](how-to-seek-a-clock-synchronously.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Media.Animation.Clock>  
@@ -34,6 +34,6 @@ Os tópicos a seguir descrevem como usar um <xref:System.Windows.Media.Animation
  <xref:System.Windows.Media.Animation.Timeline>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Visão geral da animação](animation-overview.md)  
   
- [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [Visão geral de storyboards](storyboards-overview.md)
