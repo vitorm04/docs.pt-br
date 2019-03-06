@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550947"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359387"
 ---
 # <a name="canvas-how-to-topics"></a>Tópicos explicativos de tela
 Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Canvas> elemento para posicionar absolutamente elementos filho.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Encapsular uma borda em torno do conteúdo de uma tela](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [Obter ou definir propriedades de posicionamento da tela](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [Criar e usar uma tela](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Usar as propriedades anexadas da tela para posicionar elementos filho](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [Redimensionar uma tela usando um elevador](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Encapsular uma borda em torno do conteúdo de uma tela](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [Obter ou definir propriedades de posicionamento da tela](how-to-get-or-set-canvas-positioning-properties.md)  
+ [Criar e usar uma tela](how-to-create-and-use-a-canvas.md)  
+ [Usar as propriedades anexadas da tela para posicionar elementos filho](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [Redimensionar uma tela usando um elevador](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Ca
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Visão geral de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Visão geral de ScrollViewer](scrollviewer-overview.md)

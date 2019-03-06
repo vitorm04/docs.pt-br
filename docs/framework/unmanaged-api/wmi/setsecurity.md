@@ -16,32 +16,34 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7200e3a19fcadabb5e149c38b620b3f60907c392
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721130"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377411"
 ---
 # <a name="setsecurity-function"></a>Função SetSecurity
-Recupera o token de representação associado ao thread atual.   
-  
+
+Recupera o token de representação associado ao thread atual. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```
 HRESULT SetSecurity (
    [out] boolean* pNeedToReset, 
    [out] HANDLE* pCurrentThreadToken
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`pNeedToReset` [out] Quando a função retorna, contém um ponteiro para um `boolean` que indica se o token deve ser redefinido por meio da chamada a [ResetSecurity](resetsecurity.md) função.  
+`pNeedToReset`\
+[out] Quando a função retorna, contém um ponteiro para um `boolean` que indica se o token deve ser redefinido por meio da chamada a [ResetSecurity](resetsecurity.md) função.
 
-`token`  
+`token`\
 [out] Quando a função retornar, contém um ponteiro para o identificador do token de representação associado ao thread atual. Seu valor pode ser `null` se não houver nenhum token associado ao thread atual. 
 
 ## <a name="return-value"></a>Valor retornado
@@ -49,13 +51,15 @@ HRESULT SetSecurity (
 Se a função for bem-sucedida, o valor retornado é `S_OK` (0).
 
 Se a função falhar, o valor de retorno é um código de erro diferente de zero. Para obter outras informações de erro, chame o [GetErrorInfo](geterrorinfo.md) função.
-  
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+
+## <a name="requirements"></a>Requisitos
+
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Cabeçalho:** WMINet_Utils.idl
+
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

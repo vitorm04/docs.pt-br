@@ -2,12 +2,12 @@
 title: Extensibilidade de Store
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517914"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375422"
 ---
 # <a name="store-extensibility"></a>Extensibilidade de Store
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> permite que os usuários elevem o personalizado, as propriedades específicas do aplicativo que podem ser usadas para consultar instâncias na base de dados de persistência. O ato de elevar uma propriedade faz com que o valor esteja disponível em uma exibição especial na base de dados. Essas propriedades elevadas (propriedades que podem ser usadas em consultas de usuário) podem ser de tipos simples como Int64, GUID, cadeia de caracteres, e DateTime ou tipo binário serializado (byte []).  
@@ -35,9 +35,9 @@ ms.locfileid: "33517914"
     application.Extensions.Add(documentStatusExtension);  
     ```  
   
-     Para obter mais detalhes sobre como adicionar um participante de persistência personalizado, consulte o [participantes de persistência](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) exemplo.  
+     Para obter mais detalhes sobre como adicionar um participante de persistência personalizado, consulte a [participantes de persistência](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) exemplo.  
   
-3.  As atividades personalizadas no aplicativo DP popular vários campos de status no **Execute** método.  
+3.  As atividades personalizadas no aplicativo de DP preencher vários campos de status na **Execute** método.  
   
     ```  
     public override void Execute(CodeActivityContext context)  
@@ -73,9 +73,9 @@ ms.locfileid: "33517914"
     ```  
   
     > [!NOTE]
-    >  Todas essas propriedades são passadas para **SqlWorkflowInstanceStore** pela estrutura de persistência por meio de **SaveWorkflowCommand.InstanceData** coleção.  
+    >  Todas essas propriedades são passadas para **SqlWorkflowInstanceStore** pela estrutura de persistência por meio de **Saveworkflowcommand** coleção.  
   
-5.  O aplicativo DP inicializa o armazenamento de instância de fluxo de trabalho do SQL e invoca o **promover** método para promover a esses dados.  
+5.  O aplicativo de DP inicializa o Store de instância de fluxo de trabalho do SQL e invoca o **promover** método para elevar esses dados.  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -91,7 +91,7 @@ ms.locfileid: "33517914"
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     Com base nessas informações de promoção, **SqlWorkflowInstanceStore** coloca as propriedades de dados em colunas da [InstancePromotedProperties](#InstancePromotedProperties) exibição.
+     Com base nessas informações de promoção, **SqlWorkflowInstanceStore** coloca as propriedades de dados nas colunas da [InstancePromotedProperties](#InstancePromotedProperties) exibição.
   
 6.  Para ver um subconjunto dos dados da tabela da promoção, o aplicativo de DP adiciona um modo de exibição personalizado no modo da promoção.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "33517914"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> Exibição [System.Activities.DurableInstancing.InstancePromotedProperties]  
+## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view  
   
 |Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|GUID|A instância de fluxo de trabalho que essa promoção pertence.|  
-|PromotionName|nvarchar (400)|O nome da promoção próprio.|  
+|PromotionName|nvarchar(400)|O nome da promoção próprio.|  
 |Valor1, valor2, Value3. , Value32|sql_variant|O valor da propriedade promovida próprio. A maioria dos tipos de dados primitivos SQL exceto gotas binários e cadeias de caracteres sobre 8000 bytes de comprimento podem caber em sql_variant.|  
 |Value33, Value34, Value35,…, Value64|varbinary (máximo)|O valor das propriedades elevadas que são explicitamente declaradas como varbinary (máximo).|

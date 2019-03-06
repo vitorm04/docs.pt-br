@@ -16,43 +16,43 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717643"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376228"
 ---
 # <a name="compareto-function"></a>Função CompareTo
-Compara um objeto a outro objeto de gerenciamento do Windows.  
+
+Compara um objeto a outro objeto de gerenciamento do Windows.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintaxe  
-  
-```
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 HRESULT CompareTo (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              flags,
-   [in] IWbemClassObject* pCompareTo 
-); 
-```  
+   [in] IWbemClassObject* pCompareTo
+);
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`vFunc`  
+`vFunc`\
 [in] Esse parâmetro é usado.
 
-`ptr`  
+`ptr`\
 [in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
-`flags`  
+`flags`\
 [in] Uma combinação bit a bit dos sinalizadores que especificam as características de objeto a serem considerados para a comparação. Consulte a [comentários](#remarks) seção para obter mais informações.
 
-`pCompareTo`  
-
-[in] O objeto para comparação. `pcompareTo` deve ser um válido [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) exemplo; ele não pode ser `null`.
+`pCompareTo`\
+[in] O objeto para comparação. `pCompareTo` deve ser um válido [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) exemplo; ele não pode ser `null`.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -66,7 +66,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Os objetos são diferentes. |
 | `WBEM_S_SAME` | 0 | Os objetos são iguais com base nos sinalizadores de comparação. |
-  
+
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) método.
@@ -88,12 +88,14 @@ Ou você pode especificar uma única sinalização composta da seguinte maneira:
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Considere todos os recursos na comparação. |
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** WMINet_Utils.idl
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

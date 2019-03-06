@@ -2,18 +2,18 @@
 title: Funções agregadas canônicas
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708968"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372796"
 ---
 # <a name="aggregate-canonical-functions"></a>Funções agregadas canônicas
 
 Agregados são as expressões em que reduz uma série de valores de entrada, por exemplo, um único valor. Agregados são normalmente usadas em conjunto com o cláusula GROUP BY de expressão SELECT, e há restrições em onde eles podem ser usados.
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Funções canônicas de Aggegate Entity SQL
+## <a name="aggregate-entity-sql-canonical-functions"></a>Funções agregadas canônicas do Entity SQL
 
 A seguir estão as funções canônicas agregadas do Entity SQL.
 
@@ -31,7 +31,7 @@ O tipo de `expression`, ou `null` se todos os valores de entrada são `null` val
 
 **Exemplo**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount (expressão)
@@ -48,10 +48,10 @@ Um `Int64`.
 
 **Exemplo**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Contagem (expressão) 
+### <a name="countexpression"></a>Contagem (expressão)
 
 Retorna o tamanho do agregado que inclui valores nulos e duplicados.
 
@@ -74,7 +74,8 @@ Retorna o máximo dos valores não anuláveis.
 
 **Argumentos**
 
-`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
+
+  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
 
 **Valor retornado**
 
@@ -91,7 +92,8 @@ Retorna o mínimo dos valores não anuláveis.
 
 **Argumentos**
 
-`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
+
+  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
 
 **Valor retornado**
 
@@ -108,7 +110,8 @@ Retorna o desvio padrão de valores não anuláveis.
 
 **Argumentos**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valor retornado**
 
@@ -125,7 +128,8 @@ Retorna o desvio padrão para a população de todos os valores.
 
 **Argumentos**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valor retornado**
 
@@ -142,7 +146,8 @@ Retorna a soma dos valores não anuláveis.
 
 **Argumentos**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valor retornado**
 
@@ -159,7 +164,8 @@ Retorna a variação de todos os valores não anuláveis.
 
 **Argumentos**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valor retornado**
 
@@ -176,7 +182,8 @@ Retorna a variação para a população de todos os valores não anuláveis.
 
 **Argumentos**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valor retornado**
 
@@ -185,7 +192,7 @@ Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
 **Exemplo**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 Funcionalidade equivalente está disponível no provedor gerenciado cliente do Microsoft SQL. Para obter mais informações, consulte [SqlClient para funções de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
 
@@ -206,7 +213,7 @@ Agregados Grupo- com base são calculadas sobre um grupo como definidas por clá
 O exemplo a seguir calcula a média quantidade ordenada para cada produto:
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,7 +231,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 As expressões na agregação grupo- base são avaliadas dentro do escopo de resolução que seria visível para a cláusula WHERE expressão.
 
-Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregações baseadas em grupo também podem especificar um todos ou modificador DISTINCT. Se o modificador DISTINCT é especificado, as duplicatas são eliminadas de coleção de entrada aggregate, antes que a agregação é calculada apenas. Se TODOS OS modificador é especificado (ou se nenhum modificador é especificado), nenhuma descarte duplicado é executada.  
+Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregações baseadas em grupo também podem especificar um todos ou modificador DISTINCT. Se o modificador DISTINCT é especificado, as duplicatas são eliminadas de coleção de entrada aggregate, antes que a agregação é calculada apenas. Se TODOS OS modificador é especificado (ou se nenhum modificador é especificado), nenhuma descarte duplicado é executada.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706226"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370118"
 ---
 # <a name="attached-properties-overview"></a>Visão geral das propriedades anexadas
 
@@ -20,7 +20,7 @@ Uma propriedade anexada é um conceito definido por XAML. Uma propriedade anexad
 
 ## Pré-requisitos <a name="prerequisites"></a>
 
-Este tópico pressupõe que você entende as propriedades de dependência da perspectiva de um consumidor de propriedades de dependência existentes nas classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e que leu a [Visão geral das propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Para seguir os exemplos neste tópico, você também deve entender o XAML e saber como escrever aplicativos do WPF.
+Este tópico pressupõe que você entende as propriedades de dependência da perspectiva de um consumidor de propriedades de dependência existentes nas classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e que leu a [Visão geral das propriedades de dependência](dependency-properties-overview.md). Para seguir os exemplos neste tópico, você também deve entender o XAML e saber como escrever aplicativos do WPF.
 
 ## Por que usar propriedades anexadas <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ Em XAML, as propriedades anexadas são definidas por meio do uso da sintaxe *Att
 
 A seguir está um exemplo de como você pode definir <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> em XAML:
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 Observe que o uso é um pouco semelhante a uma propriedade estática; Você sempre faz referência o tipo <xref:System.Windows.Controls.DockPanel> que possui e registra a propriedade anexada, em vez de fazer referência a uma instância especificada pelo nome.
 
-Além disso, como uma propriedade anexada em XAML é um atributo definido na marcação, somente a operação de conjuntos tem alguma relevância. Não é possível obter uma propriedade diretamente em XAML, apesar de existirem alguns mecanismos indiretos para comparar valores, como gatilhos em estilos (para mais detalhes, consulte [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)).
+Além disso, como uma propriedade anexada em XAML é um atributo definido na marcação, somente a operação de conjuntos tem alguma relevância. Não é possível obter uma propriedade diretamente em XAML, apesar de existirem alguns mecanismos indiretos para comparar valores, como gatilhos em estilos (para mais detalhes, consulte [Estilo e modelagem](../controls/styling-and-templating.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Implementação de propriedades anexadas no WPF
 
@@ -64,8 +64,8 @@ Propriedades anexadas no WPF não tem o típico [!INCLUDE[TLA2#tla_clr](../../..
 
 O exemplo a seguir mostra como você pode definir uma propriedade anexada em código. Neste exemplo, `myCheckBox` é uma instância do <xref:System.Windows.Controls.CheckBox> classe.
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 Assim como o XAML de caso, se `myCheckBox` ainda não tivesse sido adicionado como um elemento filho `myDockPanel` até a terceira linha de código, a quarta linha de código não geraria uma exceção, mas o valor da propriedade não interagiria com um <xref:System.Windows.Controls.DockPanel> pai e, portanto, não faria nada. Somente um <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> valor de conjunto em um elemento filho combinado com a presença de um <xref:System.Windows.Controls.DockPanel> elemento pai fará com que um comportamento eficaz no aplicativo renderizado. (Nesse caso, você poderia definir a propriedade anexada e anexar à árvore. Uma alternativa é anexar à árvore e, em seguida, definir a propriedade anexada. A ordem das ações gera o mesmo resultado.)
 
@@ -73,7 +73,7 @@ Assim como o XAML de caso, se `myCheckBox` ainda não tivesse sido adicionado co
 
 Ao registrar a propriedade <xref:System.Windows.FrameworkPropertyMetadata> é definido para especificar as características da propriedade, como se a propriedade afeta a renderização, medição e assim por diante. Em geral, os metadados de uma propriedade anexada não diferem dos metadados de uma propriedade de dependência. Se você especificar um valor padrão em uma substituição para metadados da propriedade anexada, esse valor vai se tornar o valor padrão da propriedade anexada implícita em instâncias da classe de substituição. Especificamente, o valor padrão será relatado se algum processo consultar o valor de uma propriedade anexada por meio do acessador do método `Get` para essa propriedade, especificando uma instância da classe em que os metadados foram especificados, e caso o valor dessa propriedade anexada não tenha sido definido de outra maneira.
 
-Se você desejar habilitar a herança de valor da propriedade em uma propriedade, deverá usar propriedades anexadas em vez de propriedades de dependência não anexadas. Para obter detalhes, consulte [Herança do valor da propriedade](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).
+Se você desejar habilitar a herança de valor da propriedade em uma propriedade, deverá usar propriedades anexadas em vez de propriedades de dependência não anexadas. Para obter detalhes, consulte [Herança do valor da propriedade](property-value-inheritance.md).
 
 ## Propriedades anexadas personalizadas <a name="custom"></a>
 
@@ -83,7 +83,7 @@ Se você desejar habilitar a herança de valor da propriedade em uma propriedade
 
 Outro cenário para usar uma propriedade anexada é quando a classe representa um serviço, e você deseja que classes possam integrar o serviço de forma mais transparente.
 
-Ainda outro cenário é receber suporte de Designer do WPF do Visual Studio, tais como **propriedades** edição da janela. Para obter mais informações, consulte [Visão geral da criação de controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
+Ainda outro cenário é receber suporte de Designer do WPF do Visual Studio, tais como **propriedades** edição da janela. Para obter mais informações, consulte [Visão geral da criação de controle](../controls/control-authoring-overview.md).
 
 Como mencionado anteriormente, será necessário registrar como propriedade anexada se você quiser usar a herança de valor da propriedade.
 
@@ -118,8 +118,8 @@ A assinatura para o **Set_PropertyName_** acessador deve ser:
 
 O exemplo a seguir mostra o registro de propriedade de dependência (usando o <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método), bem como o **Get_PropertyName_** e **Set_PropertyName_** acessadores. No exemplo, o nome da propriedade anexada é `IsBubbleSource`. Portanto, os acessadores devem ser nomeados como `GetIsBubbleSource` e `SetIsBubbleSource`.
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>Atributos de propriedade anexada
 
@@ -135,16 +135,16 @@ WPF define vários [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../include
 
 ## Saiba mais sobre as propriedades anexadas <a name="more"></a>
 
--   Para obter mais informações sobre como criar uma propriedade anexada, consulte [Registrar uma propriedade anexada](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md).
+-   Para obter mais informações sobre como criar uma propriedade anexada, consulte [Registrar uma propriedade anexada](how-to-register-an-attached-property.md).
 
--   Para ver mais cenários de uso avançados para as propriedades de dependência e as propriedades anexadas, consulte [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).
+-   Para ver mais cenários de uso avançados para as propriedades de dependência e as propriedades anexadas, consulte [Propriedades de dependência personalizada](custom-dependency-properties.md).
 
 -   Também é possível registrar uma propriedade como propriedade anexada e como propriedade de dependência, mas ainda expor implementações de “wrapper”. Nesse caso, a propriedade pode ser definida nesse elemento ou em qualquer elemento por meio da sintaxe de propriedade anexada XAML. Um exemplo de uma propriedade com cenário adequado para usos padrão e anexados é <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.DependencyProperty>
-- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Registrar uma propriedade anexada](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Propriedades de dependência personalizada](custom-dependency-properties.md)
+- [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
+- [Registrar uma propriedade anexada](how-to-register-an-attached-property.md)

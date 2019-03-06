@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 5378744ea43b72bafb77c9d58c1a8d848c3a8fc9
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 745ac23d65248302940eed6db3b8b19748dfc00d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745509"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376319"
 ---
 # <a name="tooltip-overview"></a>Visão geral de ToolTip
 Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, como por um <xref:System.Windows.Controls.Button>. Este tópico apresenta a dica de ferramenta e discute como criar e personalizar o conteúdo da dica de ferramenta.  
@@ -36,32 +36,32 @@ Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuár
 ## <a name="creating-a-tooltip"></a>Criando uma ToolTip  
  O exemplo a seguir mostra como criar uma dica de ferramenta simple, definindo o <xref:System.Windows.FrameworkElement.ToolTip%2A> propriedade para um <xref:System.Windows.Controls.Button> controle para uma cadeia de caracteres de texto.  
   
- [!code-xaml[GroupBoxSnippet#ToolTipString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
+ [!code-xaml[GroupBoxSnippet#ToolTipString](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
   
  Você também pode definir uma dica de ferramenta como um <xref:System.Windows.Controls.ToolTip> objeto. O exemplo a seguir usa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para especificar um <xref:System.Windows.Controls.ToolTip> objeto como a dica de ferramenta de um <xref:System.Windows.Controls.TextBox> elemento. Observe que o exemplo especifica o <xref:System.Windows.Controls.ToolTip> definindo o <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> propriedade.  
   
- [!code-xaml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
+ [!code-xaml[ToolTipSimple#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
   
  O exemplo a seguir usa o código para gerar um <xref:System.Windows.Controls.ToolTip> objeto. O exemplo cria um <xref:System.Windows.Controls.ToolTip> (`tt`) e o associa com um <xref:System.Windows.Controls.Button>.  
   
- [!code-csharp[ToolTipSimple#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
- [!code-vb[ToolTipSimple#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[ToolTipSimple#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ToolTipSimple#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
   
  Você também pode criar o conteúdo da dica de ferramenta que não está definido como um <xref:System.Windows.Controls.ToolTip> objeto colocando o conteúdo da dica de ferramenta em um elemento de layout, como um <xref:System.Windows.Controls.DockPanel>. O exemplo a seguir mostra como definir a <xref:System.Windows.FrameworkElement.ToolTip%2A> propriedade de um <xref:System.Windows.Controls.TextBox> para o conteúdo que é colocado entre um <xref:System.Windows.Controls.DockPanel> controle.  
   
- [!code-xaml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
+ [!code-xaml[GroupBoxSnippet#ToolTipDockPanel](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
   
 <a name="Using_the_ToolTip_and_ToolTipService_Properties"></a>   
 ## <a name="using-the-properties-of-the-tooltip-and-tooltipservice-classes"></a>Usando as propriedades das classes ToolTip e ToolTipService  
  Você pode personalizar o conteúdo da dica de ferramenta definindo propriedades visuais e aplicando estilos. Se você definir a dica de ferramenta com conteúdo como um <xref:System.Windows.Controls.ToolTip> do objeto, você pode definir as propriedades visuais do <xref:System.Windows.Controls.ToolTip> objeto. Caso contrário, você deve definir propriedades anexadas equivalentes no <xref:System.Windows.Controls.ToolTipService> classe.  
   
- Para obter um exemplo de como definir propriedades para especificar a posição do conteúdo da dica de ferramenta usando o <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService> propriedades, consulte [posicionar um ToolTip](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
+ Para obter um exemplo de como definir propriedades para especificar a posição do conteúdo da dica de ferramenta usando o <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService> propriedades, consulte [posicionar um ToolTip](how-to-position-a-tooltip.md).  
   
 <a name="StylingToolTip"></a>   
 ## <a name="styling-a-tooltip"></a>Definindo o estilo de uma ToolTip  
  Você pode estilizar um <xref:System.Windows.Controls.ToolTip> definindo um personalizado <xref:System.Windows.Style>. O exemplo a seguir define uma <xref:System.Windows.Style> chamado `Simple` que mostra como deslocar o posicionamento do <xref:System.Windows.Controls.ToolTip> e alterar sua aparência, definindo o <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, e <xref:System.Windows.Controls.Control.FontWeight%2A>.  
   
- [!code-xaml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
+ [!code-xaml[ToolTipSimple#Style](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
   
 <a name="UsingtheToolTipServiceTimeIntervalProperties"></a>   
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Usando as propriedades Intervalo de Tempo de ToolTipService  
@@ -69,15 +69,15 @@ Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuár
   
  Use o <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propriedades para especificar um atraso, normalmente breve, antes uma <xref:System.Windows.Controls.ToolTip> aparece e também para especificar por quanto tempo um <xref:System.Windows.Controls.ToolTip> permanece visível. Para obter mais informações, confira [Como: Adiar a exibição de uma dica de ferramenta](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms747264(v=vs.90)).  
   
- O <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriedade determina se as dicas de ferramentas para controles diferentes aparecem sem um atraso inicial quando você move o ponteiro do mouse rapidamente entre eles. Para obter mais informações sobre o <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriedade, consulte [usar a propriedade BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
+ O <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriedade determina se as dicas de ferramentas para controles diferentes aparecem sem um atraso inicial quando você move o ponteiro do mouse rapidamente entre eles. Para obter mais informações sobre o <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriedade, consulte [usar a propriedade BetweenShowDelay](how-to-use-the-betweenshowdelay-property.md).  
   
  O exemplo a seguir mostra como definir essas propriedades para uma dica de ferramenta.  
   
- [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Controls.ToolTipService>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>
 - <xref:System.Windows.Controls.ToolTipEventHandler>
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Tópicos de instruções](tooltip-how-to-topics.md)

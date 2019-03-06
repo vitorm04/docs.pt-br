@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: a242f60324f2342f3dd96edc3ccbd663ecc9807a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5a044166023069cdb6e1091339044cd7f964825
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680475"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377082"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interoperação Win32 e WPF
 Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente sofisticado para criação de aplicativos. No entanto, quando você tem um investimento significativo em código do [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], pode ser mais eficiente reutilizar parte desse código.  
@@ -27,7 +27,7 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
   
 -   Hospedar uma janela do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] no conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Com essa técnica, você pode usar um controle do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] personalizado no contexto de outro conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e passar dados entre os limites.  
   
- Essas duas técnicas são apresentadas conceitualmente neste tópico. Para obter uma ilustração mais orientada a código de hospedagem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], consulte [passo a passo: Hospedando conteúdo do WPF no Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md). Para obter uma ilustração mais orientada a código de hospedagem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [passo a passo: Hospedando um controle Win32 no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
+ Essas duas técnicas são apresentadas conceitualmente neste tópico. Para obter uma ilustração mais orientada a código de hospedagem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], consulte [passo a passo: Hospedando conteúdo do WPF no Win32](walkthrough-hosting-wpf-content-in-win32.md). Para obter uma ilustração mais orientada a código de hospedagem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [passo a passo: Hospedando um controle Win32 no WPF](walkthrough-hosting-a-win32-control-in-wpf.md).  
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>Projetos de interoperação do WPF  
@@ -50,11 +50,11 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>Como o WPF usa Hwnds  
- Para aproveitar ao máximo a "Interoperabilidade de HWND" do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você precisa entender como o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa HWNDs. Para qualquer HWND, você não pode combinar a renderização do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] com a renderização do [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] ou a renderização do [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] / [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]. Isso tem várias implicações. Basicamente, para combinar esses modelos de renderização, você deve criar uma solução de interoperabilidade e usar segmentos de interoperação designados para cada modelo de renderização que optar usar. Além disso, o comportamento de renderização cria uma restrição de "espaço aéreo" para o que sua solução de interoperação pode realizar. O conceito de "espaço aéreo" é explicado com mais detalhes no tópico [Visão geral das regiões de tecnologia](../../../../docs/framework/wpf/advanced/technology-regions-overview.md).  
+ Para aproveitar ao máximo a "Interoperabilidade de HWND" do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você precisa entender como o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa HWNDs. Para qualquer HWND, você não pode combinar a renderização do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] com a renderização do [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] ou a renderização do [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] / [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]. Isso tem várias implicações. Basicamente, para combinar esses modelos de renderização, você deve criar uma solução de interoperabilidade e usar segmentos de interoperação designados para cada modelo de renderização que optar usar. Além disso, o comportamento de renderização cria uma restrição de "espaço aéreo" para o que sua solução de interoperação pode realizar. O conceito de "espaço aéreo" é explicado com mais detalhes no tópico [Visão geral das regiões de tecnologia](technology-regions-overview.md).  
   
  Todos os elementos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na tela, por fim, contam com um HWND. Quando você cria um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window>, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cria um HWND de alto nível e usa um <xref:System.Windows.Interop.HwndSource> colocar o <xref:System.Windows.Window> e sua [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo dentro do HWND.  O restante do seu conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no aplicativo compartilha aquele único HWND. Uma exceção são menus, caixas de combinação suspensas e outros pop-ups. Esses elementos criam sua própria janela de nível superior, razão pela qual um menu do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode passar da borda do HWND da janela que o contém. Quando você usa <xref:System.Windows.Interop.HwndHost> para colocar um HWND dentro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] informa [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] como posicionar o novo HWND filho em relação para o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> HWND.  
   
- Um conceito relacionado a HWND é a transparência dentro e entre cada HWND. Isso também é discutido no tópico [Visão geral das regiões de tecnologia](../../../../docs/framework/wpf/advanced/technology-regions-overview.md).  
+ Um conceito relacionado a HWND é a transparência dentro e entre cada HWND. Isso também é discutido no tópico [Visão geral das regiões de tecnologia](technology-regions-overview.md).  
   
 <a name="hosting_a_wpf_page"></a>   
 ## <a name="hosting-wpf-content-in-a-microsoft-win32-window"></a>Hospedando conteúdo do WPF em uma janela do Microsoft Win32  
@@ -87,7 +87,7 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
 > [!NOTE]
 >  Você pode fazer algumas ou todas as definições de classe de conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da Etapa Um em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usando a classe parcial padrão da classe de conteúdo, se você gerar um assembly separado e, em seguida, referenciá-lo. Embora você normalmente inclua um <xref:System.Windows.Application> objeto como parte da compilação a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] em um assembly, você acaba não usando essa <xref:System.Windows.Application> como parte da interoperação, você apenas use um ou mais das classes raiz para [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos conhecidos para o aplicativo e referencia suas classes parciais. O restante do procedimento é basicamente semelhante ao descrito acima.  
 >   
->  Cada uma dessas etapas é ilustrada por meio de código no tópico [passo a passo: Hospedando conteúdo do WPF no Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md).  
+>  Cada uma dessas etapas é ilustrada por meio de código no tópico [passo a passo: Hospedando conteúdo do WPF no Win32](walkthrough-hosting-wpf-content-in-win32.md).  
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>Hospedando uma janela do Microsoft Win32 no WPF  
@@ -115,7 +115,7 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
   
  Seguir essas cria um aplicativo que funciona com a entrada do mouse. Você pode adicionar suporte a TAB para sua janela hospedada Implementando a <xref:System.Windows.Interop.IKeyboardInputSink> interface.  
   
- Cada uma dessas etapas é ilustrada por meio de código no tópico [passo a passo: Hospedando um controle Win32 no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
+ Cada uma dessas etapas é ilustrada por meio de código no tópico [passo a passo: Hospedando um controle Win32 no WPF](walkthrough-hosting-a-win32-control-in-wpf.md).  
   
 ### <a name="hwnds-inside-wpf"></a>Hwnds dentro do WPF  
  Você pode pensar <xref:System.Windows.Interop.HwndHost> como um controle especial. (Tecnicamente, <xref:System.Windows.Interop.HwndHost> é um <xref:System.Windows.FrameworkElement> derivado de classe, não um <xref:System.Windows.Controls.Control> classe derivada, mas ele pode ser considerado um controle para fins de interoperação.) <xref:System.Windows.Interop.HwndHost> abstrai a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] natureza do conteúdo hospedado, de modo que o restante do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] considera o conteúdo hospedado como outro objeto do tipo controle, que deve renderizar e processar a entrada. <xref:System.Windows.Interop.HwndHost> geralmente se comporta como qualquer outro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement>, embora há algumas diferenças importantes em torno de saída (desenho e gráficos) e pode dar suporte a entrada (mouse e teclado) com base nas limitações de que os HWNDs subjacentes.  
@@ -160,5 +160,5 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [Passo a passo: Hospedando um controle Win32 no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)
-- [Passo a passo: Hospedando conteúdo do WPF no Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)
+- [Passo a passo: Hospedando um controle Win32 no WPF](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [Passo a passo: Hospedando conteúdo do WPF no Win32](walkthrough-hosting-wpf-content-in-win32.md)

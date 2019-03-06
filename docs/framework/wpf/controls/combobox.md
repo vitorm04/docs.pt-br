@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747026"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374837"
 ---
 # <a name="combobox"></a>ComboBox
 O <xref:System.Windows.Controls.ComboBox> controle apresenta aos usuários uma lista de opções. A lista for exibida e ocultada conforme o controle se expande e recolhe. Em seu estado padrão, a lista estiver recolhida, exibindo somente uma opção. O usuário clica em um botão para ver a lista completa de opções.  
   
  A ilustração a seguir mostra um <xref:System.Windows.Controls.ComboBox> em diferentes estados.  
   
- ![Combinação caixas em default e pressionado estados](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+ ![Combinação caixas em default e pressionado estados](./media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Expandida e recolhida  
   
 ## <a name="reference"></a>Referência  

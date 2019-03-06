@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527634"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358516"
 ---
 # <a name="custom-animations-overview"></a>Visão geral de animações personalizadas
 Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de animação criando quadros-chave personalizados, classes de animação ou utilizando callback por quadro para contorná-lo.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Para entender esse tópico, você deve estar familiarizado com os diferentes tipos de animação fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obter mais informações, consulte Visão geral sobre animações de From/To/By a [visão geral de animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)e o [visão geral de animações de caminho](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+ Para entender esse tópico, você deve estar familiarizado com os diferentes tipos de animação fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obter mais informações, consulte Visão geral sobre animações de From/To/By a [visão geral de animações de quadro-chave](key-frame-animations-overview.md)e o [visão geral de animações de caminho](path-animations-overview.md).  
   
- Porque as classes de animação herdam os <xref:System.Windows.Freezable> classe, você deve estar familiarizado com <xref:System.Windows.Freezable> objetos e como herdar de <xref:System.Windows.Freezable>. Para obter mais informações, consulte a [visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Porque as classes de animação herdam os <xref:System.Windows.Freezable> classe, você deve estar familiarizado com <xref:System.Windows.Freezable> objetos e como herdar de <xref:System.Windows.Freezable>. Para obter mais informações, consulte a [visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Estendendo o sistema de animação  
@@ -45,7 +45,7 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>Criar um quadro-chave personalizado  
- Criar uma classe de quadro-chave personalizado é a maneira mais simples para estender o sistema de animação. Use essa abordagem para um método de interpolação diferente para uma animação de quadro-chave.  Conforme descrito na [Visão geral de animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), uma animação de quadro-chave utiliza objetos de quadro-chave para gerar seus valores de saída. Cada objeto de quadro-chave realiza três funções:  
+ Criar uma classe de quadro-chave personalizado é a maneira mais simples para estender o sistema de animação. Use essa abordagem para um método de interpolação diferente para uma animação de quadro-chave.  Conforme descrito na [Visão geral de animações de quadro-chave](key-frame-animations-overview.md), uma animação de quadro-chave utiliza objetos de quadro-chave para gerar seus valores de saída. Cada objeto de quadro-chave realiza três funções:  
   
 -   Especifica um valor de destino usando seu <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriedade.  
   
@@ -57,7 +57,7 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
   
  Derivam da classe *\<Tipo>* KeyFrame abstrata e implementa o método InterpolateValueCore. O método InterpolateValueCore retorna o valor atual do quadro-chave. Ele usa dois parâmetros: o valor do quadro chave anterior e um valor de progresso que varia de 0 a 1. Um progresso de 0 indica o quadro-chave começou e um valor de 1 indica que o quadro-chave completou e deve retornar o valor especificado pelo seu <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriedade.  
   
- Porque o  *\<tipo >* herdarem de classes de quadro-chave as <xref:System.Windows.Freezable> classe, você também deve substituir <xref:System.Windows.Freezable.CreateInstanceCore%2A> para retornar uma nova instância da sua classe. Se a classe não usar propriedades de dependência para armazenar seus dados ou requer inicialização extra após a criação, talvez seja necessário substituir métodos adicionais; Consulte a [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) para obter mais informações.  
+ Porque o  *\<tipo >* herdarem de classes de quadro-chave as <xref:System.Windows.Freezable> classe, você também deve substituir <xref:System.Windows.Freezable.CreateInstanceCore%2A> para retornar uma nova instância da sua classe. Se a classe não usar propriedades de dependência para armazenar seus dados ou requer inicialização extra após a criação, talvez seja necessário substituir métodos adicionais; Consulte a [Visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md) para obter mais informações.  
   
  Depois de criar sua animação personalizada de *\<Tipo >* KeyFrame, você pode usá-la com o  *\<Tipo>* AnimationUsingKeyFrames para aquele tipo.  
   
@@ -72,7 +72,7 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
   
  Derivar de uma classe *\<Tipo>* Animação e implementar o método GetCurrentValueCore. O método GetCurrentValueCore retorna o valor atual da animação. Ele usa três parâmetros: um valor inicial sugerido, um valor final sugerido e um <xref:System.Windows.Media.Animation.AnimationClock>, que você pode usar para determinar o progresso da animação.  
   
- Porque o  *\<tipo >* classes AnimationBase herdam o <xref:System.Windows.Freezable> classe, você também deve substituir <xref:System.Windows.Freezable.CreateInstanceCore%2A> para retornar uma nova instância da sua classe. Se a classe não usar propriedades de dependência para armazenar seus dados ou requer inicialização extra após a criação, talvez seja necessário substituir métodos adicionais; Consulte a [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) para obter mais informações.  
+ Porque o  *\<tipo >* classes AnimationBase herdam o <xref:System.Windows.Freezable> classe, você também deve substituir <xref:System.Windows.Freezable.CreateInstanceCore%2A> para retornar uma nova instância da sua classe. Se a classe não usar propriedades de dependência para armazenar seus dados ou requer inicialização extra após a criação, talvez seja necessário substituir métodos adicionais; Consulte a [Visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md) para obter mais informações.  
   
  Para obter mais informações, consulte a documentação do método GetCurrentValueCore para a classe *\<Tipo>* AnimationBase para o tipo que você deseja animar. Para obter um exemplo, consulte a [Exemplo de animação personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)  
   
@@ -95,7 +95,7 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Substituir essa propriedade para indicar o <xref:System.Type> da saída de sua animação produz.  
   
- Se a classe não usar propriedades de dependência para armazenar seus dados ou requer inicialização extra após a criação, talvez seja necessário substituir métodos adicionais; Consulte a [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) para obter mais informações.  
+ Se a classe não usar propriedades de dependência para armazenar seus dados ou requer inicialização extra após a criação, talvez seja necessário substituir métodos adicionais; Consulte a [Visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md) para obter mais informações.  
   
  O paradigma recomendado (usada pelas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animações) é utilizar dois níveis de herança:  
   
@@ -126,10 +126,10 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Visão geral das técnicas de animação da propriedade](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Visão geral de animações de caminho](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Visão geral da animação e do sistema de tempo](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Visão geral das técnicas de animação da propriedade](property-animation-techniques-overview.md)
+- [Visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md)
+- [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
+- [Visão geral de animações de caminho](path-animations-overview.md)
+- [Visão geral da animação](animation-overview.md)
+- [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)
 - [Exemplo de animação personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)
