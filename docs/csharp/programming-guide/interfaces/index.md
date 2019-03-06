@@ -62,7 +62,7 @@ Uma interface tem as propriedades a seguir:
  [Como: implementar membros de duas interfaces de forma explícita](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Fornece um exemplo de como implementar explicitamente membros de interfaces com herança.  
   
-##  <a name="BKMK_RelatedSections"></a> Seções relacionadas
+## <a name="BKMK_RelatedSections"></a> Seções relacionadas
 
 - [Propriedades de interface](../classes-and-structs/interface-properties.md)  
 - [Indexadores em interfaces](../indexers/indexers-in-interfaces.md)  

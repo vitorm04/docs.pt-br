@@ -48,7 +48,7 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
   
 -   Os indexadores podem ter mais de um parâmetro formal, por exemplo, ao acessar uma matriz bidimensional.  
   
-##  <a name="BKMK_RelatedSections"></a> Seções relacionadas  
+## <a name="BKMK_RelatedSections"></a> Seções relacionadas  
   
 -   [Usando indexadores](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

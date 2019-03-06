@@ -113,7 +113,7 @@ string s = String.Empty;
   
  Neste exemplo, um objeto <xref:System.Text.StringBuilder> é usado para criar uma cadeia de caracteres com base em um conjunto de tipos numéricos:  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Cadeias de caracteres, métodos de extensão e LINQ  
  Uma vez que o tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, você pode usar os métodos de extensão definidos na classe <xref:System.Linq.Enumerable> em cadeias de caracteres. Para evitar a desordem visual, esses métodos são excluídos do IntelliSense para o tipo <xref:System.String>, mas estão disponíveis mesmo assim. Você também pode usar expressões [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] em cadeias de caracteres de consulta. Para saber mais, confira [LINQ e cadeias de caracteres](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
