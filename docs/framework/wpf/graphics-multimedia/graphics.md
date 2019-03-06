@@ -7,28 +7,28 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 9a8dcc98b6d201825e4880edc2ad77f9e0406586
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662381"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361151"
 ---
-# <a name="graphics"></a><span data-ttu-id="2ed72-102">Gráficos</span><span class="sxs-lookup"><span data-stu-id="2ed72-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="2ed72-103">oferece suporte integrado para multimídia, gráficos vetoriais, animação e composição de conteúdo, tornando mais fácil para os desenvolvedores criem interfaces de usuário e conteúdo interessantes.</span><span class="sxs-lookup"><span data-stu-id="2ed72-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="10e4c-102">Gráficos</span><span class="sxs-lookup"><span data-stu-id="10e4c-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="10e4c-103">oferece suporte integrado para multimídia, gráficos vetoriais, animação e composição de conteúdo, tornando mais fácil para os desenvolvedores criem interfaces de usuário e conteúdo interessantes.</span><span class="sxs-lookup"><span data-stu-id="10e4c-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2ed72-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="2ed72-104">In This Section</span></span>  
- [<span data-ttu-id="2ed72-105">Efeitos de bitmap</span><span class="sxs-lookup"><span data-stu-id="2ed72-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [<span data-ttu-id="2ed72-106">Pincéis</span><span class="sxs-lookup"><span data-stu-id="2ed72-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [<span data-ttu-id="2ed72-107">Desenhos</span><span class="sxs-lookup"><span data-stu-id="2ed72-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [<span data-ttu-id="2ed72-108">Geometrias</span><span class="sxs-lookup"><span data-stu-id="2ed72-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [<span data-ttu-id="2ed72-109">Imagens</span><span class="sxs-lookup"><span data-stu-id="2ed72-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [<span data-ttu-id="2ed72-110">Formas</span><span class="sxs-lookup"><span data-stu-id="2ed72-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [<span data-ttu-id="2ed72-111">Transformações</span><span class="sxs-lookup"><span data-stu-id="2ed72-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [<span data-ttu-id="2ed72-112">Configurações do Registro de renderização dos elementos gráficos</span><span class="sxs-lookup"><span data-stu-id="2ed72-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="2ed72-113">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="2ed72-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="10e4c-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="10e4c-104">In This Section</span></span>  
+ [<span data-ttu-id="10e4c-105">Efeitos de bitmap</span><span class="sxs-lookup"><span data-stu-id="10e4c-105">Bitmap Effects</span></span>](bitmap-effects.md)  
+ [<span data-ttu-id="10e4c-106">Pincéis</span><span class="sxs-lookup"><span data-stu-id="10e4c-106">Brushes</span></span>](brushes.md)  
+ [<span data-ttu-id="10e4c-107">Desenhos</span><span class="sxs-lookup"><span data-stu-id="10e4c-107">Drawings</span></span>](drawings.md)  
+ [<span data-ttu-id="10e4c-108">Geometrias</span><span class="sxs-lookup"><span data-stu-id="10e4c-108">Geometries</span></span>](geometries.md)  
+ [<span data-ttu-id="10e4c-109">Imagens</span><span class="sxs-lookup"><span data-stu-id="10e4c-109">Images</span></span>](images.md)  
+ [<span data-ttu-id="10e4c-110">Formas</span><span class="sxs-lookup"><span data-stu-id="10e4c-110">Shapes</span></span>](shapes.md)  
+ [<span data-ttu-id="10e4c-111">Transformações</span><span class="sxs-lookup"><span data-stu-id="10e4c-111">Transformations</span></span>](transformations.md)  
+ [<span data-ttu-id="10e4c-112">Configurações do Registro de renderização dos elementos gráficos</span><span class="sxs-lookup"><span data-stu-id="10e4c-112">Graphics Rendering Registry Settings</span></span>](graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="10e4c-113">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="10e4c-113">How-to Topics</span></span>](graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2ed72-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2ed72-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10e4c-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="10e4c-114">See also</span></span>
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -36,6 +36,6 @@ ms.locfileid: "54662381"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="2ed72-115">Elementos gráficos e geração de imagens 2D</span><span class="sxs-lookup"><span data-stu-id="2ed72-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="2ed72-116">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="2ed72-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="2ed72-117">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="2ed72-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="10e4c-115">Elementos gráficos e geração de imagens 2D</span><span class="sxs-lookup"><span data-stu-id="10e4c-115">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="10e4c-116">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="10e4c-116">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="10e4c-117">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="10e4c-117">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

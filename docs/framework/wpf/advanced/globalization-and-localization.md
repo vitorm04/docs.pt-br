@@ -11,31 +11,31 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: b1931b17c0902eec590c3c998c52f6e9d84133dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543449"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375175"
 ---
-# <a name="globalization-and-localization"></a><span data-ttu-id="304f4-102">Globalização e localização</span><span class="sxs-lookup"><span data-stu-id="304f4-102">Globalization and Localization</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="304f4-103"> fornece amplo suporte para o desenvolvimento de aplicativos prontos para o mundo.</span><span class="sxs-lookup"><span data-stu-id="304f4-103"> provides extensive support for the development of world-ready applications.</span></span>  
+# <a name="globalization-and-localization"></a><span data-ttu-id="51f16-102">Globalização e localização</span><span class="sxs-lookup"><span data-stu-id="51f16-102">Globalization and Localization</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="51f16-103">fornece suporte extensivo para o desenvolvimento de aplicativos preparados para o mundo.</span><span class="sxs-lookup"><span data-stu-id="51f16-103">provides extensive support for the development of world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="304f4-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="304f4-104">In This Section</span></span>  
- [<span data-ttu-id="304f4-105">Visão geral de globalização e localização do WPF</span><span class="sxs-lookup"><span data-stu-id="304f4-105">WPF Globalization and Localization Overview</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [<span data-ttu-id="304f4-106">Globalização para WPF</span><span class="sxs-lookup"><span data-stu-id="304f4-106">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [<span data-ttu-id="304f4-107">Visão geral do uso de layout automático</span><span class="sxs-lookup"><span data-stu-id="304f4-107">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [<span data-ttu-id="304f4-108">Atributos de localização e comentários</span><span class="sxs-lookup"><span data-stu-id="304f4-108">Localization Attributes and Comments</span></span>](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [<span data-ttu-id="304f4-109">Visão geral dos recursos bidirecionais no WPF</span><span class="sxs-lookup"><span data-stu-id="304f4-109">Bidirectional Features in WPF Overview</span></span>](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [<span data-ttu-id="304f4-110">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="304f4-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="51f16-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="51f16-104">In This Section</span></span>  
+ [<span data-ttu-id="51f16-105">Visão geral de globalização e localização do WPF</span><span class="sxs-lookup"><span data-stu-id="51f16-105">WPF Globalization and Localization Overview</span></span>](wpf-globalization-and-localization-overview.md)  
+ [<span data-ttu-id="51f16-106">Globalização para WPF</span><span class="sxs-lookup"><span data-stu-id="51f16-106">Globalization for WPF</span></span>](globalization-for-wpf.md)  
+ [<span data-ttu-id="51f16-107">Visão geral do uso de layout automático</span><span class="sxs-lookup"><span data-stu-id="51f16-107">Use Automatic Layout Overview</span></span>](use-automatic-layout-overview.md)  
+ [<span data-ttu-id="51f16-108">Atributos de localização e comentários</span><span class="sxs-lookup"><span data-stu-id="51f16-108">Localization Attributes and Comments</span></span>](localization-attributes-and-comments.md)  
+ [<span data-ttu-id="51f16-109">Visão geral dos recursos bidirecionais no WPF</span><span class="sxs-lookup"><span data-stu-id="51f16-109">Bidirectional Features in WPF Overview</span></span>](bidirectional-features-in-wpf-overview.md)  
+ [<span data-ttu-id="51f16-110">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="51f16-110">How-to Topics</span></span>](globalization-and-localization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="304f4-111">Referência</span><span class="sxs-lookup"><span data-stu-id="304f4-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="51f16-111">Referência</span><span class="sxs-lookup"><span data-stu-id="51f16-111">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="304f4-112">Tratamento de xml:lang em XAML</span><span class="sxs-lookup"><span data-stu-id="304f4-112">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="51f16-112">Tratamento de xml:lang em XAML</span><span class="sxs-lookup"><span data-stu-id="51f16-112">xml:lang Handling in XAML</span></span>](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="304f4-113">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="304f4-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="51f16-113">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="51f16-113">Related Sections</span></span>

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - TabControl control [WPF]
 - controls [WPF], TabControl
 ms.assetid: 3d26404b-431e-432d-a82b-ef026feb3fff
-ms.openlocfilehash: dba156139bb8a3bb68b3ef1434177b8d9b839cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33eb4943d2c867b7843952e5c961eb7e66072890
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555971"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372055"
 ---
-# <a name="tabcontrol"></a><span data-ttu-id="95439-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="95439-102">TabControl</span></span>
-<span data-ttu-id="95439-103"><xref:System.Windows.Controls.TabControl> elementos de exibem o conteúdo em páginas distintas acessadas selecionando a guia apropriada. Cada guia contém um <xref:System.Windows.Controls.TabItem>.</span><span class="sxs-lookup"><span data-stu-id="95439-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
+# <a name="tabcontrol"></a><span data-ttu-id="53c33-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="53c33-102">TabControl</span></span>
+<span data-ttu-id="53c33-103"><xref:System.Windows.Controls.TabControl> elementos exibem conteúdo em páginas distintas acessadas selecionando a guia apropriada. Cada guia contém um <xref:System.Windows.Controls.TabItem>.</span><span class="sxs-lookup"><span data-stu-id="53c33-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
   
- <span data-ttu-id="95439-104">A ilustração a seguir mostra um <xref:System.Windows.Controls.TabControl>.</span><span class="sxs-lookup"><span data-stu-id="95439-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
+ <span data-ttu-id="53c33-104">A ilustração a seguir mostra um <xref:System.Windows.Controls.TabControl>.</span><span class="sxs-lookup"><span data-stu-id="53c33-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
   
- <span data-ttu-id="95439-105">![Controle guia](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="95439-105">![Tab control](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
-<span data-ttu-id="95439-106">TabControl típico</span><span class="sxs-lookup"><span data-stu-id="95439-106">Typical TabControl</span></span>  
+ <span data-ttu-id="53c33-105">![Guia de controle](./media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="53c33-105">![Tab control](./media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
+<span data-ttu-id="53c33-106">TabControl típico</span><span class="sxs-lookup"><span data-stu-id="53c33-106">Typical TabControl</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="95439-107">Referência</span><span class="sxs-lookup"><span data-stu-id="95439-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="53c33-107">Referência</span><span class="sxs-lookup"><span data-stu-id="53c33-107">Reference</span></span>  
  <xref:System.Windows.Controls.TabControl>  
   <xref:System.Windows.Controls.TabItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="95439-108">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="95439-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="53c33-108">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="53c33-108">Related Sections</span></span>

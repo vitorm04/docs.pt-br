@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550947"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359387"
 ---
-# <a name="canvas-how-to-topics"></a><span data-ttu-id="8e4c7-102">Tópicos explicativos de tela</span><span class="sxs-lookup"><span data-stu-id="8e4c7-102">Canvas How-to Topics</span></span>
-<span data-ttu-id="8e4c7-103">Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Canvas> elemento para posicionar absolutamente elementos filho.</span><span class="sxs-lookup"><span data-stu-id="8e4c7-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
+# <a name="canvas-how-to-topics"></a><span data-ttu-id="efedc-102">Tópicos explicativos de tela</span><span class="sxs-lookup"><span data-stu-id="efedc-102">Canvas How-to Topics</span></span>
+<span data-ttu-id="efedc-103">Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Canvas> elemento para posicionar absolutamente elementos filho.</span><span class="sxs-lookup"><span data-stu-id="efedc-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8e4c7-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8e4c7-104">In This Section</span></span>  
- [<span data-ttu-id="8e4c7-105">Encapsular uma borda em torno do conteúdo de uma tela</span><span class="sxs-lookup"><span data-stu-id="8e4c7-105">Wrap a Border Around the Content of a Canvas</span></span>](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [<span data-ttu-id="8e4c7-106">Obter ou definir propriedades de posicionamento da tela</span><span class="sxs-lookup"><span data-stu-id="8e4c7-106">Get or Set Canvas Positioning Properties</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [<span data-ttu-id="8e4c7-107">Criar e usar uma tela</span><span class="sxs-lookup"><span data-stu-id="8e4c7-107">Create and Use a Canvas</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [<span data-ttu-id="8e4c7-108">Usar as propriedades anexadas da tela para posicionar elementos filho</span><span class="sxs-lookup"><span data-stu-id="8e4c7-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [<span data-ttu-id="8e4c7-109">Redimensionar uma tela usando um elevador</span><span class="sxs-lookup"><span data-stu-id="8e4c7-109">Resize a Canvas by Using a Thumb</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+## <a name="in-this-section"></a><span data-ttu-id="efedc-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="efedc-104">In This Section</span></span>  
+ [<span data-ttu-id="efedc-105">Encapsular uma borda em torno do conteúdo de uma tela</span><span class="sxs-lookup"><span data-stu-id="efedc-105">Wrap a Border Around the Content of a Canvas</span></span>](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [<span data-ttu-id="efedc-106">Obter ou definir propriedades de posicionamento da tela</span><span class="sxs-lookup"><span data-stu-id="efedc-106">Get or Set Canvas Positioning Properties</span></span>](how-to-get-or-set-canvas-positioning-properties.md)  
+ [<span data-ttu-id="efedc-107">Criar e usar uma tela</span><span class="sxs-lookup"><span data-stu-id="efedc-107">Create and Use a Canvas</span></span>](how-to-create-and-use-a-canvas.md)  
+ [<span data-ttu-id="efedc-108">Usar as propriedades anexadas da tela para posicionar elementos filho</span><span class="sxs-lookup"><span data-stu-id="efedc-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [<span data-ttu-id="efedc-109">Redimensionar uma tela usando um elevador</span><span class="sxs-lookup"><span data-stu-id="efedc-109">Resize a Canvas by Using a Thumb</span></span>](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
-## <a name="reference"></a><span data-ttu-id="8e4c7-110">Referência</span><span class="sxs-lookup"><span data-stu-id="8e4c7-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="efedc-110">Referência</span><span class="sxs-lookup"><span data-stu-id="efedc-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -39,9 +39,9 @@ ms.locfileid: "33550947"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="8e4c7-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="8e4c7-111">Related Sections</span></span>  
- [<span data-ttu-id="8e4c7-112">Layout</span><span class="sxs-lookup"><span data-stu-id="8e4c7-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="efedc-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="efedc-111">Related Sections</span></span>  
+ [<span data-ttu-id="efedc-112">Layout</span><span class="sxs-lookup"><span data-stu-id="efedc-112">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="8e4c7-113">Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF</span><span class="sxs-lookup"><span data-stu-id="8e4c7-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="efedc-113">Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF</span><span class="sxs-lookup"><span data-stu-id="efedc-113">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="8e4c7-114">Visão geral de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="8e4c7-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="efedc-114">Visão geral de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="efedc-114">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

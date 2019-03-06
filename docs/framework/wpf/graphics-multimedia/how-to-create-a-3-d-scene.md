@@ -8,34 +8,34 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 23e01934eac0d9e1ea9fb5fbbbc5d8c9d8aabbc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c9aec78bdda4f9f122b6dbefe0956ba649adf22
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494349"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370742"
 ---
-# <a name="how-to-create-a-3-d-scene"></a><span data-ttu-id="cff13-102">Como: Criar uma cena 3D</span><span class="sxs-lookup"><span data-stu-id="cff13-102">How to: Create a 3-D Scene</span></span>
-<span data-ttu-id="cff13-103">Este exemplo mostra como criar um objeto 3D parecido com uma folha de papel que foi girada.</span><span class="sxs-lookup"><span data-stu-id="cff13-103">This example shows how to create a 3-D object that looks like a flat sheet of paper which has been rotated.</span></span> <span data-ttu-id="cff13-104">Um <xref:System.Windows.Controls.Viewport3D> juntamente com os seguintes componentes são usados para criar esta cena 3D simples:</span><span class="sxs-lookup"><span data-stu-id="cff13-104">A <xref:System.Windows.Controls.Viewport3D> along with the following components are used to create this simple 3-D scene:</span></span>  
+# <a name="how-to-create-a-3-d-scene"></a><span data-ttu-id="b24b8-102">Como: Criar uma cena 3D</span><span class="sxs-lookup"><span data-stu-id="b24b8-102">How to: Create a 3-D Scene</span></span>
+<span data-ttu-id="b24b8-103">Este exemplo mostra como criar um objeto 3D parecido com uma folha de papel que foi girada.</span><span class="sxs-lookup"><span data-stu-id="b24b8-103">This example shows how to create a 3-D object that looks like a flat sheet of paper which has been rotated.</span></span> <span data-ttu-id="b24b8-104">Um <xref:System.Windows.Controls.Viewport3D> juntamente com os seguintes componentes são usados para criar esta cena 3D simples:</span><span class="sxs-lookup"><span data-stu-id="b24b8-104">A <xref:System.Windows.Controls.Viewport3D> along with the following components are used to create this simple 3-D scene:</span></span>  
   
--   <span data-ttu-id="cff13-105">Uma câmera é criada usando um <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span><span class="sxs-lookup"><span data-stu-id="cff13-105">A camera is created using a <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="cff13-106">A câmera especifica qual parte da cena 3D é visível.</span><span class="sxs-lookup"><span data-stu-id="cff13-106">The camera specifies what part of the 3-D scene is viewable.</span></span>  
+-   <span data-ttu-id="b24b8-105">Uma câmera é criada usando um <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span><span class="sxs-lookup"><span data-stu-id="b24b8-105">A camera is created using a <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="b24b8-106">A câmera especifica qual parte da cena 3D é visível.</span><span class="sxs-lookup"><span data-stu-id="b24b8-106">The camera specifies what part of the 3-D scene is viewable.</span></span>  
   
--   <span data-ttu-id="cff13-107">Uma malha é criada para especificar a forma do objeto 3D (folha de papel) usando o <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> propriedade de <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span><span class="sxs-lookup"><span data-stu-id="cff13-107">A mesh is created to specify the shape of 3-D object (sheet of paper) using the <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> property of <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
+-   <span data-ttu-id="b24b8-107">Uma malha é criada para especificar a forma do objeto 3D (folha de papel) usando o <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> propriedade de <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span><span class="sxs-lookup"><span data-stu-id="b24b8-107">A mesh is created to specify the shape of 3-D object (sheet of paper) using the <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> property of <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
   
--   <span data-ttu-id="cff13-108">Um material é especificado para ser exibido na superfície do objeto (gradiente linear neste exemplo) usando o <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propriedade de <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span><span class="sxs-lookup"><span data-stu-id="cff13-108">A material is specified to be displayed on the surface of the object (linear gradient in this sample) using the <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> property of <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
+-   <span data-ttu-id="b24b8-108">Um material é especificado para ser exibido na superfície do objeto (gradiente linear neste exemplo) usando o <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propriedade de <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span><span class="sxs-lookup"><span data-stu-id="b24b8-108">A material is specified to be displayed on the surface of the object (linear gradient in this sample) using the <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> property of <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
   
--   <span data-ttu-id="cff13-109">A luz é criada para brilhar sobre o objeto usando <xref:System.Windows.Media.Media3D.DirectionalLight>.</span><span class="sxs-lookup"><span data-stu-id="cff13-109">A light is created to shine on the object using <xref:System.Windows.Media.Media3D.DirectionalLight>.</span></span>  
+-   <span data-ttu-id="b24b8-109">A luz é criada para brilhar sobre o objeto usando <xref:System.Windows.Media.Media3D.DirectionalLight>.</span><span class="sxs-lookup"><span data-stu-id="b24b8-109">A light is created to shine on the object using <xref:System.Windows.Media.Media3D.DirectionalLight>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cff13-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="cff13-110">Example</span></span>  
- <span data-ttu-id="cff13-111">O código a seguir mostra como criar uma cena 3D em XAML.</span><span class="sxs-lookup"><span data-stu-id="cff13-111">The code below shows how to create a 3-D scene in XAML.</span></span>  
+## <a name="example"></a><span data-ttu-id="b24b8-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b24b8-110">Example</span></span>  
+ <span data-ttu-id="b24b8-111">O código a seguir mostra como criar uma cena 3D em XAML.</span><span class="sxs-lookup"><span data-stu-id="b24b8-111">The code below shows how to create a 3-D scene in XAML.</span></span>  
   
- [!code-xaml[3DGallery_snip#Basic3DShapeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/Basic3DShapeExample.xaml#basic3dshapeexamplewholepage)]  
+ [!code-xaml[3DGallery_snip#Basic3DShapeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/Basic3DShapeExample.xaml#basic3dshapeexamplewholepage)]  
   
-## <a name="example"></a><span data-ttu-id="cff13-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="cff13-112">Example</span></span>  
- <span data-ttu-id="cff13-113">O código a seguir mostra como criar a mesma cena 3D em código procedural.</span><span class="sxs-lookup"><span data-stu-id="cff13-113">The code below shows how to create the same 3-D scene in procedural code.</span></span>  
+## <a name="example"></a><span data-ttu-id="b24b8-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b24b8-112">Example</span></span>  
+ <span data-ttu-id="b24b8-113">O código a seguir mostra como criar a mesma cena 3D em código procedural.</span><span class="sxs-lookup"><span data-stu-id="b24b8-113">The code below shows how to create the same 3-D scene in procedural code.</span></span>  
   
- [!code-csharp[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexamplewholepage)]
- [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
+ [!code-csharp[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexamplewholepage)]
+ [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="cff13-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cff13-114">See also</span></span>
-- [<span data-ttu-id="cff13-115">Visão geral de elementos gráficos 3D</span><span class="sxs-lookup"><span data-stu-id="cff13-115">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b24b8-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b24b8-114">See also</span></span>
+- [<span data-ttu-id="b24b8-115">Visão geral de elementos gráficos 3D</span><span class="sxs-lookup"><span data-stu-id="b24b8-115">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
