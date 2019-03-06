@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554402"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353979"
 ---
-# <a name="slider"></a><span data-ttu-id="1a838-102">Controle deslizante</span><span class="sxs-lookup"><span data-stu-id="1a838-102">Slider</span></span>
-<span data-ttu-id="1a838-103">O <xref:System.Windows.Controls.Slider> permite que você seleciona um intervalo de valores movendo um <xref:System.Windows.Controls.Primitives.Thumb> ao longo de um <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="1a838-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
+# <a name="slider"></a><span data-ttu-id="5f41a-102">Controle deslizante</span><span class="sxs-lookup"><span data-stu-id="5f41a-102">Slider</span></span>
+<span data-ttu-id="5f41a-103">O <xref:System.Windows.Controls.Slider> permite que você seleciona um intervalo de valores movendo um <xref:System.Windows.Controls.Primitives.Thumb> ao longo de um <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="5f41a-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
   
- <span data-ttu-id="1a838-104">A ilustração a seguir mostra um exemplo de um horizontal <xref:System.Windows.Controls.Slider> controle.</span><span class="sxs-lookup"><span data-stu-id="1a838-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
+ <span data-ttu-id="5f41a-104">A ilustração a seguir mostra um exemplo de um horizontal <xref:System.Windows.Controls.Slider> controle.</span><span class="sxs-lookup"><span data-stu-id="5f41a-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
   
- <span data-ttu-id="1a838-105">![Controle deslizante horizontal e marcas de escala](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="1a838-105">![Horizontal slider with tick marks](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
+ <span data-ttu-id="5f41a-105">![Controle deslizante horizontal com marcas de escala](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="5f41a-105">![Horizontal slider with tick marks](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1a838-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="1a838-106">In This Section</span></span>  
- [<span data-ttu-id="1a838-107">Personalizar os tiques em um controle deslizante</span><span class="sxs-lookup"><span data-stu-id="1a838-107">Customize the Ticks on a Slider</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5f41a-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="5f41a-106">In This Section</span></span>  
+ [<span data-ttu-id="5f41a-107">Personalizar os tiques em um controle deslizante</span><span class="sxs-lookup"><span data-stu-id="5f41a-107">Customize the Ticks on a Slider</span></span>](how-to-customize-the-ticks-on-a-slider.md)  
   
-## <a name="reference"></a><span data-ttu-id="1a838-108">Referência</span><span class="sxs-lookup"><span data-stu-id="1a838-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5f41a-108">Referência</span><span class="sxs-lookup"><span data-stu-id="5f41a-108">Reference</span></span>  
  <xref:System.Windows.Controls.Slider>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>

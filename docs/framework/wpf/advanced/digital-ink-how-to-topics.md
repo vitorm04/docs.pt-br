@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538868"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355579"
 ---
-# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="a7d93-102">Tópicos explicativos de tinta digital</span><span class="sxs-lookup"><span data-stu-id="a7d93-102">Digital Ink How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="a7d93-103">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="a7d93-103">In This Section</span></span>  
- [<span data-ttu-id="a7d93-104">Selecionar tinta em um controle personalizado</span><span class="sxs-lookup"><span data-stu-id="a7d93-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [<span data-ttu-id="a7d93-105">Adicionar dados personalizados aos dados de tinta</span><span class="sxs-lookup"><span data-stu-id="a7d93-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [<span data-ttu-id="a7d93-106">Apagar tinta em um controle personalizado</span><span class="sxs-lookup"><span data-stu-id="a7d93-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [<span data-ttu-id="a7d93-107">Reconhecer gestos de aplicativo</span><span class="sxs-lookup"><span data-stu-id="a7d93-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [<span data-ttu-id="a7d93-108">Arrastar e soltar tinta</span><span class="sxs-lookup"><span data-stu-id="a7d93-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [<span data-ttu-id="a7d93-109">Associar dados a um InkCanvas</span><span class="sxs-lookup"><span data-stu-id="a7d93-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [<span data-ttu-id="a7d93-110">Analisar tinta com dicas de análise</span><span class="sxs-lookup"><span data-stu-id="a7d93-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [<span data-ttu-id="a7d93-111">Girar tinta</span><span class="sxs-lookup"><span data-stu-id="a7d93-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [<span data-ttu-id="a7d93-112">Desabilitar o RealTimeStylus para aplicativos WPF</span><span class="sxs-lookup"><span data-stu-id="a7d93-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="8dcdf-102">Tópicos explicativos de tinta digital</span><span class="sxs-lookup"><span data-stu-id="8dcdf-102">Digital Ink How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="8dcdf-103">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8dcdf-103">In This Section</span></span>  
+ [<span data-ttu-id="8dcdf-104">Selecionar tinta em um controle personalizado</span><span class="sxs-lookup"><span data-stu-id="8dcdf-104">Select Ink from a Custom Control</span></span>](how-to-select-ink-from-a-custom-control.md)  
+  [<span data-ttu-id="8dcdf-105">Adicionar dados personalizados aos dados de tinta</span><span class="sxs-lookup"><span data-stu-id="8dcdf-105">Add Custom Data to Ink Data</span></span>](how-to-add-custom-data-to-ink-data.md)  
+  [<span data-ttu-id="8dcdf-106">Apagar tinta em um controle personalizado</span><span class="sxs-lookup"><span data-stu-id="8dcdf-106">Erase Ink on a Custom Control</span></span>](how-to-erase-ink-on-a-custom-control.md)  
+  [<span data-ttu-id="8dcdf-107">Reconhecer gestos de aplicativo</span><span class="sxs-lookup"><span data-stu-id="8dcdf-107">Recognize Application Gestures</span></span>](how-to-recognize-application-gestures.md)  
+  [<span data-ttu-id="8dcdf-108">Arrastar e soltar tinta</span><span class="sxs-lookup"><span data-stu-id="8dcdf-108">Drag and Drop Ink</span></span>](how-to-drag-and-drop-ink.md)  
+  [<span data-ttu-id="8dcdf-109">Associar dados a um InkCanvas</span><span class="sxs-lookup"><span data-stu-id="8dcdf-109">Data Bind to an InkCanvas</span></span>](how-to-data-bind-to-an-inkcanvas.md)  
+  [<span data-ttu-id="8dcdf-110">Analisar tinta com dicas de análise</span><span class="sxs-lookup"><span data-stu-id="8dcdf-110">Analyze Ink with Analysis Hints</span></span>](how-to-analyze-ink-with-analysis-hints.md)  
+  [<span data-ttu-id="8dcdf-111">Girar tinta</span><span class="sxs-lookup"><span data-stu-id="8dcdf-111">Rotate Ink</span></span>](how-to-rotate-ink.md)  
+  [<span data-ttu-id="8dcdf-112">Desabilitar o RealTimeStylus para aplicativos WPF</span><span class="sxs-lookup"><span data-stu-id="8dcdf-112">Disable the RealTimeStylus for WPF Applications</span></span>](disable-the-realtimestylus-for-wpf-applications.md)

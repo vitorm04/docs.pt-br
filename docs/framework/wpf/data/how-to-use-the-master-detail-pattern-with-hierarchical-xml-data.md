@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
-ms.openlocfilehash: 4beb2377fa9740e5103df0a82cfda9bd5f6f4769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b1ed34fe363f44a3a9eb80dc56d721868329717
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550057"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378100"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a><span data-ttu-id="a4fb1-102">Como: Usar o padrão de detalhes mestre com dados XML hierárquicos</span><span class="sxs-lookup"><span data-stu-id="a4fb1-102">How to: Use the Master-Detail Pattern with Hierarchical XML Data</span></span>
-<span data-ttu-id="a4fb1-103">Este exemplo mostra como implementar o cenário mestre / detalhes com [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados.</span><span class="sxs-lookup"><span data-stu-id="a4fb1-103">This example shows how to implement the master-detail scenario with [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data.</span></span>  
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a><span data-ttu-id="f7b66-102">Como: Usar o padrão de detalhes mestre com dados XML hierárquicos</span><span class="sxs-lookup"><span data-stu-id="f7b66-102">How to: Use the Master-Detail Pattern with Hierarchical XML Data</span></span>
+<span data-ttu-id="f7b66-103">Este exemplo mostra como implementar o cenário mestre / detalhes com [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados.</span><span class="sxs-lookup"><span data-stu-id="f7b66-103">This example shows how to implement the master-detail scenario with [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a4fb1-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a4fb1-104">Example</span></span>  
- <span data-ttu-id="a4fb1-105">Este exemplo é o [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] versão de dados de exemplo discutido no [usar o padrão de detalhes mestre com dados hierárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md).</span><span class="sxs-lookup"><span data-stu-id="a4fb1-105">This example is the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data version of the example discussed in [Use the Master-Detail Pattern with Hierarchical Data](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md).</span></span> <span data-ttu-id="a4fb1-106">Neste exemplo, os dados são do arquivo `League.xml`.</span><span class="sxs-lookup"><span data-stu-id="a4fb1-106">In this example, the data is from the file `League.xml`.</span></span> <span data-ttu-id="a4fb1-107">Observe como o terceiro <xref:System.Windows.Controls.ListBox> controle rastreia as alterações de seleção na segunda <xref:System.Windows.Controls.ListBox> fazendo a ligação com seu <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="a4fb1-107">Note how the third <xref:System.Windows.Controls.ListBox> control tracks selection changes in the second <xref:System.Windows.Controls.ListBox> by binding to its <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="f7b66-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f7b66-104">Example</span></span>  
+ <span data-ttu-id="f7b66-105">Este exemplo é o [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] versão de dados de exemplo discutido no [usar o padrão de detalhes mestre com dados hierárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).</span><span class="sxs-lookup"><span data-stu-id="f7b66-105">This example is the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data version of the example discussed in [Use the Master-Detail Pattern with Hierarchical Data](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).</span></span> <span data-ttu-id="f7b66-106">Neste exemplo, os dados são do arquivo `League.xml`.</span><span class="sxs-lookup"><span data-stu-id="f7b66-106">In this example, the data is from the file `League.xml`.</span></span> <span data-ttu-id="f7b66-107">Observe como o terceiro <xref:System.Windows.Controls.ListBox> controle rastreia as alterações de seleção na segunda <xref:System.Windows.Controls.ListBox> fazendo a ligação com seu <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="f7b66-107">Note how the third <xref:System.Windows.Controls.ListBox> control tracks selection changes in the second <xref:System.Windows.Controls.ListBox> by binding to its <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> property.</span></span>  
   
- [!code-xaml[MasterDetailXml#HowTo1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto1)]  
-[!code-xaml[MasterDetailXml#HowTo2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
+ [!code-xaml[MasterDetailXml#HowTo1](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto1)]  
+[!code-xaml[MasterDetailXml#HowTo2](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
   
-## <a name="see-also"></a><span data-ttu-id="a4fb1-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a4fb1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7b66-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f7b66-108">See also</span></span>
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [<span data-ttu-id="a4fb1-109">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="a4fb1-109">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [<span data-ttu-id="f7b66-109">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="f7b66-109">How-to Topics</span></span>](data-binding-how-to-topics.md)

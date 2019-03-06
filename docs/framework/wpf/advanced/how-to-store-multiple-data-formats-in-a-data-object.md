@@ -9,24 +9,24 @@ helpviewer_keywords:
 - DataFormats class [WPF], storing multiple formats
 - drag-and-drop [WPF], storing multiple formats
 ms.assetid: 941ace29-29c4-4c26-b75b-ea7d06aa0d69
-ms.openlocfilehash: 33415dd3cb1a05263cf9fb9ecafcbc857d364d57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e261f3f00c28a0a15343e2691048ad022f1be7c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555668"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351067"
 ---
-# <a name="how-to-store-multiple-data-formats-in-a-data-object"></a><span data-ttu-id="c6168-102">Como: Armazenar vários formatos de dados em um objeto de dados</span><span class="sxs-lookup"><span data-stu-id="c6168-102">How to: Store Multiple Data Formats in a Data Object</span></span>
-<span data-ttu-id="c6168-103">O exemplo a seguir mostra como usar o <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> método para adicionar dados a um objeto de dados em vários formatos.</span><span class="sxs-lookup"><span data-stu-id="c6168-103">The following example shows how to use the <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> method to add data to a data object in multiple formats.</span></span>  
+# <a name="how-to-store-multiple-data-formats-in-a-data-object"></a><span data-ttu-id="60b46-102">Como: Armazenar vários formatos de dados em um objeto de dados</span><span class="sxs-lookup"><span data-stu-id="60b46-102">How to: Store Multiple Data Formats in a Data Object</span></span>
+<span data-ttu-id="60b46-103">O exemplo a seguir mostra como usar o <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> método para adicionar dados a um objeto de dados em vários formatos.</span><span class="sxs-lookup"><span data-stu-id="60b46-103">The following example shows how to use the <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> method to add data to a data object in multiple formats.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c6168-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c6168-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="60b46-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="60b46-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="c6168-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="c6168-105">Description</span></span>  
+### <a name="description"></a><span data-ttu-id="60b46-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="60b46-105">Description</span></span>  
   
-### <a name="code"></a><span data-ttu-id="c6168-106">Código</span><span class="sxs-lookup"><span data-stu-id="c6168-106">Code</span></span>  
- [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_storemultipleformats)]
- [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_storemultipleformats)]  
+### <a name="code"></a><span data-ttu-id="60b46-106">Código</span><span class="sxs-lookup"><span data-stu-id="60b46-106">Code</span></span>  
+ [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_storemultipleformats)]
+ [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_storemultipleformats)]  
   
-## <a name="see-also"></a><span data-ttu-id="c6168-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c6168-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60b46-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="60b46-107">See also</span></span>
 - <xref:System.Windows.IDataObject>
-- [<span data-ttu-id="c6168-108">Visão geral de arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="c6168-108">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+- [<span data-ttu-id="60b46-108">Visão geral de arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="60b46-108">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)
