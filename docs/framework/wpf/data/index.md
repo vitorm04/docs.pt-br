@@ -9,14 +9,14 @@ helpviewer_keywords:
   - 'data [WPF]'
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 ---
-# <a name="data"></a><span data-ttu-id="1c6c6-102">Dados</span><span class="sxs-lookup"><span data-stu-id="1c6c6-102">Data</span></span>
-<span data-ttu-id="1c6c6-103">A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados.</span><span class="sxs-lookup"><span data-stu-id="1c6c6-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="1c6c6-104">Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e XML.</span><span class="sxs-lookup"><span data-stu-id="1c6c6-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="1c6c6-105">também fornece um mecanismo para a transferência de dados por meio de operações do tipo arrastar e soltar.</span><span class="sxs-lookup"><span data-stu-id="1c6c6-105">also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
+# <a name="data"></a><span data-ttu-id="fa6f7-102">Dados</span><span class="sxs-lookup"><span data-stu-id="fa6f7-102">Data</span></span>
+<span data-ttu-id="fa6f7-103">A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados.</span><span class="sxs-lookup"><span data-stu-id="fa6f7-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="fa6f7-104">Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e XML.</span><span class="sxs-lookup"><span data-stu-id="fa6f7-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="fa6f7-105">também fornece um mecanismo para a transferência de dados por meio de operações do tipo arrastar e soltar.</span><span class="sxs-lookup"><span data-stu-id="fa6f7-105">also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1c6c6-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="1c6c6-106">In This Section</span></span>  
- [<span data-ttu-id="1c6c6-107">Associação de dados</span><span class="sxs-lookup"><span data-stu-id="1c6c6-107">Data Binding</span></span>](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [<span data-ttu-id="1c6c6-108">Arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="1c6c6-108">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fa6f7-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="fa6f7-106">In This Section</span></span>  
+ [<span data-ttu-id="fa6f7-107">Associação de dados</span><span class="sxs-lookup"><span data-stu-id="fa6f7-107">Data Binding</span></span>](data-binding-wpf.md)  
+ [<span data-ttu-id="fa6f7-108">Arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="fa6f7-108">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a><span data-ttu-id="1c6c6-109">Referência</span><span class="sxs-lookup"><span data-stu-id="1c6c6-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fa6f7-109">Referência</span><span class="sxs-lookup"><span data-stu-id="fa6f7-109">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -25,13 +25,13 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="1c6c6-110">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="1c6c6-110">Related Sections</span></span>  
- [<span data-ttu-id="1c6c6-111">Controles</span><span class="sxs-lookup"><span data-stu-id="1c6c6-111">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="fa6f7-110">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="fa6f7-110">Related Sections</span></span>  
+ [<span data-ttu-id="fa6f7-111">Controles</span><span class="sxs-lookup"><span data-stu-id="fa6f7-111">Controls</span></span>](../controls/index.md)  
   
- [<span data-ttu-id="1c6c6-112">Estilo e modelagem</span><span class="sxs-lookup"><span data-stu-id="1c6c6-112">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="fa6f7-112">Estilo e modelagem</span><span class="sxs-lookup"><span data-stu-id="fa6f7-112">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
   
- [<span data-ttu-id="1c6c6-113">Associação de dados</span><span class="sxs-lookup"><span data-stu-id="1c6c6-113">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="fa6f7-113">Associação de dados</span><span class="sxs-lookup"><span data-stu-id="fa6f7-113">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1c6c6-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1c6c6-114">See also</span></span>
-- [<span data-ttu-id="1c6c6-115">Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF</span><span class="sxs-lookup"><span data-stu-id="1c6c6-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [<span data-ttu-id="1c6c6-116">Passo a passo: Cache de dados de aplicativo em um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="1c6c6-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+## <a name="see-also"></a><span data-ttu-id="fa6f7-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fa6f7-114">See also</span></span>
+- [<span data-ttu-id="fa6f7-115">Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF</span><span class="sxs-lookup"><span data-stu-id="fa6f7-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [<span data-ttu-id="fa6f7-116">Passo a passo: Cache de dados de aplicativo em um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="fa6f7-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

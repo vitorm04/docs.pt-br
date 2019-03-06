@@ -7,37 +7,37 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: e0cc5d73f9b9f15fc02bf20a70c84da1a7c535c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 874724584b44c17ff6c01331295cfa1a60978d54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671662"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360337"
 ---
-# <a name="how-to-make-a-freezable-read-only"></a><span data-ttu-id="2b910-102">Como: Tornar um congelável somente leitura</span><span class="sxs-lookup"><span data-stu-id="2b910-102">How to: Make a Freezable Read-Only</span></span>
-<span data-ttu-id="2b910-103">Este exemplo mostra como fazer uma <xref:System.Windows.Freezable> somente leitura, chamando seu <xref:System.Windows.Freezable.Freeze%2A> método.</span><span class="sxs-lookup"><span data-stu-id="2b910-103">This example shows how to make a <xref:System.Windows.Freezable> read-only by calling its <xref:System.Windows.Freezable.Freeze%2A> method.</span></span>  
+# <a name="how-to-make-a-freezable-read-only"></a><span data-ttu-id="41bb4-102">Como: Tornar um congelável somente leitura</span><span class="sxs-lookup"><span data-stu-id="41bb4-102">How to: Make a Freezable Read-Only</span></span>
+<span data-ttu-id="41bb4-103">Este exemplo mostra como fazer uma <xref:System.Windows.Freezable> somente leitura, chamando seu <xref:System.Windows.Freezable.Freeze%2A> método.</span><span class="sxs-lookup"><span data-stu-id="41bb4-103">This example shows how to make a <xref:System.Windows.Freezable> read-only by calling its <xref:System.Windows.Freezable.Freeze%2A> method.</span></span>  
   
- <span data-ttu-id="2b910-104">Você não é possível congelar um <xref:System.Windows.Freezable> do objeto se qualquer uma das seguintes condições for `true` sobre o objeto:</span><span class="sxs-lookup"><span data-stu-id="2b910-104">You cannot freeze a <xref:System.Windows.Freezable> object if any one of the following conditions is `true` about the object:</span></span>  
+ <span data-ttu-id="41bb4-104">Você não é possível congelar um <xref:System.Windows.Freezable> do objeto se qualquer uma das seguintes condições for `true` sobre o objeto:</span><span class="sxs-lookup"><span data-stu-id="41bb4-104">You cannot freeze a <xref:System.Windows.Freezable> object if any one of the following conditions is `true` about the object:</span></span>  
   
--   <span data-ttu-id="2b910-105">Ele tem propriedades animadas ou associadas a dados.</span><span class="sxs-lookup"><span data-stu-id="2b910-105">It has animated or data bound properties.</span></span>  
+-   <span data-ttu-id="41bb4-105">Ele tem propriedades animadas ou associadas a dados.</span><span class="sxs-lookup"><span data-stu-id="41bb4-105">It has animated or data bound properties.</span></span>  
   
--   <span data-ttu-id="2b910-106">Ela tem propriedades que são definidas por um recurso dinâmico.</span><span class="sxs-lookup"><span data-stu-id="2b910-106">It has properties that are set by a dynamic resource.</span></span> <span data-ttu-id="2b910-107">Para obter mais informações sobre recursos dinâmicos, consulte o [recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="2b910-107">For more information about dynamic resources, see the [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
+-   <span data-ttu-id="41bb4-106">Ela tem propriedades que são definidas por um recurso dinâmico.</span><span class="sxs-lookup"><span data-stu-id="41bb4-106">It has properties that are set by a dynamic resource.</span></span> <span data-ttu-id="41bb4-107">Para obter mais informações sobre recursos dinâmicos, consulte o [recursos XAML](xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="41bb4-107">For more information about dynamic resources, see the [XAML Resources](xaml-resources.md).</span></span>  
   
--   <span data-ttu-id="2b910-108">Ele contém <xref:System.Windows.Freezable> subobjetos não podem ser congelados.</span><span class="sxs-lookup"><span data-stu-id="2b910-108">It contains <xref:System.Windows.Freezable> sub-objects that cannot be frozen.</span></span>  
+-   <span data-ttu-id="41bb4-108">Ele contém <xref:System.Windows.Freezable> subobjetos não podem ser congelados.</span><span class="sxs-lookup"><span data-stu-id="41bb4-108">It contains <xref:System.Windows.Freezable> sub-objects that cannot be frozen.</span></span>  
   
- <span data-ttu-id="2b910-109">Se essas condições forem `false` para seu <xref:System.Windows.Freezable> objeto e não pretende modificá-lo, considere congelá-lo para obter benefícios de desempenho.</span><span class="sxs-lookup"><span data-stu-id="2b910-109">If these conditions are `false` for your <xref:System.Windows.Freezable> object and you do not intend to modify it, consider freezing it to gain performance benefits.</span></span>  
+ <span data-ttu-id="41bb4-109">Se essas condições forem `false` para seu <xref:System.Windows.Freezable> objeto e não pretende modificá-lo, considere congelá-lo para obter benefícios de desempenho.</span><span class="sxs-lookup"><span data-stu-id="41bb4-109">If these conditions are `false` for your <xref:System.Windows.Freezable> object and you do not intend to modify it, consider freezing it to gain performance benefits.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2b910-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2b910-110">Example</span></span>  
- <span data-ttu-id="2b910-111">O exemplo a seguir congela um <xref:System.Windows.Media.SolidColorBrush>, que é um tipo de <xref:System.Windows.Freezable> objeto.</span><span class="sxs-lookup"><span data-stu-id="2b910-111">The following example freezes a <xref:System.Windows.Media.SolidColorBrush>, which is a type of <xref:System.Windows.Freezable> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="41bb4-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="41bb4-110">Example</span></span>  
+ <span data-ttu-id="41bb4-111">O exemplo a seguir congela um <xref:System.Windows.Media.SolidColorBrush>, que é um tipo de <xref:System.Windows.Freezable> objeto.</span><span class="sxs-lookup"><span data-stu-id="41bb4-111">The following example freezes a <xref:System.Windows.Media.SolidColorBrush>, which is a type of <xref:System.Windows.Freezable> object.</span></span>  
   
- [!code-csharp[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#freezeexample1)]
- [!code-vb[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#freezeexample1)]  
+ [!code-csharp[freezablesample_procedural#FreezeExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#freezeexample1)]
+ [!code-vb[freezablesample_procedural#FreezeExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#freezeexample1)]  
   
- <span data-ttu-id="2b910-112">Para obter mais informações sobre <xref:System.Windows.Freezable> objetos, consulte a [visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="2b910-112">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
+ <span data-ttu-id="41bb4-112">Para obter mais informações sobre <xref:System.Windows.Freezable> objetos, consulte a [visão geral de objetos congeláveis](freezable-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="41bb4-112">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](freezable-objects-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b910-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2b910-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41bb4-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="41bb4-113">See also</span></span>
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
-- [<span data-ttu-id="2b910-114">Visão geral de objetos congeláveis</span><span class="sxs-lookup"><span data-stu-id="2b910-114">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [<span data-ttu-id="2b910-115">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="2b910-115">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+- [<span data-ttu-id="41bb4-114">Visão geral de objetos congeláveis</span><span class="sxs-lookup"><span data-stu-id="41bb4-114">Freezable Objects Overview</span></span>](freezable-objects-overview.md)
+- [<span data-ttu-id="41bb4-115">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="41bb4-115">How-to Topics</span></span>](base-elements-how-to-topics.md)

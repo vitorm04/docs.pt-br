@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: f8a7e9adb8ca7d9e21bbc30a346b12d8b584067a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695793"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357554"
 ---
-# <a name="image"></a><span data-ttu-id="5e78b-102">Image</span><span class="sxs-lookup"><span data-stu-id="5e78b-102">Image</span></span>
-<span data-ttu-id="5e78b-103">O <xref:System.Windows.Controls.Image> elemento é usado para exibir imagens bitmap em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="5e78b-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="0d809-102">Image</span><span class="sxs-lookup"><span data-stu-id="0d809-102">Image</span></span>
+<span data-ttu-id="0d809-103">O <xref:System.Windows.Controls.Image> elemento é usado para exibir imagens bitmap em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="0d809-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5e78b-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="5e78b-104">In This Section</span></span>  
- [<span data-ttu-id="5e78b-105">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="5e78b-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0d809-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="0d809-104">In This Section</span></span>  
+ [<span data-ttu-id="0d809-105">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="0d809-105">How-to Topics</span></span>](image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="5e78b-106">Referência</span><span class="sxs-lookup"><span data-stu-id="5e78b-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0d809-106">Referência</span><span class="sxs-lookup"><span data-stu-id="0d809-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="5e78b-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5e78b-107">See also</span></span>
-- [<span data-ttu-id="5e78b-108">Visão geral da geração de imagens</span><span class="sxs-lookup"><span data-stu-id="5e78b-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="5e78b-109">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="5e78b-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="0d809-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0d809-107">See also</span></span>
+- [<span data-ttu-id="0d809-108">Visão geral da geração de imagens</span><span class="sxs-lookup"><span data-stu-id="0d809-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="0d809-109">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="0d809-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

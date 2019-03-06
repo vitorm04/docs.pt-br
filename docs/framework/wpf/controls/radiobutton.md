@@ -7,22 +7,22 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553917"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365263"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="3faa3-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="3faa3-102">RadioButton</span></span>
-<span data-ttu-id="3faa3-103"><xref:System.Windows.Controls.RadioButton> controles geralmente são agrupados juntos para oferecer aos usuários uma opção única entre várias opções; apenas um botão de cada vez pode ser selecionado.</span><span class="sxs-lookup"><span data-stu-id="3faa3-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="66c54-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="66c54-102">RadioButton</span></span>
+<span data-ttu-id="66c54-103"><xref:System.Windows.Controls.RadioButton> controles geralmente são agrupados juntos para oferecer aos usuários uma única escolha entre várias opções; botão de apenas um por vez pode ser selecionado.</span><span class="sxs-lookup"><span data-stu-id="66c54-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="3faa3-104">A ilustração a seguir mostra um exemplo de um <xref:System.Windows.Controls.RadioButton> controle.</span><span class="sxs-lookup"><span data-stu-id="3faa3-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="66c54-104">A ilustração a seguir mostra um exemplo de um <xref:System.Windows.Controls.RadioButton> controle.</span><span class="sxs-lookup"><span data-stu-id="66c54-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="3faa3-105">![Estados de botão de opção](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="3faa3-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="3faa3-106">RadioButton típico</span><span class="sxs-lookup"><span data-stu-id="3faa3-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="66c54-105">![Estados do botão de rádio](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="66c54-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="66c54-106">Botão de opção típica</span><span class="sxs-lookup"><span data-stu-id="66c54-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="3faa3-107">Referência</span><span class="sxs-lookup"><span data-stu-id="3faa3-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66c54-107">Referência</span><span class="sxs-lookup"><span data-stu-id="66c54-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="3faa3-108">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="3faa3-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="66c54-108">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="66c54-108">Related Sections</span></span>

@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
 ms.openlocfilehash: 657814eb120878cdc71cd7603d0499ff65ca50e8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367083"
 ---
-# <a name="state-of-states"></a><span data-ttu-id="e7cdc-102">\<estado > do \<estados ></span><span class="sxs-lookup"><span data-stu-id="e7cdc-102">\<state> of \<states></span></span>
-<span data-ttu-id="e7cdc-103">Um elemento de configuração que contém o estado da atividade inscrito para que um registro de rastreamento deve ser emitido.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-103">A configuration element that contains the state of the subscribed activity for which a tracking record should be emitted.</span></span>  
+# <a name="state-of-states"></a><span data-ttu-id="474d8-102">\<estado > do \<estados ></span><span class="sxs-lookup"><span data-stu-id="474d8-102">\<state> of \<states></span></span>
+<span data-ttu-id="474d8-103">Um elemento de configuração que contém o estado da atividade inscrito para que um registro de rastreamento deve ser emitido.</span><span class="sxs-lookup"><span data-stu-id="474d8-103">A configuration element that contains the state of the subscribed activity for which a tracking record should be emitted.</span></span>  
   
- <span data-ttu-id="e7cdc-104">Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="e7cdc-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="474d8-104">Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="474d8-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-<span data-ttu-id="e7cdc-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="e7cdc-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="e7cdc-106">\<tracking></span><span class="sxs-lookup"><span data-stu-id="e7cdc-106">\<tracking></span></span>  
-<span data-ttu-id="e7cdc-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="e7cdc-107">\<trackingProfile></span></span>  
-<span data-ttu-id="e7cdc-108">\<workflow></span><span class="sxs-lookup"><span data-stu-id="e7cdc-108">\<workflow></span></span>  
-<span data-ttu-id="e7cdc-109">\<activityStateQueries></span><span class="sxs-lookup"><span data-stu-id="e7cdc-109">\<activityStateQueries></span></span>  
-<span data-ttu-id="e7cdc-110">\<activityStateQuery></span><span class="sxs-lookup"><span data-stu-id="e7cdc-110">\<activityStateQuery></span></span>  
-<span data-ttu-id="e7cdc-111">\<states></span><span class="sxs-lookup"><span data-stu-id="e7cdc-111">\<states></span></span>  
-<span data-ttu-id="e7cdc-112">\<state></span><span class="sxs-lookup"><span data-stu-id="e7cdc-112">\<state></span></span>  
+<span data-ttu-id="474d8-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="474d8-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="474d8-106">\<tracking></span><span class="sxs-lookup"><span data-stu-id="474d8-106">\<tracking></span></span>  
+<span data-ttu-id="474d8-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="474d8-107">\<trackingProfile></span></span>  
+<span data-ttu-id="474d8-108">\<workflow></span><span class="sxs-lookup"><span data-stu-id="474d8-108">\<workflow></span></span>  
+<span data-ttu-id="474d8-109">\<activityStateQueries></span><span class="sxs-lookup"><span data-stu-id="474d8-109">\<activityStateQueries></span></span>  
+<span data-ttu-id="474d8-110">\<activityStateQuery></span><span class="sxs-lookup"><span data-stu-id="474d8-110">\<activityStateQuery></span></span>  
+<span data-ttu-id="474d8-111">\<states></span><span class="sxs-lookup"><span data-stu-id="474d8-111">\<states></span></span>  
+<span data-ttu-id="474d8-112">\<state></span><span class="sxs-lookup"><span data-stu-id="474d8-112">\<state></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7cdc-113">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e7cdc-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="474d8-113">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="474d8-113">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -41,26 +41,26 @@ ms.locfileid: "55271426"
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e7cdc-114">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="e7cdc-114">Attributes and Elements</span></span>  
- <span data-ttu-id="e7cdc-115">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="474d8-114">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="474d8-114">Attributes and Elements</span></span>  
+ <span data-ttu-id="474d8-115">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="474d8-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e7cdc-116">Atributos</span><span class="sxs-lookup"><span data-stu-id="e7cdc-116">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="474d8-116">Atributos</span><span class="sxs-lookup"><span data-stu-id="474d8-116">Attributes</span></span>  
   
-|<span data-ttu-id="e7cdc-117">Atributo</span><span class="sxs-lookup"><span data-stu-id="e7cdc-117">Attribute</span></span>|<span data-ttu-id="e7cdc-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="e7cdc-118">Description</span></span>|  
+|<span data-ttu-id="474d8-117">Atributo</span><span class="sxs-lookup"><span data-stu-id="474d8-117">Attribute</span></span>|<span data-ttu-id="474d8-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="474d8-118">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="e7cdc-119">name</span><span class="sxs-lookup"><span data-stu-id="e7cdc-119">name</span></span>|<span data-ttu-id="e7cdc-120">Uma cadeia de caracteres que especifica o estado da atividade inscrito para que um registro de rastreamento deve ser emitido.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-120">A string that specifies the state of the subscribed activity for which a tracking record should be emitted.</span></span>|  
+|<span data-ttu-id="474d8-119">name</span><span class="sxs-lookup"><span data-stu-id="474d8-119">name</span></span>|<span data-ttu-id="474d8-120">Uma cadeia de caracteres que especifica o estado da atividade inscrito para que um registro de rastreamento deve ser emitido.</span><span class="sxs-lookup"><span data-stu-id="474d8-120">A string that specifies the state of the subscribed activity for which a tracking record should be emitted.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="e7cdc-121">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="e7cdc-121">Child Elements</span></span>  
- <span data-ttu-id="e7cdc-122">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="474d8-121">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="474d8-121">Child Elements</span></span>  
+ <span data-ttu-id="474d8-122">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="474d8-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="e7cdc-123">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="e7cdc-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="474d8-123">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="474d8-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="e7cdc-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="e7cdc-124">Element</span></span>|<span data-ttu-id="e7cdc-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="e7cdc-125">Description</span></span>|  
+|<span data-ttu-id="474d8-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="474d8-124">Element</span></span>|<span data-ttu-id="474d8-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="474d8-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e7cdc-126">\<states></span><span class="sxs-lookup"><span data-stu-id="e7cdc-126">\<states></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states-of-activitystatequery.md)|<span data-ttu-id="e7cdc-127">Uma coleção de elementos de configuração que contêm os estados da atividade inscrito para que um registro de rastreamento deve ser emitido.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-127">A collection of configuration elements that contain the states of the subscribed activity for which a tracking record should be emitted.</span></span>|  
+|[<span data-ttu-id="474d8-126">\<states></span><span class="sxs-lookup"><span data-stu-id="474d8-126">\<states></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states-of-activitystatequery.md)|<span data-ttu-id="474d8-127">Uma coleção de elementos de configuração que contêm os estados da atividade inscrito para que um registro de rastreamento deve ser emitido.</span><span class="sxs-lookup"><span data-stu-id="474d8-127">A collection of configuration elements that contain the states of the subscribed activity for which a tracking record should be emitted.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e7cdc-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="e7cdc-128">Remarks</span></span>  
- <span data-ttu-id="e7cdc-129">Um recurso exclusivo de um ActivityStateQuery é a capacidade de extrair dados para controlar a execução de um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-129">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="e7cdc-130">Isso fornece contexto adicional ao acessar o rastreamento registra pós execução.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-130">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="e7cdc-131">Você pode usar o [ \<argumentos >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) e [ \<estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elementos a extrair qualquer variável ou argumento de qualquer atividade em um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-131">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.</span></span> <span data-ttu-id="e7cdc-132">O exemplo a seguir mostra uma consulta de estado da atividade que extrai variáveis e argumentos quando `Closed` de atividade que controla o registro é emitida.</span><span class="sxs-lookup"><span data-stu-id="e7cdc-132">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="e7cdc-133">Argumentos e variáveis podem ser extraídos somente com um ActivityStateRecord e são assinados dentro de um controle de perfil usando [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span><span class="sxs-lookup"><span data-stu-id="e7cdc-133">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="474d8-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="474d8-128">Remarks</span></span>  
+ <span data-ttu-id="474d8-129">Um recurso exclusivo de um ActivityStateQuery é a capacidade de extrair dados para controlar a execução de um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="474d8-129">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="474d8-130">Isso fornece contexto adicional ao acessar o rastreamento registra pós execução.</span><span class="sxs-lookup"><span data-stu-id="474d8-130">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="474d8-131">Você pode usar o [ \<argumentos >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) e [ \<estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elementos a extrair qualquer variável ou argumento de qualquer atividade em um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="474d8-131">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.</span></span> <span data-ttu-id="474d8-132">O exemplo a seguir mostra uma consulta de estado da atividade que extrai variáveis e argumentos quando `Closed` de atividade que controla o registro é emitida.</span><span class="sxs-lookup"><span data-stu-id="474d8-132">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="474d8-133">Argumentos e variáveis podem ser extraídos somente com um ActivityStateRecord e são assinados dentro de um controle de perfil usando [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span><span class="sxs-lookup"><span data-stu-id="474d8-133">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -76,8 +76,8 @@ ms.locfileid: "55271426"
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e7cdc-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e7cdc-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="474d8-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="474d8-134">See also</span></span>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="e7cdc-135">Acompanhamento e rastreamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="e7cdc-135">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="e7cdc-136">Acompanhando perfis</span><span class="sxs-lookup"><span data-stu-id="e7cdc-136">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="474d8-135">Acompanhamento e rastreamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="474d8-135">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="474d8-136">Acompanhando perfis</span><span class="sxs-lookup"><span data-stu-id="474d8-136">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
