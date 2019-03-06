@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580779"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376852"
 ---
 # <a name="visual-layer-programming"></a>Programação de camada do visual
 O <xref:System.Windows.Media.Visual> objeto é um núcleo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objeto, cuja função principal é fornecer suporte a renderização. Controles de interface do usuário, como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBox>, derivam o <xref:System.Windows.Media.Visual> de classe e usá-lo para persistir seus dados de renderização.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Teste de clique na camada visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [Usando objetos DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Tutorial: Hospedando objetos visuais em um aplicativo Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+ [Teste de clique na camada visual](hit-testing-in-the-visual-layer.md)  
+ [Usando objetos DrawingVisual](using-drawingvisual-objects.md)  
+ [Tutorial: Hospedando objetos visuais em um aplicativo Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [Tópicos de instruções](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)
+- [Elementos gráficos e multimídia](index.md)

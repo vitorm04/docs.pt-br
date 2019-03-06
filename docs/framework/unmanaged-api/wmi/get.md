@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e996a299de7b365a1513d5b1fb7ca0e758f6005b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7534d760f902f80d42c6c20c57a34d52012997a7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966054"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369650"
 ---
 # <a name="get-function"></a>Função Get
+
 Recupera o valor da propriedade especificado se ele existir.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -40,26 +41,30 @@ HRESULT Get (
    [out] CIMTYPE*         pvtType,
    [out] LONG*            plFlavor
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`vFunc`  
+`vFunc`\
 [in] Esse parâmetro é usado.
 
-`ptr`  
+`ptr`\
 [in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
-`wszName`  
+`wszName`\
 [in] O nome da propriedade.
 
-`lFlags` [in] Reservado. Esse parâmetro deve ser 0.
+`lFlags`\
+[in] Reservado. Esse parâmetro deve ser 0.
 
-`pVal` [out] Se a função retornar com êxito, contém o valor da `wszName` propriedade. O `pval` argumento é atribuído o tipo correto e o valor do qualificador.
+`pVal`\
+[out] Se a função retornar com êxito, contém o valor da `wszName` propriedade. O `pval` argumento é atribuído o tipo correto e o valor do qualificador.
 
-`pvtType` [out] Se a função retornar com êxito, contém um [constante de tipo CIM](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) que indica o tipo de propriedade. Seu valor também pode ser `null`. 
+`pvtType`\
+[out] Se a função retornar com êxito, contém um [constante de tipo CIM](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) que indica o tipo de propriedade. Seu valor também pode ser `null`. 
 
-`plFlavor` [out] Se a função retornar com êxito, recebe informações sobre a origem da propriedade. Seu valor pode ser `null`, ou uma das seguintes constantes WBEM_FLAVOR_TYPE definidas na *WbemCli.h* arquivo de cabeçalho: 
+`plFlavor`\
+[out] Se a função retornar com êxito, recebe informações sobre a origem da propriedade. Seu valor pode ser `null`, ou uma das seguintes constantes WBEM_FLAVOR_TYPE definidas na *WbemCli.h* arquivo de cabeçalho: 
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -78,7 +83,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 |`WBEM_E_NOT_FOUND` | 0x80041002 | A propriedade especificada não foi encontrada. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-  
+
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) método.
@@ -87,12 +92,14 @@ O `Get` função também pode retornar propriedades do sistema.
 
 O `pVal` argumento é atribuído o tipo correto e o valor para o qualificador e o COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) função
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Cabeçalho:** WMINet_Utils.idl
+
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

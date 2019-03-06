@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369845"
 ---
 # <a name="layout"></a>Layout
 Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Entender como e quando ocorrem os cálculos de layout é essencial para a criação de interfaces do usuário no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,22 +41,22 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
   
  A ilustração a seguir mostra um layout simples.  
   
- ![Uma grade típica, sem caixa delimitadora sobreposta.](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![Uma grade típica, sem caixa delimitadora sobreposta.](./media/boundingbox1.png "boundingbox1")  
   
  Este layout pode ser alcançado usando o seguinte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  Uma única <xref:System.Windows.Controls.TextBlock> elemento é hospedado dentro de um <xref:System.Windows.Controls.Grid>. Enquanto o texto preenche apenas o canto superior esquerdo da primeira coluna, o espaço alocado para o <xref:System.Windows.Controls.TextBlock> é muito maior. A caixa delimitadora de qualquer <xref:System.Windows.FrameworkElement> podem ser recuperados usando o <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> método. A ilustração a seguir mostra a caixa delimitadora para o <xref:System.Windows.Controls.TextBlock> elemento.  
   
- ![A caixa delimitadora do TextBlock agora está visível.](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![A caixa delimitadora do TextBlock agora está visível.](./media/boundingbox2.png "boundingbox2")  
   
  Conforme mostrado pelo retângulo amarelo, o espaço alocado para o <xref:System.Windows.Controls.TextBlock> elemento é muito maior do que parece. Como outros elementos são adicionados para o <xref:System.Windows.Controls.Grid>, essa alocação pode reduzir ou expandir, dependendo do tipo e tamanho dos elementos que são adicionados.  
   
  O slot de layout a <xref:System.Windows.Controls.TextBlock> é convertida em uma <xref:System.Windows.Shapes.Path> usando o <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> método. Essa técnica pode ser útil para exibir a caixa delimitadora de um elemento.  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>O sistema de layout  
@@ -122,7 +122,7 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
   
 -   Esteja ciente de quais alterações de valor da propriedade forçarão uma atualização recursiva realizada pelo sistema de layout.  
   
-     As propriedades de dependência cujos valores podem fazer com que o sistema de layout seja inicializado são marcadas com sinalizadores públicos. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> e <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> fornecem dicas úteis sobre qual propriedade alterações de valor forçará uma recursiva atualizar pelo sistema de layout. Em geral, qualquer propriedade que pode afetar o tamanho da caixa delimitadora de um elemento deve ter um <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> o sinalizador será definido como true. Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     As propriedades de dependência cujos valores podem fazer com que o sistema de layout seja inicializado são marcadas com sinalizadores públicos. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> e <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> fornecem dicas úteis sobre qual propriedade alterações de valor forçará uma recursiva atualizar pelo sistema de layout. Em geral, qualquer propriedade que pode afetar o tamanho da caixa delimitadora de um elemento deve ter um <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> o sinalizador será definido como true. Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](dependency-properties-overview.md).  
   
 -   Quando possível, use uma <xref:System.Windows.UIElement.RenderTransform%2A> em vez de um <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
@@ -146,11 +146,11 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Novidades  
- Entender como os elementos são medidos e organizados é o primeiro passo para entender o layout. Para obter mais informações sobre como as disponíveis <xref:System.Windows.Controls.Panel> elementos, consulte [visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md). Para compreender melhor as várias propriedades de posicionamento que podem afetar o layout, consulte [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Para obter um exemplo de um personalizado <xref:System.Windows.Controls.Panel> elemento, consulte [Custom Panel Sample Radial](https://go.microsoft.com/fwlink/?LinkID=159982). Quando você estiver pronto para juntar tudo em um aplicativo leve, consulte [passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Entender como os elementos são medidos e organizados é o primeiro passo para entender o layout. Para obter mais informações sobre como as disponíveis <xref:System.Windows.Controls.Panel> elementos, consulte [visão geral de painéis](../controls/panels-overview.md). Para compreender melhor as várias propriedades de posicionamento que podem afetar o layout, consulte [Visão geral de alinhamento, margens e preenchimento](alignment-margins-and-padding-overview.md). Para obter um exemplo de um personalizado <xref:System.Windows.Controls.Panel> elemento, consulte [Custom Panel Sample Radial](https://go.microsoft.com/fwlink/?LinkID=159982). Quando você estiver pronto para juntar tudo em um aplicativo leve, consulte [passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Visão geral de alinhamento, margens e preenchimento](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Visão geral de painéis](../controls/panels-overview.md)
+- [Visão geral de alinhamento, margens e preenchimento](alignment-margins-and-padding-overview.md)
+- [Layout e design](optimizing-performance-layout-and-design.md)

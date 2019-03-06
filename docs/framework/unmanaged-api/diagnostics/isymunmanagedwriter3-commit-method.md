@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90ef45650b30fd57fb93d0e16eac6e34079745b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38d9c3eeb5cdb8b15ef5306a641910f2f4bcc9cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526230"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372341"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>Método ISymUnmanagedWriter3::Commit
 Confirma as alterações gravadas no fluxo até o momento.  
@@ -37,7 +37,7 @@ HRESULT Commit();
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl , CorSym.h  
+ **Cabeçalho:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 - [Interface ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

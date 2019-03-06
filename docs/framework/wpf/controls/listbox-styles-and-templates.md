@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 552df5df6bdf8d9cdd8241c3e68cae671a24c6a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3171322e0f24060422f54c74f4d2b4751433415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577757"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357892"
 ---
 # <a name="listbox-styles-and-templates"></a>Estilos e modelos ListBox
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.ListBox> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.ListBox> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="listbox-parts"></a>Partes de ListBox  
  O <xref:System.Windows.Controls.ListBox> controle não tem nenhuma parte nomeada.  
@@ -56,18 +56,18 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 ## <a name="listbox-controltemplate-example"></a>Exemplo de ControlTemplate de ListBox  
  O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListBoxItem> controles.  
   
- [!code-xaml[ControlTemplateExamples#ListBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
+ [!code-xaml[ControlTemplateExamples#ListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
   
  O exemplo anterior usa um ou mais dos seguintes recursos.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Estilos e modelos de controle](control-styles-and-templates.md)
+- [Personalização do controle](control-customization.md)
+- [Estilo e modelagem](styling-and-templating.md)
+- [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550359"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377671"
 ---
 # <a name="grid-how-to-topics"></a>Tópicos explicativos de grade
 Os tópicos nesta seção descrevem como posicionar elementos usando o <xref:System.Windows.Controls.Grid> elemento.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criar uma caixa de diálogo de interface do usuário padrão usando grade](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [Criar uma grade complexa](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [Criar um elemento de grade](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [Criar e usar um objeto GridLengthConverter](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [Manipular colunas e linhas usando ColumnDefinitionsCollections e RowDefinitionsCollections](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [Posicionar os elementos filhos de uma grade](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [Compartilhar propriedades de dimensionamento entre grades](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [Criar uma caixa de diálogo de interface do usuário padrão usando grade](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [Criar uma grade complexa](how-to-create-a-complex-grid.md)  
+ [Criar um elemento de grade](how-to-create-a-grid-element.md)  
+ [Criar e usar um objeto GridLengthConverter](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [Manipular colunas e linhas usando ColumnDefinitionsCollections e RowDefinitionsCollections](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [Posicionar os elementos filhos de uma grade](how-to-position-the-child-elements-of-a-grid.md)  
+ [Compartilhar propriedades de dimensionamento entre grades](how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Panel>  
@@ -42,8 +42,8 @@ Os tópicos nesta seção descrevem como posicionar elementos usando o <xref:Sys
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Visão geral de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Visão geral de ScrollViewer](scrollviewer-overview.md)

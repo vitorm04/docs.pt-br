@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 682563937de0bb907b97ee4237d33c76307493da
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745632"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364288"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 Aplicativos do Windows Presentation Foundation (WPF) podem ser criados como [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] executáveis (.exe), bibliotecas (. dll) ou uma combinação de ambos os tipos de assemblies. Este tópico apresenta como compilar aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve as principais etapas no processo de build.  
@@ -32,7 +32,7 @@ Aplicativos do Windows Presentation Foundation (WPF) podem ser criados como [!IN
 ## <a name="wpf-build-pipeline"></a>Pipeline de build do WPF  
  Quando um projeto do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é compilado, a combinação de destinos específicos a um idioma e específicos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são invocados. O processo de execução desses destinos denomina-se pipeline de build, e as principais etapas estão ilustradas na figura a seguir.  
   
- ![Processo de build do WPF](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
+ ![Processo de build do WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
   
 <a name="Pre_Build_Initializations"></a>   
 ### <a name="pre-build-initializations"></a>Inicializações pré-build  
@@ -167,7 +167,7 @@ End Sub
 -   Nada é recompilado (se nada no projeto tiver sido alterado).  
   
 ## <a name="see-also"></a>Consulte também
-- [Implantando um aplicativo WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)
 - [Referência do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
-- [URIs "pack://" no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [URIs "pack://" no WPF](pack-uris-in-wpf.md)
+- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](wpf-application-resource-content-and-data-files.md)

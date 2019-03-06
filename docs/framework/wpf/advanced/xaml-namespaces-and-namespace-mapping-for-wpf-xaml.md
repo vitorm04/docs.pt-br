@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: a484ba1e5d0c7a51e7e4c3edbf341bf40345fd2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633901"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366596"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Namespaces XAML e mapeamento de namespace para XAML WPF
 Este tópico oferece explicação adicional sobre a presença e a finalidade dos dois mapeamentos de namespace de XAML como frequentemente encontrados na marca raiz de um arquivo XAML do WPF. Ele também descreve como gerar mapeamentos semelhantes para usar elementos que são definidos em seu próprio código e/ou em assemblies separados.  
@@ -40,7 +40,7 @@ Este tópico oferece explicação adicional sobre a presença e a finalidade dos
   
  A relação entre essas declarações é que o mapeamento de prefixo `x:` dá suporte aos intrínsecos que fazem parte da definição de linguagem XAML e o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é uma implementação que usa XAML como uma linguagem e define um vocabulário de seus objetos para XAML. Como os usos do vocabulário do WPF serão muito mais comuns que os usos de intrínsecos do XAML, o vocabulário do WPF é mapeado como o padrão.  
   
- A convenção de prefixo `x:` para o mapeamento do suporte aos intrínsecos da linguagem XAML é seguida por modelos de projeto, código de exemplo e pela documentação dos recursos de linguagem dentro desse [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. O namespace de XAML define vários recursos comumente usados que são necessários até mesmo para aplicativos básicos do WPF. Por exemplo, para unir qualquer code-behind a um arquivo XAML por meio de uma classe parcial, você deve nomear essa classe como o atributo `x:Class` no elemento raiz do arquivo XAML relevante. Ou, qualquer elemento, conforme definido em uma página XAML que você deseja acessar como um recurso com chave, deve ter o atributo `x:Key` definido no elemento em questão. Para obter mais informações sobre esses e outros aspectos do XAML, consulte [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) ou [Sintaxe de XAML em detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ A convenção de prefixo `x:` para o mapeamento do suporte aos intrínsecos da linguagem XAML é seguida por modelos de projeto, código de exemplo e pela documentação dos recursos de linguagem dentro desse [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. O namespace de XAML define vários recursos comumente usados que são necessários até mesmo para aplicativos básicos do WPF. Por exemplo, para unir qualquer code-behind a um arquivo XAML por meio de uma classe parcial, você deve nomear essa classe como o atributo `x:Class` no elemento raiz do arquivo XAML relevante. Ou, qualquer elemento, conforme definido em uma página XAML que você deseja acessar como um recurso com chave, deve ter o atributo `x:Key` definido no elemento em questão. Para obter mais informações sobre esses e outros aspectos do XAML, consulte [Visão geral de XAML (WPF)](xaml-overview-wpf.md) ou [Sintaxe de XAML em detalhes](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Mapeando para assemblies e classes personalizadas  
@@ -115,7 +115,7 @@ End Namespace
   
  O [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa um namespace de designer que é normalmente mapeado para o prefixo `d:`. Os modelos de projeto mais recentes para WPF podem mapear previamente esse namespace de XAML para dar suporte ao intercâmbio do XAML entre o [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] e outros ambientes de design. Esse namespace de XAML de design é usado para manter o estado de design durante a movimentação da interface do usuário baseada em XAML no designer. Ele também é usado para recursos como `d:IsDataSource`, que habilitam fontes de dados em tempo de execução em um designer.  
   
- Outro prefixo que talvez você veja mapeado é o `mc:`. O `mc:` é para a compatibilidade de marcação e aproveita um padrão de compatibilidade de marcação que não é, necessariamente, específico de XAML. Até certo ponto, os recursos de compatibilidade de marcação podem ser usados para a troca de XAML entre estruturas ou entre outros limites de implementação de suporte, para trabalhar entre contextos de esquema de XAML, para fornecer compatibilidade para modos limitados nos designers e assim por diante. Para obter mais informações sobre conceitos de compatibilidade de marcação e como eles se relacionam com o WPF, consulte [compatibilidade de marcação (mc:) Recursos de linguagem](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
+ Outro prefixo que talvez você veja mapeado é o `mc:`. O `mc:` é para a compatibilidade de marcação e aproveita um padrão de compatibilidade de marcação que não é, necessariamente, específico de XAML. Até certo ponto, os recursos de compatibilidade de marcação podem ser usados para a troca de XAML entre estruturas ou entre outros limites de implementação de suporte, para trabalhar entre contextos de esquema de XAML, para fornecer compatibilidade para modos limitados nos designers e assim por diante. Para obter mais informações sobre conceitos de compatibilidade de marcação e como eles se relacionam com o WPF, consulte [compatibilidade de marcação (mc:) Recursos de linguagem](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF e carregamento de assembly  
  O contexto do esquema XAML para WPF integra-se com o modelo de aplicativo WPF, que por sua vez, usa o conceito definido pelo CLR de <xref:System.AppDomain>. A sequência a seguir descreve como o contexto de esquema XAML interpreta como carregar assemblies ou localizar tipos em tempo de execução ou tempo de design, com base no uso do WPF do <xref:System.AppDomain> e outros fatores.  
@@ -138,4 +138,4 @@ End Namespace
   
 ## <a name="see-also"></a>Consulte também
 - [Noções básicas sobre Namespaces XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Visão geral de XAML (WPF)](xaml-overview-wpf.md)

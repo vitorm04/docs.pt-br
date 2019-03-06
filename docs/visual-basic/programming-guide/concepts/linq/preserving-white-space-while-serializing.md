@@ -2,12 +2,12 @@
 title: Preservar o espaço em branco ao Serializing2
 ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
-ms.openlocfilehash: cbfa9a39c52a40831627429f7ffc9971e0074a50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a69916627c25e4c90131e5eb9a1939bb6dea207
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602033"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373992"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Preservar espaço em branco para serializar
 Este tópico descreve como controlar o espaço em branco para serializar uma árvore XML.  
@@ -23,9 +23,9 @@ Este tópico descreve como controlar o espaço em branco para serializar uma ár
   
 -   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.ToString%2A?displayProperty=nameWithType>  
+-   [XElement.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
--   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=nameWithType>  
+-   [XDocument.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
  Se o método não utiliza <xref:System.Xml.Linq.SaveOptions> como um argumento, o método irá formatar (corte XML serializável.) Nesse caso, qualquer espaço em branco irrisória na árvore XML é descartado.  
   

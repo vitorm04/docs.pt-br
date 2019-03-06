@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 156d248921499aa78c3638e45af113c5698bdacd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668009"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352016"
 ---
 # <a name="optimizing-performance-data-binding"></a>Otimizando desempenho: Associação de dados
 A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
@@ -74,14 +74,14 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite associar dados a conteúdo [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. No entanto, a vinculação de dados ao conteúdo [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] é mais lenta que a vinculação de dados a objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Não converta os dados de objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] em XML se o único objetivo for a vinculação de dados.  
   
 ## <a name="see-also"></a>Consulte também
-- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planejando para desempenho do aplicativo](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Aproveitando o hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento do objeto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Recursos do aplicativo](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Outras recomendações de desempenho](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Passo a passo: Cache de dados de aplicativo em um aplicativo WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
+- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Layout e design](optimizing-performance-layout-and-design.md)
+- [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento do objeto](optimizing-performance-object-behavior.md)
+- [Recursos do aplicativo](optimizing-performance-application-resources.md)
+- [Texto](optimizing-performance-text.md)
+- [Outras recomendações de desempenho](optimizing-performance-other-recommendations.md)
+- [Visão geral da vinculação de dados](../data/data-binding-overview.md)
+- [Passo a passo: Cache de dados de aplicativo em um aplicativo WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

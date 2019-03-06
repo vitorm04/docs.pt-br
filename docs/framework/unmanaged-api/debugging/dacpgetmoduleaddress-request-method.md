@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1b69a3385743e948dd52dee75be2f975066c5f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc3b0258381b10c27dd58bee66dbb6b2cf5b2c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542594"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351080"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>Método DacpGetModuleAddress::Request
 
@@ -36,9 +36,10 @@ HRESULT Request(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>Parâmetros
 
-`pDataModule` [in] Um ponteiro para o módulo de dados de semente.
+`pDataModule`\
+[in] Um ponteiro para o módulo de dados de semente.
 
 ## <a name="remarks"></a>Comentários
 
@@ -56,5 +57,5 @@ Essa estrutura reside dentro do tempo de execução e não é exposta por meio d
 
 ## <a name="see-also"></a>Consulte também
 
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md)
+- [Depuração](index.md)
+- [Interface DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)

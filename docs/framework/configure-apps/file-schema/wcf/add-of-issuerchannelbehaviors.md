@@ -2,58 +2,62 @@
 title: <add> De <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 65c76cba696ae388d6184eaaa70a1f2f5a301e1c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c9937cb6302a194228461f3e2e06ecdf4d43269
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271782"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377749"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<Adicionar > de \<issuerChannelBehaviors >
-Adiciona um comportamento de ponto de extremidade a ser usado ao se comunicar com um STS.  
-  
+
+Adiciona um comportamento de ponto de extremidade a ser usado ao se comunicar com um STS.
+
 > [!NOTE]
->  Se qualquer comportamento de ponto de extremidade contém um [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento, uma exceção será gerada.  
-  
- \<system.ServiceModel>  
-\<comportamentos >  
-seção endpointBehaviors  
-\<behavior>  
-\<clientCredentials>  
-\<issuedToken>  
-\<issuerChannelBehaviors > elemento  
-\<add>  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```xml  
+> Se qualquer comportamento de ponto de extremidade contém um [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento, uma exceção será gerada.
+
+\<system.ServiceModel>\
+\<comportamentos > \
+seção endpointBehaviors \<comportamento > \
+\<clientCredentials>\
+\<issuedToken>\
+\<issuerChannelBehaviors > Element\
+\<add>
+
+## <a name="syntax"></a>Sintaxe
+
+```xml
 <add issuerAddress="string"
-     behaviorConfiguraton="string" />
-```  
-  
-## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai  
-  
-### <a name="attributes"></a>Atributos  
-  
-|Atributo|Descrição|  
-|---------------|-----------------|  
-|issuerAddress|O URI do emissor do token de segurança para se comunicar com.|  
-|behaviorConfiguration|O nome de um comportamento de ponto de extremidade definido no mesmo arquivo de configuração.|  
-  
-### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
-  
-### <a name="parent-elements"></a>Elementos pai  
-  
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contém uma coleção de comportamentos de ponto de extremidade do cliente Windows Communication Foundation (WCF) a ser usado ao se comunicar com os serviços de Token de serviço especificados.|  
-  
-## <a name="remarks"></a>Comentários  
- `issuerAddress` contém o URI do serviço de Token de segurança que o cliente quer se comunicar com. `behaviorConfiguration` aponta para um comportamento de ponto de extremidade que o aplicativo usa nos canais criados pelo Windows Communication Foundation (WCF) para obter os tokens emitidos de serviços de Token de segurança.  
-  
+     behaviorConfiguration="string" />
+```
+
+## <a name="attributes-and-elements"></a>Atributos e elementos
+
+As seções a seguir descrevem atributos, elementos filho e elementos pai
+
+### <a name="attributes"></a>Atributos
+
+|Atributo|Descrição|
+|---------------|-----------------|
+|issuerAddress|O URI do emissor do token de segurança para se comunicar com.|
+|behaviorConfiguration|O nome de um comportamento de ponto de extremidade definido no mesmo arquivo de configuração.|
+
+### <a name="child-elements"></a>Elementos filho
+
+nenhuma.
+
+### <a name="parent-elements"></a>Elementos pai
+
+|Elemento|Descrição|
+|-------------|-----------------|
+|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contém uma coleção de comportamentos de ponto de extremidade do cliente Windows Communication Foundation (WCF) a ser usado ao se comunicar com os serviços de Token de serviço especificados.|
+
+## <a name="remarks"></a>Comentários
+
+`issuerAddress` contém o URI do serviço de Token de segurança que o cliente quer se comunicar com. `behaviorConfiguration` aponta para um comportamento de ponto de extremidade que o aplicativo usa nos canais criados pelo Windows Communication Foundation (WCF) para obter os tokens emitidos de serviços de Token de segurança.
+
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>

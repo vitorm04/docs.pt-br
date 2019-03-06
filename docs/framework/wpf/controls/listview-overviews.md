@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551037"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370326"
 ---
 # <a name="listview-overviews"></a>Visões gerais de ListView
 Os tópicos nesta seção mostram como usar um <xref:System.Windows.Controls.ListView> controle.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Visão geral dos estilos e dos modelos de cabeçalho da coluna GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [Visão geral de ListView](listview-overview.md)  
+ [Visão geral de GridView](gridview-overview.md)  
+ [Visão geral dos estilos e dos modelos de cabeçalho da coluna GridView](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.ListView>  
@@ -28,4 +28,4 @@ Os tópicos nesta seção mostram como usar um <xref:System.Windows.Controls.Lis
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Tópicos de instruções](listview-how-to-topics.md)

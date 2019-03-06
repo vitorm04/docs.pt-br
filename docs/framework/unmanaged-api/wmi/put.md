@@ -16,51 +16,51 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02c8ab3aa7fcc603b76fb4b1d09e7e73d04494be
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625764"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369182"
 ---
 # <a name="put-function"></a>Função PUT
+
 Define uma propriedade nomeada para um novo valor.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 HRESULT Put (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LPCWSTR           wszName,
    [in] LONG              lFlags,
    [in] VARIANT*          pVal,
    [in] CIMTYPE           vtType
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`vFunc`  
+`vFunc`\
 [in] Esse parâmetro é usado.
 
-`ptr`  
+`ptr`\
 [in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
-`wszName`  
+`wszName`\
 [in] O nome da propriedade. O parâmetro não pode ser `null`.
 
-`lFlags`  
+`lFlags`\
 [in] Reservado. Esse parâmetro deve ser 0.
 
-`pVal`   
-[in] Um ponteiro para um válido `VARIANT` que se torna o novo valor da propriedade. Se `pVal` está `null` ou aponta para um `VARIANT` do tipo `VT_NULL`, a propriedade é definida como `null`. 
+`pVal`\
+[in] Um ponteiro para um válido `VARIANT` que se torna o novo valor da propriedade. Se `pVal` está `null` ou aponta para um `VARIANT` do tipo `VT_NULL`, a propriedade é definida como `null`.
 
-`vtType`  
+`vtType`\
 [in] O tipo de `VARIANT` apontado por `pVal`. Consulte a [comentários](#remarks) seção para obter mais informações.
- 
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -74,7 +74,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Para instâncias: Indica que `pVal` aponta para um `VARIANT` de um tipo incorreto para a propriedade. <br/> Para obter definições de classe: A propriedade já existe na classe pai e o novo tipo de COM é diferente do tipo COM antigo. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida. |
-  
+
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) método.
@@ -85,20 +85,22 @@ O `__CLASS` sistema propriedade só é gravável durante a criação de classes,
 
 Um usuário não é possível criar propriedades com nomes que começam ou terminam com um sublinhado ("_"). Isso é reservado para as propriedades e classes do sistema.
 
-Se a propriedade definida `Put` função existe na classe pai, o valor padrão da propriedade é alterado, a menos que o tipo de propriedade não coincide com o tipo da classe pai. Se a propriedade não existe e não é uma incompatibilidade de tipo, a propriedade é criado.
+Se a propriedade definida `Put` função existe na classe pai, o valor padrão da propriedade é alterado, a menos que o tipo de propriedade não coincide com o tipo da classe pai. Se a propriedade não existe e não é uma incompatibilidade de tipo, a propriedade é criada.
 
-Use o `vtType` parâmetro somente ao criar novas propriedades em uma definição de classe do CIM e `pVal` é `null` ou aponta para um `VARIANT` do tipo `VT_NULL`. Nesse caso, o `vType` parâmetro especifica o tipo CIM da propriedade. Em todos os outros casos, `vtType` deve ser 0. `vtType` também deve ser 0 se o objeto subjacente for uma instância (mesmo se `Val` é `null`) porque o tipo da propriedade é fixo e não pode ser alterado.   
+Use o `vtType` parâmetro somente ao criar novas propriedades em uma definição de classe do CIM e `pVal` é `null` ou aponta para um `VARIANT` do tipo `VT_NULL`. Nesse caso, o `vType` parâmetro especifica o tipo CIM da propriedade. Em todos os outros casos, `vtType` deve ser 0. `vtType` também deve ser 0 se o objeto subjacente for uma instância (mesmo se `Val` é `null`) porque o tipo da propriedade é fixo e não pode ser alterado.
 
 ## <a name="example"></a>Exemplo
 
 Por exemplo, consulte o [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) método.
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** WMINet_Utils.idl
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

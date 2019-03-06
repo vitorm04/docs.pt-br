@@ -8,12 +8,12 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e5cf8a8b280a539feb73a54defbb0cd8c2c0f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590897"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366641"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Visão geral dos estilos e dos modelos de cabeçalho da coluna GridView
 Esta visão geral discute a ordem de precedência para propriedades que você pode usar para personalizar um cabeçalho de coluna na <xref:System.Windows.Controls.GridView> modo de exibição de um <xref:System.Windows.Controls.ListView> controle.  
@@ -36,6 +36,6 @@ Esta visão geral discute a ordem de precedência para propriedades que você po
  <sup>1</sup>Para **Propriedades de modelo de cabeçalho**, se as propriedades do modelo e do seletor de modelo forem definidas, a propriedade do modelo terá precedência. Por exemplo, se você definir ambos os <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> e <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriedades, o <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propriedade terá precedência.  
   
 ## <a name="see-also"></a>Consulte também
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Visão geral de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Tópicos de instruções](listview-how-to-topics.md)
+- [Visão geral de ListView](listview-overview.md)
+- [Visão geral de GridView](gridview-overview.md)

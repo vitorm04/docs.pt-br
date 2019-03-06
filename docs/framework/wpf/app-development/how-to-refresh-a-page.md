@@ -1,5 +1,5 @@
 ---
-title: 'Como: atualizar uma página'
+title: 'Como: Atualizar uma página'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - pages [WPF], refreshing
 - refreshing pages [WPF]
 ms.assetid: 06dd1bbd-81c4-40ad-ac0d-7a5b326b1465
-ms.openlocfilehash: 27735450360206e0a15ecae00cc9d45f93e4e838
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71a71c91384a8905413358d023531afec23f2d41
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546524"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368279"
 ---
-# <a name="how-to-refresh-a-page"></a>Como: atualizar uma página
+# <a name="how-to-refresh-a-page"></a>Como: Atualizar uma página
 Este exemplo mostra como chamar o <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> método para atualizar o conteúdo atual em um <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Exemplo  
  <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> atualiza o conteúdo atual em um <xref:System.Windows.Navigation.NavigationWindow> a ser recarregado de sua origem.  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateRefreshCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigaterefreshcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateRefreshCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigaterefreshcode)]
+ [!code-csharp[HOWTONavigationSnippets#NavigateRefreshCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigaterefreshcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateRefreshCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigaterefreshcode)]

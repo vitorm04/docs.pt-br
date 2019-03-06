@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542581"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361207"
 ---
 # <a name="events-wpf"></a>Eventos (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta os eventos roteados que podem invocar manipuladores que existem em vários ouvintes na árvore de elementos de um aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Visão geral de eventos anexados](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [Eventos de tempo de vida do objeto](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [Marcando eventos roteados como manipulados e tratamento de classes](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Eventos de visualização](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [Eventos de alteração de propriedade](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic e manipulação de eventos WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Padrões de evento fracos](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Visão geral de eventos roteados](routed-events-overview.md)  
+ [Visão geral de eventos anexados](attached-events-overview.md)  
+ [Eventos de tempo de vida do objeto](object-lifetime-events.md)  
+ [Marcando eventos roteados como manipulados e tratamento de classes](marking-routed-events-as-handled-and-class-handling.md)  
+ [Eventos de visualização](preview-events.md)  
+ [Eventos de alteração de propriedade](property-change-events.md)  
+ [Visual Basic e manipulação de eventos WPF](visual-basic-and-wpf-event-handling.md)  
+ [Padrões de evento fracos](weak-event-patterns.md)  
+ [Tópicos de instruções](events-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542581"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Arquitetura do WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML no WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Elementos base](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Árvore de elementos e serialização](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Propriedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Entrada](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Recursos](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Modelo de conteúdo do WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [Modelo de threading](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Arquitetura do WPF](wpf-architecture.md)  
+  [XAML no WPF](xaml-in-wpf.md)  
+  [Elementos base](base-elements.md)  
+  [Árvore de elementos e serialização](element-tree-and-serialization.md)  
+  [Propriedades](properties-wpf.md)  
+  [Entrada](input-wpf.md)  
+  [Recursos](resources-wpf.md)  
+  [Estilo e modelagem](../controls/styling-and-templating.md)  
+  [Modelo de conteúdo do WPF](../controls/wpf-content-model.md)  
+  [Modelo de threading](threading-model.md)

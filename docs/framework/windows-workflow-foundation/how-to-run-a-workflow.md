@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a5836c60d5f0ea21b1373b2d9bbbb29e0b6cb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530396"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360014"
 ---
 # <a name="how-to-run-a-workflow"></a>Como: Executar um fluxo de trabalho
 Este tópico é uma continuação do tutorial do guia de Introdução do Windows Workflow Foundation e discute como criar um host de fluxo de trabalho e executar o fluxo de trabalho definido anteriormente na [como: Criar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) tópico.
@@ -137,7 +137,7 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]
 
-##  <a name="BKMK_ToRunTheApplication"></a> Para compilar e executar o aplicativo
+## <a name="BKMK_ToRunTheApplication"></a> Para compilar e executar o aplicativo
 
 1.  Clique com botão direito **NumberGuessWorkflowHost** na **Gerenciador de soluções** e selecione **Set as StartUp Project**.
 

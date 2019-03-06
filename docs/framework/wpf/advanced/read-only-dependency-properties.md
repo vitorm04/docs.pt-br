@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 256790880e6fcf3bd2492d3f3f00b532f6a31eea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568121"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378997"
 ---
 # <a name="read-only-dependency-properties"></a>Propriedades de dependência somente leitura
 Este tópico descreve propriedades de dependência somente leitura, incluindo as propriedades de dependência somente leitura existentes e os cenários e técnicas para criação de uma propriedade de dependência somente leitura personalizada.  
@@ -19,7 +19,7 @@ Este tópico descreve propriedades de dependência somente leitura, incluindo as
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Este tópico pressupõe que você compreenda os cenários básicos de implementar uma propriedade de dependência e como os metadados são aplicados a uma propriedade de dependência personalizada. Consulte [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) e [Metadados de propriedade de dependência](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) para ver o contexto.  
+ Este tópico pressupõe que você compreenda os cenários básicos de implementar uma propriedade de dependência e como os metadados são aplicados a uma propriedade de dependência personalizada. Consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md) e [Metadados de propriedade de dependência](dependency-property-metadata.md) para ver o contexto.  
   
 <a name="existing"></a>   
 ## <a name="existing-read-only-dependency-properties"></a>Propriedades de dependência somente leitura existentes  
@@ -31,7 +31,7 @@ Este tópico descreve propriedades de dependência somente leitura, incluindo as
 ## <a name="creating-custom-read-only-dependency-properties"></a>Criando propriedades de dependência somente leitura personalizadas  
  Certifique-se de ler a seção acima sobre por que as propriedades de dependência somente leitura não funcionarão para muitos cenários típicos de propriedade de dependência. Mas, se tiver um cenário apropriado, você poderá querer criar sua própria propriedade de dependência somente leitura.  
   
- Grande parte do processo de criar uma propriedade de dependência somente leitura é igual ao processo descrito nos tópicos [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) e [Implementar uma propriedade de dependência](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md). Há três diferenças importantes:  
+ Grande parte do processo de criar uma propriedade de dependência somente leitura é igual ao processo descrito nos tópicos [Propriedades de dependência personalizadas](custom-dependency-properties.md) e [Implementar uma propriedade de dependência](how-to-implement-a-dependency-property.md). Há três diferenças importantes:  
   
 -   Ao registrar sua propriedade, chame o <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> método em vez de normal <xref:System.Windows.DependencyProperty.Register%2A> método para registro de propriedade.  
   
@@ -41,9 +41,9 @@ Este tópico descreve propriedades de dependência somente leitura, incluindo as
   
  Qualquer valor ou campo particular que você tiver como suporte para sua propriedade de dependência somente leitura pode ser totalmente gravável usando qualquer lógica que você decidir. No entanto, a maneira mais simples de configurar a propriedade inicialmente ou como parte da lógica de tempo de execução é usar o [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] do sistema de propriedades em vez de contornar o sistema de propriedades e configurar o campo de suporte privado diretamente. Em particular, há uma assinatura do <xref:System.Windows.DependencyObject.SetValue%2A> que aceita um parâmetro de tipo <xref:System.Windows.DependencyPropertyKey>. Como e onde você definir esse valor por meio de programação na lógica do seu aplicativo afetará como você poderá definir o acesso a <xref:System.Windows.DependencyPropertyKey> criou quando registrou a propriedade de dependência pela primeira vez. Se manipular toda essa lógica dentro da classe, você pode torná-la particular ou, se exigir que ela seja definida de outras partes do assembly, poderá defini-la como interna. Uma abordagem é chamar <xref:System.Windows.DependencyObject.SetValue%2A> dentro de um manipulador de eventos de classe de um evento relevante que informa a uma instância da classe que o valor da propriedade armazenado precisa ser alterado. Outra abordagem é unir as propriedades de dependência usando emparelhado <xref:System.Windows.PropertyChangedCallback> e <xref:System.Windows.CoerceValueCallback> retornos de chamada como parte dos metadados dessas propriedades durante o registro.  
   
- Porque o <xref:System.Windows.DependencyPropertyKey> é privado e não é propagada pelo sistema de propriedades fora do seu código, uma propriedade de dependência somente leitura tem uma melhor configuração de segurança que uma propriedade de dependência de leitura / gravação. Para uma propriedade de dependência de leitura/gravação, o campo de identificação é implicitamente ou explicitamente público e, portanto, a propriedade é amplamente configurável. Para obter informações mais específicas, consulte [Segurança das propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-property-security.md).  
+ Porque o <xref:System.Windows.DependencyPropertyKey> é privado e não é propagada pelo sistema de propriedades fora do seu código, uma propriedade de dependência somente leitura tem uma melhor configuração de segurança que uma propriedade de dependência de leitura / gravação. Para uma propriedade de dependência de leitura/gravação, o campo de identificação é implicitamente ou explicitamente público e, portanto, a propriedade é amplamente configurável. Para obter informações mais específicas, consulte [Segurança das propriedades de dependência](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Propriedades de dependência personalizada](custom-dependency-properties.md)
+- [Estilo e modelagem](../controls/styling-and-templating.md)

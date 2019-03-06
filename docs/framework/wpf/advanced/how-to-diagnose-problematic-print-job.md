@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 7a2f6cd76cf44a3a6bd431e53ba0c10d3438037e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665793"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369702"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Como: Diagnosticar um trabalho de impressão problemático
 Administradores de rede frequentemente recebem reclamações de usuários sobre trabalhos de impressão que não são impressos ou são impressos lentamente. O conjunto avançado de propriedades do trabalho de impressão exposto no [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] do Microsoft .NET Framework fornecem um meio para executar um diagnóstico remoto rápido dos trabalhos de impressão.  
@@ -41,9 +41,9 @@ Administradores de rede frequentemente recebem reclamações de usuários sobre 
   
  Em seguida o aplicativo faz um loop por meio de <xref:System.Printing.PrintSystemJobInfo> coleta e o compara <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> propriedade com o alias do usuário que fez a reclamação. Se forem iguais, o aplicativo adiciona informações de identificação sobre o trabalho à cadeia de caracteres que será apresentada. (As variáveis `userName` e `jobList` são inicializadas anteriormente no aplicativo.)  
   
- [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
- [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
- [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
   
  O exemplo de código a seguir usa o aplicativo a partir da Etapa 2. (Veja acima.) O trabalho problemático foi identificado e o aplicativo solicita as informações que o identificarão. Com essas informações, ele cria <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, e <xref:System.Printing.PrintSystemJobInfo> objetos.  
   
@@ -53,33 +53,33 @@ Administradores de rede frequentemente recebem reclamações de usuários sobre 
   
 -   Você pode ler cada propriedade relevante, como <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> e <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
   
- Este exemplo demonstra ambos métodos, o usuário foi previamente consultado sobre qual método usar e respondeu com "Y" se quiser usar os sinalizadores do <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriedade. Veja abaixo os detalhes dos dois métodos. Por fim, o aplicativo usa um método chamado **ReportQueueAndJobAvailability** para relatar se o trabalho pode ser impresso a esta hora do dia. Esse método é abordado em [Descobrir se um trabalho de impressão pode ser impresso a esta hora do dia](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
+ Este exemplo demonstra ambos métodos, o usuário foi previamente consultado sobre qual método usar e respondeu com "Y" se quiser usar os sinalizadores do <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriedade. Veja abaixo os detalhes dos dois métodos. Por fim, o aplicativo usa um método chamado **ReportQueueAndJobAvailability** para relatar se o trabalho pode ser impresso a esta hora do dia. Esse método é abordado em [Descobrir se um trabalho de impressão pode ser impresso a esta hora do dia](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
   
- [!code-cpp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#identifyanddiagnoseproblematicjob)]
- [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
- [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#identifyanddiagnoseproblematicjob)]
+ [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
+ [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
  Para verificar o status do trabalho de impressão usando os sinalizadores do <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriedade, que você verifique cada sinalizador relevante para ver se ele está definido. O modo padrão para ver se um bit está definido em um conjunto de sinalizadores de bit é realizar uma operação lógica AND com o conjunto de sinalizadores como um operando e o próprio sinalizador como o outro. Uma vez que o próprio sinalizador tem apenas um bit definido, o resultado do AND lógico é que, no máximo, esse mesmo bit é definido. Para saber se ele é ou não, basta comparar o resultado do AND lógico com o sinalizador em si. Para obter mais informações, consulte <xref:System.Printing.PrintJobStatus>, o [& operador (C# referência)](~/docs/csharp/language-reference/operators/and-operator.md), e <xref:System.FlagsAttribute>.  
   
  Para cada atributo cujo bit estiver definido, o código relata isso para a tela do console e, às vezes, sugere uma maneira de responder. (O método **HandlePausedJob** que é chamado se a fila ou o trabalho estiver em pausa é abordado abaixo.)  
   
- [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobattributes)]
- [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobattributes)]
- [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobattributes)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobattributes)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobattributes)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobattributes)]  
   
  Para verificar o status do trabalho de impressão usando propriedades separadas, basta ler cada propriedade e, se a propriedade for `true`, relatar isso para a tela do console e, possivelmente, sugerir uma maneira de responder. (O método **HandlePausedJob** que é chamado se a fila ou o trabalho estiver em pausa é abordado abaixo.)  
   
- [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
- [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
- [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
   
  O método **HandlePausedJob** permite que o usuário do aplicativo retome remotamente trabalhos em pausa. Como pode haver um bom motivo para a fila de impressão ter sido colocada em pausa, o método começa solicitando que o usuário decida se deseja retomá-la. Se a resposta for "Y", então o <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType> método é chamado.  
   
  Em seguida, será solicitado que o decida se o trabalho propriamente dito deve ser retomado, caso ele tenha sido colocado em pausa independentemente da fila de impressão. (Compare <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> e <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>.) Se a resposta for "Y", em seguida <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType> é chamado; caso contrário <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> é chamado.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
- [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
- [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
+ [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
+ [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Printing.PrintJobStatus>
@@ -87,5 +87,5 @@ Administradores de rede frequentemente recebem reclamações de usuários sobre 
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
 - [& Operador (C# referência)](~/docs/csharp/language-reference/operators/and-operator.md)
-- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documentos no WPF](documents-in-wpf.md)
+- [Visão Geral da Impressão](printing-overview.md)

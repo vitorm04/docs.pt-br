@@ -8,21 +8,21 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 084354f2c567716c2ca083dddb4cd6628334d603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542568"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367460"
 ---
 # <a name="drag-and-drop"></a>Arrastar e soltar
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece um arraste altamente flexível e a infraestrutura de soltar que dá suporte a arrastar e soltar de dados dentro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, bem como outros [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplicativos.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece um arrastar altamente flexível e a infraestrutura de soltar que dá suporte a arrastar e soltar de dados dentro de ambos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, bem como outros [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplicativos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de arrastar e soltar](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [Dados e objetos de dados](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [Passo a passo: habilitando arrastar e soltar em um controle de usuário](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [Visão geral de arrastar e soltar](drag-and-drop-overview.md)  
+ [Dados e objetos de dados](data-and-data-objects.md)  
+ [Passo a passo: Habilitando arrastar e soltar em um controle de usuário](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [Tópicos de instruções](drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.DataFormat>  

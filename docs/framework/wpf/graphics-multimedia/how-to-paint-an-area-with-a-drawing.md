@@ -1,5 +1,5 @@
 ---
-title: Como pintar uma área com um desenho
+title: 'Como: Pintar uma área com um desenho'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,37 +9,37 @@ helpviewer_keywords:
 - painting [WPF], with drawings
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
-ms.openlocfilehash: 222aa3fbb72ebaf15be3ed7f9804936e7e1187e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b204ae631912181333e2559ebadcdc37e7693b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560897"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371548"
 ---
-# <a name="how-to-paint-an-area-with-a-drawing"></a>Como pintar uma área com um desenho
-Este exemplo mostra como pintar uma área com um desenho. Para pintar uma área com um desenho, use um <xref:System.Windows.Media.DrawingBrush> e um ou mais <xref:System.Windows.Media.Drawing> objetos.   O exemplo a seguir usa um <xref:System.Windows.Media.DrawingBrush> para pintar um objeto com um desenho de duas elipses.  
+# <a name="how-to-paint-an-area-with-a-drawing"></a>Como: Pintar uma área com um desenho
+Este exemplo mostra como pintar uma área com um desenho. Para pintar uma área com um desenho, use uma <xref:System.Windows.Media.DrawingBrush> e um ou mais <xref:System.Windows.Media.Drawing> objetos.   O exemplo a seguir usa um <xref:System.Windows.Media.DrawingBrush> para pintar um objeto com um desenho de duas elipses.  
   
 ## <a name="example"></a>Exemplo  
- [!code-xaml[drawingbrush_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
+ [!code-xaml[drawingbrush_snip#DrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
   
- [!code-csharp[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]
- [!code-vb[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/DrawingBrushExample.vb#drawingbrushexamplewholepage)]  
+ [!code-csharp[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]
+ [!code-vb[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/DrawingBrushExample.vb#drawingbrushexamplewholepage)]  
   
  A ilustração a seguir mostra a saída do exemplo.  
   
- ![Saída de um DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-simple.png "graphicsmm_drawingbrush_simple")  
+ ![Saída de um DrawingBrush](./media/graphicsmm-drawingbrush-simple.png "graphicsmm_drawingbrush_simple")  
   
- (O centro da forma é banco por razões descritas em [controlar o preenchimento de uma forma de composição](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md).)  
+ (O centro da forma é branco por razões descritas em [controlar o preenchimento de uma forma composta](how-to-control-the-fill-of-a-composite-shape.md).)  
   
- Definindo um <xref:System.Windows.Media.DrawingBrush> do objeto <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.TileMode%2A> propriedades, você pode criar um padrão de repetição. O exemplo a seguir pinta um objeto com um padrão criado de um desenho de duas elipses.  
+ Definindo uma <xref:System.Windows.Media.DrawingBrush> do objeto <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.TileMode%2A> propriedades, você pode criar um padrão de repetição. O exemplo a seguir pinta um objeto com um padrão criado de um desenho de duas elipses.  
   
- [!code-xaml[drawingbrush_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/TiledDrawingBrushExample.xaml#tileddrawingbrushexamplewholepage)]  
+ [!code-xaml[drawingbrush_snip#TiledDrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/TiledDrawingBrushExample.xaml#tileddrawingbrushexamplewholepage)]  
   
- [!code-csharp[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/TiledDrawingBrushExample.cs#tileddrawingbrushexamplewholepage)]
- [!code-vb[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/TiledDrawingBrushExample.vb#tileddrawingbrushexamplewholepage)]  
+ [!code-csharp[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/TiledDrawingBrushExample.cs#tileddrawingbrushexamplewholepage)]
+ [!code-vb[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/TiledDrawingBrushExample.vb#tileddrawingbrushexamplewholepage)]  
   
  A ilustração a seguir mostra o lado a lado <xref:System.Windows.Media.DrawingBrush> saída.  
   
- ![Saída lado a lado de um DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-tiled.png "graphicsmm_drawingbrush_tiled")  
+ ![Saída lado a lado de um DrawingBrush](./media/graphicsmm-drawingbrush-tiled.png "graphicsmm_drawingbrush_tiled")  
   
- Para obter mais informações sobre pincéis de desenho, consulte [pintura com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md). Para obter mais informações sobre <xref:System.Windows.Media.Drawing> objetos, consulte o [visão geral de objetos de desenho](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).
+ Para obter mais informações sobre pincéis de desenho, consulte [pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md). Para obter mais informações sobre <xref:System.Windows.Media.Drawing> objetos, consulte a [visão geral de objetos de desenho](drawing-objects-overview.md).

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682950"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371665"
 ---
 # <a name="attached-events-overview"></a>Visão geral de eventos anexados
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define um componente de linguagem e o tipo de evento chamado de *evento anexado*. O conceito de um evento anexado permite que você adicione um manipulador para um evento específico a um elemento arbitrário em vez de um elemento que realmente define ou herda o evento. Nesse caso, nem o objeto potencialmente aumentando o evento, nem a instância de tratamento define ou caso contrário, é "proprietário" do evento.  
@@ -26,7 +26,7 @@ ms.locfileid: "54682950"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Este tópico pressupõe que você leu a [visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md) e [visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Este tópico pressupõe que você leu a [visão geral de eventos roteados](routed-events-overview.md) e [visão geral de XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>Sintaxe de evento anexado  
@@ -36,7 +36,7 @@ ms.locfileid: "54682950"
   
  Por exemplo, o seguinte é a sintaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para anexar um manipulador para um `NeedsCleaning` evento anexado personalizado:  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Observe o `aqua:` prefixo; o prefixo é necessário nesse caso porque o evento anexado é um evento personalizado proveniente de um xmlns personalizado e mapeado.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54682950"
   
  Em geral, um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] evento anexado não é muito diferente de um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] evento roteado. As diferenças são como o evento foi originado e como ele é exposto por uma classe como um membro (que também afeta a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintaxe do manipulador).  
   
- No entanto, como observado anteriormente, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos anexados existente não são particularmente para tratamento no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Com mais frequência, o objetivo do evento é habilitar um elemento de composição para relatar um estado para um elemento pai na composição, no qual, o evento é gerado normalmente em código e também depende do tratamento da classe na classe pai relevante. Por exemplo, itens dentro de um <xref:System.Windows.Controls.Primitives.Selector> gerem o anexo <xref:System.Windows.Controls.Primitives.Selector.Selected> evento, que é, em seguida, a classe é tratada pelo <xref:System.Windows.Controls.Primitives.Selector> classe e, em seguida, potencialmente convertidos pela <xref:System.Windows.Controls.Primitives.Selector> classe em um evento roteado diferente, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Para obter mais informações sobre eventos roteados e identificação por classe, consulte [Marcando eventos roteados como manipulados e tratamento de classes](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ No entanto, como observado anteriormente, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos anexados existente não são particularmente para tratamento no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Com mais frequência, o objetivo do evento é habilitar um elemento de composição para relatar um estado para um elemento pai na composição, no qual, o evento é gerado normalmente em código e também depende do tratamento da classe na classe pai relevante. Por exemplo, itens dentro de um <xref:System.Windows.Controls.Primitives.Selector> gerem o anexo <xref:System.Windows.Controls.Primitives.Selector.Selected> evento, que é, em seguida, a classe é tratada pelo <xref:System.Windows.Controls.Primitives.Selector> classe e, em seguida, potencialmente convertidos pela <xref:System.Windows.Controls.Primitives.Selector> classe em um evento roteado diferente, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Para obter mais informações sobre eventos roteados e identificação por classe, consulte [Marcando eventos roteados como manipulados e tratamento de classes](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Definir seus próprios eventos anexados como eventos roteados  
@@ -80,10 +80,10 @@ ms.locfileid: "54682950"
   
  Por exemplo, o código a seguir define o `NeedsCleaning` evento na classe proprietária anexada `Aquarium`, usando a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estratégia de evento anexado de declarar o evento anexado como um evento roteado.  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Observe que o método usado para estabelecer o campo de identificador de evento anexado, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, é realmente o mesmo método que é usado para registrar um evento roteado e não anexado. Eventos anexados e eventos roteados são registrados para um repositório centralizado interno. Essa implementação de repositório de eventos permite a consideração conceitual de "eventos como uma interface" que é abordada na [visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Observe que o método usado para estabelecer o campo de identificador de evento anexado, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, é realmente o mesmo método que é usado para registrar um evento roteado e não anexado. Eventos anexados e eventos roteados são registrados para um repositório centralizado interno. Essa implementação de repositório de eventos permite a consideração conceitual de "eventos como uma interface" que é abordada na [visão geral de eventos roteados](routed-events-overview.md).  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>Gerar um evento anexado WPF  
@@ -92,6 +92,6 @@ ms.locfileid: "54682950"
  No entanto, se você estiver definindo um evento anexado personalizado com base nas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de basear os eventos anexados na <xref:System.Windows.RoutedEvent>, você pode usar <xref:System.Windows.UIElement.RaiseEvent%2A> para gerar um evento de qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement>. Gerar um evento roteado (anexado ou não) requer que você declare um determinado elemento na árvore de elementos como a origem do evento; Essa fonte é relatada como o <xref:System.Windows.UIElement.RaiseEvent%2A> chamador. Determinar qual elemento é relatado como a fonte na árvore é responsabilidade do serviço  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Sintaxe XAML em detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [XAML e classes personalizadas para WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Visão geral de eventos roteados](routed-events-overview.md)
+- [Sintaxe XAML em detalhes](xaml-syntax-in-detail.md)
+- [XAML e classes personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)

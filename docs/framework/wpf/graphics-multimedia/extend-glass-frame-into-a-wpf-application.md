@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 9df6adbf9208ee58044b0ba6ef606d693c9dca7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 326cf683c05eae342646efca962cfe9b87ccab79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705817"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364678"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estender quadro com efeito de transparência em um aplicativo WPF
 Este tópico demonstra como estender o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] quadro de vidro na área do cliente de um aplicativo Windows Presentation Foundation (WPF).  
@@ -28,7 +28,7 @@ Este tópico demonstra como estender o [!INCLUDE[TLA#tla_winvista](../../../../i
   
  **Internet Explorer com quadro com efeito de transparência estendido atrás da barra de endereços.**  
   
- ![IE7 com quadro com efeito de transparência estendido por trás da barra de endereços.](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
+ ![IE7 com quadro com efeito de transparência estendido por trás da barra de endereços.](./media/ie7glasstopbar.PNG "IE7glasstopbar")  
   
  Para estender o quadro com efeito de transparência em um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], é necessário obter acesso ao [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] não gerenciado. O exemplo de código a seguir faz uma invocação de plataforma (pinvoke) para os dois [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] necessários para estender o quadro para a área de cliente. Cada um desses [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] são declarados em uma classe chamada **NonClientRegionAPI**.  
   
@@ -147,7 +147,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  **Quadro com efeito de transparência estendido para um**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  **aplicativo.**  
   
- ![Quadro com efeito de transparência estendido em um aplicativo WPF.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
+ ![Quadro com efeito de transparência estendido em um aplicativo WPF.](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Consulte também
 - [Visão geral do Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview)

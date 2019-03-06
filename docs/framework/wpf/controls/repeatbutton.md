@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555000"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367124"
 ---
 # <a name="repeatbutton"></a>RepeatButton
-O <xref:System.Windows.Controls.Primitives.RepeatButton> é semelhante a um <xref:System.Windows.Controls.Button>. No entanto, <xref:System.Windows.Controls.Primitives.RepeatButton> fornecem elementos que você controle sobre quando e como o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento ocorre.  
+O <xref:System.Windows.Controls.Primitives.RepeatButton> é semelhante a um <xref:System.Windows.Controls.Button>. No entanto, <xref:System.Windows.Controls.Primitives.RepeatButton> oferecem elementos controle sobre quando e como a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento ocorre.  
   
- O gráfico a seguir mostra um exemplo dos três estados de um controle de botão de repetição, Default, PointerFocused e pressionado. O primeiro botão mostra o estado padrão da <xref:System.Windows.Controls.Primitives.RepeatButton>. O segundo mostra como a aparência do botão muda quando o ponteiro do mouse passa sobre o botão, dando a ele foco. O último botão mostra a aparência do <xref:System.Windows.Controls.Primitives.RepeatButton> quando o usuário pressiona o botão do mouse sobre o controle.  
+ O gráfico a seguir mostra um exemplo dos três estados de um controle de botão de repetição, padrão, PointerFocused e pressionado. O primeiro botão mostra o estado padrão do <xref:System.Windows.Controls.Primitives.RepeatButton>. O segundo mostra como a aparência do botão muda quando o ponteiro do mouse passa sobre o botão, dando a ele foco. O último botão mostra a aparência do <xref:System.Windows.Controls.Primitives.RepeatButton> quando o usuário pressiona o botão do mouse sobre o controle.  
   
- ![Repita os estados de botão](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
+ ![Repita os estados do botão](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
 RepeatButton típico  
   
 ## <a name="in-this-section"></a>Nesta seção  

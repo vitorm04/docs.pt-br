@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a1d082cae19bd83c90e063d841a0c9e4602bc40
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498288"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373043"
 ---
 # <a name="createinstanceenumwmi-function"></a>Função CreateInstanceEnumWmi
-Retorna um enumerador que retorna as instâncias de uma classe especificada que atendem aos critérios de seleção especificados. 
+
+Retorna um enumerador que retorna as instâncias de uma classe especificada que atendem aos critérios de seleção especificados.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 HRESULT CreateInstanceEnumWmi (
    [in] BSTR                    strFilter,
    [in] long                    lFlags,
@@ -42,16 +43,16 @@ HRESULT CreateInstanceEnumWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`strFilter`    
+`strFilter`\
 [in] O nome da classe para a qual as instâncias são desejadas. O parâmetro não pode ser `null`.
 
-`lFlags`   
-[in] Uma combinação de sinalizadores que afetam o comportamento dessa função. Os seguintes valores são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código: 
+`lFlags`\
+[in] Uma combinação de sinalizadores que afetam o comportamento dessa função. Os seguintes valores são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -60,31 +61,32 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_FLAG_SHALLOW` | 1 | A enumeração inclui apenas puras instâncias dessa classe e exclui todas as instâncias de subclasses que fornecem propriedades não encontradas nessa classe. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | O sinalizador faz com que uma chamada semissíncrona. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | A função retorna um enumerador de somente avanço. Normalmente, os enumeradores de somente avanço são mais rápidos e usam menos memória do que os enumeradores convencionais, mas eles não permitem chamadas para [Clone](clone.md). |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI mantém ponteiros para objetos no enumration até que eles sejam liberados. | 
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI mantém ponteiros para objetos na enumeração até que eles sejam liberados. |
 
 Os sinalizadores recomendados são `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` para melhor desempenho.
 
-`pCtx`  
+`pCtx`\
 [in] Normalmente, esse valor é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instância que pode ser usada pelo provedor que está fornecendo as instâncias solicitadas.
 
-`ppEnum`  
+`ppEnum`\
 [out] Recebe o ponteiro para o enumerador.
 
-`authLevel`  
+`authLevel`\
 [in] O nível de autorização.
 
-`impLevel` [in] O nível de representação.
+`impLevel`\
+[in] O nível de representação.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Um ponteiro para um [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto que representa o namespace atual.
 
-`strUser`   
+`strUser`\
 [in] O nome de usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
-`strPassword`   
+`strPassword`\
 [in] A senha. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
-`strAuthority`   
+`strAuthority`\
 [in] O nome de domínio do usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
 ## <a name="return-value"></a>Valor retornado
@@ -101,7 +103,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI foi provavelmente interrompido e reiniciar. Chame [ConnectServerWmi](connectserverwmi.md) novamente. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada) de procedimento remoto entre o processo atual e a WMI falhou. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-  
+
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IWbemServices:: Createclassenum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum) método.
@@ -110,12 +112,14 @@ Observe que o enumerador retornado pode ter zero elementos.
 
 Se a chamada de função falhar, você pode obter informações adicionais sobre erros chamando o [GetErrorInfo](geterrorinfo.md) função.
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** WMINet_Utils.idl
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

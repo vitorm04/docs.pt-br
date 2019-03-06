@@ -9,19 +9,19 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 641fe7aa752e9c1a4e4fb10d2a454b1d977a0c7e
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746303"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366771"
 ---
 # <a name="property-animation-techniques-overview"></a>Visão geral das técnicas de animação da propriedade
 Este tópico descreve as diferentes abordagens para animar propriedades: storyboards, animações locais, relógios e animações por quadro.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Para entender este tópico, você deve estar familiarizado com os recursos básicos de animação descritos na [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Para entender este tópico, você deve estar familiarizado com os recursos básicos de animação descritos na [Visão geral da animação](animation-overview.md).  
   
 <a name="summary"></a>   
 ## <a name="different-ways-to-animate"></a>Diferentes maneiras de animar  
@@ -38,13 +38,13 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
 <a name="storyboard_animations"></a>   
 ## <a name="storyboard-animations"></a>Animações de storyboard  
- Use uma <xref:System.Windows.Media.Animation.Storyboard> quando você deseja definir e aplicar suas animações em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]de forma interativa controlar suas animações depois de iniciar, criar uma árvore complexa de animações ou animar em um <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>. Para um objeto seja animado por um <xref:System.Windows.Media.Animation.Storyboard>, ele deve ser um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>, ou deve ser usado para definir um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Para obter mais detalhes, consulte a [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Use uma <xref:System.Windows.Media.Animation.Storyboard> quando você deseja definir e aplicar suas animações em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]de forma interativa controlar suas animações depois de iniciar, criar uma árvore complexa de animações ou animar em um <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>. Para um objeto seja animado por um <xref:System.Windows.Media.Animation.Storyboard>, ele deve ser um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>, ou deve ser usado para definir um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Para obter mais detalhes, consulte a [Visão geral de storyboards](storyboards-overview.md).  
   
  Um <xref:System.Windows.Media.Animation.Storyboard> é um tipo especial de contêiner <xref:System.Windows.Media.Animation.Timeline> que fornece informações de direcionamento para as animações que ele contém. Para animar com um <xref:System.Windows.Media.Animation.Storyboard>, você concluir as três etapas a seguir.  
   
 1.  Declarar um <xref:System.Windows.Media.Animation.Storyboard> e uma ou mais animações.  
   
-2.  Use o <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> anexado propriedades para especificar o objeto de destino e a propriedade de cada animação.  
+2.  Use o <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> anexado propriedades para especificar o objeto de destino e a propriedade de cada animação.  
   
 3.  (Somente código) Definir um <xref:System.Windows.NameScope> para um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Registrar os nomes dos objetos para animar com aquele <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>.  
   
@@ -56,12 +56,12 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
 |O storyboard é iniciado usando…|Por instância|Estilo|Modelo de controle|Modelo de dados|Exemplo|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.EventTrigger>|Sim|Sim|Sim|Sim|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e uma propriedade <xref:System.Windows.Trigger>|Não|Sim|Sim|Sim|[Disparar uma animação quando o valor de uma propriedade é alterado](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.EventTrigger>|Sim|Sim|Sim|Sim|[Animar uma propriedade usando um storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e uma propriedade <xref:System.Windows.Trigger>|Não|Sim|Sim|Sim|[Disparar uma animação quando o valor de uma propriedade é alterado](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como: Disparar uma animação quando dados forem alterados](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sim|Não|Não|Não|[Animar uma propriedade usando um storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sim|Não|Não|Não|[Animar uma propriedade usando um storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
- Para obter mais informações sobre <xref:System.Windows.Media.Animation.Storyboard> objetos, consulte a [visão geral de Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Para obter mais informações sobre <xref:System.Windows.Media.Animation.Storyboard> objetos, consulte a [visão geral de Storyboards](storyboards-overview.md).  
   
 ## <a name="local-animations"></a>Animações locais  
  Animações locais oferecem uma maneira conveniente de animar uma propriedade de dependência de qualquer <xref:System.Windows.Media.Animation.Animatable> objeto. Use animações locais quando você quiser aplicar uma única animação a uma propriedade e não precisar controlar interativamente a animação após seu início. Ao contrário de um <xref:System.Windows.Media.Animation.Storyboard> animação, uma animação local pode animar um objeto que não está associado com um <xref:System.Windows.FrameworkElement> ou um <xref:System.Windows.FrameworkContentElement>. Você também não precisa definir um <xref:System.Windows.NameScope> para esse tipo de animação.  
@@ -76,14 +76,14 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
  O exemplo a seguir mostra como animar a cor de plano de fundo e a largura de um <xref:System.Windows.Controls.Button>.  
   
- [!code-cpp[animateproperty#11](../../../../samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
- [!code-csharp[animateproperty#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
- [!code-vb[animateproperty#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
+ [!code-cpp[animateproperty#11](~/samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
+ [!code-csharp[animateproperty#11](~/samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
+ [!code-vb[animateproperty#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
 ## <a name="clock-animations"></a>Animações de relógio  
  Use <xref:System.Windows.Media.MediaPlayer.Clock%2A> objetos quando você deseja animar sem usar um <xref:System.Windows.Media.Animation.Storyboard> e você deseja criar árvores de tempo complexas ou controlar interativamente animações após seu início. Você pode usar objetos de relógio para animar uma propriedade de dependência de qualquer <xref:System.Windows.Media.Animation.Animatable> objeto.  
   
- Não é possível usar <xref:System.Windows.Media.Animation.Clock> objetos diretamente para animar em estilos, modelos de controle ou modelos de dados. (O sistema de animação e tempo, na verdade, usar <xref:System.Windows.Media.Animation.Clock> objetos para animar em estilos, modelos de controle e modelos de dados, mas ele devem criar aqueles <xref:System.Windows.Media.Animation.Clock> objetos para você de um <xref:System.Windows.Media.Animation.Storyboard>. Para obter mais informações sobre a relação entre <xref:System.Windows.Media.Animation.Storyboard> objetos e <xref:System.Windows.Media.Animation.Clock> objetos, consulte o [animação e visão geral do sistema de temporização](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).)  
+ Não é possível usar <xref:System.Windows.Media.Animation.Clock> objetos diretamente para animar em estilos, modelos de controle ou modelos de dados. (O sistema de animação e tempo, na verdade, usar <xref:System.Windows.Media.Animation.Clock> objetos para animar em estilos, modelos de controle e modelos de dados, mas ele devem criar aqueles <xref:System.Windows.Media.Animation.Clock> objetos para você de um <xref:System.Windows.Media.Animation.Storyboard>. Para obter mais informações sobre a relação entre <xref:System.Windows.Media.Animation.Storyboard> objetos e <xref:System.Windows.Media.Animation.Clock> objetos, consulte o [animação e visão geral do sistema de temporização](animation-and-timing-system-overview.md).)  
   
  Para aplicar uma única <xref:System.Windows.Media.Animation.Clock> a uma propriedade, você concluir as etapas a seguir.  
   
@@ -95,8 +95,8 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
  O exemplo a seguir mostra como criar um <xref:System.Windows.Media.Animation.AnimationClock> e aplicá-lo a duas propriedades semelhantes.  
   
- [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
- [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
+ [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
+ [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
  Para criar uma árvore de tempo e usá-la para animar propriedades, conclua as etapas a seguir.  
   
@@ -106,7 +106,7 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
 3.  Iterar por meio de <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> do <xref:System.Windows.Media.Animation.ClockGroup> e aplicar seu filho <xref:System.Windows.Media.Animation.Clock> objetos. Para cada <xref:System.Windows.Media.Animation.AnimationClock> filho, use o <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> método do objeto que você deseja animar para aplicar o <xref:System.Windows.Media.Animation.AnimationClock> à propriedade que você especifica  
   
- Para obter mais informações sobre objetos de Relógio, consulte o [Visão geral da animação e do sistema de tempo](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Para obter mais informações sobre objetos de Relógio, consulte o [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md).  
   
 ## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>Animação por quadro: Ignorar o sistema de animação e tempo  
  Use esta abordagem quando você precisar ignorar completamente o sistema de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Um cenário para essa abordagem são as animações de física, em que cada etapa da animação requer que os objetos sejam recalculados com base no último conjunto de interações de objetos.  
@@ -122,7 +122,7 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
  Para obter mais informações, consulte o <xref:System.Windows.Media.CompositionTarget.Rendering> página.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
-- [Visão geral da animação e do sistema de tempo](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Visão geral da animação](animation-overview.md)
+- [Visão geral de storyboards](storyboards-overview.md)
+- [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)
+- [Visão geral das propriedades da dependência](../advanced/dependency-properties-overview.md)

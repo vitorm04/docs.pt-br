@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552890"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371327"
 ---
 # <a name="progressbar"></a>ProgressBar
-A <xref:System.Windows.Controls.ProgressBar> indica o progresso de uma operação. O <xref:System.Windows.Controls.ProgressBar> controle consiste em uma janela que é preenchida com a cor de realce de sistema como uma operação progride.  
+Um <xref:System.Windows.Controls.ProgressBar> indica o progresso de uma operação. O <xref:System.Windows.Controls.ProgressBar> controle consiste em uma janela que é preenchida com a cor de realce do sistema como uma operação progride.  
   
  A ilustração a seguir mostra um típico <xref:System.Windows.Controls.ProgressBar>.  
   
- ![Barra de progresso](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
+ ![Progress bar](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

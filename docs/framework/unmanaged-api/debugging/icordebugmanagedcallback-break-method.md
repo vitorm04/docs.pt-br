@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83524b24fd05969fa4f45fd742d1df955c441d44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bab20301c5413f8bbe95d44b87e06d3b3870c9e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732382"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377697"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>Método ICorDebugManagedCallback::Break
-Notifica o depurador quando uma <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-HRESULT Break (  
-    [in] ICorDebugAppDomain *pAppDomain,  
-    [in] ICorDebugThread    *thread  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `pAppDOmain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém a instrução break.  
-  
- `thread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread que contém a instrução break.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** CorDebug.idl, CorDebug.h  
-  
- **Biblioteca:** CorGuids.lib  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Notifica o depurador quando uma <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT Break (
+    [in] ICorDebugAppDomain *pAppDomain,
+    [in] ICorDebugThread    *thread
+);
+```
+
+## <a name="parameters"></a>Parâmetros
+
+`pAppDomain`\
+[in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém a instrução break.
+
+`thread`\
+[in] Um ponteiro para um objeto de ICorDebugThread que representa o thread que contém a instrução break.
+
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** CorDebug.idl, CorDebug.h
+
+**Biblioteca:** CorGuids.lib
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>Consulte também
-- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

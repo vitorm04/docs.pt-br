@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9331c892b0c0abccf2ea8700d46fa4180a7225ed
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499308"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375838"
 ---
 # <a name="freezable-objects-overview"></a>Visão geral de objetos congeláveis
 Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Freezable> objetos, que oferecem recursos especiais que podem ajudar a melhorar o desempenho do aplicativo. Exemplos de objetos congeláveis incluem pincéis, canetas, transformações, geometrias e animações.  
@@ -31,8 +31,8 @@ Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Fre
   
  Por exemplo, suponha que você crie um <xref:System.Windows.Media.SolidColorBrush> de pincel e usá-lo para pintar a tela de fundo de um botão.  
   
- [!code-csharp[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
- [!code-vb[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
+ [!code-csharp[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
+ [!code-vb[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
   
  Quando o botão é renderizado, o subsistema de elementos gráficos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa as informações fornecidas para pintar um grupo de pixels para criar a aparência de um botão. Embora você tenha usado um pincel de cor sólida para descrever como o botão deveria ser pintado, seu pincel de cor sólida, na verdade, não faz a pintura. O sistema de elementos gráficos gera objetos rápidos e de baixo nível para o botão e o pincel e são esses objetos que realmente aparecem na tela.  
   
@@ -43,8 +43,8 @@ Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Fre
 > [!NOTE]
 >  Nem todo objeto Congelável pode ser congelado. Para evitar lançar uma <xref:System.InvalidOperationException>, verifique o valor do objeto Freezable <xref:System.Windows.Freezable.CanFreeze%2A> propriedade para determinar se ele pode ser congelado antes de tentar congelá-lo.  
   
- [!code-csharp[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
- [!code-vb[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
+ [!code-csharp[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
+ [!code-vb[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
   
  Quando você não precisa mais modificar um congelável, congelá-lo fornece benefícios de desempenho. Se você congelasse o pincel nesse exemplo, o sistema de elementos gráficos não precisaria mais monitorar as alterações feitas nele. O sistema de elementos gráficos também pode fazer outras otimizações, porque sabe que o pincel não será alterado.  
   
@@ -55,8 +55,8 @@ Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Fre
 ## <a name="using-freezables"></a>Usando Congeláveis  
  O uso de um congelável descongelado é como o uso de qualquer outro tipo de objeto. No exemplo a seguir, a cor de um <xref:System.Windows.Media.SolidColorBrush> é alterada de amarelo para vermelho depois que ele é usado para pintar a tela de fundo de um botão. O sistema de elementos gráficos funciona nos bastidores para alterar automaticamente o botão de amarelo para vermelho na próxima vez que a tela for atualizada.  
   
- [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
- [!code-vb[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
+ [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
+ [!code-vb[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
   
 ### <a name="freezing-a-freezable"></a>Congelando uma congelável  
  Para fazer uma <xref:System.Windows.Freezable> não modificável, chame seu <xref:System.Windows.Freezable.Freeze%2A> método. Quando você congela um objeto que contém objetos congeláveis, esses objetos também são congelados. Por exemplo, se você congela um <xref:System.Windows.Media.PathGeometry>, as figuras e segmentos que ele contém seriam congelados também.  
@@ -65,7 +65,7 @@ Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Fre
   
 -   Ele tem propriedades animadas ou associadas a dados.  
   
--   Ele tem propriedades definidas por um recurso dinâmico. (Consulte os [recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md) para obter mais informações sobre recursos dinâmicos).  
+-   Ele tem propriedades definidas por um recurso dinâmico. (Consulte os [recursos XAML](xaml-resources.md) para obter mais informações sobre recursos dinâmicos).  
   
 -   Ele contém <xref:System.Windows.Freezable> subobjetos não podem ser congelados.  
   
@@ -73,22 +73,22 @@ Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Fre
   
  Depois de chamar um congelável <xref:System.Windows.Freezable.Freeze%2A> método, ele não pode mais ser modificado. A tentativa de modificar um congelado objeto faz com que um <xref:System.InvalidOperationException> seja lançada. O código a seguir gera uma exceção, pois tenta modificar o pincel depois de ele ter sido congelado.  
   
- [!code-csharp[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
- [!code-vb[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
+ [!code-csharp[freezablesample_procedural#ExceptionExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
+ [!code-vb[freezablesample_procedural#ExceptionExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
   
  Para evitar lançar essa exceção, você pode usar o <xref:System.Windows.Freezable.IsFrozen%2A> método para determinar se um <xref:System.Windows.Freezable> está congelado.  
   
- [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
- [!code-vb[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
+ [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
+ [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
  No exemplo de código anterior, uma cópia modificável foi feita de um objeto congelado usando o <xref:System.Windows.Freezable.Clone%2A> método. A próxima seção aborda a clonagem em mais detalhes.  
   
- **Observação** porque um congelado freezable não pode ser animado, o sistema de animação criará automaticamente clones modificáveis de congelado <xref:System.Windows.Freezable> objetos quando você tenta animá-los com um <xref:System.Windows.Media.Animation.Storyboard>. Para eliminar a sobrecarga de desempenho causada pela clonagem, deixe um objeto descongelado se você pretende animá-lo. Para obter mais informações sobre animação com storyboards, consulte a [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ **Observação** porque um congelado freezable não pode ser animado, o sistema de animação criará automaticamente clones modificáveis de congelado <xref:System.Windows.Freezable> objetos quando você tenta animá-los com um <xref:System.Windows.Media.Animation.Storyboard>. Para eliminar a sobrecarga de desempenho causada pela clonagem, deixe um objeto descongelado se você pretende animá-lo. Para obter mais informações sobre animação com storyboards, consulte a [Visão geral de storyboards](../graphics-multimedia/storyboards-overview.md).  
   
 ### <a name="freezing-from-markup"></a>Congelamento na marcação  
  Para congelar um <xref:System.Windows.Freezable> objeto declarado na marcação, você usa o `PresentationOptions:Freeze` atributo. No exemplo a seguir, um <xref:System.Windows.Media.SolidColorBrush> é declarado como um recurso de página e congelado. Em seguida, ele é usado para definir a tela de fundo de um botão.  
   
- [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
+ [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
  Para usar o atributo `Freeze`, você deve mapear para o namespace de opções de apresentação: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. O `PresentationOptions` é o prefixo recomendado para mapear este namespace:  
   
@@ -96,22 +96,22 @@ Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Fre
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
   
- Como nem todos os leitores de XAML reconhecem esse atributo, é recomendável que você use o [mc:Ignorable Attribute](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) para marcar o atributo `Presentation:Freeze` como ignorável:  
+ Como nem todos os leitores de XAML reconhecem esse atributo, é recomendável que você use o [mc:Ignorable Attribute](mc-ignorable-attribute.md) para marcar o atributo `Presentation:Freeze` como ignorável:  
   
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- Para obter mais informações, consulte a página [Atributo mc:Ignorable](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md).  
+ Para obter mais informações, consulte a página [Atributo mc:Ignorable](mc-ignorable-attribute.md).  
   
 ### <a name="unfreezing-a-freezable"></a>"Descongelando" um Congelável  
  Após congelado, um <xref:System.Windows.Freezable> nunca pode ser modificado ou descongelado; no entanto, você pode criar um clone descongelado usando o <xref:System.Windows.Freezable.Clone%2A> ou <xref:System.Windows.Freezable.CloneCurrentValue%2A> método.  
   
  No exemplo a seguir, a tela de fundo do botão é definida com um pincel e, então, esse pincel é congelado. Uma cópia descongelada é feita do pincel usando o <xref:System.Windows.Freezable.Clone%2A> método. O clone é modificado e usado para alterar a tela de fundo do botão de amarela para vermelha.  
   
- [!code-csharp[freezablesample_procedural#CloneExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
- [!code-vb[freezablesample_procedural#CloneExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
+ [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
+ [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
 >  Independentemente de qual método de clonagem usar, animações nunca são copiadas para o novo <xref:System.Windows.Freezable>.  
@@ -130,7 +130,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Fácil clonagem: a classe Congelável tem vários métodos já implementados que produzem clones profundos.  
   
- Um <xref:System.Windows.Freezable> é um tipo de <xref:System.Windows.DependencyObject>e, portanto, usa o sistema de propriedade de dependência. As propriedades de classe não precisam ser propriedades de dependência, mas usar as propriedades de dependência reduzirá a quantidade de código que você precisa escrever, porque o <xref:System.Windows.Freezable> classe foi projetada com propriedades de dependência em mente. Para obter mais informações sobre o sistema de propriedade de dependência, consulte o [Visão geral de propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Um <xref:System.Windows.Freezable> é um tipo de <xref:System.Windows.DependencyObject>e, portanto, usa o sistema de propriedade de dependência. As propriedades de classe não precisam ser propriedades de dependência, mas usar as propriedades de dependência reduzirá a quantidade de código que você precisa escrever, porque o <xref:System.Windows.Freezable> classe foi projetada com propriedades de dependência em mente. Para obter mais informações sobre o sistema de propriedade de dependência, consulte o [Visão geral de propriedades de dependência](dependency-properties-overview.md).  
   
  Cada <xref:System.Windows.Freezable> subclasse deve substituir o <xref:System.Windows.Freezable.CreateInstanceCore%2A> método. Se sua classe usa as propriedades de dependência para todos os seus dados, você terminou.  
   
@@ -164,5 +164,5 @@ mc:Ignorable="PresentationOptions"
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Freezable>
 - [Exemplo de animação personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)
-- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Propriedades de dependência personalizada](custom-dependency-properties.md)

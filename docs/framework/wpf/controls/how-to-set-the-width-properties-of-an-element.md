@@ -8,12 +8,12 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-ms.openlocfilehash: 739b041d8ca89abb9bd1934abb997d1154f08c95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8fdc7c6659eb33f948741145c0b2e100bb133e4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673979"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376839"
 ---
 # <a name="how-to-set-the-width-properties-of-an-element"></a>Como: Definir as propriedades de largura de um elemento
 ## <a name="example"></a>Exemplo  
@@ -23,13 +23,13 @@ ms.locfileid: "54673979"
   
  O seguinte [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] exemplos de desenham uma <xref:System.Windows.Shapes.Rectangle> elemento (`rect1`) como um filho de <xref:System.Windows.Controls.Canvas>. Você pode alterar as propriedades de largura de um <xref:System.Windows.Shapes.Rectangle> por meio de uma série de <xref:System.Windows.Controls.ListBox> elementos que representam os valores de propriedade de <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, e <xref:System.Windows.FrameworkElement.Width%2A>. Dessa forma, a precedência de cada propriedade é exibida visualmente.  
   
- [!code-xaml[WidthMinWidthMaxWidth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
-[!code-xaml[WidthMinWidthMaxWidth#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
+ [!code-xaml[WidthMinWidthMaxWidth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
+[!code-xaml[WidthMinWidthMaxWidth#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
   
  Os seguintes exemplos de code-behind manipulam os eventos que o <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> aciona eventos. Cada método personalizado recebe entrada do <xref:System.Windows.Controls.ListBox>, analisa o valor como um <xref:System.Double>e aplica o valor à propriedade relacionada à largura especificada. Os valores de largura também são convertidos em uma cadeia de caracteres e gravados em vários <xref:System.Windows.Controls.TextBlock> elementos (a definição desses elementos não é mostrada o XAML selecionado).  
   
- [!code-csharp[WidthMinWidthMaxWidth#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
- [!code-vb[WidthMinWidthMaxWidth#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[WidthMinWidthMaxWidth#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[WidthMinWidthMaxWidth#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
   
  Para ver o exemplo completo, confira [Exemplo de comparação de propriedades de largura](https://go.microsoft.com/fwlink/?LinkID=160050).  
   
@@ -40,6 +40,6 @@ ms.locfileid: "54673979"
 - <xref:System.Windows.FrameworkElement.MaxWidth%2A>
 - <xref:System.Windows.FrameworkElement.MinWidth%2A>
 - <xref:System.Windows.FrameworkElement.Width%2A>
-- [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Definir as propriedades de altura de um elemento](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)
+- [Visão geral de painéis](panels-overview.md)
+- [Definir as propriedades de altura de um elemento](how-to-set-the-height-properties-of-an-element.md)
 - [Exemplo de comparação de propriedades de largura](https://go.microsoft.com/fwlink/?LinkID=160050)

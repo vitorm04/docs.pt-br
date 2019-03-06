@@ -3,11 +3,11 @@ title: <certificate> de <clientCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
 ms.openlocfilehash: 94241d022e8a97253100a67e2a779593861c093c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286449"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366511"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<certificado > de \<clientCertificate > elemento
 Especifica um x. 509 certificado usado para assinar e criptografar mensagens.  

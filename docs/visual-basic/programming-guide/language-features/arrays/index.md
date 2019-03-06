@@ -2,18 +2,13 @@
 title: Matrizes no Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149894"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Matrizes no Visual Basic
 
 Uma matriz é um conjunto de valores, que são chamados *elementos*, que são logicamente relacionados uns aos outros. Por exemplo, uma matriz pode consistir no número de alunos em cada nível em uma escola primária; cada elemento da matriz é o número de alunos em uma única nota. Da mesma forma, uma matriz pode consistir em curso de um aluno para uma classe; cada elemento da matriz é uma única nota.
@@ -87,7 +82,7 @@ Você pode definir o tamanho de uma matriz de várias maneiras:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-Se você tiver uma matriz existente, você poderá redefinir o tamanho usando o [ `Redim` ](../../../language-reference/statements/redim-statement.md) instrução. Você pode especificar que o `Redim` instrução manter os valores que estão na matriz, ou você pode especificar que ele crie uma matriz vazia. O exemplo a seguir mostra os diferentes usos da instrução `Redim` para modificar o tamanho de uma matriz existente.
+Se você tiver uma matriz existente, você poderá redefinir o tamanho usando o [ `ReDim` ](../../../language-reference/statements/redim-statement.md) instrução. Você pode especificar que o `ReDim` instrução manter os valores que estão na matriz, ou você pode especificar que ele crie uma matriz vazia. O exemplo a seguir mostra os diferentes usos da instrução `ReDim` para modificar o tamanho de uma matriz existente.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ O exemplo a seguir usa uma matriz de meses, cada elemento é uma matriz de dias.
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-O exemplo anterior atribui valores para a matriz denteada em uma base de elemento por elemento usando um `For...Next` loop. Você também pode atribuir valores aos elementos de uma matriz denteada usando literais de matriz aninhados. No entanto, a tentativa de usar aninhados literais de matriz (por exemplo, ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) gera o erro do compilador [BC30568](../../../,,/../misc/bc30568.md). Para corrigir o erro, coloque os literais de matriz interna entre parênteses. Os parênteses forçam a expressão literal de matriz a ser avaliada e os valores resultantes são usados com a matriz externa literal, como mostra o exemplo a seguir.
+O exemplo anterior atribui valores para a matriz denteada em uma base de elemento por elemento usando um `For...Next` loop. Você também pode atribuir valores aos elementos de uma matriz denteada usando literais de matriz aninhados. No entanto, a tentativa de usar aninhados literais de matriz (por exemplo, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) gera o erro do compilador [BC30568](../../../,,/../misc/bc30568.md). Para corrigir o erro, coloque os literais de matriz interna entre parênteses. Os parênteses forçam a expressão literal de matriz a ser avaliada e os valores resultantes são usados com a matriz externa literal, como mostra o exemplo a seguir.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Você também pode combinar várias matrizes em uma única matriz maior. Para fa
 > [!NOTE]
 > Esta seção discute a ingressar em uma matriz de cadeia de caracteres em uma única cadeia de caracteres. Para obter informações sobre como ingressar em uma matriz de cadeia de caracteres, consulte o <xref:System.String.Join%2A?displayProperty=nameWithType> método.
 
-Antes de copiar os elementos de cada matriz para a nova matriz, primeiro você deve assegurar que você inicializou a matriz para que ele seja grande o suficiente para accompodate a nova matriz. Você pode fazer isso de duas maneiras:
+Antes de copiar os elementos de cada matriz para a nova matriz, primeiro você deve assegurar que você inicializou a matriz para que ele seja grande o suficiente para acomodar a nova matriz. Você pode fazer isso de duas maneiras:
 
 - Use o [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) instrução expandir dinamicamente a matriz antes de adicionar novos elementos a ele. Essa é a técnica mais fácil, mas isso pode resultar em degradação de desempenho e consumo excessivo de memória quando você estiver copiando matrizes grandes.
 - Calcular o número total de elementos necessários para a nova matriz grande, em seguida, adicionar os elementos de cada matriz de origem a ele.

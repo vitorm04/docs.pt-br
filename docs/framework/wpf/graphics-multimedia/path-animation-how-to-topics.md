@@ -7,23 +7,23 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665845"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373472"
 ---
 # <a name="path-animation-how-to-topics"></a>Tópicos explicativos de animação do caminho
 Os tópicos nesta seção demonstram como animar um objeto ao longo de um caminho.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Animar um objeto ao longo de um caminho (animação dupla)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [Animar um objeto ao longo de um caminho (animação de ponto)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [Animar um objeto ao longo de um caminho (animação de matriz)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [Animar um objeto ao longo de um caminho (animação de matriz com acúmulo de deslocamento)](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [Girar um objeto usando um caminho geométrico (animação de matriz)](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [Girar um objeto usando um caminho geométrico](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [Animar um objeto ao longo de um caminho (animação dupla)](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [Animar um objeto ao longo de um caminho (animação de ponto)](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [Animar um objeto ao longo de um caminho (animação de matriz)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [Animar um objeto ao longo de um caminho (animação de matriz com acúmulo de deslocamento)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [Girar um objeto usando um caminho geométrico (animação de matriz)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [Girar um objeto usando um caminho geométrico](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
@@ -31,6 +31,6 @@ Os tópicos nesta seção demonstram como animar um objeto ao longo de um caminh
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>Consulte também
-- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Elementos gráficos e multimídia](index.md)
+- [Visão geral da animação](animation-overview.md)
+- [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)

@@ -2,17 +2,11 @@
 title: Desempenho do .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance [.NET Framework]
-- reliability [.NET Framework]
+  - 'performance [.NET Framework]'
+  - 'reliability [.NET Framework]'
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221167"
 ---
 # <a name="net-framework-performance"></a>Desempenho do .NET Framework
 Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o desempenho da mesma forma como projetaria qualquer outro recurso do aplicativo. É possível usar as ferramentas fornecidas pela Microsoft para medir o desempenho do aplicativo e, se necessário, fazer melhorias no uso da memória, na produtividade de código e na capacidade de resposta. Este tópico lista as ferramentas de análise de desempenho que a Microsoft fornece, além de fornecer links a outros tópicos que abordam o desempenho em áreas específicas do desenvolvimento de aplicativo.  
@@ -49,7 +43,6 @@ Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o des
 |Aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] gravados em C++, C# e Visual Basic|[Práticas recomendadas de desempenho para Aplicativos da Windows Store usando C++, C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[Pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Visão geral do desempenho do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
-|Windows Forms|[Dicas práticas para aumentar o desempenho de aplicativos do Windows Forms](https://msdn.microsoft.com/magazine/cc163630.aspx)|  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   

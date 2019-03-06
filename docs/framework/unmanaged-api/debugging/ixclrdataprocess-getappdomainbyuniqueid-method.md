@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cf610e3af26c60dd9bf738bff8785890394d0f34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4226bd73c7ae0c1faf510ed63b644116b064fb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710268"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375071"
 ---
 # <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>Método IXCLRDataProcess::GetAppDomainByUniqueId
 
@@ -36,10 +36,13 @@ HRESULT GetAppDomainByUniqueID(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
-`id` [in] O identificador exclusivo do AppDomain
+## <a name="parameters"></a>Parâmetros
 
-`appDomain` [out] O AppDomain
+`id`\
+[in] O identificador exclusivo do AppDomain
+
+`appDomain`\
+[out] O AppDomain
 
 ## <a name="remarks"></a>Comentários
 
@@ -52,5 +55,5 @@ O método fornecido é parte do `IXCLRDataProcess` de interface e corresponde ao
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Consulte também
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Depuração](index.md)
+- [Interface IXCLRDataProcess](ixclrdataprocess-interface.md)

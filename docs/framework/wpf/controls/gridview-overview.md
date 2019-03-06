@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 161c42254144fca0e76bfb5e4aa10f1afb5b11d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578527"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360193"
 ---
 # <a name="gridview-overview"></a>Visão geral de GridView
 <xref:System.Windows.Controls.GridView> modo de exibição é um dos modos de exibição para um <xref:System.Windows.Controls.ListView> controle. O <xref:System.Windows.Controls.GridView> classe e suas classes de suporte permitem que você e seus usuários exibir coleções de itens em uma tabela que normalmente usa botões como cabeçalhos de coluna interativos. Este tópico apresenta o <xref:System.Windows.Controls.GridView> de classe e descreve seu uso.  
@@ -29,19 +29,19 @@ ms.locfileid: "54578527"
   
  **Modo de exibição GridView do conteúdo de ListView**  
   
- ![ListView estilizado](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
+ ![ListView estilizado](./media/styledlistview.PNG "StyledListView")  
   
  <xref:System.Windows.Controls.GridView> colunas são representadas por <xref:System.Windows.Controls.GridViewColumn> objetos, que podem dimensionar automaticamente ao seu conteúdo. Opcionalmente, você pode definir explicitamente um <xref:System.Windows.Controls.GridViewColumn> com uma largura específica. Você pode redimensionar colunas arrastando a alça entre cabeçalhos de coluna. Você pode também adicionar dinamicamente, remover, substituir e reordenar colunas porque essa funcionalidade é incorporada no <xref:System.Windows.Controls.GridView>. No entanto, <xref:System.Windows.Controls.GridView> não pode atualizar diretamente os dados que ele exibe.  
   
  O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.GridView> que exibe dados de funcionários. Neste exemplo, <xref:System.Windows.Controls.ListView> define o `EmployeeInfoDataSource` como o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. As definições de propriedade de <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> vincular <xref:System.Windows.Controls.GridViewColumn> conteúdo para `EmployeeInfoDataSource` categorias de dados.  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  A ilustração a seguir mostra a tabela que o exemplo anterior cria.  
   
  **GridView que exibe dados de um ItemsSource**  
   
- ![ListView com saída de GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView com saída de GridView](./media/listviewgridview.JPG "ListViewGridView")  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>Layout e estilo do GridView  
@@ -55,7 +55,7 @@ ms.locfileid: "54578527"
   
  Para especificar o alinhamento do conteúdo em uma coluna de uma <xref:System.Windows.Controls.GridView>, defina um <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>. Não use o <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> e <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> propriedades de <xref:System.Windows.Controls.ListView> conteúdo que é exibido usando um <xref:System.Windows.Controls.GridView>.  
   
- Para especificar propriedades de modelo e estilo para cabeçalhos de coluna, use o <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, e <xref:System.Windows.Controls.GridViewColumnHeader> classes. Para obter mais informações, consulte [Visão geral de modelos e estilos de cabeçalho de coluna GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).  
+ Para especificar propriedades de modelo e estilo para cabeçalhos de coluna, use o <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, e <xref:System.Windows.Controls.GridViewColumnHeader> classes. Para obter mais informações, consulte [Visão geral de modelos e estilos de cabeçalho de coluna GridView](gridview-column-header-styles-and-templates-overview.md).  
   
 <a name="AddingVisualElementstoaGridViewView"></a>   
 ### <a name="adding-visual-elements-to-a-gridview"></a>Adicionando elementos visuais a um GridView  
@@ -65,7 +65,7 @@ ms.locfileid: "54578527"
   
 <a name="StylingRowsinaGridViewView"></a>   
 ### <a name="styling-rows-in-a-gridview"></a>Aplicando estilo a linhas em um GridView  
- Use o <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> classes para formatar e exibir as linhas de um <xref:System.Windows.Controls.GridView>. Para obter um exemplo de como aplicar estilos sobre linhas em uma <xref:System.Windows.Controls.GridView> modo de exibição, consulte [estilizar uma linha em um ListView que implementa um GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
+ Use o <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> classes para formatar e exibir as linhas de um <xref:System.Windows.Controls.GridView>. Para obter um exemplo de como aplicar estilos sobre linhas em uma <xref:System.Windows.Controls.GridView> modo de exibição, consulte [estilizar uma linha em um ListView que implementa um GridView](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
   
 <a name="AlignmentIssuesWhenUsingItemContainerStyle"></a>   
 ### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>Problemas de alinhamento ao usar ItemContainerStyle  
@@ -83,7 +83,7 @@ ms.locfileid: "54578527"
   
      Os usuários podem reordenar colunas em um <xref:System.Windows.Controls.GridView> pressionando o botão esquerdo do mouse enquanto está sobre um cabeçalho de coluna e, em seguida, arrastando essa coluna para uma nova posição. Enquanto o usuário arrasta o cabeçalho da coluna, uma versão flutuante do cabeçalho é exibida, bem como uma linha preta sólida que mostra onde inserir a coluna.  
   
-     Se você quiser modificar o estilo padrão para a versão de um cabeçalho flutuante, especifique um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.GridViewColumnHeader> tipo que é disparado quando o <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> estiver definida como <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Para mais informações, consulte [Criar um estilo para um cabeçalho de coluna GridView arrastado](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
+     Se você quiser modificar o estilo padrão para a versão de um cabeçalho flutuante, especifique um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.GridViewColumnHeader> tipo que é disparado quando o <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> estiver definida como <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Para mais informações, consulte [Criar um estilo para um cabeçalho de coluna GridView arrastado](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
 -   **Redimensionar uma coluna para seu conteúdo.**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54578527"
   
      Os usuários podem selecionar um ou mais itens em um <xref:System.Windows.Controls.GridView>.  
   
-     Se você quiser alterar o <xref:System.Windows.Style> de um item selecionado, consulte [usar gatilhos para o estilo de itens selecionados em um ListView](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
+     Se você quiser alterar o <xref:System.Windows.Style> de um item selecionado, consulte [usar gatilhos para o estilo de itens selecionados em um ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
 -   **Barra de rolagem para exibir o conteúdo que não está visível inicialmente na tela.**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54578527"
   
 <a name="Obtaining_Other_Custom_Views"></a>   
 ## <a name="obtaining-other-custom-views"></a>Obtendo outros modos de exibição personalizados  
- O <xref:System.Windows.Controls.GridView> classe, que é derivado do <xref:System.Windows.Controls.ViewBase> classe abstrata, é apenas um dos modos de exibição possíveis para o <xref:System.Windows.Controls.ListView> classe. Você pode criar outros modos de exibição personalizados para <xref:System.Windows.Controls.ListView> derivando de <xref:System.Windows.Controls.ViewBase> classe. Para obter um exemplo de um modo de exibição personalizado, consulte [Criar um modo de exibição personalizado para um ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+ O <xref:System.Windows.Controls.GridView> classe, que é derivado do <xref:System.Windows.Controls.ViewBase> classe abstrata, é apenas um dos modos de exibição possíveis para o <xref:System.Windows.Controls.ListView> classe. Você pode criar outros modos de exibição personalizados para <xref:System.Windows.Controls.ListView> derivando de <xref:System.Windows.Controls.ViewBase> classe. Para obter um exemplo de um modo de exibição personalizado, consulte [Criar um modo de exibição personalizado para um ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="GridViewSupportingClasses"></a>   
 ## <a name="gridview-supporting-classes"></a>Classes de apoio a GridView  
@@ -136,6 +136,6 @@ ms.locfileid: "54578527"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [Visão geral de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Classificar uma coluna GridView quando um cabeçalho é clicado](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Visão geral de ListView](listview-overview.md)
+- [Classificar uma coluna GridView quando um cabeçalho é clicado](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [Tópicos de instruções](listview-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695887"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374447"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)
 Você pode configurar um botão que pode ser usado para cancelar um aplicativo assíncrono se não desejar aguardar sua conclusão. Seguindo os exemplos neste tópico, você pode adicionar um botão de cancelamento a um aplicativo que baixa o conteúdo de um site ou uma lista de sites.  
@@ -17,11 +17,11 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
 > [!NOTE]
 >  Para executar os exemplos, você precisa ter o Visual Studio 2012 ou uma versão mais recente e o .NET Framework 4.5 ou posterior instalados em seu computador.  
   
-##  <a name="BKMK_CancelaTask"></a> Cancelar uma tarefa  
+## <a name="BKMK_CancelaTask"></a> Cancelar uma tarefa  
  O primeiro exemplo associa o botão **Cancelar** a uma única tarefa de download. Se você escolher o botão enquanto o aplicativo está baixando conteúdo, o download será cancelado.  
   
 ### <a name="downloading-the-example"></a>Baixando o Exemplo  
- Você pode baixar o projeto completo do Windows Presentation Foundation (WPF) de [exemplo assíncrono: Bem ajustando seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.  
+ Baixe o projeto completo do WPF (Windows Presentation Foundation) em [Amostra assíncrona: Ajustando o aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.  
   
 1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
@@ -135,11 +135,11 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a> Cancelar uma lista de tarefas  
+## <a name="BKMK_CancelaListofTasks"></a> Cancelar uma lista de tarefas  
  Você pode estender o exemplo anterior para cancelar muitas tarefas associando a mesma instância `CancellationTokenSource` a cada tarefa. Se você escolher o botão **Cancelar**, cancela todas as tarefas que ainda não estão concluídas.  
   
 ### <a name="downloading-the-example"></a>Baixando o Exemplo  
- Você pode baixar o projeto completo do Windows Presentation Foundation (WPF) de [exemplo assíncrono: Bem ajustando seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.  
+ Baixe o projeto completo do WPF (Windows Presentation Foundation) em [Amostra assíncrona: Ajustando o aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.  
   
 1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
@@ -247,10 +247,10 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a> Exemplos completos  
+## <a name="BKMK_CompleteExamples"></a> Exemplos completos  
  As seções a seguir contêm o código para cada um dos exemplos anteriores. Observe que você deve adicionar uma referência para <xref:System.Net.Http>.  
   
- Você pode baixar os projetos de [exemplo assíncrono: Ajuste fino do aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Você pode baixar os projetos de [exemplo assíncrono: Ajustando o aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ### <a name="cancel-a-task-example"></a>Exemplo de cancelar uma tarefa  
  O código a seguir é o arquivo. XAML. vb completo para um exemplo que cancela uma única tarefa.  

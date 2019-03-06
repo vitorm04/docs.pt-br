@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: cb8efd32302287de1d80ef68cf98bfa071b7feaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a45cf48c1d0cc097cea956d22fed2079e657a8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664675"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361636"
 ---
 # <a name="geometries-how-to-topics"></a>Tópicos explicativos de geometrias
 Os tópicos nesta seção demonstram como usar <xref:System.Windows.Media.Geometry> objetos em seus aplicativos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Animar um EllipseGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [Animar o tamanho de um ArcSegment](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [Controlar o preenchimento de uma forma composta](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [Criar uma geometria combinada](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [Criar uma forma composta](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Criar uma curva de Bézier cúbica](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [Criar uma linha usando um LineGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [Criar um LineSegment em uma PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [Criar uma forma usando um PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [Criar uma forma usando um StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [Criar uma curva de Bézier quadrática](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [Criar um arco elíptico](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [Criar vários subcaminhos dentro de um PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [Definir um retângulo usando um RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [Arredondar os cantos de um RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+ [Animar um EllipseGeometry](how-to-animate-an-ellipsegeometry.md)  
+ [Animar o tamanho de um ArcSegment](how-to-animate-the-size-of-an-arcsegment.md)  
+ [Controlar o preenchimento de uma forma composta](how-to-control-the-fill-of-a-composite-shape.md)  
+ [Criar uma geometria combinada](how-to-create-a-combined-geometry.md)  
+ [Criar uma forma composta](how-to-create-a-composite-shape.md)  
+ [Criar uma curva de Bézier cúbica](how-to-create-a-cubic-bezier-curve.md)  
+ [Criar uma linha usando um LineGeometry](how-to-create-a-line-using-a-linegeometry.md)  
+ [Criar um LineSegment em uma PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [Criar uma forma usando um PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [Criar uma forma usando um StreamGeometry](how-to-create-a-shape-using-a-streamgeometry.md)  
+ [Criar uma curva de Bézier quadrática](how-to-create-a-quadratic-bezier-curve.md)  
+ [Criar um arco elíptico](how-to-create-an-elliptical-arc.md)  
+ [Criar vários subcaminhos dentro de um PathGeometry](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [Definir um retângulo usando um RectangleGeometry](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [Arredondar os cantos de um RectangleGeometry](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Elementos gráficos e multimídia](index.md)

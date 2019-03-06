@@ -9,12 +9,12 @@ helpviewer_keywords:
 - key frames [WPF], animating camera position
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
-ms.openlocfilehash: 3284b11939b6f0bb921a4cfeb7fd0d4172b46f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5df3a201eaae4ddcf2e5d5aac3de6e0d5013947c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663551"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353383"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>Como: Animar a posição e a direção da câmera usando quadros-chave
 No exemplo a seguir <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> é usado para animar a posição de um <xref:System.Windows.Media.Media3D.PerspectiveCamera> em uma cena 3D. Além disso, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> é usado para animar a direção da câmera está apontando na cena 3D. Ambas essas animações usam vários quadros-chave que cria uma série de efeitos de animação:  
@@ -26,8 +26,8 @@ No exemplo a seguir <xref:System.Windows.Media.Animation.Point3DAnimationUsingKe
 3.  <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> e <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> são usados para criar uma transição variável entre valores de acordo o <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> propriedade. No exemplo a seguir, a animação começa lentamente, mas na direção do final do segmento de tempo, acelera exponencialmente.  
   
 ## <a name="example"></a>Exemplo  
- [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
+ [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Animar posição e direção da câmera em uma cena 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
-- [Visão geral de elementos gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Animar posição e direção da câmera em uma cena 3D](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
+- [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md)

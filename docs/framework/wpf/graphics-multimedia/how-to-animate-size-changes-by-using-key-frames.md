@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 9efaaebdf08a6079bff7179e9ec035b4f38bb3ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 967537bb1828d323f1dcaa8d049604a1a6e30fa4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678441"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374175"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Como: Animar alterações de tamanho usando quadros-chave
 Esse exemplo demonstra como animar alterações de tamanho usando quadros-chave.  
@@ -25,7 +25,7 @@ Esse exemplo demonstra como animar alterações de tamanho usando quadros-chave.
   
 3.  Sobre os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> classe para aumentar o tamanho do arco. Como quadros-chave spline <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> criam uma transição variável entre valores de acordo com os valores da <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> propriedade. Neste exemplo, o tamanho do arco aumenta lentamente no início e aumenta exponencialmente até o final do segmento de tempo.  
   
- [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
  Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
@@ -36,5 +36,5 @@ Esse exemplo demonstra como animar alterações de tamanho usando quadros-chave.
 - <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
-- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Tópicos explicativos sobre quadros-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
+- [Tópicos explicativos sobre quadros-chave](key-frame-animation-how-to-topics.md)

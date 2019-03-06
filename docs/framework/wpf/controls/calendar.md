@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d8e2306a2a63e567b156449caa9741e1028f017f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545212"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359400"
 ---
 # <a name="calendar"></a>Calendário
 Um calendário permite ao usuário selecionar uma data usando uma exibição visual do calendário.  
@@ -19,7 +19,7 @@ Um calendário permite ao usuário selecionar uma data usando uma exibição vis
   
  A ilustração a seguir mostra dois <xref:System.Windows.Controls.Calendar> controla, um com as seleções e datas de blecaute e outro sem.  
   
- ![Controles de calendário](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+ ![Controles de calendário](./media/ndp-calendarcontrols.png "NDP_CalendarControls")  
 Controles de calendário  
   
  A tabela a seguir fornece informações sobre as tarefas que são normalmente associadas a <xref:System.Windows.Controls.Calendar>.  
@@ -52,5 +52,5 @@ Controles de calendário
 |BARRA DE ESPAÇOS ou ENTER|<xref:System.Windows.Controls.CalendarMode.Year> ou <xref:System.Windows.Controls.CalendarMode.Decade>|Comutadores <xref:System.Windows.Controls.Calendar.DisplayMode%2A> para o <xref:System.Windows.Controls.CalendarMode.Month> ou <xref:System.Windows.Controls.CalendarMode.Year> representado pelo item focalizado.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Controles](../../../../docs/framework/wpf/controls/index.md)
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Controles](index.md)
+- [Estilo e modelagem](styling-and-templating.md)

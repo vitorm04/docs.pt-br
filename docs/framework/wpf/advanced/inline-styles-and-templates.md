@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 7f619985e909b772d8c7b86d8393341999288cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496905"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373381"
 ---
 # <a name="inline-styles-and-templates"></a>Estilos e modelos embutidos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece <xref:System.Windows.Style> objetos e objetos de modelo (<xref:System.Windows.FrameworkTemplate> subclasses) como uma maneira de definir a aparência visual de um elemento em recursos, para que eles podem ser usados várias vezes. Por esse motivo, os atributos no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que levam os tipos <xref:System.Windows.Style> e <xref:System.Windows.FrameworkTemplate> quase sempre fazem referências de recurso a estilos e modelos existentes em vez de definir novos embutidos.  
@@ -34,7 +34,7 @@ ms.locfileid: "54496905"
   
  Geralmente não haverá nenhum motivo para definir um estilo ou modelo embutido, mesmo se você pretender usar esse estilo ou modelo nesse local. A maioria dos elementos que podem assumir um estilo ou modelo também dão suporte a uma propriedade e um modelo de conteúdo. Se você estivesse usando uma árvore lógica criada por meio de estilos ou modelagem, seria ainda mais fácil preencher somente essa propriedade de conteúdo com os elementos filho equivalentes na marcação direta. Isso ignoraria totalmente os mecanismos de estilo e modelo.  
   
- Outras sintaxes habilitadas por extensões de marcação que retornam um objeto também são possíveis para os estilos e modelos. Duas destas extensões têm possíveis cenários incluem [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) e <xref:System.Windows.Data.Binding>.  
+ Outras sintaxes habilitadas por extensões de marcação que retornam um objeto também são possíveis para os estilos e modelos. Duas destas extensões têm possíveis cenários incluem [TemplateBinding](templatebinding-markup-extension.md) e <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Estilo e modelagem](../controls/styling-and-templating.md)

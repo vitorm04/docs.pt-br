@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550742"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377036"
 ---
 # <a name="checkbox"></a>CheckBox
-Você pode usar um <xref:System.Windows.Controls.CheckBox> no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do seu aplicativo para representar as opções que um usuário pode selecionar ou desmarcar. Você pode usar uma única caixa de seleção, ou você pode agrupar duas ou mais caixas de seleção.  
+Você pode usar um <xref:System.Windows.Controls.CheckBox> no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do seu aplicativo para representar as opções que um usuário pode marcar ou desmarcar. Você pode usar uma única caixa de seleção, ou você pode agrupar duas ou mais caixas de seleção.  
   
  O gráfico a seguir mostra os diferentes estados de um <xref:System.Windows.Controls.CheckBox>.  
   
- ![Caixa de seleção estados](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+ ![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
 Controles de caixa de seleção em diferentes estados  
   
 ## <a name="reference"></a>Referência  

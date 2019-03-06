@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550118"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354629"
 ---
 # <a name="contextmenu"></a>ContextMenu
-O <xref:System.Windows.Controls.ContextMenu> permite um controle para exibir um <xref:System.Windows.Controls.Menu> que é específico para o contexto do controle. Normalmente, o <xref:System.Windows.Controls.ContextMenu> é exposta no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] com o botão direito do mouse ou botão de menu do teclado.  
+O <xref:System.Windows.Controls.ContextMenu> permite que um controle para exibir um <xref:System.Windows.Controls.Menu> que é específico para o contexto do controle. Normalmente, o <xref:System.Windows.Controls.ContextMenu> é exposta no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] por meio do botão direito do mouse ou por meio do botão de menu do teclado.  
   
- A figura a seguir ilustra uma <xref:System.Windows.Controls.ContextMenu> em dois estados diferentes: o estado padrão e o estado aberto. O estado padrão, o controle é recolhido. Quando o botão direito do mouse é pressionado sobre o pai do menu, o controle se expande e exibe os itens de menu.  
+ A figura a seguir ilustra um <xref:System.Windows.Controls.ContextMenu> em dois estados diferentes: o estado padrão e o estado aberto. No estado padrão, o controle é recolhido. Quando o botão direito do mouse é pressionado sobre o pai do menu, o controle se expande e exibe os itens de menu.  
   
- ![Estados de ContextMenu](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![Estados de ContextMenu](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 Menu de contexto em diferentes estados  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [Visão geral de ContextMenu](contextmenu-overview.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.ContextMenu>  

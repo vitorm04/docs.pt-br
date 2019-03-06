@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703673"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358930"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Otimizando desempenho: Outras recomendações
-<a name="introduction"></a> Este tópico apresenta recomendações de desempenho além daquelas abordadas pelos tópicos na seção [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).  
+<a name="introduction"></a> Este tópico apresenta recomendações de desempenho além daquelas abordadas pelos tópicos na seção [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md).  
   
  Esse tópico contém as seguintes seções:  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54703673"
 ## <a name="navigation-to-object"></a>Navegação para objeto  
  O <xref:System.Windows.Navigation.NavigationWindow> objeto deriva <xref:System.Windows.Window> e a estende com suporte de navegação de conteúdo, principalmente agregando <xref:System.Windows.Navigation.NavigationService> e o diário. Você pode atualizar a área do cliente <xref:System.Windows.Navigation.NavigationWindow> , especificando a um [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ou um objeto. O exemplo a seguir mostra os dois métodos:  
   
- [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
- [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
+ [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
+ [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
  Cada <xref:System.Windows.Navigation.NavigationWindow> objeto tem um diário que registra o histórico de navegação do usuário na janela. Uma das finalidades do diário é permitir aos usuários rastrear seus passos.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54703673"
   
  Quando você navega usando um objeto, o diário armazena toda a árvore visual do objeto. Isso significa que sempre que você revisita a página, ela é renderizada imediatamente sem precisar ser reconstruída. Nesse caso, o custo de armazenamento do diário é alto, mas o tempo para reconstituir a página é baixo.  
   
- Quando você usa o <xref:System.Windows.Navigation.NavigationWindow> do objeto, você precisará ter em mente como o suporte de diário afeta o desempenho do seu aplicativo. Para obter mais informações, consulte [Visão geral de navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ Quando você usa o <xref:System.Windows.Navigation.NavigationWindow> do objeto, você precisará ter em mente como o suporte de diário afeta o desempenho do seu aplicativo. Para obter mais informações, consulte [Visão geral de navegação](../app-development/navigation-overview.md).  
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>Testes de clique em grandes superfícies 3D  
@@ -73,12 +73,12 @@ ms.locfileid: "54703673"
  O serviço de Cache de Fontes [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] compartilha dados de fontes entre aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O primeiro aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] executado iniciará esse serviço se o serviço ainda não estiver em execução. Se você estiver usando [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], você pode definir o serviço "Windows Presentation Foundation (WPF) fonte Cache 3.0.0.0" de "Manual" (o padrão) para "Automático (início atrasado)" para reduzir o tempo de inicialização inicial dos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Planejando para desempenho do aplicativo](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Aproveitando o hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento do objeto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Recursos do aplicativo](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Dicas e truques de animação](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Layout e design](optimizing-performance-layout-and-design.md)
+- [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento do objeto](optimizing-performance-object-behavior.md)
+- [Recursos do aplicativo](optimizing-performance-application-resources.md)
+- [Texto](optimizing-performance-text.md)
+- [Associação de dados](optimizing-performance-data-binding.md)
+- [Dicas e truques de animação](../graphics-multimedia/animation-tips-and-tricks.md)

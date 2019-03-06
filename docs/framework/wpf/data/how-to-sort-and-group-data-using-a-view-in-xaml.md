@@ -11,12 +11,12 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: 62b0f46e710180ef53fba086bdfed9e7cf45be9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cbd113502c3f953bd701930df6db090844fefa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610598"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351418"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Como: Organizar e agrupar dados usando uma exibição em XAML
 Este exemplo mostra como criar uma exibição de uma coleção de dados em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Modos de exibição permitem as funcionalidades de agrupamento, classificação, filtragem e a noção de um item atual.  
@@ -26,20 +26,20 @@ Este exemplo mostra como criar uma exibição de uma coleção de dados em [!INC
   
  O exemplo a seguir cria uma exibição da coleta de dados classificada por nome de cidade e agrupada por estado.  
   
- [!code-xaml[CollectionViewSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
+ [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
  Em seguida, o modo de exibição, pode ser uma origem da associação, como no exemplo a seguir:  
   
- [!code-xaml[CollectionViewSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
+ [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
  Para associações a dados XML definidos em um <xref:System.Windows.Data.XmlDataProvider> recurso, preceda o nome XML com um símbolo @.  
   
- [!code-xaml[CollectionViewSource#XDPChunk](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
+ [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
- [!code-xaml[CollectionViewSource#Attribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
+ [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Data.CollectionViewSource>
-- [Obter a exibição padrão de uma coleta de dados](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)
-- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Obter a exibição padrão de uma coleta de dados](how-to-get-the-default-view-of-a-data-collection.md)
+- [Visão geral da vinculação de dados](data-binding-overview.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

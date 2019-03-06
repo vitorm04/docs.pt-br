@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547287"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375097"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizando a aparência de um controle existente criando um ControlTemplate
 <a name="introduction"></a> Um <xref:System.Windows.Controls.ControlTemplate> Especifica a estrutura visual e o comportamento visual de um controle. Você pode personalizar a aparência de um controle, fornecendo uma nova <xref:System.Windows.Controls.ControlTemplate>. Quando você cria um <xref:System.Windows.Controls.ControlTemplate>, substitua a aparência de um controle existente sem alterar sua funcionalidade. Por exemplo, você pode tornar os botões em seu aplicativo redondos em vez da forma quadrada padrão, mas o botão ainda gerará o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
@@ -26,16 +26,16 @@ ms.locfileid: "54547287"
   
  As ilustrações mostram uma <xref:System.Windows.Controls.Button> que usa o <xref:System.Windows.Controls.ControlTemplate> que é criado neste tópico.  
   
- ![Um botão com um modelo de controle personalizado. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![Um botão com um modelo de controle personalizado. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Um botão que usa um modelo de controle personalizado  
   
- ![Um botão com uma borda vermelha. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![Um botão com uma borda vermelha. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Um botão que usa um modelo de controle personalizado e tem o ponteiro do mouse sobre ele  
   
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Este tópico presume que você entenda como criar e usar controles e estilos, conforme discutido em [Controles](../../../../docs/framework/wpf/controls/index.md). Os conceitos discutidos neste tópico se aplicam aos elementos que herdam de <xref:System.Windows.Controls.Control> classe, exceto para o <xref:System.Windows.Controls.UserControl>. Não é possível aplicar uma <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.UserControl>.  
+ Este tópico presume que você entenda como criar e usar controles e estilos, conforme discutido em [Controles](index.md). Os conceitos discutidos neste tópico se aplicam aos elementos que herdam de <xref:System.Windows.Controls.Control> classe, exceto para o <xref:System.Windows.Controls.UserControl>. Não é possível aplicar uma <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.UserControl>.  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
 ## <a name="when-you-should-create-a-controltemplate"></a>Quando você criar um ControlTemplate  
@@ -47,12 +47,12 @@ Um botão que usa um modelo de controle personalizado e tem o ponteiro do mouse 
   
  A ilustração a seguir mostra uma <xref:System.Windows.Controls.CheckBox> que usa um padrão <xref:System.Windows.Controls.ControlTemplate>.  
   
- ![Uma caixa de seleção com o modelo de controle padrão. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![Uma caixa de seleção com o modelo de controle padrão. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Uma caixa de seleção que usa o modelo de controle padrão  
   
  A ilustração a seguir mostra uma <xref:System.Windows.Controls.CheckBox> que usa um personalizado <xref:System.Windows.Controls.ControlTemplate> para colocar o conteúdo da <xref:System.Windows.Controls.CheckBox> acima do indicador de seleção e exibe um X quando o <xref:System.Windows.Controls.CheckBox> está selecionado.  
   
- ![Uma caixa de seleção com um modelo de controle personalizado. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+ ![Uma caixa de seleção com um modelo de controle personalizado. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 Uma caixa de seleção que usa um modelo de controle personalizado  
   
  O <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.CheckBox> neste exemplo é relativamente complexa, portanto, este tópico usa um exemplo mais simples de criar um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.Button>.  
@@ -71,14 +71,14 @@ Uma caixa de seleção que usa um modelo de controle personalizado
   
 -   Um <xref:System.Windows.Controls.ContentPresenter> que exibe o conteúdo do botão. O <xref:System.Windows.Controls.ContentPresenter> permite que qualquer tipo de objeto a ser exibido.  
   
- [!code-xaml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
+ [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
 ### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>Preserva a funcionalidade das propriedades de um controle usando TemplateBinding  
- Quando você cria um novo <xref:System.Windows.Controls.ControlTemplate>, você ainda poderá usar as propriedades públicas para alterar a aparência do controle. O [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) extensão de marcação é associado a uma propriedade de um elemento que está no <xref:System.Windows.Controls.ControlTemplate> a uma propriedade pública que é definida pelo controle. Quando você usa [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md), você habilita propriedades do controle para atuar como parâmetros para o modelo. Ou seja, quando uma propriedade em um controle é definida, esse valor é passado para o elemento que contém a [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md).  
+ Quando você cria um novo <xref:System.Windows.Controls.ControlTemplate>, você ainda poderá usar as propriedades públicas para alterar a aparência do controle. O [TemplateBinding](../advanced/templatebinding-markup-extension.md) extensão de marcação é associado a uma propriedade de um elemento que está no <xref:System.Windows.Controls.ControlTemplate> a uma propriedade pública que é definida pelo controle. Quando você usa [TemplateBinding](../advanced/templatebinding-markup-extension.md), você habilita propriedades do controle para atuar como parâmetros para o modelo. Ou seja, quando uma propriedade em um controle é definida, esse valor é passado para o elemento que contém a [TemplateBinding](../advanced/templatebinding-markup-extension.md).  
   
- O exemplo a seguir repete a parte do exemplo anterior que usa o [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) extensão de marcação para associar as propriedades dos elementos que estão na <xref:System.Windows.Controls.ControlTemplate> a propriedades públicas que são definidas pelo botão.  
+ O exemplo a seguir repete a parte do exemplo anterior que usa o [TemplateBinding](../advanced/templatebinding-markup-extension.md) extensão de marcação para associar as propriedades dos elementos que estão na <xref:System.Windows.Controls.ControlTemplate> a propriedades públicas que são definidas pelo botão.  
   
- [!code-xaml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
+ [!code-xaml[VSMButtonTemplate#TemplateBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
  Neste exemplo, o <xref:System.Windows.Controls.Grid> tem sua <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> modelo de propriedade associado ao <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Porque <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> é o modelo associado, você pode criar vários botões que usam o mesmo <xref:System.Windows.Controls.ControlTemplate> e defina o <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> como valores diferentes em cada botão. Se <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> era o modelo não associado a uma propriedade de um elemento em de <xref:System.Windows.Controls.ControlTemplate>, definindo o <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> de um botão não tem nenhum impacto sobre a aparência do botão.  
   
@@ -112,11 +112,11 @@ Uma caixa de seleção que usa um modelo de controle personalizado
   
  O exemplo a seguir cria dois botões que usam o <xref:System.Windows.Controls.ControlTemplate> definido no exemplo anterior. O exemplo define o <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, e <xref:System.Windows.Controls.Control.FontSize%2A> propriedades em cada botão. Definindo o <xref:System.Windows.Controls.Control.Background%2A> propriedade tem um efeito porque ele é o modelo associado a <xref:System.Windows.Controls.ControlTemplate>. Mesmo que o <xref:System.Windows.Controls.Control.Foreground%2A> e <xref:System.Windows.Controls.Control.FontSize%2A> propriedades não são de modelo associado, defini-las tem um efeito porque seus valores são herdados.  
   
- [!code-xaml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
+ [!code-xaml[VSMButtonTemplate#ButtonDeclaration](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
  O exemplo anterior produz um resultado semelhante ao mostrado na ilustração a seguir.  
   
- ![Dois botões, um azul e um roxo. ](../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP_ButtonTwo")  
+ ![Dois botões, um azul e um roxo. ](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
 Dois botões com cores da tela de fundo diferentes  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
@@ -127,7 +127,7 @@ Dois botões com cores da tela de fundo diferentes
   
  A exemplo a seguir mostra a <xref:System.Windows.VisualState> que altera a aparência de um <xref:System.Windows.Controls.Button> quando o ponteiro do mouse está sobre ele. O <xref:System.Windows.Media.Animation.Storyboard> altera a cor da borda do botão alterando a cor do `BorderBrush`. Se você consultar a <xref:System.Windows.Controls.ControlTemplate> exemplo no início deste tópico, você deve se lembrar que `BorderBrush` é o nome da <xref:System.Windows.Media.SolidColorBrush> que é atribuído ao <xref:System.Windows.Controls.Border.Background%2A> do <xref:System.Windows.Controls.Border>.  
   
- [!code-xaml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
+ [!code-xaml[VSMButtonTemplate#4](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
  O controle é responsável por definir os estados como parte de seu contrato de controle, que é abordado em detalhes em [Personalizar outros controles pela compreensão do contrato de controle](#customizing_other_controls_by_understanding_the_control_contract), mais adiante neste tópico. A tabela a seguir lista os estados que são especificados para o <xref:System.Windows.Controls.Button>.  
   
@@ -147,20 +147,20 @@ Dois botões com cores da tela de fundo diferentes
 > [!NOTE]
 >  Certifique-se de definir a <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> anexados a propriedade na raiz <xref:System.Windows.FrameworkElement> da <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-xaml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
+ [!code-xaml[VSMButtonTemplate#VisualStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
  O exemplo anterior produz um resultado semelhante ao mostrado nas ilustrações a seguir.  
   
- ![Um botão com um modelo de controle personalizado. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![Um botão com um modelo de controle personalizado. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Um botão que usa um modelo de controle personalizado no estado normal  
   
- ![Um botão com uma borda vermelha. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![Um botão com uma borda vermelha. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Um botão que usa um modelo de controle personalizado no estado de passar o mouse  
   
- ![A borda é transparente em um botão pressionado. ](../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+ ![A borda é transparente em um botão pressionado. ](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
 Um botão que usa um modelo de controle personalizado no estado pressionado  
   
- Para localizar os estados visuais para controles incluídos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Para localizar os estados visuais para controles incluídos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Estilos e modelos de controle](control-styles-and-templates.md).  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
 ## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>Especificar o comportamento de um controle quando ele faz a transição entre estados  
@@ -177,12 +177,12 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
 ### <a name="specifying-the-duration-of-a-transition"></a>Especificar a duração de uma transição  
  Você pode especificar quanto tempo uma transição dura definindo a <xref:System.Windows.VisualTransition.GeneratedDuration%2A> propriedade. O exemplo anterior tem um <xref:System.Windows.VisualState> que especifica que a borda do botão se torna transparente quando o botão é pressionado, mas a animação leva muito tempo para ser perceptível caso o botão é pressionado e liberado de rapidamente. Você pode usar um <xref:System.Windows.VisualTransition> para especificar a quantidade de tempo ele leva o controle para fazer a transição para o estado pressionado. O exemplo a seguir especifica que o controle utiliza um centésimo de segundo para ir para o estado pressionado.  
   
- [!code-xaml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
+ [!code-xaml[VSMButtonTemplate#PressedTransition](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
 ### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>Especificar alterações à aparência do controle durante uma transição  
  O <xref:System.Windows.VisualTransition> contém um <xref:System.Windows.Media.Animation.Storyboard> que começa quando o controle faz a transição entre estados. Por exemplo, você pode especificar que uma determinada animação ocorre quando o controle faz a transição do estado `MouseOver` para o estado `Normal`. O exemplo a seguir cria um <xref:System.Windows.VisualTransition> que especifica que quando o usuário move o ponteiro do mouse para longe do botão, a borda do botão muda para azul, em seguida, amarelo e, então, preto em 1,5 segundos.  
   
- [!code-xaml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
+ [!code-xaml[VSMButtonTemplate#8](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
 ### <a name="specifying-when-a-visualtransition-is-applied"></a>Especificar quando uma VisualTransition é aplicada  
  Um <xref:System.Windows.VisualTransition> pode ser restrito a ser aplicado somente em determinados estados, ou ele pode ser aplicado sempre que o controle fizer a transição entre estados. No exemplo anterior, o <xref:System.Windows.VisualTransition> é aplicada quando o controle passa do `MouseOver` estado para o `Normal` estado; no exemplo antes disso, o <xref:System.Windows.VisualTransition> é aplicado quando o controle passa para o `Pressed` estado. Você restringe quando uma <xref:System.Windows.VisualTransition> é aplicada definindo o <xref:System.Windows.VisualTransition.To%2A> e <xref:System.Windows.VisualTransition.From%2A> propriedades. A tabela a seguir descreve os níveis de restrição do mais restritivo para o menos restritivo.  
@@ -196,7 +196,7 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
  Você pode ter vários <xref:System.Windows.VisualTransition> objetos em um <xref:System.Windows.VisualStateGroup> que se referem ao mesmo estado, mas eles serão usados na ordem em que especifica a tabela anterior. O exemplo a seguir, há dois <xref:System.Windows.VisualTransition> objetos. Quando o controle faz a transição do `Pressed` estado para o `MouseOver` estado, o <xref:System.Windows.VisualTransition> que tem ambos <xref:System.Windows.VisualTransition.From%2A> e <xref:System.Windows.VisualTransition.To%2A> conjunto é usado. Quando o controle faz a transição de um estado diferente de `Pressed` para o estado `MouseOver`, o outro estado é usado.  
   
- [!code-xaml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
+ [!code-xaml[VSMButtonTemplate#7](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
  O <xref:System.Windows.VisualStateGroup> tem uma <xref:System.Windows.VisualStateGroup.Transitions%2A> propriedade que contém o <xref:System.Windows.VisualTransition> objetos que se aplicam ao <xref:System.Windows.VisualState> objetos no <xref:System.Windows.VisualStateGroup>. Como o <xref:System.Windows.Controls.ControlTemplate> autor, você é livre para incluir quaisquer <xref:System.Windows.VisualTransition> desejado. No entanto, se o <xref:System.Windows.VisualTransition.To%2A> e <xref:System.Windows.VisualTransition.From%2A> são definidas como nomes de estado que não estão na <xref:System.Windows.VisualStateGroup>, o <xref:System.Windows.VisualTransition> será ignorado.  
   
@@ -210,7 +210,7 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
 -   Do estado `MouseOver` para o estado `Normal`.  
   
- [!code-xaml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
+ [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
 ## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>Personalizar de outros controles pela compreensão do contrato de controle  
@@ -229,25 +229,25 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
  A exemplo a seguir mostra a <xref:System.Windows.TemplatePartAttribute> objetos que são especificados no <xref:System.Windows.Controls.ComboBox> classe. A lógica de <xref:System.Windows.Controls.ComboBox> espera encontrar uma <xref:System.Windows.Controls.TextBox> denominado `PART_EditableTextBox` e uma <xref:System.Windows.Controls.Primitives.Popup> denominada `PART_Popup` no seu <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-csharp[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
- [!code-vb[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
+ [!code-csharp[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
+ [!code-vb[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
  O exemplo a seguir mostra um simplificada <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.ComboBox> que inclui os elementos que são especificados pelo <xref:System.Windows.TemplatePartAttribute> objetos no <xref:System.Windows.Controls.ComboBox> classe.  
   
- [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
+ [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
 ### <a name="states-in-the-control-contract"></a>Estados no contrato de controle  
  Os estados de um controle também são uma parte do contrato de controle. O exemplo de como criar uma <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.Button> mostra como especificar a aparência de um <xref:System.Windows.Controls.Button> dependendo de seus estados. Você cria um <xref:System.Windows.VisualState> para cada estado especificado e coloca todos os <xref:System.Windows.VisualState> objetos que compartilham um <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> em um <xref:System.Windows.VisualStateGroup>, conforme descrito na [alterando a aparência de um controle dependendo do seu estado](#changing_the_appearance_of_a_control_depending_on_its_state) anteriores desta tópico. Controles de terceiros devem especificar estados usando o <xref:System.Windows.TemplateVisualStateAttribute>, que permite que ferramentas de designer, como o Expression Blend, exponham os estados do controle para a criação de modelos de controle.  
   
- Para localizar o contrato de controle para controles incluídos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Para localizar o contrato de controle para controles incluídos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Estilos e modelos de controle](control-styles-and-templates.md).  
   
 ### <a name="properties-in-the-control-contract"></a>Propriedades no contrato de controle  
- As propriedades públicas que afetam visualmente o controle também estão incluídas no contrato de controle. Você pode definir essas propriedades para alterar a aparência do controle sem criar um novo <xref:System.Windows.Controls.ControlTemplate>. Você também pode usar o [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) extensão de marcação para associar as propriedades dos elementos que estão na <xref:System.Windows.Controls.ControlTemplate> a propriedades públicas que são definidas pelo <xref:System.Windows.Controls.Button>.  
+ As propriedades públicas que afetam visualmente o controle também estão incluídas no contrato de controle. Você pode definir essas propriedades para alterar a aparência do controle sem criar um novo <xref:System.Windows.Controls.ControlTemplate>. Você também pode usar o [TemplateBinding](../advanced/templatebinding-markup-extension.md) extensão de marcação para associar as propriedades dos elementos que estão na <xref:System.Windows.Controls.ControlTemplate> a propriedades públicas que são definidas pelo <xref:System.Windows.Controls.Button>.  
   
  O exemplo a seguir mostra o contrato de controle do botão.  
   
- [!code-csharp[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
- [!code-vb[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
+ [!code-csharp[VSMButtonTemplate#ButtonContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
+ [!code-vb[VSMButtonTemplate#ButtonContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
  Ao criar uma <xref:System.Windows.Controls.ControlTemplate>, geralmente é mais fácil começar com um <xref:System.Windows.Controls.ControlTemplate> e fazer alterações nele. Você pode fazer uma das opções a seguir para alterar um existente <xref:System.Windows.Controls.ControlTemplate>:  
   
@@ -259,7 +259,7 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
 ## <a name="complete-example"></a>Exemplo completo  
  O exemplo a seguir mostra todo <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> que é discutido neste tópico.  
   
- [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
+ [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Estilo e modelagem](styling-and-templating.md)

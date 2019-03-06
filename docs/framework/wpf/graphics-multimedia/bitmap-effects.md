@@ -9,21 +9,21 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: fef5cec4da09f8cd1a29cb9ebaccc83ee7c48311
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555809"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373459"
 ---
 # <a name="bitmap-effects"></a>Efeitos de bitmap
-Os tópicos nesta seção descrevem como aplicar efeitos visuais sobre imagens de bitmap usando [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Os tópicos nesta seção descrevem como aplicar efeitos visuais a imagens de bitmap usando [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 > [!IMPORTANT]
 >  No [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ou posterior, o <xref:System.Windows.Media.Effects.BitmapEffect> classe está obsoleta. Se você tentar usar o <xref:System.Windows.Media.Effects.BitmapEffect> classe, você receberá uma exceção obsoleta. A alternativa não obsoleta para o <xref:System.Windows.Media.Effects.BitmapEffect> classe é o <xref:System.Windows.Media.Effects.Effect> classe. Na maioria das situações, a <xref:System.Windows.Media.Effects.Effect> classe é significativamente mais rápida.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral dos efeitos de bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ [Visão geral dos efeitos de bitmap](bitmap-effects-overview.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
@@ -31,6 +31,6 @@ Os tópicos nesta seção descrevem como aplicar efeitos visuais sobre imagens d
  <xref:System.Windows.Media.Effects>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Elementos gráficos e multimídia](index.md)  
   
- [Visão geral da geração de imagens](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Visão geral da geração de imagens](imaging-overview.md)

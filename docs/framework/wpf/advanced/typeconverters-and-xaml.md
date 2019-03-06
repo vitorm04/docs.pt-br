@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748071"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352705"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters e XAML
 Este tópico apresenta a finalidade da conversão de tipo de cadeia de caracteres como um recurso de linguagem XAML geral. No .NET Framework, o <xref:System.ComponentModel.TypeConverter> classe tem uma finalidade específica como parte da implementação para uma classe personalizada gerenciada que pode ser usada como um valor de propriedade no uso do atributo XAML. Se você escrever uma classe personalizada e desejar que instâncias de sua classe a ser usado como valores de atributo configuráveis de XAML, você precisará aplicar uma <xref:System.ComponentModel.TypeConverterAttribute> à sua classe, escrever um personalizado <xref:System.ComponentModel.TypeConverter> classe, ou ambos.  
@@ -24,27 +24,22 @@ Este tópico apresenta a finalidade da conversão de tipo de cadeia de caractere
  Um processador XAML precisa de duas informações para processar um valor de atributo. A primeira informação é o tipo de valor da propriedade que está sendo definido. Qualquer cadeia de caracteres que define um valor de atributo e que é processada em XAML deve, por fim, ser convertida ou resolvida para um valor desse tipo. Caso o valor seja um primitivo compreendido pelo analisador XAML (como um valor numérico), será tentada uma conversão direta da cadeia de caracteres. Se o valor for uma enumeração, a cadeia de caracteres será usada para verificar se há uma correspondência de nome com uma constante nomeada na enumeração. Se o valor não for um primitivo compreendido pelo analisador nem uma enumeração, o tipo em questão deverá ser capaz de fornecer uma instância do tipo ou um valor, com base em uma cadeia de caracteres convertida. Isso é feito por meio de indicação de uma classe de conversor de tipos. O conversor de tipos é uma classe auxiliar para fornecer valores de outra classe, tanto para o cenário XAML quanto, potencialmente, para chamadas de código no código .NET.  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>Usando o comportamento de conversão de tipo existente em XAML  
- Dependendo da sua familiaridade com os conceitos fundamentais de XAML, você pode já estar usando o comportamento de conversão de tipos no aplicativo básico XAML sem perceber. Por exemplo, o WPF define, literalmente, centenas de propriedades que recebem um valor do tipo <xref:System.Windows.Point>. Um <xref:System.Windows.Point> é um valor que descreve uma coordenada em um espaço de coordenadas bidimensional, e ele tem apenas duas propriedades importantes: <xref:System.Windows.Point.X%2A> e <xref:System.Windows.Point.Y%2A>. Quando você especifica um ponto em XAML, especifique-o como uma cadeia de caracteres com um delimitador (normalmente, uma vírgula) entre o <xref:System.Windows.Point.X%2A> e <xref:System.Windows.Point.Y%2A> valores que você fornecer. Por exemplo: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`.  
+ Dependendo da sua familiaridade com os conceitos fundamentais de XAML, você pode já estar usando o comportamento de conversão de tipos no aplicativo básico XAML sem perceber. Por exemplo, o WPF define, literalmente, centenas de propriedades que recebem um valor do tipo <xref:System.Windows.Point>. Um <xref:System.Windows.Point> é um valor que descreve uma coordenada em um espaço de coordenadas bidimensional, e ele tem apenas duas propriedades importantes: <xref:System.Windows.Point.X%2A> e <xref:System.Windows.Point.Y%2A>. Quando você especifica um ponto em XAML, especifique-o como uma cadeia de caracteres com um delimitador (normalmente, uma vírgula) entre o <xref:System.Windows.Point.X%2A> e <xref:System.Windows.Point.Y%2A> valores que você fornecer. Por exemplo: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>`.  
   
  Até mesmo esse tipo simples de <xref:System.Windows.Point> e seu uso simples em XAML envolvem um conversor de tipo. Nesse caso, que é a classe <xref:System.Windows.PointConverter>.  
   
  O conversor de tipo para <xref:System.Windows.Point> definida no otimiza de nível de classe os usos de marcação de todas as propriedades que recebem <xref:System.Windows.Point>. Sem um conversor de tipos aqui, você precisaria da marcação muito mais detalhada a seguir para o mesmo exemplo mostrado anteriormente:  
-  
- `<LinearGradientBrush>`  
-  
- `<LinearGradientBrush.StartPoint>`  
-  
- `<Point X="0" Y="0"/>`  
-  
- `</LinearGradientBrush.StartPoint>`  
-  
- `<LinearGradientBrush.EndPoint>`  
-  
- `<Point X="1" Y="1"/>`  
-  
- `</LinearGradientBrush.EndPoint>`  
-  
- `<LinearGradientBrush>`  
+
+```xaml
+<LinearGradientBrush>
+  <LinearGradientBrush.StartPoint>
+    <Point X="0" Y="0"/>
+  </LinearGradientBrush.StartPoint>
+  <LinearGradientBrush.EndPoint>
+    <Point X="1" Y="1"/>
+  </LinearGradientBrush.EndPoint>
+</LinearGradientBrush>
+ ```
   
  Usar a cadeia de caracteres de conversão de tipo ou uma sintaxe equivalente mais detalhada geralmente é uma opção de estilo de codificação. O fluxo de trabalho das ferramentas XAML também pode influenciar a forma como os valores são definidos. Algumas ferramentas XAML tendem a emitir a forma mais detalhada da marcação, porque é mais fácil ir e voltar de modos de exibição de designer ou do próprio mecanismo de serialização.  
   
@@ -53,7 +48,7 @@ Este tópico apresenta a finalidade da conversão de tipo de cadeia de caractere
 ### <a name="type-converters-and-markup-extensions"></a>Conversores de tipo e extensões de marcação  
  As extensões de marcação e os conversores de tipos exercem funções ortogonais em termos de comportamento do processador XAML e dos cenários aos quais são aplicados. Embora o contexto esteja disponível para usos de extensão de marcação, o comportamento de conversão de tipos de propriedades em que uma extensão de marcação fornece um valor geralmente não é verificado em implementações de extensão de marcação. Em outras palavras, mesmo se uma extensão de marcação retornar uma cadeia de caracteres de texto como saída do `ProvideValue`, o comportamento de conversão de tipo dessa cadeia de caracteres, conforme aplicado a uma propriedade específica ou a um tipo de valor da propriedade, não será chamado. Em geral, a finalidade de uma extensão de marcação é processar uma cadeia de caracteres e retornar um objeto sem nenhum conversor de tipo envolvido.  
   
- Uma situação comum em que uma extensão de marcação é necessária, em vez de um conversor de tipos, é para fazer referência a um objeto que já existe. Na melhor das hipóteses, um conversor de tipo sem monitoração de estado pode gerar somente uma nova instância, o que pode não ser desejável. Para obter mais informações sobre extensões de marcação, consulte [Extensões de marcação e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Uma situação comum em que uma extensão de marcação é necessária, em vez de um conversor de tipos, é para fazer referência a um objeto que já existe. Na melhor das hipóteses, um conversor de tipo sem monitoração de estado pode gerar somente uma nova instância, o que pode não ser desejável. Para obter mais informações sobre extensões de marcação, consulte [Extensões de marcação e XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Conversores de tipos nativos  
  Na implementação do analisador XAML do WPF e do .NET Framework, alguns tipos têm manipulação de conversão de tipos nativos; porém, não são tipos que poderiam ser interpretados, convencionalmente, como primitivos. Um exemplo desse tipo é <xref:System.DateTime>. A razão para isso é com base em como funciona a arquitetura do .NET Framework: o tipo <xref:System.DateTime> é definido em mscorlib, a biblioteca mais básica no .NET. <xref:System.DateTime> não é permitida para ser atribuído com um atributo que vem de outro assembly que introduz uma dependência (<xref:System.ComponentModel.TypeConverterAttribute> é do sistema) para que o mecanismo de descoberta de conversor de tipos usual por atribuição não têm suporte. Em vez disso, o analisador XAML tem uma lista de tipos que precisam de tal processamento nativo e os processa da mesma forma como os primitivos verdadeiros são processados. (No caso de <xref:System.DateTime> isso envolve uma chamada para <xref:System.DateTime.Parse%2A>.)  
@@ -116,6 +111,6 @@ Este tópico apresenta a finalidade da conversão de tipo de cadeia de caractere
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.ComponentModel.TypeConverter>
-- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Extensões de marcação e XAML do WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Sintaxe XAML em detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
+- [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md)
+- [Sintaxe XAML em detalhes](xaml-syntax-in-detail.md)

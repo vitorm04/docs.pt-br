@@ -13,8 +13,8 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também fornece um mecanismo para a transferência de dados por meio de operações do tipo arrastar e soltar.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Associação de dados](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [Arrastar e soltar](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Associação de dados](data-binding-wpf.md)  
+ [Arrastar e soltar](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Data>  
@@ -26,12 +26,12 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Controles](../../../../docs/framework/wpf/controls/index.md)  
+ [Controles](../controls/index.md)  
   
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Estilo e modelagem](../controls/styling-and-templating.md)  
   
- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Associação de dados](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Passo a passo: Cache de dados de aplicativo em um aplicativo WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Passo a passo: Cache de dados de aplicativo em um aplicativo WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

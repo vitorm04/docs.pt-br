@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: 3cce6e09cd2dbb02a07487ade781b03406fcad96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed608a658b5077a20ed56419c4ac731641610e3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580272"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373069"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Carregamento de XAML e propriedades da dependência
 A implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] atual de seu processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é inerentemente com reconhecimento de propriedade de dependência. O processador [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa métodos de sistema de propriedade de propriedades de dependência ao carregar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] binários e processar atributos que são propriedades de dependência. Isso desvia os wrappers de propriedade de forma efetiva. Quando você implementa propriedades de dependência personalizadas, você deve considerar esse comportamento e evitar colocar qualquer outro código no seu wrapper de propriedade que não sejam os métodos de sistema de propriedade <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A>.  
@@ -22,7 +22,7 @@ A implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Este tópico pressupõe que você entende as propriedades de dependência das perspectivas de um consumidor e criador e que leu os tópicos [Visão Geral das Propriedades de Dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) e [Propriedades de Dependência Personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md). Também é necessário ter lido [Visão Geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) e [Sintaxe XAML em Detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Este tópico pressupõe que você entende as propriedades de dependência das perspectivas de um consumidor e criador e que leu os tópicos [Visão Geral das Propriedades de Dependência](dependency-properties-overview.md) e [Propriedades de Dependência Personalizada](custom-dependency-properties.md). Também é necessário ter lido [Visão Geral de XAML (WPF)](xaml-overview-wpf.md) e [Sintaxe XAML em Detalhes](xaml-syntax-in-detail.md).  
   
 <a name="implementation"></a>   
 ## <a name="the-wpf-xaml-loader-implementation-and-performance"></a>A implementação do Carregador XAML do WPF e o desempenho  
@@ -38,13 +38,13 @@ A implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
   
  O exemplo a seguir é uma definição de propriedade de dependência recomendada com wrappers, em que o identificador de propriedade é armazenado como um campo `public` `static` `readonly` e as definições `get` e `set` não contêm nenhum código além dos métodos de sistema de propriedade necessários que definem o suporte à propriedade de dependência.  
   
- [!code-csharp[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
- [!code-vb[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
+ [!code-csharp[WPFAquariumSln#AGWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
+ [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Metadados de propriedade da dependência](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Propriedades de dependência do tipo de coleção](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [Segurança de propriedade da dependência](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [Padrões de construtor seguro para DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
+- [Metadados de propriedade da dependência](dependency-property-metadata.md)
+- [Propriedades de dependência do tipo de coleção](collection-type-dependency-properties.md)
+- [Segurança de propriedade da dependência](dependency-property-security.md)
+- [Padrões de construtor seguro para DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)

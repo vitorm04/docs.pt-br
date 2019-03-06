@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 31c6313adb24cd1a2cfca319ac5e243fcdf2b6a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 837ed1cd41869031e8c0b549ffcd26e3285570cd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583253"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368058"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Suplementos do Firefox para dar suporte à implantação do aplicativo .NET
 Habilitar o Windows Presentation Foundation (WPF) plug-in para Firefox e o .NET Framework Assistant para Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], flexível [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e os aplicativos ClickOnce para trabalhar com o navegador Mozilla Firefox.  
@@ -22,7 +22,7 @@ Habilitar o Windows Presentation Foundation (WPF) plug-in para Firefox e o .NET 
   
  O plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para Firefox é instalado com o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. O Windows 7 inclui o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], mas não inclui o plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para o Firefox. Não é possível instalar o plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para Firefox no Windows 7.  
   
- O [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] não inclui o plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para o Firefox. No entanto, se [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] e [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] forem instalados, o plug-in de WPF para Firefox será instalado com o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. Portanto, aplicativos [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ainda serão executados, pois o Host do WPF carregará a versão correta da estrutura. Para obter mais informações, consulte [Host do WPF (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md).  
+ O [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] não inclui o plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para o Firefox. No entanto, se [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] e [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] forem instalados, o plug-in de WPF para Firefox será instalado com o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. Portanto, aplicativos [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ainda serão executados, pois o Host do WPF carregará a versão correta da estrutura. Para obter mais informações, consulte [Host do WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
  O .NET Framework Assistant para Firefox permite que os aplicativos ClickOnce independentes sejam executados do navegador Firefox. O .NET Framework Assistant para Firefox funciona de forma idêntica quando instalado antes e depois do navegador Firefox. Quando o navegador Firefox é iniciado e o [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] é instalado, o Firefox localiza e instala o .NET Framework Assistant para Firefox. Os usuários podem configurar o .NET Framework Assistant para Firefox para fazer o seguinte:  
@@ -34,6 +34,6 @@ Habilitar o Windows Presentation Foundation (WPF) plug-in para Firefox e o .NET 
  O .NET Framework Assistant para Firefox está incluído com o [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Para obter informações sobre como remover o .NET Framework Assistant para Firefox, consulte [Como remover o .NET Framework Assistant para Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
 ## <a name="see-also"></a>Consulte também
-- [Implantando um aplicativo WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
-- [Visão geral dos aplicativos de navegador XAML do WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
-- [Detectar se o plug-in do WPF para Firefox está instalado](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+- [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)
+- [Visão geral dos aplicativos de navegador XAML do WPF](wpf-xaml-browser-applications-overview.md)
+- [Detectar se o plug-in do WPF para Firefox está instalado](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

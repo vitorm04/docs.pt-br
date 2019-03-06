@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493697"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358555"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms e mapeamento de propriedade do WPF
 As tecnologias [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm dois modelos de propriedade semelhantes, mas diferentes. O *mapeamento de propriedade* dá suporte à interoperação entre as duas arquiteturas e fornece os seguintes recursos:  
@@ -49,7 +49,7 @@ As tecnologias [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winf
   
  Propriedades anexadas a elementos de contêiner são totalmente compatíveis com o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
   
- Para obter mais informações, confira [Passo a passo: Mapeando propriedades usando o elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
+ Para obter mais informações, confira [Passo a passo: Mapeando propriedades usando o elemento WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
   
 ## <a name="updates-to-parent-properties"></a>Atualizações para propriedades pai  
  As alterações na maioria das propriedades pai ocasionam notificações para o controle filho hospedado. A lista a seguir descreve as propriedades que não ocasionam notificações quando seus valores são alterados.  
@@ -117,7 +117,7 @@ As tecnologias [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winf
   
  O <xref:System.Windows.Forms.Integration.ElementHost> padrão do controle converte [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propriedades para seus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalentes usando a seguinte tabela de conversão.  
   
- Para obter mais informações, confira [Passo a passo: Mapeando propriedades usando o controle ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
+ Para obter mais informações, confira [Passo a passo: Mapeando propriedades usando o controle ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md).  
   
 |Hospedagem dos Windows Forms|Windows Presentation Foundation|Comportamento de interoperação|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -137,7 +137,7 @@ As tecnologias [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winf
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Interoperação do WPF e do Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Interoperação do WPF e do Windows Forms](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [Passo a passo: Mapeando propriedades usando o elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Passo a passo: Mapeando propriedades usando o controle ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
+- [Interoperação do WPF e do Windows Forms](wpf-and-windows-forms-interoperation.md)
+- [Passo a passo: Mapeando propriedades usando o elemento WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [Passo a passo: Mapeando propriedades usando o controle ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)

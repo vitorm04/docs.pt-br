@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 4cadc1e7e4b7ee70e3a71ddaf433327a7561125d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70c5766da2ea91f519756cb47b20d688b33253e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670823"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356193"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>Como: Animar uma cadeia de caracteres usando quadros-chave
 Este exemplo mostra como animar uma cadeia de caracteres, que neste exemplo é o <xref:System.Windows.Controls.ContentControl.Content%2A> propriedade de um <xref:System.Windows.Controls.Button> controle usando quadros-chave.  
@@ -21,7 +21,7 @@ Este exemplo mostra como animar uma cadeia de caracteres, que neste exemplo é o
   
  Todos os quadros chave neste exemplo usam uma instância da <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> classe porque uma animação de cadeia de caracteres que é criada com quadros chave só pode usar quadros-chave discretos. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> criam saltos repentinos entre valores, ou seja, as alterações para a animação ocorrem rapidamente e não são sutis.  
   
- [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
  Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
@@ -30,5 +30,5 @@ Este exemplo mostra como animar uma cadeia de caracteres, que neste exemplo é o
 - <xref:System.Windows.Controls.ContentControl.Content%2A>
 - <xref:System.Windows.Controls.Button>
 - <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>
-- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Tópicos explicativos sobre quadros-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
+- [Tópicos explicativos sobre quadros-chave](key-frame-animation-how-to-topics.md)

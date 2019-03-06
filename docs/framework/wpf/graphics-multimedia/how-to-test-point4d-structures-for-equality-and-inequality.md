@@ -9,12 +9,12 @@ helpviewer_keywords:
 - testing [WPF], Point4D structures for inequality
 - Point4D structures [WPF], testing for equality
 ms.assetid: e004a67e-db7f-4af8-a31f-e6b2a44ccf34
-ms.openlocfilehash: 1366f66a54266aaae61baf1cf6eee9792da732f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72aef8a1328742f0b04c2ad009126e21390398a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724522"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367200"
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>Como: Testar estruturas Point4D para igualdade e desigualdade
 Este exemplo mostra como testar <xref:System.Windows.Media.Media3D.Point4D> estruturas para igualdade e desigualdade.  
@@ -22,7 +22,7 @@ Este exemplo mostra como testar <xref:System.Windows.Media.Media3D.Point4D> estr
  O código a seguir ilustra como testar <xref:System.Windows.Media.Media3D.Point4D> estruturas para igualdade e desigualdade usando o <xref:System.Windows.Media.Media3D.Point4D> métodos de igualdade.  O <xref:System.Windows.Media.Media3D.Point4D> estruturas são testadas quanto à igualdade usando a igualdade sobrecarregada (`==`) operador, em seguida, para desigualdade usando o operador de desigualdade sobrecarregado (`!=`) operador e, finalmente, uma <xref:System.Windows.Media.Media3D.Point3D> estrutura e um <xref:System.Windows.Media.Media3D.Point4D> estrutura são verificados quanto à igualdade usando estático <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> método.  
   
 ## <a name="example"></a>Exemplo  
- [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
+ [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>

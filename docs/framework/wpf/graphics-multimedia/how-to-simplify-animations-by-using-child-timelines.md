@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: b5af20ce791c442eada0774cd46f52205e5b93e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648187"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370352"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Como: Simplificar animações usando linhas do tempo filho
 Este exemplo mostra como simplificar animações usando filho <xref:System.Windows.Media.Animation.ParallelTimeline> objetos. Um <xref:System.Windows.Media.Animation.Storyboard> é um tipo de <xref:System.Windows.Media.Animation.Timeline> que fornece informações de direcionamento para as linhas do tempo que ele contém. Use um <xref:System.Windows.Media.Animation.Storyboard> para fornecer informações, incluindo informações de propriedade e o objeto de direcionamento de linha do tempo.  
@@ -23,8 +23,8 @@ Este exemplo mostra como simplificar animações usando filho <xref:System.Windo
  **Observação de desempenho:** Embora você possa aninhar <xref:System.Windows.Media.Animation.Storyboard> cronogramas dentro uns aos outros, <xref:System.Windows.Media.Animation.ParallelTimeline>s são mais adequadas para aninhar, pois requerem menos sobrecarga. (O <xref:System.Windows.Media.Animation.Storyboard> herda o <xref:System.Windows.Media.Animation.ParallelTimeline> classe.)  
   
 ## <a name="example"></a>Exemplo  
- [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
+ [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Especificar HandoffBehavior entre animações de storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [Visão geral da animação](animation-overview.md)
+- [Especificar HandoffBehavior entre animações de storyboard](how-to-specify-handoffbehavior-between-storyboard-animations.md)

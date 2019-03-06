@@ -8,18 +8,18 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553735"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361221"
 ---
 # <a name="stackpanel"></a>StackPanel
-O <xref:System.Windows.Controls.StackPanel> elemento é usado para empilhar elementos filho horizontal ou verticalmente.  
+O <xref:System.Windows.Controls.StackPanel> elemento é usado para a pilha de elementos filho horizontal ou verticalmente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tópicos de instruções](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [Tópicos de instruções](stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ O <xref:System.Windows.Controls.StackPanel> elemento é usado para empilhar elem
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Visão geral de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Visão geral de ScrollViewer](scrollviewer-overview.md)

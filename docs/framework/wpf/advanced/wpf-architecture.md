@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634578"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362000"
 ---
 # <a name="wpf-architecture"></a>Arquitetura do WPF
 Este tópico fornece um tour guiado da hierarquia de classe do Windows Presentation Foundation (WPF). Ele aborda a maioria dos subsistemas principais do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve como eles interagem. Ele também detalha algumas das escolhas feitas pelos arquitetos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -33,7 +33,7 @@ Este tópico fornece um tour guiado da hierarquia de classe do Windows Presentat
   
  Os principais componentes do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estão ilustrados na figura abaixo. As seções em vermelho do diagrama (PresentationFramework, PresentationCore e milcore) são as principais partes de código do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Dessas, somente uma é um componente não gerenciado – milcore. O milcore é escrito em código não gerenciado para permitir uma forte integração com o [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Toda a exibição no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é feito por meio do mecanismo do [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], permitindo renderização eficiente de hardware e software. O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] também exigiu controle detalhado de memória e execução. O mecanismo de composição no milcore é extremamente sensível ao desempenho e exigiu que se abdicasse de muitas vantagens do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para obtenção de um melhor desempenho.  
   
- ![A posição do WPF no .NET Framework.](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![A posição do WPF no .NET Framework.](./media/wpf-architect1.PNG "wpf_architect1")  
   
  Comunicação entre as partes gerenciadas e não gerenciadas do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é discutida posteriormente neste tópico. O restante do modelo de programação gerenciado é descrito abaixo.  
   
@@ -71,7 +71,7 @@ Este tópico fornece um tour guiado da hierarquia de classe do Windows Presentat
   
  Ao programar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], você cria <xref:System.Windows.Media.Visual> elementos e tipos derivados que se comunicam internamente com a árvore de composição por meio deste protocolo de mensagens. Cada <xref:System.Windows.Media.Visual> em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pode criar um, nenhum ou vários nós de composição.  
   
- ![A árvore visual do Windows Presentation Foundation.](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![A árvore visual do Windows Presentation Foundation.](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  Há um detalhe arquitetural muito importante a observar aqui – toda a árvore de elementos visuais e instruções de desenho é armazenada em cache. Em termos gráficos, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa um sistema de renderização retido. Isso permite ao sistema redesenhar com altas taxas de atualização sem o bloqueio do sistema de composição em retornos de chamada para o código do usuário. Isso ajuda a impedir o surgimento de um aplicativo que não responde.  
   
@@ -149,6 +149,6 @@ Este tópico fornece um tour guiado da hierarquia de classe do Windows Presentat
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
-- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral da vinculação de dados](../data/data-binding-overview.md)
+- [Layout](layout.md)
+- [Visão geral da animação](../graphics-multimedia/animation-overview.md)

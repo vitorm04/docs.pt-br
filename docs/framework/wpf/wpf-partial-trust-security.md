@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ec3c7a15627cf423d27221b870286009a8f7606f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371626"
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
-<a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguagens de script do lado do cliente não são capazes de acessar recursos críticos do sistema. Porque os aplicativos hospedados pelo navegador do Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade para um conjunto semelhante de restrições. Para impor essas restrições [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se baseia em ambos [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consulte [estratégia de segurança do WPF – segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Por padrão, os aplicativos hospedados pelo navegador solicitam a zona da Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] conjunto de permissões, independentemente se eles são lançados da Internet, intranet local ou no computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
+<a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguagens de script do lado do cliente não são capazes de acessar recursos críticos do sistema. Porque os aplicativos hospedados pelo navegador do Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade para um conjunto semelhante de restrições. Para impor essas restrições [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se baseia em ambos [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, os aplicativos hospedados pelo navegador solicitam a zona da Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] conjunto de permissões, independentemente se eles são lançados da Internet, intranet local ou no computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Fornece uma ampla variedade de suporte para garantir que tanta funcionalidade possível pode ser usada com segurança em confiança parcial e juntamente com [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], fornece suporte adicional para programação de confiança parcial.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54534781"
   
  Esta tabela abrange o [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] recursos de alto nível. Para obter mais informações, o [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] documenta as permissões que são exigidas por cada membro no [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Além disso, os recursos a seguir possuem informações mais detalhadas sobre a execução em confiança parcial, incluindo considerações especiais.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (consulte [visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (consulte [visão geral de XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
   
 -   Pop-ups (consulte <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   Arrastar e soltar (consulte [arrastar e soltar de visão geral da](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)).  
+-   Arrastar e soltar (consulte [arrastar e soltar de visão geral da](./advanced/drag-and-drop-overview.md)).  
   
 -   Área de transferência (consulte <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
@@ -95,10 +95,10 @@ ms.locfileid: "54534781"
 ### <a name="detecting-permissions-using-cas"></a>Detectando permissões usando o CAS  
  Em algumas situações, é possível para o código compartilhado em assemblies de biblioteca a ser usado por aplicativos autônomos e [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Nesses casos, código pode executar funcionalidades que podem exigir mais permissões do que o conjunto de permissões que o aplicativo permite. Seu aplicativo pode detectar se ele tem uma determinada permissão usando a segurança do Microsoft .NET Framework ou não. Especificamente, ele pode testar se ele tem uma permissão específica chamando o <xref:System.Security.CodeAccessPermission.Demand%2A> método na instância da permissão desejada. Isso é mostrado no exemplo a seguir, que tem código que consulta para que tenha a capacidade de salvar um arquivo no disco local:  
   
- [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
- [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
-[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
-[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
+ [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
+ [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
+[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
+[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
  Se um aplicativo não tiver a permissão desejada, a chamada para <xref:System.Security.CodeAccessPermission.Demand%2A> lançará uma exceção de segurança. Caso contrário, a permissão foi concedida. `IsPermissionGranted` encapsula esse comportamento e retorna `true` ou `false` conforme apropriado.  
   
@@ -106,14 +106,14 @@ ms.locfileid: "54534781"
 ### <a name="graceful-degradation-of-functionality"></a>Degradação gradual de funcionalidade  
  Ser capaz de detectar se o código tem permissão para fazer o que precisa fazer é interessante para o código que pode ser executado em diferentes regiões. Ao detectar a zona é uma coisa, que é muito melhor fornecer uma alternativa para o usuário, se possível. Por exemplo, um aplicativo de confiança total geralmente permite aos usuários criar arquivos em qualquer lugar que querem, embora um aplicativo parcialmente confiável só pode criar arquivos no armazenamento isolado. Se o código para criar um arquivo existe em um assembly que é compartilhado por aplicativos de confiança total (autônomo) e aplicativos de confiança parcial (online) e ambos os aplicativos deseja que os usuários criem arquivos, o código compartilhado deverá detectar se ele está em execução em confiança parcial ou total antes de criar um arquivo no local apropriado. O código a seguir demonstra a ambos.  
   
- [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
- [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
-[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
-[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
+ [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
+ [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
+[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
+[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
   
  Em muitos casos, você deve ser capaz de encontrar uma alternativa de confiança parcial.  
   
- Em um ambiente controlado, como uma intranet, estruturas gerenciadas personalizadas podem ser instaladas entre o cliente com base no [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Essas bibliotecas podem executar o código que requer confiança total e ser referenciadas por aplicativos que são permitidos apenas parcialmente confiáveis usando <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (para obter mais informações, consulte [Security](../../../docs/framework/wpf/security-wpf.md) e [segurança do WPF Estratégia - segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).  
+ Em um ambiente controlado, como uma intranet, estruturas gerenciadas personalizadas podem ser instaladas entre o cliente com base no [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Essas bibliotecas podem executar o código que requer confiança total e ser referenciadas por aplicativos que são permitidos apenas parcialmente confiáveis usando <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (para obter mais informações, consulte [Security](security-wpf.md) e [segurança do WPF Estratégia - segurança da plataforma](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Detecção de Host do navegador  
@@ -151,19 +151,19 @@ ms.locfileid: "54534781"
 > [!NOTE]
 >  Recortar e colar só é permitido em confiança parcial quando iniciada pelo usuário.  
   
- Se você precisar aumentar as permissões, você precisará alterar as configurações do projeto e o manifesto do aplicativo ClickOnce. Para obter mais informações, consulte [Visão geral de aplicativos de navegador XAML WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md). Os documentos a seguir também podem ser úteis.  
+ Se você precisar aumentar as permissões, você precisará alterar as configurações do projeto e o manifesto do aplicativo ClickOnce. Para obter mais informações, consulte [Visão geral de aplicativos de navegador XAML WPF](./app-development/wpf-xaml-browser-applications-overview.md). Os documentos a seguir também podem ser úteis.  
   
--   [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+-   [Mage.exe (Manifest Generation and Editing Tool)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
--   [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+-   [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
 -   [Protegendo aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
  Se seu [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] requer confiança total, você pode usar as mesmas ferramentas para aumentar as permissões solicitadas. Embora um [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] só receberão confiança total, se for instalado e iniciado no computador local, intranet, ou de uma URL que está listada no navegador da confiáveis ou sites permitidos. Se o aplicativo for instalado da intranet ou em um site confiável, o usuário receberá o prompt ClickOnce padrão notificando sobre as permissões com privilégios elevados. O usuário pode optar por continuar ou cancelar a instalação.  
   
- Como alternativa, você pode usar o modelo de implantação do ClickOnce confiáveis para implantação de confiança total de qualquer zona de segurança. Para obter mais informações, consulte [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) e [segurança](../../../docs/framework/wpf/security-wpf.md).  
+ Como alternativa, você pode usar o modelo de implantação do ClickOnce confiáveis para implantação de confiança total de qualquer zona de segurança. Para obter mais informações, consulte [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) e [segurança](security-wpf.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Segurança](../../../docs/framework/wpf/security-wpf.md)
-- [Estratégia de segurança do WPF – segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
-- [Estratégia de segurança do WPF – Engenharia de segurança](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Segurança](security-wpf.md)
+- [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)
+- [Estratégia de segurança do WPF – Engenharia de segurança](wpf-security-strategy-security-engineering.md)

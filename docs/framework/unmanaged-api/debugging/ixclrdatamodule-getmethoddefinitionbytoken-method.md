@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1371b86f30324908a639b3b1bbae0ae007ba590a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 727005437289b4bc66ab90f280b80a79f4db06db
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708084"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359309"
 ---
 # <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>Método IXCLRDataModule::GetMethodDefinitionByToken
 
@@ -37,11 +37,13 @@ HRESULT GetMethodDefinitionByToken(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>Parâmetros
 
-`token` [in] O token de método.
+`token`\
+[in] O token de método.
 
-`methodDefinition` [out] A definição do método.
+`methodDefinition`\
+[out] A definição do método.
 
 ## <a name="remarks"></a>Comentários
 
@@ -56,5 +58,5 @@ O método fornecido é parte do `IXCLRDataModule` de interface e corresponde a 2
  
 ## <a name="see-also"></a>Consulte também
 
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [Depuração](index.md)
+- [Interface IXCLRDataModule](ixclrdatamodule-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: 985c9b7737d979937837d7184f9b96f226ec73c3
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d20eea0890708eb2ec2ada503f5c871d54ccc035
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364519"
 ---
 # <a name="how-to-position-a-tooltip"></a>Como: Posicionar um ToolTip
 Este exemplo mostra como especificar a posição de uma dica de ferramenta na tela.  
@@ -33,33 +33,33 @@ Este exemplo mostra como especificar a posição de uma dica de ferramenta na te
   
  Se você definir o conteúdo de uma dica de ferramenta usando um <xref:System.Windows.Controls.ToolTip> objeto, você pode usar as propriedades de qualquer classe; no entanto, o <xref:System.Windows.Controls.ToolTipService> propriedades têm precedência. Use o <xref:System.Windows.Controls.ToolTipService> propriedades de dicas de ferramenta que não são definidas como <xref:System.Windows.Controls.ToolTip> objetos.  
   
- As ilustrações a seguir mostram como posicionar uma dica de ferramenta usando essas propriedades. Embora, a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] exemplos nessas ilustrações mostram como definir as propriedades que são definidas pela <xref:System.Windows.Controls.ToolTip> classe, as propriedades correspondentes do <xref:System.Windows.Controls.ToolTipService> classe seguem as mesmas regras de layout. Para obter mais informações sobre os possíveis valores para a propriedade de Posicionamento, consulte [Comportamento de posicionamento de pop-up](../../../../docs/framework/wpf/controls/popup-placement-behavior.md).  
+ As ilustrações a seguir mostram como posicionar uma dica de ferramenta usando essas propriedades. Embora, a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] exemplos nessas ilustrações mostram como definir as propriedades que são definidas pela <xref:System.Windows.Controls.ToolTip> classe, as propriedades correspondentes do <xref:System.Windows.Controls.ToolTipService> classe seguem as mesmas regras de layout. Para obter mais informações sobre os possíveis valores para a propriedade de Posicionamento, consulte [Comportamento de posicionamento de pop-up](popup-placement-behavior.md).  
   
- ![Posicionamento de ToolTip](../../../../docs/framework/wpf/controls/media/tooltipplacement.png "ToolTipPlacement")  
+ ![Posicionamento de ToolTip](./media/tooltipplacement.png "ToolTipPlacement")  
 Posicionamento de ToolTip usando a propriedade de Posicionamento  
   
- ![Colocando uma dica de ferramenta usando um retângulo de posicionamento](../../../../docs/framework/wpf/controls/media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
+ ![Colocando uma dica de ferramenta usando um retângulo de posicionamento](./media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
 Posicionamento de ToolTip usando as propriedades Placement e PlacementRectangle  
   
- ![Diagrama de posicionamento da dica de ferramenta](../../../../docs/framework/wpf/controls/media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
+ ![Diagrama de posicionamento da dica de ferramenta](./media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
 Posicionamento de ToolTip usando as propriedades Placement, PlacementRectangle e Offset  
   
  O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ToolTip> propriedades para especificar a posição de uma dica de ferramenta cujo conteúdo é um <xref:System.Windows.Controls.ToolTip> objeto.  
   
- [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
- [!code-csharp[ToolTipService#ToolTipCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
- [!code-vb[ToolTipService#ToolTipCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
+ [!code-csharp[ToolTipService#ToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
+ [!code-vb[ToolTipService#ToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
   
  O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ToolTipService> propriedades para especificar a posição de uma dica de ferramenta cujo conteúdo não é um <xref:System.Windows.Controls.ToolTip> objeto.  
   
- [!code-xaml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
+ [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
- [!code-csharp[ToolTipService#NoToolTipCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#notooltipcode)]
- [!code-vb[ToolTipService#NoToolTipCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
+ [!code-csharp[ToolTipService#NoToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#notooltipcode)]
+ [!code-vb[ToolTipService#NoToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Tópicos de instruções](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
-- [Visão geral de ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+- [Tópicos de instruções](tooltip-how-to-topics.md)
+- [Visão geral de ToolTip](tooltip-overview.md)

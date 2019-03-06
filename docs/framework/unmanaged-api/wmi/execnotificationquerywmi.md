@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cac00ff96d0c7007bdd6135282c3f767217385e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566977"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352874"
 ---
 # <a name="execnotificationquerywmi-function"></a>Função ExecNotificationQueryWmi
-Executa uma consulta para receber eventos. A chamada retorna imediatamente, e o chamador pode sondar o enumerador retornado para eventos à medida que eles chegam. Liberar enumerador retornado cancela a consulta.  
+
+Executa uma consulta para receber eventos. A chamada retorna imediatamente, e o chamador pode sondar o enumerador retornado para eventos à medida que eles chegam. Liberar enumerador retornado cancela a consulta.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 HRESULT ExecNotificationQueryWmi (
    [in] BSTR                    strQueryLanguage,
    [in] BSTR                    strQuery,
@@ -43,46 +44,47 @@ HRESULT ExecNotificationQueryWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parâmetros
 
-`strQueryLanguage`    
+`strQueryLanguage`\
 [in] Uma cadeia de caracteres com a linguagem de consulta válida com suporte pelo gerenciamento do Windows. Ele deve ser "WQL", o acrônimo de linguagem de consulta WMI.
 
-`strQuery`  
+`strQuery`\
 [in] O texto da consulta. O parâmetro não pode ser `null`.
 
-`lFlags`   
-[in] Uma combinação dos seguintes dois sinalizadores que afetam o comportamento dessa função. Esses valores são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código. 
+`lFlags`\
+[in] Uma combinação dos seguintes dois sinalizadores que afetam o comportamento dessa função. Esses valores são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código.
 
 | Constante | Valor  | Descrição  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | O sinalizador faz com que uma chamada semissíncrona. Se este sinalizador não for definido, a chamada falhará. Isso é porque os eventos são recebidos continuamente, que significa que o usuário deve sondar o enumerador retornado. Essa chamada de bloqueio por tempo indeterminado, que torna impossível. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | A função retorna um enumerador de somente avanço. Normalmente, os enumeradores de somente avanço são mais rápidos e usam menos memória do que os enumeradores convencionais, mas eles não permitem chamadas para [Clone](clone.md). |
 
-`pCtx`  
-[in] Normalmente, esse valor é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instância que pode ser usada pelo provedor que está fornecendo os eventos solicitados. 
+`pCtx`\
+[in] Normalmente, esse valor é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instância que pode ser usada pelo provedor que está fornecendo os eventos solicitados.
 
-`ppEnum`  
+`ppEnum`\
 [out] Se nenhum erro ocorrer, recebe o ponteiro para o enumerador que permite que o chamador recuperar as instâncias no conjunto de resultados da consulta. Consulte a [comentários](#remarks) seção para obter mais informações.
 
-`authLevel`  
+`authLevel`\
 [in] O nível de autorização.
 
-`impLevel` [in] O nível de representação.
+`impLevel`\
+[in] O nível de representação.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Um ponteiro para um [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto que representa o namespace atual.
 
-`strUser`   
+`strUser`\
 [in] O nome de usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
-`strPassword`   
+`strPassword`\
 [in] A senha. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
-`strAuthority`   
+`strAuthority`\
 [in] O nome de domínio do usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
 ## <a name="return-value"></a>Valor retornado
@@ -96,7 +98,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | A consulta especifica uma classe que não existe. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Muita precisão na entrega de eventos foi solicitada. Uma maior tolerância de sondagem deve ser especificada. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | A consulta requess mais informações de gerenciamento do Windows podem fornecer. Isso `HRESULT` é retornado quando uma consulta de evento resulta em uma solicitação de sondagem de todos os objetos em um namespace. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | A consulta solicita mais informações do que o gerenciamento do Windows pode fornecer. Isso `HRESULT` é retornado quando uma consulta de evento resulta em uma solicitação de sondagem de todos os objetos em um namespace. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | A consulta teve um erro de sintaxe. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | O idioma de consulta solicitado não tem suporte. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | A consulta é muito complexa. |
@@ -105,7 +107,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada) de procedimento remoto entre o processo atual e a WMI falhou. |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | A consulta não pode ser analisada. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-  
+
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o [IWbemServices::ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) método.
@@ -116,12 +118,14 @@ Há limites para o número de `AND` e `OR` palavras-chave que podem ser usadas e
 
 Se a chamada de função falhar, você pode obter informações adicionais sobre erros chamando o [GetErrorInfo](geterrorinfo.md) função.
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Cabeçalho:** WMINet_Utils.idl  
-  
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Cabeçalho:** WMINet_Utils.idl
+
+**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Consulte também
+
 - [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

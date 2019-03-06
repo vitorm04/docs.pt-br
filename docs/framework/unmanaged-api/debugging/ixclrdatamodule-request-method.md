@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746655"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374863"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>Método IXCLRDataModule::Request
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>Parâmetros
 
-`reqCode` [in] Tipo a ser enviado de solicitação.
+`reqCode`\
+[in] Tipo a ser enviado de solicitação.
 
-`inBufferSize` [in] o tamanho do buffer de entrada a ser passado.
+`inBufferSize`\
+[in] o tamanho do buffer de entrada a ser passado.
 
-`inBuffer` [in, size_is(inBufferSize)] Ponteiro de buffer para os dados brutos a serem enviados na solicitação.
+`inBuffer`\
+[in, size_is(inBufferSize)] Ponteiro de buffer para os dados brutos a serem enviados na solicitação.
 
-`outBufferSize` [in] Tamanho do buffer de saída.
+`outBufferSize`\
+[in] Tamanho do buffer de saída.
 
-`outBuffer` [out, size_is(outBufferSize)] Ponteiro de buffer usado para armazenar a resposta da solicitação.
+`outBuffer`\
+[out, size_is(outBufferSize)] Ponteiro de buffer usado para armazenar a resposta da solicitação.
 
 ## <a name="remarks"></a>Comentários
 
@@ -61,5 +66,5 @@ O método fornecido é parte do `IXCLRDataModule` de interface e corresponde ao 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Consulte também
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [Depuração](index.md)
+- [Interface IXCLRDataModule](ixclrdatamodule-interface.md)

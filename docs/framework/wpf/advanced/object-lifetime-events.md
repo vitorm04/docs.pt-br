@@ -24,12 +24,12 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: 8b42104522be854fe4e49d08e110497469d64980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555356"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371483"
 ---
 # <a name="object-lifetime-events"></a>Eventos de tempo de vida do objeto
 Este tópico descreve os eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] específicos que indicam os estágios de criação, uso e destruição no tempo de vida do objeto.  
@@ -38,7 +38,7 @@ Este tópico descreve os eventos [!INCLUDE[TLA2#tla_winclient](../../../../inclu
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Este tópico pressupõe que você entenda as propriedades de dependência da perspectiva de um consumidor das propriedades de dependência existentes em classes do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e que leu o tópico [Visão geral das propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Para seguir os exemplos deste tópico, você também deve compreender [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (consulte [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)) e saber como escrever aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Este tópico pressupõe que você entenda as propriedades de dependência da perspectiva de um consumidor das propriedades de dependência existentes em classes do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e que leu o tópico [Visão geral das propriedades de dependência](dependency-properties-overview.md). Para seguir os exemplos deste tópico, você também deve compreender [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (consulte [Visão geral de XAML (WPF)](xaml-overview-wpf.md)) e saber como escrever aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>Eventos de tempo de vida do objeto  
@@ -68,12 +68,12 @@ Este tópico descreve os eventos [!INCLUDE[TLA2#tla_winclient](../../../../inclu
 ## <a name="lifetime-events-application-model-elements"></a>Elementos de modelo de aplicativo dos eventos de tempo de vida  
  Aproveitando os eventos de tempo de vida comuns para elementos são os seguintes elementos de modelo de aplicativo: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, e <xref:System.Windows.Controls.Frame>. Eles estendem os eventos de tempo de vida comuns com eventos adicionais que são relevantes para suas finalidades específicas. Eles são discutidos com detalhes nos seguintes locais:  
   
--   <xref:System.Windows.Application>: [Visão geral do gerenciamento de aplicativo](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+-   <xref:System.Windows.Application>: [Visão geral do gerenciamento de aplicativo](../app-development/application-management-overview.md).  
   
--   <xref:System.Windows.Window>: [Visão geral do Windows WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
+-   <xref:System.Windows.Window>: [Visão geral do Windows WPF](../app-development/wpf-windows-overview.md).  
   
--   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, e <xref:System.Windows.Controls.Frame>: [Visão geral da navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, e <xref:System.Windows.Controls.Frame>: [Visão geral da navegação](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Precedência do valor da propriedade da dependência](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Precedência do valor da propriedade da dependência](dependency-property-value-precedence.md)
+- [Visão geral de eventos roteados](routed-events-overview.md)

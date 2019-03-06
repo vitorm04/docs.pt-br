@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595104"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378811"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcando eventos roteados como manipulados e tratamento de classes
 Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados do evento. Efetivamente, a manipulação do evento reduzirá a rota. A manipulação de classes é um conceito de programação com suporte nos eventos roteados. Um manipulador de classes tem a oportunidade de manipular um evento roteado específico no nível de uma classe com um manipulador que é invocado antes de qualquer manipulador de instâncias em uma instância da classe.  
@@ -31,7 +31,7 @@ Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Este tópico fornece mais detalhes sobre os conceitos introduzidos na [Visão geral dos eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Este tópico fornece mais detalhes sobre os conceitos introduzidos na [Visão geral dos eventos roteados](routed-events-overview.md).  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>Quando marcar eventos como manipulados  
@@ -47,7 +47,7 @@ Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados
   
  A conexão entre os eventos roteados de túnel e de propagação é feita pela implementação interna de como uma classe do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] específica aciona seus próprios eventos roteados declarados e isso é verdadeiro para os eventos roteados de entrada emparelhados. Porém, a menos que essa implementação em nível de classe exista, não haverá nenhuma conexão entre um evento roteado de túnel e um evento roteado de propagação que compartilham o esquema de nomenclatura: sem essa implementação, eles serão dois eventos roteados completamente separados e não serão acionados em sequência nem compartilharão dados do evento.  
   
- Para obter mais informações sobre como implementar pares de eventos roteados de entrada de túnel/propagação em uma classe personalizada, consulte [Criar um evento roteado personalizado](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Para obter mais informações sobre como implementar pares de eventos roteados de entrada de túnel/propagação em uma classe personalizada, consulte [Criar um evento roteado personalizado](how-to-create-a-custom-routed-event.md).  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Manipuladores de classe e de instância  
@@ -100,6 +100,6 @@ Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.EventManager>
-- [Eventos de visualização](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [Criar um evento roteado personalizado](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Eventos de visualização](preview-events.md)
+- [Criar um evento roteado personalizado](how-to-create-a-custom-routed-event.md)
+- [Visão geral de eventos roteados](routed-events-overview.md)

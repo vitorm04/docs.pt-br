@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 72131780744e08d820f0aa05fdedd36b5458fa84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a08c9bec8436399cd3acbf27198e0912e32d09
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733929"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362377"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Visão geral da pintura com cores sólidas e gradientes
 Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, e <xref:System.Windows.Media.RadialGradientBrush> objetos para pintar com cores sólidas, gradientes lineares e gradientes radiais.  
@@ -31,15 +31,15 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
   
 -   Selecione um pincel de cor sólida predefinida pelo nome.  Por exemplo, você pode definir um botão <xref:System.Windows.Controls.Control.Background%2A> "Vermelho" ou "MediumBlue".  Para obter uma lista das outras predefinidas pincéis de cores sólidas, consulte as propriedades estáticas do <xref:System.Windows.Media.Brushes> classe. Confira o exemplo abaixo.  
   
-     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
 -   Escolha uma cor da paleta de cores de 32 bits, especificando as quantidades de vermelho, verde e azul para combinar em uma única cor sólida.  O formato para especificar uma cor da paleta de 32 bits é "*#rrggbb*", em que *rr* é um número hexadecimal de dois dígitos que especifica a quantidade relativa de vermelho, *gg* especifica a quantidade de verde e *bb* especifica a quantidade de azul.  Além disso, a cor pode ser especificada como "#*aarrggbb*" em que *aa* especifica o valor *alfa*, ou a transparência, da cor. Essa abordagem permite que você crie cores parcialmente transparentes.  No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button> é definido como vermelho totalmente opaco usando notação hexadecimal.  
   
-     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
 -   Usar a sintaxe de marca de propriedade para descrever um <xref:System.Windows.Media.SolidColorBrush>. Essa sintaxe é mais detalhada, mas permite que você especifique configurações adicionais, como a opacidade do pincel. No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> propriedades de dois <xref:System.Windows.Controls.Button> elementos serão definidos como vermelho totalmente opaco. A primeira cor do pincel é descrita usando um nome de cor predefinido. A segunda cor do pincel é descrita usando notação hexadecimal.  
   
-     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
 <a name="solidcolorsincode"></a>   
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Pintando com um SolidColorBrush no código  
@@ -47,17 +47,17 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
   
 -   Use um dos pincéis predefinidos fornecidos pelo <xref:System.Windows.Media.Brushes> classe. No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button> é definido como <xref:System.Windows.Media.Brushes.Red%2A>.  
   
-     [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
+     [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
 -   Criar uma <xref:System.Windows.Media.SolidColorBrush> e defina sua <xref:System.Windows.Media.SolidColorBrush.Color%2A> propriedade usando um <xref:System.Windows.Media.Color> estrutura. Você pode usar uma cor predefinida na <xref:System.Windows.Media.Colors> classe, ou você pode criar um <xref:System.Windows.Media.Color> usando o estático <xref:System.Windows.Media.Color.FromArgb%2A> método.  
   
      O exemplo a seguir mostra como definir a <xref:System.Windows.Media.SolidColorBrush.Color%2A> propriedade de um <xref:System.Windows.Media.SolidColorBrush> usando uma cor predefinida.  
   
-     [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedColor1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedcolor1csharp)]  
+     [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedColor1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedcolor1csharp)]  
   
  Estático <xref:System.Windows.Media.Color.FromArgb%2A> permite que você especifique os valores da cor alfa, vermelho, verde e azul. O intervalo típico para cada um desses valores é de 0 a 255. Por exemplo, um valor alfa igual a 0 indica que uma cor é completamente transparente, enquanto um valor de 255 indica que a cor é completamente opaca. Da mesma forma, um valor de vermelho igual a 0 indica que uma cor não contém nenhum vermelho, enquanto um valor de 255 indica que uma cor tem a quantidade máxima possível de vermelho.  No exemplo a seguir, a cor do pincel é descrita especificando valores alfa, vermelho, verde e azul.  
   
- [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushfromArgbExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushfromargbexample1csharp)]  
+ [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushfromArgbExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushfromargbexample1csharp)]  
   
  Para outras maneiras de especificar a cor, consulte o <xref:System.Windows.Media.Color> tópico de referência.  
   
@@ -71,13 +71,13 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
   
  O exemplo a seguir mostra o código que cria um gradiente linear com quatro cores.  
   
- [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
   
- [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  
   
  Esse código produz o gradiente a seguir:  
   
- ![Um gradiente linear diagonal](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
+ ![Um gradiente linear diagonal](./media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
   
  **Observação:** Os exemplos de gradiente neste tópico usam o sistema de coordenadas padrão para definir pontos de início e pontos de extremidade. O sistema de coordenadas padrão é relativo a uma caixa delimitadora: 0 indica 0 por cento da caixa delimitadora e 1 indica 100 por cento da caixa delimitadora. Você pode alterar esse sistema de coordenadas definindo a <xref:System.Windows.Media.GradientBrush.MappingMode%2A> propriedade para o valor <xref:System.Windows.Media.BrushMappingMode.Absolute>. Um sistema de coordenadas absoluto não é relativo a uma caixa delimitadora. Os valores são interpretados diretamente no espaço local.  
   
@@ -89,7 +89,7 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
   
  A cor de cada ponto entre as marcas de gradiente é interpolada linearmente como uma combinação da cor especificada pelas duas marcas de gradiente delimitadoras. A ilustração a seguir realça as marcas de gradiente do exemplo anterior. Os círculos marcam a posição das marcas de gradiente e uma linha tracejada mostra o eixo do gradiente.  
   
- ![Marcas de gradiente em um gradiente linear](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")  
+ ![Marcas de gradiente em um gradiente linear](./media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")  
   
  A primeira marca de gradiente especifica a cor amarela em um deslocamento de `0.0`.  A segunda marca de gradiente especifica a cor vermelha em um deslocamento de `0.25`.  Os pontos entre essas duas marcas mudam gradualmente de amarelo para vermelho conforme você move da esquerda para a direita ao longo do eixo do gradiente.  A terceira marca de gradiente especifica a cor azul em um deslocamento de `0.75`.  Os pontos entre a segunda e a terceira marca de gradiente mudam gradualmente de vermelho para azul. A quarta marca de gradiente especifica a cor verde-limão em um deslocamento de `1.0`. Os pontos entre a terceira e a quarta marca de gradiente mudam gradualmente de azul para verde-limão.  
   
@@ -99,27 +99,27 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
   
  Por padrão, o pincel de gradiente linear <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> e <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> são relativas à área que está sendo pintada. O ponto (0,0) representa o canto superior esquerdo da área que está sendo pintada e (1,1) representa o canto inferior direito da área que está sendo pintada. O padrão <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> de um <xref:System.Windows.Media.LinearGradientBrush> é (0,0) e seu padrão <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> é (1,1), que cria um gradiente diagonal começando no canto superior esquerdo e estendendo-se para o canto inferior direito da área que está sendo pintada. A ilustração a seguir mostra o eixo do gradiente de um pincel de gradiente linear com o padrão <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> e <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>.  
   
- ![Eixo do gradiente de um gradiente linear diagonal](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk_graphicsmm_diagonalgradientaxis")  
+ ![Eixo do gradiente de um gradiente linear diagonal](./media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk_graphicsmm_diagonalgradientaxis")  
   
  O exemplo a seguir mostra como criar um horizontal gradiente, especificando o pincel <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> e <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>. Observe que as paradas de gradiente são as mesmas nos exemplos anteriores; simplesmente alterando a <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> e <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, o gradiente foi alterado de diagonal para horizontal.  
   
- [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
- [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
   
  A ilustração a seguir mostra o gradiente que é criado. O eixo do gradiente é marcado com uma linha tracejada e as marcas de gradiente são marcadas com círculos.  
   
- ![Eixo do gradiente de um gradiente linear horizontal](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-horizontalgradient.jpg "wcpsdk_graphicsmm_horizontalgradient")  
+ ![Eixo do gradiente de um gradiente linear horizontal](./media/wcpsdk-graphicsmm-horizontalgradient.jpg "wcpsdk_graphicsmm_horizontalgradient")  
   
  O exemplo a seguir mostra como criar um gradiente vertical.  
   
- [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
- [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
   
  A ilustração a seguir mostra o gradiente que é criado. O eixo do gradiente é marcado com uma linha tracejada e as marcas de gradiente são marcadas com círculos.  
   
- ![Eixo do gradiente para um gradiente vertical](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")  
+ ![Eixo do gradiente para um gradiente vertical](./media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")  
   
 <a name="radialgradients"></a>   
 ## <a name="radial-gradients"></a>Gradientes radiais  
@@ -127,19 +127,19 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
   
  No exemplo a seguir, um pincel de gradiente radial é usado para pintar o interior de um retângulo.  
   
- [!code-xaml[GradientBrushExamples_snip#RadialGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/RadialGradientBrushExample.xaml#radialgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#RadialGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/RadialGradientBrushExample.xaml#radialgradient1xaml)]  
   
- [!code-csharp[GradientBrushExamples_snip#RadialGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/RadialGradientBrushExample.cs#radialgradient1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#RadialGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/RadialGradientBrushExample.cs#radialgradient1csharp)]  
   
  A ilustração a seguir mostra o gradiente criado no exemplo anterior. As marcas de gradiente do pincel foram realçadas. Observe que, embora os resultados sejam diferentes, as marcas de gradiente neste exemplo são idênticas às marcas de gradiente nos exemplos anteriores de pincel de gradiente linear.  
   
- ![Marcas de gradiente em um gradiente radial](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
+ ![Marcas de gradiente em um gradiente radial](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
  O <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> Especifica o ponto inicial de eixo do gradiente do pincel de gradiente radial. O eixo do gradiente irradia da origem do gradiente para o círculo do gradiente. Círculo de gradiente do pincel é definido por seu <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, e <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> propriedades.  
   
  A ilustração a seguir mostra vários gradientes radiais com diferentes <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A>, <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, e <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> configurações.  
   
- ![Configurações de RadialGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii")  
+ ![Configurações de RadialGradientBrush](./media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii")  
 RadialGradientBrushes com diferentes configurações de GradientOrigin, Center, RadiusX e RadiusY.  
   
 <a name="specifyinggradientcolors"></a>   
@@ -154,25 +154,25 @@ RadialGradientBrushes com diferentes configurações de GradientOrigin, Center, 
   
  O *aa* na linha anterior representa um valor hexadecimal de dois dígitos usado para especificar a opacidade da cor. O *rr*, o *gg* e o *bb* representam um valor hexadecimal de dois dígitos usado para especificar a quantidade de vermelho, verde e azul na cor. Cada dígito hexadecimal pode ter um valor de 0 a 9 ou de A a F. 0 é o menor valor. F é o maior valor. Um valor alfa de 00 especifica uma cor que é completamente transparente, enquanto um valor alfa de FF cria uma cor que é totalmente opaca.  No exemplo a seguir, a notação [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] hexadecimal é usada para especificar duas cores. A primeira é parcialmente transparente (tem um valor alfa de x20), enquanto a segundo é completamente opaca.  
   
- [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   
 <a name="fromscrgbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-code"></a>Especificando a opacidade das cores no código  
  Ao usar o código, estático <xref:System.Windows.Media.Color.FromArgb%2A> método permite que você especifique um valor alfa ao criar uma cor. O método utiliza quatro parâmetros do tipo <xref:System.Byte>. O primeiro parâmetro especifica o canal alfa da cor e os outros três parâmetros especificam os valores de vermelho, verde e azul da cor. Cada valor deve estar entre 0 e 255, inclusivo. Um valor alfa de 0 especifica que a cor é completamente transparente, enquanto um valor alfa de 255 especifica que a cor é completamente opaca. No exemplo a seguir, o <xref:System.Windows.Media.Color.FromArgb%2A> método é usado para produzir duas cores. A primeira cor é parcialmente transparente (tem um valor alfa de 32), enquanto a segunda é completamente opaca.  
   
- [!code-csharp[GradientBrushExamples_snip#TransparentGradientStopExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/GradientStopsExample.cs#transparentgradientstopexample1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#TransparentGradientStopExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/GradientStopsExample.cs#transparentgradientstopexample1csharp)]  
   
  Como alternativa, você pode usar o <xref:System.Windows.Media.Color.FromScRgb%2A> método, que permite que você use valores ScRGB para criar uma cor.  
   
 <a name="otherbrushes"></a>   
 ## <a name="painting-with-images-drawings-visuals-and-patterns"></a>Pintando com imagens, desenhos, elementos visuais e padrões  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> classes permitem pintar uma área com imagens, desenhos ou visuais. Para obter informações sobre como pintar com imagens, desenhos e padrões, consulte [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> classes permitem pintar uma área com imagens, desenhos ou visuais. Para obter informações sobre como pintar com imagens, desenhos e padrões, consulte [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.LinearGradientBrush>
 - <xref:System.Windows.Media.RadialGradientBrush>
-- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Visão geral da transformação de pincel](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)
-- [Camadas de renderização de gráficos](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
+- [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)
+- [Visão geral da transformação de pincel](brush-transformation-overview.md)
+- [Camadas de renderização de gráficos](../advanced/graphics-rendering-tiers.md)

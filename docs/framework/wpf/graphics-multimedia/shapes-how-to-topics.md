@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620221"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358061"
 ---
 # <a name="shapes-how-to-topics"></a>Tópicos explicativos de formas
 Os tópicos nesta seção demonstram como usar <xref:System.Windows.Shapes.Shape> objetos para desenhar formas básicas para a tela.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Desenhar uma forma fechada usando o elemento Polygon](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [Desenhar uma elipse ou um círculo](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [Desenhar uma linha](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [Desenhar uma polilinha usando o elemento Polyline](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [Desenhar um retângulo](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [Modificar o limite ao final de uma linha ou um segmento](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [Desenhar uma forma fechada usando o elemento Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [Desenhar uma elipse ou um círculo](how-to-draw-an-ellipse-or-a-circle.md)  
+ [Desenhar uma linha](how-to-draw-a-line.md)  
+ [Desenhar uma polilinha usando o elemento Polyline](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [Desenhar um retângulo](how-to-draw-a-rectangle.md)  
+ [Modificar o limite ao final de uma linha ou um segmento](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Shapes.Shape>
-- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Elementos gráficos e multimídia](index.md)
