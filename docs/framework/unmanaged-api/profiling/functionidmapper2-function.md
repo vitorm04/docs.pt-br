@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 71bde7534e391872fe85c2a22142cbc3dc2725e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71c7dcc5d337e7585e380981cc2ec4b5192e5151
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680939"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481723"
 ---
 # <a name="functionidmapper2-function"></a>Função FunctionIDMapper2
 Notifica o criador de perfil que o identificador fornecido de uma função pode ser remapeado para uma ID alternativa a ser usado na [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), e [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), ou[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), e [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) retornos de chamada para essa função. `FunctionIDMapper2` também permite que o criador de perfil indicar se deseja receber retornos de chamada para essa função.  
@@ -36,7 +36,7 @@ UINT_PTR __stdcall FunctionIDMapper2 (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `funcId`  
  [in] O identificador de função a ser remapeado.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2ca00b660a9cbb408fd1175e94a4242dae5f1a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3cc2bb7cc18979f58a407e5e68e6f00e3439c14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523955"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481658"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>Método ICLRStrongName::GetHashFromFileW
 Gera um hash sobre o conteúdo do arquivo especificado por uma cadeia de caracteres Unicode.  
@@ -39,7 +39,7 @@ HRESULT GetHashFromFileW (
 );   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
  [in] O nome do Unicode do arquivo para hash.  
   

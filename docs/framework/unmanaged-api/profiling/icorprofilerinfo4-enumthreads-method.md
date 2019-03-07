@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8cfb474eaa0a770c2bb101787d34072e4ed98714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c4d754ea00dae3893b8630e248523b97ae96d78
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496775"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>Método ICorProfilerInfo4::EnumThreads
 Retorna um enumerador que fornece métodos para iterar de forma sequencial por meio da coleção de todos os threads gerenciados no processo de criação de perfil.  
@@ -34,7 +34,7 @@ HRESULT EnumThreads([out]
             ICorProfilerThreadEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppEnum`  
  [out] Um ponteiro para um [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.  
   

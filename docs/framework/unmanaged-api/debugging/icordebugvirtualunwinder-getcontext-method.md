@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec68e36e2e5a06836d0f5d5758a230591626b03e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a554efc89c1242537bec7de074220cbec95ecdd2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744096"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481121"
 ---
 # <a name="icordebugvirtualunwindergetcontext-method"></a>Método ICorDebugVirtualUnwinder::GetContext
 Obtém o contexto atual deste desenrolador.  
@@ -25,7 +25,7 @@ HRESULT GetContext(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `contextFlags`  
  [in] Sinalizadores que especificam quais partes do contexto para retornar (definidos em Winnt. H).  
   

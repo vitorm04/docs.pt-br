@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 862b1b49283321ec7fa363a0279694e18cbf557c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1411207c6374456cd9a5c70ad922622f141fd58d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541827"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492537"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>Método ICorProfilerFunctionEnum::Next
 Obtém o número especificado de funções contíguos de uma coleção sequencial de funções, começando na posição atual do enumerador na sequência.  
@@ -36,7 +36,7 @@ HRESULT Next([in]  ULONG      celt,
              [out] ULONG *   pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `celt`  
  [in] O número de funções para recuperar.  
   

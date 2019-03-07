@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf6d14ebb82b5e653596c735ed170c5bc7e763
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b27cf1ab377a3bb51700b287024d801e75107c8c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625218"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464915"
 ---
 # <a name="ihostsyncmanagersetclrsyncmanager-method"></a>Método IHostSyncManager::SetCLRSyncManager
 Define o [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) instância a ser associado com o atual [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md) instância.  
@@ -35,7 +35,7 @@ HRESULT SetCLRSyncManager (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pManager`  
  [in] Um ponteiro para um `ICLRSyncManager` instância fornecida pelo common language runtime (CLR).  
   

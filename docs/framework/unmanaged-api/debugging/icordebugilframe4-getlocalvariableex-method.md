@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a6154ad3fe3ee384a38007ab371e83482193ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697c935e2162f57677802118b1321b8dbf8c8df2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545969"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481619"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::Método GetLocalVariableEx
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -36,7 +36,7 @@ HRESULT GetLocalVariableEx(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `flags`  
  [in] Uma [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) membro de enumeração que especifica se uma variável adicionada na instrumentação ReJIT do criador está incluída no quadro.  
   

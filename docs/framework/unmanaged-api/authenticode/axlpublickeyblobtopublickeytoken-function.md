@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ac147596794f748d3160cdbd34b9f306dfdb379
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37957931f9d1e2f8da44f70e5b99d3544bf0ae4f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604412"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497490"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>Função _AxlPublicKeyBlobToPublicKeyToken
 Computa o token de chave pública do nome forte de um formato CSP PUBLICKEYBLOB.  
@@ -29,7 +29,7 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pCspPublicKeyBlob`  
  [in] O blob da chave pública CSP.  
   

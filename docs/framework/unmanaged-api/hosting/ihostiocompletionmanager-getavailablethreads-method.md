@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ef25267f6af5d1f8503825e2784383a0eb241e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27922c1b1b576ae34bfbe363f3d46e10d0f2551c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535523"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485168"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>Método IHostIoCompletionManager::GetAvailableThreads
 Obtém o número de threads de conclusão de e/s, do número total de threads gerenciados pelo host, que atualmente não estão atendendo a solicitações.  
@@ -35,7 +35,7 @@ HRESULT GetAvailableThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pdwAvailableIoCompletionThreads`  
  [out] Um ponteiro para o número de threads de conclusão de e/s gerenciados pelo host que estão atualmente disponíveis para solicitações de serviço.  
   

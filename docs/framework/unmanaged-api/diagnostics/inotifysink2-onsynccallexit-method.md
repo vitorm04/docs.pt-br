@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff5d2dd2cf13e8626d1cca7f66c976dad6d90f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8124af428d68606382e4449db3f68b0b61eb432c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620913"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500259"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>Método INotifySink2::OnSyncCallExit
 É invocado quando você sair de uma chamada.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallExit
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `in_CallID`  
  [in] ID da chamada que está sendo encerrada. Ver [estrutura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   

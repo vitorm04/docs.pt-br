@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 291c8129a790c235ee6e7f163c49c4e1e726cce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ab2b584b4a3e9bef17110f3084dc93efb2e5167
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402706"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481645"
 ---
 # <a name="icordebugchaingetthread-method"></a>Método ICorDebugChain::GetThread
-Obtém o segmento físico que essa cadeia de chamada é parte do.  
+Obtém o thread físico que essa cadeia de chamada é parte do.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppThread`  
- [out] Um ponteiro para um objeto ICorDebugThread que representa o segmento físico essa cadeia de chamada é parte do.  
+ [out] Um ponteiro para um objeto de ICorDebugThread que representa o segmento físico essa cadeia de chamada faz parte.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

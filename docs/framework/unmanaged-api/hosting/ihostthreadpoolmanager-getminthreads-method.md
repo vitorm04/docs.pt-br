@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8010ac602c82c7da2af9d0678227a6ce1c91391a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec323daf7c0d612d84c86c950c0c7235c7f9ebe7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485239"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>Método IHostThreadPoolManager::GetMinThreads
 Obtém o número mínimo de threads ociosos do que o host mantém no pool de threads em antecipação de solicitações.  
@@ -35,7 +35,7 @@ HRESULT GetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `MinThreads`  
  [out] Um ponteiro para o número mínimo de threads de trabalho ocioso que atualmente mantém o host.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98015af4a79a9fca4945708e6d0baeb61e46876f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d993bc6b947d309ce1a0fb10ad231a429be567
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531220"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471908"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>Método ISymENCUnmanagedMethod::GetLineFromOffset
 Obtém as informações de linha associadas com um deslocamento. Se o parâmetro offset (`dwOffset`) não é um ponto de sequência, esse método obtém as informações de linha associadas com a diferença anterior.  
@@ -39,7 +39,7 @@ HRESULT GetLineFromOffset(
      [out] ULONG32*  pdwStartOffset);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwOffset`  
  [in] Um `ULONG32` que contém o deslocamento.  
   

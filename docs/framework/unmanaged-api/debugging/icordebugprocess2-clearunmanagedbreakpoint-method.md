@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc34ab9c8dbfe10282f36a241a4e433debef7dd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4dcfb977f5ca87f2219fd3ed8ef87d16c2defd2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420489"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472636"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>Método ICorDebugProcess2::ClearUnmanagedBreakpoint
-Remove um definido anteriormente ponto de interrupção no endereço especificado.  
+Remove um definido anteriormente em determinado endereço do ponto de interrupção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,22 +35,22 @@ HRESULT ClearUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `address`  
  [in] Um `CORDB_ADDRESS` valor que especifica o endereço no qual o ponto de interrupção foi definido.  
   
 ## <a name="remarks"></a>Comentários  
- O ponto de interrupção especificado tenha sido previamente definido por uma chamada anterior para [Icordebugprocess2](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ O ponto de interrupção especificado seria ter sido anteriormente definido por uma chamada anterior para [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- O `ClearUnmanagedBreakpoint` método pode ser chamado enquanto o processo está sendo depurado está em execução.  
+ O `ClearUnmanagedBreakpoint` método pode ser chamado enquanto o processo que está sendo depurado está em execução.  
   
  O `ClearUnmanagedBreakpoint` método retorna um código de falha se o depurador está anexado no modo somente gerenciados ou se nenhum ponto de interrupção existe no endereço especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

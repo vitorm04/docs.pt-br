@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db4f0bbef1ce0e6e4a2a0e904bfe8ebb997d5f4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e985d82fcce404e15344f2277d27a6aab45f9efc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586582"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472493"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>Método ICorDebugManagedCallback::Exception
 Notifica o depurador que foi lançada uma exceção do código gerenciado.  
@@ -37,7 +37,7 @@ HRESULT Exception (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
  [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo no qual a exceção foi gerada.  
   

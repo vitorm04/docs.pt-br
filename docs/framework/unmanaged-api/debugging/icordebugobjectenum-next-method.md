@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4db5b6c6d54729363cd734840926f97d89aa4bfa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745138"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489287"
 ---
 # <a name="icordebugobjectenumnext-method"></a>Método ICorDebugObjectEnum::Next
 Obtém os endereços virtuais (relacionados RVAs) do número especificado de objetos de enumeração, começando na posição atual.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `celt`  
  [in] O número de objetos a serem recuperados.  
   

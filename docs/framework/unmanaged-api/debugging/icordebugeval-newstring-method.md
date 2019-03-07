@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5eb86bb80aea5fc65a7362467b78b16a59794d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412224"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480176"
 ---
 # <a name="icordebugevalnewstring-method"></a>Método ICorDebugEval::NewString
-Aloca uma nova instância da cadeia de caracteres com o conteúdo especificado.  
+Aloca uma nova instância de cadeia de caracteres com o conteúdo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT NewString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `string`  
- [in] Ponteiro para o conteúdo para a cadeia de caracteres.  
+ [in] Ponteiro para o conteúdo da cadeia de caracteres.  
   
 ## <a name="remarks"></a>Comentários  
  A cadeia de caracteres sempre é criada no domínio do aplicativo no qual o thread está em execução no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

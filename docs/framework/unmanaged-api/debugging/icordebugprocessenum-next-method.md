@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493577"
 ---
 # <a name="icordebugprocessenumnext-method"></a>Método ICorDebugProcessEnum::Next
 Obtém o número especificado de instâncias de ICorDebugProcess de enumeração, começando na posição atual.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `celt`  
  [in] O número de `ICorDebugProcess` instâncias a serem recuperados.  
   
@@ -46,13 +46,13 @@ HRESULT Next (
  [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugProcess` objeto que representa um processo.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de `ICorDebugProcess` , na verdade, retornadas de instâncias. Esse valor pode ser null se `celt` é um.  
+ [out] Ponteiro para o número de `ICorDebugProcess` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

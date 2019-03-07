@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d725110dd6bae2047ff680b4caa02f5583903ed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2204ee8adaf433152b203cbe93f8db9bb45de53c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591400"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498023"
 ---
 # <a name="functiontailcall3-function"></a>Função FunctionTailcall3
 Notifica o criador de perfil que a função atualmente em execução está prestes a realizar uma chamada tail para outra função.  
@@ -32,7 +32,7 @@ Notifica o criador de perfil que a função atualmente em execução está prest
 void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `functionOrRemappedID`  
  [in] O identificador da função em execução no momento que está prestes a fazer uma cauda de chamada.  
   

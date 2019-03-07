@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3677b38854ada67c4f2d30043bf80a83d9268971
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c787a93ac98a086dfb6218d1b4891de87e0e107d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654991"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486974"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>Método ICorDebugMetaDataLocator::GetMetaData
 Solicita que o depurador para retornar o caminho completo para um módulo cujos metadados são necessários para concluir uma operação solicitado do depurador.  
@@ -41,7 +41,7 @@ HRESULT GetMetaData(
       );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `wszImagePath`  
  [in] Uma cadeia terminada em nulo que representa o caminho completo para o arquivo. Se o caminho completo não estiver disponível, o nome e a extensão do arquivo (*filename*. *extensão*).  
   

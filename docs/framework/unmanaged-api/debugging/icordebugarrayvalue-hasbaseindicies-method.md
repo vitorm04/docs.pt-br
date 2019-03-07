@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 574df434360dfab644a4c937dac46ebc3871a53a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49f5ed8b24d81ba8f32a9fe0ad7488693718bde9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468553"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>Método ICorDebugArrayValue::HasBaseIndicies
-Obtém um valor que indica se todas as dimensões dessa matriz tem um índice de base do diferente de zero.  
+Obtém um valor que indica se todas as dimensões desta matriz tem um índice de base de diferente de zero.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ HRESULT HasBaseIndicies (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbHasBaseIndicies`  
- [out] Um ponteiro para um valor booliano que é `true` se uma ou mais dimensões deste `ICorDebugArrayValue` objeto tem um índice de base não-zero; caso contrário, o valor booliano é `false`.  
+ [out] Um ponteiro para um valor booliano que será `true` se um ou mais dimensões dessa `ICorDebugArrayValue` objeto tem um índice de base de diferente de zero; caso contrário, o valor booliano é `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]

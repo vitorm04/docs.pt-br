@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78bfc91bdd0f9fa68252c6a07e1362807eb507b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ce1e42d74dc611032d941e833bb8f248a56488b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416017"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486245"
 ---
 # <a name="icordebugmodulegetassembly-method"></a>Método ICorDebugModule::GetAssembly
-Obtém o assembly contendo para este módulo.  
+Obtém o assembly que contém esse módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ HRESULT GetAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppAssembly`  
- [out] Um ponteiro para um objeto ICorDebugAssembly que representa o assembly que contém esse módulo.  
+ [out] Um ponteiro para um objeto de ICorDebugAssembly que representa o assembly que contém esse módulo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

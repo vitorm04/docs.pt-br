@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2143524b92ca34299877fe935ae5a603c3e86563
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8fde6772a43cc763df82ec109c11f8548ba240e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540501"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476169"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>Método ICorDebugManagedCallback::LoadAssembly
 Notifica o depurador que um assembly do common language runtime (CLR) foi carregado com êxito.  
@@ -36,7 +36,7 @@ HRESULT LoadAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
  [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo no qual o assembly foi carregado.  
   

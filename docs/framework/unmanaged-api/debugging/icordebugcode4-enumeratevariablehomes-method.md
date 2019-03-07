@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c765cb2e0e59fe2fcac562fdb2e926e878298c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f55675bf79b98a7af47f6bec561704a4e5dd565
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530266"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486102"
 ---
 # <a name="icordebugcode4enumeratevariablehomes-method"></a>Método ICorDebugCode4::EnumerateVariableHomes
 Obtém um enumerador para os argumentos e variáveis locais em uma função.  
@@ -35,7 +35,7 @@ HRESULT EnumerateVariableHomes(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppEnum`  
  Um ponteiro para o endereço de um [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) objeto de interface que é um enumerador para as variáveis locais e os argumentos em uma função.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44093f84ea644757a5f5c73da54ce5bcfa717a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54e2648765d896c189cc2deb5590a0a2a9b3f410
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728077"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476472"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>Método ICorDebugProcess5::EnumerateGCReferences
 Obtém um enumerador para todos os objetos que precisam estar em um processo de coleta de lixo.  
@@ -36,7 +36,7 @@ HRESULT EnumerateGCReferences(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `enumerateWeakReferences`  
  [in] Um valor booliano que indica se as referências fracas são também a serem enumerados. Se `enumerateWeakReferences` está `true`, o `ppEnum` enumerador inclui referências fortes e referências fracas. Se `enumerateWeakReferences` é `false`, o enumerador inclui apenas as referências fortes.  
   

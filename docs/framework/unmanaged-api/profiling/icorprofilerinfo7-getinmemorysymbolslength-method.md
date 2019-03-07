@@ -11,12 +11,12 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64289ee7fbdc440a87df6c8e506317f23e780912
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 550acc8d696cbd9e82d05e09c48a8c929af23673
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722849"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487467"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Método ICorProfilerInfo7::GetInMemorySymbolsLength
 [Com suporte no .NET Framework 4.6.1 e versões posteriores]  
@@ -32,7 +32,7 @@ HRESULT GetInMemorySymbolsLength(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `moduleId`  
  [in] O identificador do módulo que contém o fluxo de memória.  
   

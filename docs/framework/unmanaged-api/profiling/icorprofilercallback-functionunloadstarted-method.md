@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 351fa8d1ec144a1861ef152ba6b02d9bbfb78df0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1944b84863cea1cfdc464489640a6f78d476537d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501650"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482516"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>Método ICorProfilerCallback::FunctionUnloadStarted
 Notifica o criador de perfil que o tempo de execução foi iniciada descarregar uma função.  
@@ -34,7 +34,7 @@ HRESULT FunctionUnloadStarted(
     [in] FunctionID functionId);   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `functionId`  
  [in] A ID da função que está sendo descarregada.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9e1ef61271e5b413972b8ba40a8fe8bac60ceeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e98ee26da2d78278435d90d6d04ef9771f41104
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489443"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>Método ICorProfilerInfo::GetILFunctionBody
 Obtém um ponteiro para o corpo de um método no código do Microsoft intermediate language (MSIL), começando em seu cabeçalho.  
@@ -37,7 +37,7 @@ HRESULT GetILFunctionBody(
     [out] ULONG       *pcbMethodSize);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `moduleId`  
  [in] A ID do módulo no qual a função reside.  
   

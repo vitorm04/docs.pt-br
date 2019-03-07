@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7a51d1ddf7a5a65ce8713161c53c1c54a5d8861
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdc617039ac8328e0153abc7cc3752c54060a8c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617688"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481453"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Método IMetaDataImport2::EnumGenericParamConstraints
 Obtém um enumerador para uma matriz de restrições de parâmetro genérico associado com o parâmetro genérico representado pelo token especificado.  
@@ -39,7 +39,7 @@ HRESULT EnumGenericParamConstraints (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
  [no, out] Um ponteiro para o enumerador.  
   

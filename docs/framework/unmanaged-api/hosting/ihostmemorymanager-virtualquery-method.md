@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 885871f3e6b3f10bfb7d660e2d6889e243ef751b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e18c035060b8d5b38649011597d35d75fa2d8ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497178"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>Método IHostMemoryManager::VirtualQuery
 Serve como um wrapper lógico para a função Win32 correspondente. A implementação do Win32 de `VirtualQuery` recupera informações sobre um intervalo de páginas no espaço de endereço virtual do processo de chamada.  
@@ -38,7 +38,7 @@ HRESULT VirtualQuery (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `lpAddress`  
  [in] Um ponteiro para o endereço na memória virtual a ser consultado.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6f8a9c62a1be682d3f0259c27f311e2dcbb2f11
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559824"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492719"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>Método ICorDebugValue::GetAddress
 Obtém o endereço do objeto "ICorDebugValue", que está no processo que está sendo depurado.  
@@ -35,7 +35,7 @@ HRESULT GetAddress (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pAddress`  
  [out] Ponteiro para um `CORDB_ADDRESS` objeto que especifica o endereço desse objeto de valor.  
   

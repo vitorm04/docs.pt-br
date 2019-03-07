@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c44a150fa85ff0cbda4ff2b39acefb46045adad1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 088d5a86b8517949d82f64b2d1dbb192b1b8ff0c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500283"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474989"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>Método INotifySink2::OnSyncCallEnter
 É invocado ao inserir uma chamada.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallEnter
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `in_CallID`  
  [in] ID da chamada que está sendo inserida. Ver [estrutura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   

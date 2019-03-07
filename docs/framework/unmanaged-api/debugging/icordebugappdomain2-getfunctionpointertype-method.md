@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d497fd8e659a24add25df63c4ce48e710dcb0c6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec1a9968dbec10783c6f1383fb523e95ff79561e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403787"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489742"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>Método ICorDebugAppDomain2::GetFunctionPointerType
-Obtém um ponteiro para uma função que tem uma assinatura fornecida.  
+Obtém um ponteiro para uma função que tem uma determinada assinatura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,21 +37,21 @@ HRESULT GetFunctionPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `nTypeArgs`  
  [in] O número de argumentos de tipo para a função.  
   
  `ppTypeArgs`  
- [in] Uma matriz de ponteiros, cada um deles aponta para um objeto ICorDebugType que representa um argumento de tipo da função. O primeiro elemento é o tipo de retorno; cada um dos outros elementos é um tipo de parâmetro.  
+ [in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugType que representa um argumento de tipo da função. O primeiro elemento é o tipo de retorno; cada um dos outros elementos é um tipo de parâmetro.  
   
  `ppType`  
- [out] Um ponteiro para o endereço de uma `ICorDebugType` objeto que representa o ponteiro para a função.  
+ [out] Um ponteiro para o endereço de um `ICorDebugType` objeto que representa o ponteiro para a função.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

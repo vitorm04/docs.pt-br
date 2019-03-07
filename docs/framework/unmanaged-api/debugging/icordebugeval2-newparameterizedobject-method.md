@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20c24984aadd05139d1a427b75bc65438539ff1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412799"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479604"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>Método ICorDebugEval2::NewParameterizedObject
-Cria um novo objeto de tipo parametrizado e chama o método de construtor do objeto.  
+Cria uma instância de um novo objeto de tipo parametrizado e chama o método de construtor do objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ HRESULT NewParameterizedObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pConstructor`  
  [in] Um ponteiro para um objeto ICorDebugFunction que representa o construtor do objeto a ser instanciado.  
   
@@ -47,22 +47,22 @@ HRESULT NewParameterizedObject (
  [in] O número de argumentos de tipo passado.  
   
  `ppTypeArgs`  
- [in] Uma matriz de ponteiros, cada um deles aponta para um objeto ICorDebugType que representa um argumento de tipo para o objeto que está sendo criado.  
+ [in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugType que representa um argumento de tipo para o objeto de instância está sendo criado.  
   
  `nArgs`  
  [in] O número de argumentos passados para o construtor.  
   
  `ppArgs`  
- [in] Uma matriz de ponteiros, cada um deles aponta para um objeto ICorDebugValue que representa um valor de argumento que é passado para o construtor.  
+ [in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugValue que representa um valor de argumento que é passado para o construtor.  
   
 ## <a name="remarks"></a>Comentários  
- O construtor do objeto pode levar <xref:System.Type> parâmetros.  
+ O construtor do objeto pode demorar <xref:System.Type> parâmetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

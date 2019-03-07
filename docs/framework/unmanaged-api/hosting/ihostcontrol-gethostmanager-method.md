@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 821968fbde6d3f5434b83adf8c9661fe39d96293
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 459691354ec12f61c7ab321fe832d8fc802a36d9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742023"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494292"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>Método IHostControl::GetHostManager
 Obtém um ponteiro de interface para a implementação do host da interface com especificado `IID`.  
@@ -36,7 +36,7 @@ HRESULT GetHostManager (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `riid`  
  [in] O `IID` da interface que está consultando o common language runtime (CLR).  
   

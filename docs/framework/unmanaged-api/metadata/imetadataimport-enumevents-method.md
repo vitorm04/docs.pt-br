@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f205615db29878bcfe936e88cab26c3d5a8e3562
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4771ed5578fe8f100c3d6a9476e5f2b15463fd8e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514512"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486414"
 ---
 # <a name="imetadataimportenumevents-method"></a>Método IMetaDataImport::EnumEvents
 Enumera os tokens de definição de eventos para o token de TypeDef especificado.  
@@ -39,7 +39,7 @@ HRESULT EnumEvents (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
  [no, out] Um ponteiro para o enumerador.  
   

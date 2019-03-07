@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c38846dc142cf011cd7fe859626aa8c19426074
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e2d054057b1813e163193b14a754ebeda034563
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563789"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491328"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>Método ICorDebugManagedCallback2::DestroyConnection
 Notifica o depurador para que a conexão especificada foi encerrada.  
@@ -36,7 +36,7 @@ HRESULT DestroyConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pProcess`  
  [in] Um ponteiro para um objeto ICorDebugProcess que representa o processo que contém a conexão que foi destruído.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a0c23c066a6f704c4dfcfbe254e91ab3bc5817e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7454b551edc546fecbd9d091f7c821e0a07b16df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416235"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497815"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>Método ICorDebugILFrame2::EnumerateTypeParameters
-Obtém um objeto ICorDebugTypeEnum que contém o <xref:System.Type> parâmetros nesse quadro.  
+Obtém um objeto ICorDebugTypeEnum que contém o <xref:System.Type> parâmetros neste quadro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,22 +35,22 @@ HRESULT EnumerateTypeParameters (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppTyParEnum`  
- Um ponteiro para o endereço de um objeto de interface ICorDebugTypeEnum que permite a enumeração de parâmetros de tipo.  
+ Um ponteiro para o endereço de um objeto de interface ICorDebugTypeEnum que permite que a enumeração dos parâmetros de tipo.  
   
- A lista de parâmetros de tipo inclui os classe parâmetros de tipo (se houver) seguidos pelos parâmetros de tipo de método (se houver).  
+ A lista de parâmetros de tipo incluem os classe parâmetros de tipo (se houver) seguidos pelos parâmetros de tipo de método (se houver).  
   
 ## <a name="remarks"></a>Comentários  
- Use o [IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) método para determinar o número de parâmetros de tipo de classe e método de tipo contém esta lista de parâmetros.  
+ Use o [IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) método para determinar quantos parâmetros de tipo de classe e método contém esta lista de parâmetros de tipo.  
   
  Os parâmetros de tipo não estão sempre disponíveis.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 330501e67e3f19fbdb24c200deacad68de1b6c03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d186c29c409bd6f85a764e3632e2e8e4998b168
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710281"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490106"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>Método ICLRDebugManager::SetSymbolReadingPolicy
 Define a política para a leitura de arquivos de banco de dados (PDB) do programa. A política determina se a opção informações sobre arquivos e números de linha estão incluídas em pilhas de chamadas.  
@@ -36,7 +36,7 @@ HRESULT SetSymbolReadingPolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `policy`  
  [in] Um membro do [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeração.  
   

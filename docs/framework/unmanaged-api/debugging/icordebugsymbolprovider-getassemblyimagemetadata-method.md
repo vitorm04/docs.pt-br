@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ea905443a01f504c1f303f726382b441ae039b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb255330937b00a987ee0d07f0332d04fe1746d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568550"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489970"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>Método ICorDebugSymbolProvider::GetAssemblyImageMetadata
 Retorna os metadados de um assembly mesclado.  
@@ -22,7 +22,7 @@ HRESULT GetAssemblyImageMetadata(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppMemoryBuffer`  
  [out] Um ponteiro para o endereço de um [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) objeto que contém informações sobre o tamanho e o endereço de metadados do assembly mesclada.  
   

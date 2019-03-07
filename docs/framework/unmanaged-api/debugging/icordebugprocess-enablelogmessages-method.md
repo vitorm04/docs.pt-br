@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0dbac6570fc0af0452a0e44f838124afbf6a4fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe237ca01d409636f184930d26ca970d58e90437
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419878"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472946"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>Método ICorDebugProcess::EnableLogMessages
 Habilita e desabilita a transmissão de mensagens de log para o depurador.  
@@ -33,18 +33,18 @@ Habilita e desabilita a transmissão de mensagens de log para o depurador.
 HRESULT EnableLogMessages([in]BOOL fOnOff);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `fOnOff`  
  [in] `true` permite a transmissão de mensagens de log; `false` desabilita a transmissão.  
   
 ## <a name="remarks"></a>Comentários  
- Este método é válido somente após o [Icordebugmanagedcallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) ocorre de retorno de chamada.  
+ Este método é válido somente após o [icordebugmanagedcallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) ocorre de retorno de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

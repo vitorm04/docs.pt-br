@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 914b1710bee3ce6e2aaaf756ae4e32d8041d064f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60e110e019619f9336b240fdc5aee8fa66c5bcdb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601721"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479175"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>Método ICLRDebugManager::EndConnection
 Remove a associação entre uma lista de tarefas e um identificador e um nome amigável.  
@@ -35,7 +35,7 @@ HRESULT EndConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwConnectionId`  
  [in] O identificador específico do host para a conexão e a lista associada das tarefas comuns de runtime (CLR) de linguagem.  
   

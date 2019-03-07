@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c768091f84157ea651c018fa89cdeafcce6c02df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85c3fb601cd013eff889e794e71512533f1b12ec
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537667"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484674"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>Método IInstallReferenceItem::GetReference
 Obtém um ponteiro para o [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) estrutura representada por este [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) objeto.  
@@ -37,7 +37,7 @@ HRESULT GetReference (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppRefData`  
  [out] Retornado `FUSION_INSTALL_REFERENCE` ponteiro.  
   

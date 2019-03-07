@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe29b3e35d2fbd42fac2d9ec1d1c594abe1239c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0d992ea86b3221af222bb01f1985fe277cea5a2c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411152"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480046"
 ---
 # <a name="icordebugevalisactive-method"></a>Método ICorDebugEval::IsActive
 Obtém um valor que indica se este objeto ICorDebugEval está em execução.  
@@ -35,15 +35,15 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbActive`  
- [out] Ponteiro para um valor que indica se esta avaliação está ativa.  
+ [out] Ponteiro para um valor que indica se essa avaliação está ativa.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

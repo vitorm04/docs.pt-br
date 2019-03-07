@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5938f916dfab9434c40b43fa8dfc5a1ef263db80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415c376fee92b1421392503c3e9b4c0848601e47
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552873"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481333"
 ---
 # <a name="iclrdebugmanagerbeginconnection-method"></a>Método ICLRDebugManager::BeginConnection
 Estabelece uma nova conexão entre o host e o depurador para associar uma lista de tarefas com um identificador e um nome amigável.  
@@ -36,7 +36,7 @@ HRESULT BeginConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwConnectionId`  
  [in] Um identificador para associar a lista de tarefas comuns de language runtime (CLR).  
   

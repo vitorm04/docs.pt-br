@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca33c8eb5e214cdaaa49905c311fd62042285d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 067765fbf500b2d20d84273d8df70c8e05a6ddc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569278"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485894"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a>Método ICorConfiguration::AddDebuggerSpecialThread
 Para os serviços de depuração, indica que um thread específico deve ter permissão para continuar em execução enquanto o depurador tem um aplicativo interrompido durante cenários de depuração gerenciados ou não gerenciado.  
@@ -35,7 +35,7 @@ HRESULT AddDebuggerSpecialThread (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwSpecialThreadId`  
  [in] A ID do thread que deve ter permissão para continuar a executar.  
   

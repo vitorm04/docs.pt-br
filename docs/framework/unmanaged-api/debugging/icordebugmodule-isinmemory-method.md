@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7bfdcc3c8328d71146732fc4ba5664ebee9bea2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f057896d9dd65a850c0b07e4084bc263e804d20
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574866"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497360"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>Método ICorDebugModule::IsInMemory
 Obtém um valor que indica se este módulo existe apenas na memória.  
@@ -35,7 +35,7 @@ HRESULT IsInMemory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pInMemory`  
  [out] `true` se esse módulo existe apenas na memória; caso contrário, `false`.  
   

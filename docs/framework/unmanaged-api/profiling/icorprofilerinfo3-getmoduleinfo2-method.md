@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64cea7fe9bb426ee9c2e98719d57e2370cab717c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 188517104d4163ad1b391c2bab3bc41a2697e63d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640895"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478070"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>Método ICorProfilerInfo3::GetModuleInfo2
 Dado um ID de módulo, retorna o nome do arquivo do módulo, a ID do pai do módulo de assembly e um bitmask que descreve as propriedades do módulo.  
@@ -41,7 +41,7 @@ HRESULT GetModuleInfo2(
     [out] DWORD                 *pdwModuleFlags);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `moduleId`  
  [in] A ID do módulo para o qual as informações serão recuperadas.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d021eb2d8da8c85fe538f0c73527876482429718
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 440f2f7c542c697b3d817c988211303c60073979
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656876"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492351"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>Método ICLRRuntimeInfo::SetDefaultStartupFlags
 Define os sinalizadores de inicialização e o arquivo de configuração de host que será usado para iniciar o tempo de execução. Esse método substitui o uso do `startupFlags` parâmetro na [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) funções.  
@@ -35,7 +35,7 @@ HRESULT SetDefaultStartupFlags(
            [in]  LPCWSTR pwzHostConfigFile);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwStartupFlags`  
  [in] Os sinalizadores de inicialização do host para definir. Use os mesmos sinalizadores como com o [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) funções.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6a862f0861416ebc80c7b6107267bcbb5ec51f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccaaee614b1ec4d03271e70338fff82d629a7c28
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657357"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468450"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>Método ISymUnmanagedWriter::OpenScope
 Abre um novo escopo léxico no método atual. O escopo se torna o novo escopo atual e é enviada por push para uma pilha de escopos. Escopos devem formar uma hierarquia. Irmãos não podem se sobrepor.  
@@ -35,7 +35,7 @@ HRESULT OpenScope(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `startOffset`  
  [in] O deslocamento da primeira instrução no escopo léxico, em bytes, desde o início do método.  
   

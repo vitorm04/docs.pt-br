@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a77ede995b08aba0822e9d86607e0d1e37bd6f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8623c69390600380d80b0292d6a75fa395f9ae7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557325"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479120"
 ---
 # <a name="strongnamekeygenex-function"></a>Função StrongNameKeyGenEx
 Gera um novo par de chaves pública/privada com o tamanho da chave especificado, para uso de nome forte.  
@@ -40,7 +40,7 @@ BOOLEAN StrongNameKeyGenEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `wszKeyContainer`  
  [in] O nome do contêiner de chave solicitado. `wszKeyContainer` deve ser uma cadeia de caracteres vazio ou nulo para gerar um nome temporário.  
   

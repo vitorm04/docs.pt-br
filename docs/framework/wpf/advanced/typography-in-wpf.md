@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359543"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482685"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem melhor qualidade e desempenho de renderização de texto, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] suporte a tipografia, texto internacional aperfeiçoado, suporte de fonte aperfeiçoado e APIs (interfaces de programação de aplicativo).  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Melhor qualidade e desempenho de texto  
@@ -36,13 +34,11 @@ Diagrama do pipeline de renderização de texto
   
  A fonte Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] contém glifos adicionais que fornecem alternativos estilísticos para o conjunto padrão de glifos. O texto a seguir exibe glifos alternativos estilísticos.  
   
- ![Texto usando glifos alternativos estilísticos OpenType](./media/opentypefont02.gif "opentypefont02")  
-Texto usando glifos alternativos estilísticos OpenType  
+ ![Texto usando glifos alternativos estilísticos OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "texto usando glifos alternativos estilísticos OpenType")  
   
  Swashes são glifos decorativos que utilizam ornamentação elaborada, geralmente associada à caligrafia. O texto a seguir exibe glifos padrão e swash para a fonte Pescadero.  
   
- ![Texto usando glifos padrão e swash OpenType](./media/opentypefont08.gif "opentypefont08")  
-Texto usando glifos padrão e swash OpenType  
+ ![Texto usando glifos padrão e swash OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "texto usando glifos padrão e swash OpenType")  
   
  Para obter mais detalhes sobre recursos [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)], consulte [Recursos da fonte OpenType](opentype-font-features.md).  
   
@@ -175,4 +171,4 @@ Interação entre o aplicativo e o TextFormatter
 - [Desenhando texto formatado](drawing-formatted-text.md)
 - [Formatação de texto avançada](advanced-text-formatting.md)
 - [Texto](optimizing-performance-text.md)
-- [Tipografia da Microsoft](https://www.microsoft.com/typography/default.mspx)
+- [Tipografia da Microsoft](https://docs.microsoft.com/typography/)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be3bfc69c551179c99b9fb2134c12f3ab1b2dd63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cb4210972ba15a7ba3c7df5981e668cb5542f5c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713217"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471401"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>Método ICLRDebugManager::SetConnectionTasks
 Associa uma lista dos [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instâncias com um identificador e um nome amigável.  
@@ -37,7 +37,7 @@ HRESULT SetConnectionTasks (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `id`  
  [in] O identificador específico do host para a conexão ao qual associar o `ppCLRTask` matriz.  
   

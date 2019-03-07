@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500359"
 ---
 # <a name="cordllmain-function"></a>Função _CorDllMain
 Inicializa o common language runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly da DLL e inicia a execução.  
@@ -36,7 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `hInst`  
  [in] O identificador da instância do módulo carregado.  
   
@@ -54,7 +54,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  Carregador do sistema operacional chama esse método, independentemente do ponto de entrada especificado no arquivo de DLL.  
   
- No Windows 98, Windows ME, Windows NT e Windows 2000, o `_CorDllMain` função é chamada indiretamente por meio de um fixupin carregador do sistema operacional. Todas as outras versões do Windows, ele é chamado diretamente pelo carregador do sistema operacional.  
+O `_CorDllMain` função é chamada diretamente pelo carregador do sistema operacional.
   
  Para obter mais informações, consulte a seção comentários a [CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tópico.  
   

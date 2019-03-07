@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c61cc12e438c0786b6e093b8bb1ea288a42e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a27ea95ca78f7db8f67ec2a13f02767e67619e97
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401161"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488052"
 ---
 # <a name="icordebugchainismanaged-method"></a>Método ICorDebugChain::IsManaged
 Obtém um valor que indica se esta cadeia está em execução de código gerenciado.  
@@ -35,15 +35,15 @@ HRESULT IsManaged (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pManaged`  
- [out] `true` se esta cadeia está executando código gerenciado; caso contrário, `false`.  
+ [out] `true` se esta cadeia é executando código gerenciado; caso contrário, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a966c1827f868c51b0a4dce93e9f536e8ae0e51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d127aa1cfa8784f51fcff4eaa774361a2cbbdbc9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659235"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503015"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>Método IHostIoCompletionManager::SetMinThreads
 Define o número mínimo de threads que o host deve alocar até a conclusão de e/s.  
@@ -35,7 +35,7 @@ HRESULT SetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwMinIoCompletionThreads`  
  [in] O número mínimo de threads de conclusão de e/s que o host deve criar.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488832"
 ---
 # <a name="control-styles-and-templates"></a>Estilos e modelos de controle
 Os controles no Windows Presentation Foundation (WPF) têm um <xref:System.Windows.Controls.ControlTemplate> que contém a árvore visual desse controle. Você pode alterar a estrutura e a aparência de um controle modificando o <xref:System.Windows.Controls.ControlTemplate> desse controle. Não é possível substituir apenas parte da árvore visual de um controle; Para alterar a árvore visual de um controle que você deve definir a <xref:System.Windows.Controls.Control.Template%2A> propriedade do controle para seu novo e completo <xref:System.Windows.Controls.ControlTemplate>.  
@@ -50,18 +50,18 @@ Os controles no Windows Presentation Foundation (WPF) têm um <xref:System.Windo
  [Estilos e modelos ListView](listview-styles-and-templates.md)  
  [Estilos e modelos de menu](menu-styles-and-templates.md)  
  [Estilos e modelos NavigationWindow](navigationwindow-styles-and-templates.md)  
- [Modelos e estilos PasswordBox](passwordbox-syles-and-templates.md)  
+ [Modelos e estilos PasswordBox](passwordbox-styles-and-templates.md)  
  [Estilos e modelos ProgressBar](progressbar-styles-and-templates.md)  
  [Estilos e modelos RadioButton](radiobutton-styles-and-templates.md)  
- [RepeatButton estilos e modelos](repeatbutton-syles-and-templates.md)  
+ [RepeatButton estilos e modelos](repeatbutton-styles-and-templates.md)  
  [Estilos e modelos ScrollBar](scrollbar-styles-and-templates.md)  
  [Estilos e modelos ScrollViewer](scrollviewer-styles-and-templates.md)  
  [Estilos e modelos de controle deslizante](slider-styles-and-templates.md)  
  [Estilos e modelos StatusBar](statusbar-styles-and-templates.md)  
  [Estilos e modelos TabControl](tabcontrol-styles-and-templates.md)  
  [Estilos e modelos TextBox](textbox-styles-and-templates.md)  
- [Thumb estilos e modelos](thumb-syles-and-templates.md)  
- [ToggleButton estilos e modelos](togglebutton-syles-and-templates.md)  
+ [Thumb estilos e modelos](thumb-styles-and-templates.md)  
+ [ToggleButton estilos e modelos](togglebutton-styles-and-templates.md)  
  [Estilos e modelos ToolBar](toolbar-styles-and-templates.md)  
  [Estilos e modelos ToolTip](tooltip-styles-and-templates.md)  
  [Estilos e modelos TreeView](treeview-styles-and-templates.md)  

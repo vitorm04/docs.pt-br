@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95532d6721467b482b1d79d611f8055b606bb4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e1edb1d25a62a9a689c397339740e563d986c8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413502"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478755"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>Método ICorDebugHeapValue::IsValid
-Obtém um valor que indica se o objeto representado por esse ICorDebugHeapValue é válido.  
+Obtém um valor que indica se o objeto representado por este ICorDebugHeapValue é válido.  
   
  Esse método foi preterido no .NET Framework versão 2.0.  
   
@@ -37,20 +37,20 @@ HRESULT IsValid (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbValid`  
  [out] Um ponteiro para um valor booliano que indica se esse valor no heap é válido.  
   
 ## <a name="remarks"></a>Comentários  
- O valor será inválido se ele tem sido recuperado pelo coletor de lixo.  
+ O valor será inválido se ele foi recuperado pelo coletor de lixo.  
   
- Esse método foi substituído. No .NET Framework 2.0, todos os valores são válidos até [Icordebugcontroller](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) é chamado, no qual os valores são invalidados.  
+ Esse método foi substituído. No .NET Framework 2.0, todos os valores são válidos até [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) é chamado, no qual os valores são invalidados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

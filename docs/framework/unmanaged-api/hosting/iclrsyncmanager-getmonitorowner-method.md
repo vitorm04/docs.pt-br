@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3847c5e5704f4eef138bf8b3f7966e4ff66d8784
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 342039e21774668ed9e6bfac289aca7c1e99b1e0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716304"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467068"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>Método ICLRSyncManager::GetMonitorOwner
 Obtém o [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância que detém o monitor identificado pelo cookie especificado.  
@@ -36,7 +36,7 @@ HRESULT GetMonitorOwner (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cookie`  
  [in] O cookie associado ao monitor.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f65262a9b9850d93e934a77f154bb625a55e1e82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71eeeefc594c450d5fb95ebae17e3c1316301278
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514238"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481372"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>Método ISymUnmanagedWriter::Initialize2
 Define a interface do emissor de metadados com o qual este gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados. Esse método também permite definir o local final do arquivo de banco de dados (PDB) do programa.  
@@ -38,7 +38,7 @@ HRESULT Initialize2(
     [in] const WCHAR  *finalfilename);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `emitter`  
  [in] Um ponteiro para a interface do emissor de metadados.  
   

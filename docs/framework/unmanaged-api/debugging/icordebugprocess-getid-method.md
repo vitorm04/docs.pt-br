@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d752eb17b956e2367e8b191080a370506a61ff34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d9239ccfe8ce08e5b50b762a6fede11ab8a439b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416661"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495709"
 ---
 # <a name="icordebugprocessgetid-method"></a>Método ICorDebugProcess::GetID
-Obtém a ID de sistema operacional (SO) do processo.  
+Obtém a ID do sistema operacional (SO) do processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,15 +33,15 @@ Obtém a ID de sistema operacional (SO) do processo.
 HRESULT GetID([out] DWORD *pdwProcessId);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pdwProcessId`  
  [out] A ID exclusiva do processo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

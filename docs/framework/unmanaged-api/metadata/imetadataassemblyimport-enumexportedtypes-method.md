@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1beb76012d5f0351ee644c8dea89cabdbe2c8970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10982b34add7e42cb54872afdea96df82c1fdc54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555018"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487901"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>Método IMetaDataAssemblyImport::EnumExportedTypes
 Enumera os tipos exportados referenciados no manifesto do assembly no escopo atual de metadados.  
@@ -38,7 +38,7 @@ HRESULT EnumExportedTypes (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
  [no, out] Um ponteiro para o enumerador. Isso deve ser um null valor quando o `EnumExportedTypes` método é chamado pela primeira vez.  
   

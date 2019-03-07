@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb085cc486c307a308258709f4c58619597bc202
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba0ff6e545a5da5d7733a157b73ddd66e717de9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608382"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477108"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>Método ICorDebugRemote::DebugActiveProcessEx
 Inicia um processo em um computador remoto sob o depurador.  
@@ -38,7 +38,7 @@ HRESULT DebugActiveProcessEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pRemoteTarget`  
  [in] Ponteiro para um [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Esse parâmetro é usado para determinar a máquina na qual o processo está em execução.  
   

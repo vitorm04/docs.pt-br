@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc91a90320967e625aab63fa17ae88ab284ea38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab4cdaf87b6fd65eecbe62f2e3b927eee6094e72
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689124"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496164"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>Método ICorDebugDataTarget::GetPlatform
 Fornece informações sobre a plataforma, incluindo a arquitetura do processador e sistema operacional, que está executando o processo de destino.  
@@ -33,7 +33,7 @@ Fornece informações sobre a plataforma, incluindo a arquitetura do processador
 HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pTargetPlatform`  
  [out] Um ponteiro para um [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) enumeração que descreve a plataforma de destino.  
   

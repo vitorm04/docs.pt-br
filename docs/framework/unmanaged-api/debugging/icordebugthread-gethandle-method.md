@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358597edc9fbc5203e5c00a5fb4d04019281060d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 900fece1dd29f73f77b85ff08e4deff1396f8aaf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418266"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484505"
 ---
 # <a name="icordebugthreadgethandle-method"></a>Método ICorDebugThread::GetHandle
 Obtém o identificador atual para a parte ativa deste ICorDebugThread.  
@@ -35,20 +35,20 @@ HRESULT GetHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phThreadHandle`  
- [out] Um ponteiro para um HTHREAD que é o identificador da parte ativa desse thread.  
+ [out] Um ponteiro para um HTHREAD que é o identificador de parte ativa desse thread.  
   
 ## <a name="remarks"></a>Comentários  
- O identificador pode alterar como o processo é executado e pode ser diferente para diferentes partes do thread.  
+ O identificador pode mudar, pois o processo é executado e pode ser diferente para diferentes partes do thread.  
   
- Esse identificador é de propriedade pela API de depuração. O depurador deve duplicar antes de usá-lo.  
+ Esse identificador pertence a API de depuração. O depurador deve duplicá-lo antes de usá-lo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

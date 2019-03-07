@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b57a8bcc584ffd209def5a84a99b15daa7480ee6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 404403576b7fd32362a690d470a5ea4b48489d26
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534937"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484791"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>Método ICorPublishProcess::IsManaged
 Obtém um valor que indica se o processo é referenciada por este [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) é conhecido por ter o código gerenciado.  
@@ -35,7 +35,7 @@ HRESULT IsManaged (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbManaged`  
  [out] Um ponteiro para um valor booliano que indica se o processo tem código gerenciado. O valor será `true` se o processo tem gerenciado código; caso contrário, `false`.  
   

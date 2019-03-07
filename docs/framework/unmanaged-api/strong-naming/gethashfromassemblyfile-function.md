@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83e3ba8644af1f630b5c9ad5268ec44750badc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09fb98c5524446041e0e7a9484322f835b9d9801
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682035"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474456"
 ---
 # <a name="gethashfromassemblyfile-function"></a>Função GetHashFromAssemblyFile
 Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `szFilePath`  
  [in] O caminho para o arquivo a ser transformada em hash.  
   

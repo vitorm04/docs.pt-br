@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18b4ad9590b57b629587af8f421a3f5902e5527f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53001d6dfef2813df86dc4bb4f9647900143aae7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704024"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469060"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>Método IHostMemoryManager::GetMemoryLoad
 Obtém a quantidade de memória física que está atualmente em uso e, portanto, indisponível, conforme informado pelo host.  
@@ -36,7 +36,7 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pMemoryLoad`  
  [out] Um ponteiro para a porcentagem aproximada de memória física total que está atualmente em uso.  
   

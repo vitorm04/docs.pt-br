@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b02792a0547b9b8ba6215069c3c0abf48726ded
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b04f51040e32aa38fbd84c46e1a3b55af7ec0a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508645"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497451"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>Método ICLRStrongName::StrongNameKeyGenEx
 Gera um novo par de chaves pública/privada com o tamanho da chave especificado, para uso de nome forte.  
@@ -39,7 +39,7 @@ HRESULT StrongNameKeyGenEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `wszKeyContainer`  
  [in] O nome do contêiner de chave solicitado. `wszKeyContainer` deve ser uma cadeia de caracteres não vazia ou null para gerar um nome temporário.  
   

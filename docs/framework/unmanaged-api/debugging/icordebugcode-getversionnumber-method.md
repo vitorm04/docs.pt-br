@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b383c322f1119ff13ac4df9a8dc0563d26dcf895
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e1f67dde8193ff97bff835f4b653a61baa0a2d7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499696"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487772"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>Método ICorDebugCode::GetVersionNumber
 Obtém o baseado em um número que identifica a versão do código que representa essa "ICorDebugCode".  
@@ -35,7 +35,7 @@ HRESULT GetVersionNumber (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `nVersion`  
  [out] Um ponteiro para o número de versão do código.  
   

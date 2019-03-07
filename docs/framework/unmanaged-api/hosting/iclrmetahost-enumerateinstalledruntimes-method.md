@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 312db617f185467eda7a9ffa0e8db919e2e94566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 900ad908229b7881dfa9ba55732e20926c912d7c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702633"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469073"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>Método ICLRMetaHost::EnumerateInstalledRuntimes
 Retorna uma enumeração que contém um válido [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface para cada versão do common language runtime (CLR) que é instalado em um computador.  
@@ -34,7 +34,7 @@ HRESULT EnumerateInstalledRuntimes (
     [out, retval] IEnumUnknown **ppEnumerator);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppEnumerator`  
  [out] Uma enumeração de [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces correspondente a cada versão do CLR que está instalado no computador.  
   

@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df50a4f5b0bdd0c1e70d7c47fe115f4a28b9bbc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526438"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492849"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>Método ICorDebugCode3::GetReturnValueLiveOffset
 Para um deslocamento especificado do IL, obtém os deslocamentos nativos onde um ponto de interrupção deve ser colocado para que o depurador possa obter o valor de retorno de uma função.  
@@ -40,7 +40,7 @@ HRESULT GetReturnValueLiveOffset(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ILoffset`  
  O deslocamento de IL. Ele deve ser um site de chamada de função ou a chamada de função falhará.  
   

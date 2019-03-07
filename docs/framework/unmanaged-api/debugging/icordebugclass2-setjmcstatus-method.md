@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d234e01e3d47a64b9a001591ee2b61074eea8afb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ed6570e11008e52d4b1f97c2dc90e2ccbef2e35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403387"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471375"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>Método ICorDebugClass2::SetJMCStatus
-Para cada método da classe, define um valor que indica se o método é código definido pelo usuário.  
+Para cada método da classe, define um valor que indica se o método é o código definido pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,20 +35,20 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `bIsJustMyCode`  
- [in] Definido como `true` para indicar que o método é definido pelo usuário código; caso contrário, é definido como `false`.  
+ [in] Definido como `true` para indicar que o método é definido pelo usuário de código; caso contrário, é definido como `false`.  
   
 ## <a name="remarks"></a>Comentários  
- Um seletor de (JMC) apenas meu código vai ignorar código definido pelo usuário. Código definido pelo usuário deve ser um subconjunto de código depurável.  
+ Um seletor do just my code (JMC) vai ignorar o código definido pelo usuário. Código definido pelo usuário deve ser um subconjunto de código depurável.  
   
- `SetJMCStatus` Retorna um valor HRESULT S_FALSE se ele falhar ao definir o valor de qualquer método, mesmo que ele define o valor para todos os outros métodos com êxito.  
+ `SetJMCStatus` Retorna um valor HRESULT de S_FALSE se ele falhar ao definir o valor de qualquer método, mesmo que define o valor para todos os outros métodos com êxito.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

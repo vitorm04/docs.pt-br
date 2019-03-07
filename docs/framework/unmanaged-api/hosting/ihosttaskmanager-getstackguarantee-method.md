@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad95f8ee5188c38bb19882d3c7fa6bf98fcc9d2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 100bb73356379d2f251513bbbed0cf1e90752ff5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625244"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494362"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>Método IHostTaskManager::GetStackGuarantee
 Obtém a quantidade de espaço de pilha é certamente estarão disponíveis após a conclusão de uma operação de pilha, mas antes do fechamento de um processo.  
@@ -35,7 +35,7 @@ HRESULT GetStackGuarantee(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pGuarantee`  
  [out] Um ponteiro para o número de bytes que estão disponíveis.  
   

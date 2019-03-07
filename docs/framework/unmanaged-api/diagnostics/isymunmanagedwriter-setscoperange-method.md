@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3657ef40fce3d9d29e0cf6c27e8eb527be0f150e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618799"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489014"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>Método ISymUnmanagedWriter::SetScopeRange
 Define o intervalo de deslocamento do escopo léxico especificado. O escopo se torna o novo escopo atual e é enviada por push para uma pilha de escopos. Escopos devem formar uma hierarquia. Irmãos não podem se sobrepor.  
@@ -36,7 +36,7 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `scopeId`  
  [in] O identificador de escopo para o escopo.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a3b0921528ed09ee4ab3a1ede6b9efe565e02a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd1d97d9f3a44e2237cfc7a9e054a5ecfa2ebb01
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619209"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470751"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>Método ICLRRuntimeInfo::IsLoaded
 Indica se o common language runtime (CLR) associada a [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface é carregado em um processo. Um tempo de execução pode ser carregado sem também ter sido iniciada.  
@@ -35,7 +35,7 @@ HRESULT IsLoaded(
 [out, retval] BOOL *pbLoaded);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `hndProcess`  
  [in] Um identificador para o processo.  
   

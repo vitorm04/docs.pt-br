@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fe770ffc5a9c187e9069e8a66553976f9a53b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709878"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500038"
 ---
 # <a name="setpekind-method"></a>Método SetPEKind
 Determina o tipo de executável portátil, específicos do computador ou máquina independente.  
@@ -37,7 +37,7 @@ HRESULT SetPEKind(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
  ID do assembly.  
   

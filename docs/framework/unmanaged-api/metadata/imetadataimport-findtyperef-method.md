@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b47369e8cee2215b3e7a21e9f069d18dffda847a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6364f9091b399182a44f143cef9e47a4fe667913
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485025"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>Método IMetaDataImport::FindTypeRef
 Obtém um ponteiro para o TypeRef token para o <xref:System.Type> referência que está no escopo especificado e que tem o nome especificado.  
@@ -37,7 +37,7 @@ HRESULT FindTypeRef (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `tkResolutionScope`  
  [in] Um token de ModuleRef, AssemblyRef ou TypeRef que especifica o assembly, módulo ou tipo, respectivamente, no qual o tipo de referência é definido.  
   

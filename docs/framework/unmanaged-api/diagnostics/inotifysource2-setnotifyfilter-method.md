@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c46f2636d397f7f71cf3c119b177f721c6fc091
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5e2d0ed5ba5411f637c8370d366a96f0e028838
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620939"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484610"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>Método INotifySource2::SetNotifyFilter
 Atribui um filtro de notificação para uso com essa origem.  
@@ -37,7 +37,7 @@ HRESULT SetNotifyFilter
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `in_NotifyFilter`  
  [in] Uma combinação bit a bit do [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) valores de enumeração que identificam os retornos de chamada para a API do depurador.  
   

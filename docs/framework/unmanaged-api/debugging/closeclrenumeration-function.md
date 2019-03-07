@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18903bd00b0a9d09365d03c155531a25dc013189
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60b6d9c302cd3af9f41e5a8dce62d7eb268c4198
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406082"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491871"
 ---
 # <a name="closeclrenumeration-function"></a>Função CloseCLREnumeration
-Fecha qualquer válido language runtime (CLR) inicialização continuar eventos comuns localizados em uma matriz de identificadores retornado pelo [função EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)e libera a memória para as matrizes de caminho do identificador e a cadeia de caracteres.  
+Fecha qualquer válido runtime (CLR) inicialização continuar eventos de common language localizados em uma matriz de identificadores retornado pela [função EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)e libera a memória para as matrizes de caminho do identificador e a cadeia de caracteres.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,31 +38,31 @@ HRESULT CloseCLREnumeration (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pHandleArray`  
- [in] Ponteiro para a matriz de identificadores de eventos retornado do [função EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
+ [in] Ponteiro para a matriz de identificadores de eventos retornados do [função EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
   
  `pStringArray`  
  [in] Ponteiro para a matriz de caminhos de cadeia de caracteres CLR retornado do [função EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
   
  `dwArrayLength`  
- [in] DWORD que contém o tamanho (comprimento) do `pHandleArray` ou `pStringArray` (eles são os mesmos).  
+ [in] Que contém o tamanho (comprimento) de um DWORD `pHandleArray` ou `pStringArray` (eles são iguais).  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK  
- Identificadores abertos pelo [função EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md) são fechadas, e a memória alocada para as matrizes de identificador e a cadeia de caracteres é liberada.  
+ Identificadores abertos pelo [função EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md) são fechados, e a memória alocada para as matrizes de cadeia de caracteres de identificador é liberada.  
   
  E_INVALIDARG  
- O comprimento de `pHandleArray` não corresponde ao tamanho que é transmitido `dwArrayLength`.  
+ O comprimento da `pHandleArray` não corresponde ao tamanho que é passado no `dwArrayLength`.  
   
- E_FAIL (ou outros códigos de retorno E_)  
- A função é não é possível liberar a memória para `pHandleArray` e `pStringArray`.  
+ E_FAIL (ou outros códigos de retorno e _)  
+ A função não é possível liberar a memória para `pHandleArray` e `pStringArray`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** dbgshim.h  
   
- **Biblioteca:** dbgshim.dll  
+ **Biblioteca:** dbgshim  
   
- **Versões do .NET framework:** 3.5 SP1
+ **Versões do .NET framework:** 3,5 SP1

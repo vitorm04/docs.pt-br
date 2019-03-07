@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98758ce2c1fb0373ce5a94ad153c0f07144616e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7e64da5002f438198a8389d2d8385d7a4210a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729888"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492695"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>Método ICoreClrDebugTarget::EnumProcesses
 Enumera os processos que estão em execução em um computador remoto.  
@@ -38,7 +38,7 @@ HRESULT EnumProcesses (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pcProcs`  
  [out] O número de processos retornados em `ppProcs`. Esse valor pode ser 0 (zero).  
   

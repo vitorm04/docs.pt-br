@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7e07450b108eb3c5ea083a2ec2f51981941153f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a190041cacb635f1ad6703a634923e0bb9ddb3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669010"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484258"
 ---
 # <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a>Método IHostIoCompletionManager::SetCLRIoCompletionManager
 Fornece o host com um ponteiro de interface para o [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) instância implementada pelo common language runtime (CLR).  
@@ -35,7 +35,7 @@ HRESULT SetCLRIoCompletionManager (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pManager`  
  [in] Um ponteiro de interface para um `ICLRIoCompletionManager` instância fornecida pelo CLR.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d127cecedb128ea5253b079d484fe8e084a81bae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48a08261d3ed17fbbb1a040f356ed341ca863a53
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637340"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468930"
 ---
 # <a name="icordebugmdagetflags-method"></a>Método ICorDebugMDA::GetFlags
 Obtém os sinalizadores associados com o Assistente para depuração gerenciada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
@@ -35,7 +35,7 @@ HRESULT GetFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pFlags`  
  [in] Uma combinação bit a bit do [CorDebugMDAFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) valores de enumeração que especificam as configurações dos sinalizadores para esse MDA.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2741f2f1a6c5f92c3d15ba7d0127cd69494afdce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9825901b3e45e31269198e8612464aad1ac626db
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545128"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482425"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>Método ICorProfilerCallback2::SurvivingReferences
 Relata o layout dos objetos no heap como resultado de uma coleta de lixo sem compactação.  
@@ -38,7 +38,7 @@ HRESULT SurvivingReferences(
                 cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cSurvivingObjectIDRanges`  
  [in] O número de blocos contíguos objetos que sobreviveram como resultado da coleta de lixo sem compactação. Ou seja, o valor de `cSurvivingObjectIDRanges` é o tamanho do `objectIDRangeStart` e `cObjectIDRangeLength` matrizes, qual repositório um `ObjectID` e um comprimento, respectivamente, para cada bloco de objetos.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 784a879b262008e1d999498fcbf4b43bb1137e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e92707e7b24709d64915e29823196bb0f827175
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674239"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485221"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>Método ICLRGCManager::GetStats
 Obtém um conjunto de estatísticas atuais sobre o sistema de coleta de lixo do common language runtime.  
@@ -35,7 +35,7 @@ HRESULT GetStats (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pStats`  
  [no, out] Um [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) instância que contém as estatísticas solicitadas.  
   
