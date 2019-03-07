@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4a1761f088732cf19d55f42d66288bb281885f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96f0b1648c8182b4d075a479f9bd376dbe33ef61
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589445"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487896"
 ---
-# <a name="ihostfiltermarktoken-method"></a><span data-ttu-id="955ad-102">Método IHostFilter::MarkToken</span><span class="sxs-lookup"><span data-stu-id="955ad-102">IHostFilter::MarkToken Method</span></span>
-<span data-ttu-id="955ad-103">Indica que o token de metadados especificado será processado.</span><span class="sxs-lookup"><span data-stu-id="955ad-103">Indicates that the specified metadata token will be processed.</span></span>  
+# <a name="ihostfiltermarktoken-method"></a><span data-ttu-id="7caec-102">Método IHostFilter::MarkToken</span><span class="sxs-lookup"><span data-stu-id="7caec-102">IHostFilter::MarkToken Method</span></span>
+<span data-ttu-id="7caec-103">Indica que o token de metadados especificado será processado.</span><span class="sxs-lookup"><span data-stu-id="7caec-103">Indicates that the specified metadata token will be processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="955ad-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="955ad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7caec-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7caec-104">Syntax</span></span>  
   
 ```  
 HRESULT MarkToken (  
@@ -35,22 +35,22 @@ HRESULT MarkToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="955ad-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="955ad-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7caec-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7caec-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="955ad-106">[in] O token de metadados a serem processados.</span><span class="sxs-lookup"><span data-stu-id="955ad-106">[in] The metadata token to be processed.</span></span>  
+ <span data-ttu-id="7caec-106">[in] O token de metadados a serem processados.</span><span class="sxs-lookup"><span data-stu-id="7caec-106">[in] The metadata token to be processed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="955ad-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="955ad-107">Remarks</span></span>  
- <span data-ttu-id="955ad-108">Geralmente, você deseja que um token a ser processada se ele está no escopo de metadados.</span><span class="sxs-lookup"><span data-stu-id="955ad-108">Typically, you want a token to be processed if it is in the metadata scope.</span></span> <span data-ttu-id="955ad-109">O `MarkToken` método é passado para o mecanismo de metadados por meio de [imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="955ad-109">The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7caec-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="7caec-107">Remarks</span></span>  
+ <span data-ttu-id="7caec-108">Geralmente, você deseja que um token a ser processada se ele está no escopo de metadados.</span><span class="sxs-lookup"><span data-stu-id="7caec-108">Typically, you want a token to be processed if it is in the metadata scope.</span></span> <span data-ttu-id="7caec-109">O `MarkToken` método é passado para o mecanismo de metadados por meio de [imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="7caec-109">The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="955ad-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="955ad-110">Requirements</span></span>  
- <span data-ttu-id="955ad-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="955ad-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7caec-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7caec-110">Requirements</span></span>  
+ <span data-ttu-id="7caec-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7caec-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="955ad-112">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="955ad-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7caec-112">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7caec-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="955ad-113">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="955ad-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7caec-113">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="7caec-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="955ad-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="955ad-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7caec-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7caec-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="955ad-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="955ad-115">See also</span></span>
-- [<span data-ttu-id="955ad-116">Interfaces de metadados</span><span class="sxs-lookup"><span data-stu-id="955ad-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="955ad-117">Interface IHostFilter</span><span class="sxs-lookup"><span data-stu-id="955ad-117">IHostFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7caec-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7caec-115">See also</span></span>
+- [<span data-ttu-id="7caec-116">Interfaces de metadados</span><span class="sxs-lookup"><span data-stu-id="7caec-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="7caec-117">Interface IHostFilter</span><span class="sxs-lookup"><span data-stu-id="7caec-117">IHostFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)

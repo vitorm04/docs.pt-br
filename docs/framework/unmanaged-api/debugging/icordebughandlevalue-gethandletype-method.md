@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51fd8e9728955e8f426a38b8bf6cdc78dfa9bbde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecc0b46618cd00ba4442e30c23a7b7e950382fee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412341"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475587"
 ---
-# <a name="icordebughandlevaluegethandletype-method"></a><span data-ttu-id="7ccee-102">Método ICorDebugHandleValue::GetHandleType</span><span class="sxs-lookup"><span data-stu-id="7ccee-102">ICorDebugHandleValue::GetHandleType Method</span></span>
-<span data-ttu-id="7ccee-103">Obtém um valor que indica o tipo de identificador referenciada por este objeto ICorDebugHandleValue.</span><span class="sxs-lookup"><span data-stu-id="7ccee-103">Gets a value that indicates the kind of handle referenced by this ICorDebugHandleValue object.</span></span>  
+# <a name="icordebughandlevaluegethandletype-method"></a><span data-ttu-id="93d63-102">Método ICorDebugHandleValue::GetHandleType</span><span class="sxs-lookup"><span data-stu-id="93d63-102">ICorDebugHandleValue::GetHandleType Method</span></span>
+<span data-ttu-id="93d63-103">Obtém um valor que indica o tipo de identificador referenciada por este objeto ICorDebugHandleValue.</span><span class="sxs-lookup"><span data-stu-id="93d63-103">Gets a value that indicates the kind of handle referenced by this ICorDebugHandleValue object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7ccee-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7ccee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93d63-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="93d63-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHandleType (  
@@ -35,15 +35,15 @@ HRESULT GetHandleType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7ccee-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7ccee-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="93d63-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="93d63-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="7ccee-106">[out] Um ponteiro para um valor da enumeração CorDebugHandleType que indica o tipo desse identificador.</span><span class="sxs-lookup"><span data-stu-id="7ccee-106">[out] A pointer to a value of the CorDebugHandleType enumeration that indicates the type of this handle.</span></span>  
+ <span data-ttu-id="93d63-106">[out] Um ponteiro para um valor de enumeração CorDebugHandleType que indica o tipo desse identificador.</span><span class="sxs-lookup"><span data-stu-id="93d63-106">[out] A pointer to a value of the CorDebugHandleType enumeration that indicates the type of this handle.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7ccee-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7ccee-107">Requirements</span></span>  
- <span data-ttu-id="7ccee-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7ccee-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93d63-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="93d63-107">Requirements</span></span>  
+ <span data-ttu-id="93d63-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93d63-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7ccee-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7ccee-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="93d63-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="93d63-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7ccee-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7ccee-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="93d63-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93d63-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7ccee-111">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ccee-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="93d63-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93d63-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

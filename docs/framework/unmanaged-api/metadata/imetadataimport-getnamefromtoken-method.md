@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 36218fa44f1cb49d8d0193d7c72e6feb2d121050
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f45c89572362f380997e7d8247b93c0f8629655
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478846"
 ---
-# <a name="imetadataimportgetnamefromtoken-method"></a><span data-ttu-id="163a5-102">Método IMetaDataImport::GetNameFromToken</span><span class="sxs-lookup"><span data-stu-id="163a5-102">IMetaDataImport::GetNameFromToken Method</span></span>
-<span data-ttu-id="163a5-103">Obtém o nome de UTF-8 do objeto referenciado pelo token de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="163a5-103">Gets the UTF-8 name of the object referenced by the specified metadata token.</span></span> <span data-ttu-id="163a5-104">Esse método é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="163a5-104">This method is obsolete.</span></span>  
+# <a name="imetadataimportgetnamefromtoken-method"></a><span data-ttu-id="f1311-102">Método IMetaDataImport::GetNameFromToken</span><span class="sxs-lookup"><span data-stu-id="f1311-102">IMetaDataImport::GetNameFromToken Method</span></span>
+<span data-ttu-id="f1311-103">Obtém o nome de UTF-8 do objeto referenciado pelo token de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="f1311-103">Gets the UTF-8 name of the object referenced by the specified metadata token.</span></span> <span data-ttu-id="f1311-104">Esse método é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="f1311-104">This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="163a5-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="163a5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1311-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f1311-105">Syntax</span></span>  
   
 ```  
 HRESULT GetNameFromToken (  
@@ -36,25 +36,25 @@ HRESULT GetNameFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="163a5-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="163a5-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1311-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f1311-106">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="163a5-107">[in] O token que representa o objeto para retornar o nome para o.</span><span class="sxs-lookup"><span data-stu-id="163a5-107">[in] The token representing the object to return the name for.</span></span>  
+ <span data-ttu-id="f1311-107">[in] O token que representa o objeto para retornar o nome para o.</span><span class="sxs-lookup"><span data-stu-id="f1311-107">[in] The token representing the object to return the name for.</span></span>  
   
  `pszUtf8NamePtr`  
- <span data-ttu-id="163a5-108">[out] Um ponteiro para o nome do objeto UTF-8 no heap.</span><span class="sxs-lookup"><span data-stu-id="163a5-108">[out] A pointer to the UTF-8 object name in the heap.</span></span>  
+ <span data-ttu-id="f1311-108">[out] Um ponteiro para o nome do objeto UTF-8 no heap.</span><span class="sxs-lookup"><span data-stu-id="f1311-108">[out] A pointer to the UTF-8 object name in the heap.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="163a5-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="163a5-109">Remarks</span></span>  
- <span data-ttu-id="163a5-110">`GetNameFromToken` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="163a5-110">`GetNameFromToken` is obsolete.</span></span> <span data-ttu-id="163a5-111">Como alternativa, chamar um método para obter as propriedades de um determinado tipo de token necessário, como `GetFieldProps` para um campo ou `GetMethodProps` para um método.</span><span class="sxs-lookup"><span data-stu-id="163a5-111">As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1311-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="f1311-109">Remarks</span></span>  
+ <span data-ttu-id="f1311-110">`GetNameFromToken` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="f1311-110">`GetNameFromToken` is obsolete.</span></span> <span data-ttu-id="f1311-111">Como alternativa, chamar um método para obter as propriedades de um determinado tipo de token necessário, como `GetFieldProps` para um campo ou `GetMethodProps` para um método.</span><span class="sxs-lookup"><span data-stu-id="f1311-111">As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="163a5-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="163a5-112">Requirements</span></span>  
- <span data-ttu-id="163a5-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="163a5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1311-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f1311-112">Requirements</span></span>  
+ <span data-ttu-id="f1311-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1311-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="163a5-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="163a5-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f1311-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f1311-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="163a5-115">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="163a5-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f1311-115">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="f1311-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="163a5-116">**Versões do .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="163a5-116">**.NET Framework Versions:** 1.0</span></span>  
+ <span data-ttu-id="f1311-116">**Versões do .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="f1311-116">**.NET Framework Versions:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="163a5-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="163a5-117">See also</span></span>
-- [<span data-ttu-id="163a5-118">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="163a5-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="163a5-119">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="163a5-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f1311-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f1311-117">See also</span></span>
+- [<span data-ttu-id="f1311-118">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="f1311-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f1311-119">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="f1311-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
