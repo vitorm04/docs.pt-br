@@ -7,57 +7,57 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: e3b4ee9a1bfcc2132d3e9e1239ff2c8f7158e513
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de80feecda1268f3899f73c52727372452a2d366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966756"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502625"
 ---
-# <a name="gettype-operator-visual-basic"></a><span data-ttu-id="c3083-102">Operador GetType (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3083-102">GetType Operator (Visual Basic)</span></span>
-<span data-ttu-id="c3083-103">Retorna um <xref:System.Type> objeto para o tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="c3083-103">Returns a <xref:System.Type> object for the specified type.</span></span> <span data-ttu-id="c3083-104">O <xref:System.Type> objeto fornece informações sobre o tipo como suas propriedades, métodos e eventos.</span><span class="sxs-lookup"><span data-stu-id="c3083-104">The <xref:System.Type> object provides information about the type such as its properties, methods, and events.</span></span>  
+# <a name="gettype-operator-visual-basic"></a><span data-ttu-id="b30df-102">Operador GetType (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b30df-102">GetType Operator (Visual Basic)</span></span>
+<span data-ttu-id="b30df-103">Retorna um <xref:System.Type> objeto para o tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="b30df-103">Returns a <xref:System.Type> object for the specified type.</span></span> <span data-ttu-id="b30df-104">O <xref:System.Type> objeto fornece informações sobre o tipo como suas propriedades, métodos e eventos.</span><span class="sxs-lookup"><span data-stu-id="b30df-104">The <xref:System.Type> object provides information about the type such as its properties, methods, and events.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3083-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c3083-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b30df-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b30df-105">Syntax</span></span>  
   
 ```  
 GetType(typename)  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c3083-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c3083-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b30df-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b30df-106">Parameters</span></span>  
   
-|<span data-ttu-id="c3083-107">Parâmetro</span><span class="sxs-lookup"><span data-stu-id="c3083-107">Parameter</span></span>|<span data-ttu-id="c3083-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="c3083-108">Description</span></span>|  
+|<span data-ttu-id="b30df-107">Parâmetro</span><span class="sxs-lookup"><span data-stu-id="b30df-107">Parameter</span></span>|<span data-ttu-id="b30df-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="b30df-108">Description</span></span>|  
 |---|---|  
-|`typename`|<span data-ttu-id="c3083-109">O nome do tipo do qual você deseja informações.</span><span class="sxs-lookup"><span data-stu-id="c3083-109">The name of the type for which you desire information.</span></span>|  
+|`typename`|<span data-ttu-id="b30df-109">O nome do tipo do qual você deseja informações.</span><span class="sxs-lookup"><span data-stu-id="b30df-109">The name of the type for which you desire information.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c3083-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="c3083-110">Remarks</span></span>  
- <span data-ttu-id="c3083-111">O `GetType` operador retorna o <xref:System.Type> o objeto especificado `typename`.</span><span class="sxs-lookup"><span data-stu-id="c3083-111">The `GetType` operator returns the <xref:System.Type> object for the specified `typename`.</span></span> <span data-ttu-id="c3083-112">Você pode passar o nome de qualquer tipo definido em `typename`.</span><span class="sxs-lookup"><span data-stu-id="c3083-112">You can pass the name of any defined type in `typename`.</span></span> <span data-ttu-id="c3083-113">Isso inclui o seguinte:</span><span class="sxs-lookup"><span data-stu-id="c3083-113">This includes the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b30df-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="b30df-110">Remarks</span></span>  
+ <span data-ttu-id="b30df-111">O `GetType` operador retorna o <xref:System.Type> o objeto especificado `typename`.</span><span class="sxs-lookup"><span data-stu-id="b30df-111">The `GetType` operator returns the <xref:System.Type> object for the specified `typename`.</span></span> <span data-ttu-id="b30df-112">Você pode passar o nome de qualquer tipo definido em `typename`.</span><span class="sxs-lookup"><span data-stu-id="b30df-112">You can pass the name of any defined type in `typename`.</span></span> <span data-ttu-id="b30df-113">Isso inclui o seguinte:</span><span class="sxs-lookup"><span data-stu-id="b30df-113">This includes the following:</span></span>  
   
--   <span data-ttu-id="c3083-114">Tipo de dados de qualquer Visual Basic, como `Boolean` ou `Date`.</span><span class="sxs-lookup"><span data-stu-id="c3083-114">Any Visual Basic data type, such as `Boolean` or `Date`.</span></span>  
+-   <span data-ttu-id="b30df-114">Tipo de dados de qualquer Visual Basic, como `Boolean` ou `Date`.</span><span class="sxs-lookup"><span data-stu-id="b30df-114">Any Visual Basic data type, such as `Boolean` or `Date`.</span></span>  
   
--   <span data-ttu-id="c3083-115">Qualquer classe do .NET Framework, estrutura, módulo ou interface, tais como <xref:System.ArgumentException?displayProperty=nameWithType> ou <xref:System.Double?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c3083-115">Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="b30df-115">Qualquer classe do .NET Framework, estrutura, módulo ou interface, tais como <xref:System.ArgumentException?displayProperty=nameWithType> ou <xref:System.Double?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b30df-115">Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="c3083-116">Qualquer classe, estrutura, módulo ou interface definida por seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c3083-116">Any class, structure, module, or interface defined by your application.</span></span>  
+-   <span data-ttu-id="b30df-116">Qualquer classe, estrutura, módulo ou interface definida por seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b30df-116">Any class, structure, module, or interface defined by your application.</span></span>  
   
--   <span data-ttu-id="c3083-117">Qualquer matriz definida por seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c3083-117">Any array defined by your application.</span></span>  
+-   <span data-ttu-id="b30df-117">Qualquer matriz definida por seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b30df-117">Any array defined by your application.</span></span>  
   
--   <span data-ttu-id="c3083-118">Qualquer delegado definido pelo seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c3083-118">Any delegate defined by your application.</span></span>  
+-   <span data-ttu-id="b30df-118">Qualquer delegado definido pelo seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b30df-118">Any delegate defined by your application.</span></span>  
   
--   <span data-ttu-id="c3083-119">Qualquer enumeração definida por seu aplicativo, o .NET Framework ou Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c3083-119">Any enumeration defined by Visual Basic, the .NET Framework, or your application.</span></span>  
+-   <span data-ttu-id="b30df-119">Qualquer enumeração definida por seu aplicativo, o .NET Framework ou Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b30df-119">Any enumeration defined by Visual Basic, the .NET Framework, or your application.</span></span>  
   
- <span data-ttu-id="c3083-120">Se você deseja obter o objeto do tipo de uma variável de objeto, use o <xref:System.Type.GetType%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="c3083-120">If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.</span></span>  
+ <span data-ttu-id="b30df-120">Se você deseja obter o objeto do tipo de uma variável de objeto, use o <xref:System.Type.GetType%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="b30df-120">If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.</span></span>  
   
- <span data-ttu-id="c3083-121">O `GetType` operador pode ser útil nas seguintes circunstâncias:</span><span class="sxs-lookup"><span data-stu-id="c3083-121">The `GetType` operator can be useful in the following circumstances:</span></span>  
+ <span data-ttu-id="b30df-121">O `GetType` operador pode ser útil nas seguintes circunstâncias:</span><span class="sxs-lookup"><span data-stu-id="b30df-121">The `GetType` operator can be useful in the following circumstances:</span></span>  
   
--   <span data-ttu-id="c3083-122">Você deve acessar os metadados para um tipo em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="c3083-122">You must access the metadata for a type at run time.</span></span> <span data-ttu-id="c3083-123">O <xref:System.Type> objeto fornece metadados como membros de tipo e informações de implantação.</span><span class="sxs-lookup"><span data-stu-id="c3083-123">The <xref:System.Type> object supplies metadata such as type members and deployment information.</span></span> <span data-ttu-id="c3083-124">Você precisa, por exemplo, para refletir sobre um assembly.</span><span class="sxs-lookup"><span data-stu-id="c3083-124">You need this, for example, to reflect over an assembly.</span></span> <span data-ttu-id="c3083-125">Para obter mais informações, consulte <xref:System.Reflection?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c3083-125">For more information, see <xref:System.Reflection?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="b30df-122">Você deve acessar os metadados para um tipo em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="b30df-122">You must access the metadata for a type at run time.</span></span> <span data-ttu-id="b30df-123">O <xref:System.Type> objeto fornece metadados como membros de tipo e informações de implantação.</span><span class="sxs-lookup"><span data-stu-id="b30df-123">The <xref:System.Type> object supplies metadata such as type members and deployment information.</span></span> <span data-ttu-id="b30df-124">Você precisa, por exemplo, para refletir sobre um assembly.</span><span class="sxs-lookup"><span data-stu-id="b30df-124">You need this, for example, to reflect over an assembly.</span></span> <span data-ttu-id="b30df-125">Para obter mais informações, consulte <xref:System.Reflection?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b30df-125">For more information, see <xref:System.Reflection?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="c3083-126">Você deseja comparar duas referências de objeto para ver se elas se referem a instâncias do mesmo tipo.</span><span class="sxs-lookup"><span data-stu-id="c3083-126">You want to compare two object references to see if they refer to instances of the same type.</span></span> <span data-ttu-id="c3083-127">Se Sim, `GetType` retorna referências para o mesmo <xref:System.Type> objeto.</span><span class="sxs-lookup"><span data-stu-id="c3083-127">If they do, `GetType` returns references to the same <xref:System.Type> object.</span></span>  
+-   <span data-ttu-id="b30df-126">Você deseja comparar duas referências de objeto para ver se elas se referem a instâncias do mesmo tipo.</span><span class="sxs-lookup"><span data-stu-id="b30df-126">You want to compare two object references to see if they refer to instances of the same type.</span></span> <span data-ttu-id="b30df-127">Se Sim, `GetType` retorna referências para o mesmo <xref:System.Type> objeto.</span><span class="sxs-lookup"><span data-stu-id="b30df-127">If they do, `GetType` returns references to the same <xref:System.Type> object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c3083-128">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c3083-128">Example</span></span>  
- <span data-ttu-id="c3083-129">Os exemplos a seguir mostram o `GetType` operador em uso.</span><span class="sxs-lookup"><span data-stu-id="c3083-129">The following examples show the `GetType` operator in use.</span></span>  
+## <a name="example"></a><span data-ttu-id="b30df-128">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b30df-128">Example</span></span>  
+ <span data-ttu-id="b30df-129">Os exemplos a seguir mostram o `GetType` operador em uso.</span><span class="sxs-lookup"><span data-stu-id="b30df-129">The following examples show the `GetType` operator in use.</span></span>  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
-## <a name="see-also"></a><span data-ttu-id="c3083-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c3083-130">See also</span></span>
-- [<span data-ttu-id="c3083-131">Precedência do operador no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c3083-131">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="c3083-132">Operadores Listados por Funcionalidade</span><span class="sxs-lookup"><span data-stu-id="c3083-132">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="c3083-133">Operadores e Expressões</span><span class="sxs-lookup"><span data-stu-id="c3083-133">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="b30df-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b30df-130">See also</span></span>
+- [<span data-ttu-id="b30df-131">Precedência do operador no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b30df-131">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="b30df-132">Operadores Listados por Funcionalidade</span><span class="sxs-lookup"><span data-stu-id="b30df-132">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="b30df-133">Operadores e Expressões</span><span class="sxs-lookup"><span data-stu-id="b30df-133">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

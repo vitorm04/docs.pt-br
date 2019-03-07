@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9390fd62e001b02b6b6d758bb65a45ab847e89c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0d0982ab7249e88c48c7734c09043031a8d0d3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564088"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482412"
 ---
-# <a name="icorprofilerinfo2getrvastaticaddress-method"></a><span data-ttu-id="b0e58-102">Método ICorProfilerInfo2::GetRVAStaticAddress</span><span class="sxs-lookup"><span data-stu-id="b0e58-102">ICorProfilerInfo2::GetRVAStaticAddress Method</span></span>
-<span data-ttu-id="b0e58-103">Obtém o endereço do campo estático especificado endereço virtual relativo (RVA).</span><span class="sxs-lookup"><span data-stu-id="b0e58-103">Gets the address of the specified relative virtual address (RVA) static field.</span></span>  
+# <a name="icorprofilerinfo2getrvastaticaddress-method"></a><span data-ttu-id="01ccf-102">Método ICorProfilerInfo2::GetRVAStaticAddress</span><span class="sxs-lookup"><span data-stu-id="01ccf-102">ICorProfilerInfo2::GetRVAStaticAddress Method</span></span>
+<span data-ttu-id="01ccf-103">Obtém o endereço do campo estático especificado endereço virtual relativo (RVA).</span><span class="sxs-lookup"><span data-stu-id="01ccf-103">Gets the address of the specified relative virtual address (RVA) static field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0e58-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b0e58-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01ccf-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="01ccf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRVAStaticAddress(  
@@ -36,34 +36,34 @@ HRESULT GetRVAStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b0e58-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b0e58-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01ccf-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="01ccf-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="b0e58-106">[in] A ID da classe que contém o campo estático RVA solicitado.</span><span class="sxs-lookup"><span data-stu-id="b0e58-106">[in] The ID of the class that contains the requested RVA-static field.</span></span>  
+ <span data-ttu-id="01ccf-106">[in] A ID da classe que contém o campo estático RVA solicitado.</span><span class="sxs-lookup"><span data-stu-id="01ccf-106">[in] The ID of the class that contains the requested RVA-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="b0e58-107">[in] Token de metadados para o campo estático RVA solicitado.</span><span class="sxs-lookup"><span data-stu-id="b0e58-107">[in] Metadata token for the requested RVA-static field.</span></span>  
+ <span data-ttu-id="01ccf-107">[in] Token de metadados para o campo estático RVA solicitado.</span><span class="sxs-lookup"><span data-stu-id="01ccf-107">[in] Metadata token for the requested RVA-static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="b0e58-108">[out] Um ponteiro para o endereço do campo estático RVA.</span><span class="sxs-lookup"><span data-stu-id="b0e58-108">[out] A pointer to the address of the RVA-static field.</span></span>  
+ <span data-ttu-id="01ccf-108">[out] Um ponteiro para o endereço do campo estático RVA.</span><span class="sxs-lookup"><span data-stu-id="01ccf-108">[out] A pointer to the address of the RVA-static field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0e58-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="b0e58-109">Remarks</span></span>  
- <span data-ttu-id="b0e58-110">O `GetRVAStaticAddress` método pode retornar um dos seguintes:</span><span class="sxs-lookup"><span data-stu-id="b0e58-110">The `GetRVAStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01ccf-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="01ccf-109">Remarks</span></span>  
+ <span data-ttu-id="01ccf-110">O `GetRVAStaticAddress` método pode retornar um dos seguintes:</span><span class="sxs-lookup"><span data-stu-id="01ccf-110">The `GetRVAStaticAddress` method may return one of the following:</span></span>  
   
--   <span data-ttu-id="b0e58-111">Um HRESULT de CORPROF_E_DATAINCOMPLETE se o campo estático fornecido não foi atribuído um endereço no contexto especificado.</span><span class="sxs-lookup"><span data-stu-id="b0e58-111">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+-   <span data-ttu-id="01ccf-111">Um HRESULT de CORPROF_E_DATAINCOMPLETE se o campo estático fornecido não foi atribuído um endereço no contexto especificado.</span><span class="sxs-lookup"><span data-stu-id="01ccf-111">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
--   <span data-ttu-id="b0e58-112">Os endereços de objetos que podem estar no heap de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="b0e58-112">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="b0e58-113">Esses endereços podem se tornar inválidos após a coleta de lixo, portanto, após a coleta de lixo, criadores de perfil não devem presumir que eles são válidos.</span><span class="sxs-lookup"><span data-stu-id="b0e58-113">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+-   <span data-ttu-id="01ccf-112">Os endereços de objetos que podem estar no heap de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="01ccf-112">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="01ccf-113">Esses endereços podem se tornar inválidos após a coleta de lixo, portanto, após a coleta de lixo, criadores de perfil não devem presumir que eles são válidos.</span><span class="sxs-lookup"><span data-stu-id="01ccf-113">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="b0e58-114">Antes de construtor de classe uma classe do for concluída, `GetRVAStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos já podem ser inicializada e podem ser torcendo objetos de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="b0e58-114">Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="01ccf-114">Antes de construtor de classe uma classe do for concluída, `GetRVAStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos já podem ser inicializada e podem ser torcendo objetos de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="01ccf-114">Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0e58-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b0e58-115">Requirements</span></span>  
- <span data-ttu-id="b0e58-116">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0e58-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01ccf-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="01ccf-115">Requirements</span></span>  
+ <span data-ttu-id="01ccf-116">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01ccf-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0e58-117">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b0e58-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="01ccf-117">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="01ccf-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b0e58-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0e58-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01ccf-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01ccf-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0e58-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0e58-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="01ccf-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01ccf-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0e58-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b0e58-120">See also</span></span>
-- [<span data-ttu-id="b0e58-121">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="b0e58-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="b0e58-122">Interface ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="b0e58-122">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="01ccf-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="01ccf-120">See also</span></span>
+- [<span data-ttu-id="01ccf-121">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="01ccf-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="01ccf-122">Interface ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="01ccf-122">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

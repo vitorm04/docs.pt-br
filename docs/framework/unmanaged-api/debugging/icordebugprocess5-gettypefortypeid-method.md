@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b5800890a5dfaef40225616f1d661a8e37ed4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9827d1c3f6e50172ad4f07137e9de0ff16564aab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661094"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477953"
 ---
-# <a name="icordebugprocess5gettypefortypeid-method"></a><span data-ttu-id="5ca51-102">Método ICorDebugProcess5::GetTypeForTypeID</span><span class="sxs-lookup"><span data-stu-id="5ca51-102">ICorDebugProcess5::GetTypeForTypeID Method</span></span>
-<span data-ttu-id="5ca51-103">Converte um identificador de tipo em um valor de ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="5ca51-103">Converts a type identifier to an ICorDebugType value.</span></span>  
+# <a name="icordebugprocess5gettypefortypeid-method"></a><span data-ttu-id="52ccb-102">Método ICorDebugProcess5::GetTypeForTypeID</span><span class="sxs-lookup"><span data-stu-id="52ccb-102">ICorDebugProcess5::GetTypeForTypeID Method</span></span>
+<span data-ttu-id="52ccb-103">Converte um identificador de tipo em um valor de ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="52ccb-103">Converts a type identifier to an ICorDebugType value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5ca51-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5ca51-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52ccb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="52ccb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeForTypeID(  
@@ -36,25 +36,25 @@ HRESULT GetTypeForTypeID(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5ca51-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5ca51-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="52ccb-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="52ccb-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="5ca51-106">[in] O identificador de tipo.</span><span class="sxs-lookup"><span data-stu-id="5ca51-106">[in] The type identifier.</span></span>  
+ <span data-ttu-id="52ccb-106">[in] O identificador de tipo.</span><span class="sxs-lookup"><span data-stu-id="52ccb-106">[in] The type identifier.</span></span>  
   
  `ppType`  
- <span data-ttu-id="5ca51-107">[out] Um ponteiro para o endereço de um objeto ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="5ca51-107">[out] A pointer to the address of an ICorDebugType object.</span></span>  
+ <span data-ttu-id="52ccb-107">[out] Um ponteiro para o endereço de um objeto ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="52ccb-107">[out] A pointer to the address of an ICorDebugType object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5ca51-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="5ca51-108">Remarks</span></span>  
- <span data-ttu-id="5ca51-109">Em alguns casos, os métodos que retornam um identificador de tipo podem retornar um valor nulo `COR_TYPEID` valor.</span><span class="sxs-lookup"><span data-stu-id="5ca51-109">In some cases, methods that return a type identifier may return a null `COR_TYPEID` value.</span></span> <span data-ttu-id="5ca51-110">Se esse valor é passado como o `id` argumento, o `GetTypeForTypeID` método falhará e retornará `E_FAIL`.</span><span class="sxs-lookup"><span data-stu-id="5ca51-110">If this value is passed as the `id` argument, the `GetTypeForTypeID` method will fail and return `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52ccb-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="52ccb-108">Remarks</span></span>  
+ <span data-ttu-id="52ccb-109">Em alguns casos, os métodos que retornam um identificador de tipo podem retornar um valor nulo `COR_TYPEID` valor.</span><span class="sxs-lookup"><span data-stu-id="52ccb-109">In some cases, methods that return a type identifier may return a null `COR_TYPEID` value.</span></span> <span data-ttu-id="52ccb-110">Se esse valor é passado como o `id` argumento, o `GetTypeForTypeID` método falhará e retornará `E_FAIL`.</span><span class="sxs-lookup"><span data-stu-id="52ccb-110">If this value is passed as the `id` argument, the `GetTypeForTypeID` method will fail and return `E_FAIL`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5ca51-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5ca51-111">Requirements</span></span>  
- <span data-ttu-id="5ca51-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5ca51-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52ccb-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="52ccb-111">Requirements</span></span>  
+ <span data-ttu-id="52ccb-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52ccb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5ca51-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5ca51-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="52ccb-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="52ccb-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5ca51-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5ca51-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="52ccb-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52ccb-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5ca51-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ca51-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="52ccb-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52ccb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ca51-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5ca51-116">See also</span></span>
-- [<span data-ttu-id="5ca51-117">Interface ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="5ca51-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="5ca51-118">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="5ca51-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="52ccb-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="52ccb-116">See also</span></span>
+- [<span data-ttu-id="52ccb-117">Interface ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="52ccb-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="52ccb-118">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="52ccb-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8010ac602c82c7da2af9d0678227a6ce1c91391a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec323daf7c0d612d84c86c950c0c7235c7f9ebe7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485239"
 ---
-# <a name="ihostthreadpoolmanagergetminthreads-method"></a><span data-ttu-id="5728a-102">Método IHostThreadPoolManager::GetMinThreads</span><span class="sxs-lookup"><span data-stu-id="5728a-102">IHostThreadPoolManager::GetMinThreads Method</span></span>
-<span data-ttu-id="5728a-103">Obtém o número mínimo de threads ociosos do que o host mantém no pool de threads em antecipação de solicitações.</span><span class="sxs-lookup"><span data-stu-id="5728a-103">Gets the minimum number of idle threads that the host maintains in the thread pool in anticipation of requests.</span></span>  
+# <a name="ihostthreadpoolmanagergetminthreads-method"></a><span data-ttu-id="554ab-102">Método IHostThreadPoolManager::GetMinThreads</span><span class="sxs-lookup"><span data-stu-id="554ab-102">IHostThreadPoolManager::GetMinThreads Method</span></span>
+<span data-ttu-id="554ab-103">Obtém o número mínimo de threads ociosos do que o host mantém no pool de threads em antecipação de solicitações.</span><span class="sxs-lookup"><span data-stu-id="554ab-103">Gets the minimum number of idle threads that the host maintains in the thread pool in anticipation of requests.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5728a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5728a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="554ab-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="554ab-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMinThreads (  
@@ -35,37 +35,37 @@ HRESULT GetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5728a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5728a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="554ab-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="554ab-105">Parameters</span></span>  
  `MinThreads`  
- <span data-ttu-id="5728a-106">[out] Um ponteiro para o número mínimo de threads de trabalho ocioso que atualmente mantém o host.</span><span class="sxs-lookup"><span data-stu-id="5728a-106">[out] A pointer to the minimum number of idle worker threads that the host currently maintains.</span></span>  
+ <span data-ttu-id="554ab-106">[out] Um ponteiro para o número mínimo de threads de trabalho ocioso que atualmente mantém o host.</span><span class="sxs-lookup"><span data-stu-id="554ab-106">[out] A pointer to the minimum number of idle worker threads that the host currently maintains.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5728a-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="5728a-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="554ab-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="554ab-107">Return Value</span></span>  
   
-|<span data-ttu-id="5728a-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5728a-108">HRESULT</span></span>|<span data-ttu-id="5728a-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="5728a-109">Description</span></span>|  
+|<span data-ttu-id="554ab-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="554ab-108">HRESULT</span></span>|<span data-ttu-id="554ab-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="554ab-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5728a-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="5728a-110">S_OK</span></span>|<span data-ttu-id="5728a-111">`GetMinThreads` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="5728a-111">`GetMinThreads` returned successfully.</span></span>|  
-|<span data-ttu-id="5728a-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5728a-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5728a-113">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="5728a-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="5728a-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5728a-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5728a-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="5728a-115">The call timed out.</span></span>|  
-|<span data-ttu-id="5728a-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5728a-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5728a-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="5728a-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="5728a-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5728a-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5728a-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="5728a-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="5728a-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5728a-120">E_FAIL</span></span>|<span data-ttu-id="5728a-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="5728a-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5728a-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="5728a-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5728a-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5728a-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="5728a-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="5728a-124">E_NOTIMPL</span></span>|<span data-ttu-id="5728a-125">O host não fornece uma implementação de `GetMinThreads`.</span><span class="sxs-lookup"><span data-stu-id="5728a-125">The host does not provide an implementation of `GetMinThreads`.</span></span>|  
+|<span data-ttu-id="554ab-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="554ab-110">S_OK</span></span>|<span data-ttu-id="554ab-111">`GetMinThreads` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="554ab-111">`GetMinThreads` returned successfully.</span></span>|  
+|<span data-ttu-id="554ab-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="554ab-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="554ab-113">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="554ab-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="554ab-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="554ab-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="554ab-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="554ab-115">The call timed out.</span></span>|  
+|<span data-ttu-id="554ab-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="554ab-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="554ab-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="554ab-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="554ab-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="554ab-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="554ab-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="554ab-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="554ab-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="554ab-120">E_FAIL</span></span>|<span data-ttu-id="554ab-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="554ab-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="554ab-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="554ab-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="554ab-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="554ab-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="554ab-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="554ab-124">E_NOTIMPL</span></span>|<span data-ttu-id="554ab-125">O host não fornece uma implementação de `GetMinThreads`.</span><span class="sxs-lookup"><span data-stu-id="554ab-125">The host does not provide an implementation of `GetMinThreads`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5728a-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="5728a-126">Remarks</span></span>  
- <span data-ttu-id="5728a-127">O host não é necessário para fornecer uma implementação de `GetMinThreads`.</span><span class="sxs-lookup"><span data-stu-id="5728a-127">The host is not required to provide an implementation of `GetMinThreads`.</span></span> <span data-ttu-id="5728a-128">Nesse caso, ele deve retornar um valor HRESULT de E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="5728a-128">In this case, it should return an HRESULT value of E_NOTIMPL.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="554ab-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="554ab-126">Remarks</span></span>  
+ <span data-ttu-id="554ab-127">O host não é necessário para fornecer uma implementação de `GetMinThreads`.</span><span class="sxs-lookup"><span data-stu-id="554ab-127">The host is not required to provide an implementation of `GetMinThreads`.</span></span> <span data-ttu-id="554ab-128">Nesse caso, ele deve retornar um valor HRESULT de E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="554ab-128">In this case, it should return an HRESULT value of E_NOTIMPL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5728a-129">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5728a-129">Requirements</span></span>  
- <span data-ttu-id="5728a-130">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5728a-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="554ab-129">Requisitos</span><span class="sxs-lookup"><span data-stu-id="554ab-129">Requirements</span></span>  
+ <span data-ttu-id="554ab-130">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="554ab-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5728a-131">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5728a-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="554ab-131">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="554ab-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5728a-132">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="5728a-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="554ab-132">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="554ab-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5728a-133">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5728a-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="554ab-133">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="554ab-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5728a-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5728a-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="554ab-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="554ab-134">See also</span></span>
 - <xref:System.Threading.ThreadPool.GetMinThreads%2A>
 - <xref:System.Threading.ThreadPool>
-- [<span data-ttu-id="5728a-135">Método GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="5728a-135">GetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)
-- [<span data-ttu-id="5728a-136">Método SetMinThreads</span><span class="sxs-lookup"><span data-stu-id="5728a-136">SetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)
-- [<span data-ttu-id="5728a-137">Interface IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="5728a-137">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [<span data-ttu-id="554ab-135">Método GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="554ab-135">GetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)
+- [<span data-ttu-id="554ab-136">Método SetMinThreads</span><span class="sxs-lookup"><span data-stu-id="554ab-136">SetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)
+- [<span data-ttu-id="554ab-137">Interface IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="554ab-137">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

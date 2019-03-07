@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500359"
 ---
-# <a name="cordllmain-function"></a><span data-ttu-id="e5586-102">Função _CorDllMain</span><span class="sxs-lookup"><span data-stu-id="e5586-102">_CorDllMain Function</span></span>
-<span data-ttu-id="e5586-103">Inicializa o common language runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly da DLL e inicia a execução.</span><span class="sxs-lookup"><span data-stu-id="e5586-103">Initializes the common language runtime (CLR), locates the managed entry point in the DLL assembly's CLR header, and begins execution.</span></span>  
+# <a name="cordllmain-function"></a><span data-ttu-id="56979-102">Função _CorDllMain</span><span class="sxs-lookup"><span data-stu-id="56979-102">_CorDllMain Function</span></span>
+<span data-ttu-id="56979-103">Inicializa o common language runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly da DLL e inicia a execução.</span><span class="sxs-lookup"><span data-stu-id="56979-103">Initializes the common language runtime (CLR), locates the managed entry point in the DLL assembly's CLR header, and begins execution.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5586-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e5586-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56979-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="56979-104">Syntax</span></span>  
   
 ```  
 BOOL STDMETHODCALLTYPE _CorDllMain (  
@@ -36,36 +36,36 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e5586-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e5586-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56979-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="56979-105">Parameters</span></span>  
  `hInst`  
- <span data-ttu-id="e5586-106">[in] O identificador da instância do módulo carregado.</span><span class="sxs-lookup"><span data-stu-id="e5586-106">[in] The instance handle of the loaded module.</span></span>  
+ <span data-ttu-id="56979-106">[in] O identificador da instância do módulo carregado.</span><span class="sxs-lookup"><span data-stu-id="56979-106">[in] The instance handle of the loaded module.</span></span>  
   
  `dwReason`  
- <span data-ttu-id="e5586-107">[in] Indica por que a função de ponto de entrada DLL está sendo chamada.</span><span class="sxs-lookup"><span data-stu-id="e5586-107">[in]Indicates why the DLL entry-point function is being called.</span></span> <span data-ttu-id="e5586-108">Esse parâmetro pode ser um dos seguintes valores: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH ou DLL_PROCESS_DETACH.</span><span class="sxs-lookup"><span data-stu-id="e5586-108">This parameter can be one of the following values: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH, or DLL_PROCESS_DETACH.</span></span> <span data-ttu-id="e5586-109">Para obter descrições desses valores, consulte o `DllMain` documentação no SDK da plataforma.</span><span class="sxs-lookup"><span data-stu-id="e5586-109">For descriptions of these values, see the `DllMain` documentation in the Platform SDK.</span></span>  
+ <span data-ttu-id="56979-107">[in] Indica por que a função de ponto de entrada DLL está sendo chamada.</span><span class="sxs-lookup"><span data-stu-id="56979-107">[in]Indicates why the DLL entry-point function is being called.</span></span> <span data-ttu-id="56979-108">Esse parâmetro pode ser um dos seguintes valores: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH ou DLL_PROCESS_DETACH.</span><span class="sxs-lookup"><span data-stu-id="56979-108">This parameter can be one of the following values: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH, or DLL_PROCESS_DETACH.</span></span> <span data-ttu-id="56979-109">Para obter descrições desses valores, consulte o `DllMain` documentação no SDK da plataforma.</span><span class="sxs-lookup"><span data-stu-id="56979-109">For descriptions of these values, see the `DllMain` documentation in the Platform SDK.</span></span>  
   
  `lpReserved`  
- <span data-ttu-id="e5586-110">[in] Não utilizado.</span><span class="sxs-lookup"><span data-stu-id="e5586-110">[in] Unused.</span></span>  
+ <span data-ttu-id="56979-110">[in] Não utilizado.</span><span class="sxs-lookup"><span data-stu-id="56979-110">[in] Unused.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e5586-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="e5586-111">Return Value</span></span>  
- <span data-ttu-id="e5586-112">Esse método retornará `true` para o sucesso e `false` se ocorrer um erro.</span><span class="sxs-lookup"><span data-stu-id="e5586-112">This method returns `true` for success and `false` if an error occurs.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="56979-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="56979-111">Return Value</span></span>  
+ <span data-ttu-id="56979-112">Esse método retornará `true` para o sucesso e `false` se ocorrer um erro.</span><span class="sxs-lookup"><span data-stu-id="56979-112">This method returns `true` for success and `false` if an error occurs.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e5586-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="e5586-113">Remarks</span></span>  
- <span data-ttu-id="e5586-114">Essa função é chamada pelo carregador do sistema operacional para os assemblies DLL.</span><span class="sxs-lookup"><span data-stu-id="e5586-114">This function is called by the operating system loader for DLL assemblies.</span></span> <span data-ttu-id="e5586-115">Para assemblies executáveis, o carregador de chamadas a [CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function em vez disso.</span><span class="sxs-lookup"><span data-stu-id="e5586-115">For executable assemblies, the loader calls the [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="56979-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="56979-113">Remarks</span></span>  
+ <span data-ttu-id="56979-114">Essa função é chamada pelo carregador do sistema operacional para os assemblies DLL.</span><span class="sxs-lookup"><span data-stu-id="56979-114">This function is called by the operating system loader for DLL assemblies.</span></span> <span data-ttu-id="56979-115">Para assemblies executáveis, o carregador de chamadas a [CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function em vez disso.</span><span class="sxs-lookup"><span data-stu-id="56979-115">For executable assemblies, the loader calls the [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function instead.</span></span>  
   
- <span data-ttu-id="e5586-116">Carregador do sistema operacional chama esse método, independentemente do ponto de entrada especificado no arquivo de DLL.</span><span class="sxs-lookup"><span data-stu-id="e5586-116">The operating system loader calls this method regardless of the entry point specified in the DLL file.</span></span>  
+ <span data-ttu-id="56979-116">Carregador do sistema operacional chama esse método, independentemente do ponto de entrada especificado no arquivo de DLL.</span><span class="sxs-lookup"><span data-stu-id="56979-116">The operating system loader calls this method regardless of the entry point specified in the DLL file.</span></span>  
   
- <span data-ttu-id="e5586-117">No Windows 98, Windows ME, Windows NT e Windows 2000, o `_CorDllMain` função é chamada indiretamente por meio de um fixupin carregador do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="e5586-117">In Windows 98, Windows ME, Windows NT, and Windows 2000, the `_CorDllMain` function is called indirectly through a fixupin the operating system loader.</span></span> <span data-ttu-id="e5586-118">Todas as outras versões do Windows, ele é chamado diretamente pelo carregador do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="e5586-118">In all other versions of Windows, it is called directly by the operating system loader.</span></span>  
+<span data-ttu-id="56979-117">O `_CorDllMain` função é chamada diretamente pelo carregador do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="56979-117">The `_CorDllMain` function is called directly by the operating system loader.</span></span>
   
- <span data-ttu-id="e5586-119">Para obter mais informações, consulte a seção comentários a [CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tópico.</span><span class="sxs-lookup"><span data-stu-id="e5586-119">For additional information, see the Remarks section in the [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) topic.</span></span>  
+ <span data-ttu-id="56979-118">Para obter mais informações, consulte a seção comentários a [CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tópico.</span><span class="sxs-lookup"><span data-stu-id="56979-118">For additional information, see the Remarks section in the [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) topic.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5586-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e5586-120">Requirements</span></span>  
- <span data-ttu-id="e5586-121">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5586-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56979-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="56979-119">Requirements</span></span>  
+ <span data-ttu-id="56979-120">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56979-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5586-122">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e5586-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="56979-121">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="56979-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e5586-123">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="e5586-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="56979-122">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="56979-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e5586-124">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5586-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="56979-123">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56979-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5586-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e5586-125">See also</span></span>
-- [<span data-ttu-id="e5586-126">Funções estáticas globais de metadados</span><span class="sxs-lookup"><span data-stu-id="e5586-126">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="56979-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="56979-124">See also</span></span>
+- [<span data-ttu-id="56979-125">Funções estáticas globais de metadados</span><span class="sxs-lookup"><span data-stu-id="56979-125">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

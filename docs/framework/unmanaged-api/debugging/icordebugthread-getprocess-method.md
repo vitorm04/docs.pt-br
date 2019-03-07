@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41c7eeccad8b3f685c81e6afc23eaf19d862182
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46aa2ec5a282ef56f28d5fa0499571028e6602e6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417606"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483622"
 ---
-# <a name="icordebugthreadgetprocess-method"></a><span data-ttu-id="c7ba0-102">Método ICorDebugThread::GetProcess</span><span class="sxs-lookup"><span data-stu-id="c7ba0-102">ICorDebugThread::GetProcess Method</span></span>
-<span data-ttu-id="c7ba0-103">Obtém um ponteiro de interface para o processo do qual esta ICorDebugThread faz parte.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-103">Gets an interface pointer to the process of which this ICorDebugThread forms a part.</span></span>  
+# <a name="icordebugthreadgetprocess-method"></a><span data-ttu-id="3f92a-102">Método ICorDebugThread::GetProcess</span><span class="sxs-lookup"><span data-stu-id="3f92a-102">ICorDebugThread::GetProcess Method</span></span>
+<span data-ttu-id="3f92a-103">Obtém um ponteiro de interface para o processo do qual este ICorDebugThread faz parte.</span><span class="sxs-lookup"><span data-stu-id="3f92a-103">Gets an interface pointer to the process of which this ICorDebugThread forms a part.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7ba0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c7ba0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f92a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3f92a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcess (  
@@ -35,15 +35,15 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c7ba0-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c7ba0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f92a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3f92a-105">Parameters</span></span>  
  `ppProcess`  
- <span data-ttu-id="c7ba0-106">[out] Um ponteiro para o endereço de um objeto de interface ICorDebugProcess que representa o processo.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-106">[out] A pointer to the address of an ICorDebugProcess interface object that represents the process.</span></span>  
+ <span data-ttu-id="3f92a-106">[out] Um ponteiro para o endereço de um objeto de interface ICorDebugProcess que representa o processo.</span><span class="sxs-lookup"><span data-stu-id="3f92a-106">[out] A pointer to the address of an ICorDebugProcess interface object that represents the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7ba0-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c7ba0-107">Requirements</span></span>  
- <span data-ttu-id="c7ba0-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f92a-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3f92a-107">Requirements</span></span>  
+ <span data-ttu-id="3f92a-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f92a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7ba0-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7ba0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3f92a-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f92a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c7ba0-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7ba0-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3f92a-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f92a-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c7ba0-111">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7ba0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3f92a-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f92a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

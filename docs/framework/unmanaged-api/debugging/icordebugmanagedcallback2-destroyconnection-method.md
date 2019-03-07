@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c38846dc142cf011cd7fe859626aa8c19426074
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e2d054057b1813e163193b14a754ebeda034563
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563789"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491328"
 ---
-# <a name="icordebugmanagedcallback2destroyconnection-method"></a><span data-ttu-id="97c76-102">Método ICorDebugManagedCallback2::DestroyConnection</span><span class="sxs-lookup"><span data-stu-id="97c76-102">ICorDebugManagedCallback2::DestroyConnection Method</span></span>
-<span data-ttu-id="97c76-103">Notifica o depurador para que a conexão especificada foi encerrada.</span><span class="sxs-lookup"><span data-stu-id="97c76-103">Notifies the debugger that the specified connection has been terminated.</span></span>  
+# <a name="icordebugmanagedcallback2destroyconnection-method"></a><span data-ttu-id="78930-102">Método ICorDebugManagedCallback2::DestroyConnection</span><span class="sxs-lookup"><span data-stu-id="78930-102">ICorDebugManagedCallback2::DestroyConnection Method</span></span>
+<span data-ttu-id="78930-103">Notifica o depurador para que a conexão especificada foi encerrada.</span><span class="sxs-lookup"><span data-stu-id="78930-103">Notifies the debugger that the specified connection has been terminated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97c76-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="97c76-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78930-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="78930-104">Syntax</span></span>  
   
 ```  
 HRESULT DestroyConnection (  
@@ -36,25 +36,25 @@ HRESULT DestroyConnection (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="97c76-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="97c76-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="78930-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="78930-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="97c76-106">[in] Um ponteiro para um objeto ICorDebugProcess que representa o processo que contém a conexão que foi destruído.</span><span class="sxs-lookup"><span data-stu-id="97c76-106">[in] A pointer to an ICorDebugProcess object that represents the process containing the connection that was destroyed.</span></span>  
+ <span data-ttu-id="78930-106">[in] Um ponteiro para um objeto ICorDebugProcess que representa o processo que contém a conexão que foi destruído.</span><span class="sxs-lookup"><span data-stu-id="78930-106">[in] A pointer to an ICorDebugProcess object that represents the process containing the connection that was destroyed.</span></span>  
   
  `dwConnectionId`  
- <span data-ttu-id="97c76-107">[in] A ID da conexão que foi destruído.</span><span class="sxs-lookup"><span data-stu-id="97c76-107">[in] The ID of the connection that was destroyed.</span></span>  
+ <span data-ttu-id="78930-107">[in] A ID da conexão que foi destruído.</span><span class="sxs-lookup"><span data-stu-id="78930-107">[in] The ID of the connection that was destroyed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="97c76-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="97c76-108">Remarks</span></span>  
- <span data-ttu-id="97c76-109">Um `DestroyConnection` retorno de chamada será acionado quando um host chama [iclrdebugmanager:: Endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) no [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).</span><span class="sxs-lookup"><span data-stu-id="97c76-109">A `DestroyConnection` callback will be fired when a host calls [ICLRDebugManager::EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="78930-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="78930-108">Remarks</span></span>  
+ <span data-ttu-id="78930-109">Um `DestroyConnection` retorno de chamada será acionado quando um host chama [iclrdebugmanager:: Endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) no [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).</span><span class="sxs-lookup"><span data-stu-id="78930-109">A `DestroyConnection` callback will be fired when a host calls [ICLRDebugManager::EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97c76-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="97c76-110">Requirements</span></span>  
- <span data-ttu-id="97c76-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97c76-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="78930-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="78930-110">Requirements</span></span>  
+ <span data-ttu-id="78930-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="78930-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97c76-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="97c76-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="78930-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78930-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="97c76-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97c76-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="78930-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78930-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="97c76-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97c76-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="78930-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78930-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97c76-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="97c76-115">See also</span></span>
-- [<span data-ttu-id="97c76-116">Interface ICorDebugManagedCallback2</span><span class="sxs-lookup"><span data-stu-id="97c76-116">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="97c76-117">Interface ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="97c76-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="78930-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="78930-115">See also</span></span>
+- [<span data-ttu-id="78930-116">Interface ICorDebugManagedCallback2</span><span class="sxs-lookup"><span data-stu-id="78930-116">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="78930-117">Interface ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="78930-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

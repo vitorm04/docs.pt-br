@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2048062267131f6b6cc6672d74c7f9d76b4b59f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630951"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484739"
 ---
-# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="887b5-102">Método ISymUnmanagedReader::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="887b5-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
-<span data-ttu-id="887b5-103">Obtém os namespaces definidos no escopo global dentro desse repositório de símbolos.</span><span class="sxs-lookup"><span data-stu-id="887b5-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
+# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="574b2-102">Método ISymUnmanagedReader::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="574b2-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
+<span data-ttu-id="574b2-103">Obtém os namespaces definidos no escopo global dentro desse repositório de símbolos.</span><span class="sxs-lookup"><span data-stu-id="574b2-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="887b5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="887b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="574b2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="574b2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces (  
@@ -38,21 +38,21 @@ HRESULT GetNamespaces (
         ISymUnmanagedNamespace*  namespaces[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="887b5-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="887b5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="574b2-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="574b2-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="887b5-106">[in] O tamanho da matriz de namespaces.</span><span class="sxs-lookup"><span data-stu-id="887b5-106">[in] The size of the namespaces array.</span></span>  
+ <span data-ttu-id="574b2-106">[in] O tamanho da matriz de namespaces.</span><span class="sxs-lookup"><span data-stu-id="574b2-106">[in] The size of the namespaces array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="887b5-107">[out] Um ponteiro para uma variável que recebe o comprimento da lista de namespace.</span><span class="sxs-lookup"><span data-stu-id="887b5-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
+ <span data-ttu-id="574b2-107">[out] Um ponteiro para uma variável que recebe o comprimento da lista de namespace.</span><span class="sxs-lookup"><span data-stu-id="574b2-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="887b5-108">[out] Um ponteiro para uma variável que recebe a lista de namespaces.</span><span class="sxs-lookup"><span data-stu-id="887b5-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
+ <span data-ttu-id="574b2-108">[out] Um ponteiro para uma variável que recebe a lista de namespaces.</span><span class="sxs-lookup"><span data-stu-id="574b2-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="887b5-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="887b5-109">Return Value</span></span>  
- <span data-ttu-id="887b5-110">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="887b5-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="574b2-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="574b2-109">Return Value</span></span>  
+ <span data-ttu-id="574b2-110">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="574b2-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="887b5-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="887b5-111">Requirements</span></span>  
- <span data-ttu-id="887b5-112">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="887b5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="574b2-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="574b2-111">Requirements</span></span>  
+ <span data-ttu-id="574b2-112">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="574b2-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="887b5-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="887b5-113">See also</span></span>
-- [<span data-ttu-id="887b5-114">Interface ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="887b5-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="574b2-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="574b2-113">See also</span></span>
+- [<span data-ttu-id="574b2-114">Interface ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="574b2-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

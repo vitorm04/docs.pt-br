@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78bfc91bdd0f9fa68252c6a07e1362807eb507b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ce1e42d74dc611032d941e833bb8f248a56488b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416017"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486245"
 ---
-# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="e637d-102">Método ICorDebugModule::GetAssembly</span><span class="sxs-lookup"><span data-stu-id="e637d-102">ICorDebugModule::GetAssembly Method</span></span>
-<span data-ttu-id="e637d-103">Obtém o assembly contendo para este módulo.</span><span class="sxs-lookup"><span data-stu-id="e637d-103">Gets the containing assembly for this module.</span></span>  
+# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="942e3-102">Método ICorDebugModule::GetAssembly</span><span class="sxs-lookup"><span data-stu-id="942e3-102">ICorDebugModule::GetAssembly Method</span></span>
+<span data-ttu-id="942e3-103">Obtém o assembly que contém esse módulo.</span><span class="sxs-lookup"><span data-stu-id="942e3-103">Gets the containing assembly for this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e637d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e637d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="942e3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="942e3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssembly(  
@@ -35,15 +35,15 @@ HRESULT GetAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e637d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e637d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="942e3-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="942e3-105">Parameters</span></span>  
  `ppAssembly`  
- <span data-ttu-id="e637d-106">[out] Um ponteiro para um objeto ICorDebugAssembly que representa o assembly que contém esse módulo.</span><span class="sxs-lookup"><span data-stu-id="e637d-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
+ <span data-ttu-id="942e3-106">[out] Um ponteiro para um objeto de ICorDebugAssembly que representa o assembly que contém esse módulo.</span><span class="sxs-lookup"><span data-stu-id="942e3-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e637d-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e637d-107">Requirements</span></span>  
- <span data-ttu-id="e637d-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e637d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="942e3-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="942e3-107">Requirements</span></span>  
+ <span data-ttu-id="942e3-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="942e3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e637d-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e637d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="942e3-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="942e3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e637d-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e637d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="942e3-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="942e3-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e637d-111">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e637d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="942e3-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="942e3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
