@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78cbede0522ce7b78f0a6518ba506b69b4b0515e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb6a9721549087900083b0d5455054abf07362df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712949"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476251"
 ---
 # <a name="iceegengenerateceefile-method"></a>Método ICeeGen::GenerateCeeFile
 Gera um arquivo de base de código que contém a base de código atualmente carregado nisso [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
@@ -35,7 +35,7 @@ Gera um arquivo de base de código que contém a base de código atualmente carr
 HRESULT GenerateCeeFile ();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `GenerateCeeFile` não usa nenhum parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  

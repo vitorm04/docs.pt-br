@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d3e10a3dbae0d1b790c0d80c9286affedaa4c8b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 361cc3b897b4c85297b597f80aaffc2a2760f88e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709137"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468467"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Método ICorDebugHeapValue3::GetThreadOwningMonitorLock
 Retorna o thread gerenciado que detém o bloqueio de monitor nesse objeto.  
@@ -36,7 +36,7 @@ HRESULT GetThreadOwningMonitorLock (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppThread`  
  [out] O thread gerenciado que detém o bloqueio de monitor nesse objeto.  
   

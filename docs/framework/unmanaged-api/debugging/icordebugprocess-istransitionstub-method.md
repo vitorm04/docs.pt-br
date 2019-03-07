@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420089"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488182"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>Método ICorDebugProcess::IsTransitionStub
 Obtém um valor que indica se um endereço está dentro de um stub que fará com que uma transição para código gerenciado.  
@@ -35,23 +35,23 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `address`  
  [in] Um `CORDB_ADDRESS` valor que especifica o endereço em questão.  
   
  `pbTransitionStub`  
- [out] Um ponteiro para um valor booliano que é `true` se o endereço especificado está dentro de um stub que fará com que uma transição para código gerenciado; caso contrário *`pbTransitionStub` é `false`.  
+ [out] Um ponteiro para um valor booliano que será `true` se o endereço especificado está dentro de um stub que fará com que uma transição para código gerenciado; caso contrário, *`pbTransitionStub` é `false`.  
   
 ## <a name="remarks"></a>Comentários  
- O `IsTransitionStub` método pode ser usado pelo revisão de código não gerenciado para decidir quando devolver o controle de revisão para o seletor gerenciado.  
+ O `IsTransitionStub` método pode ser usado pelo código não gerenciado de passo a passo para decidir quando retornar o controle de revisão para o escalonador gerenciado.  
   
- Você também pode stubs de transição de identidade examinando as informações do arquivo executável portátil (PE).  
+ Você também pode stubs de transição de identidade examinando informações no arquivo executável portátil (PE).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11c08e59813014bf9a474e92d06c6bd2576dd7d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b65eb3e733fa7970e4c0e7de09755598eaf149
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404866"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474976"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>Método ICorDebugBreakpointEnum::Next
 Obtém o número especificado de instâncias de ICorDebugBreakpoint de enumeração, começando na posição atual.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `celt`  
  [in] O número de `ICorDebugBreakpoint` instâncias a serem recuperados.  
   
@@ -46,13 +46,13 @@ HRESULT Next (
  [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugBreakpoint` objeto que representa um ponto de interrupção.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de `ICorDebugBreakpoint` , na verdade, retornadas de instâncias. Esse valor pode ser null se `celt` é um.  
+ [out] Um ponteiro para o número de `ICorDebugBreakpoint` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

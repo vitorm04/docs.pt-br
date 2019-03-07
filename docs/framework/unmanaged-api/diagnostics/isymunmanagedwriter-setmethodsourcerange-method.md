@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40d05ee60d0183337e67b1f36722dff29ae9beaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46072718a7dafc0a00294757d5ccce6242a11e23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663538"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468358"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>Método ISymUnmanagedWriter::SetMethodSourceRange
 Especifica os verdadeiros início e término de um método de dentro de um arquivo de origem. Use esse método para especificar a extensão de um método independentemente dos pontos de sequência que existem dentro do método.  
@@ -39,7 +39,7 @@ HRESULT SetMethodSourceRange(
     [in] ULONG32                      endColumn);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `startDoc`  
  [in] Um ponteiro para o documento que contém a posição inicial.  
   

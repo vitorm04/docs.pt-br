@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcc7770f95c0cb7d416480145a430d781e093f6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 729ae390d36f82cbafd46385b396d6513489628e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599655"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474769"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>Método ICorProfilerInfo2::GetObjectGeneration
 Obtém o segmento de heap que contém o objeto especificado.  
@@ -35,7 +35,7 @@ HRESULT GetObjectGeneration(
     [out] COR_PRF_GC_GENERATION_RANGE *range);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `objectId`  
  [in] A ID do objeto.  
   

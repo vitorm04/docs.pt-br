@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 330a159e056018d702eec7e4fef80c3d8e041212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e23f39f8e7a1812366e15ffec9589f756c73f94
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630795"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481680"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>Método ICorProfilerInfo::BeginInprocDebugging
 Inicializa suporte à depuração em processo. Este método é obsoleto no .NET Framework versão 2.0.  
@@ -35,7 +35,7 @@ HRESULT BeginInprocDebugging(
     [out] DWORD *pdwProfilerContext);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `fThisThreadOnly`  
  [in] Defina esse valor como `true` para inicializar o suporte à depuração de apenas o thread atual; defina-a como `false` para inicializar o suporte à depuração de todos os threads.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fd07f018bdc5bd9fd8ca6a81b4aca6d6f97a531
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: beb2b9f17696e293d14cf997ef69deb7557ed0bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647290"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479235"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>Método ICorDebugUnmanagedCallback::DebugEvent
 Notifica o depurador que um evento nativo foi disparado.  
@@ -36,7 +36,7 @@ HRESULT DebugEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pDebugEvent`  
  [in] Um ponteiro para o evento nativo.  
   

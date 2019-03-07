@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6962824551c108907929e19d75fc4a31f7001f03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d58174aa8b8d0e0544566faa6b1d79c2c3d6197
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727151"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472610"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>Método ICorProfilerInfo2::GetClassIDInfo2
 Obtém o módulo de pai e os metadados de token para a definição de genérica aberta da classe especificada, o `ClassID` de sua classe pai e o `ClassID` para cada argumento de tipo, se presente, da classe.  
@@ -40,7 +40,7 @@ HRESULT GetClassIDInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `classId`  
  [in] A ID da classe para o qual as informações serão recuperadas.  
   

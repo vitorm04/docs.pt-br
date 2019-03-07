@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 019a85d6d58c99adb7c16be5cc3b31b029b0312d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bcf52a3745b22df58e67e892bf3a2b77c542d43
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513122"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478993"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>Método ICorProfilerInfo::GetInprocInspectionIThisThread
 Obtém um objeto que pode ser consultado para a interface ICorDebugThread. Este método é obsoleto no .NET Framework versão 2.0.  
@@ -34,7 +34,7 @@ HRESULT GetInprocInspectionIThisThread(
     [out] IUnknown **ppicd);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppicd`  
  [-out](/cpp/atl/iunknown) objeto que pode ser consultado para o `ICorDebugThread` interface.  
   

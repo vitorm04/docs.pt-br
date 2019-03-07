@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c16f904251545b87426210a76c5107e93a27749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18cf59553468e2408f3898d8233bd05d453db17b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639556"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471956"
 ---
 # <a name="imetadataimportenumfields-method"></a>Método IMetaDataImport::EnumFields
 Enumera FieldDef tokens para o tipo referenciado pelo token de TypeDef especificado.  
@@ -39,7 +39,7 @@ HRESULT EnumFields (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phEnum`  
  [no, out] Um ponteiro para o enumerador.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d30a9f03d8717486be7cd89bb182d350a82df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53db4dcb13303c9e7bdd77a46b3c9526364bac06
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411630"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471215"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>Método ICorDebugGenericValue::GetValue
-Copia o valor nesse genérico para o buffer especificado.  
+Copia o valor nesse genérico no buffer especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ HRESULT GetValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pTo`  
- [out] Um ponteiro para o valor que é representado pelo objeto ICorDebugGenericValue. O valor pode ser um tipo simples ou um tipo de referência (ou seja, um ponteiro).  
+ [out] Um ponteiro para o valor que é representado por esse objeto ICorDebugGenericValue. O valor pode ser um tipo simples ou um tipo de referência (ou seja, um ponteiro).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

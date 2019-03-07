@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9335cb182355931b31040f164c9e51a67598f7b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73982cb4cb7b6e80579714b32cf7aba620272af
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748032"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467097"
 ---
 # <a name="ihosttasksetpriority-method"></a>Método IHostTask::SetPriority
 Solicitações que o host de ajustar a prioridade do thread de nível para a tarefa representada por atual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância.  
@@ -35,7 +35,7 @@ HRESULT SetPriority (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `newPriority`  
  [in] Um inteiro que representa o valor de prioridade de thread solicitada para a tarefa representada por atual `IHostTask` instância.  
   

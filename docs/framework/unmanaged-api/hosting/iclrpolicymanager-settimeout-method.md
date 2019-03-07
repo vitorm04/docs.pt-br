@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8edb16de4c02d2589ecfb9ae5becba22e10e6be6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e367fc772c5b673795c8229f9084fac850d53a8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609324"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474771"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>Método ICLRPolicyManager::SetTimeout
 Define um valor de tempo limite para a operação especificada.  
@@ -36,7 +36,7 @@ HRESULT SetTimeout (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `operation`  
  [in] Um dos [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) valores, indicando que a operação de runtime (CLR) de linguagem comum para o qual definir um tempo limite. Há suporte para os seguintes valores:  
   

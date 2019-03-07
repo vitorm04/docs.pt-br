@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0089502519a5a5530b7ed2a5896f7c445ccb128
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fbd07638050b3861cd3cbfd45171ade5c19acb3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480644"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>Método ICorDebugThread3::CreateStackWalk
 Cria uma [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para o thread cuja pilha que você deseja de desenrolamento.  
@@ -33,7 +33,7 @@ Cria uma [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging
 HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppStackWalk`  
  [out] Um ponteiro para o endereço do [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para o thread cuja pilha que você deseja de desenrolamento.  
   

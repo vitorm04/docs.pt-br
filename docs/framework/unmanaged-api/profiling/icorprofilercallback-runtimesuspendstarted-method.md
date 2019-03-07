@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29d57f4ff2584ca6444f09d4e66c4ba36e3fff67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f07cd585ab800394569b97d103e292a5d8f36f20
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517793"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466717"
 ---
 # <a name="icorprofilercallbackruntimesuspendstarted-method"></a>Método ICorProfilerCallback::RuntimeSuspendStarted
 Notifica o criador de perfil que o tempo de execução está prestes a suspender todos os segmentos de tempo de execução.  
@@ -34,7 +34,7 @@ HRESULT RuntimeSuspendStarted(
     [in] COR_PRF_SUSPEND_REASON suspendReason);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `suspendReason`  
  [in] Um valor igual a [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) enumeração que indica o motivo para a suspensão.  
   

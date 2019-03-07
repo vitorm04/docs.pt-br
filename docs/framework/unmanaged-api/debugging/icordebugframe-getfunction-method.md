@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b622d1bd82e53d5fa232e07b1f49e6fbba3ccba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a48396f8ef668cfe7755b2718180317b465793b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414823"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475275"
 ---
 # <a name="icordebugframegetfunction-method"></a>Método ICorDebugFrame::GetFunction
-Obtém a função que contém o código associado deste quadro de pilhas.  
+Obtém a função que contém o código associado a esse registro de ativação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppFunction`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugFunction que representa a função que contém o código associado deste quadro de pilhas.  
+ [out] Um ponteiro para o endereço de um objeto ICorDebugFunction que representa a função que contém o código associado a esse registro de ativação.  
   
 ## <a name="remarks"></a>Comentários  
  O `GetFunction` método poderá falhar se o quadro não está associado a qualquer função específica.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

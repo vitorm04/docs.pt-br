@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5ed689ad7c456121f7687e7df09eca6c7ea617d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5696dc8fcf4b5c84e12ca60f93679f7b67d5f7e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502553"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476315"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Método ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 Recupera um mapa de dicionário genérico.  
@@ -22,7 +22,7 @@ HRESULT GetGenericDictionaryInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppMemoryBuffer`  
  [out] Um ponteiro para o endereço de um [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) objeto que contém o mapa de dicionário genérico. Consulte a seção Comentários para obter mais informações.  
   

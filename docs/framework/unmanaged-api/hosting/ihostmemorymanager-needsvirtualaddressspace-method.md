@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4a67e1eb5a257cc6d4e4c9bc8798b61c97fba38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fe47a155b29fe452a59adfaffe59162f60f58aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661744"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469568"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>Método IHostMemoryManager::NeedsVirtualAddressSpace
 Notifica o host que o common language runtime (CLR) vai tentar usar a memória especificada.  
@@ -36,7 +36,7 @@ HRESULT NeedsVirtualAddressSpace (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `startAddress`  
  [in] O endereço inicial da memória.  
   

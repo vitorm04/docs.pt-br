@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3662ed8a3fda5881b0e0929a830d19b0d805299f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fe3cbc4bad83496bcc58aaea60e6724b1d1f06c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411025"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466382"
 ---
 # <a name="icordebugframecreatestepper-method"></a>Método ICorDebugFrame::CreateStepper
-Obtém um seletor que permite que o depurador executar operações de revisão em relação a essa ICorDebugFrame.  
+Obtém um seletor que permite que o depurador executar operações de passo a passo em relação a esse ICorDebugFrame.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT CreateStepper (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppStepper`  
- [out] Um ponteiro para o endereço de um objeto de ICorDebugStepper que permite que o depurador executar operações de revisão em relação ao quadro atual.  
+ [out] Um ponteiro para o endereço de um objeto de ICorDebugStepper que permite que o depurador executar operações de passo a passo em relação ao quadro atual.  
   
 ## <a name="remarks"></a>Comentários  
- Se o quadro não está ativo, o objeto de seletor normalmente terá que retornar ao quadro antes que a etapa seja concluída.  
+ Se o quadro não estiver ativo, o objeto escalonador normalmente terá que retornar para o quadro antes que a etapa for concluída.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

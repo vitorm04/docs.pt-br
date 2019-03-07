@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3c24b3a96a03359dc6983bcaac4a800613ff5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9b4ee64022374cb4e1950acceb3f32925b736bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478677"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>Método ICorDebugStepper::SetRangeIL
-Define um valor que especifica se chamadas para [: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passar valores que são relativos ao código nativo ou em relação ao Microsoft intermediário código language (MSIL) do método que está sendo passado de argumento a.  
+Define um valor que especifica se chamadas para [ICorDebugStepper:: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passar argumento código language (MSIL) do método que está sendo de nível intermediário de valores que são relativos ao código nativo ou em relação à Microsoft por meio do.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ HRESULT SetRangeIL (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `bIL`  
- [in] Definido como `true` para especificar que os intervalos são relativas ao código MSIL. Definido como `false` para especificar que os intervalos são relativas ao código nativo. O valor padrão é `true`.  
+ [in] Definido como `true` para especificar que os intervalos são em relação ao código MSIL. Definido como `false` para especificar que os intervalos são em relação ao código nativo. O valor padrão é `true`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

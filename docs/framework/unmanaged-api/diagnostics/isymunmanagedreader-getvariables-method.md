@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec1e2b59c15c956a4657b224a937829dbd3b14cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cca073cfccedacb037478903a603c375c876349c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549896"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475353"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>Método ISymUnmanagedReader::GetVariables
 Retorna uma variável não local, dado seu pai e o nome.  
@@ -38,7 +38,7 @@ HRESULT GetVariables (
         length_is (*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `parent`  
  [in] O pai da variável.  
   

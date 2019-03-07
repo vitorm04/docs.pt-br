@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7b9602f490900fd5c923abf195b3b0707959832
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a64922e1fe069d682f7ebc51040d06231a8b49c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554024"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484349"
 ---
 # <a name="icorconfigurationsetgchostcontrol-method"></a>Método ICorConfiguration::SetGCHostControl
 Define a interface de retorno de chamada a ser usado pelo coletor de lixo para solicitar o host para alterar os limites de memória virtual.  
@@ -35,7 +35,7 @@ HRESULT SetGCHostControl (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pGCHostControl`  
  [in] Um ponteiro para um [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) objeto que permite que o coletor de lixo solicitar o host para alterar os limites de memória virtual.  
   

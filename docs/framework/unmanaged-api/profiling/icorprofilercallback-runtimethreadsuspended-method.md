@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb93dbf35501d44bb21d3d689aebeba3acd19f79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d297f6915af59ad5a24dfdad9dca9397489edb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616792"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468163"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>Método ICorProfilerCallback::RuntimeThreadSuspended
 Notifica o criador de perfil que o thread especificado foi suspenso ou está prestes a ser suspenso.  
@@ -34,7 +34,7 @@ HRESULT RuntimeThreadSuspended(
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `threadId`  
  [in] A ID do thread que foi suspenso.  
   

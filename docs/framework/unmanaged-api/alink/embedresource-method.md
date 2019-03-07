@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51711162613db6c8045d9192e2ca9f1380509be2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffcd389f9b9e2e113fc45d2961a92790f4c57ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556162"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478044"
 ---
 # <a name="embedresource-method"></a>Método EmbedResource
 Declara um recurso inserido. Esse método insere, na verdade, o recurso.  
@@ -39,7 +39,7 @@ HRESULT EmbedResource(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
  ID do assembly.  
   

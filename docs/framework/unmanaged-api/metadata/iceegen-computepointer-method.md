@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fb63d4fe1e736ca1ff0c729d8d83cfe092eaaf5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522408"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465524"
 ---
 # <a name="iceegencomputepointer-method"></a>Método ICeeGen::ComputePointer
 Determina o buffer para a seção de código especificada.  
@@ -39,7 +39,7 @@ HRESULT ComputePointer (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `section`  
  [in] A seção de código para o qual retornar um buffer.  
   

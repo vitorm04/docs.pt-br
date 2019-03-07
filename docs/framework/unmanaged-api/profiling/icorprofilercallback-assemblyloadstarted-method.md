@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: deb8475ab338c6ce733f1700e509dff982bd697f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbb9a48fc4795f2e5f074369318fec6d4152d9d5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611170"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468748"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>Método ICorProfilerCallback::AssemblyLoadStarted
 Notifica o criador de perfil que um assembly que está sendo carregado.  
@@ -34,7 +34,7 @@ HRESULT AssemblyLoadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `assemblyId`  
  [in] Identifica o assembly que está sendo carregado.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b96c6ab8fb9065e1a08ad45a7f4482ef0b32788b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d04bc67013a2227f295ac3a41be027b9f9b04e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478720"
 ---
 # <a name="icordebugtypegetbase-method"></a>Método ICorDebugType::GetBase
-Obtém um ponteiro de interface para um ICorDebugType que representa o tipo base, se houver, do tipo representado por esse `ICorDebugType`.  
+Obtém um ponteiro de interface para um que representa o tipo base, se houver, do tipo representado por este ICorDebugType `ICorDebugType`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT GetBase (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pBase`  
- [out] Um ponteiro para o endereço de uma `ICorDebugType` objeto que representa o tipo base.  
+ [out] Um ponteiro para o endereço de um `ICorDebugType` objeto que representa o tipo base.  
   
 ## <a name="remarks"></a>Comentários  
- Pesquisar o tipo base para um tipo é útil para implementar a funcionalidade comum do depurador, como na impressão de todos os campos de um objeto ou suas classes pai.  
+ Procurar o tipo base para um tipo é útil para implementar a funcionalidade comum do depurador, como a impressão de todos os campos de um objeto ou suas classes pai.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

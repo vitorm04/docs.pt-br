@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb6d5a141838991d6b180acf7f30c378d4ab71f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78829d647e8d5467a628bc9ba5bb877a5f13b6de
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535899"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474482"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>Método ICLRStrongName::StrongNameSignatureSize
 Retorna o tamanho da assinatura de nome forte. Esse método é normalmente usado por compiladores para determinar a quantidade de espaço para reservar no arquivo durante a criação de um assembly assinado com atraso.  
@@ -37,7 +37,7 @@ HRESULT StrongNameSignatureSize (
 );   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbPublicKeyBlob`  
  [in] Uma estrutura do tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contém a parte pública do par de chaves usado para gerar a assinatura de nome forte.  
   

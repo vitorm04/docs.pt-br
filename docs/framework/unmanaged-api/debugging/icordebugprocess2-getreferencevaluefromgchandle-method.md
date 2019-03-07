@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60624a5f6323399d06bda4e0280de8fbe861bd9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08bf4022f7cd7f85ffe7939c16fd47950e131a77
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419579"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471518"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>Método ICorDebugProcess2::GetReferenceValueFromGCHandle
 Obtém um ponteiro de referência para o objeto especificado gerenciado que possua uma coleta de lixo a alça.  
@@ -36,26 +36,26 @@ HRESULT GetReferenceValueFromGCHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `handle`  
- [in] Um ponteiro para um objeto gerenciado que tem um identificador de coleta de lixo. Esse valor é um <xref:System.IntPtr> de objeto e podem ser recuperados do <xref:System.Runtime.InteropServices.GCHandle> para o objeto gerenciado.  
+ [in] Um ponteiro para um objeto gerenciado que tem um identificador de coleta de lixo. Esse valor é uma <xref:System.IntPtr> do objeto e pode ser recuperada do <xref:System.Runtime.InteropServices.GCHandle> do objeto gerenciado.  
   
  `pOutValue`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugReferenceValue que representa uma referência ao objeto gerenciado especificado.  
+ [out] Um ponteiro para o endereço de um objeto ICorDebugReferenceValue que representa uma referência ao objeto especificado gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
- Não confunda o valor de referência fornecida com um valor de referência de coleta de lixo.  
+ Não confunda o valor retornado de referência com um valor de referência de coleta de lixo.  
   
- A referência retornada se comporta como uma referência normal. Ele é desabilitado quando a execução de código continua depois de um ponto de interrupção. O tempo de vida do objeto de destino não é afetado pelo tempo de vida do valor de referência.  
+ A referência retornada se comporta como uma referência normal. Ela é desabilitada quando a execução de código continua depois de um ponto de interrupção. O tempo de vida do objeto de destino não é afetado pelo tempo de vida do valor de referência.  
   
 > [!NOTE]
->  O `GetReferenceValueFromGCHandle` método não valida o identificador. Portanto, o `GetReferenceValueFromGCHandle` método pode corromper o depurador e o código que está sendo depurado se um identificador inválido for passado.  
+>  O `GetReferenceValueFromGCHandle` método não valida o identificador. Portanto, o `GetReferenceValueFromGCHandle` método pode corromper o depurador e o código que está sendo depurado, se um identificador inválido for passado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

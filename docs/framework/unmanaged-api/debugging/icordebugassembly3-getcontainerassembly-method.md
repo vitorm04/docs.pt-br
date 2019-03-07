@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c01898bcbd76f7e6de9445d5d1f511203c100ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ddae1da8b07afff6ade28fb6dcae942cddd8c2e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585179"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471609"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>Método ICorDebugAssembly3::GetContainerAssembly
 Retorna o assembly do contêiner desse objeto `ICorDebugAssembly3`.  
@@ -22,7 +22,7 @@ HRESULT GetContainerAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppAssembly`  
  Um ponteiro para o endereço de um objeto ICorDebugAssembly que representa o assembly do contêiner, ou **nulo** se a chamada de método falhar.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3882998d3155b49251fbe091b72ef11022ebfd2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41e10855a7254da4124ac0bf9aa247b90311632b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540202"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479071"
 ---
 # <a name="setassemblyfile2-method"></a>Método SetAssemblyFile2
 Define o nome e as opções para um novo assembly. Não chame este método quando você produzir módulos não associados.  
@@ -37,7 +37,7 @@ HRESULT SetAssemblyFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pszFilename`  
  Nome do arquivo de manifesto.  
   

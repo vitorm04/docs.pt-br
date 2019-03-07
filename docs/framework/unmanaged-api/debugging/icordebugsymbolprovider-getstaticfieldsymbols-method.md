@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a72e9911adf5b48638c2323adcbbb76e721618a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69ad0878daf57c379a5958dbeacddac8510c6eba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553744"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476146"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>Método ICorDebugSymbolProvider::GetStaticFieldSymbols
 Obtém os símbolos de campo estático que correspondem a uma assinatura de typespec.  
@@ -26,7 +26,7 @@ HRESULT GetStaticFieldSymbols(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cbSignature`  
  [in] O número de bytes no `typeSig` matriz.  
   

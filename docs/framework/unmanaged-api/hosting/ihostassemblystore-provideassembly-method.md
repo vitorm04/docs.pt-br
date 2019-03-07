@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe8491852ea1fd9791de761d848b774480f4b461
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 778664dea16c5183945e25e0261f4a65bb646ac0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550286"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467968"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>Método IHostAssemblyStore::ProvideAssembly
 Obtém uma referência a um assembly que não é referenciado pela [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) que é retornado de [ihostassemblymanager:: Getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). O common language runtime (CLR) chama `ProvideAssembly` para cada assembly que não aparece na lista.  
@@ -39,7 +39,7 @@ HRESULT ProvideAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pBindInfo`  
  [in] Um ponteiro para um [AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) instância que o host usa para determinar a certas características de associação, inclusive a presença ou ausência de qualquer política de controle de versão e qual assembly para associar a.  
   

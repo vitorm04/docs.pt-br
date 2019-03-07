@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5ec72380493a88dc5b411ef195484cdb1c58c62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d1f4796d86ca2733674c537591d91912f53811b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543390"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485636"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>Método IMetaDataFilter::UnmarkAll
 Remove as marcas de processamento de todos os tokens no escopo atual de metadados.  
@@ -33,7 +33,7 @@ Remove as marcas de processamento de todos os tokens no escopo atual de metadado
 HRESULT UnmarkAll ();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `UnmarkAll` não usa nenhum parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd92b03d87672875661bb5e5241c6fa46f099ce6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f53227908f263cceeb8677739c0bf5b5ba30cd5e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732460"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473975"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>Método IHostTaskManager::GetCurrentTask
 Obtém um ponteiro de interface para a tarefa que está sendo executado no thread do sistema operacional do qual essa chamada é feita.  
@@ -35,7 +35,7 @@ HRESULT GetCurrentTask (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pTask`  
  [out] Um ponteiro para o endereço de um [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância que representa a tarefa em execução no momento, ou nulo, se nenhuma tarefa está em execução atualmente.  
   

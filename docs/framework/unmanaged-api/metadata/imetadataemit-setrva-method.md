@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89475ebc5ef04c8693adb7a83bd1dd07f5774fb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a9df30ae11b13c052c75b05b0850d9f4754620
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544686"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470088"
 ---
 # <a name="imetadataemitsetrva-method"></a>Método IMetaDataEmit::SetRVA
 Define o endereço virtual relativo do método especificado.  
@@ -36,7 +36,7 @@ HRESULT SetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `md`  
  [in] O token para o método de destino ou a implementação do método.  
   

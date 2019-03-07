@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c474b2ea9bc80be156c8e1424eabe3d2384666
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68e3074252786d0339184ad3e1586337db9f368a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585257"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469242"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>Método ISymUnmanagedVariable::GetEndOffset
 Obtém o deslocamento final dessa variável dentro de seu pai. Quando se trata de uma variável local dentro de um escopo, o deslocamento final se enquadram dentro dos deslocamentos definidos para o escopo.  
@@ -34,7 +34,7 @@ HRESULT GetEndOffset(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pRetVal`  
  [out] Um ponteiro para um `ULONG32` que recebe o deslocamento de fim.  
   

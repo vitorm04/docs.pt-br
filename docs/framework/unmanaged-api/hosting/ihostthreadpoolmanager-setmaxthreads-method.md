@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 905ce9183d295568977eb7e216e5327d6b4ee8bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0afd3b187b0424be939146f02f4baed837be444c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636086"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466811"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>Método IHostThreadPoolManager::SetMaxThreads
 Define o número máximo de threads que o host pode manter no pool de threads.  
@@ -35,7 +35,7 @@ HRESULT SetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `MaxThreads`  
  O número máximo de threads de trabalho no pool de threads.  
   
