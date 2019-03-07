@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e6798c2574167ec1a013429b380d8fa6c878dad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9bf96371798b38bc392bc6bbd8f6fe8f97c7969
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416557"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501962"
 ---
-# <a name="icordebugthread2getvolatileosthreadid-method"></a><span data-ttu-id="124f2-102">Método ICorDebugThread2::GetVolatileOSThreadID</span><span class="sxs-lookup"><span data-stu-id="124f2-102">ICorDebugThread2::GetVolatileOSThreadID Method</span></span>
-<span data-ttu-id="124f2-103">Obtém o identificador de thread do sistema operacional para este ICorDebugThread2.</span><span class="sxs-lookup"><span data-stu-id="124f2-103">Gets the operating system thread identifier for this ICorDebugThread2.</span></span>  
+# <a name="icordebugthread2getvolatileosthreadid-method"></a><span data-ttu-id="59085-102">Método ICorDebugThread2::GetVolatileOSThreadID</span><span class="sxs-lookup"><span data-stu-id="59085-102">ICorDebugThread2::GetVolatileOSThreadID Method</span></span>
+<span data-ttu-id="59085-103">Obtém o identificador de thread do sistema operacional para este ICorDebugThread2.</span><span class="sxs-lookup"><span data-stu-id="59085-103">Gets the operating system thread identifier for this ICorDebugThread2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="124f2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="124f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59085-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="59085-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVolatileOSThreadID (  
@@ -35,15 +35,15 @@ HRESULT GetVolatileOSThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="124f2-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="124f2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="59085-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="59085-105">Parameters</span></span>  
  `pdwTid`  
- <span data-ttu-id="124f2-106">[out] O identificador de thread do sistema operacional para este segmento.</span><span class="sxs-lookup"><span data-stu-id="124f2-106">[out] The operating system thread identifier for this thread.</span></span>  
+ <span data-ttu-id="59085-106">[out] O identificador de thread do sistema operacional para este thread.</span><span class="sxs-lookup"><span data-stu-id="59085-106">[out] The operating system thread identifier for this thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="124f2-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="124f2-107">Requirements</span></span>  
- <span data-ttu-id="124f2-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="124f2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="59085-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="59085-107">Requirements</span></span>  
+ <span data-ttu-id="59085-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59085-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="124f2-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="124f2-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="59085-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="59085-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="124f2-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="124f2-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="59085-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="59085-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="124f2-111">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="124f2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="59085-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59085-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

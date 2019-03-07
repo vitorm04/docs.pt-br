@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3eccb42caa6fdc62b090cd60ff86ad102511883c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb61dbcee1851ebe70c1dc0138e14aaa7a08d901
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629152"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468683"
 ---
-# <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="ed12d-102">Método IMetaDataDispenserEx::GetCORSystemDirectory</span><span class="sxs-lookup"><span data-stu-id="ed12d-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
-<span data-ttu-id="ed12d-103">Obtém o diretório que mantém o atual common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="ed12d-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="ed12d-104">Esse método tem suporte apenas para uso por depuradores out-of-process.</span><span class="sxs-lookup"><span data-stu-id="ed12d-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="ed12d-105">Se chamado de outro componente, ele retornará E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="ed12d-105">If called from another component, it will return E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="5e33e-102">Método IMetaDataDispenserEx::GetCORSystemDirectory</span><span class="sxs-lookup"><span data-stu-id="5e33e-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
+<span data-ttu-id="5e33e-103">Obtém o diretório que mantém o atual common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="5e33e-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="5e33e-104">Esse método tem suporte apenas para uso por depuradores out-of-process.</span><span class="sxs-lookup"><span data-stu-id="5e33e-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="5e33e-105">Se chamado de outro componente, ele retornará E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="5e33e-105">If called from another component, it will return E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ed12d-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ed12d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e33e-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5e33e-106">Syntax</span></span>  
   
 ```  
 HRESULT GetCORSystemDirectory (  
@@ -37,25 +37,25 @@ HRESULT GetCORSystemDirectory (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ed12d-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ed12d-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e33e-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5e33e-107">Parameters</span></span>  
  `szBuffer`  
- <span data-ttu-id="ed12d-108">[out] O buffer para receber o nome do diretório.</span><span class="sxs-lookup"><span data-stu-id="ed12d-108">[out] The buffer to receive the directory name.</span></span>  
+ <span data-ttu-id="5e33e-108">[out] O buffer para receber o nome do diretório.</span><span class="sxs-lookup"><span data-stu-id="5e33e-108">[out] The buffer to receive the directory name.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="ed12d-109">[in] O tamanho, em bytes, do `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="ed12d-109">[in] The size, in bytes, of `szBuffer`.</span></span>  
+ <span data-ttu-id="5e33e-109">[in] O tamanho, em bytes, do `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="5e33e-109">[in] The size, in bytes, of `szBuffer`.</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="ed12d-110">[out] O número de bytes realmente retornados em `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="ed12d-110">[out] The number of bytes actually returned in `szBuffer`.</span></span>  
+ <span data-ttu-id="5e33e-110">[out] O número de bytes realmente retornados em `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="5e33e-110">[out] The number of bytes actually returned in `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ed12d-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ed12d-111">Requirements</span></span>  
- <span data-ttu-id="ed12d-112">**Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed12d-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e33e-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5e33e-111">Requirements</span></span>  
+ <span data-ttu-id="5e33e-112">**Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e33e-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ed12d-113">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ed12d-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5e33e-113">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5e33e-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ed12d-114">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ed12d-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5e33e-114">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="5e33e-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ed12d-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed12d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5e33e-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e33e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ed12d-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ed12d-116">See also</span></span>
-- [<span data-ttu-id="ed12d-117">Interface IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="ed12d-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="ed12d-118">Interface IMetaDataDispenser</span><span class="sxs-lookup"><span data-stu-id="ed12d-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5e33e-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5e33e-116">See also</span></span>
+- [<span data-ttu-id="5e33e-117">Interface IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="5e33e-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="5e33e-118">Interface IMetaDataDispenser</span><span class="sxs-lookup"><span data-stu-id="5e33e-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

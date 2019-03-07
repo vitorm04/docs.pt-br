@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c020b9f6c074be11e3433939ce6898586123cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 032c1e3dcfe50cd30953ca581ff9f0d83b78518d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412601"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488459"
 ---
-# <a name="icordebugframegetchain-method"></a><span data-ttu-id="827dc-102">Método ICorDebugFrame::GetChain</span><span class="sxs-lookup"><span data-stu-id="827dc-102">ICorDebugFrame::GetChain Method</span></span>
-<span data-ttu-id="827dc-103">Obtém um ponteiro para a cadeia que este quadro é uma parte do.</span><span class="sxs-lookup"><span data-stu-id="827dc-103">Gets a pointer to the chain this frame is a part of.</span></span>  
+# <a name="icordebugframegetchain-method"></a><span data-ttu-id="6cd52-102">Método ICorDebugFrame::GetChain</span><span class="sxs-lookup"><span data-stu-id="6cd52-102">ICorDebugFrame::GetChain Method</span></span>
+<span data-ttu-id="6cd52-103">Obtém um ponteiro para a cadeia que esse quadro é uma parte do.</span><span class="sxs-lookup"><span data-stu-id="6cd52-103">Gets a pointer to the chain this frame is a part of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="827dc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="827dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6cd52-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6cd52-104">Syntax</span></span>  
   
 ```  
 HRESULT GetChain (  
@@ -35,15 +35,15 @@ HRESULT GetChain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="827dc-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="827dc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6cd52-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6cd52-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="827dc-106">[out] Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia que contém este quadro.</span><span class="sxs-lookup"><span data-stu-id="827dc-106">[out] A pointer to the address of an ICorDebugChain object that represents the chain containing this frame.</span></span>  
+ <span data-ttu-id="6cd52-106">[out] Um ponteiro para o endereço de um objeto de ICorDebugChain que representa a cadeia que contém este quadro.</span><span class="sxs-lookup"><span data-stu-id="6cd52-106">[out] A pointer to the address of an ICorDebugChain object that represents the chain containing this frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="827dc-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="827dc-107">Requirements</span></span>  
- <span data-ttu-id="827dc-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="827dc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6cd52-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6cd52-107">Requirements</span></span>  
+ <span data-ttu-id="6cd52-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6cd52-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="827dc-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="827dc-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6cd52-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6cd52-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="827dc-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="827dc-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6cd52-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6cd52-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="827dc-111">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="827dc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="6cd52-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6cd52-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

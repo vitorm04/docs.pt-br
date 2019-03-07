@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0412089fee27e556c2f9230e9b34de3391b9bd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fa9576f568ef1f6da3eef812abb9674aa0d81dfb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402555"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496372"
 ---
-# <a name="icordebugappdomainisattached-method"></a><span data-ttu-id="bcf97-102">Método ICorDebugAppDomain::IsAttached</span><span class="sxs-lookup"><span data-stu-id="bcf97-102">ICorDebugAppDomain::IsAttached Method</span></span>
-<span data-ttu-id="bcf97-103">Obtém um valor que indica se o depurador é anexado ao domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="bcf97-103">Gets a value that indicates whether the debugger is attached to the application domain.</span></span>  
+# <a name="icordebugappdomainisattached-method"></a><span data-ttu-id="96fc9-102">Método ICorDebugAppDomain::IsAttached</span><span class="sxs-lookup"><span data-stu-id="96fc9-102">ICorDebugAppDomain::IsAttached Method</span></span>
+<span data-ttu-id="96fc9-103">Obtém um valor que indica se o depurador é anexado ao domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="96fc9-103">Gets a value that indicates whether the debugger is attached to the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bcf97-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bcf97-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96fc9-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="96fc9-104">Syntax</span></span>  
   
 ```  
 HRESULT IsAttached (  
@@ -35,18 +35,18 @@ HRESULT IsAttached (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bcf97-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="bcf97-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="96fc9-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="96fc9-105">Parameters</span></span>  
  `pbAttached`  
- <span data-ttu-id="bcf97-106">[out] `true` se o depurador é anexado ao domínio do aplicativo; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="bcf97-106">[out] `true` if the debugger is attached to the application domain; otherwise, `false`.</span></span>  
+ <span data-ttu-id="96fc9-106">[out] `true` se o depurador é anexado ao domínio do aplicativo; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="96fc9-106">[out] `true` if the debugger is attached to the application domain; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bcf97-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="bcf97-107">Remarks</span></span>  
- <span data-ttu-id="bcf97-108">Os métodos de ICorDebugController não podem ser usados até que o depurador se anexa ao domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="bcf97-108">The ICorDebugController methods cannot be used until the debugger attaches to the application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96fc9-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="96fc9-107">Remarks</span></span>  
+ <span data-ttu-id="96fc9-108">Os métodos ICorDebugController não podem ser usados até que o depurador é anexado ao domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="96fc9-108">The ICorDebugController methods cannot be used until the debugger attaches to the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bcf97-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bcf97-109">Requirements</span></span>  
- <span data-ttu-id="bcf97-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bcf97-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96fc9-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="96fc9-109">Requirements</span></span>  
+ <span data-ttu-id="96fc9-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96fc9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bcf97-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bcf97-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="96fc9-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="96fc9-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bcf97-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bcf97-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="96fc9-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96fc9-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bcf97-113">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bcf97-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="96fc9-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96fc9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

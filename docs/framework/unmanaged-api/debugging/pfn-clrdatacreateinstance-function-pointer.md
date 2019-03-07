@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46e039aeec352c215046bebfb17e6fbd803962a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19d7284399719dd848af43765a392802a589fc33
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597483"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492524"
 ---
-# <a name="pfnclrdatacreateinstance-function-pointer"></a><span data-ttu-id="69081-102">Ponteiro de função PFN_CLRDataCreateInstance</span><span class="sxs-lookup"><span data-stu-id="69081-102">PFN_CLRDataCreateInstance Function Pointer</span></span>
-<span data-ttu-id="69081-103">Aponta para uma função que cria um objeto de interface para o item de destino especificado.</span><span class="sxs-lookup"><span data-stu-id="69081-103">Points to a function that creates an interface object for the specified target item.</span></span>  
+# <a name="pfnclrdatacreateinstance-function-pointer"></a><span data-ttu-id="28c59-102">Ponteiro de função PFN_CLRDataCreateInstance</span><span class="sxs-lookup"><span data-stu-id="28c59-102">PFN_CLRDataCreateInstance Function Pointer</span></span>
+<span data-ttu-id="28c59-103">Aponta para uma função que cria um objeto de interface para o item de destino especificado.</span><span class="sxs-lookup"><span data-stu-id="28c59-103">Points to a function that creates an interface object for the specified target item.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69081-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="69081-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28c59-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="28c59-104">Syntax</span></span>  
   
 ```  
 typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (  
@@ -36,27 +36,27 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="69081-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="69081-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="28c59-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="28c59-105">Parameters</span></span>  
  `iid`  
- <span data-ttu-id="69081-106">[in] O identificador da interface a ser instanciado.</span><span class="sxs-lookup"><span data-stu-id="69081-106">[in] The identifier of the interface to be instantiated.</span></span>  
+ <span data-ttu-id="28c59-106">[in] O identificador da interface a ser instanciado.</span><span class="sxs-lookup"><span data-stu-id="28c59-106">[in] The identifier of the interface to be instantiated.</span></span>  
   
  `target`  
- <span data-ttu-id="69081-107">[in] Um ponteiro para um usuário implementada [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) objeto que representa o item de destino para o qual criar o objeto de interface.</span><span class="sxs-lookup"><span data-stu-id="69081-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
+ <span data-ttu-id="28c59-107">[in] Um ponteiro para um usuário implementada [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) objeto que representa o item de destino para o qual criar o objeto de interface.</span><span class="sxs-lookup"><span data-stu-id="28c59-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
   
  `iface`  
- <span data-ttu-id="69081-108">[out] Um ponteiro para o endereço do objeto de interface retornada.</span><span class="sxs-lookup"><span data-stu-id="69081-108">[out] A pointer to the address of the returned interface object.</span></span>  
+ <span data-ttu-id="28c59-108">[out] Um ponteiro para o endereço do objeto de interface retornada.</span><span class="sxs-lookup"><span data-stu-id="28c59-108">[out] A pointer to the address of the returned interface object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="69081-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="69081-109">Remarks</span></span>  
- <span data-ttu-id="69081-110">O `ICLRDataTarget` objeto é implementado pelo gravador do aplicativo de depuração.</span><span class="sxs-lookup"><span data-stu-id="69081-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="69081-111">A implementação depende do tipo de item de destino que está sendo representado.</span><span class="sxs-lookup"><span data-stu-id="69081-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="69081-112">O item de destino pode ser um processo, despejo de memória, computador remoto e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="69081-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="28c59-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="28c59-109">Remarks</span></span>  
+ <span data-ttu-id="28c59-110">O `ICLRDataTarget` objeto é implementado pelo gravador do aplicativo de depuração.</span><span class="sxs-lookup"><span data-stu-id="28c59-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="28c59-111">A implementação depende do tipo de item de destino que está sendo representado.</span><span class="sxs-lookup"><span data-stu-id="28c59-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="28c59-112">O item de destino pode ser um processo, despejo de memória, computador remoto e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="28c59-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69081-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="69081-113">Requirements</span></span>  
- <span data-ttu-id="69081-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69081-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28c59-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="28c59-113">Requirements</span></span>  
+ <span data-ttu-id="28c59-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28c59-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="69081-115">**Cabeçalho:** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="69081-115">**Header:** ClrData.idl</span></span>  
+ <span data-ttu-id="28c59-115">**Cabeçalho:** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="28c59-115">**Header:** ClrData.idl</span></span>  
   
- <span data-ttu-id="69081-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="69081-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="28c59-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="28c59-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="69081-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69081-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="28c59-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28c59-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69081-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="69081-118">See also</span></span>
-- [<span data-ttu-id="69081-119">Depurando funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="69081-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="28c59-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="28c59-118">See also</span></span>
+- [<span data-ttu-id="28c59-119">Depurando funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="28c59-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

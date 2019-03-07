@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502248"
 ---
-# <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="49401-102">Método ICorDebugArrayValue::GetElementAtPosition</span><span class="sxs-lookup"><span data-stu-id="49401-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
-<span data-ttu-id="49401-103">Obtém o elemento na posição determinada, tratando a matriz como uma matriz unidimensional com base em zero.</span><span class="sxs-lookup"><span data-stu-id="49401-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  
+# <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="3f970-102">Método ICorDebugArrayValue::GetElementAtPosition</span><span class="sxs-lookup"><span data-stu-id="3f970-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
+<span data-ttu-id="3f970-103">Obtém o elemento na posição determinada, tratando da matriz como uma matriz unidimensional de base zero.</span><span class="sxs-lookup"><span data-stu-id="3f970-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49401-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="49401-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f970-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3f970-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElementAtPosition (  
@@ -36,21 +36,21 @@ HRESULT GetElementAtPosition (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="49401-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="49401-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f970-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3f970-105">Parameters</span></span>  
  `nPosition`  
- <span data-ttu-id="49401-106">[in] A posição do elemento a ser recuperado.</span><span class="sxs-lookup"><span data-stu-id="49401-106">[in] The position of the element to be retrieved.</span></span>  
+ <span data-ttu-id="3f970-106">[in] A posição do elemento a ser recuperado.</span><span class="sxs-lookup"><span data-stu-id="3f970-106">[in] The position of the element to be retrieved.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="49401-107">[out] Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor do elemento.</span><span class="sxs-lookup"><span data-stu-id="49401-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the element.</span></span>  
+ <span data-ttu-id="3f970-107">[out] Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor do elemento.</span><span class="sxs-lookup"><span data-stu-id="3f970-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the element.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="49401-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="49401-108">Remarks</span></span>  
- <span data-ttu-id="49401-109">O layout de uma matriz de multi-dimensão segue o estilo de C++ de layout de matriz.</span><span class="sxs-lookup"><span data-stu-id="49401-109">The layout of a multi-dimension array follows the C++ style of array layout.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f970-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="3f970-108">Remarks</span></span>  
+ <span data-ttu-id="3f970-109">O layout de uma matriz multidimensional segue o estilo de C++ do layout de matriz.</span><span class="sxs-lookup"><span data-stu-id="3f970-109">The layout of a multi-dimension array follows the C++ style of array layout.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49401-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="49401-110">Requirements</span></span>  
- <span data-ttu-id="49401-111">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="49401-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f970-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3f970-110">Requirements</span></span>  
+ <span data-ttu-id="3f970-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f970-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49401-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="49401-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3f970-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f970-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="49401-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49401-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3f970-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f970-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="49401-114">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49401-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3f970-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f970-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

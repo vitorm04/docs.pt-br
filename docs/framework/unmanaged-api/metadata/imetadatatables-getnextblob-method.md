@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e43485caa0c1dbf989ae12de77ee4e160652942e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e60ce044fc0272fbc9c4a641224bd70ad9faeeae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502670"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488117"
 ---
-# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="feef3-102">Método IMetaDataTables::GetNextBlob</span><span class="sxs-lookup"><span data-stu-id="feef3-102">IMetaDataTables::GetNextBlob Method</span></span>
-<span data-ttu-id="feef3-103">Obtém o índice do próximo grande objeto binário (BLOB) na tabela.</span><span class="sxs-lookup"><span data-stu-id="feef3-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
+# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="c550e-102">Método IMetaDataTables::GetNextBlob</span><span class="sxs-lookup"><span data-stu-id="c550e-102">IMetaDataTables::GetNextBlob Method</span></span>
+<span data-ttu-id="c550e-103">Obtém o índice do próximo grande objeto binário (BLOB) na tabela.</span><span class="sxs-lookup"><span data-stu-id="c550e-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="feef3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="feef3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c550e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c550e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextBlob (  
@@ -36,22 +36,22 @@ HRESULT GetNextBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="feef3-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="feef3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c550e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c550e-105">Parameters</span></span>  
  `ixBlob`  
- <span data-ttu-id="feef3-106">[in] O índice, conforme retornado de uma coluna de BLOBs.</span><span class="sxs-lookup"><span data-stu-id="feef3-106">[in] The index, as returned from a column of BLOBs.</span></span>  
+ <span data-ttu-id="c550e-106">[in] O índice, conforme retornado de uma coluna de BLOBs.</span><span class="sxs-lookup"><span data-stu-id="c550e-106">[in] The index, as returned from a column of BLOBs.</span></span>  
   
  `pNext`  
- <span data-ttu-id="feef3-107">[out] Um ponteiro para o índice do próximo BLOB.</span><span class="sxs-lookup"><span data-stu-id="feef3-107">[out] A pointer to the index of the next BLOB.</span></span>  
+ <span data-ttu-id="c550e-107">[out] Um ponteiro para o índice do próximo BLOB.</span><span class="sxs-lookup"><span data-stu-id="c550e-107">[out] A pointer to the index of the next BLOB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="feef3-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="feef3-108">Requirements</span></span>  
- <span data-ttu-id="feef3-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="feef3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c550e-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c550e-108">Requirements</span></span>  
+ <span data-ttu-id="c550e-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c550e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="feef3-110">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="feef3-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c550e-110">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c550e-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="feef3-111">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="feef3-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c550e-111">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c550e-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="feef3-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="feef3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c550e-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c550e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="feef3-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="feef3-113">See also</span></span>
-- [<span data-ttu-id="feef3-114">Interface IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="feef3-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="feef3-115">Interface IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="feef3-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c550e-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c550e-113">See also</span></span>
+- [<span data-ttu-id="c550e-114">Interface IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="c550e-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="c550e-115">Interface IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="c550e-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

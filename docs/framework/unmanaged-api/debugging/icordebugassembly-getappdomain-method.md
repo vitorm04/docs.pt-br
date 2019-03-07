@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401973"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485103"
 ---
-# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="ed128-102">Método ICorDebugAssembly::GetAppDomain</span><span class="sxs-lookup"><span data-stu-id="ed128-102">ICorDebugAssembly::GetAppDomain Method</span></span>
-<span data-ttu-id="ed128-103">Obtém um ponteiro de interface para o domínio de aplicativo que contém essa `ICorDebugAssembly` instância.</span><span class="sxs-lookup"><span data-stu-id="ed128-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
+# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="16a0f-102">Método ICorDebugAssembly::GetAppDomain</span><span class="sxs-lookup"><span data-stu-id="16a0f-102">ICorDebugAssembly::GetAppDomain Method</span></span>
+<span data-ttu-id="16a0f-103">Obtém um ponteiro de interface para o domínio do aplicativo que contém este `ICorDebugAssembly` instância.</span><span class="sxs-lookup"><span data-stu-id="16a0f-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ed128-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ed128-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16a0f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="16a0f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAppDomain (  
@@ -35,18 +35,18 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ed128-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ed128-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="16a0f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="16a0f-105">Parameters</span></span>  
  `ppAppDomain`  
- <span data-ttu-id="ed128-106">[out] Um ponteiro para o endereço de uma interface ICorDebugAppDomain que representa o domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ed128-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
+ <span data-ttu-id="16a0f-106">[out] Um ponteiro para o endereço de uma interface ICorDebugAppDomain que representa o domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="16a0f-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ed128-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="ed128-107">Remarks</span></span>  
- <span data-ttu-id="ed128-108">Se esse assembly é o assembly do sistema, `GetAppDomain` retorna nulo.</span><span class="sxs-lookup"><span data-stu-id="ed128-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="16a0f-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="16a0f-107">Remarks</span></span>  
+ <span data-ttu-id="16a0f-108">Se esse assembly é o assembly do sistema, `GetAppDomain` retorna null.</span><span class="sxs-lookup"><span data-stu-id="16a0f-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ed128-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ed128-109">Requirements</span></span>  
- <span data-ttu-id="ed128-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed128-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16a0f-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="16a0f-109">Requirements</span></span>  
+ <span data-ttu-id="16a0f-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16a0f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ed128-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ed128-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="16a0f-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="16a0f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ed128-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed128-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="16a0f-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16a0f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ed128-113">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed128-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="16a0f-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16a0f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

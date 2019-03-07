@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 931395a1bb5f516000097f964ce0372a69420d85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27747b02237672ec302a545e2e0c73ace0cae1fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679624"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487454"
 ---
-# <a name="iclrtasklocksheld-method"></a><span data-ttu-id="30b48-102">Método ICLRTask::LocksHeld</span><span class="sxs-lookup"><span data-stu-id="30b48-102">ICLRTask::LocksHeld Method</span></span>
-<span data-ttu-id="30b48-103">Obtém o número de bloqueios atualmente mantidos na tarefa.</span><span class="sxs-lookup"><span data-stu-id="30b48-103">Gets the number of locks currently held on the task.</span></span>  
+# <a name="iclrtasklocksheld-method"></a><span data-ttu-id="ef8a8-102">Método ICLRTask::LocksHeld</span><span class="sxs-lookup"><span data-stu-id="ef8a8-102">ICLRTask::LocksHeld Method</span></span>
+<span data-ttu-id="ef8a8-103">Obtém o número de bloqueios atualmente mantidos na tarefa.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-103">Gets the number of locks currently held on the task.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30b48-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="30b48-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef8a8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ef8a8-104">Syntax</span></span>  
   
 ```  
 HRESULT LocksHeld (  
@@ -35,32 +35,32 @@ HRESULT LocksHeld (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="30b48-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="30b48-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef8a8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ef8a8-105">Parameters</span></span>  
  `pLockCount`  
- <span data-ttu-id="30b48-106">[out] O número de bloqueios mantidos na tarefa no momento da chamada de método.</span><span class="sxs-lookup"><span data-stu-id="30b48-106">[out] The number of locks held on the task at the time of the method call.</span></span>  
+ <span data-ttu-id="ef8a8-106">[out] O número de bloqueios mantidos na tarefa no momento da chamada de método.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-106">[out] The number of locks held on the task at the time of the method call.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="30b48-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="30b48-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ef8a8-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="ef8a8-107">Return Value</span></span>  
   
-|<span data-ttu-id="30b48-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="30b48-108">HRESULT</span></span>|<span data-ttu-id="30b48-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="30b48-109">Description</span></span>|  
+|<span data-ttu-id="ef8a8-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ef8a8-108">HRESULT</span></span>|<span data-ttu-id="ef8a8-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="ef8a8-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="30b48-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="30b48-110">S_OK</span></span>|<span data-ttu-id="30b48-111">`LocksHeld` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="30b48-111">`LocksHeld` returned successfully.</span></span>|  
-|<span data-ttu-id="30b48-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="30b48-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="30b48-113">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="30b48-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="30b48-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="30b48-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="30b48-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="30b48-115">The call timed out.</span></span>|  
-|<span data-ttu-id="30b48-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="30b48-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="30b48-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="30b48-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="30b48-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="30b48-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="30b48-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="30b48-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="30b48-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="30b48-120">E_FAIL</span></span>|<span data-ttu-id="30b48-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="30b48-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="30b48-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="30b48-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="30b48-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="30b48-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="ef8a8-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="ef8a8-110">S_OK</span></span>|<span data-ttu-id="ef8a8-111">`LocksHeld` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-111">`LocksHeld` returned successfully.</span></span>|  
+|<span data-ttu-id="ef8a8-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ef8a8-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ef8a8-113">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="ef8a8-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ef8a8-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ef8a8-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-115">The call timed out.</span></span>|  
+|<span data-ttu-id="ef8a8-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ef8a8-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ef8a8-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="ef8a8-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ef8a8-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ef8a8-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="ef8a8-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ef8a8-120">E_FAIL</span></span>|<span data-ttu-id="ef8a8-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ef8a8-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ef8a8-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="ef8a8-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="30b48-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="30b48-124">Requirements</span></span>  
- <span data-ttu-id="30b48-125">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30b48-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef8a8-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ef8a8-124">Requirements</span></span>  
+ <span data-ttu-id="ef8a8-125">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef8a8-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30b48-126">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="30b48-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ef8a8-126">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ef8a8-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="30b48-127">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="30b48-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ef8a8-127">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ef8a8-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="30b48-128">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30b48-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ef8a8-128">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef8a8-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30b48-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="30b48-129">See also</span></span>
-- [<span data-ttu-id="30b48-130">Interface ICLRTask</span><span class="sxs-lookup"><span data-stu-id="30b48-130">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="30b48-131">Interface ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="30b48-131">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="30b48-132">Interface IHostTask</span><span class="sxs-lookup"><span data-stu-id="30b48-132">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="30b48-133">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="30b48-133">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ef8a8-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ef8a8-129">See also</span></span>
+- [<span data-ttu-id="ef8a8-130">Interface ICLRTask</span><span class="sxs-lookup"><span data-stu-id="ef8a8-130">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="ef8a8-131">Interface ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="ef8a8-131">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="ef8a8-132">Interface IHostTask</span><span class="sxs-lookup"><span data-stu-id="ef8a8-132">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="ef8a8-133">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="ef8a8-133">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

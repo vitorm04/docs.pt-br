@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca85a12191db51818da2a08910dc9524d1ac9498
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 061a54dd3b3700840f90843a135cf81d8ed81a2e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211813"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481151"
 ---
-# <a name="coinitializeee-function"></a><span data-ttu-id="c6792-102">Função CoInitializeEE</span><span class="sxs-lookup"><span data-stu-id="c6792-102">CoInitializeEE Function</span></span>
-<span data-ttu-id="c6792-103">Garante que o mecanismo de execução do common language runtime é carregado em um processo.</span><span class="sxs-lookup"><span data-stu-id="c6792-103">Ensures that the common language runtime execution engine is loaded into a process.</span></span> <span data-ttu-id="c6792-104">Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c6792-104">This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="c6792-105">Use o [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método em vez disso.</span><span class="sxs-lookup"><span data-stu-id="c6792-105">Use the [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method instead.</span></span>  
+# <a name="coinitializeee-function"></a><span data-ttu-id="92a1d-102">Função CoInitializeEE</span><span class="sxs-lookup"><span data-stu-id="92a1d-102">CoInitializeEE Function</span></span>
+<span data-ttu-id="92a1d-103">Garante que o mecanismo de execução do common language runtime é carregado em um processo.</span><span class="sxs-lookup"><span data-stu-id="92a1d-103">Ensures that the common language runtime execution engine is loaded into a process.</span></span> <span data-ttu-id="92a1d-104">Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="92a1d-104">This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="92a1d-105">Use o [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método em vez disso.</span><span class="sxs-lookup"><span data-stu-id="92a1d-105">Use the [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6792-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c6792-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92a1d-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="92a1d-106">Syntax</span></span>  
   
 ```  
 HRESULT CoInitializeEE (  
@@ -35,30 +35,30 @@ HRESULT CoInitializeEE (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c6792-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c6792-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="92a1d-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="92a1d-107">Parameters</span></span>  
  `fFlags`  
- <span data-ttu-id="c6792-108">[in] Um dos [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) constantes de enumeração.</span><span class="sxs-lookup"><span data-stu-id="c6792-108">[in] One of the [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) enumeration constants.</span></span>  
+ <span data-ttu-id="92a1d-108">[in] Um dos [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) constantes de enumeração.</span><span class="sxs-lookup"><span data-stu-id="92a1d-108">[in] One of the [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) enumeration constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c6792-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="c6792-109">Return Value</span></span>  
- <span data-ttu-id="c6792-110">Esse método retorna códigos de erro padrão COM conforme definido em Winerror. h e os valores na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="c6792-110">This method returns standard COM error codes as defined in Winerror.h, and the values in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="92a1d-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="92a1d-109">Return Value</span></span>  
+ <span data-ttu-id="92a1d-110">Esse método retorna códigos de erro padrão COM conforme definido em Winerror. h e os valores na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="92a1d-110">This method returns standard COM error codes as defined in Winerror.h, and the values in the following table.</span></span>  
   
-|<span data-ttu-id="c6792-111">Código de retorno</span><span class="sxs-lookup"><span data-stu-id="c6792-111">Return code</span></span>|<span data-ttu-id="c6792-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="c6792-112">Description</span></span>|  
+|<span data-ttu-id="92a1d-111">Código de retorno</span><span class="sxs-lookup"><span data-stu-id="92a1d-111">Return code</span></span>|<span data-ttu-id="92a1d-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="92a1d-112">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="c6792-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="c6792-113">S_OK</span></span>|<span data-ttu-id="c6792-114">O mecanismo de execução foi carregado com êxito.</span><span class="sxs-lookup"><span data-stu-id="c6792-114">The execution engine was loaded successfully.</span></span>|  
-|<span data-ttu-id="c6792-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="c6792-115">S_FALSE</span></span>|<span data-ttu-id="c6792-116">O mecanismo de execução já está carregado.</span><span class="sxs-lookup"><span data-stu-id="c6792-116">The execution engine is already loaded.</span></span>|  
-|<span data-ttu-id="c6792-117">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c6792-117">E_FAIL</span></span>|<span data-ttu-id="c6792-118">Não foi possível carregar o mecanismo de execução.</span><span class="sxs-lookup"><span data-stu-id="c6792-118">The execution engine could not be loaded.</span></span>|  
+|<span data-ttu-id="92a1d-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="92a1d-113">S_OK</span></span>|<span data-ttu-id="92a1d-114">O mecanismo de execução foi carregado com êxito.</span><span class="sxs-lookup"><span data-stu-id="92a1d-114">The execution engine was loaded successfully.</span></span>|  
+|<span data-ttu-id="92a1d-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="92a1d-115">S_FALSE</span></span>|<span data-ttu-id="92a1d-116">O mecanismo de execução já está carregado.</span><span class="sxs-lookup"><span data-stu-id="92a1d-116">The execution engine is already loaded.</span></span>|  
+|<span data-ttu-id="92a1d-117">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="92a1d-117">E_FAIL</span></span>|<span data-ttu-id="92a1d-118">Não foi possível carregar o mecanismo de execução.</span><span class="sxs-lookup"><span data-stu-id="92a1d-118">The execution engine could not be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c6792-119">Comentários</span><span class="sxs-lookup"><span data-stu-id="c6792-119">Remarks</span></span>  
- <span data-ttu-id="c6792-120">Esse método carrega o mecanismo de execução, se ele não foi carregado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="c6792-120">This method loads the execution engine if it has not been previously loaded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="92a1d-119">Comentários</span><span class="sxs-lookup"><span data-stu-id="92a1d-119">Remarks</span></span>  
+ <span data-ttu-id="92a1d-120">Esse método carrega o mecanismo de execução, se ele não foi carregado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="92a1d-120">This method loads the execution engine if it has not been previously loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6792-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c6792-121">Requirements</span></span>  
- <span data-ttu-id="c6792-122">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6792-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92a1d-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="92a1d-121">Requirements</span></span>  
+ <span data-ttu-id="92a1d-122">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="92a1d-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6792-123">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c6792-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="92a1d-123">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="92a1d-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c6792-124">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c6792-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="92a1d-124">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="92a1d-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c6792-125">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6792-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="92a1d-125">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92a1d-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6792-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c6792-126">See also</span></span>
-- [<span data-ttu-id="c6792-127">Funções estáticas globais de metadados</span><span class="sxs-lookup"><span data-stu-id="c6792-127">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="92a1d-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="92a1d-126">See also</span></span>
+- [<span data-ttu-id="92a1d-127">Funções estáticas globais de metadados</span><span class="sxs-lookup"><span data-stu-id="92a1d-127">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

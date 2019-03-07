@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 12e6a262-d9ac-49b8-9b80-1e653a2a3819
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38d0ad7d84484c3b061429ee6cc1c38bc59586a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0069f301df9908a584608c7d20e5348de47361c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517260"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501598"
 ---
-# <a name="icordebugexceptiondebugeventgetnativeip-method"></a><span data-ttu-id="96e2a-102">Método ICorDebugExceptionDebugEvent::GetNativeIP</span><span class="sxs-lookup"><span data-stu-id="96e2a-102">ICorDebugExceptionDebugEvent::GetNativeIP Method</span></span>
-<span data-ttu-id="96e2a-103">Obtém o ponteiro de instrução nativo para esse evento de depuração de exceção.</span><span class="sxs-lookup"><span data-stu-id="96e2a-103">Gets the native instruction pointer for this exception debug event.</span></span>  
+# <a name="icordebugexceptiondebugeventgetnativeip-method"></a><span data-ttu-id="c2188-102">Método ICorDebugExceptionDebugEvent::GetNativeIP</span><span class="sxs-lookup"><span data-stu-id="c2188-102">ICorDebugExceptionDebugEvent::GetNativeIP Method</span></span>
+<span data-ttu-id="c2188-103">Obtém o ponteiro de instrução nativo para esse evento de depuração de exceção.</span><span class="sxs-lookup"><span data-stu-id="c2188-103">Gets the native instruction pointer for this exception debug event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96e2a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="96e2a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2188-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c2188-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNativeIP(  
@@ -22,34 +22,34 @@ HRESULT GetNativeIP(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="96e2a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="96e2a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c2188-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c2188-105">Parameters</span></span>  
  `pIP`  
- <span data-ttu-id="96e2a-106">[out] Evento de depuração de um ponteiro para o ponteiro de instrução para essa exceção.</span><span class="sxs-lookup"><span data-stu-id="96e2a-106">[out] A pointer to the instruction pointer for this exception debug event.</span></span> <span data-ttu-id="96e2a-107">Consulte a seção Comentários para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="96e2a-107">See the Remarks section for more information.</span></span>  
+ <span data-ttu-id="c2188-106">[out] Evento de depuração de um ponteiro para o ponteiro de instrução para essa exceção.</span><span class="sxs-lookup"><span data-stu-id="c2188-106">[out] A pointer to the instruction pointer for this exception debug event.</span></span> <span data-ttu-id="c2188-107">Consulte a seção Comentários para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="c2188-107">See the Remarks section for more information.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="96e2a-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="96e2a-108">Remarks</span></span>  
- <span data-ttu-id="96e2a-109">O significado de neste ponteiro de instrução depende do tipo de evento, conforme mostrado na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="96e2a-109">The meaning of this instruction pointer depends on the event type, as shown in the following table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c2188-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="c2188-108">Remarks</span></span>  
+ <span data-ttu-id="c2188-109">O significado de neste ponteiro de instrução depende do tipo de evento, conforme mostrado na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="c2188-109">The meaning of this instruction pointer depends on the event type, as shown in the following table.</span></span>  
   
-|<span data-ttu-id="96e2a-110">Tipo de evento</span><span class="sxs-lookup"><span data-stu-id="96e2a-110">Event type</span></span>|<span data-ttu-id="96e2a-111">Significado do `pStackPointer` valor</span><span class="sxs-lookup"><span data-stu-id="96e2a-111">Meaning of `pStackPointer` value</span></span>|  
+|<span data-ttu-id="c2188-110">Tipo de evento</span><span class="sxs-lookup"><span data-stu-id="c2188-110">Event type</span></span>|<span data-ttu-id="c2188-111">Significado do `pStackPointer` valor</span><span class="sxs-lookup"><span data-stu-id="c2188-111">Meaning of `pStackPointer` value</span></span>|  
 |----------------|--------------------------------------|  
-|[<span data-ttu-id="96e2a-112">MANAGED_EXCEPTION_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="96e2a-112">MANAGED_EXCEPTION_FIRST_CHANCE</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="96e2a-113">O endereço da instrução de falha.</span><span class="sxs-lookup"><span data-stu-id="96e2a-113">The address of the faulting instruction.</span></span>|  
-|[<span data-ttu-id="96e2a-114">MANAGED_EXCEPTION_USER_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="96e2a-114">MANAGED_EXCEPTION_USER_FIRST_CHANCE</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="96e2a-115">O endereço de código no quadro indicado pelo [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) método em que a execução será retomada se nenhuma exceção tivesse sido gerada.</span><span class="sxs-lookup"><span data-stu-id="96e2a-115">The code address in the frame indicated by the [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) method where execution would resume if no exception had been raised.</span></span> <span data-ttu-id="96e2a-116">A exceção pode causar ou não código diferente, como o bloco catch de uma `try/catch/finally` cláusula, a ser executada neste quadro.</span><span class="sxs-lookup"><span data-stu-id="96e2a-116">The exception may or may not cause different code, such as the catch block of a `try/catch/finally` clause, to be executed in this frame.</span></span>|  
-|[<span data-ttu-id="96e2a-117">MANAGED_EXCEPTION_CATCH_HANDLER_FOUND</span><span class="sxs-lookup"><span data-stu-id="96e2a-117">MANAGED_EXCEPTION_CATCH_HANDLER_FOUND</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="96e2a-118">O código de endereço onde `catch` execução do manipulador será iniciada no quadro indicado pela [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="96e2a-118">The code address where `catch` handler execution will start in the frame indicated by the [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) method.</span></span>|  
-|[<span data-ttu-id="96e2a-119">MANAGED_EXCEPTION_UNHANDLED</span><span class="sxs-lookup"><span data-stu-id="96e2a-119">MANAGED_EXCEPTION_UNHANDLED</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="96e2a-120">`pIP` é 0.</span><span class="sxs-lookup"><span data-stu-id="96e2a-120">`pIP` is 0.</span></span>|  
+|[<span data-ttu-id="c2188-112">MANAGED_EXCEPTION_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="c2188-112">MANAGED_EXCEPTION_FIRST_CHANCE</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="c2188-113">O endereço da instrução de falha.</span><span class="sxs-lookup"><span data-stu-id="c2188-113">The address of the faulting instruction.</span></span>|  
+|[<span data-ttu-id="c2188-114">MANAGED_EXCEPTION_USER_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="c2188-114">MANAGED_EXCEPTION_USER_FIRST_CHANCE</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="c2188-115">O endereço de código no quadro indicado pelo [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) método em que a execução será retomada se nenhuma exceção tivesse sido gerada.</span><span class="sxs-lookup"><span data-stu-id="c2188-115">The code address in the frame indicated by the [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) method where execution would resume if no exception had been raised.</span></span> <span data-ttu-id="c2188-116">A exceção pode causar ou não código diferente, como o bloco catch de uma `try/catch/finally` cláusula, a ser executada neste quadro.</span><span class="sxs-lookup"><span data-stu-id="c2188-116">The exception may or may not cause different code, such as the catch block of a `try/catch/finally` clause, to be executed in this frame.</span></span>|  
+|[<span data-ttu-id="c2188-117">MANAGED_EXCEPTION_CATCH_HANDLER_FOUND</span><span class="sxs-lookup"><span data-stu-id="c2188-117">MANAGED_EXCEPTION_CATCH_HANDLER_FOUND</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="c2188-118">O código de endereço onde `catch` execução do manipulador será iniciada no quadro indicado pela [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="c2188-118">The code address where `catch` handler execution will start in the frame indicated by the [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) method.</span></span>|  
+|[<span data-ttu-id="c2188-119">MANAGED_EXCEPTION_UNHANDLED</span><span class="sxs-lookup"><span data-stu-id="c2188-119">MANAGED_EXCEPTION_UNHANDLED</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="c2188-120">`pIP` é 0.</span><span class="sxs-lookup"><span data-stu-id="c2188-120">`pIP` is 0.</span></span>|  
   
- <span data-ttu-id="96e2a-121">O tipo de evento é proveniente de [icordebugdebugevent:: Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="96e2a-121">The event type is available from the [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) method.</span></span>  
+ <span data-ttu-id="c2188-121">O tipo de evento é proveniente de [icordebugdebugevent:: Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="c2188-121">The event type is available from the [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="96e2a-122">Esse método só está disponível com o .NET Native.</span><span class="sxs-lookup"><span data-stu-id="96e2a-122">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="c2188-122">Esse método só está disponível com o .NET Native.</span><span class="sxs-lookup"><span data-stu-id="c2188-122">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="96e2a-123">Requisitos</span><span class="sxs-lookup"><span data-stu-id="96e2a-123">Requirements</span></span>  
- <span data-ttu-id="96e2a-124">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96e2a-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c2188-123">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c2188-123">Requirements</span></span>  
+ <span data-ttu-id="c2188-124">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2188-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="96e2a-125">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="96e2a-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c2188-125">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c2188-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="96e2a-126">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96e2a-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c2188-126">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c2188-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="96e2a-127">**Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96e2a-127">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="c2188-127">**Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2188-127">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96e2a-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="96e2a-128">See also</span></span>
-- [<span data-ttu-id="96e2a-129">Interface ICorDebugExceptionDebugEvent</span><span class="sxs-lookup"><span data-stu-id="96e2a-129">ICorDebugExceptionDebugEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [<span data-ttu-id="96e2a-130">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="96e2a-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c2188-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c2188-128">See also</span></span>
+- [<span data-ttu-id="c2188-129">Interface ICorDebugExceptionDebugEvent</span><span class="sxs-lookup"><span data-stu-id="c2188-129">ICorDebugExceptionDebugEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
+- [<span data-ttu-id="c2188-130">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="c2188-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

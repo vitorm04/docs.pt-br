@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b92885d2a6514839a864d6a345dd8af8b07b90c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414977"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489807"
 ---
-# <a name="icordebugilframe2remapfunction-method"></a><span data-ttu-id="b8103-102">Método ICorDebugILFrame2::RemapFunction</span><span class="sxs-lookup"><span data-stu-id="b8103-102">ICorDebugILFrame2::RemapFunction Method</span></span>
-<span data-ttu-id="b8103-103">Remapeia uma função editada, especificando o novo deslocamento de linguagem intermediária (MSIL) Microsoft</span><span class="sxs-lookup"><span data-stu-id="b8103-103">Remaps an edited function by specifying the new Microsoft intermediate language (MSIL) offset</span></span>  
+# <a name="icordebugilframe2remapfunction-method"></a><span data-ttu-id="e142b-102">Método ICorDebugILFrame2::RemapFunction</span><span class="sxs-lookup"><span data-stu-id="e142b-102">ICorDebugILFrame2::RemapFunction Method</span></span>
+<span data-ttu-id="e142b-103">Remapeia uma função editada, especificando o novo deslocamento do Microsoft intermediate language (MSIL)</span><span class="sxs-lookup"><span data-stu-id="e142b-103">Remaps an edited function by specifying the new Microsoft intermediate language (MSIL) offset</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8103-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b8103-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e142b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e142b-104">Syntax</span></span>  
   
 ```  
 HRESULT RemapFunction (  
@@ -35,29 +35,29 @@ HRESULT RemapFunction (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b8103-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b8103-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e142b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e142b-105">Parameters</span></span>  
  `newILOffset`  
- <span data-ttu-id="b8103-106">[in] Novo MSIL deslocamento do quadro de pilhas em que o ponteiro de instrução deve ser colocado.</span><span class="sxs-lookup"><span data-stu-id="b8103-106">[in] The stack frame's new MSIL offset at which the instruction pointer should be placed.</span></span> <span data-ttu-id="b8103-107">Esse valor deve ser um ponto de sequência.</span><span class="sxs-lookup"><span data-stu-id="b8103-107">This value must be a sequence point.</span></span>  
+ <span data-ttu-id="e142b-106">[in] Novo deslocamento da MSIL do quadro de pilhas no qual o ponteiro de instrução deve ser colocado.</span><span class="sxs-lookup"><span data-stu-id="e142b-106">[in] The stack frame's new MSIL offset at which the instruction pointer should be placed.</span></span> <span data-ttu-id="e142b-107">Esse valor deve ser um ponto de sequência.</span><span class="sxs-lookup"><span data-stu-id="e142b-107">This value must be a sequence point.</span></span>  
   
- <span data-ttu-id="b8103-108">É responsabilidade do chamador para garantir a validade do valor.</span><span class="sxs-lookup"><span data-stu-id="b8103-108">It is the caller’s responsibility to ensure the validity of this value.</span></span> <span data-ttu-id="b8103-109">Por exemplo, o deslocamento do MSIL não é válido se ele está fora dos limites da função.</span><span class="sxs-lookup"><span data-stu-id="b8103-109">For example, the MSIL offset is not valid if it is outside the bounds of the function.</span></span>  
+ <span data-ttu-id="e142b-108">É responsabilidade do chamador para garantir a validade desse valor.</span><span class="sxs-lookup"><span data-stu-id="e142b-108">It is the caller’s responsibility to ensure the validity of this value.</span></span> <span data-ttu-id="e142b-109">Por exemplo, o deslocamento do MSIL não é válido se ele está fora dos limites da função.</span><span class="sxs-lookup"><span data-stu-id="e142b-109">For example, the MSIL offset is not valid if it is outside the bounds of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b8103-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="b8103-110">Remarks</span></span>  
- <span data-ttu-id="b8103-111">Quando a função do quadro foi editada, o depurador pode chamar o `RemapFunction` método alternar a versão mais recente da função do quadro para que ele pode ser executado.</span><span class="sxs-lookup"><span data-stu-id="b8103-111">When a frame’s function has been edited, the debugger can call the `RemapFunction` method to swap in the latest version of the frame's function so it can be executed.</span></span> <span data-ttu-id="b8103-112">A execução de código será iniciado em um deslocamento específico do MSIL.</span><span class="sxs-lookup"><span data-stu-id="b8103-112">The code execution will begin at the given MSIL offset.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e142b-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="e142b-110">Remarks</span></span>  
+ <span data-ttu-id="e142b-111">Quando a função de um quadro foi editada, o depurador pode chamar o `RemapFunction` método trocar a versão mais recente da função do quadro para que ele pode ser executado.</span><span class="sxs-lookup"><span data-stu-id="e142b-111">When a frame’s function has been edited, the debugger can call the `RemapFunction` method to swap in the latest version of the frame's function so it can be executed.</span></span> <span data-ttu-id="e142b-112">A execução do código será iniciada no deslocamento especificado do MSIL.</span><span class="sxs-lookup"><span data-stu-id="e142b-112">The code execution will begin at the given MSIL offset.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b8103-113">Chamando `RemapFunction`, como chamar [Icordebugilframe](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), imediatamente invalidará todas as interfaces de depuração que estão relacionadas à geração de um rastreamento de pilha do thread.</span><span class="sxs-lookup"><span data-stu-id="b8103-113">Calling `RemapFunction`, like calling [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), will immediately invalidate all debugging interfaces that are related to generating a stack trace for the thread.</span></span> <span data-ttu-id="b8103-114">Essas interfaces incluem [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame e ICorDebugNativeFrame.</span><span class="sxs-lookup"><span data-stu-id="b8103-114">These interfaces include [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame, and ICorDebugNativeFrame.</span></span>  
+>  <span data-ttu-id="e142b-113">Chamando `RemapFunction`, como chamar [icordebugilframe:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), imediatamente invalidará todas as interfaces de depuração que estão relacionadas à geração de um rastreamento de pilha do thread.</span><span class="sxs-lookup"><span data-stu-id="e142b-113">Calling `RemapFunction`, like calling [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), will immediately invalidate all debugging interfaces that are related to generating a stack trace for the thread.</span></span> <span data-ttu-id="e142b-114">Essas interfaces incluem [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame e ICorDebugNativeFrame.</span><span class="sxs-lookup"><span data-stu-id="e142b-114">These interfaces include [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame, and ICorDebugNativeFrame.</span></span>  
   
- <span data-ttu-id="b8103-115">O `RemapFunction` método pode ser chamado somente no contexto do quadro atual e somente em um dos seguintes casos:</span><span class="sxs-lookup"><span data-stu-id="b8103-115">The `RemapFunction` method can be called only in the context of the current frame, and only in one of the following cases:</span></span>  
+ <span data-ttu-id="e142b-115">O `RemapFunction` método pode ser chamado somente no contexto do quadro atual e somente em um dos seguintes casos:</span><span class="sxs-lookup"><span data-stu-id="e142b-115">The `RemapFunction` method can be called only in the context of the current frame, and only in one of the following cases:</span></span>  
   
--   <span data-ttu-id="b8103-116">Após o recebimento de uma [Icordebugmanagedcallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) retorno de chamada que não tenha sido continuado.</span><span class="sxs-lookup"><span data-stu-id="b8103-116">After receipt of a [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) callback that has not yet been continued.</span></span>  
+-   <span data-ttu-id="e142b-116">Após o recebimento de uma [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) retorno de chamada que ainda não foi continuado.</span><span class="sxs-lookup"><span data-stu-id="e142b-116">After receipt of a [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) callback that has not yet been continued.</span></span>  
   
--   <span data-ttu-id="b8103-117">Enquanto a execução de código é interrompida por uma [: Editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) eventos para este quadro.</span><span class="sxs-lookup"><span data-stu-id="b8103-117">While code execution is stopped because of an [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) event for this frame.</span></span>  
+-   <span data-ttu-id="e142b-117">Embora a execução do código é interrompida devido uma [icordebugmanagedcallback:: Editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) eventos para este quadro.</span><span class="sxs-lookup"><span data-stu-id="e142b-117">While code execution is stopped because of an [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) event for this frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8103-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b8103-118">Requirements</span></span>  
- <span data-ttu-id="b8103-119">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b8103-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e142b-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e142b-118">Requirements</span></span>  
+ <span data-ttu-id="e142b-119">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e142b-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8103-120">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b8103-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e142b-120">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e142b-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b8103-121">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b8103-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e142b-121">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e142b-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b8103-122">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8103-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="e142b-122">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e142b-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

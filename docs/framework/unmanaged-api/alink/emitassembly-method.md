@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d73c158fa9d7b5574e4f875b8d51e932e30041b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1cdcfcaf29cc2b0ec6da1108e0ecd91710db36c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572234"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487298"
 ---
-# <a name="emitassembly-method"></a><span data-ttu-id="f4f8c-102">Método EmitAssembly</span><span class="sxs-lookup"><span data-stu-id="f4f8c-102">EmitAssembly Method</span></span>
-<span data-ttu-id="f4f8c-103">Cria o assembly.</span><span class="sxs-lookup"><span data-stu-id="f4f8c-103">Creates the assembly.</span></span> <span data-ttu-id="f4f8c-104">Chame esse método depois que todos os outros arquivos são fechados, exceto para o arquivo do assembly.</span><span class="sxs-lookup"><span data-stu-id="f4f8c-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="f4f8c-105">Não chame este método durante a produção de módulos não associados.</span><span class="sxs-lookup"><span data-stu-id="f4f8c-105">Do not call this method when producing unbound modules.</span></span>  
+# <a name="emitassembly-method"></a><span data-ttu-id="fdd06-102">Método EmitAssembly</span><span class="sxs-lookup"><span data-stu-id="fdd06-102">EmitAssembly Method</span></span>
+<span data-ttu-id="fdd06-103">Cria o assembly.</span><span class="sxs-lookup"><span data-stu-id="fdd06-103">Creates the assembly.</span></span> <span data-ttu-id="fdd06-104">Chame esse método depois que todos os outros arquivos são fechados, exceto para o arquivo do assembly.</span><span class="sxs-lookup"><span data-stu-id="fdd06-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="fdd06-105">Não chame este método durante a produção de módulos não associados.</span><span class="sxs-lookup"><span data-stu-id="fdd06-105">Do not call this method when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4f8c-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f4f8c-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fdd06-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fdd06-106">Syntax</span></span>  
   
 ```  
 HRESULT EmitAssembly(  
@@ -35,17 +35,17 @@ HRESULT EmitAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f4f8c-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f4f8c-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fdd06-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="fdd06-107">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="f4f8c-108">ID do assembly.</span><span class="sxs-lookup"><span data-stu-id="f4f8c-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="fdd06-108">ID do assembly.</span><span class="sxs-lookup"><span data-stu-id="fdd06-108">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f4f8c-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="f4f8c-109">Return Value</span></span>  
- <span data-ttu-id="f4f8c-110">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="f4f8c-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fdd06-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="fdd06-109">Return Value</span></span>  
+ <span data-ttu-id="fdd06-110">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="fdd06-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4f8c-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f4f8c-111">Requirements</span></span>  
- <span data-ttu-id="f4f8c-112">Requer alink.h</span><span class="sxs-lookup"><span data-stu-id="f4f8c-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fdd06-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fdd06-111">Requirements</span></span>  
+ <span data-ttu-id="fdd06-112">Requer alink.h</span><span class="sxs-lookup"><span data-stu-id="fdd06-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4f8c-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f4f8c-113">See also</span></span>
-- [<span data-ttu-id="f4f8c-114">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="f4f8c-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="f4f8c-115">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="f4f8c-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="f4f8c-116">API do ALink</span><span class="sxs-lookup"><span data-stu-id="f4f8c-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="fdd06-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fdd06-113">See also</span></span>
+- [<span data-ttu-id="fdd06-114">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="fdd06-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="fdd06-115">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="fdd06-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="fdd06-116">API do ALink</span><span class="sxs-lookup"><span data-stu-id="fdd06-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

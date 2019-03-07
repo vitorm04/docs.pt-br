@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acfb8910df6e20bf55ed33fdbb9b1c30d22f4684
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e56c8eba49260eba9e3e0ca7e9ab4c7cfcd3261f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412046"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471931"
 ---
-# <a name="icordebugfunctiongettoken-method"></a><span data-ttu-id="a8e62-102">Método ICorDebugFunction::GetToken</span><span class="sxs-lookup"><span data-stu-id="a8e62-102">ICorDebugFunction::GetToken Method</span></span>
-<span data-ttu-id="a8e62-103">Obtém os metadados de token para essa função.</span><span class="sxs-lookup"><span data-stu-id="a8e62-103">Gets the metadata token for this function.</span></span>  
+# <a name="icordebugfunctiongettoken-method"></a><span data-ttu-id="b5a12-102">Método ICorDebugFunction::GetToken</span><span class="sxs-lookup"><span data-stu-id="b5a12-102">ICorDebugFunction::GetToken Method</span></span>
+<span data-ttu-id="b5a12-103">Obtém os metadados de token para essa função.</span><span class="sxs-lookup"><span data-stu-id="b5a12-103">Gets the metadata token for this function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8e62-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a8e62-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b5a12-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b5a12-104">Syntax</span></span>  
   
 ```  
 HRESULT GetToken (  
@@ -35,15 +35,15 @@ HRESULT GetToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a8e62-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a8e62-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b5a12-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b5a12-105">Parameters</span></span>  
  `pMethodDef`  
- <span data-ttu-id="a8e62-106">[out] Um ponteiro para um `mdMethodDef` token que referencia os metadados para essa função.</span><span class="sxs-lookup"><span data-stu-id="a8e62-106">[out] A pointer to an `mdMethodDef` token that references the metadata for this function.</span></span>  
+ <span data-ttu-id="b5a12-106">[out] Um ponteiro para um `mdMethodDef` token que referencia os metadados para essa função.</span><span class="sxs-lookup"><span data-stu-id="b5a12-106">[out] A pointer to an `mdMethodDef` token that references the metadata for this function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a8e62-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a8e62-107">Requirements</span></span>  
- <span data-ttu-id="a8e62-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8e62-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b5a12-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b5a12-107">Requirements</span></span>  
+ <span data-ttu-id="b5a12-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5a12-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8e62-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a8e62-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b5a12-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5a12-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a8e62-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a8e62-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b5a12-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5a12-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a8e62-111">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8e62-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b5a12-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5a12-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

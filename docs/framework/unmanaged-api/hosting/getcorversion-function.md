@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0741e5773b946186a452e191cc3ae987e6067c44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3d30603f16841a92013dd5cc2032799365e8c76
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606881"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471882"
 ---
-# <a name="getcorversion-function"></a><span data-ttu-id="2ff8c-102">Função GetCORVersion</span><span class="sxs-lookup"><span data-stu-id="2ff8c-102">GetCORVersion Function</span></span>
-<span data-ttu-id="2ff8c-103">Retorna o número de versão do common language runtime (CLR) que está em execução no processo atual.</span><span class="sxs-lookup"><span data-stu-id="2ff8c-103">Returns the version number of the common language runtime (CLR) that is running in the current process.</span></span>  
+# <a name="getcorversion-function"></a><span data-ttu-id="51453-102">Função GetCORVersion</span><span class="sxs-lookup"><span data-stu-id="51453-102">GetCORVersion Function</span></span>
+<span data-ttu-id="51453-103">Retorna o número de versão do common language runtime (CLR) que está em execução no processo atual.</span><span class="sxs-lookup"><span data-stu-id="51453-103">Returns the version number of the common language runtime (CLR) that is running in the current process.</span></span>  
   
- <span data-ttu-id="2ff8c-104">Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2ff8c-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="51453-104">Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="51453-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2ff8c-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2ff8c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="51453-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="51453-105">Syntax</span></span>  
   
 ```  
 HRESULT GetCORVersion (  
@@ -39,24 +39,24 @@ HRESULT GetCORVersion (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2ff8c-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="2ff8c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="51453-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="51453-106">Parameters</span></span>  
  `pbuffer`  
- <span data-ttu-id="2ff8c-107">Um ponteiro para um buffer no qual o CLR retorna uma cadeia de caracteres que especifica a versão do tempo de execução que atualmente é carregado no processo.</span><span class="sxs-lookup"><span data-stu-id="2ff8c-107">A pointer to a buffer in which the CLR returns a string specifying the version of the runtime that is currently loaded into the process.</span></span> <span data-ttu-id="2ff8c-108">A cadeia de caracteres retornada usa a mesma forma como cadeias de caracteres passados para [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), por exemplo, "v1.0.1216".</span><span class="sxs-lookup"><span data-stu-id="2ff8c-108">The returned string takes the same form as strings passed to [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), for example, "v1.0.1216".</span></span> <span data-ttu-id="2ff8c-109">Se o tempo de execução ainda não tiver sido carregado no processo, a função retorna as informações de diretório apropriado para a versão mais recente do tempo de execução instalado no computador.</span><span class="sxs-lookup"><span data-stu-id="2ff8c-109">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
+ <span data-ttu-id="51453-107">Um ponteiro para um buffer no qual o CLR retorna uma cadeia de caracteres que especifica a versão do tempo de execução que atualmente é carregado no processo.</span><span class="sxs-lookup"><span data-stu-id="51453-107">A pointer to a buffer in which the CLR returns a string specifying the version of the runtime that is currently loaded into the process.</span></span> <span data-ttu-id="51453-108">A cadeia de caracteres retornada usa a mesma forma como cadeias de caracteres passados para [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), por exemplo, "v1.0.1216".</span><span class="sxs-lookup"><span data-stu-id="51453-108">The returned string takes the same form as strings passed to [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), for example, "v1.0.1216".</span></span> <span data-ttu-id="51453-109">Se o tempo de execução ainda não tiver sido carregado no processo, a função retorna as informações de diretório apropriado para a versão mais recente do tempo de execução instalado no computador.</span><span class="sxs-lookup"><span data-stu-id="51453-109">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="2ff8c-110">O número de caracteres (`WCHAR`s) que podem ser mantidos em `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="2ff8c-110">The number of characters (`WCHAR`s) that can be held in `pbuffer`.</span></span>  
+ <span data-ttu-id="51453-110">O número de caracteres (`WCHAR`s) que podem ser mantidos em `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="51453-110">The number of characters (`WCHAR`s) that can be held in `pbuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="2ff8c-111">Um ponteiro para o número de caracteres retornado de fato no `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="2ff8c-111">A pointer to the number of characters actually returned in `pbuffer`.</span></span> <span data-ttu-id="2ff8c-112">Se `pbuffer` for um ponteiro nulo, o tempo de execução retorna E_POINTER.</span><span class="sxs-lookup"><span data-stu-id="2ff8c-112">If `pbuffer` is a null pointer, the runtime returns E_POINTER.</span></span> <span data-ttu-id="2ff8c-113">Se o número de caracteres for maior, em seguida, o comprimento de `pbuffer` , o tempo de execução retorna ERROR_INSUFFICIENT_BUFFER.</span><span class="sxs-lookup"><span data-stu-id="2ff8c-113">If the number of characters is greater then the length of `pbuffer` , the runtime returns ERROR_INSUFFICIENT_BUFFER.</span></span>  
+ <span data-ttu-id="51453-111">Um ponteiro para o número de caracteres retornado de fato no `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="51453-111">A pointer to the number of characters actually returned in `pbuffer`.</span></span> <span data-ttu-id="51453-112">Se `pbuffer` for um ponteiro nulo, o tempo de execução retorna E_POINTER.</span><span class="sxs-lookup"><span data-stu-id="51453-112">If `pbuffer` is a null pointer, the runtime returns E_POINTER.</span></span> <span data-ttu-id="51453-113">Se o número de caracteres for maior, em seguida, o comprimento de `pbuffer` , o tempo de execução retorna ERROR_INSUFFICIENT_BUFFER.</span><span class="sxs-lookup"><span data-stu-id="51453-113">If the number of characters is greater then the length of `pbuffer` , the runtime returns ERROR_INSUFFICIENT_BUFFER.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2ff8c-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2ff8c-114">Requirements</span></span>  
- <span data-ttu-id="2ff8c-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ff8c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="51453-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="51453-114">Requirements</span></span>  
+ <span data-ttu-id="51453-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="51453-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2ff8c-116">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2ff8c-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="51453-116">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="51453-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2ff8c-117">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2ff8c-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="51453-117">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="51453-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2ff8c-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ff8c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="51453-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51453-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ff8c-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2ff8c-119">See also</span></span>
-- [<span data-ttu-id="2ff8c-120">Funções de hospedagem CLR preteridas</span><span class="sxs-lookup"><span data-stu-id="2ff8c-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="51453-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="51453-119">See also</span></span>
+- [<span data-ttu-id="51453-120">Funções de hospedagem CLR preteridas</span><span class="sxs-lookup"><span data-stu-id="51453-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
