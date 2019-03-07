@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9baf207f46082a4bb1ece4dba39c98cdd125d073
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844449bbce847883e5ba125d656adc4480f1fd23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702100"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497061"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>Função StrongNameSignatureVerificationFromImage
 Verifica se um assembly, que já foi mapeado para a memória, é válido para a chave pública associada.  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbBase`  
  [in] O endereço virtual relativo do manifesto do assembly mapeados.  
   

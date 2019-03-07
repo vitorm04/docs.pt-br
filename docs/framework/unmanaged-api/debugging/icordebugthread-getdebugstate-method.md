@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d9696e29bc1b460c94d7f4d8afd3de82653333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419624"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489885"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>Método ICorDebugThread::GetDebugState
 Obtém o estado de depuração atual deste objeto ICorDebugThread.  
@@ -35,18 +35,18 @@ HRESULT GetDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pState`  
  [out] Um ponteiro para uma combinação bit a bit dos valores de enumeração CorDebugThreadState que descreve o estado de depuração atual deste thread.  
   
 ## <a name="remarks"></a>Comentários  
- Se o processo está parado no momento, `pState` representa o estado de depuração que deve existir para esse thread se o processo continuar, não o estado real atual deste thread.  
+ Se o processo for interrompido no momento, `pState` representa o estado de depuração que deve existir para esse thread se o processo de ser continuada, não o estado atual real desse thread.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

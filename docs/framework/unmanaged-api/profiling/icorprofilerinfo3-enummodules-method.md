@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91550d3328acfb5f3bf2ab461fb2d826ee34c580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73218a5b63ae53ac125d3d807c1a50bdbf0d9c8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545154"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503050"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>Método ICorProfilerInfo3::EnumModules
 Retorna um enumerador que fornece métodos para iterar de forma sequencial por meio de uma coleção de módulos gerenciados que são carregados no aplicativo.  
@@ -33,7 +33,7 @@ Retorna um enumerador que fornece métodos para iterar de forma sequencial por m
 HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppEnum`  
  [out] Um ponteiro para um [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.  
   

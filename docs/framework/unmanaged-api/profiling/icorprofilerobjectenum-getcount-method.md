@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a363021700eacea1d4af80ca6371de5c587afda1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65f6067fcfe0e6ef5f01a13865d002afd6da9efb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622190"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474703"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>Método ICorProfilerObjectEnum::GetCount
 Obtém o número total de objetos congelados na coleção.  
@@ -35,7 +35,7 @@ HRESULT GetCount (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pcelt`  
  [out] Um ponteiro para o número de objetos congelados na coleção.  
   

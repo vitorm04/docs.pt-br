@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08333c49d135b85d068df3a199aca15d74e78c46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f2073ed1ba2ed8644d825d24f36166e4f2ed3b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619526"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478369"
 ---
 # <a name="functionenter3-function"></a>Função FunctionEnter3
 Notifica o criador de perfil que o controle está sendo passado para uma função.  
@@ -32,7 +32,7 @@ Notifica o criador de perfil que o controle está sendo passado para uma funçã
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `functionOrRemappedID`  
  [in] O identificador da função à qual o controle é passado.  
   

@@ -2,12 +2,12 @@
 title: Cliente de Teste do WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903995"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499284"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de Teste do WCF (WcfTestClient.exe)
 Cliente de teste do Windows Communication Foundation (WCF) (WcfTestClient.exe) é uma ferramenta de GUI que permite aos usuários inserir parâmetros de teste, enviem essa entrada para o serviço e exibir a resposta que o serviço envia de volta. Ele fornece um serviço perfeito experiência quando combinado com o Host de serviço WCF em teste.  
@@ -125,7 +125,7 @@ Cliente de teste do Windows Communication Foundation (WCF) (WcfTestClient.exe) �
  Durante a geração do proxy, da compilação binária ou da chamada do serviço, os itens de menu que dão suporte à atualização de um serviço estão desabilitados. A chamada de serviço também está desabilitada.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>Local dos arquivos gerados pelo Cliente de Teste  
- Por padrão, os repositórios de cliente de teste do WCF gerado os arquivos de código e a configuração do cliente na pasta "%appdata%\Local\temp\Test Client Projects". Essa pasta é excluída após o encerramento de cliente de teste do WCF. Se um arquivo de configuração é modificado no cliente de teste do WCF e o **sempre regenerar configuração ao iniciar serviços** opção está desabilitada, o arquivo modificado será copiado para a pasta "Cached Config" em "Meus documentos\test Client Projects" com um arquivo XML (metadados-endereço-para-file-name) de mapeamento como um índice.  
+ Por padrão, os repositórios de cliente de teste do WCF gerado os arquivos de código e a configuração do cliente na pasta "%appdata%\Local\temp\Test Client Projects". Essa pasta é excluída após o encerramento de cliente de teste do WCF. Se um arquivo de configuração é modificado no cliente de teste do WCF e o **sempre regenerar configuração ao iniciar serviços** opção está desabilitada, o arquivo modificado será copiado para a pasta "CachedConfig" em "Meus documentos\test Client Projects" com um arquivo XML (metadados-endereço-para-file-name) de mapeamento como um índice.  
   
  Você também pode iniciar o cliente de teste do WCF em uma linha de comando, use o `/ProjectPath` alternar para especificar um novo caminho desejado para armazenar os arquivos gerados ou usar o `/RestoreProjectPath` switch para restaurar o local padrão. A sintaxe é a seguinte:  
   

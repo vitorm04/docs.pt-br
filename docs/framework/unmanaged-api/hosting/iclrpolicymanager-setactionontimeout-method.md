@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7844ca5aefad94542146dc5eba6a966143ff8327
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46462362e959b6af9d9b0d311f813e183dfb04df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612847"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474469"
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>Método ICLRPolicyManager::SetActionOnTimeout
 Especifica a ação de política, que o common language runtime (CLR) deve tomar quando a operação especificada expira.  
@@ -36,7 +36,7 @@ HRESULT SetActionOnTimeout (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `operation`  
  [in] Um dos [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) valores, indicando que a operação para o qual especificar a ação de tempo limite. Há suporte para os seguintes valores:  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03949fb52d23e3b0f107f9f1d5208208369c3960
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 737f4600d04a4fa443fbd5b422b26eff11178d82
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574606"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473533"
 ---
 # <a name="exporttypeforwarder-method"></a>Método ExportTypeForwarder
 Adiciona um encaminhador de tipo para a tabela de tipo do assembly fornecido.  
@@ -37,7 +37,7 @@ HRESULT ExportTypeForwarder(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `tkAssemblyRef`  
  Referência ao assembly ao qual se refere o encaminhador de tipo.  
   

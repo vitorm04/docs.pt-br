@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0672ee0e47e28afb42a533d44e83e3807b08d659
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 892da7ec41c75e50f7f2cb086b05e466478e1ced
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484089"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a>Método ISymUnmanagedSymbolSearchInfo::GetSearchPathLength
 Obtém o comprimento do caminho de pesquisa.  
@@ -34,7 +34,7 @@ HRESULT GetSearchPathLength(
     [out] ULONG32 *pcchPath);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pcchPath`  
  [out] Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter o comprimento do caminho de pesquisa.  
   

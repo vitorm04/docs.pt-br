@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45aaceb2c39703cb1369941ce801c9cff1935ad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 364742957d16f12508d2df6f4cd7f50d7956d4cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555837"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479448"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>Método ISymUnmanagedReader::GetMethodVersion
 Obtém a versão do método. A versão do método começa em 1 e é incrementada toda vez que o método for recompilado. A recompilação pode acontecer sem alterações para o método.  
@@ -35,7 +35,7 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pMethod`  
  [in] O método para o qual obter a versão.  
   

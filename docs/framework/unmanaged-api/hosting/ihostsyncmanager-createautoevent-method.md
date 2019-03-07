@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9166d7934c56a897ef766bc3a4962041e6d19f5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f60d0d8480dcbe697b9ae76abd210120fc6b6955
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658631"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485506"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>Método IHostSyncManager::CreateAutoEvent
 Cria um objeto de evento de redefinição automática.  
@@ -35,7 +35,7 @@ HRESULT CreateAutoEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppEvent`  
  [out] Um ponteiro para o endereço de um [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instância implementada pelo host ou nula se não foi possível criar o objeto de evento.  
   

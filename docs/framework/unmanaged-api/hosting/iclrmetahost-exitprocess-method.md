@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbf3c00eafe47556c6b46e1acb687a19df5a2b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eed86f37ccab2d7eefead4997362fb82d310a1d1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502365"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>Método ICLRMetaHost::ExitProcess
 Tenta desligar normalmente o carregados todos os tempos de execução e, em seguida, encerra o processo. Substitui o [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) função.  
@@ -34,7 +34,7 @@ HRESULT ExitProcess (
     [in] INT32 iExitCode);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `iExitCode`  
  [in] O código de saída para o processo.  
   

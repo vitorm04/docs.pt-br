@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec7e303e5145e16f4c17074d557410ffe4521c20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3877f00a22c43ef5f22974b621b32b78ce15d795
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494461"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>Método ICLRErrorReportingManager::GetBucketParametersForCurrentException
 Obtém o número de buckets Watson para a exceção atual no thread de chamada.  
@@ -37,7 +37,7 @@ HRESULT GetBucketParametersForCurrentException(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pParams`  
  [out] Um ponteiro para um [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) estrutura que contém dados de erro da exceção.  
   

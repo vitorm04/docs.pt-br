@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d7d5b4e7ed4fdf6ae20da654913cbf3e004eb09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20312b80a4882acdaf53d9bcbf95ae2babe0fdca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506735"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476692"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>Método ICorProfilerInfo4::RequestReJIT
 Solicita uma recompilação JIT de todas as instâncias das funções especificadas.  
@@ -36,7 +36,7 @@ HRESULT RequestReJIT (
    [in, size_is(cFunctions)]  mdMethodDef methodIds[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cFunctions`  
  [in] O número de funções para recompilar.  
   

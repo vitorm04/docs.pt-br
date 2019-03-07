@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7cf2fec56da39a0e3e076be37df185ff2bce5e3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adf3c74526bbf2b8e740f505ab6f4243cd799041
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616661"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474573"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>Método IMetaDataEmit::DefineCustomAttribute
 Cria uma definição para um atributo personalizado com a assinatura de metadados especificado, a ser anexado ao objeto especificado e obtém um token a definição desse atributo personalizado.  
@@ -39,7 +39,7 @@ HRESULT DefineCustomAttribute (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `tkObj`  
  [in] O token para o item do proprietário.  
   

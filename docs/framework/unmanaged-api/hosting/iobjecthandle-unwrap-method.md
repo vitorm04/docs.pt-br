@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da25055917743481f5a8314023ed94d552fe49ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5539d77b93be1f56102970e9febe6f63599d78e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526412"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502963"
 ---
 # <a name="iobjecthandleunwrap-method"></a>Método IObjectHandle::Unwrap
 Desencapsula um objeto de marshaling por valor de uma indireção.  
@@ -35,7 +35,7 @@ HRESULT Unwrap (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppv`  
  [out] Um ponteiro para o objeto a ser descodificada.  
   

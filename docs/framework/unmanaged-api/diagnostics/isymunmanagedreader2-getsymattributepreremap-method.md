@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d5702f5df1e2d31a4e01de6be7c70af03b54296
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258d6967d1586974a4258e7906fd71db6c461b07
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519678"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482178"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>Método ISymUnmanagedReader2::GetSymAttributePreRemap
 Obtém um atributo personalizado com base em seu nome. Ao contrário de atributos personalizados de metadados, esses atributos são mantidos no repositório de símbolos.  
@@ -39,7 +39,7 @@ HRESULT GetSymAttributePreRemap(
         length_is(*pcBuffer)] BYTE buffer[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `parent`  
  [in] O token de metadados do pai.  
   

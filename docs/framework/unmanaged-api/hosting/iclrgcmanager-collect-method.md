@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b448892a58dd120fd0f30f2b61be59e579b629a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2da0b3b7a8a7ae46050345aaf5fcfa65fa349ae5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651403"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477979"
 ---
 # <a name="iclrgcmanagercollect-method"></a>Método ICLRGCManager::Collect
 Força uma coleta de lixo para a geração especificada.  
@@ -35,7 +35,7 @@ HRESULT Collect (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `Generation`  
  [in] A geração para coletar. Um valor -1 força uma coleção de todas as gerações.  
   

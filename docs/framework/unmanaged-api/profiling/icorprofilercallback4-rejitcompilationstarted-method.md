@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a65de26f3fc088b292ec9f8a96ca4e503a17edd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83caaa04481b4ed92407294584512b38553710b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680891"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501481"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>Método ICorProfilerCallback4::ReJITCompilationStarted
 Notifica o criador de perfil que o compilador just-in-time (JIT) foi iniciado recompilar uma função.  
@@ -36,7 +36,7 @@ HRESULT ReJITCompilationStarted(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `functionId`  
  [in] A ID da função que o compilador JIT começou a recompilação.  
   

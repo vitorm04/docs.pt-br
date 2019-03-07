@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 623ff5d14db6ae9cc5999aa184b81d6b22f4b201
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: af51a0d76ac080017f58ac8fc3acca86c23fb480
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365003"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474859"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Chamado por PresentationHost.exe para obter mensagens de erro e andamento personalizadas do host, se implementado.  
@@ -20,7 +20,7 @@ Chamado por PresentationHost.exe para obter mensagens de erro e andamento person
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pwzProgressAssemblyName`  
   
  [out] Um ponteiro para o assembly que contém a interface do usuário de andamento fornecida pelo host.  

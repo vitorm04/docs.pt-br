@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06ff8f0f13d7710d2d3d59aac4b5fdcadfe707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e4deaa3ab4b14fbd32d45841966cfac9e33b9f31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418383"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487844"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>Método ICorDebugThread::GetUserState
 Obtém o estado do usuário atual deste ICorDebugThread.  
@@ -35,18 +35,18 @@ HRESULT GetUserState (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pState`  
  [out] Um ponteiro para uma combinação bit a bit dos valores de enumeração CorDebugUserState que descrevem o estado do usuário atual deste thread.  
   
 ## <a name="remarks"></a>Comentários  
- O estado do usuário do thread é o estado do thread quando ele é examinado com o programa que está sendo depurado. Um thread pode ter vários bits de estado definido.  
+ O estado do usuário do thread é o estado do thread quando ele é examinado pelo programa que está sendo depurado. Um thread pode ter vários bits de estado definido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

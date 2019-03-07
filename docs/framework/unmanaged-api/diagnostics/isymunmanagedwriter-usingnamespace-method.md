@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca9f3488c9fb2280d2ceb99c87a54d99c1a33b6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b102f49a642d2bcd62e7f75a8dd0b9ab782ad674
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587720"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491337"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>Método ISymUnmanagedWriter::UsingNamespace
 Especifica que o nome totalmente qualificado do namespace fornecido está sendo usado dentro do escopo léxico aberto no momento. O namespace será usado em todos os escopos que herdam do escopo aberto no momento. Fechar o escopo atual também vai interromper o uso do namespace.  
@@ -34,7 +34,7 @@ HRESULT UsingNamespace(
     [in] const WCHAR *fullName);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `fullName`  
  [in] Um ponteiro para o nome totalmente qualificado do namespace.  
   

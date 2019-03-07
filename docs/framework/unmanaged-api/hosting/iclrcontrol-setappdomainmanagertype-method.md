@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d79d3651bb949899681eac2e7d2ac49d9233ccc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb1632b5d9379eb35d4188a218f3184acf8d0ed3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531766"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497100"
 ---
 # <a name="iclrcontrolsetappdomainmanagertype-method"></a>Método ICLRControl::SetAppDomainManagerType
 Define um tipo derivado de <xref:System.AppDomainManager> como o tipo para gerenciadores de domínio do aplicativo.  
@@ -36,7 +36,7 @@ HRESULT SetAppDomainManagerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pwzAppDomainManagerAssembly`  
  [in] O nome do assembly no qual o tipo solicitado derivado <xref:System.AppDomainManager> é implementado.  
   

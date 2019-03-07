@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9b2fc1028eea4965dd9ac603706279e96e3855c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a44e85d0f697b8388b45373340e1691892ea499
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503262"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>Método IHostSyncManager::CreateCrst
 Cria um objeto de seção crítica para a sincronização.  
@@ -35,7 +35,7 @@ HRESULT CreateCrst (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppCrst`  
  [out] Um ponteiro para o endereço de um [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instância implementada pelo host ou nula se a seção crítica não pôde ser criada.  
   

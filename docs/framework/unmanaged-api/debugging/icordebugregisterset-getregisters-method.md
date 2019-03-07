@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee56a7f343de999d68a71d9eac04eed6e06b444e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4887d44f0ac5603280efa0abdbd7e65c71fc3ca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568888"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485442"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>Método ICorDebugRegisterSet::GetRegisters
 Obtém o valor de cada registro (no computador que está executando código) que é especificado pela máscara de bits.  
@@ -38,7 +38,7 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `mask`  
  [in] Uma máscara de bits que especifica quais valores devem ser recuperadas de registro. Cada bit corresponde a um registro. Se um bit é definido como um, o valor do registro é recuperado; Caso contrário, o valor do registro não será recuperado.  
   

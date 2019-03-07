@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e605859a3049abc0c17d9d6792ade78f4ad2bd78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c71ccbc62ea026a55a7e84f6925a78850594a813
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417356"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473781"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a>Método ICorDebugModule2::SetJITCompilerFlags
 Define os sinalizadores que controlam a compilação just-in-time (JIT) deste ICorDebugModule2.  
@@ -35,22 +35,22 @@ HRESULT SetJITCompilerFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwFlags`  
  [in] Uma combinação bit a bit do [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) valores de enumeração.  
   
 ## <a name="remarks"></a>Comentários  
- Se o `dwFlags` o valor é inválido, o `SetJITCompilerFlags` método irá falhar.  
+ Se o `dwFlags` o valor é inválido, o `SetJITCompilerFlags` método falhará.  
   
- O `SetJITCompilerFlags` método pode ser chamado apenas de dentro do [: LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) retorno de chamada para este módulo. Tenta chamá-lo após o `ICorDebugManagedCallback::LoadModule` retorno de chamada foi entregue irá falhar.  
+ O `SetJITCompilerFlags` método pode ser chamado apenas de dentro de [icordebugmanagedcallback:: LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) retorno de chamada para esse módulo. Tentativas de chamá-lo após o `ICorDebugManagedCallback::LoadModule` retorno de chamada tiver sido entregue irá falhar.  
   
- Não há suporte para editar e continuar em 64 bits ou plataformas Win9x. Portanto, se você chamar o `SetJITCompilerFlags` método em qualquer uma dessas duas plataformas com o sinalizador CORDEBUG_JIT_ENABLE_ENC definido `dwFlags`, o `SetJITCompilerFlags` método e todos os métodos específicos para editar e continuar, como [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), falharão.  
+ Não há suporte para editar e continuar no Win9x plataformas ou de 64 bits. Portanto, se você chamar o `SetJITCompilerFlags` método em qualquer uma dessas duas plataformas com o sinalizador CORDEBUG_JIT_ENABLE_ENC definido `dwFlags`, o `SetJITCompilerFlags` método e todos os métodos específicos para editar e continuar, tais como [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), falhará.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

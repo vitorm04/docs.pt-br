@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c14b48a29993a65a0a0ab9fcb63bcb1e0d882042
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402793"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494059"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>Método ICorDebugChain::GetActiveFrame
 Obtém o ativo (ou seja, mais recente) quadro da cadeia.  
@@ -35,20 +35,20 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppFrame`  
  [out] Um ponteiro para o endereço de um objeto ICorDebugFrame que representa o ativo (ou seja, mais recente) quadro da cadeia.  
   
 ## <a name="remarks"></a>Comentários  
  Se nenhum quadro de pilha gerenciada estiver disponível, `ppFrame` é definido como null.  
   
- Se o quadro ativo não estiver disponível, a chamada será bem-sucedida e `ppFrame` será nulo. Quadros ativa não estará disponíveis para cadeias iniciadas devido a CHAIN_ENTER_UNMANAGED e para algumas cadeias iniciadas devido a CHAIN_CLASS_INIT. Consulte a enumeração CorDebugChainReason.  
+ Se o quadro ativo não estiver disponível, a chamada será bem-sucedida e `ppFrame` será nulo. Quadros ativa não estará disponíveis para cadeias de iniciada devido ao CHAIN_ENTER_UNMANAGED e para algumas cadeias iniciadas devido ao CHAIN_CLASS_INIT. Consulte a enumeração CorDebugChainReason.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

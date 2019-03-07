@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 006360203518f74adb964634af52505a71d51473
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a85936eb12d0b6123469a63a14a3ae58cb1bb5b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587093"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484479"
 ---
 # <a name="setassemblyfile-method"></a>Método SetAssemblyFile
 Atribui o nome do assembly a ser criado. Não para uso durante a produção de módulos não associados.  
@@ -37,7 +37,7 @@ HRESULT SetAssemblyFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pszFilename`  
  Nome totalmente qualificado do arquivo de manifesto.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 343834492776fdb09a68210fb80138ec2c588773
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ed9a9a91f4e802e6251add965306cf13f19139e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741146"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494227"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>Método ICorProfilerInfo3::GetAppDomainsContainingModule
 Obtém os identificadores dos domínios de aplicativo no qual o determinado módulo foi carregado.  
@@ -38,7 +38,7 @@ HRESULT GetAppDomainsContainingModule(
                     AppDomainID appDomainIds[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `moduleId`  
  [in] A ID do módulo carregado.  
   

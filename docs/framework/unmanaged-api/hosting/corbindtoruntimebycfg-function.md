@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d59506b522e1c225912da4bc3bd62ca19d32eb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c382b3841aa0d36e7b326da27be4b371c9a51c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556071"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474768"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>Função CorBindToRuntimeByCfg
 Carrega o common language runtime (CLR) em um processo usando informações de versão que é lido de um arquivo XML.  
@@ -41,7 +41,7 @@ HRESULT CorBindToRuntimeByCfg (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pCfgStream`  
  [in] Um ponteiro para um `IStream` objeto que lê o arquivo XML.  
   

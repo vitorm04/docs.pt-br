@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63d3df561a3b48a4b26426235455ef1a074512f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1bf62d8855b3f9de5629b9cfc6e0bcd0878a0d17
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417954"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489911"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>Método ICorDebugStringValue::GetString
 Obtém a cadeia de caracteres referenciada por este ICorDebugStringValue.  
@@ -38,21 +38,21 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cchString`  
  [in] O tamanho do `szString` matriz.  
   
  `pcchString`  
- [out] Um ponteiro para o número de caracteres retornados na `szString` matriz.  
+ [out] Um ponteiro para o número de caracteres retornados no `szString` matriz.  
   
  `szString`  
  [out] Uma matriz que armazena a cadeia de caracteres recuperada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
