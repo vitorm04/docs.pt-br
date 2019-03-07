@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 126cc9d407e2653fdb3f4ea7b03fa05c24a572d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8832d6c19108459ffe261a5cf66f921ff521ddf9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629105"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465823"
 ---
-# <a name="imetadataimportgetrva-method"></a><span data-ttu-id="6fde2-102">Método IMetaDataImport::GetRVA</span><span class="sxs-lookup"><span data-stu-id="6fde2-102">IMetaDataImport::GetRVA Method</span></span>
-<span data-ttu-id="6fde2-103">Obtém o endereço virtual relativo (RVA) e os sinalizadores de implementação do método ou campo representado pelo token especificado.</span><span class="sxs-lookup"><span data-stu-id="6fde2-103">Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.</span></span>  
+# <a name="imetadataimportgetrva-method"></a><span data-ttu-id="7e27a-102">Método IMetaDataImport::GetRVA</span><span class="sxs-lookup"><span data-stu-id="7e27a-102">IMetaDataImport::GetRVA Method</span></span>
+<span data-ttu-id="7e27a-103">Obtém o endereço virtual relativo (RVA) e os sinalizadores de implementação do método ou campo representado pelo token especificado.</span><span class="sxs-lookup"><span data-stu-id="7e27a-103">Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6fde2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6fde2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e27a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7e27a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRVA (  
@@ -37,25 +37,25 @@ HRESULT GetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6fde2-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6fde2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e27a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7e27a-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="6fde2-106">[in] Um token de metadados MethodDef ou FieldDef que representa o objeto de código para retornar o RVA para.</span><span class="sxs-lookup"><span data-stu-id="6fde2-106">[in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for.</span></span> <span data-ttu-id="6fde2-107">Se o token for uma FieldDef, o campo deve ser uma variável global.</span><span class="sxs-lookup"><span data-stu-id="6fde2-107">If the token is a FieldDef, the field must be a global variable.</span></span>  
+ <span data-ttu-id="7e27a-106">[in] Um token de metadados MethodDef ou FieldDef que representa o objeto de código para retornar o RVA para.</span><span class="sxs-lookup"><span data-stu-id="7e27a-106">[in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for.</span></span> <span data-ttu-id="7e27a-107">Se o token for uma FieldDef, o campo deve ser uma variável global.</span><span class="sxs-lookup"><span data-stu-id="7e27a-107">If the token is a FieldDef, the field must be a global variable.</span></span>  
   
  `pulCodeRVA`  
- <span data-ttu-id="6fde2-108">[out] Um ponteiro para o endereço virtual relativo do código objeto representado pelo token.</span><span class="sxs-lookup"><span data-stu-id="6fde2-108">[out] A pointer to the relative virtual address of the code object represented by the token.</span></span>  
+ <span data-ttu-id="7e27a-108">[out] Um ponteiro para o endereço virtual relativo do código objeto representado pelo token.</span><span class="sxs-lookup"><span data-stu-id="7e27a-108">[out] A pointer to the relative virtual address of the code object represented by the token.</span></span>  
   
  `pdwImplFlags`  
- <span data-ttu-id="6fde2-109">[out] Um ponteiro para os sinalizadores de implementação para o método.</span><span class="sxs-lookup"><span data-stu-id="6fde2-109">[out] A pointer to the implementation flags for the method.</span></span> <span data-ttu-id="6fde2-110">Esse valor é um bitmask do [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeração.</span><span class="sxs-lookup"><span data-stu-id="6fde2-110">This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration.</span></span> <span data-ttu-id="6fde2-111">O valor de `pdwImplFlags` é válido somente se `tk` é um token MethodDef.</span><span class="sxs-lookup"><span data-stu-id="6fde2-111">The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.</span></span>  
+ <span data-ttu-id="7e27a-109">[out] Um ponteiro para os sinalizadores de implementação para o método.</span><span class="sxs-lookup"><span data-stu-id="7e27a-109">[out] A pointer to the implementation flags for the method.</span></span> <span data-ttu-id="7e27a-110">Esse valor é um bitmask do [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeração.</span><span class="sxs-lookup"><span data-stu-id="7e27a-110">This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration.</span></span> <span data-ttu-id="7e27a-111">O valor de `pdwImplFlags` é válido somente se `tk` é um token MethodDef.</span><span class="sxs-lookup"><span data-stu-id="7e27a-111">The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6fde2-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6fde2-112">Requirements</span></span>  
- <span data-ttu-id="6fde2-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6fde2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e27a-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7e27a-112">Requirements</span></span>  
+ <span data-ttu-id="7e27a-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e27a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6fde2-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6fde2-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7e27a-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7e27a-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6fde2-115">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="6fde2-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7e27a-115">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="7e27a-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6fde2-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fde2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7e27a-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e27a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6fde2-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6fde2-117">See also</span></span>
-- [<span data-ttu-id="6fde2-118">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="6fde2-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="6fde2-119">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="6fde2-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7e27a-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7e27a-117">See also</span></span>
+- [<span data-ttu-id="7e27a-118">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="7e27a-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7e27a-119">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="7e27a-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
