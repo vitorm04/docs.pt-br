@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c85c70acbdf7e5da1286f11d9962ca16f0d0ed72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f86468d96d5ffbb5029562f69edb9e8579985470
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569122"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466668"
 ---
 # <a name="iclroneventmanagerregisteractiononevent-method"></a>Método ICLROnEventManager::RegisterActionOnEvent
 Registra um ponteiro de retorno de chamada para o evento especificado.  
@@ -36,7 +36,7 @@ HRESULT RegisterActionOnEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `event`  
  [in] Um dos [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) valores, que indica o evento para o qual registrar o ponteiro de retorno de chamada descrito pelo `pAction`.  
   

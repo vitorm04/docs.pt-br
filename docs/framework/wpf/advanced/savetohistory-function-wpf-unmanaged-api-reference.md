@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-ms.openlocfilehash: c146b03fa3e687027eeab3de864d9403f9b01fc7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 853931b7b968f8103af8bf9c33c07d40ac653069
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351665"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489092"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>Função SaveToHistory (referência de API não gerenciada WPF)
 Essa API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente do seu código.  
@@ -28,7 +28,7 @@ HRESULT SaveToHistory(
 )  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  pHistoryStream  
  Um ponteiro para o fluxo de histórico.  
   
