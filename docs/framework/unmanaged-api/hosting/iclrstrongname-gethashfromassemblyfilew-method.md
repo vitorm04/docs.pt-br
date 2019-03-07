@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819801cd9ecce9f3d71f4454f4c65e8f3f8391a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f580d795485c5e306b4eb892c5d717346ce0c48c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714753"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477496"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>Método ICLRStrongName::GetHashFromAssemblyFileW
 Gera um hash sobre o conteúdo do arquivo especificado por uma cadeia de caracteres Unicode.  
@@ -39,7 +39,7 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
  [in] O caminho para o arquivo a ser transformada em hash. Esse parâmetro deve ser uma cadeia de caracteres Unicode.  
   

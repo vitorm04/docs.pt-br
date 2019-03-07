@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: e31bea225a699f19e57e5a94f84c1a9f1727a3b6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364406"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492654"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Visão geral de globalização e localização do WPF
 
@@ -74,7 +74,7 @@ Quando você localiza um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2
   
 -   Você pode localizar após o build.  
   
--   É possível atualizar para uma versão mais nova do formato BAML de XAML com localizações de uma versão mais antiga do formato BAML de XAML, para que você possa localizar simultaneamente com o desenvolvimento.  
+-   Você pode atualizar para uma versão mais recente do formato BAML de XAML com localizações de uma versão mais antiga do formato BAML de XAML para que você possa localizar ao mesmo tempo que você desenvolve.  
   
 -   Você pode validar elementos de origem original e a semântica em tempo de compilação porque o formato BAML de XAML é a forma compilada de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
