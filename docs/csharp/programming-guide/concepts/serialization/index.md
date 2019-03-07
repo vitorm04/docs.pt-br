@@ -1,12 +1,6 @@
 ---
-title: Serialização (C#)
+title: 'Serialização (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858311"
 ---
 # <a name="serialization-c"></a>Serialização (C#)
 
@@ -68,12 +62,12 @@ Se você quiser que o objeto também seja desserializado de uma maneira personal
 
 A serialização de designer é um formulário especial de serialização que envolve o tipo de persistência do objeto associado a ferramentas de desenvolvimento. A serialização de designer é o processo de conversão de um grafo do objeto em um arquivo de origem que pode, posteriormente, ser usado para recuperar o grafo do objeto. Um arquivo de origem pode conter código, marcação ou até mesmo informações de tabela do SQL.
 
-##  <a name="BKMK_RelatedTopics"></a> Exemplos e tópicos relacionados  
-[Passo a passo: mantendo um objeto no Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
+## <a name="BKMK_RelatedTopics"></a> Exemplos e tópicos relacionados  
+[Passo a passo: Mantendo um objeto no Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 Demonstra como a serialização pode ser usada para manter dados de um objeto entre instâncias, permitindo que você armazene e recupere valores na próxima vez que o objeto for instanciado.
 
-[Como ler dados de objeto de um arquivo XML (C#)](how-to-read-object-data-from-an-xml-file.md)  
+[Como: Ler dados de objeto de um arquivo XML (C#)](how-to-read-object-data-from-an-xml-file.md)  
  Mostra como ler dados de objeto que foram previamente gravados em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.
 
-[Como gravar dados de objeto em um arquivo XML (C#)](how-to-write-object-data-to-an-xml-file.md)  
+[Como: Gravar dados de objeto em um arquivo XML (C#)](how-to-write-object-data-to-an-xml-file.md)  
 Mostra como gravar o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.
