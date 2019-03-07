@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d0e1b764691fd2582e1225cb90003e2a644061f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6c48a7ae62155dc558fb4a62b3e2573bea77594
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643683"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499167"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>Método ISymUnmanagedScope::GetLocals
 Obtém as variáveis locais definidas dentro desse escopo.  
@@ -37,7 +37,7 @@ HRESULT GetLocals(
         length_is(*pcLocals)] ISymUnmanagedVariable* locals[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cLocals`  
  [in] Um `ULONG32` que indica o tamanho do `locals` matriz.  
   

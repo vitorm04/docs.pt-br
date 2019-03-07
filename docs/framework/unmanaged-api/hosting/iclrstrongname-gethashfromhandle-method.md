@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 645c344e5dd9e509873a65335b5d042e94107fad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9688635532e0ccc35ff8826a53da80738bfc528e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728811"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470010"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>Método ICLRStrongName::GetHashFromHandle
 Gera um hash sobre o conteúdo do arquivo que tem o identificador de arquivo especificado, usando o algoritmo de hash especificado.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `hFile`  
  [in] O identificador do arquivo a ser transformada em hash.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fd0a7322437cb89fe62729f86f5ce8005ed3b5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f18d73a6740d44408acf964c68f0b58e75d3b226
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646744"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492082"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>Método ICLRDebugging::CanUnloadNow
 Determina se uma biblioteca que foi fornecida por um [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface ainda está em uso ou pode ser descarregado.  
@@ -33,7 +33,7 @@ Determina se uma biblioteca que foi fornecida por um [ICLRDebuggingLibraryProvid
 HRESULT CanUnloadNow(HMODULE hModule);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `hmodule`  
  [in] O endereço básico de um módulo no processo de destino.  
   

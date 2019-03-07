@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92ee0570a1a9bcc48cea744d5cc707750742d51a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b73d966e91480a13b03610dae452b04f9d6b9b4f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534076"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471973"
 ---
 # <a name="getcorrequiredversion-function"></a>Função GetCORRequiredVersion
 Obtém o número de versão do common language runtime (CLR) necessária.  
@@ -38,7 +38,7 @@ HRESULT GetCORRequiredVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbuffer`  
  [out] Um buffer que contém uma cadeia de caracteres que especifica o número de versão.  
   

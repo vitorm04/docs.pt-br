@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e23026241a836bfa6cf6f186a47037370c174e61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 872f5a9eaa17a777cfbb14fea34cc80e0b7c04ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680930"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487468"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>Método IMetaDataTables::GetNextGuid
 Obtém o índice do próximo valor GUID na coluna da tabela atual.  
@@ -36,7 +36,7 @@ HRESULT GetNextGuid (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ixGuid`  
  [in] O valor de índice de uma coluna de tabela do GUID.  
   

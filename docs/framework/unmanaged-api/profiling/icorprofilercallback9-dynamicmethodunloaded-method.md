@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e68c82a04b78a18f51f0a2c9ec712036521368
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 658f5b7ede2895eaf774b2ef9cf7ca17f6682ac8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513536"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496788"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>Método ICorProfilerCallback9::DynamicMethodUnloaded
 [Com suporte no .NET Framework 4.7.2 e versões posteriores]  
@@ -30,7 +30,7 @@ HRESULT DynamicMethodUnloaded(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
 [in] `functionId`  
 O identificador da função na memória que tenha sido limpos e descarregado.   
 

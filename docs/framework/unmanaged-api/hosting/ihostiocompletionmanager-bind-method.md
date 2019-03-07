@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c03cdb9f9205676d17d6e18b9b2e074132ee26f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 826543a224c4d6850f345b187d3aaafc8e1de8cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594766"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491484"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>Método IHostIoCompletionManager::Bind
 Associa o identificador especificado para uma porta de conclusão de e/s que foi criada por uma chamada anterior para [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).  
@@ -36,7 +36,7 @@ HRESULT Bind (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `hPort`  
  [in] A porta de conclusão de e/s à qual associar `hHandle`. Se o valor de `hPort` for nulo, `hHandle` está associado à porta de conclusão de e/s padrão.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3fe9edf7a635e54aac881a242aca3bc32e21fe1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408119"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471648"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>Método ICorDebugArrayValue::GetBaseIndicies
 Obtém o índice de base de cada dimensão da matriz.  
@@ -37,18 +37,18 @@ HRESULT GetBaseIndicies (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cdim`  
- [in] O número de dimensões deste `ICorDebugArrayValue` objeto. Esse valor também é o tamanho do `indicies` porque seu tamanho é igual ao número de dimensões do `ICorDebugArrayValue` objeto.  
+ [in] O número de dimensões dessa `ICorDebugArrayValue` objeto. Esse valor também é o tamanho do `indicies` matriz porque seu tamanho é igual ao número de dimensões do `ICorDebugArrayValue` objeto.  
   
  `indicies`  
  [out] Uma matriz de inteiros, cada um deles é o índice de base (ou seja, o índice inicial) de uma dimensão desse `ICorDebugArrayValue` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

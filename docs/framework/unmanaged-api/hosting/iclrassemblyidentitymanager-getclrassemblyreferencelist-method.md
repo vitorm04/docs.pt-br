@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bfb3e07504570f8cedceddb43410b48691c4695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65ec26384b88ba3048666f3b6e3affcb90d8f070
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479305"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>Método ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList
 Obtém um ponteiro de interface para um [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) instância na lista fornecida de identidades de assembly parcial.  
@@ -37,7 +37,7 @@ HRESULT  GetCLRAssemblyReferenceList (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppwzAssemblyReferences`  
  [in] Uma matriz de cadeias de caracteres terminada em nulo no formulário "propriedade name = value..." que especificam uma lista de identidades de assembly parcial.  
   

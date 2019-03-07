@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89802de31ed6db4ef6532a2b4a90a82c4e9a5c72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f5ea632ad8a7dd2e24e71742223936b01298f31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590845"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485142"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>Método ICorDebugExceptionDebugEvent::GetStackPointer
 Obtém o ponteiro de pilha para esse evento de depuração de exceção.  
@@ -22,7 +22,7 @@ HRESULT GetStackPointer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pStackPointer`  
  [out] Evento de depuração de um ponteiro para o endereço do ponteiro de pilha para essa exceção. Consulte a seção Comentários para obter mais informações.  
   

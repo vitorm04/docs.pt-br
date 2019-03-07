@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c89a7671cde9e519d0fc66751ee8f95b34fe9039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16973fe322a0fbd7a2433cd94982df04eb13dc50
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669660"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468718"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>Método ICorProfilerCallback::AppDomainShutdownFinished
 Notifica o criador de perfil que um domínio de aplicativo foi descarregado de um processo.  
@@ -35,7 +35,7 @@ HRESULT AppDomainShutdownFinished(
     [in] HRESULT     hrStatus);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `appDomainId`  
  [in] Identifica o domínio no qual os assemblies do aplicativo são armazenados.  
   

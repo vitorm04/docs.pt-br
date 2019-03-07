@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ed1db49be78d7d16648a9ef9735e79ef1b3ab98
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404304"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487316"
 ---
 # <a name="getstartupnotificationevent-function"></a>Função GetStartupNotificationEvent
-Cria ou abre um identificador de evento será sinalizado após qualquer common language runtime (CLR) que está sendo carregado no processo de destino especificado.  
+Cria ou abre um identificador de eventos que será sinalizado após qualquer common language runtime (CLR) que está sendo carregada no processo de destino especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,12 +38,12 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `debuggeePID`  
  [in] Identificador de processo do processo de destino do qual deseja receber notificações de inicialização do CLR.  
   
  `phStartupEvent`  
- [out] Um ponteiro para um identificador que será sinalizado um CLR na inicialização.  
+ [out] Um ponteiro para um identificador que será sinalizado por um CLR na inicialização.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK  
@@ -52,7 +52,7 @@ HRESULT GetStartupNotificationEvent
  E_INVALIDARG  
  `phStartupEvent` é nulo ou `debuggeePID` não faz referência a um processo que está sendo executado.  
   
- E_FAIL (ou outros códigos de retorno E_)  
+ E_FAIL (ou outros códigos de retorno e _)  
  Não é possível obter o identificador para o evento de notificação de inicialização.  
   
 ## <a name="remarks"></a>Comentários  
@@ -61,10 +61,10 @@ HRESULT GetStartupNotificationEvent
  O evento é sinalizado antes de qualquer gerenciados código é executado pelo CLR que o evento de sinalizado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** dbgshim.h  
   
- **Biblioteca:** dbgshim.dll  
+ **Biblioteca:** dbgshim  
   
- **Versões do .NET framework:** 3.5 SP1
+ **Versões do .NET framework:** 3,5 SP1

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caeb60c33580f7171a6959c3046cf7312868851b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482854"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>Método ICorDebugThread::EnumerateChains
-Obtém um ponteiro de interface para um enumerador de ICorDebugChainEnum que contém todas as cadeias de pilha no objeto ICorDebugThread.  
+Obtém um ponteiro de interface para um enumerador de ICorDebugChainEnum que contém todas as cadeias de pilha neste objeto ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,28 +35,28 @@ HRESULT EnumerateChains (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppChains`  
- [out] Um ponteiro para o endereço de uma `ICorDebugChainEnum` objeto que permite a enumeração de todos os a pilha encadeia neste thread, começando na cadeia de ativo (ou seja, o mais recente).  
+ [out] Um ponteiro para o endereço de um `ICorDebugChainEnum` objeto que permite a enumeração de todos os a pilha encadeia neste thread, começando na cadeia de ativo (ou seja, o mais recente).  
   
 ## <a name="remarks"></a>Comentários  
- A cadeia da pilha representa a pilha de chamadas físico para o thread. As circunstâncias a seguir criar um limite de cadeia de pilha:  
+ A cadeia da pilha representa a pilha de chamadas física para o thread. As circunstâncias a seguir criar um limite de cadeia de pilha:  
   
--   Uma transição gerenciado para gerenciado ou não gerenciado para gerenciado.  
+-   Uma transição para gerenciado ou não gerenciado para gerenciado.  
   
--   Uma alternância de contexto.  
+-   A alternância de contexto.  
   
 -   Um sequestro de um thread de usuário do depurador.  
   
- No caso mais simples para um thread que está executando o código totalmente gerenciado em um único contexto, exista uma correspondência entre threads e cadeias de pilha.  
+ No caso mais simples para um thread que está executando código puramente gerenciado em um único contexto, uma correspondência direta existirá entre os threads e cadeias de pilha.  
   
- Um depurador talvez queira reorganizar as pilhas de chamadas física de todos os threads em pilhas de chamadas lógicas. Isso envolve a classificação de cadeias de todos os threads por suas relações de chamador/receptor e reagrupá-los.  
+ Um depurador talvez queira reorganizar as pilhas de chamadas física de todos os threads em pilhas de chamadas lógicas. Isso envolveria a classificação de cadeias de todos os threads por suas relações de chamador/receptor e reagrupá-los.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

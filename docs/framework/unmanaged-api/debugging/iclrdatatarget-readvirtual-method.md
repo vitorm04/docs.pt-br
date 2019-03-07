@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5484f8bd5515d3a4a3cd08110cc5d48c4356a9f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55bebdd87c43f674973b2e47783fa6f2a604b620
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590140"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501546"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>Método ICLRDataTarget::ReadVirtual
 Lê dados do endereço da memória virtual especificado no buffer especificado.  
@@ -39,7 +39,7 @@ HRESULT ReadVirtual (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `address`  
  [in] Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.  
   

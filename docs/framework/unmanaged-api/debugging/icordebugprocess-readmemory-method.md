@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0063e33a6a7861815ebb9d9eb3dabec64dd4b9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 218279684304b766a9bf009f5891ac4910254a3c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419647"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492160"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>Método ICorDebugProcess::ReadMemory
 Lê uma área especificada de memória para esse processo.  
@@ -37,9 +37,9 @@ HRESULT ReadMemory(
     [out] SIZE_T *read);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `address`  
- [in] Um `CORDB_ADDRESS` valor que especifica o endereço base da memória para ser lido.  
+ [in] Um `CORDB_ADDRESS` valor que especifica o endereço básico da memória a ser lido.  
   
  `size`  
  [in] O número de bytes a serem lidos da memória.  
@@ -51,17 +51,17 @@ HRESULT ReadMemory(
  [out] Um ponteiro para o número de bytes transferidos para o buffer especificado.  
   
 ## <a name="remarks"></a>Comentários  
- O `ReadMemory` método destina-se principalmente a ser usado ao depurar interop para inspecionar as regiões de memória que estão sendo usadas pela parte não gerenciada o ser depurado. Esse método também pode ser usado para ler o código Microsoft intermediate language (MSIL) e o código nativo de compilação JIT.  
+ O `ReadMemory` método destina-se principalmente a ser usado pela depuração interop para inspecionar as regiões de memória que estão sendo usadas pela parte não gerenciada o ser depurado. Esse método também pode ser usado para ler o código Microsoft intermediate language (MSIL) e o código nativo compilado por JIT.  
   
- Qualquer ponto de interrupção gerenciado será removido dos dados que são retornados no `buffer` parâmetro. Nenhum ajuste será feita para pontos de interrupção nativo definido pelo [Icordebugprocess2](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Nenhum ponto de interrupção gerenciados serão removidos dos dados que são retornados no `buffer` parâmetro. Nenhum ajuste será feita para pontos de interrupção nativos definido [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- Nenhum cache de memória de processo é executada.  
+ Sem cache de memória de processo é executada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

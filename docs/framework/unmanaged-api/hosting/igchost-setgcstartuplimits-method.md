@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83a1c03c209d68035b3615c83ec0ee13b94eb549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6962b52925ab5b70a8b34c6d3720bb45c85b24c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719944"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473884"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>Método IGCHost::SetGCStartupLimits
 Define o tamanho do segmento e o tamanho máximo para a geração 0.  
@@ -39,7 +39,7 @@ HRESULT SetGCStartupLimits (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `SegmentSize`  
  [in] O tamanho do segmento usado pelo sistema de coleta de lixo.  
   

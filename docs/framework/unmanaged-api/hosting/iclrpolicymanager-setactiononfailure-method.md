@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 535a0cbfd3224c13b42a69d01876867297b218d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebfe02774aa8cea74c17340d63f930cf87a6fa27
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544215"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478460"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>Método ICLRPolicyManager::SetActionOnFailure
 Especifica a ação de política, que o common language runtime (CLR) deve tomar quando ocorre a falha especificada.  
@@ -36,7 +36,7 @@ HRESULT SetActionOnFailure (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `failure`  
  [in] Um dos [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) valores, que indica o tipo de falha para o qual agir.  
   

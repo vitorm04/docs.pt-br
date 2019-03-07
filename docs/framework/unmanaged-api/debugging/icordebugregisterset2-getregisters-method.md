@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eab43bce4dbd4ea8f88a9137ce5574252dae8a61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c74509a0435fe54f754c6e47603bd74b5b09fe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743849"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493590"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>Método ICorDebugRegisterSet2::GetRegisters
 Obtém o valor de cada registro (para a plataforma na qual o código está sendo executado) que é especificado pela máscara de bits especificado.  
@@ -38,7 +38,7 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `maskCount`  
  [in] O tamanho, em bytes, da `mask` matriz.  
   

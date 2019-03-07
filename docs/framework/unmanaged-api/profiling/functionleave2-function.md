@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 874bbf46e74550b325631a00acc16f49d818dc61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9985b5a5547097c0474eb3a5797388d1444083e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574931"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471576"
 ---
 # <a name="functionleave2-function"></a>Função FunctionLeave2
 Notifica o criador de perfil que uma função está prestes a retornar ao chamador e fornece informações sobre o stack frame e função de valor retornado.  
@@ -37,7 +37,7 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `funcId`  
  [in] O identificador da função que está retornando.  
   

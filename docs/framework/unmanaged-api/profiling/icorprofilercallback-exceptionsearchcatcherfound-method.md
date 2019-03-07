@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fca83d952e139b0f141dcd75362f31c5235644d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4dc6b66aff34bae869737591040e5fc1e552834
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678727"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499661"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>Método ICorProfilerCallback::ExceptionSearchCatcherFound
 Notifica o criador de perfil que a fase de pesquisa de manipulação de exceção foi localizado um manipulador para a exceção que foi gerada.  
@@ -34,7 +34,7 @@ RESULT ExceptionSearchCatcherFound(
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `functionId`  
  [in] A ID da função que contém o manipulador de exceção.  
   

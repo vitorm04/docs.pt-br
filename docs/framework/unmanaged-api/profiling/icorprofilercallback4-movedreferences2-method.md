@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b6dd32d63fc856b67f8e7d64be31dcbf107b10b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9878252fb61dabe3154df90265229f160bb80d10
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531022"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484414"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>Método ICorProfilerCallback4::MovedReferences2
 Chamado para relatar o novo layout dos objetos no heap como resultado de uma coleta de lixo de compactação. Esse método é chamado se o criador de perfil tiver implementado a [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface. Esse retorno de chamada substitui o [ICorProfilerCallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) método, porque ele pode relatar intervalos maiores de objetos cujo comprimento excede o que pode ser expresso em um ULONG.  
@@ -37,7 +37,7 @@ HRESULT MovedReferences2(
     [in, size_is(cMovedObjectIDRanges)] SIZE_T    cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cMovedObjectIDRanges`  
  [in] O número de blocos de objetos contíguos que movidas como resultado da compactação coleta de lixo. Ou seja, o valor de `cMovedObjectIDRanges` é o tamanho total do `oldObjectIDRangeStart`, `newObjectIDRangeStart`, e `cObjectIDRangeLength` matrizes.  
   

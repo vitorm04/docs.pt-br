@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be400fd62568c6b7d506acb52a5eedc4fdbfcf0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9dd6345cb8b930136f1219144540fde96429a71b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549740"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478603"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>Método ICorProfilerCallback::ExceptionSearchFilterEnter
 Notifica o criador de perfil que a fase de pesquisa de tratamento de exceções começou a execução de um filtro de exceção definidas pelo usuário.  
@@ -34,7 +34,7 @@ HRESULT ExceptionSearchFilterEnter(
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `functionId`  
  [in] A ID da função que contém o filtro.  
   

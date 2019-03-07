@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b107ceec5c9e88117e8ec1f6f94d60debfdf7201
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630834"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500051"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>Método ICorDebugController::HasQueuedCallbacks
 Obtém um valor que indica se qualquer retorno de chamada gerenciado atualmente na fila para o thread especificado.  
@@ -36,7 +36,7 @@ HRESULT HasQueuedCallbacks (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pThread`  
  [in] Um ponteiro para um objeto de "ICorDebugThread" que representa o thread.  
   

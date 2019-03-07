@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eeb0b80ba691d813e3193f7ae746129c6725e1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 985d98059c0c763f560d5e0f06133c45e75fa51a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506531"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490418"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>Método ICorDebugAppDomain4::GetObjectForCCW
 Obtém um objeto gerenciado de um ponteiro CCW (callable wrapper) COM.  
@@ -23,7 +23,7 @@ HRESULT GetObjectForCCW(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ccwPointer`  
  [in] Um ponteiro CCW (callable wrapper) COM.  
   

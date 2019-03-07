@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413274"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487676"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>Método ICorDebugEval2::NewParameterizedArray
 Aloca uma nova matriz do tipo de elemento especificado e dimensões.  
@@ -38,7 +38,7 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pElementType`  
  [in] Um ponteiro para um objeto ICorDebugType que representa o tipo de elemento armazenado na matriz.  
   
@@ -52,13 +52,13 @@ HRESULT NewParameterizedArray(
  [in] Opcional. O limite inferior de cada dimensão da matriz. Se esse valor for omitido, um limite inferior de zero será assumido para cada dimensão.  
   
 ## <a name="remarks"></a>Comentários  
- Os elementos da matriz podem ser instâncias de um tipo genérico. A matriz sempre é criada no domínio do aplicativo no qual o thread está sendo executado. No .NET Framework 2.0, o valor de `rank` deve ser 1.  
+ Os elementos da matriz podem ser instâncias de um tipo genérico. A matriz é sempre criada no domínio do aplicativo no qual o thread está em execução. No .NET Framework 2.0, o valor de `rank` deve ser 1.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

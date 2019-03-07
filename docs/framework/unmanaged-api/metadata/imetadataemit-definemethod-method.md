@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdd8f8a1120e3e6e82c87cc02afa5c503493da1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2372aac00473786df9b5deefb969fc02abd8daa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719827"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496099"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Método IMetaDataEmit::DefineMethod
 Cria uma definição para um método ou uma função global com a assinatura especificada e retorna um token para essa definição de método.  
@@ -42,7 +42,7 @@ HRESULT DefineMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `td`  
  [in] O `mdTypedef` token da classe pai ou a interface pai do método. Definir `td` para `mdTokenNil`, se você estiver definindo uma função global.  
   

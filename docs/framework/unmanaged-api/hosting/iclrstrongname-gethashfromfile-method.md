@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1407bbcbb5bfa351a38f7627f2a89106c7d5136f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a619bf2a98b2140ab126745305a85f4e1fd05c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537654"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484278"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>Método ICLRStrongName::GetHashFromFile
 Gera um hash sobre o conteúdo do arquivo especificado.  
@@ -39,7 +39,7 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `szFilePath`  
  [in] O nome do arquivo para hash.  
   

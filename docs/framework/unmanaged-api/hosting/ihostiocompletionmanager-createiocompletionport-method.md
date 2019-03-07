@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fc7bda648dd19f614eb27ff514da653dcd347fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d91791517350137c71937b4e1b02e070d62efd38
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619404"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472584"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>Método IHostIoCompletionManager::CreateIoCompletionPort
 Solicita que o host, crie uma nova porta de conclusão de e/s.  
@@ -35,7 +35,7 @@ HRESULT CreateIoCompletionPort (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phPort`  
  [out] Um ponteiro para um identificador para a porta de conclusão de e/s recém-criado ou 0 (zero), se a porta não pôde ser criada.  
   

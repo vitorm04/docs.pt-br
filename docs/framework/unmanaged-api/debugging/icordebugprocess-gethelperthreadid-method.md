@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c3f879e04a710d65f812a5165c3edbfa31f8542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd5e30d08e667dcd5a8be1f9502462f28290068e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419062"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494214"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>Método ICorDebugProcess::GetHelperThreadID
 Obtém a ID do thread do sistema operacional (SO) do thread de auxiliar interno do depurador.  
@@ -35,22 +35,22 @@ HRESULT GetHelperThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pThreadID`  
  [out] ID do thread de auxiliar interno do depurador do thread de um ponteiro para o sistema operacional.  
   
 ## <a name="remarks"></a>Comentários  
- Durante a depuração gerenciado e não gerenciado, é responsabilidade do depurador para garantir que o thread com a ID especificada permanece em execução, se ele atinja um ponto de interrupção colocado pelo depurador. Um depurador também pode querer ocultar esse thread do usuário. Se nenhum thread auxiliar ainda não existe no processo, o `GetHelperThreadID` método retorna zero em *`pThreadID`.  
+ Durante a depuração de gerenciados e não gerenciados, é responsabilidade do depurador para garantir que o thread com a ID especificada permaneça em execução, se ele atingir um ponto de interrupção colocado pelo depurador. Um depurador também pode desejar ocultar esse thread do usuário. Se nenhum thread auxiliar ainda não existe no processo, o `GetHelperThreadID` método retorna zero em *`pThreadID`.  
   
- Você não pode armazenar em cache a ID do thread do thread auxiliar, pois ele pode ser alterado ao longo do tempo. Você deve consultar novamente a ID do thread em todos os eventos de interrupção.  
+ Você não pode armazenar em cache a ID do thread do thread auxiliar, pois isso pode mudar ao longo do tempo. Você deve consultar novamente a ID do thread em todos os eventos de interrupção.  
   
- A ID do thread de thread do auxiliar do depurador estará correta em todos os não gerenciados [Icordebugmanagedcallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) eventos, permitindo que um depurador determinar a ID do thread de seu thread auxiliar e ocultá-lo do usuário. Um thread que é identificado como um thread auxiliar durante um não gerenciado `ICorDebugManagedCallback::CreateThread` evento nunca será executado o código de usuário gerenciado.  
+ A ID do thread de thread do auxiliar do depurador esteja correta em todos os não gerenciados [icordebugmanagedcallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) eventos, permitindo assim que um depurador determinar a ID do thread de seu thread auxiliar e ocultá-lo do usuário. Um thread que é identificado como um thread auxiliar durante um não-gerenciado `ICorDebugManagedCallback::CreateThread` evento nunca será executado o código de usuário gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl. CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a385e42ae3a494f6d2196e21b552c6b5679dda9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603658"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468878"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Método ISymUnmanagedWriter::DefineField
 Define uma única variável que não está dentro de um método. Esse método é usado para determinados campos em classes, campos de bits e assim por diante.  
@@ -42,7 +42,7 @@ HRESULT DefineField(
     [in] ULONG32      addr3);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `parent`  
  [in] O método ou tipo de metadados de token.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2b4285cf667bfb929956f23e9dc051e0070fff9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cabf9d059a14411af48c165ab9c913156e696a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560979"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500740"
 ---
 # <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a>Método ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference
 Obtém uma [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) enumerador para as identidades de assembly referenciados pelo assembly com o tipo de identidade especificado.  
@@ -38,7 +38,7 @@ HRESULT GetProbingAssembliesFromReference (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwMachineType`  
  [in] Um valor válido que especifica a arquitetura do processador, conforme definido em Winnt. H.  
   

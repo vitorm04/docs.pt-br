@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ccc36231a2a554e523dbbef67996b7ad220cf2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5995eac780241b5d0a01b99b23ec91c2f325e2a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602436"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478798"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>Método ICorProfilerInfo2::GetClassLayout
 Obtém informações sobre o layout, na memória, dos campos definidos pela classe especificada. Ou seja, esse método obtém os deslocamentos de campos da classe.  
@@ -38,7 +38,7 @@ HRESULT GetClassLayout(
     [out] ULONG *pulClassSize);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `classID`  
  [in] A ID da classe para o qual o layout será recuperado.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ae7007c4588724da7b3a67f924c981121d2c82bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8619bf0e62752513b1ae03fa01d22be40f65e58e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622215"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468852"
 ---
 # <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a>Método IMetaDataConverter::GetMetaDataFromTypeInfo
 Obtém um ponteiro para um [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instância que representa a assinatura de metadados da biblioteca de tipos referenciada pelo especificado `ITypeInfo` instância.  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataFromTypeInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pITI`  
  [in] Um ponteiro para um `ITypeInfo` objeto que faz referência à biblioteca de tipos.  
   

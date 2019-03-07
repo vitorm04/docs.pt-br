@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527595"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490405"
 ---
 # <a name="imetadataimportfindfield-method"></a>Método IMetaDataImport::FindField
 Obtém um ponteiro para o FieldDef token para o campo que é incluído por especificado <xref:System.Type> e que tenha a assinatura de nome e os metadados especificada.  
@@ -39,7 +39,7 @@ HRESULT FindField (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `td`  
  [in] O token de TypeDef para a classe ou interface que inclui o campo a ser pesquisado. Se esse valor for `mdTokenNil`, a pesquisa é feita para uma variável global.  
   

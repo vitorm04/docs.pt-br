@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a89c706ece0949ffa3c182d53b57221acf81b18d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 767508e51660a161a7a6ff0b168a46178d66be99
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515058"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474132"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>Método ISymUnmanagedDocument::GetSourceRange
 Retorna o intervalo especificado da origem inserida para o buffer fornecido. O buffer deve ser grande o suficiente para manter o código-fonte.  
@@ -41,7 +41,7 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `startLine`  
  [in] A linha inicial no documento atual.  
   

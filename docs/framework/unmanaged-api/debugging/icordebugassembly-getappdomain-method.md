@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401973"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485103"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>Método ICorDebugAssembly::GetAppDomain
-Obtém um ponteiro de interface para o domínio de aplicativo que contém essa `ICorDebugAssembly` instância.  
+Obtém um ponteiro de interface para o domínio do aplicativo que contém este `ICorDebugAssembly` instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppAppDomain`  
- [out] Um ponteiro para o endereço de uma interface ICorDebugAppDomain que representa o domínio de aplicativo.  
+ [out] Um ponteiro para o endereço de uma interface ICorDebugAppDomain que representa o domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- Se esse assembly é o assembly do sistema, `GetAppDomain` retorna nulo.  
+ Se esse assembly é o assembly do sistema, `GetAppDomain` retorna null.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

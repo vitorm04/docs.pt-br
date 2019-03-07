@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d428bfc6816219669f47652e2fc182329d3f31d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd1763f4271c522c0cfc8731825d67f140b075f8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503620"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474404"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>Método ICLRIoCompletionManager::OnComplete
 Notifica o common language runtime (CLR) do status de uma solicitação de e/s foi feita usando uma chamada para o [ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) método.  
@@ -37,7 +37,7 @@ HRESULT OnComplete (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwErrorCode`  
  [in] Um valor HRESULT que indica o status da operação de associação.  
   

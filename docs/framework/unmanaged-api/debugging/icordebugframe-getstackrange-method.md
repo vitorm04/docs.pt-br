@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5da87071bc23ac17a3077049cd77f0fb8611439f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 43532888d181adcb7a7e3760f2a5e3d8f664a35c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413014"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492277"
 ---
 # <a name="icordebugframegetstackrange-method"></a>Método ICorDebugFrame::GetStackRange
-Obtém o intervalo de endereços absolutos deste quadro de pilha.  
+Obtém o intervalo de endereços absoluto deste quadro de pilha.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,21 +36,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pStart`  
- [out] Um ponteiro para um `CORDB_ADDRESS` que especifica o endereço inicial do quadro de pilhas representado por esse `ICorDebugFrame` objeto.  
+ [out] Um ponteiro para um `CORDB_ADDRESS` que especifica o endereço inicial do quadro de pilha representado por este `ICorDebugFrame` objeto.  
   
  `pEnd`  
- [out] Um ponteiro para um `CORDB_ADDRESS` que especifica o endereço final do quadro de pilhas representado por esse `ICorDebugFrame` objeto.  
+ [out] Um ponteiro para um `CORDB_ADDRESS` que especifica o endereço final do quadro de pilha representado por este `ICorDebugFrame` objeto.  
   
 ## <a name="remarks"></a>Comentários  
- O intervalo de endereços da pilha é útil para juntando rastreamentos de pilha intercalada coletados a partir de vários mecanismos de depuração. O intervalo numérico não fornece nenhuma informação sobre o conteúdo do quadro de pilhas. Faz sentido somente para comparação de locais de quadro de pilha.  
+ O intervalo de endereços da pilha é útil para reunir rastreamentos de pilha intercalados, coletados de vários mecanismos de depuração. O intervalo numérico não fornece informações sobre o conteúdo da estrutura de pilhas. Ele é significativo apenas para comparação dos locais de quadro de pilha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

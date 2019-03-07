@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 86910434e572bc19595d1664347f35d7a39eb75b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 763767514f5f157c676f2e5c86ff9b1e4e64f233
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365094"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495241"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 Permite ao PresentationHost.exe descobrir e registrar os dispositivos de dados brutos (dispositivos de interface humana) no qual o aplicativo host está interessado.  
@@ -20,7 +20,7 @@ Permite ao PresentationHost.exe descobrir e registrar os dispositivos de dados b
 HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppEnum`  
   
  [out] Um ponteiro para um [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) para enumerar os dispositivos de entrada brutos.  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f66d91434fd92ff80bb17e04bf38bb0b631e819
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3dd1038fdc8b22b99e1c8c7b753b46b9ce877355
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825492"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496437"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Método ICLRDebuggingLibraryProvider::ProvideLibrary
 Obtém um provedor de biblioteca de interface de retorno de chamada que permite que o common language runtime (CLR) específicos da versão bibliotecas de depuração ser localizada e carregada sob demanda.  
@@ -37,7 +37,7 @@ HRESULT ProvideLibrary(
      [out] HMODULE* hModule);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pwszFilename`  
  [in] O nome do módulo que está sendo solicitado.  
   

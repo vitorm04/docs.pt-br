@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c0f25b50bf2948bb6f096db70fff208cef799bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 857ea06ad8aba2a6de87bdf670ad0462a2f7dde1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587301"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487273"
 ---
 # <a name="imetadataimportfindmethod-method"></a>Método IMetaDataImport::FindMethod
 Obtém um ponteiro para o MethodDef token para o método que é incluído por especificado <xref:System.Type> e que tenha a assinatura de nome e os metadados especificada.  
@@ -39,7 +39,7 @@ HRESULT FindMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `td`  
  [in] O `mdTypeDef` token para o tipo (uma classe ou interface) que inclui o membro a ser pesquisado. Se esse valor for `mdTokenNil`, em seguida, a pesquisa é feita para uma função global.  
   

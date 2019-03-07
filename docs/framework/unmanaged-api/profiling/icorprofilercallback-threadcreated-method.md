@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d85dcb462df0255ab5420db94f9d055cce2c78b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a26faf4f648107e7062a723663877b5b6a8e76e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616922"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497152"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>Método ICorProfilerCallback::ThreadCreated
 Notifica o criador de perfil que um thread foi criado.  
@@ -34,7 +34,7 @@ HRESULT ThreadCreated(
     [in] ThreadID threadId);   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `threadId`  
  [in] A ID do thread que foi criado.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e5ba0fac05bcab12abccd224b14e504a33b64a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 287f08c4ce5108ac9ae871135976cb45917fa861
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746228"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476694"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a>Método ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo
 Especifica as funções implementadas pelo criador de perfil que serão chamadas na [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), e [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) ganchos de funções gerenciadas.  
@@ -36,7 +36,7 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
             [in] FunctionTailcall3WithInfo *pFuncTailcall3);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pFuncEnter3`  
  [in] Um ponteiro para a implementação a ser usado como o `FunctionEnter3WithInfo` retorno de chamada.  
   

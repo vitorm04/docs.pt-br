@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501429"
 ---
 # <a name="icordebugappdomaingetid-method"></a>Método ICorDebugAppDomain::GetId
 Obtém o identificador exclusivo do domínio do aplicativo.  
@@ -35,18 +35,18 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pId`  
  [out] O identificador exclusivo do domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- O identificador para o domínio de aplicativo é exclusivo dentro do processo que contém.  
+ O identificador para o domínio de aplicativo é exclusivo dentro do processo de recipiente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

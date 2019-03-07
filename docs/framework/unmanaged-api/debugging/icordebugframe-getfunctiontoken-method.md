@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bb4331b1c55cbda818866c5ff08f9bacd3ebae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413979"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497555"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>Método ICorDebugFrame::GetFunctionToken
-Obtém o token de metadados para a função que contém o código associado deste quadro de pilhas.  
+Obtém o token de metadados para a função que contém o código associado a esse registro de ativação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ HRESULT GetFunctionToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pToken`  
- [out] Um ponteiro para um `mdMethodDef` token que referencia os metadados para a função.  
+ [out] Um ponteiro para um `mdMethodDef` token que faz referência o metadados para a função.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

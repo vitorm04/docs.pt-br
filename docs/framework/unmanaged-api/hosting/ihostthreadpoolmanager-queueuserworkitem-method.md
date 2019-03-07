@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3faa3762612e4d1fc608291a393e9eb2e79fe67e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03185f3f554c5454b23b0c72c42d68714488e6be
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616843"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501702"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>Método IHostThreadPoolManager::QueueUserWorkItem
 Enfileira uma função para a execução e especifica um objeto que contém dados a serem usados por essa função. A função é executada quando um thread fique disponível.  
@@ -37,7 +37,7 @@ HRESULT QueueUserWorkItem (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `Function`  
  [in] Um ponteiro de função que representa a função a ser executada.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49139f5b1f65bc2e258362d9b47f4e0d44cc6894
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727086"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481515"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>Método ICorProfilerInfo3::GetThreadStaticAddress2
 Obtém o endereço do campo de thread estático especificado está no escopo do thread especificado e do domínio de aplicativo.  
@@ -38,7 +38,7 @@ HRESULT GetThreadStaticAddress2(
                 [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `classId`  
  [in] A ID da classe que contém o campo de thread estático solicitado.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84d53bd5bb9c0eca83b39fc9d1c83d93440e336b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b45d78548f2b1a7e17f61c5228cd68f228fe4980
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645452"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478838"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>Método IMetaDataInfo::GetFileMapping
 Obtém a região de memória do arquivo mapeado e o tipo de mapeamento.  
@@ -37,7 +37,7 @@ HRESULT GetFileMapping (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppvData`  
  [out] Um ponteiro para o início do arquivo mapeado.  
   

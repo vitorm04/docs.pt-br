@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d65d918147423396a18d2ea5c3edf7ff60c26a11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0320c831648c15dfec42c1b693be2f13e6888ae9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556123"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475158"
 ---
 # <a name="functionidmapper-function"></a>Função FunctionIDMapper
 Notifica o criador de perfil que o identificador fornecido de uma função pode ser remapeado para uma ID alternativa a ser usado na [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), e [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) retornos de chamada para essa função. `FunctionIDMapper` também permite que o criador de perfil indicar se deseja receber retornos de chamada para essa função.  
@@ -35,7 +35,7 @@ UINT_PTR __stdcall FunctionIDMapper (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `funcId`  
  [in] O identificador de função a ser remapeado.  
   

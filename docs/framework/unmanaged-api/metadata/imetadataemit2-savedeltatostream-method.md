@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0702a7a58e6bd8c13254da5adce17c9adf6fa0cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcb94323c9950b8e1fe56ca3dae5f41a9c801907
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569448"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472116"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>Método IMetaDataEmit2::SaveDeltaToStream
 Salva as alterações da sessão atual de editar e continuar o fluxo especificado.  
@@ -36,7 +36,7 @@ HRESULT SaveDeltaToStream (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pIStream`  
  [in] Um ponteiro de interface para o fluxo gravável no qual salvar as alterações.  
   

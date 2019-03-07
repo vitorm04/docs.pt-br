@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9030319ca12aafcf452e3ecd816fc269f0abfc0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417509"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483310"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>Método ICorDebugThread::GetActiveChain
 Obtém um ponteiro de interface para a cadeia da pilha (mais recente) ativa neste objeto ICorDebugThread.  
@@ -35,7 +35,7 @@ HRESULT GetActiveChain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppChain`  
  [out] Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia da pilha.  
   
@@ -43,10 +43,10 @@ HRESULT GetActiveChain (
  O `ppChain` parâmetro será nulo se nenhuma cadeia de pilha está ativa no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

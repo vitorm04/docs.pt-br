@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aa1025d3f24126c6f8b8585e39dda0201fad3d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ecea5911771d12df74b260845523dd2b7a012aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623307"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494513"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>Método ICorProfilerCallback::Initialize
 Chamado para inicializar o criador de perfil de código sempre que um novo aplicativo de runtime (CLR) de linguagem comum é iniciado.  
@@ -34,7 +34,7 @@ HRESULT Initialize(
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pICorProfilerInfoUnk`  
  [na](/cpp/atl/iunknown) interface que o criador de perfis deve consultar um [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) ponteiro de interface.  
   

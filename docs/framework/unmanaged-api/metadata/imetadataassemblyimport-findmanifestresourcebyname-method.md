@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b05c9a75bf870dd3b2316d2df7c50932b26894f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d736a93e7ba6451f1d4755a86749565b9ea071b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702737"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491510"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>Método IMetaDataAssemblyImport::FindManifestResourceByName
 Obtém um ponteiro para o recurso de manifesto com o nome especificado.  
@@ -36,7 +36,7 @@ HRESULT FindManifestResourceByName (
 );   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `szName`  
  [in] O nome do recurso.  
   

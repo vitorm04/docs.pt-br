@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f2eec9fce1909f6a83190f5ba3e99162461bbc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492145"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Método IMetaDataImport::GetEventProps
 Obtém informações de metadados para o evento representado pelo token de evento especificado, incluindo o tipo de declaração, adicionar e remover métodos para representantes e os sinalizadores e outros dados associados.  
@@ -47,7 +47,7 @@ HRESULT GetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ev`  
  [in] O token de metadados de evento que representa o evento para obter metadados.  
   

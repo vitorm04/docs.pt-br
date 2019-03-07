@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84f895e749fc8f2520dbce3caf9e6c11fda78a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7939f7b1c0c725bb4e8c642bc38121dd755da5e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405763"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471039"
 ---
 # <a name="icordebugappdomaingetname-method"></a>Método ICorDebugAppDomain::GetName
 Obtém o nome do domínio do aplicativo.  
@@ -38,24 +38,24 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cchName`  
  [in] O tamanho do `szName` matriz. Defina esse valor como zero para colocar esse método no modo de consulta.  
   
  `pcchName`  
- [out] Um ponteiro para o tamanho do nome ou o número de caracteres de fato retornadas em `szName`. No modo de consulta, esse valor permite que o chamador saiba grande como um buffer para alocar para o nome.  
+ [out] Um ponteiro para o tamanho do nome ou o número de caracteres retornado de fato no `szName`. No modo de consulta, esse valor permite que o chamador saiba quão grande um buffer para alocar para o nome.  
   
  `szName`  
  [out] Uma matriz que armazena o nome do domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- Um depurador chama o `GetName` método uma vez para obter o tamanho de um buffer necessário para o nome. O depurador aloca o buffer e, em seguida, chama o método uma segunda vez para preencher o buffer. A primeira chamada para obter o tamanho do nome é conhecida como *o modo de consulta*.  
+ Um depurador chama o `GetName` método uma vez para obter o tamanho de um buffer necessário para o nome. O depurador aloca o buffer e, em seguida, chama o método uma segunda vez para preencher o buffer. A primeira chamada para obter o tamanho do nome, é conhecida como *modo de consulta*.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

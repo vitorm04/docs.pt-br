@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c3185bdc0776d6536458ce03c348ed77b8ba0b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597938"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499089"
 ---
 # <a name="loadstringrcex-function"></a>Função LoadStringRCEx
 Converte um valor HRESULT a uma mensagem de erro apropriada para a cultura especificada.  
@@ -41,7 +41,7 @@ HRESULT LoadStringRCEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `lcid`  
  [in] Um identificador de cultura. Passe -1 `lcid` para usar a cultura padrão.  
   

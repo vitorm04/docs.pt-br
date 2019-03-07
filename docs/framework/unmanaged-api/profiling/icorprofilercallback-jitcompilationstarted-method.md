@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88362d33c05c25e7a86e474adf37f2ccd0474ff4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5eb881c8f024373fbff1dad17cd883ab6cafa2a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530745"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466625"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>Método ICorProfilerCallback::JITCompilationStarted
 Notifica o criador de perfil que o compilador just-in-time (JIT) começou a compilar uma função.  
@@ -35,7 +35,7 @@ HRESULT JITCompilationStarted(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `functionId`  
  [in] A ID da função para o qual a compilação está sendo iniciada.  
   

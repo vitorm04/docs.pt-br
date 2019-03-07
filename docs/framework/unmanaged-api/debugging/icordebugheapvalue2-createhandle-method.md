@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d1f83a4591df4d2dcb7fb9724fa582ea28387
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 078dfd7162c250f0279b8bc372aeb39662aa0119
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413573"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498530"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>Método ICorDebugHeapValue2::CreateHandle
-Cria um identificador do tipo especificado para o valor de heap representado por esse objeto em ICorDebugHeapValue2.  
+Cria um identificador do tipo especificado para o valor de heap representado por esse objeto ICorDebugHeapValue2.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,23 +36,23 @@ HRESULT CreateHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `type`  
- [in] Um valor da enumeração CorDebugHandleType que especifica o tipo de identificador a ser criado.  
+ [in] Um valor de enumeração CorDebugHandleType que especifica o tipo de identificador a ser criado.  
   
  `ppHandle`  
  [out] Um ponteiro para o endereço de um objeto ICorDebugHandleValue que representa o novo identificador para esse valor de heap.  
   
 ## <a name="remarks"></a>Comentários  
- O identificador será criado no domínio do aplicativo que está associado com o valor de heap e se tornarão inválido se o domínio de aplicativo seja descarregado.  
+ O identificador será criado no domínio do aplicativo que está associado com o valor de heap e se tornará inválido caso se o domínio do aplicativo seja descarregado.  
   
- Várias chamadas a essa função para o mesmo valor de heap criará vários identificadores. Identificadores de afetam o desempenho do coletor de lixo, o depurador deve limitar automaticamente para um número relativamente pequeno de identificadores (aproximadamente 256) que estão ativos por vez.  
+ Várias chamadas para essa função para o mesmo valor de heap criará vários identificadores. Como identificadores de afetam o desempenho do coletor de lixo, o depurador deve se limitar a um número relativamente pequeno de identificadores (cerca de 256) que estão ativos por vez.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

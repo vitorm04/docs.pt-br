@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6485688c2964d477f0c5f68a3da714f084fa308f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4537d3098223ebfade6b0351aca4f889d6b2ae2a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515295"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471661"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>Método ISymUnmanagedMethod::GetOffset
 Retorna o deslocamento dentro desse método que corresponde a uma determinada posição dentro de um documento.  
@@ -37,7 +37,7 @@ HRESULT GetOffset(
     [out, retval] ULONG32*        pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `document`  
  [in] Um ponteiro para o documento para o qual o deslocamento é solicitado.  
   

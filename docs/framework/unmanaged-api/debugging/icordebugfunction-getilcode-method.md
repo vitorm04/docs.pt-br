@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac34fbca56c8a0f00ee3a7e0f898b8ee03287b11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f34a2fe2bb1f92e75f77c086b03776ec59495600
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412279"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482088"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>Método ICorDebugFunction::GetILCode
-Obtém a instância de ICorDebugCode que representa o código do Microsoft intermediate language (MSIL) associado ao objeto ICorDebugFunction.  
+Obtém a instância de ICorDebugCode que representa o código do Microsoft intermediate language (MSIL) associado a este objeto ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT GetILCode (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ppCode`  
- [out] Um ponteiro para a `ICorDebugCode` instância ou nulo, se a função não foi compilada na MSIL.  
+ [out] Um ponteiro para o `ICorDebugCode` da instância ou nulo, se a função não foi compilada em MSIL.  
   
 ## <a name="remarks"></a>Comentários  
- Se editar e continuar foi permitido nesta função, o `GetILCode` método receberá o código MSIL correspondente para a versão editada desta função de código no common language runtime (CLR).  
+ Se editar e continuar foi permitido nesta função, o `GetILCode` método obterá o código MSIL correspondente à versão editada dessa função do código no common language runtime (CLR).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

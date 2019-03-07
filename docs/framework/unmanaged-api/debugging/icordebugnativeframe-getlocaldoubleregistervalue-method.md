@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71930460c5db77950efdaaba3cead8c49697a97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 573949f50135ddf29ac9aa88bf4d1dd480001219
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696276"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471700"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>Método ICorDebugNativeFrame::GetLocalDoubleRegisterValue
 Obtém o valor de um argumento ou uma variável local que é armazenado nos dois registradores especificados para este quadro nativo.  
@@ -39,7 +39,7 @@ HRESULT GetLocalDoubleRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `highWordReg`  
  [in] Um valor de enumeração "CorDebugRegister" que especifica o registro que contém a palavra alta do valor.  
   

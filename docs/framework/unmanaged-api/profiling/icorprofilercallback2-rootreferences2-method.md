@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4383bf8b7369f5906fe4664056f1cd938f04584
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2164350ff94e53e6144298aab621065faba4a0dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607534"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475334"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>Método ICorProfilerCallback2::RootReferences2
 Notifica o criador de perfil sobre referências raiz após a ocorrência de uma coleta de lixo. Esse método é uma extensão de [ICorProfilerCallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) método.  
@@ -38,7 +38,7 @@ HRESULT RootReferences2(
     [in, size_is(cRootRefs)] UINT_PTR rootIds[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cRootRefs`  
  [in] O número de elementos na `rootRefIds`, `rootKinds`, `rootFlags`, e `rootIds` matrizes.  
   

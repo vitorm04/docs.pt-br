@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 931395a1bb5f516000097f964ce0372a69420d85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27747b02237672ec302a545e2e0c73ace0cae1fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679624"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487454"
 ---
 # <a name="iclrtasklocksheld-method"></a>Método ICLRTask::LocksHeld
 Obtém o número de bloqueios atualmente mantidos na tarefa.  
@@ -35,7 +35,7 @@ HRESULT LocksHeld (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pLockCount`  
  [out] O número de bloqueios mantidos na tarefa no momento da chamada de método.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa9e168b36c8408583ca23dee070fc36b2cb076c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3a174953877d70a295e659220e71c337e45f392
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572988"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495228"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>Método ICorDebugNativeFrame::GetLocalRegisterMemoryValue
 Obtém o valor de um argumento ou uma variável local, dos quais a palavra baixa e a palavra alta são armazenados no local da memória e especificado o registro, respectivamente, para este quadro nativo.  
@@ -39,7 +39,7 @@ HRESULT GetLocalRegisterMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `highWordReg`  
  [in] Um valor de enumeração "CorDebugRegister" que especifica o registro que contém a palavra alta do valor.  
   

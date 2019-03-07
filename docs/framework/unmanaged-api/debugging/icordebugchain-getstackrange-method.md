@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402464"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481554"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Método ICorDebugChain::GetStackRange
 Obtém o intervalo de endereços do segmento de pilha para essa cadeia.  
@@ -36,7 +36,7 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pStart`  
  [out] Um ponteiro para um `CORDB_ADDRESS` valor que é o endereço inicial do segmento de pilha.  
   
@@ -44,13 +44,13 @@ HRESULT GetStackRange (
  [out] Um ponteiro para um `CORDB_ADDRESS` valor que é o endereço final do segmento de pilha.  
   
 ## <a name="remarks"></a>Comentários  
- O intervalo numérico é significativo apenas para comparação de locais de quadro de pilha. Você não pode fazer suposições sobre o que realmente está armazenado na pilha.  
+ O intervalo numérico é significativo apenas para comparação dos locais de quadro de pilha. Você não pode fazer suposições sobre o que realmente está armazenado na pilha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

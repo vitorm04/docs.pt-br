@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49dc456df684d6905370ee6ab8c8883449bea990
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710333"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498036"
 ---
 # <a name="exportnestedtype-method"></a>Método ExportNestedType
 Especifica os tipos aninhados como exportável. O [método ExportType](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) também pode tipos aninhado de exportação, mas esse método é mais rápido.  
@@ -41,7 +41,7 @@ HRESULT ExportNestedType(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
  ID do assembly para exportação.  
   

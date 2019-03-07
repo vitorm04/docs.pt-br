@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9780020abe609212fe3c4bd65f70200467ff9c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 586882ad7577c367576da9b32e6d3b8fe2f806c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533683"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501208"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>Método ICLRRuntimeInfo::IsLoadable
 Indica se o tempo de execução associado a essa interface pode ser carregado no processo atual, levando em consideração outros tempos de execução que já podem ser carregados no processo.  
@@ -34,7 +34,7 @@ HRESULT IsLoadable(
         [out, retval] BOOL *pbLoadable);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pbLoadable`  
  [out] `true` se esse tempo de execução pode ser carregado no processo atual; caso contrário, `false`.  
   

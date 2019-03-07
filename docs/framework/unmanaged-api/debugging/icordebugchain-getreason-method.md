@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d02a68e80e34be906e9fe09f3457a0f2214c6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48650a370f7d15724e20850e9d3b47dc8215f960
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405061"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498348"
 ---
 # <a name="icordebugchaingetreason-method"></a>Método ICorDebugChain::GetReason
-Obtém o motivo para genesis dessa cadeia de chamada.  
+Obtém o motivo para a gênese dessa cadeia de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ HRESULT GetReason (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pReason`  
- [out] Um ponteiro para um valor (uma combinação bit a bit) da enumeração CorDebugChainReason que indica o motivo para genesis dessa cadeia de chamada.  
+ [out] Um ponteiro para um valor (uma combinação bit a bit) da enumeração CorDebugChainReason que indica o motivo para a gênese dessa cadeia de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

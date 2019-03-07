@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd84293b3414a8622c6b91717e9f1b2f2ce85286
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603892"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472467"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>Método ICorDebugManagedCallback::ControlCTrap
 Notifica o depurador que um CTRL + C é interceptado no processo que está sendo depurado.  
@@ -35,7 +35,7 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pProcess`  
  [in] Um ponteiro para um objeto ICorDebugProcess que representa o processo no qual o CTRL + C é interceptada.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423436"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498080"
 ---
 # <a name="icordebugprocessgethandle-method"></a>Método ICorDebugProcess::GetHandle
 Obtém um identificador para o processo.  
@@ -33,7 +33,7 @@ Obtém um identificador para o processo.
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `phProcessHandle`  
  [out] Um ponteiro para um `HPROCESS` que é o identificador para o processo.  
   
@@ -41,10 +41,10 @@ HRESULT GetHandle([out] HPROCESS *phProcessHandle);
  O identificador recuperado pertence a interface de depuração. O depurador deve duplicar o identificador antes de usá-lo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

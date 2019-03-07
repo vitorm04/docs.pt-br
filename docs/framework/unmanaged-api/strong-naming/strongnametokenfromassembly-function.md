@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe15b855044a7bf45ea172f42436c3557b562037
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46d8013d43dc14807804502e4a0820a2928f917e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687057"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499232"
 ---
 # <a name="strongnametokenfromassembly-function"></a>Função StrongNameTokenFromAssembly
 Cria um token de nome forte do arquivo do assembly especificado.  
@@ -38,7 +38,7 @@ BOOLEAN StrongNameTokenFromAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
  [in] O caminho para o arquivo executável portátil (PE) para o assembly.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 078820649543479e65ec35daa6e1cc2876581ddc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c595f59905a369c206da2fa011038d0d95041fa4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693195"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500675"
 ---
 # <a name="addfile2-method"></a>Método AddFile2
 Adiciona arquivos ao assembly. Também pode ser usado para criar os módulos não associados.  
@@ -39,7 +39,7 @@ HRESULT AddFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
  ID para o assembly ao qual o arquivo é adicionado.  
   

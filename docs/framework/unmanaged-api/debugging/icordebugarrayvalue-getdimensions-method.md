@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c341ba3d0164e65cd752baa20f674fe3afc714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a52075f33d594787c516f84b65b3319991380907
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405428"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500355"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>Método ICorDebugArrayValue::GetDimensions
 Obtém o número de elementos em cada dimensão dessa matriz.  
@@ -37,20 +37,20 @@ HRESULT GetDimensions (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cdim`  
  [in] O número de dimensões do objeto ICorDebugArrayValue.  
   
- Esse valor também é o tamanho do `dims` porque seu tamanho é igual ao número de dimensões do `ICorDebugArrayValue` objeto.  
+ Esse valor também é o tamanho do `dims` matriz porque seu tamanho é igual ao número de dimensões do `ICorDebugArrayValue` objeto.  
   
  `dims`  
- [out] Uma matriz de inteiros, cada uma delas Especifica o número de elementos em uma dimensão neste `ICorDebugArrayValue` objeto.  
+ [out] Uma matriz de inteiros, cada um deles Especifica o número de elementos em uma dimensão neste `ICorDebugArrayValue` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

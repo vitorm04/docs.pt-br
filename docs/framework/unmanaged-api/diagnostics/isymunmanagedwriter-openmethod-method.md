@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a5e50327e74e0b893bd5f8e6f716827f2168e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e6ee68fe3ffed0ae19c2f528a49a863b99fa7f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557949"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499544"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>Método ISymUnmanagedWriter::OpenMethod
 Abre um método em qual símbolo informações são emitidas. O método em questão se torna o método atual para chamadas para definir pontos de sequência, parâmetros e escopos léxicos. Há um escopo léxico implícito ao redor de todo o método. Reabrir um método que foi fechado anteriormente apaga qualquer símbolos definidos anteriormente para esse método. Pode haver apenas um método aberto por vez.  
@@ -34,7 +34,7 @@ HRESULT OpenMethod(
     [in] mdMethodDef method);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `method`  
  [in] O token de metadados para o método a ser aberto.  
   

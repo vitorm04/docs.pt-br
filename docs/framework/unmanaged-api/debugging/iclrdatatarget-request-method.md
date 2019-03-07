@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77bd3bc239d0101f02cd515b0ec2a8bec3372882
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bafc8be92da72cbb98f7cd47ec6632a3fbb76656
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596898"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487195"
 ---
 # <a name="iclrdatatargetrequest-method"></a>Método ICLRDataTarget::Request
 Chamado pelo serviço common language runtime (CLR) dados acesso para solicitar uma operação, conforme definido pela implementação.  
@@ -41,7 +41,7 @@ HRESULT Request (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `reqCode`  
  [in] Definido pelo usuário.  
   

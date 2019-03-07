@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 739398d8c20f58d8b5e458e2de4cbb6f56c50fd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47db4313354b00514084ec1110710cbd174a3788
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624140"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492615"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>Método ISymUnmanagedScope::GetEndOffset
 Obtém o deslocamento de fim para esse escopo.  
@@ -34,7 +34,7 @@ HRESULT GetEndOffset(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pRetVal`  
  [out] Um ponteiro para um `ULONG32` que recebe o deslocamento de fim.  
   

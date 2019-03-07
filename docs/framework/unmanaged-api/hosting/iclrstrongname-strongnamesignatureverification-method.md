@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b773203ef390122626ea3c51644e43e571740ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc4f24ae28be49dec7de2c0b9ebf9cc930989bfc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569304"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485129"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>Método ICLRStrongName::StrongNameSignatureVerification
 Obtém um valor que indica se o manifesto do assembly no caminho fornecido contém uma assinatura de nome forte, que é verificada de acordo com os sinalizadores especificados.  
@@ -37,7 +37,7 @@ HRESULT StrongNameSignatureVerification (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
  [in] O caminho para o arquivo executável portátil (. dll ou .exe) para o assembly verificar.  
   

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19e348f63af181b80b0924b0f2d3be156703595d
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ca53995daec372c75aa8c0beb305a6c36f1e6e07
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065915"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489768"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>Método ICLRDataTarget3::GetExceptionRecord
 Chamado pelo serviço de acesso a dados do CLR (Common Language Runtime) para recuperar o registro de exceção associado ao processo de destino. Por exemplo, para um destino de despejo, isso seria equivalente ao registro de exceção passado por meio de `ExceptionParam` argumento para o [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) função no Windows ajudar a biblioteca de depuração (DbgHelp).  
@@ -34,7 +34,7 @@ HRESULT GetExceptionRecord(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `bufferSize`  
  [in] O tamanho do buffer de entrada, em bytes. Isso deve ser igual a `sizeof(` [{1&gt;{2&gt;minidump_exception&lt;2}{3&gt; http://msdn.microsoft.com/library/Windows/Desktop/ms680367.aspx&lt;3}&lt;1](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.  
   

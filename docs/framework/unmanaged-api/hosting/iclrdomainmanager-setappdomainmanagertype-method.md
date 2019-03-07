@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47545d590682236d7a19813b15a144731b64c9e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c2927195b650f1098292f3d59cd887e084aea21
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555070"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490054"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>Método ICLRDomainManager::SetAppDomainManagerType
 Especifica o tipo, derivado de <xref:System.AppDomainManager?displayProperty=nameWithType> classe do Gerenciador de domínio de aplicativo que será usado para inicializar o domínio de aplicativo padrão.  
@@ -35,7 +35,7 @@ HRESULT SetAppDomainManagerType(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `wszAppDomainManagerAssembly`  
  [in] O nome de exibição do assembly que contém o tipo de Gerenciador de domínio de aplicativo; Por exemplo: "AdMgrExample, versão Version=1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3".  
   

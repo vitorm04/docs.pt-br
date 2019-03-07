@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b374720bd7bdad48222da006b809702de6462a62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420811"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472779"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>Método ICorDebugProcess2::SetUnmanagedBreakpoint
 Define um ponto de interrupção não gerenciado no deslocamento especificado de imagem nativa.  
@@ -39,12 +39,12 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `address`  
  [in] Um `CORDB_ADDRESS` objeto que especifica o deslocamento de imagem nativa.  
   
  `bufsize`  
- [in] O tamanho, em bytes, do `buffer` matriz.  
+ [in] O tamanho, em bytes, da `buffer` matriz.  
   
  `buffer`  
  [out] Uma matriz que contém o código de operação que é substituído pelo ponto de interrupção.  
@@ -53,13 +53,13 @@ HRESULT SetUnmanagedBreakpoint (
  [out] Um ponteiro para o número de bytes retornados a `buffer` matriz.  
   
 ## <a name="remarks"></a>Comentários  
- Se o deslocamento de imagem nativa estiver dentro o common language runtime (CLR), o ponto de interrupção será ignorado. Isso permite que o CLR evitar a distribuição de um ponto de interrupção de fora da banda, quando o ponto de interrupção é definido pelo depurador.  
+ Se o deslocamento de imagem nativa estiver dentro do common language runtime (CLR), o ponto de interrupção será ignorado. Isso permite que o CLR evitar a expedição de um ponto de interrupção de out-of-band, quando o ponto de interrupção é definido pelo depurador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

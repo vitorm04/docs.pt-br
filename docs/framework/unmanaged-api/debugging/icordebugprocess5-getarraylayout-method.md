@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6f739902738f05e103cce9365a3afc0379f9b0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5cff3f3f577a0c7ef04a226ec70a2722c89b5c8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646978"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496879"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a>Método ICorDebugProcess5::GetArrayLayout
 Fornece informações sobre o layout dos tipos de matriz.  
@@ -33,7 +33,7 @@ Fornece informações sobre o layout dos tipos de matriz.
 HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayout);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `id`  
  [in] Um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token que especifica a matriz cujo layout é desejado.  
   

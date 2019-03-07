@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c6d3b50cb3589dcd98c53e1abf0ce2be144d8f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730770"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501988"
 ---
 # <a name="corvalidateimage-function"></a>Função _CorValidateImage
 Valida imagens de módulo gerenciado e notifica o carregador do sistema operacional, depois de eles terem sido carregados.  
@@ -35,7 +35,7 @@ STDAPI _CorValidateImage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `ImageBase`  
  [in] Um ponteiro para o local inicial da imagem para validar que o código gerenciado. A imagem já deve ser carregada na memória.  
   

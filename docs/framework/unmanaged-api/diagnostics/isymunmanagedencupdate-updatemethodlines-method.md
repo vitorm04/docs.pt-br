@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7905b3ee83378ed1a27501b082dbfca01d6436c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226d9aa75d0a9e4d6cef92e2d2edacb6e98cf34e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688058"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473046"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>Método ISymUnmanagedENCUpdate::UpdateMethodLines
 Permite atualizar as informações de linha para um método que não foram recompilado, mas cujas linhas foram movidas de forma independente. Um delta para cada instrução é permitido.  
@@ -36,7 +36,7 @@ HRESULT UpdateMethodLines(
     [in]  ULONG        cDeltas);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `mdMethodToken`  
  [in] Os metadados do token de método.  
   

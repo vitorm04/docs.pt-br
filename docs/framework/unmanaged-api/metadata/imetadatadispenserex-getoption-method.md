@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6287b7adf0ef6f6269a51f608657444f5fa7f74e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5512c503d8b4048c613ab88c2b4d9d19cdbb9dca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580220"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479015"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>Método IMetaDataDispenserEx::GetOption
 Obtém o valor da opção especificada para o escopo de metadados atual. A opção controla como as chamadas para o escopo de metadados atual são tratadas.  
@@ -36,7 +36,7 @@ HRESULT GetOption (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `optionId`  
  [in] Um ponteiro para um GUID que especifica a opção a ser recuperado. Consulte a seção de comentários para obter uma lista de GUIDs com suporte.  
   

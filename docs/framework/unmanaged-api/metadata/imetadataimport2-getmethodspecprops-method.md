@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69af794d5405894d24f0d7545613a0e85ca3ec6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bca30e2079e6a41852aa953e43f8b2eba9487e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574008"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489079"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>Método IMetaDataImport2::GetMethodSpecProps
 Obtém o token de assinatura de metadados do método referenciado pelo MethodSpec especificado.  
@@ -38,7 +38,7 @@ HRESULT GetMethodSpecProps (
 );   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `mi`  
  [in] Um token MethodSpec que representa a instanciação do método.  
   

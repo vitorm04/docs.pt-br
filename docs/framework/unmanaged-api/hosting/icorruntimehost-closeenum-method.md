@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd59b08537ebc49068b92d229f3ccab6e7280ace
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65da00d99fec5f2280bcd00ce97b8eddafede680
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591559"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484999"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>Método ICorRuntimeHost::CloseEnum
 Redefine o enumerador de um domínio voltar ao início da lista de domínios.  
@@ -35,7 +35,7 @@ HRESULT CloseEnum (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `hEnum`  
  [in] O enumerador para redefinir.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab637b33797ebc5b6d16873cb460c465405b6849
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ee3e96a25a224fb5b025e22fa43169a64f6c0d2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645646"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501663"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Método ISymUnmanagedWriter::SetSymAttribute
 Define um atributo personalizado com base em seu nome. Esses atributos são mantidos no repositório de símbolos, ao contrário de atributos personalizados de metadados.  
@@ -37,7 +37,7 @@ HRESULT SetSymAttribute(
     [in, size_is(cData)] unsigned char data[]);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `parent`  
  [in] O token de metadados para o qual o atributo está sendo definido.  
   

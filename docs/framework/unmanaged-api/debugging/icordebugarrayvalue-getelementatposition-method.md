@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502248"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>Método ICorDebugArrayValue::GetElementAtPosition
-Obtém o elemento na posição determinada, tratando a matriz como uma matriz unidimensional com base em zero.  
+Obtém o elemento na posição determinada, tratando da matriz como uma matriz unidimensional de base zero.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ HRESULT GetElementAtPosition (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `nPosition`  
  [in] A posição do elemento a ser recuperado.  
   
@@ -44,13 +44,13 @@ HRESULT GetElementAtPosition (
  [out] Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor do elemento.  
   
 ## <a name="remarks"></a>Comentários  
- O layout de uma matriz de multi-dimensão segue o estilo de C++ de layout de matriz.  
+ O layout de uma matriz multidimensional segue o estilo de C++ do layout de matriz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

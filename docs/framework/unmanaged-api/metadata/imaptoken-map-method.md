@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31c18061ad5f21e26665cd0d6883b0eb26afd1d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ece12247e48a0a005fd542bf76a32a1c6eeaa7cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557468"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478396"
 ---
 # <a name="imaptokenmap-method"></a>Método IMapToken::Map
 Mapeia uma relação entre os assemblies usando assinaturas de metadados.  
@@ -36,7 +36,7 @@ HRESULT Map (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `tkImp`  
  [in] O token de metadados que representa o objeto de código importados.  
   

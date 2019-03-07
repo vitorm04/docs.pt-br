@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427c885dc1d7cbf535656a7db3f40da28c55a9b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b83efca5a8b175d5dc83c03de473262ca033354c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630756"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491302"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>Método ICorDebugVariableSymbol::SetValue
 Atribui o valor de uma matriz de bytes a uma variável.  
@@ -27,7 +27,7 @@ HRESULT SetValue(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `offset`  
  [in] O deslocamento inicial da variável no qual definir o valor. Esse parâmetro é usado ao gravar em campos de membro em um objeto.  
   

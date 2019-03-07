@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de857f251bd03b4b2d3fabf458275251440a2113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5300174b071fee257f5db85aeb763e11668971a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741785"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497022"
 ---
 # <a name="imetadatatablesgettableindex-method"></a>Método IMetaDataTables::GetTableIndex
 Obtém o índice para a tabela referenciada pelo token especificado.  
@@ -36,7 +36,7 @@ HRESULT GetTableIndex (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `token`  
  [in] O token que faz referência à tabela.  
   
