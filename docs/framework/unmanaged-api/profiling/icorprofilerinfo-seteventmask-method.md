@@ -17,41 +17,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34aba20704ff8dc0d699ebee9440745d19c697b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66a59fd338b9cbaadb2c19d0957c38ffe1af25e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566002"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471284"
 ---
-# <a name="icorprofilerinfoseteventmask-method"></a><span data-ttu-id="d7c1a-102">Método ICorProfilerInfo::SetEventMask</span><span class="sxs-lookup"><span data-stu-id="d7c1a-102">ICorProfilerInfo::SetEventMask Method</span></span>
-<span data-ttu-id="d7c1a-103">Determina um valor que especifica os tipos de eventos dos quais o perfil deseja receber notificação do CLR (Common Language Runtime).</span><span class="sxs-lookup"><span data-stu-id="d7c1a-103">Sets a value that specifies the types of events for which the profiler wants to receive notification from the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoseteventmask-method"></a><span data-ttu-id="8078e-102">Método ICorProfilerInfo::SetEventMask</span><span class="sxs-lookup"><span data-stu-id="8078e-102">ICorProfilerInfo::SetEventMask Method</span></span>
+<span data-ttu-id="8078e-103">Determina um valor que especifica os tipos de eventos dos quais o perfil deseja receber notificação do CLR (Common Language Runtime).</span><span class="sxs-lookup"><span data-stu-id="8078e-103">Sets a value that specifies the types of events for which the profiler wants to receive notification from the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7c1a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d7c1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8078e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8078e-104">Syntax</span></span>  
   
 ```  
 HRESULT SetEventMask(  
     [in] DWORD dwEvents);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d7c1a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d7c1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8078e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="8078e-105">Parameters</span></span>  
  `dwEvents`  
- <span data-ttu-id="d7c1a-106">[in] Um valor de 4 bytes que especifica as categorias de eventos.</span><span class="sxs-lookup"><span data-stu-id="d7c1a-106">[in] A 4-byte value that specifies the categories of events.</span></span> <span data-ttu-id="d7c1a-107">Cada bit controla uma capacidade, um comportamento ou um tipo de evento diferente.</span><span class="sxs-lookup"><span data-stu-id="d7c1a-107">Each bit controls a different capability, behavior, or type of event.</span></span> <span data-ttu-id="d7c1a-108">Os bits são descritos na [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeração.</span><span class="sxs-lookup"><span data-stu-id="d7c1a-108">The bits are described in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="8078e-106">[in] Um valor de 4 bytes que especifica as categorias de eventos.</span><span class="sxs-lookup"><span data-stu-id="8078e-106">[in] A 4-byte value that specifies the categories of events.</span></span> <span data-ttu-id="8078e-107">Cada bit controla uma capacidade, um comportamento ou um tipo de evento diferente.</span><span class="sxs-lookup"><span data-stu-id="8078e-107">Each bit controls a different capability, behavior, or type of event.</span></span> <span data-ttu-id="8078e-108">Os bits são descritos na [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeração.</span><span class="sxs-lookup"><span data-stu-id="8078e-108">The bits are described in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d7c1a-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="d7c1a-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8078e-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="8078e-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d7c1a-110">Você deve chamar o [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) em vez deste método.</span><span class="sxs-lookup"><span data-stu-id="d7c1a-110">You should call the [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method instead of this method.</span></span> <span data-ttu-id="d7c1a-111">Embora o `SetEventMask` método continua a ter suporte, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) fornece funcionalidade adicional.</span><span class="sxs-lookup"><span data-stu-id="d7c1a-111">Although the `SetEventMask` method continues to be supported, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) provides additional functionality.</span></span>  
+>  <span data-ttu-id="8078e-110">Você deve chamar o [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) em vez deste método.</span><span class="sxs-lookup"><span data-stu-id="8078e-110">You should call the [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method instead of this method.</span></span> <span data-ttu-id="8078e-111">Embora o `SetEventMask` método continua a ter suporte, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) fornece funcionalidade adicional.</span><span class="sxs-lookup"><span data-stu-id="8078e-111">Although the `SetEventMask` method continues to be supported, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) provides additional functionality.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d7c1a-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d7c1a-112">Requirements</span></span>  
- <span data-ttu-id="d7c1a-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7c1a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8078e-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8078e-112">Requirements</span></span>  
+ <span data-ttu-id="8078e-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8078e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7c1a-114">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d7c1a-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8078e-114">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8078e-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d7c1a-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7c1a-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8078e-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8078e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d7c1a-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7c1a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8078e-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8078e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7c1a-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d7c1a-117">See also</span></span>
-- [<span data-ttu-id="d7c1a-118">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="d7c1a-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="d7c1a-119">Método SetEventMask2</span><span class="sxs-lookup"><span data-stu-id="d7c1a-119">SetEventMask2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+## <a name="see-also"></a><span data-ttu-id="8078e-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8078e-117">See also</span></span>
+- [<span data-ttu-id="8078e-118">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="8078e-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="8078e-119">Método SetEventMask2</span><span class="sxs-lookup"><span data-stu-id="8078e-119">SetEventMask2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)

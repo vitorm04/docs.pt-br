@@ -8,19 +8,19 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-ms.openlocfilehash: c146b03fa3e687027eeab3de864d9403f9b01fc7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 853931b7b968f8103af8bf9c33c07d40ac653069
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351665"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489092"
 ---
-# <a name="savetohistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="e5797-102">Função SaveToHistory (referência de API não gerenciada WPF)</span><span class="sxs-lookup"><span data-stu-id="e5797-102">SaveToHistory Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="e5797-103">Essa API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="e5797-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="savetohistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="97141-102">Função SaveToHistory (referência de API não gerenciada WPF)</span><span class="sxs-lookup"><span data-stu-id="97141-102">SaveToHistory Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="97141-103">Essa API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="97141-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="e5797-104">Usado pela infraestrutura do Windows Presentation Foundation (WPF) para gerenciamento do windows.</span><span class="sxs-lookup"><span data-stu-id="e5797-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="97141-104">Usado pela infraestrutura do Windows Presentation Foundation (WPF) para gerenciamento do windows.</span><span class="sxs-lookup"><span data-stu-id="97141-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5797-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e5797-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97141-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="97141-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToHistory(  
@@ -28,22 +28,22 @@ HRESULT SaveToHistory(
 )  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e5797-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e5797-106">Parameters</span></span>  
- <span data-ttu-id="e5797-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="e5797-107">pHistoryStream</span></span>  
- <span data-ttu-id="e5797-108">Um ponteiro para o fluxo de histórico.</span><span class="sxs-lookup"><span data-stu-id="e5797-108">A pointer to the history stream.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97141-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="97141-106">Parameters</span></span>  
+ <span data-ttu-id="97141-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="97141-107">pHistoryStream</span></span>  
+ <span data-ttu-id="97141-108">Um ponteiro para o fluxo de histórico.</span><span class="sxs-lookup"><span data-stu-id="97141-108">A pointer to the history stream.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5797-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e5797-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97141-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="97141-109">Requirements</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5797-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e5797-110">Requirements</span></span>  
- <span data-ttu-id="e5797-111">**Plataformas:** Ver [requisitos de sistema do .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5797-111">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97141-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="97141-110">Requirements</span></span>  
+ <span data-ttu-id="97141-111">**Plataformas:** Ver [requisitos de sistema do .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97141-111">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5797-112">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="e5797-112">**DLL:**</span></span>  
+ <span data-ttu-id="97141-112">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="97141-112">**DLL:**</span></span>  
   
- <span data-ttu-id="e5797-113">No .NET Framework 3.0 e 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="e5797-113">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="97141-113">No .NET Framework 3.0 e 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="97141-113">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="e5797-114">No .NET Framework 4 e posterior: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="e5797-114">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="97141-114">No .NET Framework 4 e posterior: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="97141-114">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="e5797-115">**Versão do .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5797-115">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="97141-115">**Versão do .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97141-115">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5797-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e5797-116">See also</span></span>
-- [<span data-ttu-id="e5797-117">Referência de API não gerenciada do WPF</span><span class="sxs-lookup"><span data-stu-id="e5797-117">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a><span data-ttu-id="97141-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="97141-116">See also</span></span>
+- [<span data-ttu-id="97141-117">Referência de API não gerenciada do WPF</span><span class="sxs-lookup"><span data-stu-id="97141-117">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
