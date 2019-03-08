@@ -4,12 +4,12 @@ description: Conheça as etapas de "loop externo" do fluxo de trabalho de DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836403"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676194"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo do Docker
 
@@ -144,7 +144,7 @@ Usando as tarefas de Docker, você pode enviar por push um conjunto de imagens d
 
 A imutabilidade das imagens do Docker garante uma implantação repetível com o que tem desenvolvido, testado por meio de CI e executar em produção. Depois de ter as imagens do Docker aplicativo publicadas no seu registro de Docker (público ou privado), você pode implantá-los para vários ambientes em que você possa ter (produção, QA, preparo, etc.) do seu pipeline de CD usando serviços de DevOps do Azure tarefas de pipeline ou gerenciamento de versão de serviços de DevOps do Azure.
 
-No entanto, neste ponto depende do tipo de aplicativo do Docker que você está implantando. Implantar um aplicativo simples (de composição e a implantação de uma perspectiva), como um monolítico implantado e de aplicativos que englobam alguns contêineres ou serviços para alguns servidores ou máquinas virtuais é diferente da implantação de um aplicativo mais complexo, como um aplicativo orientado a microsserviços com recursos em hiperescala. Esses dois cenários são explicados nas seções a seguir.
+No entanto, nesse ponto depende do que tipo de aplicativo do Docker que você está implantando. Implantar um aplicativo simples (de composição e a implantação de uma perspectiva), como um monolítico implantado e de aplicativos que englobam alguns contêineres ou serviços para alguns servidores ou máquinas virtuais é diferente da implantação de um aplicativo mais complexo, como um aplicativo orientado a microsserviços com recursos em hiperescala. Esses dois cenários são explicados nas seções a seguir.
 
 ### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>Implantando aplicativos de Docker em vários ambientes de Docker de compostos
 
@@ -202,7 +202,7 @@ Figura 5 a 11 demonstra como você pode editar a tarefa de implantação do Dock
 
 ## <a name="step-5-run-and-manage"></a>Etapa 5: Executar e gerenciar
 
-Como executar e gerenciar aplicativos em produção enterprise nível é um assunto principal e de si mesmo e devido ao tipo de operações e pessoas trabalhando nesse nível (operações de TI), bem como o escopo grande desta área, podemos ter dedicada a toda a em seguida capítulo para explicá-lo.
+Como executar e gerenciar aplicativos em produção enterprise nível é um assunto principal e de si mesmo e devido ao tipo de operações e pessoas trabalhando nesse nível (operações de TI), bem como o escopo grande desta área, o próximo capítulo inteiro é dedicado a explicá-lo.
 
 ## <a name="step-6-monitor-and-diagnose"></a>Etapa 6: Monitorar e diagnosticar
 

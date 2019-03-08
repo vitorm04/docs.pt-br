@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746410"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679275"
 ---
 # <a name="what-about-cloud-native-applications"></a>E quanto aos aplicativos nativos de nuvem?
 
@@ -21,13 +21,13 @@ Figura 4-3 posiciona aplicativos nativos de nuvem em que os níveis de maturidad
 
 > **Figura 4-3.** Posicionamento de aplicativos nativos de nuvem
 
-O nível de maturidade de modernização nativos de nuvem normalmente exige novos investimentos de desenvolvimento. Mover para o nível de nuvem nativa normalmente é orientada pela necessidade de negócios para modernizar aplicativos tanto quanto possíveis melhorar drasticamente a escala em aplicativos grandes, criando subsistemas autônomos (microsserviços) que podem ser implantados e escala independentemente de outras áreas do aplicativo enquanto reduz os custos em agilidade longo prazo e aumento de evolução das partes do aplicativo esses autônomos que fornecem significativa competir vantagens. 
+O nível de maturidade de modernização nativos de nuvem normalmente exige novos investimentos de desenvolvimento. Mover para o nível de nuvem nativa normalmente é orientada pela necessidade de negócios para modernizar aplicativos tanto quanto possíveis melhorar drasticamente a escala em aplicativos grandes, criando subsistemas autônomos (microsserviços) que podem ser implantados e escala independentemente de outras áreas do aplicativo enquanto reduz os custos em agilidade longo prazo e aumento de evolução das partes do aplicativo esses autônomos que fornecem significativa competir vantagens.
 
 Dos principais pilares de aplicativos nativos de nuvem se baseiam em abordagens de arquitetura de microsserviços, que podem evoluir com agilidade e dimensionar aos limites que seriam difícil de atingir em uma arquitetura monolítica, implantada no local ou de nuvem ambiente.
 
-Figura 4-4 mostra as principais características do modelo nativos da nuvem.  
+Figura 4-4 mostra as principais características do modelo nativos da nuvem.
 
-> ![Características nativos de nuvem são os Microsserviços, contêineres, resiliência de nuvem, orquestradores e serverles](./media/image4.png)
+> ![Características de nativos de nuvem são Microsserviços, orquestradores de nuvem resilientes, contêineres e sem servidor](./media/image4.png)
 >
 > **Figura 4-4.** Características de nativos da nuvem
 
@@ -47,7 +47,7 @@ Para um exemplo de definição e para obter mais informações sobre as caracter
 
 O fator mais importante a considerar se você migrar um aplicativo completo para o modelo nativos de nuvem é que você deve refazer a arquitetura para uma arquitetura baseada em microsserviços. Claramente, isso exige um investimento significativo em desenvolvimento devido à grande processo de refatoração envolvido. Geralmente, essa opção é escolhida para aplicativos de missão crítica que precisam de novos níveis de escalabilidade e agilidade de longo prazo. Mas, você pode começar a mover na direção nativos de nuvem adicionando microsserviços para apenas alguns novos cenários e, eventualmente, refatorar o aplicativo totalmente como microsserviços. Essa é uma abordagem incremental que é a melhor opção para alguns cenários.
 
-## <a name="what-about-microservices"></a>E sobre os microsserviços? 
+## <a name="what-about-microservices"></a>E sobre os microsserviços?
 
 Noções básicas sobre microsserviços e como eles funcionam é importante quando você estiver pensando em aplicativos nativos de nuvem para sua organização.
 
@@ -67,6 +67,6 @@ Como uma observação final, mesmo com o risco de serem repetitiva sobre esse co
 
 Em qualquer caso, o restante deste guia presente se concentra acima de tudo em "não há aplicativos baseados em microsserviços" porque este guia destina principalmente a modernização de aplicativos existentes que normalmente têm arquiteturas monolíticas ou de N camadas.
 
->[!div class="step-by-step"]
->[Anterior](microsoft-technologies-in-cloud-optimized-applications.md)
->[Próximo](deploy-existing-net-apps-as-windows-containers.md)
+> [!div class="step-by-step"]
+> [Anterior](microsoft-technologies-in-cloud-optimized-applications.md)
+> [Próximo](deploy-existing-net-apps-as-windows-containers.md)

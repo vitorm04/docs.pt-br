@@ -2,12 +2,12 @@
 title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442887"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680380"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclar facilmente, exibir e filtrar as mensagens de rastreamento no log de forma que você possa diagnosticar, reparar e verificar problemas de serviço do WCF.  
@@ -50,7 +50,13 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 |ActivityTracing|Eventos de fluxo entre atividades de processamento e componentes.<br /><br /> Este nível permite que os administradores e desenvolvedores correlacionem aplicativos no mesmo domínio de aplicativos.<br /><br /> -Rastreamentos de limites de atividades: iniciar/parar.<br />-Rastreamentos de transferências.|  
   
  Você pode usar `add` para especificar o nome e o tipo do ouvinte de rastreamento que deseja usar. Na configuração de exemplo, o ouvinte é chamado de `sdt` e o ouvinte de rastreamento do .NET Framework padrão (`System.Diagnostics.XmlWriterTraceListener`) é adicionado como o tipo. Use `initializeData` para definir o nome do arquivo de log para esse ouvinte. Além disso, é possível substituir um nome de arquivo simples por um caminho totalmente qualificado.  
-  
+
+A partir do .NET Framework 4.8, controles de caixa de combinação em alguns temas de alto contraste são exibidos na cor correta. Você pode desabilitar essa alteração, removendo a seguinte configuração das *svcTraceViewer.exe.config* arquivo:
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Usando a ferramenta Visualizador de Rastreamento de Serviço  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Abrindo e exibindo arquivos de rastreamento do WCF  

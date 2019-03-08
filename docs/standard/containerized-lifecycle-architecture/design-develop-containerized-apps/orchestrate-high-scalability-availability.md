@@ -4,16 +4,16 @@ description: Aplicativos de produção real precisam ser implantados e gerenciad
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836151"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679037"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
-Usando orquestradores para aplicativos prontos para produção é essencial se seu aplicativo baseado em microsserviços ou dividido em vários contêineres. Conforme apresentado anteriormente, em uma abordagem baseada em microsserviço, cada microsserviço tem seu próprio modelo e dados para que seja autônomo de um ponto de vista de desenvolvimento e implantação. No entanto, se o seu aplicativo for mais tradicional, composto por diversos serviços (como o SOA), também haverá vários contêineres ou serviços que abrangem um único aplicativo de negócios e precisam ser implantados como um sistema distribuído. Esses tipos de sistemas são difíceis de escalar horizontalmente e gerenciar; portanto, um orquestrador é absolutamente necessário para ter um aplicativo pronto para produção, escalonável e com vários contêineres.
+Usando orquestradores para aplicativos prontos para produção é essencial se seu aplicativo baseado em microsserviços ou dividido em vários contêineres. Conforme apresentado anteriormente, em uma abordagem baseada em microsserviço, cada microsserviço tem seu próprio modelo e dados para que seja autônomo de um ponto de vista de desenvolvimento e implantação. No entanto, se o aplicativo for mais tradicional, composto por diversos serviços (como o SOA), também haverá vários contêineres ou serviços que abrangem um único aplicativo de negócios e precisam ser implantados como um sistema distribuído. Esses tipos de sistemas são difíceis de escalar horizontalmente e gerenciar; portanto, um orquestrador é absolutamente necessário para ter um aplicativo pronto para produção, escalonável e com vários contêineres.
 
 Figura 4 a 6 ilustra uma implantação em um cluster de um aplicativo composto por vários microsserviços (contêineres).
 
@@ -56,7 +56,7 @@ O AKS é uma maneira de simplificar a criação, configuração e gerenciamento 
 
 O Serviço de Kubernetes do Azure otimiza a configuração de ferramentas de software livre e tecnologias conhecidas do Docker especificamente para o Azure. É uma solução aberta que oferece portabilidade para contêineres e configuração de aplicativo. Selecione o tamanho, a quantidade de hosts e as ferramentas de orquestrador e deixe o AKS cuidar de todo o resto.
 
-![Estrutura de cluster Kubernetes: Há um nó mestre que manipula o DNS, Agendador, proxy, etc. e vários nós de trabalho, que hospedam os contêineres.](media/image36.png)
+![Estrutura de cluster Kubernetes: há um nó mestre que manipula o DNS, o agendador, o proxy, entre outros e vários nós de trabalho que hospedam os contêineres.](media/image36.png)
 
 **Figura 4-7**. Topologia e estrutura simplificadas do cluster Kubernetes
 
@@ -74,13 +74,13 @@ No ambiente de desenvolvimento que [Docker anunciada em julho de 2018](https://b
 
 Para começar a usar AKS, implante um cluster do AKS do portal do Azure ou usando a CLI. Para saber mais sobre como implantar um cluster do Serviço de Contêiner do Azure, veja [Implantar um cluster do AKS (Serviço de Kubernetes do Azure)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
-Nenhum valor é cobrado pelos softwares instalados por padrão como parte do AKS. Todas as opções padrão são implementadas com software livre. O AKS está disponível para várias máquinas virtuais no Azure. Somente as instâncias de computação escolhidas serão cobradas, bem como outros recursos de infraestrutura consumidos, como armazenamento e rede. Não há cobranças adicionais pelo AKS.
+Nenhum valor é cobrado pelos softwares instalados por padrão como parte do AKS. Todas as opções padrão são implementadas com software livre. O AKS está disponível para várias máquinas virtuais no Azure. Somente as instâncias de computação escolhidas serão cobradas, bem como outros recursos adjacentes de infraestrutura consumidos, como armazenamento e rede. Não há cobranças adicionais pelo AKS.
 
 Para implementação ainda mais informações sobre implantação no Kubernetes com base em `kubectl` e originais `.yaml` arquivos, consulte a postagem no [Configurando o eShopOnContainers no AKS (serviço de Kubernetes do Azure)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)).
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Implantar com gráficos do Helm em clusters de Kubernetes
 
-Ao implantar um aplicativo em um cluster Kubernetes, você pode usar o original `kubectl.exe` ferramenta CLI usando arquivos de implantação com base no formato nativo (`.yaml` arquivos), como já mencionado na seção anterior. No entanto, para aplicativos mais complexos do Kubernetes, como ao implantar aplicativos complexos baseados em microsserviço, é recomendável usar [Helm](https://helm.sh/).
+Ao implantar um aplicativo em um cluster Kubernetes, você pode usar o original `kubectl.exe` ferramenta CLI usando arquivos de implantação com base no formato nativo (`.yaml` arquivos), como já mencionado na seção anterior. No entanto, para aplicativos mais complexos do Kubernetes, como ao implantar aplicativos complexos baseados em microsserviços, é recomendável usar o [Helm](https://helm.sh/).
 
 Gráficos do Helm ajuda você a definir, versão, instalação, compartilhamento, atualização ou reversão até mesmo o aplicativo mais complexo do Kubernetes.
 
@@ -149,7 +149,7 @@ Para obter informações atualizadas sobre o suporte a contêineres no Azure Ser
 
 Service Fabric é um bom exemplo de uma plataforma em que você pode definir uma arquitetura lógica diferente (microsserviços de negócios ou contextos limitados) da implementação física. Por exemplo, se você implementar [Reliable Services com estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) na [do Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), que são introduzidos na próxima seção, "[sem estado versus microsserviços com estado](#stateless-versus-stateful-microservices), "você tem um conceito de microsserviço de negócios com vários serviços físicos.
 
-Conforme mostrado na Figura 4-10 e com base em uma perspectiva de microsserviço lógico/de negócios, ao implementar um serviço do Service Fabric com monitoração de estado confiável, você geralmente precisará implementar dois níveis de serviços. O primeiro é o serviço confiável com estado de back-end, que manipula várias partições (cada partição é um serviço com estado). O segundo é o serviço de front-end, ou serviço de Gateway, responsável pelo roteamento e agregação de dados entre várias partições ou instâncias de serviço com estado. Esse serviço de Gateway também manipula a comunicação do cliente com loops de repetição que acessam o serviço de back-end. Ele é chamado de serviço de Gateway, se você implementar seu serviço personalizado, ou como alternativa, você também pode usar a malha de serviço out of box [proxy reverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Conforme mostrado na Figura 4-10 e com base em uma perspectiva de microsserviço lógico/de negócios, ao implementar um serviço do Service Fabric com monitoração de estado confiável, você geralmente precisará implementar dois níveis de serviços. O primeiro é o serviço confiável com estado de back-end, que manipula várias partições (cada partição é um serviço com estado). O segundo é o serviço de front-end, ou serviço de Gateway, responsável pelo roteamento e agregação de dados entre várias partições ou instâncias de serviço com estado. Esse serviço de Gateway também manipula a comunicação do cliente com loops de repetição que acessam o serviço de back-end. Ele será denominado serviço de Gateway se você implementar seu serviço personalizado ou, de maneira alternativa, também é possível usar o [proxy reverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) do Service Fabric pronto para uso.
 
 ![O Service Fabric tem prescrição para dar suporte a vários serviços confiáveis com estado em contêineres.](./media/service-fabric-stateful-business-microservice.png)
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 75d891052abffe3362c13aa09fe880404564639a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7636a7d9a100d0df95f7d5462672819624ba52a4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377178"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679964"
 ---
 # <a name="navigation-overview"></a>Visão geral de navegação
 Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo de navegador que pode ser usada em dois tipos de aplicativos: aplicativos autônomos e [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Para empacotar conteúdo para o painel de navegação, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece o <xref:System.Windows.Controls.Page> classe. Você pode navegar de uma <xref:System.Windows.Controls.Page> para outra declarativamente, usando um <xref:System.Windows.Documents.Hyperlink>, ou programaticamente, usando o <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa o diário para lembrar as páginas que foram navegadas e navegar de volta para elas.  
@@ -136,7 +136,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  Neste exemplo, o `StartupUri` atributo é definido com um pacote relativo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] que identifica HomePage. XAML. Quando o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é iniciado, HomePage. XAML é navegado e exibido automaticamente. Isso é demonstrado pela figura a seguir, que mostra um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] que foi iniciado de um servidor Web.  
   
- ![Página XBAP](./media/navigationoverviewfigure9.png "NavigationOverviewFigure9")  
+ ![Página XBAP](./media/navigation-overview/xbap-launched-from-a-web-server.png "isso mostra um XBAP iniciado a partir de um servidor Web.")  
   
 > [!NOTE]
 >  Para obter mais informações sobre o desenvolvimento e implantação do [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], consulte [visão geral dos aplicativos de navegador XAML do WPF](wpf-xaml-browser-applications-overview.md) e [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md).  
@@ -151,7 +151,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  O resultado é mostrado na figura a seguir.  
   
- ![Título, altura e largura da janela](./media/navigationoverviewfigure2.png "NavigationOverviewFigure2")  
+ ![Título da janela, altura e largura](./media/navigation-overview/window-title-width-height.png "isso mostra o título da janela, altura e largura, você pode configurar.")  
   
 <a name="NavigatingBetweenXAMLPages"></a>   
 ### <a name="hyperlink-navigation"></a>Navegação de hiperlink  
@@ -169,11 +169,11 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  A figura a seguir mostra uma [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] com um <xref:System.Windows.Controls.Page> que tem um <xref:System.Windows.Documents.Hyperlink>.  
   
- ![Página com hiperlink](./media/navigationoverviewfigure3.png "NavigationOverviewFigure3")  
+ ![Página com hiperlink](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "isso mostra um XBAP com uma página com um hiperlink.")  
   
  Como você esperaria, clicando na <xref:System.Windows.Documents.Hyperlink> faz com que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] para navegar até a <xref:System.Windows.Controls.Page> que é identificado pelo `NavigateUri` atributo. Além disso, o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] adiciona uma entrada para o anterior <xref:System.Windows.Controls.Page> à lista de páginas recentes na [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Isso será mostrado na figura a seguir.  
   
- ![Botões Voltar e Avançar](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![Botões Voltar e Avançar](./media/navigation-overview/back-and-forward-navigation.png "navegar com os botões Voltar e Avançar.")  
   
  Bem como suporte à navegação de um <xref:System.Windows.Controls.Page> para outro, <xref:System.Windows.Documents.Hyperlink> também dá suporte à navegação de fragmento.  
   
@@ -309,7 +309,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  Os eventos de navegação são acionados na ordem em que são ilustrados pela figura a seguir.  
   
- ![Fluxograma de navegação de página](./media/navigationoverviewfigure11.png "NavigationOverviewFigure11")  
+ ![Fluxograma de navegação de página](./media/navigation-overview/order-of-navigation-events.png "gráfico de fluxo de eventos de navegação de página")  
   
  Em geral, um <xref:System.Windows.Controls.Page> não se preocupa com esses eventos. É mais provável que um aplicativo esteja relacionado a eles e, por esse motivo, esses eventos também são gerados pela <xref:System.Windows.Application> classe:  
   
@@ -345,7 +345,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Navegando pelo diário no Internet Explorer  
  Conceitualmente, o diário funciona da mesma forma que o **volta** e **Forward** botões [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] fazer. Eles serão mostrados na figura a seguir.  
   
- ![Botões Voltar e Avançar](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![Botões Voltar e Avançar](./media/navigation-overview/back-and-forward-navigation.png "navegar com os botões Voltar e Avançar.")  
   
  Para [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] que são hospedadas pelo [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integra o diário de navegação [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Isso permite aos usuários navegar pelas páginas em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] usando o **volta**, **Forward**, e **páginas recentes** botões [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. O diário não está integrado ao [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] da mesma forma que ele é para [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] ou Internet Explorer 8. Em vez disso, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] renderiza uma navegação substituta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -402,7 +402,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  Por esse motivo, o comportamento padrão do diário é armazenar <xref:System.Windows.Controls.Page> metadados em cada entrada de diário em vez de uma referência a um <xref:System.Windows.Controls.Page> objeto. Quando uma entrada de diário é navegada, seus <xref:System.Windows.Controls.Page> metadados são usados para criar uma nova instância da especificado <xref:System.Windows.Controls.Page>. Como consequência, cada <xref:System.Windows.Controls.Page> que se navega tem o tempo de vida é ilustrado pela figura a seguir.  
   
- ![Tempo de vida da página](./media/navigationoverviewfigure10.PNG "NavigationOverviewFigure10")  
+ ![Tempo de vida da página](./media/navigation-overview/navigated-page-lifetime.png "isso mostra o tempo de vida quando uma página é acessada.")  
   
  Embora usar o comportamento de registro no diário padrão possa economizar consumo de memória, o desempenho de processamento por página poderá ser reduzido; reinstanciar uma <xref:System.Windows.Controls.Page> pode ser demorado, especialmente se ela tiver muito conteúdo. Se você precisar manter um <xref:System.Windows.Controls.Page> instância no diário, você pode utilizar duas técnicas para fazer isso. Primeiro, você pode navegar programaticamente para um <xref:System.Windows.Controls.Page> objeto chamando o <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> método.  
   
@@ -412,7 +412,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  O tempo de vida de um <xref:System.Windows.Controls.Page> que é mantida ativa é ligeiramente diferente de uma que não é. Na primeira vez em uma <xref:System.Windows.Controls.Page> que é mantida ativa é acessada, ela é instanciada como um <xref:System.Windows.Controls.Page> que não é mantida ativa. No entanto, porque uma instância da <xref:System.Windows.Controls.Page> é mantida no diário, ela é nunca instanciada novamente enquanto ele permanece no diário. Consequentemente, se um <xref:System.Windows.Controls.Page> tem uma lógica de inicialização que precisa ser chamado sempre que o <xref:System.Windows.Controls.Page> navega, você deve movê-la do construtor para um manipulador para o <xref:System.Windows.FrameworkElement.Loaded> eventos. Conforme mostrado na figura a seguir, o <xref:System.Windows.FrameworkElement.Loaded> e <xref:System.Windows.FrameworkElement.Unloaded> eventos ainda são acionados sempre que um <xref:System.Windows.Controls.Page> se navega de e para, respectivamente.  
   
- ![Quando os eventos Loaded e Unloaded são acionados](./media/navigationoverviewfigure17.png "NavigationOverviewFigure17")  
+ ![Quando os eventos Loaded e Unloaded são acionados](./media/navigation-overview/loaded-and-unloaded-events.png "carregado e descarregados eventos são gerados quando uma página é acessada de e para.")  
   
  Quando um <xref:System.Windows.Controls.Page> não é mantida ativa, você não deve fazer o seguinte:  
   
@@ -474,7 +474,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  Se um <xref:System.Windows.Controls.Page> usa esses controles, os dados inseridos neles são memorizados entre <xref:System.Windows.Controls.Page> navegações, como demonstrado pelo **cor favorita** <xref:System.Windows.Controls.ListBox> na figura a seguir.  
   
- ![Página com controles que memorizam o estado](./media/navigationoverviewfigure13.png "NavigationOverviewFigure13")  
+ ![Página com controles que memorizam o estado](./media/navigation-overview/data-remembered-across-page-navigations.png "dados inseridos são memorizados entre navegações de página.")  
   
  Quando um <xref:System.Windows.Controls.Page> tem controles diferentes na lista anterior, ou quando o estado é armazenado em objetos personalizados, você precisa escrever código para fazer com que o diário memorize o estado entre <xref:System.Windows.Controls.Page> navegações.  
   
@@ -549,7 +549,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  A figura a seguir mostra o <xref:System.Windows.Navigation.NavigationWindow> como a janela principal de um aplicativo autônomo.  
   
- ![Uma janela principal](./media/navigationoverviewfigure18.png "NavigationOverviewFigure18")  
+ ![Uma janela principal](./media/navigation-overview/navigation-window-as-main-window.png "janela de navegação como a janela principal")  
   
  Na figura, você pode ver que o <xref:System.Windows.Navigation.NavigationWindow> tem um título, mesmo que ele não foi definido no <xref:System.Windows.Navigation.NavigationWindow> código de implementação do exemplo anterior. Em vez disso, o título é definido usando o <xref:System.Windows.Controls.Page.WindowTitle%2A> propriedade, que é mostrada no código a seguir.  
   
@@ -569,11 +569,11 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  A figura a seguir mostra o resultado.  
   
- ![Uma caixa de diálogo](./media/navigationoverviewfigure19.png "NavigationOverviewFigure19")  
+ ![Uma caixa de diálogo](./media/navigation-overview/navigation-window-as-dialog-box.png "janela de navegação como uma caixa de diálogo")  
   
  Como você pode ver, <xref:System.Windows.Navigation.NavigationWindow> exibe [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]-estilo **volta** e **Forward** botões que permitem aos usuários navegar pelo diário. Esses botões fornecem a mesma experiência do usuário, conforme mostrado na figura a seguir.  
   
- ![Botões Voltar e Avançar em NavigationWindow](./media/navigationoverviewfigure20.png "NavigationOverviewFigure20")  
+ ![Voltar e Avançar botões em uma NavigationWindow](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "botões em uma janela de navegação Voltar e Avançar")  
   
  Se suas páginas fornecem seus próprios suporte de navegação de diário e interface do usuário, você pode ocultar a **volta** e **Forward** botões exibidos pela <xref:System.Windows.Navigation.NavigationWindow> definindo o valor da <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> propriedade `false`.  
   
@@ -591,13 +591,13 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  Essa marcação define o `Source` atributo do `Frame` elemento com um pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para o <xref:System.Windows.Controls.Page> que o <xref:System.Windows.Controls.Frame> deve navegar inicialmente. A figura a seguir mostra uma [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] com um <xref:System.Windows.Controls.Page> que tem um <xref:System.Windows.Controls.Frame> que navegou entre várias páginas.  
   
- ![Um quadro que navegou entre várias páginas](./media/navigationoverviewfigure5.png "NavigationOverviewFigure5")  
+ ![Um quadro que navegou entre várias páginas](./media/navigation-overview/frame-navigation-between-multiple-pages.png "isso mostra uma navegação de quadro entre várias páginas.")  
   
  Você não precisa usar apenas <xref:System.Windows.Controls.Frame> dentro do conteúdo de um <xref:System.Windows.Controls.Page>. Também é comum hospedar um <xref:System.Windows.Controls.Frame> dentro do conteúdo de um <xref:System.Windows.Window>.  
   
  Por padrão, <xref:System.Windows.Controls.Frame> usa apenas seu próprio diário na ausência de outro diário. Se um <xref:System.Windows.Controls.Frame> faz parte do conteúdo que está hospedado dentro uma <xref:System.Windows.Navigation.NavigationWindow> ou um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame> usa o diário que pertence a <xref:System.Windows.Navigation.NavigationWindow> ou [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Às vezes, no entanto, um <xref:System.Windows.Controls.Frame> talvez precise ser responsável por seu próprio diário. Um motivo para fazer isso é permitir a navegação de diário em páginas que são hospedados por um <xref:System.Windows.Controls.Frame>. Isso é ilustrado pela figura a seguir.  
   
- ![Diagrama de páginas e quadro](./media/navigationoverviewfigure7.png "NavigationOverviewFigure7")  
+ ![Diagrama de páginas e quadro](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "isso mostra a navegação do diário em páginas hospedadas por um quadro.")  
   
  Nesse caso, você pode configurar o <xref:System.Windows.Controls.Frame> para usar seu próprio diário, definindo o <xref:System.Windows.Controls.Frame.JournalOwnership%2A> propriedade da <xref:System.Windows.Controls.Frame> para <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>. Isso é mostrado na marcação a seguir.  
   
@@ -607,7 +607,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  A figura a seguir ilustra o efeito de navegar em um <xref:System.Windows.Controls.Frame> que usa seu próprio diário.  
   
- ![Um quadro que usa seu próprio diário](./media/navigationoverviewfigure8.png "NavigationOverviewFigure8")  
+ ![Um quadro que usa seu próprio diário](./media/navigation-overview/frame-uses-its-own-journal.png "isso mostra o efeito de navegar em um quadro que usa seu próprio diário.")  
   
  Observe que as entradas de diário são mostradas por de navegação [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no <xref:System.Windows.Controls.Frame>, em vez de pelo [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)].  
   
@@ -624,19 +624,19 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
 ## <a name="navigation-hosts"></a>Hosts de navegação  
  <xref:System.Windows.Controls.Frame> e <xref:System.Windows.Navigation.NavigationWindow> são classes que são conhecidas como hosts de navegação. Um *host de navegação* é uma classe que pode navegar e exibir o conteúdo. Para fazer isso, cada host de navegação usa seus próprios <xref:System.Windows.Navigation.NavigationService> e diário. A construção básica de um host de navegação é mostrada na figura a seguir.  
   
- ![Diagramas do navegador](./media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
+ ![Diagramas do navegador](./media/navigation-overview/navigation-host-construction.png "construção básica de um host de navegação")  
   
  Essencialmente, isso permite <xref:System.Windows.Navigation.NavigationWindow> e <xref:System.Windows.Controls.Frame> para fornecer o mesmo suporte à navegação que um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] dá quando hospedado no navegador.  
   
  Além de usar <xref:System.Windows.Navigation.NavigationService> e um diário, hosts de navegação implementam os mesmos membros que <xref:System.Windows.Navigation.NavigationService> implementa. Isso é ilustrado pela figura a seguir.  
   
- ![Um diário em um quadro e em uma NavigationWindow](./media/naivgationoverviewfigure24.png "NaivgationOverviewFigure24")  
+ ![Um diário em um quadro em uma NavigationWindow](./media/navigation-overview/navigation-window-and-frame.png "janela de navegação e de quadro")  
   
  Isso permite que você programe suporte a navegação diretamente em relação a eles. Você pode considerar isso se você precisar fornecer uma navegação personalizada [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para um <xref:System.Windows.Controls.Frame> que é hospedado em um <xref:System.Windows.Window>. Além disso, os dois tipos implementam membros adicionais, relacionados a navegação, incluindo `BackStack` (<xref:System.Windows.Navigation.NavigationWindow.BackStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Frame.BackStack%2A?displayProperty=nameWithType>) e `ForwardStack` (<xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Frame.ForwardStack%2A?displayProperty=nameWithType>), que permitem enumerar as entradas de diário na parte traseira pilha e a pilha de avanço, respectivamente.  
   
  Conforme mencionado anteriormente, mais de um diário pode existir dentro de um aplicativo. A figura a seguir fornece um exemplo de quando isso pode acontecer.  
   
- ![Vários diários dentro de um aplicativo](./media/naivgationoverviewfigure25.png "NaivgationOverviewFigure25")  
+ ![Vários diários dentro de um aplicativo](./media/navigation-overview/multiple-journals-in-one-application.png "este é um exemplo de mais de um diário em um aplicativo.")  
   
 <a name="Navigating_to_Content_Other_than_Pages"></a>   
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>Navegar para conteúdo que não seja páginas XAML  
@@ -660,7 +660,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  Quando você clica duas vezes no arquivo, o navegador é aberto e então navega para o conteúdo e o exibe. Isso será mostrado na figura a seguir.  
   
- ![Exibição do conteúdo no arquivo Person.XAML](./media/navigationoverviewfigure21.png "NavigationOverviewFigure21")  
+ ![Exibição do conteúdo no arquivo Person XAML](./media/navigation-overview/contents-of-person-xaml-file.png "mostra o conteúdo do arquivo Person XAML.")  
   
  Você pode exibir um flexível [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo a partir do seguinte:  
   
@@ -711,7 +711,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  A figura a seguir mostra o resultado.  
   
- ![Uma página que navega para uma classe](./media/navigationoverviewfigure22.png "NavigationOverviewFigure22")  
+ ![Uma página que navega para uma classe](./media/navigation-overview/page-navigates-to-an-object.png "este é um exemplo de uma página que navega para um objeto.")  
   
  Nessa figura, você pode ver que nada útil é exibido. Na verdade, o valor exibido é o valor de retorno de `ToString` método para o **pessoa** objeto; por padrão, esse é o único valor que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pode usar para representar seu objeto. É possível substituir o `ToString` método para retornar informações mais significativas, embora ele continuasse sendo apenas ser um valor de cadeia de caracteres. Uma técnica que você pode usar que tira proveito dos recursos de apresentação de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é usar um modelo de dados. Você pode implementar um modelo de dados que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pode associar a um objeto de um tipo específico. O código a seguir mostra um modelo de dados para o `Person` objeto.  
   
@@ -719,7 +719,7 @@ Windows Presentation Foundation (WPF) oferece suporte à navegação de estilo d
   
  Aqui, o modelo de dados é associado a `Person` tipo usando o `x:Type` extensão de marcação no `DataType` atributo. O modelo de dados, em seguida, associa `TextBlock` elementos (consulte <xref:System.Windows.Controls.TextBlock>) para as propriedades do `Person` classe. A figura a seguir mostra a aparência atualizada do `Person` objeto.  
   
- ![Navegar para uma classe que tem um modelo de dados](./media/navigationoverviewfigure23.png "NavigationOverviewFigure23")  
+ ![Navegar para uma classe que tem um modelo de dados](./media/navigation-overview/navigating-to-a-class.png "navegando até uma classe que tem um modelo de dados.")  
   
  Uma vantagem dessa técnica é a consistência você obtém sendo capaz de reutilizar o modelo de dados para exibir os objetos de forma consistente em qualquer lugar no aplicativo.  
   

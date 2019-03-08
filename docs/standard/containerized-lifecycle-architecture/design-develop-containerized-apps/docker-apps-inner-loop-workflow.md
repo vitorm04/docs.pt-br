@@ -4,16 +4,16 @@ description: Aprenda o fluxo de trabalho de "loop interno" para o desenvolviment
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835675"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676662"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento de loop interno para aplicativos do Docker
 
-Antes de disparar o fluxo de trabalho de loop externo que abrangem o DevOps todo ciclo, tudo começa em cada computador de desenvolvedor, codificando o aplicativo em si, usando seus idiomas preferenciais ou plataformas e testá-lo localmente (Figura 4-21). Mas, em todos os casos, você terá um ponto importante em comum, não importa qual linguagem, estrutura ou plataformas você escolher. Nesse fluxo de trabalho específico, você sempre estiver desenvolvendo e testando contêineres do Docker, mas localmente.
+Antes de disparar o fluxo de trabalho de loop externo que abrangem o DevOps todo ciclo, tudo começa em cada computador de desenvolvedor, codificando o aplicativo em si, usando seus idiomas preferenciais ou plataformas e testá-lo localmente (Figura 4-21). Mas, em todos os casos, você terá um ponto importante em comum, não importa qual linguagem, estrutura ou plataformas você escolher. Nesse fluxo de trabalho específico, você sempre está desenvolvendo e testando contêineres do Docker, mas localmente.
 
 ![Etapa 1 - código/execução/depuração](./media/image18.png)
 
@@ -43,7 +43,7 @@ Figura 4-22 mostra as etapas básicas que você normalmente precisará realizar 
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Etapa 1: Iniciar a codificação no Visual Studio Code e crie sua linha de base inicial/serviço de aplicativo
 
-A maneira de desenvolver seu aplicativo é semelhante à forma como você pode fazê-lo sem o Docker. A diferença é que, durante o desenvolvimento, você está implantando e testando o aplicativo ou serviços em execução em contêineres do Docker colocados no seu ambiente local (como uma VM do Linux ou Windows).
+A maneira de desenvolver seu aplicativo é semelhante à forma como você pode fazê-lo sem o Docker. A diferença é que, durante o desenvolvimento, você está implantando e testando seu aplicativo ou serviços em execução em contêineres do Docker colocados no seu ambiente local (como uma VM do Linux ou Windows).
 
 **Como configurar seu ambiente local**
 
@@ -91,13 +91,13 @@ Para instalar a extensão do Docker, pressione Ctrl + Shift + P, digite `ext ins
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Etapa 2: Criar um DockerFile relacionado a uma imagem existente (sem formatação do sistema operacional ou ambientes de desenvolvimento, como Ruby, Node. js e .NET Core)
 
-Você precisará de um `DockerFile` por uma imagem personalizada a ser criado e por contêiner a ser implantado. Se seu aplicativo é composto por um único serviço personalizado, será necessário um único `DockerFile`. Mas se seu aplicativo é composto de vários serviços (como em uma arquitetura de microsserviços), você precisará de uma `Dockerfile` por serviço.
+Você precisará de um `DockerFile` por uma imagem personalizada a ser criado e por contêiner a ser implantado. Se seu aplicativo é composto por um único serviço personalizado, você precisará de um único `DockerFile`. Mas se seu aplicativo é composto de vários serviços (como em uma arquitetura de microsserviços), você precisará de uma `Dockerfile` por serviço.
 
 O `DockerFile` normalmente é colocado na pasta raiz do seu aplicativo ou serviço e contém os comandos necessários para que o Docker Saiba como configurar e executar esse aplicativo ou serviço. Você pode criar seu `DockerFile` e adicioná-lo ao seu projeto, juntamente com seu código (Node. js, .NET Core, etc.), ou, se você for novo no ambiente, examine a seguinte dica.
 
 > [!TIP]
 >
-> Você pode usar a extensão do Docker para orientá-lo ao usar o `Dockerfile` e `docker-compose.yml` arquivos relacionados ao seus contêineres do Docker. Por fim, provavelmente você vai escrever esses tipos de arquivos sem essa ferramenta, mas usando a extensão do Docker é um bom ponto de partida que acelerará sua curva de aprendizado.
+> Você pode usar a extensão do Docker para orientá-lo ao usar o `Dockerfile` e `docker-compose.yml` arquivos relacionados ao seus contêineres do Docker. Por fim, você provavelmente vai gravar esses tipos de arquivos sem essa ferramenta, mas usando a extensão do Docker é um bom ponto de partida que acelerará sua curva de aprendizado.
 
 Na Figura 4-24, você pode ver como o docker-compose arquivo for adicionado usando a extensão do Docker para VS Code.
 
@@ -105,7 +105,7 @@ Na Figura 4-24, você pode ver como o docker-compose arquivo for adicionado usan
 
 **Figura 4-24**. Arquivos do docker adicionados usando o **arquivos Docker adicionar ao comando de espaço de trabalho**
 
-Quando você adiciona um DockerFile, você especificar qual imagem base do Docker, você vai usar (como o uso de `FROM microsoft/aspnetcore`). Geralmente, você cria sua imagem personalizada na parte superior de uma imagem de base que você obteve de qualquer repositório oficial, nos [registro de Hub do Docker](https://hub.docker.com/) (como um [imagem para o .NET Core](https://hub.docker.com/r/microsoft/dotnet/) o um ou mais [para Node. js](https://hub.docker.com/_/node/)).
+Quando você adiciona um DockerFile, você especificar qual imagem base do Docker, você vai usar (como o uso de `FROM microsoft/aspnetcore`). Normalmente, você criará sua imagem personalizada na parte superior de uma imagem de base que você obteve de qualquer repositório oficial, nos [registro de Hub do Docker](https://hub.docker.com/) (como um [imagem para o .NET Core](https://hub.docker.com/r/microsoft/dotnet/) o um ou mais [para Node. js](https://hub.docker.com/_/node/)).
 
 ***Usar uma imagem de Docker oficial existente***
 
@@ -149,7 +149,7 @@ Extraindo o [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore
 
 ***Criar sua imagem de base a partir do zero***
 
-Você pode criar sua própria imagem base do Docker do zero, conforme explicado neste [artigo](https://docs.docker.com/engine/userguide/eng-image/baseimages/) do Docker. Esse cenário provavelmente não é o melhor para você, se você estiver apenas começando com o Docker, mas se você quiser definir as partes específicas de sua própria imagem base, você pode fazê-lo.
+Você pode criar sua própria imagem base do Docker do zero, conforme explicado neste [artigo](https://docs.docker.com/engine/userguide/eng-image/baseimages/) do Docker. Esse cenário provavelmente não é o melhor para você, se você estiver começando com o Docker, mas se você quiser definir as partes específicas de sua própria imagem base, você pode fazê-lo.
 
 ### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Etapa 3: Criar imagens personalizadas do Docker inserindo seu serviço nele
 

@@ -2,12 +2,12 @@
 title: Criando um serviço de fluxo de trabalho de execução longa
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: b3c5cd8a64f32a199932a40ed2d94b0a545b0dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585388"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679431"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Criando um serviço de fluxo de trabalho de execução longa
 Este tópico descreve como criar um serviço de fluxo de trabalho de longa execução. Serviços de fluxo de trabalho de longa execução pode ser executada por longos períodos de tempo. Em algum momento o fluxo de trabalho poderá ficar ocioso enquanto aguarda para obter informações adicionais. Quando isso acontece o fluxo de trabalho é mantido para um banco de dados SQL e é removido da memória. Quando as informações adicionais está disponível a instância de fluxo de trabalho é carregada para a memória e continua executando.  Nesse cenário, você está implementando um sistema de pedidos muito simplificado.  O cliente envia uma mensagem inicial para o serviço de fluxo de trabalho para iniciar a ordem. Ele retorna uma ID de pedido para o cliente. Neste ponto o serviço de fluxo de trabalho está aguardando a outra mensagem do cliente e entra no estado ocioso e é mantido para um banco de dados do SQL Server.  Quando o cliente envia a próxima mensagem a um item de ordem, o serviço de fluxo de trabalho é carregado para a memória e termina de processar o pedido. No exemplo de código, ele retorna uma cadeia de caracteres informando que o item foi adicionado ao pedido. O exemplo de código não deve ser um aplicativo do mundo real da tecnologia, mas em vez disso, um exemplo simple que ilustra os serviços de fluxo de trabalho de longa execução. Este tópico pressupõe que você sabe como criar soluções e projetos do Visual Studio 2012.
@@ -45,11 +45,11 @@ Este tópico descreve como criar um serviço de fluxo de trabalho de longa execu
 
     1.  Sob **iniciar ação** selecionar **página específica** e especifique `Service1.xamlx`.
 
-         ![Propriedades de Web de projeto de serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")
+         ![Propriedades de Web de projeto de serviço de fluxo de trabalho](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "criar o serviço de fluxo de trabalho hospedado na web - opção de página específica")
 
     2.  Sob **servidores** selecionar **servidor Web do IIS Local Use**.
 
-         ![Configurações do servidor Web local](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")
+         ![Configurações do servidor Web local](./media/creating-a-long-running-workflow-service/use-local-web-server.png "criar o serviço de fluxo de trabalho hospedado na web - opção de usar o servidor de Web do IIS Local")
 
         > [!WARNING]
         >  Você deve executar o Visual Studio 2012 no modo administrador para fazer essa configuração.
@@ -63,55 +63,55 @@ Este tópico descreve como criar um serviço de fluxo de trabalho de longa execu
     > [!NOTE]
     >  Se o CorrelationHandle não estiver na lista suspensa tipo de variável, selecione **procurar tipos** na lista suspensa. Digite CorrelationHandle na **nome do tipo** selecione CorrelationHandle na caixa de listagem e clique em **Okey**.
 
-     ![Adicione variáveis](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")
+     ![Adicione variáveis](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "adicionar variáveis à atividade Sequential Service.")
 
 6.  Arraste e solte uma **ReceiveAndSendReply** modelo de atividade para o **Sequential Service** atividade. Esse conjunto de atividades será receber uma mensagem de um cliente e enviar uma resposta de volta.
 
     1.  Selecione o **Receive** atividade e defina as propriedades realçadas na ilustração a seguir.
 
-         ![Propriedades de atividade de recebimento de conjunto](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")
+         ![Definir propriedades de atividade receber](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "definir as propriedades de atividade de recebimento.")
 
          A propriedade DisplayName define o nome exibido para a atividade Receive no designer. As propriedades ServiceContractName e OperationName especificam o nome do contrato de serviço e operação são implementados pela atividade Receive. Para obter mais informações sobre como os contratos são usados nos serviços de fluxo de trabalho, consulte [utilizando contratos no fluxo de trabalho](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).
 
     2.  Clique o **defina...**  link na **ReceiveStartOrder** atividade e defina as propriedades mostradas na ilustração a seguir.  Observe que o **parâmetros** botão de opção é selecionado, um parâmetro denominado `p_customerName` está associado a `customerName` variável. Isso configura a **Receive** atividade receber alguns dados e associar dados a variáveis locais.
 
-         ![Definindo os dados recebidos pela atividade Receive](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")
+         ![Definindo os dados recebidos pela atividade Receive](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "definir as propriedades de dados recebidos pela atividade Receive.")
 
     3.  Selecione o **SendReplyToReceive** atividade e defina a propriedade realçada mostrada na ilustração a seguir.
 
-         ![Definindo as propriedades da atividade SendReply](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")
+         ![Definindo as propriedades da atividade SendReply](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
 
     4.  Clique o **defina...**  link na **SendReplyToStartOrder** atividade e defina as propriedades mostradas na ilustração a seguir. Observe que o **parâmetros** botão de opção é selecionado; um parâmetro chamado `p_orderId` está associado a `orderId` variável. Essa configuração especifica que a atividade SendReplyToStartOrder retornará um valor de cadeia de caracteres de tipo para o chamador.
 
-         ![Configurando os dados de conteúdo de atividade de SendReply](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")
+         ![Configurando os dados de conteúdo de atividade de SendReply](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "definir a configuração para a atividade de SetReplyToStartOrder.")
 
     5.  Arrastar e soltar uma atividade de atribuição entre o **Receive** e **SendReply** atividades e defina as propriedades conforme mostrado na ilustração a seguir:
 
-         ![Adicionar uma atividade assign](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")
+         ![Adicionar uma atividade assign](./media/creating-a-long-running-workflow-service/add-an-assign-activity.png "adicionar uma atividade de atribuição.")
 
          Isso cria uma nova ID de ordem e coloca o valor na variável orderId.
 
     6.  Selecione o **ReplyToStartOrder** atividade. Na janela Propriedades, clique no botão de reticências para **CorrelationInitializers**. Selecione o **adicionar inicializador** link, digite `orderIdHandle` na caixa de texto de inicializador, selecione o inicializador de correlação de consulta para o tipo de correlação e selecione p_orderId sob a caixa de lista suspensa de consultas XPATH. Essas configurações são mostradas na ilustração a seguir. Clique em **OK**.  Isso inicializa uma correlação entre o cliente e essa instância do serviço de fluxo de trabalho. Quando uma mensagem que contém essa ordem de que ID é recebida, ela é roteada para esta instância do serviço de fluxo de trabalho.
 
-         ![Adicionando um inicializador de correlação](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")
+         ![Adicionando um inicializador de correlação](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "adicionar um inicializador de correlação.")
 
 7.  Arraste e solte outra **ReceiveAndSendReply** atividade até o final do fluxo de trabalho (fora do **sequência** que contém o primeiro **Receive** e  **SendReply** atividades). Isso irá receber a segunda mensagem enviada pelo cliente e responder a ele.
 
     1.  Selecione o **sequência** que contém o recém-adicionado **Receive** e **SendReply** atividades e clique no **variáveis** botão. Adicione a variável realçada na ilustração a seguir:
 
-         ![Adicionando novas variáveis](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")
+         ![Adicionando novas variáveis](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "adicionar a variável de ItemId.")
 
     2.  Selecione o **Receive** atividade e defina as propriedades mostradas na ilustração a seguir:
 
-         ![Definir as propriedades de atividade de recebimento](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")
+         ![Definir as propriedades de atividade de recebimento](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "definir as propriedades de atividades de recebimento.")
 
     3.  Clique o **defina...**  link na **ReceiveAddItem** atividade e adicione os parâmetros mostrados na ilustração a seguir: Isso configura a atividade de recebimento para aceitar dois parâmetros, a ID da ordem e a ID do item que estão sendo ordenada.
 
-         ![Especificar parâmetros para o segundo recebem](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")
+         ![Especificando parâmetros para o segundo recebimento](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "configurar a atividade de recebimento para receber dois parâmetros.")
 
     4.  Clique o **CorrelateOn** reticências e digitar `orderIdHandle`. Sob **consultas XPath**, clique na seta suspensa e selecione `p_orderId`. Isso configura a correlação na segunda atividade de recebimento. Para obter mais informações sobre a correlação, consulte [correlação](../../../../docs/framework/wcf/feature-details/correlation.md).
 
-         ![Definindo a propriedade CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")
+         ![Definindo a propriedade CorrelatesOn](./media/creating-a-long-running-workflow-service/correlateson-setting.png "defina a propriedade CorrelatesOn.")
 
     5.  Arraste e solte uma **se** atividade imediatamente após o **ReceiveAddItem** atividade. Essa atividade atua como um se instrução.
 
@@ -119,17 +119,17 @@ Este tópico descreve como criar um serviço de fluxo de trabalho de longa execu
 
         2.  Arrastar e soltar uma **atribuir** atividade para o **, em seguida,** seção e outro para o **Else** seção definir as propriedades do **atribuir** atividades, conforme mostrado na ilustração a seguir.
 
-             ![Atribuir o resultado da chamada de serviço](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")
+             ![Atribuir o resultado da chamada de serviço](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "atribuir o resultado da chamada de serviço.")
 
              Se a condição for `true` as **, em seguida,** seção será executada. Se a condição for `false` as **Else** seção será executada.
 
         3.  Selecione o **SendReplyToReceive** atividade e conjunto de **DisplayName** propriedade mostrada na ilustração a seguir.
 
-             ![Definindo as propriedades da atividade SendReply](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")
+             ![Definindo as propriedades da atividade SendReply](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "defina a propriedade de atividade de SendReply.")
 
         4.  Clique o **defina...**  link na **SetReplyToAddItem** atividade e configurá-lo, conforme mostrado na ilustração a seguir. Isso configura a **SendReplyToAddItem** atividade para retornar o valor de `orderResult` variável.
 
-             ![Definindo a associação de dados para a atividade de sendreply](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")
+             ![Definindo a associação de dados para a atividade de SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "definir propriedade de atividade SendReplyToAddItem.")
 
 8.  Abra o arquivo Web. config e adicione os seguintes elementos no \<comportamento > seção para habilitar a persistência de fluxo de trabalho.
 

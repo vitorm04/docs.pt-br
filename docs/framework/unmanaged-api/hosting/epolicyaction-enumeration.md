@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa8589b3f27ba97d32e77dbfecb190edc69dbc18
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655706"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677325"
 ---
 # <a name="epolicyaction-enumeration"></a>Enumeração EPolicyAction
 Descreve as ações de política, o host pode ser definido para operações descritas pelo [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) e as falhas descritas pelo [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
@@ -50,7 +50,7 @@ typedef enum {
 |`eAbortThread`|Especifica que o common language runtime (CLR) deve anular o thread normalmente. Uma anulação normal inclui tentativas de executar todos `finally` bloqueia qualquer `catch` blocos relacionados a anulações de thread e finalizadores.|  
 |`eDisableRuntime`|Especifica que o CLR deve entrar em um estado desabilitado. Nenhum outro código gerenciado pode ser executado no processo afetado e threads são bloqueados de inserir o CLR.|  
 |`eExitProcess`|Especifica que o CLR deve tentar uma saída normal do processo, incluindo a execução de finalizadores e operações de registro em log e limpeza.|  
-|`eFastExitProcess`|Especifica que o CLR deve sair do processo imediatamente, sem execução dos finalizadores ou executar a limpeza e operações de registro em log. Nowever, a notificação é enviada para o depurador.|  
+|`eFastExitProcess`|Especifica que o CLR deve sair do processo imediatamente, sem execução dos finalizadores ou executar a limpeza e operações de registro em log. No entanto, a notificação é enviada para o depurador.|  
 |`eNoAction`|Especifica que nenhuma ação deve ser executada.|  
 |`eRudeAbortThread`|Especifica que o CLR deve realizar uma anulação de thread rude. Somente aqueles `catch` e `finally` blocos marcados com <xref:System.EnterpriseServices.MustRunInClientContextAttribute> são executadas.|  
 |`eRudeExitProcess`|Especifica que o CLR deve sair do processo sem execução dos finalizadores ou operações de registro em log.|  
