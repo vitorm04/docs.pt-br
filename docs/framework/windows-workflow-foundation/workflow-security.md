@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 62564823338ee071f09036929a3a11cd5f3bbbe1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441744"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676558"
 ---
 # <a name="workflow-security"></a>Segurança de fluxo de trabalho
 Windows Workflow Foundation (WF) está integrado com várias tecnologias diferentes, como Microsoft SQL Server e Windows Communication Foundation (WCF). Interagir com essas tecnologias pode gerar problemas de segurança no fluxo de trabalho se feito de modo inadequado.
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) está integrado com várias tecnologias diferen
 
 4.  Fluxo um símbolo de segurança de cliente a um serviço back-end (delegação reivindicação- base) usando a ws-trust Ata
 
-Para obter mais informações e baixar a CTP de segurança de WF, consulte: [Pacote de segurança WF CTP](https://wf.codeplex.com/releases/view/48114)
+Para obter mais informações e baixar a CTP de segurança de WF, consulte: [Pacote de segurança WF CTP](https://archive.codeplex.com/?p=wf)

@@ -4,16 +4,16 @@ description: Entenda os conceitos principais para implantar aplicativos monolít
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747256"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676831"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
-Nesse cenário, você é criar um aplicativo web único e monolítico ou serviço e implantá-lo como um contêiner. Dentro do aplicativo, a estrutura pode não ser monolítica; ele pode ser composto por várias bibliotecas, componentes ou até mesmo camadas (camada de aplicativo, camada de domínio, camada de acesso a dados, etc.). Externamente, ele é um único contêiner, como um único processo, um único aplicativo web ou um único serviço.
+Nesse cenário, você estiver criando um aplicativo web único e monolítico ou serviço e implantá-lo como um contêiner. Dentro do aplicativo, a estrutura pode não ser monolítica; ele pode ser composto por várias bibliotecas, componentes ou até mesmo camadas (camada de aplicativo, camada de domínio, camada de acesso a dados, etc.). Externamente, ele é um único contêiner, como um único processo, um único aplicativo web ou um único serviço.
 
 Para gerenciar esse modelo, implante um contêiner único para representar o aplicativo. Para dimensioná-lo, basta Adicione algumas cópias mais com um balanceador de carga na frente. A simplicidade é proveniente do gerenciamento de uma única implantação em um único contêiner ou uma máquina virtual (VM).
 

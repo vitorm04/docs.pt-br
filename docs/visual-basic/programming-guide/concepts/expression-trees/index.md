@@ -6,7 +6,7 @@ ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
 # <a name="expression-trees-visual-basic"></a>Árvores de expressão (Visual Basic)
 Árvores de expressão representam código em uma estrutura de dados de árvore, onde cada nó é, por exemplo, uma expressão, uma chamada de método ou uma operação binária como `x < y`.  
   
- Você pode compilar e executar código representado por árvores de expressão. Isso permite a modificação dinâmica de código executável, a execução de consultas LINQ em vários bancos de dados e a criação de consultas dinâmicas. Para obter mais informações sobre árvores de expressão no LINQ, consulte [como: Usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
+ Você pode compilar e executar código representado por árvores de expressão. Isso permite a modificação dinâmica de código executável, a execução de consultas LINQ em vários bancos de dados e a criação de consultas dinâmicas. Confira mais informações sobre árvores de expressão no LINQ em [Como: Usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
   
  Árvores de expressão também são usadas no tempo de execução de linguagem dinâmica (DLR) para fornecer interoperabilidade entre linguagens dinâmicas e o .NET Framework e permitir que gravadores compiladores emitam árvores de expressão em vez de Microsoft intermediate language (MSIL). Para obter mais informações sobre o DLR, consulte [Visão geral do Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
@@ -79,7 +79,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Para saber mais, confira [Gerar métodos dinâmicos com árvores de expressão no Visual Studio 2010](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010), que também se aplica a versões mais recentes do Visual Studio.
+Para saber mais, confira [Gerar métodos dinâmicos com árvores de expressão no Visual Studio 2010](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/), que também se aplica a versões mais recentes do Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analisando árvores de expressão  
  O exemplo de código a seguir demonstra como a árvore de expressão que representa a expressão lambda `Function(num) num < 5` pode ser decomposta em suas partes.  

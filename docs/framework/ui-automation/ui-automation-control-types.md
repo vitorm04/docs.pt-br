@@ -7,14 +7,12 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 9eb9b7193a1800a9c73c925bd8f699633efb719d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cfd0678b21c61cc776162c6daeb1b7262e602cb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615918"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674972"
 ---
 # <a name="ui-automation-control-types"></a>Tipos de controle de automação de interface do usuário
 **Observação** desta documentação é destinada a desenvolvedores de .NET Framework que desejam usar o gerenciados [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes definidas no <xref:System.Windows.Automation> namespace. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  

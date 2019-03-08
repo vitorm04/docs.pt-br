@@ -5,133 +5,141 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: b0dbd38e02c2e200796fa4508efc203685026155
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596664"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680303"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Mensagem de segurança com um cliente anônimo
-O cenário a seguir mostra um cliente e serviço protegidos pela segurança de mensagem do Windows Communication Foundation (WCF). Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro ele pode dar suporte a um modelo mais avançado baseado em declarações. Para obter mais informações sobre como usar rica de declarações para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
-  
- Para um aplicativo de exemplo, consulte [mensagem de segurança anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
-  
- ![Segurança com um cliente anônimo da mensagem](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")  
-  
-|Característica|Descrição|  
-|--------------------|-----------------|  
-|Modo de segurança|Mensagem|  
-|Interoperabilidade|Somente o WCF|  
-|Autenticação (servidor)|Negociação inicial exige a autenticação do servidor, mas não a autenticação do cliente|  
-|Autenticação (cliente)|Nenhum|  
-|Integridade|Sim, usando o contexto de segurança compartilhado|  
-|Confidencialidade|Sim, usando o contexto de segurança compartilhado|  
-|Transporte|HTTP|  
-  
-## <a name="service"></a>Serviço  
- O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
-  
--   Crie um serviço autônomo usando o código sem nenhuma configuração.  
-  
--   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
-  
-### <a name="code"></a>Código  
- O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem.  
-  
- [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
- [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
-  
-### <a name="configuration"></a>Configuração  
- A configuração a seguir pode ser usada em vez do código. O elemento de comportamento de serviço é usado para especificar um certificado que é usado para autenticar o serviço ao cliente. O elemento de serviço deve especificar o comportamento usando o `behaviorConfiguration` atributo. O elemento de associação Especifica que o tipo de credencial de cliente `None`, permitindo que os clientes anônimos usar o serviço.  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-  <system.serviceModel>  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="ServiceCredentialsBehavior">  
-          <serviceCredentials>  
-            <serviceCertificate findValue="contoso.com"   
-                                storeLocation="LocalMachine"  
-                                storeName="My" />  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-    <services>  
-      <service behaviorConfiguration="ServiceCredentialsBehavior"   
-               name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
-                  binding="wsHttpBinding"  
-                  bindingConfiguration="WSHttpBinding_ICalculator"   
-                  name="CalculatorService"  
-                  contract="ServiceModel.ICalculator" />  
-      </service>  
-    </services>  
-    <bindings>  
-      <wsHttpBinding>  
-        <binding name="WSHttpBinding_ICalculator" >  
-          <security mode="Message">  
-            <message clientCredentialType="None" />  
-          </security>  
-        </binding>  
-      </wsHttpBinding>  
-    </bindings>  
-    <client />  
-  </system.serviceModel>  
-</configuration>  
-```  
-  
-## <a name="client"></a>Cliente  
- O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
-  
--   Crie um cliente autônomo usando o código (e o código do cliente).  
-  
--   Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:  
-  
-     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
-     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
-  
-### <a name="code"></a>Código  
- O código a seguir cria uma instância do cliente. A associação usa segurança de modo de mensagem e o tipo de credencial de cliente é definido como none.  
-  
- [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
- [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
-  
-### <a name="configuration"></a>Configuração  
- O código a seguir configura o cliente.  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-  <system.serviceModel>  
-    <bindings>  
-      <wsHttpBinding>  
-        <binding name="WSHttpBinding_ICalculator" >  
-          <security mode="Message">  
-            <message clientCredentialType="None" />  
-          </security>  
-        </binding>  
-      </wsHttpBinding>  
-    </bindings>  
-    <client>  
-      <endpoint address="http://machineName/Calculator"  
-        binding="wsHttpBinding"  
-        bindingConfiguration="WSHttpBinding_ICalculator"   
-        contract="ICalculator"  
-        name="WSHttpBinding_ICalculator">  
-        <identity>  
-          <dns value="contoso.com" />  
-        </identity>  
-      </endpoint>  
-    </client>  
-  </system.serviceModel>  
-</configuration>  
-```  
-  
+
+O cenário a seguir mostra um cliente e serviço protegidos pela segurança de mensagem do Windows Communication Foundation (WCF). Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro ele pode dar suporte a um modelo mais avançado baseado em declarações. Para obter mais informações sobre como usar rica de declarações para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+
+Para um aplicativo de exemplo, consulte [mensagem de segurança anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).
+
+![Segurança com um cliente anônimo da mensagem](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
+
+|Característica|Descrição|
+|--------------------|-----------------|
+|Modo de segurança|Mensagem|
+|Interoperabilidade|Somente o WCF|
+|Autenticação (servidor)|Negociação inicial exige a autenticação do servidor, mas não a autenticação do cliente|
+|Autenticação (cliente)|Nenhum|
+|Integridade|Sim, usando o contexto de segurança compartilhado|
+|Confidencialidade|Sim, usando o contexto de segurança compartilhado|
+|Transporte|HTTP|
+
+## <a name="service"></a>Serviço
+
+O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:
+
+- Crie um serviço autônomo usando o código sem nenhuma configuração.
+
+- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.
+
+### <a name="code"></a>Código
+
+O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem.
+
+[!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
+[!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]
+
+### <a name="configuration"></a>Configuração
+
+A configuração a seguir pode ser usada em vez do código. O elemento de comportamento de serviço é usado para especificar um certificado que é usado para autenticar o serviço ao cliente. O elemento de serviço deve especificar o comportamento usando o `behaviorConfiguration` atributo. O elemento de associação Especifica que o tipo de credencial de cliente `None`, permitindo que os clientes anônimos usar o serviço.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="ServiceCredentialsBehavior">
+          <serviceCredentials>
+            <serviceCertificate findValue="contoso.com"
+                                storeLocation="LocalMachine"
+                                storeName="My" />
+          </serviceCredentials>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <services>
+      <service behaviorConfiguration="ServiceCredentialsBehavior"
+               name="ServiceModel.Calculator">
+        <endpoint address="http://localhost/Calculator"
+                  binding="wsHttpBinding"
+                  bindingConfiguration="WSHttpBinding_ICalculator"
+                  name="CalculatorService"
+                  contract="ServiceModel.ICalculator" />
+      </service>
+    </services>
+    <bindings>
+      <wsHttpBinding>
+        <binding name="WSHttpBinding_ICalculator" >
+          <security mode="Message">
+            <message clientCredentialType="None" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client />
+  </system.serviceModel>
+</configuration>
+```
+
+## <a name="client"></a>Cliente
+
+O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:
+
+- Crie um cliente autônomo usando o código (e o código do cliente).
+
+- Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:
+
+    [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
+    [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
+
+### <a name="code"></a>Código
+
+O código a seguir cria uma instância do cliente. A associação usa segurança de modo de mensagem e o tipo de credencial de cliente é definido como none.
+
+[!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
+[!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]
+
+### <a name="configuration"></a>Configuração
+
+O código a seguir configura o cliente.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <bindings>
+      <wsHttpBinding>
+        <binding name="WSHttpBinding_ICalculator" >
+          <security mode="Message">
+            <message clientCredentialType="None" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://machineName/Calculator"
+        binding="wsHttpBinding"
+        bindingConfiguration="WSHttpBinding_ICalculator"
+        contract="ICalculator"
+        name="WSHttpBinding_ICalculator">
+        <identity>
+          <dns value="contoso.com" />
+        </identity>
+      </endpoint>
+    </client>
+  </system.serviceModel>
+</configuration>
+```
+
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Segurança de aplicativos distribuídos](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [Segurança de mensagem anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)

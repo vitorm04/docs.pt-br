@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967159"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676649"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Criar aplicativos ASP.NET Core 2.1 implantados como contêineres do Linux em um orquestrador AKS/Kubernetes
 
@@ -27,7 +27,7 @@ Os exemplos a seguir explorar a criação de um aplicativo ASP.NET Core 2.1 é e
 
 ## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Criando o projeto do ASP.NET Core 2.1 usando o Visual Studio 2017
 
-ASP.NET Core é uma plataforma de desenvolvimento de uso geral mantida pela Microsoft e pela comunidade .NET no GitHub. Ele é multiplataforma e dá suporte ao Windows, macOS e Linux, e pode ser usado em dispositivos, na nuvem e em cenários inseridos/IoT.
+ASP.NET Core é uma plataforma de desenvolvimento de uso geral mantida pela Microsoft e pela comunidade .NET no GitHub. Ele é multiplataforma, que dão suporte a Windows, macOS e Linux e pode ser usado em cenários inseridos/IoT, nuvem e dispositivo.
 
 Este exemplo usa um projeto simples com base em um modelo de API de Web do Visual Studio, que exige qualquer conhecimento adicional para criar o exemplo. Você só precisará criar o projeto usando um modelo padrão que inclui todos os elementos para executar um pequeno projeto com uma API REST, usando a tecnologia ASP.NET Core 2.1.
 
@@ -39,7 +39,7 @@ Para criar o projeto de exemplo no Visual Studio, selecione **arquivo** > **New*
 
 Visual Studio contém modelos para projetos web. Para nosso exemplo, selecione **API** para criar um aplicativo de API Web ASP.NET.
 
-Verifique se você selecionou ASP.NET Core 2.1 como a estrutura. .NET core 2.1 está incluído na última versão do Visual Studio 2017 e é automaticamente instalado e configurado para você quando você instala o Visual Studio 2017.
+Verifique se que você tenha selecionado o ASP.NET Core 2.1 como a estrutura. .NET core 2.1 está incluído na última versão do Visual Studio 2017 e é automaticamente instalado e configurado para você quando você instala o Visual Studio 2017.
 
 ![Visual Studio caixa de diálogo para selecionar o tipo de um aplicativo Web do ASP.NET Core com a opção de API selecionada.](media/create-web-api-application.png)
 

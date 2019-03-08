@@ -4,16 +4,16 @@ description: Compreenda Docker, contêineres e uma arquitetura de Microsserviço
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442419"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674426"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Caminho para aplicativos modernos baseados em contêineres
 
-Você provavelmente está lendo este livro porque você está planejando o desenvolvimento de novos aplicativos e/ou você estiver avaliando o impacto de usar o Docker, contêineres e novas abordagens como Microsserviços em sua empresa.
+Você provavelmente está lendo este livro porque você está planejando o desenvolvimento de novos aplicativos ou você está avaliando o impacto de usar o Docker, contêineres e novas abordagens como Microsserviços em sua empresa.
 
 A adoção de novos paradigmas de desenvolvimento deve ser executada com cuidado antes de iniciar um projeto, para avaliar o impacto em suas equipes de desenvolvimento, seu orçamento ou sua infraestrutura.
 

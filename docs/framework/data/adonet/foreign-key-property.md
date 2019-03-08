@@ -2,12 +2,12 @@
 title: propriedade de chave estrangeira
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: a33d60e28c7c4e5a90199437fc95a83b5a304b06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8680019f6f1a53233b5c49163f474cf33409b69b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746603"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674465"
 ---
 # <a name="foreign-key-property"></a>propriedade de chave estrangeira
 Um *propriedade de chave estrangeira* no modelo de dados de entidade (EDM) é um tipo primitivo [propriedade](../../../../docs/framework/data/adonet/property.md) (ou um conjunto de propriedades de tipo primitivo) em um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) que contém a [chave de entidade](../../../../docs/framework/data/adonet/entity-key.md) de outro tipo de entidade.  
@@ -17,7 +17,7 @@ Um *propriedade de chave estrangeira* no modelo de dados de entidade (EDM) é um
 ## <a name="example"></a>Exemplo  
  O diagrama a seguir mostra um modelo conceitual com três tipos de entidade: `Book`, `Publisher`, e `Author`. O tipo de entidade de `Book` tem uma propriedade, `PublisherId`, que faz referência a chave de entidade do tipo de entidade de `Publisher` quando você define uma restrição de integridade referencial em associação de `PublishedBy` .  
   
- ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
+ ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "exemplo de um modelo de restrição referencial")  
   
  O [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa uma linguagem específica de domínio (DSL) chamada linguagem de definição de esquema conceitual ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir modelos conceituais. CSDL seguir usa a propriedade `PublisherId` de chave externa para definir uma restrição de integridade referencial em associação de `PublishedBy` mostrada no modelo conceitual mostrado acima.  
   

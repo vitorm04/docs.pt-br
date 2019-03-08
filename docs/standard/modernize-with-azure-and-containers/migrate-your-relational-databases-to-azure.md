@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153755"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677546"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar seus bancos de dados relacionais para o azure
 
@@ -49,7 +49,7 @@ A instância gerenciada SQL do Azure tem as seguintes características:
 
   - Envio de logs, restauração e backup nativo
 
-Com esses recursos, ao migrar bancos de dados de aplicativo existente para o banco de dados SQL Azure, o modelo de instância gerenciada oferece quase 100% dos benefícios de Paas para o SQL Server. Instância gerenciada é um ambiente do SQL Server no qual você continua usando os recursos de nível de instância sem alterar o design do aplicativo.
+Com esses recursos, ao migrar bancos de dados de aplicativo existente para o banco de dados SQL Azure, o modelo de instância gerenciada oferece quase 100% dos benefícios de PaaS para o SQL Server. Instância gerenciada é um ambiente do SQL Server no qual você continua usando os recursos de nível de instância sem alterar o design do aplicativo.
 
 A instância gerenciada é provavelmente a melhor opção para empresas que atualmente estão usando o SQL Server e requerem a flexibilidade para sua segurança de rede na nuvem. É como ter uma rede virtual privada para seus bancos de dados SQL.
 
@@ -114,7 +114,7 @@ Para saber como migrar bancos de dados usando o serviço de migração de banco 
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
-- **Migração de banco de dados do SQL Server para o banco de dados SQL na nuvem**
+- **Migração de banco de dados do SQL Server para o Banco de Dados SQL na nuvem**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
@@ -126,6 +126,6 @@ Para saber como migrar bancos de dados usando o serviço de migração de banco 
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[Anterior](lift-and-shift-existing-apps-azure-iaas.md)
->[Próximo](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [Anterior](lift-and-shift-existing-apps-azure-iaas.md)
+> [Próximo](modernize-existing-apps-to-cloud-optimized/index.md)

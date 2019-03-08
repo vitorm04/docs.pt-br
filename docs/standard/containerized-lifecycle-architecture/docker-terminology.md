@@ -4,12 +4,12 @@ description: Aprenda a terminologia básica que tenha usado todos os dias, ao tr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a7f0106eed81c28634a079ce61f48d7d56f6ffd2
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584194"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677158"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -37,7 +37,7 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Hub do Docker**: Um registro público para fazer upload de imagens e trabalhar com elas. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 
-**Registro de Contêiner do Azure**: Um recurso público para trabalhar com imagens do Docker e seus componentes no Azure. Fornece um registro que está perto de suas implantações no Azure e que permite controlar o acesso, tornando possível usar as permissões e os grupos do Azure Active Directory.
+**Registro de Contêiner do Azure**: Um recurso público para trabalhar com imagens do Docker e seus componentes no Azure. Isso fornece um registro que está perto de suas implantações no Azure e que permite controlar o acesso, tornando possível usar seus grupos do Active Directory do Azure e permissões.
 
 **DTR (Registro Confiável do Docker)**: Um serviço de registro do Docker (do Docker) que pode ser instalado localmente, de modo que ele resida no datacenter e na rede da organização. É conveniente para imagens privadas que devem ser gerenciadas dentro da empresa. O Docker Trusted Registry é parte do produto Docker Datacenter. Para saber mais, consulte [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
@@ -45,7 +45,7 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Docker EE (Enterprise Edition)**: Uma versão empresarial das ferramentas do Docker para desenvolvimento no Linux e no Windows.
 
-**Compose**: Uma ferramenta de linha de comando e formato de arquivo YAML com metadados para definir e executar aplicativos de vários contêineres. Você define um único aplicativo com base em várias imagens com um ou mais arquivos .yml que podem substituir valores dependendo do ambiente. Depois de criar as definições, você pode implantar todo o aplicativo de vários contêineres com um único comando (docker-compose up), que cria um contêiner por imagem no host do Docker.
+**Compose**: Uma ferramenta de linha de comando e formato de arquivo YAML com metadados para definir e executar aplicativos de vários contêineres. Você define um único aplicativo com base em várias imagens com um ou mais arquivos .yml que podem substituir valores dependendo do ambiente. Depois de criar as definições, você pode implantar o aplicativo inteiro com vários contêiner com um único comando (docker-compose) que cria um contêiner por imagem no host do Docker.
 
 **Cluster**: Uma coleção de hosts do Docker expostos como um único host virtual do Docker, de modo que o aplicativo possa ser dimensionado para várias instâncias dos serviços distribuídos em vários hosts do cluster. Os clusters do Docker podem ser criados com o Kubernetes, o Azure Service Fabric, o Docker Swarm e o Mesosphere DC/OS.
 

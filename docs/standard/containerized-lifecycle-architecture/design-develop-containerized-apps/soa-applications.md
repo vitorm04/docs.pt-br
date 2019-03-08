@@ -4,12 +4,12 @@ description: Tenha em mente que os contêineres também podem ser uma opção de
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 353ba738143b7dcd92c7c75ac27ea6a7370f9da6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ee71873ac15246f979fd2b08d92280ba797ff6ee
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745827"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675791"
 ---
 # <a name="service-oriented-applications"></a>Aplicativos orientados a serviço
 
