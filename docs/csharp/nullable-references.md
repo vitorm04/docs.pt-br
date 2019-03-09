@@ -2,12 +2,12 @@
 title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência que permitem valor nulo, adicionados no C# 8. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411541"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725019"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -41,7 +41,7 @@ O compilador usa uma análise estática para determinar se uma referência que p
 name!.Length;
 ```
 
-é possível ler detalhes sobre esse operador na proposta de especificação de [tipos de referência que permitem valor nulo do rascunho](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) no GitHub.
+é possível ler detalhes sobre esse operador na proposta de especificação de [tipos de referência que permitem valor nulo do rascunho](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) no GitHub.
 
 ## <a name="nullability-of-types"></a>Possibilidade de nulidade de tipos
 

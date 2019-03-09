@@ -1,15 +1,9 @@
 ---
 title: Processo de desenvolvimento de aplicativos baseados no Docker
-description: Obtenha uma visão geral de alto nível das opções para desenvolvimento de aplicativos baseados no Docker. Escolha e use o Visual Studio para Windows, o Visual Studio para Mac ou o Visual Studio Code com suporte a várias plataformas (Windows, Mac e Linux).
+description: 'Obtenha uma visão geral de alto nível das opções para desenvolvimento de aplicativos baseados no Docker. Escolha e use o Visual Studio para Windows, o Visual Studio para Mac ou o Visual Studio Code com suporte a várias plataformas (Windows, Mac e Linux).'
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: eb87f9a214dbffe71dae1e1739f2563c08fac280
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084921"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Processo de desenvolvimento de aplicativos baseados no Docker
 
@@ -42,7 +36,7 @@ Ao instalar as ferramentas do [Docker CE (Community Edition)](https://www.docker
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Linguagens e estruturas do .NET para contêineres do Docker
 
-Conforme mencionado nas seções anteriores deste guia, você pode usar o projeto do NET Framework, do .NET Core ou do Mono de software livre ao desenvolver aplicativos .NET em contêineres do Docker. Você poderá desenvolver em C\#, em F\# ou em Visual Basic ao direcionar a contêineres do Linux ou do Windows, dependendo de qual .NET Framework estiver em uso. Para saber mais detalhes sobre as linguagens do .NET detalhes, consulte a postagem no blog [The .NET Language Strategy](https://blogs.msdn.microsoft.com/dotnet/2017/02/01/the-net-language-strategy/) (A estratégia de linguagem do .NET).
+Conforme mencionado nas seções anteriores deste guia, você pode usar o projeto do NET Framework, do .NET Core ou do Mono de software livre ao desenvolver aplicativos .NET em contêineres do Docker. Você poderá desenvolver em C\#, em F\# ou em Visual Basic ao direcionar a contêineres do Linux ou do Windows, dependendo de qual .NET Framework estiver em uso. Para saber mais detalhes sobre as linguagens do .NET detalhes, consulte a postagem no blog [The .NET Language Strategy](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/) (A estratégia de linguagem do .NET).
 
 >[!div class="step-by-step"]
 >[Anterior](../architect-microservice-container-applications/using-azure-service-fabric.md)
