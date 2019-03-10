@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: dab72d64cdd013125ae7c302ccf297ecdc0c98b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589858"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707394"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="e72ea-102">Como: Enviar dados para o filho MDI ativo</span><span class="sxs-lookup"><span data-stu-id="e72ea-102">How to: Send Data to the Active MDI Child</span></span>
-<span data-ttu-id="e72ea-103">Muitas vezes, dentro do contexto de [aplicativos de Interface de documentos múltiplos (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), você precisará enviar dados para a janela filho ativa, como quando o usuário cola dados da área de transferência em um aplicativo MDI.</span><span class="sxs-lookup"><span data-stu-id="e72ea-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="a2bb0-102">Como: Enviar dados para o filho MDI ativo</span><span class="sxs-lookup"><span data-stu-id="a2bb0-102">How to: Send Data to the Active MDI Child</span></span>
+<span data-ttu-id="a2bb0-103">Muitas vezes, dentro do contexto de [aplicativos de Interface de documentos múltiplos (MDI)](multiple-document-interface-mdi-applications.md), você precisará enviar dados para a janela filho ativa, como quando o usuário cola dados da área de transferência em um aplicativo MDI.</span><span class="sxs-lookup"><span data-stu-id="a2bb0-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e72ea-104">Para obter informações sobre como verificar qual janela filho tem o foco e enviar seu conteúdo para a área de transferência, consulte [determinar o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).</span><span class="sxs-lookup"><span data-stu-id="e72ea-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).</span></span>  
+>  <span data-ttu-id="a2bb0-104">Para obter informações sobre como verificar qual janela filho tem o foco e enviar seu conteúdo para a área de transferência, consulte [determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md).</span><span class="sxs-lookup"><span data-stu-id="a2bb0-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="e72ea-105">Para enviar dados para a janela filho MDI ativo da área de transferência</span><span class="sxs-lookup"><span data-stu-id="e72ea-105">To send data to the active MDI child window from the Clipboard</span></span>  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="a2bb0-105">Para enviar dados para a janela filho MDI ativo da área de transferência</span><span class="sxs-lookup"><span data-stu-id="a2bb0-105">To send data to the active MDI child window from the Clipboard</span></span>  
   
-1.  <span data-ttu-id="e72ea-106">Dentro de um método, copie o texto na área de transferência para o controle ativo do formulário filho ativo.</span><span class="sxs-lookup"><span data-stu-id="e72ea-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
+1.  <span data-ttu-id="a2bb0-106">Dentro de um método, copie o texto na área de transferência para o controle ativo do formulário filho ativo.</span><span class="sxs-lookup"><span data-stu-id="a2bb0-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="e72ea-107">Este exemplo assume que há um formulário MDI pai (`Form1`) que tem um ou mais janelas filho MDI que contém um <xref:System.Windows.Forms.RichTextBox> controle.</span><span class="sxs-lookup"><span data-stu-id="e72ea-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="e72ea-108">Para obter mais informações, consulte [Criando formulários pai MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="e72ea-108">For more information, see [Creating MDI Parent Forms](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).</span></span>  
+    >  <span data-ttu-id="a2bb0-107">Este exemplo assume que há um formulário MDI pai (`Form1`) que tem um ou mais janelas filho MDI que contém um <xref:System.Windows.Forms.RichTextBox> controle.</span><span class="sxs-lookup"><span data-stu-id="a2bb0-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="a2bb0-108">Para obter mais informações, consulte [Criando formulários pai MDI](how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="a2bb0-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -91,9 +91,9 @@ ms.locfileid: "54589858"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e72ea-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e72ea-109">See also</span></span>
-- [<span data-ttu-id="e72ea-110">Aplicativos da interface MDI (Interface de Vários Documentos)</span><span class="sxs-lookup"><span data-stu-id="e72ea-110">Multiple-Document Interface (MDI) Applications</span></span>](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="e72ea-111">Como: Criar formulários pai MDI</span><span class="sxs-lookup"><span data-stu-id="e72ea-111">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="e72ea-112">Como: Criar formulários filho MDI</span><span class="sxs-lookup"><span data-stu-id="e72ea-112">How to: Create MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="e72ea-113">Como: Determinar o filho MDI ativo</span><span class="sxs-lookup"><span data-stu-id="e72ea-113">How to: Determine the Active MDI Child</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [<span data-ttu-id="e72ea-114">Como: Organizar formulários filho MDI</span><span class="sxs-lookup"><span data-stu-id="e72ea-114">How to: Arrange MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a><span data-ttu-id="a2bb0-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a2bb0-109">See also</span></span>
+- [<span data-ttu-id="a2bb0-110">Aplicativos da interface MDI (Interface de Vários Documentos)</span><span class="sxs-lookup"><span data-stu-id="a2bb0-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="a2bb0-111">Como: Criar formulários pai MDI</span><span class="sxs-lookup"><span data-stu-id="a2bb0-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="a2bb0-112">Como: Criar formulários filho MDI</span><span class="sxs-lookup"><span data-stu-id="a2bb0-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="a2bb0-113">Como: Determinar o filho MDI ativo</span><span class="sxs-lookup"><span data-stu-id="a2bb0-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
+- [<span data-ttu-id="a2bb0-114">Como: Organizar formulários filho MDI</span><span class="sxs-lookup"><span data-stu-id="a2bb0-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
