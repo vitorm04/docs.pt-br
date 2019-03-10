@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e746cd1d0f9f7d9850d0263ee6ed0a82472fcb5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e463ac0fd77a31e4e11cb440f64ec0d4694af61f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504139"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722016"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Como: Determinar quando os atributos de formatação mudam no controle Windows Forms RichTextBox
 Um uso comum dos formulários Windows <xref:System.Windows.Forms.RichTextBox> controle é formatar texto com atributos como opções de fonte ou estilos de parágrafo. Seu aplicativo pode precisar controlar as alterações no texto de formatação para fins de exibição de uma barra de ferramentas, como muitos aplicativos de processamento de texto.  
@@ -25,7 +25,7 @@ Um uso comum dos formulários Windows <xref:System.Windows.Forms.RichTextBox> co
   
 1.  Escrever código no <xref:System.Windows.Forms.RichTextBox.SelectionChanged> manipulador de eventos para executar a ação apropriada dependendo do valor do atributo. O exemplo a seguir altera a aparência de um botão de barra de ferramentas, dependendo do valor da <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propriedade. O botão de barra de ferramentas será atualizado somente quando o ponto de inserção for movido no controle.  
   
-     O exemplo a seguir supõe um formulário com um <xref:System.Windows.Forms.RichTextBox> controle e um <xref:System.Windows.Forms.ToolBar> controle que contém um botão de barra de ferramentas. Para obter mais informações sobre as barras de ferramentas e botões de barra de ferramentas, consulte [como: Adicionar botões a um controle de barra de ferramentas](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md).  
+     O exemplo a seguir supõe um formulário com um <xref:System.Windows.Forms.RichTextBox> controle e um <xref:System.Windows.Forms.ToolBar> controle que contém um botão de barra de ferramentas. Para obter mais informações sobre as barras de ferramentas e botões de barra de ferramentas, consulte [como: Adicionar botões a um controle de barra de ferramentas](how-to-add-buttons-to-a-toolbar-control.md).  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -83,5 +83,5 @@ Um uso comum dos formulários Windows <xref:System.Windows.Forms.RichTextBox> co
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Controle RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controle RichTextBox](richtextbox-control-windows-forms.md)
+- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

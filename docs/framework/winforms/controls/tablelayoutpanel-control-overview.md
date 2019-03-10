@@ -11,12 +11,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
-ms.openlocfilehash: a0971fd02e27ea718af7fafe2404cd77d5946e25
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 127ab849fffb586261f1ac25f74f540c0f46d295
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748681"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714795"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>Visão geral do controle TableLayoutPanel
 O <xref:System.Windows.Forms.TableLayoutPanel> controle organiza seu conteúdo em uma grade. Como o layout é executado tanto em tempo de design quanto em tempo de execução, ele pode ser alterado dinamicamente à medida que o ambiente do aplicativo muda. Assim, os controles no painel têm a capacidade de redimensionar proporcionalmente, portanto ele pode responder a alterações como o redimensionamento do controle pai ou à alteração de comprimento do texto devido à localização.  
@@ -44,6 +44,6 @@ O <xref:System.Windows.Forms.TableLayoutPanel> controle organiza seu conteúdo e
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutSettings>
-- [Como: Projetar um Layout de formulários do Windows que responde bem à localização](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
-- [Como: Criar um formulário do Windows redimensionável para entrada de dados](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)
-- [Práticas recomendadas para o controle TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
+- [Como: Projetar um Layout de formulários do Windows que responde bem à localização](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Como: Criar um formulário do Windows redimensionável para entrada de dados](how-to-create-a-resizable-windows-form-for-data-entry.md)
+- [Práticas recomendadas para o controle TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)

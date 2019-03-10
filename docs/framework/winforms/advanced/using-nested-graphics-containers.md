@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: e13993f5d8ac3c543e2d3f1f10d5596a09e7617b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 639b53ada8639ed686d04b4aa2e5295ca08240b0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622503"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714171"
 ---
 # <a name="using-nested-graphics-containers"></a>Usando contêineres de elementos gráficos aninhados
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornece contêineres que você pode usar para substituir ou aumentar a parte do estado no temporariamente um <xref:System.Drawing.Graphics> objeto. Criar um contêiner chamando o <xref:System.Drawing.Graphics.BeginContainer%2A> método de um <xref:System.Drawing.Graphics> objeto. Você pode chamar <xref:System.Drawing.Graphics.BeginContainer%2A> repetidamente para formar contêineres aninhados. Cada chamada para <xref:System.Drawing.Graphics.BeginContainer%2A> deve ser emparelhado com uma chamada para <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -22,22 +22,22 @@ ms.locfileid: "54622503"
 ## <a name="transformations-in-nested-containers"></a>Transformações em contêineres aninhados  
  O exemplo a seguir cria uma <xref:System.Drawing.Graphics> objeto e um contêiner dentro desse <xref:System.Drawing.Graphics> objeto. A transformação global do <xref:System.Drawing.Graphics> objeto é uma translação 100 unidades na direção x e 80 unidades na direção y. A transformação global do contêiner é uma rotação de 30 graus. O código faz a chamada `DrawRectangle(pen, -60, -30, 120, 60)` duas vezes. A primeira chamada para <xref:System.Drawing.Graphics.DrawRectangle%2A> está dentro do contêiner; ou seja, a chamada está entre as chamadas para <xref:System.Drawing.Graphics.BeginContainer%2A> e <xref:System.Drawing.Graphics.EndContainer%2A>. A segunda chamada para <xref:System.Drawing.Graphics.DrawRectangle%2A> após a chamada para <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.MiscLegacyTopics#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
  No código anterior, o retângulo desenhado de dentro do contêiner é transformado primeiro pela transformação global do contêiner (rotação) e, em seguida, pela transformação global do <xref:System.Drawing.Graphics> objeto (conversão). O retângulo desenhado de fora do contêiner é transformado apenas pela transformação global do <xref:System.Drawing.Graphics> objeto (conversão). A ilustração a seguir mostra os dois retângulos.  
   
- ![Contêineres aninhados](../../../../docs/framework/winforms/advanced/media/csnestedcontainers1.png "csnestedcontainers1")  
+ ![Contêineres aninhados](./media/csnestedcontainers1.png "csnestedcontainers1")  
   
 ## <a name="clipping-in-nested-containers"></a>Recorte em contêineres aninhados  
  O exemplo a seguir demonstra como contêineres aninhados lidam com áreas de recorte. O código cria uma <xref:System.Drawing.Graphics> objeto e um contêiner dentro desse <xref:System.Drawing.Graphics> objeto. A região de recorte do <xref:System.Drawing.Graphics> objeto é um retângulo e a região de recorte do contêiner é uma elipse. O código faz duas chamadas para o <xref:System.Drawing.Graphics.DrawLine%2A> método. A primeira chamada para <xref:System.Drawing.Graphics.DrawLine%2A> está dentro do contêiner e a segunda chamada para <xref:System.Drawing.Graphics.DrawLine%2A> está fora do contêiner (após a chamada para <xref:System.Drawing.Graphics.EndContainer%2A>). A primeira linha é recortada pela interseção das duas áreas de recorte. A segunda linha é recortada apenas pela região de recorte retangular do <xref:System.Drawing.Graphics> objeto.  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#62](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
- [!code-vb[System.Drawing.MiscLegacyTopics#62](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
  A ilustração a seguir mostra as duas linhas recortadas.  
   
- ![Contêiner aninhado](../../../../docs/framework/winforms/advanced/media/nestedcontainers2.png "nestedcontainers2")  
+ ![Contêiner aninhado](./media/nestedcontainers2.png "nestedcontainers2")  
   
  Como os dois exemplos anteriores mostram, as transformações e áreas de recorte são cumulativas em contêineres aninhados. Se você definir as transformações globais do contêiner e o <xref:System.Drawing.Graphics> do objeto, as duas transformações se aplicarão a itens desenhados de dentro do contêiner. A transformação do contêiner será aplicado primeiro e a transformação do <xref:System.Drawing.Graphics> objeto será aplicado depois. Se você definir as regiões de recorte do contêiner e o <xref:System.Drawing.Graphics> do objeto, itens desenhados de dentro do contêiner serão recortados pela interseção das duas áreas de recorte.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "54622503"
   
  O exemplo a seguir cria uma <xref:System.Drawing.Graphics> do objeto e define sua dica de renderização de texto como <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. O código cria dois contêineres, um aninhado dentro do outro. A dica de renderização de texto do contêiner externo é definida como <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>, e a dica de renderização de texto do contêiner interno é definida como <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. O código desenha três cadeias de caracteres: uma do contêiner interno, uma do contêiner externo e uma do <xref:System.Drawing.Graphics> objeto propriamente dito.  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#63](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#63)]
- [!code-vb[System.Drawing.MiscLegacyTopics#63](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#63)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#63](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#63)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#63](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#63)]  
   
  A ilustração a seguir mostra as três cadeias de caracteres. As cadeias de caracteres desenhadas do contêiner interno e do <xref:System.Drawing.Graphics> objeto são suavizadas pela suavização. A cadeia de caracteres desenhada do contêiner externo não é suavizada pela suavização porque o <xref:System.Drawing.Graphics.TextRenderingHint%2A> estiver definida como <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
   
- ![Contêineres aninhados](../../../../docs/framework/winforms/advanced/media/nestedcontainers3.png "nestedcontainers3")  
+ ![Contêineres aninhados](./media/nestedcontainers3.png "nestedcontainers3")  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Drawing.Graphics>
-- [Gerenciando o Estado de um Objeto Gráfico](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)
+- [Gerenciando o Estado de um Objeto Gráfico](managing-the-state-of-a-graphics-object.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 0d3703019f081f07ecb29bf9229f0a2044764ae6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586898"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725321"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Como: Navegar em dados nos Windows Forms
 Em um aplicativo do Windows, a maneira mais fácil de navegar pelos registros em uma fonte de dados é associar um <xref:System.Windows.Forms.BindingSource> componente de fonte de dados e, em seguida, vincule controles à <xref:System.Windows.Forms.BindingSource>. Você pode usar o método de navegação interna na <xref:System.Windows.Forms.BindingSource> tal um <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Usando esses métodos ajustará as <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> propriedades do <xref:System.Windows.Forms.BindingSource> adequadamente. Você também pode localizar um item e defini-lo como o item atual definindo o <xref:System.Windows.Forms.BindingSource.Position%2A> propriedade.  
@@ -28,8 +28,8 @@ Em um aplicativo do Windows, a maneira mais fácil de navegar pelos registros em
     > [!NOTE]
     >  Definindo o <xref:System.Windows.Forms.BindingSource.Position%2A> propriedade para um valor além do primeiro ou último registro não resulta em um erro, como o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] não permitirá que você definir a posição com um valor fora dos limites da lista. Se, no aplicativo, for importante saber se você passou do primeiro ou do último registro, inclua a lógica para testar se a contagem de elementos de dados será excedida.  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Verificar se você passou do final ou do início  
   
@@ -40,18 +40,18 @@ Em um aplicativo do Windows, a maneira mais fácil de navegar pelos registros em
     > [!NOTE]
     >  Lembre-se de que é necessário alterar a lista em que você está navegando no código, reabilite o botão **Próximo**, para que os usuários possam pesquisar a totalidade da nova lista. Além disso, lembre-se que os itens acima <xref:System.Windows.Forms.BindingSource.PositionChanged> evento específicas <xref:System.Windows.Forms.BindingSource> você estiver trabalhando com precisa ser associado com seu método de manipulação de eventos. A seguir está um exemplo de um método para manipulação de <xref:System.Windows.Forms.BindingSource.PositionChanged> eventos:  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.NavigatingData#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Localizar um item e defini-lo como o item atual  
   
 1.  Localize o registro que deseja definir como o item atual. Você pode fazer isso usando o <xref:System.Windows.Forms.BindingSource.Find%2A> método da <xref:System.Windows.Forms.BindingSource>, se a fonte de dados implementa <xref:System.ComponentModel.IBindingList>. Alguns exemplos de dados de fontes que implementam <xref:System.ComponentModel.IBindingList> estão <xref:System.ComponentModel.BindingList%601> e <xref:System.Data.DataView>.  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Fontes de dados com suporte nos Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)
-- [Notificação de alteração na vinculação de dados dos Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Fontes de dados com suporte nos Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Notificação de alteração na vinculação de dados dos Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+- [Associação de dados do Windows Forms](windows-forms-data-binding.md)

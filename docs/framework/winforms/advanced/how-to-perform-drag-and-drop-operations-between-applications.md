@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 89b1b89c01ba80393e0965858d7767d5c9029003
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718411"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713426"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Como: Executar operações de arrastar e soltar entre aplicativos
 Executar operações de arrastar e soltar entre aplicativos não é diferente de ativar esta ação dentro de um aplicativo, desde que os dois aplicativos envolvidos se comportam de acordo com o "contrato" estabelecido entre o <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> e <xref:System.Windows.Forms.DragEventArgs.Effect%2A> Propriedades.  
@@ -24,7 +24,7 @@ Executar operações de arrastar e soltar entre aplicativos não é diferente de
   
 3.  Configurar o <xref:System.Windows.Forms.TextBox> controle para receber dados descartados.  
   
-     Para obter mais informações, confira [Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
+     Para obter mais informações, confira [Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 4.  Execute seu aplicativo do Windows e, enquanto o aplicativo está em execução, execute o WordPad.  
   
@@ -36,9 +36,9 @@ Executar operações de arrastar e soltar entre aplicativos não é diferente de
   
      Observe que quando você passa o mouse sobre o <xref:System.Windows.Forms.TextBox> controle (e, consequentemente, gerar o <xref:System.Windows.Forms.Control.DragEnter> evento), o cursor muda e você pode soltar o texto selecionado para o <xref:System.Windows.Forms.TextBox> controle.  
   
-     Além disso, você pode configurar seu <xref:System.Windows.Forms.TextBox> controle para permitir que cadeias de caracteres de texto sejam arrastadas e soltas no WordPad. Para obter mais informações, confira [Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
+     Além disso, você pode configurar seu <xref:System.Windows.Forms.TextBox> controle para permitir que cadeias de caracteres de texto sejam arrastadas e soltas no WordPad. Para obter mais informações, confira [Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Adicionar dados à área de transferência](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
-- [Como: Recuperar dados da área de transferência](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
-- [Operações do Tipo "Arrastar e Soltar" e Suporte à Área de Transferência](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+- [Como: Adicionar dados à área de transferência](how-to-add-data-to-the-clipboard.md)
+- [Como: Recuperar dados da área de transferência](how-to-retrieve-data-from-the-clipboard.md)
+- [Operações do Tipo "Arrastar e Soltar" e Suporte à Área de Transferência](drag-and-drop-operations-and-clipboard-support.md)

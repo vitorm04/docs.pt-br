@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: c57f7d22219c0cda91dad174be4e225808a9949d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d215eeaa367156c6228615a8f6e0a7f889efdf60
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494919"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713807"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Arquitetura do controle DataGridView (Windows Forms)
 O <xref:System.Windows.Forms.DataGridView> controle e suas classes relacionadas foram projetados para ser um sistema flexível e extensível para exibir e editar dados tabulares. Essas classes estão contidas no <xref:System.Windows.Forms?displayProperty=nameWithType> namespace e eles são nomeados com o prefixo "DataGridView".  
@@ -17,7 +17,7 @@ O <xref:System.Windows.Forms.DataGridView> controle e suas classes relacionadas 
 ## <a name="architecture-elements"></a>Elementos de arquitetura  
  O principal <xref:System.Windows.Forms.DataGridView> derivam de classes complementares <xref:System.Windows.Forms.DataGridViewElement>. O modelo de objeto a seguir ilustra o <xref:System.Windows.Forms.DataGridViewElement> hierarquia de herança.  
   
- ![Objeto DataGridViewElement](../../../../docs/framework/winforms/controls/media/datagridviewelement.gif "DataGridViewElement")  
+ ![Objeto DataGridViewElement](./media/datagridviewelement.gif "DataGridViewElement")  
 Modelo do objeto DataGridViewElement  
   
  O <xref:System.Windows.Forms.DataGridViewElement> classe fornece uma referência ao pai <xref:System.Windows.Forms.DataGridView> controlar e tem um <xref:System.Windows.Forms.DataGridViewElement.State%2A> propriedade, que contém um valor que representa uma combinação de valores da <xref:System.Windows.Forms.DataGridViewElementStates> enumeração.  
@@ -51,7 +51,7 @@ Modelo do objeto DataGridViewElement
 ### <a name="datagridviewcell"></a>DataGridViewCell  
  A célula é a unidade fundamental de interação para o <xref:System.Windows.Forms.DataGridView>. A exibição é centralizada das células e entrada de dados geralmente é realizada por meio das células. Você pode acessar as células usando o <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> coleção do <xref:System.Windows.Forms.DataGridViewRow> classe e você pode acessar as células selecionadas usando a <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> coleção do <xref:System.Windows.Forms.DataGridView> controle. O modelo de objeto a seguir ilustra esse uso e mostra o <xref:System.Windows.Forms.DataGridViewCell> hierarquia de herança.  
   
- ![Modelo do objeto DataGridViewCell](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
+ ![Modelo do objeto DataGridViewCell](./media/datagridviewcell.gif "DataGridViewCell")  
 Modelo do objeto DataGridViewCell  
   
  O <xref:System.Windows.Forms.DataGridViewCell> tipo é uma classe base abstrata da qual derivam todos os tipos de célula. <xref:System.Windows.Forms.DataGridViewCell> e seus tipos derivados não são controles dos Windows Forms, mas alguns controles de formulários do Windows do host. Qualquer funcionalidade de edição com suporte de uma célula normalmente é manipulada por um controle hospedado.  
@@ -85,7 +85,7 @@ Modelo do objeto DataGridViewCell
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  O esquema do <xref:System.Windows.Forms.DataGridView> repositório de dados anexados do controle é expresso no <xref:System.Windows.Forms.DataGridView> colunas do controle. Você pode acessar o <xref:System.Windows.Forms.DataGridView> colunas do controle usando o <xref:System.Windows.Forms.DataGridView.Columns%2A> coleção. Você pode acessar as colunas selecionadas usando a <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> coleção. O modelo de objeto a seguir ilustra esse uso e mostra o <xref:System.Windows.Forms.DataGridViewColumn> hierarquia de herança.  
   
- ![Modelo do objeto DataGridViewColumn](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.gif "DataGridViewColumn")  
+ ![Modelo do objeto DataGridViewColumn](./media/datagridviewcolumn.gif "DataGridViewColumn")  
 Modelo do objeto DataGridViewColumn  
   
  Alguns dos principais tipos de células têm tipos de colunas correspondentes. Eles derivam o <xref:System.Windows.Forms.DataGridViewColumn> classe base.  
@@ -109,7 +109,7 @@ Modelo do objeto DataGridViewColumn
 ### <a name="datagridview-editing-controls"></a>Controles de edição de DataGridView  
  Células que dão suporte a recursos de edição avançados normalmente usam um controle hospedado que é derivado de um controle dos Windows Forms. Esses controles também implementam a <xref:System.Windows.Forms.IDataGridViewEditingControl> interface. O modelo de objeto a seguir ilustra o uso desses controles.  
   
- ![Modelo de objeto de controle de edição de DataGridView](../../../../docs/framework/winforms/controls/media/datagridviewediting.gif "DataGridViewEditing")  
+ ![Modelo de objeto de controle de edição de DataGridView](./media/datagridviewediting.gif "DataGridViewEditing")  
 Modelo do objeto de controle de edição de DataGridView  
   
  Os controles de edição a seguir são fornecidos com o <xref:System.Windows.Forms.DataGridView> controle:  
@@ -118,7 +118,7 @@ Modelo do objeto de controle de edição de DataGridView
   
 -   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
- Para obter informações sobre como criar suas própria edição de controles, consulte [como: Hospedar controles em Windows Forms células DataGridView](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Para obter informações sobre como criar suas própria edição de controles, consulte [como: Hospedar controles em Windows Forms células DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
  A tabela a seguir ilustra o relacionamento entre tipos de células, tipos de colunas e controles de edição.  
   
@@ -134,14 +134,14 @@ Modelo do objeto de controle de edição de DataGridView
 ### <a name="datagridviewrow"></a>DataGridViewRow  
  O <xref:System.Windows.Forms.DataGridViewRow> exibe classe campos de dados de um registro dos dados da loja para o qual o <xref:System.Windows.Forms.DataGridView> controle está anexado. Você pode acessar o <xref:System.Windows.Forms.DataGridView> linhas do controle usando o <xref:System.Windows.Forms.DataGridView.Rows%2A> coleção. Você pode acessar as linhas selecionadas usando a <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> coleção. O modelo de objeto a seguir ilustra esse uso e mostra o <xref:System.Windows.Forms.DataGridViewRow> hierarquia de herança.  
   
- ![Modelo do objeto DataGridViewRow](../../../../docs/framework/winforms/controls/media/datagridviewrow.gif "DataGridViewRow")  
+ ![Modelo do objeto DataGridViewRow](./media/datagridviewrow.gif "DataGridViewRow")  
 Modelo do objeto DataGridViewRow  
   
  Você pode derivar seus próprios tipos da <xref:System.Windows.Forms.DataGridViewRow> classe, embora isso normalmente não será necessário. O <xref:System.Windows.Forms.DataGridView> controle tem vários eventos relacionados à linha e propriedades para personalizar o comportamento do seu <xref:System.Windows.Forms.DataGridViewRow> objetos.  
   
- Se você habilitar a <xref:System.Windows.Forms.DataGridView> do controle <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> propriedade, uma linha especial para adicionar novas linhas aparecerá como a última linha. Esta linha é parte do <xref:System.Windows.Forms.DataGridView.Rows%2A> coleção, mas ele tem uma funcionalidade especial que pode exigir sua atenção. Para obter mais informações, consulte [Usando a linha para novos registros no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
+ Se você habilitar a <xref:System.Windows.Forms.DataGridView> do controle <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> propriedade, uma linha especial para adicionar novas linhas aparecerá como a última linha. Esta linha é parte do <xref:System.Windows.Forms.DataGridView.Rows%2A> coleção, mas ele tem uma funcionalidade especial que pode exigir sua atenção. Para obter mais informações, consulte [Usando a linha para novos registros no controle DataGridView dos Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral do controle DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [Personalizando o controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
-- [Usando a linha para novos registros no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [Visão geral do controle DataGridView](datagridview-control-overview-windows-forms.md)
+- [Personalizando o controle DataGridView dos Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Usando a linha para novos registros no controle DataGridView dos Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: c7a65bcc65710324a4457c17dd728b4771550c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694068"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711207"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Como: Definir imagens em tempo de execução (Windows Forms)
 Você pode definir programaticamente a imagem exibida por um Windows Forms <xref:System.Windows.Forms.PictureBox> controle.  
@@ -93,14 +93,14 @@ Você pode definir programaticamente a imagem exibida por um Windows Forms <xref
     ```  
   
     > [!NOTE]
-    >  Para obter mais informações sobre por que você deve usar o <xref:System.Drawing.Image.Dispose%2A> método dessa forma, consulte [limpeza de recursos não gerenciados](../../../../docs/standard/garbage-collection/unmanaged.md).  
+    >  Para obter mais informações sobre por que você deve usar o <xref:System.Drawing.Image.Dispose%2A> método dessa forma, consulte [limpeza de recursos não gerenciados](../../../standard/garbage-collection/unmanaged.md).  
   
      Esse código limpará a imagem, mesmo se um elemento gráfico foi carregado no controle em tempo de design.  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [Visão geral do controle PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [Como: Carregar uma imagem usando o Designer](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Como: Modificar o tamanho ou a colocação de uma imagem em tempo de execução](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [Controle PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [Visão geral do controle PictureBox](picturebox-control-overview-windows-forms.md)
+- [Como: Carregar uma imagem usando o Designer](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Como: Modificar o tamanho ou a colocação de uma imagem em tempo de execução](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Controle PictureBox](picturebox-control-windows-forms.md)

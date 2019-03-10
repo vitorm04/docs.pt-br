@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150624"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720950"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Como: Criar um personalizado de participante de acompanhamento
 O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execução do fluxo de trabalho. O tempo de execução do fluxo de trabalho emite os registros de rastreamento que descrevem os eventos de ciclo de vida do fluxo de trabalho, os eventos de ciclo de vida da atividade, os reinícios do indicador e as falhas. Esses registros de rastreamento são consumidos pelos participantes. Windows Workflow Foundation (WF) inclui um participante de rastreamento padrão que grava registros de rastreamento como eventos do Event Tracing for Windows (ETW). Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado. Esta etapa do tutorial descreve como criar um participante de rastreamento personalizado e um perfil de rastreamento que captura a saída das atividades `WriteLine` de forma que elas possam ser exibidas para o usuário.  
@@ -328,7 +328,7 @@ O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execuç�
     ```
     
     > [!NOTE]
-    > Essas informações são úteis para determinar o intervalo do número aleatório, mas ele não contém informações sobre os palpites que já foram feitos anteriormente. Essas informações estão na próxima etapa, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+    > Essas informações são úteis para determinar o intervalo do número aleatório, mas ele não contém informações sobre os palpites que já foram feitos anteriormente. Essas informações estão na próxima etapa, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
     Faça uma anotação da ID de instância de fluxo de trabalho e jogue até o final.
   
@@ -342,4 +342,4 @@ O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execuç�
     Please enter a number between 1 and 10
     ```
 
-    Além da ausência de palpites do usuário, esses dados de rastreamento não contêm informações sobre o palpite final do fluxo de trabalho. Isso ocorre porque as informações de rastreamento consistem apenas na saída de `WriteLine` do fluxo de trabalho, e a mensagem final que é exibida é feita a partir do manipulador `Completed` depois que o fluxo de trabalho é concluído. Na próxima etapa do tutorial, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` atividades são alteradas para exibir as previsões do usuário e uma outra `WriteLine` atividade é adicionada que exibe os resultados finais. Depois que essas alterações são integradas, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) demonstra como hospedar várias versões de um fluxo de trabalho ao mesmo tempo.
+    Além da ausência de palpites do usuário, esses dados de rastreamento não contêm informações sobre o palpite final do fluxo de trabalho. Isso ocorre porque as informações de rastreamento consistem apenas na saída de `WriteLine` do fluxo de trabalho, e a mensagem final que é exibida é feita a partir do manipulador `Completed` depois que o fluxo de trabalho é concluído. Na próxima etapa do tutorial, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` atividades são alteradas para exibir as previsões do usuário e uma outra `WriteLine` atividade é adicionada que exibe os resultados finais. Depois que essas alterações são integradas, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](how-to-host-multiple-versions-of-a-workflow-side-by-side.md) demonstra como hospedar várias versões de um fluxo de trabalho ao mesmo tempo.
