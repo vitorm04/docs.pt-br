@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sorting data
 - DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
-ms.openlocfilehash: 588678b3ba0d75fea58709c1969a3e276d65439e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 606ffc7bd6136b775adaaaa79cf5042cf1e2dd70
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688279"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724915"
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Classificando dados no controle DataGridView do Windows Forms
 
@@ -19,13 +19,13 @@ Por padrão, os usuários podem classificar os dados em um <xref:System.Windows.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Modos de classificação da coluna no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
+[Modos de classificação da coluna no controle DataGridView dos Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)  
 Descreve as opções para classificar os dados no controle.
 
-[Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+[Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
 Descreve como habilitar usuários para classificar por colunas que não são classificáveis por padrão.
 
-[Como: Personalizar a classificação no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+[Como: Personalizar a classificação no controle DataGridView dos Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
 Descreve como classificar dados por meio de programação e como personalizar a classificação usando o <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> evento ou implementando o <xref:System.Collections.IComparer> interface.
 
 ## <a name="reference"></a>Referência
@@ -44,5 +44,5 @@ Fornece documentação de referência para o <xref:System.Windows.Forms.DataGrid
 
 ## <a name="see-also"></a>Consulte também
 
-- [Controle DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Tipos de coluna no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+- [Controle DataGridView](datagridview-control-windows-forms.md)
+- [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

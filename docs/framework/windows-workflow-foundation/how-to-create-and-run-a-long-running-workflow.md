@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 4ca19b8f9c0fad17c012bffbdd95917a4d4e47bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cbb00797944f63ab695c7af87ac02b49e0ad15fa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356858"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721158"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Como: Criar e executar uma longa em execução de fluxo de trabalho
-Um dos recursos centrais do Windows Workflow Foundation (WF) é a capacidade de persistir e descarregar fluxos de trabalho ociosos para um banco de dados do tempo de execução. As etapas em [como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) demonstraram os fundamentos de hospedagem de fluxo de trabalho usando um aplicativo de console. Foram mostrados exemplos de iniciação de fluxos de trabalho, manipuladores do ciclo de vida de fluxo de trabalho e retomada de indicadores. Para demonstrar efetivamente a persistência do fluxo de trabalho, um host de fluxo de trabalho mais complexo é necessário que dá suporte a início e retomada de várias instâncias de fluxo de trabalho. Esta etapa no tutorial demonstra como criar um aplicativo de host do Windows Form que dê suporte ao início e à retomada de várias instâncias de fluxo de trabalho, persistência de fluxo de trabalho e fornece uma base para os recursos avançados como o rastreamento e o controle de versão que são demonstrados em etapas tutoriais subsequentes.  
+Um dos recursos centrais do Windows Workflow Foundation (WF) é a capacidade de persistir e descarregar fluxos de trabalho ociosos para um banco de dados do tempo de execução. As etapas em [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md) demonstraram os fundamentos de hospedagem de fluxo de trabalho usando um aplicativo de console. Foram mostrados exemplos de iniciação de fluxos de trabalho, manipuladores do ciclo de vida de fluxo de trabalho e retomada de indicadores. Para demonstrar efetivamente a persistência do fluxo de trabalho, um host de fluxo de trabalho mais complexo é necessário que dá suporte a início e retomada de várias instâncias de fluxo de trabalho. Esta etapa no tutorial demonstra como criar um aplicativo de host do Windows Form que dê suporte ao início e à retomada de várias instâncias de fluxo de trabalho, persistência de fluxo de trabalho e fornece uma base para os recursos avançados como o rastreamento e o controle de versão que são demonstrados em etapas tutoriais subsequentes.  
   
 > [!NOTE]
->  Nesta etapa do tutorial e as etapas subsequentes usam todos os três tipos de fluxo de trabalho de [como: Criar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md). Se você não tiver concluído todos os três tipos, você pode baixar uma versão completa das etapas da [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Nesta etapa do tutorial e as etapas subsequentes usam todos os três tipos de fluxo de trabalho de [como: Criar um fluxo de trabalho](how-to-create-a-workflow.md). Se você não tiver concluído todos os três tipos, você pode baixar uma versão completa das etapas da [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 > [!NOTE]
 >  Para baixar uma versão completa ou exibir uma vídeo passo a passo do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-topic"></a>Neste tópico  
   
--   [Para criar o banco de dados de persistência](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [Para criar o banco de dados de persistência](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [Para adicionar a referência aos assemblies do DurableInstancing](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [Para adicionar a referência aos assemblies do DurableInstancing](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [Para criar o formulário de host de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [Para criar o formulário de host de fluxo de trabalho](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Para adicionar as propriedades e métodos auxiliares do formulário](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [Para adicionar as propriedades e métodos auxiliares do formulário](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [Para configurar o armazenamento de instância, manipuladores de ciclo de vida de fluxo de trabalho e extensões](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [Para configurar o armazenamento de instância, manipuladores de ciclo de vida de fluxo de trabalho e extensões](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Para habilitar o início e retomada de vários tipos de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [Para habilitar o início e retomada de vários tipos de fluxo de trabalho](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Para iniciar um novo fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [Para iniciar um novo fluxo de trabalho](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [Para retomar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [Para retomar um fluxo de trabalho](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [Para encerrar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [Para encerrar um fluxo de trabalho](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Para compilar e executar o aplicativo](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [Para compilar e executar o aplicativo](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Para criar o banco de dados de persistência  
   
@@ -76,7 +76,7 @@ Um dos recursos centrais do Windows Workflow Foundation (WF) é a capacidade de 
 ### <a name="BKMK_CreateForm"></a> Para criar o formulário de host de fluxo de trabalho  
   
 > [!NOTE]
->  As etapas neste procedimento descrevem como adicionar e configurar manualmente o formulário. Se for desejar, você poderá baixar os arquivos da solução para o tutorial e adicionar o formulário concluído ao projeto. Para baixar os arquivos do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976). Depois que os arquivos são baixados, clique com botão direito **NumberGuessWorkflowHost** e escolha **adicionar referência**. Adicione uma referência ao **Forms** e **System. Drawing**. Essas referências são adicionadas automaticamente se você adicionar um novo formulário do **Add**, **Novo Item** menu, mas devem ser adicionadas manualmente ao importar um formulário. Depois que as referências são adicionadas, clique com botão direito **NumberGuessWorkflowHost** na **Gerenciador de soluções** e escolha **Add**, **Item existente**. Navegue até a `Form` pasta nos arquivos de projeto, selecionadas **WorkflowHostForm.cs** (ou **Workflowhostform**) e clique em **Add**. Se você optar por importar o formulário e, em seguida, você poderá pular para a próxima seção, [para adicionar as propriedades e métodos auxiliares do formulário](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).  
+>  As etapas neste procedimento descrevem como adicionar e configurar manualmente o formulário. Se for desejar, você poderá baixar os arquivos da solução para o tutorial e adicionar o formulário concluído ao projeto. Para baixar os arquivos do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976). Depois que os arquivos são baixados, clique com botão direito **NumberGuessWorkflowHost** e escolha **adicionar referência**. Adicione uma referência ao **Forms** e **System. Drawing**. Essas referências são adicionadas automaticamente se você adicionar um novo formulário do **Add**, **Novo Item** menu, mas devem ser adicionadas manualmente ao importar um formulário. Depois que as referências são adicionadas, clique com botão direito **NumberGuessWorkflowHost** na **Gerenciador de soluções** e escolha **Add**, **Item existente**. Navegue até a `Form` pasta nos arquivos de projeto, selecionadas **WorkflowHostForm.cs** (ou **Workflowhostform**) e clique em **Add**. Se você optar por importar o formulário e, em seguida, você poderá pular para a próxima seção, [para adicionar as propriedades e métodos auxiliares do formulário](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).  
   
 1.  Clique com botão direito **NumberGuessWorkflowHost** na **Gerenciador de soluções** e escolha **Add**, **Novo Item**.  
   
@@ -113,13 +113,13 @@ Um dos recursos centrais do Windows Workflow Foundation (WF) é a capacidade de 
     |**TextBox**|Nome: Palpite<br /><br /> Local: 50, 44<br /><br /> Tamanho: 65, 20|  
     |**Button**|Nome: EnterGuess<br /><br /> Local: 121, 42<br /><br /> Tamanho: 75, 23<br /><br /> Texto: Enter Guess|  
     |**Button**|Nome: QuitGame<br /><br /> Local: 274, 42<br /><br /> Tamanho: 75, 23<br /><br /> Texto: Encerrar|  
-    |**TextBox**|Nome: WorkflowStatus<br /><br /> Local: 10, 73<br /><br /> Várias linhas: verdadeiro<br /><br /> ReadOnly: verdadeiro<br /><br /> ScrollBars: Vertical<br /><br /> Tamanho: 338, 208|  
+    |**TextBox**|Nome: WorkflowStatus<br /><br /> Local: 10, 73<br /><br /> Várias linhas: True<br /><br /> ReadOnly: True<br /><br /> ScrollBars: Vertical<br /><br /> Tamanho: 338, 208|  
   
 5.  Defina as **AcceptButton** propriedades do formulário para **EnterGuess**.  
   
  O exemplo a seguir ilustra o formato concluído.  
   
- ![WF45 Introdução ao formulário de Host de fluxo de trabalho Tutorial](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ ![WF45 Introdução ao formulário de Host de fluxo de trabalho Tutorial](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
   
 ### <a name="BKMK_AddHelperMethods"></a> Para adicionar as propriedades e métodos auxiliares do formulário  
  As etapas nesta seção adicionam propriedades e métodos auxiliares para a classe de formulário que configura a interface de usuário do formulário para dar suporte à execução e à retomada de fluxos de trabalho de palpite de número.  
@@ -692,7 +692,7 @@ Um dos recursos centrais do Windows Workflow Foundation (WF) é a capacidade de 
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> Para habilitar o início e retomada de vários tipos de fluxo de trabalho  
- Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a definição de fluxo de trabalho. Neste tutorial, há três tipos de fluxo de trabalho e as etapas tutoriais subsequentes trazem várias versões desses tipos. `WorkflowIdentity` fornece uma maneira de um aplicativo de host associar informações de identificação a uma instância do fluxo de trabalho persistida. As etapas nesta seção demonstram como criar uma classe de utilitário para ajudar com o mapeamento da identidade de fluxo de trabalho de uma instância do fluxo de trabalho persistida para a definição do fluxo de trabalho correspondente. Para obter mais informações sobre `WorkflowIdentity` e o controle de versão, consulte [usando WorkflowIdentity e controle de versão](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+ Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a definição de fluxo de trabalho. Neste tutorial, há três tipos de fluxo de trabalho e as etapas tutoriais subsequentes trazem várias versões desses tipos. `WorkflowIdentity` fornece uma maneira de um aplicativo de host associar informações de identificação a uma instância do fluxo de trabalho persistida. As etapas nesta seção demonstram como criar uma classe de utilitário para ajudar com o mapeamento da identidade de fluxo de trabalho de uma instância do fluxo de trabalho persistida para a definição do fluxo de trabalho correspondente. Para obter mais informações sobre `WorkflowIdentity` e o controle de versão, consulte [usando WorkflowIdentity e controle de versão](using-workflowidentity-and-versioning.md).  
   
 1.  Clique com botão direito **NumberGuessWorkflowHost** na **Gerenciador de soluções** e escolha **Add**, **classe**. Tipo de `WorkflowVersionMap` para o **nome** caixa e clique em **Add**.  
   
@@ -1307,7 +1307,7 @@ Um dos recursos centrais do Windows Workflow Foundation (WF) é a capacidade de 
     using System.Windows.Forms;  
     ```  
   
-3.  Remova ou comente o fluxo de trabalho existente que hospeda o código de [como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)e substitua-o pelo código a seguir.  
+3.  Remova ou comente o fluxo de trabalho existente que hospeda o código de [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md)e substitua-o pelo código a seguir.  
   
     ```vb  
     Sub Main()  
@@ -1334,4 +1334,4 @@ Um dos recursos centrais do Windows Workflow Foundation (WF) é a capacidade de 
   
 8.  Iniciar vários fluxos de trabalho usando intervalos de número e os tipos de fluxo de trabalho diferente, insira alguns Palpites e alterne entre os fluxos de trabalho, selecionando a partir de **Id da instância de fluxo de trabalho** lista.  
   
-     Observe que, quando você alterna para um novo fluxo de trabalho, os palpites anteriores e o progresso do fluxo de trabalho não são exibidos na janela de status. A razão pela qual o status não está disponível é porque ele não é capturado e salvo em nenhum lugar. Na próxima etapa do tutorial, [como: Criar um participante de acompanhamento personalizado](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md), criar um participante personalizado que salva essas informações.
+     Observe que, quando você alterna para um novo fluxo de trabalho, os palpites anteriores e o progresso do fluxo de trabalho não são exibidos na janela de status. A razão pela qual o status não está disponível é porque ele não é capturado e salvo em nenhum lugar. Na próxima etapa do tutorial, [como: Criar um participante de acompanhamento personalizado](how-to-create-a-custom-tracking-participant.md), criar um participante personalizado que salva essas informações.

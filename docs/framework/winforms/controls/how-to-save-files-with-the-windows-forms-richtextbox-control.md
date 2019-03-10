@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 739cc33df873ef2c8ec7a2f5eaf867abadb8da75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539773"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723017"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Como: Salvar arquivos com o controle RichTextBox dos Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode gravar as informações exibidas em um dos vários formatos:  
@@ -41,7 +41,7 @@ Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode
   
 1.  Determine o caminho do arquivo a ser salvo.  
   
-     Para fazer isso em um aplicativo do mundo real, você normalmente usaria o <xref:System.Windows.Forms.SaveFileDialog> componente. Para obter uma visão geral, consulte [Visão geral do componente SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).  
+     Para fazer isso em um aplicativo do mundo real, você normalmente usaria o <xref:System.Windows.Forms.SaveFileDialog> componente. Para obter uma visão geral, consulte [Visão geral do componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md).  
   
 2.  Chame o <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> método da <xref:System.Windows.Forms.RichTextBox> controle, especificando o arquivo a ser salvo e, opcionalmente, um tipo de arquivo. Se você chamar o método com um nome de arquivo como seu único argumento, o arquivo será salvo como RTF. Para especificar outro tipo de arquivo, chame o método com um valor da <xref:System.Windows.Forms.RichTextBoxStreamType> enumeração como seu segundo argumento.  
   
@@ -90,5 +90,5 @@ Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Controle RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controle RichTextBox](richtextbox-control-windows-forms.md)
+- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

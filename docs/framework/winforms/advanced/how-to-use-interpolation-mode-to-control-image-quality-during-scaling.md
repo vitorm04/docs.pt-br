@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 0c295411418dabac74626c3c4ab43fb8210bbfa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83f1e569f1fb1ae49143f4ed11837759df29fe79
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631419"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721951"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Como: Usar o modo de interpolação para controlar a qualidade da imagem durante o dimensionamento
 O modo de interpolação de uma <xref:System.Drawing.Graphics> objeto influencia a maneira como [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dimensiona (estica e reduz) imagens. O <xref:System.Drawing.Drawing2D.InterpolationMode> enumeração define diversos modos de interpolação, alguns dos quais são mostrados na lista a seguir:  
@@ -38,14 +38,14 @@ O modo de interpolação de uma <xref:System.Drawing.Graphics> objeto influencia
   
  A ilustração a seguir mostra a imagem original e as três imagens menores.  
   
- ![Imagem com configurações de interpolação variadas](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")  
+ ![Imagem com configurações de interpolação variadas](./media/csgrapes1.png "csgrapes1")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
- [!code-vb[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#81](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
+ [!code-vb[System.Drawing.WorkingWithImages#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
+- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

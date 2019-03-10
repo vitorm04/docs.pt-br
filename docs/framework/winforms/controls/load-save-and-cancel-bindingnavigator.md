@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671103"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722432"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Como: Adicione carga, salvar, e botões de cancelamento para o Windows Forms controle BindingNavigator
 O <xref:System.Windows.Forms.BindingNavigator> controle é uma finalidade especial <xref:System.Windows.Forms.ToolStrip> controle que é destinado para navegar e manipular controles no formulário que estão associados aos dados.  
@@ -34,7 +34,7 @@ O <xref:System.Windows.Forms.BindingNavigator> controle é uma finalidade especi
   
 5.  Selecione o <xref:System.Windows.Forms.BindingNavigator> controle.  
   
-6.  Clique no glifo de smart tag (![glifo de smart tag](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) para que a caixa de diálogo **Tarefas BindingNavigator** seja exibida e selecione **Editar Itens**.  
+6.  Clique no glifo de smart tag (![glifo de smart tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) para que a caixa de diálogo **Tarefas BindingNavigator** seja exibida e selecione **Editar Itens**.  
   
      O **Editor de Coleção de Itens** aparece.  
   
@@ -113,5 +113,5 @@ O <xref:System.Windows.Forms.BindingNavigator> controle é uma finalidade especi
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [Controle BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Visão geral do componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [Controle BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [Visão geral do componente BindingSource](bindingsource-component-overview.md)

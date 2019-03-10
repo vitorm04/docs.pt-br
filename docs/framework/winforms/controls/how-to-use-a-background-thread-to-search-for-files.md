@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536316"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723160"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Como: Usar um Thread em segundo plano para procurar arquivos
-O <xref:System.ComponentModel.BackgroundWorker> componente substitui e adiciona funcionalidade para o <xref:System.Threading> namespace; no entanto, o <xref:System.Threading> é mantido para compatibilidade com versões anteriores e uso futuro, se você escolher. Para obter mais informações, consulte [Visão Geral do Componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+O <xref:System.ComponentModel.BackgroundWorker> componente substitui e adiciona funcionalidade para o <xref:System.Threading> namespace; no entanto, o <xref:System.Threading> é mantido para compatibilidade com versões anteriores e uso futuro, se você escolher. Para obter mais informações, consulte [Visão Geral do Componente BackgroundWorker](backgroundworker-component-overview.md).  
   
- O Windows Forms usa o modelo de single-threaded apartment (STA), pois Windows Forms é baseado em janelas nativas do Win32, que são inerentemente STA. O modelo STA implica que uma janela pode ser criada em qualquer thread, mas ela não pode mudar os threads já criados e todas as chamadas de função a ela devem ocorrer em seu thread de criação. Fora do Windows Forms, as classes do .NET Framework usam o modelo de threading livre. Para obter informações sobre threading no .NET Framework, consulte [Threading](../../../../docs/standard/threading/index.md).  
+ O Windows Forms usa o modelo de single-threaded apartment (STA), pois Windows Forms é baseado em janelas nativas do Win32, que são inerentemente STA. O modelo STA implica que uma janela pode ser criada em qualquer thread, mas ela não pode mudar os threads já criados e todas as chamadas de função a ela devem ocorrer em seu thread de criação. Fora do Windows Forms, as classes do .NET Framework usam o modelo de threading livre. Para obter informações sobre threading no .NET Framework, consulte [Threading](../../../standard/threading/index.md).  
   
  O modelo STA exige que qualquer método em um controle que precise ser chamado de fora do thread de criação do controle deve realizar marshaling (ser executado no) thread de criação do controle. A classe base <xref:System.Windows.Forms.Control> fornece vários métodos (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, e <xref:System.Windows.Forms.Control.EndInvoke%2A>) para essa finalidade. <xref:System.Windows.Forms.Control.Invoke%2A> faz chamadas de método síncrono; <xref:System.Windows.Forms.Control.BeginInvoke%2A> faz chamadas de método assíncrono.  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
+- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

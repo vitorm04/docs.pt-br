@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: c8d6f3d9b1d0380ccf78badd44484c96e0593bd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621429"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721293"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Cenários do controle DataGridView (Windows Forms)
 Com o <xref:System.Windows.Forms.DataGridView> controle, você pode exibir dados tabulares de uma variedade de fontes de dados. Para usos simples, você pode preencher manualmente um <xref:System.Windows.Forms.DataGridView> e manipular os dados diretamente por meio do controle. Normalmente, no entanto, você armazena seus dados em uma fonte de dados externa e associar o controle a ele por meio de um <xref:System.Windows.Forms.BindingSource> componente.  
@@ -19,7 +19,7 @@ Com o <xref:System.Windows.Forms.DataGridView> controle, você pode exibir dados
  Este tópico descreve alguns dos cenários comuns que envolvem o <xref:System.Windows.Forms.DataGridView> controle.  
   
 ## <a name="scenario-1-displaying-small-amounts-of-data"></a>Cenário 1: Exibição de pequenas quantidades de dados  
- Você não precisa armazenar seus dados em uma fonte de dados externa para exibi-lo no <xref:System.Windows.Forms.DataGridView> controle. Se estiver trabalhando com uma pequena quantidade de dados, você poderá preencher o controle por conta própria e manipular os dados por meio do controle. Isso é chamado de *modo não associado*. Para obter mais informações, confira [Como: Criar um controle de DataGridView não associado do Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Você não precisa armazenar seus dados em uma fonte de dados externa para exibi-lo no <xref:System.Windows.Forms.DataGridView> controle. Se estiver trabalhando com uma pequena quantidade de dados, você poderá preencher o controle por conta própria e manipular os dados por meio do controle. Isso é chamado de *modo não associado*. Para obter mais informações, confira [Como: Criar um controle de DataGridView não associado do Windows Forms](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Principais aspectos do cenário  
   
@@ -30,7 +30,7 @@ Com o <xref:System.Windows.Forms.DataGridView> controle, você pode exibir dados
 -   O modo não associado também é adequado para tabelas preenchidas escassamente ou semelhantes a planilhas.  
   
 ## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a>Cenário 2: Exibindo e atualizando dados armazenados em uma fonte de dados externa  
- Você pode usar o <xref:System.Windows.Forms.DataGridView> controlar como uma interface do usuário (IU) por meio do quais os usuários podem acessar dados mantidos em uma fonte de dados como uma tabela de banco de dados ou uma coleção de objetos de negócios. Para obter mais informações, confira [Como: Associar dados para o Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ Você pode usar o <xref:System.Windows.Forms.DataGridView> controlar como uma interface do usuário (IU) por meio do quais os usuários podem acessar dados mantidos em uma fonte de dados como uma tabela de banco de dados ou uma coleção de objetos de negócios. Para obter mais informações, confira [Como: Associar dados para o Windows Forms DataGridView Control](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Principais aspectos do cenário  
   
@@ -47,14 +47,14 @@ Com o <xref:System.Windows.Forms.DataGridView> controle, você pode exibir dados
   
  Por exemplo, caso trabalhe com grandes quantidades de dados, você talvez queira implementar o modo virtual para garantir a eficiência máxima. O modo virtual também é útil para manter os valores das colunas não associadas que você exibe em conjunto com colunas recuperadas de outra fonte de dados.  
   
- Para obter mais informações sobre o modo virtual, consulte [passo a passo: Implementando o modo Virtual no Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Para obter mais informações sobre o modo virtual, consulte [passo a passo: Implementando o modo Virtual no Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Principais aspectos do cenário  
   
 -   O modo virtual é adequado para exibir grandes quantidades de dados quando você precisar ajustar o desempenho.  
   
 ## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>Cenário 4: Redimensionar automaticamente linhas e colunas  
- Quando exibe dados que são atualizados regularmente, você pode redimensionar automaticamente as linhas e colunas para garantir que todo o conteúdo esteja visível. O <xref:System.Windows.Forms.DataGridView> controle fornece várias opções que permitem que você habilitar ou desabilitar o redimensionamento manual, redimensionar programaticamente em horários específicos ou redimensionar automaticamente sempre que alterações de conteúdo. Para obter mais informações, consulte [Sizing Options in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md) (Opções de dimensionamento no controle DataGridView dos Windows Forms).  
+ Quando exibe dados que são atualizados regularmente, você pode redimensionar automaticamente as linhas e colunas para garantir que todo o conteúdo esteja visível. O <xref:System.Windows.Forms.DataGridView> controle fornece várias opções que permitem que você habilitar ou desabilitar o redimensionamento manual, redimensionar programaticamente em horários específicos ou redimensionar automaticamente sempre que alterações de conteúdo. Para obter mais informações, consulte [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md) (Opções de dimensionamento no controle DataGridView dos Windows Forms).  
   
 ### <a name="scenario-key-points"></a>Principais aspectos do cenário  
   
@@ -65,7 +65,7 @@ Com o <xref:System.Windows.Forms.DataGridView> controle, você pode exibir dados
 -   O redimensionando programático permite redimensionar células em momentos específicos para evitar a degradação do desempenho decorrente do redimensionamento automático contínuo.  
   
 ## <a name="scenario-5-simple-customization"></a>Cenário 5: Personalização simples  
- O <xref:System.Windows.Forms.DataGridView> controle fornece várias maneiras de alterar sua aparência básica e seu comportamento. Para obter mais informações, consulte [Estilos de célula no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+ O <xref:System.Windows.Forms.DataGridView> controle fornece várias maneiras de alterar sua aparência básica e seu comportamento. Para obter mais informações, consulte [Estilos de célula no controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Principais aspectos do cenário  
   
@@ -78,14 +78,14 @@ Com o <xref:System.Windows.Forms.DataGridView> controle, você pode exibir dados
   
 ### <a name="scenario-key-points"></a>Principais aspectos do cenário  
   
--   Você pode fornecer seu próprio código de pintura da célula. Para obter mais informações, confira [Como: Personalizar a aparência de células no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).  
+-   Você pode fornecer seu próprio código de pintura da célula. Para obter mais informações, confira [Como: Personalizar a aparência de células no controle DataGridView dos Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md).  
   
--   Você pode fornecer sua própria pintura de linhas. Isso é útil, por exemplo, para criar linhas com conteúdo que se estende por várias colunas. Para obter mais informações, confira [Como: Personalizar a aparência das linhas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+-   Você pode fornecer sua própria pintura de linhas. Isso é útil, por exemplo, para criar linhas com conteúdo que se estende por várias colunas. Para obter mais informações, confira [Como: Personalizar a aparência das linhas no controle DataGridView dos Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md).  
   
--   Você pode implementar suas próprias classes de célula e de coluna para personalizar a aparência da célula. Para obter mais informações, confira [Como: Personalizar células e colunas no Windows Forms DataGridView Control estendendo o comportamento e aparência](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
+-   Você pode implementar suas próprias classes de célula e de coluna para personalizar a aparência da célula. Para obter mais informações, confira [Como: Personalizar células e colunas no Windows Forms DataGridView Control estendendo o comportamento e aparência](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
   
--   Você pode implementar suas próprias classes de célula e de coluna para hospedar controles diferentes daqueles fornecidos pelos tipos de coluna internos. Para obter mais informações, confira [Como: Hospedar controles em Windows Forms células DataGridView](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+-   Você pode implementar suas próprias classes de célula e de coluna para hospedar controles diferentes daqueles fornecidos pelos tipos de coluna internos. Para obter mais informações, confira [Como: Hospedar controles em Windows Forms células DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.DataGridView>
-- [Visão geral do controle DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+- [Visão geral do controle DataGridView](datagridview-control-overview-windows-forms.md)

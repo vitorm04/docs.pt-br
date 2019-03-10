@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738596"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724928"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Como: Fornecer Ajuda em um aplicativo do Windows
 Você pode usar o <xref:System.Windows.Forms.HelpProvider> componente para anexar tópicos da Ajuda em um arquivo de ajuda a controles específicos em formulários do Windows. O arquivo de Ajuda pode ser HTML ou HTMLHelp 1.x ou formato maior.  
@@ -53,10 +53,10 @@ Você pode usar o <xref:System.Windows.Forms.HelpProvider> componente para anexa
 > [!IMPORTANT]
 >  Tenha cuidado para verificar as informações que são enviadas de um cliente antes de usá-las em seu aplicativo. Usuários mal-intencionados podem tentar enviar ou injetar script executável, instruções SQL ou outro código. Antes de exibir a entrada do usuário, armazená-la em um banco de dados ou trabalhar com ela, verifique se ela não contém informações potencialmente não seguras. Uma maneira comum de verificar é usar uma expressão regular para procurar palavras-chave como "SCRIPT" ao receber entrada de um usuário.  
   
- Você também pode usar o <xref:System.Windows.Forms.HelpProvider> componente para exibir a Ajuda pop-up, mesmo se você tiver configurado para exibir arquivos de ajuda para os controles em formulários do Windows. Para obter mais informações, confira [Como: Exibir Ajuda pop-up](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ Você também pode usar o <xref:System.Windows.Forms.HelpProvider> componente para exibir a Ajuda pop-up, mesmo se você tiver configurado para exibir arquivos de ajuda para os controles em formulários do Windows. Para obter mais informações, confira [Como: Exibir Ajuda pop-up](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Exibir Ajuda pop-up](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [Ajuda de Controle Usando ToolTips](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [Integrando a Ajuda do Usuário nos Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Como: Exibir Ajuda pop-up](how-to-display-pop-up-help.md)
+- [Ajuda de Controle Usando ToolTips](control-help-using-tooltips.md)
+- [Integrando a Ajuda do Usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../index.md)

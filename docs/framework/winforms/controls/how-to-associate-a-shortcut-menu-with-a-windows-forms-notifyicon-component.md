@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 142d40040872a0fbe4e679a8ad67ef0ca48b4753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573680"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720378"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Como: Associar um Menu de atalho um componente NotifyIcon dos Windows Forms
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "54573680"
   
 1.  Adicionar um <xref:System.Windows.Forms.NotifyIcon> ao seu formulário e defina as propriedades importantes, como o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriedades.  
   
-     Para obter mais informações, confira [Como: Adicionar ícones de aplicativo ao TaskBar com o Windows Forms ao componente NotifyIcon](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+     Para obter mais informações, confira [Como: Adicionar ícones de aplicativo ao TaskBar com o Windows Forms ao componente NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 2.  Adicionar um <xref:System.Windows.Forms.ContextMenu> ao seu formulário do Windows.  
   
@@ -129,6 +129,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Como: Adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)
-- [Componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
-- [Visão geral do componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+- [Como: Adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Componente NotifyIcon](notifyicon-component-windows-forms.md)
+- [Visão geral do componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

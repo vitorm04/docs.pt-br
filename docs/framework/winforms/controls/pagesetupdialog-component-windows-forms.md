@@ -19,21 +19,21 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 8caa984799d7f8f5a8f4b017e8c40eeb44d8b6c4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964546"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723927"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>Componente PageSetupDialog (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.PageSetupDialog> componente é uma caixa de diálogo pré-configurada usada para definir os detalhes da página para impressão em aplicativos baseados no Windows. Use-o dentro de seu aplicativo com base em Windows, como uma solução simples para os usuários para definir preferências de página em vez de configurar sua própria caixa de diálogo. Você pode habilitar os usuários definam a borda e ajustes de margem, cabeçalhos e rodapés de páginas e retrato versus orientação paisagem. Com base nas caixas de diálogo padrão do Windows, crie aplicativos cuja funcionalidade básica é imediatamente familiar aos usuários.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral do componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ [Visão geral do componente PageSetupDialog](pagesetupdialog-component-overview-windows-forms.md)  
  Apresenta os conceitos gerais do <xref:System.Windows.Forms.PageSetupDialog> componente, que você pode usar para exibir uma caixa de diálogo pré-configurada que os usuários podem usar para manipular as configurações de página.  
   
- [Como determinar propriedades de página usando o componente PageSetupDialog](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ [Como: Determinar as propriedades de página usando o componente PageSetupDialog](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
  Explica como definir propriedades de página por meio de uma instância da <xref:System.Windows.Forms.PageSetupDialog> componente em tempo de execução.  
   
 ## <a name="reference"></a>Referência  
@@ -41,10 +41,10 @@ Os formulários do Windows <xref:System.Windows.Forms.PageSetupDialog> component
  Fornece informações de referência sobre a classe e seus membros.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
- [Controles e componentes da caixa de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ [Controles e componentes da caixa de diálogo](dialog-box-controls-and-components-windows-forms.md)  
  Descreve um conjunto de controles e componentes que permitem aos usuários executar interações padrão com o aplicativo ou sistema.  
   
  [Caixas de diálogo de código essencial para o Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  

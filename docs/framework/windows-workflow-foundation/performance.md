@@ -2,12 +2,12 @@
 title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 29fc675e0eee37bac7cd6a9e309fa68b29bf28c8
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 032c143e1b27c6e37872ac070b3a1430b3c948b4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442874"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724577"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 Dustin Metzgar
@@ -53,10 +53,10 @@ Dustin Metzgar
 ### <a name="asynchronous-programming"></a>Programação assíncrona
  Os aplicativos geralmente têm um melhor desempenho e escalabilidade com programação assíncrona para operações longas de bloqueio como E/S ou operações distribuídos de computação. WF4 fornece suporte assíncrono por tipos de base <xref:System.Activities.AsyncCodeActivity>de atividade, <xref:System.Activities.AsyncCodeActivity%601>. O tempo de execução entende nativo que as atividades assíncronos e portanto podem automaticamente colocar a instância em uma zona sem persistir quando o trabalho assíncrono está excelente. As atividades personalizados podem derivar desses tipos para executar o trabalho assíncrona sem armazenar o segmento de agendador de fluxo de trabalho e bloquear quaisquer atividades que podem ser capaz executar paralelamente.
 
-### <a name="messaging"></a>Mensagens
+### <a name="messaging"></a>Mensagem
  Inicialmente WF3 tinha muito suporte limitado de mensagem com as chamadas de eventos externos ou serviços da Web. No .net 3.5, os fluxos de trabalho pode ser implementados como clientes do WCF ou expostos como serviços WCF por meio <xref:System.Workflow.Activities.SendActivity> e <xref:System.Workflow.Activities.ReceiveActivity>. Em WF4, o conceito de programação de mensagens baseada em fluxo de trabalho tem foi reforçado mais com a integração perfeita do WCF lógica da mensagem no WF.
 
- O pipeline de processamento de mensagens unificado fornecido no WCF no .net 4 ajuda serviços WF4 a ter um desempenho significativamente melhor e a escalabilidade que WF3. WF4 também fornece um meio de programação mais sofisticado de mensagem que pode modelar padrão complexos (MEPs) de Exchange de mensagem. Os desenvolvedores podem usar contratos de serviço tipados obter programação fácil ou contratos de serviço un- tipados obter melhor desempenho sem pagar custo de serialização. Suporte do lado do cliente de cachê do canal por meio da classe <xref:System.ServiceModel.Activities.SendMessageChannelCache> em desenvolvedores de ajuda WF4 criar aplicativos rápidos com esforço mínimo. Para obter mais informações, consulte [alterando os níveis de compartilhamento de Cache para enviar atividades](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
+ O pipeline de processamento de mensagens unificado fornecido no WCF no .net 4 ajuda serviços WF4 a ter um desempenho significativamente melhor e a escalabilidade que WF3. WF4 também fornece um meio de programação mais sofisticado de mensagem que pode modelar padrão complexos (MEPs) de Exchange de mensagem. Os desenvolvedores podem usar contratos de serviço tipados obter programação fácil ou contratos de serviço un- tipados obter melhor desempenho sem pagar custo de serialização. Suporte do lado do cliente de cachê do canal por meio da classe <xref:System.ServiceModel.Activities.SendMessageChannelCache> em desenvolvedores de ajuda WF4 criar aplicativos rápidos com esforço mínimo. Para obter mais informações, consulte [alterando os níveis de compartilhamento de Cache para enviar atividades](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
 ### <a name="declarative-programming"></a>Programação declarativa
  WF4 fornece uma estrutura declarativamente limpa e de programação simples para modelar processos comerciais e serviços. O modelo de programação oferece suporte a composição totalmente declarativa de atividades, sem nenhum código ao lado de simplificando, bastante a criação de fluxo de trabalho. Em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a estrutura xaml-específicas declarativamente com base de programação unificado foi no único assembly System.Xaml.dll para oferecer suporte a WPF e WF.
@@ -70,7 +70,7 @@ Dustin Metzgar
  Esta seção contém dados em comparações diretas entre atividades individuais em fluxos de trabalho WF3 e WF4.  Os pontos chave como a persistência tem um impacto no desempenho mais profundo dos componentes individuais de atividade.  As melhorias de desempenho em componentes individuais em WF4 são importantes embora porque os componentes são agora rápidos o suficiente para ser comparados com a lógica mão- valor de orquestração.  Um exemplo que é abordado na próxima seção: "Cenário de composição do serviço".
 
 ### <a name="environment-setup"></a>Configuração de ambiente
- ![Ambiente de teste de desempenho de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Ambiente de teste de desempenho de fluxo de trabalho](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
  A figura anterior mostra a configuração de máquina usada para medidas de desempenho de nível por componente. Um único servidor e cinco clientes conectados sobre uma interface de rede Ethernet 1-Gbps. Para medidas fácil, o servidor é configurado para usar um único principal de um servidor dual de proc/principal executando Windows Server 2008 x. A utilização da CPU do sistema é mantida em quase 100%.
 
@@ -109,12 +109,11 @@ Dustin Metzgar
  O fluxo de trabalho da sequência contém uma atividade de <xref:System.Activities.Statements.While> com uma atividade filho no loop que não executa qualquer trabalho.
 
 ### <a name="replicator-compared-to-parallelforeach"></a>Replicator comparou a ParallelForEach
- <xref:System.Workflow.Activities.ReplicatorActivity> em WF3 tem modos de execução sequencial e paralela.  No modo sequencial, o desempenho da atividade é semelhante a <xref:System.Workflow.Activities.WhileActivity>.  
-  <xref:System.Workflow.Activities.ReplicatorActivity> é mais útil para execução paralela.  O WF4 analógico para essa é a atividade de <xref:System.Activities.Statements.ParallelForEach%601> .
+ <xref:System.Workflow.Activities.ReplicatorActivity> em WF3 tem modos de execução sequencial e paralela.  No modo sequencial, o desempenho da atividade é semelhante a <xref:System.Workflow.Activities.WhileActivity>.  <xref:System.Workflow.Activities.ReplicatorActivity> é mais útil para execução paralela.  O WF4 analógico para essa é a atividade de <xref:System.Activities.Statements.ParallelForEach%601> .
 
  O diagrama a seguir mostra os fluxos de trabalho usados para esse teste. O trabalho WF3 estão à esquerda e o trabalho WF4 estão à direita.
 
- ![WF3 ReplicatorActivity e WF4 ParallelForEach](../../../docs/framework/windows-workflow-foundation/media/replicatorandparallelforeach.gif "ReplicatorAndParallelForEach")
+ ![WF3 ReplicatorActivity e WF4 ParallelForEach](./media/replicatorandparallelforeach.gif "ReplicatorAndParallelForEach")
 
 ### <a name="sequential-workflow-with-five-activities"></a>Fluxo de trabalho sequencial com cinco atividades
  Este teste serve mostrar o efeito de ter várias atividades executa em ordem.  Há cinco atividades na sequência.
@@ -144,8 +143,7 @@ class WorkScope :
     }
 ```
 
- O manipulador de falha se destina a atividade de `WorkScope` . O fluxo de trabalho WF4 é igualmente simplista.  
-  <xref:System.Activities.Statements.CompensableActivity> tem um corpo e um manipulador de compensação.  Um explícito compensa é seguir na sequência.  A atividade de atividade de corpo e do manipulador de compensação é ambas são implementações:
+ O manipulador de falha se destina a atividade de `WorkScope` . O fluxo de trabalho WF4 é igualmente simplista.  <xref:System.Activities.Statements.CompensableActivity> tem um corpo e um manipulador de compensação.  Um explícito compensa é seguir na sequência.  A atividade de atividade de corpo e do manipulador de compensação é ambas são implementações:
 
 ```
 public sealed class CompensableActivityEmptyCompensation : CodeActivity
@@ -168,14 +166,14 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
     }
 ```
 
- ![Fluxos de trabalho de compensação básica de WF3 e WF](../../../docs/framework/windows-workflow-foundation/media/basiccompensationworkflows.gif "BasicCompensationWorkflows")
+ ![Fluxos de trabalho de compensação básica de WF3 e WF](./media/basiccompensationworkflows.gif "BasicCompensationWorkflows")
 
  Figura 2 -fluxos de trabalho básicos (permissões) de compensação WF3 (deixado) e WF4
 
 ### <a name="performance-test-results"></a>Resultados de testes de desempenho
- ![Os resultados de teste de desempenho](../../../docs/framework/windows-workflow-foundation/media/performancedata.gif "PerformanceData")
+ ![Os resultados de teste de desempenho](./media/performancedata.gif "PerformanceData")
 
- ![Gráfico de dados de teste de desempenho](../../../docs/framework/windows-workflow-foundation/media/performancetestchart.gif "PerformanceTestChart")
+ ![Gráfico de dados de teste de desempenho](./media/performancetestchart.gif "PerformanceTestChart")
 
  Todos os testes são medidos em por segundo de fluxos de trabalho com exceção de teste do escopo de transação.  Como pode ser deduzido anterior, o desempenho de tempo de execução de [!INCLUDE[wf1](../../../includes/wf1-md.md)] melhor em qualquer linha, especialmente em áreas que eles exigem mais execuções da mesma atividade como quando o loop do.
 
@@ -188,12 +186,12 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Os dois serviços backend, a validação do serviço e o depósito os serviços de aplicativos, permanecem os mesmos para ambos os testes.  A parte que muda é o serviço online de Store que executa a orquestração.  Em um caso, o serviço mão-é codificado como um serviço WCF.  Para os outros casos, o serviço é escrito como um serviço de fluxo de trabalho do WCF em WF4. os recursos específico de[!INCLUDE[wf1](../../../includes/wf1-md.md)]como o rastreamento e a persistência estão desativados para esse teste.
 
 ### <a name="environment"></a>Ambiente
- ![Ambiente de teste de desempenho de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Ambiente de teste de desempenho de fluxo de trabalho](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
  As solicitações de cliente são feitas para o serviço online de Store por HTTP vários computadores.  Hosts únicos do computador todos os três serviços.  A camada de transporte entre o serviço online de Store e serviços backend é TCP ou HTTP.  A medida das operações/é baseada em dependendo do número de chamadas concluídos de `PurchaseOrder` feitas para o serviço online de Store.  Pool de canal é um novo recurso disponível em WF4.  O WCF parte do pool de canal teste não é fornecido fora da caixa para que uma implementação mão-codificados de uma técnica pooling simples foi usada no serviço Online de Store.
 
 ### <a name="performance"></a>Desempenho
- ![Gráfico de desempenho do serviço online de Store](../../../docs/framework/windows-workflow-foundation/media/onlinestoreperfgraph.gif "OnlineStorePerfGraph")
+ ![Gráfico de desempenho do serviço online de Store](./media/onlinestoreperfgraph.gif "OnlineStorePerfGraph")
 
  Conectando para backend os serviços TCP sem canal que agrupam-se, o serviço de [!INCLUDE[wf1](../../../includes/wf1-md.md)] tem um impacto 17,2% em produção.  Com que o canal pool, a caneta é aproximadamente 23,8%.  Para HTTP, o impacto é muito menos: 4,3% sem agrupamento e 8,1% com agrupamento.  Também é importante observar que se agrupar do canal fornece muito pouco benefício ao usar HTTP.
 
@@ -206,19 +204,19 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Em um aplicativo de serviço de fluxo de trabalho WCF, é importante, pois ele pode estar bloqueando a latência para iniciar um novo fluxo de trabalho ou carregar um fluxo de trabalho existente.  Essa situação de teste mede um host de WF3 XOML contra um host de WF4 XAMLX em um cenário típico.
 
 ##### <a name="environment-setup"></a>Configuração de ambiente
- ![Configuração do ambiente para testes de latência e taxa de transferência](../../../docs/framework/windows-workflow-foundation/media/latencyandthroughputenvironment.gif "LatencyAndThroughputEnvironment")
+ ![Configuração do ambiente para testes de latência e taxa de transferência](./media/latencyandthroughputenvironment.gif "LatencyAndThroughputEnvironment")
 
 ##### <a name="test-setup"></a>Configuração de teste
  No cenário, um computador cliente contata um serviço de fluxo de trabalho do WCF usando correlação de contexto base.  Correlação de contexto requer uma associação especial de contexto e usa um cabeçalho de contexto ou o cookie para relacionar mensagens ao fluxo de trabalho correto instância.  Tem um benefício de desempenho que a identificação de correlação está localizada no cabeçalho de mensagem para que o corpo da mensagem não precisa ser analisado.
 
  O serviço criará um novo fluxo de trabalho com a solicitação e enviará uma resposta imediata de modo que a medida de latência não inclua o tempo gasto executando o fluxo de trabalho.  O trabalho WF3 são XOML com a code-behind e o trabalho WF4 são totalmente XAML.  Os aspectos de fluxo de trabalho WF4 como este:
 
- ![Escopo do WF 4 de correlação](../../../docs/framework/windows-workflow-foundation/media/correlationscopeworkflow.gif "CorrelationScopeWorkflow")
+ ![Escopo do WF 4 de correlação](./media/correlationscopeworkflow.gif "CorrelationScopeWorkflow")
 
  A atividade de <xref:System.ServiceModel.Activities.Receive> cria a instância de fluxo de trabalho.  Um valor passado a mensagem é recebida ecoado na mensagem de resposta.  Uma sequência após a resposta contém o resto de fluxo de trabalho.  Em casos anterior, somente uma atividade do comentário é mostrada.  O número de atividades de comentário é alterado para simular a complexidade de fluxo de trabalho.  Uma atividade do comentário é equivalente a um WF3 <xref:System.Workflow.Activities.CodeActivity> que não executa qualquer trabalho. Para obter mais informações sobre a atividade de comentário, consulte a seção "comparação de desempenho de nível de componente" anteriormente neste artigo.
 
 ##### <a name="test-results"></a>Resultados do teste
- ![Resultados de latência](../../../docs/framework/windows-workflow-foundation/media/latencyresultsgraph.gif "LatencyResultsGraph")
+ ![Resultados de latência](./media/latencyresultsgraph.gif "LatencyResultsGraph")
 
  Figura 3 - latência fria e morna para serviços de fluxo de trabalho WCF
 
@@ -230,22 +228,22 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Correlação de contexto base tem uma vantagem de desempenho que a chave de correlação está localizada no cabeçalho de mensagem.  A chave pode ser lido de mensagem sem de- serialização/mensagem- copiar.  Em correlação conteudo base, a chave de correlação é armazenada no corpo da mensagem.  Uma expressão XPath é usada para localizar a chave.  O custo desse processamento adicional depende do tamanho de mensagem, profundidade de chave no corpo, e o número de chaves.  Este teste compara contexto e correlação conteudo base e também mostra degradação de desempenho ao usar várias chaves.
 
 #### <a name="environment-setup"></a>Configuração de ambiente
- ![Ambiente de teste de desempenho de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Ambiente de teste de desempenho de fluxo de trabalho](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
 #### <a name="test-setup"></a>Configuração de teste
- ![Teste de fluxo de trabalho de taxa de transferência de correlação](../../../docs/framework/windows-workflow-foundation/media/correlationthroughputworkflow.gif "CorrelationThroughputWorkflow")
+ ![Teste de fluxo de trabalho de taxa de transferência de correlação](./media/correlationthroughputworkflow.gif "CorrelationThroughputWorkflow")
 
  O fluxo de trabalho mostrado acima é o mesmo usado na seção "Persistência" abaixo.  Para teste de correlação sem persistência não há nenhum provedor de persistência instalado em tempo de execução.  Correlação ocorre em dois locais: CreateOrder e CompleteOrder.
 
 #### <a name="test-results"></a>Resultados do teste
- ![Taxa de transferência de correlação](../../../docs/framework/windows-workflow-foundation/media/correlationthroughputgraph.gif "CorrelationThroughputGraph")
+ ![Taxa de transferência de correlação](./media/correlationthroughputgraph.gif "CorrelationThroughputGraph")
 
  Este gráfico a seguir mostra um decréscimo de desempenho como o número de chaves usadas em correlação conteudo base aumenta.  A semelhança em curvas entre o TCP e o HTTP indica a sobrecarga associada com esses protocolos.
 
 #### <a name="correlation-with-persistence"></a>Correlação com persistência
  Com um fluxo de trabalho persistente, pressão CPU de conteudo correlação desloca com base em tempo de execução do fluxo de trabalho a base de dados SQL.  Os procedimentos armazenados no provedor de persistência do SQL faça o trabalho de combinar as chaves para localizar o fluxo de trabalho apropriado.
 
- ![Resultados de correlação e persistência](../../../docs/framework/windows-workflow-foundation/media/correlationandpersistencegraph.gif "CorrelationAndPersistenceGraph")
+ ![Resultados de correlação e persistência](./media/correlationandpersistencegraph.gif "CorrelationAndPersistenceGraph")
 
  Correlação de contexto base ainda é mais rápido que correlação conteudo base.  No entanto, a diferença é pronunciada menos porque a persistência tem mais impacto no desempenho que correlação.
 
@@ -259,32 +257,32 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  O número de atividades em um teste dado é determinado por profundidade e o número de atividades pela sequência.  A equação seguir calcula o número de atividades no teste WF4:
 
- ![A equação para calcular o número de atividades](../../../docs/framework/windows-workflow-foundation/media/numberofactivitiesequation.gif "NumberOfActivitiesEquation")
+ ![A equação para calcular o número de atividades](./media/numberofactivitiesequation.gif "NumberOfActivitiesEquation")
 
  A contagem de atividade de teste WF3 pode ser computado com uma equação ligeiramente diferente devido a uma sequência extra:
 
- ![A equação para calcular o número de atividades](../../../docs/framework/windows-workflow-foundation/media/w3numberofactivitiesequation.gif "W3NumberOfActivitiesEquation")
+ ![A equação para calcular o número de atividades](./media/w3numberofactivitiesequation.gif "W3NumberOfActivitiesEquation")
 
  De onde está o tamanho e a são o número de atividades pela sequência.  A lógica por trás dessas equações é que a primeira constante, multiplicada por, é o número de sequências e a segunda constante é o número de atividades estático no nível atual.  Há três atividades filhos do fluxograma em cada fluxograma.  A nível inferior de profundidade, esses fluxogramas estão vazios mas a outros níveis são cópias do fluxograma principal.  O número de atividades na definição de fluxo de trabalho de cada variação de teste é indicado na tabela a seguir:
 
- ![Compara o número de atividades usadas em cada teste](../../../docs/framework/windows-workflow-foundation/media/comparechart.gif "CompareChart")
+ ![Compara o número de atividades usadas em cada teste](./media/comparechart.gif "CompareChart")
 
  O número de atividades na definição de fluxo de trabalho aumenta com nitidez com cada nível de profundidade.  Mas somente um caminho pelo ponto de decisão é executado em uma determinada instância de fluxo de trabalho, portanto somente um subconjunto pequeno de atividades reais é executado.
 
- ![Fluxo de trabalho complexo](../../../docs/framework/windows-workflow-foundation/media/complexworkflowthroughputworkflow.gif "ComplexWorkflowThroughputWorkflow")
+ ![Fluxo de trabalho complexo](./media/complexworkflowthroughputworkflow.gif "ComplexWorkflowThroughputWorkflow")
 
- Um fluxo de trabalho equivalente foi criado para WF3. O designer WF3 mostra o fluxo de trabalho inteiro na área de design em vez de aninhamento, portanto é muito grande exibir neste tópico. Um snippet de fluxo de trabalho é mostrado abaixo.
+ Um fluxo de trabalho equivalente foi criado para WF3. O designer WF3 mostra o fluxo de trabalho inteiro na área de design em vez de aninhamento, portanto é muito grande exibir neste tópico. Um trecho de fluxo de trabalho é mostrado abaixo.
 
- ![WF3 Fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/wf3workflow.gif "WF3Workflow")
+ ![WF3 Fluxo de trabalho](./media/wf3workflow.gif "WF3Workflow")
 
  Para exercitar aninhamento em casos, extremos outro fluxo de trabalho que seja parte dos usos 100 deste teste tivesse sequências.  Na sequência interno são único `Comment` ou <xref:System.Workflow.Activities.CodeActivity>.
 
- ![Aninhado sequências](../../../docs/framework/windows-workflow-foundation/media/nestedsequencewf.gif "NestedSequenceWF")
+ ![Aninhado sequências](./media/nestedsequencewf.gif "NestedSequenceWF")
 
  O rastreamento e a persistência não são usados como parte deste teste.
 
 ### <a name="test-results"></a>Resultados do teste
- ![Gráfico de taxa de transferência](../../../docs/framework/windows-workflow-foundation/media/testresults1.gif "TestResults1")
+ ![Gráfico de taxa de transferência](./media/testresults1.gif "TestResults1")
 
  Mesmo com fluxos de trabalho complexos com muitos de profundida e um número alto de atividades, os resultados de desempenho são consistentes com outros números de produção mostradas anteriormente neste artigo.  A taxa de WF4 é pedidos de magnitude mais rapidamente e tem que ser comparadas em uma escala logarítmica.
 
@@ -296,11 +294,11 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  Os dois novos teste básicos têm fluxos de trabalho que são como aqueles mostrados abaixo:
 
- ![Fluxos de trabalho complexos](../../../docs/framework/windows-workflow-foundation/media/complexworkflowboth.gif "ComplexWorkflowBoth")
+ ![Fluxos de trabalho complexos](./media/complexworkflowboth.gif "ComplexWorkflowBoth")
 
  No fluxo de trabalho WF3 mostrado acima, as atividades vazios de <xref:System.Workflow.Activities.CodeActivity> são usadas.  As atividades acima de `Comment` usos de fluxo de trabalho WF4.  A atividade de `Comment` foi descrito na seção comparações de desempenho de nível por componente anteriormente neste artigo.
 
- ![Gráfico de uso de memória](../../../docs/framework/windows-workflow-foundation/media/complexmemoryusage.gif "ComplexMemoryUsage")
+ ![Gráfico de uso de memória](./media/complexmemoryusage.gif "ComplexMemoryUsage")
 
  Uma das tendências claras observar no gráfico é que se aninhar relativamente tem impacto mínimo sobre o uso de memória em WF3 e em WF4.  O impacto o mais significativa de memória do número de atividades em um determinado fluxo de trabalho.  Dado os dados da sequência 1000, a sequência complexa 5 profundidade 5, e profundidade complexa 7 variações da sequência 1, é claro como o número de atividades inserir milhares, increase de uso de memória ficar mais visível.  Em casos extremos sequência 1 (profundidade 7) onde há atividades de ~29K, WF4 estiver usando quase 79% menos memória que WF3.
 
@@ -313,7 +311,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  As definições de fluxo de trabalho usadas no teste de console foram fluxos de trabalho sequenciais simples com uma única atividade.  A única atividade foi <xref:System.Workflow.Activities.CodeActivity> vazio para as caixas WF3 e uma atividade de `Comment` para casos WF4.  Configuração dos casos hospedados usaram fluxos de trabalho que começam em receber uma mensagem e terminam em enviar uma resposta:
 
- ![Serviços de fluxo de trabalho no WF3 e WF4](../../../docs/framework/windows-workflow-foundation/media/receiveworkflowboth.gif "ReceiveWorkflowBoth")
+ ![Serviços de fluxo de trabalho no WF3 e WF4](./media/receiveworkflowboth.gif "ReceiveWorkflowBoth")
 
  Figura 4 - trabalho WF3 com ReceiveActivity e trabalhos WF4 com padrão de solicitação/resposta
 
@@ -363,25 +361,25 @@ public class Workflow1 : Activity
  O provedor de persistência WF4 SQL tenta resolver alguns desses interesses.  As tabelas de persistência expõe determinada informações como os indicadores ativos e as propriedades promotable.  O novo recurso de conteudo baseado em WF4 correlação não deseja executar bem usando a abordagem de persistência WF3 SQL, que fez alterações na organização de instância persistentes de fluxo de trabalho.  Isso torna o provedor de persistência mais complexos e coloca o esforço extra na base de dados.
 
 ### <a name="environment-setup"></a>Configuração de ambiente
- ![Ambiente de teste de desempenho de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Ambiente de teste de desempenho de fluxo de trabalho](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
 ### <a name="test-setup"></a>Configuração de teste
  Mesmo com um conjunto aprimorado de recurso e uma melhor manipulação de concorrência, o provedor de persistência SQL em WF4 é mais rápido do que o provedor em WF3.  Para apresentar isso, dois fluxos de trabalho executando essencialmente as mesmas operações em WF3 e em WF4 são comparados abaixo.
 
- ![Fluxos de trabalho de persistência](../../../docs/framework/windows-workflow-foundation/media/persistworkflow.gif "PersistWorkflow")
+ ![Fluxos de trabalho de persistência](./media/persistworkflow.gif "PersistWorkflow")
 
  Figura 5 - fluxo de trabalho de persistência em WF3 na esquerda e em direito no WF4
 
  Os dois fluxos de trabalho ambos são criados por uma mensagem recebida.  Após enviar uma resposta inicial, o fluxo de trabalho é mantido.  Em casos WF3, <xref:System.Workflow.ComponentModel.TransactionScopeActivity> vazia é usado para iniciar a persistência.  O mesmo pode ser obtido em WF3 marcar uma atividade como "persistir no fechamento."  Uma segunda mensagem correlacionada concluir o fluxo de trabalho.  Fluxos de trabalho são persistidos mas não descarregados.
 
 ### <a name="test-results"></a>Resultados do teste
- ![Persistência de taxa de transferência](../../../docs/framework/windows-workflow-foundation/media/throughputpersistence.gif "ThroughputPersistence")
+ ![Persistência de taxa de transferência](./media/throughputpersistence.gif "ThroughputPersistence")
 
  Quando o transporte entre o cliente e a camada intermediária é HTTP, a persistência em WF4 mostra uma melhoria de 2,6 vezes.  O transporte TCP aumenta o fator a 3,0 vezes.  Em todos os casos, a utilização da CPU na camada intermediária é 98% ou maior.  A razão para a produção WF4 é maior realiza-se devido ao tempo de execução mais rápida de fluxo de trabalho.  O tamanho da instância é serializado baixo para ambos os casos e não é um elemento de contribuição principal nesta situação.
 
  WF3 e fluxos de trabalho WF4 neste teste usam uma atividade para indicar explicitamente quando a persistência deve ocorrer.  Isso tem a vantagem de persistir o fluxo de trabalho sem descarregá-lo.  Em WF3, também é possível persistir usando o recurso de <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> , mas este descarrega a instância de fluxo de trabalho de memória.  Se um desenvolvedor que usa WF3 deseja verificar se um fluxo de trabalho persiste em determinados pontos, tem que alterar a definição de fluxo de trabalho ou pagar o custo descarregar e recarregar a instância de fluxo de trabalho.  Um novo recurso em WF4 possibilita persistir sem descarregar: <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>.  Esse recurso permite que a instância de fluxo de trabalho está armazenado em ociosa mas é na memória até que o limite de <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> está localizado ou a execução é continuada.
 
- Observe que o provedor de persistência WF4 SQL executa mais trabalho na camada de base de dados.  O base de dados SQL pode se tornar um gargalo portanto é importante monitorar existem o uso da CPU e o disco.  Certifique-se de incluir os seguintes contadores de desempenho de base de dados SQL quando aplicativos de fluxo de trabalho de teste de desempenho:
+ Observe que o provedor de persistência WF4 SQL executa mais trabalho na camada de base de dados.  O base de dados SQL pode se tornar um afunilamento portanto é importante monitorar existem o uso da CPU e o disco.  Certifique-se de incluir os seguintes contadores de desempenho de base de dados SQL quando aplicativos de fluxo de trabalho de teste de desempenho:
 
 -   PhysicalDisk\\tempo de leitura do disco %
 
@@ -426,15 +424,15 @@ public class Workflow1 : Activity
 
  Quando WF4 não possui um provedor de rastreamento SQL, AppFabric faz.  A abordagem de rastreamento SQL de AppFabric é assinar eventos de ETW com um serviço do Windows que processa em lotes os eventos e os escrevam a uma tabela SQL criada para inserções rápido possível.  Um trabalho separados sai os dados da tabela e reformam-nos nas tabelas de relatório que podem ser exibidas no painel de AppFabric.  Isso significa que um lote de eventos de rastreamento é tratado independente de fluxo de trabalho proveniente de e portanto não tenha que aguardar um ponto de persistência antes de ser gravado.
 
- Os eventos de ETW podem ser gravados com ferramentas como o logman ou o xperf.  O arquivo de compacto ETL pode ser exibido com uma ferramenta como o xperfview ou ser convertido em um formato mais legível, como XML, com tracerpt.  Em WF3, a única opção para obter eventos de rastreamento sem um base de dados SQL é criar um serviço personalizado de rastreamento. Para obter mais informações sobre o ETW, consulte [os serviços WCF e rastreamento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [rastreamento de eventos - aplicativos do Windows](/windows/desktop/etw/event-tracing-portal).
+ Os eventos de ETW podem ser gravados com ferramentas como o logman ou o xperf.  O arquivo de compacto ETL pode ser exibido com uma ferramenta como o xperfview ou ser convertido em um formato mais legível, como XML, com tracerpt.  Em WF3, a única opção para obter eventos de rastreamento sem um base de dados SQL é criar um serviço personalizado de rastreamento. Para obter mais informações sobre o ETW, consulte [os serviços WCF e rastreamento de eventos para Windows](../wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [rastreamento de eventos - aplicativos do Windows](/windows/desktop/etw/event-tracing-portal).
 
  Ativar o rastreamento de fluxo de trabalho irá afetar o desempenho em vários níveis.  A marca de nível abaixo usar a ferramenta de logman para consumir eventos de rastreamento de ETW e para gravar-los a um arquivo de ETL.  O custo de rastreamento SQL em AppFabric não está no escopo deste artigo.  O perfil básico de rastreamento, também usado em AppFabric, é mostrada nessa marca de nível.  Também estão incluídos o custo de acompanhar somente eventos de monitoramento de integridade.  Esses eventos são úteis para solucionar problemas e determinar a taxa média do sistema.
 
 ### <a name="environment-setup"></a>Configuração de ambiente
- ![Ambiente de teste de desempenho de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Ambiente de teste de desempenho de fluxo de trabalho](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
 ### <a name="test-results"></a>Resultados do teste
- ![Custo de rastreamento de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/workflowtracingcost.gif "WorkflowTracingCost")
+ ![Custo de rastreamento de fluxo de trabalho](./media/workflowtracingcost.gif "WorkflowTracingCost")
 
  Monitoramento da integridade tem um impacto de aproximadamente 3% em produção.  Os custos de perfil básico são aproximadamente 8%.
 
@@ -442,7 +440,7 @@ public class Workflow1 : Activity
  WF4 é quase uma reescrita completo de [!INCLUDE[wf1](../../../includes/wf1-md.md)] e portanto fluxos de trabalho WF3 e as atividades não são diretamente compatíveis com WF4.  Vários clientes que adotaram o Windows Workflow Foundation no início terão as definições de fluxo de trabalho internas ou de terceiros e atividades personalizados para WF3.  Uma maneira de fazer a transição para WF4 é usar a atividade de Interoperabilidade, que pode executar as atividades WF3 de dentro de um fluxo de trabalho WF4.  É recomendável que a atividade de <xref:System.Activities.Statements.Interop> seja usada somente quando necessário. Para obter mais informações sobre a migração para WF4 fazer check-out a [diretrizes de migração de WF4](https://go.microsoft.com/fwlink/?LinkID=153313).
 
 ### <a name="environment-setup"></a>Configuração de ambiente
- ![Ambiente de teste de desempenho de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Ambiente de teste de desempenho de fluxo de trabalho](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
 ### <a name="test-results"></a>Resultados do teste
  A tabela abaixo mostra os resultados de executar um fluxo de trabalho que contém cinco atividades em uma sequência em várias configurações.

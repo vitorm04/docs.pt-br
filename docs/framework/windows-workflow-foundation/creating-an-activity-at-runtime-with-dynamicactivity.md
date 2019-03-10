@@ -2,12 +2,12 @@
 title: Criando uma atividade em tempo de execução com o DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58dea5f6e469f871da35fc57aa4d9d8a1266bfed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733201"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724608"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Criando uma atividade em tempo de execução com o DynamicActivity
 <xref:System.Activities.DynamicActivity> é um concreto, classe lacradas com um construtor público. <xref:System.Activities.DynamicActivity> pode ser usado para reunir a funcionalidade de atividade em tempo de execução usando os DOM de uma atividade.  
@@ -98,4 +98,4 @@ ms.locfileid: "54733201"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Criando fluxos de trabalho, atividades e expressões de design usando o código obrigatório](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Criando fluxos de trabalho, atividades e expressões de design usando o código obrigatório](authoring-workflows-activities-and-expressions-using-imperative-code.md)

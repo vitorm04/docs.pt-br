@@ -8,20 +8,20 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: b1ae7afe2a99870e4befc04992148080aff6bfad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40129deed1f43480b7bde59ef8a67f4561af5d38
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720321"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724681"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Como: Editar colunas e linhas em um controle TableLayoutPanel
 Você pode usar o editor de coleção do <xref:System.Windows.Forms.TableLayoutPanel> controle, chamado de **estilos de linha e coluna** caixa de diálogo para editar as linhas e colunas dos controles.  
   
 > [!NOTE]
->  Se você quiser que um controle ocupe várias linhas ou colunas, defina as propriedades `RowSpan` e `ColumnSpan` do controle. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+>  Se você quiser que um controle ocupe várias linhas ou colunas, defina as propriedades `RowSpan` e `ColumnSpan` do controle. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
 >   
->  Se você deseja alinhar um controle dentro de uma célula, ou se você quiser um controle se alongue por uma célula, use o controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+>  Se você deseja alinhar um controle dentro de uma célula, ou se você quiser um controle se alongue por uma célula, use o controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
 >   
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -29,7 +29,7 @@ Você pode usar o editor de coleção do <xref:System.Windows.Forms.TableLayoutP
   
 1.  Arraste uma <xref:System.Windows.Forms.TableLayoutPanel> controlar do **caixa de ferramentas** para seu formulário.  
   
-2.  Clique o <xref:System.Windows.Forms.TableLayoutPanel> glifo de smart tag do controle (![glifo de Smart Tag](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) e selecione **Editar linhas e colunas** para abrir o  **Estilos de linha e coluna** caixa de diálogo. Você pode também clique com botão direito do <xref:System.Windows.Forms.TableLayoutPanel> controle e selecione **Editar linhas e colunas** no menu de atalho.  
+2.  Clique o <xref:System.Windows.Forms.TableLayoutPanel> glifo de smart tag do controle (![glifo de Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) e selecione **Editar linhas e colunas** para abrir o  **Estilos de linha e coluna** caixa de diálogo. Você pode também clique com botão direito do <xref:System.Windows.Forms.TableLayoutPanel> controle e selecione **Editar linhas e colunas** no menu de atalho.  
   
 3.  Para adicionar ou remover colunas, selecione **Colunas** da caixa de listagem suspensa **Tipo de membro**.  
   
@@ -45,4 +45,4 @@ Você pode usar o editor de coleção do <xref:System.Windows.Forms.TableLayoutP
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.SizeType>
-- [Controle TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+- [Controle TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

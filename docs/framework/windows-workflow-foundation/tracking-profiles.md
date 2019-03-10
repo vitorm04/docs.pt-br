@@ -2,12 +2,12 @@
 title: Controlando perfis
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482295"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721366"
 ---
 # <a name="tracking-profiles"></a>Controlando perfis
 
@@ -104,15 +104,13 @@ A funcionalidade de `implementationVisibility` é especificado como <xref:System
 </tracking>
 ```
 
-
-  `ImplementationVisibility` que define o perfil de rastreamento é opcional. Por padrão, o valor é definido como `RootScope`. Os valores para este atributo são também maiúsculas de minúsculas.
+`ImplementationVisibility` que define o perfil de rastreamento é opcional. Por padrão, o valor é definido como `RootScope`. Os valores para este atributo são também maiúsculas de minúsculas.
 
 ### <a name="tracking-profile-query-types"></a>Controlando tipos de consulta de perfil
 
 Controlando os perfis são estruturados como as assinaturas declarativas para controlar os registros que permitem que você possa ver o tempo de execução de fluxo de trabalho para o controle específico registro. Há vários tipos de consulta que permitem autenticação para classes diferentes de objetos de <xref:System.Activities.Tracking.TrackingRecord> . Controlar perfis pode ser especificado na configuração ou com o código. Aqui estão os tipos de consulta mais comuns:
 
-- <xref:System.Activities.Tracking.WorkflowInstanceQuery> - use isso para controlar as alterações do ciclo de vida de instância de fluxo de trabalho como `Started` precedente- demonstrado e `Completed`. 
-  <xref:System.Activities.Tracking.WorkflowInstanceQuery> é usado para assinar seguintes a <xref:System.Activities.Tracking.TrackingRecord> os objetos:
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery> - use isso para controlar as alterações do ciclo de vida de instância de fluxo de trabalho como `Started` precedente- demonstrado e `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> é usado para assinar seguintes a <xref:System.Activities.Tracking.TrackingRecord> os objetos:
 
     - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
 
@@ -346,7 +344,7 @@ Controlando a consulta elementos são usados para criar um perfil de rastreament
 > [!WARNING]
 > Para um WF usando o host serviço de fluxo de trabalho, o perfil de rastreamento é normalmente criado usando um arquivo de configuração. Também é possível criar um perfil de rastreamento com o código usando o perfil de rastreamento e a consulta API de rastreamento.
 
-Um perfil configurado como um arquivo de configuração XML é aplicado a um participante de rastreamento que usa uma extensão de comportamento. Isso é adicionado a um WorkflowServiceHost como descrito na seção posterior [Configurando o rastreamento para um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).
+Um perfil configurado como um arquivo de configuração XML é aplicado a um participante de rastreamento que usa uma extensão de comportamento. Isso é adicionado a um WorkflowServiceHost como descrito na seção posterior [Configurando o rastreamento para um fluxo de trabalho](configuring-tracking-for-a-workflow.md).
 
 A verbosidade de registros de rastreamento emissores pelo host é determinada pelas configurações dentro do perfil de rastreamento. Um participante de rastreamento assina controlar registros adicionando consultas a um perfil de rastreamento. Para assinar todos os registros de rastreamento, o perfil de acompanhamento precisa especificar todas as consultas de acompanhamento usando "\*" em campos de nome em cada uma das consultas.
 
@@ -389,6 +387,6 @@ Aqui estão alguns dos exemplos comuns de perfis de rastreamento.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Acompanhamento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Acompanhamento de SQL](./samples/sql-tracking.md)
 - [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -2,12 +2,12 @@
 title: Arquitetura de fluxo de trabalho do Windows
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: c0e21e514e807196f3a09ae2a6eed6a9e7c55a18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513091"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723732"
 ---
 # <a name="windows-workflow-architecture"></a>Arquitetura de fluxo de trabalho do Windows
 Windows Workflow Foundation (WF) aumenta o nível de abstração para o desenvolvimento de aplicativos interativos de longa execução. As unidades de trabalho são encapsuladas como atividades. As atividades executam em um ambiente que fornece recursos para o controle de fluxo, manipulação de exceção, a propagação de falha, persistência de dados do estado, ao carregamento e descarregamento de fluxos de trabalho em andamento de memória, de rastreamento, e de fluxo de transação.  
@@ -38,15 +38,15 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-context"></a>Contexto de atividades  
  <xref:System.Activities.ActivityContext> é a interface de autor de atividade do tempo de execução de fluxo de trabalho e fornece acesso a riqueza de tempo de execução dos recursos. No exemplo a seguir, uma atividade é definida que usa o contexto de execução para criar um marcador (o mecanismo que permite uma atividade registra um ponto de continuação de linha em sua execução que pode ser continuada por um host que passa dados na atividade).  
   
- [!code-csharp[CFX_WorkflowApplicationExample#15](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#15](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
   
 ## <a name="activity-life-cycle"></a>Ciclo de vida de atividades  
  Uma instância de uma atividade começa em estado de <xref:System.Activities.ActivityInstanceState.Executing> . A menos que as exceções são localizadas, permanece nesse estado até que todas as atividades filho sejam executar completo e qualquer outro trabalho pendente (<xref:System.Activities.Bookmark> objetos, por exemplo) está concluído, ao ponto que ele faz a transição de estado de <xref:System.Activities.ActivityInstanceState.Closed> . O pai de uma instância da atividade pode solicitar um filho; cancelar se o filho pode ser cancelado termina em estado de <xref:System.Activities.ActivityInstanceState.Canceled> . Se uma exceção é lançada durante a execução, o tempo de execução coloca a atividade no estado de <xref:System.Activities.ActivityInstanceState.Faulted> e propaga a exceção acima da cadeia pai de atividades. A seguir estão os três estados de conclusão de uma atividade:  
   
--   **Fechados:** a atividade foi concluída seu trabalho e foi encerrado.  
+-   **Fechado:** A atividade concluir seu trabalho e foi encerrado.  
   
--   **Cancelada:** a atividade normalmente tem abandonou seu trabalho e foi encerrado. O trabalho não será revertido explicitamente quando esse estado está conectado.  
+-   **Cancelados:** A atividade normalmente abandonada seu trabalho e foi encerrado. O trabalho não será revertido explicitamente quando esse estado está conectado.  
   
--   **Falha:** a atividade encontrou um erro e foi encerrado sem concluir seu trabalho.  
+-   **Com falha:** A atividade encontrou um erro e foi encerrado sem concluir seu trabalho.  
   
  As atividades permanecem no estado de <xref:System.Activities.ActivityInstanceState.Executing> quando são persistentes ou descarregadas.

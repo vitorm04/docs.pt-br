@@ -9,17 +9,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 29b32cd91cefe80f2f0a331f901fcabe55aa9c60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558976"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720859"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Como: Herdar Windows Forms
 Criar novo Windows Forms herdando de formulários base é uma maneira prática de duplicar seus melhores esforços sem passar pelo processo de recriar inteiramente um formulário toda vez que precisar dele.  
   
- Para obter mais informações sobre herdar formulários em tempo de design usando o **selecionador de herança** controles de caixa de diálogo e como distinguir visualmente entre níveis de segurança de herdados, consulte [como: Herdar formulários usando a caixa de diálogo selecionador de herança](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
+ Para obter mais informações sobre herdar formulários em tempo de design usando o **selecionador de herança** controles de caixa de diálogo e como distinguir visualmente entre níveis de segurança de herdados, consulte [como: Herdar formulários usando a caixa de diálogo selecionador de herança](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
   
  **Observação** para herdar de um formulário, o arquivo ou namespace que contém esse formulário deve ter sido incorporado em um arquivo executável ou DLL. Para compilar o projeto, escolha **Compilar** no menu **Compilar**. Além disso, uma referência ao namespace deve ser adicionada à classe que herda o formulário. As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -44,5 +44,5 @@ Criar novo Windows Forms herdando de formulários base é uma maneira prática d
 - [Instrução Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Instrução Imports (Tipo e Namespace .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Efeitos da Modificação da Aparência de um Formulário Base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Herança Visual dos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Efeitos da Modificação da Aparência de um Formulário Base](effects-of-modifying-base-form-appearance.md)
+- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)
