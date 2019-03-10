@@ -3,12 +3,12 @@ title: Modelos personalizados para dotnet new
 description: Saiba mais sobre modelos personalizados para qualquer tipo de projeto ou de arquivos do .NET.
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503920"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679054"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
@@ -16,7 +16,7 @@ O [SDK do .NET Core](https://www.microsoft.com/net/download/core) vem com muitos
 
 É possível instalar modelos personalizados de um pacote NuGet em qualquer feed do NuGet, referenciando um arquivo *nupkg* do NuGet diretamente ou especificando um diretório de sistema de arquivos que contenha o modelo. O mecanismo de modelo oferece recursos que permitem substituir valores, incluir e excluir arquivos e regiões de arquivos e executar operações de processamento personalizadas quando seu modelo é usado.
 
-O mecanismo de modelo é um software livre e o repositório de código online fica em [dotnet/modelagem](https://github.com/dotnet/templating/) no GitHub. Acesse o repositório [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) para obter exemplos de modelos. Mais modelos, incluindo modelos de terceiros, são encontrados em [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Modelos disponíveis para dotnet new) no GitHub. Para obter mais informações sobre a criação e o uso de modelos personalizados, consulte [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) (Como criar seus próprios modelos para dotnet new) e o [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki).
+O mecanismo de modelo é um software livre e o repositório de código online fica em [dotnet/modelagem](https://github.com/dotnet/templating/) no GitHub. Acesse o repositório [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) para obter exemplos de modelos. Mais modelos, incluindo modelos de terceiros, são encontrados em [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Modelos disponíveis para dotnet new) no GitHub. Para obter mais informações sobre a criação e o uso de modelos personalizados, consulte [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) (Como criar seus próprios modelos para dotnet new) e o [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki).
 
 Para seguir um passo a passo e criar um modelo, consulte o tutorial [Create a custom template for dotnet new](~/docs/core/tutorials/create-custom-template.md) (Criar um modelo personalizado para dotnet new).
 
@@ -155,5 +155,5 @@ dotnet new <TEMPLATE>
 - [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/create-custom-template.md)
 - [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)
 - [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
-- [Como criar seus próprios modelos para dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [Como criar seus próprios modelos para dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
 - [Esquema *template.json* no Repositório de Esquema JSON](http://json.schemastore.org/template)

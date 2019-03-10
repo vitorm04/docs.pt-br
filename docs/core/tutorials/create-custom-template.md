@@ -4,12 +4,12 @@ description: Saiba como criar um modelo personalizado para o comando dotnet new 
 author: guardrex
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 72cafab774187cf8c59b2a00d8adcc5028974c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714052"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676441"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Criar um modelo personalizado para dotnet new
 
@@ -211,5 +211,5 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 - [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)
 - [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
-- [Como criar seus próprios modelos para dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [Como criar seus próprios modelos para dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
 - [Esquema *template.json* no Repositório de Esquema JSON](http://json.schemastore.org/template)

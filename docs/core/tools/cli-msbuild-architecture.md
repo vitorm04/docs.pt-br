@@ -1,21 +1,20 @@
 ---
 title: Arquitetura das ferramentas de linha de comando do .NET Core
 description: Saiba mais sobre as camadas de ferramentas do .NET Core e o que foi alterado nas versões recentes.
-author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696318"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675687"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Visão geral de alto nível das alterações nas ferramentas do .NET Core
 
-Este documento descreve as alterações associadas à movimentação de *project.json* para o MSBuild e para o sistema de projeto *csproj*, com informações sobre as alterações na camada de ferramentas do .NET Core e a implementação dos comandos da CLI. Essas alterações ocorreram com o lançamento do SDK 1.0 do .NET Core e do Visual Studio 2017 em 7 de março de 2017 (veja o [comunicado](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)), mas foram implementadas inicialmente com o lançamento do SDK Preview 3 do .NET Core.
+Este documento descreve as alterações associadas à movimentação de *project.json* para o MSBuild e para o sistema de projeto *csproj*, com informações sobre as alterações na camada de ferramentas do .NET Core e a implementação dos comandos da CLI. Essas alterações ocorreram com o lançamento do SDK 1.0 do .NET Core e do Visual Studio 2017 em 7 de março de 2017 (veja o [comunicado](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)), mas foram implementadas inicialmente com o lançamento do SDK Preview 3 do .NET Core.
 
 ## <a name="moving-away-from-projectjson"></a>Deixando o project.json
-A maior alteração nas ferramentas do .NET Core é certamente a [mudança de project.json para csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) como o sistema de projeto. As últimas versões das ferramentas de linha de comando não dão suporte a arquivos *project.json*. Isso significa que ele não pode ser usado para compilar, executar ou publicar aplicativos e bibliotecas baseados no project.json. Para usar essa versão das ferramentas, é necessário migrar os projetos existentes ou iniciar projetos novos. 
+A maior alteração nas ferramentas do .NET Core é certamente a [mudança de project.json para csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) como o sistema de projeto. As últimas versões das ferramentas de linha de comando não dão suporte a arquivos *project.json*. Isso significa que ele não pode ser usado para compilar, executar ou publicar aplicativos e bibliotecas baseados no project.json. Para usar essa versão das ferramentas, é necessário migrar os projetos existentes ou iniciar projetos novos. 
 
 Como parte dessa mudança, o mecanismo de build personalizado desenvolvido para compilar projetos project.json foi substituído por um mecanismo de build maduro e totalmente capaz, chamado [MSBuild](https://github.com/Microsoft/msbuild). O MSBuild é um mecanismo conhecido na comunidade do .NET, pois que tem sido uma tecnologia chave desde a primeira versão da plataforma. Naturalmente, como precisa compilar aplicativos .NET Core, o MSBuild foi movido para o .NET Core e pode ser usado em qualquer plataforma que executa o .NET Core. Uma das principais promessas do .NET Core é uma pilha de desenvolvimento de plataforma cruzada e nós garantimos que essa mudança não quebra essa promessa.
 

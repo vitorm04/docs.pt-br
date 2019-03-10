@@ -4,16 +4,16 @@ description: Reduza as dependências do pacote ao criar bibliotecas com base no 
 author: cartermp
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168265"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674959"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzindo as dependências de pacote com o project.json
 
-Este artigo aborda o que você precisa saber sobre como reduzir suas dependências de pacote ao criar bibliotecas `project.json`. No final deste artigo, você aprenderá como compor sua biblioteca de forma que ela usa apenas as dependências necessárias. 
+Este artigo aborda o que você precisa saber sobre como reduzir suas dependências de pacote ao criar bibliotecas `project.json`. No final deste artigo, você aprenderá como compor sua biblioteca de forma que ela usa apenas as dependências necessárias.
 
 ## <a name="why-its-important"></a>Por que isso é importante
 
@@ -27,18 +27,17 @@ Atualmente, não há nenhum comando `dotnet` oficial para cortar as referências
 
 1. Faça referência à `NETStandard.Library` versão `1.6.0` em uma seção `dependencies` de seu `project.json`.
 2. Restaure pacotes com `dotnet restore` ([veja observação](#dotnet-restore-note)) por meio da linha de comando.
-3. Inspecione o arquivo `project.lock.json` e localize a seção `NETSTandard.Library`.  Ele estará perto do início do arquivo.
+3. Inspecione o arquivo `project.lock.json` e localize a seção `NETStandard.Library`.  Ele estará perto do início do arquivo.
 4. Copie todos os pacotes listados em `dependencies`.
 5. Remova a referência `.NETStandard.Library` e substitua-a pelos pacotes copiados.
 6. Remova as referências aos pacotes que não são necessários.
-
 
 Você pode descobrir quais pacotes não são necessários das seguintes maneiras:
 
 1. Tentativa e erro.  Isso significa remover um pacote, restaurar, ver se sua biblioteca ainda é compilada e repetir esse processo.
 2. Usar uma ferramenta como [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) ou [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) para inspecionar as referências e ver o que seu código realmente está usando.  Você poderá então remover os pacotes que não correspondem aos tipos que você está usando.
 
-## <a name="example"></a>Exemplo 
+## <a name="example"></a>Exemplo
 
 Imagine que você criou uma biblioteca que fornecia uma funcionalidade adicional para tipos de coleção genérica.  Uma biblioteca precisaria depender de pacotes como `System.Collections`, mas pode não de pacotes como `System.Net.Http`.  Dessa forma, seria bom cortar as dependências do pacote para reduzir até o que essa biblioteca realmente precisa.
 
@@ -56,7 +55,7 @@ Para cortar essa biblioteca, você deve começar com o arquivo `project.json` e 
 }
 ```
 
-Em seguida, restaure pacotes com `dotnet restore` ([veja observação](#dotnet-restore-note)), inspecione o arquivo `project.lock.json` e localize todos os pacotes restaurados para `NETSTandard.Library`.
+Em seguida, restaure pacotes com `dotnet restore` ([veja observação](#dotnet-restore-note)), inspecione o arquivo `project.lock.json` e localize todos os pacotes restaurados para `NETStandard.Library`.
 
 Veja como a seção relevante no arquivo `project.lock.json` se parece ao redirecionar para `netstandard1.0`:
 
