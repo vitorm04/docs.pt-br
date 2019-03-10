@@ -13,12 +13,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
-ms.openlocfilehash: 1883e73f3b1937e8568b751d1cb9f3b57548c010
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ac6c4f2e3334a9b4c5ff4d2a6e31b6b9bf3673
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649499"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711209"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Como: Reproduzir um som do sistema de um formulário do Windows
 O código a seguir exemplo reproduz o `Exclamation` som do sistema em tempo de execução. Para obter mais informações sobre os sons do sistema, consulte <xref:System.Media.SystemSounds>.  
@@ -46,5 +46,5 @@ public void playExclamation()
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>
-- [Como: Executar um bipe de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)
-- [Como: Reproduzir um som de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+- [Como: Executar um bipe de um formulário do Windows](how-to-play-a-beep-from-a-windows-form.md)
+- [Como: Reproduzir um som de um formulário do Windows](how-to-play-a-sound-from-a-windows-form.md)

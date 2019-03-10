@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 88a743cc6d0a1e90d2912c9ec610fae326ff5770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744902"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720885"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Como: Adicionar ou remover de uma coleção de controles em tempo de execução
 Tarefas comuns no desenvolvimento de aplicativos são adicionar controles para e remover controles de qualquer controle de contêiner em formulários (como o <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox> controle ou até mesmo o próprio formulário). Em tempo de design, controles podem ser arrastados diretamente para um painel ou caixa de grupo. Em tempo de execução, esses controles mantêm uma coleção `Controls`, que mantém o controle de quais controles são colocados neles.  
@@ -102,4 +102,4 @@ Tarefas comuns no desenvolvimento de aplicativos são adicionar controles para e
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.Panel>
-- [Controle de painel](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+- [Controle de painel](panel-control-windows-forms.md)

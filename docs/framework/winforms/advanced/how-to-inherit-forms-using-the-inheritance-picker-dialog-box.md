@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601825"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719345"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como: Herdar formulários usando a caixa de diálogo selecionador de herança
 A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa de diálogo **Selecionador de Herança**. Com ela, você pode aproveitar códigos ou interfaces do usuário já criados em outras soluções.  
@@ -41,7 +41,7 @@ A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa d
   
 6.  Selecione o componente.  
   
-     No **Gerenciador de Soluções**, o componente é adicionado ao seu projeto. Se ela tiver uma interface do usuário, controles que fazem parte do formulário herdado serão marcados com um glifo (![captura de tela VisualBasicInheritanceSymbol](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) e, quando selecionados, terão uma borda indicando o nível de segurança que o controle tem sobre o formulário da superclasse. Os comportamentos que correspondem aos diferentes níveis de segurança são listados na tabela a seguir.  
+     No **Gerenciador de Soluções**, o componente é adicionado ao seu projeto. Se ela tiver uma interface do usuário, controles que fazem parte do formulário herdado serão marcados com um glifo (![captura de tela VisualBasicInheritanceSymbol](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) e, quando selecionados, terão uma borda indicando o nível de segurança que o controle tem sobre o formulário da superclasse. Os comportamentos que correspondem aos diferentes níveis de segurança são listados na tabela a seguir.  
   
     |Nível de segurança de controle|Interação disponível por meio do Designer e do Editor de Códigos com Formulário Herdado|  
     |-------------------------------|--------------------------------------------------------------------------------|  
@@ -51,13 +51,13 @@ A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa d
     |Interno (Amigo, no Visual Basic)|Borda padrão sem alça de dimensionamento, mostrada no formulário, propriedades visíveis na janela **Propriedades**. No entanto, todos os aspectos do controle serão considerados somente leitura. Você não pode mover nem dimensionar o controle nem alterar suas propriedades. Se o controle for um recipiente de outros controles, como uma caixa de grupo, novos controles não poderão ser adicionados e os controles existentes não poderão ser removidos, mesmo que os controles sejam públicos. O controle só pode ser acessado por outros membros do assembly que o contém.|  
     |Particular|Borda padrão sem alça de dimensionamento, mostrada no formulário, propriedades visíveis na janela **Propriedades**. No entanto, todos os aspectos do controle serão considerados somente leitura. Você não pode mover nem dimensionar o controle nem alterar suas propriedades. Se o controle for um recipiente de outros controles, como uma caixa de grupo, novos controles não poderão ser adicionados e os controles existentes não poderão ser removidos, mesmo que os controles sejam públicos. O controle só pode ser acessado pela classe que o declara.|  
   
-     Para obter informações sobre como alterar a aparência do formulário de base, consulte [Efeitos da modificação da aparência de um formulário de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
+     Para obter informações sobre como alterar a aparência do formulário de base, consulte [Efeitos da modificação da aparência de um formulário de base](effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Ao combinar controles e componentes herdados com controles e componentes padrão no Windows Forms, você pode encontrar conflitos com a ordenação z. Você pode corrigir isso modificando a ordenação z, o que é feito clicando no menu **Formato**, apontando para **Ordem** e, em seguida, clicando em **Trazer para Frente** ou **Enviar para Trás**. Para obter mais informações sobre a ordem z dos controles, consulte [como: Camada de objetos no Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Ao combinar controles e componentes herdados com controles e componentes padrão no Windows Forms, você pode encontrar conflitos com a ordenação z. Você pode corrigir isso modificando a ordenação z, o que é feito clicando no menu **Formato**, apontando para **Ordem** e, em seguida, clicando em **Trazer para Frente** ou **Enviar para Trás**. Para obter mais informações sobre a ordem z dos controles, consulte [como: Camada de objetos no Windows Forms](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Consulte também
 - [Instrução Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Efeitos da Modificação da Aparência de um Formulário Base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Herança Visual dos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Efeitos da Modificação da Aparência de um Formulário Base](effects-of-modifying-base-form-appearance.md)
+- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)

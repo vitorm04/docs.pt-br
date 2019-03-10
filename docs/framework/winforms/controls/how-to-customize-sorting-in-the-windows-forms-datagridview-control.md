@@ -9,35 +9,35 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sorting
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
-ms.openlocfilehash: 2eb7b66b52770f8641cc56adb1829ba590ba5874
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 18d3ec4aa2c8c4a9bfd769b8d922bc76e7dac4a5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584181"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718515"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Como: Personalizar a classificação no controle DataGridView dos Windows Forms
 O <xref:System.Windows.Forms.DataGridView> controle proporciona classificação automática mas, dependendo das suas necessidades, talvez você precise personalizar as operações de classificação. Por exemplo, é possível usar a classificação programática para criar uma interface do usuário (UI) alternativa. Como alternativa, você pode lidar com o <xref:System.Windows.Forms.DataGridView.SortCompare> chamada ou evento a `Sort(IComparer)` sobrecarga da <xref:System.Windows.Forms.DataGridView.Sort%2A> método para maior flexibilidade de classificação, como classificar várias colunas.  
   
- Os exemplos de código a seguir demonstram essas três abordagens da classificação personalizada. Para mais informações, consulte [Modos de classificação da coluna no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md).  
+ Os exemplos de código a seguir demonstram essas três abordagens da classificação personalizada. Para mais informações, consulte [Modos de classificação da coluna no controle DataGridView do Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="programmatic-sorting"></a>Classificação programática  
  O exemplo de código a seguir demonstra uma classificação programática usando o <xref:System.Windows.Forms.DataGridView.SortOrder%2A> e <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> propriedades para determinar a direção da classificação e o <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A> propriedade para definir manualmente o glifo de classificação. O `Sort(DataGridViewColumn,ListSortDirection)` sobrecarga da <xref:System.Windows.Forms.DataGridView.Sort%2A> método é usado para classificar dados somente em uma única coluna.  
   
- [!code-csharp[System.Windows.Forms.DataGridViewProgrammaticSort#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewProgrammaticSort/CS/form1.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewProgrammaticSort#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewProgrammaticSort/VB/form1.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewProgrammaticSort#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewProgrammaticSort/CS/form1.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewProgrammaticSort#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewProgrammaticSort/VB/form1.vb#00)]  
   
 ## <a name="custom-sorting-using-the-sortcompare-event"></a>Classificação personalizada usando o evento SortCompare  
  O exemplo de código a seguir demonstra classificação personalizada usando um <xref:System.Windows.Forms.DataGridView.SortCompare> manipulador de eventos. Selecionado <xref:System.Windows.Forms.DataGridViewColumn> é classificada e, se houver valores duplicados na coluna, a coluna de ID é usada para determinar a classificação final.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridView.SortCompare#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridView.SortCompare#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#00)]  
   
 ## <a name="custom-sorting-using-the-icomparer-interface"></a>Classificação personalizada usando a interface IComparer  
  O exemplo de código a seguir demonstra classificação personalizada usando o `Sort(IComparer)` sobrecarga da <xref:System.Windows.Forms.DataGridView.Sort%2A> método, que usa uma implementação da <xref:System.Collections.IComparer> interface para executar uma classificação de várias colunas.  
   
- [!code-csharp[System.Windows.Forms.DataGridViewIComparerSort#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/CS/form1.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewIComparerSort#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/VB/form1.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewIComparerSort#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/CS/form1.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewIComparerSort#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/VB/form1.vb#00)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Esses exemplos precisam de:  
@@ -48,6 +48,6 @@ O <xref:System.Windows.Forms.DataGridView> controle proporciona classificação 
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.DataGridView>
-- [Classificando dados no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Modos de classificação da coluna no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Classificando dados no controle DataGridView dos Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Modos de classificação da coluna no controle DataGridView dos Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)

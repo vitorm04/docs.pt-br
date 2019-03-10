@@ -2,12 +2,12 @@
 title: Escopo e visibilidade de definição de atividades
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: f3a8936c1bc3275468e1e4dbd23d0d001edad021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518496"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723836"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Escopo e visibilidade de definição de atividades
 O escopo e a visibilidade de definição de atividade, assim como o escopo e a visibilidade de um objeto, são a capacidade de objetos ou outras atividades para acessar membros da atividade. A definição da atividade é executada por implementações seguintes:  
@@ -22,7 +22,7 @@ O escopo e a visibilidade de definição de atividade, assim como o escopo e a v
  Além do escopo de dados, visibilidade modelo de atividade pode restringir o acesso a outros aspectos da atividade, como validação, a depuração, o rastreamento, ou o rastreamento. As propriedades de execução usam a visibilidade e o escopo para características de execução em um escopo específico de definição. As raízes secundários usam a visibilidade e o escopo para restringir o estado capturado por <xref:System.Activities.Statements.CompensableActivity> escopo de definição em que as atividades compensáveis são usadas.  
   
 ## <a name="definition-and-usage"></a>Definição e uso  
- Um fluxo de trabalho foi criado por meio da criação de novas atividades herdadas de classes de atividade de base e usando atividades de [biblioteca de atividades internas](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md). Para usar uma atividade, o autor de atividade deve configurar a visibilidade de cada componente de sua definição.  
+ Um fluxo de trabalho é escrito criando novos atividades herdar de classes de base de atividade e usando atividades do [biblioteca de atividades internas](net-framework-4-5-built-in-activity-library.md). Para usar uma atividade, o autor de atividade deve configurar a visibilidade de cada componente de sua definição.  
   
 ### <a name="activity-members"></a>Membros de atividades  
  O modelo de atividade define argumentos, variáveis, representantes, e as atividades filhos que a atividade torna disponíveis para os consumidores. Cada um desses membros pode ser declarado como `public` ou `private`. Os membros públicos são configurados pelo consumidor de atividade, enquanto os membros de `private` usam uma implementação fixa pelo autor de atividade. As regras de visibilidade para o escopo de dados são:  

@@ -2,12 +2,12 @@
 title: Processo de aprovação de documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582704"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717696"
 ---
 # <a name="document-approval-process"></a>Processo de aprovação de documento
 Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (WF) e o Windows Communication Foundation (WCF) em conjunto. Junto implementam um cenário do processo de aprovação do documento. Um aplicativo cliente pode enviar documentos para a aprovação e aprovar documentos. Um aplicativo do gerenciador de aprovação existe para facilitar comunicação entre clientes e para aplicar as regras do processo de aprovação. O processo de aprovação é um fluxo de trabalho que pode executar vários tipos de aprovação. As atividades existem para obter uma única aprovação, uma aprovação de quorum (uma porcentagem do conjunto de approvers), e um processo de aprovação complexo que consiste em um quorum e em uma única aprovação em uma sequência.
@@ -24,7 +24,7 @@ Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (
 ## <a name="sample-details"></a>Detalhes de exemplo  
  O gráfico a seguir demonstra o fluxo de trabalho do processo de aprovação do documento.  
   
- ![Um fluxo de trabalho do processo de aprovação do documento](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Um fluxo de trabalho do processo de aprovação do documento](./media/approvalprocess.jpg "ApprovalProcess")  
   
  Da perspectiva de cliente, o processo de aprovação funciona como segue:  
   

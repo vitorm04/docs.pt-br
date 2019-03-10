@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636963"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719306"
 ---
 # <a name="application-settings-for-windows-forms"></a>Configurações do aplicativo para o Windows Forms
 O recurso Configurações de aplicativo dos Windows Forms facilita a criação, o repositório e a manutenção de aplicativos personalizados e preferências do usuário no cliente. Com as Configurações de aplicativo, é possível armazenar não apenas dados do aplicativo, como cadeias de conexão de banco de dados, mas também dados específicos do usuário, como posições da barra de ferramentas e as listas mais recentemente usadas.  
@@ -38,7 +38,7 @@ O recurso Configurações de aplicativo dos Windows Forms facilita a criação, 
   
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Seção de configuração do Windows Forms](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
+[Seção de configuração do Windows Forms](../../configure-apps/file-schema/winforms/index.md)    
 Documentos de suporte as configurações para habilitar a DPI alto no aplicativo do Windows Forms a partir do .NET Framework 4.7.
 
 ## <a name="see-also"></a>Consulte também

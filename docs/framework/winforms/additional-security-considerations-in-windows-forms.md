@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 56bc14f176f239a0272038494015cea4553e3e6f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442523"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718903"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerações adicionais sobre Segurança do Windows Forms
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configurações de segurança podem fazer com que seu aplicativo seja executado de forma diferente em um ambiente de confiança parcial que no computador local. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe o acesso a esses recursos locais críticos como o sistema de arquivos, rede e APIs não gerenciadas, entre outras coisas. As configurações de segurança afetam a capacidade de chamar a API do Microsoft Win32 ou outras APIs que não pode ser verificado pelo sistema de segurança. A segurança também afeta outros aspectos do seu aplicativo, incluindo acesso a dados e de arquivo e impressão. Para obter mais informações sobre o acesso a arquivos e dados em um ambiente de confiança parcial, consulte [acesso a dados nos Windows Forms e o arquivo mais seguro](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Para obter mais informações sobre a impressão em um ambiente de confiança parcial, consulte [mais seguro impressão nos Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configurações de segurança podem fazer com que seu aplicativo seja executado de forma diferente em um ambiente de confiança parcial que no computador local. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe o acesso a esses recursos locais críticos como o sistema de arquivos, rede e APIs não gerenciadas, entre outras coisas. As configurações de segurança afetam a capacidade de chamar a API do Microsoft Win32 ou outras APIs que não pode ser verificado pelo sistema de segurança. A segurança também afeta outros aspectos do seu aplicativo, incluindo acesso a dados e de arquivo e impressão. Para obter mais informações sobre o acesso a arquivos e dados em um ambiente de confiança parcial, consulte [acesso a dados nos Windows Forms e o arquivo mais seguro](more-secure-file-and-data-access-in-windows-forms.md). Para obter mais informações sobre a impressão em um ambiente de confiança parcial, consulte [mais seguro impressão nos Windows Forms](more-secure-printing-in-windows-forms.md).  
   
  As seções a seguir abordam como trabalhar com a área de transferência, executar a manipulação de janela e chamar a API do Win32 em aplicativos que são executados em um ambiente de confiança parcial.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "56442523"
   
  Se seu aplicativo não tem permissão para chamar código não gerenciado, seu aplicativo deve solicitar <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão, ou você deve considerar maneiras alternativas de implementação de recursos; em muitos casos, o Windows Forms fornece uma alternativa gerenciada para a API do Win32 funções. Se nenhuma alternativa significa que existe e o aplicativo deve acessar código não gerenciado, você terá a elevar as permissões para o aplicativo.  
   
- Permissão para chamar código não gerenciado permite que um aplicativo execute quase qualquer coisa. Portanto, permissão para chamar código não gerenciado somente deve ser concedida para aplicativos que vêm de uma fonte confiável. Como alternativa, dependendo do aplicativo, a parte da funcionalidade do aplicativo que faz a chamada para código não gerenciado pode ser opcional ou habilitado no ambiente de confiança total, somente. Para obter mais informações sobre permissões perigosas, consulte [permissões perigosas e administração da diretiva](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Para obter mais informações sobre elevar permissões, consulte [administração geral de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
+ Permissão para chamar código não gerenciado permite que um aplicativo execute quase qualquer coisa. Portanto, permissão para chamar código não gerenciado somente deve ser concedida para aplicativos que vêm de uma fonte confiável. Como alternativa, dependendo do aplicativo, a parte da funcionalidade do aplicativo que faz a chamada para código não gerenciado pode ser opcional ou habilitado no ambiente de confiança total, somente. Para obter mais informações sobre permissões perigosas, consulte [permissões perigosas e administração da diretiva](../misc/dangerous-permissions-and-policy-administration.md). Para obter mais informações sobre elevar permissões, consulte [administração geral de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
-- [Acesso mais seguro a arquivos e a dados nos Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)
-- [Impressão mais segura no Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Visão geral da segurança dos Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Segurança do Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)
+- [Acesso mais seguro a arquivos e a dados nos Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
+- [Impressão mais segura no Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Visão geral da segurança dos Windows Forms](security-in-windows-forms-overview.md)
+- [Segurança do Windows Forms](windows-forms-security.md)
 - [Protegendo aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

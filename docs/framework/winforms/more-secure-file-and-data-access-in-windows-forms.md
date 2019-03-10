@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664920"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724538"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acesso mais seguro a arquivos e dados no Windows Forms
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permissões para ajudar a proteger recursos e dados. Onde seu aplicativo pode ler ou gravar dados depende das permissões concedidas ao aplicativo. Quando seu aplicativo é executado em um ambiente de confiança parcial, talvez você não tenha acesso aos seus dados ou talvez você precise alterar a maneira como você acessa os dados.  
@@ -26,7 +26,7 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permissões p
  Quando você encontrar uma restrição de segurança, você tem duas opções: declarar a permissão (supondo que ela foi concedida ao seu aplicativo) ou use uma versão do recurso escrita para trabalhar em confiança parcial. As seções a seguir abordam como trabalhar com arquivos, o banco de dados e o acesso ao Registro de aplicativos que são executados em um ambiente parcialmente confiável.  
   
 > [!NOTE]
->  Por padrão, as ferramentas que geram [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] implantações, padronizam essas distribuições para solicitar confiança total dos computadores em que são executadas. Se você decidir que deseja os benefícios de aumentar a segurança da execução em confiança parcial, você deve alterar esse padrão no Visual Studio ou em um do [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] ferramentas (Mage.exe ou MageUI.exe). Para obter mais informações sobre segurança dos Windows Forms e sobre como determinar o nível de confiança apropriado para seu aplicativo, consulte [Visão geral de Segurança nos Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Por padrão, as ferramentas que geram [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] implantações, padronizam essas distribuições para solicitar confiança total dos computadores em que são executadas. Se você decidir que deseja os benefícios de aumentar a segurança da execução em confiança parcial, você deve alterar esse padrão no Visual Studio ou em um do [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] ferramentas (Mage.exe ou MageUI.exe). Para obter mais informações sobre segurança dos Windows Forms e sobre como determinar o nível de confiança apropriado para seu aplicativo, consulte [Visão geral de Segurança nos Windows Forms](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Acesso a arquivos  
  O <xref:System.Security.Permissions.FileIOPermission> classe controla o acesso do arquivo e pasta no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Por padrão, o sistema de segurança não concede a <xref:System.Security.Permissions.FileIOPermission> para ambientes de confiança parcial, como a intranet local e zonas da Internet. No entanto, um aplicativo que requer acesso a arquivos ainda funcionará nesses ambientes se você modificar o design do seu aplicativo ou usa métodos diferentes para acessar arquivos. Por padrão, a zona da intranet local recebe o direito de ter o mesmo acesso a sites e o mesmo acesso a diretórios, para conectar-se novamente ao site de sua origem e ler seu diretório de instalação. Por padrão, a zona da Internet, é apenas o direito para se conectar novamente ao site de sua origem.  
@@ -136,7 +136,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 >  No Visual c#, certifique-se de que você adicione código para permitir que o manipulador de eventos. Ao usar o código do exemplo anterior, o código a seguir mostra como habilitar o manipulador de eventos.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Outros arquivos  
- Às vezes, você precisará ler ou gravar em arquivos que o usuário não especifica, como quando você precisa salvar as configurações do aplicativo. Na intranet local e zonas da Internet, o aplicativo não terá permissão para armazenar dados em um arquivo local. No entanto, seu aplicativo poderá armazenar dados no armazenamento isolado. Armazenamento isolado é um compartimento de dados abstrato (não um local de armazenamento específico) que contém um ou mais arquivos de armazenamento isolados, chamados de armazenamentos, que contêm os locais reais dos diretórios nos quais os dados são armazenados. As permissões de acesso, como arquivos <xref:System.Security.Permissions.FileIOPermission> não são necessários; em vez disso, o <xref:System.Security.Permissions.IsolatedStoragePermission> classe controla as permissões para o armazenamento isolado. Por padrão, os aplicativos que são executados na intranet local e zonas da Internet podem armazenar dados usando armazenamento isolado; No entanto, configurações como cota de disco podem variar. Para obter mais informações sobre armazenamento isolado, consulte [Armazenamento Isolado](../../../docs/standard/io/isolated-storage.md).  
+ Às vezes, você precisará ler ou gravar em arquivos que o usuário não especifica, como quando você precisa salvar as configurações do aplicativo. Na intranet local e zonas da Internet, o aplicativo não terá permissão para armazenar dados em um arquivo local. No entanto, seu aplicativo poderá armazenar dados no armazenamento isolado. Armazenamento isolado é um compartimento de dados abstrato (não um local de armazenamento específico) que contém um ou mais arquivos de armazenamento isolados, chamados de armazenamentos, que contêm os locais reais dos diretórios nos quais os dados são armazenados. As permissões de acesso, como arquivos <xref:System.Security.Permissions.FileIOPermission> não são necessários; em vez disso, o <xref:System.Security.Permissions.IsolatedStoragePermission> classe controla as permissões para o armazenamento isolado. Por padrão, os aplicativos que são executados na intranet local e zonas da Internet podem armazenar dados usando armazenamento isolado; No entanto, configurações como cota de disco podem variar. Para obter mais informações sobre armazenamento isolado, consulte [Armazenamento Isolado](../../standard/io/isolated-storage.md).  
   
  O exemplo a seguir usa armazenamento isolado para gravar dados em um arquivo localizado em um repositório. O exemplo requer <xref:System.Security.Permissions.IsolatedStorageFilePermission> e o <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> valor de enumeração. O exemplo demonstra a leitura e gravação de certos valores de propriedades de <xref:System.Windows.Forms.Button> controle em um arquivo no armazenamento isolado. A função `Read` é chamada depois que o aplicativo é iniciado e a função `Write` é chamada antes do aplicativo terminar. O exemplo requer que o `Read` e `Write` existem funções como membros de uma <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.Button> controle chamado `MainButton`.  
   
@@ -349,7 +349,7 @@ public void Write()
 ```  
   
 ## <a name="database-access"></a>Acesso ao banco de dados  
- As permissões necessárias para acessar um banco de dados variam de acordo com o provedor de banco de dados. No entanto, somente os aplicativos que estão executando com as permissões apropriadas podem acessar um banco de dados por meio de uma conexão de dados. Para obter mais informações sobre as permissões necessárias para acessar um banco de dados, consulte [Segurança de Acesso ao Código e ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+ As permissões necessárias para acessar um banco de dados variam de acordo com o provedor de banco de dados. No entanto, somente os aplicativos que estão executando com as permissões apropriadas podem acessar um banco de dados por meio de uma conexão de dados. Para obter mais informações sobre as permissões necessárias para acessar um banco de dados, consulte [Segurança de Acesso ao Código e ADO.NET](../data/adonet/code-access-security.md).  
   
  Se você não pode acessar um banco de dados diretamente, porque você deseja que o aplicativo seja executado em confiança parcial, você pode usar um serviço Web como um meio alternativo para acessar seus dados. Um serviço Web é um componente de software que pode ser acessado programaticamente através de uma rede. Com os serviços Web, aplicativos podem compartilhar dados entre zonas de grupos de códigos. Por padrão, a aplicativos na intranet local e zonas da Internet têm o direito de acessar seus sites de origem, que permite a chamar um serviço Web hospedado no mesmo servidor. Para obter mais informações, consulte [Serviços Web em ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) ou [Windows Communication Foundation](../wcf/index.md).  
   
@@ -359,9 +359,9 @@ public void Write()
  Como você não pode acessar o Registro sob confiança parcial, você precisará encontrar outros métodos para armazenar seus dados. Quando você armazena configurações do aplicativo, use o armazenamento isolado em vez de no Registro. Armazenamento isolado também pode ser usado para armazenar outros arquivos específicos do aplicativo. Você também pode armazenar informações globais do aplicativo sobre o servidor ou site de origem, porque, por padrão, um aplicativo recebe o direito de acessar o seu site de origem.  
   
 ## <a name="see-also"></a>Consulte também
-- [Impressão mais segura no Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Considerações adicionais sobre segurança nos Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
-- [Visão geral da segurança dos Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Segurança do Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)
-- [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Impressão mais segura no Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Considerações adicionais sobre segurança nos Windows Forms](additional-security-considerations-in-windows-forms.md)
+- [Visão geral da segurança dos Windows Forms](security-in-windows-forms-overview.md)
+- [Segurança do Windows Forms](windows-forms-security.md)
+- [Mage.exe (Manifest Generation and Editing Tool)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

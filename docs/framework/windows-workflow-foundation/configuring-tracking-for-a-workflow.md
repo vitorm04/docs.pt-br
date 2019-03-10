@@ -2,12 +2,12 @@
 title: Configurando o rastreamento para um fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491250"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719397"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurando o rastreamento para um fluxo de trabalho
 
@@ -67,7 +67,7 @@ Para um serviço de fluxo de trabalho hospedados no <xref:System.ServiceModel.Wo
 Como alternativa, para um serviço de fluxo de trabalho hospedado em <xref:System.ServiceModel.WorkflowServiceHost>, você pode adicionar a extensão do comportamento de <xref:System.Activities.Tracking.EtwTrackingParticipant> com o código. Para adicionar um participante personalizado de rastreamento, criar uma nova extensão do comportamento e adicioná-lo a <xref:System.ServiceModel.ServiceHost> conforme mostrado no código de exemplo a seguir.
 
 > [!NOTE]
-> Se você deseja exibir o código de exemplo que mostra como criar um elemento de comportamento personalizado que adiciona um participante personalizado, consulte a [acompanhamento](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) exemplos.
+> Se você deseja exibir o código de exemplo que mostra como criar um elemento de comportamento personalizado que adiciona um participante personalizado, consulte a [acompanhamento](./samples/tracking.md) exemplos.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -141,7 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configurando o rastreamento usando WorkflowInvoker
 
-Para configurar o rastreamento para um fluxo de trabalho foi executado usando <xref:System.Activities.WorkflowInvoker>, adicione o provedor de rastreamento como uma extensão para uma instância de <xref:System.Activities.WorkflowInvoker> . O exemplo de código a seguir é do [acompanhamento personalizado](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) exemplo.
+Para configurar o rastreamento para um fluxo de trabalho foi executado usando <xref:System.Activities.WorkflowInvoker>, adicione o provedor de rastreamento como uma extensão para uma instância de <xref:System.Activities.WorkflowInvoker> . O exemplo de código a seguir é do [acompanhamento personalizado](./samples/custom-tracking.md) exemplo.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -185,7 +185,7 @@ Para exibir registros de rastreamento, siga estas etapas.
 
 A imagem a seguir mostra eventos de rastreamento no visualizador de eventos.
 
-![Mostrando de Visualizador de eventos, registros de acompanhamento](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![Mostrando de Visualizador de eventos, registros de acompanhamento](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrando um ID específico do aplicativo provedor
 

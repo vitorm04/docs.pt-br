@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 87b49b025cfb27812933511b76c5a024cde4995a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6ef24d00baa4df6dfc8e0af69c1d489b79a41f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680280"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724642"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Personalizando a experiência design de fluxo de trabalho
 
@@ -17,15 +17,15 @@ Cenários para criar atividades personalizados e para rehosting [!INCLUDE[wfd1](
 
 ## <a name="in-this-section"></a>Nesta seção
 
- [Usando designers e modelos de atividade personalizados](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)
+ [Usando designers e modelos de atividade personalizados](using-custom-activity-designers-and-templates.md)
 
  Descreve como criar novos designer personalizadas e modelos de atividade.
 
- [Hospedando novamente o Designer de Fluxo de Trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+ [Hospedando novamente o Designer de Fluxo de Trabalho](rehosting-the-workflow-designer.md)
 
  Descreve como hospedar novamente o [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] fora do Visual Studio e como exibir erros de validação.
 
- [Usando um editor de expressão personalizado](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)
+ [Usando um editor de expressão personalizado](using-a-custom-expression-editor.md)
 
  Descreve como implementar um editor de expressão personalizada para usar com designers de fluxo de trabalho rehosted fora do Visual Studio 2010.
 
@@ -35,7 +35,7 @@ Cenários para criar atividades personalizados e para rehosting [!INCLUDE[wfd1](
 
 ## <a name="see-also"></a>Consulte também
 
-- [Estendendo o Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)
-- [Designer](../../../docs/framework/windows-workflow-foundation/samples/designer.md)
-- [Designers de atividade personalizada](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)
-- [Mudança de host de designer](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)
+- [Estendendo o Windows Workflow Foundation](extend.md)
+- [Designer](./samples/designer.md)
+- [Designers de atividade personalizada](./samples/custom-activity-designers.md)
+- [Mudança de host de designer](./samples/designer-rehosting.md)

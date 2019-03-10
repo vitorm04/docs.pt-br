@@ -6,33 +6,33 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: 31c056f823cc38d370d7d23b7e91d682aa571f76
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d577237e659959d53a045e101ff8b1dc47704ac4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441535"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719449"
 ---
 # <a name="contextmenustrip-control"></a>Controle ContextMenuStrip
 O <xref:System.Windows.Forms.ContextMenuStrip> controle fornece um menu de atalho que você associar um controle.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral do controle ContextMenuStrip](../../../../docs/framework/winforms/controls/contextmenustrip-control-overview.md)  
+ [Visão geral do controle ContextMenuStrip](contextmenustrip-control-overview.md)  
  Explica o que é o controle e seus principais recursos e propriedades.  
   
- [Como: Associar um ContextMenuStrip um controle](../../../../docs/framework/winforms/controls/how-to-associate-a-contextmenustrip-with-a-control.md)  
+ [Como: Associar um ContextMenuStrip um controle](how-to-associate-a-contextmenustrip-with-a-control.md)  
  Descreve a tomada de uma <xref:System.Windows.Forms.ContextMenuStrip> o menu de atalho para um controle específico.  
   
- [Como: Adicionar itens de Menu a um ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
+ [Como: Adicionar itens de Menu a um ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)  
  Descreve como adicionar opções selecionáveis a um <xref:System.Windows.Forms.ContextMenuStrip>.  
   
- [Como: Configurar verificação ContextMenuStrip margens de imagem e margens](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
+ [Como: Configurar verificação ContextMenuStrip margens de imagem e margens](how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
  Descreve como personalizar um <xref:System.Windows.Forms.ContextMenuStrip> definindo propriedades de margem de imagens e seleção de várias maneiras.  
   
- [Como: Habilitar margens de verificação e imagem em controles ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
+ [Como: Habilitar margens de verificação e imagem em controles ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
  Descreve como ativar <xref:System.Windows.Forms.ContextMenuStrip> verificar margens e desativar.  
   
- [Como: Manipular o evento de abertura ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
+ [Como: Manipular o evento de abertura ContextMenuStrip](how-to-handle-the-contextmenustrip-opening-event.md)  
  Descreve como personalizar o comportamento de um <xref:System.Windows.Forms.ContextMenuStrip> controle manipulando o <xref:System.Windows.Forms.ToolStripDropDown.Opening> eventos.  
   
  Veja também [Caixa de diálogo de tarefas ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100)) ou [Editor de coleção de itens ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100)).  
@@ -48,5 +48,5 @@ O <xref:System.Windows.Forms.ContextMenuStrip> controle fornece um menu de atalh
  Descreve os recursos da <xref:System.Windows.Forms.ToolStripMenuItem> classe, que representa uma opção selecionável exibida em um <xref:System.Windows.Forms.MenuStrip> ou <xref:System.Windows.Forms.ContextMenuStrip>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

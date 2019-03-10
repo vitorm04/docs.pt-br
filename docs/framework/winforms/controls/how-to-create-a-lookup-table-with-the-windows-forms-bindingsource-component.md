@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539890"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723910"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Como: Criar uma tabela de pesquisa com o componente BindingSource dos Windows Forms
 A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados de registros em uma tabela relacionada. Nos procedimentos a seguir, um controle <xref:System.Windows.Forms.ComboBox> é usado para exibir o campo com a relação de chave estrangeira da tabela pai para a tabela filho.  
@@ -35,7 +35,7 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
  Neste cenário, uma tabela, CustomersTable, armazena a informação real que você deseja exibir e salvar. Mas, para economizar espaço, a tabela deixa de fora dados que adicionam clareza. A outra tabela, OrdersTable, contém apenas informações relacionadas à aparência sobre qual número da ID do cliente é equivalente a qual data de pedido e ID do pedido. Não há nenhuma menção dos nomes dos clientes.  
   
- Quatro propriedades importantes são definidas no [Controle ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) para criar a tabela de pesquisa.  
+ Quatro propriedades importantes são definidas no [Controle ComboBox](combobox-control-windows-forms.md) para criar a tabela de pesquisa.  
   
 -   A propriedade <xref:System.Windows.Forms.ComboBox.DataSource%2A> contém o nome da tabela.  
   
@@ -53,7 +53,7 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
      Esse controle exibirá a coluna da tabela pai.  
   
-2.  Arraste outros controles para exibir detalhes da tabela filho. O formato dos dados na tabela deve determinar quais controles você escolhe. Para obter mais informações, consulte [Controles dos Windows Forms por função](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  Arraste outros controles para exibir detalhes da tabela filho. O formato dos dados na tabela deve determinar quais controles você escolhe. Para obter mais informações, consulte [Controles dos Windows Forms por função](windows-forms-controls-by-function.md).  
   
 3.  Arraste um controle <xref:System.Windows.Forms.BindingNavigator> para o formulário; isso permitirá que você navegue os dados na tabela filho.  
   
@@ -93,6 +93,6 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.BindingSource>
-- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Controle ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Componente BindingSource](bindingsource-component.md)
+- [Controle ComboBox](combobox-control-windows-forms.md)
 - [Associar controles a dados no Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

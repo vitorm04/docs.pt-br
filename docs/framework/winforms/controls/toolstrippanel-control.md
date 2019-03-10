@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-ms.openlocfilehash: 86940b97ed373dc90f82520104b9b85019873cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9982d7b1edde083d546681b37966358d2aac23bd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745230"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718487"
 ---
 # <a name="toolstrippanel-control"></a>Controle ToolStripPanel
 `ToolStripPanel` controle habilita o compartilhamento de espaço horizontal ou vertical dentro da área de ferramenta quando encaixado e disposição das <xref:System.Windows.Forms.ToolStrip> controla quando você não precisa de quatro painéis e no painel central de um <xref:System.Windows.Forms.ToolStripContainer>.  
@@ -21,13 +21,13 @@ ms.locfileid: "54745230"
  Os tópicos nesta seção descrevem os conceitos e técnicas que você pode usar para compilar recursos `ToolStripPanel` em seus aplicativos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral do controle ToolStripPanel](../../../../docs/framework/winforms/controls/toolstrippanel-control-overview.md)  
+ [Visão geral do controle ToolStripPanel](toolstrippanel-control-overview.md)  
  Fornece tópicos que descrevem a finalidade e os principais conceitos de formulários do Windows <xref:System.Windows.Forms.ToolStripContainer> controle.  
   
- [Como: Unir ToolStripPanels](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
+ [Como: Unir ToolStripPanels](how-to-join-toolstrippanels.md)  
  Demonstra como adicionar <xref:System.Windows.Forms.ToolStrip> controles a um `ToolStripPanel`.  
   
- [Como: Usar ToolStripPanels para MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
+ [Como: Usar ToolStripPanels para MDI](how-to-use-toolstrippanels-for-mdi.md)  
  Demonstra a flexibilidade oferecida pela `ToolStripPanel` controles em um aplicativo de Interface de documentos múltiplos.  
   
 ## <a name="reference"></a>Referência  
@@ -35,4 +35,4 @@ ms.locfileid: "54745230"
  Fornece documentação de referência para o <xref:System.Windows.Forms.ToolStripPanel> controle.  
   
 ## <a name="see-also"></a>Consulte também
-- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

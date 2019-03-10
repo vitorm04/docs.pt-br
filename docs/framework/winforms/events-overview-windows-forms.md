@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543702"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710726"
 ---
 # <a name="events-overview-windows-forms"></a>Visão geral sobre eventos (Windows Forms)
 Um evento é uma ação a qual você pode responder ou "manipular", no código. Os eventos podem ser gerados por uma ação do usuário, como o clicar do mouse ou pressionar de uma tecla, pelo código de programa ou pelo sistema.  
@@ -26,12 +26,12 @@ Um evento é uma ação a qual você pode responder ou "manipular", no código. 
 > [!NOTE]
 >  Muitos eventos ocorrem com outros eventos. Por exemplo, enquanto o evento <xref:System.Windows.Forms.Control.DoubleClick> ocorre, os eventos <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp> e <xref:System.Windows.Forms.Control.Click> ocorrem.  
   
- Para obter informações sobre como gerar e consumir um evento, consulte [eventos](../../../docs/standard/events/index.md).  
+ Para obter informações sobre como gerar e consumir um evento, consulte [eventos](../../standard/events/index.md).  
   
 ## <a name="delegates-and-their-role"></a>Classes delegate e suas funções  
  As classes delegate são classes comumente usados no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para compilar mecanismos de manipulação de eventos. As classes delegate, em termos gerais, equivalem a ponteiros de função, usados normalmente no [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] e outras linguagens orientadas a objetos. No entanto, diferente dos ponteiros de função, as classes delegate são orientadas a objeto, fortemente tipadas e seguras. Além disso, quando um ponteiro de função contém apenas uma referência a uma função particular, uma classe delegate consiste em uma referência a um objeto, e as referências a um ou mais métodos dentro do objeto.  
   
- Esse modelo de evento usa *delegados* para associar eventos aos métodos que são usados para lidar com eles. A classe delegate permite que outras classes se registrem para a notificação de eventos, especificando um método de manipulador. Quando o evento ocorre, a classe delegate chama o método associado. Para obter mais informações sobre como definir classes Delegate, consulte [eventos](../../../docs/standard/events/index.md).  
+ Esse modelo de evento usa *delegados* para associar eventos aos métodos que são usados para lidar com eles. A classe delegate permite que outras classes se registrem para a notificação de eventos, especificando um método de manipulador. Quando o evento ocorre, a classe delegate chama o método associado. Para obter mais informações sobre como definir classes Delegate, consulte [eventos](../../standard/events/index.md).  
   
  Essas classes podem ser associadas a um único método ou a vários métodos, o que chamamos de multicasting. Ao criar uma classe delegate para um evento, você (ou o Designer de Formulários do Windows) normalmente cria um evento multicast. Uma rara exceção pode ser um evento que resulta em um procedimento específico (como a exibição de uma caixa de diálogo) que não repetiria logicamente várias vezes por evento. Para obter informações sobre como criar um delegado multicast, consulte [como: Combinar delegados (delegados Multicast)](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
   
@@ -44,5 +44,5 @@ Um evento é uma ação a qual você pode responder ou "manipular", no código. 
  O mecanismo de associação usado com essas classes é dinâmico: uma classe delegate pode ser associada em tempo de execução a qualquer método cuja assinatura corresponda à assinatura do manipulador de eventos. Com esse recurso, você pode configurar ou alterar o método associado de acordo com uma condição e anexar dinamicamente um manipulador de eventos a um controle.  
   
 ## <a name="see-also"></a>Consulte também
-- [Criando manipuladores de eventos no Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Visão geral de manipuladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Visão geral de manipuladores de eventos](event-handlers-overview-windows-forms.md)

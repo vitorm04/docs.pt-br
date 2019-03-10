@@ -2,12 +2,6 @@
 title: Documentação de exemplo do Windows Workflow (WF)
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e451ecd18b68ba42aa2c8a71e394077ee6b492ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201326"
 ---
 # <a name="windows-workflow-wf-samples"></a>Fluxo de trabalho (WF) Exemplos do Windows
 
@@ -20,8 +14,8 @@ Os artigos nesta seção descrevem alguns dos exemplos no pacote de download. Pa
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Aplicativo](../../../../docs/framework/windows-workflow-foundation/samples/application.md) -fornece exemplos que são relacionados aos aplicativos de fluxo de trabalho.
+[Aplicativo](application.md) -fornece exemplos que são relacionados aos aplicativos de fluxo de trabalho.
 
-[Básico](../../../../docs/framework/windows-workflow-foundation/samples/basic.md) -fornece exemplos que demonstram a funcionalidade básica do Windows Workflow Foundation (WF).
+[Básico](basic.md) -fornece exemplos que demonstram a funcionalidade básica do Windows Workflow Foundation (WF).
 
-[Cenário](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md) -fornece exemplos de cenários do Windows Workflow Foundation (WF).
+[Cenário](scenario.md) -fornece exemplos de cenários do Windows Workflow Foundation (WF).

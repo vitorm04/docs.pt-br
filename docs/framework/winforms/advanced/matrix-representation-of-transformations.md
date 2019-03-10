@@ -16,21 +16,21 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: ec1feda5547a96a0deac6f9d2e6ba1139e3fa73f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f98dac8b9d14cac01e109627d40fe01c37c6954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732083"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720818"
 ---
 # <a name="matrix-representation-of-transformations"></a>Representação matricial de transformações
 Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. A ilustração a seguir mostra diversas matrizes.  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")  
+ ![Transformações](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
   
  Você pode adicionar duas matrizes do mesmo tamanho ao adicionar elementos individuais. A ilustração a seguir mostra dois exemplos de adição de matriz.  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")  
+ ![Transformações](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
   
  Uma matriz m×n pode ser multiplicada por uma matriz n×p e o resultado é uma matriz m×p. O número de colunas da primeira matriz deve ser igual ao número de linhas da segunda. Por exemplo, uma matriz 4x2 pode ser multiplicada por uma matriz 2×3 para produzir uma matriz 4×3.  
   
@@ -48,23 +48,23 @@ Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. 
   
  A ilustração a seguir mostra dois exemplos de multiplicação de matriz.  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")  
+ ![Transformações](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
   
  Se pensar em um ponto em um plano como uma matriz 1 × 2, você poderá transformar esse ponto multiplicando-o por uma matriz 2 x 2. A ilustração a seguir mostra várias transformações aplicadas ao ponto (2, 1).  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")  
+ ![Transformações](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
   
  Todas as transformações mostradas na figura anterior são transformações lineares. Outras transformações, como conversão, não são lineares e não podem ser expressas como multiplicação por uma matriz 2 x 2. Suponha que você deseja começar com o ponto (2, 1), girá-lo 90 graus, movê-lo em 3 unidades na direção x e 4 unidades na direção y. Você pode fazer isso usando uma multiplicação de matriz seguida por uma adição de matriz.  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")  
+ ![Transformações](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
   
  Uma transformação linear (multiplicação por uma matriz 2 x 2) seguida por uma tradução (além de uma matriz 1 × 2) é chamada de uma transformação afim. Uma alternativa ao armazenamento uma transformação afim em um par de matrizes (um para a parte linear e outro para a conversão) é armazenar a transformação toda em uma matriz 3 × 3. Para fazer esse trabalho, um ponto no plano deve ser armazenado em uma matriz 1 × 3 com uma 3ª coordenada fictícia. A técnica comum é fazer todas as terceiras coordenadas iguais a 1. Por exemplo, o ponto (2, 1) é representado pela matriz [2 1 1]. A ilustração a seguir mostra uma transformação afim (girar 90 graus; mover 3 unidades na direção x, 4 unidades na direção y) expressa como uma multiplicação por uma matriz única 3 × 3.  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")  
+ ![Transformações](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
   
  No exemplo anterior, o ponto (2, 1) é mapeado para o ponto (2, 6). Observe que a terceira coluna da matriz 3 × 3 contém os números 0, 0, 1. Isso será sempre o caso para a matriz 3 × 3 de uma transformação afim. Os números importantes são os seis números nas colunas 1 e 2. A parte 2 × 2 esquerda superior da matriz representa a parte linear da transformação e as duas primeiras entradas na 3ª linha representam a conversão.  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")  
+ ![Transformações](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
  Na [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] você pode armazenar uma transformação afim em um <xref:System.Drawing.Drawing2D.Matrix> objeto. Como a terceira coluna de uma matriz que representa uma transformação afim sempre é (0, 0, 1), especifique somente os seis números nas duas primeiras colunas quando você constrói um <xref:System.Drawing.Drawing2D.Matrix> objeto. A instrução `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` constrói a matriz mostrada na figura anterior.  
   
@@ -87,7 +87,7 @@ Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. 
   
  A ilustração a seguir mostra as matrizes A, B, C e D.  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")  
+ ![Transformações](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
  O fato de que a matriz de uma transformação composta pode ser formada pela multiplicação de matrizes de transformação individuais significa que qualquer sequência de transformações afins pode ser armazenada em um único <xref:System.Drawing.Drawing2D.Matrix> objeto.  
   
@@ -96,13 +96,13 @@ Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. 
   
  O <xref:System.Drawing.Drawing2D.Matrix> classe fornece vários métodos para a criação de uma transformação de composição: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, e <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>. O exemplo a seguir cria a matriz de uma transformação de composição que primeiro gira 30 graus e, então, é dimensionada por um fator de 2 na direção y e movida em 5 unidades na direção x:  
   
- [!code-csharp[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
   
  A ilustração a seguir mostra a matriz.  
   
- ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")  
+ ![Transformações](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
 ## <a name="see-also"></a>Consulte também
-- [Sistemas de Coordenadas e Transformações](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
-- [Usando Transformações no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+- [Sistemas de Coordenadas e Transformações](coordinate-systems-and-transformations.md)
+- [Usando Transformações no GDI+ Gerenciado](using-transformations-in-managed-gdi.md)

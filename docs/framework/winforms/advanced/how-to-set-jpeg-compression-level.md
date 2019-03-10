@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: aae7be0b610ba90b5915267cd9bc257be9b56362
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628096"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722277"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Como: Definir a nível de compactação de JPEG
 É possível modificar os parâmetros de uma imagem ao salvar a imagem em disco para minimizar o tamanho do arquivo ou melhorar sua qualidade. Você pode ajustar a qualidade de uma imagem JPEG modificando seu nível de compactação. Para especificar o nível de compactação quando você salva uma imagem JPEG, você deve criar uma <xref:System.Drawing.Imaging.EncoderParameters> do objeto e passá-lo para o <xref:System.Drawing.Image.Save%2A> método o <xref:System.Drawing.Image> classe. Inicializar o <xref:System.Drawing.Imaging.EncoderParameters> objeto para que ele tenha uma matriz que consiste em uma <xref:System.Drawing.Imaging.EncoderParameter>. Quando você cria o <xref:System.Drawing.Imaging.EncoderParameter>, especifique o <xref:System.Drawing.Imaging.Encoder.Quality> codificador e o nível de compactação desejado.  
@@ -130,6 +130,6 @@ End Function
 -   Um arquivo de imagem chamado `TestPhoto.jpg` e localizado em **c:\\**.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Determinar os parâmetros com suporte em um codificador](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)
-- [Tipos de Bitmaps](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
-- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+- [Como: Determinar os parâmetros com suporte em um codificador](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [Tipos de Bitmaps](types-of-bitmaps.md)
+- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)

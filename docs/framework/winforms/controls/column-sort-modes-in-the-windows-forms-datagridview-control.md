@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615040"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717850"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modos de classificação da coluna no controle DataGridView dos Windows Forms
 <xref:System.Windows.Forms.DataGridView> colunas têm três modos de classificação. O modo de classificação para cada coluna é especificado por meio de <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> propriedade da coluna, que pode ser definida como um dos seguintes <xref:System.Windows.Forms.DataGridViewColumnSortMode> valores de enumeração.  
@@ -31,7 +31,7 @@ ms.locfileid: "54615040"
   
  Quando um <xref:System.Windows.Forms.DataGridView> é classificada, você pode determinar a coluna de classificação e a ordem de classificação verificando os valores da <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> e <xref:System.Windows.Forms.DataGridView.SortOrder%2A> propriedades. Esses valores não são significativos após uma operação de classificação personalizada. Para obter mais informações sobre classificação personalizada, consulte a seção Classificação Personalizada neste tópico.  
   
- Quando um <xref:System.Windows.Forms.DataGridView> controle contendo colunas associadas e não associadas for classificado, os valores nas colunas não associadas não podem ser mantidos automaticamente. Para manter esses valores, você deve implementar o modo virtual, definindo o <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriedade para `true` e manipulando os <xref:System.Windows.Forms.DataGridView.CellValueNeeded> e <xref:System.Windows.Forms.DataGridView.CellValuePushed> eventos. Para obter mais informações, confira [Como: Implementar o modo Virtual no Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Não há suporte para a classificação por colunas não associadas no modo associado.  
+ Quando um <xref:System.Windows.Forms.DataGridView> controle contendo colunas associadas e não associadas for classificado, os valores nas colunas não associadas não podem ser mantidos automaticamente. Para manter esses valores, você deve implementar o modo virtual, definindo o <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriedade para `true` e manipulando os <xref:System.Windows.Forms.DataGridView.CellValueNeeded> e <xref:System.Windows.Forms.DataGridView.CellValuePushed> eventos. Para obter mais informações, confira [Como: Implementar o modo Virtual no Windows Forms DataGridView Control](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Não há suporte para a classificação por colunas não associadas no modo associado.  
   
 ## <a name="programmatic-sorting"></a>Classificação programática  
  Você pode classificar uma <xref:System.Windows.Forms.DataGridView> programaticamente, chamando seu <xref:System.Windows.Forms.DataGridView.Sort%2A> método.  
@@ -65,6 +65,6 @@ ms.locfileid: "54615040"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Classificando dados no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Como: Personalizar a classificação no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Classificando dados no controle DataGridView dos Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Como: Personalizar a classificação no controle DataGridView dos Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

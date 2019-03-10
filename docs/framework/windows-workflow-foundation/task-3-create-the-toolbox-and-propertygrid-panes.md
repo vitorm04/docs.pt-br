@@ -2,21 +2,21 @@
 title: 'Tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558417"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721210"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid
 Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGrid** painéis e adicioná-los para o rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Para referência, o código que deve estar no arquivo MainWindow.xaml.cs após concluir as três tarefas a [Rehosting o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) série de tópicos é fornecido no final deste tópico.  
+ Para referência, o código que deve estar no arquivo MainWindow.xaml.cs após concluir as três tarefas a [Rehosting o Designer de fluxo de trabalho](rehosting-the-workflow-designer.md) série de tópicos é fornecido no final deste tópico.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Para criar a caixa de ferramentas e adicioná-la à grade  
   
-1.  Abra o projeto de HostingApplication você obteve seguindo o procedimento descrito em [tarefa 2: Hospedar o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Abra o projeto de HostingApplication você obteve seguindo o procedimento descrito em [tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md).  
   
 2.  No **Gerenciador de soluções** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedando novamente o Designer de Fluxo de Trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Tarefa 2: Hospedar o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [Hospedando novamente o Designer de Fluxo de Trabalho](rehosting-the-workflow-designer.md)
+- [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md)

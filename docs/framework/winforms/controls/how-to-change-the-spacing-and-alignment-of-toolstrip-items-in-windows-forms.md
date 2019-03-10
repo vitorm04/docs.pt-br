@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2c9c60a3bfd78b7111b9cdff6a791d70c8e53c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685057"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719436"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Como: Alterar o espaçamento e alinhamento de itens de ToolStrip nos Windows Forms
 O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recursos de layout como dimensionamento, espaçamento de <xref:System.Windows.Forms.ToolStripItem> controles relativos uns aos outros, a organização dos controles na <xref:System.Windows.Forms.ToolStrip>e o espaçamento dos controles relativo para o <xref:System.Windows.Forms.ToolStrip>.  
@@ -87,6 +87,6 @@ O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recu
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [Visão geral do controle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Arquitetura de controle do ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [Resumo da tecnologia de ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Arquitetura de controle do ToolStrip](toolstrip-control-architecture.md)
+- [Resumo da tecnologia de ToolStrip](toolstrip-technology-summary.md)
