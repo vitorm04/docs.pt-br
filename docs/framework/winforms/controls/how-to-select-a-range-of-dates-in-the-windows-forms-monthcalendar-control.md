@@ -11,19 +11,19 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 4c7100f77c313d219cfd4cceff5ae3015eae4c18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21cda9fb11edd3f6148d7128621fbde8d3ff913c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558443"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723810"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="531d1-102">Como: Selecione um intervalo de datas no controle MonthCalendar dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="531d1-102">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>
-<span data-ttu-id="531d1-103">Um recurso importante dos formulários Windows <xref:System.Windows.Forms.MonthCalendar> controle é que o usuário pode selecionar um intervalo de datas.</span><span class="sxs-lookup"><span data-stu-id="531d1-103">An important feature of the Windows Forms <xref:System.Windows.Forms.MonthCalendar> control is that the user can select a range of dates.</span></span> <span data-ttu-id="531d1-104">Esse recurso é um aprimoramento o recurso de seleção de data do <xref:System.Windows.Forms.DateTimePicker> controle, que permite apenas que o usuário selecione um valor único de data/hora.</span><span class="sxs-lookup"><span data-stu-id="531d1-104">This feature is an improvement over the date-selection feature of the <xref:System.Windows.Forms.DateTimePicker> control, which only enables the user to select a single date/time value.</span></span> <span data-ttu-id="531d1-105">Você pode definir um intervalo de datas ou obter um intervalo de seleção definido pelo usuário usando as propriedades do <xref:System.Windows.Forms.MonthCalendar> controle.</span><span class="sxs-lookup"><span data-stu-id="531d1-105">You can set a range of dates or get a selection range set by the user by using properties of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span> <span data-ttu-id="531d1-106">O exemplo de código a seguir demonstra como definir um intervalo de seleção.</span><span class="sxs-lookup"><span data-stu-id="531d1-106">The following code example demonstrates how to set a selection range.</span></span>  
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="ab32f-102">Como: Selecione um intervalo de datas no controle MonthCalendar dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ab32f-102">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>
+<span data-ttu-id="ab32f-103">Um recurso importante dos formulários Windows <xref:System.Windows.Forms.MonthCalendar> controle é que o usuário pode selecionar um intervalo de datas.</span><span class="sxs-lookup"><span data-stu-id="ab32f-103">An important feature of the Windows Forms <xref:System.Windows.Forms.MonthCalendar> control is that the user can select a range of dates.</span></span> <span data-ttu-id="ab32f-104">Esse recurso é um aprimoramento o recurso de seleção de data do <xref:System.Windows.Forms.DateTimePicker> controle, que permite apenas que o usuário selecione um valor único de data/hora.</span><span class="sxs-lookup"><span data-stu-id="ab32f-104">This feature is an improvement over the date-selection feature of the <xref:System.Windows.Forms.DateTimePicker> control, which only enables the user to select a single date/time value.</span></span> <span data-ttu-id="ab32f-105">Você pode definir um intervalo de datas ou obter um intervalo de seleção definido pelo usuário usando as propriedades do <xref:System.Windows.Forms.MonthCalendar> controle.</span><span class="sxs-lookup"><span data-stu-id="ab32f-105">You can set a range of dates or get a selection range set by the user by using properties of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span> <span data-ttu-id="ab32f-106">O exemplo de código a seguir demonstra como definir um intervalo de seleção.</span><span class="sxs-lookup"><span data-stu-id="ab32f-106">The following code example demonstrates how to set a selection range.</span></span>  
   
-### <a name="to-select-a-range-of-dates"></a><span data-ttu-id="531d1-107">Para selecionar um intervalo de datas</span><span class="sxs-lookup"><span data-stu-id="531d1-107">To select a range of dates</span></span>  
+### <a name="to-select-a-range-of-dates"></a><span data-ttu-id="ab32f-107">Para selecionar um intervalo de datas</span><span class="sxs-lookup"><span data-stu-id="ab32f-107">To select a range of dates</span></span>  
   
-1.  <span data-ttu-id="531d1-108">Criar <xref:System.DateTime> objetos que representam a primeira e última data em um intervalo.</span><span class="sxs-lookup"><span data-stu-id="531d1-108">Create <xref:System.DateTime> objects that represent the first and last dates in a range.</span></span>  
+1.  <span data-ttu-id="ab32f-108">Criar <xref:System.DateTime> objetos que representam a primeira e última data em um intervalo.</span><span class="sxs-lookup"><span data-stu-id="ab32f-108">Create <xref:System.DateTime> objects that represent the first and last dates in a range.</span></span>  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -40,7 +40,7 @@ ms.locfileid: "54558443"
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  <span data-ttu-id="531d1-109">Definir a propriedade <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>.</span><span class="sxs-lookup"><span data-stu-id="531d1-109">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> property.</span></span>  
+2.  <span data-ttu-id="ab32f-109">Definir a propriedade <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>.</span><span class="sxs-lookup"><span data-stu-id="ab32f-109">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> property.</span></span>  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  
@@ -55,9 +55,9 @@ ms.locfileid: "54558443"
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     <span data-ttu-id="531d1-110">– ou –</span><span class="sxs-lookup"><span data-stu-id="531d1-110">–or–</span></span>  
+     <span data-ttu-id="ab32f-110">– ou –</span><span class="sxs-lookup"><span data-stu-id="ab32f-110">–or–</span></span>  
   
-     <span data-ttu-id="531d1-111">Defina as <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedades.</span><span class="sxs-lookup"><span data-stu-id="531d1-111">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> and <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> properties.</span></span>  
+     <span data-ttu-id="ab32f-111">Defina as <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedades.</span><span class="sxs-lookup"><span data-stu-id="ab32f-111">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> and <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> properties.</span></span>  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,8 +74,8 @@ ms.locfileid: "54558443"
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="531d1-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="531d1-112">See also</span></span>
-- [<span data-ttu-id="531d1-113">Controle MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="531d1-113">MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
-- [<span data-ttu-id="531d1-114">Como: Alterar a aparência do controle do Windows Forms MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="531d1-114">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)
-- [<span data-ttu-id="531d1-115">Como: Exibir dias específicos em negrito com o Windows Forms controle MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="531d1-115">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [<span data-ttu-id="531d1-116">Como: Exibir mais de um mês no controle MonthCalendar dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="531d1-116">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a><span data-ttu-id="ab32f-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ab32f-112">See also</span></span>
+- [<span data-ttu-id="ab32f-113">Controle MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="ab32f-113">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
+- [<span data-ttu-id="ab32f-114">Como: Alterar a aparência do controle do Windows Forms MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="ab32f-114">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
+- [<span data-ttu-id="ab32f-115">Como: Exibir dias específicos em negrito com o Windows Forms controle MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="ab32f-115">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [<span data-ttu-id="ab32f-116">Como: Exibir mais de um mês no controle MonthCalendar dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ab32f-116">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)
