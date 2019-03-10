@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: dab72d64cdd013125ae7c302ccf297ecdc0c98b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589858"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707394"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Como: Enviar dados para o filho MDI ativo
-Muitas vezes, dentro do contexto de [aplicativos de Interface de documentos múltiplos (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), você precisará enviar dados para a janela filho ativa, como quando o usuário cola dados da área de transferência em um aplicativo MDI.  
+Muitas vezes, dentro do contexto de [aplicativos de Interface de documentos múltiplos (MDI)](multiple-document-interface-mdi-applications.md), você precisará enviar dados para a janela filho ativa, como quando o usuário cola dados da área de transferência em um aplicativo MDI.  
   
 > [!NOTE]
->  Para obter informações sobre como verificar qual janela filho tem o foco e enviar seu conteúdo para a área de transferência, consulte [determinar o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
+>  Para obter informações sobre como verificar qual janela filho tem o foco e enviar seu conteúdo para a área de transferência, consulte [determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md).  
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Para enviar dados para a janela filho MDI ativo da área de transferência  
   
 1.  Dentro de um método, copie o texto na área de transferência para o controle ativo do formulário filho ativo.  
   
     > [!NOTE]
-    >  Este exemplo assume que há um formulário MDI pai (`Form1`) que tem um ou mais janelas filho MDI que contém um <xref:System.Windows.Forms.RichTextBox> controle. Para obter mais informações, consulte [Criando formulários pai MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  Este exemplo assume que há um formulário MDI pai (`Form1`) que tem um ou mais janelas filho MDI que contém um <xref:System.Windows.Forms.RichTextBox> controle. Para obter mais informações, consulte [Criando formulários pai MDI](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -92,8 +92,8 @@ Muitas vezes, dentro do contexto de [aplicativos de Interface de documentos múl
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Aplicativos da interface MDI (Interface de Vários Documentos)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Como: Criar formulários pai MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Como: Criar formulários filho MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Como: Determinar o filho MDI ativo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Como: Organizar formulários filho MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)
+- [Como: Criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
+- [Como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md)
+- [Como: Determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
+- [Como: Organizar formulários filho MDI](how-to-arrange-mdi-child-forms.md)

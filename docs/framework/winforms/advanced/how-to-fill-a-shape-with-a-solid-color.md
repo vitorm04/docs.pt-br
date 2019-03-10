@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 576042d9d8e7a7f77d5375b7dfafafdc63b3e824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601955"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704422"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Como: Preencher uma forma com uma cor sólida
 Para preencher uma forma com uma cor sólida, crie uma <xref:System.Drawing.SolidBrush> do objeto e, em seguida, passá-lo <xref:System.Drawing.SolidBrush> objeto como um argumento para um dos métodos de preenchimento do <xref:System.Drawing.Graphics> classe. O exemplo a seguir mostra como preencher uma elipse com a cor vermelha.  
@@ -23,11 +23,11 @@ Para preencher uma forma com uma cor sólida, crie uma <xref:System.Drawing.Soli
   
  Os quatro números (0, 0, 100, 60) passados para o <xref:System.Drawing.Graphics.FillEllipse%2A> método especificar o local e o tamanho do retângulo delimitador para a elipse. O retângulo tem um canto superior esquerdo de (0, 0), uma largura de 100 e uma altura de 60.  
   
- [!code-csharp[System.Drawing.UsingABrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.UsingABrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.UsingABrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.UsingABrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando um pincel para preencher formas](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [Usando um pincel para preencher formas](using-a-brush-to-fill-shapes.md)

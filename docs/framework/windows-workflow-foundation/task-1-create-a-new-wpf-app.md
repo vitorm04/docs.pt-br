@@ -2,12 +2,12 @@
 title: 'Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679399"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711873"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation
 Nesta tarefa, você criará um aplicativo vazio do Windows Presentation Foundation (WPF) usando o modelo de aplicativo WPF Visual Studio e adicionar referências a apropriado [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] assemblies de fluxo de trabalho.  
@@ -40,8 +40,8 @@ Nesta tarefa, você criará um aplicativo vazio do Windows Presentation Foundati
   
 10. Clique em **OK**.  
   
-11. Consulte [tarefa 2: Hospedar o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) para aprender a hospedar a tela de design do designer de fluxo de trabalho.  
+11. Consulte [tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md) para aprender a hospedar a tela de design do designer de fluxo de trabalho.  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedando novamente o Designer de Fluxo de Trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Tarefa 2: Hospedar o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [Hospedando novamente o Designer de Fluxo de Trabalho](rehosting-the-workflow-designer.md)
+- [Tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md)

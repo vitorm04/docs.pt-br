@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687239"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710674"
 ---
 # <a name="application-settings-architecture"></a>Arquitetura das configurações do aplicativo
 Este tópico descreve como a arquitetura das configurações de aplicativo funciona e explora recursos avançados da arquitetura, como as configurações agrupadas e as chaves de configurações.  
@@ -34,12 +34,12 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
   
 -   Validar configurações, antes que sejam alteradas ou antes que sejam salvas  
   
- As configurações podem ser descritas usando um número de atributos definidos dentro de <xref:System.Configuration> namespace; elas são descritas nas [atributos de configurações do aplicativo](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). Quando você define uma configuração, você deverá aplicá-la com um <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>, que descreve se a configuração se aplica ao aplicativo inteiro ou apenas para o usuário atual.  
+ As configurações podem ser descritas usando um número de atributos definidos dentro de <xref:System.Configuration> namespace; elas são descritas nas [atributos de configurações do aplicativo](application-settings-attributes.md). Quando você define uma configuração, você deverá aplicá-la com um <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>, que descreve se a configuração se aplica ao aplicativo inteiro ou apenas para o usuário atual.  
   
  O exemplo de código a seguir define uma classe de configurações personalizadas com uma única configuração, `BackgroundColor`.  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>Persistência das configurações  
  O <xref:System.Configuration.ApplicationSettingsBase> classe não próprio persistir ou carregar configurações; este trabalho recai sobre o provedor de configurações, uma classe que deriva de <xref:System.Configuration.SettingsProvider>. Se uma classe derivada de <xref:System.Configuration.ApplicationSettingsBase> não especifica um provedor de configurações por meio de <xref:System.Configuration.SettingsProviderAttribute>, em seguida, o provedor padrão, <xref:System.Configuration.LocalFileSettingsProvider>, é usado.  
@@ -88,7 +88,7 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
 </configuration>  
 ```  
   
- Para obter uma configuração dos elementos da seção de configurações de aplicativo de um arquivo de configuração, consulte [Esquema de configurações de aplicativo](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md).  
+ Para obter uma configuração dos elementos da seção de configurações de aplicativo de um arquivo de configuração, consulte [Esquema de configurações de aplicativo](../../configure-apps/file-schema/application-settings-schema.md).  
   
 ### <a name="settings-bindings"></a>Associações de configurações  
  As configurações de aplicativo usam a arquitetura de vinculação de dados dos Windows Forms para fornecer comunicação bidirecional das atualizações de configurações entre o objeto de configurações e os componentes. Se você usar o Visual Studio para criar configurações de aplicativo e atribuí-las às propriedades do componente, essas associações serão geradas automaticamente.  
@@ -106,7 +106,7 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
   
 3.  Determina quais configurações vão em quais arquivos, com base no atributo da configuração.  
   
- Se você implementar sua própria classe de configurações, você pode usar o <xref:System.Configuration.SettingsSerializeAsAttribute> para marcar uma configuração para a serialização binária ou personalizada usando o <xref:System.Configuration.SettingsSerializeAs> enumeração. Para obter mais informações sobre como criar sua própria classe de configurações no código, consulte [como: Criar configurações de aplicativo](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Se você implementar sua própria classe de configurações, você pode usar o <xref:System.Configuration.SettingsSerializeAsAttribute> para marcar uma configuração para a serialização binária ou personalizada usando o <xref:System.Configuration.SettingsSerializeAs> enumeração. Para obter mais informações sobre como criar sua própria classe de configurações no código, consulte [como: Criar configurações de aplicativo](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Locais de arquivo de configurações  
  O local dos arquivos `app`.exe.config e *user*.config serão diferentes com base em como o aplicativo é instalado. Para um aplicativo baseado em Windows Forms copiado para o computador local, `app`. exe. config residirá no mesmo diretório que o diretório base do arquivo de executável principal do aplicativo, e *usuário*. config residirá no local especificado pelo <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> propriedade. Para um aplicativo instalado por meio do [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], esses dois arquivos residirão no diretório de dados do [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], sob %InstallRoot%\Documents and Settings\\*nome de usuário*\Configurações Locais.  
@@ -127,8 +127,8 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
   
  Seu provedor precisará implementar uma propriedade e um método cujas implementações podem não ser óbvias. O <xref:System.Configuration.SettingsProvider.ApplicationName%2A> é uma propriedade abstrata do <xref:System.Configuration.SettingsProvider>; você deve programá-lo para retornar o seguinte:  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  Sua classe derivada também deve implementar um método `Initialize` que não recebe argumentos e não retorna nenhum valor. Esse método não é definido pelo <xref:System.Configuration.SettingsProvider>.  
   
@@ -136,8 +136,8 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
   
  Depois de ter implementado e compilado seu provedor, você precisa instruir a classe de configurações para usar este provedor em vez do padrão. Você fazer isso por meio de <xref:System.Configuration.SettingsProviderAttribute>. Se aplicado a uma classe configurações inteira, o provedor é usado para cada configuração que define a classe; Se aplicado a configurações individuais, a arquitetura das configurações do aplicativo usa esse provedor para essas configurações somente e usa <xref:System.Configuration.LocalFileSettingsProvider> para o restante. O exemplo de código a seguir mostra como instruir a classe de configurações para usar o provedor personalizado.  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  Um provedor pode ser chamado simultaneamente de vários threads, mas ele sempre gravará no mesmo local de armazenamento. Portanto, a arquitetura das configurações de aplicativo somente instanciará uma única instância de sua classe de provedor.  
   
@@ -150,7 +150,7 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Visão Geral das Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Configurações do Aplicativo para Controles Personalizados](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)
+- [Configurações do Aplicativo para Controles Personalizados](application-settings-for-custom-controls.md)
 - [O ClickOnce e as configurações de aplicativo](/visualstudio/deployment/clickonce-and-application-settings)
-- [Esquema de configurações de aplicativo](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [Esquema de configurações de aplicativo](../../configure-apps/file-schema/application-settings-schema.md)

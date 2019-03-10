@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 73a6c20f1790ca4ad1dbe331d693af2331da1ea1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682262"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715965"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Como: Responder a alterações de esquema de fontes em um aplicativo do Windows Forms
 Nos sistemas operacionais Windows, um usuário pode alterar as configurações de fonte de todo o sistema para tornar a fonte padrão maior ou menor. A alteração dessas configurações de fonte é essencial para usuários com deficiência visual, que requerem letras maiores para ler o texto em suas telas. É possível ajustar seu aplicativo do Windows Forms para reagir a essas alterações aumentando ou diminuindo o tamanho do formulário e todo o texto contido nele sempre que o esquema de fontes for alterado. Se desejar que seu formulário acomode as alterações em tamanhos de fonte dinamicamente, será possível adicionar código a ele.  
@@ -21,30 +21,30 @@ Nos sistemas operacionais Windows, um usuário pode alterar as configurações d
   
 ### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Utilizar a fonte da área de trabalho e responder a alterações no esquema de fontes  
   
-1.  Crie seu formulário e adicione os controles desejados a ele. Para obter mais informações, confira [Como: Criar um aplicativo de formulários do Windows da linha de comando](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md) e [controles a serem usados nos Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md).  
+1.  Crie seu formulário e adicione os controles desejados a ele. Para obter mais informações, confira [Como: Criar um aplicativo de formulários do Windows da linha de comando](how-to-create-a-windows-forms-application-from-the-command-line.md) e [controles a serem usados nos Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
   
 2.  Adicione uma referência para o <xref:Microsoft.Win32> namespace ao seu código.  
   
-     [!code-csharp[WinFormsAutoScaling#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
-     [!code-vb[WinFormsAutoScaling#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
+     [!code-csharp[WinFormsAutoScaling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
+     [!code-vb[WinFormsAutoScaling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
 3.  Adicione o seguinte código ao construtor do formulário para ligar manipuladores de eventos necessários e para alterar a fonte padrão em uso do formulário.  
   
-     [!code-csharp[WinFormsAutoScaling#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
-     [!code-vb[WinFormsAutoScaling#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
+     [!code-csharp[WinFormsAutoScaling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
+     [!code-vb[WinFormsAutoScaling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
 4.  Implemente um manipulador para o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> evento que faz com que o formulário dimensionar automaticamente quando o <xref:Microsoft.Win32.UserPreferenceCategory.Window> as alterações de categoria.  
   
-     [!code-csharp[WinFormsAutoScaling#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
-     [!code-vb[WinFormsAutoScaling#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
+     [!code-csharp[WinFormsAutoScaling#4](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
+     [!code-vb[WinFormsAutoScaling#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
 5.  Finalmente, implemente um manipulador para o <xref:System.Windows.Forms.Form.FormClosing> evento que dispara o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> manipulador de eventos.  
   
      > [!IMPORTANT]
      > Uma falha na inclusão desse código fará com que ocorra vazamento de memória no aplicativo.  
   
-     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
-     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
 6.  Compile e execute o código.  
   
@@ -59,11 +59,11 @@ Nos sistemas operacionais Windows, um usuário pode alterar as configurações d
      Você observará que o formulário agora reage a alterações de tempo de execução no esquema de fontes da área de trabalho. Quando o usuário altera entre **Normal**, **Fontes Grandes** e **Fontes Extra Grandes**, o formulário muda a fonte e ajusta a escala corretamente.  
   
 ## <a name="example"></a>Exemplo  
- [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
- [!code-vb[WinFormsAutoScaling#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
+ [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
+ [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
  O construtor nesse exemplo de código contém uma chamada para `InitializeComponent`, definida ao criar um novo projeto do Windows Forms no Visual Studio. Remova essa linha de código se estiver compilando um aplicativo na linha de comando.  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
-- [Dimensionamento automático no Windows Forms](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)
+- [Dimensionamento automático no Windows Forms](automatic-scaling-in-windows-forms.md)

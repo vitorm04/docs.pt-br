@@ -2,12 +2,12 @@
 title: Ativação de instância
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 78f134ca2d78261a5f6ff9376bd9a98116315f0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366034"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703390"
 ---
 # <a name="instance-activation"></a>Ativação de instância
 A instância Store de fluxo de trabalho do SQL executa uma tarefa periodicamente interna que acorde e detecte instâncias praticáveis ou activatable de fluxo de trabalho na base de dados de persistência. Se encontra uma instância viável de fluxo de trabalho, notifica o host de fluxo de trabalho que é capaz de ativar a instância. Se o armazenamento de instância encontra uma instância activatable de fluxo de trabalho, notifica um host genérico que ative um host de fluxo de trabalho, que executa por sua vez a instância de fluxo de trabalho. As seções neste tópico explica o processo de ativação de instância em detalhes.  
@@ -40,4 +40,4 @@ A instância Store de fluxo de trabalho do SQL executa uma tarefa periodicamente
  Para WAS ativação, um host genérico requer um conjunto de parâmetros de ativação derivar o endereço do ponto de extremidade em que os novos host podem ser ativados. Os parâmetros de ativação para ativação do WAS são nome do site, caminho relativo para o aplicativo ao site, e caminho para o serviço relativo para o aplicativo. A instância Store de fluxo de trabalho do SQL armazena esses parâmetros de ativação durante a execução de <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   
 ## <a name="runnable-instances-detection-period"></a>Período viável de detecção de instâncias  
- O **período de detecção de instâncias praticáveis** propriedade de Store de instância de fluxo de trabalho do SQL Especifica o período de tempo após o qual o Store de instância de fluxo de trabalho do SQL executa uma tarefa de detecção para detectar qualquer fluxo de trabalho possível ou activatable instâncias do banco de dados de persistência após o ciclo de detecção anterior. Ver [período de detecção de instâncias praticáveis](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md) para obter mais detalhes sobre essa propriedade.
+ O **período de detecção de instâncias praticáveis** propriedade de Store de instância de fluxo de trabalho do SQL Especifica o período de tempo após o qual o Store de instância de fluxo de trabalho do SQL executa uma tarefa de detecção para detectar qualquer fluxo de trabalho possível ou activatable instâncias do banco de dados de persistência após o ciclo de detecção anterior. Ver [período de detecção de instâncias praticáveis](runnable-instances-detection-period.md) para obter mais detalhes sobre essa propriedade.

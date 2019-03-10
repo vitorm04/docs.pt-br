@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: ad91f7591e2fa07605fe4f7ac026b7c969ab7ef0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678924"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712767"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Como: Alterar estilos em um elemento no modelo de objeto do documento HTML gerenciado
 
@@ -63,20 +63,19 @@ O procedimento a seguir contém o código que pode ser usado para manipular faci
 6. Adicione o seguinte código ao arquivo de código do seu projeto.
 
     > [!IMPORTANT]
-    > Certifique-se de que o `webBrowser1_DocumentCompleted` manipulador de eventos é configurado como um ouvinte para o <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos. No Visual Studio, clique duas vezes no <xref:System.Windows.Forms.WebBrowser> controle; em um editor de texto, configure o ouvinte por meio de programação.
-
-    [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-    [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
-
-7. Execute o projeto. Passe o cursor pelo primeiro `DIV` para observar os efeitos do código.
-
-## <a name="example"></a>Exemplo
-
-O exemplo de código a seguir mostra o código completo para a classe `StyleGenerator`, que analisa um valor de estilo existente, dá suporte à adição, alteração e remoção de estilos e retorna um novo valor de estilo com as alterações solicitadas.
-
-[!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
-[!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
-
+    >  Certifique-se de que o `webBrowser1_DocumentCompleted` manipulador de eventos é configurado como um ouvinte para o <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos. No Visual Studio, clique duas vezes no <xref:System.Windows.Forms.WebBrowser> controle; em um editor de texto, configure o ouvinte por meio de programação.  
+  
+     [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
+  
+7.  Execute o projeto. Passe o cursor pelo primeiro `DIV` para observar os efeitos do código.  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo de código a seguir mostra o código completo para a classe `StyleGenerator`, que analisa um valor de estilo existente, dá suporte à adição, alteração e remoção de estilos e retorna um novo valor de estilo com as alterações solicitadas.  
+  
+ [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+ [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
+  
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.HtmlElement>

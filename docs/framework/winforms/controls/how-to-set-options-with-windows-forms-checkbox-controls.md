@@ -12,12 +12,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: a8159e9e9a2484b95399aba67b1a10b1252a4357
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb68d76d936f13e78d13629455c6ac7fb537b40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525554"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714782"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Como: Definir opções com controles CheckBox dos Windows Forms
 Um Windows Forms <xref:System.Windows.Forms.CheckBox> controle é usado para dar aos usuários True/False ou opções de Sim/não. O controle exibe uma marca de seleção quando ele é selecionado.  
@@ -67,6 +67,6 @@ Um Windows Forms <xref:System.Windows.Forms.CheckBox> controle é usado para dar
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.CheckBox>
-- [Visão geral do controle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
-- [Como: Responder ao Windows Forms cliques no CheckBox](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [Controle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [Visão geral do controle CheckBox](checkbox-control-overview-windows-forms.md)
+- [Como: Responder ao Windows Forms cliques no CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [Controle CheckBox](checkbox-control-windows-forms.md)

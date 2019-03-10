@@ -6,19 +6,19 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 964f2130c650d486bf8a20af96b74122b1450e05
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304421"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703550"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Como: Agrupar itens em um controle de ListView do Windows Forms usando o Designer
 O recurso de agrupamento a <xref:System.Windows.Forms.ListView> controle permite que você exibir conjuntos de itens relacionados em grupos. Esses grupos são separados na tela por cabeçalhos de grupo horizontal que contêm os títulos do grupo. Você pode usar <xref:System.Windows.Forms.ListView> grupos para facilitar a navegação em listas grandes agrupando itens em ordem alfabética, por data, ou por qualquer outro agrupamento lógico. A imagem a seguir mostra alguns itens agrupados.  
   
- ![Grupos de ListView](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
+ ![Grupos de ListView](./media/listviewgroups.gif "ListViewGroups")  
   
- O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contém um <xref:System.Windows.Forms.ListView> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como: Adicionar controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contém um <xref:System.Windows.Forms.ListView> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
  Para habilitar o agrupamento, você deve criar primeiro um ou mais <xref:System.Windows.Forms.ListViewGroup> objetos no designer ou programaticamente. Depois que um grupo tiver sido definido, você poderá atribuir itens a ele.  
   
@@ -29,7 +29,7 @@ O recurso de agrupamento a <xref:System.Windows.Forms.ListView> controle permite
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>Adicionar ou remover grupos no designer  
   
-1.  No **propriedades** janela, clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) lado o <xref:System.Windows.Forms.ListView.Groups%2A> propriedade.  
+1.  No **propriedades** janela, clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) lado o <xref:System.Windows.Forms.ListView.Groups%2A> propriedade.  
   
      O **Editor de coleção de ListViewGroup** é exibido.  
   
@@ -37,7 +37,7 @@ O recurso de agrupamento a <xref:System.Windows.Forms.ListView> controle permite
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>Atribuir itens aos grupos no designer  
   
-1.  No **propriedades** janela, clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) lado o <xref:System.Windows.Forms.ListView.Items%2A> propriedade.  
+1.  No **propriedades** janela, clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) lado o <xref:System.Windows.Forms.ListView.Items%2A> propriedade.  
   
      O **Editor de coleção de ListViewItem** é exibido.  
   
@@ -49,6 +49,6 @@ O recurso de agrupamento a <xref:System.Windows.Forms.ListView> controle permite
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
-- [Controle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [Visão geral do controle ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [Como: Adicionar e remover itens com o controle ListView do Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Controle ListView](listview-control-windows-forms.md)
+- [Visão geral do controle ListView](listview-control-overview-windows-forms.md)
+- [Como: Adicionar e remover itens com o controle ListView do Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

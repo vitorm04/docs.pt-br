@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: 05e44da390f3fe668890d8c093729cb0ebfd1642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd15e581e646f53ed56af654917c7543bf18617e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631068"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705396"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Como: Alterar a aparência do texto da faixa de ferramentas e imagens no Windows Forms
 Você pode controlar se o texto e imagens são exibidas em uma <xref:System.Windows.Forms.ToolStripItem> e como eles são alinhados relativos uns aos outros e a <xref:System.Windows.Forms.ToolStrip>.  
@@ -77,6 +77,6 @@ Você pode controlar se o texto e imagens são exibidas em uma <xref:System.Wind
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.ToolStrip>
-- [Visão geral do controle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Arquitetura de controle do ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [Resumo da tecnologia de ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Arquitetura de controle do ToolStrip](toolstrip-control-architecture.md)
+- [Resumo da tecnologia de ToolStrip](toolstrip-technology-summary.md)

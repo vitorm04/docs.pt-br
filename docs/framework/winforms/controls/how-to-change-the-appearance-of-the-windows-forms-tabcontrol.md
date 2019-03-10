@@ -11,12 +11,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 1ed062b3991d7738269d30a6ff13cda3c80927c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 642115eeb61649eb369058947e5347d4389182a0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630314"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702406"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Como: Alterar a aparência do TabControl dos Windows Forms
 Você pode alterar a aparência das guias nos Windows Forms usando propriedades do <xref:System.Windows.Forms.TabControl> e o <xref:System.Windows.Forms.TabPage> objetos que compõem guias individuais no controle. Ao configurar essas propriedades, é possível exibir imagens em guias, exibir guias verticalmente em vez de horizontalmente, exibir várias linhas de guias e habilitar ou desabilitar guias com programação.  
@@ -27,7 +27,7 @@ Você pode alterar a aparência das guias nos Windows Forms usando propriedades 
   
 2.  Adicione imagens à lista de imagens.  
   
-     Para obter mais informações sobre listas de imagens, consulte [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [como: Adicionar ou remover imagens com o Windows Forms componente ImageList](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+     Para obter mais informações sobre listas de imagens, consulte [componente ImageList](imagelist-component-windows-forms.md) e [como: Adicionar ou remover imagens com o Windows Forms componente ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
 3.  Defina a <xref:System.Windows.Forms.TabControl.ImageList%2A> propriedade do <xref:System.Windows.Forms.TabControl> para o <xref:System.Windows.Forms.ImageList> controle.  
   
@@ -66,8 +66,8 @@ Você pode alterar a aparência das guias nos Windows Forms usando propriedades 
 -   Defina as <xref:System.Windows.Forms.TabControl.Appearance%2A> propriedade do <xref:System.Windows.Forms.TabControl> para <xref:System.Windows.Forms.TabAppearance.Buttons> ou <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Controle TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [Visão geral do controle TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [Como: Adicionar um controle a uma página da guia](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [Como: Desabilitar páginas de guia](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [Como: Adicionar e remover guias com o TabControl dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Controle TabControl](tabcontrol-control-windows-forms.md)
+- [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)
+- [Como: Adicionar um controle a uma página da guia](how-to-add-a-control-to-a-tab-page.md)
+- [Como: Desabilitar páginas de guia](how-to-disable-tab-pages.md)
+- [Como: Adicionar e remover guias com o TabControl dos Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

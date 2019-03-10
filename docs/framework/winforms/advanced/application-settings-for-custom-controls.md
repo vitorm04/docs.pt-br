@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526737"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714340"
 ---
 # <a name="application-settings-for-custom-controls"></a>Configurações do aplicativo para controles personalizados
 É necessário concluir algumas tarefas para que os controles personalizados tenham a capacidade de persistir as configurações de aplicativo quando os controles estão hospedados em aplicativos de terceiros.  
@@ -26,7 +26,7 @@ ms.locfileid: "54526737"
   
 2.  Crie esta classe de configurações personalizadas depois que o controle foi criado e colocado em um formulário, como o formulário <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
   
- Para obter instruções sobre como criar uma classe de configurações personalizadas, consulte [como: Criar configurações de aplicativo](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Para obter instruções sobre como criar uma classe de configurações personalizadas, consulte [como: Criar configurações de aplicativo](how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Chaves de Configurações e Configurações Compartilhadas  
  Alguns controles podem ser usados várias vezes dentro do mesmo formulário. Na maioria das vezes, esses controles deverão persistir suas próprias configurações individuais. Com o <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> propriedade em <xref:System.Configuration.IPersistComponentSettings>, você pode fornecer uma cadeia de caracteres exclusiva que funciona para desambiguar várias versões de um controle em um formulário.  
@@ -48,4 +48,4 @@ ms.locfileid: "54526737"
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Arquitetura das Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Arquitetura das Configurações do Aplicativo](application-settings-architecture.md)

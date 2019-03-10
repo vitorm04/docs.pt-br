@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 7a3ed1f3f6b3e89c8df160b7e753839e20acd877
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549753"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703017"
 ---
 # <a name="how-to-translate-image-colors"></a>Como: Converter cores de imagens
 Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. As entradas de matriz de cores que representam as conversões são fornecidas na tabela a seguir.  
@@ -31,7 +31,7 @@ Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. A
   
  A ilustração a seguir mostra a imagem original à esquerda e a imagem transformada à direita.  
   
- ![Converter cores](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
+ ![Converter cores](./media/colortrans2.png "colortrans2")  
   
  A tabela a seguir lista os vetores de cores para as quatro barras antes e depois da conversão em vermelho. Observe que, como o valor máximo para um componente de cor é 1, o componente vermelho na segunda linha não será alterado. (Da mesma forma, o valor mínimo para um componente de cor é 0).  
   
@@ -42,8 +42,8 @@ Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. A
 |Verde (0, 1, 0, 1)|(0.75, 1, 0, 1)|  
 |Azul (0, 0, 1, 1)|(0.75, 0, 1, 1)|  
   
- [!code-csharp[System.Drawing.RecoloringImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.RecoloringImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `ColorBars.bmp` por um nome de arquivo de imagem e um caminho que sejam válidos no sistema.  
@@ -51,5 +51,5 @@ Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. A
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Recolorindo Imagens](recoloring-images.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547125"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703524"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfaces relacionadas à associação de dados
 Com o [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], você pode criar diversas estruturas de dados para atender às necessidades de associação do seu aplicativo e dos dados com os quais você está trabalhando. Talvez você queira criar suas próprias classes que forneçam ou consumam dados nos Windows Forms. Esses objetos podem oferecer vários níveis de funcionalidade e complexidade, desde a vinculação de dados básica até o fornecimento de suporte em tempo de design, verificação de erros, notificação de alterações ou até mesmo suporte para uma reversão estruturada das alterações feitas nos próprios dados.  
@@ -150,6 +150,6 @@ Com o [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], você pode criar d
     >  Uma classe que herda de <xref:System.Windows.Forms.Control> gerencia automaticamente por meio de associações seus <xref:System.Windows.Forms.Control.BindingContext%2A> propriedade, portanto, casos em que você precisa implementar o <xref:System.Windows.Forms.ICurrencyManagerProvider> são relativamente raros.  
   
 ## <a name="see-also"></a>Consulte também
-- [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Como: Criar um controle associado simples em um formulário do Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+- [Como: Criar um controle associado simples em um formulário do Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Associação de dados do Windows Forms](windows-forms-data-binding.md)

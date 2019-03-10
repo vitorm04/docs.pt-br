@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: d1a465fb7c1cd6d4064a077e592daefebf590714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e82f406b4fdca93df7a811eea5506846d56fda28
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564819"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703043"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Como: Largura da caneta conjunto e alinhamento
 Quando você cria um <xref:System.Drawing.Pen>, você pode fornecer a largura da caneta como um dos argumentos para o construtor. Você também pode alterar a largura da caneta com a <xref:System.Drawing.Pen.Width%2A> propriedade do <xref:System.Drawing.Pen> classe.  
@@ -28,12 +28,12 @@ Quando você cria um <xref:System.Drawing.Pen>, você pode fornecer a largura da
   
 -   Defina o valor da <xref:System.Drawing.Pen.Alignment%2A> propriedade para <xref:System.Drawing.Drawing2D.PenAlignment.Center> (o padrão) para especificar que os pixels desenhados com a caneta verde serão centralizados na linha teórica. A ilustração a seguir mostra a linha resultante.  
   
-     ![Canetas](../../../../docs/framework/winforms/advanced/media/pens1a.gif "pens1A")  
+     ![Canetas](./media/pens1a.gif "pens1A")  
   
      O exemplo de código a seguir desenha um retângulo duas vezes: uma vez com uma caneta preta da largura 1 e uma vez com uma caneta verde da largura 10.  
   
-     [!code-csharp[System.Drawing.UsingAPen#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#41)]
-     [!code-vb[System.Drawing.UsingAPen#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#41)]  
+     [!code-csharp[System.Drawing.UsingAPen#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#41)]
+     [!code-vb[System.Drawing.UsingAPen#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#41)]  
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>Alterar o alinhamento de uma caneta  
   
@@ -41,22 +41,22 @@ Quando você cria um <xref:System.Drawing.Pen>, você pode fornecer a largura da
   
      A ilustração a seguir mostra o retângulo resultante.  
   
-     ![Canetas](../../../../docs/framework/winforms/advanced/media/pens2.gif "pens2")  
+     ![Canetas](./media/pens2.gif "pens2")  
   
-     [!code-csharp[System.Drawing.UsingAPen#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
-     [!code-vb[System.Drawing.UsingAPen#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
+     [!code-csharp[System.Drawing.UsingAPen#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
+     [!code-vb[System.Drawing.UsingAPen#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
   
 ### <a name="to-create-an-inset-pen"></a>Criar uma caneta de baixo-relevo  
   
 -   Altere o alinhamento da caneta verde modificando a terceira instrução no exemplo de código anterior da seguinte maneira:  
   
-     [!code-csharp[System.Drawing.UsingAPen#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
-     [!code-vb[System.Drawing.UsingAPen#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
+     [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
+     [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
   
      Agora os pixels na linha verde larga aparecem no interior do retângulo conforme mostrado na ilustração a seguir.  
   
-     ![Canetas](../../../../docs/framework/winforms/advanced/media/pens3.gif "pens3")  
+     ![Canetas](./media/pens3.gif "pens3")  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando uma caneta para desenhar linhas e formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Usando uma caneta para desenhar linhas e formas](using-a-pen-to-draw-lines-and-shapes.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)

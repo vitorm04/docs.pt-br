@@ -11,12 +11,12 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-ms.openlocfilehash: f58fa2d105492c6c72d3d6906c3c35f89130fe91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517680"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715991"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Combinação alfa em linhas e preenchimentos
 No [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], uma cor é um valor de 32 bits com 8 bits cada para alfa, vermelho, verde e azul. O valor alfa indica a transparência da cor – a extensão a qual a cor é combinada com a cor da tela de fundo. Os valores alfa variam de 0 a 255, em que 0 representa uma cor totalmente transparente e 255 representa uma cor totalmente opaca.  
@@ -30,14 +30,14 @@ No [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], uma cor 
  150 × 200 / 255 + 100 × (255 – 200) / 255 = 139  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como Desenhar Linhas Opacas e Semitransparentes](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)  
+ [Como: Desenhar linhas opacas e semitransparentes](how-to-draw-opaque-and-semitransparent-lines.md)  
  Mostra como desenhar linhas com combinação alfa.  
   
- [Como Desenhar com Pincéis Opacos e Semitransparentes](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)  
+ [Como: Desenhar com pincéis opacos e semitransparentes](how-to-draw-with-opaque-and-semitransparent-brushes.md)  
  Explica como fazer a combinação alfa com pincéis.  
   
- [Como Usar o Modo de Composição para Controlar a Combinação Alfa](../../../../docs/framework/winforms/advanced/how-to-use-compositing-mode-to-control-alpha-blending.md)  
+ [Como: Use o modo de composição para controlar a combinação alfa](how-to-use-compositing-mode-to-control-alpha-blending.md)  
  Descreve como controlar a combinação alfa usando <xref:System.Drawing.Drawing2D.CompositingMode>.  
   
- [Como Usar uma Matriz de Cores para Definir Valores Alfa em Imagens](../../../../docs/framework/winforms/advanced/how-to-use-a-color-matrix-to-set-alpha-values-in-images.md)  
+ [Como: Use uma matriz de cores para definir valores alfa em imagens](how-to-use-a-color-matrix-to-set-alpha-values-in-images.md)  
  Explica como usar um <xref:System.Drawing.Imaging.ColorMatrix> objeto para controlar a combinação alfa.

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526724"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715354"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Como: Aplicativos de exibir visualização de impressão no Windows Forms
 Você pode usar o <xref:System.Windows.Forms.PrintPreviewDialog> controle para permitir que os usuários exibam um documento, muitas vezes antes que seja a ser impresso.  
   
- Para fazer isso, você precisa especificar uma instância da <xref:System.Drawing.Printing.PrintDocument> classe; este é o documento a ser impresso. Para obter mais informações sobre como usar a visualização de impressão com o <xref:System.Drawing.Printing.PrintDocument> componente, consulte [como: Impressão no Windows Forms usando Visualizar impressão](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ Para fazer isso, você precisa especificar uma instância da <xref:System.Drawing.Printing.PrintDocument> classe; este é o documento a ser impresso. Para obter mais informações sobre como usar a visualização de impressão com o <xref:System.Drawing.Printing.PrintDocument> componente, consulte [como: Impressão no Windows Forms usando Visualizar impressão](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
   
 > [!NOTE]
 >  Para usar o <xref:System.Windows.Forms.PrintPreviewDialog> controle em tempo de execução, os usuários devem ter uma impressora instalada em seu computador, localmente ou através de uma rede, pois isso é parcialmente como o <xref:System.Windows.Forms.PrintPreviewDialog> componente determina qual será a aparência de um documento quando impresso.  
@@ -82,7 +82,7 @@ Você pode usar o <xref:System.Windows.Forms.PrintPreviewDialog> controle para p
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Componente PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
-- [Controle PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Suporte à impressão nos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Componente PrintDocument](printdocument-component-windows-forms.md)
+- [Controle PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)
+- [Suporte à impressão nos Windows Forms](../advanced/windows-forms-print-support.md)
+- [Windows Forms](../index.md)
