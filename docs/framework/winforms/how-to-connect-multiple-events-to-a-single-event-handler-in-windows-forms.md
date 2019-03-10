@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967861"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722640"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Como: Conectar vários eventos a um único manipulador de eventos nos Windows Forms
 No projeto do seu aplicativo, talvez seja necessário usar um único manipulador de eventos para vários eventos ou fazer com que vários eventos executem o mesmo procedimento. Por exemplo, fazer um comando de menu gerar o mesmo evento que um botão no seu formulário geralmente representará uma grande economia de tempo se eles expuserem a mesma funcionalidade. Você pode fazer isso usando a exibição Eventos da janela Propriedades em C# ou usando a palavra-chave `Handles` e as caixas suspensas **Nome de Classe** e **Nome do Método** no Editor de Código do Visual Basic.  
@@ -50,7 +50,7 @@ No projeto do seu aplicativo, talvez seja necessário usar um único manipulador
   
 1.  Selecione o controle ao qual você deseja conectar um manipulador de eventos.  
   
-2.  Na janela Propriedades, clique no botão **Eventos** (![Botão Eventos](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
+2.  Na janela Propriedades, clique no botão **Eventos** (![Botão Eventos](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
   
 3.  Clique no nome do evento que você deseja tratar.  
   
@@ -61,5 +61,5 @@ No projeto do seu aplicativo, talvez seja necessário usar um único manipulador
      O código será adicionado ao formulário para associar o evento ao manipulador de eventos existente.  
   
 ## <a name="see-also"></a>Consulte também
-- [Criando manipuladores de eventos no Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Visão geral de manipuladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Visão geral de manipuladores de eventos](event-handlers-overview-windows-forms.md)

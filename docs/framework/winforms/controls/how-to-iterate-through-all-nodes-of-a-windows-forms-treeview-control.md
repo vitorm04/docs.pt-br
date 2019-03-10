@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: c6345ab5e5d4f4e480bb2724e7a1d795de2bef5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 306c1f684f1f4c2deb057f7d81c93856ee6189e7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651845"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715382"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Como: Iterar em todos os nós de um controle TreeView dos Windows Forms
 Às vezes é útil para examinar todos os nós em um Windows Forms <xref:System.Windows.Forms.TreeView> controle para realizar alguns cálculos nos valores de nó. Essa operação pode ser feita usando um procedimento recursivo (método recursivo em c# e C++) que itera em cada nó em cada coleção da árvore.  
@@ -124,5 +124,5 @@ ms.locfileid: "54651845"
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Controle TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [Controle TreeView](treeview-control-windows-forms.md)
 - [Procedimentos Recursivos](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

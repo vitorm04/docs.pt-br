@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746238"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710739"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Passo a passo: Criando um controle ToolStrip com estilo profissional
 Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla uma aparência e comportamento profissional escrevendo sua própria classe que deriva de <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
@@ -30,7 +30,7 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
   
  Quando tiver terminado, você terá um controle de cliente personalizado reutilizável com a aparência profissional de um controle do Microsoft Office XP.  
   
- Para copiar o código deste tópico como uma única listagem, confira [Como: Criar um controle ToolStrip com estilo profissional](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
+ Para copiar o código deste tópico como uma única listagem, confira [Como: Criar um controle ToolStrip com estilo profissional](how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -54,7 +54,7 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
 3.  Adicione um novo <xref:System.Windows.Forms.UserControl> de item para o **StackViewLibrary** projeto. Dê ao novo arquivo de origem o nome base `StackView`.  
   
 ## <a name="designing-the-stackview-control"></a>Projetar o controle StackView  
- O `StackView` um controle composto com um filho do controle é <xref:System.Windows.Forms.ToolStrip> controle. Para obter mais informações sobre controles de composição, consulte [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).  
+ O `StackView` um controle composto com um filho do controle é <xref:System.Windows.Forms.ToolStrip> controle. Para obter mais informações sobre controles de composição, consulte [Variedades de controles personalizados](varieties-of-custom-controls.md).  
   
 #### <a name="to-design-the-stackview-control"></a>Para projetar o controle StackView  
   
@@ -108,8 +108,8 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
   
 4.  No manipulador de eventos `StackView_Load`, copie e cole o código a seguir.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
   
 5.  No Designer de Formulários do Windows, selecione o controle `mailStackButton`.  
   
@@ -125,8 +125,8 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
   
 9. Adicione o seguinte código ao manipulador de eventos `stackButton_Click`.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#4)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#4)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#4)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#4)]  
   
 10. No Designer de Formulários do Windows, selecione o controle `calendarStackButton`.  
   
@@ -141,13 +141,13 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
   
 1.  No Editor de Códigos, insira o seguinte código na definição de classe `StackView`. Esse código inicializa os bitmaps para os <xref:System.Windows.Forms.ToolStripButton> ícones.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
 2.  Adicione uma chamada ao método `InitializeImages` no construtor de classe `StackView`.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="implementing-a-custom-renderer"></a>Implementar um renderizador personalizado  
  Você pode personalizar a maioria dos elementos do `StackView` controlar a minha implementação de uma classe que deriva de <xref:System.Windows.Forms.ToolStripRenderer> classe. Neste procedimento, você implementará uma <xref:System.Windows.Forms.ToolStripProfessionalRenderer> classe que personaliza a alça e desenha planos de fundo gradiente para o <xref:System.Windows.Forms.ToolStripButton> controles.  
@@ -158,16 +158,16 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
   
      Essa é a definição para o `StackRenderer` classe, que substitui o <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>, <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>, e <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> métodos para produzir uma aparência personalizada.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
   
 2.  No `StackView` construtor do controle, crie uma nova instância da `StackRenderer` classe e atribua essa instância para o `stackStrip` do controle <xref:System.Windows.Forms.ToolStrip.Renderer%2A> propriedade.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="testing-the-stackview-control"></a>Testando o controle StackView  
- O `StackView` controle deriva o <xref:System.Windows.Forms.UserControl> classe. Portanto, você pode testar o controle com o **Contêiner de teste do UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ O `StackView` controle deriva o <xref:System.Windows.Forms.UserControl> classe. Portanto, você pode testar o controle com o **Contêiner de teste do UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-the-stackview-control"></a>Para testar o controle StackView  
   
@@ -178,15 +178,15 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
 ## <a name="next-steps"></a>Próximas etapas  
  Neste passo a passo, você criou controle de cliente personalizado reutilizável com a aparência profissional de um controle do Office XP. Você pode usar o <xref:System.Windows.Forms.ToolStrip> família de controles para muitas outras finalidades:  
   
--   Criar menus de atalho para os controles com <xref:System.Windows.Forms.ContextMenuStrip>. Para obter mais informações, consulte [Visão geral do componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+-   Criar menus de atalho para os controles com <xref:System.Windows.Forms.ContextMenuStrip>. Para obter mais informações, consulte [Visão geral do componente ContextMenu](contextmenu-component-overview-windows-forms.md).  
   
--   Criar um formulário com um menu padrão preenchido automaticamente. Para obter mais informações, confira [Passo a passo: Fornecendo itens de Menu padrão para um formulário](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
+-   Criar um formulário com um menu padrão preenchido automaticamente. Para obter mais informações, confira [Passo a passo: Fornecendo itens de Menu padrão para um formulário](walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Criar um formulário de MDI (interface MDI) de vários documentos com encaixe <xref:System.Windows.Forms.ToolStrip> controles. Para obter mais informações, confira [Como: Criar um formulário MDI com mesclagem de Menu e controles ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   Criar um formulário de MDI (interface MDI) de vários documentos com encaixe <xref:System.Windows.Forms.ToolStrip> controles. Para obter mais informações, confira [Como: Criar um formulário MDI com mesclagem de Menu e controles ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Controle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [Como: Fornecer itens de Menu padrão para um formulário](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+- [Controle ToolStrip](toolstrip-control-windows-forms.md)
+- [Como: Fornecer itens de Menu padrão para um formulário](how-to-provide-standard-menu-items-to-a-form.md)

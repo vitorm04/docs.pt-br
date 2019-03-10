@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: b4c6bf42bdd1ba6b0f9ccddb730dc517dbaab963
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304083"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723966"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados
 Se seus componentes forem definidos por um projeto na solução aberta no momento, eles aparecerão automaticamente na **Caixa de Ferramentas** sem exigir que você execute nenhuma ação. Você também pode preencher manualmente a **Caixa de Ferramentas** com seus componentes personalizados usando a [Caixa de Diálogo Escolher Itens da Caixa de Ferramentas (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), mas a **Caixa de Ferramentas** leva em conta itens nas saídas de build da sua solução com todas as seguintes características:  
@@ -97,4 +97,4 @@ Se seus componentes forem definidos por um projeto na solução aberta no moment
 - [Geral, Designer de formulários do Windows, caixa de diálogo Opções](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Como: Manipular guias da caixa de ferramentas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
 - [Caixa de diálogo Escolher Itens da Caixa de Ferramentas (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
-- [Colocando controles nos Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+- [Colocando controles nos Windows Forms](putting-controls-on-windows-forms.md)

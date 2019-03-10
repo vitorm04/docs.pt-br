@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 10981f6e49b1d109dce0f3b2b4dc0ab9043ceb0f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746371"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712689"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Solucionando problemas de criação do controle e do componente
 Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver componentes e controles. Para obter mais informações, consulte [Programando com componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -34,7 +34,7 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
 -   O ícone do componente não aparece na caixa de ferramentas  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Não é possível adicionar o controle à caixa de ferramentas  
- Se você quiser adicionar um controle personalizado criado em outro projeto ou um controle de terceiros à **Caixa de Ferramentas**, faça isso manualmente. Se o projeto atual contiver seu controle ou componente, ele deverá aparecer na **Caixa de Ferramentas** automaticamente. Para obter mais informações, confira [Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+ Se você quiser adicionar um controle personalizado criado em outro projeto ou um controle de terceiros à **Caixa de Ferramentas**, faça isso manualmente. Se o projeto atual contiver seu controle ou componente, ele deverá aparecer na **Caixa de Ferramentas** automaticamente. Para obter mais informações, confira [Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Para adicionar um controle à Caixa de Ferramentas  
   
@@ -67,7 +67,7 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
          Seu controle é adicionado à **Caixa de Ferramentas**.  
   
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Não é possível depurar o componente nem o controle de usuário do Windows Forms  
- Se seu controle deriva o <xref:System.Windows.Forms.UserControl> classe, você pode depurar seu comportamento de tempo de execução com o contêiner de teste. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Se seu controle deriva o <xref:System.Windows.Forms.UserControl> classe, você pode depurar seu comportamento de tempo de execução com o contêiner de teste. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Outros controles e componentes personalizados não são projetos autônomos. Eles devem ser hospedados por um aplicativo como um projeto do Windows Forms. Para depurar um controle ou um componente, adicione-o a um projeto do Windows Forms.  
   
@@ -93,7 +93,7 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
   
      Agora você pode depurar seu componente ou controle como de costume.  
   
- Para obter mais informações sobre a depuração, consulte [depuração no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) e [passo a passo: Depurando Windows personalizado do Forms a controles em tempo de Design](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Para obter mais informações sobre a depuração, consulte [depuração no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) e [passo a passo: Depurando Windows personalizado do Forms a controles em tempo de Design](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>O evento é gerado duas vezes no componente ou no controle herdado  
  Isso provavelmente é devido a uma cláusula `Handles` duplicada. Para obter mais informações, consulte [Solução de problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
@@ -105,12 +105,12 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
  O <xref:System.STAThreadAttribute> informa o common language runtime (CLR) que o Windows Forms usa o modelo de single-threaded apartment. Você poderá perceber um comportamento não intencional se não aplicar esse atributo ao método `Main` do aplicativo do Windows Forms. Por exemplo, imagens de plano de fundo podem não aparecer para controles, como <xref:System.Windows.Forms.ListView>. Alguns controles também podem exigir esse atributo para um comportamento correto de Preenchimento Automático e do tipo "arrastar e soltar".  
   
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>O ícone do componente não aparece na caixa de ferramentas  
- Quando você usa <xref:System.Drawing.ToolboxBitmapAttribute> para associar um ícone ao seu componente personalizado, o bitmap não aparece na caixa de ferramentas para componentes gerados automaticamente. Para ver o bitmap, recarregue o controle usando a caixa de diálogo **Escolher Itens da Caixa de Ferramentas**. Para obter mais informações, confira [Como: Fornecer um Bitmap da caixa de ferramentas para um controle](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
+ Quando você usa <xref:System.Drawing.ToolboxBitmapAttribute> para associar um ícone ao seu componente personalizado, o bitmap não aparece na caixa de ferramentas para componentes gerados automaticamente. Para ver o bitmap, recarregue o controle usando a caixa de diálogo **Escolher Itens da Caixa de Ferramentas**. Para obter mais informações, confira [Como: Fornecer um Bitmap da caixa de ferramentas para um controle](how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Desenvolvendo controles dos Windows Forms em tempo de design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
-- [Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Como: Testar o comportamento de tempo de execução de um UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Passo a passo: Depuração de controles personalizados do Windows Forms em tempo de design](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)
+- [Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Passo a passo: Depuração de controles personalizados do Windows Forms em tempo de design](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 - [Criação de componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [Solucionando problemas de desenvolvimento de tempo de Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

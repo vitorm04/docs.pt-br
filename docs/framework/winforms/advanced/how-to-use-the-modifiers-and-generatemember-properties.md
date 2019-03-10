@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 890290d75c6690f467e565a3d75a4b75102d7875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558378"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710791"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Como: Usar os modificadores e as propriedades GenerateMember
 Quando você coloca um componente em um Windows Form, duas propriedades são fornecidas pelo ambiente de design: `GenerateMember` e `Modifiers`. A propriedade `GenerateMember` especifica quando o Designer de Formulários do Windows gera uma variável de membro de um componente. A propriedade `Modifiers` é o modificador de acesso atribuído a essa variável de membro. Se o valor da propriedade `GenerateMember` for `false`, o valor da propriedade `Modifiers` não terá efeito.  
@@ -50,17 +50,17 @@ Quando você coloca um componente em um Windows Form, duas propriedades são for
   
 7.  Localize as declarações dos três botões. O exemplo de código a seguir mostra as diferenças especificadas pelas propriedades `GenerateMember` e `Modifiers`.  
   
-     [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.GenerateMember#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
   
-     [!code-csharp[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.GenerateMember#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.GenerateMember#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
 >  Por padrão, o Designer de formulários do Windows atribui a `private` (`Friend` no Visual Basic) modificador para controles de contêiner como <xref:System.Windows.Forms.Panel>. Se sua base <xref:System.Windows.Forms.UserControl> ou <xref:System.Windows.Forms.Form> tem um controle de contêiner, ele não aceitará novos filhos em controles e formulários herdados. A solução é alterar o modificador da caixa de controles de base para `protected` ou `public`.  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.Button>
-- [Herança Visual dos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
-- [Passo a passo: Demonstrando Herança Visual](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)
-- [Como: Herdar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)
+- [Passo a passo: Demonstrando Herança Visual](walkthrough-demonstrating-visual-inheritance.md)
+- [Como: Herdar Windows Forms](how-to-inherit-windows-forms.md)

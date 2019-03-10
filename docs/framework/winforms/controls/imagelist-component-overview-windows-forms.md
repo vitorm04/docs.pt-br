@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: 49da971975deecfde8e299a46dd59d469da63802
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9869e647613ccf009954a5d65445947fbced40e7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521030"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709832"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Visão geral do componente ImageList (Windows Forms)
 
@@ -30,4 +30,4 @@ A propriedade de chave do <xref:System.Windows.Forms.ImageList> componente é <x
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ImageList>
-- [Como: Adicionar ou remover imagens com o componente ImageList dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Como: Adicionar ou remover imagens com o componente ImageList dos Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

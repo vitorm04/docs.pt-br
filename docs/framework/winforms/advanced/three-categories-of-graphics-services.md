@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: 2c2ddc76faaf0c15cc56345c607678985b9c4656
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576376"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711208"
 ---
 # <a name="three-categories-of-graphics-services"></a>Três categorias de serviços gráficos
 As ofertas de elementos gráficos no Windows Forms se enquadram nas três categorias amplas a seguir:  
@@ -40,6 +40,6 @@ As ofertas de elementos gráficos no Windows Forms se enquadram nas três catego
  Além disso, o Windows Forms oferece a opção para desenhar texto com [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] recursos no seu <xref:System.Windows.Forms.TextRenderer> classe.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de elementos gráficos](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
-- [Sobre o Código Gerenciado no GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
-- [Usando Classes de Elementos Gráficos Gerenciadas](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+- [Visão geral de elementos gráficos](graphics-overview-windows-forms.md)
+- [Sobre o Código Gerenciado no GDI+](about-gdi-managed-code.md)
+- [Usando Classes de Elementos Gráficos Gerenciadas](using-managed-graphics-classes.md)

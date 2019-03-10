@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674762"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713209"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de bitmaps
 Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz retangular de pixels. O número de bits dedicados a um pixel individual determina o número de cores que podem ser atribuídos a esse pixel. Por exemplo, se cada pixel é representado por 4 bits, em seguida, um determinado pixel pode ser atribuído um dos 16 cores diferentes (2^4 = 16). A tabela a seguir mostra alguns exemplos do número de cores que podem ser atribuídos a um pixel representado por um determinado número de bits.  
@@ -41,7 +41,7 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
   
  Arquivos de disco que armazenam os bitmaps geralmente contêm um ou mais blocos de informações que armazenam informações como o número de bits por pixel, o número de pixels em cada linha e o número de linhas na matriz. Esse arquivo também pode conter uma tabela de cores (às vezes chamada de uma paleta de cores). Uma tabela de cores mapeia os números no bitmap para cores específicas. A ilustração a seguir mostra uma imagem ampliada juntamente com sua tabela de cores e bitmap. Cada pixel é representado por um número de 4 bits, portanto, existem 2^4 = 16 cores na tabela de cores. Cada cor na tabela é representada por um número de 24 bits: 8 bits para vermelho, 8 bits para verde e 8 bits para azul. Os números são exibidos em formato hexadecimal (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
- ![Exemplo de bitmap](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![Exemplo de bitmap](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  Examinar o pixel na linha 3, coluna 5 da imagem. O número correspondente no bitmap é 1. A tabela de cores nos informa que 1 representa a cor vermelha, portanto o pixel é vermelho. Todas as entradas na linha superior do bitmap são 3. A tabela de cores nos informa que 3 representa azul, portanto, todos os pixels na linha superior da imagem são azuis.  
   
@@ -50,7 +50,7 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
   
  Um bitmap que armazena os índices em uma tabela de cores é chamado um bitmap indexado por paleta. Alguns bitmaps não tiveram necessidade de uma tabela de cores. Por exemplo, se um bitmap usa 24 bits por pixel, esse bitmap pode armazenar as cores ao invés de indexar em uma tabela de cores. A ilustração a seguir mostra um bitmap que armazena as cores diretamente (24 bits por pixel) em vez de usar uma tabela de cores. A ilustração também mostra uma exibição ampliada da imagem correspondente. No bitmap, FFFFFF representa branco, FF0000 representa vermelho, 00FF00 representa verde e 0000FF representa azul.  
   
- ![Exemplo de bitmap](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![Exemplo de bitmap](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formatos de arquivos gráficos  
  Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dá suporte a formatos de arquivo gráfico descritos nos parágrafos a seguir.  
@@ -66,11 +66,11 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
   
  O nível de compactação de imagens JPEG é configurável, mas níveis mais altos de compactação (arquivos menores) resultam em mais perda de informações. Uma taxa de compactação de 20:1 geralmente produz uma imagem que o olho humano tem dificuldade de distinguir do original. A ilustração a seguir mostra uma imagem BMP e duas imagens JPEG compactadas dessa imagem BMP. O primeiro JPEG tem uma taxa de compactação de 4:1 e o segundo JPEG tem uma taxa de compactação de 8:1.  
   
- ![Exemplos de tipo de arquivo](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Exemplos de tipo de arquivo](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  Compactação de JPEG não funcionam bem para desenhos de linha, blocos de cor sólida e limites nítidos. A ilustração a seguir mostra um BMP junto com dois JPEGs e GIF. Os JPEGs e GIF foram compactados do BMP. A taxa de compactação é 4:1 para o GIF, 4:1 para o JPEG menor e 8:3 para o JPEG maior. Observe que o GIF mantém os limites nítidos ao longo das linhas, mas os JPEGs tendem a desfocar os limites.  
   
- ![Filetypes](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Filetypes](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG é um esquema de compactação, não é um formato de arquivo. JPEG File Interchange Format (JFIF) é um formato de arquivo normalmente usado para armazenar e transferir imagens que foram compactadas de acordo com o esquema JPEG. Arquivos JFIF exibidos por navegadores da Web usam a extensão .jpg.  
   
@@ -89,5 +89,5 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
+- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

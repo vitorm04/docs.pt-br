@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615954"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719423"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Como: Salvar arquivos usando o componente SaveFileDialog
 O <xref:System.Windows.Forms.SaveFileDialog> componente permite aos usuários navegar no sistema de arquivos e selecionar arquivos a serem salvos. A caixa de diálogo retorna o caminho e o nome do arquivo que o usuário selecionou na caixa de diálogo. No entanto, você deve escrever o código para efetivamente gravar os arquivos no disco.  
@@ -32,7 +32,7 @@ O <xref:System.Windows.Forms.SaveFileDialog> componente permite aos usuários na
      No exemplo a seguir, há um <xref:System.Windows.Forms.Button> controle com uma imagem atribuída a ele. Quando você clica no botão, um <xref:System.Windows.Forms.SaveFileDialog> componente é instanciado com um filtro que permite que os arquivos de tipo. gif,. JPEG e. bmp. Se um arquivo desse tipo for selecionado na caixa de diálogo Salvar Arquivo, a imagem do botão será salva.  
   
     > [!IMPORTANT]
-    >  Para obter ou definir a <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade, seu assembly requer um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Para obter ou definir a <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade, seu assembly requer um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../misc/code-access-security-basics.md).  
   
      O exemplo supõe que seu formulário tem um <xref:System.Windows.Forms.Button> controlar com seu <xref:System.Windows.Forms.ButtonBase.Image%2A> propriedade definida como um arquivo do tipo. gif,. JPEG ou. bmp.  
   
@@ -179,4 +179,4 @@ O <xref:System.Windows.Forms.SaveFileDialog> componente permite aos usuários na
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [Componente SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [Componente SaveFileDialog](savefiledialog-component-windows-forms.md)

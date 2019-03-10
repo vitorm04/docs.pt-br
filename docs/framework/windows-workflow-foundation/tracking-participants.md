@@ -2,12 +2,12 @@
 title: Participantes de rastreamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613499"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711961"
 ---
 # <a name="tracking-participants"></a>Participantes de rastreamento
 Os participantes de rastreamento são os pontos de extensibilidade que permitem que um desenvolvedor de fluxo de trabalho acessar objetos de <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e processe os. O [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclui um participante padrão de rastreamento que grava registros de rastreamento como eventos de Rastreamento de Eventos para Windows (ETW). Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado.  
@@ -60,10 +60,10 @@ Os participantes de rastreamento são os pontos de extensibilidade que permitem 
   
  A ilustração a seguir mostra o fluxo de dados de rastreamento através de participante de rastreamento de ETW. Uma vez que os dados de acompanhamento alcançam a sessão de ETW, podem ser acessados de várias maneiras. Uma das maneiras mais úteis de acessar esses eventos é através do visualizador de eventos, uma ferramenta do Windows comuns usada exibindo efetua logon e rastreamentos de aplicativos e serviços.  
   
- ![O fluxo de controle e o provedor de rastreamento ETW](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![O fluxo de controle e o provedor de rastreamento ETW](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
 ## <a name="tracking-participant-event-data"></a>Dados do evento de participante de rastreamento  
- Um participante de rastreamento serializa dados controlados de evento a uma sessão de ETW no formato de um evento pelo registro de rastreamento.  Um evento é identificado usando um identificador dentro do intervalo de 100 a 199. Para obter definições de evento de acompanhamento emitidos por um participante de rastreamento, os registros, consulte a [referência de rastreamento de eventos](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) tópico.  
+ Um participante de rastreamento serializa dados controlados de evento a uma sessão de ETW no formato de um evento pelo registro de rastreamento.  Um evento é identificado usando um identificador dentro do intervalo de 100 a 199. Para obter definições de evento de acompanhamento emitidos por um participante de rastreamento, os registros, consulte a [referência de rastreamento de eventos](tracking-events-reference.md) tópico.  
   
  O tamanho de um evento de ETW é limitado pelo tamanho do buffer de ETW, ou pela carga útil máximo para um evento de ETW, qualquer valor é menor. Se o tamanho do evento excede qualquer um desses limites de ETW, o evento será truncado e seu conteúdo é removido de uma maneira arbitrária. Variáveis, os argumentos, anotações e os dados personalizado não são removidos seletivamente. No caso de truncamento, todos estes é truncada independentemente do valor que fez com que o tamanho do evento excede o limite de ETW.  Os dados são removidos substituídos por `<item>..<item>`.  
   
@@ -114,7 +114,8 @@ class ConsoleTrackingParticipant : TrackingParticipant
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- No exemplo a seguir, um fluxo de trabalho que consiste uma atividade de <xref:System.Activities.Statements.Sequence> que contém uma atividade de <xref:System.Activities.Statements.WriteLine> é criado. `ConsoleTrackingParticipant` é adicionado para extensões e fluxo de trabalho é chamado.  
+ No exemplo a seguir, um fluxo de trabalho que consiste uma atividade de <xref:System.Activities.Statements.Sequence> que contém uma atividade de <xref:System.Activities.Statements.WriteLine> é criado. 
+  `ConsoleTrackingParticipant` é adicionado para extensões e fluxo de trabalho é chamado.  
   
 ```csharp  
 Activity activity= new Sequence()  

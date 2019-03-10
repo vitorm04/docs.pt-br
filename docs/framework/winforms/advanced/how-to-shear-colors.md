@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: bde3271398c6bc6a37c975476b76acb85511c1a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589826"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720215"
 ---
 # <a name="how-to-shear-colors"></a>Como: Distorcer cores
 A distorção aumenta ou diminui um componente de cor em uma quantidade proporcional a outro componente de cor. Por exemplo, considere a transformação em que o componente vermelho é aumentado pela metade do valor do componente azul. Nessa transformação, a cor (0,2, 0,5, 1) seria (0,7, 0,5, 1). O novo componente vermelho é 0,2 + (1/2)(1) = 0,7.  
@@ -23,7 +23,7 @@ A distorção aumenta ou diminui um componente de cor em uma quantidade proporci
   
  A ilustração a seguir mostra a imagem original à esquerda e a imagem distorcida à direita.  
   
- ![Distorcer cores](../../../../docs/framework/winforms/advanced/media/colortrans6.png "colortrans6")  
+ ![Distorcer cores](./media/colortrans6.png "colortrans6")  
   
  A tabela a seguir lista os vetores de cores para as quatro barras antes e depois da transformação de distorção.  
   
@@ -34,8 +34,8 @@ A distorção aumenta ou diminui um componente de cor em uma quantidade proporci
 |(1, 1, 0, 1)|(1, 1, 0, 1)|  
 |(0.4, 0.4, 0.4, 1)|(0.6, 0.4, 0.4, 1)|  
   
- [!code-csharp[System.Drawing.Misc3#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#9)]
- [!code-vb[System.Drawing.Misc3#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
+ [!code-csharp[System.Drawing.Misc3#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#9)]
+ [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `ColorBars.bmp` por um nome de imagem e caminho válidos no sistema.  
@@ -43,5 +43,5 @@ A distorção aumenta ou diminui um componente de cor em uma quantidade proporci
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Recolorindo Imagens](recoloring-images.md)

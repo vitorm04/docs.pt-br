@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664738"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711291"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Fontes de dados com suporte do Windows Forms
 Tradicionalmente, a associação de dados era usada nos aplicativos para tirar proveito dos dados armazenados em bancos de dados. Com a associação de dados do Windows Forms, você pode acessar dados de bancos de dados, bem como dados em outras estruturas, como matrizes e coleções, desde que certos requisitos mínimos sejam atendidos.  
   
 ## <a name="structures-to-bind-to"></a>Estruturas às quais associar  
- No Windows Forms, é possível associar a uma grande variedade de estruturas, desde objetos simples (associação simples) a listas complexas como tabelas de dados do ADO.NET (associação complexa). Para a associação simples, o Windows Forms dá suporte à associação às propriedades públicas no objeto simples. Associação baseada em lista do Windows Forms geralmente requer que o objeto dá suporte a <xref:System.Collections.IList> interface ou o <xref:System.ComponentModel.IListSource> interface. Além disso, se você estiver associando com por meio de um <xref:System.Windows.Forms.BindingSource> componente, você pode associar a um objeto que dá suporte a <xref:System.Collections.IEnumerable> interface. Para obter mais informações sobre interfaces relacionadas à associação de dados, consulte [Interfaces relacionadas à associação de dados](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
+ No Windows Forms, é possível associar a uma grande variedade de estruturas, desde objetos simples (associação simples) a listas complexas como tabelas de dados do ADO.NET (associação complexa). Para a associação simples, o Windows Forms dá suporte à associação às propriedades públicas no objeto simples. Associação baseada em lista do Windows Forms geralmente requer que o objeto dá suporte a <xref:System.Collections.IList> interface ou o <xref:System.ComponentModel.IListSource> interface. Além disso, se você estiver associando com por meio de um <xref:System.Windows.Forms.BindingSource> componente, você pode associar a um objeto que dá suporte a <xref:System.Collections.IEnumerable> interface. Para obter mais informações sobre interfaces relacionadas à associação de dados, consulte [Interfaces relacionadas à associação de dados](interfaces-related-to-data-binding.md).  
   
  A lista a seguir mostra as estruturas a que você pode associar no Windows Forms.  
   
@@ -58,6 +58,6 @@ Tradicionalmente, a associação de dados era usada nos aplicativos para tirar p
 -   <xref:System.Data.DataViewManager>. Um <xref:System.Data.DataViewManager> é uma exibição personalizada de todo o <xref:System.Data.DataSet>, análogo a um <xref:System.Data.DataView>, mas com relações incluídas. Com uma <xref:System.Data.DataViewManager.DataViewSettings%2A> coleção, você pode definir opções de classificação para todas as exibições e filtros padrão que o <xref:System.Data.DataViewManager> tem para uma determinada tabela.  
   
 ## <a name="see-also"></a>Consulte também
-- [Notificação de alteração na vinculação de dados dos Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Notificação de alteração na vinculação de dados dos Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+- [Associação de dados do Windows Forms](windows-forms-data-binding.md)

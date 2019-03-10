@@ -7,33 +7,33 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: b422de09b41d72a680146192fd773767fe64e257
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 5b66e60fa2d28528a9e60d20bb101bc2d19bec3e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664556"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711796"
 ---
 # <a name="user-input-in-windows-forms"></a>Entrada do usuário no Windows Forms
 O Windows Forms inclui um modelo de entrada do usuário com base em eventos que são gerados durante o processamento de mensagens do Windows relacionadas. Os tópicos nesta seção fornecem informações sobre entrada do usuário com mouse e teclado, incluindo exemplos de código que demonstram como realizar tarefas específicas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Entrada do usuário em um aplicativo dos Windows Forms](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
+ [Entrada do usuário em um aplicativo dos Windows Forms](user-input-in-a-windows-forms-application.md)  
  Fornece uma visão geral dos eventos de entrada do usuário e os métodos que processam mensagens do Windows.  
   
- [Entrada do teclado em um aplicativo dos Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [Entrada do teclado em um aplicativo dos Windows Forms](keyboard-input-in-a-windows-forms-application.md)  
  Fornece informações sobre a manipulação de mensagens do teclado, os diferentes tipos de teclas e os eventos de teclado.  
   
- [Entrada do mouse em um Aplicativo do Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)  
  Fornece informações sobre os eventos do mouse e outros recursos relacionados ao mouse, incluindo cursores e captura do mouse.  
   
- [Como: Simular eventos de Mouse e teclado no código](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ [Como: Simular eventos de Mouse e teclado no código](how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  Demonstra várias maneiras diferentes de simular programaticamente entrada do mouse e do teclado.  
   
- [Como: Tratar eventos de entrada do usuário em controles dos Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ [Como: Tratar eventos de entrada do usuário em controles dos Windows Forms](how-to-handle-user-input-events-in-windows-forms-controls.md)  
  Apresenta um exemplo de código que manipula a maioria dos eventos de entrada do usuário e relata informações sobre cada evento.  
   
- [Validação da entrada do usuário nos Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
+ [Validação da entrada do usuário nos Windows Forms](user-input-validation-in-windows-forms.md)  
  Descreve os métodos para validar a entrada do usuário em aplicativos dos Windows Forms.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

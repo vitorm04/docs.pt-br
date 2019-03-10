@@ -13,12 +13,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ad5dd1cc3839fbe29d39f6ab38b0e865e7b0a335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492400"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713020"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Como: Definir recuos, recuos deslocados e parágrafos com marcadores com o controle RichTextBox dos Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle tem várias opções para formatar o texto que ele exibe. Você pode formatar parágrafos selecionados como listas com marcadores, definindo o <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propriedade. Você também pode usar o <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, e <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedades para definir o recuo de parágrafos em relação à esquerda e direita bordas do controle e a borda esquerda de outras linhas de texto.  
@@ -70,5 +70,5 @@ Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle tem 
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.RichTextBox>
-- [Controle RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controle RichTextBox](richtextbox-control-windows-forms.md)
+- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

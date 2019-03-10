@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 8999dba110ee21b735c79ccc10c5af52dbfcdea9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305838"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712988"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel
 Alguns aplicativos exigem um formulário com um layout que se organiza adequadamente à medida que o formulário é redimensionado ou conforme o tamanho do conteúdo é alterado. Quando você precisa de um layout dinâmico e não deseja manipular <xref:System.Windows.Forms.Control.Layout> eventos explicitamente no seu código, considere o uso de um painel de layout.  
   
  O <xref:System.Windows.Forms.FlowLayoutPanel> controle e o <xref:System.Windows.Forms.TableLayoutPanel> controle fornecem maneiras intuitivas para organizar os controles no seu formulário. Ambos fornecem uma capacidade automática e configurável de controlar as posições relativas dos controles filho contidos neles e ambos oferecem recursos de layout dinâmico em tempo de execução, para que eles possam redimensionar e reposicionar os controles filho conforme as dimensões do formulário pai se alteram. Os painéis de layout podem ser aninhados em painéis de layout, para permitir a realização de interfaces do usuário sofisticadas.  
   
- O <xref:System.Windows.Forms.FlowLayoutPanel> organiza seu conteúdo em uma direção específica de fluxo: horizontal ou vertical. Seu conteúdo pode ser encapsulado de uma linha à outra ou de uma coluna à próxima. Como alternativa, seu conteúdo pode ser recortado, em vez de encapsulado. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+ O <xref:System.Windows.Forms.FlowLayoutPanel> organiza seu conteúdo em uma direção específica de fluxo: horizontal ou vertical. Seu conteúdo pode ser encapsulado de uma linha à outra ou de uma coluna à próxima. Como alternativa, seu conteúdo pode ser recortado, em vez de encapsulado. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
  O <xref:System.Windows.Forms.TableLayoutPanel> organiza seu conteúdo em uma grade, fornecendo funcionalidade semelhante ao HTML \<tabela > elemento. O <xref:System.Windows.Forms.TableLayoutPanel> controle permite que você coloque controles em um layout de grade sem a necessidade de especificar precisamente a posição de cada controle individual. Suas células são organizadas em linhas e colunas, que podem ter diferentes tamanhos. As células podem ser mescladas entre linhas e colunas. As células podem conter qualquer coisa que um formulário pode conter e se comportam, na maioria de outros aspectos, como contêineres.  
   
@@ -95,7 +95,7 @@ Alguns aplicativos exigem um formulário com um layout que se organiza adequadam
   
 1.  Selecione o <xref:System.Windows.Forms.TableLayoutPanel> no controlar os **Designer de formulários do Windows**.  
   
-2.  No **propriedades** windows, abra o <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> coleção clicando no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) botão ao lado de **colunas** entrada.  
+2.  No **propriedades** windows, abra o <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> coleção clicando no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) botão ao lado de **colunas** entrada.  
   
 3.  Selecione a primeira coluna e altere o valor de sua <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propriedade para <xref:System.Windows.Forms.SizeType.AutoSize>. Clique em **OK** para aceitar a alteração. Observe que a largura da primeira coluna é reduzida para ajustar o <xref:System.Windows.Forms.Button> controle. Observe também que a largura da coluna não é redimensionável.  
   
@@ -181,13 +181,13 @@ Alguns aplicativos exigem um formulário com um layout que se organiza adequadam
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers (Experiência do usuário do Microsoft Windows, diretrizes oficiais para desenvolvedores e designers da interface do usuário). Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [Passo a passo: Criando um formulário do Windows redimensionável para entrada de dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [Passo a passo: Criando um formulário do Windows localizáveis](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
-- [Práticas recomendadas para o controle TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
-- [Visão geral da propriedade AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [Como: Encaixar controles nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [Como: Ancoragem de controles nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
-- [Passo a passo: Definindo o layout dos Windows Forms controles com preenchimento, margens e a propriedade AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+- [Práticas recomendadas para o controle TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
+- [Visão geral da propriedade AutoSize](autosize-property-overview.md)
+- [Como: Encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Como: Ancoragem de controles nos Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Passo a passo: Definindo o layout dos Windows Forms controles com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: 18a9a4bca42117233c4b01a4aeb6cffcb79119d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4036b6e12d8c4df2c4edfd5df293160d9197b61a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726397"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717057"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Como: Mostrar uma lista de fontes com o componente FontDialog
-O componente [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) permite aos usuários selecionar uma fonte, bem como alterar seus aspectos de exibição, como peso e tamanho.  
+O componente [FontDialog](fontdialog-component-windows-forms.md) permite aos usuários selecionar uma fonte, bem como alterar seus aspectos de exibição, como peso e tamanho.  
   
  A fonte selecionada na caixa de diálogo é retornada no <xref:System.Windows.Forms.FontDialog.Font%2A> propriedade. Assim, tirar proveito da fonte selecionada pelo usuário é tão fácil quanto ler uma propriedade.  
   
@@ -78,4 +78,4 @@ O componente [FontDialog](../../../../docs/framework/winforms/controls/fontdialo
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.FontDialog>
-- [Componente FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+- [Componente FontDialog](fontdialog-component-windows-forms.md)

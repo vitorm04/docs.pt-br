@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655992"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710531"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Desabilitar o reconhecimento de DPI no Visual Studio
 
@@ -21,11 +21,11 @@ O Visual Studio é um pontos por polegada (DPI) com suporte a aplicativo, o que 
 
 O **Designer de formulários do Windows** no Visual Studio não tem suporte a dimensionamento. Isso causa problemas de exibição quando você abrir alguns formulários na **Designer de formulários do Windows** em alta pontos por polegada (HDPI) monitores. Para obter exemplos, os controles podem aparecer sobrepor conforme mostrado na imagem a seguir:
 
-![Designer de formulários do Windows no monitor HDPI](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![Designer de formulários do Windows no monitor HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
 No Visual Studio 2017 versão 15,8 e posterior, quando você abre um formulário na **Designer de formulários do Windows** em um monitor HDPI, o Visual Studio exibe uma amarela informativa barra na parte superior do designer:
 
-![Barra informativa no Visual Studio para reiniciar no modo de reconhecimento de DPI](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![Barra informativa no Visual Studio para reiniciar no modo de reconhecimento de DPI](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Lê a mensagem **colocação em escala no vídeo principal está definida para 200% (192 dpi). Isso pode causar problemas de renderização na janela do designer.**
 
@@ -75,7 +75,7 @@ Você pode optar por não ser notificado de DPI problemas de dimensionamento no 
 
 Para desabilitar as notificações, escolha **ferramentas** > **opções** para abrir o **opções** caixa de diálogo. Em seguida, escolha **Designer de formulários do Windows** > **geral**e defina **notificações de dimensionamento de DPI** para **False**.
 
-![Dimensionamento DPI opção notificações em Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![Dimensionamento DPI opção notificações em Visual Studio](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 Se você quiser reabilitar posteriormente notificações de dimensionamento, defina a propriedade como **verdadeira**.
 

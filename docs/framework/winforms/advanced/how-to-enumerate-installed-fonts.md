@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: 0124d2bdd8b9c60dc2bf2508348044d76a2c7eb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34234ee0400e1d2ca36f2f559b63d282f590ca0d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602228"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709869"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>Como: Enumerar as fontes instaladas
 O <xref:System.Drawing.Text.InstalledFontCollection> herda o <xref:System.Drawing.Text.FontCollection> classe base abstrata. Você pode usar um <xref:System.Drawing.Text.InstalledFontCollection> objeto para enumerar as fontes instaladas no computador. O <xref:System.Drawing.Text.FontCollection.Families%2A> propriedade de um <xref:System.Drawing.Text.InstalledFontCollection> objeto é uma matriz de <xref:System.Drawing.FontFamily> objetos.  
@@ -23,13 +23,13 @@ O <xref:System.Drawing.Text.InstalledFontCollection> herda o <xref:System.Drawin
   
  Se você executar o código de exemplo, a saída será semelhante ao mostrado na ilustração a seguir.  
   
- ![Fontes instaladas](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")  
+ ![Fontes instaladas](./media/csfontstext6.png "csfontstext6")  
   
- [!code-csharp[System.Drawing.FontsAndText#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.FontsAndText#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.FontsAndText#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.FontsAndText#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>. Além disso, você deve importar o <xref:System.Drawing.Text> namespace.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando fontes e texto](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [Usando fontes e texto](using-fonts-and-text.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: b40c45905c65cdc40d77553a93e83aa417199826
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643541"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723056"
 ---
 # <a name="windows-forms-control-development-basics"></a>Noções básicas sobre o desenvolvimento de controle dos Windows Forms
 Um controle dos Windows Forms é uma classe que deriva direta ou indiretamente <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. A lista a seguir descreve os cenários comuns para o desenvolvimento de controles do Windows Forms:  
   
 -   Combinando controles existentes para criar um controle composto.  
   
-     Controles compostos encapsulam uma interface do usuário que pode ser reutilizada como um controle. Um exemplo de um controle composto é um controle que consiste em uma caixa de texto e um botão de redefinição. Designers visuais dão suporte avançado para a criação de controles compostos. Para criar um controle composto, derivam <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. A classe base <xref:System.Windows.Forms.UserControl> fornece o roteamento de teclado para controles filho e permite que os controles filho funcionem como um grupo. Para obter mais informações, consulte [Desenvolvendo um controle composto do Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
+     Controles compostos encapsulam uma interface do usuário que pode ser reutilizada como um controle. Um exemplo de um controle composto é um controle que consiste em uma caixa de texto e um botão de redefinição. Designers visuais dão suporte avançado para a criação de controles compostos. Para criar um controle composto, derivam <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. A classe base <xref:System.Windows.Forms.UserControl> fornece o roteamento de teclado para controles filho e permite que os controles filho funcionem como um grupo. Para obter mais informações, consulte [Desenvolvendo um controle composto do Windows Forms](developing-a-composite-windows-forms-control.md).  
   
 -   Estendendo um controle existente para personalizá-la ou aumentar sua funcionalidade.  
   
@@ -26,12 +26,12 @@ Um controle dos Windows Forms é uma classe que deriva direta ou indiretamente <
   
 -   Criando um controle que não combina ou estende os controles existentes.  
   
-     Nesse cenário, derive o controle da classe base <xref:System.Windows.Forms.Control>. Você pode adicionar e substituir propriedades, métodos e eventos da classe base. Para começar, consulte [como: Desenvolver um controle de formulários do Windows simples](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+     Nesse cenário, derive o controle da classe base <xref:System.Windows.Forms.Control>. Você pode adicionar e substituir propriedades, métodos e eventos da classe base. Para começar, consulte [como: Desenvolver um controle de formulários do Windows simples](how-to-develop-a-simple-windows-forms-control.md).  
   
  A classe base para controles dos Windows Forms, <xref:System.Windows.Forms.Control>, fornece a estrutura necessária para a exibição visual em aplicativos baseados em Windows do lado do cliente. <xref:System.Windows.Forms.Control> Fornece um identificador de janela, manipula o roteamento de mensagens e fornece eventos de mouse e teclado, assim como muitos outro usuário eventos de interface. Ele fornece um layout avançado e tem as propriedades específicas para a exibição visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e muitos outros. Além disso, ele fornece segurança, suporte a threading e interoperabilidade com controles ActiveX. Como grande parte da infraestrutura é fornecida pela classe base, é relativamente fácil desenvolver seus próprios controles do Windows Forms.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Desenvolver um controle de formulários do Windows simples](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [Desenvolvendo um controle de composição dos Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
-- [Como: Criar um controle de formulários do Windows que mostre o progresso](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)
-- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Como: Desenvolver um controle de formulários do Windows simples](how-to-develop-a-simple-windows-forms-control.md)
+- [Desenvolvendo um controle de composição dos Windows Forms](developing-a-composite-windows-forms-control.md)
+- [Como: Criar um controle de formulários do Windows que mostre o progresso](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)

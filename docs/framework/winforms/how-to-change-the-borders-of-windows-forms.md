@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 5efda369b2059afd350fc947b706fb9f4c27ae14
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664439"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713898"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Como: Alterar as bordas de formulários do Windows
 Você tem vários estilos de borda para escolher quando estiver determinando a aparência e comportamento dos Windows Forms. Alterando o <xref:System.Windows.Forms.Form.FormBorderStyle%2A> propriedade, você pode controlar o comportamento de redimensionamento do formulário. Além disso, definindo o <xref:System.Windows.Forms.Form.FormBorderStyle%2A> afeta como a barra de legenda é exibida, bem como quais botões podem aparecer nela. Para obter mais informações, consulte <xref:System.Windows.Forms.FormBorderStyle>.  
@@ -46,4 +46,4 @@ Você tem vários estilos de borda para escolher quando estiver determinando a a
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
-- [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Guia de introdução ao Windows Forms](getting-started-with-windows-forms.md)

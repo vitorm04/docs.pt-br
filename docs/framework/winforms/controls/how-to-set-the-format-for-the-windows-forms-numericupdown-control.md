@@ -9,12 +9,12 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: 5574faf858c32752cfa99b6bf339ddf06cb6b345
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c387fe593082e08ad39cb4582c946ca986a79e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631003"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713924"
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Como: Defina o formato para o controle do Windows Forms NumericUpDown
 Você pode configurar como os valores são exibidos nos formulários de Windows <xref:System.Windows.Forms.NumericUpDown> controle. O <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> propriedade determina quantos números aparecem após o ponto decimal; o padrão é 0. O <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> propriedade determina se um separador será inserido entre cada três dígitos decimais; o padrão é `false`. O controle pode exibir valores em hexadecimal, em vez de formato decimal, se o <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> estiver definida como `true`; o padrão é `false`.  
@@ -59,5 +59,5 @@ Você pode configurar como os valores são exibidos nos formulários de Windows 
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.NumericUpDown>
-- [Controle NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)
-- [Visão geral do controle NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+- [Controle NumericUpDown](numericupdown-control-windows-forms.md)
+- [Visão geral do controle NumericUpDown](numericupdown-control-overview-windows-forms.md)

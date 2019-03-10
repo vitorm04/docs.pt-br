@@ -9,27 +9,27 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: 84e01e3c8b2275f910c7daf3de31d1ffbe891171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539832"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713703"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>Controle MaskedTextBox (Windows Forms)
-Este tópico contém links para outras pessoas sobre o `MaskedTextBox` controle.  
+Este tópico vincula a outras pessoas sobre o `MaskedTextBox` controle.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Instruções passo a passo: trabalhando com o controle MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
- Demonstra os recursos principais do `MaskedTextBox` controle.  
+ [Passo a passo: Trabalhando com o controle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
+ Demonstra os principais recursos do `MaskedTextBox` controle.  
   
- [Como associar dados ao controle MaskedTextBox](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
+ [Como: Associar dados ao controle MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
  Demonstra como reformatar os dados quando os dados no banco de dados não coincide com o formato esperado pela sua definição de máscara.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.MaskedTextBox>  
- A classe principal para a implementação de controle da caixa de texto mascarada.  
+ A classe principal para a implementação de controle de caixa de texto mascarada.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

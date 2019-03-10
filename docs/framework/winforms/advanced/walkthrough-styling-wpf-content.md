@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ef81d9272acdddfc7d547de6f44725481e55dc3e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303719"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712390"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Passo a passo: Criando o conteúdo WPF
 Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Windows Presentation Foundation) hospedado em um Windows Form.
@@ -47,7 +47,7 @@ Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Wi
   
 #### <a name="to-create-wpf-control-types"></a>Criar tipos de controle WPF  
   
-1.  Adicione um novo WPF <xref:System.Windows.Controls.UserControl> projeto à solução. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, confira [Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Adicione um novo WPF <xref:System.Windows.Controls.UserControl> projeto à solução. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, confira [Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
 2.  No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, confira [Como: Selecionar e mover elementos na superfície de Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
   
@@ -76,7 +76,7 @@ Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Wi
   
 4.  Na exibição XAML, insira o seguinte XAML após a marca de abertura `<UserControl>`.  
   
-     Esse XAML cria um gradiente com uma borda gradiente de contraste. Ao clicar no controle, os gradientes são alterados para gerar uma aparência de botão pressionado. Para obter mais informações, consulte [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+     Esse XAML cria um gradiente com uma borda gradiente de contraste. Ao clicar no controle, os gradientes são alterados para gerar uma aparência de botão pressionado. Para obter mais informações, consulte [Estilo e modelagem](../../wpf/controls/styling-and-templating.md).  
   
 ```xaml  
 <UserControl.Resources>  
@@ -152,8 +152,8 @@ Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Wi
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [Usando Controles do WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Migração e interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
+- [Usando Controles do WPF](using-wpf-controls.md)
 - [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Visão geral de XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [Estilo e modelagem](../../wpf/controls/styling-and-templating.md)

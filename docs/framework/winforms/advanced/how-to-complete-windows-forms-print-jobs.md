@@ -9,17 +9,17 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f7504d645ea1fca6f45b17f79eb576919b782263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ae20e4fdc3a4fc3de8c462c355bcc700eddf22e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572819"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711727"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Como: Trabalhos de impressão de formulários do Windows completa
 Frequentemente, processadores de texto e outros aplicativos que envolvem impressão fornecerão a opção para exibir uma mensagem aos usuários de que um trabalho de impressão foi concluído. Você pode fornecer essa funcionalidade em seus formulários do Windows manipulando o <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventos do <xref:System.Drawing.Printing.PrintDocument> componente.  
   
- O procedimento a seguir requer que você tenha criado um aplicativo baseado em Windows com um <xref:System.Drawing.Printing.PrintDocument> componente nele, que é a maneira padrão de habilitar a impressão de um aplicativo baseado em Windows. Para obter mais informações sobre impressão nos Windows Forms usando o <xref:System.Drawing.Printing.PrintDocument> componente, consulte [como: Criar trabalhos de impressão padrão do Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md).  
+ O procedimento a seguir requer que você tenha criado um aplicativo baseado em Windows com um <xref:System.Drawing.Printing.PrintDocument> componente nele, que é a maneira padrão de habilitar a impressão de um aplicativo baseado em Windows. Para obter mais informações sobre impressão nos Windows Forms usando o <xref:System.Drawing.Printing.PrintDocument> componente, consulte [como: Criar trabalhos de impressão padrão do Windows Forms](how-to-create-standard-windows-forms-print-jobs.md).  
   
 ### <a name="to-complete-a-print-job"></a>Para concluir um trabalho de impressão  
   
@@ -82,4 +82,4 @@ Frequentemente, processadores de texto e outros aplicativos que envolvem impress
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Suporte à impressão nos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)

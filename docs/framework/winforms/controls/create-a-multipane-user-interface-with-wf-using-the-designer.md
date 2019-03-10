@@ -6,17 +6,17 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 923f913d8dd44aeef5d0b661e9408c6c50acd98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664220"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713768"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Como: Criar uma Interface do usuário Multipainel com Windows Forms usando o Designer
 No procedimento a seguir, você vai criar uma interface do usuário com vários painéis semelhante à que é usada no Microsoft Outlook, com uma lista **Pasta**, um painel **Mensagens** e um painel **Visualização**. Essa organização é obtida principalmente por meio de controles de encaixe com o formulário.  
   
- Ao encaixar um controle, você determina a qual borda do contêiner pai um controle é fixado. Portanto, se você definir a <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade para <xref:System.Windows.Forms.DockStyle.Right>, a borda direita do controle será encaixada na borda direita do controle pai. Além disso, a borda encaixada do controle será redimensionada para corresponder à borda de sua caixa de controles. Para obter mais informações sobre como o <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade funciona, consulte [como: Encaixar controles nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ Ao encaixar um controle, você determina a qual borda do contêiner pai um controle é fixado. Portanto, se você definir a <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade para <xref:System.Windows.Forms.DockStyle.Right>, a borda direita do controle será encaixada na borda direita do controle pai. Além disso, a borda encaixada do controle será redimensionada para corresponder à borda de sua caixa de controles. Para obter mais informações sobre como o <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade funciona, consulte [como: Encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md).  
   
  Este procedimento se concentra em Organizando o <xref:System.Windows.Forms.SplitContainer> e os outros controles no formulário, não na adição de funcionalidade para fazer com que o aplicativo simular o Microsoft Outlook.  
   
@@ -44,8 +44,8 @@ No procedimento a seguir, você vai criar uma interface do usuário com vários 
     > [!NOTE]
     >  Quando você colocar o ponteiro do mouse sobre qualquer um dos divisores dentro de <xref:System.Windows.Forms.SplitContainer> controles, você pode redimensionar as dimensões internas.  
   
-     Neste ponto no desenvolvimento de aplicativos, você criou uma interface do usuário sofisticada. A próxima etapa é prosseguir com a programação do aplicativo em si, talvez conectando-se a <xref:System.Windows.Forms.TreeView> controle e <xref:System.Windows.Forms.ListView> controles para algum tipo de fonte de dados. Para obter mais informações sobre como conectar controles a dados, consulte [Vinculação de dados e Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md).  
+     Neste ponto no desenvolvimento de aplicativos, você criou uma interface do usuário sofisticada. A próxima etapa é prosseguir com a programação do aplicativo em si, talvez conectando-se a <xref:System.Windows.Forms.TreeView> controle e <xref:System.Windows.Forms.ListView> controles para algum tipo de fonte de dados. Para obter mais informações sobre como conectar controles a dados, consulte [Vinculação de dados e Windows Forms](../data-binding-and-windows-forms.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.SplitContainer>
-- [Controle SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Controle SplitContainer](splitcontainer-control-windows-forms.md)

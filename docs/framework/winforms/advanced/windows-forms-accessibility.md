@@ -5,30 +5,30 @@ helpviewer_keywords:
 - Windows Forms controls, accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 23a3f168-ebc0-4f23-9efc-799109aa4a2d
-ms.openlocfilehash: 813507fbb5fcffebfa2430f28245f37b82f3e3f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a01a0456dfef6e89f0cf1b3608a07cb359d4497
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524648"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702367"
 ---
 # <a name="windows-forms-accessibility"></a>Acessibilidade dos Windows Forms
-A funcionalidade de acessibilidade dos Windows Forms permite que você disponibilize seu aplicativo para uma ampla variedade de usuários.  
+A funcionalidade de acessibilidade dos Windows Forms permite que você disponibilizar seu aplicativo a uma ampla variedade de usuários.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Instruções passo a passo: criando um aplicativo acessível baseado no Windows](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
+ [Passo a passo: Criando um aplicativo acessível baseado em Windows](walkthrough-creating-an-accessible-windows-based-application.md)  
  Descreve todos os recursos que você deve dar suporte para aumentar a acessibilidade.  
   
 ## <a name="reference"></a>Referência  
  <xref:Accessibility>  
- Um namespace contendo um número de classes relacionadas a acessibilidade.  
+ Um namespace que contém um número de classes relacionadas à acessibilidade.  
   
  <xref:System.Windows.Forms.AccessibleObject>  
  Fornece informações que os aplicativos de acessibilidade usam para ajustar a interface do usuário de um aplicativo para os usuários portadores de deficiências.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Fornecendo informações de acessibilidade para controles em um Windows Form](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Descreve como fornecer informações que podem usar controles de formulários do Windows para ajudar os usuários com deficiências.  
+ [Fornecendo informações de acessibilidade para controles em um Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ Descreve como fornecer informações que controles dos Windows Forms podem usar para ajudar os usuários com deficiências.  
   
- [Dimensionamento automático no Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
- Descreve como fazer seu aplicativo reagir a alterações no tamanho de fonte de sistema do Windows Forms.
+ [Dimensionamento automático no Windows Forms](../automatic-scaling-in-windows-forms.md)  
+ Descreve como fazer os formulários do Windows aplicativo reagir a alterações no tamanho de fonte de sistema.

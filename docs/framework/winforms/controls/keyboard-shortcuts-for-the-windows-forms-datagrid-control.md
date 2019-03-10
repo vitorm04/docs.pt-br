@@ -5,16 +5,16 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509526"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711766"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Atalhos de teclado para o controle DataGrid dos Windows Forms
 > [!NOTE]
->  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  A tabela a seguir lista os atalhos de teclado que podem ser usados para navegação dentro do Windows Forms <xref:System.Windows.Forms.DataGrid> controle:  
   
@@ -51,5 +51,5 @@ ms.locfileid: "54509526"
 |Insira um <xref:System.DBNull.Value?displayProperty=nameWithType> valor em uma célula no modo de edição.|CTRL+0|  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral do controle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [Controle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Visão geral do controle DataGrid](datagrid-control-overview-windows-forms.md)
+- [Controle DataGrid](datagrid-control-windows-forms.md)
