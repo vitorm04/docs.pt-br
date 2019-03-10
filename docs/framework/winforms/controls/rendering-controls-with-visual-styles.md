@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664348"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708048"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderizando controles com estilos visuais
 O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à renderização de controles e outros elementos da interface do usuário do Windows usando estilos visuais em sistemas operacionais que dão suporte a eles. Este tópico discute os vários níveis de suporte no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para renderizar controles e outros elementos da interface do usuário com o estilo visual atual do sistema operacional.  
@@ -49,7 +49,7 @@ O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à
   
 -   <xref:System.Windows.Forms.TrackBarRenderer>  
   
- Para obter mais informações sobre como usar essas classes para desenhar um controle, consulte [como: Usar um classe de renderização do controle](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md).  
+ Para obter mais informações sobre como usar essas classes para desenhar um controle, consulte [como: Usar um classe de renderização do controle](how-to-use-a-control-rendering-class.md).  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>Elemento de estilo visual e classes de renderização  
  O <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace inclui classes que podem ser usadas para desenhar e obter informações sobre qualquer controle ou elemento de interface do usuário que é compatível com estilos visuais. Controles com suporte incluem controles comuns que têm uma classe de renderização no <xref:System.Windows.Forms?displayProperty=nameWithType> namespace (consulte a seção anterior), bem como outros controles, como controles de guia e controles rebar. Outros elementos de interface do usuário com suporte incluem as partes do menu **Iniciar**, a barra de tarefas e a área não cliente do Windows.  
@@ -58,7 +58,7 @@ O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> fornece os métodos que desenhar e obtém informações sobre cada <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> definido pelo estilo visual atual do sistema operacional. Informações que podem ser recuperadas sobre um elemento incluem seu tamanho padrão, o tipo de tela de fundo e definições de cores. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> encapsula a funcionalidade dos estilos visuais (UxTheme) API da parte do Shell do Windows do Windows Platform SDK. Para obter mais informações, consulte [habilitando estilos visuais](/windows/desktop/controls/cookbook-overview).  
   
- Para obter mais informações sobre como usar <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> e <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, consulte [como: Renderizar um elemento de estilo Visual](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
+ Para obter mais informações sobre como usar <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> e <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, consulte [como: Renderizar um elemento de estilo Visual](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Habilitar estilos visuais  
  Para habilitar os estilos visuais para um aplicativo escrito para o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versão 1.0, os programadores devem incluir um manifesto do aplicativo que especifique que o ComCtl32.dll versão 6 ou posterior será usado para desenhar controles. Aplicativos criados com o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versão 1.1 ou posterior pode usar o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método da <xref:System.Windows.Forms.Application> classe.  
@@ -79,4 +79,4 @@ O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à
 >  Se você quiser usar <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> para renderizar um controle ou elemento de interface do usuário quando o usuário ativa ou alterna os estilos visuais, certifique-se de que você faça isso ao lidar com o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> eventos em vez do <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> eventos. Uma exceção será gerada se você usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> quando a manipulação de classe <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Pintura e renderização de controle personalizado](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+- [Pintura e renderização de controle personalizado](custom-control-painting-and-rendering.md)

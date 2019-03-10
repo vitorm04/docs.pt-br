@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0b87034487ef0f2cabed786354682f394500cafc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664413"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707879"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Como: Testar o comportamento de tempo de execução de um UserControl
 Quando você desenvolve um <xref:System.Windows.Forms.UserControl>, você precisa testar seu comportamento de tempo de execução. É possível criar um projeto de aplicativo separado do Windows e colocar o controle em um formulário de teste, porém esse procedimento é inconveniente. Uma maneira mais rápida e fácil é usar o **Contêiner de teste de UserControl** fornecido pelo Visual Studio. Esse contêiner de teste é iniciado diretamente do seu projeto de biblioteca de controles do Windows.  
@@ -68,7 +68,7 @@ Quando você desenvolve um <xref:System.Windows.Forms.UserControl>, você precis
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.UserControl>
-- [Como: Criar controles compostos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
-- [Passo a passo: Criando um controle composto com o Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Passo a passo: Criando um controle composto com VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Como: Criar controles compostos](how-to-author-composite-controls.md)
+- [Passo a passo: Criando um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Passo a passo: Criando um controle composto com VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Designer de Controle de Usuário](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: 285a35012c4417e4ee39bf8c72e85bd6102d3e23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8efb783fcb5bcbe9c4ee99bc784e27a1aebb0cf
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594441"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707658"
 ---
 # <a name="system-information-and-windows-forms"></a>Informações do sistema e o Windows Forms
 Às vezes, é necessário obter informações sobre o computador em que o aplicativo está sendo executado para tomar decisões em seu código. Por exemplo, você pode ter uma função que só é aplicável quando conectada a um domínio de rede específico; Nesse caso, você precisaria de uma maneira de determinar o domínio e desabilitar a função se o domínio não estiver presente.  
@@ -44,4 +44,4 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.SystemInformation>
-- [Gerenciamento de Energia nos Windows Forms](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)
+- [Gerenciamento de Energia nos Windows Forms](power-management-in-windows-forms.md)

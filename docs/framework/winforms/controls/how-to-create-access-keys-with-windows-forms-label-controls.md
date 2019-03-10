@@ -17,12 +17,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: a1317f34b39c5689e285f8822fff9bfcc42db1d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680308"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708295"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Como: Criar chaves de acesso com controles de rótulo dos Windows Forms
 Windows Forms <xref:System.Windows.Forms.Label> controles podem ser usados para definir chaves de acesso para outros controles. Ao definir uma tecla de acesso em um controle de rótulo, o usuário pode pressionar a tecla ALT mais o caractere designado para mover o foco para o controle seguinte na ordem de tabulação. Como os rótulos não podem receber o foco, este é movido automaticamente para o próximo controle na ordem de tabulação. Use essa técnica para atribuir teclas de acesso a caixas de texto, caixas de combinação, caixas de listagem e grades de dados.  
@@ -37,7 +37,7 @@ Windows Forms <xref:System.Windows.Forms.Label> controles podem ser usados para 
   
 2.  Defina o rótulo <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriedade para `true`.  
   
-3.  Use um e comercial (&) no rótulo do <xref:System.Windows.Forms.Label.Text%2A> propriedade para atribuir a chave de acesso para o rótulo. Para obter mais informações, consulte [Criando teclas de acesso para controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  
+3.  Use um e comercial (&) no rótulo do <xref:System.Windows.Forms.Label.Text%2A> propriedade para atribuir a chave de acesso para o rótulo. Para obter mais informações, consulte [Criando teclas de acesso para controles dos Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md).  
   
     > [!NOTE]
     >  Pode ser útil exibir o E comercial em um controle de rótulo, em vez de usá-lo para criar teclas de acesso. Isso poderá ocorrer se você associar um controle de rótulo a um campo em um conjunto de registros em que os dados incluem o E comercial. Para exibir e comercial em um controle de rótulo, defina as <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriedade para `false`. Se você quiser exibir o e comercial e também ter uma chave de acesso, defina as <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriedade para `true` e indique a chave de acesso com um e comercial (&) e o e comercial para exibir com dois es comerciais.  
@@ -64,6 +64,6 @@ Windows Forms <xref:System.Windows.Forms.Label> controles podem ser usados para 
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Dimensionar um controle de rótulo do Windows Forms para ajustar seu conteúdo](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Visão geral do controle Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [Controle de rótulo](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+- [Como: Dimensionar um controle de rótulo do Windows Forms para ajustar seu conteúdo](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Visão geral do controle Label](label-control-overview-windows-forms.md)
+- [Controle de rótulo](label-control-windows-forms.md)

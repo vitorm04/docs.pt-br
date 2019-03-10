@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 05b127099b85188b0df2f1f7821ceb147cc41e1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698954"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705217"
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Como: Exibir uma página da Web de um controle LinkLabel dos Windows Forms (Visual Basic)
 Este exemplo exibe uma página da Web no navegador padrão, quando um usuário clica em um Windows Forms <xref:System.Windows.Forms.LinkLabel> controle.  
@@ -51,4 +51,4 @@ End Sub
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.LinkLabel>
-- [Controle LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [Controle LinkLabel](linklabel-control-windows-forms.md)

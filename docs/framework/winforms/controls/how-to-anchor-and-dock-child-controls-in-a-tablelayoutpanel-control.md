@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: cfa0d374bf08ab1ea1753ed46e3e87ca177343b6
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a4fcb4e527825a9946861a46dc336db227e52296
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219848"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709609"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel
 O <xref:System.Windows.Forms.TableLayoutPanel> controlar dá suporte a <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> propriedades em seus controles filho.  
@@ -62,20 +62,20 @@ O <xref:System.Windows.Forms.TableLayoutPanel> controlar dá suporte a <xref:Sys
 ## <a name="example"></a>Exemplo  
  A ilustração a seguir mostra cinco botões ancorados em cinco separado <xref:System.Windows.Forms.TableLayoutPanel> células.  
   
- ![Ancoragem TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")  
+ ![Ancoragem TableLayoutPanel](./media/vs-tlpanchor.gif "VS_TLPanchor")  
   
  A ilustração a seguir mostra quatro botões ancorados nos cantos de quatro separado <xref:System.Windows.Forms.TableLayoutPanel> células.  
   
- ![Ancoragem TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")  
+ ![Ancoragem TableLayoutPanel](./media/vs-tlpanchor2.gif "VS_TLPanchor2")  
   
  A ilustração a seguir mostra três botões alongados com ancoragem em três separado <xref:System.Windows.Forms.TableLayoutPanel> células.  
   
- ![Ancoragem TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")  
+ ![Ancoragem TableLayoutPanel](./media/vs-tlpanchor3.gif "VS_TLPAnchor3")  
   
  O exemplo de código a seguir demonstra todas as combinações de <xref:System.Windows.Forms.Control.Anchor%2A> valores de propriedades de um <xref:System.Windows.Forms.Button> de controle em um <xref:System.Windows.Forms.TableLayoutPanel> controle.  
   
- [!code-csharp[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/CS/TlpAnchorExampleForm.cs#1)]
- [!code-vb[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/VB/TlpAnchorExampleForm.vb#1)]  
+ [!code-csharp[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/CS/TlpAnchorExampleForm.cs#1)]
+ [!code-vb[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/VB/TlpAnchorExampleForm.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
@@ -86,4 +86,4 @@ O <xref:System.Windows.Forms.TableLayoutPanel> controlar dá suporte a <xref:Sys
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Controle TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+- [Controle TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: f838f94698375eca27027c4769fcc5f54f96528c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: b5da5895b39412052f83cb0a89c3852d28f264bb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443179"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707126"
 ---
 # <a name="helpprovider-component-windows-forms"></a>Componente HelpProvider (Windows Forms)
 Os formulários do Windows `HelpProvider` componente é usado para associar um arquivo de ajuda a Ajuda HTML 1.x (um arquivo. chm, produzido com o HTML Help Workshop, ou um arquivo. htm) com seu aplicativo baseado em Windows.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral do componente HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
+ [Visão geral do componente HelpProvider](helpprovider-component-overview-windows-forms.md)  
  Apresenta os conceitos gerais do `HelpProvider` componente, que permite que você associe um arquivo de Ajuda em HTML com um aplicativo baseado em Windows.  
   
- Ver [sistemas de Ajuda em aplicativos do Windows Forms](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).  
+ Ver [sistemas de Ajuda em aplicativos do Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.HelpProvider>  
@@ -30,7 +30,7 @@ Os formulários do Windows `HelpProvider` componente é usado para associar um a
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
  Consulte também [sistemas de Ajuda em aplicativos do Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).

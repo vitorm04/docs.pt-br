@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643566"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708334"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como: Criar um controle associado simples em um formulário do Windows
 Com a *associação simples*, é possível exibir um elemento de dados simples, como um valor de coluna de uma tabela de dados em um controle. Você pode associar de maneira simples qualquer propriedade de um controle a um valor de dados.  
@@ -20,7 +20,7 @@ Com a *associação simples*, é possível exibir um elemento de dados simples, 
   
 ### <a name="to-simple-bind-a-control"></a>Para associar de maneira simples um controle  
   
-1.  Conecte-se a uma fonte de dados. Para obter mais informações, consulte [Conectando a uma fonte de dados](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Conecte-se a uma fonte de dados. Para obter mais informações, consulte [Conectando a uma fonte de dados](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  No formulário, selecione o controle e abra exiba janela **Propriedades**.  
   
@@ -28,7 +28,7 @@ Com a *associação simples*, é possível exibir um elemento de dados simples, 
   
      As propriedades geralmente mais associadas são exibidas sob a propriedade **(DataBindings)**. Por exemplo, na maioria dos controles, a propriedade **Text** é vinculada com mais frequência.  
   
-4.  Se a propriedade que deseja associar não for uma das propriedades comumente vinculadas, clique no botão **Elipse** (![VisualStudioEllipsesButton screenshot](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) na caixa **(Avançado)** para exibir a caixa de diálogo **Formatação e associação avançada** com uma lista completa de propriedades para esse controle.  
+4.  Se a propriedade que deseja associar não for uma das propriedades comumente vinculadas, clique no botão **Elipse** (![VisualStudioEllipsesButton screenshot](./media/vbellipsesbutton.png "vbEllipsesButton")) na caixa **(Avançado)** para exibir a caixa de diálogo **Formatação e associação avançada** com uma lista completa de propriedades para esse controle.  
   
 5.  Selecione a propriedade que deseja associar e clique na seta suspensa em **Associação**.  
   
@@ -47,5 +47,5 @@ Com a *associação simples*, é possível exibir um elemento de dados simples, 
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.Binding>
-- [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Associação de dados do Windows Forms](windows-forms-data-binding.md)
+- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)

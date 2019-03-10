@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366693"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705981"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Como: Hospedar várias versões de uma fluxo de trabalho lado a lado
 O `WorkflowIdentity` fornece uma maneira para que os desenvolvedores de aplicativos de fluxo de trabalho associem um nome e uma versão a uma definição de fluxo de trabalho, e para que essas informações sejam associadas a uma instância de fluxo de trabalho persistida. Essas informações de identidade podem ser usadas por desenvolvedores de aplicativos de fluxo de trabalho para habilitar cenários como execução lado a lado de várias versões de uma definição de fluxo de trabalho, e fornece o pilar para outra funcionalidade como a atualização dinâmica. Esta etapa no tutorial demonstra como usar o `WorkflowIdentity` para hospedar ao mesmo tempo várias versões de um fluxo de trabalho.
@@ -21,22 +21,22 @@ O `WorkflowIdentity` fornece uma maneira para que os desenvolvedores de aplicati
 ## <a name="in-this-topic"></a>Neste tópico  
  Nesta etapa do tutorial, as atividades `WriteLine` no fluxo de trabalho são modificadas para fornecer informações adicionais e uma nova atividade `WriteLine` é adicionada. Uma cópia do assembly original do fluxo de trabalho é armazenada e o aplicativo host é atualizado de forma que possa executar os fluxos de trabalho atualizados e originais ao mesmo tempo.  
   
--   [Para fazer uma cópia do projeto NumberGuessWorkflowActivities](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [Para fazer uma cópia do projeto NumberGuessWorkflowActivities](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [Para atualizar os fluxos de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [Para atualizar os fluxos de trabalho](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [Para atualizar o fluxo de trabalho StateMachine](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [Para atualizar o fluxo de trabalho StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [Para atualizar o fluxo de trabalho de fluxograma](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [Para atualizar o fluxo de trabalho de fluxograma](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [Para atualizar o fluxo de trabalho sequencial](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [Para atualizar o fluxo de trabalho sequencial](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [Para compilar e executar o aplicativo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [Para compilar e executar o aplicativo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  Antes de seguir as etapas deste tópico, execute o aplicativo, inicie vários fluxos de trabalho de cada tipo e dê um ou dois palpites para cada um. Esses fluxos de trabalho persistidos são usados nesta etapa e a etapa a seguir, [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+>  Antes de seguir as etapas deste tópico, execute o aplicativo, inicie vários fluxos de trabalho de cada tipo e dê um ou dois palpites para cada um. Esses fluxos de trabalho persistidos são usados nesta etapa e a etapa a seguir, [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 > [!NOTE]
 >  Cada etapa do tutorial de Introdução depende das etapas anteriores. Se você não tiver concluído as etapas anteriores, você pode baixar uma versão completa do tutorial do [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -60,7 +60,7 @@ O `WorkflowIdentity` fornece uma maneira para que os desenvolvedores de aplicati
     > [!NOTE]
     >  As etapas deste tópico demonstram uma maneira de gerenciar os assemblies usados para conter várias versões dos fluxos de trabalho. Outros métodos como nomeação forte dos assemblies e registrando deles no cache de assembly global também podem ser usados.
 
-8.  Criar uma nova pasta chamada **NumberGuessWorkflowActivities_du** na mesma pasta que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**e o recentemente adicionado **PreviousVersions** pasta e copie todos os arquivos e subpastas do **NumberGuessWorkflowActivities** pasta para a nova  **NumberGuessWorkflowActivities_du** pasta. Essa cópia de backup do projeto para a versão inicial das atividades é usada em [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+8.  Criar uma nova pasta chamada **NumberGuessWorkflowActivities_du** na mesma pasta que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**e o recentemente adicionado **PreviousVersions** pasta e copie todos os arquivos e subpastas do **NumberGuessWorkflowActivities** pasta para a nova  **NumberGuessWorkflowActivities_du** pasta. Essa cópia de backup do projeto para a versão inicial das atividades é usada em [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Abra novamente o **WF45GettingStartedTutorial** solução no Visual Studio 2012.
 
@@ -580,4 +580,4 @@ O `WorkflowIdentity` fornece uma maneira para que os desenvolvedores de aplicati
 
 4.  Alterne novamente para o aplicativo de palpite de número e selecione um dos fluxos de trabalho que foi iniciado antes que as atualizações foram feitas. Você pode identificar a versão do fluxo de trabalho selecionado no momento examinando as informações de versão que são exibidas embaixo da janela de status. Insira alguns palpites e observe que as atualizações de status correspondem à saída da atividade `WriteLine` da versão anterior, e não incluem o palpite do usuário. Isso ocorre porque esses fluxos de trabalho estão usando a definição do fluxo de trabalho anterior que não tem as atualizações `WriteLine`.
 
-     Na próxima etapa, [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), a execução `v1` instâncias de fluxo de trabalho são atualizadas para conter a nova funcionalidade como a `v2` instâncias.
+     Na próxima etapa, [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](how-to-update-the-definition-of-a-running-workflow-instance.md), a execução `v1` instâncias de fluxo de trabalho são atualizadas para conter a nova funcionalidade como a `v2` instâncias.

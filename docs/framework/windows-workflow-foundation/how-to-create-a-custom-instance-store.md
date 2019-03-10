@@ -2,16 +2,16 @@
 title: 'Como: Criar um Store de instância personalizado'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503184"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707762"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Como: Criar um Store de instância personalizado
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contém <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, um armazenamento de instância que usa o SQL Server para persistir dados de fluxo de trabalho. Se seu aplicativo é necessário manter dados de fluxo de trabalho para outro meio, como um base de dados diferente ou um sistema de arquivos, você pode implementar um armazenamento personalizado de instância. Um armazenamento personalizado de instância é criado estendendo a classe abstrata de <xref:System.Runtime.DurableInstancing.InstanceStore> e implementar métodos que são necessários para a implementação. Para uma implementação completa de um armazenamento personalizado de instância, consulte o [processo de compra corporativo](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemplo.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contém <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, um armazenamento de instância que usa o SQL Server para persistir dados de fluxo de trabalho. Se seu aplicativo é necessário manter dados de fluxo de trabalho para outro meio, como um base de dados diferente ou um sistema de arquivos, você pode implementar um armazenamento personalizado de instância. Um armazenamento personalizado de instância é criado estendendo a classe abstrata de <xref:System.Runtime.DurableInstancing.InstanceStore> e implementar métodos que são necessários para a implementação. Para uma implementação completa de um armazenamento personalizado de instância, consulte o [processo de compra corporativo](./samples/corporate-purchase-process.md) exemplo.
 
 ## <a name="implementing-the-begintrycommand-method"></a>Implementando o método de BeginTryCommand
 
@@ -226,11 +226,11 @@ O <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> é en
 
 ## <a name="using-a-custom-instance-store"></a>Usando um armazenamento personalizado de instância
 
-Para implementar um armazenamento personalizado de instância, atribua uma instância da instância a <xref:System.Activities.WorkflowApplication.InstanceStore%2A>, e implementar o método <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> . Consulte o [como: Criar e executar um fluxo de trabalho de execução longa](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) tutorial para obter informações específicas.
+Para implementar um armazenamento personalizado de instância, atribua uma instância da instância a <xref:System.Activities.WorkflowApplication.InstanceStore%2A>, e implementar o método <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> . Consulte o [como: Criar e executar um fluxo de trabalho de execução longa](how-to-create-and-run-a-long-running-workflow.md) tutorial para obter informações específicas.
 
 ## <a name="a-sample-instance-store"></a>Um armazenamento de instância de exemplo
 
-O exemplo de código a seguir é uma implementação completa da instância, tirada os [processo de compra corporativo](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemplo. Esse armazenamento de instância persistir dados de fluxo de trabalho a um arquivo XML usando.
+O exemplo de código a seguir é uma implementação completa da instância, tirada os [processo de compra corporativo](./samples/corporate-purchase-process.md) exemplo. Esse armazenamento de instância persistir dados de fluxo de trabalho a um arquivo XML usando.
 
 ```csharp
 using System;

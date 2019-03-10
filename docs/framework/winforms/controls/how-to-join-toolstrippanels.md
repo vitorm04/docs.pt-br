@@ -8,12 +8,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], joining together
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
-ms.openlocfilehash: cebfcb417dc011ed8990e9d536cd165c2a92cb68
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 297e3bfec9bb24fb2c06e903a5f32410618812d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260732"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703667"
 ---
 # <a name="how-to-join-toolstrippanels"></a>Como: Unir ToolStripPanels
 Você pode unir <xref:System.Windows.Forms.ToolStrip> controles a um <xref:System.Windows.Forms.ToolStripPanel> em tempo de execução, que fornece a flexibilidade de aplicativos de interface de documentos múltiplos (MDI).  
@@ -21,8 +21,8 @@ Você pode unir <xref:System.Windows.Forms.ToolStrip> controles a um <xref:Syste
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra como unir <xref:System.Windows.Forms.ToolStrip> controles a um <xref:System.Windows.Forms.ToolStripPanel>.  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#11)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#11)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#11)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
@@ -34,4 +34,4 @@ Você pode unir <xref:System.Windows.Forms.ToolStrip> controles a um <xref:Syste
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Como: Usar ToolStripPanels para MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)
+- [Como: Usar ToolStripPanels para MDI](how-to-use-toolstrippanels-for-mdi.md)

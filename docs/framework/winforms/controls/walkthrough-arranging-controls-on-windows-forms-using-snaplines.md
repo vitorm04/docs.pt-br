@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748028"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703589"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O Designer de Formulários do Windows fornece várias ferramentas de layout para fazer isso. Um dos mais importantes é a <xref:System.Windows.Forms.Design.Behavior.SnapLine> recurso.  
@@ -92,7 +92,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 > [!NOTE]
 >  Se o formulário <xref:System.Windows.Forms.Control.Padding%2A> estiver definida como 0,0,0,0, o Designer de formulários do Windows fornecerá ao formulário como um sombreado <xref:System.Windows.Forms.Control.Padding%2A> valor 9,9,9,9. Para substituir esse comportamento, atribua um valor diferente de 0,0,0,0.  
   
-1.  Alterar o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Margin%2A> propriedade expandindo o <xref:System.Windows.Forms.Control.Margin%2A> entrada no **propriedades** janela e definindo o <xref:System.Windows.Forms.Padding.All%2A> propriedade como 0. Para obter detalhes, consulte [passo a passo: Definindo o layout dos Windows Forms a controles com preenchimento, margens e a propriedade AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).  
+1.  Alterar o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Margin%2A> propriedade expandindo o <xref:System.Windows.Forms.Control.Margin%2A> entrada no **propriedades** janela e definindo o <xref:System.Windows.Forms.Padding.All%2A> propriedade como 0. Para obter detalhes, consulte [passo a passo: Definindo o layout dos Windows Forms a controles com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md).  
   
 2.  Mover o <xref:System.Windows.Forms.Button> controle perto da borda direita do formulário até que apareça um guia de alinhamento. Essa distância agora é fornecida pelo valor no formato <xref:System.Windows.Forms.Control.Padding%2A> propriedade.  
   
@@ -154,7 +154,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
   
 1.  Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** para seu formulário.  
   
-2.  Redimensionar o <xref:System.Windows.Forms.Button> controle capturando uma das alças de dimensionamento e arrastando o canto. Para obter detalhes, confira [Como: Redimensionar controles nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+2.  Redimensionar o <xref:System.Windows.Forms.Button> controle capturando uma das alças de dimensionamento e arrastando o canto. Para obter detalhes, confira [Como: Redimensionar controles nos Windows Forms](how-to-resize-controls-on-windows-forms.md).  
   
 3.  Arraste a alça de dimensionamento até que um do <xref:System.Windows.Forms.Button> bordas do controle é alinhado com outro controle. Observe que uma guia de alinhamento aparece. Observe também que a alça de dimensionamento se encaixa na posição indicada pela guia de alinhamento.  
   
@@ -165,7 +165,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>Para alinhar um rótulo a um texto do controle  
   
-1.  Arraste uma <xref:System.Windows.Forms.TextBox> controlar do **caixa de ferramentas** para seu formulário. Quando você solta o <xref:System.Windows.Forms.TextBox> controle para o formulário, clique no glifo de marca inteligente e selecione o **definir texto para textBox1** opção. Para obter detalhes, consulte [passo a passo: Executar tarefas comuns usando Smart Tags em Windows Forms a controles](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).  
+1.  Arraste uma <xref:System.Windows.Forms.TextBox> controlar do **caixa de ferramentas** para seu formulário. Quando você solta o <xref:System.Windows.Forms.TextBox> controle para o formulário, clique no glifo de marca inteligente e selecione o **definir texto para textBox1** opção. Para obter detalhes, consulte [passo a passo: Executar tarefas comuns usando Smart Tags em Windows Forms a controles](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
 2.  Arraste uma <xref:System.Windows.Forms.Label> controlar do **caixa de ferramentas** para seu formulário.  
   
@@ -241,7 +241,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Passo a passo: Definindo o layout dos Windows Forms controles com preenchimento, margens e a propriedade AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
-- [Organizando Controles nos Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Passo a passo: Definindo o layout dos Windows Forms controles com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)
+- [Organizando Controles nos Windows Forms](arranging-controls-on-windows-forms.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - HScrollBar control [Windows Forms]
 - Scroll Bar control [Windows Forms]
 ms.assetid: f5e9cda7-d8f3-406b-b0e6-bdb4375d6eb0
-ms.openlocfilehash: ab2182a92f2fd05d0be69c5e4d2bede5011dde37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7937b2b65691bbb2581dea88df8ce315dcfda3e6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533147"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707307"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>Controles HScrollBar e VScrollBar (Windows Forms)
-Controles de barra de rolagem de formulários do Windows são usados para fornecer fácil navegação por uma longa lista de itens ou uma grande quantidade de informações por qualquer um de rolagem horizontal ou verticalmente dentro de um aplicativo ou controle. Barras de rolagem são um elemento comum da interface do Windows.  
+Controles de barra de rolagem do Windows Forms são usados para fornecer uma navegação fácil por meio de uma longa lista de itens ou uma grande quantidade de informações ao rolar horizontal ou verticalmente dentro de um aplicativo ou controle. Barras de rolagem são um elemento comum da interface do Windows.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral dos controles HScrollBar e VScrollBar](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
- Apresenta os conceitos gerais do <xref:System.Windows.Forms.HScrollBar> e <xref:System.Windows.Forms.VScrollBar> controles, que permitem aos usuários rolar horizontalmente e verticalmente grandes quantidades de informações.  
+ [Visão geral dos controles HScrollBar e VScrollBar](hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
+ Apresenta os conceitos gerais do <xref:System.Windows.Forms.HScrollBar> e <xref:System.Windows.Forms.VScrollBar> controles, que permitem aos usuários rolar horizontalmente e verticalmente por meio de grandes quantidades de informações.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.HScrollBar>  
@@ -30,5 +30,5 @@ Controles de barra de rolagem de formulários do Windows são usados para fornec
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 050bb147358636ff9ce250bd5026facd53e9bf51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f19039c69f27f78e838ea1a891690451af3f0cdc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498941"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705591"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Como: Use uma matriz de cores para transformar uma única cor
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece o <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classes para armazenar e manipular imagens. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> objetos armazenam a cor de cada pixel como um número de 32 bits: 8 bits cada para vermelho, verde, azul e alfa. Cada um dos quatro componentes é um número de 0 a 255, sendo que 0 representa nenhuma intensidade e 255 representa intensidade total. O componente alfa Especifica a transparência da cor: 0 é completamente transparente e 255 é totalmente opaca.  
@@ -32,22 +32,22 @@ ms.locfileid: "54498941"
   
  A multiplicação de matriz a seguir executará o par de transformações na ordem listada.  
   
- ![Recolorindo](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")  
+ ![Recolorindo](./media/recoloring01.gif "recoloring01")  
   
  Os elementos de uma matriz de cores são indexados (baseados em zero) por linha e coluna. Por exemplo, a entrada na quinta linha e na terceira coluna da matriz M é indicada por M[4][2].  
   
  A matriz de identidade 5 × 5 (mostrada na ilustração a seguir) tem 1s na diagonal e 0s em todos os outros lugares. Se você multiplicar um vetor de cor pela matriz de identidade, o vetor de cor não mudará. Uma maneira conveniente de formar a matriz de uma transformação de cor é começar com a matriz de identidade e fazer uma pequena alteração que produza a transformação desejada.  
   
- ![Recolorindo](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
+ ![Recolorindo](./media/recoloring02.gif "recoloring02")  
   
- Para uma discussão mais detalhada de matrizes e transformações, consulte [Sistemas de coordenadas e transformações](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Para uma discussão mais detalhada de matrizes e transformações, consulte [Sistemas de coordenadas e transformações](coordinate-systems-and-transformations.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa uma imagem toda de uma cor (0,2, 0,0, 0,4, 1,0) e aplica a transformação descrita nos parágrafos anteriores.  
   
  A ilustração a seguir mostra a imagem original à esquerda e a imagem transformada à direita.  
   
- ![Cores](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")  
+ ![Cores](./media/colortrans1.png "colortrans1")  
   
  O código no exemplo a seguir usa as seguintes etapas para recolorir:  
   
@@ -57,12 +57,12 @@ ms.locfileid: "54498941"
   
 3.  Passe o <xref:System.Drawing.Imaging.ImageAttributes> do objeto para o <xref:System.Drawing.Graphics.DrawImage%2A> método de um <xref:System.Drawing.Graphics> objeto.  
   
- [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)
-- [Sistemas de Coordenadas e Transformações](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [Recolorindo Imagens](recoloring-images.md)
+- [Sistemas de Coordenadas e Transformações](coordinate-systems-and-transformations.md)

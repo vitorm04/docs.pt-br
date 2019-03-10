@@ -1,19 +1,19 @@
 ---
-title: 'Instruções passo a passo: criando um aplicativo baseado no Windows acessível'
+title: 'Passo a passo: Criando um aplicativo acessível baseado em Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6c798d0f6a454c7ee819d5556970bca12f1812e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529617"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708269"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Instruções passo a passo: criando um aplicativo baseado no Windows acessível
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Passo a passo: Criando um aplicativo acessível baseado em Windows
 A criação de um aplicativo acessível tem implicações importantes nos negócios. Muitos órgãos governamentais tem regulamentos de acessibilidade para a compra de software. O logotipo Certified for Windows inclui requisitos de acessibilidade. Estima-se que 30 milhões de moradores, apenas dos EUA, muitos deles clientes potenciais, são afetados pela acessibilidade do software.  
   
  Este passo a passo abordará os cinco requisitos de acessibilidade para o logotipo Certified for Windows. De acordo com a esses requisitos, um aplicativo acessível:  
@@ -30,10 +30,10 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
   
  Para obter mais informações, consulte [Recursos para projetar aplicativos acessíveis](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
- Para obter informações sobre suporte a diferentes layouts de teclado, consulte [Melhores práticas para o desenvolvimento de aplicativos prontos para o mundo](../../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
+ Para obter informações sobre suporte a diferentes layouts de teclado, consulte [Melhores práticas para o desenvolvimento de aplicativos prontos para o mundo](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
   
 ## <a name="creating-the-project"></a>Criando o Projeto  
- Este passo a passo cria a interface do usuário para um aplicativo que recebe pedidos de pizza. Ele consiste em um <xref:System.Windows.Forms.TextBox> para o nome do cliente, um <xref:System.Windows.Forms.RadioButton> grupo para selecionar o tamanho da pizza, um <xref:System.Windows.Forms.CheckedListBox> para selecionar os ingredientes, dois controles de botão rotulado ordem e Cancelar e um Menu com um comando de saída.  
+ Este passo a passo cria a interface do usuário para um aplicativo que recebe pedidos de pizza. Ele consiste em uma <xref:System.Windows.Forms.TextBox> para o nome do cliente, uma <xref:System.Windows.Forms.RadioButton> grupo para selecionar o tamanho da pizza, um <xref:System.Windows.Forms.CheckedListBox> para selecionar os ingredientes, dois controles de botão rotulado como ordem e Cancelar e um Menu com um comando Sair.  
   
  O usuário insere o nome do cliente, o tamanho da pizza e os ingredientes desejados. Quando o usuário clica no botão Pedir, um resumo do pedido e o custo são exibidos em uma caixa de mensagem e os controles são limpos e preparados para o próximo pedido. Quando o usuário clica no botão Cancelar, os controles são limpos e preparados para o próximo pedido. Quando o usuário clica no item de menu Sair, o programa é fechado.  
   
@@ -41,12 +41,12 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
   
 #### <a name="to-begin-making-the-application"></a>Para começar a criar o aplicativo  
   
--   Crie um novo aplicativo do Windows em Visual Basic ou Visual c#. Nomeie o projeto como **PizzaOrder**. (Para obter detalhes, consulte [Criando novas soluções e projetos](/visualstudio/ide/creating-solutions-and-projects)).  
+-   Criar um novo aplicativo do Windows no Visual Basic ou Visual C#. Nomeie o projeto como **PizzaOrder**. (Para obter detalhes, consulte [Criando novas soluções e projetos](/visualstudio/ide/creating-solutions-and-projects)).  
   
 ## <a name="adding-the-controls-to-the-form"></a>Adicionando os controles ao formulário  
  Ao adicionar controles a um formulário, tenha em mente as seguintes diretrizes para criar um aplicativo acessível:  
   
--   Definir o <xref:System.Windows.Forms.Control.AccessibleDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleName%2A> propriedades. Neste exemplo, a configuração padrão para o <xref:System.Windows.Forms.Control.AccessibleRole%2A> é suficiente. Para obter mais informações sobre as propriedades de acessibilidade, consulte [Fornecendo informações de acessibilidade para controles em um Windows Form](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+-   Defina as <xref:System.Windows.Forms.Control.AccessibleDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleName%2A> propriedades. Neste exemplo, a configuração padrão para o <xref:System.Windows.Forms.Control.AccessibleRole%2A> é suficiente. Para obter mais informações sobre as propriedades de acessibilidade, consulte [Fornecendo informações de acessibilidade para controles em um Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
 -   Defina o tamanho da fonte como 10 pontos ou mais.  
   
@@ -55,9 +55,9 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
   
 -   Certifique-se de que qualquer controle de rótulo que descreve um controle TextBox venha logo antes do controle TextBox na ordem de tabulação.  
   
--   Adicionar uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade de qualquer controle que o usuário deseja navegar.  
+-   Adicione uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade de qualquer controle que o usuário deseja navegar.  
   
--   Adicionar uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade do rótulo que precede um controle que o usuário deseja navegar. Definir os rótulos <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriedade `true`, de modo que o foco é definido para o próximo controle na ordem de tabulação quando o usuário pressiona a tecla de acesso.  
+-   Adicione uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade do rótulo que precede um controle que o usuário poderá navegar para. Definir rótulos <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriedade para `true`, de modo que o foco é definido para o próximo controle na ordem de tabulação quando o usuário pressiona a tecla de acesso.  
   
 -   Adicione chaves de acesso a todos os itens de menu.  
   
@@ -137,7 +137,7 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
     |MenuItem|Nome|exitApp|  
     ||Texto|Sa&ir|  
   
-     ![Formulário de pedido de pizza](../../../../docs/framework/winforms/advanced/media/vbpizzaorderform.gif "vbPizzaOrderForm")  
+     ![Pizza Order Form](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
 Seu formulário será algo parecido com o seguinte:  
   
 ## <a name="supporting-high-contrast-mode"></a>Suporte ao modo de alto contraste  
@@ -151,7 +151,7 @@ Seu formulário será algo parecido com o seguinte:
   
 -   Omitir imagens ou padrões por trás do texto  
   
- O aplicativo deve verificar a configuração de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> quando o aplicativo é iniciado e responder ao evento de sistema <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. O <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> é gerado sempre que o valor de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> alterações.  
+ O aplicativo deve verificar a configuração da <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> quando o aplicativo é iniciado e responder ao evento de sistema <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. O <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> é gerado sempre que o valor de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> alterações.  
   
  Em nosso aplicativo, o único elemento que não está usando as configurações do sistema para a cor é o `lblCompanyName`. O <xref:System.Drawing.SystemColors> classe é usada para alterar as configurações de cor do rótulo para as cores do sistema selecionadas pelo usuário.  
   
@@ -245,7 +245,7 @@ Seu formulário será algo parecido com o seguinte:
     }  
     ```  
   
-5.  Adicione código para o formulário <xref:System.Windows.Forms.Control.Dispose%2A> método, antes da chamada para o <xref:System.Windows.Forms.Control.Dispose%2A> método da classe base, para liberar o evento quando o aplicativo for fechado. Para acessar o <xref:System.Windows.Forms.Control.Dispose%2A> método no Visual Basic, você precisará expandir a região rotulada como código gerado pelo Windows Form Designer.  
+5.  Adicione código ao formulário <xref:System.Windows.Forms.Control.Dispose%2A> método antes de chamar o <xref:System.Windows.Forms.Control.Dispose%2A> método da classe base, para liberar o evento quando o aplicativo é fechado. Para acessar o <xref:System.Windows.Forms.Control.Dispose%2A> método no Visual Basic, você precisará expandir a região rotulada como código gerado pelo Windows Form Designer.  
   
     > [!NOTE]
     >  O código de evento do sistema executa um thread separado do aplicativo principal. Se você não liberar o evento, o código que você associou com o evento será executado mesmo depois que o programa for fechado.  
@@ -287,7 +287,7 @@ Seu formulário será algo parecido com o seguinte:
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Para fornecer informações por outros meios além do som  
   
-1.  Faça a barra de título piscar, usando a função FlashWindow da API do Windows. Para obter um exemplo de como chamar funções da API do Windows, consulte [Passo a passo: chamando APIs do Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1.  Faça a barra de título piscar, usando a função FlashWindow da API do Windows. Para obter um exemplo de como chamar funções da API do Windows, consulte [passo a passo: Chamando APIs do Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  O usuário pode ter o serviço SoundSentry do Windows habilitado, que também fará com que a janela pisque quando os sons do sistema forem executados pelo alto-falante do computador.  
@@ -296,7 +296,7 @@ Seu formulário será algo parecido com o seguinte:
   
 3.  Exiba uma caixa de mensagem que obtém o foco do teclado. Evite esse método quando o usuário pode estar digitando.  
   
-4.  Exiba um indicador de status na área de notificação de status da barra de tarefas. Para obter detalhes, consulte [Adicionando ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4.  Exiba um indicador de status na área de notificação de status da barra de tarefas. Para obter detalhes, consulte [Adicionando ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Testando o aplicativo  
  Antes de implantar o aplicativo, você deve testar os recursos de acessibilidade que implementou.  

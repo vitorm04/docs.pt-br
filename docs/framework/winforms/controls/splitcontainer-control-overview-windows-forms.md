@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: d96f754c9e28455b6494c17d4d295837c008f535
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e99683bf6746cc5a85448bb22a996c04b7dcaa8c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747217"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709678"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Visão geral do controle SplitContainer (Windows Forms)
 O controle <xref:System.Windows.Forms.SplitContainer> dos Windows Forms pode ser considerado uma composição; são dois painéis separados por uma barra móvel. Quando o ponteiro do mouse passa sobre a barra, ele muda de forma para mostrar que a barra é móvel.  
@@ -51,5 +51,5 @@ O controle <xref:System.Windows.Forms.SplitContainer> dos Windows Forms pode ser
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.SplitContainer>
-- [Controle SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Controle SplitContainer](splitcontainer-control-windows-forms.md)
 - [Exemplo do controle SplitContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

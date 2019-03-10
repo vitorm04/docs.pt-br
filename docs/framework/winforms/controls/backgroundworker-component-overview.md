@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: d7d99cf87507237b23cb40c58b2308643f7f1056
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185292"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707606"
 ---
 # <a name="backgroundworker-component-overview"></a>Visão geral do componente BackgroundWorker
 Há muitas operações realizadas com frequência que podem levar muito tempo para serem executadas. Por exemplo:  
@@ -47,21 +47,21 @@ Há muitas operações realizadas com frequência que podem levar muito tempo pa
   
  Para iniciar a operação assíncrona, use o método <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> usa um parâmetro opcional `object`, que pode ser usado para passar argumentos para o seu método de trabalho. A classe <xref:System.ComponentModel.BackgroundWorker> expõe o evento <xref:System.ComponentModel.BackgroundWorker.DoWork>, ao qual o seu thread de trabalho está anexado por meio de um manipulador de eventos <xref:System.ComponentModel.BackgroundWorker.DoWork>.  
   
- O manipulador de eventos <xref:System.ComponentModel.BackgroundWorker.DoWork> usa um parâmetro <xref:System.ComponentModel.DoWorkEventArgs>, que tem uma propriedade <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>. Esta propriedade recebe o parâmetro de <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> e pode ser passada para o seu método de trabalho, que será chamado no manipulador de eventos <xref:System.ComponentModel.BackgroundWorker.DoWork>. O exemplo a seguir mostra como atribuir um resultado de um método de trabalho chamado `ComputeFibonacci`. Ele faz parte de um exemplo maior, que pode ser encontrado em [Como implementar um formulário que usa uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+ O manipulador de eventos <xref:System.ComponentModel.BackgroundWorker.DoWork> usa um parâmetro <xref:System.ComponentModel.DoWorkEventArgs>, que tem uma propriedade <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>. Esta propriedade recebe o parâmetro de <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> e pode ser passada para o seu método de trabalho, que será chamado no manipulador de eventos <xref:System.ComponentModel.BackgroundWorker.DoWork>. O exemplo a seguir mostra como atribuir um resultado de um método de trabalho chamado `ComputeFibonacci`. Ele faz parte de um exemplo maior, que você pode encontrar em [como: Implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
- [!code-cpp[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#5)]
- [!code-csharp[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
- [!code-vb[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
+ [!code-cpp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#5)]
+ [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
+ [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
- Para obter mais informações sobre o uso de manipuladores de eventos, consulte [Eventos](../../../../docs/standard/events/index.md).  
+ Para obter mais informações sobre o uso de manipuladores de eventos, consulte [Eventos](../../../standard/events/index.md).  
   
 > [!CAUTION]
->  O uso de multithreading de qualquer tipo pode expor o computador a bugs muito sérios e complexos. Consulte as [Melhores práticas de threading gerenciado](../../../../docs/standard/threading/managed-threading-best-practices.md) antes de implementar qualquer solução que use multithreading.  
+>  O uso de multithreading de qualquer tipo pode expor o computador a bugs muito sérios e complexos. Consulte as [Melhores práticas de threading gerenciado](../../../standard/threading/managed-threading-best-practices.md) antes de implementar qualquer solução que use multithreading.  
   
- Para obter mais informações sobre como usar o <xref:System.ComponentModel.BackgroundWorker> classe, consulte [como: executar uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ Para obter mais informações sobre como usar o <xref:System.ComponentModel.BackgroundWorker> classe, consulte [como: Executar uma operação em segundo plano](how-to-run-an-operation-in-the-background.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Threading gerenciado](../../../../docs/standard/threading/index.md)
-- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Como implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Threading gerenciado](../../../standard/threading/index.md)
+- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Como: Implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)

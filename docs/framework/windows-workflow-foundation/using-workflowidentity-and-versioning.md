@@ -2,25 +2,25 @@
 title: Usando WorkflowIdentity e controle de versão
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: ad1d3385801b451795c6be321094851339a55f81
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64abab815c523abce88b00515239155499de9c4c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373420"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708165"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Usando WorkflowIdentity e controle de versão
-O <xref:System.Activities.WorkflowIdentity> fornece uma maneira para que os desenvolvedores de aplicativos de fluxo de trabalho associem um nome e uma <xref:System.Version> com uma definição de fluxo de trabalho, e para que essas informações sejam associadas a uma instância de fluxo de trabalho persistida. Essas informações de identidade podem ser usadas por desenvolvedores de aplicativos de fluxo de trabalho para habilitar cenários como execução lado a lado de várias versões de uma definição de fluxo de trabalho, e fornece o pilar para outra funcionalidade como a atualização dinâmica. Este tópico fornece uma visão geral de como usar o <xref:System.Activities.WorkflowIdentity> com hospedagem <xref:System.Activities.WorkflowApplication>. Para obter informações sobre a execução lado a lado das definições de fluxo de trabalho em um serviço de fluxo de trabalho, consulte [controle de versão lado a lado no WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Para obter informações sobre a atualização dinâmica, consulte [atualização dinâmica](../../../docs/framework/windows-workflow-foundation/dynamic-update.md).  
+O <xref:System.Activities.WorkflowIdentity> fornece uma maneira para que os desenvolvedores de aplicativos de fluxo de trabalho associem um nome e uma <xref:System.Version> com uma definição de fluxo de trabalho, e para que essas informações sejam associadas a uma instância de fluxo de trabalho persistida. Essas informações de identidade podem ser usadas por desenvolvedores de aplicativos de fluxo de trabalho para habilitar cenários como execução lado a lado de várias versões de uma definição de fluxo de trabalho, e fornece o pilar para outra funcionalidade como a atualização dinâmica. Este tópico fornece uma visão geral de como usar o <xref:System.Activities.WorkflowIdentity> com hospedagem <xref:System.Activities.WorkflowApplication>. Para obter informações sobre a execução lado a lado das definições de fluxo de trabalho em um serviço de fluxo de trabalho, consulte [controle de versão lado a lado no WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Para obter informações sobre a atualização dinâmica, consulte [atualização dinâmica](dynamic-update.md).  
   
 ## <a name="in-this-topic"></a>Neste tópico  
   
--   [Usando WorkflowIdentity](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
+-   [Usando WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [Execução lado a lado com WorkflowIdentity](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#SxS)  
+    -   [Execução lado a lado com WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
   
--   [Atualizando bancos de dados do .NET Framework 4 de persistência para dar suporte a controle de versão de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+-   [Atualizando bancos de dados do .NET Framework 4 de persistência para dar suporte a controle de versão de fluxo de trabalho](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [Para atualizar o esquema de banco de dados](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#ToUpgrade)  
+    -   [Para atualizar o esquema de banco de dados](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> Usando WorkflowIdentity  
  Para usar <xref:System.Activities.WorkflowIdentity>, crie uma instância, configure-a e associe-a a uma instância <xref:System.Activities.WorkflowApplication>. Uma instância <xref:System.Activities.WorkflowIdentity> contém três informações de identificação. <xref:System.Activities.WorkflowIdentity.Name%2A> e <xref:System.Activities.WorkflowIdentity.Version%2A> contêm um nome e um <xref:System.Version> e são necessários, e <xref:System.Activities.WorkflowIdentity.Package%2A> é opcional e pode ser usado para especificar uma cadeia de caracteres adicional que contém informações como o nome do assembly ou outras informações desejadas. Um <xref:System.Activities.WorkflowIdentity> é exclusivo se qualquer uma de suas três propriedades for diferente da outra <xref:System.Activities.WorkflowIdentity>.  
@@ -83,7 +83,7 @@ wfApp.Load(instanceId);
  Para recuperar o <xref:System.Activities.WorkflowIdentity> de uma instância do fluxo de trabalho persistida, o método <xref:System.Activities.WorkflowApplication.GetInstance%2A> é usado. O método <xref:System.Activities.WorkflowApplication.GetInstance%2A> usa a <xref:System.Activities.WorkflowApplication.Id%2A> da instância do fluxo de trabalho persistida e o <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> que contém a instância persistida e retorna um <xref:System.Activities.WorkflowApplicationInstance>. Um <xref:System.Activities.WorkflowApplicationInstance> contém informações sobre uma instância do fluxo de trabalho persistida, incluindo o <xref:System.Activities.WorkflowIdentity> associado. Esse <xref:System.Activities.WorkflowIdentity> associado pode ser usado pelo host para fornecer a definição correta de fluxo de trabalho ao carregar e retomar a instância de fluxo de trabalho.  
   
 > [!NOTE]
->  Um <xref:System.Activities.WorkflowIdentity> nulo é válido e pode ser usado pelo host para mapear as instâncias que foram persistidas sem <xref:System.Activities.WorkflowIdentity> associado para a definição adequada de fluxo de trabalho. Este cenário poderá ocorrer quando um aplicativo de fluxo de trabalho não tiver sido inicialmente escrito com controle de versão de fluxo de trabalho ou quando um aplicativo for atualizado do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Para obter mais informações, consulte [atualizando o .NET Framework 4 persistência bancos de dados ao controle de versão de fluxo de trabalho de suporte](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+>  Um <xref:System.Activities.WorkflowIdentity> nulo é válido e pode ser usado pelo host para mapear as instâncias que foram persistidas sem <xref:System.Activities.WorkflowIdentity> associado para a definição adequada de fluxo de trabalho. Este cenário poderá ocorrer quando um aplicativo de fluxo de trabalho não tiver sido inicialmente escrito com controle de versão de fluxo de trabalho ou quando um aplicativo for atualizado do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Para obter mais informações, consulte [atualizando o .NET Framework 4 persistência bancos de dados ao controle de versão de fluxo de trabalho de suporte](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
  No exemplo a seguir uma `Dictionary<WorkflowIdentity, Activity>` é usado para associar <xref:System.Activities.WorkflowIdentity> instâncias com suas definições de fluxo de trabalho correspondente e um fluxo de trabalho é iniciado usando o `MortgageWorkflow` definição de fluxo de trabalho, que está associada com o `identityV1` <xref:System.Activities.WorkflowIdentity>.  
   

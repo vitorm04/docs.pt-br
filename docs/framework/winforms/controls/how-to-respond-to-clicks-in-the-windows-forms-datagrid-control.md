@@ -12,16 +12,16 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: be9c5c213f9bb52bf620b3d7edec95279220abdf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722901"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708191"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Como: Responder a cliques no controle DataGrid dos Windows Forms
 > [!NOTE]
->  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Após os formulários do Windows <xref:System.Windows.Forms.DataGrid> está conectado a um banco de dados, você pode monitorar o que o usuário clicado de célula.  
   
@@ -141,5 +141,5 @@ ms.locfileid: "54722901"
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Controle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
-- [Como: Alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Controle DataGrid](datagrid-control-windows-forms.md)
+- [Como: Alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

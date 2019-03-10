@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: fa8bdf17f7dc7f6d09059e54b208acaec6207e48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604776"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709767"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Como: Modificar o tamanho ou a colocação de uma imagem em tempo de execução (Windows Forms)
 Se você usar o Windows Forms <xref:System.Windows.Forms.PictureBox> controle em um formulário, você pode definir o <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propriedade nele para:  
@@ -84,7 +84,7 @@ Se você usar o Windows Forms <xref:System.Windows.Forms.PictureBox> controle em
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.PictureBox>
-- [Como: Carregar uma imagem usando o Designer](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Visão geral do controle PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [Como: Definir imagens em tempo de execução](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
-- [Controle PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [Como: Carregar uma imagem usando o Designer](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Visão geral do controle PictureBox](picturebox-control-overview-windows-forms.md)
+- [Como: Definir imagens em tempo de execução](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Controle PictureBox](picturebox-control-windows-forms.md)

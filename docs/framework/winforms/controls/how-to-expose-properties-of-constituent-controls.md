@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75ee93b7a601b4fc1480dca708d78740664c9a85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532156"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704506"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Como: Expor as propriedades de controles constituintes
 Os controles que compõem um controle de composição são chamados *controles de membro*. Esses controles normalmente são declarados particulares e, portanto, não podem ser acessados pelo desenvolvedor. Se você quiser disponibilizar as propriedades desses controles para futuros usuários, deverá expô-las para o usuário. Uma propriedade de um controle de membro é exposta pela criação de uma propriedade no controle de usuário e usando os acessadores `get` e `set` dessa propriedade para efetivar a alteração na propriedade privada do controle de membro.  
@@ -59,5 +59,5 @@ public Color ButtonColor
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.UserControl>
-- [Propriedades em controles do Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Propriedades em controles do Windows Forms](properties-in-windows-forms-controls.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)

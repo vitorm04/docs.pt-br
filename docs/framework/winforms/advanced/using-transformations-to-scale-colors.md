@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ff6172d571a7ca449ab21d1f7a7f9a699bf40f8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737969"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707424"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Usando transformações para ajustar a escala de cores
 Uma transformação de dimensionamento multiplica um ou mais dos quatro componentes de cor por um número. As entradas de matriz de cores que representam o dimensionamento são dadas na tabela a seguir.  
@@ -28,12 +28,12 @@ Uma transformação de dimensionamento multiplica um ou mais dos quatro componen
 ## <a name="scaling-one-color"></a>Ajustando uma cor  
  O exemplo a seguir constrói um <xref:System.Drawing.Image> objeto do arquivo ColorBars2.bmp. Depois o código escala o componente azul de cada pixel na imagem por um fator de 2. A imagem original é desenhada ao lado da imagem transformada.  
   
- [!code-csharp[System.Drawing.RecoloringImages#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.RecoloringImages#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
  A ilustração a seguir mostra a imagem original à esquerda e a imagem em escala à direita.  
   
- ![Scale Colors](../../../../docs/framework/winforms/advanced/media/colortrans3.png "colortrans3")  
+ ![Scale Colors](./media/colortrans3.png "colortrans3")  
   
  A tabela a seguir lista os vetores de cores para as quatro barras antes e depois do ajuste de azul. Veja que o componente azul na quarta barra de cores foi de 0,8 para 0,6. O motivo é que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] retém apenas parte fracionária do resultado. Por exemplo, (2)(0,8) = 1,6, e a parte fracionária de 1,6 é 0,6. Reter apenas a parte fracionária assegura que o resultado esteja sempre no intervalo [0, 1].  
   
@@ -47,12 +47,12 @@ Uma transformação de dimensionamento multiplica um ou mais dos quatro componen
 ## <a name="scaling-multiple-colors"></a>Ajustando de várias cores  
  O exemplo a seguir constrói um <xref:System.Drawing.Image> objeto do arquivo ColorBars2.bmp. Depois, o código escala os componentes vermelho, verde e azul de cada pixel na imagem. Os componentes vermelhos são reduzidos em 25 por cento, os componentes verdes são reduzidos em 35 por cento e os componentes azuis são reduzidos em 50 por cento.  
   
- [!code-csharp[System.Drawing.RecoloringImages#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
- [!code-vb[System.Drawing.RecoloringImages#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
+ [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
+ [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
  A ilustração a seguir mostra a imagem original à esquerda e a imagem em escala à direita.  
   
- ![Scale Colors](../../../../docs/framework/winforms/advanced/media/colortrans4.png "colortrans4")  
+ ![Scale Colors](./media/colortrans4.png "colortrans4")  
   
  A tabela a seguir lista os vetores de cor para as quatro barras antes e depois do ajuste de vermelho, verde e azul.  
   
@@ -66,5 +66,5 @@ Uma transformação de dimensionamento multiplica um ou mais dos quatro componen
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Recolorindo Imagens](recoloring-images.md)

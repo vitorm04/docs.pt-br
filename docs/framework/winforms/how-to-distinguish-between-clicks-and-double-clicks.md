@@ -10,12 +10,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 05c2e308693fe5e2f278f8d503ddf52beddbb092
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 2d02e8faac1dd55e2a7e64b00137df011c931f32
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665193"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707490"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Como: Distinguir entre cliques e cliques duplos
 Normalmente, um único *clique* inicia uma interface do usuário e um *clique duplo* estende a ação. Por exemplo, um clique normalmente seleciona um item e um clique duplo edita o item selecionado. No entanto, eventos de clique a formulários do Windows não acomodam facilmente um cenário onde um clique e um clique duplo executam ações incompatíveis, como uma ação associada à <xref:System.Windows.Forms.Control.Click> ou <xref:System.Windows.Forms.Control.MouseClick> eventos é executado antes da ação ligada para o <xref:System.Windows.Forms.Control.DoubleClick>ou <xref:System.Windows.Forms.Control.MouseDoubleClick> eventos. Este tópico demonstra duas soluções para esse problema. Uma solução é manipular o evento de clique duplo e reverter as ações no tratamento de evento de clique. Em raras situações, você talvez seja necessário simular um clique e comportamento de clique duplo manipulando o <xref:System.Windows.Forms.Control.MouseDown> evento e, usando o <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> e <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> propriedades do <xref:System.Windows.Forms.SystemInformation> classe. Você medir o tempo entre cliques e se um segundo clique ocorre antes do valor de <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> for atingido e o clique foi dentro de um retângulo definido por <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, executar a ação de clique duplo; caso contrário, execute a ação de clique.  
@@ -24,16 +24,16 @@ Normalmente, um único *clique* inicia uma interface do usuário e um *clique du
   
 -   Verifique se o controle em que você está trabalhando tem um comportamento de clique duplo padrão. Se não estiver, habilite o controle com o <xref:System.Windows.Forms.Control.SetStyle%2A> método. Trate o evento de clique duplo e reverta a ação de clique, bem como a ação de clique duplo. O exemplo de código a seguir demonstra um como criar um botão personalizado com clique duplo habilitado, bem como reverter a ação de clique no código de tratamento de eventos de clique duplo.  
   
-     [!code-csharp[System.Windows.Forms.ButtonDoubleClick#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonDoubleClick/CS/Form1.cs#1)]
-     [!code-vb[System.Windows.Forms.ButtonDoubleClick#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonDoubleClick/VB/Form1.vb#1)]  
+     [!code-csharp[System.Windows.Forms.ButtonDoubleClick#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonDoubleClick/CS/Form1.cs#1)]
+     [!code-vb[System.Windows.Forms.ButtonDoubleClick#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonDoubleClick/VB/Form1.vb#1)]  
   
 ### <a name="to-distinguish-between-clicks-in-the-mousedown-event"></a>Distinguir entre cliques no evento MouseDown  
   
 -   Lidar com o <xref:System.Windows.Forms.Control.MouseDown> eventos e determinar o local e o tempo de espaço entre os cliques usando apropriado <xref:System.Windows.Forms.SystemInformation> propriedades e um <xref:System.Windows.Forms.Timer> componente. Execute a ação apropriada dependendo se ocorreu um clique ou um clique duplo. O exemplo de código a seguir demonstra como fazer isso.  
   
-     [!code-cpp[System.Windows.Forms.SingleVersusDoubleClick#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/cpp/form1.cpp#0)]
-     [!code-csharp[System.Windows.Forms.SingleVersusDoubleClick#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/CS/form1.cs#0)]
-     [!code-vb[System.Windows.Forms.SingleVersusDoubleClick#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/VB/form1.vb#0)]  
+     [!code-cpp[System.Windows.Forms.SingleVersusDoubleClick#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/cpp/form1.cpp#0)]
+     [!code-csharp[System.Windows.Forms.SingleVersusDoubleClick#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/CS/form1.cs#0)]
+     [!code-vb[System.Windows.Forms.SingleVersusDoubleClick#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Esses exemplos precisam de:  
@@ -43,4 +43,4 @@ Normalmente, um único *clique* inicia uma interface do usuário e um *clique du
  Para obter informações sobre como compilar esses exemplos da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar esses exemplos no Visual Studio colando o código em novos projetos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Entrada do mouse em um Aplicativo do Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)

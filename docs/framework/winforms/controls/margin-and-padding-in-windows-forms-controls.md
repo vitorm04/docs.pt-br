@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: a3218ad029735f4a5d70b3166951dcd93e061c26
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 60c808138436b947ef78b61863fc353b731b4a8f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665219"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702809"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Margem e preenchimento em controles dos Windows Forms
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace fornece muitos recursos de layout para fazer isso. Duas das mais importantes são as <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A> propriedades.  
@@ -23,7 +23,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
   
  A ilustração a seguir mostra a <xref:System.Windows.Forms.Control.Padding%2A> e <xref:System.Windows.Forms.Control.Margin%2A> propriedades em um controle.  
   
- ![Preenchimento e margem para controles dos Windows Forms](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Preenchimento e margem para controles dos Windows Forms](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
  Não há suporte de tempo de design para esse recurso no Visual Studio. Consulte também [passo a passo: Definindo o layout dos Windows Forms a controles com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md).  
   

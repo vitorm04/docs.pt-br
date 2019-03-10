@@ -2,12 +2,12 @@
 title: 'Tarefa 2: Hospedar o Designer de fluxo de trabalho'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572767"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708633"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarefa 2: Hospedar o Designer de fluxo de trabalho
 Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] em um aplicativo Windows Presentation Foundation (WPF).  
@@ -16,7 +16,7 @@ Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[
   
 ### <a name="to-host-the-workflow-designer"></a>Para hospedar o designer de fluxo de trabalho  
   
-1.  Abra o projeto de HostingApplication você criou no [tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Abra o projeto de HostingApplication você criou no [tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
 2.  Ajuste o tamanho da janela para facilitar usar [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para fazer isso, selecione **MainWindow** no designer, pressione F4 para exibir o **propriedades** janela e, na **Layout** seção lá, defina o **largura** como um valor de 600 e o **altura** para um valor de 350.  
   
@@ -97,7 +97,7 @@ Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[
         }  
         ```  
   
-         Para obter mais informações sobre como registrar os designers de atividade, consulte [como: Criar um Designer personalizado de atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Para obter mais informações sobre como registrar os designers de atividade, consulte [como: Criar um Designer personalizado de atividade](how-to-create-a-custom-activity-designer.md).  
   
     5.  No construtor da classe de `MainWindow` , adicione chamadas para métodos previamente declaradas para registrar os metadados para o suporte de designer e criar <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[
   
 9. Pressione F5 para compilar e executar a solução.  
   
-10. Consulte [tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) para aprender a adicionar **caixa de ferramentas** e **PropertyGrid** dão suporte ao seu designer de fluxo de trabalho rehosted.  
+10. Consulte [tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md) para aprender a adicionar **caixa de ferramentas** e **PropertyGrid** dão suporte ao seu designer de fluxo de trabalho rehosted.  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedando novamente o Designer de Fluxo de Trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Hospedando novamente o Designer de Fluxo de Trabalho](rehosting-the-workflow-designer.md)
+- [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)

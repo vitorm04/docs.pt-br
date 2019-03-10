@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509955"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709660"
 ---
 # <a name="user-drawn-controls"></a>Controles desenhados pelo usuário
 O .NET Framework possibilita que você desenvolva facilmente seus próprios controles. Você pode criar um controle de usuário, que é um conjunto de controles padrão vinculados por código ou pode criar seu próprio controle desde o início. Você pode até mesmo usar herança para criar um controle que herde de um controle existente e adicionar à sua funcionalidade inerente. Independentemente da abordagem utilizada, o .NET Framework oferece a funcionalidade de desenhar uma interface gráfica personalizada para qualquer controle que você criar.  
@@ -25,7 +25,7 @@ O .NET Framework possibilita que você desenvolva facilmente seus próprios cont
   
 -   <xref:System.Drawing.Graphics> objeto - encapsula vários gráficos e orientada a objetos e métodos que fornecem a funcionalidade necessária para desenhar o controle.  
   
- Para obter mais informações sobre o <xref:System.Drawing.Graphics> objeto e como usá-lo, consulte [como: Criar objetos gráficos para desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+ Para obter mais informações sobre o <xref:System.Drawing.Graphics> objeto e como usá-lo, consulte [como: Criar objetos gráficos para desenho](../advanced/how-to-create-graphics-objects-for-drawing.md).  
   
  O <xref:System.Windows.Forms.Control.OnPaint%2A> evento é acionado sempre que o controle é desenhado ou atualizado na tela e o <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> objeto representa o retângulo no qual será realizada pintura. Se o controle inteiro precisar ser atualizado, o <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> representará o tamanho de todo o controle. Se apenas parte do controle precisa ser atualizado, no entanto, o <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> objeto representará somente a região que precisa ser redesenhado. Um exemplo de um caso assim seria quando um controle foi parcialmente encoberto por outro controle ou formulário na interface do usuário.  
   
@@ -81,6 +81,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Como: Criar objetos gráficos para desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Controles constituintes](../../../../docs/framework/winforms/controls/constituent-controls.md)
-- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Como: Criar objetos gráficos para desenho](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Controles constituintes](constituent-controls.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)

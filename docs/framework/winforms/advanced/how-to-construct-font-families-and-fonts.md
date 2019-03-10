@@ -8,12 +8,12 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: 6f939ab90252697d09d594e4d9300ec101c8f2e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540670"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708537"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Como: Construir fontes e famílias de fontes
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] agrupa fontes com a mesma face de tipo, mas diferentes estilos em famílias de fontes. Por exemplo, a família de fonte Arial contém as seguintes fontes:  
@@ -43,12 +43,12 @@ ms.locfileid: "54540670"
   
  <xref:System.Drawing.GraphicsUnit.Pixel> é um membro do <xref:System.Drawing.GraphicsUnit> enumeração, e <xref:System.Drawing.FontStyle.Regular> é um membro do <xref:System.Drawing.FontStyle> enumeração.  
   
- [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.FontsAndText#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando fontes e texto](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
-- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Usando fontes e texto](using-fonts-and-text.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)

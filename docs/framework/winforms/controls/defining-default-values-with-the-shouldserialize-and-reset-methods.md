@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb23220be2b4a3564c4869016c05065afe7c27c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497427"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704435"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definindo valores padrão com o ShouldSerialize e os métodos de redefinição
 `ShouldSerialize` e `Reset` são métodos opcionais que você pode fornecer para uma propriedade, caso ela não tenha um valor padrão simples. Se a propriedade tem um valor padrão simples, você deve aplicar o <xref:System.ComponentModel.DefaultValueAttribute> e forneça o valor padrão para o construtor de classe de atributo em vez disso. Qualquer um desses mecanismos habilita os recursos a seguir no designer:  
@@ -144,6 +144,6 @@ public class MyControl : Control {
  Nesse caso, mesmo quando o valor da variável particular acessada pela `MyFont` é de propriedade `null`, o navegador de propriedade não exibe `null`; em vez disso, ele exibe o <xref:System.Windows.Forms.Control.Font%2A> propriedade do pai, se não for `null`, ou o padrão <xref:System.Windows.Forms.Control.Font%2A> valor definido na <xref:System.Windows.Forms.Control>. Assim, o valor padrão para `MyFont` não pode ser simplesmente definido e um <xref:System.ComponentModel.DefaultValueAttribute> não pode ser aplicado a essa propriedade. Em vez disso, os métodos `ShouldSerialize` e `Reset` devem ser implementados para a propriedade `MyFont`.  
   
 ## <a name="see-also"></a>Consulte também
-- [Propriedades em controles do Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [Definindo uma propriedade](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
-- [Eventos alterados por propriedade](../../../../docs/framework/winforms/controls/property-changed-events.md)
+- [Propriedades em controles do Windows Forms](properties-in-windows-forms-controls.md)
+- [Definindo uma propriedade](defining-a-property-in-windows-forms-controls.md)
+- [Eventos alterados por propriedade](property-changed-events.md)

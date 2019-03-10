@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 556a3c8953f72a1272d74c4f887ded4845d3cd28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3ec8c1b8c9b30a23dacabeb033d525c34709931
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739596"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708256"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Como: Criar um fluxo de trabalho de máquina de estado
-Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico orienta a criação de um fluxo de trabalho usa atividades internas, como o <xref:System.Activities.Statements.StateMachine> atividade e atividades personalizadas do anterior [como: Criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
+Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico orienta a criação de um fluxo de trabalho usa atividades internas, como o <xref:System.Activities.Statements.StateMachine> atividade e atividades personalizadas do anterior [como: Criar uma atividade](how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
   
 > [!NOTE]
->  Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: Criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: Criar uma atividade](how-to-create-an-activity.md).  
   
 > [!NOTE]
 >  Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -179,19 +179,19 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
      O exemplo a seguir ilustra o fluxo de trabalho concluído.  
   
-     ![Fluxo de trabalho de máquina de estado concluído](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     ![Fluxo de trabalho de máquina de estado concluído](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
 ### <a name="to-build-the-workflow"></a>Para compilar o fluxo de trabalho  
   
 1.  Pressione CTRL+SHIFT+B para criar a solução.  
   
-     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico, [como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Se você já tiver concluído o [como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) passo a passo com um estilo diferente de fluxo de trabalho e quiser executá-lo usando o fluxo de trabalho de máquina de estado dessa etapa, pule para a [para compilar e executar o aplicativo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) seção [como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico, [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md). Se você já tiver concluído o [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md) passo a passo com um estilo diferente de fluxo de trabalho e quiser executá-lo usando o fluxo de trabalho de máquina de estado dessa etapa, pule para a [para compilar e executar o aplicativo](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) seção [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Programação do Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
-- [Criando fluxos de trabalho](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
-- [Tutorial de Introdução](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Como: Criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
-- [Como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+- [Programação do Windows Workflow Foundation](programming.md)
+- [Criando fluxos de trabalho](designing-workflows.md)
+- [Tutorial de Introdução](getting-started-tutorial.md)
+- [Como: Criar uma atividade](how-to-create-an-activity.md)
+- [Como: Executar um fluxo de trabalho](how-to-run-a-workflow.md)

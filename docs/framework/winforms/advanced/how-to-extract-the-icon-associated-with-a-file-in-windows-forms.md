@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-ms.openlocfilehash: f961345c4b9be43e73a8c7a11914cf82833a822f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbce48643d21418d580a6db44f86b00cf50fb9d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559010"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714184"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Como: Extrair o ícone associado a um arquivo nos Windows Forms
 Muitos arquivos têm ícones inseridos que fornecem uma representação visual do tipo de arquivo associado. Por exemplo, documentos do Microsoft Word contêm um ícone que os identifica como documentos do Word. Ao exibir os arquivos em um controle de lista ou um controle de tabela, talvez você queira exibir o ícone que representa o tipo de arquivo ao lado de cada nome de arquivo. Você pode fazer isso facilmente usando o <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> método.  
@@ -22,8 +22,8 @@ Muitos arquivos têm ícones inseridos que fornecem uma representação visual d
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra como extrair o ícone associado a um arquivo e exibir o nome do arquivo e seu ícone associado em um <xref:System.Windows.Forms.ListView> controle.  
   
- [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
- [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
+ [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Para compilar o exemplo:  
@@ -33,5 +33,5 @@ Muitos arquivos têm ícones inseridos que fornecem uma representação visual d
      Você precisará certificar-se de que seu formulário importa o <xref:System.IO> namespace.  
   
 ## <a name="see-also"></a>Consulte também
-- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Controle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
+- [Controle ListView](../controls/listview-control-windows-forms.md)

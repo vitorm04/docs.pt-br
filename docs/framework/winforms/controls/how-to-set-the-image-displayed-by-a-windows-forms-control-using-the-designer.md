@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 0f8c2ef747a160adc292a3330a4478b7a8c432d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562304"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702250"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Como: Definir a imagem exibida por um Windows Forms usando o Designer de controle
 Vários controles de Windows Forms podem exibir imagens. A imagem pode ser um ícone que esclarece a finalidade do controle, como um ícone de disco em um botão que indica a **salvar** comando. Como alternativa, o ícone pode ser uma imagem de plano de fundo para dar o controle a aparência desejada.  
@@ -26,7 +26,7 @@ Vários controles de Windows Forms podem exibir imagens. A imagem pode ser um í
   
 1.  No **propriedades** janela, selecione a **imagem** ou **BackgroundImage** propriedade do controle, em seguida, clique no botão de reticências (  
   
-     ![Captura de tela de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![Captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) para exibir o **selecionar recurso** caixa de diálogo.  
   
@@ -36,4 +36,4 @@ Vários controles de Windows Forms podem exibir imagens. A imagem pode ser um í
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

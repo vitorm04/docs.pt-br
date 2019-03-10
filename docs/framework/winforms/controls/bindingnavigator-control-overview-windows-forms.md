@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 06ad69b7ad40e85dfbb18a170e0a72095e711b83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533108"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703303"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Visão geral do controle BindingNavigator (Windows Forms)
 Você pode usar o <xref:System.Windows.Forms.BindingNavigator> controle para criar um meio padronizado para que os usuários a pesquisar e alterar dados em um formulário do Windows. Você usa frequentemente <xref:System.Windows.Forms.BindingNavigator> com o <xref:System.Windows.Forms.BindingSource> para permitir aos usuários percorrer os registros de dados em um formulário e interagir com os registros.  
@@ -22,7 +22,7 @@ Você pode usar o <xref:System.Windows.Forms.BindingNavigator> controle para cri
 ## <a name="how-the-bindingnavigator-works"></a>Como o BindingNavigator funciona  
  O <xref:System.Windows.Forms.BindingNavigator> controle é composto de um <xref:System.Windows.Forms.ToolStrip> com uma série de <xref:System.Windows.Forms.ToolStripItem> objetos para a maioria das ações comuns relacionadas a dados: adição de dados, exclusão de dados e navegar pelos dados. Por padrão, o <xref:System.Windows.Forms.BindingNavigator> controle contém esses botões padrão. Captura de tela a seguir mostra o <xref:System.Windows.Forms.BindingNavigator> controle em um formulário.  
   
- ![Controle BindingNavigator](../../../../docs/framework/winforms/controls/media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ ![Controle BindingNavigator](./media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
   
  A tabela a seguir lista os controles e descreve suas funções.  
   
@@ -39,9 +39,9 @@ Você pode usar o <xref:System.Windows.Forms.BindingNavigator> controle para cri
   
  Para cada controle nessa coleção, há um membro correspondente do <xref:System.Windows.Forms.BindingSource> componente que fornece programaticamente a mesma funcionalidade. Por exemplo, o <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> botão corresponde à <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> método da <xref:System.Windows.Forms.BindingSource> componente, o <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> botão corresponde à <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> método e assim por diante.  
   
- Se os botões padrão não são adequados para seu aplicativo, ou se você precisar de botões adicionais para dar suporte a outros tipos de funcionalidade, você pode fornecer seu próprio <xref:System.Windows.Forms.ToolStrip> botões. Consulte também [como: Adicione carga, salvar, e botões de cancelamento para o Windows Forms controle BindingNavigator](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).  
+ Se os botões padrão não são adequados para seu aplicativo, ou se você precisar de botões adicionais para dar suporte a outros tipos de funcionalidade, você pode fornecer seu próprio <xref:System.Windows.Forms.ToolStrip> botões. Consulte também [como: Adicione carga, salvar, e botões de cancelamento para o Windows Forms controle BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
-- [Controle BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [Controle BindingNavigator](bindingnavigator-control-windows-forms.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497026"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709038"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Como: Criar objetos gráficos para desenho
 Antes que você possa desenhar linhas e formas, renderizar texto ou exibir e manipular imagens com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], você precisa criar um <xref:System.Drawing.Graphics> objeto. O <xref:System.Drawing.Graphics> objeto representa um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superfície de desenho, e é o objeto que é usado para criar imagens gráficas.  
@@ -165,13 +165,13 @@ Antes que você possa desenhar linhas e formas, renderizar texto ou exibir e man
   
     |Para renderizar|Consulte|  
     |---------------|---------|  
-    |Linhas|[Como: Desenhar uma linha em um formulário do Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formas|[Como: Desenhar uma forma delineada](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Texto|[Como: Desenhar texto em um formulário do Windows](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |Imagens|[Como: Renderizar imagens com o GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |Linhas|[Como: Desenhar uma linha em um formulário do Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formas|[Como: Desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)|  
+    |Texto|[Como: Desenhar texto em um formulário do Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Imagens|[Como: Renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Consulte também
-- [Introdução à Programação de Elementos Gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Como: Renderizar imagens com o GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+- [Introdução à Programação de Elementos Gráficos](getting-started-with-graphics-programming.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
+- [Como: Renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)

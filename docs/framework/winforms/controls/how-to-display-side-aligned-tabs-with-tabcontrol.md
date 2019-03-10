@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: 9b2d691cb41a48b51bb48291e321d763a9ff7e08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8715cb1a1f0d5795afc4003afcecdb3fb89912c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650568"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705176"
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Como: Exibir guias alinhadas lateralmente com TabControl
 O <xref:System.Windows.Forms.TabControl.Alignment%2A> propriedade de <xref:System.Windows.Forms.TabControl> dá suporte à exibição de guias verticalmente (na borda esquerda ou direita do controle), em vez de horizontalmente (na parte superior ou inferior do controle). Por padrão, essa exibição vertical resulta em uma experiência de usuário ruim, porque o <xref:System.Windows.Forms.TabPage.Text%2A> propriedade do <xref:System.Windows.Forms.TabPage> objeto não exibe na guia de quando estilos visuais estiverem habilitados. Também não há nenhuma maneira direta de controlar a direção do texto dentro da guia. Você pode usar o proprietário traçam <xref:System.Windows.Forms.TabControl> para aprimorar essa experiência.  
@@ -37,8 +37,8 @@ O <xref:System.Windows.Forms.TabControl.Alignment%2A> propriedade de <xref:Syste
   
 6.  Definir um manipulador para o <xref:System.Windows.Forms.TabControl.DrawItem> eventos de <xref:System.Windows.Forms.TabControl> que renderiza o texto da esquerda para a direita.  
   
-     [!code-csharp[TabControl.RightAlignedTabs#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
-     [!code-vb[TabControl.RightAlignedTabs#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
+     [!code-csharp[TabControl.RightAlignedTabs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
+     [!code-vb[TabControl.RightAlignedTabs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Controle TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
+- [Controle TabControl](tabcontrol-control-windows-forms.md)

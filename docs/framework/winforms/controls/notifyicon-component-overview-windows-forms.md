@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system tray icons [Windows Forms], about system tray icons
 - system tray icons [Windows Forms], using in Windows Forms
 ms.assetid: 5b9189fa-d4ae-41a6-9b97-eb1f44bb1a69
-ms.openlocfilehash: 4b612e0a798a53c3034cc78bfed5bde43f591286
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430d869265b9add34c6de617a178aa27af6218f3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551859"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707619"
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a>Visão geral do componente NotifyIcon (Windows Forms)
 
@@ -27,9 +27,9 @@ Cada <xref:System.Windows.Forms.NotifyIcon> componente exibe um único ícone na
 
 Você pode associar dicas de balão, menus de atalho e dicas de ferramenta com um <xref:System.Windows.Forms.NotifyIcon> para auxiliar o usuário.
 
-Você pode exibir dicas de balão para um <xref:System.Windows.Forms.NotifyIcon> chamando o <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> método especificando o intervalo de tempo você deseja exibir a dica de balão. Você também pode especificar o texto, ícone e título da dica de balão com o <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> e <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, respectivamente. <xref:System.Windows.Forms.NotifyIcon> componentes também podem ter associadas dicas de ferramentas e menus de atalho. Para mais informação, consulte [Visão geral do componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md) e [Visão geral do componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).
+Você pode exibir dicas de balão para um <xref:System.Windows.Forms.NotifyIcon> chamando o <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> método especificando o intervalo de tempo você deseja exibir a dica de balão. Você também pode especificar o texto, ícone e título da dica de balão com o <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> e <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, respectivamente. <xref:System.Windows.Forms.NotifyIcon> componentes também podem ter associadas dicas de ferramentas e menus de atalho. Para mais informação, consulte [Visão geral do componente ToolTip](tooltip-component-overview-windows-forms.md) e [Visão geral do componente ContextMenu](contextmenu-component-overview-windows-forms.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.NotifyIcon>
-- [Componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
+- [Componente NotifyIcon](notifyicon-component-windows-forms.md)

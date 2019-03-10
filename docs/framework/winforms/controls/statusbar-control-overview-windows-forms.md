@@ -7,18 +7,18 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: c3e52a91a31eb898d0176bc35a97cda7de9a8368
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 516462aa92e2cd836820ec34440f34bb4c5b577d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491344"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703797"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>Visão geral do controle StatusBar (Windows Forms)
 > [!IMPORTANT]
 >  O <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controles substituam e adicionem funcionalidade para o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controla; no entanto, o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controles sejam mantidos para compatibilidade com versões anteriores e uso futuro, se você Escolha.  
   
- O [Controle StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) dos Windows Forms é usado em formulários como uma área, normalmente exibido na parte inferior de uma janela, na qual um aplicativo pode exibir diversos tipos de informações de status. <xref:System.Windows.Forms.StatusBar> os controles podem ter painéis da barra de status sobre eles que exibem texto ou ícones para indicar o estado ou uma série de ícones em uma animação que indicam que um processo está funcionando. Por exemplo, [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] indicando que o documento está sendo salvo.  
+ O [Controle StatusBar](statusbar-control-windows-forms.md) dos Windows Forms é usado em formulários como uma área, normalmente exibido na parte inferior de uma janela, na qual um aplicativo pode exibir diversos tipos de informações de status. <xref:System.Windows.Forms.StatusBar> os controles podem ter painéis da barra de status sobre eles que exibem texto ou ícones para indicar o estado ou uma série de ícones em uma animação que indicam que um processo está funcionando. Por exemplo, [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] indicando que o documento está sendo salvo.  
   
 ## <a name="using-the-statusbar-control"></a>Usando o controle StatusBar  
  Internet Explorer usa uma barra de status para indicar a URL de uma página quando o mouse passa sobre o hiperlink; [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] fornece informações sobre o local da página, local de seção e editar modos como sobrescrever e controle de revisão; e o Visual Studio usa a barra de status para fornecer informações contextuais, como informá-lo como manipular janelas encaixáveis como encaixadas ou flutuantes.  
@@ -28,4 +28,4 @@ ms.locfileid: "54491344"
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Como: Determinar qual painel no controle StatusBar dos Windows Forms foi clicado](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Como: Determinar qual painel no controle StatusBar dos Windows Forms foi clicado](determine-which-panel-wf-statusbar-control-was-clicked.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 4510ac86cec556734d3d238ba1f02b00074e2609
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 298791fc43d976e339c42c45a8fd30c25d73bdb9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687161"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708009"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Rastreamento e rastreamento de fluxo de trabalho
 O rastreamento de fluxo de trabalho do Windows é um recurso de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] projetado para fornecer a visibilidade no fluxo de trabalho. Fornece uma infraestrutura de rastreamento para controlar a execução de uma instância de fluxo de trabalho. De WF de rastreamento de infraestrutura os implementa transparente um fluxo de trabalho para emitir os registros que refletem eventos chave durante a execução. Essa funcionalidade está disponível por padrão para qualquer fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] . Nenhuma alteração é necessária para ser feita a um fluxo de trabalho para acompanhar [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] que ocorra. É apenas uma questão de decidir quanto dados de acompanhamento você deseja receber. Quando inicia de uma instância de fluxo de trabalho ou tiver terminado, seus registros de acompanhamento de processamento são emitidas. O rastreamento também pode extrair os dados negócio- relevantes associados com variáveis de fluxo de trabalho. Por exemplo, se o fluxo de trabalho representa um sistema de processamento de aplicativos, a identificação do pedido pode ser extraído juntamente com o objeto de <xref:System.Activities.Tracking.TrackingRecord> . Geralmente, ative o rastreamento de WF facilita diagnóstico ou dados de análise de negócio a ser acessados de uma execução de fluxo de trabalho.  
@@ -18,38 +18,38 @@ O rastreamento de fluxo de trabalho do Windows é um recurso de [!INCLUDE[netfx_
   
  A tela de aplicativo Windows Server também fornece a capacidade de monitorar a execução do windows e serviços de fluxo de trabalho. Para obter mais informações, consulte [monitoramento de malha de aplicativo do Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273) e [Monitorando aplicativos com o Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201287)  
   
- Para solucionar o tempo de execução de fluxo de trabalho, você pode ativar o rastreamento diagnóstico de fluxo de trabalho. Para obter mais informações, consulte [rastreamento de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md).  
+ Para solucionar o tempo de execução de fluxo de trabalho, você pode ativar o rastreamento diagnóstico de fluxo de trabalho. Para obter mais informações, consulte [rastreamento de fluxo de trabalho](workflow-tracing.md).  
   
  Para entender o modelo de programação, os componentes principais de infraestrutura de rastreamento são abordados neste tópico:  
   
--   objetos de<xref:System.Activities.Tracking.TrackingRecord> emissores de fluxo de trabalho. Para obter mais informações, consulte [registros de rastreamento](../../../docs/framework/windows-workflow-foundation/tracking-records.md).  
+-   objetos de<xref:System.Activities.Tracking.TrackingRecord> emissores de fluxo de trabalho. Para obter mais informações, consulte [registros de rastreamento](tracking-records.md).  
   
--   os objetos de<xref:System.Activities.Tracking.TrackingParticipant> a autenticação <xref:System.Activities.Tracking.TrackingRecord> objetos. Os participantes de rastreamento contém a lógica para processar a carga útil dos objetos de <xref:System.Activities.Tracking.TrackingRecord> (por exemplo, poderia escolher gravar em um arquivo). Para obter mais informações, consulte [participantes de rastreamento](../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
+-   os objetos de<xref:System.Activities.Tracking.TrackingParticipant> a autenticação <xref:System.Activities.Tracking.TrackingRecord> objetos. Os participantes de rastreamento contém a lógica para processar a carga útil dos objetos de <xref:System.Activities.Tracking.TrackingRecord> (por exemplo, poderia escolher gravar em um arquivo). Para obter mais informações, consulte [participantes de rastreamento](tracking-participants.md).  
   
--   os registros de acompanhamento de filtro de objetos de<xref:System.Activities.Tracking.TrackingProfile> emissores de um fluxo de trabalho instância. Para obter mais informações, consulte [perfis de acompanhamento](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+-   os registros de acompanhamento de filtro de objetos de<xref:System.Activities.Tracking.TrackingProfile> emissores de um fluxo de trabalho instância. Para obter mais informações, consulte [perfis de acompanhamento](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Infraestrutura de rastreamento de fluxo de trabalho  
  A infraestrutura de acompanhamento de fluxo de trabalho segue um paradigma publicar-e- assinatura. A instância de fluxo de trabalho é o editor de registros de rastreamento, quando os assinantes de registros de rastreamento são registrados como extensões para o fluxo de trabalho. Essas extensões que assina a <xref:System.Activities.Tracking.TrackingRecord> objetos são chamadas controlar participantes. Os participantes de rastreamento são os pontos de extensibilidade no qual acessar objetos de <xref:System.Activities.Tracking.TrackingRecord> e os processar o que são escritos maneira para fazer isso. A infraestrutura de rastreamento permite o aplicativo de um filtro os registros de saída do rastreamento permitir que um participante assine a um subconjunto de registros. Esse mecanismo de filtragem é feito através de um arquivo de perfil de rastreamento.  
   
  Uma exibição de alto nível de infraestrutura de rastreamento é mostrado na ilustração a seguir.  
   
- ![Infraestrutura de acompanhamento de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/wv.gif "WV")  
+ ![Infraestrutura de acompanhamento de fluxo de trabalho](./media/wv.gif "WV")  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Acompanhando registros](../../../docs/framework/windows-workflow-foundation/tracking-records.md)  
+ [Acompanhando registros](tracking-records.md)  
  Descreve os registros de rastreamento que o tempo de execução de fluxo de trabalho se emite.  
   
- [Acompanhando perfis](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ [Acompanhando perfis](tracking-profiles.md)  
  Discute como controlando os perfis são usados.  
   
- [Acompanhando participantes](../../../docs/framework/windows-workflow-foundation/tracking-participants.md)  
+ [Acompanhando participantes](tracking-participants.md)  
  Descreve como usar o sistema forneceu participante de rastreamento ou como criar participantes personalizados de rastreamento.  
   
- [Configurando o acompanhamento para um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)  
+ [Configurando o acompanhamento para um fluxo de trabalho](configuring-tracking-for-a-workflow.md)  
  Descreve como configurar o rastreamento para um fluxo de trabalho.  
   
- [Acompanhamento de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
+ [Acompanhamento de fluxo de trabalho](workflow-tracing.md)  
  Descreve as duas maneiras para ativar o rastreamento de depuração para um fluxo de trabalho.  
   
 ## <a name="see-also"></a>Consulte também
-- [Acompanhamento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Acompanhamento de SQL](./samples/sql-tracking.md)
