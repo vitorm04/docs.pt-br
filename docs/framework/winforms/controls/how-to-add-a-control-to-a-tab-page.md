@@ -10,27 +10,27 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: b092532e-7346-469f-b9a1-897f9bea4fb7
-ms.openlocfilehash: 42f0be64a6ac050fe8873588263b1faf7e2491a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6eb509fd10a5000a5423d624cec5b6d126990d73
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710177"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723931"
 ---
-# <a name="how-to-add-a-control-to-a-tab-page"></a><span data-ttu-id="84da1-102">Como: Adicionar um controle a uma página da guia</span><span class="sxs-lookup"><span data-stu-id="84da1-102">How to: Add a Control to a Tab Page</span></span>
-<span data-ttu-id="84da1-103">Você pode usar os formulários do Windows <xref:System.Windows.Forms.TabControl> para exibir outros controles de forma organizada.</span><span class="sxs-lookup"><span data-stu-id="84da1-103">You can use the Windows Forms <xref:System.Windows.Forms.TabControl> to display other controls in an organized fashion.</span></span> <span data-ttu-id="84da1-104">O procedimento a seguir mostra como adicionar um botão para a primeira guia. Para obter informações sobre como adicionar um ícone à parte do rótulo de uma página da guia, consulte [como: Alterar a aparência do TabControl dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span><span class="sxs-lookup"><span data-stu-id="84da1-104">The following procedure shows how to add a button to the first tab. For information about adding an icon to the label part of a tab page, see [How to: Change the Appearance of the Windows Forms TabControl](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span></span>  
+# <a name="how-to-add-a-control-to-a-tab-page"></a><span data-ttu-id="c0472-102">Como: Adicionar um controle a uma página da guia</span><span class="sxs-lookup"><span data-stu-id="c0472-102">How to: Add a Control to a Tab Page</span></span>
+<span data-ttu-id="c0472-103">Você pode usar os formulários do Windows <xref:System.Windows.Forms.TabControl> para exibir outros controles de forma organizada.</span><span class="sxs-lookup"><span data-stu-id="c0472-103">You can use the Windows Forms <xref:System.Windows.Forms.TabControl> to display other controls in an organized fashion.</span></span> <span data-ttu-id="c0472-104">O procedimento a seguir mostra como adicionar um botão para a primeira guia. Para obter informações sobre como adicionar um ícone à parte do rótulo de uma página da guia, consulte [como: Alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span><span class="sxs-lookup"><span data-stu-id="c0472-104">The following procedure shows how to add a button to the first tab. For information about adding an icon to the label part of a tab page, see [How to: Change the Appearance of the Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span></span>  
   
-### <a name="to-add-a-control-programmatically"></a><span data-ttu-id="84da1-105">Para adicionar um controle de forma programática</span><span class="sxs-lookup"><span data-stu-id="84da1-105">To add a control programmatically</span></span>  
+### <a name="to-add-a-control-programmatically"></a><span data-ttu-id="c0472-105">Para adicionar um controle de forma programática</span><span class="sxs-lookup"><span data-stu-id="c0472-105">To add a control programmatically</span></span>  
   
-1.  <span data-ttu-id="84da1-106">Use o <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> método de coleção retornada pela <xref:System.Windows.Forms.Control.Controls%2A> propriedade de <xref:System.Windows.Forms.TabPage>:</span><span class="sxs-lookup"><span data-stu-id="84da1-106">Use the <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> method of the collection returned by the <xref:System.Windows.Forms.Control.Controls%2A> property of <xref:System.Windows.Forms.TabPage>:</span></span>  
+1.  <span data-ttu-id="c0472-106">Use o <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> método de coleção retornada pela <xref:System.Windows.Forms.Control.Controls%2A> propriedade de <xref:System.Windows.Forms.TabPage>:</span><span class="sxs-lookup"><span data-stu-id="c0472-106">Use the <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> method of the collection returned by the <xref:System.Windows.Forms.Control.Controls%2A> property of <xref:System.Windows.Forms.TabPage>:</span></span>  
   
-     [!code-cpp[TabPageControlCollectionHowToAdd#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/cpp/add.cpp#1)]
-     [!code-csharp[TabPageControlCollectionHowToAdd#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/cs/add.cs#1)]
-     [!code-vb[TabPageControlCollectionHowToAdd#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/vb/add.vb#1)]  
+     [!code-cpp[TabPageControlCollectionHowToAdd#1](~/samples/snippets/cpp/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/cpp/add.cpp#1)]
+     [!code-csharp[TabPageControlCollectionHowToAdd#1](~/samples/snippets/csharp/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/cs/add.cs#1)]
+     [!code-vb[TabPageControlCollectionHowToAdd#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/vb/add.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="84da1-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="84da1-107">See also</span></span>
-- [<span data-ttu-id="84da1-108">Controle TabControl</span><span class="sxs-lookup"><span data-stu-id="84da1-108">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [<span data-ttu-id="84da1-109">Visão geral do controle TabControl</span><span class="sxs-lookup"><span data-stu-id="84da1-109">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="84da1-110">Como: Alterar a aparência do TabControl dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="84da1-110">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [<span data-ttu-id="84da1-111">Como: Desabilitar páginas de guia</span><span class="sxs-lookup"><span data-stu-id="84da1-111">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [<span data-ttu-id="84da1-112">Como: Adicionar e remover guias com o TabControl dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="84da1-112">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="c0472-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c0472-107">See also</span></span>
+- [<span data-ttu-id="c0472-108">Controle TabControl</span><span class="sxs-lookup"><span data-stu-id="c0472-108">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
+- [<span data-ttu-id="c0472-109">Visão geral do controle TabControl</span><span class="sxs-lookup"><span data-stu-id="c0472-109">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="c0472-110">Como: Alterar a aparência do TabControl dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0472-110">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="c0472-111">Como: Desabilitar páginas de guia</span><span class="sxs-lookup"><span data-stu-id="c0472-111">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="c0472-112">Como: Adicionar e remover guias com o TabControl dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0472-112">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
