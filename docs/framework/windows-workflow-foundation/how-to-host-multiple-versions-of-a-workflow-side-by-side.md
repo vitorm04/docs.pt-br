@@ -5,115 +5,75 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366693"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705981"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a><span data-ttu-id="7f577-102">Como: Hospedar várias versões de uma fluxo de trabalho lado a lado</span><span class="sxs-lookup"><span data-stu-id="7f577-102">How to: Host Multiple Versions of a Workflow Side-by-Side</span></span>
-<span data-ttu-id="7f577-103">O `WorkflowIdentity` fornece uma maneira para que os desenvolvedores de aplicativos de fluxo de trabalho associem um nome e uma versão a uma definição de fluxo de trabalho, e para que essas informações sejam associadas a uma instância de fluxo de trabalho persistida.</span><span class="sxs-lookup"><span data-stu-id="7f577-103">`WorkflowIdentity` provides a way for workflow application developers to associate a name and a version with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="7f577-104">Essas informações de identidade podem ser usadas por desenvolvedores de aplicativos de fluxo de trabalho para habilitar cenários como execução lado a lado de várias versões de uma definição de fluxo de trabalho, e fornece o pilar para outra funcionalidade como a atualização dinâmica.</span><span class="sxs-lookup"><span data-stu-id="7f577-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="7f577-105">Esta etapa no tutorial demonstra como usar o `WorkflowIdentity` para hospedar ao mesmo tempo várias versões de um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="7f577-105">This step in the tutorial demonstrates how to use `WorkflowIdentity` to host multiple versions of a workflow at the same time.</span></span>
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a><span data-ttu-id="f7e57-102">Como: Hospedar várias versões de uma fluxo de trabalho lado a lado</span><span class="sxs-lookup"><span data-stu-id="f7e57-102">How to: Host Multiple Versions of a Workflow Side-by-Side</span></span>
+<span data-ttu-id="f7e57-103">O `WorkflowIdentity` fornece uma maneira para que os desenvolvedores de aplicativos de fluxo de trabalho associem um nome e uma versão a uma definição de fluxo de trabalho, e para que essas informações sejam associadas a uma instância de fluxo de trabalho persistida.</span><span class="sxs-lookup"><span data-stu-id="f7e57-103">`WorkflowIdentity` provides a way for workflow application developers to associate a name and a version with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="f7e57-104">Essas informações de identidade podem ser usadas por desenvolvedores de aplicativos de fluxo de trabalho para habilitar cenários como execução lado a lado de várias versões de uma definição de fluxo de trabalho, e fornece o pilar para outra funcionalidade como a atualização dinâmica.</span><span class="sxs-lookup"><span data-stu-id="f7e57-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="f7e57-105">Esta etapa no tutorial demonstra como usar o `WorkflowIdentity` para hospedar ao mesmo tempo várias versões de um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="f7e57-105">This step in the tutorial demonstrates how to use `WorkflowIdentity` to host multiple versions of a workflow at the same time.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="7f577-106">Para baixar uma versão completa ou exibir uma vídeo passo a passo do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="7f577-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="f7e57-106">Para baixar uma versão completa ou exibir uma vídeo passo a passo do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="f7e57-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="in-this-topic"></a><span data-ttu-id="7f577-107">Neste tópico</span><span class="sxs-lookup"><span data-stu-id="7f577-107">In this topic</span></span>  
- <span data-ttu-id="7f577-108">Nesta etapa do tutorial, as atividades `WriteLine` no fluxo de trabalho são modificadas para fornecer informações adicionais e uma nova atividade `WriteLine` é adicionada.</span><span class="sxs-lookup"><span data-stu-id="7f577-108">In this step of the tutorial, the `WriteLine` activities in the workflow are modified to provide additional information, and a new `WriteLine` activity is added.</span></span> <span data-ttu-id="7f577-109">Uma cópia do assembly original do fluxo de trabalho é armazenada e o aplicativo host é atualizado de forma que possa executar os fluxos de trabalho atualizados e originais ao mesmo tempo.</span><span class="sxs-lookup"><span data-stu-id="7f577-109">A copy of the original workflow assembly is stored, and the host application is updated so that it can run both the original and the updated workflows at the same time.</span></span>  
+## <a name="in-this-topic"></a><span data-ttu-id="f7e57-107">Neste tópico</span><span class="sxs-lookup"><span data-stu-id="f7e57-107">In this topic</span></span>  
+ <span data-ttu-id="f7e57-108">Nesta etapa do tutorial, as atividades `WriteLine` no fluxo de trabalho são modificadas para fornecer informações adicionais e uma nova atividade `WriteLine` é adicionada.</span><span class="sxs-lookup"><span data-stu-id="f7e57-108">In this step of the tutorial, the `WriteLine` activities in the workflow are modified to provide additional information, and a new `WriteLine` activity is added.</span></span> <span data-ttu-id="f7e57-109">Uma cópia do assembly original do fluxo de trabalho é armazenada e o aplicativo host é atualizado de forma que possa executar os fluxos de trabalho atualizados e originais ao mesmo tempo.</span><span class="sxs-lookup"><span data-stu-id="f7e57-109">A copy of the original workflow assembly is stored, and the host application is updated so that it can run both the original and the updated workflows at the same time.</span></span>  
   
--   [<span data-ttu-id="7f577-110">Para fazer uma cópia do projeto NumberGuessWorkflowActivities</span><span class="sxs-lookup"><span data-stu-id="7f577-110">To make a copy of the NumberGuessWorkflowActivities project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [<span data-ttu-id="f7e57-110">Para fazer uma cópia do projeto NumberGuessWorkflowActivities</span><span class="sxs-lookup"><span data-stu-id="f7e57-110">To make a copy of the NumberGuessWorkflowActivities project</span></span>](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [<span data-ttu-id="7f577-111">Para atualizar os fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="7f577-111">To update the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [<span data-ttu-id="f7e57-111">Para atualizar os fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="f7e57-111">To update the workflows</span></span>](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [<span data-ttu-id="7f577-112">Para atualizar o fluxo de trabalho StateMachine</span><span class="sxs-lookup"><span data-stu-id="7f577-112">To update the StateMachine workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [<span data-ttu-id="f7e57-112">Para atualizar o fluxo de trabalho StateMachine</span><span class="sxs-lookup"><span data-stu-id="f7e57-112">To update the StateMachine workflow</span></span>](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [<span data-ttu-id="7f577-113">Para atualizar o fluxo de trabalho de fluxograma</span><span class="sxs-lookup"><span data-stu-id="7f577-113">To update the Flowchart workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [<span data-ttu-id="f7e57-113">Para atualizar o fluxo de trabalho de fluxograma</span><span class="sxs-lookup"><span data-stu-id="f7e57-113">To update the Flowchart workflow</span></span>](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [<span data-ttu-id="7f577-114">Para atualizar o fluxo de trabalho sequencial</span><span class="sxs-lookup"><span data-stu-id="7f577-114">To update the Sequential workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [<span data-ttu-id="f7e57-114">Para atualizar o fluxo de trabalho sequencial</span><span class="sxs-lookup"><span data-stu-id="f7e57-114">To update the Sequential workflow</span></span>](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [<span data-ttu-id="7f577-115">Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="7f577-115">To update WorkflowVersionMap to include the previous workflow versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [<span data-ttu-id="f7e57-115">Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="f7e57-115">To update WorkflowVersionMap to include the previous workflow versions</span></span>](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [<span data-ttu-id="7f577-116">Para compilar e executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="7f577-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="f7e57-116">Para compilar e executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="f7e57-116">To build and run the application</span></span>](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  <span data-ttu-id="7f577-117">Antes de seguir as etapas deste tópico, execute o aplicativo, inicie vários fluxos de trabalho de cada tipo e dê um ou dois palpites para cada um.</span><span class="sxs-lookup"><span data-stu-id="7f577-117">Before following the steps in this topic, run the application, start several workflows of each type, and making one or two guesses for each one.</span></span> <span data-ttu-id="7f577-118">Esses fluxos de trabalho persistidos são usados nesta etapa e a etapa a seguir, [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="7f577-118">These persisted workflows are used in this step and the following step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
+>  <span data-ttu-id="f7e57-117">Antes de seguir as etapas deste tópico, execute o aplicativo, inicie vários fluxos de trabalho de cada tipo e dê um ou dois palpites para cada um.</span><span class="sxs-lookup"><span data-stu-id="f7e57-117">Before following the steps in this topic, run the application, start several workflows of each type, and making one or two guesses for each one.</span></span> <span data-ttu-id="f7e57-118">Esses fluxos de trabalho persistidos são usados nesta etapa e a etapa a seguir, [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="f7e57-118">These persisted workflows are used in this step and the following step, [How to: Update the Definition of a Running Workflow Instance](how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="7f577-119">Cada etapa do tutorial de Introdução depende das etapas anteriores.</span><span class="sxs-lookup"><span data-stu-id="7f577-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="7f577-120">Se você não tiver concluído as etapas anteriores, você pode baixar uma versão completa do tutorial do [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="7f577-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="f7e57-119">Cada etapa do tutorial de Introdução depende das etapas anteriores.</span><span class="sxs-lookup"><span data-stu-id="f7e57-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="f7e57-120">Se você não tiver concluído as etapas anteriores, você pode baixar uma versão completa do tutorial do [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="f7e57-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-### <a name="BKMK_BackupCopy"></a> <span data-ttu-id="7f577-121">Para fazer uma cópia do projeto NumberGuessWorkflowActivities</span><span class="sxs-lookup"><span data-stu-id="7f577-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
+### <a name="BKMK_BackupCopy"></a> <span data-ttu-id="f7e57-121">Para fazer uma cópia do projeto NumberGuessWorkflowActivities</span><span class="sxs-lookup"><span data-stu-id="f7e57-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
   
-1.  <span data-ttu-id="7f577-122">Abra o **WF45GettingStartedTutorial** solução no Visual Studio 2012 se não estiver aberto.</span><span class="sxs-lookup"><span data-stu-id="7f577-122">Open the **WF45GettingStartedTutorial** solution in Visual Studio 2012 if it is not open.</span></span>  
+1.  <span data-ttu-id="f7e57-122">Abra o **WF45GettingStartedTutorial** solução no Visual Studio 2012 se não estiver aberto.</span><span class="sxs-lookup"><span data-stu-id="f7e57-122">Open the **WF45GettingStartedTutorial** solution in Visual Studio 2012 if it is not open.</span></span>  
   
-2.  <span data-ttu-id="7f577-123">Pressione CTRL+SHIFT+B para criar a solução.</span><span class="sxs-lookup"><span data-stu-id="7f577-123">Press CTRL+SHIFT+B to build the solution.</span></span>  
+2.  <span data-ttu-id="f7e57-123">Pressione CTRL+SHIFT+B para criar a solução.</span><span class="sxs-lookup"><span data-stu-id="f7e57-123">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-3.  <span data-ttu-id="7f577-124">Fechar o **WF45GettingStartedTutorial** solução.</span><span class="sxs-lookup"><span data-stu-id="7f577-124">Close the **WF45GettingStartedTutorial** solution.</span></span>  
+3.  <span data-ttu-id="f7e57-124">Fechar o **WF45GettingStartedTutorial** solução.</span><span class="sxs-lookup"><span data-stu-id="f7e57-124">Close the **WF45GettingStartedTutorial** solution.</span></span>  
   
-4.  <span data-ttu-id="7f577-125">Abra o Windows Explorer e navegue até a pasta onde o arquivo da solução do tutorial e as pastas do projeto estão localizados.</span><span class="sxs-lookup"><span data-stu-id="7f577-125">Open Windows Explorer and navigate to the folder where the tutorial solution file and the project folders are located.</span></span>  
+4.  <span data-ttu-id="f7e57-125">Abra o Windows Explorer e navegue até a pasta onde o arquivo da solução do tutorial e as pastas do projeto estão localizados.</span><span class="sxs-lookup"><span data-stu-id="f7e57-125">Open Windows Explorer and navigate to the folder where the tutorial solution file and the project folders are located.</span></span>  
   
-5.  <span data-ttu-id="7f577-126">Criar uma nova pasta chamada **PreviousVersions** na mesma pasta que **NumberGuessWorkflowHost** e **NumberGuessWorkflowActivities**.</span><span class="sxs-lookup"><span data-stu-id="7f577-126">Create a new folder named **PreviousVersions** in the same folder as **NumberGuessWorkflowHost** and **NumberGuessWorkflowActivities**.</span></span> <span data-ttu-id="7f577-127">Essa pasta é usada para conter os assemblies que contêm as versões diferentes dos fluxos de trabalho usados nas etapas subsequentes do tutorial.</span><span class="sxs-lookup"><span data-stu-id="7f577-127">This folder is used to contain the assemblies that contain the different versions of the workflows used in the subsequent tutorial steps.</span></span>  
+5.  <span data-ttu-id="f7e57-126">Criar uma nova pasta chamada **PreviousVersions** na mesma pasta que **NumberGuessWorkflowHost** e **NumberGuessWorkflowActivities**.</span><span class="sxs-lookup"><span data-stu-id="f7e57-126">Create a new folder named **PreviousVersions** in the same folder as **NumberGuessWorkflowHost** and **NumberGuessWorkflowActivities**.</span></span> <span data-ttu-id="f7e57-127">Essa pasta é usada para conter os assemblies que contêm as versões diferentes dos fluxos de trabalho usados nas etapas subsequentes do tutorial.</span><span class="sxs-lookup"><span data-stu-id="f7e57-127">This folder is used to contain the assemblies that contain the different versions of the workflows used in the subsequent tutorial steps.</span></span>  
   
-6.  <span data-ttu-id="7f577-128">Navegue até a **NumberGuessWorkflowActivities\bin\debug** pasta (ou **bin\release** dependendo de suas configurações de projeto).</span><span class="sxs-lookup"><span data-stu-id="7f577-128">Navigate to the **NumberGuessWorkflowActivities\bin\debug** folder (or **bin\release** depending on your project settings).</span></span> <span data-ttu-id="7f577-129">Cópia **Numberguessworkflowactivities** e cole-o **PreviousVersions** pasta.</span><span class="sxs-lookup"><span data-stu-id="7f577-129">Copy **NumberGuessWorkflowActivities.dll** and paste it into the **PreviousVersions** folder.</span></span>  
+6.  <span data-ttu-id="f7e57-128">Navegue até a **NumberGuessWorkflowActivities\bin\debug** pasta (ou **bin\release** dependendo de suas configurações de projeto).</span><span class="sxs-lookup"><span data-stu-id="f7e57-128">Navigate to the **NumberGuessWorkflowActivities\bin\debug** folder (or **bin\release** depending on your project settings).</span></span> <span data-ttu-id="f7e57-129">Cópia **Numberguessworkflowactivities** e cole-o **PreviousVersions** pasta.</span><span class="sxs-lookup"><span data-stu-id="f7e57-129">Copy **NumberGuessWorkflowActivities.dll** and paste it into the **PreviousVersions** folder.</span></span>  
   
-7.  <span data-ttu-id="7f577-130">Renomeie **Numberguessworkflowactivities** na **PreviousVersions** pasta a ser **NumberGuessWorkflowActivities_v1.dll**.</span><span class="sxs-lookup"><span data-stu-id="7f577-130">Rename **NumberGuessWorkflowActivities.dll** in the **PreviousVersions** folder to **NumberGuessWorkflowActivities_v1.dll**.</span></span>  
+7.  <span data-ttu-id="f7e57-130">Renomeie **Numberguessworkflowactivities** na **PreviousVersions** pasta a ser **NumberGuessWorkflowActivities_v1.dll**.</span><span class="sxs-lookup"><span data-stu-id="f7e57-130">Rename **NumberGuessWorkflowActivities.dll** in the **PreviousVersions** folder to **NumberGuessWorkflowActivities_v1.dll**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="7f577-131">As etapas deste tópico demonstram uma maneira de gerenciar os assemblies usados para conter várias versões dos fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="7f577-131">The steps in this topic demonstrate one way to manage the assemblies used to contain multiple versions of the workflows.</span></span> <span data-ttu-id="7f577-132">Outros métodos como nomeação forte dos assemblies e registrando deles no cache de assembly global também podem ser usados.</span><span class="sxs-lookup"><span data-stu-id="7f577-132">Other methods such as strong naming the assemblies and registering them in the global assembly cache could also be used.</span></span>
+    >  <span data-ttu-id="f7e57-131">As etapas deste tópico demonstram uma maneira de gerenciar os assemblies usados para conter várias versões dos fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="f7e57-131">The steps in this topic demonstrate one way to manage the assemblies used to contain multiple versions of the workflows.</span></span> <span data-ttu-id="f7e57-132">Outros métodos como nomeação forte dos assemblies e registrando deles no cache de assembly global também podem ser usados.</span><span class="sxs-lookup"><span data-stu-id="f7e57-132">Other methods such as strong naming the assemblies and registering them in the global assembly cache could also be used.</span></span>
 
-8.  <span data-ttu-id="7f577-133">Criar uma nova pasta chamada **NumberGuessWorkflowActivities_du** na mesma pasta que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**e o recentemente adicionado **PreviousVersions** pasta e copie todos os arquivos e subpastas do **NumberGuessWorkflowActivities** pasta para a nova  **NumberGuessWorkflowActivities_du** pasta.</span><span class="sxs-lookup"><span data-stu-id="7f577-133">Create a new folder named **NumberGuessWorkflowActivities_du** in the same folder as **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, and the newly added **PreviousVersions** folder, and copy all of the files and subfolders from the **NumberGuessWorkflowActivities** folder into the new **NumberGuessWorkflowActivities_du** folder.</span></span> <span data-ttu-id="7f577-134">Essa cópia de backup do projeto para a versão inicial das atividades é usada em [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="7f577-134">This backup copy of the project for the initial version of the activities is used in [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
+8.  <span data-ttu-id="f7e57-133">Criar uma nova pasta chamada **NumberGuessWorkflowActivities_du** na mesma pasta que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**e o recentemente adicionado **PreviousVersions** pasta e copie todos os arquivos e subpastas do **NumberGuessWorkflowActivities** pasta para a nova  **NumberGuessWorkflowActivities_du** pasta.</span><span class="sxs-lookup"><span data-stu-id="f7e57-133">Create a new folder named **NumberGuessWorkflowActivities_du** in the same folder as **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, and the newly added **PreviousVersions** folder, and copy all of the files and subfolders from the **NumberGuessWorkflowActivities** folder into the new **NumberGuessWorkflowActivities_du** folder.</span></span> <span data-ttu-id="f7e57-134">Essa cópia de backup do projeto para a versão inicial das atividades é usada em [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="f7e57-134">This backup copy of the project for the initial version of the activities is used in [How to: Update the Definition of a Running Workflow Instance](how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
 
-9. <span data-ttu-id="7f577-135">Abra novamente o **WF45GettingStartedTutorial** solução no Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="7f577-135">Re-open the **WF45GettingStartedTutorial** solution in Visual Studio 2012.</span></span>
+9. <span data-ttu-id="f7e57-135">Abra novamente o **WF45GettingStartedTutorial** solução no Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="f7e57-135">Re-open the **WF45GettingStartedTutorial** solution in Visual Studio 2012.</span></span>
 
-### <a name="BKMK_UpdateWorkflows"></a> <span data-ttu-id="7f577-136">Para atualizar os fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="7f577-136">To update the workflows</span></span>
- <span data-ttu-id="7f577-137">Nesta seção, as definições de fluxo de trabalho são atualizadas.</span><span class="sxs-lookup"><span data-stu-id="7f577-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="7f577-138">As duas atividades `WriteLine` que fornecem comentários sobre o palpite do usuário são atualizadas, e uma nova atividade `WriteLine` é adicionada, que fornece informações adicionais sobre o jogo quando o número é acertado.</span><span class="sxs-lookup"><span data-stu-id="7f577-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>
+### <a name="BKMK_UpdateWorkflows"></a> <span data-ttu-id="f7e57-136">Para atualizar os fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="f7e57-136">To update the workflows</span></span>
+ <span data-ttu-id="f7e57-137">Nesta seção, as definições de fluxo de trabalho são atualizadas.</span><span class="sxs-lookup"><span data-stu-id="f7e57-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="f7e57-138">As duas atividades `WriteLine` que fornecem comentários sobre o palpite do usuário são atualizadas, e uma nova atividade `WriteLine` é adicionada, que fornece informações adicionais sobre o jogo quando o número é acertado.</span><span class="sxs-lookup"><span data-stu-id="f7e57-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>
 
-#### <a name="BKMK_UpdateStateMachine"></a> <span data-ttu-id="7f577-139">Para atualizar o fluxo de trabalho StateMachine</span><span class="sxs-lookup"><span data-stu-id="7f577-139">To update the StateMachine workflow</span></span>
+#### <a name="BKMK_UpdateStateMachine"></a> <span data-ttu-id="f7e57-139">Para atualizar o fluxo de trabalho StateMachine</span><span class="sxs-lookup"><span data-stu-id="f7e57-139">To update the StateMachine workflow</span></span>
 
-1.  <span data-ttu-id="7f577-140">Na **Gerenciador de soluções**, sob o **NumberGuessWorkflowActivities** do projeto, clique duas vezes em **Statemachinenumberguessworkflow**.</span><span class="sxs-lookup"><span data-stu-id="7f577-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>
+1.  <span data-ttu-id="f7e57-140">Na **Gerenciador de soluções**, sob o **NumberGuessWorkflowActivities** do projeto, clique duas vezes em **Statemachinenumberguessworkflow**.</span><span class="sxs-lookup"><span data-stu-id="f7e57-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>
 
-2.  <span data-ttu-id="7f577-141">Clique duas vezes o **Palpite incorreto** transição na máquina de estado.</span><span class="sxs-lookup"><span data-stu-id="7f577-141">Double-click the **Guess Incorrect** transition on the state machine.</span></span>
+2.  <span data-ttu-id="f7e57-141">Clique duas vezes o **Palpite incorreto** transição na máquina de estado.</span><span class="sxs-lookup"><span data-stu-id="f7e57-141">Double-click the **Guess Incorrect** transition on the state machine.</span></span>
 
-3.  <span data-ttu-id="7f577-142">Atualize o `Text` do `WriteLine` mais à esquerda na atividade `If`.</span><span class="sxs-lookup"><span data-stu-id="7f577-142">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
-
-    ```vb
-    Guess & " is too low."
-    ```
-
-    ```csharp
-    Guess + " is too low."
-    ```
-
-4.  <span data-ttu-id="7f577-143">Atualize o `Text` do `WriteLine` mais à direita na atividade `If`.</span><span class="sxs-lookup"><span data-stu-id="7f577-143">Update the `Text` of the right-most `WriteLine` in the `If` activity.</span></span>
-
-    ```vb
-    Guess & " is too high."
-    ```
-
-    ```csharp
-    Guess + " is too high."
-    ```
-
-5.  <span data-ttu-id="7f577-144">Retorne ao geral exibição no designer de fluxo de trabalho de máquina de estado clicando **StateMachine** na trilha exibir na parte superior do designer de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="7f577-144">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>
-
-6.  <span data-ttu-id="7f577-145">Clique duas vezes o **Palpite correto** transição na máquina de estado.</span><span class="sxs-lookup"><span data-stu-id="7f577-145">Double-click the **Guess Correct** transition on the state machine.</span></span>
-
-7.  <span data-ttu-id="7f577-146">Arraste uma **WriteLine** a atividade do **primitivos** seção do **caixa de ferramentas** e solte-a no **atividade de ação de soltar aqui** rótulo da transição.</span><span class="sxs-lookup"><span data-stu-id="7f577-146">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the **Drop Action activity here** label of the transition.</span></span>
-
-8.  <span data-ttu-id="7f577-147">Digite a seguinte expressão na caixa de propriedades de `Text`.</span><span class="sxs-lookup"><span data-stu-id="7f577-147">Type the following expression into the `Text` property box.</span></span>
-
-    ```vb
-    Guess & " is correct. You guessed it in " & Turns & " turns."
-    ```
-
-    ```csharp
-    Guess + " is correct. You guessed it in " + Turns + " turns."
-    ```
-
-#### <a name="BKMK_UpdateFlowchart"></a> <span data-ttu-id="7f577-148">Para atualizar o fluxo de trabalho de fluxograma</span><span class="sxs-lookup"><span data-stu-id="7f577-148">To update the Flowchart workflow</span></span>
-
-1.  <span data-ttu-id="7f577-149">Na **Gerenciador de soluções**, sob o **NumberGuessWorkflowActivities** do projeto, clique duas vezes em **Flowchartnumberguessworkflow**.</span><span class="sxs-lookup"><span data-stu-id="7f577-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>
-
-2.  <span data-ttu-id="7f577-150">Atualize o `Text` do `WriteLine` mais à esquerda.</span><span class="sxs-lookup"><span data-stu-id="7f577-150">Update the `Text` of the left-most `WriteLine` activity.</span></span>
+3.  <span data-ttu-id="f7e57-142">Atualize o `Text` do `WriteLine` mais à esquerda na atividade `If`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-142">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
 
     ```vb
     Guess & " is too low."
@@ -123,7 +83,7 @@ ms.locfileid: "57366693"
     Guess + " is too low."
     ```
 
-3.  <span data-ttu-id="7f577-151">Atualize o `Text` do `WriteLine` mais à direita.</span><span class="sxs-lookup"><span data-stu-id="7f577-151">Update the `Text` of the right-most `WriteLine` activity.</span></span>
+4.  <span data-ttu-id="f7e57-143">Atualize o `Text` do `WriteLine` mais à direita na atividade `If`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-143">Update the `Text` of the right-most `WriteLine` in the `If` activity.</span></span>
 
     ```vb
     Guess & " is too high."
@@ -133,9 +93,13 @@ ms.locfileid: "57366693"
     Guess + " is too high."
     ```
 
-4.  <span data-ttu-id="7f577-152">Arraste um **WriteLine** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-no ponto certo do `True` ação de nível superior `FlowDecision` .</span><span class="sxs-lookup"><span data-stu-id="7f577-152">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the drop point of the `True` action of the topmost `FlowDecision`.</span></span> <span data-ttu-id="7f577-153">A atividade `WriteLine` é adicionada ao fluxograma e vinculada à ação `True` do `FlowDecision`.</span><span class="sxs-lookup"><span data-stu-id="7f577-153">The `WriteLine` activity is added to the flowchart and linked to the `True` action of the `FlowDecision`.</span></span>
+5.  <span data-ttu-id="f7e57-144">Retorne ao geral exibição no designer de fluxo de trabalho de máquina de estado clicando **StateMachine** na trilha exibir na parte superior do designer de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="f7e57-144">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>
 
-5.  <span data-ttu-id="7f577-154">Digite a seguinte expressão na caixa de propriedades de `Text`.</span><span class="sxs-lookup"><span data-stu-id="7f577-154">Type the following expression into the `Text` property box.</span></span>
+6.  <span data-ttu-id="f7e57-145">Clique duas vezes o **Palpite correto** transição na máquina de estado.</span><span class="sxs-lookup"><span data-stu-id="f7e57-145">Double-click the **Guess Correct** transition on the state machine.</span></span>
+
+7.  <span data-ttu-id="f7e57-146">Arraste uma **WriteLine** a atividade do **primitivos** seção do **caixa de ferramentas** e solte-a no **atividade de ação de soltar aqui** rótulo da transição.</span><span class="sxs-lookup"><span data-stu-id="f7e57-146">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the **Drop Action activity here** label of the transition.</span></span>
+
+8.  <span data-ttu-id="f7e57-147">Digite a seguinte expressão na caixa de propriedades de `Text`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-147">Type the following expression into the `Text` property box.</span></span>
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -145,11 +109,11 @@ ms.locfileid: "57366693"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-#### <a name="BKMK_UpdateSequential"></a> <span data-ttu-id="7f577-155">Para atualizar o fluxo de trabalho sequencial</span><span class="sxs-lookup"><span data-stu-id="7f577-155">To update the Sequential workflow</span></span>
+#### <a name="BKMK_UpdateFlowchart"></a> <span data-ttu-id="f7e57-148">Para atualizar o fluxo de trabalho de fluxograma</span><span class="sxs-lookup"><span data-stu-id="f7e57-148">To update the Flowchart workflow</span></span>
 
-1.  <span data-ttu-id="7f577-156">Na **Gerenciador de soluções**, sob o **NumberGuessWorkflowActivities** do projeto, clique duas vezes em **Sequentialnumberguessworkflow**.</span><span class="sxs-lookup"><span data-stu-id="7f577-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>
+1.  <span data-ttu-id="f7e57-149">Na **Gerenciador de soluções**, sob o **NumberGuessWorkflowActivities** do projeto, clique duas vezes em **Flowchartnumberguessworkflow**.</span><span class="sxs-lookup"><span data-stu-id="f7e57-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>
 
-2.  <span data-ttu-id="7f577-157">Atualize o `Text` do `WriteLine` mais à esquerda na atividade `If`.</span><span class="sxs-lookup"><span data-stu-id="7f577-157">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
+2.  <span data-ttu-id="f7e57-150">Atualize o `Text` do `WriteLine` mais à esquerda.</span><span class="sxs-lookup"><span data-stu-id="f7e57-150">Update the `Text` of the left-most `WriteLine` activity.</span></span>
 
     ```vb
     Guess & " is too low."
@@ -159,7 +123,7 @@ ms.locfileid: "57366693"
     Guess + " is too low."
     ```
 
-3.  <span data-ttu-id="7f577-158">Atualize o `Text` da atividade `WriteLine` mais à direita na atividade `If`.</span><span class="sxs-lookup"><span data-stu-id="7f577-158">Update the `Text` of the right-most `WriteLine` activity in the `If` activity.</span></span>
+3.  <span data-ttu-id="f7e57-151">Atualize o `Text` do `WriteLine` mais à direita.</span><span class="sxs-lookup"><span data-stu-id="f7e57-151">Update the `Text` of the right-most `WriteLine` activity.</span></span>
 
     ```vb
     Guess & " is too high."
@@ -169,9 +133,9 @@ ms.locfileid: "57366693"
     Guess + " is too high."
     ```
 
-4.  <span data-ttu-id="7f577-159">Arrastar um **WriteLine** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-a depois o **DoWhile** atividade para que o  **WriteLine** é a atividade final na raiz `Sequence` atividade.</span><span class="sxs-lookup"><span data-stu-id="7f577-159">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it after the **DoWhile** activity so that the **WriteLine** is the final activity in the root `Sequence` activity.</span></span>
+4.  <span data-ttu-id="f7e57-152">Arraste um **WriteLine** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-no ponto certo do `True` ação de nível superior `FlowDecision` .</span><span class="sxs-lookup"><span data-stu-id="f7e57-152">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the drop point of the `True` action of the topmost `FlowDecision`.</span></span> <span data-ttu-id="f7e57-153">A atividade `WriteLine` é adicionada ao fluxograma e vinculada à ação `True` do `FlowDecision`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-153">The `WriteLine` activity is added to the flowchart and linked to the `True` action of the `FlowDecision`.</span></span>
 
-5.  <span data-ttu-id="7f577-160">Digite a seguinte expressão na caixa de propriedades de `Text`.</span><span class="sxs-lookup"><span data-stu-id="7f577-160">Type the following expression into the `Text` property box.</span></span>
+5.  <span data-ttu-id="f7e57-154">Digite a seguinte expressão na caixa de propriedades de `Text`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-154">Type the following expression into the `Text` property box.</span></span>
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -181,11 +145,47 @@ ms.locfileid: "57366693"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-### <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="7f577-161">Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="7f577-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>
+#### <a name="BKMK_UpdateSequential"></a> <span data-ttu-id="f7e57-155">Para atualizar o fluxo de trabalho sequencial</span><span class="sxs-lookup"><span data-stu-id="f7e57-155">To update the Sequential workflow</span></span>
 
-1.  <span data-ttu-id="7f577-162">Clique duas vezes em **WorkflowVersionMap.cs** (ou **Workflowversionmap**) sob o **NumberGuessWorkflowHost** para abri-lo.</span><span class="sxs-lookup"><span data-stu-id="7f577-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+1.  <span data-ttu-id="f7e57-156">Na **Gerenciador de soluções**, sob o **NumberGuessWorkflowActivities** do projeto, clique duas vezes em **Sequentialnumberguessworkflow**.</span><span class="sxs-lookup"><span data-stu-id="f7e57-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>
 
-2.  <span data-ttu-id="7f577-163">Adicione as seguintes instruções `using` (ou `Imports`) na parte superior do arquivo com as outras instruções `using` (ou `Imports`).</span><span class="sxs-lookup"><span data-stu-id="7f577-163">Add the following `using` (or `Imports`) statements to the top of the file with the other `using` (or `Imports`) statements.</span></span>
+2.  <span data-ttu-id="f7e57-157">Atualize o `Text` do `WriteLine` mais à esquerda na atividade `If`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-157">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
+
+    ```vb
+    Guess & " is too low."
+    ```
+
+    ```csharp
+    Guess + " is too low."
+    ```
+
+3.  <span data-ttu-id="f7e57-158">Atualize o `Text` da atividade `WriteLine` mais à direita na atividade `If`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-158">Update the `Text` of the right-most `WriteLine` activity in the `If` activity.</span></span>
+
+    ```vb
+    Guess & " is too high."
+    ```
+
+    ```csharp
+    Guess + " is too high."
+    ```
+
+4.  <span data-ttu-id="f7e57-159">Arrastar um **WriteLine** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-a depois o **DoWhile** atividade para que o  **WriteLine** é a atividade final na raiz `Sequence` atividade.</span><span class="sxs-lookup"><span data-stu-id="f7e57-159">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it after the **DoWhile** activity so that the **WriteLine** is the final activity in the root `Sequence` activity.</span></span>
+
+5.  <span data-ttu-id="f7e57-160">Digite a seguinte expressão na caixa de propriedades de `Text`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-160">Type the following expression into the `Text` property box.</span></span>
+
+    ```vb
+    Guess & " is correct. You guessed it in " & Turns & " turns."
+    ```
+
+    ```csharp
+    Guess + " is correct. You guessed it in " + Turns + " turns."
+    ```
+
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="f7e57-161">Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="f7e57-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>
+
+1.  <span data-ttu-id="f7e57-162">Clique duas vezes em **WorkflowVersionMap.cs** (ou **Workflowversionmap**) sob o **NumberGuessWorkflowHost** para abri-lo.</span><span class="sxs-lookup"><span data-stu-id="f7e57-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+
+2.  <span data-ttu-id="f7e57-163">Adicione as seguintes instruções `using` (ou `Imports`) na parte superior do arquivo com as outras instruções `using` (ou `Imports`).</span><span class="sxs-lookup"><span data-stu-id="f7e57-163">Add the following `using` (or `Imports`) statements to the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports System.Reflection
@@ -197,7 +197,7 @@ ms.locfileid: "57366693"
     using System.IO;
     ```
 
-3.  <span data-ttu-id="7f577-164">Adicione três novas identidades de fluxo de trabalho abaixo das três declarações de identidade de fluxo de trabalho existentes.</span><span class="sxs-lookup"><span data-stu-id="7f577-164">Add three new workflow identities just below the three existing workflow identity declarations.</span></span> <span data-ttu-id="7f577-165">Essas novas identidades de fluxo de trabalho `v1` serão usadas para fornecer a definição correta para fluxos de trabalho iniciados antes que as atualizações foram feitas.</span><span class="sxs-lookup"><span data-stu-id="7f577-165">These new `v1` workflow identities will be used provide the correct workflow definition to workflows started before the updates were made.</span></span>
+3.  <span data-ttu-id="f7e57-164">Adicione três novas identidades de fluxo de trabalho abaixo das três declarações de identidade de fluxo de trabalho existentes.</span><span class="sxs-lookup"><span data-stu-id="f7e57-164">Add three new workflow identities just below the three existing workflow identity declarations.</span></span> <span data-ttu-id="f7e57-165">Essas novas identidades de fluxo de trabalho `v1` serão usadas para fornecer a definição correta para fluxos de trabalho iniciados antes que as atualizações foram feitas.</span><span class="sxs-lookup"><span data-stu-id="f7e57-165">These new `v1` workflow identities will be used provide the correct workflow definition to workflows started before the updates were made.</span></span>
 
     ```vb
     'Current version identities.
@@ -223,7 +223,7 @@ ms.locfileid: "57366693"
     static public WorkflowIdentity SequentialNumberGuessIdentity_v1;
     ```
 
-4.  <span data-ttu-id="7f577-166">No construtor `WorkflowVersionMap`, atualize a propriedade `Version` das três identidades atuais de fluxo de trabalho para `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="7f577-166">In the `WorkflowVersionMap` constructor, update the `Version` property of the three current workflow identities to `2.0.0.0`.</span></span>
+4.  <span data-ttu-id="f7e57-166">No construtor `WorkflowVersionMap`, atualize a propriedade `Version` das três identidades atuais de fluxo de trabalho para `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-166">In the `WorkflowVersionMap` constructor, update the `Version` property of the three current workflow identities to `2.0.0.0`.</span></span>
 
     ```vb
     'Add the current workflow version identities.
@@ -278,9 +278,9 @@ ms.locfileid: "57366693"
     map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());
     ```
 
-     <span data-ttu-id="7f577-167">Esse código adiciona as versões atuais dos fluxos de trabalho para o dicionário que usa as versões atuais que são referenciadas no projeto, de modo que o código que inicializa as definições de fluxo de trabalho não precise ser atualizado.</span><span class="sxs-lookup"><span data-stu-id="7f577-167">The code in that adds the current versions of the workflows to the dictionary uses the current versions that are referenced in the project, so the code that initializes the workflow definitions does not need to be updated.</span></span>
+     <span data-ttu-id="f7e57-167">Esse código adiciona as versões atuais dos fluxos de trabalho para o dicionário que usa as versões atuais que são referenciadas no projeto, de modo que o código que inicializa as definições de fluxo de trabalho não precise ser atualizado.</span><span class="sxs-lookup"><span data-stu-id="f7e57-167">The code in that adds the current versions of the workflows to the dictionary uses the current versions that are referenced in the project, so the code that initializes the workflow definitions does not need to be updated.</span></span>
 
-5.  <span data-ttu-id="7f577-168">Adicione o seguinte código no construtor imediatamente depois do código que adiciona as versões atuais ao dicionário.</span><span class="sxs-lookup"><span data-stu-id="7f577-168">Add the following code in the constructor just after the code that adds the current versions to the dictionary.</span></span>
+5.  <span data-ttu-id="f7e57-168">Adicione o seguinte código no construtor imediatamente depois do código que adiciona as versões atuais ao dicionário.</span><span class="sxs-lookup"><span data-stu-id="f7e57-168">Add the following code in the constructor just after the code that adds the current versions to the dictionary.</span></span>
 
     ```vb
     'Initialize the previous workflow version identities.
@@ -324,9 +324,9 @@ ms.locfileid: "57366693"
     };
     ```
 
-     <span data-ttu-id="7f577-169">Essas identidades de fluxo de trabalho são associadas às versões iniciais das definições de fluxo de trabalho correspondentes.</span><span class="sxs-lookup"><span data-stu-id="7f577-169">These workflow identities are associated with the initial versions of the corresponding workflow definitions.</span></span>
+     <span data-ttu-id="f7e57-169">Essas identidades de fluxo de trabalho são associadas às versões iniciais das definições de fluxo de trabalho correspondentes.</span><span class="sxs-lookup"><span data-stu-id="f7e57-169">These workflow identities are associated with the initial versions of the corresponding workflow definitions.</span></span>
 
-6.  <span data-ttu-id="7f577-170">Em seguida, carregue o assembly que contém a versão inicial das definições de fluxo de trabalho, e crie e adicione as definições correspondentes do fluxo de trabalho ao dicionário.</span><span class="sxs-lookup"><span data-stu-id="7f577-170">Next, load the assembly that contains the initial version of the workflow definitions, and create and add the corresponding workflow definitions to the dictionary.</span></span>
+6.  <span data-ttu-id="f7e57-170">Em seguida, carregue o assembly que contém a versão inicial das definições de fluxo de trabalho, e crie e adicione as definições correspondentes do fluxo de trabalho ao dicionário.</span><span class="sxs-lookup"><span data-stu-id="f7e57-170">Next, load the assembly that contains the initial version of the workflow definitions, and create and add the corresponding workflow definitions to the dictionary.</span></span>
 
     ```vb
     'Add the previous version workflow identities to the dictionary along with
@@ -366,7 +366,7 @@ ms.locfileid: "57366693"
         v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
     ```
 
-     <span data-ttu-id="7f577-171">O exemplo a seguir é a listagem completa para a classe `WorkflowVersionMap` atualizada.</span><span class="sxs-lookup"><span data-stu-id="7f577-171">The following example is the complete listing for the updated `WorkflowVersionMap` class.</span></span>
+     <span data-ttu-id="f7e57-171">O exemplo a seguir é a listagem completa para a classe `WorkflowVersionMap` atualizada.</span><span class="sxs-lookup"><span data-stu-id="f7e57-171">The following example is the complete listing for the updated `WorkflowVersionMap` class.</span></span>
 
     ```vb
     Public Module WorkflowVersionMap
@@ -549,42 +549,42 @@ ms.locfileid: "57366693"
     }
     ```
 
-### <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="7f577-172">Para compilar e executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="7f577-172">To build and run the application</span></span>
+### <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="f7e57-172">Para compilar e executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="f7e57-172">To build and run the application</span></span>
 
-1.  <span data-ttu-id="7f577-173">Pressione CTRL+SHIFT+B para criar o aplicativo, e CTRL+F5 para iniciar.</span><span class="sxs-lookup"><span data-stu-id="7f577-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>
+1.  <span data-ttu-id="f7e57-173">Pressione CTRL+SHIFT+B para criar o aplicativo, e CTRL+F5 para iniciar.</span><span class="sxs-lookup"><span data-stu-id="f7e57-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>
 
-2.  <span data-ttu-id="7f577-174">Inicie um novo fluxo de trabalho clicando **novo jogo**.</span><span class="sxs-lookup"><span data-stu-id="7f577-174">Start a new workflow by clicking **New Game**.</span></span> <span data-ttu-id="7f577-175">A versão do fluxo de trabalho é exibida abaixo da janela de status e reflete a versão atualizada do `WorkflowIdentity` associado.</span><span class="sxs-lookup"><span data-stu-id="7f577-175">The version of the workflow is displayed under the status window and reflects the updated version from the associated `WorkflowIdentity`.</span></span> <span data-ttu-id="7f577-176">Faça uma anotação do `InstanceId` para que você possa exibir o arquivo de rastreamento para o fluxo de trabalho quando ele for concluído, e insira os palpites até que o jogo seja concluído.</span><span class="sxs-lookup"><span data-stu-id="7f577-176">Make a note of the `InstanceId` so you can view the tracking file for the workflow when it completes, and then enter guesses until the game is complete.</span></span> <span data-ttu-id="7f577-177">Observe como o palpite do usuário é exibido nas informações exibidas na janela de status com base nas atualizações das atividades `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="7f577-177">Note how the user's guess is displayed in the information displayed in the status window based on the updates to the `WriteLine` activities.</span></span>
+2.  <span data-ttu-id="f7e57-174">Inicie um novo fluxo de trabalho clicando **novo jogo**.</span><span class="sxs-lookup"><span data-stu-id="f7e57-174">Start a new workflow by clicking **New Game**.</span></span> <span data-ttu-id="f7e57-175">A versão do fluxo de trabalho é exibida abaixo da janela de status e reflete a versão atualizada do `WorkflowIdentity` associado.</span><span class="sxs-lookup"><span data-stu-id="f7e57-175">The version of the workflow is displayed under the status window and reflects the updated version from the associated `WorkflowIdentity`.</span></span> <span data-ttu-id="f7e57-176">Faça uma anotação do `InstanceId` para que você possa exibir o arquivo de rastreamento para o fluxo de trabalho quando ele for concluído, e insira os palpites até que o jogo seja concluído.</span><span class="sxs-lookup"><span data-stu-id="f7e57-176">Make a note of the `InstanceId` so you can view the tracking file for the workflow when it completes, and then enter guesses until the game is complete.</span></span> <span data-ttu-id="f7e57-177">Observe como o palpite do usuário é exibido nas informações exibidas na janela de status com base nas atualizações das atividades `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-177">Note how the user's guess is displayed in the information displayed in the status window based on the updates to the `WriteLine` activities.</span></span>
 
- <span data-ttu-id="7f577-178">**Insira um número entre 1 e 10**</span><span class="sxs-lookup"><span data-stu-id="7f577-178">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="7f577-179">**5 é muito alta.**</span><span class="sxs-lookup"><span data-stu-id="7f577-179">**5 is too high.**</span></span>  
-<span data-ttu-id="7f577-180">**Insira um número entre 1 e 10**</span><span class="sxs-lookup"><span data-stu-id="7f577-180">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="7f577-181">**3 é muito alta.**</span><span class="sxs-lookup"><span data-stu-id="7f577-181">**3 is too high.**</span></span>  
-<span data-ttu-id="7f577-182">**Insira um número entre 1 e 10**</span><span class="sxs-lookup"><span data-stu-id="7f577-182">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="7f577-183">**1 é muito baixo.**</span><span class="sxs-lookup"><span data-stu-id="7f577-183">**1 is too low.**</span></span>  
-<span data-ttu-id="7f577-184">**Insira um número entre 1 e 10**</span><span class="sxs-lookup"><span data-stu-id="7f577-184">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="7f577-185">**Parabéns, você já entendeu o número em 4 sequências.**</span><span class="sxs-lookup"><span data-stu-id="7f577-185">**Congratulations, you guessed the number in 4 turns.**</span></span>  
+ <span data-ttu-id="f7e57-178">**Insira um número entre 1 e 10**</span><span class="sxs-lookup"><span data-stu-id="f7e57-178">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="f7e57-179">**5 é muito alta.**</span><span class="sxs-lookup"><span data-stu-id="f7e57-179">**5 is too high.**</span></span>  
+<span data-ttu-id="f7e57-180">**Insira um número entre 1 e 10**</span><span class="sxs-lookup"><span data-stu-id="f7e57-180">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="f7e57-181">**3 é muito alta.**</span><span class="sxs-lookup"><span data-stu-id="f7e57-181">**3 is too high.**</span></span>  
+<span data-ttu-id="f7e57-182">**Insira um número entre 1 e 10**</span><span class="sxs-lookup"><span data-stu-id="f7e57-182">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="f7e57-183">**1 é muito baixo.**</span><span class="sxs-lookup"><span data-stu-id="f7e57-183">**1 is too low.**</span></span>  
+<span data-ttu-id="f7e57-184">**Insira um número entre 1 e 10**</span><span class="sxs-lookup"><span data-stu-id="f7e57-184">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="f7e57-185">**Parabéns, você já entendeu o número em 4 sequências.**</span><span class="sxs-lookup"><span data-stu-id="f7e57-185">**Congratulations, you guessed the number in 4 turns.**</span></span>  
 
     > [!NOTE]
-    >  <span data-ttu-id="7f577-186">O texto atualizado das atividades `WriteLine` é exibido, mas não a saída final da atividade `WriteLine` final que foi adicionada neste tópico.</span><span class="sxs-lookup"><span data-stu-id="7f577-186">The updated text from the `WriteLine` activities is displayed, but the output of the final `WriteLine` activity that was added in this topic is not.</span></span> <span data-ttu-id="7f577-187">Isso ocorre porque a janela de status é atualizada pelo manipulador `PersistableIdle`.</span><span class="sxs-lookup"><span data-stu-id="7f577-187">That is because the status window is updated by the `PersistableIdle` handler.</span></span> <span data-ttu-id="7f577-188">Como o fluxo de trabalho é concluído e não fica ocioso após a atividade final, o manipulador `PersistableIdle` não é chamado.</span><span class="sxs-lookup"><span data-stu-id="7f577-188">Because the workflow completes and does not go idle after the final activity, the `PersistableIdle` handler is not called.</span></span> <span data-ttu-id="7f577-189">No entanto, uma mensagem semelhante é exibida na janela de status pelo manipulador `Completed`.</span><span class="sxs-lookup"><span data-stu-id="7f577-189">However, a similar message is displayed in the status window by the `Completed` handler.</span></span> <span data-ttu-id="7f577-190">Se desejar, um código pode ser adicionado ao manipulador `Completed` para extrair o texto de `StringWriter` e exibi-lo na janela de status.</span><span class="sxs-lookup"><span data-stu-id="7f577-190">If desired, code could be added to the `Completed` handler to extract the text from the `StringWriter` and display it to the status window.</span></span>
+    >  <span data-ttu-id="f7e57-186">O texto atualizado das atividades `WriteLine` é exibido, mas não a saída final da atividade `WriteLine` final que foi adicionada neste tópico.</span><span class="sxs-lookup"><span data-stu-id="f7e57-186">The updated text from the `WriteLine` activities is displayed, but the output of the final `WriteLine` activity that was added in this topic is not.</span></span> <span data-ttu-id="f7e57-187">Isso ocorre porque a janela de status é atualizada pelo manipulador `PersistableIdle`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-187">That is because the status window is updated by the `PersistableIdle` handler.</span></span> <span data-ttu-id="f7e57-188">Como o fluxo de trabalho é concluído e não fica ocioso após a atividade final, o manipulador `PersistableIdle` não é chamado.</span><span class="sxs-lookup"><span data-stu-id="f7e57-188">Because the workflow completes and does not go idle after the final activity, the `PersistableIdle` handler is not called.</span></span> <span data-ttu-id="f7e57-189">No entanto, uma mensagem semelhante é exibida na janela de status pelo manipulador `Completed`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-189">However, a similar message is displayed in the status window by the `Completed` handler.</span></span> <span data-ttu-id="f7e57-190">Se desejar, um código pode ser adicionado ao manipulador `Completed` para extrair o texto de `StringWriter` e exibi-lo na janela de status.</span><span class="sxs-lookup"><span data-stu-id="f7e57-190">If desired, code could be added to the `Completed` handler to extract the text from the `StringWriter` and display it to the status window.</span></span>
 
-3.  <span data-ttu-id="7f577-191">Abra o Windows Explorer e navegue até a **NumberGuessWorkflowHost\bin\debug** pasta (ou **bin\release** dependendo de suas configurações de projeto) e abra o arquivo de rastreamento usando o bloco de notas que corresponde o fluxo de trabalho concluído.</span><span class="sxs-lookup"><span data-stu-id="7f577-191">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="7f577-192">Se você não fez uma anotação do `InstanceId`, você pode identificar o arquivo de controle correto usando a **data modificada** informações no Windows Explorer.</span><span class="sxs-lookup"><span data-stu-id="7f577-192">If you did not make a note of the `InstanceId`, you can identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span>
+3.  <span data-ttu-id="f7e57-191">Abra o Windows Explorer e navegue até a **NumberGuessWorkflowHost\bin\debug** pasta (ou **bin\release** dependendo de suas configurações de projeto) e abra o arquivo de rastreamento usando o bloco de notas que corresponde o fluxo de trabalho concluído.</span><span class="sxs-lookup"><span data-stu-id="f7e57-191">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="f7e57-192">Se você não fez uma anotação do `InstanceId`, você pode identificar o arquivo de controle correto usando a **data modificada** informações no Windows Explorer.</span><span class="sxs-lookup"><span data-stu-id="f7e57-192">If you did not make a note of the `InstanceId`, you can identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span>
 
- <span data-ttu-id="7f577-193">**Insira um número entre 1 e 10**
+ <span data-ttu-id="f7e57-193">**Insira um número entre 1 e 10**
 **5 é muito alta.** 
  **Insira um número entre 1 e 10**
 **3 é muito alta.** 
  **Insira um número entre 1 e 10**
 **1 é muito baixa.** 
  **Insira um número entre 1 e 10**
-**2 está correto. Você acertou o Palpite em 4 sequências.**</span><span class="sxs-lookup"><span data-stu-id="7f577-193">**Please enter a number between 1 and 10**
+**2 está correto. Você acertou o Palpite em 4 sequências.**</span><span class="sxs-lookup"><span data-stu-id="f7e57-193">**Please enter a number between 1 and 10**
 **5 is too high.**
 **Please enter a number between 1 and 10**
 **3 is too high.**
 **Please enter a number between 1 and 10**
 **1 is too low.**
 **Please enter a number between 1 and 10**
-**2 is correct. You guessed it in 4 turns.**</span></span>      <span data-ttu-id="7f577-194">A saída `WriteLine` atualizada está contida no arquivo de rastreamento, incluindo a saída de `WriteLine` que foi adicionada neste tópico.</span><span class="sxs-lookup"><span data-stu-id="7f577-194">The updated `WriteLine` output is contained within the tracking file, including the output of the `WriteLine` that was added in this topic.</span></span>
+**2 is correct. You guessed it in 4 turns.**</span></span>      <span data-ttu-id="f7e57-194">A saída `WriteLine` atualizada está contida no arquivo de rastreamento, incluindo a saída de `WriteLine` que foi adicionada neste tópico.</span><span class="sxs-lookup"><span data-stu-id="f7e57-194">The updated `WriteLine` output is contained within the tracking file, including the output of the `WriteLine` that was added in this topic.</span></span>
 
-4.  <span data-ttu-id="7f577-195">Alterne novamente para o aplicativo de palpite de número e selecione um dos fluxos de trabalho que foi iniciado antes que as atualizações foram feitas.</span><span class="sxs-lookup"><span data-stu-id="7f577-195">Switch back to the number guessing application and select one of the workflows that was started before the updates were made.</span></span> <span data-ttu-id="7f577-196">Você pode identificar a versão do fluxo de trabalho selecionado no momento examinando as informações de versão que são exibidas embaixo da janela de status.</span><span class="sxs-lookup"><span data-stu-id="7f577-196">You can identify the version of the currently selected workflow by looking at the version information that is displayed below the status window.</span></span> <span data-ttu-id="7f577-197">Insira alguns palpites e observe que as atualizações de status correspondem à saída da atividade `WriteLine` da versão anterior, e não incluem o palpite do usuário.</span><span class="sxs-lookup"><span data-stu-id="7f577-197">Enter some guesses and note that the status updates match the `WriteLine` activity output from the previous version, and do not include the user's guess.</span></span> <span data-ttu-id="7f577-198">Isso ocorre porque esses fluxos de trabalho estão usando a definição do fluxo de trabalho anterior que não tem as atualizações `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="7f577-198">That is because these workflows are using the previous workflow definition that does not have the `WriteLine` updates.</span></span>
+4.  <span data-ttu-id="f7e57-195">Alterne novamente para o aplicativo de palpite de número e selecione um dos fluxos de trabalho que foi iniciado antes que as atualizações foram feitas.</span><span class="sxs-lookup"><span data-stu-id="f7e57-195">Switch back to the number guessing application and select one of the workflows that was started before the updates were made.</span></span> <span data-ttu-id="f7e57-196">Você pode identificar a versão do fluxo de trabalho selecionado no momento examinando as informações de versão que são exibidas embaixo da janela de status.</span><span class="sxs-lookup"><span data-stu-id="f7e57-196">You can identify the version of the currently selected workflow by looking at the version information that is displayed below the status window.</span></span> <span data-ttu-id="f7e57-197">Insira alguns palpites e observe que as atualizações de status correspondem à saída da atividade `WriteLine` da versão anterior, e não incluem o palpite do usuário.</span><span class="sxs-lookup"><span data-stu-id="f7e57-197">Enter some guesses and note that the status updates match the `WriteLine` activity output from the previous version, and do not include the user's guess.</span></span> <span data-ttu-id="f7e57-198">Isso ocorre porque esses fluxos de trabalho estão usando a definição do fluxo de trabalho anterior que não tem as atualizações `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="f7e57-198">That is because these workflows are using the previous workflow definition that does not have the `WriteLine` updates.</span></span>
 
-     <span data-ttu-id="7f577-199">Na próxima etapa, [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), a execução `v1` instâncias de fluxo de trabalho são atualizadas para conter a nova funcionalidade como a `v2` instâncias.</span><span class="sxs-lookup"><span data-stu-id="7f577-199">In the next step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), the running `v1` workflow instances are updated so they contain the new functionality as the `v2` instances.</span></span>
+     <span data-ttu-id="f7e57-199">Na próxima etapa, [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](how-to-update-the-definition-of-a-running-workflow-instance.md), a execução `v1` instâncias de fluxo de trabalho são atualizadas para conter a nova funcionalidade como a `v2` instâncias.</span><span class="sxs-lookup"><span data-stu-id="f7e57-199">In the next step, [How to: Update the Definition of a Running Workflow Instance](how-to-update-the-definition-of-a-running-workflow-instance.md), the running `v1` workflow instances are updated so they contain the new functionality as the `v2` instances.</span></span>
