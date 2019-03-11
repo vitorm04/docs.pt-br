@@ -9,12 +9,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: 823cc774e4bfd9ba94ea84efeda493b225a04a35
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 3cf53a6934190cd0e7cd7e18bc57fb5fbfb57a86
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260901"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713859"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>Como: Fornecer itens de Menu padrão para um formulário
 Você pode fornecer um menu padrão para os formulários com o <xref:System.Windows.Forms.MenuStrip> controle.  
@@ -26,8 +26,8 @@ Você pode fornecer um menu padrão para os formulários com o <xref:System.Wind
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra como usar um <xref:System.Windows.Forms.MenuStrip> controle para criar um formulário com um menu padrão. Seleções de item de menu são exibidas em um <xref:System.Windows.Forms.StatusStrip> controle.  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
@@ -40,4 +40,4 @@ Você pode fornecer um menu padrão para os formulários com o <xref:System.Wind
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Controle MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+- [Controle MenuStrip](menustrip-control-windows-forms.md)
