@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 7c664ee7d6e0e083eba958e6ee36a63009e13956
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0145df533572ff9d5004a653bb232a7ff60af5f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606602"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495098"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (Referência de C#)
 O `#pragma warning` pode habilitar ou desabilitar determinados avisos.  
@@ -24,7 +24,7 @@ O `#pragma warning` pode habilitar ou desabilitar determinados avisos.
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `warning-list`  
  Uma lista de números de aviso separada por vírgulas. O prefixo "CS" é opcional.  
   

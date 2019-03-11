@@ -3,12 +3,12 @@ title: Tutorial Branches e loops – introdução ao C#
 description: Neste tutorial sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153768"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677780"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Saiba mais sobre lógica condicional com instruções branch e loop
 
@@ -20,7 +20,7 @@ Este tutorial espera que você tenha um computador que possa usar para desenvolv
 
 Crie um diretório chamado **branches-tutorial**. Torne-o o diretório atual e execute `dotnet new console -n BranchesAndLoops -o .`. Esse comando cria um novo aplicativo de console .NET Core no diretório atual.
 
-Abra **Program.cs** em seu editor favorito e substitua a linha `Console.Writeline("Hello World!");` pelo seguinte código:
+Abra **Program.cs** em seu editor favorito e substitua a linha `Console.WriteLine("Hello World!");` pelo seguinte código:
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 Experimente este código digitando `dotnet run` na sua janela do console. Você deve ver a mensagem "A resposta é maior do que 10." impressa no console.
 
-Modifique a declaração de `b` para que a soma seja inferior a 10: 
+Modifique a declaração de `b` para que a soma seja inferior a 10:
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ A instrução após a palavra-chave `else` é executada somente quando a condiç
 
 > [!IMPORTANT]
 > O recuo sob as instruções `if` e `else` é para leitores humanos.
-> A linguagem C# não considera recuos ou espaços em branco como significativos. A instrução após a palavra-chave `if` ou `else` será executada com base na condição. Todos os exemplos neste tutorial seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.
+> A linguagem C# não considera recuos ou espaços em branco como significativos.
+> A instrução após a palavra-chave `if` ou `else` será executada com base na condição. Todos os exemplos neste tutorial seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.
 
 Como o recuo não é significativo, você precisa usar `{` e `}` para indicar quando você quer que mais de uma instrução faça parte do bloco executado condicionalmente. Os programadores em C# normalmente usam essas chaves em todas as cláusulas `if` e `else`. O exemplo a seguir é igual ao que você acabou de criar. Modifique o código acima para coincidir com o código a seguir:
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ O loop **for** é usado normalmente em C#. Tente este código em seu método Mai
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona.
@@ -252,7 +253,7 @@ Continue com o tutorial [Interpolação de cadeias de caracteres](interpolated-s
 
 Saiba mais sobre esses conceitos nestes tópicos:
 
-[Instrução If e else](../../language-reference/keywords/if-else.md)  
-[Instrução while](../../language-reference/keywords/while.md)  
-[Instrução Do](../../language-reference/keywords/do.md)  
-[Instrução for](../../language-reference/keywords/for.md)  
+- [Instrução If e else](../../language-reference/keywords/if-else.md)
+- [Instrução while](../../language-reference/keywords/while.md)
+- [Instrução Do](../../language-reference/keywords/do.md)
+- [Instrução for](../../language-reference/keywords/for.md)

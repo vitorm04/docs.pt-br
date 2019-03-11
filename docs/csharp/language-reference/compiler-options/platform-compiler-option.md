@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 59b54cfd731c21982cae9a07fd1e37d97f3747db
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663893"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486973"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opções do compilador C#)
 Especifica qual versão do CLR (Common Language Runtime) pode executar o assembly.  
@@ -24,7 +24,7 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
 -platform:string  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `string`  
  anycpu (padrão), anycpu32bitpreferred, ARM, x64, x86 ou Itanium.  
   

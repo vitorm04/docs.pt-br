@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: b50b081dd3307f60f32bfa13c61f69e14d6341c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362702"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicar abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 
@@ -41,7 +41,7 @@ Diferentes BCs (Contextos limitados) empregarão diferentes padrões. Eles têm 
 
 Há apenas uma arquitetura de aplicativo: a arquitetura do sistema ou o aplicativo de ponta a ponta que você está criando (por exemplo, a arquitetura de microsserviços). No entanto, o design de cada Contexto limitado ou microsserviço dentro desse aplicativo reflete suas próprias compensações e decisões de design interno em um nível de padrões de arquitetura. Não tente aplicar os mesmos padrões de arquitetura como CQRS ou DDD em todos os lugares.
 
-####  <a name="additional-resources"></a>Recursos adicionais
+### <a name="additional-resources"></a>Recursos adicionais
 
 - **Martin Fowler. CQRS** \
   [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)

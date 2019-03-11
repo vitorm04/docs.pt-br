@@ -3,12 +3,12 @@ title: 'Tutorial: crie seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201892"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677156"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: crie seu primeiro analisador e correção de código
 
@@ -199,7 +199,7 @@ Todas as correções de código derivam de <xref:Microsoft.CodeAnalysis.CodeFixe
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
-Em seguida, altere a última linha para registrar uma correção de código. A correção criará um novo documento resultante da adição do modificador `const` para uma declaração existente:  
+Em seguida, altere a última linha para registrar uma correção de código. A correção criará um novo documento resultante da adição do modificador `const` para uma declaração existente:
 
 [!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
@@ -275,7 +275,7 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 }
 ```
 
-Você pode criar uma nova linha de dados para este teste, definindo qualquer fragmento de código que não faça com que o diagnóstico dispare um aviso. Essa sobrecarga de `VerifyCSharpDiagnostic` passa quando não há nenhum diagnóstico disparado para o fragmento de código-fonte.  
+Você pode criar uma nova linha de dados para este teste, definindo qualquer fragmento de código que não faça com que o diagnóstico dispare um aviso. Essa sobrecarga de `VerifyCSharpDiagnostic` passa quando não há nenhum diagnóstico disparado para o fragmento de código-fonte.
 
 Em seguida, substitua `TestMethod2` com esse teste que garante que um diagnóstico é gerado e uma correção de código aplicada ao fragmento de código-fonte:
 
@@ -426,7 +426,7 @@ Você está quase terminando. Há mais algumas condições com as quais o seu an
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Além disso, os tipos de referência não são tratados corretamente. O único valor de constante permitido para um tipo de referência é `null`, exceto no caso de <xref:System.String?displayPropert=nameWIthType>, que permite literais de cadeia de caracteres. Em outras palavras, `const string s = "abc"` é legal, mas `const object s = "abc"` não é. Este snippet de código verifica essa condição:
+Além disso, os tipos de referência não são tratados corretamente. O único valor de constante permitido para um tipo de referência é `null`, exceto no caso de <xref:System.String?displayProperty=nameWIthType>, que permite literais de cadeia de caracteres. Em outras palavras, `const string s = "abc"` é legal, mas `const object s = "abc"` não é. Este snippet de código verifica essa condição:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
@@ -444,7 +444,7 @@ Essas alterações atualizam as declarações de linha de dados para ambos os te
 
 Felizmente, todos os erros acima podem ser resolvidos usando as mesmas técnicas que você acabou de aprender.
 
-Para corrigir o primeiro bug, primeiro abra **DiagnosticAnalyzer.cs** e localize o loop foreach em que cada um dos inicializadores de declaração local é verificado para garantir que valores constantes sejam atribuídos a eles. Imediatamente _antes_ do primeiro loop foreach, chame `context.SemanicModel.GetTypeInfo()` para recuperar informações detalhadas sobre o tipo declarado da declaração local:
+Para corrigir o primeiro bug, primeiro abra **DiagnosticAnalyzer.cs** e localize o loop foreach em que cada um dos inicializadores de declaração local é verificado para garantir que valores constantes sejam atribuídos a eles. Imediatamente _antes_ do primeiro loop foreach, chame `context.SemanticModel.GetTypeInfo()` para recuperar informações detalhadas sobre o tipo declarado da declaração local:
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;

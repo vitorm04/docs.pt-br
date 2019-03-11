@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: bc1bc1376271b3a01d9b720dd85f812ea55cf34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665039"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361259"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (opção do compilador C#)
 Especifica um assembly cujos tipos não públicos podem ser acessados por um .netmodule.  
@@ -39,7 +39,7 @@ Especifica um assembly cujos tipos não públicos podem ser acessados por um .ne
   
  Para obter mais informações sobre a compilação de um .netmodule, consulte [-target:module (Opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Para obter mais informações sobre assemblies amigos, consulte [Assemblies Amigáveis](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Para obter mais informações sobre assemblies amigos, consulte [Assemblies Amigáveis](../../../standard/assembly/friend-assemblies.md).  
   
  Essa opção não está disponível de dentro do ambiente de desenvolvimento; ela só está disponível quando se compila na linha de comando.  
   

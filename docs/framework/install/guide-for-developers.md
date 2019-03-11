@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093938"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715679"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalar o .NET Framework para desenvolvedores
 
@@ -228,7 +228,7 @@ A tabela a seguir lista os idiomas compatíveis.
 
 - Para saber mais sobre como migrar seu aplicativo do .NET Framework 4 para o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou um de seus pontos de lançamento, veja o [guia de migração](~/docs/framework/migration-guide/index.md).
 
-- Confira a [Fonte de referência do .NET Framework](https://referencesource.microsoft.com/) para navegar online no código-fonte do .NET Framework. A fonte de referência também está disponível no [GitHub](https://github.com/Microsoft/referencesource). Também é possível [baixar a referência](https://referencesource.microsoft.com/download.html) para visualização offline e percorrer as fontes (incluindo correções e atualizações) durante a depuração. Para saber mais, confira a postagem no blog [A new look for .NET Reference Source](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx) (Um novo olhar sobre a fonte de referência do .NET).
+- Confira a [Fonte de referência do .NET Framework](https://referencesource.microsoft.com/) para navegar online no código-fonte do .NET Framework. A fonte de referência também está disponível no [GitHub](https://github.com/Microsoft/referencesource). Também é possível [baixar a referência](https://referencesource.microsoft.com/download.html) para visualização offline e percorrer as fontes (incluindo correções e atualizações) durante a depuração. Para saber mais, confira a postagem no blog [A new look for .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/) (Um novo olhar sobre a fonte de referência do .NET).
 
 ## <a name="see-also"></a>Consulte também
 

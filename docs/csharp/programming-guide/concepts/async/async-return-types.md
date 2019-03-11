@@ -2,12 +2,12 @@
 title: Tipos de retorno assíncronos (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548228"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368175"
 ---
 # <a name="async-return-types-c"></a>Tipos de retorno assíncronos (C#)
 Métodos assíncronos podem conter os seguintes tipos de retorno:
@@ -24,7 +24,7 @@ Para obter mais informações sobre os métodos assíncronos, consulte [Programa
   
 Cada tipo de retorno é examinado em uma das seções a seguir e você pode encontrar um exemplo completo que usa todos os três tipos no final do tópico.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Tipo de retorno Task\<TResult\>  
+## <a name="BKMK_TaskTReturnType"></a> Tipo de retorno Task\<TResult\>  
 O tipo de retorno <xref:System.Threading.Tasks.Task%601> é usado para um método assíncrono que contém uma instrução [return](../../../../csharp/language-reference/keywords/return.md) (C#), na qual o operando tem o tipo `TResult`.  
   
 No exemplo a seguir, o método assíncrono `GetLeisureHours` contém uma instrução `return` que retorna um número inteiro. Portanto, a declaração do método deve especificar um tipo de retorno de `Task<int>`.  O método assíncrono <xref:System.Threading.Tasks.Task.FromResult%2A> é um espaço reservado para uma operação que retorna uma cadeia de caracteres.
@@ -40,7 +40,7 @@ Você pode entender melhor como isso acontece, separando a chamada ao `GetLeisur
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> Tipo de retorno Task  
+## <a name="BKMK_TaskReturnType"></a> Tipo de retorno Task  
 Os métodos assíncronos que não contêm uma instrução `return` ou que contêm uma instrução `return` que não retorna um operando, normalmente têm um tipo de retorno de <xref:System.Threading.Tasks.Task>. Esses métodos retornam `void` se eles são executados de forma síncrona. Se você usar um tipo de retorno <xref:System.Threading.Tasks.Task> para um método assíncrono, um método de chamada poderá usar um operador `await` para suspender a conclusão do chamador até que o método assíncrono chamado seja concluído.  
   
 No exemplo a seguir, o método assíncrono `WaitAndApologize` não contém uma instrução `return`, então o método retorna um objeto <xref:System.Threading.Tasks.Task>. Isso permite que `WaitAndApologize` seja aguardado. Observe que o tipo <xref:System.Threading.Tasks.Task> não inclui uma propriedade `Result` porque ele não tem nenhum valor retornado.  
@@ -55,7 +55,7 @@ O código a seguir separa a chamada ao método `WaitAndApologize` da espera pela
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Tipo de retorno void
+## <a name="BKMK_VoidReturnType"></a> Tipo de retorno void
 
 O tipo de retorno `void` é usado em manipuladores de eventos assíncronos, que exigem um tipo de retorno `void`. Para métodos diferentes de manipuladores de eventos que não retornam um valor, você deve retornar um <xref:System.Threading.Tasks.Task>, porque não é possível esperar por um método assíncrono que retorna `void`. Qualquer chamador desse método deve ser capaz de continuar até a conclusão, sem aguardar a conclusão do método assíncrono chamado e o chamador deve ser independente de todos os valores ou exceções gerados pelo método assíncrono.  
   

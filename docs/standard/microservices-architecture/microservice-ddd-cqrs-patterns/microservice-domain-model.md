@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066245"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676363"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projetar um modelo de domínio de microsserviço
 
@@ -78,7 +78,7 @@ Uma pessoa com um nome e um sobrenome geralmente é uma entidade, porque a pesso
 
 Os objetos de valor são difíceis de gerenciar em bancos de dados relacionais e em ORMs, como o EF, mas em bancos de dados orientados a documentos eles são mais fáceis de implementar e usar.
 
-O EF Core 2.0 inclui o recurso [Entidades de Propriedade](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que torna mais fácil lidar com objetos de valor, como veremos em detalhes posteriormente.
+O EF Core 2.0 inclui o recurso [Entidades de Propriedade](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que torna mais fácil lidar com objetos de valor, como veremos em detalhes posteriormente.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 

@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411353"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675778"
 ---
 # <a name="customizing-structure-marshalling"></a>Personalização do marshalling de estrutura
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-Usando os valores `UmanagedType.U1` ou `UnmanagedType.I1` abaixo, você pode informar o tempo de execução para realizar marshal do campo `b` como um tipo `bool` nativo de 1 byte.
+Usando os valores `UnmanagedType.U1` ou `UnmanagedType.I1` abaixo, você pode informar o tempo de execução para realizar marshal do campo `b` como um tipo `bool` nativo de 1 byte.
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 No Windows, você pode realizar marshal dos campos tipados de `object` para o código nativo. Você pode realizar marshal desses campos para um dos três tipos:
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch). 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 Por padrão, um campo tipado de `object` terá o marshal realizado para um `IUnknown*` que envolve o objeto.
 

@@ -3,12 +3,12 @@ title: Tutorial Números em C# – introdução ao C#
 description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978612"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673854"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C\#
 
@@ -20,7 +20,7 @@ Este tutorial espera que você tenha um computador que possa usar para desenvolv
 
 Crie um diretório chamado **numbers-quickstart**. Torne-o o diretório atual e execute `dotnet new console -n NumbersInCSharp -o .`.
 
-Abra **Program.cs** em seu editor favorito e substitua a linha `Console.Writeline("Hello World!");` pelo seguinte:
+Abra **Program.cs** em seu editor favorito e substitua a linha `Console.WriteLine("Hello World!");` pelo seguinte:
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Execute este código digitando `dotnet run` na janela de comando. 
+Execute este código digitando `dotnet run` na janela de comando.
 
 Você viu apenas uma das operações matemáticas fundamentais com números inteiros. O tipo `int` representa um **inteiro**, um número inteiro positivo ou negativo. Você usa o símbolo `+` para adição. Outras operações matemáticas comuns para inteiros incluem:
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Execute este código digitando `dotnet run` na janela de comando. 
-    
+Execute este código digitando `dotnet run` na janela de comando.
+
 Você também pode experimentar, executando várias operações matemáticas na mesma linha, se quiser. Experimente `c = a + b - 12 * 17;`, por exemplo. É permitido misturar variáveis e números constantes.
 
 > [!TIP]
 > À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código. O **compilador** encontrará esses erros e os reportará a você. Quando a saída contiver mensagens de erro, analise atentamente o código de exemplo e o código em sua janela para ver o que deve ser corrigido.
-> Esse exercício ajudará você a conhecer a estrutura do código C#.     
+> Esse exercício ajudará você a conhecer a estrutura do código C#.
 
 Você terminou a primeira etapa. Antes de iniciar a próxima seção, vamos passar o código atual para um método separado. Isso facilita o começo do trabalho com um exemplo novo. Renomeie seu método `Main` como `WorkingWithIntegers` e escreva um novo método `Main` que chama `WorkingWithIntegers`. Quando você terminar, seu código deverá parecer com isto:
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>Explorar a precisão de inteiros e limites
+
 Esse último exemplo mostrou que uma divisão de inteiros trunca o resultado.
 Você pode obter o **restante** usando o operador **module**, o caractere `%`. Experimente o seguinte código em seu método `Main`:
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 O tipo de inteiro C# difere do inteiros matemáticos de outra forma: o tipo `int` tem limites mínimo e máximo. Adicione este código ao seu método `Main` para ver esses limites:
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Se um cálculo produzir um valor que excede esses limites, você terá uma condi
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-Observe que a resposta é muito próxima do mínimo inteiro (negativo). É o mesmo que `min + 2`. A operação de adição **estourou** os valores permitidos para números inteiros.
+
+Observe que a resposta é muito próxima do mínimo inteiro (negativo). É o mesmo que `min + 2`.
+A operação de adição **estourou** os valores permitidos para números inteiros.
 A resposta é um número negativo muito grande, pois um estouro "envolve" do maior valor de inteiro possível para o menor.
 
 Há outros tipos numéricos com limites e precisão diferentes que você usaria quando o tipo `int` não atendesse às suas necessidades. Vamos explorá-los na sequência.
 
-Novamente, vamos passar o código que você escreveu nesta seção para um método separado. Nomeie-o como `TestLimits`. 
+Novamente, vamos passar o código que você escreveu nesta seção para um método separado. Nomeie-o como `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Trabalhar com o tipo Double
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Esses valores são impressos em notação científica. O número à esquerda do `E` é o significando. O número à direita é o expoente, como uma potência de 10. 
+Esses valores são impressos em notação científica. O número à esquerda do `E` é o significando. O número à direita é o expoente, como uma potência de 10.
 
 Assim como os números decimais em matemática, os duplos em C# podem ter erros de arredondamento. Experimente esse código:
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 O sufixo `M` nos números é o modo como você indica que uma constante deve usar o tipo `decimal`.
 
-Observe que o cálculo usando o tipo decimal tem mais dígitos à direita da vírgula decimal. 
+Observe que o cálculo usando o tipo decimal tem mais dígitos à direita da vírgula decimal.
 
 ***Desafio***
 
-Agora que você viu os diferentes tipos numéricos, escreva um código que calcula a área de um círculo cujo raio é de 2,50 centímetros. Lembre-se de que a área de um círculo é o quadrado do raio multiplicado por PI. Uma dica: o .NET contém uma constante para PI, <xref:System.Math.PI?displayProperty=nameWithType>, que você pode usar para esse valor. 
+Agora que você viu os diferentes tipos numéricos, escreva um código que calcula a área de um círculo cujo raio é de 2,50 centímetros. Lembre-se de que a área de um círculo é o quadrado do raio multiplicado por PI. Uma dica: o .NET contém uma constante para PI, <xref:System.Math.PI?displayProperty=nameWithType>, que você pode usar para esse valor.
 
 Você deve obter uma resposta entre 19 e 20.
 Confira sua resposta [analisando o código de exemplo finalizado no GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
-Experimente outras fórmulas, se quiser. 
+Experimente outras fórmulas, se quiser.
 
 Você concluiu o início rápido "Números em C#". Continue com o início rápido [Branches e loops](branches-and-loops-local.md) em seu próprio ambiente de desenvolvimento.
 
 Saiba mais sobre os números em C# nos tópicos a seguir:
 
-[Tabela de Tipos Integrais](../../language-reference/keywords/integral-types-table.md)   
-[Tabela de tipos de ponto flutuante](../../language-reference/keywords/floating-point-types-table.md)   
-[Tabela de Tipos Internos](../../language-reference/keywords/built-in-types-table.md)   
-[Tabela de conversões numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[Tabela de conversões numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tabela de tipos integrais](../../language-reference/keywords/integral-types-table.md)
+- [Tabela de tipos de ponto flutuante](../../language-reference/keywords/floating-point-types-table.md)
+- [Tabela de tipos internos](../../language-reference/keywords/built-in-types-table.md)
+- [Tabela de conversões numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabela de conversões numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)
