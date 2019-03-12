@@ -197,6 +197,7 @@
 ### [Organizando projetos para o .NET Core](core/porting/project-structure.md)
 ### [Ferramentas para ajudar com a portabilidade para .NET Core](core/porting/tools.md)
 ### [Usando o pacote de compatibilidade do Windows](core/porting/windows-compat-pack.md)
+### [Portabilizar projetos do Windows Forms](core/porting/winforms.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [Compilar Build .NET Core da origem](core/build/index.md)
 ### [Pacote de distribuição do .NET Core](core/build/distribution-packaging.md)
