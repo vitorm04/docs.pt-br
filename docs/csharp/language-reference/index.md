@@ -1,19 +1,13 @@
 ---
-title: Referência de C#
+title: 'Referência de C#'
 ms.date: 02/14/2017
 helpviewer_keywords:
-- Visual C#, language reference
-- language reference [C#]
-- Programmer's Reference for C#
-- C# language, reference
-- reference, C# language
+  - 'Visual C#, language reference'
+  - 'language reference [C#]'
+  - 'Programmer''s Reference for C#'
+  - 'C# language, reference'
+  - 'reference, C# language'
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472497"
 ---
 # <a name="c-reference"></a>Referência de C#
 Esta seção fornece o material de referência sobre palavras-chave do C#, operadores, caracteres especiais, diretivas de pré-processador, opções de compilador e erros de compilador e avisos.  
@@ -35,10 +29,13 @@ Esta seção fornece o material de referência sobre palavras-chave do C#, opera
  Inclui informações sobre as opções do compilador e como usá-las.  
   
  [Erros do Compilador do C#](../../csharp/language-reference/compiler-messages/index.md)  
- Inclui trechos de código que demonstram a causa e a correção de erros do compilador do C# e avisos.  
+ Inclui snippets de código que demonstram a causa e a correção de erros do compilador do C# e avisos.  
   
- [C# Language Specification](../../csharp/language-reference/language-specification/index.md) (Especificação da linguagem C#)  
- Fornece links para as versões mais recentes da especificação da linguagem C#.  
+ [C# Language Specification](../../../_csharplang/spec/introduction.md) (Especificação da linguagem C#)  
+ Especificação de linguagem do C# 6.0. Este é um projeto de proposta da linguagem C# 6.0. A versão 5.0 foi lançada em dezembro de 2017 como o documento [Padrão ECMA-334 – 5ª Edição](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
+  
+ [Propostas da linguagem C# 7.0](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ Implementamos diversos recursos novos no C# 7.0. Entre eles estão correspondência de padrões, funções locais, declarações de variável out, expressões throw, literais binários e separadores de dígito. Esta pasta contém as especificações de cada um desses recursos.
   
 ## <a name="related-sections"></a>Seções relacionadas  
 

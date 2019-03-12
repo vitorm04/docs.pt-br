@@ -4,6 +4,7 @@ description: Saiba como realizar tarefas específicas para ajudar na criação d
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guia de instruções de aprendizado de máquina .NET – ML.NET
 
 Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas rápidas para perguntas comuns. Em alguns casos, os artigos podem ser listados em várias seções para torná-los mais fáceis de encontrar.
@@ -44,7 +45,7 @@ Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas r
 
 * [Aplicar a engenharia de recursos ao treinamento de modelo em dados textuais com ML.NET.](train-model-textual-ml-net.md)
 
-## <a name="run"></a>Executar 
+## <a name="run"></a>Executar
 
 * [Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET.](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas r
 
 * [Usar o PredictionFunction para fazer uma previsão por vez.](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>Programação probabilística (Infer.NET)
+## <a name="probabilistic-infernet"></a>Probabilística (Infer.NET)
 
 * [Criar um aplicativo de lista de campeonato com Infer.NET e programação probabilística.](matchup-app-infer-net.md)
-
