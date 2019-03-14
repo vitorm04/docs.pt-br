@@ -5,5 +5,4 @@
 ## [Matrizes denteadas](jagged-arrays.md)
 ## [Usando foreach com matrizes](using-foreach-with-arrays.md)
 ## [Passando matrizes como argumentos](passing-arrays-as-arguments.md)
-## [Passando matrizes com o uso de ref e out](passing-arrays-using-ref-and-out.md)
 ## [Matrizes de tipo implícito](implicitly-typed-arrays.md)
