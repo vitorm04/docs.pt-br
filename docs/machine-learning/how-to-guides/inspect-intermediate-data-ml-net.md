@@ -1,24 +1,29 @@
 ---
 title: Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET
 description: Saiba como inspecionar valores de dados intermediários reais durante o processamento de pipeline de aprendizado de máquina do ML.NET
-ms.date: 01/30/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b3a554bf7cd88219a66f91a18b9d983bb91c0f0e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675004"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678638"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="f7fd6-103">Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET</span><span class="sxs-lookup"><span data-stu-id="f7fd6-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
+# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="da50b-103">Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET</span><span class="sxs-lookup"><span data-stu-id="da50b-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
 
-<span data-ttu-id="f7fd6-104">Durante o experimento, talvez você deseje observar e validar os resultados do processamento de dados em determinado momento.</span><span class="sxs-lookup"><span data-stu-id="f7fd6-104">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="f7fd6-105">Isso não é fácil, pois as operações do ML.NET são lentas, construindo objetos que são 'promessas' de dados.</span><span class="sxs-lookup"><span data-stu-id="f7fd6-105">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
+> [!NOTE]
+> <span data-ttu-id="da50b-104">Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações.</span><span class="sxs-lookup"><span data-stu-id="da50b-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="da50b-105">Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="da50b-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="f7fd6-106">O método de extensão `GetColumn<T>` permite que você inspecione os dados intermediários.</span><span class="sxs-lookup"><span data-stu-id="f7fd6-106">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="f7fd6-107">Ele retorna o conteúdo de uma coluna de dados como um `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="f7fd6-107">It returns the contents of one data column as an `IEnumerable`.</span></span>
+<span data-ttu-id="da50b-106">Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento.</span><span class="sxs-lookup"><span data-stu-id="da50b-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="da50b-107">Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="da50b-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="f7fd6-108">O seguinte exemplo mostra como usar o método de extensão `GetColumn<T>`:</span><span class="sxs-lookup"><span data-stu-id="f7fd6-108">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
+<span data-ttu-id="da50b-108">Durante o experimento, talvez você deseje observar e validar os resultados do processamento de dados em determinado momento.</span><span class="sxs-lookup"><span data-stu-id="da50b-108">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="da50b-109">Isso não é fácil, pois as operações do ML.NET são lentas, construindo objetos que são 'promessas' de dados.</span><span class="sxs-lookup"><span data-stu-id="da50b-109">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
 
-<span data-ttu-id="f7fd6-109">[Arquivo de exemplo](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="f7fd6-109">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="da50b-110">O método de extensão `GetColumn<T>` permite que você inspecione os dados intermediários.</span><span class="sxs-lookup"><span data-stu-id="da50b-110">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="da50b-111">Ele retorna o conteúdo de uma coluna de dados como um `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="da50b-111">It returns the contents of one data column as an `IEnumerable`.</span></span>
+
+<span data-ttu-id="da50b-112">O seguinte exemplo mostra como usar o método de extensão `GetColumn<T>`:</span><span class="sxs-lookup"><span data-stu-id="da50b-112">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
+
+<span data-ttu-id="da50b-113">[Arquivo de exemplo](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="da50b-113">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -28,7 +33,7 @@ Label   Workclass   education   marital-status
 
 ```
 
-<span data-ttu-id="f7fd6-110">Nossa classe é definida da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="f7fd6-110">Our class is defined as follows:</span></span>
+<span data-ttu-id="da50b-114">Nossa classe é definida da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="da50b-114">Our class is defined as follows:</span></span>
 
 ```csharp
 public class InspectedRow

@@ -7,75 +7,75 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 40ba9b2dcc7321c81ee3f03112e677363c37a5f9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203646"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723303"
 ---
-# <a name="language-independence-and-language-independent-components"></a><span data-ttu-id="fa2a8-103">Componentes de independência de linguagem e componentes independentes da linguagem</span><span class="sxs-lookup"><span data-stu-id="fa2a8-103">Language independence and language-independent components</span></span>
+# <a name="language-independence-and-language-independent-components"></a><span data-ttu-id="b8dc1-103">Componentes de independência de linguagem e componentes independentes da linguagem</span><span class="sxs-lookup"><span data-stu-id="b8dc1-103">Language independence and language-independent components</span></span>
 
-<span data-ttu-id="fa2a8-104">O .NET é independente de linguagem.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-104">.NET is language independent.</span></span> <span data-ttu-id="fa2a8-105">Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens direcionadas às implementações do .NET, como C#, F# e Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-105">This means that, as a developer, you can develop in one of the many languages that target .NET implementations, such as C#, F#, and Visual Basic.</span></span> <span data-ttu-id="fa2a8-106">É possível acessar tipos e membros de bibliotecas de classes desenvolvidas para implementações do .NET sem que seja necessário conhecer a linguagem em que foram originalmente escritas e sem precisar seguir as convenções da linguagem original.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-106">You can access the types and members of class libraries developed for .NET implementations without having to know the language in which they were originally written and without having to follow any of the original language's conventions.</span></span> <span data-ttu-id="fa2a8-107">Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo .NET, independentemente da linguagem.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-107">If you are a component developer, your component can be accessed by any .NET app regardless of its language.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="fa2a8-108">A primeira parte deste artigo descreve como criar componentes independentes de linguagem, ou seja, componentes que podem ser consumidos por aplicativos gravados em qualquer linguagem.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-108">This first part of this article discusses creating language-independent components - that is, components that can be consumed by apps that are written in any language.</span></span> <span data-ttu-id="fa2a8-109">Você também pode criar um único componente ou aplicativo de código-fonte gravado em várias linguagens; consulte [Interoperabilidade em qualquer idioma](#cross-language-interoperability) na segunda parte deste artigo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-109">You can also create a single component or app from source code written in multiple languages; see [Cross-Language Interoperability](#cross-language-interoperability) in the second part of this article.</span></span> 
-
-<span data-ttu-id="fa2a8-110">Para interagir completamente com outros objetos gravados em qualquer linguagem, os objetos devem expor aos chamadores somente os recursos comuns a todas as linguagens.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-110">To fully interact with other objects written in any language, objects must expose to callers only those features that are common to all languages.</span></span> <span data-ttu-id="fa2a8-111">Esse conjunto comum de recursos é definido pela CLS (Common Language Specification), que é um conjunto de regras que se aplicam aos assemblies gerados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-111">This common set of features is defined by the Common Language Specification (CLS), which is a set of rules that apply to generated assemblies.</span></span> <span data-ttu-id="fa2a8-112">A Common Language Specification é definida na Partição I, cláusulas 7 a 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-112">The Common Language Specification is defined in Partition I, Clauses 7 through 11 of the [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span> 
-
-<span data-ttu-id="fa2a8-113">Se o componente estiver de acordo com a Common Language Specification, ele será compatível com a CLS e poderá ser acessado pelo código em assemblies gravados em qualquer linguagem de programação que dê suporte a CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-113">If your component conforms to the Common Language Specification, it is guaranteed to be CLS-compliant and can be accessed from code in assemblies written in any programming language that supports the CLS.</span></span> <span data-ttu-id="fa2a8-114">É possível determinar se o componente está de acordo com a Common Language Specification no tempo de compilação aplicando o atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) ao código-fonte.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-114">You can determine whether your component conforms to the Common Language Specification at compile time by applying the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute to your source code.</span></span> <span data-ttu-id="fa2a8-115">Para obter mais informações, consulte o atributo [CLSCompliantAttribute](#the-clscompliantattribute-attribute).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-115">For more information, see The [CLSCompliantAttribute attribute](#the-clscompliantattribute-attribute).</span></span>
-
-<span data-ttu-id="fa2a8-116">Neste artigo:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-116">In this article:</span></span>
-
-* [<span data-ttu-id="fa2a8-117">Regras de conformidade da CLS</span><span class="sxs-lookup"><span data-stu-id="fa2a8-117">CLS compliance rules</span></span>](#cls-compliance-rules)
-
-    * [<span data-ttu-id="fa2a8-118">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-118">Types and type member signatures</span></span>](#types-and-type-member-signatures)
-
-    * [<span data-ttu-id="fa2a8-119">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="fa2a8-119">Naming conventions</span></span>](#naming-conventions)
-    
-    * [<span data-ttu-id="fa2a8-120">Conversão de tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-120">Type conversion</span></span>](#type-conversion)
-    
-    * [<span data-ttu-id="fa2a8-121">Matrizes</span><span class="sxs-lookup"><span data-stu-id="fa2a8-121">Arrays</span></span>](#arrays)
-    
-    * [<span data-ttu-id="fa2a8-122">Interfaces</span><span class="sxs-lookup"><span data-stu-id="fa2a8-122">Interfaces</span></span>](#interfaces)
-    
-    * [<span data-ttu-id="fa2a8-123">Enumerações</span><span class="sxs-lookup"><span data-stu-id="fa2a8-123">Enumerations</span></span>](#enumerations)
-    
-    * [<span data-ttu-id="fa2a8-124">Membros de tipo em geral</span><span class="sxs-lookup"><span data-stu-id="fa2a8-124">Type members in general</span></span>](#type-members-in-general)
-    
-    * [<span data-ttu-id="fa2a8-125">Acessibilidade de membro</span><span class="sxs-lookup"><span data-stu-id="fa2a8-125">Member accessibility</span></span>](#member-accessibility)
-    
-    * [<span data-ttu-id="fa2a8-126">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-126">Generic types and members</span></span>](#generic-types-and-members)
-    
-    * [<span data-ttu-id="fa2a8-127">Construtores</span><span class="sxs-lookup"><span data-stu-id="fa2a8-127">Constructors</span></span>](#constructors)
-    
-    * [<span data-ttu-id="fa2a8-128">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-128">Properties</span></span>](#properties)
-    
-    * [<span data-ttu-id="fa2a8-129">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-129">Events</span></span>](#events)
-    
-    * [<span data-ttu-id="fa2a8-130">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="fa2a8-130">Overloads</span></span>](#overloads)
-    
-    * [<span data-ttu-id="fa2a8-131">Exceções</span><span class="sxs-lookup"><span data-stu-id="fa2a8-131">Exceptions</span></span>](#exceptions)
-    
-    * [<span data-ttu-id="fa2a8-132">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-132">Attributes</span></span>](#attributes)
-    
-* [<span data-ttu-id="fa2a8-133">O atributo CLSCompliantAttribute</span><span class="sxs-lookup"><span data-stu-id="fa2a8-133">CLSCompliantAttribute attribute</span></span>](#the-clscompliantattribute-attribute)
-
-* [<span data-ttu-id="fa2a8-134">Interoperabilidade em qualquer idioma</span><span class="sxs-lookup"><span data-stu-id="fa2a8-134">Cross-Language Interoperability</span></span>](#cross-language-interoperability)
-
-## <a name="cls-compliance-rules"></a><span data-ttu-id="fa2a8-135">Regras de conformidade com CLS</span><span class="sxs-lookup"><span data-stu-id="fa2a8-135">CLS compliance rules</span></span>
-
-<span data-ttu-id="fa2a8-136">Esta seção discute as regras para criar um componente compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-136">This section discusses the rules for creating a CLS-compliant component.</span></span> <span data-ttu-id="fa2a8-137">Para obter uma lista completa de regras, confira a Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-137">For a complete list of rules, see Partition I, Clause 11 of the [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span>
+<span data-ttu-id="b8dc1-104">O .NET é independente de linguagem.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-104">.NET is language independent.</span></span> <span data-ttu-id="b8dc1-105">Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens direcionadas às implementações do .NET, como C#, F# e Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-105">This means that, as a developer, you can develop in one of the many languages that target .NET implementations, such as C#, F#, and Visual Basic.</span></span> <span data-ttu-id="b8dc1-106">É possível acessar tipos e membros de bibliotecas de classes desenvolvidas para implementações do .NET sem que seja necessário conhecer a linguagem em que foram originalmente escritas e sem precisar seguir as convenções da linguagem original.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-106">You can access the types and members of class libraries developed for .NET implementations without having to know the language in which they were originally written and without having to follow any of the original language's conventions.</span></span> <span data-ttu-id="b8dc1-107">Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo .NET, independentemente da linguagem.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-107">If you are a component developer, your component can be accessed by any .NET app regardless of its language.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="fa2a8-138">A Common Language Specification aborda cada regra de conformidade com CLS à medida que se aplica a consumidores (desenvolvedores que estão acessando programaticamente um componente compatível com CLS), estruturas (desenvolvedores que estão usando um compilador de linguagem para criar bibliotecas compatíveis com CLS) e extensores (desenvolvedores que estão criando uma ferramenta, como um compilador de linguagem ou um analisador de código que cria componentes compatíveis com CLS).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-138">The Common Language Specification discusses each rule for CLS compliance as it applies to consumers (developers who are programmatically accessing a component that is CLS-compliant), frameworks (developers who are using a language compiler to create CLS-compliant libraries), and extenders (developers who are creating a tool such as a language compiler or a code parser that creates CLS-compliant components).</span></span> <span data-ttu-id="fa2a8-139">Este artigo enfoca as regras que se aplicam às estruturas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-139">This article focuses on the rules as they apply to frameworks.</span></span> <span data-ttu-id="fa2a8-140">Entretanto, algumas das regras que se aplicam a extensores também podem ser aplicadas a assemblies criados usando [Reflection.Emit](xref:System.Reflection.Emit).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-140">Note, though, that some of the rules that apply to extenders may also apply to assemblies that are created using [Reflection.Emit](xref:System.Reflection.Emit).</span></span> 
+> <span data-ttu-id="b8dc1-108">A primeira parte deste artigo descreve como criar componentes independentes de linguagem, ou seja, componentes que podem ser consumidos por aplicativos gravados em qualquer linguagem.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-108">This first part of this article discusses creating language-independent components - that is, components that can be consumed by apps that are written in any language.</span></span> <span data-ttu-id="b8dc1-109">Você também pode criar um único componente ou aplicativo de código-fonte gravado em várias linguagens; consulte [Interoperabilidade em qualquer idioma](#cross-language-interoperability) na segunda parte deste artigo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-109">You can also create a single component or app from source code written in multiple languages; see [Cross-Language Interoperability](#cross-language-interoperability) in the second part of this article.</span></span>
 
-<span data-ttu-id="fa2a8-141">Para criar um componente independente de linguagem, você só precisa aplicar as regras de compatibilidade com CLS à interface pública do componente.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-141">To design a component that is language independent, you only need to apply the rules for CLS compliance to your component's public interface.</span></span> <span data-ttu-id="fa2a8-142">A implementação privada não precisa estar de acordo com a especificação.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-142">Your private implementation does not have to conform to the specification.</span></span> 
+<span data-ttu-id="b8dc1-110">Para interagir completamente com outros objetos gravados em qualquer linguagem, os objetos devem expor aos chamadores somente os recursos comuns a todas as linguagens.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-110">To fully interact with other objects written in any language, objects must expose to callers only those features that are common to all languages.</span></span> <span data-ttu-id="b8dc1-111">Esse conjunto comum de recursos é definido pela CLS (Common Language Specification), que é um conjunto de regras que se aplicam aos assemblies gerados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-111">This common set of features is defined by the Common Language Specification (CLS), which is a set of rules that apply to generated assemblies.</span></span> <span data-ttu-id="b8dc1-112">A Common Language Specification é definida na Partição I, cláusulas 7 a 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-112">The Common Language Specification is defined in Partition I, Clauses 7 through 11 of the [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span>
+
+<span data-ttu-id="b8dc1-113">Se o componente estiver de acordo com a Common Language Specification, ele será compatível com a CLS e poderá ser acessado pelo código em assemblies gravados em qualquer linguagem de programação que dê suporte a CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-113">If your component conforms to the Common Language Specification, it is guaranteed to be CLS-compliant and can be accessed from code in assemblies written in any programming language that supports the CLS.</span></span> <span data-ttu-id="b8dc1-114">É possível determinar se o componente está de acordo com a Common Language Specification no tempo de compilação aplicando o atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) ao código-fonte.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-114">You can determine whether your component conforms to the Common Language Specification at compile time by applying the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute to your source code.</span></span> <span data-ttu-id="b8dc1-115">Para obter mais informações, consulte o atributo [CLSCompliantAttribute](#the-clscompliantattribute-attribute).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-115">For more information, see The [CLSCompliantAttribute attribute](#the-clscompliantattribute-attribute).</span></span>
+
+<span data-ttu-id="b8dc1-116">Neste artigo:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-116">In this article:</span></span>
+
+* [<span data-ttu-id="b8dc1-117">Regras de conformidade da CLS</span><span class="sxs-lookup"><span data-stu-id="b8dc1-117">CLS compliance rules</span></span>](#cls-compliance-rules)
+
+    * [<span data-ttu-id="b8dc1-118">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-118">Types and type member signatures</span></span>](#types-and-type-member-signatures)
+
+    * [<span data-ttu-id="b8dc1-119">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="b8dc1-119">Naming conventions</span></span>](#naming-conventions)
+
+    * [<span data-ttu-id="b8dc1-120">Conversão de tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-120">Type conversion</span></span>](#type-conversion)
+
+    * [<span data-ttu-id="b8dc1-121">Matrizes</span><span class="sxs-lookup"><span data-stu-id="b8dc1-121">Arrays</span></span>](#arrays)
+
+    * [<span data-ttu-id="b8dc1-122">Interfaces</span><span class="sxs-lookup"><span data-stu-id="b8dc1-122">Interfaces</span></span>](#interfaces)
+
+    * [<span data-ttu-id="b8dc1-123">Enumerações</span><span class="sxs-lookup"><span data-stu-id="b8dc1-123">Enumerations</span></span>](#enumerations)
+
+    * [<span data-ttu-id="b8dc1-124">Membros de tipo em geral</span><span class="sxs-lookup"><span data-stu-id="b8dc1-124">Type members in general</span></span>](#type-members-in-general)
+
+    * [<span data-ttu-id="b8dc1-125">Acessibilidade de membro</span><span class="sxs-lookup"><span data-stu-id="b8dc1-125">Member accessibility</span></span>](#member-accessibility)
+
+    * [<span data-ttu-id="b8dc1-126">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-126">Generic types and members</span></span>](#generic-types-and-members)
+
+    * [<span data-ttu-id="b8dc1-127">Construtores</span><span class="sxs-lookup"><span data-stu-id="b8dc1-127">Constructors</span></span>](#constructors)
+
+    * [<span data-ttu-id="b8dc1-128">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-128">Properties</span></span>](#properties)
+
+    * [<span data-ttu-id="b8dc1-129">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-129">Events</span></span>](#events)
+
+    * [<span data-ttu-id="b8dc1-130">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="b8dc1-130">Overloads</span></span>](#overloads)
+
+    * [<span data-ttu-id="b8dc1-131">Exceções</span><span class="sxs-lookup"><span data-stu-id="b8dc1-131">Exceptions</span></span>](#exceptions)
+
+    * [<span data-ttu-id="b8dc1-132">Atributos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-132">Attributes</span></span>](#attributes)
+
+* [<span data-ttu-id="b8dc1-133">O atributo CLSCompliantAttribute</span><span class="sxs-lookup"><span data-stu-id="b8dc1-133">CLSCompliantAttribute attribute</span></span>](#the-clscompliantattribute-attribute)
+
+* [<span data-ttu-id="b8dc1-134">Interoperabilidade em qualquer idioma</span><span class="sxs-lookup"><span data-stu-id="b8dc1-134">Cross-Language Interoperability</span></span>](#cross-language-interoperability)
+
+## <a name="cls-compliance-rules"></a><span data-ttu-id="b8dc1-135">Regras de conformidade com CLS</span><span class="sxs-lookup"><span data-stu-id="b8dc1-135">CLS compliance rules</span></span>
+
+<span data-ttu-id="b8dc1-136">Esta seção discute as regras para criar um componente compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-136">This section discusses the rules for creating a CLS-compliant component.</span></span> <span data-ttu-id="b8dc1-137">Para obter uma lista completa de regras, confira a Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-137">For a complete list of rules, see Partition I, Clause 11 of the [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="b8dc1-138">A Common Language Specification aborda cada regra de conformidade com CLS à medida que se aplica a consumidores (desenvolvedores que estão acessando programaticamente um componente compatível com CLS), estruturas (desenvolvedores que estão usando um compilador de linguagem para criar bibliotecas compatíveis com CLS) e extensores (desenvolvedores que estão criando uma ferramenta, como um compilador de linguagem ou um analisador de código que cria componentes compatíveis com CLS).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-138">The Common Language Specification discusses each rule for CLS compliance as it applies to consumers (developers who are programmatically accessing a component that is CLS-compliant), frameworks (developers who are using a language compiler to create CLS-compliant libraries), and extenders (developers who are creating a tool such as a language compiler or a code parser that creates CLS-compliant components).</span></span> <span data-ttu-id="b8dc1-139">Este artigo enfoca as regras que se aplicam às estruturas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-139">This article focuses on the rules as they apply to frameworks.</span></span> <span data-ttu-id="b8dc1-140">Entretanto, algumas das regras que se aplicam a extensores também podem ser aplicadas a assemblies criados usando [Reflection.Emit](xref:System.Reflection.Emit).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-140">Note, though, that some of the rules that apply to extenders may also apply to assemblies that are created using [Reflection.Emit](xref:System.Reflection.Emit).</span></span>
+
+<span data-ttu-id="b8dc1-141">Para criar um componente independente de linguagem, você só precisa aplicar as regras de compatibilidade com CLS à interface pública do componente.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-141">To design a component that is language independent, you only need to apply the rules for CLS compliance to your component's public interface.</span></span> <span data-ttu-id="b8dc1-142">A implementação privada não precisa estar de acordo com a especificação.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-142">Your private implementation does not have to conform to the specification.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="fa2a8-143">As regras de conformidade com CLS só se aplicam à interface pública de um componente e não à implementação privada.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-143">The rules for CLS compliance apply only to a component's public interface, not to its private implementation.</span></span> 
+> <span data-ttu-id="b8dc1-143">As regras de conformidade com CLS só se aplicam à interface pública de um componente e não à implementação privada.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-143">The rules for CLS compliance apply only to a component's public interface, not to its private implementation.</span></span>
 
-<span data-ttu-id="fa2a8-144">Por exemplo, inteiros sem sinal que não sejam [Byte](xref:System.Byte) não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-144">For example, unsigned integers other than [Byte](xref:System.Byte) are not CLS-compliant.</span></span> <span data-ttu-id="fa2a8-145">Como a classe `Person` no exemplo a seguir expõe uma propriedade `Age` de tipo [UInt16](xref:System.UInt16), o código a seguir exibe um aviso do compilador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-145">Because the `Person` class in the following example exposes an `Age` property of type [UInt16](xref:System.UInt16), the following code displays a compiler warning.</span></span>
+<span data-ttu-id="b8dc1-144">Por exemplo, inteiros sem sinal que não sejam [Byte](xref:System.Byte) não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-144">For example, unsigned integers other than [Byte](xref:System.Byte) are not CLS-compliant.</span></span> <span data-ttu-id="b8dc1-145">Como a classe `Person` no exemplo a seguir expõe uma propriedade `Age` de tipo [UInt16](xref:System.UInt16), o código a seguir exibe um aviso do compilador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-145">Because the `Person` class in the following example exposes an `Age` property of type [UInt16](xref:System.UInt16), the following code displays a compiler warning.</span></span>
 
 ```csharp
 using System;
@@ -86,7 +86,7 @@ public class Person
 {
    private UInt16 personAge = 0;
 
-   public UInt16 Age 
+   public UInt16 Age
    { get { return personAge; } }
 }
 // The attempt to compile the example displays the following compiler warning:
@@ -94,25 +94,25 @@ public class Person
 ```
 
 ```vb
-<Assembly: CLSCompliant(True)> 
+<Assembly: CLSCompliant(True)>
 
 Public Class Person
    Private personAge As UInt16
 
    Public ReadOnly Property Age As UInt16
       Get
-         Return personAge      
-      End Get   
+         Return personAge
+      End Get
    End Property
 End Class
 ' The attempt to compile the example displays the following compiler warning:
 '    Public1.vb(9) : warning BC40027: Return type of function 'Age' is not CLS-compliant.
-'    
+'
 '       Public ReadOnly Property Age As UInt16
 '                                ~~~
 ```
 
-<span data-ttu-id="fa2a8-146">É possível tornar a classe Pessoa compatível com CLS alterando o tipo de propriedade `Age` de `UInt16` para [Int16](xref:System.Int16), que é um inteiro com sinal de 16 bits compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-146">You can make the Person class CLS-compliant by changing the type of `Age` property from `UInt16` to [Int16](xref:System.Int16), which is a CLS-compliant, 16-bit signed integer.</span></span> <span data-ttu-id="fa2a8-147">Não é necessário alterar o tipo do campo `personAge` privado.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-147">You do not have to change the type of the private `personAge` field.</span></span> 
+<span data-ttu-id="b8dc1-146">É possível tornar a classe Pessoa compatível com CLS alterando o tipo de propriedade `Age` de `UInt16` para [Int16](xref:System.Int16), que é um inteiro com sinal de 16 bits compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-146">You can make the Person class CLS-compliant by changing the type of `Age` property from `UInt16` to [Int16](xref:System.Int16), which is a CLS-compliant, 16-bit signed integer.</span></span> <span data-ttu-id="b8dc1-147">Não é necessário alterar o tipo do campo `personAge` privado.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-147">You do not have to change the type of the private `personAge` field.</span></span>
 
 ```csharp
 using System;
@@ -123,97 +123,97 @@ public class Person
 {
    private Int16 personAge = 0;
 
-   public Int16 Age 
+   public Int16 Age
    { get { return personAge; } }
 }
 ```
 
 ```vb
-<Assembly: CLSCompliant(True)> 
+<Assembly: CLSCompliant(True)>
 
 Public Class Person
    Private personAge As UInt16
 
    Public ReadOnly Property Age As Int16
       Get
-         Return CType(personAge, Int16)      
-      End Get   
+         Return CType(personAge, Int16)
+      End Get
    End Property
 End Class
 ```
 
-<span data-ttu-id="fa2a8-148">A interface pública de uma biblioteca consiste no seguinte:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-148">A library's public interface consists of the following:</span></span>
+<span data-ttu-id="b8dc1-148">A interface pública de uma biblioteca consiste no seguinte:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-148">A library's public interface consists of the following:</span></span>
 
-* <span data-ttu-id="fa2a8-149">Definições de classes públicas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-149">Definitions of public classes.</span></span>
+* <span data-ttu-id="b8dc1-149">Definições de classes públicas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-149">Definitions of public classes.</span></span>
 
-* <span data-ttu-id="fa2a8-150">Definições dos membros públicos de classes públicas e definições de membros acessíveis para classes derivadas (ou seja, membros protegidos).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-150">Definitions of the public members of public classes, and definitions of members accessible to derived classes (that is, protected members).</span></span> 
+* <span data-ttu-id="b8dc1-150">Definições dos membros públicos de classes públicas e definições de membros acessíveis para classes derivadas (ou seja, membros protegidos).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-150">Definitions of the public members of public classes, and definitions of members accessible to derived classes (that is, protected members).</span></span>
 
-* <span data-ttu-id="fa2a8-151">Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-151">Parameters and return types of public methods of public classes, and parameters and return types of methods accessible to derived classes.</span></span> 
+* <span data-ttu-id="b8dc1-151">Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-151">Parameters and return types of public methods of public classes, and parameters and return types of methods accessible to derived classes.</span></span>
 
-<span data-ttu-id="fa2a8-152">As regras de conformidade com CLS estão listadas na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-152">The rules for CLS compliance are listed in the following table.</span></span> <span data-ttu-id="fa2a8-153">O texto das regras foi retirado palavra por palavra do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-153">The text of the rules is taken verbatim from the [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), which is Copyright 2012 by Ecma International.</span></span> <span data-ttu-id="fa2a8-154">Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-154">More detailed information about these rules is found in the following sections.</span></span> 
+<span data-ttu-id="b8dc1-152">As regras de conformidade com CLS estão listadas na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-152">The rules for CLS compliance are listed in the following table.</span></span> <span data-ttu-id="b8dc1-153">O texto das regras foi retirado palavra por palavra do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-153">The text of the rules is taken verbatim from the [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), which is Copyright 2012 by Ecma International.</span></span> <span data-ttu-id="b8dc1-154">Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-154">More detailed information about these rules is found in the following sections.</span></span>
 
-<span data-ttu-id="fa2a8-155">Categoria</span><span class="sxs-lookup"><span data-stu-id="fa2a8-155">Category</span></span> | <span data-ttu-id="fa2a8-156">Consulte</span><span class="sxs-lookup"><span data-stu-id="fa2a8-156">See</span></span> | <span data-ttu-id="fa2a8-157">Regra</span><span class="sxs-lookup"><span data-stu-id="fa2a8-157">Rule</span></span> | <span data-ttu-id="fa2a8-158">Número da regra</span><span class="sxs-lookup"><span data-stu-id="fa2a8-158">Rule Number</span></span>
+<span data-ttu-id="b8dc1-155">Categoria</span><span class="sxs-lookup"><span data-stu-id="b8dc1-155">Category</span></span> | <span data-ttu-id="b8dc1-156">Consulte</span><span class="sxs-lookup"><span data-stu-id="b8dc1-156">See</span></span> | <span data-ttu-id="b8dc1-157">Regra</span><span class="sxs-lookup"><span data-stu-id="b8dc1-157">Rule</span></span> | <span data-ttu-id="b8dc1-158">Número da regra</span><span class="sxs-lookup"><span data-stu-id="b8dc1-158">Rule Number</span></span>
 -------- | --- | ---- | -----------
-<span data-ttu-id="fa2a8-159">Acessibilidade</span><span class="sxs-lookup"><span data-stu-id="fa2a8-159">Accessibility</span></span> | [<span data-ttu-id="fa2a8-160">Acessibilidade de membro</span><span class="sxs-lookup"><span data-stu-id="fa2a8-160">Member accessibility</span></span>](#member-accessibility) | <span data-ttu-id="fa2a8-161">A acessibilidade não deverá ser alterada ao substituir métodos herdados, exceto na substituição de um método herdado de um assembly diferente com acessibilidade `family-or-assembly`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-161">Accessibility shall not be changed when overriding inherited methods, except when overriding a method inherited from a different assembly with accessibility `family-or-assembly`.</span></span> <span data-ttu-id="fa2a8-162">Nesse caso, a substituição deverá ter a acessibilidade `family`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-162">In this case, the override shall have accessibility `family`.</span></span> | <span data-ttu-id="fa2a8-163">10</span><span class="sxs-lookup"><span data-stu-id="fa2a8-163">10</span></span>
-<span data-ttu-id="fa2a8-164">Acessibilidade</span><span class="sxs-lookup"><span data-stu-id="fa2a8-164">Accessibility</span></span> | [<span data-ttu-id="fa2a8-165">Acessibilidade de membro</span><span class="sxs-lookup"><span data-stu-id="fa2a8-165">Member accessibility</span></span>](#member-accessibility) | <span data-ttu-id="fa2a8-166">A visibilidade e a acessibilidade de tipos e membros deverão ser de tal forma que os tipos na assinatura de qualquer membro sejam visíveis e acessíveis sempre que o próprio membro estiver visível e acessível.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-166">The visibility and accessibility of types and members shall be such that types in the signature of any member shall be visible and accessible whenever the member itself is visible and accessible.</span></span> <span data-ttu-id="fa2a8-167">Por exemplo, um método público visível fora do assembly não deve ter um argumento cujo tipo seja visível somente dentro do assembly.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-167">For example, a public method that is visible outside its assembly shall not have an argument whose type is visible only within the assembly.</span></span> <span data-ttu-id="fa2a8-168">A visibilidade e a acessibilidade dos tipos que compõem um tipo genérico instanciado usado na assinatura de qualquer membro deverão estar visíveis e acessíveis sempre que o próprio membro estiver visível e acessível.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-168">The visibility and accessibility of types composing an instantiated generic type used in the signature of any member shall be visible and accessible whenever the member itself is visible and accessible.</span></span> <span data-ttu-id="fa2a8-169">Por exemplo, um tipo genérico instanciado presente na assinatura de um membro visível fora do assembly não deverá ter um argumento genérico cujo tipo seja visível somente dentro do assembly.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-169">For example, an instantiated generic type present in the signature of a member that is visible outside its assembly shall not have a generic argument whose type is visible only within the assembly.</span></span> | <span data-ttu-id="fa2a8-170">12</span><span class="sxs-lookup"><span data-stu-id="fa2a8-170">12</span></span>
-<span data-ttu-id="fa2a8-171">Matrizes</span><span class="sxs-lookup"><span data-stu-id="fa2a8-171">Arrays</span></span> | [<span data-ttu-id="fa2a8-172">Matrizes</span><span class="sxs-lookup"><span data-stu-id="fa2a8-172">Arrays</span></span>](#arrays) | <span data-ttu-id="fa2a8-173">As matrizes deverão ter elementos com um tipo compatível com CLS e todas as dimensões da matriz deverão ter limites inferiores iguais a zero.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-173">Arrays shall have elements with a CLS-compliant type, and all dimensions of the array shall have lower bounds of zero.</span></span> <span data-ttu-id="fa2a8-174">Se o item for uma matriz, o tipo do elemento da matriz será necessário para diferenciar as sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-174">Only the fact that an item is an array and the element type of the array shall be required to distinguish between overloads.</span></span> <span data-ttu-id="fa2a8-175">Quando a sobrecarga é baseada em dois ou mais tipos de matriz, os tipos de elemento deverão ser chamados de tipos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-175">When overloading is based on two or more array types the element types shall be named types.</span></span> | <span data-ttu-id="fa2a8-176">16</span><span class="sxs-lookup"><span data-stu-id="fa2a8-176">16</span></span>
-<span data-ttu-id="fa2a8-177">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-177">Attributes</span></span> | [<span data-ttu-id="fa2a8-178">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-178">Attributes</span></span>](#attributes) | <span data-ttu-id="fa2a8-179">Os atributos deverão ser do tipo [System.Attribute](xref:System.Attribute) ou de um tipo herdado dele.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-179">Attributes shall be of type [System.Attribute](xref:System.Attribute), or a type inheriting from it.</span></span> | <span data-ttu-id="fa2a8-180">41</span><span class="sxs-lookup"><span data-stu-id="fa2a8-180">41</span></span>
-<span data-ttu-id="fa2a8-181">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-181">Attributes</span></span> | [<span data-ttu-id="fa2a8-182">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-182">Attributes</span></span>](#attributes) | <span data-ttu-id="fa2a8-183">A CLS só permite um subconjunto das codificações de atributos personalizados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-183">The CLS only allows a subset of the encodings of custom attributes.</span></span> <span data-ttu-id="fa2a8-184">Os únicos tipos que devem ser exibidos nessas codificações são (confira a Partição IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) e qualquer tipo de enumeração com base em um tipo inteiro básico compatível com o CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-184">The only types that shall appear in these encodings are (see Partition IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double), and any enumeration type based on a CLS-compliant base integer type.</span></span> | <span data-ttu-id="fa2a8-185">34</span><span class="sxs-lookup"><span data-stu-id="fa2a8-185">34</span></span>
-<span data-ttu-id="fa2a8-186">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-186">Attributes</span></span> | [<span data-ttu-id="fa2a8-187">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-187">Attributes</span></span>](#attributes) | <span data-ttu-id="fa2a8-188">A CLS não permite modificadores obrigatórios visíveis publicamente (`modreq`, consulte a Partição II), mas permite modificadores opcionais (`modopt`, consulte a Partição II) que ela não entende.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-188">The CLS does not allow publicly visible required modifiers (`modreq`, see Partition II), but does allow optional modifiers (`modopt`, see Partition II) it does not understand.</span></span> | <span data-ttu-id="fa2a8-189">35</span><span class="sxs-lookup"><span data-stu-id="fa2a8-189">35</span></span>
-<span data-ttu-id="fa2a8-190">Construtores</span><span class="sxs-lookup"><span data-stu-id="fa2a8-190">Constructors</span></span> | [<span data-ttu-id="fa2a8-191">Construtores</span><span class="sxs-lookup"><span data-stu-id="fa2a8-191">Constructors</span></span>](#constructors) | <span data-ttu-id="fa2a8-192">Um construtor de objeto deverá chamar um construtor de instância de sua classe base antes de qualquer acesso aos dados da instância herdados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-192">An object constructor shall call some instance constructor of its base class before any access occurs to inherited instance data.</span></span> <span data-ttu-id="fa2a8-193">(Isso não se aplica a tipos de valor, que não precisam ter construtores.)</span><span class="sxs-lookup"><span data-stu-id="fa2a8-193">(This does not apply to value types, which need not have constructors.)</span></span>  | <span data-ttu-id="fa2a8-194">21</span><span class="sxs-lookup"><span data-stu-id="fa2a8-194">21</span></span>
-<span data-ttu-id="fa2a8-195">Construtores</span><span class="sxs-lookup"><span data-stu-id="fa2a8-195">Constructors</span></span> | [<span data-ttu-id="fa2a8-196">Construtores</span><span class="sxs-lookup"><span data-stu-id="fa2a8-196">Constructors</span></span>](#constructors) | <span data-ttu-id="fa2a8-197">Um construtor de objeto não deverá ser chamado, exceto como parte da criação de um objeto e um objeto não deve ser inicializado duas vezes.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-197">An object constructor shall not be called except as part of the creation of an object, and an object shall not be initialized twice.</span></span> | <span data-ttu-id="fa2a8-198">22</span><span class="sxs-lookup"><span data-stu-id="fa2a8-198">22</span></span>
-<span data-ttu-id="fa2a8-199">Enumerações</span><span class="sxs-lookup"><span data-stu-id="fa2a8-199">Enumerations</span></span> | [<span data-ttu-id="fa2a8-200">Enumerações</span><span class="sxs-lookup"><span data-stu-id="fa2a8-200">Enumerations</span></span>](#enumerations) | <span data-ttu-id="fa2a8-201">O tipo subjacente de um enum deverá ser um tipo de inteiro CLS interno, o nome do campo deverá ser "value__", e esse campo deverá ser marcado como `RTSpecialName`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-201">The underlying type of an enum shall be a built-in CLS integer type, the name of the field shall be "value__", and that field shall be marked `RTSpecialName`.</span></span> |  <span data-ttu-id="fa2a8-202">7</span><span class="sxs-lookup"><span data-stu-id="fa2a8-202">7</span></span>
-<span data-ttu-id="fa2a8-203">Enumerações</span><span class="sxs-lookup"><span data-stu-id="fa2a8-203">Enumerations</span></span> | [<span data-ttu-id="fa2a8-204">Enumerações</span><span class="sxs-lookup"><span data-stu-id="fa2a8-204">Enumerations</span></span>](#enumerations) | <span data-ttu-id="fa2a8-205">Há dois tipos diferentes de enums, indicados pela presença ou pela ausência do atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute) (consulte a Biblioteca da Partição IV).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-205">There are two distinct kinds of enums, indicated by the presence or absence of the [System.FlagsAttribute](xref:System.FlagsAttribute) (see Partition IV Library) custom attribute.</span></span> <span data-ttu-id="fa2a8-206">Um representa valores de inteiro nomeados; o outro representa sinalizadores de bit nomeados que podem ser combinados para gerar um valor sem nome.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-206">One represents named integer values; the other represents named bit flags that can be combined to generate an unnamed value.</span></span> <span data-ttu-id="fa2a8-207">O valor de um `enum` não está limitado aos valores especificados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-207">The value of an `enum` is not limited to the specified values.</span></span> |  <span data-ttu-id="fa2a8-208">8</span><span class="sxs-lookup"><span data-stu-id="fa2a8-208">8</span></span>
-<span data-ttu-id="fa2a8-209">Enumerações</span><span class="sxs-lookup"><span data-stu-id="fa2a8-209">Enumerations</span></span> | [<span data-ttu-id="fa2a8-210">Enumerações</span><span class="sxs-lookup"><span data-stu-id="fa2a8-210">Enumerations</span></span>](#enumerations) | <span data-ttu-id="fa2a8-211">Campos estáticos de literais de um enum deverão ter o tipo do próprio enum.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-211">Literal static fields of an enum shall have the type of the enum itself.</span></span> |  <span data-ttu-id="fa2a8-212">9</span><span class="sxs-lookup"><span data-stu-id="fa2a8-212">9</span></span>
-<span data-ttu-id="fa2a8-213">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-213">Events</span></span> | [<span data-ttu-id="fa2a8-214">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-214">Events</span></span>](#events) | <span data-ttu-id="fa2a8-215">Os métodos que implementam um evento deverão ser marcados como `SpecialName` nos metadados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-215">The methods that implement an event shall be marked `SpecialName` in the metadata.</span></span> |<span data-ttu-id="fa2a8-216">29</span><span class="sxs-lookup"><span data-stu-id="fa2a8-216">29</span></span>
-<span data-ttu-id="fa2a8-217">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-217">Events</span></span> | [<span data-ttu-id="fa2a8-218">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-218">Events</span></span>](#events) | <span data-ttu-id="fa2a8-219">A acessibilidade de um evento e de seus acessadores deverá ser idêntica.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-219">The accessibility of an event and of its accessors shall be identical.</span></span> |<span data-ttu-id="fa2a8-220">30</span><span class="sxs-lookup"><span data-stu-id="fa2a8-220">30</span></span>
-<span data-ttu-id="fa2a8-221">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-221">Events</span></span> | [<span data-ttu-id="fa2a8-222">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-222">Events</span></span>](#events) | <span data-ttu-id="fa2a8-223">Os métodos `add` e `remove` de um evento deverão estar presentes ou ausentes.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-223">The `add` and `remove` methods for an event shall both either be present or absent.</span></span> |<span data-ttu-id="fa2a8-224">31</span><span class="sxs-lookup"><span data-stu-id="fa2a8-224">31</span></span>
-<span data-ttu-id="fa2a8-225">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-225">Events</span></span> | [<span data-ttu-id="fa2a8-226">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-226">Events</span></span>](#events) | <span data-ttu-id="fa2a8-227">Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um, cujo tipo defina o tipo do evento e ele deverá ser derivado de [System.Delegate](xref:System.Delegate).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-227">The `add` and `remove` methods for an event shall each take one parameter whose type defines the type of the event and that shall be derived from [System.Delegate](xref:System.Delegate).</span></span> |<span data-ttu-id="fa2a8-228">32</span><span class="sxs-lookup"><span data-stu-id="fa2a8-228">32</span></span>
-<span data-ttu-id="fa2a8-229">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-229">Events</span></span> | [<span data-ttu-id="fa2a8-230">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-230">Events</span></span>](#events) | <span data-ttu-id="fa2a8-231">Os eventos deverão respeitar um padrão de nomenclatura específico.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-231">Events shall adhere to a specific naming pattern.</span></span> <span data-ttu-id="fa2a8-232">O atributo SpecialName mencionado na regra 29 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-232">The SpecialName attribute referred to in CLS rule 29 shall be ignored in appropriate name comparisons and shall adhere to identifier rules.</span></span>  |<span data-ttu-id="fa2a8-233">33</span><span class="sxs-lookup"><span data-stu-id="fa2a8-233">33</span></span>
-<span data-ttu-id="fa2a8-234">Exceções</span><span class="sxs-lookup"><span data-stu-id="fa2a8-234">Exceptions</span></span> | [<span data-ttu-id="fa2a8-235">Exceções</span><span class="sxs-lookup"><span data-stu-id="fa2a8-235">Exceptions</span></span>](#exceptions) | <span data-ttu-id="fa2a8-236">Os atributos acionados deverão ser do tipo [System.Exception](xref:System.Exception) ou de um tipo herdado dele.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-236">Objects that are thrown shall be of type [System.Exception](xref:System.Exception) or a type inheriting from it.</span></span> <span data-ttu-id="fa2a8-237">Mesmo assim, os métodos compatíveis com CLS não precisam bloquear a propagação de outros tipos de exceção.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-237">Nonetheless, CLS-compliant methods are not required to block the propagation of other types of exceptions.</span></span> | <span data-ttu-id="fa2a8-238">40</span><span class="sxs-lookup"><span data-stu-id="fa2a8-238">40</span></span>
-<span data-ttu-id="fa2a8-239">Geral</span><span class="sxs-lookup"><span data-stu-id="fa2a8-239">General</span></span> | [<span data-ttu-id="fa2a8-240">Regras de conformidade da CLS</span><span class="sxs-lookup"><span data-stu-id="fa2a8-240">CLS compliance rules</span></span>](#cls-compliance-rules) | <span data-ttu-id="fa2a8-241">As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-241">CLS rules apply only to those parts of a type that are accessible or visible outsideof the defining assembly.</span></span> | <span data-ttu-id="fa2a8-242">1</span><span class="sxs-lookup"><span data-stu-id="fa2a8-242">1</span></span>
-<span data-ttu-id="fa2a8-243">Geral</span><span class="sxs-lookup"><span data-stu-id="fa2a8-243">General</span></span> | [<span data-ttu-id="fa2a8-244">Regras de conformidade da CLS</span><span class="sxs-lookup"><span data-stu-id="fa2a8-244">CLS compliance rules</span></span>](#cls-compliance-rules) | <span data-ttu-id="fa2a8-245">Membros de tipos incompatíveis com CLS não deverão ser marcados como compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-245">Members of non-CLS compliant types shall not be marked CLS-compliant.</span></span> | <span data-ttu-id="fa2a8-246">2</span><span class="sxs-lookup"><span data-stu-id="fa2a8-246">2</span></span>
-<span data-ttu-id="fa2a8-247">Genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-247">Generics</span></span> | [<span data-ttu-id="fa2a8-248">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-248">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="fa2a8-249">Os tipos aninhados deverão ter, pelo menos, tantos parâmetros genéricos quanto o tipo delimitador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-249">Nested types shall have at least as many generic parameters as the enclosing type.</span></span> <span data-ttu-id="fa2a8-250">Os parâmetros genéricos em um tipo aninhado correspondem, por posição, aos parâmetros genéricos no tipo delimitador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-250">Generic parameters in a nested type correspond by position to the generic parameters in its enclosing type.</span></span>  | <span data-ttu-id="fa2a8-251">42</span><span class="sxs-lookup"><span data-stu-id="fa2a8-251">42</span></span>
-<span data-ttu-id="fa2a8-252">Genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-252">Generics</span></span> | [<span data-ttu-id="fa2a8-253">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-253">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="fa2a8-254">O nome de um tipo genérico deverá codificar o número de parâmetros de tipo declarados no tipo não aninhado ou recém-introduzidos no tipo, se aninhado, de acordo com as regras definidas anteriormente.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-254">The name of a generic type shall encode the number of type parameters declared on the non-nested type, or newly introduced to the type if nested, according to the rules defined above.</span></span> | <span data-ttu-id="fa2a8-255">43</span><span class="sxs-lookup"><span data-stu-id="fa2a8-255">43</span></span>
-<span data-ttu-id="fa2a8-256">Genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-256">Generics</span></span> | [<span data-ttu-id="fa2a8-257">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-257">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="fa2a8-258">Um tipo genérico deverá redeclarar restrições suficientes para assegurar que todas as restrições no tipo base ou nas interfaces sejam atendidas pelas restrições de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-258">A generic type shall redeclare sufficient constraints to guarantee that any constraints on the base type, or interfaces would be satisfied by the generic type constraints.</span></span> | <span data-ttu-id="fa2a8-259">44</span><span class="sxs-lookup"><span data-stu-id="fa2a8-259">44</span></span>
-<span data-ttu-id="fa2a8-260">Genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-260">Generics</span></span> | [<span data-ttu-id="fa2a8-261">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-261">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="fa2a8-262">Tipos usados como restrições em parâmetros genéricos deverão ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-262">Types used as constraints on generic parameters shall themselves be CLS-compliant.</span></span> | <span data-ttu-id="fa2a8-263">45</span><span class="sxs-lookup"><span data-stu-id="fa2a8-263">45</span></span>
-<span data-ttu-id="fa2a8-264">Genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-264">Generics</span></span> | [<span data-ttu-id="fa2a8-265">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-265">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="fa2a8-266">A visibilidade e a acessibilidade de membros (incluindo tipos aninhados) em um tipo genérico instanciado deverão ser consideradas no escopo da instanciação específica, em vez da declaração de tipo genérico como um todo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-266">The visibility and accessibility of members (including nested types) in an instantiated generic type shall be considered to be scoped to the specific instantiation rather than the generic type declaration as a whole.</span></span> <span data-ttu-id="fa2a8-267">Supondo isso, as regras de visibilidade e acessibilidade da regra 12 da CLS continuam sendo aplicáveis.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-267">Assuming this, the visibility and accessibility rules of CLS rule 12 still apply.</span></span> | <span data-ttu-id="fa2a8-268">46</span><span class="sxs-lookup"><span data-stu-id="fa2a8-268">46</span></span>
-<span data-ttu-id="fa2a8-269">Genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-269">Generics</span></span> | [<span data-ttu-id="fa2a8-270">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-270">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="fa2a8-271">Para cada método genérico abstrato ou virtual, deverá haver uma implementação concreta (não abstrata) padrão</span><span class="sxs-lookup"><span data-stu-id="fa2a8-271">For each abstract or virtual generic method, there shall be a default concrete (nonabstract) implementation</span></span> | <span data-ttu-id="fa2a8-272">47</span><span class="sxs-lookup"><span data-stu-id="fa2a8-272">47</span></span>
-<span data-ttu-id="fa2a8-273">Interfaces</span><span class="sxs-lookup"><span data-stu-id="fa2a8-273">Interfaces</span></span> | [<span data-ttu-id="fa2a8-274">Interfaces</span><span class="sxs-lookup"><span data-stu-id="fa2a8-274">Interfaces</span></span>](#interfaces) | <span data-ttu-id="fa2a8-275">As interfaces compatíveis com CLS não deverão exigir a definição de métodos incompatíveis com CLS para implementá-los.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-275">CLS-compliant interfaces shall not require the definition of non-CLS compliantmethods in order to implement them.</span></span> | <span data-ttu-id="fa2a8-276">18</span><span class="sxs-lookup"><span data-stu-id="fa2a8-276">18</span></span>
-<span data-ttu-id="fa2a8-277">Interfaces</span><span class="sxs-lookup"><span data-stu-id="fa2a8-277">Interfaces</span></span> | [<span data-ttu-id="fa2a8-278">Interfaces</span><span class="sxs-lookup"><span data-stu-id="fa2a8-278">Interfaces</span></span>](#interfaces) | <span data-ttu-id="fa2a8-279">As interfaces compatíveis com CLS não deverão definir métodos estáticos, nem devem definir campos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-279">CLS-compliant interfaces shall not define static methods, nor shall they define fields.</span></span> | <span data-ttu-id="fa2a8-280">19</span><span class="sxs-lookup"><span data-stu-id="fa2a8-280">19</span></span>
-<span data-ttu-id="fa2a8-281">Membros</span><span class="sxs-lookup"><span data-stu-id="fa2a8-281">Members</span></span> | [<span data-ttu-id="fa2a8-282">Membros de tipo em geral</span><span class="sxs-lookup"><span data-stu-id="fa2a8-282">Type members in general</span></span>](#type-members-in-general) | <span data-ttu-id="fa2a8-283">Campos e métodos estáticos globais não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-283">Global static fields and methods are not CLS-compliant.</span></span> | <span data-ttu-id="fa2a8-284">36</span><span class="sxs-lookup"><span data-stu-id="fa2a8-284">36</span></span>
-<span data-ttu-id="fa2a8-285">Membros</span><span class="sxs-lookup"><span data-stu-id="fa2a8-285">Members</span></span> | -- | <span data-ttu-id="fa2a8-286">O valor de um estático literal é especificado por meio do uso de metadados de inicialização do campo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-286">The value of a literal static is specified through the use of field initialization metadata.</span></span> <span data-ttu-id="fa2a8-287">Um literal compatível com CLS deve ter um valor especificado em metadados de inicialização de campo que sejam exatamente do mesmo tipo que o literal (ou do tipo subjacente, se esse literal for um `enum`).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-287">A CLS-compliant literal must have a value specified in field initialization metadata that is of exactly the same type as the literal (or of the underlying type, if that literal is an `enum`).</span></span> | <span data-ttu-id="fa2a8-288">13</span><span class="sxs-lookup"><span data-stu-id="fa2a8-288">13</span></span>
-<span data-ttu-id="fa2a8-289">Membros</span><span class="sxs-lookup"><span data-stu-id="fa2a8-289">Members</span></span> | [<span data-ttu-id="fa2a8-290">Membros de tipo em geral</span><span class="sxs-lookup"><span data-stu-id="fa2a8-290">Type members in general</span></span>](#type-members-in-general) | <span data-ttu-id="fa2a8-291">A restrição vararg não faz parte da CLS e a única convenção de chamada com suporte pela CLS é a convenção de chamada gerenciada padrão.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-291">The vararg constraint is not part of the CLS, and the only calling convention supported by the CLS is the standard managed calling convention.</span></span> | <span data-ttu-id="fa2a8-292">15</span><span class="sxs-lookup"><span data-stu-id="fa2a8-292">15</span></span>
-<span data-ttu-id="fa2a8-293">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="fa2a8-293">Naming conventions</span></span> | [<span data-ttu-id="fa2a8-294">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="fa2a8-294">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="fa2a8-295">Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres permitidos para iniciar e serem incluídos em identificadores, disponíveis online em [Formulários de Normalização de Unicode](https://www.unicode.org/unicode/reports/tr15/tr15-18.html).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-295">Assemblies shall follow Annex 7 of Technical Report 15 of the Unicode Standard3.0 governing the set of characters permitted to start and be included in identifiers, available online at [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html).</span></span> <span data-ttu-id="fa2a8-296">Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, insensíveis a local) forem os mesmos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-296">Identifiers shall be in the canonical format defined by Unicode Normalization Form C. For CLS purposes, two identifiersare the same if their lowercase mappings (as specified by the Unicode locale-insensitive, one-to-one lowercase mappings) are the same.</span></span> <span data-ttu-id="fa2a8-297">Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-297">That is, for two identifiers to be considered different under the CLS they shall differ in more than simply their case.</span></span> <span data-ttu-id="fa2a8-298">No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-298">However, in order to override an inherited definition the CLI requires the precise encoding of the original declaration be used.</span></span> | <span data-ttu-id="fa2a8-299">4</span><span class="sxs-lookup"><span data-stu-id="fa2a8-299">4</span></span>
-<span data-ttu-id="fa2a8-300">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="fa2a8-300">Overloading</span></span> | [<span data-ttu-id="fa2a8-301">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="fa2a8-301">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="fa2a8-302">Todos os nomes introduzidos em um escopo compatível com CLS deverão ser independentes e distintos do tipo, exceto quando os nomes forem idênticos e resolvidos por meio da sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-302">All names introduced in a CLS-compliant scope shall be distinct independent of kind, except where the names are identical and resolved via overloading.</span></span> <span data-ttu-id="fa2a8-303">Ou seja, embora o CTS permita que um tipo single use o mesmo nome para um método e um campo, a CLS não permite.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-303">That is, while the CTS allows a single type to use the same name for a method and a field, the CLS does not.</span></span> | <span data-ttu-id="fa2a8-304">5</span><span class="sxs-lookup"><span data-stu-id="fa2a8-304">5</span></span>
-<span data-ttu-id="fa2a8-305">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="fa2a8-305">Overloading</span></span> | [<span data-ttu-id="fa2a8-306">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="fa2a8-306">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="fa2a8-307">Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-307">Fields and nested types shall be distinct by identifier comparison alone, eventhough the CTS allows distinct signatures to be distinguished.</span></span> <span data-ttu-id="fa2a8-308">Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra 39 da CLS</span><span class="sxs-lookup"><span data-stu-id="fa2a8-308">Methods, properties, and events that have the same name (by identifier comparison) shall differ by more than just the return type,except as specified in CLS Rule 39</span></span> | <span data-ttu-id="fa2a8-309">6</span><span class="sxs-lookup"><span data-stu-id="fa2a8-309">6</span></span>
-<span data-ttu-id="fa2a8-310">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="fa2a8-310">Overloading</span></span> | [<span data-ttu-id="fa2a8-311">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="fa2a8-311">Overloads</span></span>](#overloads) | <span data-ttu-id="fa2a8-312">Somente propriedades e métodos podem ser sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-312">Only properties and methods can be overloaded.</span></span> | <span data-ttu-id="fa2a8-313">37</span><span class="sxs-lookup"><span data-stu-id="fa2a8-313">37</span></span>
-<span data-ttu-id="fa2a8-314">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="fa2a8-314">Overloading</span></span> | [<span data-ttu-id="fa2a8-315">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="fa2a8-315">Overloads</span></span>](#overloads) |<span data-ttu-id="fa2a8-316">As propriedades e os métodos só podem ser sobrecarregados com base no número e nos tipos de seus parâmetros, exceto os operadores de conversão chamados `op_Implicit` e `op_Explicit`, que também podem ser sobrecarregados com base no tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-316">Properties and methods can be overloaded based only on the number and types of their parameters, except the conversion operators named `op_Implicit` and `op_Explicit`, which can also be overloaded based on their return type.</span></span> | <span data-ttu-id="fa2a8-317">38</span><span class="sxs-lookup"><span data-stu-id="fa2a8-317">38</span></span>
-<span data-ttu-id="fa2a8-318">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="fa2a8-318">Overloading</span></span> | -- | <span data-ttu-id="fa2a8-319">Se dois ou mais métodos compatíveis com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-319">If two or more CLS-compliant methods declared in a type have the same nameand, for a specific set of type instantiations, they have the same parameter and return types, then all these methods shall be semantically equivalent at those type instantiations.</span></span> | <span data-ttu-id="fa2a8-320">48</span><span class="sxs-lookup"><span data-stu-id="fa2a8-320">48</span></span>
-<span data-ttu-id="fa2a8-321">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-321">Properties</span></span> | [<span data-ttu-id="fa2a8-322">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-322">Properties</span></span>](#properties) | <span data-ttu-id="fa2a8-323">Os métodos que implementam os métodos getter e setter de uma propriedade deverão ser marcados como `SpecialName` nos metadados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-323">The methods that implement the getter and setter methods of a property shall be marked `SpecialName` in the metadata.</span></span> | <span data-ttu-id="fa2a8-324">24</span><span class="sxs-lookup"><span data-stu-id="fa2a8-324">24</span></span>
-<span data-ttu-id="fa2a8-325">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-325">Properties</span></span> | [<span data-ttu-id="fa2a8-326">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-326">Properties</span></span>](#properties) | <span data-ttu-id="fa2a8-327">Os acessadores de uma propriedade deverão ser todos estáticos, virtuais ou de instância.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-327">A property’s accessors shall all be static, all be virtual, or all be instance.</span></span> | <span data-ttu-id="fa2a8-328">26</span><span class="sxs-lookup"><span data-stu-id="fa2a8-328">26</span></span>
-<span data-ttu-id="fa2a8-329">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-329">Properties</span></span> | [<span data-ttu-id="fa2a8-330">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-330">Properties</span></span>](#properties) | <span data-ttu-id="fa2a8-331">O tipo de uma propriedade deverá ser o tipo de retorno do getter e o tipo do último argumento do setter.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-331">The type of a property shall be the return type of the getter and the type of the last argument of the setter.</span></span> <span data-ttu-id="fa2a8-332">Os tipos dos parâmetros da propriedade deverão ser os tipos dos parâmetros do getter e os tipos de todos os parâmetros, menos o parâmetro final do setter.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-332">The types of the parameters of the property shall be the types of the parameters to the getter and the types of all but the final parameter of the setter.</span></span> <span data-ttu-id="fa2a8-333">Todos esses tipos deverão ser compatíveis com CLS e não deverão ser ponteiros gerenciados (ou seja, não deverão ser passados por referência).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-333">All of these types shall be CLS-compliant, and shall not be managed pointers (that is, shall not be passed by reference).</span></span> | <span data-ttu-id="fa2a8-334">27</span><span class="sxs-lookup"><span data-stu-id="fa2a8-334">27</span></span>
-<span data-ttu-id="fa2a8-335">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-335">Properties</span></span> | [<span data-ttu-id="fa2a8-336">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-336">Properties</span></span>](#properties) | <span data-ttu-id="fa2a8-337">As propriedades deverão seguir um padrão de nomenclatura específico.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-337">Properties shall adhere to a specific naming pattern.</span></span> <span data-ttu-id="fa2a8-338">O atributo `SpecialName` mencionado na regra 24 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-338">The `SpecialName` attribute referred to in CLS rule 24 shall be ignored in appropriate name comparisons and shall adhere to identifier rules.</span></span> <span data-ttu-id="fa2a8-339">Uma propriedade deverá ter um método getter, um método setter ou ambos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-339">A property shall have a getter method, a setter method, or both.</span></span> | <span data-ttu-id="fa2a8-340">28</span><span class="sxs-lookup"><span data-stu-id="fa2a8-340">28</span></span>
-<span data-ttu-id="fa2a8-341">Conversão de tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-341">Type conversion</span></span> | [<span data-ttu-id="fa2a8-342">Conversão de tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-342">Type conversion</span></span>](#type-conversion) | <span data-ttu-id="fa2a8-343">Se op_Implicit ou op_Explicit for fornecido, um meio alternativo de coerção deverá ser fornecido.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-343">If either op_Implicit or op_Explicit is provided, an alternate means of providing the coercion shall be provided.</span></span> | <span data-ttu-id="fa2a8-344">39</span><span class="sxs-lookup"><span data-stu-id="fa2a8-344">39</span></span>
-<span data-ttu-id="fa2a8-345">Tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-345">Types</span></span> | [<span data-ttu-id="fa2a8-346">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-346">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="fa2a8-347">Tipos de valor demarcado não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-347">Boxed value types are not CLS-compliant.</span></span> | <span data-ttu-id="fa2a8-348">3</span><span class="sxs-lookup"><span data-stu-id="fa2a8-348">3</span></span>
-<span data-ttu-id="fa2a8-349">Tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-349">Types</span></span> | [<span data-ttu-id="fa2a8-350">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-350">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="fa2a8-351">Todos os tipos exibidos em uma assinatura deverão ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-351">All types appearing in a signature shall be CLS-compliant.</span></span> <span data-ttu-id="fa2a8-352">Todos os tipos que compõem um tipo genérico instanciado deverão ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-352">All types composing an instantiated generic type shall be CLS-compliant.</span></span> | <span data-ttu-id="fa2a8-353">11</span><span class="sxs-lookup"><span data-stu-id="fa2a8-353">11</span></span>
-<span data-ttu-id="fa2a8-354">Tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-354">Types</span></span> | [<span data-ttu-id="fa2a8-355">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-355">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="fa2a8-356">Referências com tipo não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-356">Typed references are not CLS-compliant.</span></span> | <span data-ttu-id="fa2a8-357">14</span><span class="sxs-lookup"><span data-stu-id="fa2a8-357">14</span></span>
-<span data-ttu-id="fa2a8-358">Tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-358">Types</span></span> | [<span data-ttu-id="fa2a8-359">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-359">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="fa2a8-360">Tipos de ponteiro não gerenciados não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-360">Unmanaged pointer types are not CLS-compliant.</span></span> | <span data-ttu-id="fa2a8-361">17</span><span class="sxs-lookup"><span data-stu-id="fa2a8-361">17</span></span>
-<span data-ttu-id="fa2a8-362">Tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-362">Types</span></span> | [<span data-ttu-id="fa2a8-363">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-363">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="fa2a8-364">Classes compatíveis com CLS, tipos de valor e interfaces não deverão exigir a implementação de membros incompatíveis com CLS</span><span class="sxs-lookup"><span data-stu-id="fa2a8-364">CLS-compliant classes, value types, and interfaces shall not require the implementation of non-CLS-compliant members</span></span> | <span data-ttu-id="fa2a8-365">20</span><span class="sxs-lookup"><span data-stu-id="fa2a8-365">20</span></span>
-<span data-ttu-id="fa2a8-366">Tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-366">Types</span></span> | [<span data-ttu-id="fa2a8-367">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-367">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="fa2a8-368">[System. Object](xref:System.Object) é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-368">[System.Object](xref:System.Object) is CLS-compliant.</span></span> <span data-ttu-id="fa2a8-369">Qualquer outra classe compatível com CLS deverá herdar de uma classe compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-369">Any other CLS-compliant class shall inherit from a CLS-compliant class.</span></span> | <span data-ttu-id="fa2a8-370">23</span><span class="sxs-lookup"><span data-stu-id="fa2a8-370">23</span></span>
+<span data-ttu-id="b8dc1-159">Acessibilidade</span><span class="sxs-lookup"><span data-stu-id="b8dc1-159">Accessibility</span></span> | [<span data-ttu-id="b8dc1-160">Acessibilidade de membro</span><span class="sxs-lookup"><span data-stu-id="b8dc1-160">Member accessibility</span></span>](#member-accessibility) | <span data-ttu-id="b8dc1-161">A acessibilidade não deverá ser alterada ao substituir métodos herdados, exceto na substituição de um método herdado de um assembly diferente com acessibilidade `family-or-assembly`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-161">Accessibility shall not be changed when overriding inherited methods, except when overriding a method inherited from a different assembly with accessibility `family-or-assembly`.</span></span> <span data-ttu-id="b8dc1-162">Nesse caso, a substituição deverá ter a acessibilidade `family`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-162">In this case, the override shall have accessibility `family`.</span></span> | <span data-ttu-id="b8dc1-163">10</span><span class="sxs-lookup"><span data-stu-id="b8dc1-163">10</span></span>
+<span data-ttu-id="b8dc1-164">Acessibilidade</span><span class="sxs-lookup"><span data-stu-id="b8dc1-164">Accessibility</span></span> | [<span data-ttu-id="b8dc1-165">Acessibilidade de membro</span><span class="sxs-lookup"><span data-stu-id="b8dc1-165">Member accessibility</span></span>](#member-accessibility) | <span data-ttu-id="b8dc1-166">A visibilidade e a acessibilidade de tipos e membros deverão ser de tal forma que os tipos na assinatura de qualquer membro sejam visíveis e acessíveis sempre que o próprio membro estiver visível e acessível.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-166">The visibility and accessibility of types and members shall be such that types in the signature of any member shall be visible and accessible whenever the member itself is visible and accessible.</span></span> <span data-ttu-id="b8dc1-167">Por exemplo, um método público visível fora do assembly não deve ter um argumento cujo tipo seja visível somente dentro do assembly.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-167">For example, a public method that is visible outside its assembly shall not have an argument whose type is visible only within the assembly.</span></span> <span data-ttu-id="b8dc1-168">A visibilidade e a acessibilidade dos tipos que compõem um tipo genérico instanciado usado na assinatura de qualquer membro deverão estar visíveis e acessíveis sempre que o próprio membro estiver visível e acessível.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-168">The visibility and accessibility of types composing an instantiated generic type used in the signature of any member shall be visible and accessible whenever the member itself is visible and accessible.</span></span> <span data-ttu-id="b8dc1-169">Por exemplo, um tipo genérico instanciado presente na assinatura de um membro visível fora do assembly não deverá ter um argumento genérico cujo tipo seja visível somente dentro do assembly.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-169">For example, an instantiated generic type present in the signature of a member that is visible outside its assembly shall not have a generic argument whose type is visible only within the assembly.</span></span> | <span data-ttu-id="b8dc1-170">12</span><span class="sxs-lookup"><span data-stu-id="b8dc1-170">12</span></span>
+<span data-ttu-id="b8dc1-171">Matrizes</span><span class="sxs-lookup"><span data-stu-id="b8dc1-171">Arrays</span></span> | [<span data-ttu-id="b8dc1-172">Matrizes</span><span class="sxs-lookup"><span data-stu-id="b8dc1-172">Arrays</span></span>](#arrays) | <span data-ttu-id="b8dc1-173">As matrizes deverão ter elementos com um tipo compatível com CLS e todas as dimensões da matriz deverão ter limites inferiores iguais a zero.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-173">Arrays shall have elements with a CLS-compliant type, and all dimensions of the array shall have lower bounds of zero.</span></span> <span data-ttu-id="b8dc1-174">Se o item for uma matriz, o tipo do elemento da matriz será necessário para diferenciar as sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-174">Only the fact that an item is an array and the element type of the array shall be required to distinguish between overloads.</span></span> <span data-ttu-id="b8dc1-175">Quando a sobrecarga é baseada em dois ou mais tipos de matriz, os tipos de elemento deverão ser chamados de tipos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-175">When overloading is based on two or more array types the element types shall be named types.</span></span> | <span data-ttu-id="b8dc1-176">16</span><span class="sxs-lookup"><span data-stu-id="b8dc1-176">16</span></span>
+<span data-ttu-id="b8dc1-177">Atributos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-177">Attributes</span></span> | [<span data-ttu-id="b8dc1-178">Atributos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-178">Attributes</span></span>](#attributes) | <span data-ttu-id="b8dc1-179">Os atributos deverão ser do tipo [System.Attribute](xref:System.Attribute) ou de um tipo herdado dele.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-179">Attributes shall be of type [System.Attribute](xref:System.Attribute), or a type inheriting from it.</span></span> | <span data-ttu-id="b8dc1-180">41</span><span class="sxs-lookup"><span data-stu-id="b8dc1-180">41</span></span>
+<span data-ttu-id="b8dc1-181">Atributos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-181">Attributes</span></span> | [<span data-ttu-id="b8dc1-182">Atributos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-182">Attributes</span></span>](#attributes) | <span data-ttu-id="b8dc1-183">A CLS só permite um subconjunto das codificações de atributos personalizados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-183">The CLS only allows a subset of the encodings of custom attributes.</span></span> <span data-ttu-id="b8dc1-184">Os únicos tipos que devem ser exibidos nessas codificações são (confira a Partição IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) e qualquer tipo de enumeração com base em um tipo inteiro básico compatível com o CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-184">The only types that shall appear in these encodings are (see Partition IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double), and any enumeration type based on a CLS-compliant base integer type.</span></span> | <span data-ttu-id="b8dc1-185">34</span><span class="sxs-lookup"><span data-stu-id="b8dc1-185">34</span></span>
+<span data-ttu-id="b8dc1-186">Atributos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-186">Attributes</span></span> | [<span data-ttu-id="b8dc1-187">Atributos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-187">Attributes</span></span>](#attributes) | <span data-ttu-id="b8dc1-188">A CLS não permite modificadores obrigatórios visíveis publicamente (`modreq`, consulte a Partição II), mas permite modificadores opcionais (`modopt`, consulte a Partição II) que ela não entende.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-188">The CLS does not allow publicly visible required modifiers (`modreq`, see Partition II), but does allow optional modifiers (`modopt`, see Partition II) it does not understand.</span></span> | <span data-ttu-id="b8dc1-189">35</span><span class="sxs-lookup"><span data-stu-id="b8dc1-189">35</span></span>
+<span data-ttu-id="b8dc1-190">Construtores</span><span class="sxs-lookup"><span data-stu-id="b8dc1-190">Constructors</span></span> | [<span data-ttu-id="b8dc1-191">Construtores</span><span class="sxs-lookup"><span data-stu-id="b8dc1-191">Constructors</span></span>](#constructors) | <span data-ttu-id="b8dc1-192">Um construtor de objeto deverá chamar um construtor de instância de sua classe base antes de qualquer acesso aos dados da instância herdados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-192">An object constructor shall call some instance constructor of its base class before any access occurs to inherited instance data.</span></span> <span data-ttu-id="b8dc1-193">(Isso não se aplica a tipos de valor, que não precisam ter construtores.)</span><span class="sxs-lookup"><span data-stu-id="b8dc1-193">(This does not apply to value types, which need not have constructors.)</span></span>  | <span data-ttu-id="b8dc1-194">21</span><span class="sxs-lookup"><span data-stu-id="b8dc1-194">21</span></span>
+<span data-ttu-id="b8dc1-195">Construtores</span><span class="sxs-lookup"><span data-stu-id="b8dc1-195">Constructors</span></span> | [<span data-ttu-id="b8dc1-196">Construtores</span><span class="sxs-lookup"><span data-stu-id="b8dc1-196">Constructors</span></span>](#constructors) | <span data-ttu-id="b8dc1-197">Um construtor de objeto não deverá ser chamado, exceto como parte da criação de um objeto e um objeto não deve ser inicializado duas vezes.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-197">An object constructor shall not be called except as part of the creation of an object, and an object shall not be initialized twice.</span></span> | <span data-ttu-id="b8dc1-198">22</span><span class="sxs-lookup"><span data-stu-id="b8dc1-198">22</span></span>
+<span data-ttu-id="b8dc1-199">Enumerações</span><span class="sxs-lookup"><span data-stu-id="b8dc1-199">Enumerations</span></span> | [<span data-ttu-id="b8dc1-200">Enumerações</span><span class="sxs-lookup"><span data-stu-id="b8dc1-200">Enumerations</span></span>](#enumerations) | <span data-ttu-id="b8dc1-201">O tipo subjacente de um enum deverá ser um tipo de inteiro CLS interno, o nome do campo deverá ser "value__", e esse campo deverá ser marcado como `RTSpecialName`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-201">The underlying type of an enum shall be a built-in CLS integer type, the name of the field shall be "value__", and that field shall be marked `RTSpecialName`.</span></span> |  <span data-ttu-id="b8dc1-202">7</span><span class="sxs-lookup"><span data-stu-id="b8dc1-202">7</span></span>
+<span data-ttu-id="b8dc1-203">Enumerações</span><span class="sxs-lookup"><span data-stu-id="b8dc1-203">Enumerations</span></span> | [<span data-ttu-id="b8dc1-204">Enumerações</span><span class="sxs-lookup"><span data-stu-id="b8dc1-204">Enumerations</span></span>](#enumerations) | <span data-ttu-id="b8dc1-205">Há dois tipos diferentes de enums, indicados pela presença ou pela ausência do atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute) (consulte a Biblioteca da Partição IV).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-205">There are two distinct kinds of enums, indicated by the presence or absence of the [System.FlagsAttribute](xref:System.FlagsAttribute) (see Partition IV Library) custom attribute.</span></span> <span data-ttu-id="b8dc1-206">Um representa valores de inteiro nomeados; o outro representa sinalizadores de bit nomeados que podem ser combinados para gerar um valor sem nome.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-206">One represents named integer values; the other represents named bit flags that can be combined to generate an unnamed value.</span></span> <span data-ttu-id="b8dc1-207">O valor de um `enum` não está limitado aos valores especificados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-207">The value of an `enum` is not limited to the specified values.</span></span> |  <span data-ttu-id="b8dc1-208">8</span><span class="sxs-lookup"><span data-stu-id="b8dc1-208">8</span></span>
+<span data-ttu-id="b8dc1-209">Enumerações</span><span class="sxs-lookup"><span data-stu-id="b8dc1-209">Enumerations</span></span> | [<span data-ttu-id="b8dc1-210">Enumerações</span><span class="sxs-lookup"><span data-stu-id="b8dc1-210">Enumerations</span></span>](#enumerations) | <span data-ttu-id="b8dc1-211">Campos estáticos de literais de um enum deverão ter o tipo do próprio enum.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-211">Literal static fields of an enum shall have the type of the enum itself.</span></span> |  <span data-ttu-id="b8dc1-212">9</span><span class="sxs-lookup"><span data-stu-id="b8dc1-212">9</span></span>
+<span data-ttu-id="b8dc1-213">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-213">Events</span></span> | [<span data-ttu-id="b8dc1-214">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-214">Events</span></span>](#events) | <span data-ttu-id="b8dc1-215">Os métodos que implementam um evento deverão ser marcados como `SpecialName` nos metadados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-215">The methods that implement an event shall be marked `SpecialName` in the metadata.</span></span> |<span data-ttu-id="b8dc1-216">29</span><span class="sxs-lookup"><span data-stu-id="b8dc1-216">29</span></span>
+<span data-ttu-id="b8dc1-217">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-217">Events</span></span> | [<span data-ttu-id="b8dc1-218">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-218">Events</span></span>](#events) | <span data-ttu-id="b8dc1-219">A acessibilidade de um evento e de seus acessadores deverá ser idêntica.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-219">The accessibility of an event and of its accessors shall be identical.</span></span> |<span data-ttu-id="b8dc1-220">30</span><span class="sxs-lookup"><span data-stu-id="b8dc1-220">30</span></span>
+<span data-ttu-id="b8dc1-221">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-221">Events</span></span> | [<span data-ttu-id="b8dc1-222">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-222">Events</span></span>](#events) | <span data-ttu-id="b8dc1-223">Os métodos `add` e `remove` de um evento deverão estar presentes ou ausentes.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-223">The `add` and `remove` methods for an event shall both either be present or absent.</span></span> |<span data-ttu-id="b8dc1-224">31</span><span class="sxs-lookup"><span data-stu-id="b8dc1-224">31</span></span>
+<span data-ttu-id="b8dc1-225">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-225">Events</span></span> | [<span data-ttu-id="b8dc1-226">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-226">Events</span></span>](#events) | <span data-ttu-id="b8dc1-227">Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um, cujo tipo defina o tipo do evento e ele deverá ser derivado de [System.Delegate](xref:System.Delegate).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-227">The `add` and `remove` methods for an event shall each take one parameter whose type defines the type of the event and that shall be derived from [System.Delegate](xref:System.Delegate).</span></span> |<span data-ttu-id="b8dc1-228">32</span><span class="sxs-lookup"><span data-stu-id="b8dc1-228">32</span></span>
+<span data-ttu-id="b8dc1-229">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-229">Events</span></span> | [<span data-ttu-id="b8dc1-230">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-230">Events</span></span>](#events) | <span data-ttu-id="b8dc1-231">Os eventos deverão respeitar um padrão de nomenclatura específico.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-231">Events shall adhere to a specific naming pattern.</span></span> <span data-ttu-id="b8dc1-232">O atributo SpecialName mencionado na regra 29 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-232">The SpecialName attribute referred to in CLS rule 29 shall be ignored in appropriate name comparisons and shall adhere to identifier rules.</span></span>  |<span data-ttu-id="b8dc1-233">33</span><span class="sxs-lookup"><span data-stu-id="b8dc1-233">33</span></span>
+<span data-ttu-id="b8dc1-234">Exceções</span><span class="sxs-lookup"><span data-stu-id="b8dc1-234">Exceptions</span></span> | [<span data-ttu-id="b8dc1-235">Exceções</span><span class="sxs-lookup"><span data-stu-id="b8dc1-235">Exceptions</span></span>](#exceptions) | <span data-ttu-id="b8dc1-236">Os atributos acionados deverão ser do tipo [System.Exception](xref:System.Exception) ou de um tipo herdado dele.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-236">Objects that are thrown shall be of type [System.Exception](xref:System.Exception) or a type inheriting from it.</span></span> <span data-ttu-id="b8dc1-237">Mesmo assim, os métodos compatíveis com CLS não precisam bloquear a propagação de outros tipos de exceção.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-237">Nonetheless, CLS-compliant methods are not required to block the propagation of other types of exceptions.</span></span> | <span data-ttu-id="b8dc1-238">40</span><span class="sxs-lookup"><span data-stu-id="b8dc1-238">40</span></span>
+<span data-ttu-id="b8dc1-239">Geral</span><span class="sxs-lookup"><span data-stu-id="b8dc1-239">General</span></span> | [<span data-ttu-id="b8dc1-240">Regras de conformidade da CLS</span><span class="sxs-lookup"><span data-stu-id="b8dc1-240">CLS compliance rules</span></span>](#cls-compliance-rules) | <span data-ttu-id="b8dc1-241">As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-241">CLS rules apply only to those parts of a type that are accessible or visible outside of the defining assembly.</span></span> | <span data-ttu-id="b8dc1-242">1</span><span class="sxs-lookup"><span data-stu-id="b8dc1-242">1</span></span>
+<span data-ttu-id="b8dc1-243">Geral</span><span class="sxs-lookup"><span data-stu-id="b8dc1-243">General</span></span> | [<span data-ttu-id="b8dc1-244">Regras de conformidade da CLS</span><span class="sxs-lookup"><span data-stu-id="b8dc1-244">CLS compliance rules</span></span>](#cls-compliance-rules) | <span data-ttu-id="b8dc1-245">Membros de tipos incompatíveis com CLS não deverão ser marcados como compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-245">Members of non-CLS compliant types shall not be marked CLS-compliant.</span></span> | <span data-ttu-id="b8dc1-246">2</span><span class="sxs-lookup"><span data-stu-id="b8dc1-246">2</span></span>
+<span data-ttu-id="b8dc1-247">Genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-247">Generics</span></span> | [<span data-ttu-id="b8dc1-248">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-248">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="b8dc1-249">Os tipos aninhados deverão ter, pelo menos, tantos parâmetros genéricos quanto o tipo delimitador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-249">Nested types shall have at least as many generic parameters as the enclosing type.</span></span> <span data-ttu-id="b8dc1-250">Os parâmetros genéricos em um tipo aninhado correspondem, por posição, aos parâmetros genéricos no tipo delimitador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-250">Generic parameters in a nested type correspond by position to the generic parameters in its enclosing type.</span></span>  | <span data-ttu-id="b8dc1-251">42</span><span class="sxs-lookup"><span data-stu-id="b8dc1-251">42</span></span>
+<span data-ttu-id="b8dc1-252">Genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-252">Generics</span></span> | [<span data-ttu-id="b8dc1-253">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-253">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="b8dc1-254">O nome de um tipo genérico deverá codificar o número de parâmetros de tipo declarados no tipo não aninhado ou recém-introduzidos no tipo, se aninhado, de acordo com as regras definidas anteriormente.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-254">The name of a generic type shall encode the number of type parameters declared on the non-nested type, or newly introduced to the type if nested, according to the rules defined above.</span></span> | <span data-ttu-id="b8dc1-255">43</span><span class="sxs-lookup"><span data-stu-id="b8dc1-255">43</span></span>
+<span data-ttu-id="b8dc1-256">Genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-256">Generics</span></span> | [<span data-ttu-id="b8dc1-257">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-257">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="b8dc1-258">Um tipo genérico deverá redeclarar restrições suficientes para assegurar que todas as restrições no tipo base ou nas interfaces sejam atendidas pelas restrições de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-258">A generic type shall redeclare sufficient constraints to guarantee that any constraints on the base type, or interfaces would be satisfied by the generic type constraints.</span></span> | <span data-ttu-id="b8dc1-259">44</span><span class="sxs-lookup"><span data-stu-id="b8dc1-259">44</span></span>
+<span data-ttu-id="b8dc1-260">Genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-260">Generics</span></span> | [<span data-ttu-id="b8dc1-261">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-261">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="b8dc1-262">Tipos usados como restrições em parâmetros genéricos deverão ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-262">Types used as constraints on generic parameters shall themselves be CLS-compliant.</span></span> | <span data-ttu-id="b8dc1-263">45</span><span class="sxs-lookup"><span data-stu-id="b8dc1-263">45</span></span>
+<span data-ttu-id="b8dc1-264">Genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-264">Generics</span></span> | [<span data-ttu-id="b8dc1-265">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-265">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="b8dc1-266">A visibilidade e a acessibilidade de membros (incluindo tipos aninhados) em um tipo genérico instanciado deverão ser consideradas no escopo da instanciação específica, em vez da declaração de tipo genérico como um todo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-266">The visibility and accessibility of members (including nested types) in an instantiated generic type shall be considered to be scoped to the specific instantiation rather than the generic type declaration as a whole.</span></span> <span data-ttu-id="b8dc1-267">Supondo isso, as regras de visibilidade e acessibilidade da regra 12 da CLS continuam sendo aplicáveis.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-267">Assuming this, the visibility and accessibility rules of CLS rule 12 still apply.</span></span> | <span data-ttu-id="b8dc1-268">46</span><span class="sxs-lookup"><span data-stu-id="b8dc1-268">46</span></span>
+<span data-ttu-id="b8dc1-269">Genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-269">Generics</span></span> | [<span data-ttu-id="b8dc1-270">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-270">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="b8dc1-271">Para cada método genérico abstrato ou virtual, deverá haver uma implementação concreta (não abstrata) padrão</span><span class="sxs-lookup"><span data-stu-id="b8dc1-271">For each abstract or virtual generic method, there shall be a default concrete (nonabstract) implementation</span></span> | <span data-ttu-id="b8dc1-272">47</span><span class="sxs-lookup"><span data-stu-id="b8dc1-272">47</span></span>
+<span data-ttu-id="b8dc1-273">Interfaces</span><span class="sxs-lookup"><span data-stu-id="b8dc1-273">Interfaces</span></span> | [<span data-ttu-id="b8dc1-274">Interfaces</span><span class="sxs-lookup"><span data-stu-id="b8dc1-274">Interfaces</span></span>](#interfaces) | <span data-ttu-id="b8dc1-275">As interfaces em conformidade com CLS não deverão exigir a definição de métodos incompatíveis com CLS para implementá-los.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-275">CLS-compliant interfaces shall not require the definition of non-CLS compliant methods in order to implement them.</span></span> | <span data-ttu-id="b8dc1-276">18</span><span class="sxs-lookup"><span data-stu-id="b8dc1-276">18</span></span>
+<span data-ttu-id="b8dc1-277">Interfaces</span><span class="sxs-lookup"><span data-stu-id="b8dc1-277">Interfaces</span></span> | [<span data-ttu-id="b8dc1-278">Interfaces</span><span class="sxs-lookup"><span data-stu-id="b8dc1-278">Interfaces</span></span>](#interfaces) | <span data-ttu-id="b8dc1-279">As interfaces compatíveis com CLS não deverão definir métodos estáticos, nem devem definir campos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-279">CLS-compliant interfaces shall not define static methods, nor shall they define fields.</span></span> | <span data-ttu-id="b8dc1-280">19</span><span class="sxs-lookup"><span data-stu-id="b8dc1-280">19</span></span>
+<span data-ttu-id="b8dc1-281">Membros</span><span class="sxs-lookup"><span data-stu-id="b8dc1-281">Members</span></span> | [<span data-ttu-id="b8dc1-282">Membros de tipo em geral</span><span class="sxs-lookup"><span data-stu-id="b8dc1-282">Type members in general</span></span>](#type-members-in-general) | <span data-ttu-id="b8dc1-283">Campos e métodos estáticos globais não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-283">Global static fields and methods are not CLS-compliant.</span></span> | <span data-ttu-id="b8dc1-284">36</span><span class="sxs-lookup"><span data-stu-id="b8dc1-284">36</span></span>
+<span data-ttu-id="b8dc1-285">Membros</span><span class="sxs-lookup"><span data-stu-id="b8dc1-285">Members</span></span> | -- | <span data-ttu-id="b8dc1-286">O valor de um estático literal é especificado por meio do uso de metadados de inicialização do campo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-286">The value of a literal static is specified through the use of field initialization metadata.</span></span> <span data-ttu-id="b8dc1-287">Um literal compatível com CLS deve ter um valor especificado em metadados de inicialização de campo que sejam exatamente do mesmo tipo que o literal (ou do tipo subjacente, se esse literal for um `enum`).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-287">A CLS-compliant literal must have a value specified in field initialization metadata that is of exactly the same type as the literal (or of the underlying type, if that literal is an `enum`).</span></span> | <span data-ttu-id="b8dc1-288">13</span><span class="sxs-lookup"><span data-stu-id="b8dc1-288">13</span></span>
+<span data-ttu-id="b8dc1-289">Membros</span><span class="sxs-lookup"><span data-stu-id="b8dc1-289">Members</span></span> | [<span data-ttu-id="b8dc1-290">Membros de tipo em geral</span><span class="sxs-lookup"><span data-stu-id="b8dc1-290">Type members in general</span></span>](#type-members-in-general) | <span data-ttu-id="b8dc1-291">A restrição vararg não faz parte da CLS e a única convenção de chamada com suporte pela CLS é a convenção de chamada gerenciada padrão.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-291">The vararg constraint is not part of the CLS, and the only calling convention supported by the CLS is the standard managed calling convention.</span></span> | <span data-ttu-id="b8dc1-292">15</span><span class="sxs-lookup"><span data-stu-id="b8dc1-292">15</span></span>
+<span data-ttu-id="b8dc1-293">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="b8dc1-293">Naming conventions</span></span> | [<span data-ttu-id="b8dc1-294">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="b8dc1-294">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="b8dc1-295">Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres permitidos para iniciar e serem incluídos em identificadores, disponíveis online em [Formulários de Normalização de Unicode](https://www.unicode.org/unicode/reports/tr15/tr15-18.html).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-295">Assemblies shall follow Annex 7 of Technical Report 15 of the Unicode Standard3.0 governing the set of characters permitted to start and be included in identifiers, available online at [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html).</span></span> <span data-ttu-id="b8dc1-296">Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, insensíveis a localidade Unicode) forem os mesmos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-296">Identifiers shall be in the canonical format defined by Unicode Normalization Form C. For CLS purposes, two identifiers are the same if their lowercase mappings (as specified by the Unicode locale-insensitive, one-to-one lowercase mappings) are the same.</span></span> <span data-ttu-id="b8dc1-297">Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-297">That is, for two identifiers to be considered different under the CLS they shall differ in more than simply their case.</span></span> <span data-ttu-id="b8dc1-298">No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-298">However, in order to override an inherited definition the CLI requires the precise encoding of the original declaration be used.</span></span> | <span data-ttu-id="b8dc1-299">4</span><span class="sxs-lookup"><span data-stu-id="b8dc1-299">4</span></span>
+<span data-ttu-id="b8dc1-300">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="b8dc1-300">Overloading</span></span> | [<span data-ttu-id="b8dc1-301">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="b8dc1-301">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="b8dc1-302">Todos os nomes introduzidos em um escopo compatível com CLS deverão ser independentes e distintos do tipo, exceto quando os nomes forem idênticos e resolvidos por meio da sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-302">All names introduced in a CLS-compliant scope shall be distinct independent of kind, except where the names are identical and resolved via overloading.</span></span> <span data-ttu-id="b8dc1-303">Ou seja, embora o CTS permita que um tipo single use o mesmo nome para um método e um campo, a CLS não permite.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-303">That is, while the CTS allows a single type to use the same name for a method and a field, the CLS does not.</span></span> | <span data-ttu-id="b8dc1-304">5</span><span class="sxs-lookup"><span data-stu-id="b8dc1-304">5</span></span>
+<span data-ttu-id="b8dc1-305">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="b8dc1-305">Overloading</span></span> | [<span data-ttu-id="b8dc1-306">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="b8dc1-306">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="b8dc1-307">Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-307">Fields and nested types shall be distinct by identifier comparison alone, even though the CTS allows distinct signatures to be distinguished.</span></span> <span data-ttu-id="b8dc1-308">Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra 39 da CLS</span><span class="sxs-lookup"><span data-stu-id="b8dc1-308">Methods, properties, and events that have the same name (by identifier comparison) shall differ by more than just the return type,except as specified in CLS Rule 39</span></span> | <span data-ttu-id="b8dc1-309">6</span><span class="sxs-lookup"><span data-stu-id="b8dc1-309">6</span></span>
+<span data-ttu-id="b8dc1-310">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="b8dc1-310">Overloading</span></span> | [<span data-ttu-id="b8dc1-311">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="b8dc1-311">Overloads</span></span>](#overloads) | <span data-ttu-id="b8dc1-312">Somente propriedades e métodos podem ser sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-312">Only properties and methods can be overloaded.</span></span> | <span data-ttu-id="b8dc1-313">37</span><span class="sxs-lookup"><span data-stu-id="b8dc1-313">37</span></span>
+<span data-ttu-id="b8dc1-314">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="b8dc1-314">Overloading</span></span> | [<span data-ttu-id="b8dc1-315">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="b8dc1-315">Overloads</span></span>](#overloads) |<span data-ttu-id="b8dc1-316">As propriedades e os métodos só podem ser sobrecarregados com base no número e nos tipos de seus parâmetros, exceto os operadores de conversão chamados `op_Implicit` e `op_Explicit`, que também podem ser sobrecarregados com base no tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-316">Properties and methods can be overloaded based only on the number and types of their parameters, except the conversion operators named `op_Implicit` and `op_Explicit`, which can also be overloaded based on their return type.</span></span> | <span data-ttu-id="b8dc1-317">38</span><span class="sxs-lookup"><span data-stu-id="b8dc1-317">38</span></span>
+<span data-ttu-id="b8dc1-318">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="b8dc1-318">Overloading</span></span> | -- | <span data-ttu-id="b8dc1-319">Se dois ou mais métodos em conformidade com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-319">If two or more CLS-compliant methods declared in a type have the same name and, for a specific set of type instantiations, they have the same parameter and return types, then all these methods shall be semantically equivalent at those type instantiations.</span></span> | <span data-ttu-id="b8dc1-320">48</span><span class="sxs-lookup"><span data-stu-id="b8dc1-320">48</span></span>
+<span data-ttu-id="b8dc1-321">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-321">Properties</span></span> | [<span data-ttu-id="b8dc1-322">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-322">Properties</span></span>](#properties) | <span data-ttu-id="b8dc1-323">Os métodos que implementam os métodos getter e setter de uma propriedade deverão ser marcados como `SpecialName` nos metadados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-323">The methods that implement the getter and setter methods of a property shall be marked `SpecialName` in the metadata.</span></span> | <span data-ttu-id="b8dc1-324">24</span><span class="sxs-lookup"><span data-stu-id="b8dc1-324">24</span></span>
+<span data-ttu-id="b8dc1-325">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-325">Properties</span></span> | [<span data-ttu-id="b8dc1-326">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-326">Properties</span></span>](#properties) | <span data-ttu-id="b8dc1-327">Os acessadores de uma propriedade deverão ser todos estáticos, virtuais ou de instância.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-327">A property’s accessors shall all be static, all be virtual, or all be instance.</span></span> | <span data-ttu-id="b8dc1-328">26</span><span class="sxs-lookup"><span data-stu-id="b8dc1-328">26</span></span>
+<span data-ttu-id="b8dc1-329">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-329">Properties</span></span> | [<span data-ttu-id="b8dc1-330">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-330">Properties</span></span>](#properties) | <span data-ttu-id="b8dc1-331">O tipo de uma propriedade deverá ser o tipo de retorno do getter e o tipo do último argumento do setter.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-331">The type of a property shall be the return type of the getter and the type of the last argument of the setter.</span></span> <span data-ttu-id="b8dc1-332">Os tipos dos parâmetros da propriedade deverão ser os tipos dos parâmetros do getter e os tipos de todos os parâmetros, menos o parâmetro final do setter.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-332">The types of the parameters of the property shall be the types of the parameters to the getter and the types of all but the final parameter of the setter.</span></span> <span data-ttu-id="b8dc1-333">Todos esses tipos deverão ser compatíveis com CLS e não deverão ser ponteiros gerenciados (ou seja, não deverão ser passados por referência).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-333">All of these types shall be CLS-compliant, and shall not be managed pointers (that is, shall not be passed by reference).</span></span> | <span data-ttu-id="b8dc1-334">27</span><span class="sxs-lookup"><span data-stu-id="b8dc1-334">27</span></span>
+<span data-ttu-id="b8dc1-335">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-335">Properties</span></span> | [<span data-ttu-id="b8dc1-336">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-336">Properties</span></span>](#properties) | <span data-ttu-id="b8dc1-337">As propriedades deverão seguir um padrão de nomenclatura específico.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-337">Properties shall adhere to a specific naming pattern.</span></span> <span data-ttu-id="b8dc1-338">O atributo `SpecialName` mencionado na regra 24 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-338">The `SpecialName` attribute referred to in CLS rule 24 shall be ignored in appropriate name comparisons and shall adhere to identifier rules.</span></span> <span data-ttu-id="b8dc1-339">Uma propriedade deverá ter um método getter, um método setter ou ambos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-339">A property shall have a getter method, a setter method, or both.</span></span> | <span data-ttu-id="b8dc1-340">28</span><span class="sxs-lookup"><span data-stu-id="b8dc1-340">28</span></span>
+<span data-ttu-id="b8dc1-341">Conversão de tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-341">Type conversion</span></span> | [<span data-ttu-id="b8dc1-342">Conversão de tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-342">Type conversion</span></span>](#type-conversion) | <span data-ttu-id="b8dc1-343">Se op_Implicit ou op_Explicit for fornecido, um meio alternativo de coerção deverá ser fornecido.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-343">If either op_Implicit or op_Explicit is provided, an alternate means of providing the coercion shall be provided.</span></span> | <span data-ttu-id="b8dc1-344">39</span><span class="sxs-lookup"><span data-stu-id="b8dc1-344">39</span></span>
+<span data-ttu-id="b8dc1-345">Tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-345">Types</span></span> | [<span data-ttu-id="b8dc1-346">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-346">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="b8dc1-347">Tipos de valor demarcado não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-347">Boxed value types are not CLS-compliant.</span></span> | <span data-ttu-id="b8dc1-348">3</span><span class="sxs-lookup"><span data-stu-id="b8dc1-348">3</span></span>
+<span data-ttu-id="b8dc1-349">Tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-349">Types</span></span> | [<span data-ttu-id="b8dc1-350">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-350">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="b8dc1-351">Todos os tipos exibidos em uma assinatura deverão ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-351">All types appearing in a signature shall be CLS-compliant.</span></span> <span data-ttu-id="b8dc1-352">Todos os tipos que compõem um tipo genérico instanciado deverão ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-352">All types composing an instantiated generic type shall be CLS-compliant.</span></span> | <span data-ttu-id="b8dc1-353">11</span><span class="sxs-lookup"><span data-stu-id="b8dc1-353">11</span></span>
+<span data-ttu-id="b8dc1-354">Tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-354">Types</span></span> | [<span data-ttu-id="b8dc1-355">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-355">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="b8dc1-356">Referências com tipo não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-356">Typed references are not CLS-compliant.</span></span> | <span data-ttu-id="b8dc1-357">14</span><span class="sxs-lookup"><span data-stu-id="b8dc1-357">14</span></span>
+<span data-ttu-id="b8dc1-358">Tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-358">Types</span></span> | [<span data-ttu-id="b8dc1-359">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-359">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="b8dc1-360">Tipos de ponteiro não gerenciados não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-360">Unmanaged pointer types are not CLS-compliant.</span></span> | <span data-ttu-id="b8dc1-361">17</span><span class="sxs-lookup"><span data-stu-id="b8dc1-361">17</span></span>
+<span data-ttu-id="b8dc1-362">Tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-362">Types</span></span> | [<span data-ttu-id="b8dc1-363">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-363">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="b8dc1-364">Classes compatíveis com CLS, tipos de valor e interfaces não deverão exigir a implementação de membros incompatíveis com CLS</span><span class="sxs-lookup"><span data-stu-id="b8dc1-364">CLS-compliant classes, value types, and interfaces shall not require the implementation of non-CLS-compliant members</span></span> | <span data-ttu-id="b8dc1-365">20</span><span class="sxs-lookup"><span data-stu-id="b8dc1-365">20</span></span>
+<span data-ttu-id="b8dc1-366">Tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-366">Types</span></span> | [<span data-ttu-id="b8dc1-367">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-367">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="b8dc1-368">[System. Object](xref:System.Object) é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-368">[System.Object](xref:System.Object) is CLS-compliant.</span></span> <span data-ttu-id="b8dc1-369">Qualquer outra classe compatível com CLS deverá herdar de uma classe compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-369">Any other CLS-compliant class shall inherit from a CLS-compliant class.</span></span> | <span data-ttu-id="b8dc1-370">23</span><span class="sxs-lookup"><span data-stu-id="b8dc1-370">23</span></span>
 
-### <a name="types-and-type-member-signatures"></a><span data-ttu-id="fa2a8-371">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-371">Types and type member signatures</span></span>
+### <a name="types-and-type-member-signatures"></a><span data-ttu-id="b8dc1-371">Tipos e assinaturas de membro de tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-371">Types and type member signatures</span></span>
 
-<span data-ttu-id="fa2a8-372">O tipo [System.Object](xref:System.Object) é compatível com CLS e é o tipo base de todos os tipos de objeto no sistema de tipos do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-372">The [System.Object](xref:System.Object) type is CLS-compliant and is the base type of all object types in the .NET Framework type system.</span></span> <span data-ttu-id="fa2a8-373">A herança no .NET Framework é implícita (por exemplo, a classe [String](xref:System.String) herda implicitamente da classe `Object`) ou explícita (por exemplo, a classe [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) herda explicitamente da classe [ArgumentException](xref:System.ArgumentException), que herda explicitamente da classe [Exception](xref:System.Exception)).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-373">Inheritance in the .NET Framework is either implicit (for example, the [String](xref:System.String) class implicitly inherits from the `Object` class) or explicit (for example, the [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) class explicitly inherits from the [ArgumentException](xref:System.ArgumentException) class, which explicitly inherits from the [Exception](xref:System.Exception) class.</span></span> <span data-ttu-id="fa2a8-374">Para que um tipo derivado seja compatível com CLS, seu tipo base também deverá ser compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-374">For a derived type to be CLS compliant, its base type must also be CLS-compliant.</span></span> 
+<span data-ttu-id="b8dc1-372">O tipo [System.Object](xref:System.Object) é compatível com CLS e é o tipo base de todos os tipos de objeto no sistema de tipos do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-372">The [System.Object](xref:System.Object) type is CLS-compliant and is the base type of all object types in the .NET Framework type system.</span></span> <span data-ttu-id="b8dc1-373">A herança no .NET Framework é implícita (por exemplo, a classe [String](xref:System.String) herda implicitamente da classe `Object`) ou explícita (por exemplo, a classe [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) herda explicitamente da classe [ArgumentException](xref:System.ArgumentException), que herda explicitamente da classe [Exception](xref:System.Exception)).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-373">Inheritance in the .NET Framework is either implicit (for example, the [String](xref:System.String) class implicitly inherits from the `Object` class) or explicit (for example, the [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) class explicitly inherits from the [ArgumentException](xref:System.ArgumentException) class, which explicitly inherits from the [Exception](xref:System.Exception) class.</span></span> <span data-ttu-id="b8dc1-374">Para que um tipo derivado seja compatível com CLS, seu tipo base também deverá ser compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-374">For a derived type to be CLS compliant, its base type must also be CLS-compliant.</span></span>
 
-<span data-ttu-id="fa2a8-375">O exemplo a seguir mostra um tipo derivado cujo tipo de base não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-375">The following example shows a derived type whose base type is not CLS-compliant.</span></span> <span data-ttu-id="fa2a8-376">Ele define uma classe `Counter` base que usa um inteiro de 32 bits sem sinal como um contador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-376">It defines a base `Counter` class that uses an unsigned 32-bit integer as a counter.</span></span> <span data-ttu-id="fa2a8-377">Como a classe fornece funcionalidade de contador encapsulando um inteiro sem sinal, a classe é marcada como não compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-377">Because the class provides counter functionality by wrapping an unsigned integer, the class is marked as non-CLS-compliant.</span></span> <span data-ttu-id="fa2a8-378">Assim, uma classe derivada, `NonZeroCounter`, também não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-378">As a result, a derived class, `NonZeroCounter`, is also not CLS-compliant.</span></span> 
+<span data-ttu-id="b8dc1-375">O exemplo a seguir mostra um tipo derivado cujo tipo de base não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-375">The following example shows a derived type whose base type is not CLS-compliant.</span></span> <span data-ttu-id="b8dc1-376">Ele define uma classe `Counter` base que usa um inteiro de 32 bits sem sinal como um contador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-376">It defines a base `Counter` class that uses an unsigned 32-bit integer as a counter.</span></span> <span data-ttu-id="b8dc1-377">Como a classe fornece funcionalidade de contador encapsulando um inteiro sem sinal, a classe é marcada como não compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-377">Because the class provides counter functionality by wrapping an unsigned integer, the class is marked as non-CLS-compliant.</span></span> <span data-ttu-id="b8dc1-378">Assim, uma classe derivada, `NonZeroCounter`, também não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-378">As a result, a derived class, `NonZeroCounter`, is also not CLS-compliant.</span></span>
 
 ```csharp
 using System;
 
 [assembly: CLSCompliant(true)]
 
-[CLSCompliant(false)] 
+[CLSCompliant(false)]
 public class Counter
 {
    UInt32 ctr;
@@ -238,7 +238,7 @@ public class Counter
       get { return ctr; }
    }
 
-   public void Increment() 
+   public void Increment()
    {
       ctr += (uint) 1;
    }
@@ -263,7 +263,7 @@ public class NonZeroCounter : Counter
 ```vb
 <Assembly: CLSCompliant(True)>
 
-<CLSCompliant(False)> _ 
+<CLSCompliant(False)> _
 Public Class Counter
    Dim ctr As UInt32
 
@@ -300,78 +300,76 @@ Public Class NonZeroCounter : Inherits Counter
    End Sub
 End Class
 ' Compilation produces a compiler warning like the following:
-'    Type3.vb(34) : warning BC40026: 'NonZeroCounter' is not CLS-compliant 
+'    Type3.vb(34) : warning BC40026: 'NonZeroCounter' is not CLS-compliant
 '    because it derives from 'Counter', which is not CLS-compliant.
-'    
+'
 '    Public Class NonZeroCounter : Inherits Counter
 '                 ~~~~~~~~~~~~~~
 ```
 
-<span data-ttu-id="fa2a8-379">Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno de método ou um tipo de propriedade, devem ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-379">All types that appear in member signatures, including a method's return type or a property type, must be CLS-compliant.</span></span> <span data-ttu-id="fa2a8-380">Além disso, para tipos genéricos:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-380">In addition, for generic types:</span></span> 
+<span data-ttu-id="b8dc1-379">Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno de método ou um tipo de propriedade, devem ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-379">All types that appear in member signatures, including a method's return type or a property type, must be CLS-compliant.</span></span> <span data-ttu-id="b8dc1-380">Além disso, para tipos genéricos:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-380">In addition, for generic types:</span></span>
 
-* <span data-ttu-id="fa2a8-381">Todos os tipos que compõe um tipo genérico instanciado devem ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-381">All types that compose an instantiated generic type must be CLS-compliant.</span></span>
+* <span data-ttu-id="b8dc1-381">Todos os tipos que compõe um tipo genérico instanciado devem ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-381">All types that compose an instantiated generic type must be CLS-compliant.</span></span>
 
-* <span data-ttu-id="fa2a8-382">Todos os tipos usados como restrições em parâmetros genéricos devem ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-382">All types used as constraints on generic parameters must be CLS-compliant.</span></span> 
+* <span data-ttu-id="b8dc1-382">Todos os tipos usados como restrições em parâmetros genéricos devem ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-382">All types used as constraints on generic parameters must be CLS-compliant.</span></span>
 
-<span data-ttu-id="fa2a8-383">O [Common Type System](common-type-system.md) do .NET inclui vários tipos internos com suporte diretamente com o Common Language Runtime e codificados especialmente nos metadados de um assembly.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-383">The .NET [common type system](common-type-system.md) includes a number of built-in types that are supported directly by the common language runtime and are specially encoded in an assembly's metadata.</span></span> <span data-ttu-id="fa2a8-384">Desses tipos intrínsecos, os tipos listados na tabela a seguir são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-384">Of these intrinsic types, the types listed in the following table are CLS-compliant.</span></span> 
+<span data-ttu-id="b8dc1-383">O [Common Type System](common-type-system.md) do .NET inclui vários tipos internos com suporte diretamente com o Common Language Runtime e codificados especialmente nos metadados de um assembly.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-383">The .NET [common type system](common-type-system.md) includes a number of built-in types that are supported directly by the common language runtime and are specially encoded in an assembly's metadata.</span></span> <span data-ttu-id="b8dc1-384">Desses tipos intrínsecos, os tipos listados na tabela a seguir são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-384">Of these intrinsic types, the types listed in the following table are CLS-compliant.</span></span>
 
-
-<span data-ttu-id="fa2a8-385">Tipo compatível com CLS</span><span class="sxs-lookup"><span data-stu-id="fa2a8-385">CLS-compliant type</span></span> | <span data-ttu-id="fa2a8-386">Descrição</span><span class="sxs-lookup"><span data-stu-id="fa2a8-386">Description</span></span>
+<span data-ttu-id="b8dc1-385">Tipo compatível com CLS</span><span class="sxs-lookup"><span data-stu-id="b8dc1-385">CLS-compliant type</span></span> | <span data-ttu-id="b8dc1-386">Descrição</span><span class="sxs-lookup"><span data-stu-id="b8dc1-386">Description</span></span>
 ------------------ | -----------
-[<span data-ttu-id="fa2a8-387">Byte</span><span class="sxs-lookup"><span data-stu-id="fa2a8-387">Byte</span></span>](xref:System.Byte) | <span data-ttu-id="fa2a8-388">Inteiro sem sinal de 8 bits</span><span class="sxs-lookup"><span data-stu-id="fa2a8-388">8-bit unsigned integer</span></span> 
-[<span data-ttu-id="fa2a8-389">Int16</span><span class="sxs-lookup"><span data-stu-id="fa2a8-389">Int16</span></span>](xref:System.Int16) | <span data-ttu-id="fa2a8-390">Inteiro com sinal de 16 bits</span><span class="sxs-lookup"><span data-stu-id="fa2a8-390">16-bit signed integer</span></span> 
-[<span data-ttu-id="fa2a8-391">Int32</span><span class="sxs-lookup"><span data-stu-id="fa2a8-391">Int32</span></span>](xref:System.Int32) | <span data-ttu-id="fa2a8-392">Inteiro com sinal de 32 bits</span><span class="sxs-lookup"><span data-stu-id="fa2a8-392">32-bit signed integer</span></span> 
-[<span data-ttu-id="fa2a8-393">Int64</span><span class="sxs-lookup"><span data-stu-id="fa2a8-393">Int64</span></span>](xref:System.Int64) | <span data-ttu-id="fa2a8-394">Inteiro com sinal de 64 bits</span><span class="sxs-lookup"><span data-stu-id="fa2a8-394">64-bit signed integer</span></span>
-[<span data-ttu-id="fa2a8-395">Simples</span><span class="sxs-lookup"><span data-stu-id="fa2a8-395">Single</span></span>](xref:System.Single) | <span data-ttu-id="fa2a8-396">Valor do ponto flutuante de precisão simples</span><span class="sxs-lookup"><span data-stu-id="fa2a8-396">Single-precision floating-point value</span></span>
-[<span data-ttu-id="fa2a8-397">Duplo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-397">Double</span></span>](xref:System.Double) | <span data-ttu-id="fa2a8-398">Valor do ponto flutuante de precisão dupla</span><span class="sxs-lookup"><span data-stu-id="fa2a8-398">Double-precision floating-point value</span></span>
-[<span data-ttu-id="fa2a8-399">Booliano</span><span class="sxs-lookup"><span data-stu-id="fa2a8-399">Boolean</span></span>](xref:System.Boolean) | <span data-ttu-id="fa2a8-400">tipo de valor verdadeiro ou falso</span><span class="sxs-lookup"><span data-stu-id="fa2a8-400">true or false value type</span></span> 
-[<span data-ttu-id="fa2a8-401">Char</span><span class="sxs-lookup"><span data-stu-id="fa2a8-401">Char</span></span>](xref:System.Char) | <span data-ttu-id="fa2a8-402">unidade de código codificado UTF-16</span><span class="sxs-lookup"><span data-stu-id="fa2a8-402">UTF-16 encoded code unit</span></span>
-[<span data-ttu-id="fa2a8-403">Decimal</span><span class="sxs-lookup"><span data-stu-id="fa2a8-403">Decimal</span></span>](xref:System.Decimal) | <span data-ttu-id="fa2a8-404">Número decimal de ponto não flutuante</span><span class="sxs-lookup"><span data-stu-id="fa2a8-404">Non-floating-point decimal number</span></span>
-[<span data-ttu-id="fa2a8-405">IntPtr</span><span class="sxs-lookup"><span data-stu-id="fa2a8-405">IntPtr</span></span>](xref:System.IntPtr) | <span data-ttu-id="fa2a8-406">Ponteiro ou identificador de um tamanho definido por plataforma</span><span class="sxs-lookup"><span data-stu-id="fa2a8-406">Pointer or handle of a platform-defined size</span></span>
-[<span data-ttu-id="fa2a8-407">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="fa2a8-407">String</span></span>](xref:System.String) | <span data-ttu-id="fa2a8-408">Coleção de zero, um ou mais objetos Char</span><span class="sxs-lookup"><span data-stu-id="fa2a8-408">Collection of zero, one, or more Char objects</span></span> 
- 
-<span data-ttu-id="fa2a8-409">Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-409">The intrinsic types listed in the following table are not CLS-Compliant.</span></span>
+[<span data-ttu-id="b8dc1-387">Byte</span><span class="sxs-lookup"><span data-stu-id="b8dc1-387">Byte</span></span>](xref:System.Byte) | <span data-ttu-id="b8dc1-388">Inteiro sem sinal de 8 bits</span><span class="sxs-lookup"><span data-stu-id="b8dc1-388">8-bit unsigned integer</span></span>
+[<span data-ttu-id="b8dc1-389">Int16</span><span class="sxs-lookup"><span data-stu-id="b8dc1-389">Int16</span></span>](xref:System.Int16) | <span data-ttu-id="b8dc1-390">Inteiro com sinal de 16 bits</span><span class="sxs-lookup"><span data-stu-id="b8dc1-390">16-bit signed integer</span></span>
+[<span data-ttu-id="b8dc1-391">Int32</span><span class="sxs-lookup"><span data-stu-id="b8dc1-391">Int32</span></span>](xref:System.Int32) | <span data-ttu-id="b8dc1-392">Inteiro com sinal de 32 bits</span><span class="sxs-lookup"><span data-stu-id="b8dc1-392">32-bit signed integer</span></span>
+[<span data-ttu-id="b8dc1-393">Int64</span><span class="sxs-lookup"><span data-stu-id="b8dc1-393">Int64</span></span>](xref:System.Int64) | <span data-ttu-id="b8dc1-394">Inteiro com sinal de 64 bits</span><span class="sxs-lookup"><span data-stu-id="b8dc1-394">64-bit signed integer</span></span>
+[<span data-ttu-id="b8dc1-395">Simples</span><span class="sxs-lookup"><span data-stu-id="b8dc1-395">Single</span></span>](xref:System.Single) | <span data-ttu-id="b8dc1-396">Valor do ponto flutuante de precisão simples</span><span class="sxs-lookup"><span data-stu-id="b8dc1-396">Single-precision floating-point value</span></span>
+[<span data-ttu-id="b8dc1-397">Duplo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-397">Double</span></span>](xref:System.Double) | <span data-ttu-id="b8dc1-398">Valor do ponto flutuante de precisão dupla</span><span class="sxs-lookup"><span data-stu-id="b8dc1-398">Double-precision floating-point value</span></span>
+[<span data-ttu-id="b8dc1-399">Booliano</span><span class="sxs-lookup"><span data-stu-id="b8dc1-399">Boolean</span></span>](xref:System.Boolean) | <span data-ttu-id="b8dc1-400">tipo de valor verdadeiro ou falso</span><span class="sxs-lookup"><span data-stu-id="b8dc1-400">true or false value type</span></span>
+[<span data-ttu-id="b8dc1-401">Char</span><span class="sxs-lookup"><span data-stu-id="b8dc1-401">Char</span></span>](xref:System.Char) | <span data-ttu-id="b8dc1-402">unidade de código codificado UTF-16</span><span class="sxs-lookup"><span data-stu-id="b8dc1-402">UTF-16 encoded code unit</span></span>
+[<span data-ttu-id="b8dc1-403">Decimal</span><span class="sxs-lookup"><span data-stu-id="b8dc1-403">Decimal</span></span>](xref:System.Decimal) | <span data-ttu-id="b8dc1-404">Número decimal de ponto não flutuante</span><span class="sxs-lookup"><span data-stu-id="b8dc1-404">Non-floating-point decimal number</span></span>
+[<span data-ttu-id="b8dc1-405">IntPtr</span><span class="sxs-lookup"><span data-stu-id="b8dc1-405">IntPtr</span></span>](xref:System.IntPtr) | <span data-ttu-id="b8dc1-406">Ponteiro ou identificador de um tamanho definido por plataforma</span><span class="sxs-lookup"><span data-stu-id="b8dc1-406">Pointer or handle of a platform-defined size</span></span>
+[<span data-ttu-id="b8dc1-407">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="b8dc1-407">String</span></span>](xref:System.String) | <span data-ttu-id="b8dc1-408">Coleção de zero, um ou mais objetos Char</span><span class="sxs-lookup"><span data-stu-id="b8dc1-408">Collection of zero, one, or more Char objects</span></span>
 
+<span data-ttu-id="b8dc1-409">Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-409">The intrinsic types listed in the following table are not CLS-Compliant.</span></span>
 
-<span data-ttu-id="fa2a8-410">Tipo não compatível</span><span class="sxs-lookup"><span data-stu-id="fa2a8-410">Non-compliant type</span></span> | <span data-ttu-id="fa2a8-411">Descrição</span><span class="sxs-lookup"><span data-stu-id="fa2a8-411">Description</span></span> | <span data-ttu-id="fa2a8-412">Alternativa compatível com CLS</span><span class="sxs-lookup"><span data-stu-id="fa2a8-412">CLS-compliant alternative</span></span>
+<span data-ttu-id="b8dc1-410">Tipo não compatível</span><span class="sxs-lookup"><span data-stu-id="b8dc1-410">Non-compliant type</span></span> | <span data-ttu-id="b8dc1-411">Descrição</span><span class="sxs-lookup"><span data-stu-id="b8dc1-411">Description</span></span> | <span data-ttu-id="b8dc1-412">Alternativa compatível com CLS</span><span class="sxs-lookup"><span data-stu-id="b8dc1-412">CLS-compliant alternative</span></span>
 ------------------ | ----------- | -------------------------
-[<span data-ttu-id="fa2a8-413">SByte</span><span class="sxs-lookup"><span data-stu-id="fa2a8-413">SByte</span></span>](xref:System.SByte) | <span data-ttu-id="fa2a8-414">Tipo de dados inteiro com sinal de 8 bits</span><span class="sxs-lookup"><span data-stu-id="fa2a8-414">8-bit signed integer data type</span></span> | [<span data-ttu-id="fa2a8-415">Int16</span><span class="sxs-lookup"><span data-stu-id="fa2a8-415">Int16</span></span>](xref:System.Int16)
-[<span data-ttu-id="fa2a8-416">UInt16</span><span class="sxs-lookup"><span data-stu-id="fa2a8-416">UInt16</span></span>](xref:System.UInt16) | <span data-ttu-id="fa2a8-417">Inteiro sem sinal de 16 bits</span><span class="sxs-lookup"><span data-stu-id="fa2a8-417">16-bit unsigned integer</span></span> | [<span data-ttu-id="fa2a8-418">Int32</span><span class="sxs-lookup"><span data-stu-id="fa2a8-418">Int32</span></span>](xref:System.Int32)
-[<span data-ttu-id="fa2a8-419">UInt32</span><span class="sxs-lookup"><span data-stu-id="fa2a8-419">UInt32</span></span>](xref:System.UInt32) | <span data-ttu-id="fa2a8-420">Inteiro sem sinal de 32 bits</span><span class="sxs-lookup"><span data-stu-id="fa2a8-420">32-bit unsigned integer</span></span> | [<span data-ttu-id="fa2a8-421">Int64</span><span class="sxs-lookup"><span data-stu-id="fa2a8-421">Int64</span></span>](xref:System.Int64)
-[<span data-ttu-id="fa2a8-422">UInt64</span><span class="sxs-lookup"><span data-stu-id="fa2a8-422">UInt64</span></span>](xref:System.UInt64) | <span data-ttu-id="fa2a8-423">Inteiro sem sinal de 64 bits</span><span class="sxs-lookup"><span data-stu-id="fa2a8-423">64-bit unsigned integer</span></span> | <span data-ttu-id="fa2a8-424">[Int64](xref:System.Int64) (pode estourar), [BigInteger](xref:System.Numerics.BigInteger), ou[Double](xref:System.Double)</span><span class="sxs-lookup"><span data-stu-id="fa2a8-424">[Int64](xref:System.Int64) (may overflow), [BigInteger](xref:System.Numerics.BigInteger), or [Double](xref:System.Double)</span></span>
-[<span data-ttu-id="fa2a8-425">UIntPtr</span><span class="sxs-lookup"><span data-stu-id="fa2a8-425">UIntPtr</span></span>](xref:System.UIntPtr) | <span data-ttu-id="fa2a8-426">Ponteiro ou identificador sem sinal</span><span class="sxs-lookup"><span data-stu-id="fa2a8-426">Unsigned pointer or handle</span></span> | [<span data-ttu-id="fa2a8-427">IntPtr</span><span class="sxs-lookup"><span data-stu-id="fa2a8-427">IntPtr</span></span>](xref:System.IntPtr)
- 
- <span data-ttu-id="fa2a8-428">A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes pode incluir outros tipos que não sejam compatíveis com CLS; por exemplo:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-428">The .NET Framework Class Library or any other class library may include other types that aren't CLS-compliant; for example:</span></span> 
- 
- * <span data-ttu-id="fa2a8-429">Tipos de valor demarcado.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-429">Boxed value types.</span></span> <span data-ttu-id="fa2a8-430">O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int`\* named `Value`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-430">The following C# example creates a class that has a public property of type `int`\* named `Value`.</span></span> <span data-ttu-id="fa2a8-431">Como um `int`\* é um tipo de valor demarcado, o compilador o sinaliza como sem conformidade com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-431">Because an `int`\* is a boxed value type, the compiler flags it as non-CLS-compliant.</span></span>
+[<span data-ttu-id="b8dc1-413">SByte</span><span class="sxs-lookup"><span data-stu-id="b8dc1-413">SByte</span></span>](xref:System.SByte) | <span data-ttu-id="b8dc1-414">Tipo de dados inteiro com sinal de 8 bits</span><span class="sxs-lookup"><span data-stu-id="b8dc1-414">8-bit signed integer data type</span></span> | [<span data-ttu-id="b8dc1-415">Int16</span><span class="sxs-lookup"><span data-stu-id="b8dc1-415">Int16</span></span>](xref:System.Int16)
+[<span data-ttu-id="b8dc1-416">UInt16</span><span class="sxs-lookup"><span data-stu-id="b8dc1-416">UInt16</span></span>](xref:System.UInt16) | <span data-ttu-id="b8dc1-417">Inteiro sem sinal de 16 bits</span><span class="sxs-lookup"><span data-stu-id="b8dc1-417">16-bit unsigned integer</span></span> | [<span data-ttu-id="b8dc1-418">Int32</span><span class="sxs-lookup"><span data-stu-id="b8dc1-418">Int32</span></span>](xref:System.Int32)
+[<span data-ttu-id="b8dc1-419">UInt32</span><span class="sxs-lookup"><span data-stu-id="b8dc1-419">UInt32</span></span>](xref:System.UInt32) | <span data-ttu-id="b8dc1-420">Inteiro sem sinal de 32 bits</span><span class="sxs-lookup"><span data-stu-id="b8dc1-420">32-bit unsigned integer</span></span> | [<span data-ttu-id="b8dc1-421">Int64</span><span class="sxs-lookup"><span data-stu-id="b8dc1-421">Int64</span></span>](xref:System.Int64)
+[<span data-ttu-id="b8dc1-422">UInt64</span><span class="sxs-lookup"><span data-stu-id="b8dc1-422">UInt64</span></span>](xref:System.UInt64) | <span data-ttu-id="b8dc1-423">Inteiro sem sinal de 64 bits</span><span class="sxs-lookup"><span data-stu-id="b8dc1-423">64-bit unsigned integer</span></span> | <span data-ttu-id="b8dc1-424">[Int64](xref:System.Int64) (pode estourar), [BigInteger](xref:System.Numerics.BigInteger), ou[Double](xref:System.Double)</span><span class="sxs-lookup"><span data-stu-id="b8dc1-424">[Int64](xref:System.Int64) (may overflow), [BigInteger](xref:System.Numerics.BigInteger), or [Double](xref:System.Double)</span></span>
+[<span data-ttu-id="b8dc1-425">UIntPtr</span><span class="sxs-lookup"><span data-stu-id="b8dc1-425">UIntPtr</span></span>](xref:System.UIntPtr) | <span data-ttu-id="b8dc1-426">Ponteiro ou identificador sem sinal</span><span class="sxs-lookup"><span data-stu-id="b8dc1-426">Unsigned pointer or handle</span></span> | [<span data-ttu-id="b8dc1-427">IntPtr</span><span class="sxs-lookup"><span data-stu-id="b8dc1-427">IntPtr</span></span>](xref:System.IntPtr)
 
-  ```csharp
-  using System;
+<span data-ttu-id="b8dc1-428">A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes pode incluir outros tipos que não sejam compatíveis com CLS; por exemplo:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-428">The .NET Framework Class Library or any other class library may include other types that aren't CLS-compliant; for example:</span></span>
 
-  [assembly:CLSCompliant(true)]
+* <span data-ttu-id="b8dc1-429">Tipos de valor demarcado.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-429">Boxed value types.</span></span> <span data-ttu-id="b8dc1-430">O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int`\* named `Value`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-430">The following C# example creates a class that has a public property of type `int`\* named `Value`.</span></span> <span data-ttu-id="b8dc1-431">Como um `int`\* é um tipo de valor demarcado, o compilador o sinaliza como sem conformidade com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-431">Because an `int`\* is a boxed value type, the compiler flags it as non-CLS-compliant.</span></span>
 
-  public unsafe class TestClass
-  {
-     private int* val;
+```csharp
+using System;
 
-     public TestClass(int number)
-     {
-        val = (int*) number;
-     }
+[assembly:CLSCompliant(true)]
 
-     public int* Value {
-        get { return val; }        
-     }
-  }
-  // The compiler generates the following output when compiling this example:
-  //        warning CS3003: Type of 'TestClass.Value' is not CLS-compliant
-  ```
+public unsafe class TestClass
+{
+   private int* val;
 
-* <span data-ttu-id="fa2a8-432">Referências de tipo, que são constructos especiais que contêm referência a um objeto e referência a um tipo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-432">Typed references, which are special constructs that contain a reference to an object and a reference to a type.</span></span>
+   public TestClass(int number)
+   {
+      val = (int*) number;
+   }
 
-<span data-ttu-id="fa2a8-433">Se um tipo não for compatível com CLS, você deverá aplicar o atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) com um parâmetro *isCompliant* com um valor de `false` a ele.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-433">If a type is not CLS-compliant, you should apply the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute with an *isCompliant* parameter with a value of `false` to it.</span></span> <span data-ttu-id="fa2a8-434">Para obter mais informações, consulte a seção [CLSCompliantAttribute attribute](#the-clscompliantattribute-attribute).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-434">For more information, see the [CLSCompliantAttribute attribute](#the-clscompliantattribute-attribute) section.</span></span>  
+   public int* Value {
+      get { return val; }
+   }
+}
+// The compiler generates the following output when compiling this example:
+//        warning CS3003: Type of 'TestClass.Value' is not CLS-compliant
+```
 
-<span data-ttu-id="fa2a8-435">O exemplo a seguir ilustra o problema de conformidade com CLS em uma assinatura do método e em uma instanciação de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-435">The following example illustrates the problem of CLS compliance in a method signature and in generic type instantiation.</span></span> <span data-ttu-id="fa2a8-436">Ele define uma classe `InvoiceItem` com uma propriedade do tipo [UInt32](xref:System.UInt32), uma propriedade do tipo [Nullable(Of UInt32)](xref:System.Nullable%601) e um construtor com parâmetros do tipo `UInt32` e `Nullable(Of UInt32)`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-436">It defines an `InvoiceItem` class with a property of type [UInt32](xref:System.UInt32), a property of type [Nullable(Of UInt32)](xref:System.Nullable%601), and a constructor with parameters of type `UInt32` and `Nullable(Of UInt32)`.</span></span> <span data-ttu-id="fa2a8-437">Você recebe quatro avisos do compilador ao tentar de compilar esse exemplo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-437">You get four compiler warnings when you try to compile this example.</span></span>
+* <span data-ttu-id="b8dc1-432">Referências de tipo, que são constructos especiais que contêm referência a um objeto e referência a um tipo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-432">Typed references, which are special constructs that contain a reference to an object and a reference to a type.</span></span>
+
+<span data-ttu-id="b8dc1-433">Se um tipo não for compatível com CLS, você deverá aplicar o atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) com um parâmetro *isCompliant* com um valor de `false` a ele.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-433">If a type is not CLS-compliant, you should apply the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute with an *isCompliant* parameter with a value of `false` to it.</span></span> <span data-ttu-id="b8dc1-434">Para obter mais informações, consulte a seção [CLSCompliantAttribute attribute](#the-clscompliantattribute-attribute).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-434">For more information, see the [CLSCompliantAttribute attribute](#the-clscompliantattribute-attribute) section.</span></span>
+
+<span data-ttu-id="b8dc1-435">O exemplo a seguir ilustra o problema de conformidade com CLS em uma assinatura do método e em uma instanciação de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-435">The following example illustrates the problem of CLS compliance in a method signature and in generic type instantiation.</span></span> <span data-ttu-id="b8dc1-436">Ele define uma classe `InvoiceItem` com uma propriedade do tipo [UInt32](xref:System.UInt32), uma propriedade do tipo [Nullable(Of UInt32)](xref:System.Nullable%601) e um construtor com parâmetros do tipo `UInt32` e `Nullable(Of UInt32)`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-436">It defines an `InvoiceItem` class with a property of type [UInt32](xref:System.UInt32), a property of type [Nullable(Of UInt32)](xref:System.Nullable%601), and a constructor with parameters of type `UInt32` and `Nullable(Of UInt32)`.</span></span> <span data-ttu-id="b8dc1-437">Você recebe quatro avisos do compilador ao tentar de compilar esse exemplo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-437">You get four compiler warnings when you try to compile this example.</span></span>
 
 ```csharp
 using System;
@@ -426,40 +424,40 @@ Public Class InvoiceItem
    Public Property Quantity As Nullable(Of UInteger)
       Get
          Return qty
-      End Get   
-      Set 
+      End Get
+      Set
          qty = value
-      End Set   
+      End Set
    End Property
 
    Public Property InvoiceId As UInteger
-      Get   
+      Get
          Return invId
       End Get
-      Set 
+      Set
          invId = value
-      End Set   
+      End Set
    End Property
 End Class
 ' The attempt to compile the example displays output similar to the following:
 '    Type1.vb(13) : warning BC40028: Type of parameter 'sku' is not CLS-compliant.
-'    
+'
 '       Public Sub New(sku As UInteger, quantity As Nullable(Of UInteger))
 '                      ~~~
 '    Type1.vb(13) : warning BC40041: Type 'UInteger' is not CLS-compliant.
-'    
+'
 '       Public Sub New(sku As UInteger, quantity As Nullable(Of UInteger))
 '                                                               ~~~~~~~~
 '    Type1.vb(18) : warning BC40041: Type 'UInteger' is not CLS-compliant.
-'    
+'
 '       Public Property Quantity As Nullable(Of UInteger)
 '                                               ~~~~~~~~
 '    Type1.vb(27) : warning BC40027: Return type of function 'InvoiceId' is not CLS-compliant.
-'    
+'
 '       Public Property InvoiceId As UInteger
 ```
 
-<span data-ttu-id="fa2a8-438">Para eliminar os avisos do compilador, substitua os tipos não compatíveis com CLS na interface pública `InvoiceItem` por tipos compatíveis:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-438">To eliminate the compiler warnings, replace the non-CLS-compliant types in the `InvoiceItem` public interface with compliant types:</span></span>
+<span data-ttu-id="b8dc1-438">Para eliminar os avisos do compilador, substitua os tipos não compatíveis com CLS na interface pública `InvoiceItem` por tipos compatíveis:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-438">To eliminate the compiler warnings, replace the non-CLS-compliant types in the `InvoiceItem` public interface with compliant types:</span></span>
 
 ```csharp
 using System;
@@ -490,7 +488,7 @@ public class InvoiceItem
    public int InvoiceId
    {
       get { return (int) invId; }
-      set { 
+      set {
          if (value <= 0)
             throw new ArgumentOutOfRangeException("The invoice number is zero or negative.");
          invId = (uint) value; }
@@ -518,24 +516,24 @@ Public Class InvoiceItem
    Public Property Quantity As Nullable(Of Integer)
       Get
          Return qty
-      End Get   
-      Set 
+      End Get
+      Set
          qty = value
-      End Set   
+      End Set
    End Property
 
    Public Property InvoiceId As Integer
-      Get   
+      Get
          Return CInt(invId)
       End Get
-      Set 
+      Set
          invId = CUInt(value)
-      End Set   
+      End Set
    End Property
 End Class
 ```
 
-<span data-ttu-id="fa2a8-439">Além dos tipos específicos listados, algumas categorias de tipos não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-439">In addition to the specific types listed, some categories of types are not CLS compliant.</span></span> <span data-ttu-id="fa2a8-440">Entre eles estão tipos de ponteiro não gerenciados e tipos de ponteiro de função.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-440">These include unmanaged pointer types and function pointer types.</span></span> <span data-ttu-id="fa2a8-441">O exemplo a seguir gera um aviso do compilador porque ele usa um ponteiro para um inteiro a fim de criar uma matriz de inteiros.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-441">The following example generates a compiler warning because it uses a pointer to an integer to create an array of integers.</span></span> 
+<span data-ttu-id="b8dc1-439">Além dos tipos específicos listados, algumas categorias de tipos não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-439">In addition to the specific types listed, some categories of types are not CLS compliant.</span></span> <span data-ttu-id="b8dc1-440">Entre eles estão tipos de ponteiro não gerenciados e tipos de ponteiro de função.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-440">These include unmanaged pointer types and function pointer types.</span></span> <span data-ttu-id="b8dc1-441">O exemplo a seguir gera um aviso do compilador porque ele usa um ponteiro para um inteiro a fim de criar uma matriz de inteiros.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-441">The following example generates a compiler warning because it uses a pointer to an integer to create an array of integers.</span></span>
 
 ```csharp
 using System;
@@ -555,12 +553,12 @@ public class ArrayHelper
       }
       return arr;
    }
-}   
+}
 // The attempt to compile this example displays the following output:
 //    UnmanagedPtr1.cs(8,57): warning CS3001: Argument type 'int*' is not CLS-compliant
 ```
 
-```vb
+```csharp
 using System;
 
 [assembly: CLSCompliant(true)]
@@ -578,16 +576,16 @@ public class ArrayHelper
       }
       return arr;
    }
-}   
+}
 // The attempt to compile this example displays the following output:
 //    UnmanagedPtr1.cs(8,57): warning CS3001: Argument type 'int*' is not CLS-compliant
 ```
 
-<span data-ttu-id="fa2a8-442">Para classes abstratas compatíveis com CLS (ou seja, classes marcadas como `abstract` no C#), todos os membros da classe também devem ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-442">For CLS-compliant abstract classes (that is, classes marked as `abstract` in C#), all members of the class must also be CLS-compliant.</span></span> 
+<span data-ttu-id="b8dc1-442">Para classes abstratas compatíveis com CLS (ou seja, classes marcadas como `abstract` no C#), todos os membros da classe também devem ser compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-442">For CLS-compliant abstract classes (that is, classes marked as `abstract` in C#), all members of the class must also be CLS-compliant.</span></span>
 
-### <a name="naming-conventions"></a><span data-ttu-id="fa2a8-443">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="fa2a8-443">Naming conventions</span></span>
+### <a name="naming-conventions"></a><span data-ttu-id="b8dc1-443">Convenções de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="b8dc1-443">Naming conventions</span></span>
 
-<span data-ttu-id="fa2a8-444">Como algumas linguagens de programação não diferenciam maiúsculas de minúsculas, os identificadores (como nomes de namespaces, tipos e membros) devem se diferenciar além de maiúsculas e minúsculas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-444">Because some programming languages are case-insensitive, identifiers (such as the names of namespaces, types, and members) must differ by more than case.</span></span> <span data-ttu-id="fa2a8-445">Dois identificadores serão considerados equivalentes se seus mapeamentos em minúsculas forem os mesmos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-445">Two identifiers are considered equivalent if their lowercase mappings are the same.</span></span> <span data-ttu-id="fa2a8-446">O exemplo do C# a seguir define duas classes públicas, `Person` e `person`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-446">The following C# example defines two public classes, `Person` and `person`.</span></span> <span data-ttu-id="fa2a8-447">Como elas são diferentes apenas em maiúsculas e minúsculas, o compilador do C# as sinaliza como não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-447">Because they differ only by case, the C# compiler flags them as not CLS-compliant.</span></span> 
+<span data-ttu-id="b8dc1-444">Como algumas linguagens de programação não diferenciam maiúsculas de minúsculas, os identificadores (como nomes de namespaces, tipos e membros) devem se diferenciar além de maiúsculas e minúsculas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-444">Because some programming languages are case-insensitive, identifiers (such as the names of namespaces, types, and members) must differ by more than case.</span></span> <span data-ttu-id="b8dc1-445">Dois identificadores serão considerados equivalentes se seus mapeamentos em minúsculas forem os mesmos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-445">Two identifiers are considered equivalent if their lowercase mappings are the same.</span></span> <span data-ttu-id="b8dc1-446">O exemplo do C# a seguir define duas classes públicas, `Person` e `person`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-446">The following C# example defines two public classes, `Person` and `person`.</span></span> <span data-ttu-id="b8dc1-447">Como elas são diferentes apenas em maiúsculas e minúsculas, o compilador do C# as sinaliza como não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-447">Because they differ only by case, the C# compiler flags them as not CLS-compliant.</span></span>
 
 ```csharp
 using System;
@@ -604,18 +602,18 @@ public class person
 
 }
 // Compilation produces a compiler warning like the following:
-//    Naming1.cs(11,14): warning CS3005: Identifier 'person' differing 
+//    Naming1.cs(11,14): warning CS3005: Identifier 'person' differing
 //                       only in case is not CLS-compliant
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-<span data-ttu-id="fa2a8-448">Identificadores de linguagem de programação, como nomes de namespaces, tipos e membros, devem estar de acordo com o [Padrão Unicode 3.0, Relatório Técnico 15, Anexo 7](https://www.unicode.org/reports/tr15/tr15-18.html).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-448">Programming language identifiers, such as the names of namespaces, types, and members, must conform to the [Unicode Standard 3.0, Technical Report 15, Annex 7](https://www.unicode.org/reports/tr15/tr15-18.html).</span></span> <span data-ttu-id="fa2a8-449">Isso significa que:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-449">This means that:</span></span>
+<span data-ttu-id="b8dc1-448">Identificadores de linguagem de programação, como nomes de namespaces, tipos e membros, devem estar de acordo com o [Padrão Unicode 3.0, Relatório Técnico 15, Anexo 7](https://www.unicode.org/reports/tr15/tr15-18.html).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-448">Programming language identifiers, such as the names of namespaces, types, and members, must conform to the [Unicode Standard 3.0, Technical Report 15, Annex 7](https://www.unicode.org/reports/tr15/tr15-18.html).</span></span> <span data-ttu-id="b8dc1-449">Isso significa que:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-449">This means that:</span></span>
 
-* <span data-ttu-id="fa2a8-450">O primeiro caractere de um identificador pode ser qualquer letra maiúscula Unicode, letra minúscula, letra maiúscula do título, letra modificadora, outra letra ou o número da letra.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-450">The first character of an identifier can be any Unicode uppercase letter, lowercase letter, title case letter, modifier letter, other letter, or letter number.</span></span> <span data-ttu-id="fa2a8-451">Para obter informações sobre categorias de caractere Unicode, consulte a enumeração [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-451">For information on Unicode character categories, see the [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) enumeration.</span></span> 
+* <span data-ttu-id="b8dc1-450">O primeiro caractere de um identificador pode ser qualquer letra maiúscula Unicode, letra minúscula, letra maiúscula do título, letra modificadora, outra letra ou o número da letra.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-450">The first character of an identifier can be any Unicode uppercase letter, lowercase letter, title case letter, modifier letter, other letter, or letter number.</span></span> <span data-ttu-id="b8dc1-451">Para obter informações sobre categorias de caractere Unicode, consulte a enumeração [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-451">For information on Unicode character categories, see the [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) enumeration.</span></span>
 
-* <span data-ttu-id="fa2a8-452">Os caracteres subsequentes podem ser de qualquer uma das categorias, como o primeiro caractere e também podem incluir marcas sem espaçamento, marcas que combinam espaçamento, números decimais, pontuações de conector e códigos de formatação.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-452">Subsequent characters can be from any of the categories as the first character, and can also include non-spacing marks, spacing combining marks, decimal numbers, connector punctuations, and formatting codes.</span></span> 
+* <span data-ttu-id="b8dc1-452">Os caracteres subsequentes podem ser de qualquer uma das categorias, como o primeiro caractere e também podem incluir marcas sem espaçamento, marcas que combinam espaçamento, números decimais, pontuações de conector e códigos de formatação.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-452">Subsequent characters can be from any of the categories as the first character, and can also include non-spacing marks, spacing combining marks, decimal numbers, connector punctuations, and formatting codes.</span></span>
 
-<span data-ttu-id="fa2a8-453">Antes de comparar identificadores, você deve filtrar códigos de formatação e converter os identificadores em Formulário C de Normalização de Unicode, porque um caractere único pode ser representado por várias unidades de código codificadas em UTF-16.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-453">Before you compare identifiers, you should filter out formatting codes and convert the identifiers to Unicode Normalization Form C, because a single character can be represented by multiple UTF-16-encoded code units.</span></span> <span data-ttu-id="fa2a8-454">As sequências de caracteres que produzem as mesmas unidades de código no Formulário C de Normalização de Unicode não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-454">Character sequences that produce the same code units in Unicode Normalization Form C are not CLS-compliant.</span></span> <span data-ttu-id="fa2a8-455">O exemplo a seguir define uma propriedade chamada `Å`, que consiste no caractere ANGSTROM SIGN (U+212B) e uma segunda propriedade chamada `Å`, que consiste no caractere LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-455">The following example defines a property named `Å`, which consists of the character ANGSTROM SIGN (U+212B), and a second property named `Å` which consists of the character LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5).</span></span> <span data-ttu-id="fa2a8-456">O compilador do C# sinaliza o código-fonte como não compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-456">The C# compiler flags the source code as non-CLS-compliant.</span></span>
+<span data-ttu-id="b8dc1-453">Antes de comparar identificadores, você deve filtrar códigos de formatação e converter os identificadores em Formulário C de Normalização de Unicode, porque um caractere único pode ser representado por várias unidades de código codificadas em UTF-16.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-453">Before you compare identifiers, you should filter out formatting codes and convert the identifiers to Unicode Normalization Form C, because a single character can be represented by multiple UTF-16-encoded code units.</span></span> <span data-ttu-id="b8dc1-454">As sequências de caracteres que produzem as mesmas unidades de código no Formulário C de Normalização de Unicode não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-454">Character sequences that produce the same code units in Unicode Normalization Form C are not CLS-compliant.</span></span> <span data-ttu-id="b8dc1-455">O exemplo a seguir define uma propriedade chamada `Å`, que consiste no caractere ANGSTROM SIGN (U+212B) e uma segunda propriedade chamada `Å`, que consiste no caractere LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-455">The following example defines a property named `Å`, which consists of the character ANGSTROM SIGN (U+212B), and a second property named `Å` which consists of the character LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5).</span></span> <span data-ttu-id="b8dc1-456">O compilador do C# sinaliza o código-fonte como não compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-456">The C# compiler flags the source code as non-CLS-compliant.</span></span>
 
 ```csharp
 public class Size
@@ -627,7 +625,7 @@ public class Size
    {
        get { return a1; }
        set { a1 = value; }
-   }         
+   }
 
    public double Å
    {
@@ -657,10 +655,10 @@ Public Class Size
        Get
           Return a1
        End Get
-       Set 
+       Set
           a1 = value
        End Set
-   End Property         
+   End Property
 
    Public Property Å As Double
        Get
@@ -668,24 +666,24 @@ Public Class Size
        End Get
        Set
           a2 = value
-       End Set   
+       End Set
    End Property
 End Class
 ' Compilation produces a compiler warning like the following:
 '    Naming1.vb(9) : error BC30269: 'Public Property Å As Double' has multiple definitions
 '     with identical signatures.
-'    
+'
 '       Public Property Å As Double
 '                       ~
 ```
 
-<span data-ttu-id="fa2a8-457">Os nomes de membro em um escopo específico (como os namespaces em um assembly, os tipos em um namespace ou os membros em um tipo) devem ser exclusivos, exceto os nomes resolvidos por meio de sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-457">Member names within a particular scope (such as the namespaces within an assembly, the types within a namespace, or the members within a type) must be unique except for names that are resolved through overloading.</span></span> <span data-ttu-id="fa2a8-458">Esse requisito é mais rígido do que o do Common Type System, que permite que vários membros em um escopo tenham nomes idênticos desde que sejam tipos diferentes de membros (por exemplo, um é um método e outro é um campo).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-458">This requirement is more stringent than that of the common type system, which allows multiple members within a scope to have identical names as long as they are different kinds of members (for example, one is a method and one is a field).</span></span> <span data-ttu-id="fa2a8-459">Em particular, para membros de tipo:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-459">In particular, for type members:</span></span> 
+<span data-ttu-id="b8dc1-457">Os nomes de membro em um escopo específico (como os namespaces em um assembly, os tipos em um namespace ou os membros em um tipo) devem ser exclusivos, exceto os nomes resolvidos por meio de sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-457">Member names within a particular scope (such as the namespaces within an assembly, the types within a namespace, or the members within a type) must be unique except for names that are resolved through overloading.</span></span> <span data-ttu-id="b8dc1-458">Esse requisito é mais rígido do que o do Common Type System, que permite que vários membros em um escopo tenham nomes idênticos desde que sejam tipos diferentes de membros (por exemplo, um é um método e outro é um campo).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-458">This requirement is more stringent than that of the common type system, which allows multiple members within a scope to have identical names as long as they are different kinds of members (for example, one is a method and one is a field).</span></span> <span data-ttu-id="b8dc1-459">Em particular, para membros de tipo:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-459">In particular, for type members:</span></span>
 
-* <span data-ttu-id="fa2a8-460">Campos e tipos aninhados são diferenciados apenas por nome.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-460">Fields and nested types are distinguished by name alone.</span></span> 
+* <span data-ttu-id="b8dc1-460">Campos e tipos aninhados são diferenciados apenas por nome.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-460">Fields and nested types are distinguished by name alone.</span></span>
 
-* <span data-ttu-id="fa2a8-461">Métodos, propriedades e eventos que tenham o mesmo nome devem ser diferentes além apenas do tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-461">Methods, properties, and events that have the same name must differ by more than just return type.</span></span> 
+* <span data-ttu-id="b8dc1-461">Métodos, propriedades e eventos que tenham o mesmo nome devem ser diferentes além apenas do tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-461">Methods, properties, and events that have the same name must differ by more than just return type.</span></span>
 
-<span data-ttu-id="fa2a8-462">O exemplo a seguir ilustra o requisito de que nomes de membros devem ser exclusivos dentro de seu escopo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-462">The following example illustrates the requirement that member names must be unique within their scope.</span></span> <span data-ttu-id="fa2a8-463">Ele define uma classe chamada `Converter` que inclui quatro membros chamados `Conversion`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-463">It defines a class named `Converter` that includes four members named `Conversion`.</span></span> <span data-ttu-id="fa2a8-464">Três são métodos e um é uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-464">Three are methods, and one is a property.</span></span> <span data-ttu-id="fa2a8-465">O método que inclui um parâmetro `Int64` tem um nome exclusivo, mas os dois métodos com um parâmetro `Int32` não têm, porque o valor retornado não é considerado parte da assinatura de um membro.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-465">The method that includes an `Int64` parameter is uniquely named, but the two methods with an `Int32` parameter are not, because return value is not considered a part of a member's signature.</span></span> <span data-ttu-id="fa2a8-466">A propriedade `Conversion` também viola esse requisito porque as propriedades não podem ter o mesmo nome dos métodos sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-466">The `Conversion` property also violates this requirement, because properties cannot have the same name as overloaded methods.</span></span> 
+<span data-ttu-id="b8dc1-462">O exemplo a seguir ilustra o requisito de que nomes de membros devem ser exclusivos dentro de seu escopo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-462">The following example illustrates the requirement that member names must be unique within their scope.</span></span> <span data-ttu-id="b8dc1-463">Ele define uma classe chamada `Converter` que inclui quatro membros chamados `Conversion`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-463">It defines a class named `Converter` that includes four members named `Conversion`.</span></span> <span data-ttu-id="b8dc1-464">Três são métodos e um é uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-464">Three are methods, and one is a property.</span></span> <span data-ttu-id="b8dc1-465">O método que inclui um parâmetro `Int64` tem um nome exclusivo, mas os dois métodos com um parâmetro `Int32` não têm, porque o valor retornado não é considerado parte da assinatura de um membro.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-465">The method that includes an `Int64` parameter is uniquely named, but the two methods with an `Int32` parameter are not, because return value is not considered a part of a member's signature.</span></span> <span data-ttu-id="b8dc1-466">A propriedade `Conversion` também viola esse requisito porque as propriedades não podem ter o mesmo nome dos métodos sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-466">The `Conversion` property also violates this requirement, because properties cannot have the same name as overloaded methods.</span></span>
 
 ```csharp
 using System;
@@ -712,8 +710,8 @@ public class Converter
    public bool Conversion
    {
       get { return true; }
-   }     
-}  
+   }
+}
 // Compilation produces a compiler error like the following:
 //    Naming3.cs(13,17): error CS0111: Type 'Converter' already defines a member called
 //            'Conversion' with the same parameter types
@@ -742,34 +740,34 @@ Public Class Converter
    Public ReadOnly Property Conversion As Boolean
       Get
          Return True
-      End Get   
-   End Property     
+      End Get
+   End Property
 End Class
 ' Compilation produces a compiler error like the following:
-'    Naming3.vb(8) : error BC30301: 'Public Function Conversion(number As Integer) As Double' 
-'                    and 'Public Function Conversion(number As Integer) As Single' cannot 
+'    Naming3.vb(8) : error BC30301: 'Public Function Conversion(number As Integer) As Double'
+'                    and 'Public Function Conversion(number As Integer) As Single' cannot
 '                    overload each other because they differ only by return types.
-'    
+'
 '       Public Function Conversion(number As Integer) As Double
 '                       ~~~~~~~~~~
-'    Naming3.vb(20) : error BC30260: 'Conversion' is already declared as 'Public Function 
+'    Naming3.vb(20) : error BC30260: 'Conversion' is already declared as 'Public Function
 '                     Conversion(number As Integer) As Single' in this class.
-'    
+'
 '       Public ReadOnly Property Conversion As Boolean
 '                                ~~~~~~~~~~
 ```
 
-<span data-ttu-id="fa2a8-467">Linguagens individuais incluem palavras-chave exclusivas, portanto, linguagens que apontam para o Common Language Runtime também devem oferecer algum mecanismo para fazer referência a identificadores (como nomes de tipo) que coincidam com palavras-chave.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-467">Individual languages include unique keywords, so languages that target the common language runtime must also provide some mechanism for referencing identifiers (such as type names) that coincide with keywords.</span></span> <span data-ttu-id="fa2a8-468">Por exemplo, `case` é uma palavra-chave no C# e no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-468">For example, `case` is a keyword in both C# and Visual Basic.</span></span> <span data-ttu-id="fa2a8-469">No entanto, o exemplo do Visual Basic a seguir pode remover a ambiguidade de uma classe chamada `case` da palavra-chave `case`, usando chaves de abertura e fechamento.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-469">However, the following Visual Basic example is able to disambiguate a class named `case` from the `case` keyword by using opening and closing braces.</span></span> <span data-ttu-id="fa2a8-470">Caso contrário, o exemplo produziria a mensagem de erro "A palavra-chave não é válida como um identificador", e não seria compilado.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-470">Otherwise, the example would produce the error message, "Keyword is not valid as an identifier," and fail to compile.</span></span> 
+<span data-ttu-id="b8dc1-467">Linguagens individuais incluem palavras-chave exclusivas, portanto, linguagens que apontam para o Common Language Runtime também devem oferecer algum mecanismo para fazer referência a identificadores (como nomes de tipo) que coincidam com palavras-chave.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-467">Individual languages include unique keywords, so languages that target the common language runtime must also provide some mechanism for referencing identifiers (such as type names) that coincide with keywords.</span></span> <span data-ttu-id="b8dc1-468">Por exemplo, `case` é uma palavra-chave no C# e no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-468">For example, `case` is a keyword in both C# and Visual Basic.</span></span> <span data-ttu-id="b8dc1-469">No entanto, o exemplo do Visual Basic a seguir pode remover a ambiguidade de uma classe chamada `case` da palavra-chave `case`, usando chaves de abertura e fechamento.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-469">However, the following Visual Basic example is able to disambiguate a class named `case` from the `case` keyword by using opening and closing braces.</span></span> <span data-ttu-id="b8dc1-470">Caso contrário, o exemplo produziria a mensagem de erro "A palavra-chave não é válida como um identificador", e não seria compilado.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-470">Otherwise, the example would produce the error message, "Keyword is not valid as an identifier," and fail to compile.</span></span>
 
 ```vb
 Public Class [case]
    Private _id As Guid
-   Private name As String  
+   Private name As String
 
    Public Sub New(name As String)
       _id = Guid.NewGuid()
-      Me.name = name 
-   End Sub   
+      Me.name = name
+   End Sub
 
    Public ReadOnly Property ClientName As String
       Get
@@ -779,7 +777,7 @@ Public Class [case]
 End Class
 ```
 
-<span data-ttu-id="fa2a8-471">O exemplo do C# a seguir pode criar uma instância da classe `case` usando o símbolo @ para remover a ambiguidade do identificador da palavra-chave da linguagem.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-471">The following C# example is able to instantiate the `case` class by using the @ symbol to disambiguate the identifier from the language keyword.</span></span> <span data-ttu-id="fa2a8-472">Sem ele, o compilador do C# exibiria duas mensagens de erro, "Tipo esperado" e "'Maiúsculas e minúsculas' do termo de expressão inválido".</span><span class="sxs-lookup"><span data-stu-id="fa2a8-472">Without it, the C# compiler would display two error messages, "Type expected" and "Invalid expression term 'case'."</span></span> 
+<span data-ttu-id="b8dc1-471">O exemplo do C# a seguir pode criar uma instância da classe `case` usando o símbolo @ para remover a ambiguidade do identificador da palavra-chave da linguagem.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-471">The following C# example is able to instantiate the `case` class by using the @ symbol to disambiguate the identifier from the language keyword.</span></span> <span data-ttu-id="b8dc1-472">Sem ele, o compilador do C# exibiria duas mensagens de erro, "Tipo esperado" e "'Maiúsculas e minúsculas' do termo de expressão inválido".</span><span class="sxs-lookup"><span data-stu-id="b8dc1-472">Without it, the C# compiler would display two error messages, "Type expected" and "Invalid expression term 'case'."</span></span>
 
 ```csharp
 using System;
@@ -794,17 +792,17 @@ public class Example
 }
 ```
 
-### <a name="type-conversion"></a><span data-ttu-id="fa2a8-473">Conversão de tipos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-473">Type conversion</span></span>
+### <a name="type-conversion"></a><span data-ttu-id="b8dc1-473">Conversão de tipos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-473">Type conversion</span></span>
 
-<span data-ttu-id="fa2a8-474">A Common Language Specification define dois operadores de conversão:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-474">The Common Language Specification defines two conversion operators:</span></span>
+<span data-ttu-id="b8dc1-474">A Common Language Specification define dois operadores de conversão:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-474">The Common Language Specification defines two conversion operators:</span></span>
 
-* <span data-ttu-id="fa2a8-475">`op_Implicit`, que é usado para conversões de ampliação que não resultam em perda de dados ou precisão.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-475">`op_Implicit`, which is used for widening conversions that do not result in loss of data or precision.</span></span> <span data-ttu-id="fa2a8-476">Por exemplo, a estrutura [Decimal](xref:System.Decimal) inclui um operador `op_Implicit` sobrecarregado para converter valores de tipos integrais e valores [Char](xref:System.Char) em valores `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-476">For example, the [Decimal](xref:System.Decimal) structure includes an overloaded `op_Implicit` operator to convert values of integral types and [Char](xref:System.Char) values to `Decimal` values.</span></span> 
+* <span data-ttu-id="b8dc1-475">`op_Implicit`, que é usado para conversões de ampliação que não resultam em perda de dados ou precisão.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-475">`op_Implicit`, which is used for widening conversions that do not result in loss of data or precision.</span></span> <span data-ttu-id="b8dc1-476">Por exemplo, a estrutura [Decimal](xref:System.Decimal) inclui um operador `op_Implicit` sobrecarregado para converter valores de tipos integrais e valores [Char](xref:System.Char) em valores `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-476">For example, the [Decimal](xref:System.Decimal) structure includes an overloaded `op_Implicit` operator to convert values of integral types and [Char](xref:System.Char) values to `Decimal` values.</span></span>
 
-* <span data-ttu-id="fa2a8-477">`op_Explicit`, que é usado para conversões de redução que possam resultar em perda de magnitude (um valor é convertido em um valor com um intervalo menor) ou precisão.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-477">`op_Explicit`, which is used for narrowing conversions that can result in loss of magnitude (a value is converted to a value that has a smaller range) or precision.</span></span> <span data-ttu-id="fa2a8-478">Por exemplo, a estrutura `Decimal` inclui um operador `op_Explicit` sobrecarregado para converter valores [Double](xref:System.Double) e [Single](xref:System.Single) em `Decimal` e para converter valores `Decimal` em valores inteiros, `Double`, `Single` e `Char`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-478">For example, the `Decimal` structure includes an overloaded `op_Explicit` operator to convert [Double](xref:System.Double) and [Single](xref:System.Single) values to `Decimal` and to convert `Decimal` values to integral values, `Double`, `Single`, and `Char`.</span></span> 
+* <span data-ttu-id="b8dc1-477">`op_Explicit`, que é usado para conversões de redução que possam resultar em perda de magnitude (um valor é convertido em um valor com um intervalo menor) ou precisão.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-477">`op_Explicit`, which is used for narrowing conversions that can result in loss of magnitude (a value is converted to a value that has a smaller range) or precision.</span></span> <span data-ttu-id="b8dc1-478">Por exemplo, a estrutura `Decimal` inclui um operador `op_Explicit` sobrecarregado para converter valores [Double](xref:System.Double) e [Single](xref:System.Single) em `Decimal` e para converter valores `Decimal` em valores inteiros, `Double`, `Single` e `Char`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-478">For example, the `Decimal` structure includes an overloaded `op_Explicit` operator to convert [Double](xref:System.Double) and [Single](xref:System.Single) values to `Decimal` and to convert `Decimal` values to integral values, `Double`, `Single`, and `Char`.</span></span>
 
-<span data-ttu-id="fa2a8-479">No entanto, nem todas as linguagens dão suporte à sobrecarga de operador ou à definição de operadores personalizados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-479">However, not all languages support operator overloading or the definition of custom operators.</span></span> <span data-ttu-id="fa2a8-480">Se optar por implementar esses operadores de conversão, você também deverá fornecer uma maneira alternativa para realizar a conversão.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-480">If you choose to implement these conversion operators, you should also provide an alternate way to perform the conversion.</span></span> <span data-ttu-id="fa2a8-481">Recomendamos que você forneça métodos `From`Xxx e `To`Xxx.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-481">We recommend that you provide `From`Xxx and `To`Xxx methods.</span></span> 
+<span data-ttu-id="b8dc1-479">No entanto, nem todas as linguagens dão suporte à sobrecarga de operador ou à definição de operadores personalizados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-479">However, not all languages support operator overloading or the definition of custom operators.</span></span> <span data-ttu-id="b8dc1-480">Se optar por implementar esses operadores de conversão, você também deverá fornecer uma maneira alternativa para realizar a conversão.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-480">If you choose to implement these conversion operators, you should also provide an alternate way to perform the conversion.</span></span> <span data-ttu-id="b8dc1-481">Recomendamos que você forneça métodos `From`Xxx e `To`Xxx.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-481">We recommend that you provide `From`Xxx and `To`Xxx methods.</span></span>
 
-<span data-ttu-id="fa2a8-482">O exemplo a seguir define conversões explícitas e implícitas compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-482">The following example defines CLS-compliant implicit and explicit conversions.</span></span> <span data-ttu-id="fa2a8-483">Ele cria uma classe `UDouble` que representa um número de ponto flutuante de precisão dupla com sinal.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-483">It creates a `UDouble` class that represents an signed double-precision, floating-point number.</span></span> <span data-ttu-id="fa2a8-484">Ele fornece conversões implícitas de `UDouble` em `Double` e conversões explícitas de `UDouble` em `Single`, de `Double` em `UDouble` e de `Single` em `UDouble`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-484">It provides for implicit conversions from `UDouble` to `Double` and for explicit conversions from `UDouble` to `Single`, `Double` to `UDouble`, and `Single` to `UDouble`.</span></span> <span data-ttu-id="fa2a8-485">Ele também define um método `ToDouble` como uma alternativa ao operador de conversão implícita e os métodos `ToSingle`, `FromDouble` e `FromSingle` como alternativas aos operadores de conversão explícita.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-485">It also defines a `ToDouble` method as an alternative to the implicit conversion operator and the `ToSingle`, `FromDouble`, and `FromSingle` methods as alternatives to the explicit conversion operators.</span></span> 
+<span data-ttu-id="b8dc1-482">O exemplo a seguir define conversões explícitas e implícitas compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-482">The following example defines CLS-compliant implicit and explicit conversions.</span></span> <span data-ttu-id="b8dc1-483">Ele cria uma classe `UDouble` que representa um número de ponto flutuante de precisão dupla com sinal.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-483">It creates a `UDouble` class that represents an signed double-precision, floating-point number.</span></span> <span data-ttu-id="b8dc1-484">Ele fornece conversões implícitas de `UDouble` em `Double` e conversões explícitas de `UDouble` em `Single`, de `Double` em `UDouble` e de `Single` em `UDouble`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-484">It provides for implicit conversions from `UDouble` to `Double` and for explicit conversions from `UDouble` to `Single`, `Double` to `UDouble`, and `Single` to `UDouble`.</span></span> <span data-ttu-id="b8dc1-485">Ele também define um método `ToDouble` como uma alternativa ao operador de conversão implícita e os métodos `ToSingle`, `FromDouble` e `FromSingle` como alternativas aos operadores de conversão explícita.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-485">It also defines a `ToDouble` method as an alternative to the implicit conversion operator and the `ToSingle`, `FromDouble`, and `FromSingle` methods as alternatives to the explicit conversion operators.</span></span>
 
 ```csharp
 using System;
@@ -839,10 +837,10 @@ public struct UDouble
 
    public static implicit operator Single(UDouble value)
    {
-      if (value.number > (double) Single.MaxValue) 
+      if (value.number > (double) Single.MaxValue)
          throw new InvalidCastException("A UDouble value is out of range of the Single type.");
 
-      return (float) value.number;         
+      return (float) value.number;
    }
 
    public static explicit operator UDouble(double value)
@@ -851,7 +849,7 @@ public struct UDouble
          throw new InvalidCastException("A negative value cannot be converted to a UDouble.");
 
       return new UDouble(value);
-   } 
+   }
 
    public static implicit operator UDouble(float value)
    {
@@ -859,17 +857,17 @@ public struct UDouble
          throw new InvalidCastException("A negative value cannot be converted to a UDouble.");
 
       return new UDouble(value);
-   } 
+   }
 
    public static Double ToDouble(UDouble value)
    {
       return (Double) value;
-   }   
+   }
 
    public static float ToSingle(UDouble value)
    {
       return (float) value;
-   }   
+   }
 
    public static UDouble FromDouble(double value)
    {
@@ -879,7 +877,7 @@ public struct UDouble
    public static UDouble FromSingle(float value)
    {
       return new UDouble(value);
-   }   
+   }
 }
 ```
 
@@ -912,7 +910,7 @@ Public Structure UDouble
       If value.number > CDbl(Single.MaxValue) Then
          Throw New InvalidCastException("A UDouble value is out of range of the Single type.")
       End If
-      Return CSng(value.number)         
+      Return CSng(value.number)
    End Operator
 
    Public Shared Narrowing Operator CType(value As Double) As UDouble
@@ -920,22 +918,22 @@ Public Structure UDouble
          Throw New InvalidCastException("A negative value cannot be converted to a UDouble.")
       End If
       Return New UDouble(value)
-   End Operator 
+   End Operator
 
    Public Shared Narrowing Operator CType(value As Single) As UDouble
       If value < 0 Then
          Throw New InvalidCastException("A negative value cannot be converted to a UDouble.")
       End If
       Return New UDouble(value)
-   End Operator 
+   End Operator
 
    Public Shared Function ToDouble(value As UDouble) As Double
       Return CType(value, Double)
-   End Function   
+   End Function
 
    Public Shared Function ToSingle(value As UDouble) As Single
       Return CType(value, Single)
-   End Function   
+   End Function
 
    Public Shared Function FromDouble(value As Double) As UDouble
       Return New UDouble(value)
@@ -943,15 +941,15 @@ Public Structure UDouble
 
    Public Shared Function FromSingle(value As Single) As UDouble
       Return New UDouble(value)
-   End Function   
+   End Function
 End Structure
 ```
 
-### <a name="arrays"></a><span data-ttu-id="fa2a8-486">Matrizes</span><span class="sxs-lookup"><span data-stu-id="fa2a8-486">Arrays</span></span>
+### <a name="arrays"></a><span data-ttu-id="b8dc1-486">Matrizes</span><span class="sxs-lookup"><span data-stu-id="b8dc1-486">Arrays</span></span>
 
-<span data-ttu-id="fa2a8-487">As matrizes compatíveis com CLS estão em conformidade com as seguintes regras:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-487">CLS-compliant arrays conform to the following rules:</span></span> 
+<span data-ttu-id="b8dc1-487">As matrizes compatíveis com CLS estão em conformidade com as seguintes regras:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-487">CLS-compliant arrays conform to the following rules:</span></span>
 
-* <span data-ttu-id="fa2a8-488">Todas as dimensões de uma matriz devem ter um limite inferior igual a zero.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-488">All dimensions of an array must have a lower bound of zero.</span></span> <span data-ttu-id="fa2a8-489">O exemplo a seguir cria uma matriz não compatível com CLS com um limite inferior de um.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-489">The following example creates a non-CLS-compliant array with a lower bound of one.</span></span> <span data-ttu-id="fa2a8-490">Independentemente da presença do atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute), o compilador não detecta se a matriz retornada pelo método `Numbers.GetTenPrimes` não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-490">Note that, despite the presence of the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute, the compiler does not detect that the array returned by the `Numbers.GetTenPrimes` method is not CLS-compliant.</span></span> 
+* <span data-ttu-id="b8dc1-488">Todas as dimensões de uma matriz devem ter um limite inferior igual a zero.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-488">All dimensions of an array must have a lower bound of zero.</span></span> <span data-ttu-id="b8dc1-489">O exemplo a seguir cria uma matriz não compatível com CLS com um limite inferior de um.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-489">The following example creates a non-CLS-compliant array with a lower bound of one.</span></span> <span data-ttu-id="b8dc1-490">Independentemente da presença do atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute), o compilador não detecta se a matriz retornada pelo método `Numbers.GetTenPrimes` não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-490">Note that, despite the presence of the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute, the compiler does not detect that the array returned by the `Numbers.GetTenPrimes` method is not CLS-compliant.</span></span>
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -966,13 +964,13 @@ End Structure
         arr.SetValue(3, 3);
         arr.SetValue(5, 4);
         arr.SetValue(7, 5);
-        arr.SetValue(11, 6); 
+        arr.SetValue(11, 6);
         arr.SetValue(13, 7);
         arr.SetValue(17, 8);
         arr.SetValue(19, 9);
         arr.SetValue(23, 10);
 
-        return arr; 
+        return arr;
     }
   }
   ```
@@ -998,7 +996,7 @@ End Structure
   End Class
   ```
 
-* <span data-ttu-id="fa2a8-491">Todos os elementos de matriz devem consistir em tipos compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-491">All array elements must consist of CLS-compliant types.</span></span> <span data-ttu-id="fa2a8-492">O exemplo a seguir define dois métodos que retornam matrizes não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-492">The following example defines two methods that return non-CLS-compliant arrays.</span></span> <span data-ttu-id="fa2a8-493">O primeiro retorna uma matriz de valores [UInt32](xref:System.UInt32).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-493">The first returns an array of [UInt32](xref:System.UInt32) values.</span></span> <span data-ttu-id="fa2a8-494">O segundo retorna uma matriz [Object](xref:System.Object) que inclui valores [Int32](xref:System.Int32) e `UInt32`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-494">The second returns an [Object](xref:System.Object) array that includes [Int32](xref:System.Int32) and `UInt32` values.</span></span> <span data-ttu-id="fa2a8-495">Embora o compilador identifique a primeira matriz como não compatível devido ao seu tipo `UInt32`, ele não reconhece que a segunda matriz inclui elementos não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-495">Although the compiler identifies the first array as non-compliant because of its `UInt32` type, it fails to recognize that the second array includes non-CLS-compliant elements.</span></span> 
+* <span data-ttu-id="b8dc1-491">Todos os elementos de matriz devem consistir em tipos compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-491">All array elements must consist of CLS-compliant types.</span></span> <span data-ttu-id="b8dc1-492">O exemplo a seguir define dois métodos que retornam matrizes não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-492">The following example defines two methods that return non-CLS-compliant arrays.</span></span> <span data-ttu-id="b8dc1-493">O primeiro retorna uma matriz de valores [UInt32](xref:System.UInt32).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-493">The first returns an array of [UInt32](xref:System.UInt32) values.</span></span> <span data-ttu-id="b8dc1-494">O segundo retorna uma matriz [Object](xref:System.Object) que inclui valores [Int32](xref:System.Int32) e `UInt32`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-494">The second returns an [Object](xref:System.Object) array that includes [Int32](xref:System.Int32) and `UInt32` values.</span></span> <span data-ttu-id="b8dc1-495">Embora o compilador identifique a primeira matriz como não compatível devido ao seu tipo `UInt32`, ele não reconhece que a segunda matriz inclui elementos não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-495">Although the compiler identifies the first array as non-compliant because of its `UInt32` type, it fails to recognize that the second array includes non-CLS-compliant elements.</span></span>
 
   ```csharp
   using System;
@@ -1038,9 +1036,9 @@ End Structure
   End Class
   ' Compilation produces a compiler warning like the following:
   '    warning BC40027: Return type of function 'GetTenPrimes' is not CLS-compliant.
-  ```                             
+  ```
 
-* <span data-ttu-id="fa2a8-496">A resolução de sobrecarga para métodos que tenham parâmetros de matriz se baseia no fato de que são matrizes e em seu tipo de elemento.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-496">Overload resolution for methods that have array parameters is based on the fact that they are arrays and on their element type.</span></span> <span data-ttu-id="fa2a8-497">Por esse motivo, a seguinte definição de um método `GetSquares` sobrecarregado é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-497">For this reason, the following definition of an overloaded `GetSquares` method is CLS-compliant.</span></span> 
+* <span data-ttu-id="b8dc1-496">A resolução de sobrecarga para métodos que tenham parâmetros de matriz se baseia no fato de que são matrizes e em seu tipo de elemento.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-496">Overload resolution for methods that have array parameters is based on the fact that they are arrays and on their element type.</span></span> <span data-ttu-id="b8dc1-497">Por esse motivo, a seguinte definição de um método `GetSquares` sobrecarregado é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-497">For this reason, the following definition of an overloaded `GetSquares` method is CLS-compliant.</span></span>
 
   ```csharp
   using System;
@@ -1054,10 +1052,10 @@ End Structure
     {
         byte[] numbersOut = new byte[numbers.Length];
         for (int ctr = 0; ctr < numbers.Length; ctr++) {
-            int square = ((int) numbers[ctr]) * ((int) numbers[ctr]); 
+            int square = ((int) numbers[ctr]) * ((int) numbers[ctr]);
             if (square <= Byte.MaxValue)
                 numbersOut[ctr] = (byte) square;
-            // If there's an overflow, assign MaxValue to the corresponding 
+            // If there's an overflow, assign MaxValue to the corresponding
             // element.
             else
                 numbersOut[ctr] = Byte.MaxValue;
@@ -1070,7 +1068,7 @@ End Structure
   {
         BigInteger[] numbersOut = new BigInteger[numbers.Length];
         for (int ctr = 0; ctr < numbers.Length; ctr++)
-            numbersOut[ctr] = numbers[ctr] * numbers[ctr]; 
+            numbersOut[ctr] = numbers[ctr] * numbers[ctr];
 
        return numbersOut;
     }
@@ -1086,14 +1084,14 @@ End Structure
      Public Function GetSquares(numbers As Byte()) As Byte()
         Dim numbersOut(numbers.Length - 1) As Byte
         For ctr As Integer = 0 To numbers.Length - 1
-           Dim square As Integer = (CInt(numbers(ctr)) * CInt(numbers(ctr))) 
+           Dim square As Integer = (CInt(numbers(ctr)) * CInt(numbers(ctr)))
            If square <= Byte.MaxValue Then
               numbersOut(ctr) = CByte(square)
-           ' If there's an overflow, assign MaxValue to the corresponding 
+           ' If there's an overflow, assign MaxValue to the corresponding
            ' element.
            Else
               numbersOut(ctr) = Byte.MaxValue
-           End If   
+           End If
         Next
         Return numbersOut
      End Function
@@ -1101,22 +1099,22 @@ End Structure
      Public Function GetSquares(numbers As BigInteger()) As BigInteger()
          Dim numbersOut(numbers.Length - 1) As BigInteger
          For ctr As Integer = 0 To numbers.Length - 1
-            numbersOut(ctr) = numbers(ctr) * numbers(ctr) 
+            numbersOut(ctr) = numbers(ctr) * numbers(ctr)
          Next
          Return numbersOut
      End Function
   End Module
   ```
 
-### <a name="interfaces"></a><span data-ttu-id="fa2a8-498">Interfaces</span><span class="sxs-lookup"><span data-stu-id="fa2a8-498">Interfaces</span></span>
+### <a name="interfaces"></a><span data-ttu-id="b8dc1-498">Interfaces</span><span class="sxs-lookup"><span data-stu-id="b8dc1-498">Interfaces</span></span>
 
-<span data-ttu-id="fa2a8-499">Interfaces compatíveis com CLS podem definir propriedades, eventos e métodos virtuais (métodos sem implementação).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-499">CLS-compliant interfaces can define properties, events, and virtual methods (methods with no implementation).</span></span> <span data-ttu-id="fa2a8-500">Uma interface compatível com CLS não pode ter nenhum dos seguintes itens:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-500">A CLS-compliant interface cannot have any of the following:</span></span> 
+<span data-ttu-id="b8dc1-499">Interfaces compatíveis com CLS podem definir propriedades, eventos e métodos virtuais (métodos sem implementação).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-499">CLS-compliant interfaces can define properties, events, and virtual methods (methods with no implementation).</span></span> <span data-ttu-id="b8dc1-500">Uma interface compatível com CLS não pode ter nenhum dos seguintes itens:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-500">A CLS-compliant interface cannot have any of the following:</span></span>
 
-* <span data-ttu-id="fa2a8-501">Métodos estáticos ou campos estáticos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-501">Static methods or static fields.</span></span> <span data-ttu-id="fa2a8-502">O compilador do C# gera erros de compilador se você definir um membro estático em uma interface.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-502">The C# compiler generatse compiler errors if you define a static member in an interface.</span></span> 
+* <span data-ttu-id="b8dc1-501">Métodos estáticos ou campos estáticos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-501">Static methods or static fields.</span></span> <span data-ttu-id="b8dc1-502">O compilador do C# gerará erros de compilador se você definir um membro estático em uma interface.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-502">The C# compiler generates compiler errors if you define a static member in an interface.</span></span>
 
-* <span data-ttu-id="fa2a8-503">Campos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-503">Fields.</span></span> <span data-ttu-id="fa2a8-504">O compilador do C# gera erros de compilador se você definir um campo em uma interface.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-504">The C# acompiler generates compiler errors if you define a field in an interface.</span></span>
+* <span data-ttu-id="b8dc1-503">Campos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-503">Fields.</span></span> <span data-ttu-id="b8dc1-504">O compilador do C# gerará erros de compilador se você definir um campo em uma interface.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-504">The C# a compiler generates compiler errors if you define a field in an interface.</span></span>
 
-* <span data-ttu-id="fa2a8-505">Métodos que não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-505">Methods that are not CLS-compliant.</span></span> <span data-ttu-id="fa2a8-506">Por exemplo, a definição a seguir da interface inclui um método, `INumber.GetUnsigned`, que está marcado como não compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-506">For example, the following interface definition includes a method, `INumber.GetUnsigned`, that is marked as non-CLS-compliant.</span></span> <span data-ttu-id="fa2a8-507">Este exemplo gera um aviso do compilador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-507">This example generates a compiler warning.</span></span> 
+* <span data-ttu-id="b8dc1-505">Métodos que não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-505">Methods that are not CLS-compliant.</span></span> <span data-ttu-id="b8dc1-506">Por exemplo, a definição a seguir da interface inclui um método, `INumber.GetUnsigned`, que está marcado como não compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-506">For example, the following interface definition includes a method, `INumber.GetUnsigned`, that is marked as non-CLS-compliant.</span></span> <span data-ttu-id="b8dc1-507">Este exemplo gera um aviso do compilador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-507">This example generates a compiler warning.</span></span>
 
   ```csharp
   using System;
@@ -1138,19 +1136,19 @@ End Structure
 
   Public Interface INumber
     Function Length As Integer
-      <CLSCompliant(False)> Function GetUnsigned As ULong   
+      <CLSCompliant(False)> Function GetUnsigned As ULong
     End Interface
     ' Attempting to compile the example displays output like the following:
-    '    Interface2.vb(9) : warning BC40033: Non CLS-compliant 'function' is not allowed in a 
+    '    Interface2.vb(9) : warning BC40033: Non CLS-compliant 'function' is not allowed in a
     '    CLS-compliant interface.
-    '    
+    '
     '       <CLSCompliant(False)> Function GetUnsigned As ULong
     '                                      ~~~~~~~~~~~
   ```
 
-  <span data-ttu-id="fa2a8-508">Devido a essa regra, os tipos compatíveis com CLS não são necessários para implementar membros não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-508">Because of this rule, CLS-compliant types are not required to implement non-CLS-compliant members.</span></span> <span data-ttu-id="fa2a8-509">Se uma estrutura compatível com CLS expuser uma classe que implementa uma interface não compatível com CLS, ela também deverá fornecer implementações concretas de todos os membros não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-509">If a CLS-compliant framework does expose a class that implements a non-CLS compliant interface, it should also provide concrete implementations of all non-CLS-compliant members.</span></span> 
+  <span data-ttu-id="b8dc1-508">Devido a essa regra, os tipos compatíveis com CLS não são necessários para implementar membros não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-508">Because of this rule, CLS-compliant types are not required to implement non-CLS-compliant members.</span></span> <span data-ttu-id="b8dc1-509">Se uma estrutura compatível com CLS expuser uma classe que implementa uma interface não compatível com CLS, ela também deverá fornecer implementações concretas de todos os membros não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-509">If a CLS-compliant framework does expose a class that implements a non-CLS compliant interface, it should also provide concrete implementations of all non-CLS-compliant members.</span></span>
 
-<span data-ttu-id="fa2a8-510">Compiladores de linguagem compatíveis com CLS também devem permitir que uma classe forneça implementações separadas dos membros com o mesmo nome e a assinatura em várias interfaces.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-510">CLS-compliant language compilers must also allow a class to provide separate implementations of members that have the same name and signature in multiple interfaces.</span></span> <span data-ttu-id="fa2a8-511">O C# dá suporte a implementações explícitas de interface para fornecer implementações diferentes de métodos com nomes idênticos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-511">C# supports explicit interface implementations to provide different implementations of identically named methods.</span></span> <span data-ttu-id="fa2a8-512">O exemplo a seguir ilustra esse cenário, definindo uma classe `Temperature` que implementa as interfaces `ICelsius` e `IFahrenheit` como implementações explícitas de interface.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-512">The following example illustrates this scenario by defining a `Temperature` class that implements the `ICelsius` and `IFahrenheit` interfaces as explicit interface implementations.</span></span> 
+<span data-ttu-id="b8dc1-510">Compiladores de linguagem compatíveis com CLS também devem permitir que uma classe forneça implementações separadas dos membros com o mesmo nome e a assinatura em várias interfaces.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-510">CLS-compliant language compilers must also allow a class to provide separate implementations of members that have the same name and signature in multiple interfaces.</span></span> <span data-ttu-id="b8dc1-511">O C# dá suporte a implementações explícitas de interface para fornecer implementações diferentes de métodos com nomes idênticos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-511">C# supports explicit interface implementations to provide different implementations of identically named methods.</span></span> <span data-ttu-id="b8dc1-512">O exemplo a seguir ilustra esse cenário, definindo uma classe `Temperature` que implementa as interfaces `ICelsius` e `IFahrenheit` como implementações explícitas de interface.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-512">The following example illustrates this scenario by defining a `Temperature` class that implements the `ICelsius` and `IFahrenheit` interfaces as explicit interface implementations.</span></span>
 
 ```csharp
 using System;
@@ -1175,7 +1173,7 @@ public class Temperature : ICelsius, IFahrenheit
    {
       // We assume that this is the Celsius value.
       _value = value;
-   } 
+   }
 
    decimal IFahrenheit.GetTemperature()
    {
@@ -1185,7 +1183,7 @@ public class Temperature : ICelsius, IFahrenheit
    decimal ICelsius.GetTemperature()
    {
       return _value;
-   } 
+   }
 }
 public class Example
 {
@@ -1194,9 +1192,9 @@ public class Example
       Temperature temp = new Temperature(100.0m);
       ICelsius cTemp = temp;
       IFahrenheit fTemp = temp;
-      Console.WriteLine("Temperature in Celsius: {0} degrees", 
+      Console.WriteLine("Temperature in Celsius: {0} degrees",
                         cTemp.GetTemperature());
-      Console.WriteLine("Temperature in Fahrenheit: {0} degrees", 
+      Console.WriteLine("Temperature in Fahrenheit: {0} degrees",
                         fTemp.GetTemperature());
    }
 }
@@ -1222,7 +1220,7 @@ Public Class Temperature : Implements ICelsius, IFahrenheit
    Public Sub New(value As Decimal)
       ' We assume that this is the Celsius value.
       _value = value
-   End Sub 
+   End Sub
 
    Public Function GetFahrenheit() As Decimal _
           Implements IFahrenheit.GetTemperature
@@ -1232,15 +1230,15 @@ Public Class Temperature : Implements ICelsius, IFahrenheit
    Public Function GetCelsius() As Decimal _
           Implements ICelsius.GetTemperature
       Return _value
-   End Function 
+   End Function
 End Class
 
 Module Example
    Public Sub Main()
       Dim temp As New Temperature(100.0d)
-      Console.WriteLine("Temperature in Celsius: {0} degrees", 
+      Console.WriteLine("Temperature in Celsius: {0} degrees",
                         temp.GetCelsius())
-      Console.WriteLine("Temperature in Fahrenheit: {0} degrees", 
+      Console.WriteLine("Temperature in Fahrenheit: {0} degrees",
                         temp.GetFahrenheit())
    End Sub
 End Module
@@ -1249,29 +1247,29 @@ End Module
 '       Temperature in Fahrenheit: 212.0 degrees
 ```
 
-### <a name="enumerations"></a><span data-ttu-id="fa2a8-513">Enumerações</span><span class="sxs-lookup"><span data-stu-id="fa2a8-513">Enumerations</span></span>
+### <a name="enumerations"></a><span data-ttu-id="b8dc1-513">Enumerações</span><span class="sxs-lookup"><span data-stu-id="b8dc1-513">Enumerations</span></span>
 
-<span data-ttu-id="fa2a8-514">Enumerações compatíveis com CLS devem seguir estas regras:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-514">CLS-compliant enumerations must follow these rules:</span></span> 
+<span data-ttu-id="b8dc1-514">Enumerações compatíveis com CLS devem seguir estas regras:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-514">CLS-compliant enumerations must follow these rules:</span></span>
 
-* <span data-ttu-id="fa2a8-515">O tipo subjacente da enumeração deve ser um inteiro intrínseco compatível com CLS ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32) ou [Int64](xref:System.Int64)).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-515">The underlying type of the enumeration must be an intrinsic CLS-compliant integer ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32), or [Int64](xref:System.Int64)).</span></span> <span data-ttu-id="fa2a8-516">Por exemplo, o código a seguir tenta definir uma enumeração cujo tipo subjacente é [UInt32](xref:System.UInt32) e gera um aviso do compilador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-516">For example, the following code tries to define an enumeration whose underlying type is [UInt32](xref:System.UInt32) and generates a compiler warning.</span></span> 
+* <span data-ttu-id="b8dc1-515">O tipo subjacente da enumeração deve ser um inteiro intrínseco compatível com CLS ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32) ou [Int64](xref:System.Int64)).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-515">The underlying type of the enumeration must be an intrinsic CLS-compliant integer ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32), or [Int64](xref:System.Int64)).</span></span> <span data-ttu-id="b8dc1-516">Por exemplo, o código a seguir tenta definir uma enumeração cujo tipo subjacente é [UInt32](xref:System.UInt32) e gera um aviso do compilador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-516">For example, the following code tries to define an enumeration whose underlying type is [UInt32](xref:System.UInt32) and generates a compiler warning.</span></span>
 
     ```csharp
     using System;
 
     [assembly: CLSCompliant(true)]
 
-    public enum Size : uint { 
-        Unspecified = 0, 
-        XSmall = 1, 
-        Small = 2, 
-        Medium = 3, 
-        Large = 4, 
-        XLarge = 5 
+    public enum Size : uint {
+        Unspecified = 0,
+        XSmall = 1,
+        Small = 2,
+        Medium = 3,
+        Large = 4,
+        XLarge = 5
     };
 
     public class Clothing
     {
-        public string Name; 
+        public string Name;
         public string Type;
         public string Size;
     }
@@ -1298,36 +1296,36 @@ End Module
     End Class
     ' The attempt to compile the example displays a compiler warning like the following:
     '    Enum3.vb(6) : warning BC40032: Underlying type 'UInt32' of Enum is not CLS-compliant.
-    '    
+    '
     '    Public Enum Size As UInt32
     '                ~~~~
     ```
 
-* <span data-ttu-id="fa2a8-517">Um tipo de enumeração deve ter um campo de instância única chamado `Value__` que foi marcado com o atributo `FieldAttributes.RTSpecialName`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-517">An enumeration type must have a single instance field named `Value__` that is marked with the `FieldAttributes.RTSpecialName` attribute.</span></span> <span data-ttu-id="fa2a8-518">Isso permite que você referencie o valor do campo implicitamente.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-518">This enables you to reference the field value implicitly.</span></span> 
+* <span data-ttu-id="b8dc1-517">Um tipo de enumeração deve ter um campo de instância única chamado `Value__` que foi marcado com o atributo `FieldAttributes.RTSpecialName`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-517">An enumeration type must have a single instance field named `Value__` that is marked with the `FieldAttributes.RTSpecialName` attribute.</span></span> <span data-ttu-id="b8dc1-518">Isso permite que você referencie o valor do campo implicitamente.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-518">This enables you to reference the field value implicitly.</span></span>
 
-* <span data-ttu-id="fa2a8-519">Uma enumeração inclui campos estáticos literais, cujos tipos correspondem ao tipo da própria enumeração.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-519">An enumeration includes literal static fields whose types match the type of the enumeration itself.</span></span> <span data-ttu-id="fa2a8-520">Por exemplo, se você definir uma enumeração `State` com valores de `State.On` e `State.Off`, `State.On` e `State.Off` serão campos literais estáticos cujo tipo será `State`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-520">For example, if you define a `State` enumeration with values of `State.On` and `State.Off`, `State.On` and `State.Off` are both literal static fields whose type is `State`.</span></span> 
+* <span data-ttu-id="b8dc1-519">Uma enumeração inclui campos estáticos literais, cujos tipos correspondem ao tipo da própria enumeração.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-519">An enumeration includes literal static fields whose types match the type of the enumeration itself.</span></span> <span data-ttu-id="b8dc1-520">Por exemplo, se você definir uma enumeração `State` com valores de `State.On` e `State.Off`, `State.On` e `State.Off` serão campos literais estáticos cujo tipo será `State`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-520">For example, if you define a `State` enumeration with values of `State.On` and `State.Off`, `State.On` and `State.Off` are both literal static fields whose type is `State`.</span></span>
 
-* <span data-ttu-id="fa2a8-521">Há dois tipos de enumeração:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-521">There are two kinds of enumerations:</span></span> 
-    
-    * <span data-ttu-id="fa2a8-522">Uma enumeração que representa um conjunto de valores mutuamente excludentes, valores inteiros nomeados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-522">An enumeration that represents a set of mutually exclusive, named integer values.</span></span> <span data-ttu-id="fa2a8-523">Esse tipo de enumeração é indicado pela ausência do atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-523">This type of enumeration is indicated by the absence of the [System.FlagsAttribute](xref:System.FlagsAttribute) custom attribute.</span></span>
-    
-    * <span data-ttu-id="fa2a8-524">Uma enumeração que representa um conjunto de sinalizadores de bit que podem ser combinados para produzir um valor sem nome.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-524">An enumeration that represents a set of bit flags that can combine to generate an unnamed value.</span></span> <span data-ttu-id="fa2a8-525">Esse tipo de enumeração é indicado pela presença do atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-525">This type of enumeration is indicated by the presence of the [System.FlagsAttribute](xref:System.FlagsAttribute) custom attribute.</span></span>
-    
- <span data-ttu-id="fa2a8-526">Para obter mais informações, consulte a documentação da estrutura [Enum](xref:System.Enum).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-526">For more information, see the documentation for the [Enum](xref:System.Enum) structure.</span></span> 
+* <span data-ttu-id="b8dc1-521">Há dois tipos de enumeração:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-521">There are two kinds of enumerations:</span></span>
 
-* <span data-ttu-id="fa2a8-527">O valor de uma enumeração não está limitado ao intervalo de seus valores especificados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-527">The value of an enumeration is not limited to the range of its specified values.</span></span> <span data-ttu-id="fa2a8-528">Em outras palavras, o intervalo de valores em uma enumeração é o intervalo de seu valor subjacente.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-528">In other words, the range of values in an enumeration is the range of its underlying value.</span></span> <span data-ttu-id="fa2a8-529">Você pode usar o método `Enum.IsDefined` para determinar se um valor especificado é membro de uma enumeração.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-529">You can use the `Enum.IsDefined` method to determine whether a specified value is a member of an enumeration.</span></span> 
+    * <span data-ttu-id="b8dc1-522">Uma enumeração que representa um conjunto de valores mutuamente excludentes, valores inteiros nomeados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-522">An enumeration that represents a set of mutually exclusive, named integer values.</span></span> <span data-ttu-id="b8dc1-523">Esse tipo de enumeração é indicado pela ausência do atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-523">This type of enumeration is indicated by the absence of the [System.FlagsAttribute](xref:System.FlagsAttribute) custom attribute.</span></span>
 
-### <a name="type-members-in-general"></a><span data-ttu-id="fa2a8-530">Membros de tipo em geral</span><span class="sxs-lookup"><span data-stu-id="fa2a8-530">Type members in general</span></span>
+    * <span data-ttu-id="b8dc1-524">Uma enumeração que representa um conjunto de sinalizadores de bit que podem ser combinados para produzir um valor sem nome.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-524">An enumeration that represents a set of bit flags that can combine to generate an unnamed value.</span></span> <span data-ttu-id="b8dc1-525">Esse tipo de enumeração é indicado pela presença do atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-525">This type of enumeration is indicated by the presence of the [System.FlagsAttribute](xref:System.FlagsAttribute) custom attribute.</span></span>
 
-<span data-ttu-id="fa2a8-531">O Common Language Specification requer que todos os campos e métodos sejam acessados como membros de uma classe específica.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-531">The Common Language Specification requires all fields and methods to be accessed as members of a particular class.</span></span> <span data-ttu-id="fa2a8-532">Portanto, campos e métodos estáticos globais (ou seja, campos ou métodos estáticos que são definidos independentemente de um tipo) não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-532">Therefore, global static fields and methods (that is, static fields or methods that are defined apart from a type) are not CLS-compliant.</span></span> <span data-ttu-id="fa2a8-533">Se você tentar incluir um campo ou método global no código-fonte, os compiladores do C# gerarão um erro de compilador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-533">If you try to include a global field or method in your source code, the C# compiler generates a compiler error.</span></span> 
+ <span data-ttu-id="b8dc1-526">Para obter mais informações, consulte a documentação da estrutura [Enum](xref:System.Enum).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-526">For more information, see the documentation for the [Enum](xref:System.Enum) structure.</span></span>
 
-<span data-ttu-id="fa2a8-534">A Common Language Specification dá suporte somente à convenção de chamada gerenciada padrão.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-534">The Common Language Specification supports only the standard managed calling convention.</span></span> <span data-ttu-id="fa2a8-535">Ela não dá suporte a convenções e métodos de chamada não gerenciados com listas de argumentos de variável marcadas com a palavra-chave `varargs`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-535">It doesn't support unmanaged calling conventions and methods with variable argument lists marked with the `varargs` keyword.</span></span> <span data-ttu-id="fa2a8-536">Para listas de argumentos de variável que são compatíveis com a convenção de chamada gerenciada padrão, use o atributo [ParamArrayAttribute](xref:System.ParamArrayAttribute) ou a implementação da linguagem individual, como a palavra-chave `params` em C# e a palavra-chave `ParamArray` em Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-536">For variable argument lists that are compatible with the standard managed calling convention, use the [ParamArrayAttribute](xref:System.ParamArrayAttribute) attribute or the individual language's implementation, such as the `params` keyword in C# and the `ParamArray` keyword in Visual Basic.</span></span> 
+* <span data-ttu-id="b8dc1-527">O valor de uma enumeração não está limitado ao intervalo de seus valores especificados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-527">The value of an enumeration is not limited to the range of its specified values.</span></span> <span data-ttu-id="b8dc1-528">Em outras palavras, o intervalo de valores em uma enumeração é o intervalo de seu valor subjacente.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-528">In other words, the range of values in an enumeration is the range of its underlying value.</span></span> <span data-ttu-id="b8dc1-529">Você pode usar o método `Enum.IsDefined` para determinar se um valor especificado é membro de uma enumeração.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-529">You can use the `Enum.IsDefined` method to determine whether a specified value is a member of an enumeration.</span></span>
 
-### <a name="member-accessibility"></a><span data-ttu-id="fa2a8-537">Acessibilidade de membro</span><span class="sxs-lookup"><span data-stu-id="fa2a8-537">Member accessibility</span></span>
+### <a name="type-members-in-general"></a><span data-ttu-id="b8dc1-530">Membros de tipo em geral</span><span class="sxs-lookup"><span data-stu-id="b8dc1-530">Type members in general</span></span>
 
-<span data-ttu-id="fa2a8-538">A substituição de um membro herdado não pode alterar a acessibilidade desse membro.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-538">Overriding an inherited member cannot change the accessibility of that member.</span></span> <span data-ttu-id="fa2a8-539">Por exemplo, um método público em uma classe base não pode ser substituído por um método privado em uma classe derivada.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-539">For example, a public method in a base class cannot be overridden by a private method in a derived class.</span></span> <span data-ttu-id="fa2a8-540">Há uma exceção: um membro `protected internal` (em C#) ou `Protected Friend` (em Visual Basic) em um assembly que é substituído por um tipo em um assembly diferente.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-540">There is one exception: a `protected internal` (in C#) or `Protected Friend` (in Visual Basic) member in one assembly that is overridden by a type in a different assembly.</span></span>  <span data-ttu-id="fa2a8-541">Nesse caso, a acessibilidade da substituição é `Protected`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-541">In that case, the accessibility of the override is `Protected`.</span></span> 
+<span data-ttu-id="b8dc1-531">O Common Language Specification requer que todos os campos e métodos sejam acessados como membros de uma classe específica.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-531">The Common Language Specification requires all fields and methods to be accessed as members of a particular class.</span></span> <span data-ttu-id="b8dc1-532">Portanto, campos e métodos estáticos globais (ou seja, campos ou métodos estáticos que são definidos independentemente de um tipo) não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-532">Therefore, global static fields and methods (that is, static fields or methods that are defined apart from a type) are not CLS-compliant.</span></span> <span data-ttu-id="b8dc1-533">Se você tentar incluir um campo ou método global no código-fonte, os compiladores do C# gerarão um erro de compilador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-533">If you try to include a global field or method in your source code, the C# compiler generates a compiler error.</span></span>
 
-<span data-ttu-id="fa2a8-542">O exemplo a seguir ilustra o erro que é gerado quando o atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) é definido como `true` e `Person`, que é uma classe derivada de `Animal`, tenta alterar a acessibilidade da propriedade `Species` de pública para privada.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-542">The following example illustrates the error that is generated when the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute is set to `true`, and `Person`, which is a class derived from `Animal`, tries to change the accessibility of the `Species` property from public to private.</span></span> <span data-ttu-id="fa2a8-543">O exemplo será compilado com êxito se sua acessibilidade for alterada para pública.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-543">The example compiles successfully if its accessibility is changed to public.</span></span> 
+<span data-ttu-id="b8dc1-534">A Common Language Specification dá suporte somente à convenção de chamada gerenciada padrão.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-534">The Common Language Specification supports only the standard managed calling convention.</span></span> <span data-ttu-id="b8dc1-535">Ela não dá suporte a convenções e métodos de chamada não gerenciados com listas de argumentos de variável marcadas com a palavra-chave `varargs`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-535">It doesn't support unmanaged calling conventions and methods with variable argument lists marked with the `varargs` keyword.</span></span> <span data-ttu-id="b8dc1-536">Para listas de argumentos de variável que são compatíveis com a convenção de chamada gerenciada padrão, use o atributo [ParamArrayAttribute](xref:System.ParamArrayAttribute) ou a implementação da linguagem individual, como a palavra-chave `params` em C# e a palavra-chave `ParamArray` em Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-536">For variable argument lists that are compatible with the standard managed calling convention, use the [ParamArrayAttribute](xref:System.ParamArrayAttribute) attribute or the individual language's implementation, such as the `params` keyword in C# and the `ParamArray` keyword in Visual Basic.</span></span>
+
+### <a name="member-accessibility"></a><span data-ttu-id="b8dc1-537">Acessibilidade de membro</span><span class="sxs-lookup"><span data-stu-id="b8dc1-537">Member accessibility</span></span>
+
+<span data-ttu-id="b8dc1-538">A substituição de um membro herdado não pode alterar a acessibilidade desse membro.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-538">Overriding an inherited member cannot change the accessibility of that member.</span></span> <span data-ttu-id="b8dc1-539">Por exemplo, um método público em uma classe base não pode ser substituído por um método privado em uma classe derivada.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-539">For example, a public method in a base class cannot be overridden by a private method in a derived class.</span></span> <span data-ttu-id="b8dc1-540">Há uma exceção: um membro `protected internal` (em C#) ou `Protected Friend` (em Visual Basic) em um assembly que é substituído por um tipo em um assembly diferente.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-540">There is one exception: a `protected internal` (in C#) or `Protected Friend` (in Visual Basic) member in one assembly that is overridden by a type in a different assembly.</span></span>  <span data-ttu-id="b8dc1-541">Nesse caso, a acessibilidade da substituição é `Protected`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-541">In that case, the accessibility of the override is `Protected`.</span></span>
+
+<span data-ttu-id="b8dc1-542">O exemplo a seguir ilustra o erro que é gerado quando o atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) é definido como `true` e `Person`, que é uma classe derivada de `Animal`, tenta alterar a acessibilidade da propriedade `Species` de pública para privada.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-542">The following example illustrates the error that is generated when the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute is set to `true`, and `Person`, which is a class derived from `Animal`, tries to change the accessibility of the `Species` property from public to private.</span></span> <span data-ttu-id="b8dc1-543">O exemplo será compilado com êxito se sua acessibilidade for alterada para pública.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-543">The example compiles successfully if its accessibility is changed to public.</span></span>
 
 ```csharp
 using System;
@@ -1343,15 +1341,15 @@ public class Animal
       _species = species;
    }
 
-   public virtual string Species 
-   {    
+   public virtual string Species
+   {
       get { return _species; }
    }
 
    public override string ToString()
    {
-      return _species;   
-   } 
+      return _species;
+   }
 }
 
 public class Human : Animal
@@ -1368,12 +1366,12 @@ public class Human : Animal
       get { return _name; }
    }
 
-   private override string Species 
+   private override string Species
    {
       get { return base.Species; }
    }
 
-   public override string ToString() 
+   public override string ToString()
    {
       return _name;
    }
@@ -1409,8 +1407,8 @@ Public Class Animal
    End Property
 
    Public Overrides Function ToString() As String
-      Return _species   
-   End Function 
+      Return _species
+   End Function
 End Class
 
 Public Class Human : Inherits Animal
@@ -1430,7 +1428,7 @@ Public Class Human : Inherits Animal
    Private Overrides ReadOnly Property Species As String
       Get
          Return MyBase.Species
-      End Get   
+      End Get
    End Property
 
    Public Overrides Function ToString() As String
@@ -1446,14 +1444,14 @@ Public Module Example
    End Sub
 End Module
 ' The example displays the following output:
-'     'Private Overrides ReadOnly Property Species As String' cannot override 
+'     'Private Overrides ReadOnly Property Species As String' cannot override
 '     'Public Overridable ReadOnly Property Species As String' because
 '      they have different access levels.
-' 
+'
 '         Private Overrides ReadOnly Property Species As String
 ```
 
-<span data-ttu-id="fa2a8-544">Os tipos na assinatura de um membro deverão ser acessíveis sempre que o membro for acessível.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-544">Types in the signature of a member must be accessible whenever that member is accessible.</span></span> <span data-ttu-id="fa2a8-545">Por exemplo, isso significa que um membro público não pode incluir um parâmetro cujo tipo seja privado, protegido ou interno.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-545">For example, this means that a public member cannot include a parameter whose type is private, protected, or internal.</span></span> <span data-ttu-id="fa2a8-546">O exemplo a seguir ilustra o erro do compilador que resulta quando um construtor de classe `StringWrapper` expõe um valor de enumeração `StringOperationType` interno que determina como um valor de cadeia de caracteres deve ser encapsulado.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-546">The following example illustrates the compiler error that results when a `StringWrapper` class constructor exposes an internal `StringOperationType` enumeration value that determines how a string value should be wrapped.</span></span> 
+<span data-ttu-id="b8dc1-544">Os tipos na assinatura de um membro deverão ser acessíveis sempre que o membro for acessível.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-544">Types in the signature of a member must be accessible whenever that member is accessible.</span></span> <span data-ttu-id="b8dc1-545">Por exemplo, isso significa que um membro público não pode incluir um parâmetro cujo tipo seja privado, protegido ou interno.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-545">For example, this means that a public member cannot include a parameter whose type is private, protected, or internal.</span></span> <span data-ttu-id="b8dc1-546">O exemplo a seguir ilustra o erro do compilador que resulta quando um construtor de classe `StringWrapper` expõe um valor de enumeração `StringOperationType` interno que determina como um valor de cadeia de caracteres deve ser encapsulado.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-546">The following example illustrates the compiler error that results when a `StringWrapper` class constructor exposes an internal `StringOperationType` enumeration value that determines how a string value should be wrapped.</span></span>
 
 ```csharp
 using System;
@@ -1466,14 +1464,14 @@ public class StringWrapper
    bool useSB = false;
 
    public StringWrapper(StringOperationType type)
-   {   
+   {
       if (type == StringOperationType.Normal) {
          useSB = false;
-      }   
+      }
       else {
          useSB = true;
          internalSB = new StringBuilder();
-      }    
+      }
    }
 
    // The remaining source code...
@@ -1497,13 +1495,13 @@ Public Class StringWrapper
    Dim internalSB As StringBuilder = Nothing
    Dim useSB As Boolean = False
 
-   Public Sub New(type As StringOperationType)   
+   Public Sub New(type As StringOperationType)
       If type = StringOperationType.Normal Then
          useSB = False
       Else
-         internalSB = New StringBuilder() 
+         internalSB = New StringBuilder()
          useSB = True
-      End If    
+      End If
    End Sub
 
    ' The remaining source code...
@@ -1516,16 +1514,16 @@ End Enum
 ' The attempt to compile the example displays the following output:
 '    error BC30909: 'type' cannot expose type 'StringOperationType'
 '     outside the project through class 'StringWrapper'.
-'    
+'
 '       Public Sub New(type As StringOperationType)
 '                              ~~~~~~~~~~~~~~~~~~~
 ```
 
-### <a name="generic-types-and-members"></a><span data-ttu-id="fa2a8-547">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-547">Generic types and members</span></span>
+### <a name="generic-types-and-members"></a><span data-ttu-id="b8dc1-547">Tipos e membros genéricos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-547">Generic types and members</span></span>
 
-<span data-ttu-id="fa2a8-548">Tipos aninhados sempre têm pelo menos o mesmo número de parâmetros genéricos do tipo delimitador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-548">Nested types always have at least as many generic parameters as their enclosing type.</span></span> <span data-ttu-id="fa2a8-549">Eles correspondem por posição aos parâmetros genéricos no tipo delimitador.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-549">These correspond by position to the generic parameters in the enclosing type.</span></span> <span data-ttu-id="fa2a8-550">O tipo genérico também pode incluir novos parâmetros genéricos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-550">The generic type can also include new generic parameters.</span></span> 
+<span data-ttu-id="b8dc1-548">Tipos aninhados sempre têm pelo menos o mesmo número de parâmetros genéricos do tipo delimitador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-548">Nested types always have at least as many generic parameters as their enclosing type.</span></span> <span data-ttu-id="b8dc1-549">Eles correspondem por posição aos parâmetros genéricos no tipo delimitador.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-549">These correspond by position to the generic parameters in the enclosing type.</span></span> <span data-ttu-id="b8dc1-550">O tipo genérico também pode incluir novos parâmetros genéricos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-550">The generic type can also include new generic parameters.</span></span>
 
-<span data-ttu-id="fa2a8-551">A relação entre os parâmetros de tipo genérico de um tipo de contenção e seus tipos aninhados pode ser ocultada pela sintaxe de linguagens individuais.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-551">The relationship between the generic type parameters of a containing type and its nested types may be hidden by the syntax of individual languages.</span></span> <span data-ttu-id="fa2a8-552">No exemplo a seguir, um tipo genérico `Outer<T>` contém duas classes aninhadas, `Inner1A` e `Inner1B<U>`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-552">In the following example, a generic type `Outer<T>` contains two nested classes, `Inner1A` and `Inner1B<U>`.</span></span> <span data-ttu-id="fa2a8-553">As chamadas para o método `ToString`, que cada classe herda de `Object.ToString`, mostram que cada classe aninhada inclui parâmetros de tipo de sua classe de contenção.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-553">The calls to the `ToString` method, which each class inherits from `Object.ToString`, show that each nested class includes the type parameters of its containing class.</span></span> 
+<span data-ttu-id="b8dc1-551">A relação entre os parâmetros de tipo genérico de um tipo de contenção e seus tipos aninhados pode ser ocultada pela sintaxe de linguagens individuais.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-551">The relationship between the generic type parameters of a containing type and its nested types may be hidden by the syntax of individual languages.</span></span> <span data-ttu-id="b8dc1-552">No exemplo a seguir, um tipo genérico `Outer<T>` contém duas classes aninhadas, `Inner1A` e `Inner1B<U>`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-552">In the following example, a generic type `Outer<T>` contains two nested classes, `Inner1A` and `Inner1B<U>`.</span></span> <span data-ttu-id="b8dc1-553">As chamadas para o método `ToString`, que cada classe herda de `Object.ToString`, mostram que cada classe aninhada inclui parâmetros de tipo de sua classe de contenção.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-553">The calls to the `ToString` method, which each class inherits from `Object.ToString`, show that each nested class includes the type parameters of its containing class.</span></span>
 
 ```csharp
 using System;
@@ -1622,9 +1620,9 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-<span data-ttu-id="fa2a8-554">Os nomes de tipo genérico são codificados no formato *name*'*n*, em que *name* é o nome do tipo, *\`* é um literal de caractere e *n* é o número de parâmetros declarados no tipo ou, para tipos genéricos aninhados, o número de parâmetros de tipo recém-introduzidos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-554">Generic type names are encoded in the form *name*'*n*, where *name* is the type name, *\`* is a character literal, and *n* is the number of parameters declared on the type, or, for nested generic types, the number of newly introduced type parameters.</span></span> <span data-ttu-id="fa2a8-555">Essa codificação de nomes de tipo genéricos é principalmente de interesse de desenvolvedores que usam a reflexão para acessar tipos genéricos compatíveis com CLS em uma biblioteca.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-555">This encoding of generic type names is primarily of interest to developers who use reflection to access CLS-complaint generic types in a library.</span></span> 
+<span data-ttu-id="b8dc1-554">Os nomes de tipo genérico são codificados no formato *name*'*n*, em que *name* é o nome do tipo, *\`* é um literal de caractere e *n* é o número de parâmetros declarados no tipo ou, para tipos genéricos aninhados, o número de parâmetros de tipo recém-introduzidos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-554">Generic type names are encoded in the form *name*'*n*, where *name* is the type name, *\`* is a character literal, and *n* is the number of parameters declared on the type, or, for nested generic types, the number of newly introduced type parameters.</span></span> <span data-ttu-id="b8dc1-555">Essa codificação de nomes de tipo genéricos é principalmente de interesse de desenvolvedores que usam a reflexão para acessar tipos genéricos compatíveis com CLS em uma biblioteca.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-555">This encoding of generic type names is primarily of interest to developers who use reflection to access CLS-complaint generic types in a library.</span></span>
 
-<span data-ttu-id="fa2a8-556">Se as restrições forem aplicadas a um tipo genérico, qualquer tipo usado como restrição também deverá ser compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-556">If constraints are applied to a generic type, any types used as constraints must also be CLS-compliant.</span></span> <span data-ttu-id="fa2a8-557">O exemplo a seguir define uma classe chamada `BaseClass` que não é compatível com CLS e uma classe genérica chamada `BaseCollection` cujo parâmetro de tipo deve derivar de `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-557">The following example defines a class named `BaseClass` that is not CLS-compliant and a generic class named `BaseCollection` whose type parameter must derive from `BaseClass`.</span></span> <span data-ttu-id="fa2a8-558">Mas como `BaseClass` não é compatível com CLS, o compilador emite um aviso.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-558">But because `BaseClass` is not CLS-compliant, the compiler emits a warning.</span></span> 
+<span data-ttu-id="b8dc1-556">Se as restrições forem aplicadas a um tipo genérico, qualquer tipo usado como restrição também deverá ser compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-556">If constraints are applied to a generic type, any types used as constraints must also be CLS-compliant.</span></span> <span data-ttu-id="b8dc1-557">O exemplo a seguir define uma classe chamada `BaseClass` que não é compatível com CLS e uma classe genérica chamada `BaseCollection` cujo parâmetro de tipo deve derivar de `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-557">The following example defines a class named `BaseClass` that is not CLS-compliant and a generic class named `BaseCollection` whose type parameter must derive from `BaseClass`.</span></span> <span data-ttu-id="b8dc1-558">Mas como `BaseClass` não é compatível com CLS, o compilador emite um aviso.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-558">But because `BaseClass` is not CLS-compliant, the compiler emits a warning.</span></span>
 
 ```csharp
 using System;
@@ -1651,14 +1649,14 @@ End Class
 Public Class BaseCollection(Of T As BaseClass)
 End Class
 ' Attempting to compile the example displays the following output:
-'    warning BC40040: Generic parameter constraint type 'BaseClass' is not 
+'    warning BC40040: Generic parameter constraint type 'BaseClass' is not
 '    CLS-compliant.
-'    
+'
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
 ```
 
-<span data-ttu-id="fa2a8-559">Se um tipo genérico for derivado de um tipo de base genérico, ele deverá redeclarar todas as restrições, para assegurar que as restrições no tipo de base também sejam atendidas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-559">If a generic type is derived from a generic base type, it must redeclare any constraints so that it can guarantee that constraints on the base type are also satisfied.</span></span> <span data-ttu-id="fa2a8-560">O exemplo a seguir define um `Number<T>` que pode representar qualquer tipo numérico.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-560">The following example defines a `Number<T>` that can represent any numeric type.</span></span> <span data-ttu-id="fa2a8-561">Ele também define uma classe `FloatingPoint<T>` que representa um valor de ponto flutuante.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-561">It also defines a `FloatingPoint<T>` class that represents a floating point value.</span></span> <span data-ttu-id="fa2a8-562">No entanto, o código-fonte falha na compilação porque não aplica a restrição em `Number<T>` (esse T deve ser um tipo de valor) a `FloatingPoint<T>`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-562">However, the source code fails to compile, because it does not apply the constraint on `Number<T>` (that T must be a value type) to `FloatingPoint<T>`.</span></span>
+<span data-ttu-id="b8dc1-559">Se um tipo genérico for derivado de um tipo de base genérico, ele deverá redeclarar todas as restrições, para assegurar que as restrições no tipo de base também sejam atendidas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-559">If a generic type is derived from a generic base type, it must redeclare any constraints so that it can guarantee that constraints on the base type are also satisfied.</span></span> <span data-ttu-id="b8dc1-560">O exemplo a seguir define um `Number<T>` que pode representar qualquer tipo numérico.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-560">The following example defines a `Number<T>` that can represent any numeric type.</span></span> <span data-ttu-id="b8dc1-561">Ele também define uma classe `FloatingPoint<T>` que representa um valor de ponto flutuante.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-561">It also defines a `FloatingPoint<T>` class that represents a floating point value.</span></span> <span data-ttu-id="b8dc1-562">No entanto, o código-fonte falha na compilação porque não aplica a restrição em `Number<T>` (esse T deve ser um tipo de valor) a `FloatingPoint<T>`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-562">However, the source code fails to compile, because it does not apply the constraint on `Number<T>` (that T must be a value type) to `FloatingPoint<T>`.</span></span>
 
 ```csharp
 using System;
@@ -1675,7 +1673,7 @@ public class Number<T> where T : struct
    {
       try {
          this.number = Convert.ToDouble(value);
-      }  
+      }
       catch (OverflowException e) {
          throw new ArgumentException("value is too large.", e);
       }
@@ -1695,19 +1693,19 @@ public class Number<T> where T : struct
    }
 }
 
-public class FloatingPoint<T> : Number<T> 
+public class FloatingPoint<T> : Number<T>
 {
-   public FloatingPoint(T number) : base(number) 
+   public FloatingPoint(T number) : base(number)
    {
       if (typeof(float) == number.GetType() ||
-          typeof(double) == number.GetType() || 
+          typeof(double) == number.GetType() ||
           typeof(decimal) == number.GetType())
          this.number = Convert.ToDouble(number);
-      else   
+      else
          throw new ArgumentException("The number parameter is not a floating-point number.");
-   }       
-}           
-// The attempt to comple the example displays the following output:
+   }
+}
+// The attempt to compile the example displays the following output:
 //       error CS0453: The type 'T' must be a non-nullable value type in
 //               order to use it as parameter 'T' in the generic type or method 'Number<T>'
 ```
@@ -1739,27 +1737,27 @@ Public Class Number(Of T As Structure)
    End Function
 End Class
 
-Public Class FloatingPoint(Of T) : Inherits Number(Of T) 
+Public Class FloatingPoint(Of T) : Inherits Number(Of T)
    Public Sub New(number As T)
-      MyBase.New(number) 
+      MyBase.New(number)
       If TypeOf number Is Single Or
                TypeOf number Is Double Or
-               TypeOf number Is Decimal Then 
+               TypeOf number Is Decimal Then
          Me.number = Convert.ToDouble(number)
-      Else   
+      Else
          throw new ArgumentException("The number parameter is not a floating-point number.")
-      End If   
-   End Sub       
-End Class           
-' The attempt to comple the example displays the following output:
+      End If
+   End Sub
+End Class
+' The attempt to compile the example displays the following output:
 '    error BC32105: Type argument 'T' does not satisfy the 'Structure'
 '    constraint for type parameter 'T'.
-'    
+'
 '    Public Class FloatingPoint(Of T) : Inherits Number(Of T)
 '                                                          ~
 ```
 
-<span data-ttu-id="fa2a8-563">O exemplo será compilado com êxito se a restrição for adicionada à classe `FloatingPoint<T>`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-563">The example compiles successfully if the constraint is added to the `FloatingPoint<T>` class.</span></span>
+<span data-ttu-id="b8dc1-563">O exemplo será compilado com êxito se a restrição for adicionada à classe `FloatingPoint<T>`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-563">The example compiles successfully if the constraint is added to the `FloatingPoint<T>` class.</span></span>
 
 ```csharp
 using System;
@@ -1777,7 +1775,7 @@ public class Number<T> where T : struct
    {
       try {
          this.number = Convert.ToDouble(value);
-      }  
+      }
       catch (OverflowException e) {
          throw new ArgumentException("value is too large.", e);
       }
@@ -1797,18 +1795,18 @@ public class Number<T> where T : struct
    }
 }
 
-public class FloatingPoint<T> : Number<T> where T : struct 
+public class FloatingPoint<T> : Number<T> where T : struct
 {
-   public FloatingPoint(T number) : base(number) 
+   public FloatingPoint(T number) : base(number)
    {
       if (typeof(float) == number.GetType() ||
-          typeof(double) == number.GetType() || 
+          typeof(double) == number.GetType() ||
           typeof(decimal) == number.GetType())
          this.number = Convert.ToDouble(number);
-      else   
+      else
          throw new ArgumentException("The number parameter is not a floating-point number.");
-   }       
-}      
+   }
+}
 ```
 
 ```vb
@@ -1838,30 +1836,30 @@ Public Class Number(Of T As Structure)
    End Function
 End Class
 
-Public Class FloatingPoint(Of T As Structure) : Inherits Number(Of T) 
+Public Class FloatingPoint(Of T As Structure) : Inherits Number(Of T)
    Public Sub New(number As T)
-      MyBase.New(number) 
+      MyBase.New(number)
       If TypeOf number Is Single Or
                TypeOf number Is Double Or
-               TypeOf number Is Decimal Then 
+               TypeOf number Is Decimal Then
          Me.number = Convert.ToDouble(number)
-      Else   
+      Else
          throw new ArgumentException("The number parameter is not a floating-point number.")
-      End If   
-   End Sub       
+      End If
+   End Sub
 End Class
 ```
 
-<span data-ttu-id="fa2a8-564">A Common Language Specification impõe um modelo por instanciação conservador para tipos aninhados e membros protegidos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-564">The Common Language Specification imposes a conservative per-instantiation model for nested types and protected members.</span></span> <span data-ttu-id="fa2a8-565">Tipos genéricos abertos não podem expor campos ou membros com assinaturas que contenham uma instanciação específica de um tipo genérico aninhado, protegido.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-565">Open generic types cannot expose fields or members with signatures that contain a specific instantiation of a nested, protected generic type.</span></span> <span data-ttu-id="fa2a8-566">Tipos não genéricos que estendam uma instanciação específica de uma interface ou classe base genérica não podem expor campos ou membros com assinaturas que contenham uma instanciação diferente de um tipo genérico aninhado e protegido.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-566">Non-generic types that extend a specific instantiation of a generic base class or interface cannot expose fields or members with signatures that contain a different instantiation of a nested, protected generic type.</span></span>
+<span data-ttu-id="b8dc1-564">A Common Language Specification impõe um modelo por instanciação conservador para tipos aninhados e membros protegidos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-564">The Common Language Specification imposes a conservative per-instantiation model for nested types and protected members.</span></span> <span data-ttu-id="b8dc1-565">Tipos genéricos abertos não podem expor campos ou membros com assinaturas que contenham uma instanciação específica de um tipo genérico aninhado, protegido.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-565">Open generic types cannot expose fields or members with signatures that contain a specific instantiation of a nested, protected generic type.</span></span> <span data-ttu-id="b8dc1-566">Tipos não genéricos que estendam uma instanciação específica de uma interface ou classe base genérica não podem expor campos ou membros com assinaturas que contenham uma instanciação diferente de um tipo genérico aninhado e protegido.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-566">Non-generic types that extend a specific instantiation of a generic base class or interface cannot expose fields or members with signatures that contain a different instantiation of a nested, protected generic type.</span></span>
 
-<span data-ttu-id="fa2a8-567">O exemplo a seguir define um tipo genérico, `C1<T>`, e uma classe protegida, `C1<T>.N`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-567">The following example defines a generic type, `C1<T>`, and a protected class, `C1<T>.N`.</span></span> <span data-ttu-id="fa2a8-568">`C1<T>` possui dois métodos, `M1` e `M2`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-568">`C1<T>` has two methods, `M1` and `M2`.</span></span> <span data-ttu-id="fa2a8-569">No entanto, `M1` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` de `C1<T>`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-569">However, `M1` is not CLS-compliant because it tries to return a `C1<int>.N` object from `C1<T>`.</span></span> <span data-ttu-id="fa2a8-570">Uma segunda classe, `C2`, é derivada de`C1<long>`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-570">A second class, `C2`, is derived from `C1<long>`.</span></span> <span data-ttu-id="fa2a8-571">Tem dois métodos, `M3` e `M4`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-571">It has two methods, `M3` and `M4`.</span></span> <span data-ttu-id="fa2a8-572">`M3` não é compatível com CLS porque tenta retornar um `C1<int>.N` objeto de uma subclasse de `C1<long>`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-572">`M3` is not CLS-compliant because it tries to return a `C1<int>.N` object from a subclass of `C1<long>`.</span></span> <span data-ttu-id="fa2a8-573">Os compiladores de linguagens podem ser ainda mais restritivos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-573">Note that language compilers can be even more restrictive.</span></span> <span data-ttu-id="fa2a8-574">Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-574">In this example, Visual Basic displays an error when it tries to compile `M4`.</span></span> 
+<span data-ttu-id="b8dc1-567">O exemplo a seguir define um tipo genérico, `C1<T>`, e uma classe protegida, `C1<T>.N`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-567">The following example defines a generic type, `C1<T>`, and a protected class, `C1<T>.N`.</span></span> <span data-ttu-id="b8dc1-568">`C1<T>` possui dois métodos, `M1` e `M2`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-568">`C1<T>` has two methods, `M1` and `M2`.</span></span> <span data-ttu-id="b8dc1-569">No entanto, `M1` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` de `C1<T>`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-569">However, `M1` is not CLS-compliant because it tries to return a `C1<int>.N` object from `C1<T>`.</span></span> <span data-ttu-id="b8dc1-570">Uma segunda classe, `C2`, é derivada de`C1<long>`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-570">A second class, `C2`, is derived from `C1<long>`.</span></span> <span data-ttu-id="b8dc1-571">Tem dois métodos, `M3` e `M4`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-571">It has two methods, `M3` and `M4`.</span></span> <span data-ttu-id="b8dc1-572">`M3` não é compatível com CLS porque tenta retornar um `C1<int>.N` objeto de uma subclasse de `C1<long>`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-572">`M3` is not CLS-compliant because it tries to return a `C1<int>.N` object from a subclass of `C1<long>`.</span></span> <span data-ttu-id="b8dc1-573">Os compiladores de linguagens podem ser ainda mais restritivos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-573">Note that language compilers can be even more restrictive.</span></span> <span data-ttu-id="b8dc1-574">Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-574">In this example, Visual Basic displays an error when it tries to compile `M4`.</span></span>
 
 ```csharp
 using System;
 
 [assembly:CLSCompliant(true)]
 
-public class C1<T> 
+public class C1<T>
 {
    protected class N { }
 
@@ -1872,7 +1870,7 @@ public class C1<T>
                                       // inside C1<T>
 }
 
-public class C2 : C1<long> 
+public class C2 : C1<long>
 {
    protected void M3(C1<int>.N n) { }  // Not CLS-compliant – C1<int>.N is not
                                        // accessible in C2 (extends C1<long>)
@@ -1888,7 +1886,7 @@ public class C2 : C1<long>
 ```vb
 <Assembly:CLSCompliant(True)>
 
-Public Class C1(Of T) 
+Public Class C1(Of T)
    Protected Class N
    End Class
 
@@ -1901,39 +1899,39 @@ Public Class C1(Of T)
    End Sub                               ' inside C1(Of T)
 End Class
 
-Public Class C2 : Inherits C1(Of Long) 
+Public Class C2 : Inherits C1(Of Long)
    Protected Sub M3(n As C1(Of Integer).N)   ' Not CLS-compliant – C1(Of Integer).N is not
    End Sub                                   ' accessible in C2 (extends C1(Of Long))
 
-   Protected Sub M4(n As C1(Of Long).N)   
-   End Sub                                
+   Protected Sub M4(n As C1(Of Long).N)
+   End Sub
 End Class
 ' Attempting to compile the example displays output like the following:
-'    error BC30508: 'n' cannot expose type 'C1(Of Integer).N' in namespace 
+'    error BC30508: 'n' cannot expose type 'C1(Of Integer).N' in namespace
 '    '<Default>' through class 'C1'.
-'    
+'
 '       Protected Sub M1(n As C1(Of Integer).N)   ' Not CLS-compliant - C1<int>.N not
 '                             ~~~~~~~~~~~~~~~~
-'    error BC30389: 'C1(Of T).N' is not accessible in this context because 
+'    error BC30389: 'C1(Of T).N' is not accessible in this context because
 '    it is 'Protected'.
-'    
+'
 '       Protected Sub M3(n As C1(Of Integer).N)   ' Not CLS-compliant - C1(Of Integer).N is not
-'    
+'
 '                             ~~~~~~~~~~~~~~~~
-'    
+'
 '    error BC30389: 'C1(Of T).N' is not accessible in this context because it is 'Protected'.
-'    
-'       Protected Sub M4(n As C1(Of Long).N)  
+'
+'       Protected Sub M4(n As C1(Of Long).N)
 '                             ~~~~~~~~~~~~~
 ```
 
-### <a name="constructors"></a><span data-ttu-id="fa2a8-575">Construtores</span><span class="sxs-lookup"><span data-stu-id="fa2a8-575">Constructors</span></span>
+### <a name="constructors"></a><span data-ttu-id="b8dc1-575">Construtores</span><span class="sxs-lookup"><span data-stu-id="b8dc1-575">Constructors</span></span>
 
-<span data-ttu-id="fa2a8-576">Os construtores em classes compatíveis com CLS e em estruturas devem seguir estas regras:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-576">Constructors in CLS-compliant classes and structures must follow these rules:</span></span> 
+<span data-ttu-id="b8dc1-576">Os construtores em classes compatíveis com CLS e em estruturas devem seguir estas regras:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-576">Constructors in CLS-compliant classes and structures must follow these rules:</span></span>
 
-* <span data-ttu-id="fa2a8-577">Um construtor de uma classe derivada deve chamar o construtor de instância de sua classe base antes de acessar quaisquer dados de instância herdados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-577">A constructor of a derived class must call the instance constructor of its base class before it accesses inherited instance data.</span></span> <span data-ttu-id="fa2a8-578">Esse requisito deve-se ao fato de que construtores de classe base não são herdados por suas classes derivadas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-578">This requirement is due to the fact that base class constructors are not inherited by their derived classes.</span></span> <span data-ttu-id="fa2a8-579">Essa regra não se aplica a estruturas que não dão suporte a herança direta.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-579">This rule does not apply to structures, which do not support direct inheritance.</span></span> 
+* <span data-ttu-id="b8dc1-577">Um construtor de uma classe derivada deve chamar o construtor de instância de sua classe base antes de acessar quaisquer dados de instância herdados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-577">A constructor of a derived class must call the instance constructor of its base class before it accesses inherited instance data.</span></span> <span data-ttu-id="b8dc1-578">Esse requisito deve-se ao fato de que construtores de classe base não são herdados por suas classes derivadas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-578">This requirement is due to the fact that base class constructors are not inherited by their derived classes.</span></span> <span data-ttu-id="b8dc1-579">Essa regra não se aplica a estruturas que não dão suporte a herança direta.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-579">This rule does not apply to structures, which do not support direct inheritance.</span></span>
 
-  <span data-ttu-id="fa2a8-580">Normalmente, os compiladores aplicam essa regra independentemente da conformidade com CLS, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-580">Typically, compilers enforce this rule independently of CLS compliance, as the following example shows.</span></span> <span data-ttu-id="fa2a8-581">Ele cria uma classe `Doctor` que é derivada de uma classe `Person`, mas a classe `Doctor` falha ao chamar o construtor de classe `Person` para inicializar campos herdados da instância.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-581">It creates a `Doctor` class that is derived from a `Person` class, but the `Doctor` class fails to call the `Person` class constructor to initialize inherited instance fields.</span></span> 
+  <span data-ttu-id="b8dc1-580">Normalmente, os compiladores aplicam essa regra independentemente da conformidade com CLS, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-580">Typically, compilers enforce this rule independently of CLS compliance, as the following example shows.</span></span> <span data-ttu-id="b8dc1-581">Ele cria uma classe `Doctor` que é derivada de uma classe `Person`, mas a classe `Doctor` falha ao chamar o construtor de classe `Person` para inicializar campos herdados da instância.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-581">It creates a `Doctor` class that is derived from a `Person` class, but the `Doctor` class fails to call the `Person` class constructor to initialize inherited instance fields.</span></span>
 
     ```csharp
     using System;
@@ -1947,31 +1945,31 @@ End Class
     public Person(string firstName, string lastName, string id)
     {
         if (String.IsNullOrEmpty(firstName + lastName))
-            throw new ArgumentNullException("Either a first name or a last name must be provided.");    
+            throw new ArgumentNullException("Either a first name or a last name must be provided.");
 
         fName = firstName;
         lName = lastName;
         _id = id;
     }
 
-    public string FirstName 
+    public string FirstName
     {
         get { return fName; }
     }
 
-    public string LastName 
+    public string LastName
     {
         get { return lName; }
     }
 
-    public string Id 
+    public string Id
     {
         get { return _id; }
     }
 
     public override string ToString()
     {
-        return String.Format("{0}{1}{2}", fName, 
+        return String.Format("{0}{1}{2}", fName,
                             String.IsNullOrEmpty(fName) ?  "" : " ",
                             lName);
     }
@@ -1995,14 +1993,14 @@ End Class
     ```
 
     ```vb
-    <Assembly: CLSCompliant(True)> 
+    <Assembly: CLSCompliant(True)>
 
     Public Class Person
        Private fName, lName, _id As String
 
        Public Sub New(firstName As String, lastName As String, id As String)
           If String.IsNullOrEmpty(firstName + lastName) Then
-             Throw New ArgumentNullException("Either a first name or a last name must be provided.")    
+             Throw New ArgumentNullException("Either a first name or a last name must be provided.")
           End If
 
           fName = firstName
@@ -2029,7 +2027,7 @@ End Class
        End Property
 
        Public Overrides Function ToString() As String
-          Return String.Format("{0}{1}{2}", fName, 
+          Return String.Format("{0}{1}{2}", fName,
                                If(String.IsNullOrEmpty(fName), "", " "),
                                lName)
        End Function
@@ -2044,42 +2042,42 @@ End Class
        End Function
     End Class
     ' Attempting to compile the example displays output like the following:
-    '    Ctor1.vb(46) : error BC30148: First statement of this 'Sub New' must be a call 
-    '    to 'MyBase.New' or 'MyClass.New' because base class 'Person' of 'Doctor' does 
+    '    Ctor1.vb(46) : error BC30148: First statement of this 'Sub New' must be a call
+    '    to 'MyBase.New' or 'MyClass.New' because base class 'Person' of 'Doctor' does
     '    not have an accessible 'Sub New' that can be called with no arguments.
-    '    
+    '
     '       Public Sub New()
     '                  ~~~
     ````
-    
-* <span data-ttu-id="fa2a8-582">Um construtor de objeto não pode ser chamado, exceto para criar um objeto.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-582">An object constructor cannot be called except to create an object.</span></span> <span data-ttu-id="fa2a8-583">Além disso, um objeto não pode ser inicializado duas vezes.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-583">In addition, an object cannot be initialized twice.</span></span> <span data-ttu-id="fa2a8-584">Por exemplo, isso significa que `Object.MemberwiseClone` não deve chamar construtores.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-584">For example, this means that `Object.MemberwiseClone` must not call constructors.</span></span>  
 
-### <a name="properties"></a><span data-ttu-id="fa2a8-585">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fa2a8-585">Properties</span></span>
+* <span data-ttu-id="b8dc1-582">Um construtor de objeto não pode ser chamado, exceto para criar um objeto.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-582">An object constructor cannot be called except to create an object.</span></span> <span data-ttu-id="b8dc1-583">Além disso, um objeto não pode ser inicializado duas vezes.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-583">In addition, an object cannot be initialized twice.</span></span> <span data-ttu-id="b8dc1-584">Por exemplo, isso significa que `Object.MemberwiseClone` não deve chamar construtores.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-584">For example, this means that `Object.MemberwiseClone` must not call constructors.</span></span>
 
-<span data-ttu-id="fa2a8-586">As propriedades em tipos compatíveis com CLS devem seguir estas regras:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-586">Properties in CLS-compliant types must follow these rules:</span></span>
+### <a name="properties"></a><span data-ttu-id="b8dc1-585">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b8dc1-585">Properties</span></span>
 
-* <span data-ttu-id="fa2a8-587">Uma propriedade deve ter um setter, um getter ou ambos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-587">A property must have a setter, a getter, or both.</span></span> <span data-ttu-id="fa2a8-588">Em um assembly, eles são implementados como métodos especiais, o que significa que aparecerão como métodos separados (o getter é chamado de `get`\_*propertyname* e o setter é `set`\_*propertyname*) marcados como `SpecialName` nos metadados do assembly.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-588">In an assembly, these are implemented as special methods, which means that they will appear as separate methods (the getter is named `get`\_*propertyname* and the setter is `set`\_*propertyname*) marked as `SpecialName` in the assembly's metadata.</span></span> <span data-ttu-id="fa2a8-589">Os compiladores do C# aplicam automaticamente essa regra, sem a necessidade de aplicar o atributo <xref:System.CLSCompliantAttribute>.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-589">The C# compiler enforces this rule automatically without the need to apply the <xref:System.CLSCompliantAttribute> attribute.</span></span> 
+<span data-ttu-id="b8dc1-586">As propriedades em tipos compatíveis com CLS devem seguir estas regras:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-586">Properties in CLS-compliant types must follow these rules:</span></span>
 
-* <span data-ttu-id="fa2a8-590">Um tipo de propriedade é o tipo de retorno do getter da propriedade e o último argumento do setter.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-590">A property's type is the return type of the property getter and the last argument of the setter.</span></span> <span data-ttu-id="fa2a8-591">Esses tipos devem ser compatíveis com CLS e os argumentos não podem ser atribuídos à propriedade por referência (ou seja, não podem ser ponteiros gerenciados).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-591">These types must be CLS compliant, and arguments cannot be assigned to the property by reference (that is, they cannot be managed pointers).</span></span> 
+* <span data-ttu-id="b8dc1-587">Uma propriedade deve ter um setter, um getter ou ambos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-587">A property must have a setter, a getter, or both.</span></span> <span data-ttu-id="b8dc1-588">Em um assembly, eles são implementados como métodos especiais, o que significa que aparecerão como métodos separados (o getter é chamado de `get`\_*propertyname* e o setter é `set`\_*propertyname*) marcados como `SpecialName` nos metadados do assembly.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-588">In an assembly, these are implemented as special methods, which means that they will appear as separate methods (the getter is named `get`\_*propertyname* and the setter is `set`\_*propertyname*) marked as `SpecialName` in the assembly's metadata.</span></span> <span data-ttu-id="b8dc1-589">Os compiladores do C# aplicam automaticamente essa regra, sem a necessidade de aplicar o atributo <xref:System.CLSCompliantAttribute>.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-589">The C# compiler enforces this rule automatically without the need to apply the <xref:System.CLSCompliantAttribute> attribute.</span></span>
 
-* <span data-ttu-id="fa2a8-592">Se uma propriedade tiver um getter e um setter, ambos deverão ser virtuais, estáticos ou instâncias.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-592">If a property has both a getter and a setter, they must both be virtual, both static, or both instance.</span></span> <span data-ttu-id="fa2a8-593">O compilador do C# impõe automaticamente essa regra por meio de sintaxe da definição de propriedade.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-593">The C# compiler automatically enforces this rule through property definition syntax.</span></span> 
+* <span data-ttu-id="b8dc1-590">Um tipo de propriedade é o tipo de retorno do getter da propriedade e o último argumento do setter.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-590">A property's type is the return type of the property getter and the last argument of the setter.</span></span> <span data-ttu-id="b8dc1-591">Esses tipos devem ser compatíveis com CLS e os argumentos não podem ser atribuídos à propriedade por referência (ou seja, não podem ser ponteiros gerenciados).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-591">These types must be CLS compliant, and arguments cannot be assigned to the property by reference (that is, they cannot be managed pointers).</span></span>
 
-### <a name="events"></a><span data-ttu-id="fa2a8-594">Eventos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-594">Events</span></span>
+* <span data-ttu-id="b8dc1-592">Se uma propriedade tiver um getter e um setter, ambos deverão ser virtuais, estáticos ou instâncias.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-592">If a property has both a getter and a setter, they must both be virtual, both static, or both instance.</span></span> <span data-ttu-id="b8dc1-593">O compilador do C# impõe automaticamente essa regra por meio de sintaxe da definição de propriedade.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-593">The C# compiler automatically enforces this rule through property definition syntax.</span></span>
 
-<span data-ttu-id="fa2a8-595">Um evento é definido por seu nome e tipo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-595">An event is defined by its name and its type.</span></span> <span data-ttu-id="fa2a8-596">O tipo de evento é um delegado que é usado para indicar o evento.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-596">The event type is a delegate that is used to indicate the event.</span></span> <span data-ttu-id="fa2a8-597">Por exemplo, o evento `DbConnection.StateChange` é do tipo `StateChangeEventHandler`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-597">For example, the `DbConnection.StateChange` event is of type `StateChangeEventHandler`.</span></span> <span data-ttu-id="fa2a8-598">Além do evento em si, três métodos com nomes com base no nome do evento fornecem a implementação do evento e estão marcados como `SpecialName` nos metadados do assembly:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-598">In addition to the event itself, three methods with names based on the event name provide the event's implementation and are marked as `SpecialName` in the assembly's metadata:</span></span> 
+### <a name="events"></a><span data-ttu-id="b8dc1-594">Eventos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-594">Events</span></span>
 
-* <span data-ttu-id="fa2a8-599">Um método para adicionar um manipulador de eventos, chamado `add`_*EventName*.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-599">A method for adding an event handler, named `add`_*EventName*.</span></span> <span data-ttu-id="fa2a8-600">Por exemplo, o método de assinatura do evento para o evento `DbConnection.StateChange` é chamado `add_StateChange`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-600">For example, the event subscription method for the `DbConnection.StateChange` event is named `add_StateChange`.</span></span> 
+<span data-ttu-id="b8dc1-595">Um evento é definido por seu nome e tipo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-595">An event is defined by its name and its type.</span></span> <span data-ttu-id="b8dc1-596">O tipo de evento é um delegado que é usado para indicar o evento.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-596">The event type is a delegate that is used to indicate the event.</span></span> <span data-ttu-id="b8dc1-597">Por exemplo, o evento `DbConnection.StateChange` é do tipo `StateChangeEventHandler`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-597">For example, the `DbConnection.StateChange` event is of type `StateChangeEventHandler`.</span></span> <span data-ttu-id="b8dc1-598">Além do evento em si, três métodos com nomes com base no nome do evento fornecem a implementação do evento e estão marcados como `SpecialName` nos metadados do assembly:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-598">In addition to the event itself, three methods with names based on the event name provide the event's implementation and are marked as `SpecialName` in the assembly's metadata:</span></span>
 
-* <span data-ttu-id="fa2a8-601">Um método para remover um manipulador de eventos, chamado `remove`_*EventName*.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-601">A method for removing an event handler, named `remove`_*EventName*.</span></span> <span data-ttu-id="fa2a8-602">Por exemplo, o método de remoção para o evento `DbConnection.StateChange` é chamado `remove_StateChange`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-602">For example, the removal method for the `DbConnection.StateChange` event is named `remove_StateChange`.</span></span>
+* <span data-ttu-id="b8dc1-599">Um método para adicionar um manipulador de eventos, chamado `add`_*EventName*.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-599">A method for adding an event handler, named `add`_*EventName*.</span></span> <span data-ttu-id="b8dc1-600">Por exemplo, o método de assinatura do evento para o evento `DbConnection.StateChange` é chamado `add_StateChange`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-600">For example, the event subscription method for the `DbConnection.StateChange` event is named `add_StateChange`.</span></span>
 
-* <span data-ttu-id="fa2a8-603">Um método para indicar que o evento ocorreu, chamado `raise`_*EventName*.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-603">A method for indicating that the event has occurred, named `raise`_*EventName*.</span></span> 
+* <span data-ttu-id="b8dc1-601">Um método para remover um manipulador de eventos, chamado `remove`_*EventName*.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-601">A method for removing an event handler, named `remove`_*EventName*.</span></span> <span data-ttu-id="b8dc1-602">Por exemplo, o método de remoção para o evento `DbConnection.StateChange` é chamado `remove_StateChange`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-602">For example, the removal method for the `DbConnection.StateChange` event is named `remove_StateChange`.</span></span>
+
+* <span data-ttu-id="b8dc1-603">Um método para indicar que o evento ocorreu, chamado `raise`\_*EventName*.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-603">A method for indicating that the event has occurred, named `raise`\_*EventName*.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="fa2a8-604">A maioria das regras da Common Language Specification em relação a eventos é implementada por compiladores de linguagem e é transparente para desenvolvedores de componente.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-604">Most of the Common Language Specification's rules regarding events are implemented by language compilers and are transparent to component developers.</span></span> 
+> <span data-ttu-id="b8dc1-604">A maioria das regras da Common Language Specification em relação a eventos é implementada por compiladores de linguagem e é transparente para desenvolvedores de componente.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-604">Most of the Common Language Specification's rules regarding events are implemented by language compilers and are transparent to component developers.</span></span>
 
-<span data-ttu-id="fa2a8-605">Os métodos para adicionar, remover e acionar o evento devem ter a mesma acessibilidade.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-605">The methods for adding, removing, and raising the event must have the same accessibility.</span></span> <span data-ttu-id="fa2a8-606">Eles também devem ser todos estáticos, instâncias ou virtuais.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-606">They must also all be static, instance, or virtual.</span></span> <span data-ttu-id="fa2a8-607">Os métodos para adicionar e remover um evento têm um parâmetro cujo tipo é o tipo de delegado do evento.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-607">The methods for adding and removing an event have one parameter whose type is the event delegate type.</span></span> <span data-ttu-id="fa2a8-608">Os métodos para adicionar e remover devem estar ambos presentes ou ausentes.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-608">The add and remove methods must both be present or both be absent.</span></span> 
+<span data-ttu-id="b8dc1-605">Os métodos para adicionar, remover e acionar o evento devem ter a mesma acessibilidade.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-605">The methods for adding, removing, and raising the event must have the same accessibility.</span></span> <span data-ttu-id="b8dc1-606">Eles também devem ser todos estáticos, instâncias ou virtuais.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-606">They must also all be static, instance, or virtual.</span></span> <span data-ttu-id="b8dc1-607">Os métodos para adicionar e remover um evento têm um parâmetro cujo tipo é o tipo de delegado do evento.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-607">The methods for adding and removing an event have one parameter whose type is the event delegate type.</span></span> <span data-ttu-id="b8dc1-608">Os métodos para adicionar e remover devem estar ambos presentes ou ausentes.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-608">The add and remove methods must both be present or both be absent.</span></span>
 
-<span data-ttu-id="fa2a8-609">O exemplo a seguir define uma classe compatível com CLS chamada `Temperature` que acionará um evento `TemperatureChanged` se a mudança de temperatura entre as duas leituras for igual ou exceder o valor de limite.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-609">The following example defines a CLS-compliant class named `Temperature` that raises a `TemperatureChanged` event if the change in temperature between two readings equals or exceeds a threshold value.</span></span> <span data-ttu-id="fa2a8-610">A classe `Temperature` define explicitamente um método `raise_TemperatureChanged` para executar seletivamente os manipuladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-610">The `Temperature` class explicitly defines a `raise_TemperatureChanged` method so that it can selectively execute event handlers.</span></span>
+<span data-ttu-id="b8dc1-609">O exemplo a seguir define uma classe compatível com CLS chamada `Temperature` que acionará um evento `TemperatureChanged` se a mudança de temperatura entre as duas leituras for igual ou exceder o valor de limite.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-609">The following example defines a CLS-compliant class named `Temperature` that raises a `TemperatureChanged` event if the change in temperature between two readings equals or exceeds a threshold value.</span></span> <span data-ttu-id="b8dc1-610">A classe `Temperature` define explicitamente um método `raise_TemperatureChanged` para executar seletivamente os manipuladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-610">The `Temperature` class explicitly defines a `raise_TemperatureChanged` method so that it can selectively execute event handlers.</span></span>
 
 ```csharp
 using System;
@@ -2091,7 +2089,7 @@ using System.Collections.Generic;
 public class TemperatureChangedEventArgs : EventArgs
 {
    private Decimal originalTemp;
-   private Decimal newTemp; 
+   private Decimal newTemp;
    private DateTimeOffset when;
 
    public TemperatureChangedEventArgs(Decimal original, Decimal @new, DateTimeOffset time)
@@ -2099,17 +2097,17 @@ public class TemperatureChangedEventArgs : EventArgs
       originalTemp = original;
       newTemp = @new;
       when = time;
-   }   
+   }
 
    public Decimal OldTemperature
    {
       get { return originalTemp; }
-   } 
+   }
 
    public Decimal CurrentTemperature
    {
       get { return newTemp; }
-   } 
+   }
 
    public DateTimeOffset Time
    {
@@ -2153,7 +2151,7 @@ public class Temperature
          ti.Recorded = DateTimeOffset.UtcNow;
          previous = current;
          current = value;
-         if (Math.Abs(current - previous) >= tolerance) 
+         if (Math.Abs(current - previous) >= tolerance)
             raise_TemperatureChanged(new TemperatureChangedEventArgs(previous, current, ti.Recorded));
       }
    }
@@ -2161,7 +2159,7 @@ public class Temperature
    public void raise_TemperatureChanged(TemperatureChangedEventArgs eventArgs)
    {
       if (TemperatureChanged == null)
-         return; 
+         return;
 
       foreach (TemperatureChanged d in TemperatureChanged.GetInvocationList()) {
          if (d.Method.Name.Contains("Duplicate"))
@@ -2203,14 +2201,14 @@ public class Example
       temp.CurrentTemperature = 63;
    }
 
-   internal void TemperatureNotification(Object sender, TemperatureChangedEventArgs e) 
+   internal void TemperatureNotification(Object sender, TemperatureChangedEventArgs e)
    {
-      Console.WriteLine("Notification 1: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature);   
+      Console.WriteLine("Notification 1: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature);
    }
 
    public void DuplicateTemperatureNotification(Object sender, TemperatureChangedEventArgs e)
-   { 
-      Console.WriteLine("Notification 2: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature);   
+   {
+      Console.WriteLine("Notification 2: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature);
    }
 }
 ```
@@ -2223,26 +2221,26 @@ Imports System.Collections.Generic
 
 Public Class TemperatureChangedEventArgs   : Inherits EventArgs
    Private originalTemp As Decimal
-   Private newTemp As Decimal 
+   Private newTemp As Decimal
    Private [when] As DateTimeOffset
 
    Public Sub New(original As Decimal, [new] As Decimal, [time] As DateTimeOffset)
       originalTemp = original
       newTemp = [new]
       [when] = [time]
-   End Sub   
+   End Sub
 
    Public ReadOnly Property OldTemperature As Decimal
       Get
          Return originalTemp
       End Get
-   End Property 
+   End Property
 
    Public ReadOnly Property CurrentTemperature As Decimal
       Get
          Return newTemp
       End Get
-   End Property 
+   End Property
 
    Public ReadOnly Property [Time] As DateTimeOffset
       Get
@@ -2332,32 +2330,32 @@ Public Class Example
 
    Friend Shared Sub TemperatureNotification(sender As Object, e As TemperatureChangedEventArgs) _
           Handles temp.TemperatureChanged
-      Console.WriteLine("Notification 1: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature)   
+      Console.WriteLine("Notification 1: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature)
    End Sub
 
    Friend Shared Sub DuplicateTemperatureNotification(sender As Object, e As TemperatureChangedEventArgs) _
           Handles temp.TemperatureChanged
-      Console.WriteLine("Notification 2: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature)   
+      Console.WriteLine("Notification 2: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature)
    End Sub
 End Class
 ```
 
-### <a name="overloads"></a><span data-ttu-id="fa2a8-611">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="fa2a8-611">Overloads</span></span>
+### <a name="overloads"></a><span data-ttu-id="b8dc1-611">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="b8dc1-611">Overloads</span></span>
 
-<span data-ttu-id="fa2a8-612">A Common Language Specification impõe os seguintes requisitos em membros sobrecarregados:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-612">The Common Language Specification imposes the following requirements on overloaded members:</span></span> 
+<span data-ttu-id="b8dc1-612">A Common Language Specification impõe os seguintes requisitos em membros sobrecarregados:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-612">The Common Language Specification imposes the following requirements on overloaded members:</span></span>
 
-* <span data-ttu-id="fa2a8-613">Os membros podem ser sobrecarregados com base no número de parâmetros e no tipo de qualquer parâmetro.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-613">Members can be overloaded based on the number of parameters and the type of any parameter.</span></span> <span data-ttu-id="fa2a8-614">A convenção de chamada, o tipo de retorno, os modificadores personalizados aplicados ao método ou seus parâmetros e se os parâmetros são passados por valor ou por referência não são considerados na diferenciação entre sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-614">Calling convention, return type, custom modifiers applied to the method or its parameter, and whether parameters are passed by value or by reference are not considered when differentiating between overloads.</span></span> <span data-ttu-id="fa2a8-615">Para obter um exemplo, consulte o código para o requisito de que os nomes devem ser exclusivos em um escopo na seção [Convenções de nomenclatura](#naming-conventions).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-615">For an example, see the code for the requirement that names must be unique within a scope in the [Naming conventions](#naming-conventions) section.</span></span> 
+* <span data-ttu-id="b8dc1-613">Os membros podem ser sobrecarregados com base no número de parâmetros e no tipo de qualquer parâmetro.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-613">Members can be overloaded based on the number of parameters and the type of any parameter.</span></span> <span data-ttu-id="b8dc1-614">A convenção de chamada, o tipo de retorno, os modificadores personalizados aplicados ao método ou seus parâmetros e se os parâmetros são passados por valor ou por referência não são considerados na diferenciação entre sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-614">Calling convention, return type, custom modifiers applied to the method or its parameter, and whether parameters are passed by value or by reference are not considered when differentiating between overloads.</span></span> <span data-ttu-id="b8dc1-615">Para obter um exemplo, consulte o código para o requisito de que os nomes devem ser exclusivos em um escopo na seção [Convenções de nomenclatura](#naming-conventions).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-615">For an example, see the code for the requirement that names must be unique within a scope in the [Naming conventions](#naming-conventions) section.</span></span>
 
-* <span data-ttu-id="fa2a8-616">Somente propriedades e métodos podem ser sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-616">Only properties and methods can be overloaded.</span></span> <span data-ttu-id="fa2a8-617">Campos e eventos não podem ser sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-617">Fields and events cannot be overloaded.</span></span> 
+* <span data-ttu-id="b8dc1-616">Somente propriedades e métodos podem ser sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-616">Only properties and methods can be overloaded.</span></span> <span data-ttu-id="b8dc1-617">Campos e eventos não podem ser sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-617">Fields and events cannot be overloaded.</span></span>
 
-* <span data-ttu-id="fa2a8-618">Métodos genéricos podem ser sobrecarregados com base no número de seus parâmetros genéricos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-618">Generic methods can be overloaded based on the number of their generic parameters.</span></span> 
+* <span data-ttu-id="b8dc1-618">Métodos genéricos podem ser sobrecarregados com base no número de seus parâmetros genéricos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-618">Generic methods can be overloaded based on the number of their generic parameters.</span></span>
 
 > [!NOTE]
-><span data-ttu-id="fa2a8-619">Os operadores `op_Explicit` e `op_Implicit` são exceções à regra de que o valor retornado não é considerado parte de uma assinatura de método para resolução de sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-619">The `op_Explicit` and `op_Implicit` operators are exceptions to the rule that return value is not considered part of a method signature for overload resolution.</span></span> <span data-ttu-id="fa2a8-620">Esses dois operadores podem ser sobrecarregados com base nos parâmetros e valor retornado.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-620">These two operators can be overloaded based on both their parameters and their return value.</span></span> 
+> <span data-ttu-id="b8dc1-619">Os operadores `op_Explicit` e `op_Implicit` são exceções à regra de que o valor retornado não é considerado parte de uma assinatura de método para resolução de sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-619">The `op_Explicit` and `op_Implicit` operators are exceptions to the rule that return value is not considered part of a method signature for overload resolution.</span></span> <span data-ttu-id="b8dc1-620">Esses dois operadores podem ser sobrecarregados com base nos parâmetros e valor retornado.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-620">These two operators can be overloaded based on both their parameters and their return value.</span></span>
 
-### <a name="exceptions"></a><span data-ttu-id="fa2a8-621">Exceções</span><span class="sxs-lookup"><span data-stu-id="fa2a8-621">Exceptions</span></span>
+### <a name="exceptions"></a><span data-ttu-id="b8dc1-621">Exceções</span><span class="sxs-lookup"><span data-stu-id="b8dc1-621">Exceptions</span></span>
 
-<span data-ttu-id="fa2a8-622">Objetos de exceção devem derivar de [System.Exception](xref:System.Exception) ou de outro tipo derivado de `System.Exception`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-622">Exception objects must derive from [System.Exception](xref:System.Exception) or from another type derived from `System.Exception`.</span></span> <span data-ttu-id="fa2a8-623">O exemplo a seguir ilustra o erro do compilador que resulta quando uma classe personalizada chamada `ErrorClass` é usada para tratamento de exceções.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-623">The following example illustrates the compiler error that results when a custom class named `ErrorClass` is used for exception handling.</span></span>
+<span data-ttu-id="b8dc1-622">Objetos de exceção devem derivar de [System.Exception](xref:System.Exception) ou de outro tipo derivado de `System.Exception`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-622">Exception objects must derive from [System.Exception](xref:System.Exception) or from another type derived from `System.Exception`.</span></span> <span data-ttu-id="b8dc1-623">O exemplo a seguir ilustra o erro do compilador que resulta quando uma classe personalizada chamada `ErrorClass` é usada para tratamento de exceções.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-623">The following example illustrates the compiler error that results when a custom class named `ErrorClass` is used for exception handling.</span></span>
 
 ```csharp
 using System;
@@ -2365,7 +2363,7 @@ using System;
 [assembly: CLSCompliant(true)]
 
 public class ErrorClass
-{ 
+{
    string msg;
 
    public ErrorClass(string errorMessage)
@@ -2387,7 +2385,7 @@ public static class StringUtilities
          ErrorClass badIndex = new ErrorClass("The index is not within the string.");
          throw badIndex;
       }
-      string[] retVal = { value.Substring(0, index - 1), 
+      string[] retVal = { value.Substring(0, index - 1),
                           value.Substring(index) };
       return retVal;
    }
@@ -2402,7 +2400,7 @@ Imports System.Runtime.CompilerServices
 
 <Assembly: CLSCompliant(True)>
 
-Public Class ErrorClass 
+Public Class ErrorClass
    Dim msg As String
 
    Public Sub New(errorMessage As String)
@@ -2412,7 +2410,7 @@ Public Class ErrorClass
    Public ReadOnly Property Message As String
       Get
          Return msg
-      End Get   
+      End Get
    End Property
 End Class
 
@@ -2422,19 +2420,19 @@ Public Module StringUtilities
          Dim BadIndex As New ErrorClass("The index is not within the string.")
          Throw BadIndex
       End If
-      Dim retVal() As String = { value.Substring(0, index - 1), 
+      Dim retVal() As String = { value.Substring(0, index - 1),
                                  value.Substring(index) }
       Return retVal
    End Function
 End Module
 ' Compilation produces a compiler error like the following:
 '    Exceptions1.vb(27) : error BC30665: 'Throw' operand must derive from 'System.Exception'.
-'    
+'
 '             Throw BadIndex
 '             ~~~~~~~~~~~~~~
 ```
 
-<span data-ttu-id="fa2a8-624">Para corrigir este erro, a classe `ErrorClass` deve herdar de `System.Exception`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-624">To correct this error, the `ErrorClass` class must inherit from `System.Exception`.</span></span> <span data-ttu-id="fa2a8-625">Além disso, a propriedade Message deve ser substituída.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-625">In addition, the Message property must be overridden.</span></span> <span data-ttu-id="fa2a8-626">O exemplo a seguir corrige esses erros para definir uma classe `ErrorClass` que seja compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-626">The following example corrects these errors to define an `ErrorClass` class that is CLS-compliant.</span></span>  
+<span data-ttu-id="b8dc1-624">Para corrigir este erro, a classe `ErrorClass` deve herdar de `System.Exception`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-624">To correct this error, the `ErrorClass` class must inherit from `System.Exception`.</span></span> <span data-ttu-id="b8dc1-625">Além disso, a propriedade Message deve ser substituída.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-625">In addition, the Message property must be overridden.</span></span> <span data-ttu-id="b8dc1-626">O exemplo a seguir corrige esses erros para definir uma classe `ErrorClass` que seja compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-626">The following example corrects these errors to define an `ErrorClass` class that is CLS-compliant.</span></span>
 
 ```csharp
 using System;
@@ -2442,7 +2440,7 @@ using System;
 [assembly: CLSCompliant(true)]
 
 public class ErrorClass : Exception
-{ 
+{
    string msg;
 
    public ErrorClass(string errorMessage)
@@ -2464,7 +2462,7 @@ public static class StringUtilities
          ErrorClass badIndex = new ErrorClass("The index is not within the string.");
          throw badIndex;
       }
-      string[] retVal = { value.Substring(0, index - 1), 
+      string[] retVal = { value.Substring(0, index - 1),
                           value.Substring(index) };
       return retVal;
    }
@@ -2486,7 +2484,7 @@ Public Class ErrorClass : Inherits Exception
    Public Overrides ReadOnly Property Message As String
       Get
          Return msg
-      End Get   
+      End Get
    End Property
 End Class
 
@@ -2496,25 +2494,25 @@ Public Module StringUtilities
          Dim BadIndex As New ErrorClass("The index is not within the string.")
          Throw BadIndex
       End If
-      Dim retVal() As String = { value.Substring(0, index - 1), 
+      Dim retVal() As String = { value.Substring(0, index - 1),
                                  value.Substring(index) }
       Return retVal
    End Function
 End Module
 ```
 
-### <a name="attributes"></a><span data-ttu-id="fa2a8-627">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa2a8-627">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="b8dc1-627">Atributos</span><span class="sxs-lookup"><span data-stu-id="b8dc1-627">Attributes</span></span>
 
-<span data-ttu-id="fa2a8-628">Em assemblies do .NET Framework, atributos personalizados fornecem um mecanismo extensível para armazenamento de atributos personalizados e recuperação de metadados sobre objetos de programação, como assemblies, tipos, membros e parâmetros de método.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-628">In.NET Framework assemblies, custom attributes provide an extensible mechanism for storing custom attributes and retrieving metadata about programming objects, such as assemblies, types, members, and method parameters.</span></span> <span data-ttu-id="fa2a8-629">Atributos personalizados devem derivar de [System.Attribute](xref:System.Attribute) ou de um tipo derivado de `System.Attribute`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-629">Custom attributes must derive from [System.Attribute](xref:System.Attribute) or from a type derived from `System.Attribute`.</span></span>
+<span data-ttu-id="b8dc1-628">Em assemblies do .NET Framework, atributos personalizados fornecem um mecanismo extensível para armazenamento de atributos personalizados e recuperação de metadados sobre objetos de programação, como assemblies, tipos, membros e parâmetros de método.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-628">In.NET Framework assemblies, custom attributes provide an extensible mechanism for storing custom attributes and retrieving metadata about programming objects, such as assemblies, types, members, and method parameters.</span></span> <span data-ttu-id="b8dc1-629">Atributos personalizados devem derivar de [System.Attribute](xref:System.Attribute) ou de um tipo derivado de `System.Attribute`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-629">Custom attributes must derive from [System.Attribute](xref:System.Attribute) or from a type derived from `System.Attribute`.</span></span>
 
-<span data-ttu-id="fa2a8-630">O exemplo a seguir viola essa regra.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-630">The following example violates this rule.</span></span> <span data-ttu-id="fa2a8-631">Ele define uma classe `NumericAttribute` que não deriva de `System.Attribute`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-631">It defines a `NumericAttribute` class that does not derive from `System.Attribute`.</span></span> <span data-ttu-id="fa2a8-632">Observe que um erro de compilador só acontece quando o atributo não compatível com CLS é aplicado e não quando a classe é definida.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-632">Note that a compiler error results only when the non-CLS-compliant attribute is applied, not when the class is defined.</span></span> 
+<span data-ttu-id="b8dc1-630">O exemplo a seguir viola essa regra.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-630">The following example violates this rule.</span></span> <span data-ttu-id="b8dc1-631">Ele define uma classe `NumericAttribute` que não deriva de `System.Attribute`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-631">It defines a `NumericAttribute` class that does not derive from `System.Attribute`.</span></span> <span data-ttu-id="b8dc1-632">Observe que um erro de compilador só acontece quando o atributo não compatível com CLS é aplicado e não quando a classe é definida.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-632">Note that a compiler error results only when the non-CLS-compliant attribute is applied, not when the class is defined.</span></span>
 
 ```csharp
 using System;
 
 [assembly: CLSCompliant(true)]
 
-[AttributeUsageAttribute(AttributeTargets.Class | AttributeTargets.Struct)] 
+[AttributeUsageAttribute(AttributeTargets.Class | AttributeTargets.Struct)]
 public class NumericAttribute
 {
    private bool _isNumeric;
@@ -2524,7 +2522,7 @@ public class NumericAttribute
       _isNumeric = isNumeric;
    }
 
-   public bool IsNumeric 
+   public bool IsNumeric
    {
       get { return _isNumeric; }
    }
@@ -2561,38 +2559,38 @@ End Class
    Dim Value As Double
 End Structure
 ' Compilation produces a compiler error like the following:
-'    error BC31504: 'NumericAttribute' cannot be used as an attribute because it 
+'    error BC31504: 'NumericAttribute' cannot be used as an attribute because it
 '    does not inherit from 'System.Attribute'.
-'    
+'
 '    <Numeric(True)> Public Structure UDouble
 '     ~~~~~~~~~~~~~
 ```
 
-<span data-ttu-id="fa2a8-633">O construtor ou as propriedades de um atributo compatível com CLS podem expor somente os seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-633">The constructor or the properties of a CLS-compliant attribute can expose only the following types:</span></span>
+<span data-ttu-id="b8dc1-633">O construtor ou as propriedades de um atributo compatível com CLS podem expor somente os seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-633">The constructor or the properties of a CLS-compliant attribute can expose only the following types:</span></span>
 
-* [<span data-ttu-id="fa2a8-634">Booliano</span><span class="sxs-lookup"><span data-stu-id="fa2a8-634">Boolean</span></span>](xref:System.Boolean)
+* [<span data-ttu-id="b8dc1-634">Booliano</span><span class="sxs-lookup"><span data-stu-id="b8dc1-634">Boolean</span></span>](xref:System.Boolean)
 
-* [<span data-ttu-id="fa2a8-635">Byte</span><span class="sxs-lookup"><span data-stu-id="fa2a8-635">Byte</span></span>](xref:System.Byte)
+* [<span data-ttu-id="b8dc1-635">Byte</span><span class="sxs-lookup"><span data-stu-id="b8dc1-635">Byte</span></span>](xref:System.Byte)
 
-* [<span data-ttu-id="fa2a8-636">Char</span><span class="sxs-lookup"><span data-stu-id="fa2a8-636">Char</span></span>](xref:System.Char)
+* [<span data-ttu-id="b8dc1-636">Char</span><span class="sxs-lookup"><span data-stu-id="b8dc1-636">Char</span></span>](xref:System.Char)
 
-* [<span data-ttu-id="fa2a8-637">Duplo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-637">Double</span></span>](xref:System.Double)
+* [<span data-ttu-id="b8dc1-637">Duplo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-637">Double</span></span>](xref:System.Double)
 
-* [<span data-ttu-id="fa2a8-638">Int16</span><span class="sxs-lookup"><span data-stu-id="fa2a8-638">Int16</span></span>](xref:System.Int16)
+* [<span data-ttu-id="b8dc1-638">Int16</span><span class="sxs-lookup"><span data-stu-id="b8dc1-638">Int16</span></span>](xref:System.Int16)
 
-* [<span data-ttu-id="fa2a8-639">Int32</span><span class="sxs-lookup"><span data-stu-id="fa2a8-639">Int32</span></span>](xref:System.Int32)
+* [<span data-ttu-id="b8dc1-639">Int32</span><span class="sxs-lookup"><span data-stu-id="b8dc1-639">Int32</span></span>](xref:System.Int32)
 
-* [<span data-ttu-id="fa2a8-640">Int64</span><span class="sxs-lookup"><span data-stu-id="fa2a8-640">Int64</span></span>](xref:System.Int64)
+* [<span data-ttu-id="b8dc1-640">Int64</span><span class="sxs-lookup"><span data-stu-id="b8dc1-640">Int64</span></span>](xref:System.Int64)
 
-* [<span data-ttu-id="fa2a8-641">Simples</span><span class="sxs-lookup"><span data-stu-id="fa2a8-641">Single</span></span>](xref:System.Single)
+* [<span data-ttu-id="b8dc1-641">Simples</span><span class="sxs-lookup"><span data-stu-id="b8dc1-641">Single</span></span>](xref:System.Single)
 
-* [<span data-ttu-id="fa2a8-642">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="fa2a8-642">String</span></span>](xref:System.String)
+* [<span data-ttu-id="b8dc1-642">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="b8dc1-642">String</span></span>](xref:System.String)
 
-* [<span data-ttu-id="fa2a8-643">Tipo</span><span class="sxs-lookup"><span data-stu-id="fa2a8-643">Type</span></span>](xref:System.Type)
+* [<span data-ttu-id="b8dc1-643">Tipo</span><span class="sxs-lookup"><span data-stu-id="b8dc1-643">Type</span></span>](xref:System.Type)
 
-* <span data-ttu-id="fa2a8-644">Qualquer tipo de enumeração cujo tipo subjacente seja `Byte`, `Int16`, `Int32` ou `Int64`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-644">Any enumeration type whose underlying type is `Byte`, `Int16`, `Int32`, or `Int64`.</span></span> 
+* <span data-ttu-id="b8dc1-644">Qualquer tipo de enumeração cujo tipo subjacente seja `Byte`, `Int16`, `Int32` ou `Int64`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-644">Any enumeration type whose underlying type is `Byte`, `Int16`, `Int32`, or `Int64`.</span></span>
 
-<span data-ttu-id="fa2a8-645">O exemplo a seguir define uma classe `DescriptionAttribute` que deriva de [Atributo](xref:System.Attribute).</span><span class="sxs-lookup"><span data-stu-id="fa2a8-645">The following example defines a `DescriptionAttribute` class that derives from [Attribute](xref:System.Attribute).</span></span> <span data-ttu-id="fa2a8-646">O construtor de classe tem um parâmetro do tipo `Descriptor`, portanto a classe não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-646">The class constructor has a parameter of type `Descriptor`, so the class is not CLS-compliant.</span></span> <span data-ttu-id="fa2a8-647">Observe que o compilador do C# emite um aviso, mas compila com êxito.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-647">Note that the C# compiler emits a warning but compiles successfully.</span></span> 
+<span data-ttu-id="b8dc1-645">O exemplo a seguir define uma classe `DescriptionAttribute` que deriva de [Atributo](xref:System.Attribute).</span><span class="sxs-lookup"><span data-stu-id="b8dc1-645">The following example defines a `DescriptionAttribute` class that derives from [Attribute](xref:System.Attribute).</span></span> <span data-ttu-id="b8dc1-646">O construtor de classe tem um parâmetro do tipo `Descriptor`, portanto a classe não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-646">The class constructor has a parameter of type `Descriptor`, so the class is not CLS-compliant.</span></span> <span data-ttu-id="b8dc1-647">Observe que o compilador do C# emite um aviso, mas compila com êxito.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-647">Note that the C# compiler emits a warning but compiles successfully.</span></span>
 
 ```csharp
 using System;
@@ -2604,7 +2602,7 @@ public enum DescriptorType { type, member };
 public class Descriptor
 {
    public DescriptorType Type;
-   public String Description; 
+   public String Description;
 }
 
 [AttributeUsage(AttributeTargets.All)]
@@ -2614,11 +2612,11 @@ public class DescriptionAttribute : Attribute
 
    public DescriptionAttribute(Descriptor d)
    {
-      desc = d; 
+      desc = d;
    }
 
    public Descriptor Descriptor
-   { get { return desc; } } 
+   { get { return desc; } }
 }
 // Attempting to compile the example displays output like the following:
 //       warning CS3015: 'DescriptionAttribute' has no accessible
@@ -2634,8 +2632,8 @@ Public Enum DescriptorType As Integer
 End Enum
 
 Public Class Descriptor
-   Public Type As DescriptorType 
-   Public Description As String 
+   Public Type As DescriptorType
+   Public Description As String
 End Class
 
 <AttributeUsage(AttributeTargets.All)> _
@@ -2643,53 +2641,53 @@ Public Class DescriptionAttribute : Inherits Attribute
    Private desc As Descriptor
 
    Public Sub New(d As Descriptor)
-      desc = d 
+      desc = d
    End Sub
 
    Public ReadOnly Property Descriptor As Descriptor
-      Get 
+      Get
          Return desc
-      End Get    
+      End Get
    End Property
 End Class
 ```
 
-## <a name="the-clscompliantattribute-attribute"></a><span data-ttu-id="fa2a8-648">O atributo CLSCompliantAttribute</span><span class="sxs-lookup"><span data-stu-id="fa2a8-648">The CLSCompliantAttribute attribute</span></span>
+## <a name="the-clscompliantattribute-attribute"></a><span data-ttu-id="b8dc1-648">O atributo CLSCompliantAttribute</span><span class="sxs-lookup"><span data-stu-id="b8dc1-648">The CLSCompliantAttribute attribute</span></span>
 
-<span data-ttu-id="fa2a8-649">O atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) é usado para indicar se um elemento do programa está em conformidade com a Common Language Specification.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-649">The [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute is used to indicate whether a program element complies with the Common Language Specification.</span></span> <span data-ttu-id="fa2a8-650">O construtor `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` inclui um único parâmetro necessário, *isCompliant*, que indica se o elemento de programa é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-650">The `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` constructor includes a single required parameter, *isCompliant*, that indicates whether the program element is CLS-compliant.</span></span> 
+<span data-ttu-id="b8dc1-649">O atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) é usado para indicar se um elemento do programa está em conformidade com a Common Language Specification.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-649">The [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute is used to indicate whether a program element complies with the Common Language Specification.</span></span> <span data-ttu-id="b8dc1-650">O construtor `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` inclui um único parâmetro necessário, *isCompliant*, que indica se o elemento de programa é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-650">The `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` constructor includes a single required parameter, *isCompliant*, that indicates whether the program element is CLS-compliant.</span></span>
 
-<span data-ttu-id="fa2a8-651">No tempo de compilação, o compilador detecta os elementos não compatíveis que provavelmente são compatíveis com CLS e emite um aviso.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-651">At compile time, the compiler detects non-compliant elements that are presumed to be CLS-compliant and emits a warning.</span></span> <span data-ttu-id="fa2a8-652">O compilador não emite avisos para tipos ou membros explicitamente declarados como não compatíveis.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-652">The compiler does not emit warnings for types or members that are explicitly declared to be non-compliant.</span></span> 
+<span data-ttu-id="b8dc1-651">No tempo de compilação, o compilador detecta os elementos não compatíveis que provavelmente são compatíveis com CLS e emite um aviso.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-651">At compile time, the compiler detects non-compliant elements that are presumed to be CLS-compliant and emits a warning.</span></span> <span data-ttu-id="b8dc1-652">O compilador não emite avisos para tipos ou membros explicitamente declarados como não compatíveis.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-652">The compiler does not emit warnings for types or members that are explicitly declared to be non-compliant.</span></span>
 
-<span data-ttu-id="fa2a8-653">Os desenvolvedores de componentes podem usar o atributo `CLSCompliantAttribute` de duas maneiras:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-653">Component developers can use the `CLSCompliantAttribute` attribute in two ways:</span></span> 
+<span data-ttu-id="b8dc1-653">Os desenvolvedores de componentes podem usar o atributo `CLSCompliantAttribute` de duas maneiras:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-653">Component developers can use the `CLSCompliantAttribute` attribute in two ways:</span></span>
 
-* <span data-ttu-id="fa2a8-654">Para definir as partes da interface pública exposta por um componente que são compatíveis com CLS e as partes que não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-654">To define the parts of the public interface exposed by a component that are CLS-compliant and the parts that are not CLS-compliant.</span></span> <span data-ttu-id="fa2a8-655">Quando o atributo é usado para marcar elementos de programa específicos como compatíveis com CLS, seu uso garante que os elementos sejam acessíveis em todas as linguagens e ferramentas direcionadas ao .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-655">When the attribute is used to mark particular program elements as CLS-compliant, its use guarantees that those elements are accessible from all languages and tools that target the .NET Framework.</span></span> 
+* <span data-ttu-id="b8dc1-654">Para definir as partes da interface pública exposta por um componente que são compatíveis com CLS e as partes que não são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-654">To define the parts of the public interface exposed by a component that are CLS-compliant and the parts that are not CLS-compliant.</span></span> <span data-ttu-id="b8dc1-655">Quando o atributo é usado para marcar elementos de programa específicos como compatíveis com CLS, seu uso garante que os elementos sejam acessíveis em todas as linguagens e ferramentas direcionadas ao .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-655">When the attribute is used to mark particular program elements as CLS-compliant, its use guarantees that those elements are accessible from all languages and tools that target the .NET Framework.</span></span>
 
-* <span data-ttu-id="fa2a8-656">Para garantir que a interface pública da biblioteca de componentes exponha apenas elementos de programa que são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-656">To ensure that the component library's public interface exposes only program elements that are CLS-compliant.</span></span> <span data-ttu-id="fa2a8-657">Se os elementos não forem compatíveis com CLS, os compiladores geralmente emitirão um aviso.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-657">If elements are not CLS-compliant, compilers will generally issue a warning.</span></span>
+* <span data-ttu-id="b8dc1-656">Para garantir que a interface pública da biblioteca de componentes exponha apenas elementos de programa que são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-656">To ensure that the component library's public interface exposes only program elements that are CLS-compliant.</span></span> <span data-ttu-id="b8dc1-657">Se os elementos não forem compatíveis com CLS, os compiladores geralmente emitirão um aviso.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-657">If elements are not CLS-compliant, compilers will generally issue a warning.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="fa2a8-658">Em alguns casos, os compiladores de linguagem aplicam as regras de compatibilidade com CLS independentemente do uso ou não do atributo `CLSCompliantAttribute`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-658">In some cases, language compilers enforce CLS-compliant rules regardless of whether the `CLSCompliantAttribute` attribute is used.</span></span> <span data-ttu-id="fa2a8-659">Por exemplo, a definição de um membro `*static` em uma interface viola uma regra CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-659">For example, defining a `*static` member in an interface violates a CLS rule.</span></span> <span data-ttu-id="fa2a8-660">No entanto, se você definir um membro `*static` em uma interface, o compilador do C# exibirá uma mensagem de erro e falhará ao compilar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-660">However, if you define a `*static` member in an interface, the C# compiler displays an error message and fails to compile the app.</span></span>
+> <span data-ttu-id="b8dc1-658">Em alguns casos, os compiladores de linguagem aplicam as regras de compatibilidade com CLS independentemente do uso ou não do atributo `CLSCompliantAttribute`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-658">In some cases, language compilers enforce CLS-compliant rules regardless of whether the `CLSCompliantAttribute` attribute is used.</span></span> <span data-ttu-id="b8dc1-659">Por exemplo, a definição de um membro `*static` em uma interface viola uma regra CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-659">For example, defining a `*static` member in an interface violates a CLS rule.</span></span> <span data-ttu-id="b8dc1-660">No entanto, se você definir um membro `*static` em uma interface, o compilador do C# exibirá uma mensagem de erro e falhará ao compilar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-660">However, if you define a `*static` member in an interface, the C# compiler displays an error message and fails to compile the app.</span></span>
 
-<span data-ttu-id="fa2a8-661">O atributo `CLSCompliantAttribute` é marcado com um atributo [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) que tem um valor de `AttributeTargets.All`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-661">The `CLSCompliantAttribute` attribute is marked with an [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) attribute that has a value of `AttributeTargets.All`.</span></span> <span data-ttu-id="fa2a8-662">Esse valor permite que você aplique o atributo `CLSCompliantAttribute` a qualquer elemento de programa, incluindo assemblies, módulos, tipos (classes, estruturas, interfaces, enumerações e delegados), membros de tipo (construtores, métodos, propriedades, campos e eventos), parâmetros, parâmetros genéricos e valores de retorno.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-662">This value allows you to apply the `CLSCompliantAttribute` attribute to any program element, including assemblies, modules, types (classes, structures, enumerations, interfaces, and delegates), type members (constructors, methods, properties, fields, and events), parameters, generic parameters, and return values.</span></span> <span data-ttu-id="fa2a8-663">No entanto, na prática, você deve aplicar o atributo somente a assemblies, tipos e membros de tipo.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-663">However, in practice, you should apply the attribute only to assemblies, types, and type members.</span></span> <span data-ttu-id="fa2a8-664">Caso contrário, os compiladores ignoram o atributo e continuam gerando avisos do compilador sempre que encontrarem um parâmetro não compatível, parâmetro genérico ou valor retornado na interface pública da biblioteca.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-664">Otherwise, compilers ignore the attribute and continue to generate compiler warnings whenever they encounter a non-compliant parameter, generic parameter, or return value in your library's public interface.</span></span>  
+<span data-ttu-id="b8dc1-661">O atributo `CLSCompliantAttribute` é marcado com um atributo [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) que tem um valor de `AttributeTargets.All`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-661">The `CLSCompliantAttribute` attribute is marked with an [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) attribute that has a value of `AttributeTargets.All`.</span></span> <span data-ttu-id="b8dc1-662">Esse valor permite que você aplique o atributo `CLSCompliantAttribute` a qualquer elemento de programa, incluindo assemblies, módulos, tipos (classes, estruturas, interfaces, enumerações e delegados), membros de tipo (construtores, métodos, propriedades, campos e eventos), parâmetros, parâmetros genéricos e valores de retorno.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-662">This value allows you to apply the `CLSCompliantAttribute` attribute to any program element, including assemblies, modules, types (classes, structures, enumerations, interfaces, and delegates), type members (constructors, methods, properties, fields, and events), parameters, generic parameters, and return values.</span></span> <span data-ttu-id="b8dc1-663">No entanto, na prática, você deve aplicar o atributo somente a assemblies, tipos e membros de tipo.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-663">However, in practice, you should apply the attribute only to assemblies, types, and type members.</span></span> <span data-ttu-id="b8dc1-664">Caso contrário, os compiladores ignoram o atributo e continuam gerando avisos do compilador sempre que encontrarem um parâmetro não compatível, parâmetro genérico ou valor retornado na interface pública da biblioteca.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-664">Otherwise, compilers ignore the attribute and continue to generate compiler warnings whenever they encounter a non-compliant parameter, generic parameter, or return value in your library's public interface.</span></span>
 
-<span data-ttu-id="fa2a8-665">O valor do atributo `CLSCompliantAttribute` é herdado pelos elementos contidos no programa.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-665">The value of the `CLSCompliantAttribute` attribute is inherited by contained program elements.</span></span> <span data-ttu-id="fa2a8-666">Por exemplo, se um assembly for marcado como compatível com CLS, seus tipos também serão compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-666">For example, if an assembly is marked as CLS-compliant, its types are also CLS-compliant.</span></span> <span data-ttu-id="fa2a8-667">Se um tipo for marcado como compatível com CLS, seus membros e tipos aninhados também serão compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-667">If a type is marked as CLS-compliant, its nested types and members are also CLS-compliant.</span></span> 
+<span data-ttu-id="b8dc1-665">O valor do atributo `CLSCompliantAttribute` é herdado pelos elementos contidos no programa.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-665">The value of the `CLSCompliantAttribute` attribute is inherited by contained program elements.</span></span> <span data-ttu-id="b8dc1-666">Por exemplo, se um assembly for marcado como compatível com CLS, seus tipos também serão compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-666">For example, if an assembly is marked as CLS-compliant, its types are also CLS-compliant.</span></span> <span data-ttu-id="b8dc1-667">Se um tipo for marcado como compatível com CLS, seus membros e tipos aninhados também serão compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-667">If a type is marked as CLS-compliant, its nested types and members are also CLS-compliant.</span></span>
 
-<span data-ttu-id="fa2a8-668">Você pode substituir explicitamente a compatibilidade herdada aplicando o atributo `CLSCompliantAttribute` a um elemento contido no programa.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-668">You can explicitly override the inherited compliance by applying the `CLSCompliantAttribute` attribute to a contained program element.</span></span> <span data-ttu-id="fa2a8-669">Por exemplo, é possível usar o atributo `CLSCompliantAttribute` com um valor *isCompliant* de `false` para definir um tipo não compatível em um assembly compatível e é possível usar o atributo com um valor *isComplian* de `true` para definir um tipo compatível em um assembly não compatível.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-669">For example, you can use the `CLSCompliantAttribute` attribute with an *isCompliant* value of `false` to define a non-compliant type in a compliant assembly, and you can use the attribute with an *isComplian* value of `true` to define a compliant type in a non-compliant assembly.</span></span> <span data-ttu-id="fa2a8-670">Você também pode definir membros não compatíveis em um tipo compatível.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-670">You can also define non-compliant members in a compliant type.</span></span> <span data-ttu-id="fa2a8-671">No entanto, um tipo não compatível não pode ter membros compatíveis. Portanto, você não pode usar o atributo com um valor *isCompliant* de `true` para substituir a herança de um tipo não compatível.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-671">However, a non-compliant type cannot have compliant members, so you cannot use the attribute with an *isCompliant* value of `true` to override inheritance from a non-compliant type.</span></span> 
+<span data-ttu-id="b8dc1-668">Você pode substituir explicitamente a compatibilidade herdada aplicando o atributo `CLSCompliantAttribute` a um elemento contido no programa.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-668">You can explicitly override the inherited compliance by applying the `CLSCompliantAttribute` attribute to a contained program element.</span></span> <span data-ttu-id="b8dc1-669">Por exemplo, é possível usar o atributo `CLSCompliantAttribute` com um valor *isCompliant* de `false` para definir um tipo não compatível em um assembly compatível e é possível usar o atributo com um valor *isComplian* de `true` para definir um tipo compatível em um assembly não compatível.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-669">For example, you can use the `CLSCompliantAttribute` attribute with an *isCompliant* value of `false` to define a non-compliant type in a compliant assembly, and you can use the attribute with an *isCompliant* value of `true` to define a compliant type in a non-compliant assembly.</span></span> <span data-ttu-id="b8dc1-670">Você também pode definir membros não compatíveis em um tipo compatível.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-670">You can also define non-compliant members in a compliant type.</span></span> <span data-ttu-id="b8dc1-671">No entanto, um tipo não compatível não pode ter membros compatíveis. Portanto, você não pode usar o atributo com um valor *isCompliant* de `true` para substituir a herança de um tipo não compatível.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-671">However, a non-compliant type cannot have compliant members, so you cannot use the attribute with an *isCompliant* value of `true` to override inheritance from a non-compliant type.</span></span>
 
-<span data-ttu-id="fa2a8-672">Ao desenvolver componentes, você sempre deve usar o atributo `CLSCompliantAttribute` para indicar se o assembly, seus tipos e membros são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-672">When you are developing components, you should always use the `CLSCompliantAttribute` attribute to indicate whether your assembly, its types, and its members are CLS-compliant.</span></span> 
+<span data-ttu-id="b8dc1-672">Ao desenvolver componentes, você sempre deve usar o atributo `CLSCompliantAttribute` para indicar se o assembly, seus tipos e membros são compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-672">When you are developing components, you should always use the `CLSCompliantAttribute` attribute to indicate whether your assembly, its types, and its members are CLS-compliant.</span></span>
 
-<span data-ttu-id="fa2a8-673">Para criar componentes compatíveis com CLS:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-673">To create CLS-compliant components:</span></span> 
+<span data-ttu-id="b8dc1-673">Para criar componentes compatíveis com CLS:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-673">To create CLS-compliant components:</span></span>
 
-1. <span data-ttu-id="fa2a8-674">Use `CLSCompliantAttribute` para marcar o assembly como compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-674">Use the `CLSCompliantAttribute` to mark you assembly as CLS-compliant.</span></span>
+1. <span data-ttu-id="b8dc1-674">Use `CLSCompliantAttribute` para marcar o assembly como compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-674">Use the `CLSCompliantAttribute` to mark you assembly as CLS-compliant.</span></span>
 
-2. <span data-ttu-id="fa2a8-675">Marque qualquer tipo exposto publicamente no assembly que não seja compatível com CLS como não compatível.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-675">Mark any publicly exposed types in the assembly that are not CLS-compliant as non-compliant.</span></span> 
+2. <span data-ttu-id="b8dc1-675">Marque qualquer tipo exposto publicamente no assembly que não seja compatível com CLS como não compatível.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-675">Mark any publicly exposed types in the assembly that are not CLS-compliant as non-compliant.</span></span>
 
-3. <span data-ttu-id="fa2a8-676">Marque qualquer membro publicamente exposto em tipos compatíveis com CLS como não compatíveis.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-676">Mark any publicly exposed members in CLS-compliant types as non-compliant.</span></span> 
+3. <span data-ttu-id="b8dc1-676">Marque qualquer membro publicamente exposto em tipos compatíveis com CLS como não compatíveis.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-676">Mark any publicly exposed members in CLS-compliant types as non-compliant.</span></span>
 
-4. <span data-ttu-id="fa2a8-677">Forneça uma alternativa compatível com CLS para membros não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-677">Provide a CLS-compliant alternative for non-CLS-compliant members.</span></span> 
+4. <span data-ttu-id="b8dc1-677">Forneça uma alternativa compatível com CLS para membros não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-677">Provide a CLS-compliant alternative for non-CLS-compliant members.</span></span>
 
-<span data-ttu-id="fa2a8-678">Se você marcou com êxito todos os tipos e membros não compatíveis, o compilador não deverá emitir avisos de não conformidade.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-678">If you've successfully marked all your non-compliant types and members, your compiler should not emit any non-compliance warnings.</span></span> <span data-ttu-id="fa2a8-679">Entretanto, você deve indicar quais membros não são compatíveis com CLS e listar suas alternativas compatíveis com CLS na documentação do produto.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-679">However, you should indicate which members are not CLS-compliant and list their CLS-compliant alternatives in your product documentation.</span></span> 
+<span data-ttu-id="b8dc1-678">Se você marcou com êxito todos os tipos e membros não compatíveis, o compilador não deverá emitir avisos de não conformidade.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-678">If you've successfully marked all your non-compliant types and members, your compiler should not emit any non-compliance warnings.</span></span> <span data-ttu-id="b8dc1-679">Entretanto, você deve indicar quais membros não são compatíveis com CLS e listar suas alternativas compatíveis com CLS na documentação do produto.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-679">However, you should indicate which members are not CLS-compliant and list their CLS-compliant alternatives in your product documentation.</span></span>
 
-<span data-ttu-id="fa2a8-680">O exemplo a seguir usa o atributo `CLSCompliantAttribute` para definir um assembly compatível com CLS e um tipo, `CharacterUtilities`, que tem dois membros não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-680">The following example uses the `CLSCompliantAttribute` attribute to define a CLS-compliant assembly and a type, `CharacterUtilities`, that has two non-CLS-compliant members.</span></span> <span data-ttu-id="fa2a8-681">Como ambos os membros são marcados com o atributo `CLSCompliant(false)`, o compilador não produz avisos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-681">Because both members are tagged with the `CLSCompliant(false)` attribute, the compiler produces no warnings.</span></span> <span data-ttu-id="fa2a8-682">A classe também fornece uma alternativa compatível com CLS para ambos os métodos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-682">The class also provides a CLS-compliant alternative for both methods.</span></span> <span data-ttu-id="fa2a8-683">Normalmente, nós adicionaríamos apenas duas sobrecargas ao método `ToUTF16` para fornecer alternativas compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-683">Ordinarily, we would just add two overloads to the `ToUTF16` method to provide CLS-compliant alternatives.</span></span> <span data-ttu-id="fa2a8-684">Entretanto, como os métodos não podem ser sobrecarregados com base no valor retornado, os nomes dos métodos compatíveis com CLS são diferentes dos nomes dos métodos não compatíveis.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-684">However, because methods cannot be overloaded based on return value, the names of the CLS-compliant methods are different from the names of the non-compliant methods.</span></span>  
+<span data-ttu-id="b8dc1-680">O exemplo a seguir usa o atributo `CLSCompliantAttribute` para definir um assembly compatível com CLS e um tipo, `CharacterUtilities`, que tem dois membros não compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-680">The following example uses the `CLSCompliantAttribute` attribute to define a CLS-compliant assembly and a type, `CharacterUtilities`, that has two non-CLS-compliant members.</span></span> <span data-ttu-id="b8dc1-681">Como ambos os membros são marcados com o atributo `CLSCompliant(false)`, o compilador não produz avisos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-681">Because both members are tagged with the `CLSCompliant(false)` attribute, the compiler produces no warnings.</span></span> <span data-ttu-id="b8dc1-682">A classe também fornece uma alternativa compatível com CLS para ambos os métodos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-682">The class also provides a CLS-compliant alternative for both methods.</span></span> <span data-ttu-id="b8dc1-683">Normalmente, nós adicionaríamos apenas duas sobrecargas ao método `ToUTF16` para fornecer alternativas compatíveis com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-683">Ordinarily, we would just add two overloads to the `ToUTF16` method to provide CLS-compliant alternatives.</span></span> <span data-ttu-id="b8dc1-684">Entretanto, como os métodos não podem ser sobrecarregados com base no valor retornado, os nomes dos métodos compatíveis com CLS são diferentes dos nomes dos métodos não compatíveis.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-684">However, because methods cannot be overloaded based on return value, the names of the CLS-compliant methods are different from the names of the non-compliant methods.</span></span>
 
 ```csharp
 using System;
@@ -2707,7 +2705,7 @@ public class CharacterUtilities
 
    [CLSCompliant(false)] public static ushort ToUTF16(Char ch)
    {
-      return Convert.ToUInt16(ch); 
+      return Convert.ToUInt16(ch);
    }
 
    // CLS-compliant alternative for ToUTF16(String).
@@ -2726,7 +2724,7 @@ public class CharacterUtilities
    public bool HasMultipleRepresentations(String s)
    {
       String s1 = s.Normalize(NormalizationForm.FormC);
-      return s.Equals(s1);   
+      return s.Equals(s1);
    }
 
    public int GetUnicodeCodePoint(Char ch)
@@ -2734,7 +2732,7 @@ public class CharacterUtilities
       if (Char.IsSurrogate(ch))
          throw new ArgumentException("ch cannot be a high or low surrogate.");
 
-      return Char.ConvertToUtf32(ch.ToString(), 0);   
+      return Char.ConvertToUtf32(ch.ToString(), 0);
    }
 
    public int GetUnicodeCodePoint(Char[] chars)
@@ -2750,7 +2748,7 @@ public class CharacterUtilities
       }
       else {
          return Char.ConvertToUtf32(chars.ToString(), 0);
-      } 
+      }
    }
 }
 ```
@@ -2767,7 +2765,7 @@ Public Class CharacterUtilities
    End Function
 
    <CLSCompliant(False)> Public Shared Function ToUTF16(ch As Char) As UShort
-      Return Convert.ToUInt16(ch) 
+      Return Convert.ToUInt16(ch)
    End Function
 
    ' CLS-compliant alternative for ToUTF16(String).
@@ -2783,14 +2781,14 @@ Public Class CharacterUtilities
 
    Public Function HasMultipleRepresentations(s As String) As Boolean
       Dim s1 As String = s.Normalize(NormalizationForm.FormC)
-      Return s.Equals(s1)   
+      Return s.Equals(s1)
    End Function
 
    Public Function GetUnicodeCodePoint(ch As Char) As Integer
       If Char.IsSurrogate(ch) Then
          Throw New ArgumentException("ch cannot be a high or low surrogate.")
       End If
-      Return Char.ConvertToUtf32(ch.ToString(), 0)   
+      Return Char.ConvertToUtf32(ch.ToString(), 0)
    End Function
 
    Public Function GetUnicodeCodePoint(chars() As Char) As Integer
@@ -2805,25 +2803,25 @@ Public Class CharacterUtilities
          End If
       Else
          Return Char.ConvertToUtf32(chars.ToString(), 0)
-      End If 
-   End Function            
+      End If
+   End Function
 End Class
 ```
 
-<span data-ttu-id="fa2a8-685">Se você estiver desenvolvendo um aplicativo em vez de uma biblioteca (ou seja, se não estiver expondo tipos ou membros que possam ser consumidos por outros desenvolvedores de aplicativos), a conformidade com CLS dos elementos do programa que seu aplicativo consome só serão de interesse se sua linguagem não der suporte a eles.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-685">If you are developing an app rather than a library (that is, if you aren't exposing types or members that can be consumed by other app developers), the CLS compliance of the program elements that your app consumes are of interest only if your language does not support them.</span></span> <span data-ttu-id="fa2a8-686">Nesse caso, seu compilador de linguagem gerará um erro quando você tentar usar um elemento não compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-686">In that case, your language compiler will generate an error when you try to use a non-CLS-compliant element.</span></span> 
+<span data-ttu-id="b8dc1-685">Se você estiver desenvolvendo um aplicativo em vez de uma biblioteca (ou seja, se não estiver expondo tipos ou membros que possam ser consumidos por outros desenvolvedores de aplicativos), a conformidade com CLS dos elementos do programa que seu aplicativo consome só serão de interesse se sua linguagem não der suporte a eles.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-685">If you are developing an app rather than a library (that is, if you aren't exposing types or members that can be consumed by other app developers), the CLS compliance of the program elements that your app consumes are of interest only if your language does not support them.</span></span> <span data-ttu-id="b8dc1-686">Nesse caso, seu compilador de linguagem gerará um erro quando você tentar usar um elemento não compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-686">In that case, your language compiler will generate an error when you try to use a non-CLS-compliant element.</span></span>
 
-## <a name="cross-language-interoperability"></a><span data-ttu-id="fa2a8-687">Interoperabilidade em qualquer idioma</span><span class="sxs-lookup"><span data-stu-id="fa2a8-687">Cross-Language Interoperability</span></span>
+## <a name="cross-language-interoperability"></a><span data-ttu-id="b8dc1-687">Interoperabilidade em qualquer idioma</span><span class="sxs-lookup"><span data-stu-id="b8dc1-687">Cross-Language Interoperability</span></span>
 
-<span data-ttu-id="fa2a8-688">A independência de linguagem tem vários significados possíveis.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-688">Language independence has a number of possible meanings.</span></span> <span data-ttu-id="fa2a8-689">Um significado envolve o consumo contínuo de tipos gravados em uma linguagem de um aplicativo gravado em outra linguagem.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-689">One meaning involves seamlessly consuming types written in one language from an app written in another language.</span></span> <span data-ttu-id="fa2a8-690">Um segundo significado, que é o enfoque deste artigo, envolve combinar o código gravado em várias linguagens em um único assembly do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-690">A second meaning, which is the focus of this article, involves combining code written in multiple languages into a single .NET Framework assembly.</span></span> 
+<span data-ttu-id="b8dc1-688">A independência de linguagem tem vários significados possíveis.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-688">Language independence has a number of possible meanings.</span></span> <span data-ttu-id="b8dc1-689">Um significado envolve o consumo contínuo de tipos gravados em uma linguagem de um aplicativo gravado em outra linguagem.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-689">One meaning involves seamlessly consuming types written in one language from an app written in another language.</span></span> <span data-ttu-id="b8dc1-690">Um segundo significado, que é o enfoque deste artigo, envolve combinar o código gravado em várias linguagens em um único assembly do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-690">A second meaning, which is the focus of this article, involves combining code written in multiple languages into a single .NET Framework assembly.</span></span>
 
-<span data-ttu-id="fa2a8-691">O exemplo a seguir ilustra a interoperabilidade em qualquer idioma com a criação de uma biblioteca de classes chamada Utilities.dll que inclui duas classes, `NumericLib` e `StringLib`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-691">The following example illustrates cross-language interoperability by creating a class library named Utilities.dll that includes two classes, `NumericLib` and `StringLib`.</span></span> <span data-ttu-id="fa2a8-692">A classe `NumericLib` é gravada em C#, e a classe `StringLib` é gravada em Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-692">The `NumericLib` class is written in C#, and the `StringLib` class is written in Visual Basic.</span></span> <span data-ttu-id="fa2a8-693">Aqui está o código-fonte de `StringUtil.vb`, que inclui um único membro, `ToTitleCase`, em sua classe `StringLib`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-693">Here's the source code for `StringUtil.vb`, which includes a single member, `ToTitleCase`, in its `StringLib` class.</span></span>
+<span data-ttu-id="b8dc1-691">O exemplo a seguir ilustra a interoperabilidade em qualquer idioma com a criação de uma biblioteca de classes chamada Utilities.dll que inclui duas classes, `NumericLib` e `StringLib`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-691">The following example illustrates cross-language interoperability by creating a class library named Utilities.dll that includes two classes, `NumericLib` and `StringLib`.</span></span> <span data-ttu-id="b8dc1-692">A classe `NumericLib` é gravada em C#, e a classe `StringLib` é gravada em Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-692">The `NumericLib` class is written in C#, and the `StringLib` class is written in Visual Basic.</span></span> <span data-ttu-id="b8dc1-693">Aqui está o código-fonte de `StringUtil.vb`, que inclui um único membro, `ToTitleCase`, em sua classe `StringLib`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-693">Here's the source code for `StringUtil.vb`, which includes a single member, `ToTitleCase`, in its `StringLib` class.</span></span>
 
 ```vb
 Imports System.Collections.Generic
 Imports System.Runtime.CompilerServices
 
 Public Module StringLib
-   Private exclusions As List(Of String) 
+   Private exclusions As List(Of String)
 
    Sub New()
       Dim words() As String = { "a", "an", "and", "of", "the" }
@@ -2833,7 +2831,7 @@ Public Module StringLib
 
    <Extension()> _
    Public Function ToTitleCase(title As String) As String
-      Dim words() As String = title.Split() 
+      Dim words() As String = title.Split()
       Dim result As String = String.Empty
 
       For ctr As Integer = 0 To words.Length - 1
@@ -2845,28 +2843,28 @@ Public Module StringLib
             result += word.ToLower()
          End If
          If ctr <= words.Length - 1 Then
-            result += " "             
-         End If   
-      Next 
-      Return result 
+            result += " "
+         End If
+      Next
+      Return result
    End Function
 End Module
 ```
 
-<span data-ttu-id="fa2a8-694">Aqui está o código-fonte de NumberUtil.cs, que define uma classe `NumericLib` com dois membros, `IsEven` e `NearZero`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-694">Here's the source code for NumberUtil.cs, which defines a `NumericLib` class that has two members, `IsEven` and `NearZero`.</span></span>
+<span data-ttu-id="b8dc1-694">Aqui está o código-fonte de NumberUtil.cs, que define uma classe `NumericLib` com dois membros, `IsEven` e `NearZero`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-694">Here's the source code for NumberUtil.cs, which defines a `NumericLib` class that has two members, `IsEven` and `NearZero`.</span></span>
 
 ```csharp
 using System;
 
-public static class NumericLib 
+public static class NumericLib
 {
    public static bool IsEven(this IConvertible number)
    {
       if (number is Byte ||
           number is SByte ||
           number is Int16 ||
-          number is UInt16 || 
-          number is Int32 || 
+          number is UInt16 ||
+          number is Int32 ||
           number is UInt32 ||
           number is Int64)
          return ((long) number) % 2 == 0;
@@ -2878,30 +2876,30 @@ public static class NumericLib
 
    public static bool NearZero(double number)
    {
-      return number < .00001; 
+      return number < .00001;
    }
 }
 ```
 
-<span data-ttu-id="fa2a8-695">Para empacotar as duas classes em um único assembly, você deve compilá-las em módulos.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-695">To package the two classes in a single assembly, you must compile them into modules.</span></span> <span data-ttu-id="fa2a8-696">Para compilar o arquivo de código-fonte do Visual Basic em um módulo, use este comando:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-696">To compile the Visual Basic source code file into a module, use this command:</span></span> 
+<span data-ttu-id="b8dc1-695">Para empacotar as duas classes em um único assembly, você deve compilá-las em módulos.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-695">To package the two classes in a single assembly, you must compile them into modules.</span></span> <span data-ttu-id="b8dc1-696">Para compilar o arquivo de código-fonte do Visual Basic em um módulo, use este comando:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-696">To compile the Visual Basic source code file into a module, use this command:</span></span>
 
-```
-vbc /t:module StringUtil.vb 
+```console
+vbc /t:module StringUtil.vb
 ```
 
-<span data-ttu-id="fa2a8-697">Para compilar o arquivo de código-fonte do C# em um módulo, use este comando:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-697">To compile the C# source code file into a module, use this command:</span></span>
+<span data-ttu-id="b8dc1-697">Para compilar o arquivo de código-fonte do C# em um módulo, use este comando:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-697">To compile the C# source code file into a module, use this command:</span></span>
 
-```
+```console
 csc /t:module NumberUtil.cs
 ```
 
-<span data-ttu-id="fa2a8-698">Então você usa a ferramenta Link (Link.exe) para compilar os dois módulos em um assembly:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-698">You then use the Link tool (Link.exe) to compile the two modules into an assembly:</span></span> 
+<span data-ttu-id="b8dc1-698">Então você usa a ferramenta Link (Link.exe) para compilar os dois módulos em um assembly:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-698">You then use the Link tool (Link.exe) to compile the two modules into an assembly:</span></span>
 
-```
+```console
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
 ```
 
-<span data-ttu-id="fa2a8-699">O exemplo a seguir chama os métodos `NumericLib.NearZero` e `StringLib.ToTitleCase`.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-699">The following example then calls the `NumericLib.NearZero` and `StringLib.ToTitleCase` methods.</span></span> <span data-ttu-id="fa2a8-700">Observe que o código do Visual Basic e o código do C# podem acessar os métodos em ambas as classes.</span><span class="sxs-lookup"><span data-stu-id="fa2a8-700">Note that both the Visual Basic code and the C# code are able to access the methods in both classes.</span></span>
+<span data-ttu-id="b8dc1-699">O exemplo a seguir chama os métodos `NumericLib.NearZero` e `StringLib.ToTitleCase`.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-699">The following example then calls the `NumericLib.NearZero` and `StringLib.ToTitleCase` methods.</span></span> <span data-ttu-id="b8dc1-700">Observe que o código do Visual Basic e o código do C# podem acessar os métodos em ambas as classes.</span><span class="sxs-lookup"><span data-stu-id="b8dc1-700">Note that both the Visual Basic code and the C# code are able to access the methods in both classes.</span></span>
 
 ```csharp
 using System;
@@ -2937,15 +2935,14 @@ End Module
 '       War and Peace
 ```
 
-<span data-ttu-id="fa2a8-701">Para compilar o código do Visual Basic, use este comando:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-701">To compile the Visual Basic code, use this command:</span></span>
+<span data-ttu-id="b8dc1-701">Para compilar o código do Visual Basic, use este comando:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-701">To compile the Visual Basic code, use this command:</span></span>
 
-```
+```console
 vbc example.vb /r:UtilityLib.dll
 ```
 
-<span data-ttu-id="fa2a8-702">Para compilar usando C#, altere o nome do compilador de vbc para csc e altere a extensão do arquivo de .vb para .cs:</span><span class="sxs-lookup"><span data-stu-id="fa2a8-702">To compile with C#, change the name of the compiler from vbc to csc, and change the file extension from .vb to .cs:</span></span>
+<span data-ttu-id="b8dc1-702">Para compilar usando C#, altere o nome do compilador de vbc para csc e altere a extensão do arquivo de .vb para .cs:</span><span class="sxs-lookup"><span data-stu-id="b8dc1-702">To compile with C#, change the name of the compiler from vbc to csc, and change the file extension from .vb to .cs:</span></span>
 
-```
+```console
 csc example.cs /r:UtilityLib.dll
 ```
-
