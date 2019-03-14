@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967965"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676012"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 
@@ -76,19 +76,19 @@ O barramento de evento está relacionado ao padrão Observador e ao padrão de p
 
 No [padrão Observador](https://en.wikipedia.org/wiki/Observer_pattern), seu objeto primário (conhecido como o Observável) notifica outros objetos de interessados (conhecidos como Observadores) com informações relevantes (eventos).
 
-### <a name="publishsubscribe-pubsub-pattern"></a>Padrão Pub/Sub (Publicar/Assinar) 
+### <a name="publishsubscribe-pubsub-pattern"></a>Padrão Pub/Sub (Publicar/Assinar)
 
 O objetivo do [padrão Publicar/Assinar](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) é o mesmo que o padrão Observador: você deseja notificar outros serviços quando determinados eventos ocorrem. Mas há uma diferença importante entre os padrões de Observador e Pub/Sub. No padrão de observador, a difusão é executada diretamente do observável para os observadores, de modo que eles "conhecem" uns aos outros. Porém, ao usar um padrão Pub/Sub, há um terceiro componente, chamado de agente, agente de mensagem ou barramento de evento, que é conhecido tanto pelo publicador quanto pelo assinante. Portanto, ao usar o padrão Pub/Sub, o publicador e os assinantes são precisamente desacoplados graças ao agente de mensagem ou barramento de evento mencionado.
 
-### <a name="the-middleman-or-event-bus"></a>O barramento de evento ou intermediário 
+### <a name="the-middleman-or-event-bus"></a>O barramento de evento ou intermediário
 
 Como você obtém anonimato entre publicador e assinante? Uma maneira fácil é permitir que um intermediário cuide de toda a comunicação. Um barramento de evento é um intermediário.
 
 Um barramento de evento normalmente é composto por duas partes:
 
--   A abstração ou interface.
+- A abstração ou interface.
 
--   Uma ou mais implementações.
+- Uma ou mais implementações.
 
 Na Figura 6-19, você pode ver como, de um ponto de vista de aplicativo, o barramento de evento é nada mais que um canal Pub/Sub. A maneira como você implementa essa comunicação assíncrona pode variar. Eles podem ter várias implementações, assim, você pode alternar entre elas, dependendo dos requisitos do ambiente (por exemplo, produção versus ambientes de desenvolvimento).
 
@@ -129,6 +129,6 @@ O método `Publish` é simples. O barramento de evento difundirá o evento de in
 
 Os métodos `Subscribe` (você pode ter várias implementações, dependendo dos argumentos) são usados pelos microsserviços que desejam receber eventos. Esse método tem dois argumentos. O primeiro é o evento de integração a assinar (`IntegrationEvent`). O segundo argumento é o manipulador de eventos de integração (ou método de retorno de chamada), denominado `IIntegrationEventHandler<T>`, a ser executado quando o microsserviço receptor obtiver essa mensagem de evento de integração.
 
->[!div class="step-by-step"]
->[Anterior](database-server-container.md)
->[Próximo](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [Anterior](database-server-container.md)
+> [Próximo](rabbitmq-event-bus-development-test-environment.md)

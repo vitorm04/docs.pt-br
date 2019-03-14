@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479601"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674647"
 ---
 # <a name="official-net-docker-images"></a>Imagens oficiais do .NET Docker
 
@@ -23,9 +23,9 @@ A maioria dos repositórios de imagens fornecem marcação extensiva para ajudar
 
 Ao criar imagens do Docker para desenvolvedores, a Microsoft se concentrava nos seguintes cenários principais:
 
--   Imagens usadas para *desenvolver* e criar aplicativos .NET Core.
+- Imagens usadas para *desenvolver* e criar aplicativos .NET Core.
 
--   Imagens usadas para *executar* aplicativos .NET Core.
+- Imagens usadas para *executar* aplicativos .NET Core.
 
 Por que várias imagens? Ao desenvolver, criar e executar aplicativos em contêineres, você geralmente tem prioridades diferentes. Fornecendo diferentes imagens para essas tarefas separadas, a Microsoft ajuda a otimizar os processos separados de desenvolver, criar e implantar aplicativos.
 
@@ -50,6 +50,6 @@ Quando você explorar os repositórios de imagem do .NET no Hub do Docker, encon
 | microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core, somente com tempo de execução e otimizações de ASP.NET Core, no Linux e no Windows (várias arquiteturas) |
 | microsoft/dotnet:**2.2-sdk**                | .NET Core, com SDKs incluídos, no Linux e no Windows (várias arquiteturas)                                  |
 
->[!div class="step-by-step"]
->[Anterior](net-container-os-targets.md)
->[Próximo](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [Anterior](net-container-os-targets.md)
+> [Próximo](../architect-microservice-container-applications/index.md)

@@ -1,16 +1,21 @@
 ---
 title: Usar o PredictionEngine para fazer uma previsão de cada vez – ML.NET
 description: Saiba como usar o PredictionEngine do ML.NET para fazer uma previsão de cada vez
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 328067816be37c9490ae71974e3f6da4ae079f25
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 68837888c53409b4249bbece481888fb4167a5ca
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092027"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673802"
 ---
 # <a name="use-the-predictionengine-to-make-one-prediction-at-a-time---mlnet"></a>Usar o PredictionEngine para fazer uma previsão de cada vez – ML.NET 
+
+> [!NOTE]
+> Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Como qualquer modelo ML.NET é um transformador, você usa `model.Transform` para aplicar o modelo ao `DataView` para fazer previsões. 
 

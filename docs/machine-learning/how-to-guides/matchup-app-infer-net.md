@@ -1,22 +1,27 @@
 ---
 title: Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
 description: Descubra como usar a programação probabilística com o Infern.NET para criar um aplicativo de lista de campeonato com base em uma versão simplificada do TrueSkill.
-ms.date: 10/04/2018
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152455"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679121"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
+
+> [!NOTE]
+> Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Este guia de instruções ensina você sobre a programação probabilística usando o Infer.NET. A programação probabilística é uma abordagem de aprendizado de máquina em que os modelos personalizados são expressados como programas de computador. Ela permite a incorporação de conhecimento de domínio aos modelos, além de tornar o sistema de aprendizado de máquina mais interpretável. Ela também dá suporte à inferência online – o processo de aprender à medida que novos dados são apresentados. O Infer.NET é usado em vários produtos da Microsoft no Azure, Xbox e Bing.
 
 ## <a name="what-is-probabilistic-programming"></a>O que é programação probabilística?
 
-A programação probabilística nos permite criar modelos estatísticos de processos do mundo real. 
+A programação probabilística nos permite criar modelos estatísticos de processos do mundo real.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -45,7 +50,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Projetar o modelo
 
-O exemplo a seguir usa partidas de pingue-pongue ou pebolim dentro da empresa. Temos os participantes e o resultado de cada jogo.  Queremos inferir habilidades do jogador usando esses dados. Vamos supor que cada jogador tenha uma habilidade latente distribuída normalmente e que o desempenho em uma determinada partida seja uma versão com ruídos dessa habilidade. Os dados forçam o desempenho do vencedor a ser superior ao desempenho do perdedor. Essa é uma versão simplificada do modelo popular do [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/), que também dá suporte a equipes, sorteios e outras extensões. Uma [versão avançada](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) desse modelo é usada para organizar partidas em dois jogos muito vendidos, Halo e Gears of War.
+O exemplo a seguir usa partidas de pingue-pongue ou pebolim dentro da empresa. Temos os participantes e o resultado de cada jogo.  Queremos inferir habilidades do jogador usando esses dados. Suponha que cada jogador tenha uma habilidade latente distribuída normalmente e que o desempenho em uma determinada partida seja uma versão com ruídos dessa habilidade. Os dados forçam o desempenho do vencedor a ser superior ao desempenho do perdedor. Essa é uma versão simplificada do modelo popular do [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/), que também dá suporte a equipes, sorteios e outras extensões. Uma [versão avançada](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) desse modelo é usada para organizar partidas em dois jogos muito vendidos, Halo e Gears of War.
 
 Precisamos listar as habilidades inferidas do jogador com a respectiva variação – a medição da incerteza em torno das habilidades.
 
@@ -85,7 +90,7 @@ namespace myApp
             var winnerData = new[] { 0, 0, 0, 1, 3, 4 };
             var loserData = new[] { 1, 3, 4, 2, 1, 2 };
 
-            // Define the statistical model as a probabilistic program 
+            // Define the statistical model as a probabilistic program
             var game = new Range(winnerData.Length);
             var player = new Range(winnerData.Concat(loserData).Max() + 1);
             var playerSkills = Variable.Array<double>(player);
@@ -149,7 +154,7 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-Nos resultados, observe que o jogador 3 está classificado ligeiramente acima do jogador 4, de acordo com o nosso modelo. Isso porque a vitória do jogador 3 sobre o jogador 1 é mais significativa do que a vitória do jogador 4 sobre o jogador 2 – observe que o jogador 1 ganha do jogador 2. O jogador 0 é o campeão absoluto!  
+Nos resultados, observe que o jogador 3 está classificado ligeiramente acima do jogador 4, de acordo com o nosso modelo. Isso porque a vitória do jogador 3 sobre o jogador 1 é mais significativa do que a vitória do jogador 4 sobre o jogador 2 – observe que o jogador 1 ganha do jogador 2. O jogador 0 é o campeão absoluto!
 
 ## <a name="keep-learning"></a>Continuar aprendendo
 

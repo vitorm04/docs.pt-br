@@ -4,12 +4,12 @@ description: Explore os componentes de engenharia de recursos com suporte no ML.
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415345"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355397"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Transformações de dados do aprendizado de máquina – ML.NET
 
@@ -25,7 +25,7 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Agrupa valores de uma coluna escalar em um vetor com base em uma ID de grupo contígua. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Desagrupa colunas de vetor em sequências de linhas, o inverso da transformação de Grupo. |
 
-## <a name="conversions"></a>Conversões 
+## <a name="conversions"></a>Conversões
 
 | Transformar | Definição |
 | --- | --- |
@@ -36,7 +36,6 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Converte uma chave em uma coluna de vetor. |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Altera o tipo da coluna subjacente, desde que o tipo possa ser convertido. |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Converte os valores de entrada (palavras, números, etc.) em um índice em um dicionário. |
-
 
 ## <a name="deep-learning"></a>Aprendizado profundo
 
@@ -49,17 +48,17 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 
 | Transformar | Definição |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Remove a lista especificada de palavras irrelevantes (stop words) comparando tokens individuais (comparação que não diferencia maiúsculas de minúsculas) com as palavras irrelevantes.| 
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Remove a lista especificada de palavras irrelevantes (stop words) comparando tokens individuais (comparação que não diferencia maiúsculas de minúsculas) com as palavras irrelevantes.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Usa uma ou mais colunas ImageType e converte-as em uma representação em escala de cinza da mesma imagem.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Usa uma ou mais colunas ReadOnlyMemory e carrega-as como um ImageType. |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Usa uma ou mais colunas ImageType e converte-as em uma representação de vetor.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Usa uma ou mais colunas ImageType e redimensiona-as para a altura e a largura fornecidas.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implementa o LightLDA, uma implementação de última geração da Alocação de Dirichlet Latente.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Carrega transformações específicas do arquivo de modelo especificado. Permite transformações 'cherry-picking' de uma cadeia serializada ou aplica uma transformação pré-treinada a uma exibição de dados diferente (mas ainda compatível). |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Produz um recipiente de contagens de ngramas (sequências de valores consecutivos de comprimento 1 – n) em um determinado vetor de chaves. Ele faz isso criando um dicionário de ngramas e usando a ID no dicionário como o índice no recipiente. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Transforma uma coleção de textos indexados (vetor de ReadOnlyMemory) ou vetores de chaves em vetores de recurso numérico. Os vetores de recurso são contagens de ngrams (sequências de tokens consecutivos – palavras ou chaves – de tamanho 1-n). | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Transforma uma coleção de textos indexados (vetor de ReadOnlyMemory) em vetores de recurso numérico usando o hash. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Produz um recipiente de contagens de ngrams (sequências de palavras consecutivas de tamanho 1-n) em determinado texto. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Produz um recipiente de contagens de ngramas (sequências de valores consecutivos de comprimento 1 – n) em um determinado vetor de chaves. Ele faz isso criando um dicionário de ngramas e usando a ID no dicionário como o índice no recipiente. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Transforma uma coleção de textos indexados (vetor de ReadOnlyMemory) ou vetores de chaves em vetores de recurso numérico. Os vetores de recurso são contagens de ngrams (sequências de tokens consecutivos – palavras ou chaves – de tamanho 1-n). |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Transforma uma coleção de textos indexados (vetor de ReadOnlyMemory) em vetores de recurso numérico usando o hash. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Produz um recipiente de contagens de ngrams (sequências de palavras consecutivas de tamanho 1-n) em determinado texto. |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Converte o valor categórico em uma matriz de indicador criando um dicionário de categorias com base nos dados e usando a ID no dicionário como o índice na matriz |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Calcula a projeção do vetor de recurso em um subespaço de classificação baixa. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Usa um modelo de sentimento previamente treinado para pontuar cadeias de caracteres de entrada. |
@@ -73,7 +72,7 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 
 | Transformar | Definição |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Esse é um método de extensão a ser usado com o <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para usar um modelo pré-treinado [AlexNet](https://en.wikipedia.org/wiki/AlexNet). O NuGet que contém essa extensão também garante a inclusão do arquivo de modelo binário. | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Esse é um método de extensão a ser usado com o <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para usar um modelo pré-treinado [AlexNet](https://en.wikipedia.org/wiki/AlexNet). O NuGet que contém essa extensão também garante a inclusão do arquivo de modelo binário. |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | Esse é um método de extensão a ser usado com o <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para usar um modelo pré-treinado ResNet18. O NuGet que contém essa extensão também garante a inclusão do arquivo de modelo binário. |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | Esse é um método de extensão a ser usado com o <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para usar um modelo pré-treinado ResNet50. O NuGet que contém essa extensão também garante a inclusão do arquivo de modelo binário. |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | Esse é um método de extensão a ser usado com o <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para usar um modelo pré-treinado ResNet101. O NuGet que contém essa extensão também garante a inclusão do arquivo de modelo binário. |

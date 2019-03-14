@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02fa197b12e6a5bfb37cd0f275bc615dc179291b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8e5a3cb79187d6434585560e9c128e03fe8003b7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222513"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679366"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Erros de inicialização do .NET framework: Gerenciando a experiência do usuário
 
@@ -41,7 +41,7 @@ As APIs de ativação do CLR retornam códigos HRESULT para relatar o resultado 
 
 Se o sistema de ativação do CLR não puder carregar a versão correta de um tempo de execução exigido por um aplicativo, ele exibirá uma mensagem de erro para os usuários para informá-los de que seu computador não está configurado adequadamente para executar o aplicativo e fornece a eles a oportunidade de corrigir a situação. Normalmente, a seguinte mensagem de erro é apresentada nesta situação. O usuário pode escolher **Sim** para ir para um site da Microsoft em que pode baixar a versão correta do .NET Framework para o aplicativo.
 
-![Caixa de diálogo de erro de inicialização do .NET Framework](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog") Mensagem de erro típica para erros de inicialização
+![Caixa de diálogo de erro de inicialização do .NET Framework](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "Mensagem de erro típica para erros de inicialização")
 
 ## <a name="resolving-the-initialization-error"></a>Resolvendo o erro de inicialização
 
@@ -82,7 +82,7 @@ O CLR inclui um conjunto de hosts para uma variedade de cenários e esses hosts 
 
 O sistema de ativação do CLR fornece o mesmo comportamento e interface do usuário no [!INCLUDE[win8](../../../includes/win8-md.md)] que em outras versões do sistema operacional Windows, exceto quando encontra problemas ao carregar o CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] inclui o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], que usa CLR 4.5. No entanto, [!INCLUDE[win8](../../../includes/win8-md.md)] não inclui o .NET Framework 2.0, 3.0 ou 3.5, que usam o CLR 2.0. Como resultado, os aplicativos que dependem do CLR 2.0 não são executados no [!INCLUDE[win8](../../../includes/win8-md.md)] por padrão. Em vez disso, eles exibem a seguinte caixa de diálogo para permitir que os usuários instalem o .NET Framework 3.5. Os usuários também podem habilitar o .NET Framework 3.5 no Painel de Controle. Ambas as opções são discutidas no artigo [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md) (Instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8).
 
-![Caixa de diálogo de instalação do 3.5 no Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog") Prompt para instalar o .NET Framework 3.5 sob demanda
+![Caixa de diálogo de instalação do 3.5 no Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Prompt para instalar o .NET Framework 3.5 sob demanda")
 
 > [!NOTE]
 > O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] substitui o .NET Framework 4 (CLR 4) no computador do usuário. Portanto, os aplicativos do .NET Framework 4 são executados continuamente, sem exibir essa caixa de diálogo, em [!INCLUDE[win8](../../../includes/win8-md.md)].

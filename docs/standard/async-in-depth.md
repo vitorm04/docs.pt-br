@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285019"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677520"
 ---
 # <a name="async-in-depth"></a>Assincronia detalhada
 
@@ -142,7 +142,7 @@ Uma vez que `await` é encontrado, a execução de `CalculateResult()` é gerada
 
 ### <a name="why-does-async-help-here"></a>Por que a assincronia ajuda aqui?
 
-`async` e `await` são a melhor prática para gerenciar o trabalho vinculado à CPU quando você precisar de capacidade de resposta. Existem vários padrões para usar a assincronia com o trabalho vinculado à CPU. É importante observar que há um pequeno custo para usar a assincronia e não é recomendado para loops estreitos.  Cabe a você determinar como escrever seu código em torno dessa nova capacidade.
+`async` e `await` são a prática recomendada para gerenciar o trabalho vinculado à CPU quando você precisar de capacidade de resposta. Existem vários padrões para usar a assincronia com o trabalho vinculado à CPU. É importante observar que há um pequeno custo para usar a assincronia e não é recomendado para loops estreitos.  Cabe a você determinar como escrever seu código em torno dessa nova capacidade.
 
 ## <a name="see-also"></a>Consulte também
 

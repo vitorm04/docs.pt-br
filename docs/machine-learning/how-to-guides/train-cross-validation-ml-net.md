@@ -1,16 +1,21 @@
 ---
 title: Treinar um modelo de machine learning usando a validação cruzada – ML.NET
 description: Descubra como treinar um modelo de machine learning usando a validação cruzada com o ML.NET para ter um maior nível de precisão para as previsões do modelo
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092274"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676532"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Treinar um modelo de machine learning usando a validação cruzada – ML.NET
+
+> [!NOTE]
+> Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 A [validação cruzada](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) é uma técnica útil para aplicativos de ML. Ela ajuda a estimar a variação da qualidade do modelo de uma execução para outra e também elimina a necessidade de extrair um conjunto de testes separado para avaliação.
 

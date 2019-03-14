@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c6f2d001c6513211cf15993285e3564f7613402
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8ffb0686de5039573355e48446a4085fc44d2c75
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "47863657"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356891"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (extensão de depuração SOS)
 
@@ -33,7 +33,7 @@ A Extensão de Depuração SOS (SOS.dll) ajuda a depurar programas gerenciados n
 |**BPMD** [**-nofuturemodule**] [\<*nome do módulo*> \<*nome do método*>] [**-md** <`MethodDesc`>] **-list** **-clear** \<*número do ponto de interrupção pendente*> **-clearall**|Cria um ponto de interrupção no método especificado do módulo especificado.<br /><br /> Se o módulo e o método especificados não forem carregados, esse comando aguardará uma notificação de que o módulo foi carregado e compilado JIT (just-in-time) antes de criar um ponto de interrupção.<br /><br /> É possível gerenciar a lista dos pontos de interrupção pendentes usando as opções **-list**, **-clear** e **-clearall**:<br /><br /> A opção **-list** gerencia uma lista de todos os pontos de interrupção pendentes. Se um ponto de interrupção pendente tiver uma ID de módulo diferente de zero, esse ponto de interrupção será específico de uma função nesse módulo carregado em especial. Se o ponto de interrupção pendente tiver uma ID de módulo zero, esse ponto de interrupção se aplicará aos módulos que ainda não foram carregados.<br /><br /> Use a opção **-clear** ou **-clearall** para remover os pontos de interrupção pendentes da lista.|
 |**CLRStack** [**-a**] [**-l**] [**-p**] [**-n**]|Fornece um rastreamento de pilha apenas do código gerenciado.<br /><br /> A opção **-p** mostra argumentos para a função gerenciada.<br /><br /> A opção **-l** mostra informações sobre as variáveis locais em um quadro. Como a Extensão de Depuração SOS não consegue recuperar nomes locais, a saída de nomes locais está no formato \<*endereço local*> **=** \<*valor*>.<br /><br /> A opção **-a**(all) é um atalho para **-l** e **-p** combinados.<br /><br /> A opção **-n** desabilita a exibição dos nomes de arquivo de origem e dos números de linha. Se o depurador tiver a opção SYMOPT_LOAD_LINES especificada, o SOS pesquisará os símbolos de cada quadro gerenciado e, se bem-sucedido, exibirá o nome do arquivo de origem e o número da linha correspondentes. O parâmetro **-n** (sem números de linha) pode ser especificado para desabilitar esse comportamento.<br /><br /> A Extensão de Depuração do SOS não exibe quadros de transição em plataformas com base em x64 e IA-64.|
 |**COMState**|Lista o modelo de apartment COM para cada thread e um ponteiro `Context`, se disponível.|
-|**DumpArray** [**-start** \<*startIndex*>] [**-length** \<*length*>] [**-details**] [**-nofields**] \<*endereço de objeto da matriz*><br /><br /> -ou-<br /><br /> **DA** [**-start** \<*startIndex*>] [**-length** \<*length*>] [**-detail**] [**-nofields**] *endereço de objeto da matriz*>|Examina elementos de um objeto da matriz.<br /><br /> A opção **-start** especifica o índice inicial no qual os elementos são exibidos.<br /><br /> A opção **-length** especifica quantos elementos devem ser mostrados.<br /><br /> A opção **-details** exibe detalhes do elemento usando os formatos **DumpObj** e **DumpVC**.<br /><br /> A opção **-nofields** impede que as matrizes sejam exibidas. Essa opção só está disponível quando a opção **-detail** é especificada.|
+|**DumpArray** [**-start** \<*startIndex*>] [**-length** \<*length*>] [**-details**] [**-nofields**] \<*endereço de objeto da matriz*><br /><br /> - ou -<br /><br /> **DA** [**-start** \<*startIndex*>] [**-length** \<*length*>] [**-detail**] [**-nofields**] *endereço de objeto da matriz*>|Examina elementos de um objeto da matriz.<br /><br /> A opção **-start** especifica o índice inicial no qual os elementos são exibidos.<br /><br /> A opção **-length** especifica quantos elementos devem ser mostrados.<br /><br /> A opção **-details** exibe detalhes do elemento usando os formatos **DumpObj** e **DumpVC**.<br /><br /> A opção **-nofields** impede que as matrizes sejam exibidas. Essa opção só está disponível quando a opção **-detail** é especificada.|
 |**DumpAssembly** \<*endereço do assembly*>|Exibe informações sobre um assembly.<br /><br /> O comando **DumpAssembly** lista vários módulos, se existirem.<br /><br /> É possível obter um endereço de assembly usando o comando **DumpDomain**.|
 |**DumpClass** \<*endereço do EEClass*>|Exibe informações sobre a estrutura `EEClass` associada a um tipo.<br /><br /> O comando **DumpClass** exibe valores de campo estáticos, mas não exibe valores de campo não estáticos.<br /><br /> Use o comando **DumpMT**, **DumpObj**, **Name2EE** ou **Token2EE** para obter um endereço da estrutura do `EEClass`.|
 |**DumpDomain** [\<*endereço do domínio*>]|Enumera cada objeto <xref:System.Reflection.Assembly> carregado no endereço do objeto <xref:System.AppDomain> especificado.  Quando chamado sem parâmetros, o comando **DumpDomain** lista todos os objetos <xref:System.AppDomain> em um processo.|
@@ -44,12 +44,12 @@ A Extensão de Depuração SOS (SOS.dll) ajuda a depurar programas gerenciados n
 |**DumpMT** [**-MD**] \<*endereço de MethodTable*>|Exibe informações sobre uma tabela de métodos no endereço especificado. A especificação da opção **-MD** exibe uma lista de todos os métodos definidos com o objeto.<br /><br /> Cada objeto gerenciado contém um ponteiro da tabela do método.|
 |**DumpMethodSig** \<*sigaddr*> <*moduleadd*`r`>|Exibe informações sobre uma estrutura `MethodSig` no endereço especificado.|
 |**DumpModule** [**-mt**] \<*endereço de Module*>|Exibe informações sobre um módulo no endereço especificado. A opção **-mt** exibe os tipos definidos em um módulo e os tipos referenciados pelo módulo<br /><br /> É possível usar o comando **DumpDomain** ou **DumpAssembly** para recuperar o endereço de um módulo.|
-|**DumpObj** [**-nofields**] \<*endereço do objeto*><br /><br /> -ou-<br /><br /> **DO** \<*endereço do objeto*>|Exibe informações sobre um objeto no endereço especificado. O comando **DumpObj** exibe os campos, as informações da estrutura `EEClass`, a tabela do método e o tamanho do objeto.<br /><br /> É possível usar o comando **DumpStackObjects** para recuperar o endereço de um objeto.<br /><br /> Observe que é possível executar o comando **DumpObj** em campos do tipo `CLASS` porque eles também são objetos.<br /><br /> A opção `-`**nofields** evita a exibição de campos do objeto e é útil para objetos como String.|
+|**DumpObj** [**-nofields**] \<*endereço do objeto*><br /><br /> - ou -<br /><br /> **DO** \<*endereço do objeto*>|Exibe informações sobre um objeto no endereço especificado. O comando **DumpObj** exibe os campos, as informações da estrutura `EEClass`, a tabela do método e o tamanho do objeto.<br /><br /> É possível usar o comando **DumpStackObjects** para recuperar o endereço de um objeto.<br /><br /> Observe que é possível executar o comando **DumpObj** em campos do tipo `CLASS` porque eles também são objetos.<br /><br /> A opção `-`**nofields** evita a exibição de campos do objeto e é útil para objetos como String.|
 |**DumpRuntimeTypes**|Exibe os objetos de tipo do tempo de execução no heap do coletor de lixo e lista seus nomes de tipo associados e tabelas de método.|
 |**DumpStack** [**-EE**] [**-n**] [`top` *stack* [`bottom` *stac*`k`]]|Exibe um rastreamento de pilha.<br /><br /> A opção **-EE** faz com que o comando **DumpStack** exiba apenas funções gerenciadas. Use os parâmetros `top` e `bottom` para limitar os quadros de pilha exibidos em plataformas x86.<br /><br /> A opção **-n** desabilita a exibição dos nomes de arquivo de origem e dos números de linha. Se o depurador tiver a opção SYMOPT_LOAD_LINES especificada, o SOS pesquisará os símbolos de cada quadro gerenciado e, se bem-sucedido, exibirá o nome do arquivo de origem e o número da linha correspondentes. O parâmetro **-n** (sem números de linha) pode ser especificado para desabilitar esse comportamento.<br /><br /> Em plataformas x86 e x64, o comando **DumpStack** cria um rastreamento de pilha detalhado.<br /><br /> Em plataformas com base em IA-64, o comando **DumpStack** imita o comando **K** do depurador. Os parâmetros `top` e `bottom` são ignorados em plataformas com base em IA-64.|
 |**DumpSig** \<*sigaddr*> \<*moduleaddr*>|Exibe informações sobre uma estrutura `Sig` no endereço especificado.|
 |**DumpSigElem** \<*sigaddr*> \<*moduleaddr*>|Exibe um único elemento de um objeto de assinatura. Na maioria dos casos, você deve usar **DumpSig** para observar objetos de assinatura individuais. No entanto, se uma assinatura tiver sido corrompida de alguma forma, será possível usar **DumpSigElem** para ler partes válidas dela.|
-|**DumpStackObjects** [**-verify**] [`top` *stack* [`bottom` *stack*]]<br /><br /> -ou-<br /><br /> **DSO** [**-verify**] [`top` *stack* [`bottom` *stack*]]|Exibe todos os objetos gerenciados encontradas dentro dos limites da pilha atual.<br /><br /> A opção **-verify** valida cada campo `CLASS` não estático de um campo do objeto.<br /><br /> Use o comando **DumpStackObject** com comandos de rastreamento de pilha como o comando **K** e o comando **CLRStack** para determinar os valores de variáveis locais e parâmetros.|
+|**DumpStackObjects** [**-verify**] [`top` *stack* [`bottom` *stack*]]<br /><br /> - ou -<br /><br /> **DSO** [**-verify**] [`top` *stack* [`bottom` *stack*]]|Exibe todos os objetos gerenciados encontradas dentro dos limites da pilha atual.<br /><br /> A opção **-verify** valida cada campo `CLASS` não estático de um campo do objeto.<br /><br /> Use o comando **DumpStackObject** com comandos de rastreamento de pilha como o comando **K** e o comando **CLRStack** para determinar os valores de variáveis locais e parâmetros.|
 |**DumpVC** \<*endereço de MethodTable*> \<*Address*>|Exibe informações sobre os campos de uma classe de valor no endereço especificado.<br /><br /> O parâmetro **MethodTable** permite que o comando **DumpVC** interprete os campos corretamente. As classes de valor não têm uma tabela de método como seu primeiro campo.|
 |**EEHeap** [**-gc**] [**-loader**]|Exibe informações sobre a memória de processo consumida por estruturas de dados CLR internas.<br /><br /> As opções **-gc** e **-loader** limitam a saída desse comando ao coletor de lixo ou a estruturas de dados do carregador.<br /><br /> As informações do coletor de lixo lista os intervalos de cada segmento no heap gerenciado.  Se o ponteiro estiver dentro de um intervalo de segmentos indicado por **-gc**, o ponteiro será um ponteiro de objeto.|
 |**EEStack** [**-short**] [**-EE**]|Executa o comando **DumpStack** em todos os threads no processo.<br /><br /> A opção **-EE** é passada diretamente para o comando **DumpStack**. O parâmetro **-short** limita a saída aos seguintes tipos de threads:<br /><br /> Threads que tenham utilizado um bloqueio.<br /><br /> Threads que foram interrompidos para permitir uma coleta de lixo.<br /><br /> Threads que estão atualmente em código gerenciado.|
@@ -74,9 +74,9 @@ A Extensão de Depuração SOS (SOS.dll) ajuda a depurar programas gerenciados n
 |**IP2MD** \<*Code address*>|Exibe a estrutura `MethodDesc` no endereço especificado no código compilado com JIT.|
 |`ListNearObj` (`lno`) *<obj_address>*|Exibe os objetos anteriores e posteriores ao endereço especificado. O comando procura o endereço no heap da coleta de lixo semelhante a um início válido de um objeto gerenciado (com base em uma tabela de método válida) e o objeto posterior ao endereço do argumento.|
 |**MinidumpMode** [**0**] [**1**]|Impede a execução de comandos não seguros durante o uso de um minidespejo.<br /><br /> Passe **0** para desabilitar esse recurso ou **1** para habilitar esse recurso. Por padrão, o valor **MinidumpMode** é definido como **0**.<br /><br /> Minidespejos criados com os comandos **.dump /m** ou **.dump** têm dados específicos limitados a CLR e permitem que você execute apenas um subconjunto de comandos SOS corretamente. Alguns comandos podem falhar com erros inesperados porque as áreas necessárias de memória não são mapeadas ou estão mapeadas apenas parcialmente. Essa opção evita a execução de comandos não seguros em minidespejos.|
-|**Name2EE** \<*nome do módulo*> \<*nome do tipo ou método*><br /><br /> -ou-<br /><br /> **Name2EE** \<*nome do módulo*>**!**\<*nome do tipo ou método*>|Exibe a estrutura `MethodTable` e a estrutura `EEClass` do tipo ou do método especificado no módulo especificado.<br /><br /> O módulo especificado deve ser carregado no processo.<br /><br /> Para obter o nome do tipo apropriado, procure o módulo usando o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Também é possível passar `*` como o parâmetro de nome do módulo para pesquisar todos os módulos gerenciados carregados. O parâmetro *module name* também pode ser o nome do depurador para um módulo, como `mscorlib` ou `image00400000`.<br /><br /> Este comando dá suporte à sintaxe do depurador do Windows de <`module`>`!`<`type`>. O tipo deve estar totalmente qualificado.|
+|**Name2EE** \<*nome do módulo*> \<*nome do tipo ou método*><br /><br /> - ou -<br /><br /> **Name2EE** \<*nome do módulo*>**!**\<*nome do tipo ou método*>|Exibe a estrutura `MethodTable` e a estrutura `EEClass` do tipo ou do método especificado no módulo especificado.<br /><br /> O módulo especificado deve ser carregado no processo.<br /><br /> Para obter o nome do tipo apropriado, procure o módulo usando o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Também é possível passar `*` como o parâmetro de nome do módulo para pesquisar todos os módulos gerenciados carregados. O parâmetro *module name* também pode ser o nome do depurador para um módulo, como `mscorlib` ou `image00400000`.<br /><br /> Este comando dá suporte à sintaxe do depurador do Windows de <`module`>`!`<`type`>. O tipo deve estar totalmente qualificado.|
 |**ObjSize** [\<*Object address*>] &#124; [**-aggregate**] [**-stat**]|Exibe o tamanho do objeto especificado. Se você não especificar parâmetros, o comando **ObjSize** exibirá o tamanho de todos os objetos encontrados em threads gerenciados, exibirá todos os identificadores do coletor de lixo do processo e totalizará o tamanho de todos os objetos apontados por esses identificadores. O comando **ObjSize** inclui o tamanho de todos os objetos filho além do pai.<br /><br /> A opção **-aggregate** pode ser usada com o argumento **-stat** para obter uma exibição detalhada dos tipos que ainda têm raízes. Usando **!dumpheap -stat** e **!objsize -aggregate -stat**, é possível determinar quais objetos não têm mais raízes e diagnosticar diversos problemas de memória.|
-|**PrintException** [**-nested**] [**-lines**] [\<*Endereço do objeto Exception*>]<br /><br /> -ou-<br /><br /> **PE** [**-nested**] [\<*Endereço do objeto Exception*>]|Exibe e formata campos de qualquer objeto derivado da classe <xref:System.Exception> no endereço especificado. Se você não especificar um endereço, o comando **PrintException** exibirá a última exceção gerada no thread atual.<br /><br /> A opção **-nested** exibe detalhes sobre objetos de exceção aninhados.<br /><br /> A opção **-lines** exibe informações da origem, se disponível.<br /><br /> É possível usar esse comando para formatar e exibir o campo `_stackTrace`, que é uma matriz binária.|
+|**PrintException** [**-nested**] [**-lines**] [\<*Endereço do objeto Exception*>]<br /><br /> - ou -<br /><br /> **PE** [**-nested**] [\<*Endereço do objeto Exception*>]|Exibe e formata campos de qualquer objeto derivado da classe <xref:System.Exception> no endereço especificado. Se você não especificar um endereço, o comando **PrintException** exibirá a última exceção gerada no thread atual.<br /><br /> A opção **-nested** exibe detalhes sobre objetos de exceção aninhados.<br /><br /> A opção **-lines** exibe informações da origem, se disponível.<br /><br /> É possível usar esse comando para formatar e exibir o campo `_stackTrace`, que é uma matriz binária.|
 |**ProcInfo** [**-env**] [**-time**] [**-mem**]|Exibe variáveis de ambiente do processo, o tempo de CPU do kernel e as estatísticas de uso da memória.|
 |**RCWCleanupList** \<*endereço de RCWCleanupList*>|Exibe a lista de runtime callable wrappers no endereço especificado que aguardam limpeza.|
 |**SaveModule** \<*Endereço básico*> \<*Filename*>|Grava uma imagem, carregada na memória do endereço especificado, no arquivo especificado.|
@@ -126,79 +126,79 @@ O comando a seguir exibe o conteúdo de uma matriz no endereço `00ad28d0`.  A e
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
- O comando a seguir exibe o conteúdo de um assembly no endereço `1ca248`.
+O comando a seguir exibe o conteúdo de um assembly no endereço `1ca248`.
 
 ```
 !dumpassembly 1ca248
 ```
 
- O comando a seguir exibe informações sobre o heap do coletor de lixo.
+O comando a seguir exibe informações sobre o heap do coletor de lixo.
 
 ```
 !dumpheap
 ```
 
- O comando a seguir grava o conteúdo do log de estresse na memória em um arquivo (padrão) chamado StressLog.txt no diretório atual.
+O comando a seguir grava o conteúdo do log de estresse na memória em um arquivo (padrão) chamado StressLog.txt no diretório atual.
 
 ```
 !DumpLog
 ```
 
- O comando a seguir exibe a estrutura `MethodDesc` no endereço `902f40`.
+O comando a seguir exibe a estrutura `MethodDesc` no endereço `902f40`.
 
 ```
 !dumpmd 902f40
 ```
 
- O comando a seguir exibe informações sobre um módulo no endereço `1caa50`.
+O comando a seguir exibe informações sobre um módulo no endereço `1caa50`.
 
 ```
 !dumpmodule 1caa50
 ```
 
- O comando a seguir exibe informações sobre um objeto no endereço `a79d40`.
+O comando a seguir exibe informações sobre um objeto no endereço `a79d40`.
 
 ```
 !DumpObj a79d40
 ```
 
- O comando a seguir exibe os campos de uma classe de valor no endereço `00a79d9c` usando a tabela de método no endereço `0090320c`.
+O comando a seguir exibe os campos de uma classe de valor no endereço `00a79d9c` usando a tabela de método no endereço `0090320c`.
 
 ```
 !DumpVC 0090320c 00a79d9c
 ```
 
- O comando a seguir exibe a memória do processo usada pelo coletor de lixo.
+O comando a seguir exibe a memória do processo usada pelo coletor de lixo.
 
 ```
 !eeheap -gc
 ```
 
- O comando a seguir exibe todos os objetos programados para a finalização.
+O comando a seguir exibe todos os objetos programados para a finalização.
 
 ```
 !finalizequeue
 ```
 
- O comando a seguir determina o domínio do aplicativo de um objeto no endereço `00a79d98`.
+O comando a seguir determina o domínio do aplicativo de um objeto no endereço `00a79d98`.
 
 ```
 !findappdomain 00a79d98
 ```
 
- O comando a seguir exibe todos os identificadores do coletor de lixo no processo atual.
+O comando a seguir exibe todos os identificadores do coletor de lixo no processo atual.
 
 ```
 !gcinfo 5b68dbb8
 ```
 
- O comando a seguir exibe as estruturas `MethodTable` e `EEClass` do método `Main` na classe `MainClass` do módulo `unittest.exe`.
+O comando a seguir exibe as estruturas `MethodTable` e `EEClass` do método `Main` na classe `MainClass` do módulo `unittest.exe`.
 
 ```
 !name2ee unittest.exe MainClass.Main
 ```
 
- O comando a seguir exibe informações sobre o token de metadados no endereço `02000003` do módulo `unittest.exe`.
+O comando a seguir exibe informações sobre o token de metadados no endereço `02000003` do módulo `unittest.exe`.
 
 ```
 !token2ee unittest.exe 02000003

@@ -1,16 +1,21 @@
 ---
 title: Operacionalizar um modelo de aprendizado de máquina treinado em aplicativos – ML.NET
 description: Descubra como usar o ML.NET para consumir um modelo de aprendizado de máquina treinado e avaliado em aplicativos
-ms.date: 11/07/2018
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff3f0a8856382d020129693bcf722f572fd87606
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: be6906c939b82d00067babaeebe809dae3de413a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131640"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675128"
 ---
 # <a name="operationalize-a-trained-machine-learning-model-in-apps---mlnet"></a>Operacionalizar um modelo de aprendizado de máquina treinado em aplicativos – ML.NET
+
+> [!NOTE]
+> Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do github dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)
 
 Quando as métricas do modelo estiverem do seu agrado, é hora de "operacionalizar" o modelo. O objeto `model` que você criou pode ser consumido, persistido e reutilizado em diferentes ambientes, aplicando as mesmas etapas "aprendidas" durante o treinamento.
 

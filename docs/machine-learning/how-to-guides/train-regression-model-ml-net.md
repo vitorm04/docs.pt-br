@@ -1,16 +1,21 @@
 ---
 title: Treinar um modelo de regressão para prever um valor usando ML.NET
 description: Descubra como treinar um modelo de regressão de aprendizado de máquina para prever um valor usando ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092898"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673139"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>Treinar um modelo de regressão para prever um valor usando ML.NET
+
+> [!NOTE]
+> Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Em geral, há três etapas para o treinamento de modelo do ML.NET:
 

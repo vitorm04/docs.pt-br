@@ -8,18 +8,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826454"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359725"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicar aplicativos .NET Core com a CLI
 
 Este artigo demonstra como você pode publicar seu aplicativo .NET Core por meio da linha de comando. O .NET Core fornece três maneiras de publicar seus aplicativos. A implantação dependente de estrutura produz um arquivo .dll multiplataforma que usa o tempo de execução do .NET Core instalado localmente. O executável dependente de estrutura produz um executável específico da plataforma que usa o tempo de execução do .NET Core instalado localmente. O executável autossuficiente produz um executável específico da plataforma e inclui uma cópia local do tempo de execução do .NET Core.
 
-Para obter uma visão geral desses modos de publicação, confira [Implantação de aplicativos .NET Core](index.md). 
+Para obter uma visão geral desses modos de publicação, confira [Implantação de aplicativos .NET Core](index.md).
 
 Procurando uma ajuda rápida de como usar a CLI? A tabela a seguir mostra alguns exemplos de como publicar o aplicativo. Especifique a estrutura de destino com o parâmetro `-f <TFM>` ou editando o arquivo de projeto. Para obter mais informações, confira [Noções básicas de publicação](#publishing-basics).
 
@@ -33,8 +33,8 @@ Procurando uma ajuda rápida de como usar a CLI? A tabela a seguir mostra alguns
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
->[!IMPORTANT]
->\*Ao usar a versão 3.0 do SDK, o executável dependente de estrutura será o modo de publicação padrão durante a execução do comando `dotnet publish` básico. Isso se aplica somente a projetos direcionados ao **.NET Core 2.1** ou ao **.NET Core 3.0**.
+> [!IMPORTANT]
+> \*Ao usar a versão 3.0 do SDK, o executável dependente de estrutura será o modo de publicação padrão durante a execução do comando `dotnet publish` básico. Isso se aplica somente a projetos direcionados ao **.NET Core 2.1** ou ao **.NET Core 3.0**.
 
 ## <a name="publishing-basics"></a>Noções básicas de publicação
 
@@ -42,7 +42,7 @@ A configuração `<TargetFramework>` do arquivo de projeto especifica a estrutur
 
 Caso deseje definir mais de uma estrutura como destino, defina a configuração `<TargetFrameworks>` com mais de um valor TFM separado por ponto-e-vírgula. Publique uma das estruturas com o comando `dotnet publish -f <TFM>`. Por exemplo, se você tem `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` e executa `dotnet publish -f netcoreapp2.1`, um binário direcionado ao .NET Core 2.1 é criado.
 
-Se não estiver definido de outro modo, o diretório de saída do comando [`dotnet publish`](../tools/dotnet-publish.md) será `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. O modo **CONFIGURAÇÃO DE BUILD** padrão é **Depuração**, a menos que seja alterado com o parâmetro `-c`. Por exemplo, `dotnet publish -c Release -f netcoreapp2.1` publica em `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Se não estiver definido de outro modo, o diretório de saída do comando [`dotnet publish`](../tools/dotnet-publish.md) será `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. O modo **CONFIGURAÇÃO DE BUILD** padrão é **Depuração**, a menos que seja alterado com o parâmetro `-c`. Por exemplo, `dotnet publish -c Release -f netcoreapp2.1` publica em `myfolder/bin/Release/netcoreapp2.1/publish/`.
 
 Se você usa o SDK do .NET Core 3.0, o modo de publicação padrão para aplicativos direcionados ao .NET Core versões 2.1, 2.2 ou 3.0 é o executável dependente de estrutura.
 
@@ -50,7 +50,7 @@ Se você usa o SDK do .NET Core 2.1, o modo de publicação padrão para aplicat
 
 ### <a name="native-dependencies"></a>Dependências nativas
 
-Se o aplicativo tiver dependências nativas, ele poderá não ser executado em um sistema operacional diferente. Por exemplo, se o aplicativo usar a API nativa do Win32, ele não será executado no macOS ou no Linux. Você precisará fornecer um código específico da plataforma e compilar um executável para cada plataforma. 
+Se o aplicativo tiver dependências nativas, ele poderá não ser executado em um sistema operacional diferente. Por exemplo, se o aplicativo usar a API nativa do Win32, ele não será executado no macOS ou no Linux. Você precisará fornecer um código específico da plataforma e compilar um executável para cada plataforma.
 
 Considere também que, se uma biblioteca referenciada tiver uma dependência nativa, o aplicativo poderá não ser executado em todas as plataformas. No entanto, é possível que um pacote NuGet referenciado tenha incluído versões específicas da plataforma para lidar com as dependências nativas necessárias para você.
 
@@ -85,6 +85,7 @@ namespace apptest1
     }
 }
 ```
+
 ```vb
 Imports System
 
@@ -128,34 +129,30 @@ A publicação de um FDE cria um aplicativo que efetua roll forward automaticame
 
 Você precisará (exceto para o .NET Core 3.x quando você definir a plataforma atual como destino) usar as seguintes opções com o comando `dotnet publish` para publicar um FDE:
 
-- `-r <RID>`  
-  Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
+- `-r <RID>` Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
 
-- `--self-contained false`  
-  Essa opção instrui o SDK do .NET Core a criar um executável como um FDE.
+- `--self-contained false` Essa opção instrui o SDK do .NET Core a criar um executável como um FDE.
 
 Sempre que você usa a opção `-r`, o caminho da pasta de saída é alterado para: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
 Se você usar o [aplicativo de exemplo](#sample-app), execute `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Esse comando cria o seguinte executável: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-> [!Note]
+> [!NOTE]
 > Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). Para obter mais informações sobre o **modo invariável de globalização** e como habilitá-lo, confira [Modo invariável de globalização do .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
 ## <a name="self-contained-deployment"></a>Implantação autocontida
 
-Quando você publica uma SCD (implantação autossuficiente), o SDK do .NET Core cria um executável específico da plataforma. A publicação de uma SCD inclui todos os arquivos do .NET Core necessários para executar o aplicativo, mas não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Essas dependências precisam estar presentes no sistema antes da execução do aplicativo. 
+Quando você publica uma SCD (implantação autossuficiente), o SDK do .NET Core cria um executável específico da plataforma. A publicação de uma SCD inclui todos os arquivos do .NET Core necessários para executar o aplicativo, mas não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Essas dependências precisam estar presentes no sistema antes da execução do aplicativo.
 
 A publicação de uma SCD cria um aplicativo que não efetua roll forward para o último patch de segurança disponível do .NET Core. Para obter mais informações sobre a associação de versão no tempo de compilação, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 É necessário usar as seguintes opções com o comando `dotnet publish` para publicar uma SCD:
 
-- `-r <RID>`  
-  Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
+- `-r <RID>` Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
 
-- `--self-contained true`  
-  Essa opção instrui o SDK do .NET Core a criar um executável como uma SCD.
+- `--self-contained true` Essa opção instrui o SDK do .NET Core a criar um executável como uma SCD.
 
-> [!Note]
+> [!NOTE]
 > Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). Para obter mais informações sobre o **modo invariável de globalização** e como habilitá-lo, confira [Modo invariável de globalização do .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
 

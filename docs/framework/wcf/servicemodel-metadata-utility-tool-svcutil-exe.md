@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533202"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788421"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)
 
@@ -43,7 +43,7 @@ A tabela a seguir resume as várias funcionalidades fornecidas por essa ferramen
 
 A ferramenta tem um tempo limite de cinco minutos ao recuperar metadados. Esse tempo limite somente se aplica para recuperar metadados pela rede. Ele não se aplica a nenhum processamento desses metadados.
 
-### <a name="multi-targetting"></a>Multiplataforma
+### <a name="multi-targeting"></a>Multiplataforma
 
 A ferramenta não dá suporte à multiplataforma. Se você deseja gerar um artefato do .NET 4 do *svcutil.exe*, use o *svcutil.exe* do SDK do .NET 4. Para gerar um artefato do .NET 3.5, use o executável do SDK do .NET 3.5.
 
@@ -71,7 +71,7 @@ Svcutil.exe pode gerar código para contratos de serviço, clientes e tipos de d
 
 Você pode usar o *SvcUtil.exe* ferramenta para gerar contratos de serviço e dados com base em um documento WSDL pré-definido. Use a opção /serviceContract e especifique uma URL ou local do arquivo de onde o documento WSDL pode ser baixado ou localizado. Isso gera os contratos de serviço e os dados definidos no documento WSDL que pode ser usado para implementar um serviço de reclamação. Para obter mais informações, confira [Como: Recuperar metadados e implementar um serviço compatível com](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
 
-Para um serviço com um ponto de extremidade BasicHttpContextbinding *Svcutil.exe* gera um BasicHttpBinding com o `allowCookies` atributo definido como `true` em vez disso. Os cookies são usados para o contexto no servidor. Se você quiser gerenciar o contexto no cliente quando o serviço usa cookies, poderá modificar manualmente a configuração para usar uma associação de contexto.
+Para um serviço com um ponto de extremidade BasicHttpContextBinding *Svcutil.exe* gera um BasicHttpBinding com o `allowCookies` atributo definido como `true` em vez disso. Os cookies são usados para o contexto no servidor. Se você quiser gerenciar o contexto no cliente quando o serviço usa cookies, poderá modificar manualmente a configuração para usar uma associação de contexto.
 
 > [!CAUTION]
 > O Svcutil.exe gera o cliente com base no WSDL ou no arquivo de políticas recebido do serviço. O nome de usuário principal (UPN) é gerado concatenando o nome de usuário, "\@" e um nome de domínio totalmente qualificado (FQDN). Entretanto, para os usuários registrados no Active Directory, esse formato é inválido e o UPN gerado pela ferramenta causa uma falha na autenticação Kerberos com a mensagem de erro “Falha ao tentar fazer logon”. Para resolver esse problema, você deve corrigir manualmente o arquivo cliente gerado por essa ferramenta.

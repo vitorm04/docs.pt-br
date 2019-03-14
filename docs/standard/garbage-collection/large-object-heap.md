@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066422"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677157"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap de objeto grande em sistemas Windows
 
@@ -47,12 +47,12 @@ O .NET Core e o .NET Framework (do .NET Framework 4.5.1 em diante) incluem a pro
 
 A Figura 1 ilustra um cenário em que o GC forma a geração 1 após o primeiro GC de geração 0, em que `Obj1` e `Obj3` estão mortos, e forma a geração 2 após o primeiro GC de geração 1, em que `Obj2` e `Obj5` estão mortos. Observe que isso e as figuras a seguir são apenas para fins de ilustração; elas contêm muito poucos objetos para mostrar melhor o que acontece no heap. Na verdade, muitos mais objetos normalmente estão envolvidos em um GC.
 
-![Figura 1: Um GC ger. 0 e um GC ger. 1](media/loh/loh-figure-1.jpg)  
+![Figura 1: Um GC ger. 0 e um GC ger. 1](media/loh/loh-figure-1.jpg)\
 Figura 1: Um GC geração 0 e um GC geração 1.
 
 A Figura 2 mostra que depois de um GC de geração 2 que observou que `Obj1` e `Obj2` estão mortos, o GC forma um espaço livre contíguo fora da memória que costumava ser ocupado por `Obj1` e `Obj2`, que foi então usado para atender a uma solicitação de alocação para `Obj4`. O espaço após o último objeto, `Obj3`, ao final do segmento também pode ser usado para atender a solicitações de alocação.
 
-![Figura 2: Depois de um GC ger. 2](media/loh/loh-figure-2.jpg)  
+![Figura 2: Depois de um GC ger. 2](media/loh/loh-figure-2.jpg)\
 Figura 2: Depois de um GC geração 2
 
 Se não houver espaço livre suficiente para acomodar as solicitações de alocação de objeto grande, o GC primeiro tentará adquirir mais segmentos do sistema operacional. Se isso falhar, ele disparará um GC de geração 2 na esperança de liberar algum espaço.
@@ -61,7 +61,7 @@ Durante um GC de geração 1 ou 2, o coletor de lixo libera segmentos que não c
 
 Como o LOH é coletado apenas durante os GCs de geração 2, o segmento de LOH só pode ser liberado durante um desses GCs. A Figura 3 ilustra um cenário em que o coletor de lixo libera um segmento (segmento 2) novamente para o sistema operacional e anula a confirmação de mais espaço nos segmentos restantes. Se ele precisar usar o espaço com anulação de confirmação no final do segmento para atender a solicitações de alocação de objeto grande, ele confirmará a memória novamente. (Para obter uma explicação da confirmação/anulação de confirmação, confira a documentação do [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).)
 
-![Figura 3: LOH depois de um GC ger. 2](media/loh/loh-figure-3.jpg)  
+![Figura 3: LOH depois de um GC ger. 2](media/loh/loh-figure-3.jpg)\
 Figura 3: LOH depois de um GC geração 2
 
 ## <a name="when-is-a-large-object-collected"></a>Quando um objeto grande é coletado?
@@ -156,7 +156,7 @@ Esses contadores de desempenho geralmente são uma boa primeira etapa na investi
 
 Uma maneira comum de examinar contadores de desempenho é com o Monitor de Desempenho (perfmon.exe). Use "Adicionar Contadores" para adicionar o contador interessante a processos de seu interesse. Salve os dados do contador de desempenho em um arquivo de log, como mostra a Figura 4.
 
-![Figura 4: Adicionando contadores de desempenho.](media/loh/perfcounter.png)  
+![Figura 4: Adicionando contadores de desempenho.](media/loh/perfcounter.png)\
 Figura 4: LOH depois de um GC geração 2
 
 Os contadores de desempenho também podem ser consultados de forma programática. Várias pessoas os coletam dessa maneira como parte de seu processo de teste de rotina. Quando elas identificam contadores com valores fora do comum, elas usam outro meio de obter dados mais detalhados para ajudar na investigação.
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 O resultado é semelhante a este:
 
-![Figura 5: Examinando os eventos de ETW usando o PerfView](media/loh/perfview.png)  
-Figura 5: Eventos de ETW mostrados usando o PerfView
+![Figura 5: exame dos eventos de ETW usando o PerfView](media/loh/perfview.png) Figura 5: eventos de ETW mostrados usando o PerfView
 
 Como você pode ver, todos os GCs são GCs de geração 2 e são disparados por AllocLarge, o que significa que a alocação de um objeto grande disparou esse GC. Sabemos que essas alocações são temporárias porque a coluna **% da Taxa de Sobrevivência de LOH** indica 1%.
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 coleta um evento AllocationTick disparado aproximadamente a cada 100 mil alocações. Em outras palavras, um evento é disparado sempre que um objeto grande é alocado. Em seguida, você pode observar uma das exibições de Alocação de Heap de GC, que mostra as pilhas de chamadas que alocaram objetos grandes:
 
-![Figura 6: Uma exibição de alocação de heap de GC](media/loh/perfview2.png)  
+![Figura 6: Uma exibição de alocação de heap de GC](media/loh/perfview2.png)\
 Figura 6: Uma exibição de alocação de heap de GC
 
 Como você pode ver, esse é um teste muito simples que aloca apenas objetos grandes de seu método `Main`.
@@ -244,7 +243,7 @@ O tamanho do heap de LOH é (16.754.224 + 16.699.288 + 16.284.504) = 49.738.016 
 
 Às vezes, o depurador mostra que o tamanho total do LOH é menor que 85.000 bytes. Isso ocorre porque o próprio tempo de execução usa o LOH para alocar alguns objetos menores que um objeto grande.
 
-Como o LOH não é compactado, às vezes, ele é considerado a origem de fragmentação. Fragmentação significa:
+Como o LOH não é compactado, às vezes ele é considerado uma fonte de fragmentação. Fragmentação significa:
 
 - Fragmentação do heap gerenciado, que é indicada pela quantidade de espaço livre entre objetos gerenciados. No SoS, o comando `!dumpheap –type Free` exibe a quantidade de espaço livre entre objetos gerenciados.
 

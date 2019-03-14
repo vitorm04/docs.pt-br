@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo do .NET Core compatível com plug-in
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: f2997c778b87ecd88c0fd2fadf491763066a4950
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739586"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363898"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Criar um aplicativo do .NET Core com plug-ins
 
@@ -244,7 +244,7 @@ Quase todos os plug-ins são mais complexos do que um simples "Olá, Mundo", e m
 
 ## <a name="other-plugin-examples-in-the-sample"></a>Outros exemplos de plug-in na amostra
 
-O objeto `AssemblyDependencyResolver` também pode resolver as bibliotecas nativas incluídas nos pacotes NuGet, bem como os assemblies satélites localizados. O `UVPlugin` e `FrenchPlugin` demonstram esses cenários, respectivamente.
+O código-fonte completo para este tutorial pode ser encontrado no [repositório dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). O exemplo completo inclui alguns outros exemplos do comportamento `AssemblyDependencyResolver`. Por exemplo, o objeto `AssemblyDependencyResolver` também pode resolver bibliotecas nativas, bem como assemblies satélites localizados incluídos em pacotes do NuGet. O `UVPlugin` e `FrenchPlugin` no repositório de amostras demonstram esses cenários.
 
 ## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Como referenciar um assembly de interface de plug-in definido em um pacote NuGet
 

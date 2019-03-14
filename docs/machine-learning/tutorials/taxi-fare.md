@@ -3,22 +3,24 @@ title: Prever os preços usando um aprendiz de regressão com o ML.NET
 description: Prever os preços usando um aprendiz de regressão com o ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 02/08/2019
+ms.date: 03/05/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 543411f58f2d7c5c4e8658bd90cf52c7a3291ec3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251086"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678374"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Prever os preços usando um aprendiz de regressão com o ML.NET
+
+Este tutorial ilustra como usar o ML.NET para criar uma [modelo de regressão](../resources/glossary.md#regression) para prever preços. Nesse caso, as tarifas de táxi na cidade de Nova York.
 
 > [!NOTE]
 > Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, confira a [Introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Este tutorial ilustra como usar o ML.NET para criar uma [modelo de regressão](../resources/glossary.md#regression) para prever preços. Nesse caso, as tarifas de táxi na cidade de Nova York.
+Este tutorial e uma amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]

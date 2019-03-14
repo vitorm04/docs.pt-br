@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a77a92d12e3b60ebb67bab557a4e5ec1dd2f882f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 104c7564b7dd29209b48d99b1dea7524c07d7e69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126440"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360414"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementando leituras/consultas em um microsserviço CQRS
 
@@ -89,19 +89,19 @@ public class OrderQueries : IOrderQueries
 
 O ponto importante é que, ao usar um tipo dinâmico, a coleção de dados retornada é montada dinamicamente como o ViewModel.
 
-**Prós:** essa abordagem reduz a necessidade de modificar classes estáticas de ViewModel sempre que você atualizar a frase SQL de uma consulta, tornando essa abordagem de design muito ágil ao codificar, simples e rápida de evoluir conforme alterações futuras.
+**Vantagens:** essa abordagem reduz a necessidade de modificar classes estáticas de ViewModel sempre que você atualizar a frase SQL de uma consulta, tornando essa abordagem de design muito ágil ao codificar, simples e rápida de evoluir conforme alterações futuras.
 
-**Contras:** no longo prazo, tipos dinâmicos podem afetar negativamente a clareza e a compatibilidade de um serviço com aplicativos cliente. Além disso, o software middleware como Swashbuckle não poderá fornecer o mesmo nível de documentação em tipos retornados ao usar tipos dinâmicos.
+**Desvantagens:** a longo prazo, tipos dinâmicos podem afetar negativamente a clareza e a compatibilidade de um serviço com aplicativos cliente. Além disso, o software middleware como Swashbuckle não poderá fornecer o mesmo nível de documentação em tipos retornados ao usar tipos dinâmicos.
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel como classes DTO predefinidas
 
-**Prós:** ter classes ViewModel estáticas predefinidas, como “contratos” com base em classes DTO explícitas, é definitivamente melhor para APIs públicas, mas também para microsserviços de longo prazo, mesmo que sejam usados apenas pelo mesmo aplicativo.
+**Vantagens**: ter classes ViewModel estáticas predefinidas, como “contratos” com base em classes DTO explícitas, é definitivamente melhor para APIs públicas, mas também para microsserviços de longo prazo, mesmo que sejam usados apenas pelo mesmo aplicativo.
 
 Se você quiser especificar os tipos de resposta para o Swagger, precisará usar as classes DTO explícitas como o tipo de retorno. Portanto, classes DTO predefinidas permitem que você ofereça informações mais sofisticadas do Swagger. Isso melhora a documentação da API e a compatibilidade ao consumir uma API.
 
-**Contras:** conforme mencionado anteriormente, ao atualizar o código, serão necessárias mais algumas etapas para atualizar as classes DTO.
+**Desvantagens**: conforme mencionado anteriormente, ao atualizar o código, serão necessárias mais algumas etapas para atualizar as classes DTO.
 
-*Dica com base em nossa experiência:* nas consultas implementadas no microsserviço de Ordenação em eShopOnContainers, começamos a desenvolver usando ViewModels dinâmico, pois ele era muito simples e mais ágil nos primeiros estágios de desenvolvimento. No entanto, quando o desenvolvimento foi estabilizado, escolhemos refatorar as APIs e usar DTOs estáticos ou predefinidos para ViewModels, pois fica mais claro para os consumidores do microsserviço conhecer os tipos de DTO explícitos, usados como "contratos".
+*Dica com base em nossa experiência*: nas consultas implementadas no microsserviço de Ordenação em eShopOnContainers, começamos a desenvolver usando ViewModels dinâmico, pois ele era muito simples e mais ágil nos primeiros estágios de desenvolvimento. No entanto, quando o desenvolvimento foi estabilizado, escolhemos refatorar as APIs e usar DTOs estáticos ou predefinidos para ViewModels, pois fica mais claro para os consumidores do microsserviço conhecer os tipos de DTO explícitos, usados como "contratos".
 
 No exemplo a seguir, você pode ver como a consulta está retornando dados usando uma classe DTO ViewModel explícita: a classe OrderSummary.
 
@@ -188,13 +188,13 @@ Você pode ver na imagem acima alguns valores de exemplo com base nos tipos View
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - **Dapper** \
-  [*https://github.com/StackExchange/dapper-dot-net*](https://github.com/StackExchange/dapper-dot-net)
+ <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. Pontos de dados – Dapper, Entity Framework e aplicativos híbridos (artigo do MSDN Mag.)** \
-  [*https://msdn.microsoft.com/magazine/mt703432.aspx*](https://msdn.microsoft.com/magazine/mt703432.aspx)
+  <https://msdn.microsoft.com/magazine/mt703432.aspx>
 
 - **Páginas de ajuda da API Web ASP.NET Core usando o Swagger** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
+  <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
 >[Anterior](eshoponcontainers-cqrs-ddd-microservice.md)

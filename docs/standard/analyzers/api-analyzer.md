@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759126"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680263"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -44,7 +44,7 @@ Quando uma API preterida, como <xref:System.Net.WebClient>, é usada em um códi
 
 A janela **Lista de Erros** contém avisos com uma ID exclusiva por API preterida, conforme mostrado no seguinte exemplo (`DE004`): 
 
-!["Captura de tela da janela Lista de Erros mostrando a ID e a descrição do aviso"](media/api-analyzer/warnings.jpg)
+!["Captura de tela da janela Lista de Erros mostrando a ID e a descrição do aviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Janela Lista de Erros, que inclui avisos.")
 
 Clicando na ID, você vai para uma página da Web com informações detalhadas sobre por que a API foi preterida e sugestões sobre APIs alternativas que podem ser usadas.
 
@@ -112,5 +112,5 @@ O usuário decide como o diagnóstico deve ser tratado: como avisos, erros, suge
 
 ## <a name="see-also"></a>Consulte também
 
-- Postagem de blog [Introduzindo o analisador de API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
+- Postagem de blog [Introduzindo o analisador de API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/).
 - Vídeo de demonstração no YouTube [Analisador de API](https://youtu.be/eeBEahYXGd0).

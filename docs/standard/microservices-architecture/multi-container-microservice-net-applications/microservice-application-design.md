@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981875"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674387"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projetando um aplicativo orientado a microsserviços
 
@@ -63,7 +63,7 @@ Cada microsserviço tem seu próprio banco de dados, permitindo que ele seja tot
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: um aplicativo de referência para .NET Core e microsserviços implantados com o uso de contêineres
 
-Para que você possa se concentrar na arquitetura e nas tecnologias em vez de pensar em um domínio corporativo hipotético desconhecido, selecionamos um domínio corporativo bem conhecido, ou seja, um aplicativo simplificado de comércio eletrônico (loja eletrônica) que apresenta um catálogo de produtos, recebe pedidos de clientes, verifica o estoque e executa outras funções de negócios. O código-fonte desse aplicativo baseado em contêineres está disponível no repositório [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) do GitHub.
+Para que você possa se concentrar na arquitetura e nas tecnologias, em vez de pensar em um domínio corporativo hipotético desconhecido, selecionamos um domínio corporativo bem conhecido, ou seja, um aplicativo simplificado de comércio eletrônico (loja eletrônica) que apresenta um catálogo de produtos, recebe pedidos de clientes, verifica o estoque e executa outras funções de negócios. O código-fonte desse aplicativo baseado em contêineres está disponível no repositório [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) do GitHub.
 
 O aplicativo consiste em vários subsistemas, incluindo vários front-ends de interface do usuário da loja (um aplicativo Web e um aplicativo móvel nativo), juntamente com os microsserviços e contêineres de back-end para todas as operações necessárias do lado do servidor com vários Gateways de API como pontos de entrada consolidados para os microsserviços internos. A figura 6-1 mostra a arquitetura do aplicativo de referência.
 
@@ -91,7 +91,7 @@ Portanto, as unidades de implantação para os microsserviços (e até mesmo par
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **repositório GitHub do eShopOnContainers. Código-fonte do aplicativo de referência**  
+- **repositório GitHub do eShopOnContainers. Código-fonte do aplicativo de referência**\
     [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Benefícios de uma solução baseada em microsserviços
@@ -150,7 +150,7 @@ Por exemplo, em nosso *eShopOnContainers* de exemplo, os microsserviços de cat�
 
 Outro motivo para uma tecnologia diferente para cada microsserviço seria a natureza de cada microsserviço. Por exemplo, talvez seja melhor usar uma linguagem de programação funcional, como F\#, ou uma linguagem como a R, se você estiver destinando a domínios de aprendizado de máquina e inteligência artificial, em vez de uma linguagem de programação mais orientada a objeto, como a C\#.
 
-O resultado é que cada microsserviço pode ter uma arquitetura interna diferente com base nos diferentes padrões de design. Nem todos os microsserviços devem ser implementados usando padrões avançados de DDD, porque que isso seria excesso de engenharia. Da mesma forma, microsserviços complexos, com lógica de negócios em constante mudança, não devem ser implementados como componentes de CRUD, ou você poderá ficar com um código de baixa qualidade. 
+O resultado é que cada microsserviço pode ter uma arquitetura interna diferente com base nos diferentes padrões de design. Nem todos os microsserviços devem ser implementados usando padrões avançados de DDD, porque que isso seria excesso de engenharia. Da mesma forma, microsserviços complexos, com lógica de negócios em constante mudança, não devem ser implementados como componentes de CRUD, ou você poderá ficar com um código de baixa qualidade.
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>O novo mundo: vários padrões de arquitetura e microsserviços poliglotas
 

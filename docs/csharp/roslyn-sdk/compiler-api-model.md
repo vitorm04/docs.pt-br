@@ -3,12 +3,12 @@ title: Conceitos e modelo de objeto do SDK do .NET Compiler Platform
 description: Esta visão geral fornece o contexto necessário para trabalhar efetivamente com o SDK do .NET Compiler. Você aprenderá sobre as camadas de API, os principais tipos envolvidos e o modelo de objeto geral.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: a3104313efa0110699c45a4ce7bca99aab20542a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363682"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675700"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Entender o modelo do SDK do .NET Compiler Platform
 
@@ -34,7 +34,7 @@ Essas APIs são as mesmas usadas pelo Visual Studio. Por exemplo, os recursos de
 
 ## <a name="api-layers"></a>Camadas de API
 
-O SDK do .NET Compiler consiste em duas camadas principais de APIs: APIs do compilador e APIs dos espaços de trabalho.
+O SDK do .NET Compiler consiste em duas camadas principais de APIs: APIs do compilador e APIs dos workspaces.
 
 ![as camadas de API representadas pelas APIs do pipeline do compilador](media/compiler-api-model/api-layers.png)
 
@@ -48,13 +48,13 @@ Como parte de sua análise, o compilador pode produzir um conjunto de diagnósti
 
 ### <a name="scripting-apis"></a>APIs de script
 
-APIs de hospedagem e script fazem parte da camada do compilador. Você pode usá-las para execução de trechos de código e acúmulo de um contexto de execução em tempo de execução.
+APIs de hospedagem e script fazem parte da camada do compilador. Você pode usá-las para execução de snippets de código e acúmulo de um contexto de execução em tempo de execução.
 O REPL (Loop de Leitura-Avaliação-Impressão) interativo do C# usa essas APIs. O REPL permite usar o C# como a linguagem de scripts, executando o código de forma interativa à medida que ele é escrito.
 
-### <a name="workspaces-apis"></a>APIs dos espaços de trabalho
+### <a name="workspaces-apis"></a>APIs dos workspaces
 
-A camada Espaços de Trabalho contém a API de Espaço de Trabalho, que é o ponto de partida para fazer a análise de código e refatoração em soluções inteiras. Ela ajuda você a organizar todas as informações sobre os projetos de uma solução em um único modelo de objeto, oferecendo acesso direto aos modelos de objeto da camada do compilador, sem a necessidade de analisar arquivos, configurar opções ou gerenciar dependências de projeto a projeto.
+A camada Workspaces contém a API de Workspace, que é o ponto de partida para fazer a análise de código e refatoração em soluções inteiras. Ela ajuda você a organizar todas as informações sobre os projetos de uma solução em um único modelo de objeto, oferecendo acesso direto aos modelos de objeto da camada do compilador, sem a necessidade de analisar arquivos, configurar opções ou gerenciar dependências de projeto a projeto.
 
-Além disso, a camada Espaços de Trabalho expõe um conjunto de APIs usado ao implementar ferramentas de análise de código e refatoração que funcionam em um ambiente de host como o IDE do Visual Studio. Exemplos incluem as APIs Localizar Todas as Referências, Formatação e Geração de Código.
+Além disso, a camada Workspaces expõe um conjunto de APIs usado ao implementar ferramentas de análise de código e refatoração que funcionam em um ambiente de host como o IDE do Visual Studio. Exemplos incluem as APIs Localizar Todas as Referências, Formatação e Geração de Código.
 
 Essa camada não tem dependências em componentes do Visual Studio.

@@ -95,7 +95,7 @@
 ### [Novidades do .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Tutoriais](core/tutorials/index.md)
 ### [Introdução ao .NET Core no macOS](core/tutorials/using-on-macos.md)
-### [Introdução ao .NET Core em macOS usando o Visual Studio para Mac](core/tutorials/using-on-mac-vs.md)
+### [Introdução ao .NET Core no macOS usando o Visual Studio para Mac](core/tutorials/using-on-mac-vs.md)
 ### [Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Introdução ao .NET Core usando as ferramentas da CLI](core/tutorials/using-with-xplat-cli.md)
 ### [Organizar e testar projetos com a linha de comando do .NET Core](core/tutorials/testing-with-cli.md)
@@ -1209,6 +1209,7 @@
 ### Usar o modelo treinado
 #### [Uma previsão por vez com PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Operacionalizar um modelo treinado](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Serve Model Azure Functions](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md) (Usar modelos no Azure Functions)
 ### Infer.NET
 #### [Programação probabilística com Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Referência

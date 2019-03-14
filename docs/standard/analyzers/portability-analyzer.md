@@ -1,17 +1,15 @@
 ---
 title: O .NET Portability Analyzer – .NET
 description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar a portabilidade do seu código entre as várias implementações de .NET, incluindo .NET Core, .NET Standard, UWP e Xamarin.
-author: blackdwarf
-ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205751"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717642"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
@@ -21,7 +19,7 @@ Deseja tornar suas bibliotecas multiplataforma? Deseja ver a quantidade de traba
 
 * [.NET Core](../../core/index.md): tem um design modular, utiliza lado a lado e está direcionado a cenários de plataforma cruzada. O lado a lado permite adotar novas versões do .NET Core sem interromper outros aplicativos.
 * [ASP.NET Core](/aspnet/core): é uma estrutura Web moderna criada no .NET Core, proporcionando os mesmos benefícios aos desenvolvedores.
-* [Plataforma Universal do Windows](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): melhore o desempenho dos seus Aplicativos da Windows Store executados em computadores x64 e ARM usando a compilação estática do .NET Native. 
+* [Plataforma Universal do Windows](https://devblogs.microsoft.com/dotnet/net-native-performance/): melhore o desempenho dos seus aplicativos da Windows Store executados em computadores x64 e ARM usando a compilação estática do .NET Native. 
 * .NET Core + extensões de plataforma: inclui as APIs do .NET Core além de outras APIs do ecossistema do .NET como WCF, ASP.NET Core, FSharp e Azure.
 * .NET Standard + extensões de plataforma: inclui as APIs do .NET Standard além de outras do ecossistema do .NET, como WCF, ASP.NET Core, FSharp e Azure.
 

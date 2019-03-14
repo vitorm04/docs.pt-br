@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065902"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363014"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementar um modelo de domínio de microsserviço com o .NET Core 
 
@@ -171,11 +171,11 @@ Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos 
 - **Vaughn Vernon. Modelagem de agregações com DDD e Entity Framework.** Observe que este *não* é um Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Coding for Domain-Driven Design: Tips for Data-Focused Devs** \ (Codificando para o design controlado por domínio: dicas para desenvolvedores com foco em dados)
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
+- **Julie Lerman. Pontos de dados – Codificação para o design controlado por domínio: Tips for Data-Focused Devs** \ (Codificando para o design controlado por domínio: dicas para desenvolvedores com foco em dados)
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. Como criar modelos de domínio totalmente encapsulados** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 >[!div class="step-by-step"]
 >[Anterior](microservice-domain-model.md)

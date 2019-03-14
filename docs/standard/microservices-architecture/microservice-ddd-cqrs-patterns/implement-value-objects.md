@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28f5a5148b39b60d69fecc8bf1273445ebad4953
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145261"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675011"
 ---
 # <a name="implement-value-objects"></a>Implementar objetos de valor
 
@@ -92,8 +92,8 @@ public abstract class ValueObject
         return GetAtomicValues()
          .Select(x => x != null ? x.GetHashCode() : 0)
          .Aggregate((x, y) => x ^ y);
-    }        
-    // Other utilility methods
+    }
+    // Other utility methods
 }
 ```
 
@@ -133,9 +133,9 @@ public class Address : ValueObject
 
 Você pode ver como essa implementação de objeto de valor do Endereço não tem nenhuma identidade e, portanto, nenhum campo de ID, nem na classe Address, nem mesmo na classe ValueObject.
 
-Não era possível não ter nenhum campo de ID em uma classe a ser usada pelo Entity Framework até o EF Core 2.0, o que ajuda muito a implementar objetos de valor melhores sem nenhuma ID. Essa é justamente a explicação da próxima seção. 
+Não era possível prescindir de um campo de ID em uma classe a ser usada pelo Entity Framework até o EF Core 2.0, o que ajuda muito a implementar objetos de valor melhores sem nenhuma ID. Essa é justamente a explicação da próxima seção.
 
-Poderíamos argumentar que os objetos de valor, sendo imutáveis, devem ser somente leitura (ou seja, propriedades get-only) e isso é realmente verdadeiro. No entanto, os objetos de valor geralmente são serializados e desserializados para passar pelas filas de mensagens e, sendo somente leitura, impedem o desserializador de atribuir valores. Portanto, simplesmente os deixamos como um conjunto particular que é somente leitura o suficiente para ser prático.
+Seria possível argumentar que já que os objetos de valor são imutáveis, deveriam ser somente leitura (ou seja, propriedades get-only) e isso realmente é verdade. No entanto, os objetos de valor geralmente são serializados e desserializados para passar pelas filas de mensagens e, sendo somente leitura, impedem o desserializador de atribuir valores. Portanto, simplesmente os deixamos como um conjunto particular que é somente leitura o suficiente para ser prático.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Como manter objetos de valor no banco de dados com o EF Core 2.0
 
@@ -143,16 +143,16 @@ Você acabou de ver como definir um objeto de valor em seu modelo de domínio. P
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Tela de fundo e abordagens mais antigas usando EF Core 1.1
 
-Como contexto, uma limitação ao usar o EF Core 1.0 e 1.1 era que não possível usar [tipos complexos](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute), conforme definido no EF 6.x no .NET Framework tradicional. Portanto, se estiver usando EF Core 1.0 ou 1.1, precisará armazenar seu objeto de valor como uma entidade EF com um campo de ID. Então, para que se pareça mais com um objeto de valor sem nenhuma identidade, você pode ocultar a ID para deixar claro que a identidade de um objeto de valor não é importante no modelo de domínio. Você pode ocultar essa ID usando a ID como um [propriedade de sombra](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Uma vez que a configuração para ocultar a ID do modelo é configurada no nível de infraestrutura do EF, seria transparente para o seu modelo de domínio.
+Como contexto, uma limitação ao usar o EF Core 1.0 e 1.1 era que não se podia usar os [tipos complexos](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute), conforme definido no EF 6.x no .NET Framework tradicional. Portanto, se estiver usando EF Core 1.0 ou 1.1, precisará armazenar seu objeto de valor como uma entidade EF com um campo de ID. Então, para que se pareça mais com um objeto de valor sem nenhuma identidade, você pode ocultar a ID para deixar claro que a identidade de um objeto de valor não é importante no modelo de domínio. Você pode ocultar essa ID usando a ID como um [propriedade de sombra](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Uma vez que a configuração para ocultar a ID do modelo é configurada no nível de infraestrutura do EF, seria transparente para o seu modelo de domínio.
 
 Na versão inicial do eShopOnContainers (.NET Core 1.1), a ID oculta necessária para a infraestrutura do EF Core foi implementada da seguinte maneira no nível de DbContext, usando a API Fluente no projeto de infraestrutura. Portanto, a ID foi oculta do ponto de vista do domínio modelo de domínio, mas ainda está na infraestrutura.
 
 ```csharp
 // Old approach with EF Core 1.1
 // Fluent API within the OrderingContext:DbContext in the Infrastructure project
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
 
     addressConfiguration.Property<int>("Id")  // Id is a shadow property
         .IsRequired();
@@ -192,7 +192,7 @@ Em eShopOnContainers, em OrderingContext.cs, no método OnModelCreating(), há v
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
-// 
+//
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
@@ -206,8 +206,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 No código a seguir, a infraestrutura de persistência é definida para a entidade Ordem:
 
 ```csharp
-// Part of the OrderEntityTypeConfiguration.cs class 
-// 
+// Part of the OrderEntityTypeConfiguration.cs class
+//
 public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 {
     orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
@@ -220,7 +220,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     orderConfiguration.OwnsOne(o => o.Address);
 
     orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    
+
     //...Additional validations, constraints and code...
     //...
 }
@@ -312,7 +312,7 @@ public class Address
 - **Martin Fowler. Padrão de ValueObject** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre objetos de valor) \
+- **Eric Evans. Design orientado por domínio: Lidando com a complexidade no núcleo do software.** (Livro; inclui uma discussão sobre objetos de valor) \
   [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 - **Vaughn Vernon. Implementando um design conduzido por domínio.** (Livro; inclui uma discussão sobre objetos de valor) \
@@ -330,6 +330,6 @@ public class Address
 - **Classe de endereços.** Exemplo de classe de objeto de valor em eShopOnContainers. \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
->[!div class="step-by-step"]
->[Anterior](seedwork-domain-model-base-classes-interfaces.md)
->[Próximo](enumeration-classes-over-enum-types.md)
+> [!div class="step-by-step"]
+> [Anterior](seedwork-domain-model-base-classes-interfaces.md)
+> [Próximo](enumeration-classes-over-enum-types.md)

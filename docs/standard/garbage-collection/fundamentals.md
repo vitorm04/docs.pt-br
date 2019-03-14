@@ -1,6 +1,7 @@
 ---
 title: Noções básicas da coleta de lixo
-ms.date: 03/30/2017
+description: Saiba como o coletor de lixo funciona e como ele pode ser configurado para ter um desempenho ideal.
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066309"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712468"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 <a name="top"></a> No CLR (Common Language Runtime), o coletor de lixo atua como um gerenciador automático de memória. Ele oferece os seguintes benefícios:  
@@ -30,28 +31,8 @@ ms.locfileid: "55066309"
   
 -   Fornece segurança de memória, assegurando que um objeto não possa usar o conteúdo de outro objeto.  
   
- Este tópico descreve os principais conceitos da coleta de lixo. Ele contém as seguintes seções:  
-  
--   [Conceitos básicos de memória](#fundamentals_of_memory)  
-  
--   [Condições para uma coleta de lixo](#conditions_for_a_garbage_collection)  
-  
--   [O heap gerenciado](#the_managed_heap)  
-  
--   [Gerações](#generations)  
-  
--   [O que acontece durante uma coleta de lixo](#what_happens_during_a_garbage_collection)  
-  
--   [Manipulação de recursos não gerenciados](#manipulating_unmanaged_resources)  
-  
--   [Coleta de lixo de estação de trabalho ou de servidor](#workstation_and_server_garbage_collection)  
-  
--   [Coleta de lixo simultânea](#concurrent_garbage_collection)  
-  
--   [Coleta de lixo de estação de trabalho em segundo plano](#background_garbage_collection)  
-  
--   [Coleta de lixo de servidor em segundo plano](#background_server_garbage_collection)  
-  
+ Este tópico descreve os principais conceitos da coleta de lixo. 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>Conceitos básicos de memória  
  A lista a seguir resume conceitos importantes de memória do CLR.  
@@ -109,9 +90,9 @@ ms.locfileid: "55066309"
   
  O grau de intrusão (frequência e a duração) de coletas de lixo é o resultado do volume de alocações e da quantidade de memória restante no heap gerenciado.  
   
- O heap pode ser considerado como o acúmulo de dois heaps: o heap de objetos grandes e o heap de objetos pequenos.  
+ O heap pode ser considerado como o acúmulo de dois heaps: o [heap de objetos grandes](large-object-heap.md) e o heap de objetos pequenos.  
   
- O heap de objetos grandes contém objetos muito grandes, com 85.000 bytes ou mais. Os objetos no heap de objetos grandes normalmente são matrizes. É raro que um objeto de instância seja muito grande.  
+ O [heap de objetos grandes](large-object-heap.md) contém objetos muito grandes, com 85.000 bytes ou mais. Os objetos no heap de objetos grandes normalmente são matrizes. É raro que um objeto de instância seja muito grande.  
   
  [Voltar ao início](#top)  
   

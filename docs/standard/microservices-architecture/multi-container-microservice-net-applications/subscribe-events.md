@@ -4,28 +4,28 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971769"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675024"
 ---
 # <a name="subscribing-to-events"></a>Assinando eventos
 
 A primeira etapa para usar o barramento de eventos é fazer com que os microsserviços assinem os eventos que eles desejam receber. Isso deve ser feito nos microsserviços destinatários.
 
-O código simples a seguir mostra o que cada destinatário de microsserviço precisa implementar ao iniciar o serviço (ou seja, a classe `Startup`) para assinar os eventos que precisa. Nesse caso, o microsserviço `basket.api` precisa assinar as mensagens `ProductPriceChangedIntegrationEvent` e `OrderStartedIntegrationEvent`. 
+O código simples a seguir mostra o que cada destinatário de microsserviço precisa implementar ao iniciar o serviço (ou seja, a classe `Startup`) para assinar os eventos que precisa. Nesse caso, o microsserviço `basket.api` precisa assinar as mensagens `ProductPriceChangedIntegrationEvent` e `OrderStartedIntegrationEvent`.
 
 Por exemplo, ao assinar o evento `ProductPriceChangedIntegrationEvent`, o microsserviço carrinho de compras tomará ciência de qualquer mudança no preço do produto e será capaz de avisar o usuário a respeito da alteração, caso o produto esteja em seu carrinho de compras.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-Nesse caso, como o microsserviço de origem é um microsserviço CRUD simples, o código é colocado diretamente em um controlador de API Web. 
- 
-Em microsserviços mais avançados, como ao usar abordagens de CQRS, ele pode ser implementado na classe `CommandHandler`, dentro do método `Handle()`. 
+Nesse caso, como o microsserviço de origem é um microsserviço CRUD simples, o código é colocado diretamente em um controlador de API Web.
+
+Em microsserviços mais avançados, como ao usar abordagens de CQRS, ele pode ser implementado na classe `CommandHandler`, dentro do método `Handle()`.
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Criando atomicidade e resiliência ao publicar no barramento de eventos
 
@@ -103,11 +103,11 @@ Vamos voltar para o problema inicial e o respectivo exemplo. Se o serviço falha
 
 Como mencionado anteriormente na seção de arquitetura, você pode ter várias abordagens para lidar com esse problema:
 
--   Usando o padrão [Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
+- Usando o padrão [Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
 
--   Usando [mineração do log de transações](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Usando [mineração do log de transações](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Usando o [padrão Outbox](http://gistlabs.com/2014/05/the-outbox/). Essa é uma tabela transacional para armazenar os eventos de integração (estendendo a transação local).
+- Usando o [padrão Outbox](http://gistlabs.com/2014/05/the-outbox/). Essa é uma tabela transacional para armazenar os eventos de integração (estendendo a transação local).
 
 Neste cenário, o uso do padrão ES (Event Sourcing) completo é uma das melhores abordagens, se não for *a* melhor. No entanto, em muitos cenários de aplicativo, pode ser impossível implementar um sistema completo de ES. O ES significa o armazenamento somente dos eventos de domínio em seu banco de dados transacional, em vez de armazenar dados do estado atual. Armazenar apenas os eventos de domínio pode ter grandes benefícios, como ter o histórico do sistema disponível e poder determinar o estado do sistema em qualquer momento no passado. No entanto, implementar um sistema de ES completo exige que você refaça a arquitetura da maior parte do seu sistema e também pode apresentar muitas outras complexidades e requisitos. Por exemplo, vai ser interessante usar um banco de dados criado especificamente para fornecimento de eventos, como o [Event Store](https://eventstore.org/), ou um banco de dados orientado a documentos, como Azure Cosmos DB, MongoDB, Cassandra, CouchDB ou RavenDB. O ES é uma ótima abordagem para esse problema, mas não é a solução mais fácil, a menos que você já esteja familiarizado com fornecimento de eventos.
 
@@ -125,19 +125,19 @@ Se já está usando um banco de dados relacional, você pode usar uma tabela tra
 
 Passo a passo, o processo é o seguinte:
 
-1.  O aplicativo inicia uma transação de banco de dados local.
+1. O aplicativo inicia uma transação de banco de dados local.
 
-2.  Em seguida, ele atualiza o estado das suas entidades de domínio e insere um evento na tabela de eventos de integração.
+2. Em seguida, ele atualiza o estado das suas entidades de domínio e insere um evento na tabela de eventos de integração.
 
-3.  Por fim, ele confirma a transação, de modo que você obtenha a atomicidade desejada e
+3. Por fim, ele confirma a transação, de modo que você obtenha a atomicidade desejada e
 
-4.  Você publica o evento de alguma forma (a seguir).
+4. Você publica o evento de alguma forma (a seguir).
 
 Ao implementar as etapas de publicação dos eventos, você tem estas opções:
 
--   Publicar o evento de integração logo após a confirmação da transação e usar outra transação local para marcar os eventos na tabela como sendo publicados. Em seguida, usar a tabela apenas como um artefato para controlar os eventos de integração, em caso de problemas com os microsserviços remotos, e executar ações compensatórias com base nos eventos de integração armazenados.
+- Publicar o evento de integração logo após a confirmação da transação e usar outra transação local para marcar os eventos na tabela como sendo publicados. Em seguida, usar a tabela apenas como um artefato para controlar os eventos de integração, em caso de problemas com os microsserviços remotos, e executar ações compensatórias com base nos eventos de integração armazenados.
 
--   Usar a tabela como um tipo de fila. Um thread ou processo do aplicativo separado consulta a tabela de eventos de integração, publica os eventos no barramento de eventos e, em seguida, usa uma transação local para marcar os eventos como publicados.
+- Usar a tabela como um tipo de fila. Um thread ou processo do aplicativo separado consulta a tabela de eventos de integração, publica os eventos no barramento de eventos e, em seguida, usa uma transação local para marcar os eventos como publicados.
 
 A Figura 6-22 mostra a arquitetura da primeira dessas abordagens.
 
@@ -166,55 +166,55 @@ Para maior clareza, o exemplo a seguir mostra todo o processo em um único segme
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -281,7 +281,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 O manipulador de eventos deve verificar se o produto existe em qualquer uma das instâncias do carrinho de compras. Ele também atualiza o preço do item para cada item de linha relacionado ao carrinho. Por fim, ele cria um alerta sobre a alteração de preço, que será exibido para o usuário, conforme mostrado na Figura 6-24.
 
-![Exibição do navegador da notificação de alteração de preço no carrinho do usuário.](./media/image25.png)
+![Exibição do navegador da notificação de alteração de processo no carrinho do usuário.](./media/image25.png)
 
 **Figura 6-24**. Exibindo uma alteração de preço de item em um carrinho de compras, conforme comunicado pelos eventos de integração
 
@@ -303,7 +303,7 @@ Alguns processamentos de mensagens são inerentemente idempotentes. Por exemplo,
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Respeitando a idempotência da mensagem** <br/>
+- **Respeitando a idempotência da mensagem** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Eliminando a duplicação de mensagens de eventos de integração
@@ -324,69 +324,69 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **eShopOnContainers bifurcado usando NServiceBus (software específico)** <br/>
+- **eShopOnContainers bifurcado usando NServiceBus (software específico)** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Mensagens controladas por evento** <br/>
+- **Mensagens controladas por evento** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refatoração para resiliência: avaliação do acoplamento** <br/>
+- **Jimmy Bogard. Refatoração para resiliência: avaliação do acoplamento** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Canal de publicação/assinatura** <br/>
+- **Canal de publicação/assinatura** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Comunicação entre contextos limitados** <br/>
+- **Comunicação entre contextos limitados** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **Consistência eventual** <br/>
+- **Consistência eventual** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Estratégias para integrar contextos limitados** <br/>
+- **Philip Brown. Estratégias para integrar contextos limitados** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Desenvolvendo microsserviços transacionais usando agregações, origem de eventos e CQRS – parte 2** <br/>
+- **Chris Richardson. Desenvolvendo microsserviços transacionais usando agregações, origem de eventos e CQRS – parte 2** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Padrão de origem de eventos** <br/>
+- **Chris Richardson. Padrão de origem de eventos** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introdução à origem de eventos** <br/>
+- **Introdução à origem de eventos** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **Banco de dados Event Store**. Site oficial. <br/>
+- **Banco de dados Event Store**. Site oficial. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Gerenciamento de dados controlado por evento para microsserviços** <br/>
+- **Patrick Nommensen. Gerenciamento de dados controlado por evento para microsserviços** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **O Teorema de CAP** <br/>
+- **O Teorema de CAP** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **O que é o Teorema de CAP?** <br/>
+- **O que é o Teorema de CAP?** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Guia de Consistência de Dados** <br/>
+- **Guia de Consistência de Dados** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling. O Teorema de CAP: por que “tudo está diferente” na nuvem e na Internet** <br/>
+- **Rick Saling. O Teorema de CAP: por que “tudo está diferente” na nuvem e na Internet** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP doze anos depois: como as "regras" mudaram** <br/>
+- **Eric Brewer. CAP doze anos depois: como as "regras" mudaram** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Barramento de Serviço do Azure. Sistema de mensagens agenciado: detecção de duplicidades**  <br/>
+- **Barramento de Serviço do Azure. Sistema de mensagens agenciado: detecção de duplicidades**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Guia de Confiabilidade** (documentação do RabbitMQ)* <br/>
+- **Guia de Confiabilidade** (documentação do RabbitMQ)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Barramento de Serviço do Azure. Sistema de mensagens agenciado: detecção de duplicidades** <br/>
+- **Barramento de Serviço do Azure. Sistema de mensagens agenciado: detecção de duplicidades** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Guia de Confiabilidade** (documentação do RabbitMQ) <br/>
+- **Guia de Confiabilidade** (documentação do RabbitMQ) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[Anterior](rabbitmq-event-bus-development-test-environment.md)
->[Próximo](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [Anterior](rabbitmq-event-bus-development-test-environment.md)
+> [Próximo](test-aspnet-core-services-web-apps.md)

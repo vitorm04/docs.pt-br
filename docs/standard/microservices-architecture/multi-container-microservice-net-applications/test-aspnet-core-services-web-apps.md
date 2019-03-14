@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8461cd77661c96e59342fa5721c93f16ce515533
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5af1fa6163858ed80fe92118e85d149081aa6f53
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976181"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677741"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
@@ -17,13 +17,13 @@ Os controladores são uma parte central de qualquer serviço de API do ASP.NET C
 
 É necessário testar como o controlador se comporta com base em entradas válidas ou inválidas, bem como testar suas respostas com base nos resultados da operação de negócios realizada. No entanto, você deveria ter esses tipos de testes nos seus microsserviços:
 
--   Testes de unidade. Eles garantem que os componentes individuais do aplicativo funcionam como esperado. Instruções assert testam a API do componente.
+- Testes de unidade. Eles garantem que os componentes individuais do aplicativo funcionam como esperado. Instruções assert testam a API do componente.
 
--   Testes de integração. Garantem que as interações do componente funcionam como esperado em artefatos externos, como bancos de dados. Instruções assert podem testar a API do componente, a interface do usuário ou os efeitos colaterais de ações, como E/S de banco de dados, registros em log etc.
+- Testes de integração. Garantem que as interações do componente funcionam como esperado em artefatos externos, como bancos de dados. Instruções assert podem testar a API do componente, a interface do usuário ou os efeitos colaterais de ações, como E/S de banco de dados, registros em log etc.
 
--   Testes funcionais para cada microsserviço. Garantem que o aplicativo funciona conforme o esperado da perspectiva do usuário.
+- Testes funcionais para cada microsserviço. Garantem que o aplicativo funciona conforme o esperado da perspectiva do usuário.
 
--   Testes de serviço. Garantem que os casos de uso do serviço de ponta a ponta sejam testados, incluindo testes de vários serviços ao mesmo tempo. Para esse tipo de teste, é necessário preparar o ambiente primeiro. Nesse caso, significa iniciar os serviços (por exemplo, usando o docker-compose up).
+- Testes de serviço. Garantem que os casos de uso do serviço de ponta a ponta sejam testados, incluindo testes de vários serviços ao mesmo tempo. Para esse tipo de teste, é necessário preparar o ambiente primeiro. Nesse caso, significa iniciar os serviços (por exemplo, usando o docker-compose up).
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementar testes de unidade para APIs Web do ASP.NET Core
 
@@ -42,18 +42,18 @@ public async Task Get_order_detail_success()
     //Arrange
     var fakeOrderId = "12";
     var fakeOrder = GetFakeOrder();
- 
+
     //...
 
     //Act
     var orderController = new OrderController(
-        _orderServiceMock.Object, 
-        _basketServiceMock.Object, 
+        _orderServiceMock.Object,
+        _basketServiceMock.Object,
         _identityParserMock.Object);
 
     orderController.ControllerContext.HttpContext = _contextMock.Object;
     var actionResult = await orderController.Detail(fakeOrderId);
- 
+
     //Assert
     var viewResult = Assert.IsType<ViewResult>(actionResult);
     Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
@@ -103,28 +103,28 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Steve Smith. Testando controladores** (ASP.NET Core) <br/>
+- **Steve Smith. Testando controladores** (ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Teste de integração** (ASP.NET Core) <br/>
+- **Steve Smith. Teste de integração** (ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **Teste de unidade no .NET Core usando dotnet test** <br/>
+- **Teste de unidade no .NET Core usando dotnet test** <br/>
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
 
--   **xUnit.net**. Site oficial. <br/>
+- **xUnit.net**. Site oficial. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Noções básicas de teste de unidade.** <br/>
+- **Noções básicas de teste de unidade.** <br/>
     [*https://docs.microsoft.com/visualstudio/test/unit-test-basics*](/visualstudio/test/unit-test-basics)
 
--   **Moq**. Repositório do GitHub. <br/>
+- **Moq**. Repositório do GitHub. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**. Site oficial. <br/>
+- **NUnit**. Site oficial. <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementar testes de serviço em um aplicativo com vários contêineres 
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementar testes de serviço em um aplicativo com vários contêineres
 
 Conforme mencionado anteriormente, ao testar aplicativos com vários contêineres, todos os microsserviços precisam ser executados no host do Docker ou no cluster do contêiner. Testes de serviço de ponta a ponta que incluem várias operações envolvendo diversos microsserviços exigem a implantação e inicialização do aplicativo inteiro no host do Docker por meio da execução do docker-compose up (ou um mecanismo semelhante se você estiver usando um orquestrador). Quando o aplicativo inteiro e todos os seus serviços estiverem em execução, você pode executar testes funcionais e de integração de ponta a ponta.
 
@@ -136,13 +136,13 @@ Se o Visual Studio estiver em execução, será possível aproveitar pontos de i
 
 Os testes do aplicativo (eShopOnContainers) de referência foram recentemente restruturados e agora há quatro categorias:
 
-1.  **Unidade** testa, os antigos testes de unidade regulares, contidos nos projetos **{MicroserviceName}.UnitTests**
+1. **Unidade** testa, os antigos testes de unidade regulares, contidos nos projetos **{MicroserviceName}.UnitTests**
 
-2.  **Testes funcionais/integração de microsserviço**, com casos de teste que envolvem a infraestrutura para cada microsserviço, mas isolado dos outros; estão contidos nos projetos **{MicroserviceName}. FunctionalTests**.
+2. **Testes funcionais/integração de microsserviço**, com casos de teste que envolvem a infraestrutura para cada microsserviço, mas isolado dos outros; estão contidos nos projetos **{MicroserviceName}.FunctionalTests**.
 
-3.  **Testes funcionais/integração de aplicativo**, que se concentram na integração de microsserviços, com casos de teste que exercem vários microsserviços. Esses testes estão localizados no projeto **Application.FunctionalTests**.
+3. **Testes funcionais/integração de aplicativo**, que se concentram na integração de microsserviços, com casos de teste que exercem vários microsserviços. Esses testes estão localizados no projeto **Application.FunctionalTests**.
 
-4.  **Testes de carga**, que se concentram em tempos de resposta para cada microsserviço. Esses testes estão localizados no projeto **LoadTest** e precisam do Visual Studio 2017 Enterprise Edition.
+4. **Testes de carga**, que se concentram em tempos de resposta para cada microsserviço. Esses testes estão localizados no projeto **LoadTest** e precisam do Visual Studio 2017 Enterprise Edition.
 
 Os testes de unidade e de integração por microsserviço estão contidos em uma pasta de teste em cada microsserviço e o testes de carga e de aplicativo estão contidos na pasta teste da pasta da solução, conforme mostrado na Figura 6-25.
 
@@ -180,7 +180,7 @@ services:
   rabbitmq:
     ports:
       - "15672:15672"
-      - "5672:5672" 
+      - "5672:5672"
   sql.data:
     environment:
       - SA_PASSWORD=Pass@word
@@ -198,16 +198,16 @@ Portanto, para executar os testes funcionais/integração, primeiro você deve e
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-Como você pode ver, esses arquivos docker-compose só iniciam os microsserviços Redis, RabitMQ, SQL Server e MongoDB.
+Como você pode ver, esses arquivos docker-compose só iniciam os microsserviços Redis, RabbitMQ, SQL Server e MongoDB.
 
-### <a name="additionl-resources"></a>Recursos adicionais
+### <a name="additional-resources"></a>Recursos adicionais
 
--   **Arquivo LEIAME dos testes** no repositório eShopOnContainers no GitHub <br/>
+- **Arquivo LEIAME dos testes** no repositório eShopOnContainers no GitHub <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
 
--   **Arquivo LEIAME dos testes de carga** no repositório eShopOnContainers no GitHub <br/>
+- **Arquivo LEIAME dos testes de carga** no repositório eShopOnContainers no GitHub <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
 
->[!div class="step-by-step"]
->[Anterior](subscribe-events.md)
->[Próximo](background-tasks-with-ihostedservice.md)
+> [!div class="step-by-step"]
+> [Anterior](subscribe-events.md)
+> [Próximo](background-tasks-with-ihostedservice.md)

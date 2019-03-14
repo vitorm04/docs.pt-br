@@ -19,7 +19,7 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Building a class library with Visual Basic](vb-library-with-visual-studio.md) (Criando uma biblioteca de classes com o Visual Basic)
 - [Testing a class library](testing-library-with-visual-studio.md) (Testando uma biblioteca de classes)
 - [Consuming a class library](consuming-library-with-visual-studio.md) (Consumindo uma biblioteca de classes)
-- [Azure Cosmos DB: introdução ao .NET Core e à API do SQL](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB: Introdução à API do SQL e ao .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Criando aplicativos Web com o Visual Studio Code
 
@@ -28,12 +28,12 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Compilar aplicativos com o Visual Studio para Mac
 
-- [Introdução ao .NET Core em macOS usando o Visual Studio para Mac](using-on-mac-vs.md)
+- [Introdução ao .NET Core no macOS usando o Visual Studio para Mac](using-on-mac-vs.md)
 - [Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac](using-on-mac-vs-full-solution.md)
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>Criando aplicativos com as ferramentas de CLI do .NET Core
 
-- [Introdução ao .NET Core no Windows/Linux/macOS usando as ferramentas de CLI do .NET Core](using-with-xplat-cli.md)
+- [Introdução ao .NET Core no Windows/Linux/macOS usando as ferramentas da CLI do .NET Core](using-with-xplat-cli.md)
 - [Organizando e testando projetos com as ferramentas da CLI do .NET Core](testing-with-cli.md)
 - [Get started with F#](../../fsharp/get-started/get-started-command-line.md) (Introdução ao F#)
 
