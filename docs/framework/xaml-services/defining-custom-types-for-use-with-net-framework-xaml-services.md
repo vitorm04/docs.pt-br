@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: 672660f73e9e6faf25985a651290e979f9deb9f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492501"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042636"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definindo tipos personalizados para uso com serviços XAML do .NET Framework
 Quando você define tipos personalizados que são objetos de negócios ou é tipos que não têm uma dependência em estruturas específicas, há algumas melhores práticas para XAML, você pode seguir. Se você seguir essas práticas, serviços de XAML do .NET Framework e seus leitores XAML e gravadores XAML podem descobrir as características XAML de seu tipo e dê a ele representação apropriada em um fluxo de nó XAML usando o sistema de tipo XAML. Este tópico descreve as práticas recomendadas para definições de tipo, definições de membro e atribuição do CLR de tipos ou membros.  
@@ -23,7 +23,7 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
   
  Se um objeto pode ser instanciado como um elemento de objeto, o objeto criado pode preencher o formulário de elemento de propriedade de todas as propriedades que usam o objeto como seu tipo base.  
   
- Você ainda pode fornecer valores de objeto para tipos que não atendem a esses critérios, se você habilitar um conversor de valor. Para obter mais informações, consulte [conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Você ainda pode fornecer valores de objeto para tipos que não atendem a esses critérios, se você habilitar um conversor de valor. Para obter mais informações, consulte [conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 ### <a name="structures"></a>Estruturas  
  Estruturas são sempre podem ser construídas em XAML, por definição de CLR. Isso ocorre porque um compilador CLR cria implicitamente um construtor padrão para uma estrutura. Este construtor inicializa todos os valores de propriedade para seus padrões.  
@@ -34,12 +34,12 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
  Interfaces podem ser usadas como tipos subjacentes de membros. O sistema de tipos XAML verifica a lista pode ser atribuída e espera que o objeto que é fornecido como o valor pode ser atribuído à interface. Não há nenhum conceito de como a interface deve ser apresentada como um tipo XAML, desde os requisitos de construção do XAML oferece suporte a um tipo atribuível relevante.  
   
 ### <a name="factory-methods"></a>Métodos de fábrica  
- Métodos de fábrica são um recurso do XAML 2009. Eles modificam o princípio XAML que objetos devem ter construtores padrão. Métodos de fábrica não são documentados neste tópico. Ver [diretiva X:factorymethod](../../../docs/framework/xaml-services/x-factorymethod-directive.md).  
+ Métodos de fábrica são um recurso do XAML 2009. Eles modificam o princípio XAML que objetos devem ter construtores padrão. Métodos de fábrica não são documentados neste tópico. Ver [diretiva X:factorymethod](x-factorymethod-directive.md).  
   
 ## <a name="enumerations"></a>Enumerações  
  Enumerações têm comportamento de conversão de tipo nativo do XAML. Nomes de constantes de enumeração especificados em XAML são resolvidos em relação ao tipo subjacente da enumeração e retornam o valor de enumeração para um gravador de objeto XAML.  
   
- XAML dá suporte ao uso de sinalizadores de estilo para enumerações com <xref:System.FlagsAttribute> aplicado. Para obter mais informações, consulte [sintaxe de XAML em detalhes](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md). ([Sintaxe de XAML em detalhes](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md) é gravada para o público-alvo do WPF, mas a maioria das informações do tópico é relevante para XAML que não é específico para uma determinada estrutura de implementação.)  
+ XAML dá suporte ao uso de sinalizadores de estilo para enumerações com <xref:System.FlagsAttribute> aplicado. Para obter mais informações, consulte [sintaxe de XAML em detalhes](../wpf/advanced/xaml-syntax-in-detail.md). ([Sintaxe de XAML em detalhes](../wpf/advanced/xaml-syntax-in-detail.md) é gravada para o público-alvo do WPF, mas a maioria das informações do tópico é relevante para XAML que não é específico para uma determinada estrutura de implementação.)  
   
 ## <a name="member-definitions"></a>Definições de membro  
  Tipos podem definir membros para o uso do XAML. É possível para os tipos que definem os membros que são utilizáveis de XAML mesmo se esse tipo específico não é utilizável de XAML. Isso é possível devido à herança do CLR. Desde que algum tipo que herda o membro dá suporte ao uso XAML como um tipo e o membro dá suporte ao uso do XAML para seu tipo subjacente ou tem uma sintaxe XAML nativa disponível, esse membro é utilizável de XAML.  
@@ -47,23 +47,23 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
 ### <a name="properties"></a>Propriedades  
  Se você definir propriedades como uma propriedade pública de CLR usando o CLR típico `get` e `set` padrões do acessador e palavras-chave apropriada ao idioma, o sistema de tipos XAML pode relatar a propriedade como um membro com informações apropriadas fornecida para <xref:System.Xaml.XamlMember> propriedades, tais como <xref:System.Xaml.XamlMember.IsReadPublic%2A> e <xref:System.Xaml.XamlMember.IsWritePublic%2A>.  
   
- Propriedades específicas podem habilitar uma sintaxe de texto por meio da aplicação <xref:System.ComponentModel.TypeConverterAttribute>. Para obter mais informações, consulte [conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Propriedades específicas podem habilitar uma sintaxe de texto por meio da aplicação <xref:System.ComponentModel.TypeConverterAttribute>. Para obter mais informações, consulte [conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
  Na ausência de uma sintaxe de texto ou conversão nativa de XAML e, na ausência de ainda mais indireto, como um uso de extensão de marcação, o tipo de uma propriedade (<xref:System.Xaml.XamlMember.TargetType%2A> no XAML o sistema de tipos) deve ser capaz de retornar uma instância em um gravador de objeto XAML, tratando o t tipo de destino como um tipo CLR.  
   
- Se usar XAML 2009, [extensão de marcação X:Reference](../../../docs/framework/xaml-services/x-reference-markup-extension.md) pode ser usado para fornecer valores se as considerações anteriores não forem atendidas; no entanto, se trata mais de um problema de uso que um problema de definição de tipo.  
+ Se usar XAML 2009, [extensão de marcação X:Reference](x-reference-markup-extension.md) pode ser usado para fornecer valores se as considerações anteriores não forem atendidas; no entanto, se trata mais de um problema de uso que um problema de definição de tipo.  
   
 ### <a name="events"></a>Eventos  
  Se você definir eventos como um evento público do CLR, o sistema de tipos XAML pode relatar o evento como um membro com <xref:System.Xaml.XamlMember.IsEvent%2A> como `true`. Conectar os manipuladores de eventos não está dentro do escopo de recursos de serviços de XAML do .NET Framework; Isso é deixado a implementações e estruturas específicas.  
   
 ### <a name="methods"></a>Métodos  
- O código embutido para métodos não é um recurso XAML padrão. Na maioria dos casos você não faça referência diretamente membros de método de XAML, e a função de métodos em XAML é apenas fornecer suporte para padrões específicos de XAML. [Diretiva X:factorymethod](../../../docs/framework/xaml-services/x-factorymethod-directive.md) é uma exceção.  
+ O código embutido para métodos não é um recurso XAML padrão. Na maioria dos casos você não faça referência diretamente membros de método de XAML, e a função de métodos em XAML é apenas fornecer suporte para padrões específicos de XAML. [Diretiva X:factorymethod](x-factorymethod-directive.md) é uma exceção.  
   
 ### <a name="fields"></a>Campos  
- Diretrizes de design do CLR desencorajar os campos não estáticos. Para campos estáticos, você pode acessar valores de campo estático somente por meio [extensão de marcação X:Static](../../../docs/framework/xaml-services/x-static-markup-extension.md); nesse caso, você não fazem nada especial na definição do CLR para expor um campo para [X:Static](../../../docs/framework/xaml-services/x-static-markup-extension.md) usos.  
+ Diretrizes de design do CLR desencorajar os campos não estáticos. Para campos estáticos, você pode acessar valores de campo estático somente por meio [extensão de marcação X:Static](x-static-markup-extension.md); nesse caso, você não fazem nada especial na definição do CLR para expor um campo para [X:Static](x-static-markup-extension.md) usos.  
   
 ## <a name="attachable-members"></a>Membros anexáveis  
- Os membros anexáveis são expostos ao XAML por meio de um padrão de método do acessador em uma definição de tipo. A definição de tipo em si não precisa ser utilizável de XAML como um objeto. Na verdade, um padrão comum é declarar uma classe de serviço cuja função é possuir o membro anexável e implementar os comportamentos relacionados, mas não servem a nenhuma outra função, como uma representação da interface do usuário. Para as seções a seguir, o espaço reservado *PropertyName* representa o nome de seu membro anexável. Esse nome deve ser válido na [gramática XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md).  
+ Os membros anexáveis são expostos ao XAML por meio de um padrão de método do acessador em uma definição de tipo. A definição de tipo em si não precisa ser utilizável de XAML como um objeto. Na verdade, um padrão comum é declarar uma classe de serviço cuja função é possuir o membro anexável e implementar os comportamentos relacionados, mas não servem a nenhuma outra função, como uma representação da interface do usuário. Para as seções a seguir, o espaço reservado *PropertyName* representa o nome de seu membro anexável. Esse nome deve ser válido na [gramática XamlName](xamlname-grammar.md).  
   
  Tenha cuidado de colisões de nome entre esses padrões e outros métodos de um tipo. Se existe um membro que corresponde a um dos padrões, ele pode ser interpretado como um caminho para o membro anexável uso por um processador XAML mesmo se não era sua intenção.  
   
@@ -95,7 +95,7 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
 ## <a name="xaml-related-clr-attributes"></a>Atributos CLR relacionados a XAML  
  Atribuindo corretamente seus tipos, membros e assemblies é importante na ordem para o relatório de informações do sistema de tipo XAML para serviços de XAML do .NET Framework. Isso é relevante se você pretende que seus tipos para uso com sistemas XAML diretamente com base em leitores de XAML de serviços do .NET Framework XAML e gravadores XAML, ou se você definir ou usa uma estrutura utilizando o XAML que se baseia nesses leitores XAML e gravadores XAML.  
   
- Para obter uma lista de cada atributo relacionados a XAML que é relevante para oferecer suporte a XAML seus tipos personalizados, consulte [XAML-Related atributos de CLR para tipos personalizados e bibliotecas](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Para obter uma lista de cada atributo relacionados a XAML que é relevante para oferecer suporte a XAML seus tipos personalizados, consulte [XAML-Related atributos de CLR para tipos personalizados e bibliotecas](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="usage"></a>Uso  
  Uso de tipos personalizados requer que o autor de marcação deve mapear um prefixo para o assembly e o namespace CLR que contém o tipo personalizado. Esse procedimento não está documentado neste tópico.  
@@ -115,5 +115,5 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
  Na terminologia do WPF XAML, uma *tipo interno* é um tipo definido pelo mesmo assembly que também inclui o XAML de referência. Um tipo pode ser mapeado por meio de um namespace XAML que omite deliberadamente o assembly = parte de um mapeamento, por exemplo, `xmlns:local="clr-namespace:WPFApplication1"`.  Se o BAML faz referência a um tipo interno e que tipo tem `internal` acessar nível, isso gera um `GeneratedInternalTypeHelper` classe para o assembly. Se você quiser evitar `GeneratedInternalTypeHelper`, você deve use `public` nível, de acesso ou deve fatorar a classe relevante em um assembly separado e fazer com que esse assembly dependente.  
   
 ## <a name="see-also"></a>Consulte também
-- [Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)
-- [Serviços XAML](../../../docs/framework/xaml-services/index.md)
+- [Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
+- [Serviços XAML](index.md)

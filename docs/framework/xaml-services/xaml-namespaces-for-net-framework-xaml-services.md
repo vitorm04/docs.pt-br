@@ -2,12 +2,12 @@
 title: Namespaces XAML para serviços XAML do .NET Framework
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736793"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030527"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Namespaces XAML para serviços XAML do .NET Framework
 Um namespace XAML é um conceito que se expande na definição de um namespace de XML. Semelhante a um namespace de XML, você pode definir um namespace XAML usando um `xmlns` atributo na marcação. Namespaces XAML também estão representados no fluxo de nó XAML e outras APIs de serviços de XAML. Este tópico define o conceito de namespace XAML e descreve como namespaces XAML podem ser definidas e usadas por contextos de esquema XAML e outros aspectos dos serviços de XAML do .NET Framework.  
@@ -44,14 +44,14 @@ Um namespace XAML é um conceito que se expande na definição de um namespace d
   
  *assemblyName* representa qualquer cadeia de caracteres que é permitida como um <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> entrada. Essa cadeia de caracteres pode incluir a cultura, chave pública ou informações de versão (definições desses conceitos são definidas no tópico de referência para <xref:System.Reflection.Assembly>). COFF formato e a evidência (conforme usado por outras sobrecargas do <xref:System.Reflection.Assembly.Load%2A>) não são relevantes para o assembly XAML ao carregar finalidades; todas as informações de carga devem ser apresentadas como uma cadeia de caracteres.  
   
- Especificando uma chave pública para o assembly é uma técnica útil para segurança XAML ou para remover a ambiguidade possíveis que pode existir se os assemblies são carregados por nome simples ou existirem previamente em um domínio de aplicativo ou de cache. Para obter mais informações, consulte [considerações sobre segurança de XAML](../../../docs/framework/xaml-services/xaml-security-considerations.md).  
+ Especificando uma chave pública para o assembly é uma técnica útil para segurança XAML ou para remover a ambiguidade possíveis que pode existir se os assemblies são carregados por nome simples ou existirem previamente em um domínio de aplicativo ou de cache. Para obter mais informações, consulte [considerações sobre segurança de XAML](xaml-security-considerations.md).  
   
 ## <a name="xaml-namespace-declarations-in-the-xaml-services-api"></a>Declarações de Namespace XAML em que a API de serviços XAML  
  Na API de serviços de XAML, uma declaração de namespace XAML é representada por um <xref:System.Xaml.NamespaceDeclaration> objeto. Se você está declarando um namespace XAML no código, você chama o <xref:System.Xaml.NamespaceDeclaration.%23ctor%28System.String%2CSystem.String%29> construtor. O `ns` e `prefix` são especificados como cadeias de caracteres e a entrada para fornecer para esses parâmetros corresponde à definição de identificador de namespace XAML e o prefixo de namespace XAML conforme fornecido anteriormente neste tópico.  
   
  Se você está examinando as informações de namespace XAML como parte de um fluxo do nó XAML ou por meio de outro acesso para o sistema de tipos XAML <xref:System.Xaml.NamespaceDeclaration.Namespace%2A?displayProperty=nameWithType> relata o identificador de namespace XAML, e <xref:System.Xaml.NamespaceDeclaration.Prefix%2A?displayProperty=nameWithType> relata o prefixo de namespace XAML.  
   
- Em um fluxo de nó XAML, as informações do namespace XAML podem aparecer como um nó XAML que precede a entidade à qual se aplica. Isso inclui os casos em que as informações do namespace XAML precede o `StartObject` do elemento raiz XAML. Para obter mais informações, consulte [Noções básicas sobre XAML Stream estruturas e conceitos nó](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+ Em um fluxo de nó XAML, as informações do namespace XAML podem aparecer como um nó XAML que precede a entidade à qual se aplica. Isso inclui os casos em que as informações do namespace XAML precede o `StartObject` do elemento raiz XAML. Para obter mais informações, consulte [Noções básicas sobre XAML Stream estruturas e conceitos nó](understanding-xaml-node-stream-structures-and-concepts.md).  
   
  Para muitos cenários que usam a API de serviços XAML do .NET Framework, pelo menos uma declaração de namespace XAML deve existir e a declaração deve conter ou fazem referência a informações que é necessário para um contexto de esquema XAML. Os namespaces XAML deve especificar assemblies para ser carregado ou ajudar a resolver tipos específicos dentro de namespaces e assemblies que já foram carregados ou conhecidos pelo contexto de esquema de XAML.  
   
@@ -61,7 +61,7 @@ Um namespace XAML é um conceito que se expande na definição de um namespace d
   
  Se você precisar preencher previamente as informações de namespace XAML, em casos em que você pretende que o contexto do esquema XAML para usar o namespace de XAML não está definido na marcação, uma técnica que você pode usar é declarar declarações de namespace XML no <xref:System.Xml.XmlParserContext> para um <xref:System.Xml.XmlReader>. Em seguida, usá-lo <xref:System.Xml.XmlReader> como entrada para um construtor de leitor XAML ou <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>.  
   
- Outra API que são relevantes para serviços XAML do .NET Framework de tratamento de namespace XAML são os atributos <xref:System.Windows.Markup.XmlnsDefinitionAttribute> e <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Esses atributos se aplicam a assemblies. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> é usado por um contexto de esquema XAML para interpretar qualquer declaração de namespace XAML que inclui um URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> é usado por ferramentas de emissão de XAML para que um namespace XAML específico pode ser serializado com um prefixo previsível. Para obter mais informações, consulte [XAML-Related atributos de CLR para tipos personalizados e bibliotecas](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Outra API que são relevantes para serviços XAML do .NET Framework de tratamento de namespace XAML são os atributos <xref:System.Windows.Markup.XmlnsDefinitionAttribute> e <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Esses atributos se aplicam a assemblies. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> é usado por um contexto de esquema XAML para interpretar qualquer declaração de namespace XAML que inclui um URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> é usado por ferramentas de emissão de XAML para que um namespace XAML específico pode ser serializado com um prefixo previsível. Para obter mais informações, consulte [XAML-Related atributos de CLR para tipos personalizados e bibliotecas](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Noções básicas sobre estruturas e conceitos do fluxo de nó XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [Noções básicas sobre estruturas e conceitos do fluxo de nó XAML](understanding-xaml-node-stream-structures-and-concepts.md)

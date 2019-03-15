@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659144"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049494"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Visão geral de conversores de tipo para XAML
 Lógica de fornecimento de conversores de tipo para um gravador de objeto que converte uma cadeia de caracteres na marcação XAML em objetos específicos em um grafo de objeto. Nos serviços de XAML do .NET Framework, o conversor de tipo deve ser uma classe que deriva de <xref:System.ComponentModel.TypeConverter>. Além disso, alguns conversores dão suporte a XAML caminho de salvamento e podem ser usados para serializar um objeto em um formulário de cadeia de caracteres na marcação de serialização. Este tópico descreve como e quando são invocados conversores de tipo em XAML e fornece conselhos de implementação para o método substituições de <xref:System.ComponentModel.TypeConverter>.  
@@ -29,7 +29,7 @@ Lógica de fornecimento de conversores de tipo para um gravador de objeto que co
 >  Diretivas de linguagem XAML não usa conversores de tipo.  
   
 ### <a name="type-converters-and-markup-extensions"></a>Conversores de tipo e extensões de marcação  
- Usos de extensão de marcação devem ser tratados por um processador XAML antes de verificar o tipo de propriedade e outras considerações. Por exemplo, se uma propriedade que está sendo definida como um atributo normalmente tem uma conversão de tipo, mas um caso específico é definida por um uso de extensão de marcação, em seguida, o comportamento de extensão de marcação processa pela primeira vez. É uma situação comum em que uma extensão de marcação é necessária fazer uma referência a um objeto que já existe. Para este cenário, um conversor de tipo sem monitoração de estado só pode gerar uma nova instância, que pode não ser desejável. Para obter mais informações sobre extensões de marcação, consulte [extensões de marcação para visão geral de XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Usos de extensão de marcação devem ser tratados por um processador XAML antes de verificar o tipo de propriedade e outras considerações. Por exemplo, se uma propriedade que está sendo definida como um atributo normalmente tem uma conversão de tipo, mas um caso específico é definida por um uso de extensão de marcação, em seguida, o comportamento de extensão de marcação processa pela primeira vez. É uma situação comum em que uma extensão de marcação é necessária fazer uma referência a um objeto que já existe. Para este cenário, um conversor de tipo sem monitoração de estado só pode gerar uma nova instância, que pode não ser desejável. Para obter mais informações sobre extensões de marcação, consulte [extensões de marcação para visão geral de XAML](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="native-type-converters"></a>Conversores de tipos nativos  
  As implementações de serviços do WPF e XAML do .NET, há determinados tipos CLR que têm manipulação de conversão de tipo nativo, no entanto, esses tipos CLR não são convencionalmente pensados como primitivos. Um exemplo desse tipo é <xref:System.DateTime>. Um motivo para isso é como a arquitetura do .NET Framework funciona: o tipo <xref:System.DateTime> é definido em mscorlib, a biblioteca mais básica no .NET. <xref:System.DateTime> não é permitida para ser atribuído com um atributo que vem de outro assembly que introduz uma dependência (<xref:System.ComponentModel.TypeConverterAttribute> é do sistema); portanto, o mecanismo de descoberta de conversor de tipos usual por atribuição não têm suporte. Em vez disso, o analisador XAML tem uma lista de tipos que precisam de processamento nativo e processa esses tipos semelhantes a como os primitivos verdadeiros são processados. No caso de <xref:System.DateTime>, esse processamento envolve uma chamada para <xref:System.DateTime.Parse%2A>.  
@@ -60,7 +60,7 @@ Lógica de fornecimento de conversores de tipo para um gravador de objeto que co
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> e <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> são os métodos de suporte que são usados quando um serviço consulta as capacidades do <xref:System.ComponentModel.TypeConverter> implementação. Esses métodos devem ser implementados para retornar o `true` para casos específicos de tipo aos quais os métodos de conversão equivalentes do seu conversor dão suporte. Para fins XAML, isso geralmente significa o <xref:System.String> tipo.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informações de cultura e conversores de tipos para XAML  
- Cada <xref:System.ComponentModel.TypeConverter> implementação exclusivamente pode interpretar o que é uma cadeia de caracteres válida para uma conversão e também pode usar ou ignorar a descrição do tipo que é passada como parâmetros. Uma consideração importante para a conversão de tipo de cultura e o XAML é o seguinte: Embora usar cadeias de caracteres localizáveis como valores de atributo for compatível com XAML, é possível usar essas cadeias de caracteres localizáveis como entrada do conversor de tipo com exigências específicas de cultura. Essa limitação existe porque os conversores de tipo para valores de atributo XAML envolvem um comportamento de processamento de XAML de linguagem necessariamente fixo usa `en-US` cultura. Para obter mais informações sobre os motivos de design para essa restrição, consulte a especificação da linguagem XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) ou [VisãogeraldelocalizaçãoeglobalizaçãodoWPF](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Cada <xref:System.ComponentModel.TypeConverter> implementação exclusivamente pode interpretar o que é uma cadeia de caracteres válida para uma conversão e também pode usar ou ignorar a descrição do tipo que é passada como parâmetros. Uma consideração importante para a conversão de tipo de cultura e o XAML é o seguinte: Embora usar cadeias de caracteres localizáveis como valores de atributo for compatível com XAML, é possível usar essas cadeias de caracteres localizáveis como entrada do conversor de tipo com exigências específicas de cultura. Essa limitação existe porque os conversores de tipo para valores de atributo XAML envolvem um comportamento de processamento de XAML de linguagem necessariamente fixo usa `en-US` cultura. Para obter mais informações sobre os motivos de design para essa restrição, consulte a especificação da linguagem XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) ou [VisãogeraldelocalizaçãoeglobalizaçãodoWPF](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Como um exemplo em que a cultura pode ser um problema, algumas culturas usam vírgula em vez de um período como o delimitador de vírgula decimal para números em formato de cadeia de caracteres. Esse uso entra em conflito com o comportamento que têm muitos conversores de tipo existente, que é usar uma vírgula como delimitador. Passando uma cultura por meio de `xml:lang` no XAML ao redor não resolver o problema.  
   
@@ -101,7 +101,7 @@ Lógica de fornecimento de conversores de tipo para um gravador de objeto que co
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Acessando o contexto de provedor de serviço de uma implementação de extensão de marcação  
- Os serviços disponíveis são as mesmas para qualquer conversor de valor. A diferença está em como cada conversor de valor recebe o contexto de serviço. Acesso a serviços e os serviços disponíveis estão documentados no tópico [conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Os serviços disponíveis são as mesmas para qualquer conversor de valor. A diferença está em como cada conversor de valor recebe o contexto de serviço. Acesso a serviços e os serviços disponíveis estão documentados no tópico [conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>Conversores de tipo em que o Stream de nó XAML  
@@ -109,5 +109,5 @@ Lógica de fornecimento de conversores de tipo para um gravador de objeto que co
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.ComponentModel.TypeConverterAttribute>
-- [Conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [Visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

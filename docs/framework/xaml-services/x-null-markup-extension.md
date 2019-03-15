@@ -12,12 +12,12 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: 5f0856f50e73a090d0ef624e2fb894d68b73c07e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34a2de71bec9b0929070aa908741de38b5904643
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553315"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58029369"
 ---
 # <a name="xnull-markup-extension"></a>Extensão de marcação x:Null
 Especifica `null` como um valor para um membro XAML.  
@@ -37,14 +37,14 @@ Especifica `null` como um valor para um membro XAML.
   
  O `x:Null` extensão de marcação, como todas as extensões de marcação XAML, usa as chaves (`{,}`) para escapar o tratamento de valores de atributo para ser diferente de literais ou referências de manipulador de eventos. Sintaxe de atributo é a sintaxe mais frequentemente usada com essa extensão de marcação. Uma sintaxe de elemento de objeto `<x:Null />` é tecnicamente possível, mas raramente é usado porque o `x:Null` extensão de marcação não tem parâmetros posicionais ou argumentos de construção.  
   
- Para obter informações sobre extensões de marcação, consulte [extensões de marcação e XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Para obter informações sobre extensões de marcação, consulte [extensões de marcação e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
  Nos serviços de XAML do .NET Framework, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.Markup.NullExtension> classe.  
   
 ## <a name="wpf-usage-notes"></a>Notas de uso do WPF  
- Observe que `null` não é necessariamente o valor inicial para uma propriedade de dependência do tipo de referência. O valor padrão inicial pode variar para cada propriedade de dependência e pode ser com base nos metadados de propriedade específica. Muitas propriedades de dependência não aceitam `null` como um valor, por meio de marcação ou código devido a suas implementações de retorno de chamada de validação. Para obter mais informações sobre propriedades de dependência, consulte [visão geral das propriedades de dependência](../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Observe que `null` não é necessariamente o valor inicial para uma propriedade de dependência do tipo de referência. O valor padrão inicial pode variar para cada propriedade de dependência e pode ser com base nos metadados de propriedade específica. Muitas propriedades de dependência não aceitam `null` como um valor, por meio de marcação ou código devido a suas implementações de retorno de chamada de validação. Para obter mais informações sobre propriedades de dependência, consulte [visão geral das propriedades de dependência](../wpf/advanced/dependency-properties-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.DependencyProperty.UnsetValue>
-- [Visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Extensões de marcação e XAML do WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

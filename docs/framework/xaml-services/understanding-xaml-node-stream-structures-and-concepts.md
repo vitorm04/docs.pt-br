@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365718"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034751"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
 
@@ -232,7 +232,7 @@ Determinadas diretivas destinam-se especificamente para fornecer mais informaç�
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>Comportamento de XamlObjectWriter e a ordem de nó
 
-`StartObject` para um <xref:System.Xaml.XamlObjectWriter> não é necessariamente um sinal para o gravador de objeto XAML para construir imediatamente a instância do objeto. XAML inclui vários recursos de linguagem que tornam possível inicializar um objeto com uma entrada adicional e não contar totalmente invocar um construtor padrão para produzir o objeto inicial e, em seguida, somente propriedades de configuração. Esses recursos incluem: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; o texto de inicialização; [X:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md); posicionais os parâmetros de uma extensão de marcação; métodos de fábrica e respectivos [x: argumentos](../../../docs/framework/xaml-services/x-arguments-directive.md) nós (XAML 2009). Cada um desses casos atrasar a construção do objeto real, e porque o fluxo do nó é reordenado, o gravador de objeto XAML pode contar com um comportamento que não seja especificamente uma construção de realmente construir a instância sempre que um membro inicial é encontrado diretiva para esse tipo de objeto.
+`StartObject` para um <xref:System.Xaml.XamlObjectWriter> não é necessariamente um sinal para o gravador de objeto XAML para construir imediatamente a instância do objeto. XAML inclui vários recursos de linguagem que tornam possível inicializar um objeto com uma entrada adicional e não contar totalmente invocar um construtor padrão para produzir o objeto inicial e, em seguida, somente propriedades de configuração. Esses recursos incluem: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; o texto de inicialização; [X:TypeArguments](x-typearguments-directive.md); posicionais os parâmetros de uma extensão de marcação; métodos de fábrica e respectivos [x: argumentos](x-arguments-directive.md) nós (XAML 2009). Cada um desses casos atrasar a construção do objeto real, e porque o fluxo do nó é reordenado, o gravador de objeto XAML pode contar com um comportamento que não seja especificamente uma construção de realmente construir a instância sempre que um membro inicial é encontrado diretiva para esse tipo de objeto.
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ Determinadas diretivas destinam-se especificamente para fornecer mais informaç�
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xaml.XamlObjectReader>
-- [Serviços XAML](../../../docs/framework/xaml-services/index.md)
-- [Namespaces XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [Serviços XAML](index.md)
+- [Namespaces XAML](xaml-namespaces-for-net-framework-xaml-services.md)

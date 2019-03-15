@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 8b951b33242fa7e17a02133adb8fed4ce638e51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498041"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030268"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Tipo intrínseco x:XData (XAML)
 Habilita o posicionamento de ilhas de dados XML dentro de uma produção de XAML. Elementos XML em `x:XData` não deve ser tratada pelos processadores XAML, como se eles são uma parte do namespace XAML padrão atuando ou qualquer outro namespace XAML. `x:XData` pode conter XML bem formado arbitrário.  
@@ -45,11 +45,11 @@ Habilita o posicionamento de ilhas de dados XML dentro de uma produção de XAML
 ## <a name="wpf-usage-notes"></a>Notas de uso do WPF  
  O `x:XData` objeto é usado principalmente como um objeto filho de um <xref:System.Windows.Data.XmlDataProvider>, ou como alternativa, como o objeto filho do <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> propriedade (no XAML, isso é normalmente expressa na sintaxe de elemento de propriedade).  
   
- Os dados normalmente devem redefinir o namespace XML base dentro da ilha de dados para ser um novo namespace XML padrão (definido como uma cadeia de caracteres vazia). Isso é mais fácil para ilhas de dados simples, porque o <xref:System.Windows.Data.Binding.XPath%2A> expressões que são usadas para referenciar e associar aos dados podem evitar a inclusão de prefixos. Ilhas de dados mais complexas podem definir vários prefixos para os dados e usar um prefixo específico para o namespace XML na raiz. Nesse caso, todos os <xref:System.Windows.Data.Binding.XPath%2A> referências de expressão devem incluir o prefixo de namespace mapeado apropriado. Para obter mais informações, consulte [Visão geral de vinculação de dados](../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Os dados normalmente devem redefinir o namespace XML base dentro da ilha de dados para ser um novo namespace XML padrão (definido como uma cadeia de caracteres vazia). Isso é mais fácil para ilhas de dados simples, porque o <xref:System.Windows.Data.Binding.XPath%2A> expressões que são usadas para referenciar e associar aos dados podem evitar a inclusão de prefixos. Ilhas de dados mais complexas podem definir vários prefixos para os dados e usar um prefixo específico para o namespace XML na raiz. Nesse caso, todos os <xref:System.Windows.Data.Binding.XPath%2A> referências de expressão devem incluir o prefixo de namespace mapeado apropriado. Para obter mais informações, consulte [Visão geral de vinculação de dados](../wpf/data/data-binding-overview.md).  
   
  Tecnicamente, `x:XData` pode ser usado como o conteúdo de qualquer propriedade do tipo <xref:System.Xml.Serialization.IXmlSerializable>. No entanto, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> é a implementação apenas proeminente.  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Data.XmlDataProvider>
-- [Visão geral da vinculação de dados](../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Extensão de marcação de associação](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+- [Visão geral da vinculação de dados](../wpf/data/data-binding-overview.md)
+- [Extensão de marcação de associação](../wpf/advanced/binding-markup-extension.md)
