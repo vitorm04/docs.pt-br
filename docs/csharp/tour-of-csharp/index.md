@@ -1,22 +1,17 @@
 ---
-title: Um tour pelo C# – Guia do C#
-description: Novato em C#? Conheça os fundamentos da linguagem.
+title: 'Um tour pelo C# – Guia do C#'
+description: 'Novato em C#? Conheça os fundamentos da linguagem.'
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150388"
 ---
-# <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#  
+
+# <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#
 
 O C# (pronuncia-se "C Sharp") é uma linguagem de programação simples, moderna, orientada a objeto e fortemente tipada. O C# tem suas raízes na família de linguagens C e os programadores em C, C++, Java e JavaScript a reconhecerão imediatamente.
 
 O C# é uma linguagem orientada a objeto, mas inclui ainda suporte para programação ***orientada a componentes***. O design de software atual depende cada vez mais dos componentes de software na forma de pacotes independentes e autodescritivos de funcionalidade. O principal é que esses componentes apresentam um modelo de programação com propriedades, métodos e eventos; eles têm atributos que fornecem informações declarativas sobre o componente; e incorporam sua própria documentação. C# fornece construções de linguagem para dar suporte diretamente a esses conceitos, tornando C# uma linguagem muito natural para criação e uso de componentes de software.
 
-Vários recursos do C# auxiliam na construção de aplicativos robustos e duradouros: ***Coleta de lixo*** recupera automaticamente a memória ocupada por objetos inacessíveis não utilizados; ***tratamento de exceção*** fornece uma abordagem estruturada e extensível para detecção e recuperação de erros; e o design ***fortemente tipado*** da linguagem impossibilita a leitura das variáveis não inicializadas, a indexação de matrizes além dos seus limites ou a execução de conversões de tipo não verificadas.
+Vários recursos de C# auxiliam na construção de aplicativos robustos e duráveis: ***Coleta de lixo*** recupera automaticamente a memória ocupada por objetos inacessíveis não utilizados. ***Tratamento de exceção*** fornece uma abordagem estruturada e extensível para detecção e recuperação de erros. E o design ***fortemente tipado*** da linguagem impossibilita a leitura das variáveis não inicializadas, a indexação de matrizes além dos seus limites ou a execução de conversões de tipo não verificadas.
 
 C# tem um ***sistema de tipo unificado***. Todos os tipos do C#, incluindo tipos primitivos, como `int` e `double`, herdam de um único tipo de `object` raiz. Assim, todos os tipos compartilham um conjunto de operações comuns, e valores de qualquer tipo podem ser armazenados, transportados e operados de maneira consistente. Além disso, C# oferece suporte a tipos de referência e tipos de valor definidos pelo usuário, permitindo a alocação dinâmica de objetos, bem como o armazenamento em linha de estruturas leves.
 
@@ -73,7 +68,7 @@ Há muito mais para aprender sobre C#.  Os tópicos a seguir fornecem uma visão
 * [Delegados](delegates.md)
     - Um ***delegado*** é um tipo que representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são parecidos com o conceito de ponteiros de função em outras linguagens, mas ao contrário dos ponteiros de função, os delegados são orientados a objetos e fortemente tipados.
 * [Atributos](attributes.md)
-    * ***Atributos*** permitem que programas especifiquem informações declarativas adicionais sobre tipos, membros e outras entidades.
+     * ***Atributos*** permitem que programas especifiquem informações declarativas adicionais sobre tipos, membros e outras entidades.
 
->[!div class="step-by-step"]
->[Avançar](program-structure.md)
+> [!div class="step-by-step"]
+> [Avançar](program-structure.md)
