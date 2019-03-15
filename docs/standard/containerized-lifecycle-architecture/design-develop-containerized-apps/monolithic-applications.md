@@ -4,12 +4,12 @@ description: Entenda os conceitos principais para implantar aplicativos monolít
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676831"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843539"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -63,7 +63,7 @@ Como os contêineres são inerentemente imutáveis por design, você nunca preci
 
 Embora aplicativos monolíticos podem se beneficiar do Docker, estejamos tocando em apenas as dicas de benefícios. Os maiores benefícios do gerenciamento de contêineres são decorrentes da implantação com orquestradores de contêiner que gerenciam as diversas instâncias e ciclo de vida de cada instância de contêiner. Dividir o aplicativo monolítico em subsistemas que podem ser dimensionados, desenvolvidos e implantados individualmente é o ponto de entrada no universo dos microsserviços.
 
-Para saber mais sobre como "lift and shift" aplicativos monolíticos com contêineres e como você pode modernizar seus aplicativos, você pode ler este guia Microsoft adicional, [modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure ](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/), que também é possível baixar como PDF de <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Para saber mais sobre como "lift and shift" aplicativos monolíticos com contêineres e como você pode modernizar seus aplicativos, você pode ler este guia Microsoft adicional, [modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure ](../../modernize-with-azure-and-containers/index.md), que também é possível baixar como PDF de <https://aka.ms/LiftAndShiftWithContainersEbook>.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Publicar um único aplicativo de contêiner do Docker no serviço de aplicativo do Azure
 

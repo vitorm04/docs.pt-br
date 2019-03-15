@@ -2,12 +2,12 @@
 title: funcionalidades de simplificação do WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467175"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845263"
 ---
 # <a name="wcf-simplification-features"></a>funcionalidades de simplificação do WCF
 
@@ -96,7 +96,7 @@ A tabela a seguir descreve as configurações que foram alteradas e onde localiz
 
 |Propriedade|On|Novo padrão|Mais informações|
 |--------------|--------|-----------------|----------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|Essa propriedade determina quanto tempo uma conexão de TCP pode levar para se autenticar usando o protocolo de enquadramento do .Net. Um cliente precisa enviar alguns dados iniciais antes que o servidor tenha informações suficientes para executar a autenticação. Esse tempo limite é feito intencionalmente menor que o ReceiveTimeout (10 min) para que os clientes não autenticados mal-intencionados não mantenham as conexões vinculadas no servidor por muito tempo. O valor padrão é 30 segundos. Para obter mais informações sobre <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|Essa propriedade determina quanto tempo uma conexão TCP pode levar para se autenticar usando o protocolo de enquadramento do .NET. Um cliente precisa enviar alguns dados iniciais antes que o servidor tenha informações suficientes para executar a autenticação. Esse tempo limite é feito intencionalmente menor que o ReceiveTimeout (10 min) para que os clientes não autenticados mal-intencionados não mantenham as conexões vinculadas no servidor por muito tempo. O valor padrão é 30 segundos. Para obter mais informações sobre <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * número de processadores|Esta propriedade de nível de soquete descreve o número de solicitações com aceitações pendentes a serem enfileiradas. Se a fila de pendências de escuta for preenchida, as novas solicitações de soquete serão rejeitadas. Para obter mais informações sobre <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * número de processadores para o transporte<br /><br /> 4 \* número de processadores para SMSvcHost.exe|Essa propriedade limita o número de canais que o servidor pode ter em espera em um ouvinte. Quando MaxPendingAccepts for muito baixo, haverá um pequeno intervalo de tempo no qual todos os canais de espera terão ligado conexões de serviços, mas nenhum novo canal terá começado a escutar. Uma conexão poderá chegar durante esse intervalo e falhará porque nada o está aguardando no servidor. Essa propriedade pode ser configurada definindo a propriedade <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> como um número maior. Para obter mais informações, consulte <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> e [Configurando o serviço de compartilhamento de porta NET. TCP](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * número de processadores|Esta propriedade controla quantas conexões um transporte aceitou, mas não foram selecionadas pelo Dispatcher do ServiceModel. Para definir esse valor, use `MaxConnections` na associação ou `maxOutboundConnectionsPerEndpoint` no elemento de associação. Para obter mais informações sobre <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|

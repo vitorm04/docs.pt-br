@@ -2,12 +2,12 @@
 title: Específicos de recurso do Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721847"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846539"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Específicos de recurso do Windows Workflow Foundation
 
@@ -101,7 +101,7 @@ O esquema de configuração do WCF é complexo e fornece aos usuários muitos re
 
 - [Elemento de ponto de extremidade padrão](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [Serviço melhorias de configuração no .net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Melhorias de configuração de serviço no .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [Erro de usuário comum no .NET 4: Mistyping o nome de configuração de serviço do WCF/WF](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -263,7 +263,7 @@ Um usuário precisa ser solicitado para a entrada. Em circunstâncias normais, o
 
 ## <a name="wcf-routing-service"></a>WCF que requer o serviço
 
-O serviço de roteamento é projetado para ser um roteador que permite que você controle como as mensagens do WCF fluem entre os clientes e serviços de software genérico. O serviço de roteamento permite que você a separar seus clientes de seus serviços, que lhe dá muito mais liberdade em termos de configurações que você pode dar suporte e a flexibilidade que você precisa ao considerar como hospedar seus serviços. No .NET 3.5, os clientes e serviços foram acoplados; um cliente tinha que conhecer todos os serviços que ele necessário para se comunicar com e onde eles foram localizados. Além disso, WCF dentro. .NET Framework 3,5 tinha as seguintes restrições:
+O serviço de roteamento é projetado para ser um roteador que permite que você controle como as mensagens do WCF fluem entre os clientes e serviços de software genérico. O serviço de roteamento permite que você a separar seus clientes de seus serviços, que lhe dá muito mais liberdade em termos de configurações que você pode dar suporte e a flexibilidade que você precisa ao considerar como hospedar seus serviços. No .NET 3.5, os clientes e serviços foram acoplados; um cliente tinha que conhecer todos os serviços que ele necessário para se comunicar com e onde eles foram localizados. Além disso, o WCF no .NET Framework 3.5 tinha as seguintes limitações:
 
 - Manipulação de erro foi complexo, como essa lógica tinha que ser embutido no cliente.
 
@@ -271,7 +271,7 @@ O serviço de roteamento é projetado para ser um roteador que permite que você
 
 - Os serviços foram raramente bom acrescentado: é mais fácil ter a conversa de cliente a um serviço que implementa todos, em vez de precisando de escolher entre vários serviços.
 
-O serviço de roteamento dentro. A rede 4 é criada para facilitar resolver esses problemas. O novo serviço de roteamento possui os seguintes recursos:
+O serviço de roteamento no .NET 4 foi projetado para facilitar resolver esses problemas. O novo serviço de roteamento possui os seguintes recursos:
 
 1. O conteúdo do roteamento (os objetos de<xref:System.ServiceModel.Dispatcher.MessageFilter> examinar uma mensagem para determinar onde deve ser enviada.)
 
@@ -327,7 +327,7 @@ Um desenvolvedor não deseja para pontos de extremidade difícil de código, des
 
 ## <a name="tracking"></a>Acompanhamento
 
-Controle de fluxo de trabalho fornece informações sobre a execução de uma instância de fluxo de trabalho. Os eventos de rastreamento são emitidos do fluxo de trabalho no nível da instância de fluxo de trabalho e as atividades no fluxo de trabalho são executadas. Um participante de acompanhamento de fluxo de trabalho precisa ser adicionado ao host de fluxo de trabalho para assinar a acompanhar registros. Os registros de rastreamento são filtrados utilizando um perfil de rastreamento. . Framework .NET fornece um participante de rastreamento (ETW de rastreamento do Windows), e um perfil básico é instalado no arquivo machine.config.
+Controle de fluxo de trabalho fornece informações sobre a execução de uma instância de fluxo de trabalho. Os eventos de rastreamento são emitidos do fluxo de trabalho no nível da instância de fluxo de trabalho e as atividades no fluxo de trabalho são executadas. Um participante de acompanhamento de fluxo de trabalho precisa ser adicionado ao host de fluxo de trabalho para assinar a acompanhar registros. Os registros de rastreamento são filtrados utilizando um perfil de rastreamento. O .NET Framework fornece um participante de rastreamento de ETW (evento de rastreamento para Windows), e um perfil básico é instalado no arquivo Machine. config.
 
 ### <a name="getting-started"></a>Guia de Introdução
 
@@ -349,7 +349,8 @@ Controle de fluxo de trabalho fornece informações sobre a execução de uma in
 
 ## <a name="sql-workflow-instance-store"></a>Store instância de fluxo de trabalho do SQL
 
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> é uma implementação com base no servidor SQL de um armazenamento de instância. Um armazenamento de instância armazena o estado de uma instância em execução junto com todos os dados necessários carregar e continuar essa instância. O host serviço instrui o armazenamento de instância para salvar o estado da instância se o fluxo de trabalho persistir, e instrui o armazenamento de instância para carregar o estado da instância quando uma mensagem chega para essa instância ou uma atividade do atraso expira.
+
+  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> é uma implementação com base no servidor SQL de um armazenamento de instância. Um armazenamento de instância armazena o estado de uma instância em execução junto com todos os dados necessários carregar e continuar essa instância. O host serviço instrui o armazenamento de instância para salvar o estado da instância se o fluxo de trabalho persistir, e instrui o armazenamento de instância para carregar o estado da instância quando uma mensagem chega para essa instância ou uma atividade do atraso expira.
 
 ### <a name="getting-started"></a>Guia de Introdução
 

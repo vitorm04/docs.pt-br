@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674933"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846253"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Instruções passo a passo e técnico obtém visão de geral de Introdução
 
@@ -83,7 +83,7 @@ Os benefícios deste passo a passo são simples: Basta se familiarizar com os ap
 Explore este conteúdo mais detalhado no wiki do GitHub:
 
 - [Tour na linha de base ASP.NET MVC e aplicativos de Web Forms "herdados"](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
--   [Tour sobre o serviço do WCF de linha de base e o aplicativo "herdado" do WinForms (camada 3)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [Tour sobre o serviço do WCF de linha de base e o aplicativo "herdado" do WinForms (camada 3)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Passo a passo 2: Colocar em contêineres seus aplicativos .NET existentes com contêineres do Windows
 

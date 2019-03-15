@@ -2,12 +2,12 @@
 title: Referência de palavras-chave
 description: Encontre links para informações sobre todos os F# palavras-chave.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857899"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845288"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
@@ -50,7 +50,7 @@ A tabela a seguir mostra todos os F# palavras-chave em ordem alfabética, junto 
 |`inline`|[Funções](functions/index.md)<br /><br />[Funções Embutidas](functions/inline-functions.md)|Usado para indicar uma função que deve ser integrada diretamente ao código do chamador.|
 |`interface`|[Interfaces](interfaces.md)|Usado para declarar e implementar interfaces.|
 |`internal`|[Controle de Acesso](access-control.md)|Usado para especificar que um membro é visível dentro de um assembly, mas não para fora dele.|
-|`lazy`|[Computações Lentas](lazy-computations.md)|Usado para especificar um cálculo que será executada somente quando um resultado é necessária.|
+|`lazy`|[Expressões lentas](lazy-expressions.md)|Usado para especificar uma expressão que será executada somente quando um resultado é necessária.|
 |`let`|[`let` Associações](functions/let-bindings.md)|Usado para associar ou associar um nome para a função ou valor.|
 |`let!`|[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)<br /><br />[Expressões de Computação](computation-expressions.md)|Usado em fluxos de trabalho assíncronos para associar um nome para o resultado de uma computação assíncrona, ou, em outras expressões de cálculo, usados para associar um nome a um resultado, que é do tipo de cálculo.|
 |`match`|[Expressões Match](match-expressions.md)|Usado para a ramificação comparando um valor para um padrão.|

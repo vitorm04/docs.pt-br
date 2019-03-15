@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680354"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844243"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Use as ferramentas do Docker no Visual Studio 2017 no Windows
 
@@ -20,7 +20,8 @@ O fluxo de trabalho do desenvolvedor ao usar as ferramentas do Docker incluído 
 
 Com as versões mais recentes do Docker para Windows, é mais fácil do que nunca para desenvolver aplicativos do Docker porque a instalação é simples, conforme explicado nas seguintes referências.
 
-> [! INFORMAÇÕES] para saber mais sobre como instalar o Docker para Windows, vá para (<https://docs.docker.com/docker-for-windows/>).
+> [!TIP]
+> Para saber mais sobre como instalar o Docker para Windows, vá para (<https://docs.docker.com/docker-for-windows/>).
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Suporte do docker no Visual Studio 2017
 
@@ -83,7 +84,8 @@ A tabela a seguir pode ajudá-lo a decidir como definir essas opções.
 > [!WARNING]
 > Se o certificado SSL do localhost não é confiável e você marcar a caixa para suprimir a solicitação, solicitações da web HTTPS podem falhar em tempo de execução em seu aplicativo ou serviço. Nesse caso, desmarque a **não solicitar** caixa de seleção, execute seu projeto e indicar confiança no prompt de.
 
-> [! INFORMAÇÕES] para obter mais detalhes sobre a implementação de serviços e o uso de ferramentas do Visual Studio para Docker, leia os artigos a seguir:
+> [!TIP]
+> Para obter mais detalhes sobre a implementação de serviços e o uso de ferramentas do Visual Studio para Docker, leia os artigos a seguir:
 >
 >Depuração de aplicativos em um contêiner de Docker local: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

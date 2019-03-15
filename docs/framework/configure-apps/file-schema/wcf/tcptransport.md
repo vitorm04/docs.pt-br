@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 20591186448fa1c3b4a91ed303bd2a5c6e452491
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272013"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845954"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Define um transporte TCP que pode ser usado por um canal transferir mensagens para uma associação personalizada.  
@@ -49,7 +49,7 @@ Define um transporte TCP que pode ser usado por um canal transferir mensagens pa
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|channelInitializationTimeout|Obtém ou define o limite de tempo de inicialização de um canal para serem aceitos.  O tempo máximo de um canal pode estar no estado de inicialização antes de ser desconectada em segundos. Essa cota inclui o tempo que uma conexão TCP pode levar para se autenticar usando o .net protocolo de enquadramento de mensagem. Um cliente precisa enviar alguns dados iniciais antes que o servidor tenha informações suficientes para executar a autenticação. O padrão é 30 segundos.|  
+|channelInitializationTimeout|Obtém ou define o limite de tempo de inicialização de um canal para serem aceitos.  O tempo máximo de um canal pode estar no estado de inicialização antes de ser desconectada em segundos. Essa cota inclui o tempo que uma conexão TCP pode levar para se autenticar usando o protocolo de enquadramento de mensagens do .NET. Um cliente precisa enviar alguns dados iniciais antes que o servidor tenha informações suficientes para executar a autenticação. O padrão é 30 segundos.|  
 |connectionBufferSize|Obtém ou define o tamanho do buffer usado para transmitir uma parte da mensagem serializada na conexão do cliente ou do serviço.|  
 |hostNameComparisonMode|Obtém ou define um valor que indica se o nome do host é usado para alcançar o serviço ao fazer correspondência no URI.|  
 |listenBacklog|O número máximo de solicitações de conexão em fila que podem estar pendentes para um serviço Web. O `connectionLeaseTimeout` atributo limita a duração em que o cliente aguardará a ser conectado antes de lançar uma exceção de conexão. Esta é uma propriedade de nível de soquete que controla o número máximo de solicitações de conexão em fila que podem estar pendentes para um serviço Web. Quando ListenBacklog for muito baixo, o WCF pare de aceitar solicitações e drop, portanto, novas conexões até que o servidor reconhece algumas das conexões existentes na fila. O padrão é 16 * número de processadores.|  
