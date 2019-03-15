@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668984"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042085"
 ---
 # <a name="xtype-markup-extension"></a>Extensão de marcação x:Type
 Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XAML especificado.  
@@ -61,7 +61,7 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
 ## <a name="wpf-usage-notes"></a>Notas de uso do WPF  
   
 ### <a name="default-xaml-namespace-and-type-mapping"></a>Namespace XAML e mapeamento de tipo padrão  
- O namespace XAML padrão para a programação do WPF contém a maioria dos tipos de XAML, que você precisa para cenários típicos de XAML; Portanto, você geralmente pode evitar prefixos ao fazer referência a valores de tipo XAML. Você talvez precise mapear um prefixo se você está fazendo referência a um tipo de um assembly personalizado ou para tipos existentes em um assembly do WPF, mas que são de um namespace CLR que não foi mapeado para o namespace XAML padrão. Para obter mais informações sobre prefixos, namespaces XAML e namespaces CLR de mapeamento, consulte [Namespaces de XAML e mapeamento de Namespace para XAML WPF](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ O namespace XAML padrão para a programação do WPF contém a maioria dos tipos de XAML, que você precisa para cenários típicos de XAML; Portanto, você geralmente pode evitar prefixos ao fazer referência a valores de tipo XAML. Você talvez precise mapear um prefixo se você está fazendo referência a um tipo de um assembly personalizado ou para tipos existentes em um assembly do WPF, mas que são de um namespace CLR que não foi mapeado para o namespace XAML padrão. Para obter mais informações sobre prefixos, namespaces XAML e namespaces CLR de mapeamento, consulte [Namespaces de XAML e mapeamento de Namespace para XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ### <a name="type-properties-that-support-typename-as-string"></a>Esse suporte Typename como cadeia de propriedades de tipo  
  WPF dá suporte a técnicas que permitem especificar o valor de algumas propriedades do tipo <xref:System.Type> sem a necessidade de um `x:Type` uso de extensão de marcação. Em vez disso, você pode especificar o valor como uma cadeia de caracteres que nomeia o tipo. Exemplos são <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> e <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Suporte para esse comportamento não é fornecido por meio de extensões de marcação ou conversores de tipo. Em vez disso, isso é implementado por meio de um comportamento de adiamento <xref:System.Windows.FrameworkElementFactory>.  
@@ -71,7 +71,7 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 fornece suporte adicional para tipos de genéricos e modifica o comportamento do recurso do `x:TypeArguments` e `x:Type` oferecer esse suporte.  
   
--   `x:TypeArguments` e o elemento de objeto associado para uma instanciação genérica de objeto pode ser em elementos que não seja a raiz. Para obter mais informações, consulte a seção "XAML 2009" [diretiva X:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` e o elemento de objeto associado para uma instanciação genérica de objeto pode ser em elementos que não seja a raiz. Para obter mais informações, consulte a seção "XAML 2009" [diretiva X:TypeArguments](x-typearguments-directive.md).  
   
 -   XAML 2009 dá suporte a uma sintaxe para especificar a restrição de um tipo genérico na marcação. Isso pode ser usado por `x:TypeArguments`, por `x:Type`, ou os dois recursos em combinação.  
   
@@ -81,6 +81,6 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Style>
-- [Estilo e modelagem](../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Extensões de marcação e XAML do WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Estilo e modelagem](../wpf/controls/styling-and-templating.md)
+- [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

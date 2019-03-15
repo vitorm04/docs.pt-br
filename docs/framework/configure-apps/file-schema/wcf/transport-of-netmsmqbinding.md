@@ -2,12 +2,12 @@
 title: <transport> De <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: c82a786fe8e4a2b2e3243db007f4f705d9fbd79a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 25dc616aa8801c28b301c6219cc45fe69c43e559
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277141"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039350"
 ---
 # <a name="transport-of-netmsmqbinding"></a>\<transporte > de \<netMsmqBinding >
 Define as configurações de segurança de transporte.  
@@ -44,7 +44,7 @@ Define as configurações de segurança de transporte.
 |msmqAuthenticationMode|Especifica como a mensagem deve ser autenticada pelo transporte MSMQ. Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma autenticação.<br />-   WindowsDomain: O mecanismo de autenticação usa o Active Directory para recuperar o certificado X.509 para o identificador de segurança associado à mensagem. Em seguida, isso é usado para verificar a ACL da fila para garantir que o usuário tem permissão de gravação para a fila.<br />-Certificado: O canal recupera o certificado do repositório de certificados.<br /><br /> O padrão é `WindowsDomain`.<br /><br /> Se esse atributo for definido como `None`, o `msmqProtectionLevel` atributo também deve ser definido como `None`. Esse atributo é do tipo<xref:System.ServiceModel.MsmqAuthenticationMode>|  
 |msmqEncryptionAlgorithm|Especifica o algoritmo a ser usado para criptografia de mensagem no fio durante a transferência de mensagens entre os gerenciadores de fila de mensagem. Os valores válidos incluem o seguinte:<br /><br /> -   RC4Stream<br />-AES<br />-O valor padrão é `RC4Stream`. Esse atributo é do tipo <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
 |msmqProtectionLevel|Especifica que as modo como as mensagens são protegidas no nível do transporte MSMQ. A criptografia assegura a mensagem de integridade, durante a entrada e criptografar garante a integridade da mensagem e não-repúdio. Ou seja, a mensagem foi realmente enviado do remetente e o remetente é quem diz que ser. Os valores válidos incluem o seguinte:<br /><br /> -None: Sem proteção.<br />-Sinal: As mensagens são assinadas.<br />-   EncryptAndSign: As mensagens são criptografadas e assinadas.<br />-O padrão é `Sign`.|  
-|msmqSecureHashAlgorithm|Especifica o algoritmo de hash a ser usado para calcular o resumo da mensagem. Os valores válidos incluem o seguinte:<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> O padrão é `SHA1`. Esse atributo é do tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
+|msmqSecureHashAlgorithm|Especifica o algoritmo de hash a ser usado para calcular o resumo da mensagem. Os valores válidos incluem o seguinte:<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> O padrão é `SHA1`. Esse atributo é do tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Devido a problemas de colisão com MD5 e SHA1, a Microsoft recomenda SHA256 ou melhor.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
