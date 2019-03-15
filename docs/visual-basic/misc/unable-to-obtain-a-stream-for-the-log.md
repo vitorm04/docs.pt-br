@@ -4,28 +4,29 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 0553da64ca8fcac148cd8da5c22227b5824387de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45b7a16608bea4879e84fa7004097a8c38312284
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628741"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031703"
 ---
-# <a name="unable-to-obtain-a-stream-for-the-log"></a><span data-ttu-id="fc803-102">Não é possível obter um fluxo para o log</span><span class="sxs-lookup"><span data-stu-id="fc803-102">Unable to obtain a stream for the log</span></span>
-<span data-ttu-id="fc803-103">Não é possível obter um fluxo para o log.</span><span class="sxs-lookup"><span data-stu-id="fc803-103">Unable to obtain a stream for the log.</span></span> <span data-ttu-id="fc803-104">Possíveis nomes de arquivo com base em \<nome > já estão em uso.</span><span class="sxs-lookup"><span data-stu-id="fc803-104">Potential file names based on \<name> are already in use.</span></span>  
+# <a name="unable-to-obtain-a-stream-for-the-log"></a><span data-ttu-id="0964e-102">Não é possível obter um fluxo para o log</span><span class="sxs-lookup"><span data-stu-id="0964e-102">Unable to obtain a stream for the log</span></span>
+<span data-ttu-id="0964e-103">Não é possível obter um fluxo para o log.</span><span class="sxs-lookup"><span data-stu-id="0964e-103">Unable to obtain a stream for the log.</span></span> <span data-ttu-id="0964e-104">Possíveis nomes de arquivo com base em \<nome > já estão em uso.</span><span class="sxs-lookup"><span data-stu-id="0964e-104">Potential file names based on \<name> are already in use.</span></span>  
   
- <span data-ttu-id="fc803-105">O <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> classe não foi possível criar um novo arquivo de log porque todos os possíveis nomes de arquivo de log com base em \<nome > já estão em uso.</span><span class="sxs-lookup"><span data-stu-id="fc803-105">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> class could not create a new log file because all potential log file names based on \<name> are already in use.</span></span>  
+ <span data-ttu-id="0964e-105">O <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> classe não foi possível criar um novo arquivo de log porque todos os possíveis nomes de arquivo de log com base em \<nome > já estão em uso.</span><span class="sxs-lookup"><span data-stu-id="0964e-105">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> class could not create a new log file because all potential log file names based on \<name> are already in use.</span></span>  
   
- <span data-ttu-id="fc803-106">Ter muitos arquivos de log pode indicar um problema com o aplicativo de arquitetura.</span><span class="sxs-lookup"><span data-stu-id="fc803-106">Having too many log files may indicate an architectural problem with the application.</span></span> <span data-ttu-id="fc803-107">Consulte a documentação para o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> classe para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="fc803-107">See the documentation for the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> class for more information.</span></span>  
+ <span data-ttu-id="0964e-106">Ter muitos arquivos de log pode indicar um problema com o aplicativo de arquitetura.</span><span class="sxs-lookup"><span data-stu-id="0964e-106">Having too many log files may indicate an architectural problem with the application.</span></span> <span data-ttu-id="0964e-107">Consulte a documentação para o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> classe para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="0964e-107">See the documentation for the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> class for more information.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="fc803-108">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="fc803-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0964e-108">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="0964e-108">To correct this error</span></span>  
   
-1.  <span data-ttu-id="fc803-109">Defina as <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> propriedade para <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> ou <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> para incluir um carimbo de data no nome do arquivo de log.</span><span class="sxs-lookup"><span data-stu-id="fc803-109">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> property to <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> or <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> to include a date-stamp in the log file name.</span></span>  
+1.  <span data-ttu-id="0964e-109">Defina as <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> propriedade para <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> ou <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> para incluir um carimbo de data no nome do arquivo de log.</span><span class="sxs-lookup"><span data-stu-id="0964e-109">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> property to <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> or <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> to include a date-stamp in the log file name.</span></span>  
   
-2.  <span data-ttu-id="fc803-110">Arquive os logs existentes e remova-os do computador para permitir que o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> objeto para criar novos logs.</span><span class="sxs-lookup"><span data-stu-id="fc803-110">Archive the existing logs and remove them from the computer to allow the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> object to create new logs.</span></span>  
+2.  <span data-ttu-id="0964e-110">Arquive os logs existentes e remova-os do computador para permitir que o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> objeto para criar novos logs.</span><span class="sxs-lookup"><span data-stu-id="0964e-110">Archive the existing logs and remove them from the computer to allow the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> object to create new logs.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc803-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fc803-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0964e-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0964e-111">See also</span></span>
+
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>
-- [<span data-ttu-id="fc803-112">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="fc803-112">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [<span data-ttu-id="fc803-113">My.Application.Info.DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="fc803-113">My.Application.Info.DirectoryPath</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [<span data-ttu-id="0964e-112">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="0964e-112">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [<span data-ttu-id="0964e-113">My.Application.Info.DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="0964e-113">My.Application.Info.DirectoryPath</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
