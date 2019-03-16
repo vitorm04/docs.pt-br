@@ -2,12 +2,12 @@
 title: Um nome inválido foi especificado para o log de eventos
 ms.date: 07/20/2015
 ms.assetid: b1b158bd-f13f-4371-a8af-31c0e86ae6be
-ms.openlocfilehash: 242c5394011fd018a03f81b9b56bcfd7015682dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b9c934272d0f3392c845dcd2f0062a98dc50c7b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604386"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58032262"
 ---
 # <a name="an-invalid-name-was-specified-for-the-event-log"></a>Um nome inválido foi especificado para o log de eventos
 Um nome inválido foi especificado para o log de eventos. Normalmente, este é um resultado de caracteres inválidos no nome da, um nome de arquivo em branco ou um nome de arquivo é muito longo.  
@@ -21,6 +21,6 @@ Um nome inválido foi especificado para o log de eventos. Normalmente, este é u
 -   Verifique não se há nenhum caractere inválido no nome. Caracteres que não podem ser usados em um nome de arquivo incluem `<`, `>`, `:`, `"`, `/`, `\`, e `|`.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Analisar demarcadores de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [Como: Renomear um arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
 
+- [Como: Analisar caminhos de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Como: Renomear um arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

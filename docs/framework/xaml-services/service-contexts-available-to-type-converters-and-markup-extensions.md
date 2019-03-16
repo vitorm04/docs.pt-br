@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629287"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049450"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contextos de serviço disponíveis para conversores de tipo e extensões de marcação
 Os autores dos tipos que oferecem suporte a usos de extensão de marcação e de conversor de tipo geralmente devem ter informações contextuais sobre onde um uso está localizado na marcação ou ao redor da estrutura de gráfico de objeto. Informações podem ser necessárias para que o objeto fornecido é instanciado corretamente ou para que as referências de objeto para objetos existentes no grafo de objeto podem ser feitas. Ao usar os serviços de XAML do .NET Framework, o contexto que pode ser necessário é exposto como uma série de interfaces de serviço. Código de suporte de extensão de marcação ou o conversor de tipo pode consultar um serviço usando um contexto de provedor de serviço que está disponível e é passado por meio de <xref:System.Xaml.XamlObjectWriter> ou tipos relacionados. O contexto do esquema XAML está diretamente disponível por meio de um desses serviços. Este tópico descreve como acessar os contextos de serviço de uma implementação de conversor de valor e lista os serviços geralmente disponíveis e suas funções.  
@@ -90,7 +90,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamltyperesolver"></a>IXamlTypeResolver  
  **Documentação de referência**: <xref:System.Windows.Markup.IXamlTypeResolver>  
   
- **Definido por:** <xref:System.Windows.Markup> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Windows.Markup> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Cenários de caminho de carga e a interação com o contexto de esquema XAML  
   
@@ -101,7 +101,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iuricontext"></a>IUriContext  
  **Documentação de referência**: <xref:System.Windows.Markup.IUriContext>  
   
- **Definido por:** <xref:System.Windows.Markup> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Windows.Markup> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Carregar o caminho e salve o tratamento de caminho de valores de membro que são URIs ou `x:Uri` valores.  
   
@@ -112,29 +112,29 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iambientprovider"></a>IAmbientProvider  
  **Documentação de referência**: <xref:System.Xaml.IAmbientProvider>  
   
- **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Carregar adiamentos de pesquisa de tratamento e o tipo de caminho ou otimizações.  
   
- **APIs de serviço:**<xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 outras pessoas.    
+ **APIs de serviço:**<xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 outras pessoas.  
   
- O conceito de ambiente no XAML é uma técnica para marcar um membro específico de um tipo como o ambiente. Como alternativa, um tipo pode ser ambiente para que todos os valores de propriedade que mantêm uma instância do tipo devem ser considerados como propriedades de ambiente. Extensões de marcação ou conversores de tipo que estão mais longe o fluxo do nó XAML e que são descendentes no grafo de objeto podem acessar a propriedade de ambiente ou uma instância de tipo em tempo de carregamento; ou eles podem usar o conhecimento da estrutura de ambiente em tempo de salvamento. Isso pode afetar o grau de qualificação que é necessário para resolver tipos para outros serviços, como pelos <xref:System.Windows.Markup.IXamlTypeResolver> ou para `x:Type`. Confira também <xref:System.Xaml.AmbientPropertyValue>.  
+ O conceito de ambiente no XAML é uma técnica para marcar um membro específico de um tipo como o ambiente. Como alternativa, um tipo pode ser ambiente para que todos os valores de propriedade que mantêm uma instância do tipo devem ser considerados como propriedades de ambiente. Extensões de marcação ou conversores de tipo que estão mais longe o fluxo do nó XAML e que são descendentes no grafo de objeto podem acessar a propriedade de ambiente ou uma instância de tipo em tempo de carregamento; ou eles podem usar o conhecimento da estrutura de ambiente em tempo de salvamento. Isso pode afetar o grau de qualificação que é necessário para resolver tipos para outros serviços, como pelos <xref:System.Windows.Markup.IXamlTypeResolver> ou para `x:Type`. Consulte também <xref:System.Xaml.AmbientPropertyValue>.  
   
 ### <a name="ixamlschemacontextprovider"></a>IXamlSchemaContextProvider  
  **Documentação de referência**: <xref:System.Xaml.IXamlSchemaContextProvider>  
   
- **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Caminho de carregamento e qualquer operação que um tipo XAML deve ser resolvido para um tipo de suporte.  
   
  **API do serviço:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- Contexto de esquema XAML é necessário para operações de carregamento de adiamento, porque o mesmo contexto de esquema deve atuar na área de adiada para integrar o conteúdo adiado. Para obter mais informações sobre a função do contexto de esquema XAML, consulte [serviços de XAML](../../../docs/framework/xaml-services/index.md).  
+ Contexto de esquema XAML é necessário para operações de carregamento de adiamento, porque o mesmo contexto de esquema deve atuar na área de adiada para integrar o conteúdo adiado. Para obter mais informações sobre a função do contexto de esquema XAML, consulte [serviços de XAML](index.md).  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **Documentação de referência**: <xref:System.Xaml.IRootObjectProvider>  
   
- **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Caminho de carregamento.  
   
@@ -145,7 +145,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamlnamespaceresolver"></a>IXamlNamespaceResolver  
  **Documentação de referência**: <xref:System.Xaml.IXamlNamespaceResolver>  
   
- **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Caminho de carregamento, caminho de salvamento.  
   
@@ -156,29 +156,29 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iprovidevaluetarget"></a>IProvideValueTarget  
  **Documentação de referência**: <xref:System.Windows.Markup.IProvideValueTarget>  
   
- **Definido por:** <xref:System.Windows.Markup> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Windows.Markup> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Carregar o caminho e salve o caminho.  
   
- **APIs de serviço:**<xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.    
+ **APIs de serviço:**<xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
  <xref:System.Windows.Markup.IProvideValueTarget> permite que uma extensão de marcação ou o conversor de tipo obter o contexto sobre onde ele está atuando em tempo de carregamento. Implementações podem usar este contexto para invalidar um uso. Por exemplo, o WPF tem lógica dentro de algumas de suas extensões de marcação, como <xref:System.Windows.DynamicResourceExtension>. As verificações de lógica de <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> para certificar-se de que a extensão só é usada para definir as propriedades de dependência (ou uma lista curta de outras propriedades não são de dependência).  
   
 ### <a name="ixamlnameresolver"></a>IXamlNameResolver  
  **Documentação de referência**: <xref:System.Xaml.IXamlNameResolver>  
   
- **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Carregar a definição de grafo de objeto de caminho, resolvendo os objetos identificados por `x:Name`, `x:Reference`, ou técnicas específicas do framework.  
   
- **APIs de serviço:**<xref:System.Xaml.IXamlNameResolver.Resolve%2A>; outras APIs para cenários mais avançados, como lidar com referências de encaminhamento.    
+ **APIs de serviço:**<xref:System.Xaml.IXamlNameResolver.Resolve%2A>; outras APIs para cenários mais avançados, como lidar com referências de encaminhamento.  
   
  A implementação de serviços de XAML do .NET Framework de `x:Reference` tratamento depende desse serviço. Estruturas específicas ou ferramentas que dão suporte a estrutura de usam esse serviço para `x:Name` manipulação ou equivalente (<xref:System.Windows.Markup.RuntimeNamePropertyAttribute> atribuído) tratamento de propriedade.  
   
 ### <a name="idestinationtypeprovider"></a>IDestinationTypeProvider  
  **Documentação de referência**: <xref:System.Xaml.IDestinationTypeProvider>  
   
- **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML    
+ **Definido por:** <xref:System.Xaml> namespace, o assembly System. XAML  
   
  **Relevantes ao:** Resolução de caminho indiretas CLR de informações de tipo de carga.  
   
@@ -189,5 +189,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [Visão geral das extensões de marcação para XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [Visão geral de conversores de tipo para XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [Visão geral das extensões de marcação para XAML](markup-extensions-for-xaml-overview.md)
+- [Visão geral de conversores de tipo para XAML](type-converters-for-xaml-overview.md)

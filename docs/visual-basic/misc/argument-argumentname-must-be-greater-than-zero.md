@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GTZero1
 ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
-ms.openlocfilehash: 3b998ee6acfbb945bbe8134af68bcf820737f7e5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a490887338a474f93d44275d49237ec490c00a4c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286462"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58019149"
 ---
 # <a name="argument-argumentname-must-be-greater-than-zero"></a>Argumento '\<argumentname >' deve ser maior que zero
 Um argumento não é válido porque ele é menor que ou igual a zero.  
@@ -21,5 +21,5 @@ Um argumento não é válido porque ele é menor que ou igual a zero.
 2.  Verifique as operações anteriores em variáveis na expressão, especialmente aquelas de outros procedimentos passadas para o procedimento como argumentos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
 
+- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
