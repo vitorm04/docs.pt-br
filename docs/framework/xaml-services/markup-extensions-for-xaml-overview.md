@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 0d1d3530bfd8bc85d6ae2d6741cbe6d48b381f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570012"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58019159"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Visão geral das extensões de marcação para XAML
 Extensões de marcação são uma técnica XAML para a obtenção de um valor que não é um primitivo nem um tipo específico de XAML. Para uso do atributo, extensões de marcação usam a sequência de caracteres conhecidos de uma chave de abertura `{` para inserir o escopo de extensão de marcação e uma chave de fechamento `}` para sair. Ao usar os serviços de XAML do .NET Framework, você pode usar alguns das extensões de marcação de linguagem XAML predefinidas do assembly System. XAML. Você também pode subclasses do <xref:System.Windows.Markup.MarkupExtension> classe, definida em System. XAML e definir suas próprias extensões de marcação. Ou você pode usar extensões de marcação definidas por uma determinada estrutura, se você já está fazendo referência a essa estrutura.  
@@ -25,28 +25,28 @@ Extensões de marcação são uma técnica XAML para a obtenção de um valor qu
 >  O `x:` prefixo é usado para o mapeamento de namespace XAML típico do namespace de linguagem XAML, no elemento raiz de uma produção de XAML. Por exemplo, modelos de página e de projeto do Visual Studio para várias estruturas específicas iniciam um arquivo XAML usando este `x:` mapeamento. Você poderia escolher um token de prefixo diferente em seu próprio mapeamento de namespace XAML, mas essa documentação assumirá o padrão `x:` mapeamento como um meio de identificar as entidades que são definidas como parte do namespace XAML de linguagem XAML, em oposição a um namespace XAML padrão específica do framework ou outros namespaces CLR ou XML arbitrários.  
   
 ### <a name="xtype"></a>Tipo de x:  
- `x:Type` fornece o <xref:System.Type> objeto para o tipo nomeado. Essa funcionalidade é usada com mais frequência em mecanismos de adiamento que usam o tipo CLR subjacente e a derivação de tipo como um moniker de agrupamento ou um identificador. WPF estilos e modelos e o uso do `TargetType` propriedades, são um exemplo específico. Para obter mais informações, consulte [extensão de marcação X:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md).  
+ `x:Type` fornece o <xref:System.Type> objeto para o tipo nomeado. Essa funcionalidade é usada com mais frequência em mecanismos de adiamento que usam o tipo CLR subjacente e a derivação de tipo como um moniker de agrupamento ou um identificador. WPF estilos e modelos e o uso do `TargetType` propriedades, são um exemplo específico. Para obter mais informações, consulte [extensão de marcação X:Type](x-type-markup-extension.md).  
   
 ### <a name="xstatic"></a>X:Static  
- `x:Static` produz valores estáticos de entidades de código de tipo de valor que não são diretamente o tipo de valor da propriedade, mas podem ser avaliados para esse tipo. Isso é útil para especificar valores que já existem como constantes conhecidas em uma definição de tipo. Para obter mais informações, consulte [extensão de marcação X:Static](../../../docs/framework/xaml-services/x-static-markup-extension.md).  
+ `x:Static` produz valores estáticos de entidades de código de tipo de valor que não são diretamente o tipo de valor da propriedade, mas podem ser avaliados para esse tipo. Isso é útil para especificar valores que já existem como constantes conhecidas em uma definição de tipo. Para obter mais informações, consulte [extensão de marcação X:Static](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` Especifica `null` como um valor para um membro XAML. Dependendo do design de tipos específicos ou sobre os conceitos de framework maiores, `null` nem sempre é um valor padrão para uma propriedade ou o valor implícito de um atributo de cadeia de caracteres vazia. Para obter mais informações, consulte [extensão de marcação X:Null](../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+ `x:Null` Especifica `null` como um valor para um membro XAML. Dependendo do design de tipos específicos ou sobre os conceitos de framework maiores, `null` nem sempre é um valor padrão para uma propriedade ou o valor implícito de um atributo de cadeia de caracteres vazia. Para obter mais informações, consulte [extensão de marcação X:Null](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>X:array  
- `x:Array` dá suporte à criação de matrizes gerais na sintaxe XAML em casos em que o suporte da coleção que é fornecido por elementos base e modelos de controle não é usado deliberadamente. Para obter mais informações, consulte [extensão de marcação X:array](../../../docs/framework/xaml-services/x-array-markup-extension.md). Em XAML 2009 especificamente, matrizes são acessadas como primitivos de linguagem, em vez de como uma extensão. Para obter mais informações, consulte [recursos da linguagem XAML 2009](../../../docs/framework/xaml-services/xaml-2009-language-features.md).  
+ `x:Array` dá suporte à criação de matrizes gerais na sintaxe XAML em casos em que o suporte da coleção que é fornecido por elementos base e modelos de controle não é usado deliberadamente. Para obter mais informações, consulte [extensão de marcação X:array](x-array-markup-extension.md). Em XAML 2009 especificamente, matrizes são acessadas como primitivos de linguagem, em vez de como uma extensão. Para obter mais informações, consulte [recursos da linguagem XAML 2009](xaml-2009-language-features.md).  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` faz parte do XAML 2009, uma extensão do conjunto original de linguagem (2006). `x:Reference` representa uma referência a outro objeto existente em um gráfico de objeto. Esse objeto é identificado por seu `x:Name`. Para obter mais informações, consulte [extensão de marcação X:Reference](../../../docs/framework/xaml-services/x-reference-markup-extension.md).  
+ `x:Reference` faz parte do XAML 2009, uma extensão do conjunto original de linguagem (2006). `x:Reference` representa uma referência a outro objeto existente em um gráfico de objeto. Esse objeto é identificado por seu `x:Name`. Para obter mais informações, consulte [extensão de marcação X:Reference](x-reference-markup-extension.md).  
   
 ### <a name="other-x-constructs"></a>Outros x: Construções  
- Outros `x:` existem construções para dar suporte a recursos da linguagem XAML, mas eles não são implementados como extensões de marcação. Para obter mais informações, consulte [Namespace de XAML (x) Recursos de linguagem](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+ Outros `x:` existem construções para dar suporte a recursos da linguagem XAML, mas eles não são implementados como extensões de marcação. Para obter mais informações, consulte [Namespace de XAML (x) Recursos de linguagem](xaml-namespace-x-language-features.md).  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>A classe Base de MarkupExtension  
  Para definir uma extensão de marcação personalizada que pode interagir com as implementações padrão de leitores XAML e gravadores XAML em System. XAML, você deriva uma classe abstrata <xref:System.Windows.Markup.MarkupExtension> classe. Que a classe tem um método substituição, que é <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Talvez você também precise definir construtores adicionais para dar suporte a argumentos para o uso de extensão de marcação e a correspondência propriedades configuráveis.  
   
- Por meio de <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>, uma extensão de marcação personalizada tem acesso a um contexto de serviço que relata o ambiente em que a extensão de marcação, na verdade, é invocada por um processador XAML. O caminho de carregamento isso é geralmente um <xref:System.Xaml.XamlObjectWriter>. Em Salvar caminho normalmente é um <xref:System.Xaml.XamlXmlWriter>. Cada relatório, o contexto de serviço como um XAML serviço provedor contexto classe interna que implementa um padrão de provedor de serviço. Para obter mais informações sobre os serviços disponíveis e o que eles representam, consulte [conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Por meio de <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>, uma extensão de marcação personalizada tem acesso a um contexto de serviço que relata o ambiente em que a extensão de marcação, na verdade, é invocada por um processador XAML. O caminho de carregamento isso é geralmente um <xref:System.Xaml.XamlObjectWriter>. Em Salvar caminho normalmente é um <xref:System.Xaml.XamlXmlWriter>. Cada relatório, o contexto de serviço como um XAML serviço provedor contexto classe interna que implementa um padrão de provedor de serviço. Para obter mais informações sobre os serviços disponíveis e o que eles representam, consulte [conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
  Sua classe de extensão de marcação deve usar um nível de acesso público; Processadores XAML sempre devem ser capazes de criar uma instância de classe de suporte da extensão de marcação para usar seus serviços.  
   
@@ -110,13 +110,13 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Acessando o contexto de provedor de serviço de uma implementação de extensão de marcação  
- Os serviços disponíveis são as mesmas para qualquer conversor de valor. A diferença está em como cada conversor de valor recebe o contexto de serviço. Acesso a serviços e os serviços disponíveis estão documentados no tópico [conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Os serviços disponíveis são as mesmas para qualquer conversor de valor. A diferença está em como cada conversor de valor recebe o contexto de serviço. Acesso a serviços e os serviços disponíveis estão documentados no tópico [conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 <a name="property_element_usage_of_a_markup_extension"></a>   
 ## <a name="property-element-usage-of-a-markup-extension"></a>Uso do elemento de propriedade de uma extensão de marcação  
  Os cenários de usos de extensão de marcação geralmente são projetados em torno do usando a extensão de marcação no uso do atributo. No entanto, também é potencialmente possível definir a classe de suporte para dar suporte ao uso de elemento de propriedade.  
   
- Para dar suporte a uso de elemento de propriedade da sua extensão de marcação, defina um construtor padrão público. Isso deve ser um construtor de instância não é um construtor estático. Isso é necessário porque um processador XAML geralmente deve invocar o construtor padrão em qualquer elemento de objeto que processa da marcação, e isso inclui classes de extensão de marcação como elementos de objeto. Para cenários avançados, você pode definir os caminhos de construção não padrão para classes. (Para obter mais informações, consulte [diretiva X:factorymethod](../../../docs/framework/xaml-services/x-factorymethod-directive.md).) No entanto, você não deve usar esses padrões para fins de extensão de marcação porque isso torna a descoberta de padrão de uso muito mais difícil, para designers e para os usuários da marcação bruta.  
+ Para dar suporte a uso de elemento de propriedade da sua extensão de marcação, defina um construtor padrão público. Isso deve ser um construtor de instância não é um construtor estático. Isso é necessário porque um processador XAML geralmente deve invocar o construtor padrão em qualquer elemento de objeto que processa da marcação, e isso inclui classes de extensão de marcação como elementos de objeto. Para cenários avançados, você pode definir os caminhos de construção não padrão para classes. (Para obter mais informações, consulte [diretiva X:factorymethod](x-factorymethod-directive.md).) No entanto, você não deve usar esses padrões para fins de extensão de marcação porque isso torna a descoberta de padrão de uso muito mais difícil, para designers e para os usuários da marcação bruta.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>Atribuição para uma extensão de marcação personalizada  
@@ -156,5 +156,5 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Windows.Markup.MarkupExtension>
-- [Conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [Extensões de marcação e XAML do WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

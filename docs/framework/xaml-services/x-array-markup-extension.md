@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: e94928f17a31cdadae11f69c37a4f148452b5d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699734"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047889"
 ---
 # <a name="xarray-markup-extension"></a>Extensão de marcação x:Array
 Fornece suporte geral para matrizes de objetos por meio de uma extensão de marcação XAML. Isso corresponde à `x:ArrayExtension` tipo XAML no [MS-XAML].  
@@ -46,9 +46,9 @@ Fornece suporte geral para matrizes de objetos por meio de uma extensão de marc
   
  `x:Array` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. `x:Array` é uma exceção a essa regra parcialmente, porque em vez de fornecer manipulação de valor de atributo alternativo, `x:Array` fornece tratamento alternativo de seu conteúdo de texto interno. Esse comportamento permite que os tipos que não podem ter suporte por um modelo de conteúdo existente para ser agrupadas em uma matriz e referenciado mais tarde no code-behind, acessando a matriz nomeada; Você pode chamar <xref:System.Array> métodos para obter os itens individuais da matriz.  
   
- Todas as extensões de marcação no XAML usam as chaves ({,} `)` na sintaxe de atributo, que é a convenção pela qual um processador XAML reconhece que uma extensão de marcação precisa processar o valor do atributo. Para obter mais informações sobre extensões de marcação em geral, consulte [conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Todas as extensões de marcação no XAML usam as chaves ({,} `)` na sintaxe de atributo, que é a convenção pela qual um processador XAML reconhece que uma extensão de marcação precisa processar o valor do atributo. Para obter mais informações sobre extensões de marcação em geral, consulte [conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
- Em XAML 2009, `x:Array` é definido como um primitivo, em vez de uma extensão de marcação de idioma. Para obter mais informações, consulte [tipos inseridos para primitivos de linguagem XAML comuns](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+ Em XAML 2009, `x:Array` é definido como um primitivo, em vez de uma extensão de marcação de idioma. Para obter mais informações, consulte [tipos inseridos para primitivos de linguagem XAML comuns](built-in-types-for-common-xaml-language-primitives.md).  
   
 ## <a name="wpf-usage-notes"></a>Notas de uso do WPF  
  Normalmente, os elementos de objeto que preenche um `x:Array` não são elementos que existem no [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] namespace XAML e exigem um prefixo de mapeamento para um namespace XAML não padrão.  
@@ -67,8 +67,8 @@ Fornece suporte geral para matrizes de objetos por meio de uma extensão de marc
   
  `</x:Array>`  
   
- Para tipos personalizados que são usados como elementos da matriz, a classe também deve dar suporte os requisitos de serem instanciados em XAML como elementos de objeto. Para obter mais informações, consulte [XAML e Classes personalizadas para WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Para tipos personalizados que são usados como elementos da matriz, a classe também deve dar suporte os requisitos de serem instanciados em XAML como elementos de objeto. Para obter mais informações, consulte [XAML e Classes personalizadas para WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Extensões de marcação e XAML do WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Tipos migrados do WPF para System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Tipos migrados do WPF para System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

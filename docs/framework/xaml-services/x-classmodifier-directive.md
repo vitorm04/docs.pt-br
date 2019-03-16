@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: ef55549b43ecbef539d7e84a7281fa704a328938
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc9e866f859192e1fa13ead24dc44a7b9d286877
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507584"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58026776"
 ---
 # <a name="xclassmodifier-directive"></a>Diretiva x:ClassModifier
 Modifica o comportamento de compilação XAML quando `x:Class` também é fornecido. Especificamente, em vez de criar um parcial `class` que tem um `Public` (o padrão), do nível de acesso fornecido `x:Class` é criada com um `NotPublic` nível de acesso. Esse comportamento afeta o nível de acesso para a classe em que os assemblies gerados.  
@@ -35,7 +35,7 @@ Modifica o comportamento de compilação XAML quando `x:Class` também é fornec
 |*NotPublic*|A cadeia de caracteres exata para passar para especificar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> versus <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varia, dependendo da linguagem de programação de lógica que você usar. Consulte Observações.|  
   
 ## <a name="dependencies"></a>Dependências  
- [X:Class](../../../docs/framework/xaml-services/x-class-directive.md) também deve ser fornecido no mesmo elemento, e esse elemento deve ser o elemento raiz em uma página. Para obter mais informações, consulte [ \[MS-XAML\] seção 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ [X:Class](x-class-directive.md) também deve ser fornecido no mesmo elemento, e esse elemento deve ser o elemento raiz em uma página. Para obter mais informações, consulte [ \[MS-XAML\] seção 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Comentários  
  O valor de `x:ClassModifier` nos serviços de XAML do .NET Framework uso varia de acordo com a linguagem de programação. A cadeia de caracteres a ser usado depende de como cada linguagem implementa sua <xref:System.CodeDom.Compiler.CodeDomProvider> e os conversores de tipo, ele retorna para definir os significados para <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> e <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, e se esse idioma é diferencia maiusculas de minúsculas.  
@@ -54,8 +54,8 @@ Modifica o comportamento de compilação XAML quando `x:Class` também é fornec
  O nível de acesso, como declarado na `x:ClassModifier` ainda está sujeito à interpretação de determinadas estruturas e seus recursos. O WPF inclui recursos para carregar e instanciar tipos em que `x:ClassModifier` é `internal`, se essa classe é referenciada em um recurso WPF por meio de um pacote de referência de URI. Como consequência neste caso e potencialmente outras como ela é implementada por outras estruturas, não dependa exclusivamente nas `x:ClassModifier` para bloquear a instanciação de todos os possíveis tentativas.  
   
 ## <a name="see-also"></a>Consulte também
-- [Diretiva x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Code-behind e XAML no WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Diretiva x:FieldModifier](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)
-- [Segurança (WPF)](../../../docs/framework/wpf/security-wpf.md)
-- [Tipos migrados do WPF para System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Diretiva x:Class](x-class-directive.md)
+- [Code-behind e XAML no WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [Diretiva x:FieldModifier](x-fieldmodifier-directive.md)
+- [Segurança (WPF)](../wpf/security-wpf.md)
+- [Tipos migrados do WPF para System.Xaml](types-migrated-from-wpf-to-system-xaml.md)
