@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: 27cbacacefb64d3a9c0257011a188397e83b9186
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806dcef7b7a29afa8804a581659023c817662434
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582039"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58024546"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Todas as larguras de campo, exceto o último elemento, devem ser maiores que zero
 Todas as larguras de campo, exceto o último elemento, devem ser maiores que zero. Uma largura de campo que menor que ou igual a zero no último elemento indica que o último campo é de comprimento variável.  
@@ -21,7 +21,8 @@ Todas as larguras de campo, exceto o último elemento, devem ser maiores que zer
 -   Defina a largura do campo como o tamanho correto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths>
-- [Como: Ler arquivos de texto de largura fixa](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [Como: Ler de arquivos de texto de largura fixa](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
 - [Objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)
