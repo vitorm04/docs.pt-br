@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 639b53ada8639ed686d04b4aa2e5295ca08240b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714171"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125857"
 ---
 # <a name="using-nested-graphics-containers"></a>Usando contêineres de elementos gráficos aninhados
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornece contêineres que você pode usar para substituir ou aumentar a parte do estado no temporariamente um <xref:System.Drawing.Graphics> objeto. Criar um contêiner chamando o <xref:System.Drawing.Graphics.BeginContainer%2A> método de um <xref:System.Drawing.Graphics> objeto. Você pode chamar <xref:System.Drawing.Graphics.BeginContainer%2A> repetidamente para formar contêineres aninhados. Cada chamada para <xref:System.Drawing.Graphics.BeginContainer%2A> deve ser emparelhado com uma chamada para <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -25,9 +25,9 @@ ms.locfileid: "57714171"
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- No código anterior, o retângulo desenhado de dentro do contêiner é transformado primeiro pela transformação global do contêiner (rotação) e, em seguida, pela transformação global do <xref:System.Drawing.Graphics> objeto (conversão). O retângulo desenhado de fora do contêiner é transformado apenas pela transformação global do <xref:System.Drawing.Graphics> objeto (conversão). A ilustração a seguir mostra os dois retângulos.  
+ No código anterior, o retângulo desenhado de dentro do contêiner é transformado primeiro pela transformação global do contêiner (rotação) e, em seguida, pela transformação global do <xref:System.Drawing.Graphics> objeto (conversão). O retângulo desenhado de fora do contêiner é transformado apenas pela transformação global do <xref:System.Drawing.Graphics> objeto (conversão). A ilustração a seguir mostra os dois retângulos: 
   
- ![Contêineres aninhados](./media/csnestedcontainers1.png "csnestedcontainers1")  
+ ![Ilustração que mostra contêineres aninhados.](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
   
 ## <a name="clipping-in-nested-containers"></a>Recorte em contêineres aninhados  
  O exemplo a seguir demonstra como contêineres aninhados lidam com áreas de recorte. O código cria uma <xref:System.Drawing.Graphics> objeto e um contêiner dentro desse <xref:System.Drawing.Graphics> objeto. A região de recorte do <xref:System.Drawing.Graphics> objeto é um retângulo e a região de recorte do contêiner é uma elipse. O código faz duas chamadas para o <xref:System.Drawing.Graphics.DrawLine%2A> método. A primeira chamada para <xref:System.Drawing.Graphics.DrawLine%2A> está dentro do contêiner e a segunda chamada para <xref:System.Drawing.Graphics.DrawLine%2A> está fora do contêiner (após a chamada para <xref:System.Drawing.Graphics.EndContainer%2A>). A primeira linha é recortada pela interseção das duas áreas de recorte. A segunda linha é recortada apenas pela região de recorte retangular do <xref:System.Drawing.Graphics> objeto.  
@@ -35,9 +35,9 @@ ms.locfileid: "57714171"
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- A ilustração a seguir mostra as duas linhas recortadas.  
+ A ilustração a seguir mostra as duas linhas recortadas:
   
- ![Contêiner aninhado](./media/nestedcontainers2.png "nestedcontainers2")  
+ ![Ilustração que mostra um contêiner aninhado com linhas recortadas.](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
   
  Como os dois exemplos anteriores mostram, as transformações e áreas de recorte são cumulativas em contêineres aninhados. Se você definir as transformações globais do contêiner e o <xref:System.Drawing.Graphics> do objeto, as duas transformações se aplicarão a itens desenhados de dentro do contêiner. A transformação do contêiner será aplicado primeiro e a transformação do <xref:System.Drawing.Graphics> objeto será aplicado depois. Se você definir as regiões de recorte do contêiner e o <xref:System.Drawing.Graphics> do objeto, itens desenhados de dentro do contêiner serão recortados pela interseção das duas áreas de recorte.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "57714171"
   
  A ilustração a seguir mostra as três cadeias de caracteres. As cadeias de caracteres desenhadas do contêiner interno e do <xref:System.Drawing.Graphics> objeto são suavizadas pela suavização. A cadeia de caracteres desenhada do contêiner externo não é suavizada pela suavização porque o <xref:System.Drawing.Graphics.TextRenderingHint%2A> estiver definida como <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
   
- ![Contêineres aninhados](./media/nestedcontainers3.png "nestedcontainers3")  
+ ![Ilustração que mostra as cadeias de caracteres extraídas contêineres aninhados.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Drawing.Graphics>

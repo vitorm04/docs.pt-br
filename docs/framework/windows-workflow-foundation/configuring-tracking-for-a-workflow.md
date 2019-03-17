@@ -2,12 +2,12 @@
 title: Configurando o rastreamento para um fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719397"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126195"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurando o rastreamento para um fluxo de trabalho
 
@@ -183,9 +183,9 @@ Para exibir registros de rastreamento, siga estas etapas.
 
 6. Clique com botão direito do **analítico** nó e selecione **atualizar.** Controlar registros deve ser no centro painel visível.
 
-A imagem a seguir mostra eventos de rastreamento no visualizador de eventos.
+A imagem a seguir mostra os eventos de rastreamento no Visualizador de eventos:
 
-![Mostrando de Visualizador de eventos, registros de acompanhamento](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![Captura de tela mostrando o Visualizador de eventos que registros de acompanhamento.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrando um ID específico do aplicativo provedor
 

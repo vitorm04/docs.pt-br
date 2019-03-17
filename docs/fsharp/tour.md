@@ -2,12 +2,12 @@
 title: Tour do F#
 description: Examine alguns dos principais recursos da linguagem em que este tour com exemplos de código de programação F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968290"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125571"
 ---
 # <a name="tour-of-f"></a>Tour do F\#
 
@@ -136,10 +136,6 @@ Falha em seguir acima resultará em um erro de compilação.
 [Correspondência de padrão](language-reference/pattern-matching.md) é o recurso da linguagem F# que permite que a correção para operar em tipos de F#.  Nos exemplos acima, você deve ter notado um pouco de `match x with ...` sintaxe.  Essa construção permite que o compilador, que possa entender a "forma" tipos de dados, para forçar a conta para todos os casos possíveis ao usar um tipo de dados por meio do que é conhecido como correspondência completa.  Isso é incrivelmente poderoso para exatidão e pode ser usado de maneira inteligente para "sobem" o que normalmente seria uma questão de tempo de execução em tempo de compilação.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-Você também pode usar a forma abreviada `function` constructo para correspondência de padrões, que é útil quando você estiver escrevendo usam funções que tornam [aplicativo parcial](language-reference/functions/index.md#partial-application-of-arguments):
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 Algo que talvez você tenha notado é que o uso do `_` padrão.  Isso é conhecido como o [padrão de curinga](language-reference/pattern-matching.md#wildcard-pattern), que é uma maneira de dizer que "Não me preocupo com o que é algo".  Embora seja conveniente, você pode ignorar acidentalmente correspondência completa e poderá se beneficiar das imposições de tempo de compilação, se você não tiver cuidado usando `_`.  Ele é melhor usado quando não se preocupa determinadas partes de um tipo decomposto ao padrão de correspondência ou a cláusula final quando você tiver enumerada de todos os casos significativos em uma expressão de correspondência.
 

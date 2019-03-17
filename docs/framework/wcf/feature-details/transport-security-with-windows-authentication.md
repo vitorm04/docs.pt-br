@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: bd4e12a861207e5318e8f3f34b38204f6724e7b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652586"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125441"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Segurança de transporte com autenticação do Windows
 O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o cliente do Windows Communication Foundation (WCF). Para obter mais informações sobre a programação, consulte [como: Proteger um serviço com credenciais do Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Um serviço Web de intranet exibe informações de recursos humanos. O cliente é um aplicativo de formulário do Windows. O aplicativo é implantado em um domínio com um controlador de Kerberos a proteção do domínio.  
   
- ![Segurança com a autenticação do Windows de transporte](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![Segurança de transporte com autenticação do Windows](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  

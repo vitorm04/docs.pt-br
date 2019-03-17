@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720391"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126221"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Como: Criar um gradiente de caminho
 O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você personalize a forma como preencher uma forma alterando as cores gradualmente. Por exemplo, você pode especificar uma cor para o centro de um caminho e outra cor para o limite de um caminho. Você também pode especificar cores separadas para cada um dos vários pontos ao longo do limite de um caminho.  
@@ -26,13 +26,13 @@ O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você per
   
 -   O exemplo a seguir preenche uma elipse com pincel de gradiente de caminho. A cor central é definida como azul e a cor do limite é definida como azul-piscina. A ilustração a seguir mostra a elipse preenchida.  
   
-     ![Caminho de gradiente](./media/pathgradient1.png "pathgradient1")  
+     ![Caminho de gradiente preenche uma elipse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      Por padrão, um pincel de gradiente de caminho não é estendido para fora do limite do caminho. Se você usar o pincel de gradiente de caminho para preencher uma figura que se estende para além do limite do caminho, a área da tela fora do caminho não será preenchida.  
   
-     A ilustração a seguir mostra o que acontece se você alterar o <xref:System.Drawing.Graphics.FillEllipse%2A> chamar no código a seguir para `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     A ilustração a seguir mostra o que acontece se você alterar o <xref:System.Drawing.Graphics.FillEllipse%2A> chamar no código a seguir para `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![Caminho de gradiente](./media/pathgradient2.png "pathgradient2")  
+     ![Caminho de gradiente estendido além do limite do caminho.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você per
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   O exemplo a seguir desenha um gradiente de caminho sem um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto no código. Determinada <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> construtor no exemplo recebe uma matriz de pontos, mas não exige um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Além disso, observe que o <xref:System.Drawing.Drawing2D.PathGradientBrush> é usado para preencher um retângulo, não um caminho. O retângulo é maior do que o caminho fechado usado para definir o pincel, portanto, alguns dos retângulos não são pintados pelo pincel. A ilustração a seguir mostra o retângulo (linha pontilhada) e a parte do retângulo pintado pelo pincel de gradiente de caminho.  
+-   O exemplo a seguir desenha um gradiente de caminho sem um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto no código. Determinada <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> construtor no exemplo recebe uma matriz de pontos, mas não exige um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Além disso, observe que o <xref:System.Drawing.Drawing2D.PathGradientBrush> é usado para preencher um retângulo, não um caminho. O retângulo é maior do que o caminho fechado usado para definir o pincel, portanto, alguns dos retângulos não são pintados pelo pincel. A ilustração a seguir mostra o retângulo (linha pontilhada) e a parte do retângulo pintado pelo pincel de gradiente de caminho: 
   
-     ![Gradiente](./media/gradient4.png "gradient4")  
+     ![Parte do gradiente pintado pelo pincel de gradiente de caminho.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você per
   
      A seguinte ilustração mostra a saída do código a seguir. A elipse à esquerda é azul-piscina somente no ponto central. A elipse à direita é azul-piscina em qualquer lugar dentro do caminho interno.  
   
- ![Gradiente](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![Efeito de gradiente de escalas de foco](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você per
   
      A ilustração a seguir mostra o triângulo preenchido com o pincel de gradiente de caminho personalizado.  
   
-     ![Caminho de gradiente](./media/pathgradient4.png "pathgradient4")  
+     ![Triângulo preenchido com pincel de gradiente de caminho personalizado.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -92,18 +92,18 @@ O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você per
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     A ilustração a seguir mostra a elipse preenchida e o ponto central do pincel de gradiente de caminho.  
+     A ilustração a seguir mostra a elipse preenchida e o ponto central do pincel de gradiente de caminho:  
   
-     ![Caminho de gradiente](./media/pathgradient5.png "pathgradient5")  
+     ![Caminho de gradiente com preenchido elipse e o ponto central.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   Você pode definir o ponto central de um pincel de gradiente de caminho para um local fora do caminho que foi usado para construir o pincel. O exemplo a seguir substitui a chamada para definir o <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriedade no código anterior.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     A ilustração a seguir mostra a saída com essa alteração.  
+     A ilustração a seguir mostra a saída com essa alteração:  
   
-     ![Caminho de gradiente](./media/pathgradient6.png "pathgradient6")  
+     ![Caminho de gradiente com o ponto central fora do caminho.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      Na ilustração anterior, os pontos na extremidade direita da elipse não são azul puro (embora muito parecido). As cores de gradiente são posicionadas como se o preenchimento tivesse atingido o ponto (145, 35) no qual a cor seria azul puro (0, 0, 255). Mas o preenchimento nunca atinge (145, 35), pois um pincel de gradiente de caminho pinta apenas dentro de seu caminho.  
   

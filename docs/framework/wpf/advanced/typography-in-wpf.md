@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482685"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125623"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem melhor qualidade e desempenho de renderização de texto, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] suporte a tipografia, texto internacional aperfeiçoado, suporte de fonte aperfeiçoado e APIs (interfaces de programação de aplicativo).  
@@ -18,13 +18,12 @@ Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tl
 ## <a name="improved-quality-and-performance-of-text"></a>Melhor qualidade e desempenho de texto  
  Texto no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é processado usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], que melhora a clareza e legibilidade do texto. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é uma tecnologia de software desenvolvida por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)], que melhora a legibilidade do texto em monitores LCD existentes, como telas de notebook, telas de Pocket PC e monitores de tela plana. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] utiliza uma renderização subpixel que permite que o texto seja exibido com maior fidelidade para sua forma verdadeira alinhando caracteres numa parte fracionária de um pixel. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil. Outra melhoria de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é a suavização na direção y, que ajusta a parte superior e inferior de curvas rasas em caracteres de texto. Para obter mais detalhes sobre recursos [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consulte [visão geral de ClearType](cleartype-overview.md).  
   
- ![Texto com y do ClearType&#45;direção&#45;alias](./media/typographyinwpf02.gif "TypographyInWPF02")  
+ ![Texto com suavização para direção de y de ClearType](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Texto com suavização da direção y do ClearType  
   
  O pipeline de renderização do texto inteiro pode ser acelerado por hardware em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] desde que seu computador satisfaça o nível mínimo de hardware requerido. Renderização que não pode ser executada usando hardware cai para renderização de software. Aceleração por hardware afeta todas as fases do pipeline de processamento de texto — desde armazenar glifos individuais, compor glifos em sequências, aplicar efeitos, para aplicar o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] algoritmo de mesclagem na saída final exibida. Para obter mais informações sobre aceleração de hardware, consulte [camadas de renderização de gráficos](graphics-rendering-tiers.md).  
   
- ![Diagrama do pipeline de renderização de texto](./media/typographyinwpf01.png "TypographyInWPF01")  
-Diagrama do pipeline de renderização de texto  
+ ![Diagrama do pipeline de renderização de texto](./media/typography-in-wpf/text-rendering-pipeline.png)  
   
  Além disso, texto animado, seja por caractere ou glifo, tira total proveito dos gráficos de capacidade de hardware habilitada por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Isso resulta em animação de texto suave.  
   
@@ -86,70 +85,57 @@ Diagrama do pipeline de renderização de texto
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Usando efeitos de Bitmap, transformações e efeitos de texto  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que você crie usos visualmente interessantes de texto utilizando características como efeitos de bitmap, transformações e efeitos de texto. O exemplo a seguir mostra um tipo comum de um efeito de sombra aplicado a texto.  
   
- ![Sombra de texto com Suavidade &#61; 0,25](./media/shadowtext01.jpg "ShadowText01")  
-Texto com uma sombra  
+ ![Sombra de texto com Suavidade &#61; 0,25](./media/typography-in-wpf/drop-shadow-text-effect.jpg) 
   
  O exemplo a seguir mostra um efeito de sombra e ruído aplicado ao texto.  
   
- ![Sombra de texto com ruído](./media/shadowtext04.jpg "ShadowText04")  
-Texto com uma sombra e ruído  
+ ![Sombra de texto com ruído](./media/typography-in-wpf/drop-shadow-noise-text.jpg) 
   
  O exemplo a seguir mostra um efeito de brilho externo aplicado ao texto.  
   
- ![Sombra de texto usando OuterGlowBitmapEffect](./media/shadowtext05.jpg "ShadowText05")  
-Texto com um efeito de brilho externo  
+ ![Sombra de texto usando OuterGlowBitmapEffect](./media/typography-in-wpf/text-shadow-glow-effect.jpg)
   
  O exemplo a seguir mostra um efeito de desfoque aplicado ao texto.  
   
- ![Sombra de texto usando BlurBitmapEffect](./media/shadowtext06.jpg "ShadowText06")  
-Texto com um efeito de desfoque  
-  
+ ![Sombra de texto usando BlurBitmapEffect](./media/typography-in-wpf/text-shadow-blur-effect.jpg)  
+
  O exemplo a seguir mostra a segunda linha de texto com escala ajustada em 150% no eixo x e a terceira linha de texto ajustada em 150% no eixo y.  
   
- ![Texto com escala ajustada usando um ScaleTransform](./media/transformedtext02.jpg "TransformedText02")  
-Texto utilizando uma ScaleTransform  
+ ![Texto com escala ajustada usando um ScaleTransform](./media/typography-in-wpf/scaled-text-scaletransform.jpg) 
   
  O exemplo a seguir mostra texto distorcido ao longo do eixo x.  
   
- ![Texto distorcido usando SkewTransform](./media/transformedtext03.jpg "TransformedText03")  
-Texto utilizando uma SkewTransform  
+ ![Texto distorcido usando SkewTransform](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
  Um <xref:System.Windows.Media.TextEffect> objeto é um objeto auxiliar que permite que você trate texto como um ou mais grupos de caracteres em uma cadeia de caracteres de texto. O exemplo a seguir mostra um caractere individual sendo rotacionado. Cada caractere é rotacionado de forma independente em intervalos de 1 segundo.  
   
- ![Captura de tela do efeito de texto girar texto](./media/texteffect01.jpg "TextEffect01")  
-Exemplo de uma animação de efeito de giro  
+ ![Captura de tela do efeito de texto girar texto](./media/typography-in-wpf/rotating-text-effect.jpg) 
   
 #### <a name="using-flow-documents"></a>Usando os documentos de fluxo  
  Além do comum [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece um controle de layout para apresentação de texto — o <xref:System.Windows.Documents.FlowDocument> elemento. O <xref:System.Windows.Documents.FlowDocument> elemento, em conjunto com o <xref:System.Windows.Controls.DocumentViewer> elemento, fornece um controle para grandes quantidades de texto com diferentes requisitos de layout. Controles de layout fornecem acesso a tipografia avançada através do <xref:System.Windows.Documents.Typography> objeto e propriedades relacionadas a fonte dos outros [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] controles.  
   
  O exemplo a seguir mostra o conteúdo de texto hospedado em um <xref:System.Windows.Controls.FlowDocumentReader>, que fornece pesquisa, navegação, paginação e suporte a dimensionamento de conteúdo.  
   
- ![Usando OpenType fontes captura de tela de exemplo](./media/typographyinwpf-03.png "TypographyInWPF_03")  
-Texto hospedado em um FlowDocumentReader  
+ ![Captura de tela que mostra as fontes OpenType.](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
  Para obter mais informações, consulte [Documentos no WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Desenho de texto leve  
  Você pode desenhar texto diretamente para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos usando o <xref:System.Windows.Media.DrawingContext.DrawText%2A> método o <xref:System.Windows.Media.DrawingContext> objeto. Para usar esse método, você cria um <xref:System.Windows.Media.FormattedText> objeto. Esse objeto permite que você desenhe texto de várias linhas, no qual cada caractere no texto pode ser formatado individualmente. A funcionalidade do <xref:System.Windows.Media.FormattedText> objeto contém muito da funcionalidade dos sinalizadores de DrawText na API do Win32. Além disso, o <xref:System.Windows.Media.FormattedText> objeto contém a funcionalidade, como suporte a reticências, no qual reticências são exibidas quando o texto excede seu limite. O exemplo a seguir mostra o texto que tem diversos formatos aplicados a ele, incluindo um gradiente linear na segunda e terceira palavras.  
   
- ![Texto exibido utilizando objeto FormattedText](./media/formattedtext01.jpg "FormattedText01")  
-Texto exibido utilizando objeto FormattedText  
+ ![Texto exibido utilizando objeto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   
  Você pode converter texto formatado em <xref:System.Windows.Media.Geometry> objetos, permitindo que você crie outros tipos de texto visualmente interessantes. Por exemplo, você pode criar um <xref:System.Windows.Media.Geometry> objeto com base no contorno de uma cadeia de caracteres de texto.  
   
- ![Contorno do texto usando um pincel de gradiente linear](./media/outlinedtext02.jpg "OutlinedText02")  
-Contorno do texto usando um pincel de gradiente linear  
+ ![Contorno do texto usando um pincel de gradiente linear](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
   
  Os exemplos a seguir ilustram várias maneiras de criar efeitos visuais interessantes modificando o traço, o preenchimento e o realce do texto convertido.  
   
- ![Texto com diferentes cores de preenchimento e traço](./media/outlinedtext03.jpg "OutlinedText03")  
-Exemplo de como definir o traço e preenchimento com diferentes cores.  
+ ![Texto com diferentes cores de preenchimento e traço](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![Texto com pincel de imagem aplicado ao traço](./media/outlinedtext04.jpg "OutlinedText04")  
-Exemplo de um pincel de imagem aplicado ao traço  
+ ![Texto com pincel de imagem aplicado ao traço](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![Texto com pincel de imagem aplicado ao traço](./media/outlinedtext05.jpg "OutlinedText05")  
-Exemplo de um pincel de imagem aplicado ao traço e ao realce  
+ ![Texto com pincel de imagem aplicado para traçar e realce](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  Para obter mais informações sobre o <xref:System.Windows.Media.FormattedText> do objeto, consulte [Desenhando texto formatado](drawing-formatted-text.md).  
   
@@ -158,8 +144,7 @@ Exemplo de um pincel de imagem aplicado ao traço e ao realce
   
  Ao contrário de um texto tradicional [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], o <xref:System.Windows.Media.TextFormatting.TextFormatter> interage com um cliente de layout de texto por meio de um conjunto de métodos de retorno de chamada. Requer que o cliente forneça esses métodos em uma implementação da <xref:System.Windows.Media.TextFormatting.TextSource> classe. O diagrama a seguir ilustra a interação de layout de texto entre o aplicativo cliente e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
- ![Diagrama de cliente de layout de texto e TextFormatter](./media/textformatter01.png "TextFormatter01")  
-Interação entre o aplicativo e o TextFormatter  
+ ![Diagrama de cliente de layout de texto e TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
  Para obter mais detalhes sobre como criar o layout de texto personalizado, consulte [formatação de texto avançada](advanced-text-formatting.md).  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - shadow effects in text [WPF]
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-ms.openlocfilehash: 4d200aa980e8f2e6d22291669dfb07db54a5f0c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2225e297dbc0b5f9d49799cb34eb5539746e62e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370664"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125779"
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>Como: Criar texto com uma sombra
 Os exemplos nesta seção mostram como criar um efeito de sombra para texto exibido.  
@@ -19,8 +19,7 @@ Os exemplos nesta seção mostram como criar um efeito de sombra para texto exib
 ## <a name="example"></a>Exemplo  
  O <xref:System.Windows.Media.Effects.DropShadowEffect> objeto permite que você crie uma variedade de efeitos de sombra para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] objetos. O exemplo a seguir mostra um efeito de sombra aplicado ao texto. Nesse caso, a sombra é suave, o que significa que a cor da sombra é desfocada.  
   
- ![Sombra de texto com Suavidade &#61; 0,25](./media/shadowtext01.jpg "ShadowText01")  
-Exemplo de texto com uma sombra suave  
+ ![Sombra de texto com Suavidade &#61; 0,25](./media/how-to-create-text-with-a-shadow/drop-shadow-text-effect.jpg) 
   
  Você pode controlar a largura de uma sombra definindo a <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> propriedade. Um valor de `4.0` indica uma sombra de 4 pixels de largura. Você pode controlar a suavidade, ou de uma sombra modificando a <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> propriedade. Um valor de `0.0` não indica nenhum desfoque. O exemplo de código a seguir mostra como criar uma sombra suave.  
   
@@ -31,13 +30,11 @@ Exemplo de texto com uma sombra suave
   
  O exemplo a seguir mostra um efeito de sombra sólida aplicado ao texto. Nesse caso, a sombra não está desfocada.  
   
- ![Sombra de texto com Suavidade &#61; 0](./media/shadowtext02.jpg "ShadowText02")  
-Exemplo de texto com uma sombra sólida  
+ ![Sombra de texto com Suavidade &#61; 0](./media/how-to-create-text-with-a-shadow/text-shadow-softness.jpg) 
   
  Você pode criar uma sombra sólida definindo a <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> propriedade para `0.0`, que indica que nenhum desfoque é utilizado. Você pode controlar a direção da sombra modificando a <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> propriedade. Defina o valor direcional desta propriedade como um grau entre `0` e `360`. A ilustração a seguir mostra os valores direcionais do <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> configuração da propriedade.  
   
- ![Configuração de grau de DropShadow através de sombra](./media/shadowtext08.png "ShadowText08")  
-Diagrama de direção de DropShadow  
+ ![Configuração de grau de DropShadow através de sombra](./media/how-to-create-text-with-a-shadow/drop-shadow-degree-setting.png)
   
  O exemplo de código a seguir mostra como criar uma sombra sólida.  
   
@@ -48,8 +45,7 @@ Diagrama de direção de DropShadow
   
  O exemplo a seguir mostra um efeito de desfoque aplicado ao texto.  
   
- ![Sombra de texto usando BlurBitmapEffect](./media/shadowtext06.jpg "ShadowText06")  
-Exemplo de texto com um efeito de desfoque  
+ ![Sombra de texto usando BlurBitmapEffect](./media/how-to-create-text-with-a-shadow/text-shadow-blur-effect.jpg)  
   
  O exemplo de código a seguir mostra como criar um efeito de desfoque.  
   
@@ -60,8 +56,7 @@ Exemplo de texto com um efeito de desfoque
   
  O seguinte exemplo de código usa um <xref:System.Windows.Media.TranslateTransform> para deslocar o texto. Neste exemplo, uma cópia ligeiramente deslocada de texto abaixo do texto primário cria um efeito de sombra.  
   
- ![Sombra de texto usando TranslateTransform](./media/shadowtext07.jpg "ShadowText07")  
-Exemplo de texto usando uma transformação para efeito de sombra  
+ ![Sombra de texto usando TranslateTransform](./media/how-to-create-text-with-a-shadow/text-transform-shadow-effect.jpg)    
   
  O exemplo de código a seguir mostra como criar uma transformação para um efeito de sombra.  
   

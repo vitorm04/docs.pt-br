@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353030"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125675"
 ---
 # <a name="threading-model"></a>Modelo de threading
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] foi projetado para livrar os desenvolvedores das dificuldades de threading. Como resultado, a maioria dos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os desenvolvedores não terão que escrever uma interface que usa mais de um thread. Como os programas multi-threaded são complexos e difíceis de serem depurados, deve-se evitá-los quando existem soluções single-threaded.  
@@ -62,7 +62,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  Considere o exemplo a seguir:  
   
- ![Captura de tela de números primos](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![Captura de tela que mostra o threading de números primos.](./media/threading-model/threading-prime-numbers.png)  
   
  Este aplicativo simples faz uma contagem ascendente a partir do três, pesquisando os números primos. Quando o usuário clica o **iniciar** botão, a pesquisa começa. Quando o programa encontra um primo, ele atualiza a interface do usuário com sua descoberta. A qualquer momento, o usuário pode parar a pesquisa.  
   
@@ -74,7 +74,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  A melhor maneira de dividir o tempo de processamento entre cálculo e manipulação de eventos é gerenciar o cálculo do <xref:System.Windows.Threading.Dispatcher>. Usando o <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> método, podemos agendar verificações de números primos na mesma fila da qual [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eventos são extraídos. Em nosso exemplo, agendamos somente uma única verificação de números primos por vez. Depois que a verificação de números primos for concluída, agendaremos a próxima verificação imediatamente. Essa verificação continua somente após pendentes [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eventos foram tratados.  
   
- ![Ilustração da fila do dispatcher](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![Captura de tela que mostra a fila do dispatcher.](./media/threading-model/threading-dispatcher-queue.png)  
   
  O [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] realiza a verificação ortográfica usando esse mecanismo. Verificação ortográfica é feita em segundo plano usando o tempo ocioso do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. Vamos dar uma olhada no código.  
   
@@ -109,7 +109,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  Neste exemplo, simulamos uma chamada de procedimento remoto que recupera uma previsão do tempo. Usamos um thread de trabalho separada para executar essa chamada e agendamos um método de atualização no <xref:System.Windows.Threading.Dispatcher> do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] quando terminamos de thread.  
   
- ![Captura de tela da interface do usuário de clima](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![Captura de tela que mostra informações sobre o clima da interface do usuário.](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -189,7 +189,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 ### <a name="nested-pumping"></a>Bombeamento aninhado  
  Às vezes, não é viável completamente travar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. Vamos considerar o <xref:System.Windows.MessageBox.Show%2A> método da <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox.Show%2A> não retorna até que o usuário clica no botão Okey. No entanto, ele cria uma janela que deve ter um loop de mensagens para ser interativa. Enquanto aguardamos até que o usuário clique em OK, a janela do aplicativo original não responde à entrada do usuário. No entanto, ele continua processando mensagens de pintura. A janela original se redesenha quando é coberta e revelada.  
   
- ![MessageBox com um botão “OK”](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![Captura de tela que mostra uma MessageBox com um botão Okey](./media/threading-model/threading-message-loop.png)  
   
  Algum thread deve ser responsável pela janela da caixa de mensagem. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] poderá criar um novo thread apenas para a janela da caixa de mensagem, mas esse thread não poderá pintar os elementos desabilitados na janela original (lembre-se da discussão anterior sobre exclusão mútua). Em vez disso, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa uma sistema de processamento de mensagens aninhado. O <xref:System.Windows.Threading.Dispatcher> classe inclui um método chamado <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, que armazena o ponto de execução atual do aplicativo, em seguida, começa um novo loop de mensagem. Quando termina o loop de mensagens aninhado, a execução continua após original <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> chamar.  
   
@@ -209,7 +209,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  A maioria das interfaces não são criadas com o acesso thread-safe em mente porque os desenvolvedores trabalham sob a suposição de que um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nunca é acessada por mais de um thread. Nesse caso, o que o único thread pode fazer alterações ambientais em momentos inesperados, causando aqueles efeitos indesejados que o <xref:System.Windows.Threading.DispatcherObject> mecanismo de exclusão mútua deverá para resolver. Considere o seguinte pseudocódigo:  
   
- ![Diagrama de reentrância de threading](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![Diagrama que mostra reentrância de threading. ](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  Na maioria das vezes, que é a coisa certa, mas há momentos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em que essa reentrada inesperada pode realmente causar problemas. Portanto, em determinados momentos cruciais, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] chamadas <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>, que altera a instrução de bloqueio para esse thread usar o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bloqueio livre de reentrância, em vez do habitual [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] bloqueio.  
   

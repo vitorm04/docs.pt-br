@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 9d2cec7f9cd2cc9d8985c9add103748583c25dc9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e7aa036f632b4c310c4978d0d684c1222d2b096
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968927"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125558"
 ---
 # <a name="goto-statement"></a>Instrução GoTo
 Branch incondicionalmente para uma linha especificada em um procedimento.  
@@ -54,8 +54,7 @@ GoTo line
   
  A ilustração a seguir mostra uma `Try` aninhada em outra. Várias ramificações entre os blocos das duas construções são indicadas como válidas ou inválidas.  
   
- ![Diagrama gráfico de ramificações em construções Try](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Ramificações válidas e inválidas em construções Try  
+ ![Diagrama gráfico de ramificações em construções Try](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `GoTo` instrução para ramificar para rótulos de linha em um procedimento.  
