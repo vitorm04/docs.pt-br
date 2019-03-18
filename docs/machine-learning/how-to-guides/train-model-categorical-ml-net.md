@@ -3,37 +3,38 @@ title: Aplicar a engenharia de recursos ao treinamento de modelo em dados categ�
 description: Saiba como aplicar a engenharia de recursos ao treinamento de modelo de aprendizado de máquina em dados categóricos com o ML.NET
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c8e7a6f2429dd5ceda065332770e0ba3af374143
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f0101a3c9398637ece60051257c82eb69ef933d0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677273"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846058"
 ---
-# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="7a728-103">Aplicar a engenharia de recursos ao treinamento de modelo em dados categóricos – ML.NET</span><span class="sxs-lookup"><span data-stu-id="7a728-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
+# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="681c5-103">Aplicar a engenharia de recursos ao treinamento de modelo em dados categóricos – ML.NET</span><span class="sxs-lookup"><span data-stu-id="681c5-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="7a728-104">Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações.</span><span class="sxs-lookup"><span data-stu-id="7a728-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="7a728-105">Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="7a728-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="681c5-104">Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações.</span><span class="sxs-lookup"><span data-stu-id="681c5-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="681c5-105">Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="681c5-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="7a728-106">Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento.</span><span class="sxs-lookup"><span data-stu-id="7a728-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="7a728-107">Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="7a728-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+<span data-ttu-id="681c5-106">Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento.</span><span class="sxs-lookup"><span data-stu-id="681c5-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="681c5-107">Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="681c5-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="7a728-108">Você precisa converter os dados não float em tipos de dados `float`, pois todos os `learners` do ML.NET esperam as funcionalidades como um `float vector`.</span><span class="sxs-lookup"><span data-stu-id="7a728-108">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="681c5-108">Você precisa converter os dados não float em tipos de dados `float`, pois todos os `learners` do ML.NET esperam as funcionalidades como um `float vector`.</span><span class="sxs-lookup"><span data-stu-id="681c5-108">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="7a728-109">Se o conjunto de dados contiver dados `categorical` (por exemplo, “enum”), o ML.NET oferecerá várias maneiras de convertê-lo em recursos:</span><span class="sxs-lookup"><span data-stu-id="7a728-109">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
+<span data-ttu-id="681c5-109">Se o conjunto de dados contiver dados `categorical` (por exemplo, “enum”), o ML.NET oferecerá várias maneiras de convertê-lo em recursos:</span><span class="sxs-lookup"><span data-stu-id="681c5-109">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
 
-- <span data-ttu-id="7a728-110">Codificação one-hot</span><span class="sxs-lookup"><span data-stu-id="7a728-110">One-hot encoding</span></span>
-- <span data-ttu-id="7a728-111">Codificação one-hot baseada em hash</span><span class="sxs-lookup"><span data-stu-id="7a728-111">Hash-based one-hot encoding</span></span>
-- <span data-ttu-id="7a728-112">Codificação binária (converter o índice de categorias em uma sequência de bits e usar os bits como recursos)</span><span class="sxs-lookup"><span data-stu-id="7a728-112">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
+- <span data-ttu-id="681c5-110">Codificação one-hot</span><span class="sxs-lookup"><span data-stu-id="681c5-110">One-hot encoding</span></span>
+- <span data-ttu-id="681c5-111">Codificação one-hot baseada em hash</span><span class="sxs-lookup"><span data-stu-id="681c5-111">Hash-based one-hot encoding</span></span>
+- <span data-ttu-id="681c5-112">Codificação binária (converter o índice de categorias em uma sequência de bits e usar os bits como recursos)</span><span class="sxs-lookup"><span data-stu-id="681c5-112">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
 
-<span data-ttu-id="7a728-113">Uma `one-hot encoding` poderá ser um desperdício se algumas categorias tiverem cardinalidade muito alta (muitos valores diferentes, com um pequeno conjunto ocorrendo com frequência).</span><span class="sxs-lookup"><span data-stu-id="7a728-113">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="7a728-114">Nesse caso, reduza o número de slots para codificar com seleção de recursos com base na contagem.</span><span class="sxs-lookup"><span data-stu-id="7a728-114">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
+<span data-ttu-id="681c5-113">Uma `one-hot encoding` poderá ser um desperdício se algumas categorias tiverem cardinalidade muito alta (muitos valores diferentes, com um pequeno conjunto ocorrendo com frequência).</span><span class="sxs-lookup"><span data-stu-id="681c5-113">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="681c5-114">Nesse caso, reduza o número de slots para codificar com seleção de recursos com base na contagem.</span><span class="sxs-lookup"><span data-stu-id="681c5-114">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
 
-<span data-ttu-id="7a728-115">Inclua personalização categórica diretamente no pipeline de aprendizado do ML.NET para garantir que a transformação categórica:</span><span class="sxs-lookup"><span data-stu-id="7a728-115">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
+<span data-ttu-id="681c5-115">Inclua personalização categórica diretamente no pipeline de aprendizado do ML.NET para garantir que a transformação categórica:</span><span class="sxs-lookup"><span data-stu-id="681c5-115">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
 
-- <span data-ttu-id="7a728-116">seja “treinada” somente nos dados de treinamento, e não nos dados de teste;</span><span class="sxs-lookup"><span data-stu-id="7a728-116">is only 'trained' on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="7a728-117">seja aplicada corretamente aos novos dados recebidos, sem pré-processamento extra em tempo de previsão.</span><span class="sxs-lookup"><span data-stu-id="7a728-117">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
+- <span data-ttu-id="681c5-116">seja “treinada” somente nos dados de treinamento, e não nos dados de teste;</span><span class="sxs-lookup"><span data-stu-id="681c5-116">is only 'trained' on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="681c5-117">seja aplicada corretamente aos novos dados recebidos, sem pré-processamento extra em tempo de previsão.</span><span class="sxs-lookup"><span data-stu-id="681c5-117">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
 
-<span data-ttu-id="7a728-118">O exemplo a seguir ilustra o tratamento categórico para o [conjunto de dados do censo de adultos](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="7a728-118">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="681c5-118">O exemplo a seguir ilustra o tratamento categórico para o [conjunto de dados do censo de adultos](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="681c5-118">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
 
+<!-- markdownlint-disable MD010 -->
 ```console
 Label   Workclass   education   marital-status  occupation  relationship    ethnicity   sex native-country-region   age fnlwgt  education-num   capital-gain    capital-loss    hours-per-week
 0   Private 11th    Never-married   Machine-op-inspct   Own-child   Black   Male    United-States   25  226802  7   0   0   40
@@ -41,6 +42,7 @@ Label   Workclass   education   marital-status  occupation  relationship    ethn
 1   Local-gov   Assoc-acdm  Married-civ-spouse  Protective-serv Husband White   Male    United-States   28  336951  12  0   0   40
 1   Private Some-college    Married-civ-spouse  Machine-op-inspct   Husband Black   Male    United-States   44  160323  10  7688    0   40
 ```
+<!-- markdownlint-enable MD010 -->
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
