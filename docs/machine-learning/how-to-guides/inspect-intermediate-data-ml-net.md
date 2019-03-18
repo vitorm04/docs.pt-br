@@ -3,12 +3,12 @@ title: Inspecionar valores de dados intermediários durante o processamento de p
 description: Saiba como inspecionar valores de dados intermediários reais durante o processamento de pipeline de aprendizado de máquina do ML.NET
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 362cb9351c3cb77b6aa67d59154854e882869ad9
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678638"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843410"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET
 
@@ -24,6 +24,8 @@ O método de extensão `GetColumn<T>` permite que você inspecione os dados inte
 O seguinte exemplo mostra como usar o método de extensão `GetColumn<T>`:
 
 [Arquivo de exemplo](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):
+
+<!-- markdownlint-disable MD010 -->
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -32,6 +34,7 @@ Label   Workclass   education   marital-status
 1   Private Some-college    Married-civ-spouse
 
 ```
+<!-- markdownlint-enable MD010 -->
 
 Nossa classe é definida da seguinte maneira:
 
@@ -50,7 +53,7 @@ public class InspectedRow
 ```
 
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
+// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
 // as a catalog of available operations and as the source of randomness.
 var mlContext = new MLContext();
 

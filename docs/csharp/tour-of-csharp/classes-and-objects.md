@@ -3,12 +3,12 @@ title: Classes e objetos em C# - um tour pela linguagem C#
 description: Novato em C#? Leia esta visão geral de classes, objetos e herança
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147537"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846136"
 ---
 # <a name="classes-and-objects"></a>Classes e objetos
 
@@ -123,7 +123,7 @@ A *assinatura* de um método deve ser exclusiva na classe na qual o método é d
 
 Os parâmetros são usados para passar valores ou referências de variável aos métodos. Os parâmetros de um método obtêm seus valores reais de *argumentos* que são especificados quando o método é invocado. Há quatro tipos de parâmetros: parâmetros de valor, parâmetros de referência, parâmetros de saída e matrizes de parâmetros.
 
-Um *parâmetro de valor* é usado para passar argumentos de entrada. Um parâmetro de valor corresponde a uma variável local que obtém seu valor inicial do argumento passado para o parâmetro. As modificações em um parâmetro de valor não afetam o argumento passado para o parâmetro. 
+Um *parâmetro de valor* é usado para passar argumentos de entrada. Um parâmetro de valor corresponde a uma variável local que obtém seu valor inicial do argumento passado para o parâmetro. As modificações em um parâmetro de valor não afetam o argumento passado para o parâmetro.
 
 Os parâmetros de valor podem ser opcionais, especificando um valor padrão para que os argumentos correspondentes possam ser omitidos.
 
@@ -293,6 +293,6 @@ O coletor de lixo tem latitude ampla ao decidir quando coletar objetos e executa
 
 A instrução `using` fornece uma abordagem melhor para a destruição de objetos.
 
->[!div class="step-by-step"]
->[Anterior](statements.md)
->[Próximo](structs.md)
+> [!div class="step-by-step"]
+> [Anterior](statements.md)
+> [Próximo](structs.md)

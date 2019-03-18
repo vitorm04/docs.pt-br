@@ -3,12 +3,12 @@ title: Carregar dados de um arquivo de texto para o processamento do aprendizado
 description: Descubra como carregar dados de um arquivo de texto para ser usado para criar, treinar e pontuar um modelo de aprendizado de máquina com o ML.NET
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 62f68bd950d6a2c116baaba86ba7e27a10cec69d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 14b1f8c99da6f1b8da436d9afef5b2ac8d36ecae
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676285"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843363"
 ---
 # <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a>Carregar dados de um arquivo de texto para o processamento do aprendizado de máquina – ML.NET
 
@@ -23,6 +23,7 @@ Observe que é perfeitamente aceitável ler algumas colunas de um arquivo ou ler
 
 [Arquivo de exemplo](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):
 
+<!-- markdownlint-disable MD010 -->
 ```console
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -30,11 +31,12 @@ Label   Workclass   education   marital-status
 1   Local-gov   Assoc-acdm  Married-civ-spouse
 1   Private Some-college    Married-civ-spouse
 ```
+<!-- markdownlint-enable MD010 -->
 
 Para carregar os dados de um arquivo de texto:
 
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
+// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
 // as a catalog of available operations and as the source of randomness.
 var mlContext = new MLContext();
 

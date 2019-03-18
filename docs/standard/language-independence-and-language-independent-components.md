@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836546"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846461"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens que segmentam o .NET Framework, como C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. É possível acessar os tipos e os membros das bibliotecas de classes desenvolvidas para o .NET Framework sem que seja necessário conhecer a linguagem em que foram originalmente gravados e sem precisar seguir as convenções da linguagem original. Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo do .NET Framework, independentemente da linguagem.  
@@ -100,7 +100,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 -   Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas.  
   
- As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras foi retirado palavra por palavra do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com Direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.  
+ As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras foi retirado palavra por palavra do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.  
   
 |Categoria|Consulte|Regra|Número da regra|  
 |--------------|---------|----------|-----------------|  
@@ -343,7 +343,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 ### <a name="member-accessibility"></a>Acessibilidade de membro  
  A substituição de um membro herdado não pode alterar a acessibilidade desse membro. Por exemplo, um método público em uma classe base não pode ser substituído por um método privado em uma classe derivada. Há uma exceção: um membro `protected internal` (em C#) ou `Protected Friend` (em Visual Basic) em um assembly que é substituído por um tipo em um assembly diferente. Nesse caso, a acessibilidade da substituição é `Protected`.  
   
- O exemplo a seguir ilustra o erro que é gerado quando o atributo <xref:System.CLSCompliantAttribute> é definido como `true` e `Person`, que é uma classe derivada de `Animal` tenta alterar a acessibilidade da propriedade `Species` de chave pública para privada. O exemplo será compilado com êxito se sua acessibilidade for alterada para pública.  
+ O exemplo a seguir ilustra o erro que é gerado quando o atributo <xref:System.CLSCompliantAttribute> é definido como `true` e `Human`, que é uma classe derivada de `Animal` tenta alterar a acessibilidade da propriedade `Species` de chave pública para privada. O exemplo será compilado com êxito se sua acessibilidade for alterada para pública.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

@@ -3,12 +3,12 @@ title: Introdução à transformação de sintaxe (APIs Roslyn)
 description: Uma introdução pela travessia, consulta e percurso por árvores de sintaxe.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122559"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788434"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introdução à transformação de sintaxe
 
@@ -152,7 +152,7 @@ Agora, adicione esta instrução para associar a expressão inicializadora:
 
 Por fim, inclua a seguinte instrução `if` para substituir o nome do tipo existente pela palavra-chave `var`, se o tipo de expressão do inicializador corresponder ao tipo especificado:
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 A condicional é necessária porque a declaração pode converter a expressão inicializadora em uma classe ou interface base. Se este for o caso, os tipos à esquerda e à direita da atribuição não coincidem. Remover o tipo explícito nesses casos alteraria a semântica de um programa. `var` é especificado como um identificador em vez de uma palavra-chave porque `var` é uma palavra-chave contextual. As trivialidades inicial e final (espaço em branco) são transferidas do nome do tipo antigo para a palavra-chave `var` para manter espaço em branco vertical e recuo. É mais simples usar `ReplaceNode` em vez de `With*` para transformar o <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, pois o nome do tipo é na verdade o neto da declaração.
 

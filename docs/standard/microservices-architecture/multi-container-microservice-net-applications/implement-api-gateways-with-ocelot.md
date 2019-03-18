@@ -4,12 +4,12 @@ description: Saiba como implementar Gateways de API com o Ocelot e como usar o O
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679483"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846097"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementar Gateways de API com o Ocelot
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ A entrada, no entanto, está apenas redirecionando solicitações HTTP, mas não
 
 A arquitetura ideal é uma camada Nginx de entrada no Kubernetes na frente dos aplicativos Web além de vários Gateways de API/BFF do Ocelot, conforme é mostrado no diagrama a seguir.
 
- ![Uma Entrada do Kubernetes funciona como um proxy reverso para todo o tráfego para o aplicativo, incluindo os aplicativos Web, que geralmente estão fora do escopo do gateway de API.](./media/image41.png)
+![Uma Entrada do Kubernetes funciona como um proxy reverso para todo o tráfego para o aplicativo, incluindo os aplicativos Web, que geralmente estão fora do escopo do gateway de API.](./media/image41.png)
 
 **Figura 6-41**. A camada de entrada em eShopOnContainers, quando implantada no Kubernetes
 
 Quando você implanta o eShopOnContainers no Kubernetes, ele expõe apenas alguns serviços ou pontos de extremidade via _entrada_, ou seja, basicamente, a seguinte lista de pós-fixados nas URLs:
 
--   `/` para o aplicativo Web cliente SPA
--   `/webmvc` para o aplicativo Web cliente MVC
--   `/webstatus` para o aplicativo Web cliente mostrando o status e as verificações de integridade
--   `/webshoppingapigw` para os processos de negócios Web BFF e de compras
--   `/webmarketingapigw` para os processos de negócios Web BFF e de marketing
--   `/mobileshoppingapigw` para os processos de negócios móveis BFF e de compras
--   `/mobilemarketingapigw` para os processos de negócios móveis BFF e de marketing
+- `/` para o aplicativo Web cliente SPA
+- `/webmvc` para o aplicativo Web cliente MVC
+- `/webstatus` para o aplicativo Web cliente mostrando o status e as verificações de integridade
+- `/webshoppingapigw` para os processos de negócios Web BFF e de compras
+- `/webmarketingapigw` para os processos de negócios Web BFF e de marketing
+- `/mobileshoppingapigw` para os processos de negócios móveis BFF e de compras
+- `/mobilemarketingapigw` para os processos de negócios móveis BFF e de marketing
 
 Ao implantar no Kubernetes, cada Gateway de API do Ocelot está usando um arquivo “configuration.json” diferente para cada _pod_ que executa os Gateways de API. Esses arquivos de "configuration.json" são fornecidos pela montagem (originalmente com o script deploy.ps1) de um volume criado com base em um _mapa de configuração_ do Kubernetes chamado 'ocelot'. Cada contêiner monta seu arquivo de configuração relacionado na pasta do contêiner chamada `/app/configuration`.
 
