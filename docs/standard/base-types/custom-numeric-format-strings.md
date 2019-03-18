@@ -19,11 +19,11 @@ ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631666"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58133331"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 
@@ -39,9 +39,9 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
   
 |Especificador de formato|Nome|Descrição|Exemplos|  
 |----------------------|----------|-----------------|--------------|  
-|"0"|Espaço reservado de zero|Substitui o zero pelo dígito correspondente, se houver um presente. Caso contrário, o zero aparecerá na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
+|"0"|Espaço reservado de zero|Substitui o zero pelo dígito correspondente, se houver um presente. Caso contrário, o zero aparecerá na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 (en-US "0,00") -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Espaço reservado de dígito|Substitui o símbolo "#" pelo dígito correspondente, se houver um presente. Caso contrário, nenhum dígito aparecerá na cadeia de caracteres de resultado.<br /><br /> Observe que nenhum dígito aparece na cadeia de caracteres de resultado se o dígito na cadeia de entrada correspondente for um 0 não significativo. Por exemplo, 0003 ("####") -> 3.<br /><br /> Para saber mais: [O especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
-|"."|Ponto decimal|Determina a posição do separador decimal na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador personalizado "."](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
+|"."|Ponto decimal|Determina a posição do separador decimal na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador personalizado "."](#SpecifierPt).|0.45678 (en-US "0,00") -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |","","|Separador de grupo e escala numérica|Funciona tanto como um separador de grupo quanto como um especificador de escala numérica. Como separador de grupo, insere um caractere separador de grupo localizado entre cada grupo. Como especificador de escala numérica, divide um número por 1000 para cada vírgula especificada.<br /><br /> Para saber mais: [O especificador personalizado ","](#SpecifierTh).|Especificador de separador de grupo:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|  
 |"%"|Espaço reservado percentual|Multiplica um número por 100 e insere um símbolo percentual localizado na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador personalizado "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
 |"‰"|Espaço reservado por milhar|Multiplica um número por 1000 e insere um símbolo de por milhar localizado na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
