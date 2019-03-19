@@ -43,7 +43,11 @@ Todos os tutoriais de introdução posteriores à lição Olá, Mundo estão dis
 
 ## <a name="explore-new-features-in-c"></a>Explore novos recursos no C\#
 
-Experimente os novos recursos no [C# 6](../whats-new/csharp-6.md) nesta [exploração interativa](exploration/csharp-6.yml).
+* [Experimente interativamente os novos recursos no C# 6](exploration/csharp-6.yml): Explore os recursos adicionados no [C# 6](../whats-new/csharp-6.md) interativamente no navegador.
+* [Interpolação de cadeia de caracteres](string-interpolation.md): demonstra como usar interpolação de cadeia de caracteres para criar cadeias de caracteres formatadas em C#.
+* [Tipos de referência nula](nullable-reference-types.md): demonstra como usar tipos de referência nula para expressar sua intenção para referências nulas.
+* [Atualizar um projeto para usar tipos de referência que permitem valor nulo](upgrade-to-nullable-references.md): demonstra técnicas para atualizar um projeto existente a fim de usar tipos de referência que permitem valor nulo.
+* [Estender recursos de dados usando a correspondência de padrões](pattern-matching.md): demonstra como usar a correspondência de padrões a fim de estender os tipos para além dos principais recursos.
 
 ## <a name="general-tutorials"></a>Tutoriais gerais
 
@@ -53,6 +57,4 @@ Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Co
 * [Cliente REST](console-webapiclient.md): demonstra as comunicações da Web, serialização JSON e recursos orientados a objeto na linguagem C#.
 * [Herança em C# e .NET](inheritance.md): demonstra herança em C#, incluindo o uso de herança para definir classes derivadas, classes base e classes base abstratas.
 * [Trabalhar com LINQ](working-with-linq.md): demonstra muitos recursos do LINQ e os elementos de linguagem que dão suporte a ele.
-* [Interpolação de cadeia de caracteres](string-interpolation.md): demonstra como usar interpolação de cadeia de caracteres para criar cadeias de caracteres formatadas em C#.
 * [Usando atributos](attributes.md): demonstra como criar e usar atributos em C#.
-* [Tipos de referência nula](nullable-reference-types.md): demonstra como usar tipos de referência nula para expressar sua intenção para referências nulas.

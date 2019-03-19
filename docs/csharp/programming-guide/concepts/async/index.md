@@ -98,9 +98,9 @@ As características a seguir resumem o que transforma o exemplo anterior em um m
  Para obter mais informações sobre assincronia nas versões anteriores do .NET Framework, consulte [Programação assíncrona do .NET Framework tradicional e TPL](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).  
   
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> O que acontece em um método assíncrono  
- O mais importante que você deve compreender na programação assíncrona é a forma como o fluxo de controle avança de um método para outro. O diagrama a seguir pode ser usado para conduzi-lo pelo processo.  
+ O mais importante que você deve compreender na programação assíncrona é a forma como o fluxo de controle avança de um método para outro. O diagrama a seguir pode ser usado para conduzi-lo pelo processo:  
   
- ![Rastreie um programa assíncrono](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![Diagrama que mostra o rastreamento de um programa assíncrono.](./media/index/navigation-trace-async-program.png)  
   
  Os números no diagrama correspondem às etapas a seguir.  
   
