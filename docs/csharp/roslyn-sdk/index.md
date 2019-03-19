@@ -1,15 +1,10 @@
 ---
 title: O SDK do .NET Compiler Platform (APIs do Roslyn)
-description: Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.
+description: 'Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.'
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: be65d8ecafc13fc699efb10dc396b0631ba70810
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249132"
 ---
+
 # <a name="the-net-compiler-platform-sdk"></a>O SDK do .NET Compiler Platform
 
 Os compiladores criam um modelo detalhado do código do aplicativo conforme validam a sintaxe e a semântica do código. O uso desse modelo para criar a saída executável do código-fonte. O SDK do .NET Compiler Platform fornece acesso a esse modelo. Cada vez mais, contamos com recursos do IDE (ambiente de desenvolvimento integrado), como IntelliSense, refatoração, renomeação inteligente, "Localizar todas as referências" e "Ir para definição" para aumentar nossa produtividade. Contamos com ferramentas de análise de código para melhorar a qualidade e com geradores de código para ajudar na criação do aplicativo. À medida que essas ferramentas ficam mais inteligentes, elas precisam de acesso a cada vez mais do modelo que somente os compiladores podem criar conforme processam o código do aplicativo. Este é o objetivo principal das APIs do Roslyn: abrir as caixas pretas e permitir que as ferramentas e os usuários finais compartilhem a riqueza de informações que os compiladores têm sobre nosso código.
@@ -19,7 +14,7 @@ Em vez de serem tradutores opacos, que aceitam código-fonte e produzem código-
 
 O SDK do .NET Compiler Platform diminui drasticamente a barreira de entrada para a criação de aplicativos e ferramentas voltadas para o código. Ele cria várias oportunidades para inovação em áreas como metaprogramação, geração e transformação de código, uso interativo das linguagens C# e VB e incorporação de C# e VB a linguagens específicas de domínio.
 
-O SDK do .NET Compiler Platform permite que você crie ***analisadores*** e ***correções de código*** que encontram e corrigem os erros de codificação. Os ***analisadores*** entendem a sintaxe e a estrutura do código e detectam práticas que devem ser corrigidas. As ***correções de código*** fornecem uma ou mais correções sugeridas para tratar erros de codificação encontrados pelos analisadores. Normalmente, um analisador e as correções de código associadas são empacotados em um único projeto. 
+O SDK do .NET Compiler Platform permite que você crie ***analisadores*** e ***correções de código*** que encontram e corrigem os erros de codificação. Os ***analisadores*** entendem a sintaxe e a estrutura do código e detectam práticas que devem ser corrigidas. As ***correções de código*** fornecem uma ou mais correções sugeridas para tratar erros de codificação encontrados pelos analisadores. Normalmente, um analisador e as correções de código associadas são empacotados em um único projeto.
 
 Os analisadores e as correções de código usam a análise estática para entender o código. Eles não executam o código ou fornecem outros benefícios de teste. No entanto, eles podem destacar práticas que frequentemente levam a erros, códigos de difícil manutenção ou validação de diretrizes padrão.
 
@@ -46,7 +41,7 @@ As equipes podem criar analisadores e correções de código que procurem as pr�
 Há uma grande variedade de bibliotecas para desenvolvedores de .NET no NuGet.
 Algumas dessas provenientes da Microsoft, algumas de terceiros e outras de membros e de voluntários da comunidade. Essas bibliotecas obtêm mais adoção e análises mais positivas quando os desenvolvedores são bem-sucedidos com elas.
 
-Além de fornecer a documentação, você pode fornecer analisadores e correções de código que encontram e corrigem os usos inadequados comuns da sua biblioteca. Essas correções imediatas ajudarão os desenvolvedores a obter êxito mais rapidamente. 
+Além de fornecer a documentação, você pode fornecer analisadores e correções de código que encontram e corrigem os usos inadequados comuns da sua biblioteca. Essas correções imediatas ajudarão os desenvolvedores a obter êxito mais rapidamente.
 
 Você pode empacotar analisadores e correções de código com sua biblioteca no NuGet. Nesse cenário, cada desenvolvedor que instalar o pacote do NuGet também instalará o pacote do analisador. Todos os desenvolvedores que estiverem usando a biblioteca obterão imediatamente as diretrizes da sua equipe na forma de comentários imediatos sobre erros e correções sugeridas.
 
@@ -62,12 +57,12 @@ O SDK do .NET Compiler Platform inclui os modelos de objeto de linguagem mais re
 
 Você pode saber mais sobre os conceitos no SDK do .NET Compiler Platform nestes cinco tópicos:
 
- - [Explorar código com o visualizador de sintaxe](syntax-visualizer.md)
- - [Entender o modelo de API do compilador](compiler-api-model.md)
- - [Trabalhar com sintaxe](work-with-syntax.md)
- - [Trabalhar com semântica](work-with-semantics.md)
- - [Trabalhar com um workspace](work-with-workspace.md)
- 
+- [Explorar código com o visualizador de sintaxe](syntax-visualizer.md)
+- [Entender o modelo de API do compilador](compiler-api-model.md)
+- [Trabalhar com sintaxe](work-with-syntax.md)
+- [Trabalhar com semântica](work-with-semantics.md)
+- [Trabalhar com um workspace](work-with-workspace.md)
+
 Para começar, será necessário instalar o **SDK do .NET Compiler Platform**:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
