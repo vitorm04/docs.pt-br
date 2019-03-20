@@ -4,20 +4,20 @@ description: Este tutorial explica como organizar e testar projetos do .NET Core
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242693"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57845902"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a><span data-ttu-id="f975d-103">Organizando e testando projetos com a linha de comando do .NET Core</span><span class="sxs-lookup"><span data-stu-id="f975d-103">Organizing and testing projects with the .NET Core command line</span></span>
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a><span data-ttu-id="4f8c6-103">Organizando e testando projetos com a linha de comando do .NET Core</span><span class="sxs-lookup"><span data-stu-id="4f8c6-103">Organizing and testing projects with the .NET Core command line</span></span>
 
-<span data-ttu-id="f975d-104">Este tutorial segue a [Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando](using-with-xplat-cli.md), levando você além da criação de um simples aplicativo de console para desenvolver aplicativos avançados e bem organizados.</span><span class="sxs-lookup"><span data-stu-id="f975d-104">This tutorial follows [Getting started with .NET Core on Windows/Linux/macOS using the command line](using-with-xplat-cli.md), taking you beyond the creation of a simple console app to develop advanced and well-organized applications.</span></span> <span data-ttu-id="f975d-105">Depois de mostrar como usar pastas para organizar seu código, este tutorial mostra como estender um aplicativo de console com a estrutura de teste [xUnit](https://xunit.github.io/).</span><span class="sxs-lookup"><span data-stu-id="f975d-105">After showing you how to use folders to organize your code, this tutorial shows you how to extend a console application with the [xUnit](https://xunit.github.io/) testing framework.</span></span>
+<span data-ttu-id="4f8c6-104">Este tutorial segue a [Introdução ao .NET Core no Windows/Linux/macOS, usando a linha de comando](using-with-xplat-cli.md), e leva você além da criação de um simples aplicativo de console para desenvolver aplicativos avançados e bem organizados.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-104">This tutorial follows [Get started with .NET Core on Windows/Linux/macOS using the command line](using-with-xplat-cli.md), taking you beyond the creation of a simple console app to develop advanced and well-organized applications.</span></span> <span data-ttu-id="4f8c6-105">Depois de mostrar como usar pastas para organizar seu código, este tutorial mostra como estender um aplicativo de console com a estrutura de teste [xUnit](https://xunit.github.io/).</span><span class="sxs-lookup"><span data-stu-id="4f8c6-105">After showing you how to use folders to organize your code, this tutorial shows you how to extend a console application with the [xUnit](https://xunit.github.io/) testing framework.</span></span>
 
-## <a name="using-folders-to-organize-code"></a><span data-ttu-id="f975d-106">Usar pastas para organizar o código</span><span class="sxs-lookup"><span data-stu-id="f975d-106">Using folders to organize code</span></span>
+## <a name="using-folders-to-organize-code"></a><span data-ttu-id="4f8c6-106">Usar pastas para organizar o código</span><span class="sxs-lookup"><span data-stu-id="4f8c6-106">Using folders to organize code</span></span>
 
-<span data-ttu-id="f975d-107">Se você quiser introduzir novos tipos em um aplicativo de console, poderá fazer isso adicionando arquivos que contêm os tipos para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f975d-107">If you want to introduce new types into a console app, you can do so by adding files containing the types to the app.</span></span> <span data-ttu-id="f975d-108">Por exemplo, se você adicionar arquivos contendo os tipos `AccountInformation` e `MonthlyReportRecords` ao seu projeto, a estrutura do arquivo de projeto será simples e fácil de navegar:</span><span class="sxs-lookup"><span data-stu-id="f975d-108">For example if you add files containing `AccountInformation` and `MonthlyReportRecords` types to your project, the project file structure is flat and easy to navigate:</span></span>
+<span data-ttu-id="4f8c6-107">Se você quiser introduzir novos tipos em um aplicativo de console, poderá fazer isso adicionando arquivos que contêm os tipos para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-107">If you want to introduce new types into a console app, you can do so by adding files containing the types to the app.</span></span> <span data-ttu-id="4f8c6-108">Por exemplo, se você adicionar arquivos contendo os tipos `AccountInformation` e `MonthlyReportRecords` ao seu projeto, a estrutura do arquivo de projeto será simples e fácil de navegar:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-108">For example if you add files containing `AccountInformation` and `MonthlyReportRecords` types to your project, the project file structure is flat and easy to navigate:</span></span>
 
 ```
 /MyProject
@@ -27,9 +27,9 @@ ms.locfileid: "53242693"
 |__Program.cs
 ```
 
-<span data-ttu-id="f975d-109">No entanto, isso funciona bem apenas quando o projeto é relativamente pequeno.</span><span class="sxs-lookup"><span data-stu-id="f975d-109">However, this only works well when the size of your project is relatively small.</span></span> <span data-ttu-id="f975d-110">Você pode imaginar o que acontecerá se adicionar 20 tipos ao projeto?</span><span class="sxs-lookup"><span data-stu-id="f975d-110">Can you imagine what will happen if you add 20 types to the project?</span></span> <span data-ttu-id="f975d-111">O projeto definitivamente não será fácil navegar e manter com tantos arquivos dividindo o diretório raiz do projeto.</span><span class="sxs-lookup"><span data-stu-id="f975d-111">The project definitely wouldn't be easy to navigate and maintain with that many files littering the project's root directory.</span></span>
+<span data-ttu-id="4f8c6-109">No entanto, isso funciona bem apenas quando o projeto é relativamente pequeno.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-109">However, this only works well when the size of your project is relatively small.</span></span> <span data-ttu-id="4f8c6-110">Você pode imaginar o que acontecerá se adicionar 20 tipos ao projeto?</span><span class="sxs-lookup"><span data-stu-id="4f8c6-110">Can you imagine what will happen if you add 20 types to the project?</span></span> <span data-ttu-id="4f8c6-111">O projeto definitivamente não será fácil navegar e manter com tantos arquivos dividindo o diretório raiz do projeto.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-111">The project definitely wouldn't be easy to navigate and maintain with that many files littering the project's root directory.</span></span>
 
-<span data-ttu-id="f975d-112">Para organizar o projeto, crie uma nova pasta e nomeie-a como *Modelos* para armazenar os arquivos do tipo.</span><span class="sxs-lookup"><span data-stu-id="f975d-112">To organize the project, create a new folder and name it *Models* to hold the type files.</span></span> <span data-ttu-id="f975d-113">Coloque os arquivos de tipo na pasta *Modelos*:</span><span class="sxs-lookup"><span data-stu-id="f975d-113">Place the type files into the *Models* folder:</span></span>
+<span data-ttu-id="4f8c6-112">Para organizar o projeto, crie uma nova pasta e nomeie-a como *Modelos* para armazenar os arquivos do tipo.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-112">To organize the project, create a new folder and name it *Models* to hold the type files.</span></span> <span data-ttu-id="4f8c6-113">Coloque os arquivos de tipo na pasta *Modelos*:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-113">Place the type files into the *Models* folder:</span></span>
 
 ```
 /MyProject
@@ -40,17 +40,17 @@ ms.locfileid: "53242693"
 |__Program.cs
 ```
 
-<span data-ttu-id="f975d-114">Projetos que agrupam arquivos em pastas de forma lógica são fáceis de navegar e manter.</span><span class="sxs-lookup"><span data-stu-id="f975d-114">Projects that logically group files into folders are easy to navigate and maintain.</span></span> <span data-ttu-id="f975d-115">Na próxima seção, você criará um exemplo mais complexo com pastas e testes de unidade.</span><span class="sxs-lookup"><span data-stu-id="f975d-115">In the next section, you create a more complex sample with folders and unit testing.</span></span>
+<span data-ttu-id="4f8c6-114">Projetos que agrupam arquivos em pastas de forma lógica são fáceis de navegar e manter.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-114">Projects that logically group files into folders are easy to navigate and maintain.</span></span> <span data-ttu-id="4f8c6-115">Na próxima seção, você criará um exemplo mais complexo com pastas e testes de unidade.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-115">In the next section, you create a more complex sample with folders and unit testing.</span></span>
 
-## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a><span data-ttu-id="f975d-116">Organizando e testando usando o Exemplo Pets de NewTypes</span><span class="sxs-lookup"><span data-stu-id="f975d-116">Organizing and testing using the NewTypes Pets Sample</span></span>
+## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a><span data-ttu-id="4f8c6-116">Organizando e testando usando o Exemplo Pets de NewTypes</span><span class="sxs-lookup"><span data-stu-id="4f8c6-116">Organizing and testing using the NewTypes Pets Sample</span></span>
 
-### <a name="building-the-sample"></a><span data-ttu-id="f975d-117">Compilando o exemplo</span><span class="sxs-lookup"><span data-stu-id="f975d-117">Building the sample</span></span>
+### <a name="building-the-sample"></a><span data-ttu-id="4f8c6-117">Compilando o exemplo</span><span class="sxs-lookup"><span data-stu-id="4f8c6-117">Building the sample</span></span>
 
-<span data-ttu-id="f975d-118">Para as etapas a seguir, você pode acompanhar usando o [NewTypes Pets Sample](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) (Exemplo Pets de NewTypes) ou criar seus próprios arquivos e pastas.</span><span class="sxs-lookup"><span data-stu-id="f975d-118">For the following steps, you can either follow along using the [NewTypes Pets Sample](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) or create your own files and folders.</span></span> <span data-ttu-id="f975d-119">Os tipos são organizados logicamente em uma estrutura de pastas que permite a adição de mais tipos posteriormente e os testes também são posicionados logicamente nas pastas, permitindo a adição de mais testes posteriormente.</span><span class="sxs-lookup"><span data-stu-id="f975d-119">The types are logically organized into a folder structure that permits the addition of more types later, and tests are also logically placed in folders permitting the addition of more tests later.</span></span>
+<span data-ttu-id="4f8c6-118">Para as etapas a seguir, você pode acompanhar usando o [NewTypes Pets Sample](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) (Exemplo Pets de NewTypes) ou criar seus próprios arquivos e pastas.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-118">For the following steps, you can either follow along using the [NewTypes Pets Sample](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) or create your own files and folders.</span></span> <span data-ttu-id="4f8c6-119">Os tipos são organizados logicamente em uma estrutura de pastas que permite a adição de mais tipos posteriormente e os testes também são posicionados logicamente nas pastas, permitindo a adição de mais testes posteriormente.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-119">The types are logically organized into a folder structure that permits the addition of more types later, and tests are also logically placed in folders permitting the addition of more tests later.</span></span>
 
-<span data-ttu-id="f975d-120">Esse exemplo contém dois tipos, `Dog` e `Cat`, e faz com que eles implementem uma interface comum, `IPet`.</span><span class="sxs-lookup"><span data-stu-id="f975d-120">The sample contains two types, `Dog` and `Cat`, and has them implement a common interface, `IPet`.</span></span> <span data-ttu-id="f975d-121">Para o projeto `NewTypes`, sua meta é organizar os tipos relacionados a animais de estimação em uma pasta *Pets*.</span><span class="sxs-lookup"><span data-stu-id="f975d-121">For the `NewTypes` project, your goal is to organize the pet-related types into a *Pets* folder.</span></span> <span data-ttu-id="f975d-122">Se outro conjunto de tipos for adicionado posteriormente, *WildAnimals* por exemplo, ele será colocado na pasta *NewTypes* junto com a pasta *Pets*.</span><span class="sxs-lookup"><span data-stu-id="f975d-122">If another set of types is added later, *WildAnimals* for example, they're placed in the *NewTypes* folder alongside the *Pets* folder.</span></span> <span data-ttu-id="f975d-123">A pasta *WildAnimals* pode conter tipos de animais que não são animais de estimação, como os tipos `Squirrel` e `Rabbit`.</span><span class="sxs-lookup"><span data-stu-id="f975d-123">The *WildAnimals* folder may contain types for animals that aren't pets, such as `Squirrel` and `Rabbit` types.</span></span> <span data-ttu-id="f975d-124">Dessa forma, conforme os tipos são adicionados, o projeto continua bem organizado.</span><span class="sxs-lookup"><span data-stu-id="f975d-124">In this way as types are added, the project remains well organized.</span></span> 
+<span data-ttu-id="4f8c6-120">Esse exemplo contém dois tipos, `Dog` e `Cat`, e faz com que eles implementem uma interface comum, `IPet`.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-120">The sample contains two types, `Dog` and `Cat`, and has them implement a common interface, `IPet`.</span></span> <span data-ttu-id="4f8c6-121">Para o projeto `NewTypes`, sua meta é organizar os tipos relacionados a animais de estimação em uma pasta *Pets*.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-121">For the `NewTypes` project, your goal is to organize the pet-related types into a *Pets* folder.</span></span> <span data-ttu-id="4f8c6-122">Se outro conjunto de tipos for adicionado posteriormente, *WildAnimals* por exemplo, ele será colocado na pasta *NewTypes* junto com a pasta *Pets*.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-122">If another set of types is added later, *WildAnimals* for example, they're placed in the *NewTypes* folder alongside the *Pets* folder.</span></span> <span data-ttu-id="4f8c6-123">A pasta *WildAnimals* pode conter tipos de animais que não são animais de estimação, como os tipos `Squirrel` e `Rabbit`.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-123">The *WildAnimals* folder may contain types for animals that aren't pets, such as `Squirrel` and `Rabbit` types.</span></span> <span data-ttu-id="4f8c6-124">Dessa forma, conforme os tipos são adicionados, o projeto continua bem organizado.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-124">In this way as types are added, the project remains well organized.</span></span>
 
-<span data-ttu-id="f975d-125">Crie a seguinte estrutura de pasta com o conteúdo do arquivo indicado:</span><span class="sxs-lookup"><span data-stu-id="f975d-125">Create the following folder structure with file content indicated:</span></span>
+<span data-ttu-id="4f8c6-125">Crie a seguinte estrutura de pasta com o conteúdo do arquivo indicado:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-125">Create the following folder structure with file content indicated:</span></span>
 
 ```
 /NewTypes
@@ -64,54 +64,54 @@ ms.locfileid: "53242693"
       |__NewTypes.csproj
 ```
 
-<span data-ttu-id="f975d-126">*IPet.cs*:</span><span class="sxs-lookup"><span data-stu-id="f975d-126">*IPet.cs*:</span></span>
+<span data-ttu-id="4f8c6-126">*IPet.cs*:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-126">*IPet.cs*:</span></span>
 
 [!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
 
-<span data-ttu-id="f975d-127">*Dog.cs*:</span><span class="sxs-lookup"><span data-stu-id="f975d-127">*Dog.cs*:</span></span>
+<span data-ttu-id="4f8c6-127">*Dog.cs*:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-127">*Dog.cs*:</span></span>
 
 [!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
 
-<span data-ttu-id="f975d-128">*Cat.cs*:</span><span class="sxs-lookup"><span data-stu-id="f975d-128">*Cat.cs*:</span></span>
+<span data-ttu-id="4f8c6-128">*Cat.cs*:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-128">*Cat.cs*:</span></span>
 
 [!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
 
-<span data-ttu-id="f975d-129">*Program.cs*:</span><span class="sxs-lookup"><span data-stu-id="f975d-129">*Program.cs*:</span></span>
+<span data-ttu-id="4f8c6-129">*Program.cs*:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-129">*Program.cs*:</span></span>
 
 [!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
 
-<span data-ttu-id="f975d-130">*NewTypes.csproj*:</span><span class="sxs-lookup"><span data-stu-id="f975d-130">*NewTypes.csproj*:</span></span>
+<span data-ttu-id="4f8c6-130">*NewTypes.csproj*:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-130">*NewTypes.csproj*:</span></span>
 
 [!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
 
-<span data-ttu-id="f975d-131">Execute o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="f975d-131">Execute the following command:</span></span>
+<span data-ttu-id="4f8c6-131">Execute o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-131">Execute the following command:</span></span>
 
 ```console
 dotnet run
 ```
 
-<span data-ttu-id="f975d-132">Obtenha a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="f975d-132">Obtain the following output:</span></span>
+<span data-ttu-id="4f8c6-132">Obtenha a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-132">Obtain the following output:</span></span>
 
 ```console
 Woof!
 Meow!
 ```
 
-<span data-ttu-id="f975d-133">Exercício opcional: Adicione um novo tipo de animal de estimação, como um `Bird`, estendendo esse projeto.</span><span class="sxs-lookup"><span data-stu-id="f975d-133">Optional exercise: You can add a new pet type, such as a `Bird`, by extending this project.</span></span> <span data-ttu-id="f975d-134">Faça com que o método `TalkToOwner` de pássaro dê um `Tweet!` para o proprietário.</span><span class="sxs-lookup"><span data-stu-id="f975d-134">Make the bird's `TalkToOwner` method give a `Tweet!` to the owner.</span></span> <span data-ttu-id="f975d-135">Execute o aplicativo novamente.</span><span class="sxs-lookup"><span data-stu-id="f975d-135">Run the app again.</span></span> <span data-ttu-id="f975d-136">A saída incluirá `Tweet!`</span><span class="sxs-lookup"><span data-stu-id="f975d-136">The output will include `Tweet!`</span></span>
+<span data-ttu-id="4f8c6-133">Exercício opcional: Adicione um novo tipo de animal de estimação, como um `Bird`, estendendo esse projeto.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-133">Optional exercise: You can add a new pet type, such as a `Bird`, by extending this project.</span></span> <span data-ttu-id="4f8c6-134">Faça com que o método `TalkToOwner` de pássaro dê um `Tweet!` para o proprietário.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-134">Make the bird's `TalkToOwner` method give a `Tweet!` to the owner.</span></span> <span data-ttu-id="4f8c6-135">Execute o aplicativo novamente.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-135">Run the app again.</span></span> <span data-ttu-id="4f8c6-136">A saída incluirá `Tweet!`</span><span class="sxs-lookup"><span data-stu-id="4f8c6-136">The output will include `Tweet!`</span></span>
 
-### <a name="testing-the-sample"></a><span data-ttu-id="f975d-137">Testando o exemplo</span><span class="sxs-lookup"><span data-stu-id="f975d-137">Testing the sample</span></span>
+### <a name="testing-the-sample"></a><span data-ttu-id="4f8c6-137">Testando o exemplo</span><span class="sxs-lookup"><span data-stu-id="4f8c6-137">Testing the sample</span></span>
 
-<span data-ttu-id="f975d-138">O projeto `NewTypes` está em funcionamento e você o organizou mantendo os tipos relacionados a animais de estimação em uma pasta.</span><span class="sxs-lookup"><span data-stu-id="f975d-138">The `NewTypes` project is in place, and you've organized it by keeping the pets-related types in a folder.</span></span> <span data-ttu-id="f975d-139">Em seguida, crie seu projeto de teste e comece a escrever testes com a estrutura de teste [xUnit](https://xunit.github.io/).</span><span class="sxs-lookup"><span data-stu-id="f975d-139">Next, create your test project and start writing tests with the [xUnit](https://xunit.github.io/) test framework.</span></span> <span data-ttu-id="f975d-140">O teste de unidade permite que você verifique automaticamente o comportamento dos seus tipos de animal de estimação para confirmar se eles estão funcionando corretamente.</span><span class="sxs-lookup"><span data-stu-id="f975d-140">Unit testing allows you to automatically check the behavior of your pet types to confirm that they're operating properly.</span></span>
+<span data-ttu-id="4f8c6-138">O projeto `NewTypes` está em funcionamento e você o organizou mantendo os tipos relacionados a animais de estimação em uma pasta.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-138">The `NewTypes` project is in place, and you've organized it by keeping the pets-related types in a folder.</span></span> <span data-ttu-id="4f8c6-139">Em seguida, crie seu projeto de teste e comece a escrever testes com a estrutura de teste [xUnit](https://xunit.github.io/).</span><span class="sxs-lookup"><span data-stu-id="4f8c6-139">Next, create your test project and start writing tests with the [xUnit](https://xunit.github.io/) test framework.</span></span> <span data-ttu-id="4f8c6-140">O teste de unidade permite que você verifique automaticamente o comportamento dos seus tipos de animal de estimação para confirmar se eles estão funcionando corretamente.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-140">Unit testing allows you to automatically check the behavior of your pet types to confirm that they're operating properly.</span></span>
 
-<span data-ttu-id="f975d-141">Navegue de volta para a pasta *src* e crie uma pasta *test* com uma pasta *NewTypesTests* dentro dela.</span><span class="sxs-lookup"><span data-stu-id="f975d-141">Navigate back to the *src* folder and create a *test* folder with a *NewTypesTests* folder within it.</span></span> <span data-ttu-id="f975d-142">Em um prompt de comando da pasta *NewTypesTests*, execute `dotnet new xunit`.</span><span class="sxs-lookup"><span data-stu-id="f975d-142">At a command prompt from the *NewTypesTests* folder, execute `dotnet new xunit`.</span></span> <span data-ttu-id="f975d-143">Isso gera dois arquivos: *NewTypesTests.csproj* e *UnitTest1.cs*.</span><span class="sxs-lookup"><span data-stu-id="f975d-143">This produces two files: *NewTypesTests.csproj* and *UnitTest1.cs*.</span></span>
+<span data-ttu-id="4f8c6-141">Navegue de volta para a pasta *src* e crie uma pasta *test* com uma pasta *NewTypesTests* dentro dela.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-141">Navigate back to the *src* folder and create a *test* folder with a *NewTypesTests* folder within it.</span></span> <span data-ttu-id="4f8c6-142">Em um prompt de comando da pasta *NewTypesTests*, execute `dotnet new xunit`.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-142">At a command prompt from the *NewTypesTests* folder, execute `dotnet new xunit`.</span></span> <span data-ttu-id="4f8c6-143">Isso gera dois arquivos: *NewTypesTests.csproj* e *UnitTest1.cs*.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-143">This produces two files: *NewTypesTests.csproj* and *UnitTest1.cs*.</span></span>
 
-<span data-ttu-id="f975d-144">No momento, o projeto de teste não pode testar os tipos no `NewTypes` e requer uma referência de projeto para o projeto `NewTypes`.</span><span class="sxs-lookup"><span data-stu-id="f975d-144">The test project cannot currently test the types in `NewTypes` and requires a project reference to the `NewTypes` project.</span></span> <span data-ttu-id="f975d-145">Para adicionar uma referência de projeto, use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="f975d-145">To add a project reference, use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="4f8c6-144">No momento, o projeto de teste não pode testar os tipos no `NewTypes` e requer uma referência de projeto para o projeto `NewTypes`.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-144">The test project cannot currently test the types in `NewTypes` and requires a project reference to the `NewTypes` project.</span></span> <span data-ttu-id="4f8c6-145">Para adicionar uma referência de projeto, use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="4f8c6-145">To add a project reference, use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```
 dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
-<span data-ttu-id="f975d-146">Se preferir, adicione manualmente a referência de projeto adicionando um nó `<ItemGroup>` ao arquivo *NewTypesTests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="f975d-146">Or, you also have the option of manually adding the project reference by adding an `<ItemGroup>` node to the *NewTypesTests.csproj* file:</span></span>
+<span data-ttu-id="4f8c6-146">Se preferir, adicione manualmente a referência de projeto adicionando um nó `<ItemGroup>` ao arquivo *NewTypesTests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-146">Or, you also have the option of manually adding the project reference by adding an `<ItemGroup>` node to the *NewTypesTests.csproj* file:</span></span>
 
 ```xml
 <ItemGroup>
@@ -119,18 +119,18 @@ dotnet add reference ../../NewTypes/NewTypes.csproj
 </ItemGroup>
 ```
 
-<span data-ttu-id="f975d-147">*NewTypesTests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="f975d-147">*NewTypesTests.csproj*:</span></span>
+<span data-ttu-id="4f8c6-147">*NewTypesTests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-147">*NewTypesTests.csproj*:</span></span>
 
 [!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
 
-<span data-ttu-id="f975d-148">O arquivo *NewTypesTests.csproj* com o seguinte:</span><span class="sxs-lookup"><span data-stu-id="f975d-148">The *NewTypesTests.csproj* file contains the following:</span></span>
+<span data-ttu-id="4f8c6-148">O arquivo *NewTypesTests.csproj* com o seguinte:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-148">The *NewTypesTests.csproj* file contains the following:</span></span>
 
-* <span data-ttu-id="f975d-149">Referência de pacote para `Microsoft.NET.Test.Sdk`, a infraestrutura de teste do .NET</span><span class="sxs-lookup"><span data-stu-id="f975d-149">Package reference to `Microsoft.NET.Test.Sdk`, the .NET testing infrastructure</span></span>
-* <span data-ttu-id="f975d-150">Referência de pacote para `xunit`, a estrutura de teste do xUnit</span><span class="sxs-lookup"><span data-stu-id="f975d-150">Package reference to `xunit`, the xUnit testing framework</span></span>
-* <span data-ttu-id="f975d-151">Referência de pacote para `xunit.runner.visualstudio`, o executor de teste</span><span class="sxs-lookup"><span data-stu-id="f975d-151">Package reference to `xunit.runner.visualstudio`, the test runner</span></span>
-* <span data-ttu-id="f975d-152">Referência de projeto para `NewTypes`, o código a ser testado</span><span class="sxs-lookup"><span data-stu-id="f975d-152">Project reference to `NewTypes`, the code to test</span></span>
+* <span data-ttu-id="4f8c6-149">Referência de pacote para `Microsoft.NET.Test.Sdk`, a infraestrutura de teste do .NET</span><span class="sxs-lookup"><span data-stu-id="4f8c6-149">Package reference to `Microsoft.NET.Test.Sdk`, the .NET testing infrastructure</span></span>
+* <span data-ttu-id="4f8c6-150">Referência de pacote para `xunit`, a estrutura de teste do xUnit</span><span class="sxs-lookup"><span data-stu-id="4f8c6-150">Package reference to `xunit`, the xUnit testing framework</span></span>
+* <span data-ttu-id="4f8c6-151">Referência de pacote para `xunit.runner.visualstudio`, o executor de teste</span><span class="sxs-lookup"><span data-stu-id="4f8c6-151">Package reference to `xunit.runner.visualstudio`, the test runner</span></span>
+* <span data-ttu-id="4f8c6-152">Referência de projeto para `NewTypes`, o código a ser testado</span><span class="sxs-lookup"><span data-stu-id="4f8c6-152">Project reference to `NewTypes`, the code to test</span></span>
 
-<span data-ttu-id="f975d-153">Altere o nome de *UnitTest1.cs* para *PetTests.cs* e substitua o código no arquivo pelo seguinte:</span><span class="sxs-lookup"><span data-stu-id="f975d-153">Change the name of *UnitTest1.cs* to *PetTests.cs* and replace the code in the file with the following:</span></span>
+<span data-ttu-id="4f8c6-153">Altere o nome de *UnitTest1.cs* para *PetTests.cs* e substitua o código no arquivo pelo seguinte:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-153">Change the name of *UnitTest1.cs* to *PetTests.cs* and replace the code in the file with the following:</span></span>
 
 ```csharp
 using System;
@@ -144,27 +144,27 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
 ```
 
-<span data-ttu-id="f975d-154">Exercício opcional: Se você já tiver adicionado um tipo `Bird` anteriormente que produz um `Tweet!` para o proprietário, adicione um método de teste ao arquivo *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, para verificar se o método `TalkToOwner` funciona corretamente para o tipo `Bird`.</span><span class="sxs-lookup"><span data-stu-id="f975d-154">Optional exercise: If you added a `Bird` type earlier that yields a `Tweet!` to the owner, add a test method to the *PetTests.cs* file, `BirdTalkToOwnerReturnsTweet`, to check that the `TalkToOwner` method works correctly for the `Bird` type.</span></span>
+<span data-ttu-id="4f8c6-154">Exercício opcional: Se você já tiver adicionado um tipo `Bird` anteriormente que produz um `Tweet!` para o proprietário, adicione um método de teste ao arquivo *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, para verificar se o método `TalkToOwner` funciona corretamente para o tipo `Bird`.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-154">Optional exercise: If you added a `Bird` type earlier that yields a `Tweet!` to the owner, add a test method to the *PetTests.cs* file, `BirdTalkToOwnerReturnsTweet`, to check that the `TalkToOwner` method works correctly for the `Bird` type.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f975d-155">Embora você espere que os valores `expected` e `actual` sejam iguais, uma declaração inicial com a verificação `Assert.NotEqual` especifica que esses valores *não são iguais*.</span><span class="sxs-lookup"><span data-stu-id="f975d-155">Although you expect that the `expected` and `actual` values are equal, an initial assertion with the `Assert.NotEqual` check specifies that these values are *not equal*.</span></span> <span data-ttu-id="f975d-156">Sempre crie inicialmente os testes para falhar para verificar a lógica do teste.</span><span class="sxs-lookup"><span data-stu-id="f975d-156">Always initially create a test to fail in order to check the logic of the test.</span></span> <span data-ttu-id="f975d-157">Depois de confirmar que o teste falhou, ajuste a declaração para permitir que o teste seja aprovado.</span><span class="sxs-lookup"><span data-stu-id="f975d-157">After you confirm that the test fails, adjust the assertion to allow the test to pass.</span></span>
+> <span data-ttu-id="4f8c6-155">Embora você espere que os valores `expected` e `actual` sejam iguais, uma declaração inicial com a verificação `Assert.NotEqual` especifica que esses valores *não são iguais*.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-155">Although you expect that the `expected` and `actual` values are equal, an initial assertion with the `Assert.NotEqual` check specifies that these values are *not equal*.</span></span> <span data-ttu-id="4f8c6-156">Sempre crie inicialmente os testes para falhar para verificar a lógica do teste.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-156">Always initially create a test to fail in order to check the logic of the test.</span></span> <span data-ttu-id="4f8c6-157">Depois de confirmar que o teste falhou, ajuste a declaração para permitir que o teste seja aprovado.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-157">After you confirm that the test fails, adjust the assertion to allow the test to pass.</span></span>
 
-<span data-ttu-id="f975d-158">O código a seguir mostra a estrutura do projeto completo:</span><span class="sxs-lookup"><span data-stu-id="f975d-158">The following shows the complete project structure:</span></span>
+<span data-ttu-id="4f8c6-158">O código a seguir mostra a estrutura do projeto completo:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-158">The following shows the complete project structure:</span></span>
 
 ```
 /NewTypes
@@ -182,12 +182,11 @@ public class PetTests
       |__NewTypesTests.csproj
 ```
 
-<span data-ttu-id="f975d-159">Inicie no diretório *test/NewTypesTests*.</span><span class="sxs-lookup"><span data-stu-id="f975d-159">Start in the *test/NewTypesTests* directory.</span></span> <span data-ttu-id="f975d-160">Restaure o projeto de teste com o comando [`dotnet restore`](../tools/dotnet-restore.md).</span><span class="sxs-lookup"><span data-stu-id="f975d-160">Restore the test project with the [`dotnet restore`](../tools/dotnet-restore.md) command.</span></span> <span data-ttu-id="f975d-161">Execute os testes com o comando [`dotnet test`](../tools/dotnet-test.md).</span><span class="sxs-lookup"><span data-stu-id="f975d-161">Run the tests with the [`dotnet test`](../tools/dotnet-test.md) command.</span></span> <span data-ttu-id="f975d-162">Esse comando inicia o executor de teste especificado no arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="f975d-162">This command starts the test runner specified in the project file.</span></span>
+<span data-ttu-id="4f8c6-159">Inicie no diretório *test/NewTypesTests*.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-159">Start in the *test/NewTypesTests* directory.</span></span> <span data-ttu-id="4f8c6-160">Restaure o projeto de teste com o comando [`dotnet restore`](../tools/dotnet-restore.md).</span><span class="sxs-lookup"><span data-stu-id="4f8c6-160">Restore the test project with the [`dotnet restore`](../tools/dotnet-restore.md) command.</span></span> <span data-ttu-id="4f8c6-161">Execute os testes com o comando [`dotnet test`](../tools/dotnet-test.md).</span><span class="sxs-lookup"><span data-stu-id="4f8c6-161">Run the tests with the [`dotnet test`](../tools/dotnet-test.md) command.</span></span> <span data-ttu-id="4f8c6-162">Esse comando inicia o executor de teste especificado no arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-162">This command starts the test runner specified in the project file.</span></span>
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
-<span data-ttu-id="f975d-163">Conforme o esperado, o teste falha e o console exibe a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="f975d-163">As expected, testing fails, and the console displays the following output:</span></span>
+<span data-ttu-id="4f8c6-163">Conforme o esperado, o teste falha e o console exibe a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-163">As expected, testing fails, and the console displays the following output:</span></span>
 
 ```
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
@@ -217,11 +216,11 @@ Test Run Failed.
 Test execution time: 1.7000 Seconds
 ```
 
-<span data-ttu-id="f975d-164">Altere as asserções de seus testes de `Assert.NotEqual` para `Assert.Equal`:</span><span class="sxs-lookup"><span data-stu-id="f975d-164">Change the assertions of your tests from `Assert.NotEqual` to `Assert.Equal`:</span></span>
+<span data-ttu-id="4f8c6-164">Altere as asserções de seus testes de `Assert.NotEqual` para `Assert.Equal`:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-164">Change the assertions of your tests from `Assert.NotEqual` to `Assert.Equal`:</span></span>
 
 [!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
 
-<span data-ttu-id="f975d-165">Execute novamente os testes com o comando `dotnet test` e obtenha a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="f975d-165">Re-run the tests with the `dotnet test` command and obtain the following output:</span></span>
+<span data-ttu-id="4f8c6-165">Execute novamente os testes com o comando `dotnet test` e obtenha a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="4f8c6-165">Re-run the tests with the `dotnet test` command and obtain the following output:</span></span>
 
 ```
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
@@ -235,7 +234,6 @@ Test Run Successful.
 Test execution time: 1.6029 Seconds
 ```
 
-<span data-ttu-id="f975d-166">O teste é aprovado.</span><span class="sxs-lookup"><span data-stu-id="f975d-166">Testing passes.</span></span> <span data-ttu-id="f975d-167">Os métodos dos tipos de animais de estimação retornam os valores corretos ao conversar com o proprietário.</span><span class="sxs-lookup"><span data-stu-id="f975d-167">The pet types' methods return the correct values when talking to the owner.</span></span>
+<span data-ttu-id="4f8c6-166">O teste é aprovado.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-166">Testing passes.</span></span> <span data-ttu-id="4f8c6-167">Os métodos dos tipos de animais de estimação retornam os valores corretos ao conversar com o proprietário.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-167">The pet types' methods return the correct values when talking to the owner.</span></span>
 
-<span data-ttu-id="f975d-168">Você aprendeu técnicas para organizar e testar projetos usando xUnit.</span><span class="sxs-lookup"><span data-stu-id="f975d-168">You've learned techniques for organizing and testing projects using xUnit.</span></span> <span data-ttu-id="f975d-169">Prossiga com essas técnicas aplicando-as em seus próprios projetos.</span><span class="sxs-lookup"><span data-stu-id="f975d-169">Go forward with these techniques applying them in your own projects.</span></span> <span data-ttu-id="f975d-170">*Boa codificação!*</span><span class="sxs-lookup"><span data-stu-id="f975d-170">*Happy coding!*</span></span>
-
+<span data-ttu-id="4f8c6-168">Você aprendeu técnicas para organizar e testar projetos usando xUnit.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-168">You've learned techniques for organizing and testing projects using xUnit.</span></span> <span data-ttu-id="4f8c6-169">Prossiga com essas técnicas aplicando-as em seus próprios projetos.</span><span class="sxs-lookup"><span data-stu-id="4f8c6-169">Go forward with these techniques applying them in your own projects.</span></span> <span data-ttu-id="4f8c6-170">*Boa codificação!*</span><span class="sxs-lookup"><span data-stu-id="4f8c6-170">*Happy coding!*</span></span>

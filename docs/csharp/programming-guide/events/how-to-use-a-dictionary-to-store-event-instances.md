@@ -1,25 +1,29 @@
 ---
-title: 'Como: usar um dicionário para armazenar instâncias de eventos – Guia de Programação em C#'
+title: Como usar um dicionário para armazenar instâncias de eventos - Guia de Programação em C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 03/11/2019
 helpviewer_keywords:
 - events [C#], storing instances in a Dictionary
 ms.assetid: 9512c64d-5aaf-40cd-b941-ca2a592f0064
-ms.openlocfilehash: f3b8e313bd0b1bd3973102caebb9bbc9da620ae6
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f8522e499887398402f63c7788bbc6c6c4f57782
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203026"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845262"
 ---
-# <a name="how-to-use-a-dictionary-to-store-event-instances-c-programming-guide"></a><span data-ttu-id="e5451-102">Como: usar um dicionário para armazenar instâncias de eventos (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="e5451-102">How to: Use a Dictionary to Store Event Instances (C# Programming Guide)</span></span>
-<span data-ttu-id="e5451-103">Um uso de `accessor-declarations` é expor muitos eventos sem alocar um campo para cada evento em vez de usar um dicionário para armazenar as instâncias de eventos.</span><span class="sxs-lookup"><span data-stu-id="e5451-103">One use for `accessor-declarations` is to expose many events without allocating a field for each event, but instead using a Dictionary to store the event instances.</span></span> <span data-ttu-id="e5451-104">Isso só é útil se você tiver muitos eventos, mas espera que a maioria dos eventos não seja implementada.</span><span class="sxs-lookup"><span data-stu-id="e5451-104">This is only useful if you have many events, but you expect most of the events will not be implemented.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="e5451-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e5451-105">Example</span></span>  
- [!code-csharp[csProgGuideEvents#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#9)]  
-  
-## <a name="see-also"></a><span data-ttu-id="e5451-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e5451-106">See also</span></span>
+# <a name="how-to-use-a-dictionary-to-store-event-instances-c-programming-guide"></a><span data-ttu-id="82abc-102">Como usar um dicionário para armazenar instâncias de eventos - Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="82abc-102">How to: use a dictionary to store event instances (C# Programming Guide)</span></span>
 
-- [<span data-ttu-id="e5451-107">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="e5451-107">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="e5451-108">Eventos</span><span class="sxs-lookup"><span data-stu-id="e5451-108">Events</span></span>](../../../csharp/programming-guide/events/index.md)
-- [<span data-ttu-id="e5451-109">Delegados</span><span class="sxs-lookup"><span data-stu-id="e5451-109">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)
+<span data-ttu-id="82abc-103">Um uso para os acessadores de eventos personalizados `add` e `remove` é expor muitos eventos sem alocar um campo para cada um deles; em vez disso, usando uma instância <xref:System.Collections.Generic.Dictionary%602> para armazenar as instâncias de eventos, como demonstra o exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="82abc-103">One use for the `add` and `remove` custom event accessors is to expose many events without allocating a field for each event, but instead using a <xref:System.Collections.Generic.Dictionary%602> instance to store the event instances, as the example below demonstrates.</span></span> <span data-ttu-id="82abc-104">Isso só será útil se você tiver muitos eventos, mas presume que não haverá subscrição à maioria deles.</span><span class="sxs-lookup"><span data-stu-id="82abc-104">This is only useful if a type has many events, but you expect that most of the events will not be subscribed to.</span></span>
+
+[!code-csharp[csProgGuideEvents#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#9)]
+
+<span data-ttu-id="82abc-105">Essa implementação está de acordo com o comportamento de [adição e remoção de delegados](~/_csharplang/spec/delegates.md#delegate-invocation) na especificação da linguagem C#.</span><span class="sxs-lookup"><span data-stu-id="82abc-105">This implementation conforms to the behavior for [adding and removing delegates](~/_csharplang/spec/delegates.md#delegate-invocation) in the C# language specification.</span></span>
+
+<span data-ttu-id="82abc-106">Observe que a instrução [lock](../../language-reference/keywords/lock-statement.md) é usada somente para *acessar* o dicionário com manipuladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="82abc-106">Note that the [lock](../../language-reference/keywords/lock-statement.md) statement is used only to *access* the dictionary with event handlers.</span></span> <span data-ttu-id="82abc-107">Não invoque um manipulador de eventos dentro do corpo da instrução `lock`, pois ela poderia levar a deadlocks ou contenção de bloqueio.</span><span class="sxs-lookup"><span data-stu-id="82abc-107">Don't invoke an event handler inside the body of the `lock` statement, as it could lead to deadlocks or lock contention.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="82abc-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="82abc-108">See also</span></span>
+
+- [<span data-ttu-id="82abc-109">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="82abc-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="82abc-110">Eventos</span><span class="sxs-lookup"><span data-stu-id="82abc-110">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+- [<span data-ttu-id="82abc-111">Delegados</span><span class="sxs-lookup"><span data-stu-id="82abc-111">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)
