@@ -4,12 +4,12 @@ description: Saiba como selecionar um aplicativo de console do .NET Framework e 
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145274"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126078"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Executando aplicativos de console em contêineres do Windows
 
@@ -50,7 +50,7 @@ Contêineres do Windows têm suporte na [Atualização de Aniversário do Window
 
 Você precisa ter o Docker para Windows, na versão 1.12 Beta 26 ou superior, para dar suporte a contêineres do Windows. Por padrão, o Docker habilita contêineres baseados em Linux. Alterne para contêineres do Windows clicando com o botão direito do mouse no ícone do Docker na bandeja do sistema e selecione **Alternar para contêineres do Windows**. O Docker executará o processo de alteração e talvez seja necessário reiniciar.
 
-![Contêineres do Windows](./media/console/SwitchContainer.png)
+![Captura de tela da opção de menu de contêiner do Windows.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Compilando o aplicativo
 Normalmente, os aplicativos de console são distribuídos por meio de um instalador, FTP ou implantação de Compartilhamento de arquivos. Durante a implantação em um contêiner, os ativos precisam ser compilados e preparados em um local que possa ser usado quando a imagem do Docker for criada.

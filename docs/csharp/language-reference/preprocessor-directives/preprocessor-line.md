@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 81c719698e1dc3462e13c149c0f6a26657052f5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51cffe40321aad2c91fb9a09821531545a415aec
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740538"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845915"
 ---
 # <a name="line-c-reference"></a>#line (Referência de C#)
 O `#line` permite modificar o número de linha do compilador e (opcionalmente) a saída do nome de arquivo para erros e avisos.
 
-O exemplo a seguir mostra como relatar dois avisos associados aos números de linha. A diretiva `#line 200` força o próximo número de linha a ser 200 (embora o padrão seja #6) e, até a próxima diretiva #line, o nome de arquivo será relatado como "Especial". A diretiva padrão #line retorna a numeração de linhas à sua numeração padrão, que conta as linhas que foram renumeradas pela diretiva anterior.  
+O exemplo a seguir mostra como relatar dois avisos associados aos números de linha. A diretiva `#line 200` força o próximo número de linha a ser 200 (embora o padrão seja #6) e, até a próxima diretiva `#line`, o nome de arquivo será relatado como "Special". A diretiva `#line default` retorna a numeração de linhas à sua numeração padrão, que conta as linhas que foram renumeradas pela diretiva anterior.  
   
 ```csharp
 class MainClass  

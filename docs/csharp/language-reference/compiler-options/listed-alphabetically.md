@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d225a4bf9da35a59a409a783347ec407b49bf16a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677720"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58037705"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opções do compilador de C# listadas em ordem alfabética
 
@@ -29,7 +29,7 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 |[-baseaddress](baseaddress-compiler-option.md)|Especifica o endereço básico para a biblioteca a ser criada.|
 |[-bugreport](bugreport-compiler-option.md)|Cria um arquivo 'Bug Report'. Esse arquivo será enviado junto com informações de falha se for usado com -errorreport:prompt ou -errorreport:send.|
 |[/checked](checked-compiler-option.md)|Faz com que o compilador gere verificações de estouro.|
-|-checksumalgorithm:\<alg>|Especifica o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores compatíveis são: SHA1 (padrão) ou SHA256.|
+|-checksumalgorithm:\<alg>|Especifica o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores compatíveis são: SHA1 (padrão) ou SHA256.<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256. |
 |[-codepage](codepage-compiler-option.md)|Especifica a página de código a ser usada ao abrir arquivos de origem.|
 |[-debug](debug-compiler-option.md)|Emite informações de depuração.|
 |[-define](define-compiler-option.md)|Define símbolos de compilação condicional.|

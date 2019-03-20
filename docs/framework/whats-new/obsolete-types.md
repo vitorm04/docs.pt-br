@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6db80e4cb1f54ed58dabf84f4a88f1b3db616ea
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443108"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58049733"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos no .NET Framework
-<a name="introduction"></a>As tabelas deste artigo listam os tipos que estão obsoletos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizados por assembly. Use os links a seguir para ver uma lista dos tipos obsoletos e das alternativas recomendadas em cada assembly. Como esses tipos são obsoletos, todos seus membros também estão obsoletos. Para obter uma lista de membros obsoletos adicionais na biblioteca de classes .NET Framework, confira [Membros obsoletos](../../../docs/framework/whats-new/obsolete-members.md).
+<a name="introduction"></a>As tabelas deste artigo listam os tipos que estão obsoletos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizados por assembly. Use os links a seguir para ver uma lista dos tipos obsoletos e das alternativas recomendadas em cada assembly. Como esses tipos são obsoletos, todos seus membros também estão obsoletos. Para obter uma lista de membros obsoletos adicionais na biblioteca de classes .NET Framework, confira [Membros obsoletos](obsolete-members.md).
 
 -   [Tipos obsoletos em assemblies de sistema](#obsolete_types_in_system_assemblies)
 
@@ -779,5 +779,5 @@ Para obter informações sobre a migração do Visual Basic 6, consulte [Centro 
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll é um assembly obsoleto e existe somente para compatibilidade com versões anteriores.|
 
 ## <a name="see-also"></a>Consulte também
-- [O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Membros obsoletos](../../../docs/framework/whats-new/obsolete-members.md)
+- [O que está obsoleto na Biblioteca de Classes](whats-obsolete.md)
+- [Membros obsoletos](obsolete-members.md)

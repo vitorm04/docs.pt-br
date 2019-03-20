@@ -3,12 +3,12 @@ title: Iterators
 description: Saiba como usar iteradores C# internos e como criar seus próprios métodos iteradores personalizados.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: d9139f565fb1e426cc1b8cef530187877bdde0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218339"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126039"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -27,7 +27,7 @@ Este tutorial tem várias etapas. Após cada etapa, você poderá executar o apl
 
 ## <a name="iterating-with-foreach"></a>iterando com foreach
 
-Enumerar uma coleção é simples: a palavra-chave `foreach` enumera uma coleção, executando a instrução inserida uma vez para cada elemento na coleção:
+Enumerar uma coleção é simples: A palavra-chave `foreach` enumera uma coleção, executando a instrução inserida uma vez para cada elemento na coleção:
  
 ```csharp
 foreach (var item in collection)
@@ -191,7 +191,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-Isso foi alterado porque o comportamento anterior poderia levar a bugs sutis e difíceis de diagnosticar envolvendo expressões lambda. Consulte a seção sobre [expressões lambda](lambda-expressions.md) para obter mais informações. 
+Isso foi alterado porque o comportamento anterior poderia levar a bugs sutis e difíceis de diagnosticar envolvendo expressões lambda. Para saber mais sobre expressões lambda, confira o artigo sobre [expressões lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md).
 
 O código exato gerado pelo compilador é um pouco mais complicada e lida com situações em que o objeto retornado por `GetEnumerator()` implementa a interface `IDisposable`. A expansão completa gera um código mais semelhante a esse:
 

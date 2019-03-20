@@ -1,17 +1,17 @@
 ---
-title: Introdução ao .NET Core em macOS usando o Visual Studio para Mac
+title: Introdução ao .NET Core no macOS, usando o Visual Studio para Mac
 description: Este tópico explica como compilar um aplicativo de console simples usando o Visual Studio para Mac e o .NET Core.
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 471bdfdaa10b2d66c19177ae36b8bd18ce19e468
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ed6c25f424e1b87c1a18a3654f756500af9f78de
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169567"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788616"
 ---
-# <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introdução ao .NET Core em macOS usando o Visual Studio para Mac
+# <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introdução ao .NET Core no macOS, usando o Visual Studio para Mac
 
 O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) completo para desenvolver aplicativos .NET Core. Este tópico explica como compilar um aplicativo de console simples usando o Visual Studio para Mac e o .NET Core.
 
@@ -24,7 +24,7 @@ O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) 
 
 Confira o tópico [Pré-requisitos para .NET Core no Mac](../../core/macos-prerequisites.md).
 
-## <a name="getting-started"></a>Introdução
+## <a name="get-started"></a>Introdução
 
 Se você já tiver instalado os pré-requisitos e o Visual Studio para Mac, ignore esta seção e vá até [Criar um projeto](#creating-a-project). Execute estas etapas para instalar os pré-requisitos e o Visual Studio para Mac:
 

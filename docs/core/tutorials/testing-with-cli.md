@@ -4,16 +4,16 @@ description: Este tutorial explica como organizar e testar projetos do .NET Core
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242693"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57845902"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizando e testando projetos com a linha de comando do .NET Core
 
-Este tutorial segue a [Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando](using-with-xplat-cli.md), levando você além da criação de um simples aplicativo de console para desenvolver aplicativos avançados e bem organizados. Depois de mostrar como usar pastas para organizar seu código, este tutorial mostra como estender um aplicativo de console com a estrutura de teste [xUnit](https://xunit.github.io/).
+Este tutorial segue a [Introdução ao .NET Core no Windows/Linux/macOS, usando a linha de comando](using-with-xplat-cli.md), e leva você além da criação de um simples aplicativo de console para desenvolver aplicativos avançados e bem organizados. Depois de mostrar como usar pastas para organizar seu código, este tutorial mostra como estender um aplicativo de console com a estrutura de teste [xUnit](https://xunit.github.io/).
 
 ## <a name="using-folders-to-organize-code"></a>Usar pastas para organizar o código
 
@@ -48,7 +48,7 @@ Projetos que agrupam arquivos em pastas de forma lógica são fáceis de navegar
 
 Para as etapas a seguir, você pode acompanhar usando o [NewTypes Pets Sample](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) (Exemplo Pets de NewTypes) ou criar seus próprios arquivos e pastas. Os tipos são organizados logicamente em uma estrutura de pastas que permite a adição de mais tipos posteriormente e os testes também são posicionados logicamente nas pastas, permitindo a adição de mais testes posteriormente.
 
-Esse exemplo contém dois tipos, `Dog` e `Cat`, e faz com que eles implementem uma interface comum, `IPet`. Para o projeto `NewTypes`, sua meta é organizar os tipos relacionados a animais de estimação em uma pasta *Pets*. Se outro conjunto de tipos for adicionado posteriormente, *WildAnimals* por exemplo, ele será colocado na pasta *NewTypes* junto com a pasta *Pets*. A pasta *WildAnimals* pode conter tipos de animais que não são animais de estimação, como os tipos `Squirrel` e `Rabbit`. Dessa forma, conforme os tipos são adicionados, o projeto continua bem organizado. 
+Esse exemplo contém dois tipos, `Dog` e `Cat`, e faz com que eles implementem uma interface comum, `IPet`. Para o projeto `NewTypes`, sua meta é organizar os tipos relacionados a animais de estimação em uma pasta *Pets*. Se outro conjunto de tipos for adicionado posteriormente, *WildAnimals* por exemplo, ele será colocado na pasta *NewTypes* junto com a pasta *Pets*. A pasta *WildAnimals* pode conter tipos de animais que não são animais de estimação, como os tipos `Squirrel` e `Rabbit`. Dessa forma, conforme os tipos são adicionados, o projeto continua bem organizado.
 
 Crie a seguinte estrutura de pasta com o conteúdo do arquivo indicado:
 
@@ -144,16 +144,16 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
@@ -184,9 +184,8 @@ O código a seguir mostra a estrutura do projeto completo:
 
 Inicie no diretório *test/NewTypesTests*. Restaure o projeto de teste com o comando [`dotnet restore`](../tools/dotnet-restore.md). Execute os testes com o comando [`dotnet test`](../tools/dotnet-test.md). Esse comando inicia o executor de teste especificado no arquivo de projeto.
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 Conforme o esperado, o teste falha e o console exibe a seguinte saída:
 
 ```
@@ -238,4 +237,3 @@ Test execution time: 1.6029 Seconds
 O teste é aprovado. Os métodos dos tipos de animais de estimação retornam os valores corretos ao conversar com o proprietário.
 
 Você aprendeu técnicas para organizar e testar projetos usando xUnit. Prossiga com essas técnicas aplicando-as em seus próprios projetos. *Boa codificação!*
-

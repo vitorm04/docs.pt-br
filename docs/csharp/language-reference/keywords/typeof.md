@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: 3fa82a6faee345be77fc8ea3f5aa3342adecb0f5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f218414bf60a86b95461d747fb6c557f03bcfcb3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244837"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846107"
 ---
 # <a name="typeof-c-reference"></a>typeof (Referência de C#)
 
@@ -34,7 +34,13 @@ System.Type type = i.GetType();
 
 O operador `typeof` não pode ser sobrecarregado.
 
-O operador `typeof` também pode ser usado em tipos genéricos abertos. Tipos com mais de um parâmetro de tipo devem ter o número apropriado de vírgulas na especificação. O exemplo a seguir mostra como determinar se o tipo de retorno de um método é um <xref:System.Collections.Generic.IEnumerable%601> genérico. <xref:System.Type.GetInterface%2A?displayProperty=nameWithType> retornará `null` se o tipo de retorno não for um tipo genérico <xref:System.Collections.Generic.IEnumerable%601>.
+O operador `typeof` também pode ser usado em tipos genéricos abertos. Tipos com mais de um parâmetro de tipo devem ter o número apropriado de vírgulas na especificação. Por exemplo, o <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWIthType> tem dois argumentos de tipo, então, você usa uma vírgula:
+
+```csharp
+Type t = typeof(System.Collection.Generic.Dictionary<,>);
+```
+
+O exemplo a seguir mostra como determinar se o tipo de retorno de um método é um <xref:System.Collections.Generic.IEnumerable%601> genérico. <xref:System.Type.GetInterface%2A?displayProperty=nameWithType> retornará `null` se o tipo de retorno não for um tipo genérico <xref:System.Collections.Generic.IEnumerable%601>.
 
 [!code-csharp[typeof_3.cs](~/samples/snippets/csharp/keywords/typeof/typeof_3.cs)]
 

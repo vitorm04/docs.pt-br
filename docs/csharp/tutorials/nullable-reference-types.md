@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442094"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846578"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos de referência que não permitem valor nulo
 
@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá a:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core, incluindo o compilador beta do C# 8.0. O compilador beta do C# 8 está disponível com o [Visual Studio 2019 versão prévia 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou o [.NET Core 3.0 versão prévia 2](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Você precisará configurar seu computador para executar o .NET Core, incluindo o compilador beta do C# 8.0. O compilador beta do C# 8 está disponível com o [Visual Studio 2019 versão prévia 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou o [.NET Core 3.0 versão prévia 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 

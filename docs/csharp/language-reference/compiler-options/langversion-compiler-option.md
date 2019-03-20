@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 19d7f20bf33de6e23860d475f38d49553049dec1
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: af30095c18a333d5ac3089fe3bf201c32739d9cf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211956"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846344"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opções do compilador C#)
 

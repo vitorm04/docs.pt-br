@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202347"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125909"
 ---
 # <a name="inheritance-c-programming-guide"></a>Herança (Guia de Programação em C#)
 
@@ -30,8 +30,7 @@ A herança, assim como o encapsulamento e o polimorfismo, é uma das três princ
   
  A ilustração a seguir mostra uma classe `WorkItem` que representa um item de trabalho em um processo comercial. Como todas as classes, ela deriva de <xref:System.Object?displayProperty=nameWithType> e herda todos os seus métodos. `WorkItem` adiciona cinco membros próprios. Eles incluem um construtor, porque os construtores não são herdados. A classe `ChangeRequest` herda de `WorkItem` e representa um tipo específico de item de trabalho. `ChangeRequest` adiciona mais dois membros aos membros que herda de `WorkItem` e de <xref:System.Object>. Ele deve adicionar seu próprio construtor e também adiciona `originalItemID`. A propriedade `originalItemID` permite que a instância `ChangeRequest` seja associada ao `WorkItem` original a que a solicitação de alteração se aplica.  
   
- ![Herança de classe](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-Herança de classe  
+ ![Diagrama que mostra a herança de classe](./media/inheritance/class-inheritance-diagram.png)  
   
  O exemplo a seguir mostra como as relações entre as classes demonstradas na ilustração anterior são expressos em C#. O exemplo também mostra como `WorkItem` substitui o método virtual <xref:System.Object.ToString%2A?displayProperty=nameWithType> e como a classe `ChangeRequest` herda a implementação de `WorkItem` do método.  
   

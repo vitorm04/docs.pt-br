@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677520"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57844730"
 ---
 # <a name="async-in-depth"></a>Assincronia detalhada
 
@@ -21,12 +21,12 @@ Escrever código assíncrono vinculado à CPU ou à E/S é simples usando o mode
 
 Tarefas são constructos usados para implementar o que é conhecido como o [modelo de promessa de simultaneidade](https://en.wikipedia.org/wiki/Futures_and_promises).  Em resumo, elas oferecem a você uma “promessa” de que o trabalho será concluído em um momento posterior, permitindo que você coordene a promessa com uma API limpa.
 
-*   `Task` representa uma única operação que não retorna um valor.
-*   `Task<T>` representa uma única operação que retorna um valor do tipo `T`.
+* `Task` representa uma única operação que não retorna um valor.
+* `Task<T>` representa uma única operação que retorna um valor do tipo `T`.
 
 É importante pensar nas tarefas como abstrações do trabalho ocorrendo de maneira assíncrona e *não* uma abstração de threading. Por padrão, as tarefas são executadas no thread atual e delegam o trabalho para o sistema operacional, conforme apropriado. Opcionalmente, as tarefas podem ser solicitadas explicitamente para serem executadas em um thread separado por meio da API `Task.Run`.
 
-As tarefas expõem um protocolo de API para monitoramento, aguardando e acessando o valor do resultado (no caso de `Task<T>`) de uma tarefa. A integração de linguagem, com a palavra-chave `await`, fornece uma abstração de nível mais alto para o uso de tarefas. 
+As tarefas expõem um protocolo de API para monitoramento, aguardando e acessando o valor do resultado (no caso de `Task<T>`) de uma tarefa. A integração de linguagem, com a palavra-chave `await`, fornece uma abstração de nível mais alto para o uso de tarefas.
 
 O uso de `await` permite que seu aplicativo ou serviço realize um trabalho útil enquanto uma tarefa estiver em execução gerando o controle para seu chamador até que a tarefa seja concluída. Seu código não precisa contar com retornos de chamada ou eventos para continuar a execução após a tarefa ter sido concluída. A integração da API da tarefa e da linguagem faz isso para você. Se você estiver usando `Task<T>`, a palavra-chave `await` "desencapsulará" adicionalmente o valor retornado quando a Tarefa for concluída.  Os detalhes de como isso funciona são explicados mais abaixo.
 
@@ -43,7 +43,7 @@ public Task<string> GetHtmlAsync()
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
@@ -55,14 +55,14 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
     var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
-    
+
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
-    
+
     if (count > page.Length)
     {
         return page;
@@ -74,7 +74,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-A chamada para `GetStringAsync()` realiza a chamada por bibliotecas .NET de níveis inferiores (talvez chamando outros métodos assíncronos) até atingir uma chamada de interoperabilidade P/Invoke em uma biblioteca de rede nativa. A biblioteca nativa pode chamar subsequentemente uma chamada à API do sistema (como `write()` para um soquete no Linux). Um objeto de tarefa será criado no limite nativo/gerenciado, possivelmente usando [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). O objeto de tarefa será passado pelas camadas, possivelmente operado ou retornado diretamente, finalmente retornado ao chamador inicial. 
+A chamada para `GetStringAsync()` realiza a chamada por bibliotecas .NET de níveis inferiores (talvez chamando outros métodos assíncronos) até atingir uma chamada de interoperabilidade P/Invoke em uma biblioteca de rede nativa. A biblioteca nativa pode chamar subsequentemente uma chamada à API do sistema (como `write()` para um soquete no Linux). Um objeto de tarefa será criado no limite nativo/gerenciado, possivelmente usando [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). O objeto de tarefa será passado pelas camadas, possivelmente operado ou retornado diretamente, finalmente retornado ao chamador inicial.
 
 No segundo exemplo acima, um objeto `Task<T>` será retornado de `GetStringAsync`. O uso da palavra-chave `await` faz com que o método retorne um objeto de tarefa recém-criado. O controle retorna para o chamador desse local no método `GetFirstCharactersCountAsync`. Os métodos e propriedades do objeto [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) permitem que os chamadores monitorem o progresso da tarefa, que será concluída quando o código restante em GetFirstCharactersCountAsync for executado.
 
@@ -90,9 +90,9 @@ Embora o descrito acima possa parecer muito trabalho a ser feito, quando medido 
 
 0-1————————————————————————————————————————————————–2-3
 
-*   O tempo gasto dos pontos `0` até `1` é tudo até um método assíncrono gerar o controle para seu chamador.
-*   O tempo gasto dos pontos `1` até `2` é o tempo gasto na E/S, sem custo de CPU.
-*   Por fim, o tempo gasto dos pontos `2` até `3` está passando o controle de volta (e potencialmente um valor) para o método assíncrono, ponto no qual está sendo executado novamente.
+* O tempo gasto dos pontos `0` até `1` é tudo até um método assíncrono gerar o controle para seu chamador.
+* O tempo gasto dos pontos `1` até `2` é o tempo gasto na E/S, sem custo de CPU.
+* Por fim, o tempo gasto dos pontos `2` até `3` está passando o controle de volta (e potencialmente um valor) para o método assíncrono, ponto no qual está sendo executado novamente.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>O que isso significa para um cenário de servidor?
 
@@ -125,13 +125,13 @@ public async Task<int> CalculateResult(InputData data)
 {
     // This queues up the work on the threadpool.
     var expensiveResultTask = Task.Run(() => DoExpensiveCalculation(data));
-    
+
     // Note that at this point, you can do some other work concurrently,
     // as CalculateResult() is still executing!
-    
+
     // Execution of CalculateResult is yielded here!
     var result = await expensiveResultTask;
-    
+
     return result;
 }
 ```

@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 8b9d87922b543f97d4b36a37759d661298318e1e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362256"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57846279"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Criar um aplicativo Olá, Mundo em Visual Basic com o SDK do .NET Core no Visual Studio 2017
 
@@ -82,9 +82,6 @@ Você criou e executou seu aplicativo. Para desenvolver um aplicativo profission
 
 - Para publicar uma versão distribuível do seu aplicativo, confira [Publicar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017](publishing-with-visual-studio.md).
 
-<!--
-## Related topics
+## <a name="related-topics"></a>Tópicos relacionados
 
-Instead of a console application, you can also build a class library with .NET Core and Visual Studio 2017. For a step-by-step introduction, see [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md).
-
-You can also develop a .NET Core console app on Mac, Linux, and Windows by using [Visual Studio Code](https://code.visualstudio.com/), a downloadable code editor. For a step-by-step tutorial, see [Getting Started with Visual Studio Code](with-visual-studio-code.md). -->
+Em vez de um aplicativo de console, você também pode compilar uma biblioteca de classes de .NET Standard com o Visual Basic, .NET Core e o Visual Studio 2017. Para ver uma introdução passo a passo, confira o artigo sobre como [Compilar uma biblioteca .NET Standard com o Visual Basic e o SDK do .NET Core no Visual Studio 2017](vb-library-with-visual-studio.md).

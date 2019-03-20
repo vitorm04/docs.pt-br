@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635969"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038181"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membros obsoletos no .NET Framework
-As tabelas deste artigo listam os membros de tipo obsoletos no .NET Framework 4.5 e em versões posteriores, organizados por assembly. Use os links a seguir para ver uma lista dos membros obsoletos e as alternativas recomendadas em cada assembly. Este tópico não lista os membros de tipos obsoletos. Para obter uma lista de tipos obsoletos, consulte [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md).  
+As tabelas deste artigo listam os membros de tipo obsoletos no .NET Framework 4.5 e em versões posteriores, organizados por assembly. Use os links a seguir para ver uma lista dos membros obsoletos e as alternativas recomendadas em cada assembly. Este tópico não lista os membros de tipos obsoletos. Para obter uma lista de tipos obsoletos, consulte [Tipos obsoletos](obsolete-types.md).  
   
 -   [Membros obsoletos em assemblies de sistema](#SystemMembers)  
   
@@ -799,5 +799,5 @@ As tabelas deste artigo listam os membros de tipo obsoletos no .NET Framework 4.
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|A chave do Registro `DynData` só funciona em Win9x, que não é compatível com essa versão do .NET Framework. Use a chave do Registro `PerformanceData` em seu lugar. Essa propriedade será removida de uma versão futura do Framework.|  
   
 ## <a name="see-also"></a>Consulte também
-- [O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md)
+- [O que está obsoleto na Biblioteca de Classes](whats-obsolete.md)
+- [Tipos obsoletos](obsolete-types.md)

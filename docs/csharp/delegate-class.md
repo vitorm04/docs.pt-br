@@ -3,12 +3,12 @@ title: System.Delegate e a palavra-chave `delegate`
 description: Aprenda sobre as classes do .NET Framework que dão suporte a delegados e como eles são mapeados para a palavra-chave “delegado”.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827294"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126169"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e a palavra-chave `delegate`
 
@@ -54,7 +54,7 @@ public Comparison<T> comparator;
 
 O tipo da variável é `Comparison<T>`, o tipo de delegado definido anteriormente. O nome da variável é `comparator`.
  
- Esse trecho de código acima declarou uma variável de membro dentro de uma classe. Você também pode declarar variáveis de delegado que são variáveis locais ou argumentos para métodos.
+ Esse snippet de código acima declarou uma variável de membro dentro de uma classe. Você também pode declarar variáveis de delegado que são variáveis locais ou argumentos para métodos.
 
 ## <a name="invoking-delegates"></a>Invocando delegados
 
@@ -67,7 +67,7 @@ int result = comparator(left, right);
 Na linha acima, o código *invoca* o método anexado ao delegado.
 Você trata a variável como um nome de método e a invoca usando a sintaxe de chamada de método normal.
 
-Essa linha de código faz uma suposição não segura: não há garantia de que um destino foi adicionado ao delegado. Se nenhum destino tiver sido anexado, a linha acima fará com que um `NullReferenceException` seja lançado. As expressões usadas para resolver esse problema são mais complicadas do que uma simples verificação de null e são abordadas posteriormente nesta [série](delegates-patterns.md).
+Essa linha de código faz uma suposição não segura: Não há nenhuma garantia de que um destino foi adicionado ao delegado. Se nenhum destino tiver sido anexado, a linha acima fará com que um `NullReferenceException` seja lançado. As expressões usadas para resolver esse problema são mais complicadas do que uma simples verificação de null e são abordadas posteriormente nesta [série](delegates-patterns.md).
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>Atribuindo, adicionando e remondo destinos de invocação
 
@@ -99,14 +99,14 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-Em usos em que o método que está sendo usado como um destino de delegado é um método pequeno, é comum usar a sintaxe da [Expressão Lambda](lambda-expressions.md) para executar a atribuição:
+Em utilizações em que o método que está sendo usado como um destinos de delegado é um método pequeno, é comum usar a sintaxe da [expressão lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) para executar a atribuição:
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);
 phrases.Sort(comparer);
 ```
 
-O uso de Expressões Lambda para destinos de delegado é mais abordado em uma [seção posterior](delegates-patterns.md).
+O uso de expressões lambda para destinos de delegado será abordado em uma [seção posterior](delegates-patterns.md).
 
 O exemplo de Sort() normalmente anexa um único método de destino ao delegado. No entanto, objetos delegados dão suporte a listas de invocação que têm vários métodos de destino anexados a um objeto de delegado.
 

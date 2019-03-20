@@ -2,19 +2,19 @@
 title: Classificando dados (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: dfa0a4a030cab8ec33c90d8edaef0d6070755034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bceb599d9e8eb3c51c07526b9ad22d3d4206efdd
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721867"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125714"
 ---
 # <a name="sorting-data-c"></a>Classificando dados (C#)
 Uma operação de classificação ordena os elementos de uma sequência com base em um ou mais atributos. O primeiro critério de classificação executa uma classificação primária dos elementos. Especificando um segundo critério de classificação, você pode classificar os elementos dentro de cada grupo de classificação primário.  
   
- A ilustração a seguir mostra os resultados de uma operação de classificação alfabética em uma sequência de caracteres.  
+ A ilustração a seguir mostra os resultados de uma operação de classificação alfabética em uma sequência de caracteres: 
   
- ![Operação de classificação no LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![Gráfico que mostra uma operação de classificação alfabética.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  Os métodos de operador de consulta padrão que classificam dados estão listados na seção a seguir.  
   

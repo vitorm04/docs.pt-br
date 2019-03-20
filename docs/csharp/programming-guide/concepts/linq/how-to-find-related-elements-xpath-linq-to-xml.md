@@ -2,12 +2,12 @@
 title: 'Como: Localizar elementos relacionados (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617402"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843333"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Como: Localizar elementos relacionados (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter um elemento que seleciona em um atributo que é chamada pelo valor de outro elemento.  
@@ -19,7 +19,7 @@ Este tópico mostra como obter um elemento que seleciona em um atributo que é c
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza o 12o elemento de `Order` , e localiza no cliente para essa ordem.  
   
- Observe a indexação em uma lista dentro. A rede é “" com base zero. A indexação em uma coleção de nós em um predicado XPath “é um” com base. Este exemplo reflete essa diferença.  
+ Observe que a indexação em uma lista no .NET é com base em “zero”. A indexação em uma coleção de nós em um predicado XPath “é um” com base. Este exemplo reflete essa diferença.  
   
  Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
