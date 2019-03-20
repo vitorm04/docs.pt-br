@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125490"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186098"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Escolhendo plataformas de computação do Azure para aplicativos baseados em contêiner
 
@@ -17,12 +17,12 @@ Como você pode ter notado depois de ler as seções anteriores, o Azure é uma 
 
 Como uma *por padrão* recomendação, o seguinte é o critério principal recomendado neste guia:
 
-  - **Aplicativo monolítico único:** Escolha o serviço de aplicativo do Azure
-  - **Aplicativo de N camadas:** Escolha orquestradores como serviço de Kubernetes do Azure (AKS), o Service Fabric (SF) ou o serviço de aplicativo, se você tiver uma única ou alguns serviços de back-end
-  - **Microsserviços do Linux:** Escolha o AKS/Kubernetes
-  - **Microsserviços do Windows:** Escolha Service Fabric
-  - **Funções sem servidor e manipuladores de eventos:** Escolha o Azure Functions
-  - **Em grande escala em lote:** Escolha o lote do Azure
+- **Aplicativo monolítico único:** Escolha o serviço de aplicativo do Azure
+- **Aplicativo de N camadas:** Escolha orquestradores como serviço de Kubernetes do Azure (AKS), o Service Fabric (SF) ou o serviço de aplicativo, se você tiver uma única ou alguns serviços de back-end
+- **Microsserviços do Linux:** Escolha o AKS/Kubernetes
+- **Microsserviços do Windows:** Escolha Service Fabric
+- **Funções sem servidor e manipuladores de eventos:** Escolha o Azure Functions
+- **Em grande escala em lote:** Escolha o lote do Azure
 
 No entanto, essa recomendação deve ser usada com uma situação de emergência de sal, como a seleção do produto depende necessidades de seu aplicativo específico e características. Nem todos os aplicativos são os mesmos, mesmo quando inicialmente, elas podem parecer similares.
 
@@ -36,6 +36,6 @@ Observe como a base do sistema operacional (Windows vs. Linux) também pode ser 
 
 No entanto, essas diferenças em maturidade do sistema operacional serão fade in no futuro e várias plataformas terão comparáveis maturidade do sistema operacional e a decisão definirá o layout mais nas preferências com base em recursos específicos do seu aplicativo, talvez seja necessário ou com base no ecossistema de cada plataforma motivos.
 
->[!div class="step-by-step"]
->[Anterior](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[Próximo](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [Anterior](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Próximo](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

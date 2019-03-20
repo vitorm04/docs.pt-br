@@ -2,12 +2,12 @@
 title: extremidade de associação
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 8c156ca1c05e22e540578adfb2be06cf477b29e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1b43dea98b65427065387aedd2305f9c7b370bd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744941"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185578"
 ---
 # <a name="association-end"></a>extremidade de associação
 Uma *final da associação* identifica as [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) em uma extremidade de um [associação](../../../../docs/framework/data/adonet/association-type.md) e o número de entidade instâncias que podem existir na fim de uma associação de tipo. Termina de associação são definidas como parte de uma associação; uma associação deve ter exatamente duas termina de associação. [Propriedades de navegação](../../../../docs/framework/data/adonet/navigation-property.md) permite a navegação de uma extremidade de associação para o outro.  
@@ -19,14 +19,14 @@ Uma *final da associação* identifica as [tipo de entidade](../../../../docs/fr
     > [!NOTE]
     >  Para uma associação determinada, o tipo de entidade especificada para cada o final da associação pode ser o mesmo. Isso cria uma dica associação.  
   
--   Uma [multiplicidade do final da associação](../../../../docs/framework/data/adonet/association-end-multiplicity.md) que indica o número de instâncias do tipo de entidade que pode estar em uma extremidade da associação. Uma multiplicidade de extremidades de associação pode ter um valor igual a um (1), a zero ou a um (0..1) ou a muitos (*).  
+-   Uma [multiplicidade do final da associação](../../../../docs/framework/data/adonet/association-end-multiplicity.md) que indica o número de instâncias do tipo de entidade que pode estar em uma extremidade da associação. Uma multiplicidade de extremidades de associação pode ter um valor de um (1), zero ou um (entre 0 e 1) ou muitas (\*).  
   
 -   Um nome para o final da associação. (Opcional)  
   
 -   Informações sobre as operações que são executadas no final da associação, como em cascata exclusão. (Opcional)  
   
 ## <a name="example"></a>Exemplo  
- O diagrama a seguir mostra um modelo conceitual com duas associações: `PublishedBy` e `WrittenBy`. Terminar a associação para associação de `PublishedBy` são os tipos de entidade de `Book` e de `Publisher` . A multiplicidade do final de `Publisher` é um (1) e a multiplicidade do final de `Book` é muitas (*), indicando que publica um editor muitos livros e um livro é publicado por um editor.  
+ O diagrama a seguir mostra um modelo conceitual com duas associações: `PublishedBy` e `WrittenBy`. Terminar a associação para associação de `PublishedBy` são os tipos de entidade de `Book` e de `Publisher` . A multiplicidade do `Publisher` final é um (1) e a multiplicidade do `Book` end é muitas (\*), indicando que um editor publica muitos livros e um livro é publicado por um editor.  
   
  ![Modelo de exemplo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   

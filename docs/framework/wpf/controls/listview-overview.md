@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379140"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186111"
 ---
 # <a name="listview-overview"></a>Visão geral de ListView
 O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para exibir um conjunto de itens de dados em diferentes layouts ou modos de exibição. Por exemplo, talvez um usuário queira exibir itens de dados em uma tabela e classificar suas colunas.  
@@ -33,7 +33,7 @@ O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para
   
  A ilustração a seguir mostra como os dados são exibidos no exemplo anterior.  
   
- ![ListView com saída de GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Captura de tela que mostra um ListView com saída de GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
  Você pode criar um modo de exibição personalizado definindo uma classe que herda o <xref:System.Windows.Controls.ViewBase> classe. O <xref:System.Windows.Controls.ViewBase> classe fornece a infraestrutura que você precisa criar uma exibição personalizada. Para obter mais informações sobre como criar uma exibição personalizada, consulte [Criar um modo de exibição personalizado para um ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   

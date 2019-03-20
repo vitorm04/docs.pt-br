@@ -2,12 +2,12 @@
 title: 'Como: Acessar um serviço de um aplicativo de fluxo de trabalho'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 790f8f24ed8a6c3b7592fb8e78befc8ee5e2214d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653691"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185422"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Como: Acessar um serviço de um aplicativo de fluxo de trabalho
 Este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicativo de console do fluxo de trabalho. Ele depende da conclusão do [como: Criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tópico. Embora este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicativo de fluxo de trabalho, os mesmos métodos podem ser usados para chamar qualquer serviço do Windows Communication Foundation (WCF) de um aplicativo de fluxo de trabalho.
@@ -20,7 +20,7 @@ Este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicat
 
 3.  Clique com botão direito do **MyWFService** solução na **Gerenciador de soluções** e selecione **Add**, **novo projeto**. Selecione **fluxo de trabalho** na **modelos instalados** e **aplicativo de Console do fluxo de trabalho** na lista de tipos de projeto. Nomeie o projeto MyWFClient e usar o local padrão, conforme mostrado na ilustração a seguir.
 
-     ![Adicionar caixa de diálogo Novo projeto](../../../../docs/framework/wcf/feature-details/media/addnewprojectdlg.JPG "AddNewProjectDlg")
+     ![Caixa de diálogo Adicionar Novo Projeto](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
      Clique o **Okey** botão para ignorar a **diálogo Adicionar novo projeto**.
 
@@ -28,37 +28,37 @@ Este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicat
 
 5.  Pressione **Ctrl**+**F5** para compilar e iniciar o serviço. Como antes, o ASP.NET Development Server é iniciado e o Internet Explorer exibe a página de Ajuda do WCF. Observe o URI para essa página, você deve usá-lo na próxima etapa.
 
-     ![IE exibindo a página de Ajuda do WCF e o URI](../../../../docs/framework/wcf/feature-details/media/iewcfhelppagewuri.JPG "IEWCFHelpPageWURI")
+     ![IE exibindo a página de Ajuda do WCF e o URI de](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
 6.  Clique com botão direito do **MyWFClient** project na **Gerenciador de soluções** e selecione **Add** > **referência de serviço**. Clique o **Discover** botão para pesquisar a solução atual para todos os serviços. Clique no triângulo ao lado de Service1.xamlx na lista de serviços. Clique no triângulo ao lado de Service1 para listar os contratos implementados pelo serviço Service1. Expanda o **Service1** nó na **Services** lista. A operação de eco é exibida na **operações** lista conforme mostrado na ilustração a seguir.
 
-     ![Adicionar caixa de diálogo de referência de serviço](../../../../docs/framework/wcf/feature-details/media/addservicereference.JPG "Adicionarreferenciaservico")
+     ![Caixa de diálogo Adicionar Referência de Serviço](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
      Mantenha o namespace padrão e clique em **Okey** para ignorar a **Add Service Reference** caixa de diálogo. A seguinte caixa de diálogo é exibida.
 
-     ![A caixa de diálogo de notificação de referência do serviço de add](../../../../docs/framework/wcf/feature-details/media/asrdlg.JPG "ASRDlg")
+     ![Adicionar caixa de diálogo de notificação de referência de serviço](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference-dialog.jpg)
 
      Clique em **Okey** para ignorar a caixa de diálogo. Em seguida, pressione CTRL + SHIFT + B para compilar a solução. Observe, na caixa de ferramentas foi adicionada uma nova seção chamada **MyWFClient.ServiceReference1.Activities**. Expanda esta seção e observe a atividade de eco que tenha sido adicionada, conforme mostrado na ilustração a seguir.
 
-     ![Atividade na caixa de ferramentas de eco](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
+     ![Atividade de eco na caixa de ferramentas](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
 7.  Arraste e solte um <xref:System.Activities.Statements.Sequence> atividade na superfície do designer. Ele está sob o **fluxo de controle** seção da caixa de ferramentas.
 
 8.  Com o <xref:System.Activities.Statements.Sequence> atividade em foco, clique em de **variáveis** vincular e adicione uma variável de cadeia de caracteres denominada `inString`. Dê à variável um valor padrão de `"Hello, world"` , bem como uma variável de cadeia de caracteres denominada `outString` conforme mostrado no diagrama a seguir.
 
-     ![Adicionando uma variável](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
+     ![Adicionando uma variável inString](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 
 9. Arraste e solte uma **Echo** atividade para o <xref:System.Activities.Statements.Sequence>. Na janela Propriedades, associar a `inMsg` argumento para o `inString` variável e o `outMsg` argumento para o `outString` variável, conforme mostrado na ilustração a seguir. Isso transmite o valor da `inString` variável para a operação e, em seguida, usa o valor de retorno e o coloca no `outString` variável.
 
-     ![Associando os argumentos a variáveis](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
+     ![Associando os argumentos a variáveis](./media/how-to-access-a-service-from-a-workflow-application/bind-arguments-variables.jpg)
 
 10. Arraste e solte uma **WriteLine** abaixo da atividade de **eco** atividade para exibir a cadeia de caracteres retornada pela chamada de serviço. O **WriteLine** atividade está localizada na **primitivos** nó na caixa de ferramentas. Associar o **texto** argumento do **WriteLine** atividade para o `outString` variável digitando `outString` na caixa de texto no **WriteLine** atividade. O fluxo de trabalho agora deve ser semelhante a ilustração a seguir.
 
-     ![O fluxo de trabalho de cliente completa](../../../../docs/framework/wcf/feature-details/media/completeclientwf.JPG "CompleteClientWF")
+     ![O fluxo de trabalho de cliente concluído](./media/how-to-access-a-service-from-a-workflow-application/complete-client-workflow.jpg)
 
 11. A solução MyWFService com o botão direito e selecione **definir projetos de inicialização...** . Selecione o **vários projetos de inicialização** botão de opção e selecione **inicie** para cada projeto na **ação** coluna, conforme mostrado na ilustração a seguir.
 
-     ![Opções de projetos de inicialização](../../../../docs/framework/wcf/feature-details/media/startupprojects.JPG "StartupProjects")
+     ![Opções de projetos de inicialização](./media/how-to-access-a-service-from-a-workflow-application/startup-project-options.jpg)
 
 12. Pressione Ctrl + F5 para iniciar o serviço e o cliente. O ASP.NET Development Server hospeda o serviço, o Internet Explorer exibe a página de Ajuda do WCF e o aplicativo de fluxo de trabalho do cliente é iniciado em uma janela do console e exibe a cadeia de caracteres retornada do serviço ("Hello, world").
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360193"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185435"
 ---
 # <a name="gridview-overview"></a>Visão geral de GridView
 <xref:System.Windows.Controls.GridView> modo de exibição é um dos modos de exibição para um <xref:System.Windows.Controls.ListView> controle. O <xref:System.Windows.Controls.GridView> classe e suas classes de suporte permitem que você e seus usuários exibir coleções de itens em uma tabela que normalmente usa botões como cabeçalhos de coluna interativos. Este tópico apresenta o <xref:System.Windows.Controls.GridView> de classe e descreve seu uso.  
@@ -26,10 +26,8 @@ ms.locfileid: "57360193"
 >  Controles de botão que <xref:System.Windows.Controls.GridView> usa para cabeçalhos de coluna é derivadas de <xref:System.Windows.Controls.Primitives.ButtonBase>.  
   
  A ilustração a seguir mostra uma <xref:System.Windows.Controls.GridView> modo de exibição de <xref:System.Windows.Controls.ListView> conteúdo.  
-  
- **Modo de exibição GridView do conteúdo de ListView**  
-  
- ![ListView estilizado](./media/styledlistview.PNG "StyledListView")  
+    
+ ![Captura de tela que mostra o modo de exibição GridView do conteúdo de ListView.](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> colunas são representadas por <xref:System.Windows.Controls.GridViewColumn> objetos, que podem dimensionar automaticamente ao seu conteúdo. Opcionalmente, você pode definir explicitamente um <xref:System.Windows.Controls.GridViewColumn> com uma largura específica. Você pode redimensionar colunas arrastando a alça entre cabeçalhos de coluna. Você pode também adicionar dinamicamente, remover, substituir e reordenar colunas porque essa funcionalidade é incorporada no <xref:System.Windows.Controls.GridView>. No entanto, <xref:System.Windows.Controls.GridView> não pode atualizar diretamente os dados que ele exibe.  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360193"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- A ilustração a seguir mostra a tabela que o exemplo anterior cria.  
-  
- **GridView que exibe dados de um ItemsSource**  
-  
- ![ListView com saída de GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ A ilustração a seguir mostra a tabela que o exemplo anterior cria. O controle GridView exibe dados de um objeto de ItemsSource:
+    
+ ![Captura de tela que mostra um ListView com saída de GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>Layout e estilo do GridView  

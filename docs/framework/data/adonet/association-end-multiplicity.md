@@ -2,12 +2,12 @@
 title: multiplicidade da extremidade da associação
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 6d1b31c5b5ead701fbe808b91d7191fb84dc86c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 151b15a6df021a25f6c3ecea00af147c6b7196ff
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502631"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185669"
 ---
 # <a name="association-end-multiplicity"></a>multiplicidade da extremidade da associação
 *Multiplicidade de extremidades de associação* define o número de [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) instâncias que podem estar em uma extremidade de uma [associação](../../../../docs/framework/data/adonet/association-type.md).  
@@ -18,12 +18,12 @@ ms.locfileid: "54502631"
   
 -   zero ou um (entre 0 e 1): Indica que zero ou uma instância de tipo de entidade existe no final da associação.  
   
--   muitos (*): indica que zero, um ou mais instâncias de tipo de entidade existem no final da associação.  
+-   muitos (\*): indica que zero, um ou mais instâncias de tipo de entidade existem no final da associação.  
   
- Uma associação é caracterizada frequentemente pelos multiplicities final da associação. Por exemplo, se as extremidades de uma associação têm um multiplicities (1) e muitos (*), a associação é chamada de um para muitos associação. No exemplo abaixo, a associação de `PublishedBy` é um para muitos associação (um editor publica muitos livros e um livro é publicado por um editor). A associação de `WrittenBy` é um muitos para muitos associação (um livro pode ter vários autores e um autor pode escrever diversos livros).  
+ Uma associação é caracterizada frequentemente pelos multiplicities final da associação. Por exemplo, se as extremidades de uma associação tem multiplicidades um (1) e muitos (\*), a associação é chamada de uma associação um-para-muitos. No exemplo abaixo, a associação de `PublishedBy` é um para muitos associação (um editor publica muitos livros e um livro é publicado por um editor). A associação de `WrittenBy` é um muitos para muitos associação (um livro pode ter vários autores e um autor pode escrever diversos livros).  
   
 ## <a name="example"></a>Exemplo  
- O diagrama a seguir mostra um modelo conceitual com duas associações: `PublishedBy` e `WrittenBy`. Terminar a associação para associação de `PublishedBy` são os tipos de entidade de `Book` e de `Publisher` . A multiplicidade do final de `Publisher` é um (1) e a multiplicidade do final de `Book` é muitas (*).  
+ O diagrama a seguir mostra um modelo conceitual com duas associações: `PublishedBy` e `WrittenBy`. Terminar a associação para associação de `PublishedBy` são os tipos de entidade de `Book` e de `Publisher` . A multiplicidade do `Publisher` final é um (1) e a multiplicidade do `Book` end é muitas (\*).  
   
  ![Modelo de exemplo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   

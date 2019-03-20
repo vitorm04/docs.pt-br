@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520458"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185721"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estruturas de controle aninhadas (Visual Basic)
 Você pode colocar instruções de controle dentro de outras instruções de controle, por exemplo uma `If...Then...Else` bloquear dentro de um `For...Next` loop. Uma instrução de controle colocada dentro de outra instrução de controle é considerada *aninhada*.  
@@ -25,7 +25,7 @@ Você pode colocar instruções de controle dentro de outras instruções de con
   
  No exemplo a seguir, o procedimento `sumRows` juntos adiciona os elementos positivos de cada linha da matriz.  
   
-```  
+```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
     Dim i, j As Integer  
     For i = 0 To UBound(a, 1)  
@@ -49,7 +49,7 @@ End Sub
 ## <a name="nesting-different-kinds-of-control-structures"></a>Aninhamento de diferentes tipos de estruturas de controle  
  Você pode aninhar um tipo de estrutura de controle dentro de outro tipo. O exemplo a seguir usa uma `With` bloquear dentro de uma `For Each` loop e aninhados `If` bloqueia dentro a `With` bloco.  
   
-```  
+```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
     With ctl  
         .BackColor = System.Drawing.Color.Yellow  
