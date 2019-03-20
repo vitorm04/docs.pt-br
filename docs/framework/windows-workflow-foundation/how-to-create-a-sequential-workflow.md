@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719631"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262573"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Como: Criar um fluxo de trabalho sequencial
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico orienta a criação de um fluxo de trabalho usa atividades internas, como o <xref:System.Activities.Statements.Sequence> atividade e atividades personalizadas do anterior [como: Criar uma atividade](how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
@@ -21,7 +21,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 > [!NOTE]
 >  Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-### <a name="to-create-the-workflow"></a>Para criar o fluxo de trabalho  
+## <a name="to-create-the-workflow"></a>Para criar o fluxo de trabalho  
   
 1.  Clique com botão direito **NumberGuessWorkflowActivities** na **Gerenciador de soluções** e selecione **Add**, **Novo Item**.  
   
@@ -31,7 +31,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 4.  Arraste uma **sequência** a atividade do **fluxo de controle** seção o **caixa de ferramentas** e solte-o no **soltar atividade aqui** rótulos no superfície de design de fluxo de trabalho.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>Para criar as variáveis e os argumentos do fluxo de trabalho  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>Para criar as variáveis e os argumentos do fluxo de trabalho  
   
 1.  Clique duas vezes em **Sequentialnumberguessworkflow** na **Gerenciador de soluções** para exibir o fluxo de trabalho no designer, caso ainda não esteja sendo exibido.  
   
@@ -62,7 +62,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 13. Clique em **variáveis** no lado inferior esquerdo do designer de atividade para fechar o **variáveis** painel.  
   
-### <a name="to-add-the-workflow-activities"></a>Para adicionar as atividades de fluxo de trabalho  
+## <a name="to-add-the-workflow-activities"></a>Para adicionar as atividades de fluxo de trabalho  
   
 1.  Arraste uma **atribuir** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-o no **sequência** atividade. Tipo `Target` para o **para** caixa e a seguinte expressão na **insira uma expressão c#** ou **insira uma expressão VB** caixa.  
   
@@ -137,13 +137,13 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 13. Clique o **WriteLine** atividade na **, em seguida,** seção para selecioná-lo e, em seguida, digite a seguinte expressão na **texto** caixa do valor de propriedade.  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. Clique o **WriteLine** atividade na **Else** seção para selecioná-lo e, em seguida, digite a seguinte expressão na **texto** caixa do valor de propriedade.  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -151,7 +151,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
      ![Fluxo de trabalho sequencial concluído](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>Para compilar o fluxo de trabalho  
+## <a name="to-build-the-workflow"></a>Para compilar o fluxo de trabalho  
   
 1.  Pressione CTRL+SHIFT+B para criar a solução.  
   
