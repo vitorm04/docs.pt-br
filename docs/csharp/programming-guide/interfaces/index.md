@@ -21,7 +21,7 @@ O nome da struct deve ser um [nome do identificador](../inside-a-program/identif
 
 Qualquer classe ou struct que implemente a interface <xref:System.IEquatable%601> deve conter uma definição para um método <xref:System.IEquatable%601.Equals%2A> que corresponda à assinatura que a interface especifica. Como resultado, você pode contar com uma classe que implementa `IEquatable<T>` para conter um método `Equals` com o qual uma instância da classe pode determinar se é igual a outra instância da mesma classe.  
   
-A definição de `IEquatable<T>` não fornece uma implementação para `Equals`. A interface define somente a assinatura. Dessa forma, uma interface em C# é semelhante a uma classe abstrata, na qual todos os métodos são abstratos. No entanto, uma classe ou struct pode implementar várias interfaces, mas uma classe pode herdar apenas uma única classe, abstrata ou não. Assim, ao usar interfaces, você pode incluir o comportamento de várias fontes em uma classe.  
+A definição de `IEquatable<T>` não fornece uma implementação para `Equals`. A interface define somente a assinatura. Dessa forma, uma interface em C# é semelhante a uma classe abstrata, na qual todos os métodos são abstratos. No entanto, uma classe ou struct pode implementar várias interfaces, mas uma classe pode herdar apenas uma única classe, abstrata ou não.
   
 Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -45,7 +45,7 @@ Uma classe base também pode implementar membros de interface usando membros vir
 
 Uma interface tem as propriedades a seguir:  
 
-- Uma interface é como uma classe base abstrata. Qualquer classe ou struct que implementa a interface deve implementar todos os seus membros.
+- Uma interface é como uma classe base abstrata que contém apenas membros abstratos. Qualquer classe ou struct que implementa a interface deve implementar todos os seus membros.
 - Uma interface não pode ser instanciada diretamente. Seus membros são implementados por qualquer classe ou struct que implemente a interface.
 - As interfaces podem conter propriedades, indexadores, métodos e eventos.
 - As interfaces não têm implementações de métodos.
