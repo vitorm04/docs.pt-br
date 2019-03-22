@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 56a4111f2e0fd290321756c43c7f245e46044b02
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254924"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348811"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners> Element
 Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento.  Esses ouvintes não recebem os rastreamentos por padrão, e não é possível recuperar esses ouvintes em tempo de execução. Ouvintes identificados como ouvintes compartilhados podem ser adicionados à fontes ou rastreamentos por nome.  
@@ -85,7 +85,7 @@ Contém os ouvintes que podem ser referenciados por qualquer elemento de origem 
       </listeners>  
     </trace>  
   </system.diagnostics>  
-</configuration></system.diagnostics>   
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Consulte também
