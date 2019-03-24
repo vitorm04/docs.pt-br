@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotnet (o driver genérico para as ferramentas da CLI do .NET Core) e seu uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 107a529952cce62dac840874fa5d6d8986376adf
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066435"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185630"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -81,9 +81,9 @@ Exibe os tempos de execução dos SDKs .NET Core instalados.
 `--roll-forward-on-no-candidate-fx <N>`
 
 Define o comportamento quando a estrutura compartilhada necessária não está disponível. `N` pode ser:
- * `0` – Desabilitar até mesmo o roll forward da versão secundária.
- * `1` – Efetuar roll forward da versão secundária, mas não da versão principal. Este é o comportamento padrão.
- * `2` – Efetuar roll forward das versões secundária e principal.
+* `0` – Desabilitar até mesmo o roll forward da versão secundária.
+* `1` – Efetuar roll forward da versão secundária, mas não da versão principal. Este é o comportamento padrão.
+* `2` – Efetuar roll forward das versões secundária e principal.
 
  Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 

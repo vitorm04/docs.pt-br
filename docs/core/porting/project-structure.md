@@ -4,12 +4,12 @@ description: Ajuda para os proprietários de projeto que desejam compilar sua so
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904018"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186059"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organize seu projeto para oferecer suporte ao .NET Framework e ao .NET Core
 
@@ -36,7 +36,7 @@ Saiba como criar uma solução compilada para .NET Framework e .NET Core simulta
 
 Considere o repositório abaixo:
 
-![Projeto existente](media/project-structure/project.png)
+![Projeto existente](./media/project-structure/existing-project-structure.png)
 
 [**Código-fonte**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
@@ -46,7 +46,7 @@ A seguir são descritas várias maneiras de adicionar suporte ao .NET Core para 
 
 Reorganize o repositório para que todos os arquivos *\*.csproj* existentes sejam removidos e seja criado um único arquivo *\*.csproj* direcionado a várias estruturas. Essa é uma ótima opção, pois um único projeto é capaz de ser compilado para estruturas diferentes. Ela também tem a capacidade de lidar com diferentes opções de compilação e dependências por estrutura de destino.
 
-![Criar um csproj direcionado a várias estruturas](media/project-structure/project.csproj.png)
+![Criar um csproj direcionado a várias estruturas](./media/project-structure/multi-targeted-project.png)
 
 [**Código-fonte**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -58,7 +58,7 @@ Observe as seguintes alterações:
 
 Se houver projetos existentes que usam estruturas mais antigas, poderá ser útil deixá-los inalterados e usar um projeto do .NET Core para ser direcionado para futuras estruturas.
 
-![Projeto do .NET Core com um projeto existente em uma pasta diferente](media/project-structure/project.csproj.different.png)
+![Projeto do .NET Core com um projeto existente em uma pasta diferente](./media/project-structure/separate-projects-same-source.png)
 
 [**Código-fonte**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
