@@ -2,12 +2,12 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: ddd25d3d25f4c4be1a9e26d444fa799a55c9cccc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90d081c1287362669286aaa1185ed3b0bbe09b07
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283277"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412104"
 ---
 # <a name="netpipe"></a>\<net.pipe>
 Especifica as definições de configuração para o serviço de ativação de Pipe nomeado, que gerencia o tempo de vida da conexão de pipe nomeado e manipula as solicitações de ativação que chegam através de pipes nomeados.  
@@ -52,7 +52,7 @@ Especifica as definições de configuração para o serviço de ativação de Pi
 |---------------|-----------------|  
 |`maxPendingAccepts`|Um inteiro que especifica o máximo threads de aceitação simultâneo pendentes no ponto de extremidade escutando para o serviço de compartilhamento. O padrão é 2.|  
 |`maxPendingConnections`|Um inteiro que especifica o número máximo de conexões que podem esperar por expedição. O padrão é 100.|  
-|`receiveTimeout`|Um `TimeSpan` que especifica o tempo limite para ler os dados de enquadramento e execução de expedição de conexão das conexões subjacentes. O padrão é "00: 00:10"|  
+|`receiveTimeout`|Um <xref:System.TimeSpan> que especifica o tempo limite para ler os dados de enquadramento e execução de expedição de conexão das conexões subjacentes. O padrão é "00: 00:10"|  
   
 ### <a name="child-elements"></a>Elementos filho  
   

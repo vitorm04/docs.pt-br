@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353069"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409868"
 ---
 # <a name="reliability-best-practices"></a>Práticas recomendadas de confiabilidade
 
@@ -241,7 +241,7 @@ Para o SQL Server, todos os métodos usados para apresentar a sincronização ou
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Não bloquear indefinidamente em código não gerenciado
 
-Bloquear em código não gerenciado em vez de em código gerenciado pode causar um ataque de negação de serviço, pois o CLR não é capaz de anular o thread.  Um thread bloqueado impede que o CLR descarregue o <xref:System.AppDomain>, pelo menos até que algumas operações extremamente não seguras sejam feitas.  O bloqueio usando um primitivo de sincronização do Win32 é um exemplo claro de algo que não podemos permitir.  O bloqueio em uma chamada para `ReadFile` em um soquete deve ser evitado se possível – idealmente, a API do Win32 deve fornecer um mecanismo para que uma operação como essa atinja o tempo limite.
+Bloquear em código não gerenciado em vez de em código gerenciado pode causar um ataque de negação de serviço, pois o CLR não é capaz de anular o thread.  Um thread bloqueado impede que o CLR descarregue o <xref:System.AppDomain>, pelo menos até que algumas operações extremamente não seguras sejam feitas.  Bloqueio usando um Windows primitivo de sincronização é um exemplo claro de algo que não podemos permitir.  O bloqueio em uma chamada para `ReadFile` em um soquete deve ser evitado se possível — o ideal é que a API do Windows deve fornecer um mecanismo para uma operação como essa atinja o tempo limite.
 
 Qualquer método que chame recursos nativos deve idealmente usar uma chamada de Win32 com um tempo limite razoável e finito.  Se o usuário tem permissão para especificar o tempo limite, o usuário não deve ter permissão para especificar um tempo limite infinito sem alguma permissão de segurança específica.  Como diretriz, se um método será bloqueado por mais de aprox. 10 segundos, você precisará estar usando uma versão que dê suporte a tempos limite ou precisará de mais suporte a CLR.
 

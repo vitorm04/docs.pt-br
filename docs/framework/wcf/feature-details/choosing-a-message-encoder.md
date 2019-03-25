@@ -2,12 +2,12 @@
 title: Escolhendo um codificador de mensagem
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538421"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409478"
 ---
 # <a name="choosing-a-message-encoder"></a>Escolhendo um codificador de mensagem
 Este tópico discute os critérios para escolher entre os codificadores de mensagem que estão incluídos no Windows Communication Foundation (WCF): MTOM Message Transmission Optimization Mechanism (), texto e binário.  
@@ -65,9 +65,9 @@ A configuração IgnoreWhitespace é ignorada.
 
 A partir do WCF 4.5, o codificador binário do WCF adiciona suporte para compactação. Isso permite que você use o algoritmo gzip nebo deflate para enviar mensagens compactadas de um cliente WCF e também responder com mensagens compactadas de um serviço WCF auto-hospedado. Esse recurso habilita a compactação em transportes TCP e HTTP. Um IIS hospedado WCF sempre é possível habilitar o serviço para enviar respostas compactadas, configurando o servidor de host do IIS. O tipo de compactação é configurado com a propriedade <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType>. Essa propriedade é definida como um do <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType> valores de enumeração:
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 Uma vez que essa propriedade só é exposta em binaryMessageEncodingBindingElement, você precisará criar uma associação personalizada semelhante à seguinte para usar esse recurso:
 

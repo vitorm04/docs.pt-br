@@ -2,12 +2,12 @@
 title: Introdução ao roteamento
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563763"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409842"
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço Routing fornece um SOAP conectável genérico que é capaz de roteamento de mensagens com base no conteúdo da mensagem intermediário. Com o serviço de roteamento, você pode criar lógica de roteamento complexa que permite implementar cenários como a agregação de serviço, controle de versão do serviço, roteamento de prioridades e roteamento de multicast. O serviço de roteamento também fornece a manipulação de erros permite que você configurar as listas de pontos de extremidade de backup, ao qual as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino principal.  
@@ -357,19 +357,19 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Padrão|Session|Transação|Contexto de recebimento|Lista de backup com suporte|Observações|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |Unidirecional||||Sim|Tenta enviar a mensagem em um ponto de extremidade de backup novamente. Se esta mensagem está sendo multicast, somente a mensagem no canal com falha é movida para o seu destino de backup.|  
-|Unidirecional||![Marca de seleção](media/checkmark.gif "marca de seleção")||Não|Uma exceção é lançada e a transação será revertida.|  
-|Unidirecional|||![Marca de seleção](media/checkmark.gif "marca de seleção")|Sim|Tenta enviar a mensagem em um ponto de extremidade de backup novamente. Depois que a mensagem é recebida com êxito e completa todos recebem contextos. Se a mensagem não for recebida com êxito por qualquer ponto de extremidade, não conclua o contexto de recebimento.<br /><br /> Quando essa mensagem está sendo multicast, o contexto de recebimento é preenchido somente se a mensagem é recebida com êxito pelo menos um ponto de extremidade (primário ou backup). Se nenhum dos pontos de extremidade em qualquer um dos caminhos de multicast com êxito a mensagem, não conclua o contexto de recebimento.|  
-|Unidirecional||![Marca de seleção](media/checkmark.gif "marca de seleção")|![Marca de seleção](media/checkmark.gif "marca de seleção")|Sim|Anular a transação anterior, crie uma nova transação e reenviar todas as mensagens. Mensagens de erro são transmitidas para um destino de backup.<br /><br /> Após uma transação ter sido criada no qual todas as transmissões de êxito, conclua os contextos de recebimento em confirmar a transação.|  
-|Unidirecional|![Marca de seleção](media/checkmark.gif "marca de seleção")|||Sim|Tenta enviar a mensagem em um ponto de extremidade de backup novamente. Em um cenário de multicast somente as mensagens em uma sessão que encontrou um erro ou em uma sessão fechar cuja sessão falhado são reenviadas para destinos de backup.|  
-|Unidirecional|![Marca de seleção](media/checkmark.gif "marca de seleção")|![Marca de seleção](media/checkmark.gif "marca de seleção")||Não|Uma exceção é lançada e a transação será revertida.|  
-|Unidirecional|![Marca de seleção](media/checkmark.gif "marca de seleção")||![Marca de seleção](media/checkmark.gif "marca de seleção")|Sim|Tenta enviar a mensagem em um ponto de extremidade de backup novamente. Depois que todos os envios concluída sem erros de mensagem, a sessão não indica mais nenhuma mensagem e o serviço de roteamento é fechada com êxito todos os canais de sessão de saída, receberiam por todos os contextos são concluídos, e o canal de sessão de entrada é fechado.|  
-|Unidirecional|![Marca de seleção](media/checkmark.gif "marca de seleção")|![Marca de seleção](media/checkmark.gif "marca de seleção")|![Marca de seleção](media/checkmark.gif "marca de seleção")|Sim|Anular a transação atual e crie um novo. Reenvie todas as mensagens anteriores na sessão. Depois de uma transação foi criada no qual todas as mensagens têm foi enviadas com êxito e a sessão indica que não há mais mensagens, todos os canais de sessão de saída são fechados, recebem contextos são concluídos com a transação, é o canal de sessão de entrada fechado, e a transação é confirmada.<br /><br /> Quando as sessões estão sendo multicast as mensagens que não tiveram nenhum erro são reenviadas para o mesmo destino como antes e as mensagens que encontrou um erro é enviada para destinos de backup.|  
+|Unidirecional||✓||Não|Uma exceção é lançada e a transação será revertida.|  
+|Unidirecional|||✓|Sim|Tenta enviar a mensagem em um ponto de extremidade de backup novamente. Depois que a mensagem é recebida com êxito e completa todos recebem contextos. Se a mensagem não for recebida com êxito por qualquer ponto de extremidade, não conclua o contexto de recebimento.<br /><br /> Quando essa mensagem está sendo multicast, o contexto de recebimento é preenchido somente se a mensagem é recebida com êxito pelo menos um ponto de extremidade (primário ou backup). Se nenhum dos pontos de extremidade em qualquer um dos caminhos de multicast com êxito a mensagem, não conclua o contexto de recebimento.|  
+|Unidirecional||✓|✓|Sim|Anular a transação anterior, crie uma nova transação e reenviar todas as mensagens. Mensagens de erro são transmitidas para um destino de backup.<br /><br /> Após uma transação ter sido criada no qual todas as transmissões de êxito, conclua os contextos de recebimento em confirmar a transação.|  
+|Unidirecional|✓|||Sim|Tenta enviar a mensagem em um ponto de extremidade de backup novamente. Em um cenário de multicast somente as mensagens em uma sessão que encontrou um erro ou em uma sessão fechar cuja sessão falhado são reenviadas para destinos de backup.|  
+|Unidirecional|✓|✓||Não|Uma exceção é lançada e a transação será revertida.|  
+|Unidirecional|✓||✓|Sim|Tenta enviar a mensagem em um ponto de extremidade de backup novamente. Depois que todos os envios concluída sem erros de mensagem, a sessão não indica mais nenhuma mensagem e o serviço de roteamento é fechada com êxito todos os canais de sessão de saída, receberiam por todos os contextos são concluídos, e o canal de sessão de entrada é fechado.|  
+|Unidirecional|✓|✓|✓|Sim|Anular a transação atual e crie um novo. Reenvie todas as mensagens anteriores na sessão. Depois de uma transação foi criada no qual todas as mensagens têm foi enviadas com êxito e a sessão indica que não há mais mensagens, todos os canais de sessão de saída são fechados, recebem contextos são concluídos com a transação, é o canal de sessão de entrada fechado, e a transação é confirmada.<br /><br /> Quando as sessões estão sendo multicast as mensagens que não tiveram nenhum erro são reenviadas para o mesmo destino como antes e as mensagens que encontrou um erro é enviada para destinos de backup.|  
 |Bidirecional||||Sim|Envie para um destino de backup.  Depois que um canal de retorna uma mensagem de resposta, retorne a resposta ao cliente original.|  
-|Bidirecional|![Marca de seleção](media/checkmark.gif "marca de seleção")|||Sim|Envie todas as mensagens no canal para um destino de backup.  Depois que um canal de retorna uma mensagem de resposta, retorne a resposta ao cliente original.|  
-|Bidirecional||![Marca de seleção](media/checkmark.gif "marca de seleção")||Não|Uma exceção é lançada e a transação será revertida.|  
-|Bidirecional|![Marca de seleção](media/checkmark.gif "marca de seleção")|![Marca de seleção](media/checkmark.gif "marca de seleção")||Não|Uma exceção é lançada e a transação será revertida.|  
+|Bidirecional|✓|||Sim|Envie todas as mensagens no canal para um destino de backup.  Depois que um canal de retorna uma mensagem de resposta, retorne a resposta ao cliente original.|  
+|Bidirecional||✓||Não|Uma exceção é lançada e a transação será revertida.|  
+|Bidirecional|✓|✓||Não|Uma exceção é lançada e a transação será revertida.|  
 |Duplex||||Não|No momento, não há suporte para a comunicação dúplex de sessão não.|  
-|Duplex|![Marca de seleção](media/checkmark.gif "marca de seleção")|||Sim|Envie para um destino de backup.|  
+|Duplex|✓|||Sim|Envie para um destino de backup.|  
   
 ## <a name="hosting"></a>Hospedagem  
  Como o serviço de roteamento é implementado como um serviço WCF, ele deve ser auto-hospedado dentro de um aplicativo ou hospedado pelo IIS ou WAS. É recomendável que o serviço de roteamento ser hospedado em IIS, WAS ou um aplicativo de serviço do Windows para aproveitar a inicialização automática e disponível nestes ambientes de hospedagem de recursos de gerenciamento de ciclo de vida.  

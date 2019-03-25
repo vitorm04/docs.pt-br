@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738346"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409465"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Práticas recomendadas: Controle de versão de contrato de dados
 Este tópico lista as práticas recomendadas para a criação de contratos de dados que podem evoluir facilmente ao longo do tempo. Para obter mais informações sobre contratos de dados, consulte os tópicos [contratos de dados usando](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -70,7 +70,7 @@ Este tópico lista as práticas recomendadas para a criação de contratos de da
   
     2.  Se o valor padrão de `null` ou zero para o membro for inaceitável, um método de retorno de chamada deve ser fornecido usando o <xref:System.Runtime.Serialization.OnDeserializingAttribute> para fornecer uma opção razoável, caso o membro não está presente no fluxo de entrada. Para obter mais informações sobre o retorno de chamada, consulte [retornos de chamada de serialização tolerantes à versão](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  O `Order` propriedade no `DataMemberAttribute` deve ser usado para certificar-se de que todos os membros de dados recém-adicionados aparecem após os membros de dados existente. A maneira recomendada de fazer isso é da seguinte maneira: Nenhum dos membros de dados na primeira versão do contrato de dados deve ter suas `Order` conjunto de propriedades. Todos os membros de dados adicionados na versão 2 do contrato de dados devem ter suas `Order` propriedade definida como 2. Todos os membros de dados adicionados na versão 3 do contrato de dados devem ter suas `Order` definido como 3 e assim por diante. É permitido ter mais de um membro de dados definido para a mesma `Order` número.  
+    3.  O <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> propriedade deve ser usada para certificar-se de que todos os membros de dados recém-adicionados aparecem após os membros de dados existente. A maneira recomendada de fazer isso é da seguinte maneira: Nenhum dos membros de dados na primeira versão do contrato de dados deve ter suas `Order` conjunto de propriedades. Todos os membros de dados adicionados na versão 2 do contrato de dados devem ter suas `Order` propriedade definida como 2. Todos os membros de dados adicionados na versão 3 do contrato de dados devem ter suas `Order` definido como 3 e assim por diante. É permitido ter mais de um membro de dados definido para a mesma `Order` número.  
   
 9. Não remova os membros de dados em versões posteriores, mesmo se o <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> propriedade foi deixada com sua propriedade default de `false` em versões anteriores.  
   

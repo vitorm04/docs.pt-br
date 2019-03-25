@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: efc568990c6af87f24f93790886388e4c505456c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289777"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411311"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Especifica um transporte HTTP para transmissão de mensagens SOAP para uma associação personalizada.  
@@ -54,7 +54,7 @@ Especifica um transporte HTTP para transmissão de mensagens SOAP para uma assoc
 |maxBufferSize|Um inteiro positivo que especifica o tamanho máximo do buffer. O padrão é 524288|  
 |maxReceivedMessageSize|Um inteiro positivo que especifica o tamanho de mensagem máximo permitido que pode ser recebido. O padrão é 65536.|  
 |proxyAddress|Um URI que especifica o endereço do proxy HTTP. Se `useSystemWebProxy` está `true`, essa configuração deve ser `null`. O padrão é `null`.|  
-|proxyAuthenticationScheme|Especifica o protocolo usado para autenticar solicitações de cliente sendo processadas por um proxy HTTP. Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma autenticação é executada.<br />-Resumo: Especifica a autenticação Digest.<br />-Negotiate: Negocia com o cliente para determinar o esquema de autenticação. Se o cliente e o servidor oferecem suporte ao Kerberos, ele é usado; caso contrário, o NTLM é usado.<br />-   Ntlm: Especifica autenticação NTLM.<br />-Básico: Especifica autenticação básica.<br />-Anônimo: Especifica autenticação anônima.<br /><br /> O padrão é anônimo. Esse atributo é do tipo <xref:System.Net.AuthenticationSchemes>. Observe que `IntegratedWindowsAuthentication` não tem suporte.|  
+|proxyAuthenticationScheme|Especifica o protocolo usado para autenticar solicitações de cliente sendo processadas por um proxy HTTP. Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma autenticação é executada.<br />-Resumo: Especifica a autenticação Digest.<br />-Negotiate: Negocia com o cliente para determinar o esquema de autenticação. Se o cliente e o servidor oferecem suporte ao Kerberos, ele é usado; caso contrário, o NTLM é usado.<br />-   Ntlm: Especifica autenticação NTLM.<br />-Básico: Especifica autenticação básica.<br />-Anônimo: Especifica autenticação anônima.<br /><br /> O padrão é anônimo. Esse atributo é do tipo <xref:System.Net.AuthenticationSchemes>. Observe que <xref:System.Net.AuthenticationSchemes.IntegratedWindowsAuthentication?displayProperty=nameWithType> não tem suporte.|  
 |território|Uma cadeia de caracteres que especifica o domínio a ser usado no proxy/servidor. O padrão é uma cadeia de caracteres vazia.<br /><br /> Servidores usam realms para dividir os recursos protegidos. Cada partição pode ter seu próprio banco de dados de esquema e/ou autorização de autenticação. Realms são usados somente para basic e autenticação digest. Depois que um cliente é autenticado com êxito, a autenticação é válida para todos os recursos de um determinado território. Para obter uma descrição detalhada de territórios, consulte RFC 2617 na [site do IETF](https://www.ietf.org).|  
 |requireClientCertificate|Um valor booliano que especifica se o servidor exige que o cliente forneça um certificado de cliente como parte do handshake HTTPS. O padrão é `false`.|  
 |transferMode|Especifica se as mensagens são armazenadas em buffer ou transmitidas ou uma solicitação ou resposta. Os valores válidos incluem o seguinte:<br /><br /> -Armazenada em buffer: As mensagens de solicitação e resposta são armazenados em buffer.<br />-Transmitidos: As mensagens de solicitação e resposta são transmitidas.<br />-   StreamedRequest: A mensagem de solicitação é transmitida e a mensagem de resposta é armazenada em buffer.<br />-   StreamedResponse: A mensagem de solicitação é armazenada em buffer e a mensagem de resposta é transmitida.<br /><br /> O padrão é armazenada em buffer. Esse atributo é do tipo <xref:System.ServiceModel.TransferMode>.|  

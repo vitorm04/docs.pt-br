@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352758"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409400"
 ---
 # <a name="optimizing-performance-text"></a>Otimizando desempenho: Texto
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui suporte para a apresentação do conteúdo de texto com o uso de controles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] com recursos sofisticados. Em geral, você pode dividir a renderização de texto em três camadas:  
@@ -133,8 +133,9 @@ ms.locfileid: "57352758"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Mostrando sublinhados em hiperlinks somente em eventos MouseEnter  
  Um <xref:System.Windows.TextDecoration> objeto é um Ornamento visual que você pode adicionar ao texto; no entanto, ele pode ser desempenho intenso para instanciar. Se você fizer uso extensivo de <xref:System.Windows.Documents.Hyperlink> elementos, considere mostrar um sublinhado somente ao disparar um evento, como o <xref:System.Windows.ContentElement.MouseEnter> eventos. Para obter mais informações, consulte [Especificar se um hiperlink está sublinhado](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![Hiperlinks exibindo TextDecorations](./media/textdecoration03.png "TextDecoration03")  
-Hiperlink aparecendo em MouseEnter  
+  A imagem a seguir mostra como o evento MouseEnter dispara o hiperlink sublinhado:
+
+  ![Hiperlinks exibindo TextDecorations](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  O exemplo de marcação a seguir mostra um <xref:System.Windows.Documents.Hyperlink> definido com e sem sublinhado:  
   

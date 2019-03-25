@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369923"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409452"
 ---
 # <a name="expander-overview"></a>Visão geral do expansor
 Um <xref:System.Windows.Controls.Expander> controle fornece uma maneira de fornecer o conteúdo em uma área expansível que lembra uma janela e inclui um cabeçalho.  
@@ -45,7 +45,7 @@ Um <xref:System.Windows.Controls.Expander> controle fornece uma maneira de forne
   
  **Expansor em um ScrollViewer**  
   
- ![Expansor com ScrollBar](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Captura de tela que mostra um expansor com ScrollBar.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  Quando você coloca um <xref:System.Windows.Controls.Expander> controlar em uma <xref:System.Windows.Controls.ScrollViewer>, defina o <xref:System.Windows.Controls.ScrollViewer> dimensão propriedade que corresponde à direção na qual o <xref:System.Windows.Controls.Expander> conteúdo é aberto para o tamanho do <xref:System.Windows.Controls.Expander> de área de conteúdo. Por exemplo, se você definir a <xref:System.Windows.Controls.Expander.ExpandDirection%2A> propriedade no <xref:System.Windows.Controls.Expander> para <xref:System.Windows.Controls.ExpandDirection.Down> (a área de conteúdo é aberto para baixo), definir a <xref:System.Windows.FrameworkElement.Height%2A> propriedade no <xref:System.Windows.Controls.ScrollViewer> controle para a altura necessária para a área de conteúdo. Se você definir em vez disso, a dimensão de altura no próprio conteúdo, <xref:System.Windows.Controls.ScrollViewer> não reconhece essa configuração e, portanto, não fornece conteúdo rolável.  
   

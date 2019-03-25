@@ -2,12 +2,12 @@
 title: extremidade do conjunto de associação
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: 9a71fd434bea87a75e259a3d5caa902fbecf8a57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61dc00e6c349a25767f6221bed56ef8b65f823d9
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701632"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412000"
 ---
 # <a name="association-set-end"></a>extremidade do conjunto de associação
 Uma *final do conjunto de associações* identifica a [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) e o [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) no final de uma [conjunto de associações](../../../../docs/framework/data/adonet/association-set.md). Termina do conjunto de associações são definidas como parte de um conjunto de associações; um conjunto de associações deve ter exatamente duas termina do conjunto de associações.  
@@ -21,11 +21,11 @@ Uma *final do conjunto de associações* identifica a [tipo de entidade](../../.
 ## <a name="example"></a>Exemplo  
  O diagrama a seguir mostra um modelo conceitual com duas associações: `WrittenBy` e `PublishedBy`.  
   
- ![Modelo de exemplo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Modelo de exemplo com três tipos de entidade](./media/association-set-end/example-model-three-entity-types.gif)  
   
  O diagrama a seguir mostra um conjunto de associações (`PublishedBy`) e dois conjuntos de entidades (`Books` e `Publishers`) com base no modelo conceitual mostrado acima. Termina do conjunto de associações são conjuntos de entidades de `Books` e de `Publishers` . BI na `Books` conjunto de entidades representa uma instância das `Book` tipo de entidade em tempo de execução. Da mesma forma, Pj representa uma `Publisher` da instância no `Publishers` conjunto de entidades. BiPj representa uma instância das `PublishedBy` associação no `PublishedBy` conjunto de associações.  
   
- ![Define o exemplo](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![Captura de tela que mostra um exemplo de conjuntos.](./media/association-set-end/sets-example-association.gif)  
   
  O [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa DSL chamada linguagem de definição de esquema conceitual ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir modelos conceituais. CSDL seguir define um contêiner de entidade com um conjunto de associações para cada associação no diagrama anterior. Observe que termina do conjunto de associações são definidas como parte de cada definição do conjunto de associações.  
   

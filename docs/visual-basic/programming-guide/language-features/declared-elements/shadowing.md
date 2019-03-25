@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580857"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410999"
 ---
 # <a name="shadowing-in-visual-basic"></a>Sombreamento no Visual Basic
 Quando dois elementos de programação compartilham o mesmo nome, um deles pode ocultar, ou *sombra*, a outra. Nessa situação, o elemento sombreado não está disponível para referência; em vez disso, quando seu código usa o nome do elemento, o compilador do Visual Basic resolve para o elemento de sombreamento.  
@@ -41,8 +41,7 @@ Quando dois elementos de programação compartilham o mesmo nome, um deles pode 
   
  A ilustração a seguir mostra duas variáveis, ambas chamadas `temp`. A variável local `temp` sombreia a variável de membro `temp` quando acessada de dentro de seu próprio procedimento `p`. No entanto, o `MyClass` ignora o sombreamento de palavra-chave e acessa a variável de membro.  
   
- ![Diagrama gráfico de sombreamento através de escopo](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-Sombreamento através de escopo  
+ ![Gráfico que mostra sombreamento através de escopo.](./media/shadowing/shadow-scope-diagram.gif)
   
  Para obter um exemplo de sombreamento através de escopo, consulte [como: Ocultar uma variável com o mesmo nome que a variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
@@ -51,8 +50,7 @@ Sombreamento através de escopo
   
  A ilustração a seguir mostra uma classe base `b` e uma classe derivada `d` que herda de `b`. A classe base define um procedimento denominado `proc`, e a classe derivada sombreia com outro procedimento de mesmo nome. A primeira `Call` instrução acessa o sombreamento `proc` na classe derivada. No entanto, o `MyBase` palavra-chave ignora o sombreamento e acessa o procedimento sombreado na classe base.  
   
- ![Diagrama gráfico de sombreamento através de herança](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-Sombreamento através de herança  
+ ![Diagrama gráfico de sombreamento através de herança](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  Para obter um exemplo de sombreamento por meio da herança, consulte [como: Ocultar uma variável com o mesmo nome que a variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) e [como: Ocultar uma variável herdada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   

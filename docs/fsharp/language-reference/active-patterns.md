@@ -2,12 +2,12 @@
 title: Padrões ativos
 description: Saiba como usar padrões ativos para definir partições nomeadas que subdividem os dados de entrada a F# linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612836"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412078"
 ---
 # <a name="active-patterns"></a>Padrões ativos
 
@@ -86,23 +86,23 @@ A saída do exemplo anterior é da seguinte maneira:
 Something else : Not matched.
 ```
 
-Ao usar padrões ativos parciais, às vezes, as opções individuais podem ser contíguos ou mutuamente exclusivos, mas eles não precisam ser. No exemplo a seguir, o quadrado do padrão e o padrão de cubo não são não contíguos, porque alguns números são quadrados e cubos, como 64. O programa a seguir imprime todos os inteiros até 1000000 quadrados e cubos.
+Ao usar padrões ativos parciais, às vezes, as opções individuais podem ser contíguos ou mutuamente exclusivos, mas eles não precisam ser. No exemplo a seguir, o quadrado do padrão e o padrão de cubo não são não contíguos, porque alguns números são quadrados e cubos, como 64. O programa a seguir usa o padrão AND para combinar os padrões de cubo e o quadrado. Ele imprimir todos os inteiros até 1000 são os quadrados e cubos, bem como aqueles que são apenas a cubos. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 A saída é a seguinte:
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>Padrões ativos com parâmetros

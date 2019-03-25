@@ -1,13 +1,13 @@
 ---
 title: Valores nulos
 description: Saiba como o valor nulo é usado no F# linguagem de programação.
-ms.date: 05/16/2016
-ms.openlocfilehash: 58c54065a98a84c4d4e912cbc42d59cfea8c6de1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 03/22/2019
+ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610990"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409634"
 ---
 # <a name="null-values"></a>Valores nulos
 
@@ -19,7 +19,7 @@ O valor nulo não é usado normalmente em F# para valores ou variáveis. No enta
 
 Para um tipo definido no F# e é usado estritamente de F#, a única maneira de criar um valor nulo usando o F# biblioteca diretamente é usar [unchecked. defaultof](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977) ou [array. zerocreate](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2). No entanto, para um F# tipo que é usado de outras linguagens .NET, ou se você estiver usando esse tipo com uma API que não é escrita em F#, como o .NET Framework, os valores nulos podem ocorrer.
 
-Você pode usar o `option` digite F# quando você pode usar uma variável de referência com um valor nulo possíveis em outra linguagem .NET. Em vez de null, com um F# `option` tipo, você usa o valor da opção `None` se não houver nenhum objeto. Você usa o valor da opção `Some(obj)` com um objeto `obj` quando há um objeto. Para obter mais informações, consulte [opções](../options.md).
+Você pode usar o `option` digite F# quando você pode usar uma variável de referência com um valor nulo possíveis em outra linguagem .NET. Em vez de null, com um F# `option` tipo, você usa o valor da opção `None` se não houver nenhum objeto. Você usa o valor da opção `Some(obj)` com um objeto `obj` quando há um objeto. Para obter mais informações, veja [Opções](../options.md). Observe que você ainda pode compactar um `null` valor em uma opção se, para `Some x`, `x` acaso `null`. Por isso, é importante que você use `None` quando um valor é `null`.
 
 O `null` palavra-chave é uma palavra-chave válida no F# idioma e você tem que usá-lo quando você estiver trabalhando com APIs do .NET Framework ou outras APIs que são escritos em outra linguagem .NET. Duas situações em que talvez seja necessário um valor nulo são quando você chama uma API do .NET e passe um valor nulo como um argumento e ao interpretar o valor de retorno ou um parâmetro de saída de uma chamada de método do .NET.
 

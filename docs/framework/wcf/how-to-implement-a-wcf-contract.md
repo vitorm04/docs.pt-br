@@ -1,28 +1,33 @@
 ---
-title: Como implementar um contrato de serviço do Windows Communication Foundation
-ms.date: 09/14/2018
+title: 'Tutorial: Implementar um contrato de serviço do Windows Communication Foundation'
+ms.date: 03/19/2019
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: 569de6f49b56b46ccfeb22e9f0bd25bcf339b7e0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: fcf96af11bae701585acd92001c8000125858449
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037359"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410076"
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Como implementar um contrato de serviço do Windows Communication Foundation
+# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>Tutorial: Implementar um contrato de serviço do Windows Communication Foundation
 
-Este é o segundo de seis tarefas necessárias para criar um serviço básico do Windows Communication Foundation (WCF) e um cliente que possa chamar o serviço. Para obter uma visão geral de todas as seis tarefas, consulte a [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md) tópico.
+Este tutorial descreve o segundo de cinco tarefas necessárias para criar um aplicativo básico do Windows Communication Foundation (WCF). Para obter uma visão geral dos tutoriais, consulte [Tutorial: Introdução a aplicativos do Windows Communication Foundation](getting-started-tutorial.md).
 
-A próxima etapa na criação de um aplicativo WCF é implementar a interface de serviço. Isso envolve a criação de uma classe chamada `CalculatorService` que implementa o definido pelo usuário `ICalculator` interface...
+A próxima etapa para a criação de um aplicativo WCF é adicionar código para implementar a interface do serviço WCF que você criou na etapa anterior. Nesta etapa, você cria uma classe chamada `CalculatorService` que implementa o definido pelo usuário `ICalculator` interface. Cada método no código a seguir chama uma operação de Calculadora e grava o texto no console para testá-lo. 
 
-## <a name="to-implement-a-wcf-service-contract"></a>Para implementar um contrato de serviço do WCF
+Neste tutorial, você aprenderá como:
+> [!div class="checklist"]
+> - Adicione código para implementar o contrato de serviço do WCF.
+> - Compile a solução.
 
-Abra o arquivo Service1.cs or Service1.vb e adicione o seguinte código:
+## <a name="add-code-to-implement-the-wcf-service-contract"></a>Adicione código para implementar o contrato de serviço do WCF
+
+Na **GettingStartedLib**, abra o **Service1.cs** ou **Service1.vb** de arquivo e substitua seu código com o código a seguir:
 
 ```csharp
 using System;
@@ -111,154 +116,32 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-Cada método implementa a operação de Calculadora e grava um texto no console para facilitar os testes.
+## <a name="edit-appconfig"></a>Edit App.config
 
-## <a name="example"></a>Exemplo
+Edite **App. config** na **GettingStartedLib** para refletir as alterações feitas no código.
+   - Para o Visual C# projetos:
+       - Altere a linha 14 para `<service name="GettingStartedLib.CalculatorService">`
+       - Altere a linha 17 para `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+       - Altere a linha 22 para `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
 
-O código a seguir mostra a interface que define o contrato e a implementação da interface.
+   - Para projetos do Visual Basic:
+       - Altere a linha 14 para `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
+       - Altere a linha 17 para `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+       - Altere a linha 22 para `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
 
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-    [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
-    public interface ICalculator
-    {
-        [OperationContract]
-        double Add(double n1, double n2);
-        [OperationContract]
-        double Subtract(double n1, double n2);
-        [OperationContract]
-        double Multiply(double n1, double n2);
-        [OperationContract]
-        double Divide(double n1, double n2);
-    }
-}
-```
-
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-    public class CalculatorService : ICalculator
-    {
-        public double Add(double n1, double n2)
-        {
-            double result = n1 + n2;
-            Console.WriteLine("Received Add({0},{1})", n1, n2);
-            // Code added to write output to the console window.
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Subtract(double n1, double n2)
-        {
-            double result = n1 - n2;
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Multiply(double n1, double n2)
-        {
-            double result = n1 * n2;
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Divide(double n1, double n2)
-        {
-            double result = n1 / n2;
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-    }
-}
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
-    Public Interface ICalculator
-
-        <OperationContract()> _
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
-    End Interface
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    Public Class CalculatorService
-        Implements ICalculator
-
-        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
-            Dim result As Double = n1 + n2
-            ' Code added to write output to the console window.
-            Console.WriteLine("Received Add({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-        End Function
-
-        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
-            Dim result As Double = n1 - n2
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
-            Dim result As Double = n1 * n2
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
-            Dim result As Double = n1 / n2
-            Console.WriteLine("Received Divide({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-    End Class
-End Namespace
-```
 
 ## <a name="compile-the-code"></a>Compilar o código
 
-Compile a solução para garantir que não há nenhum erro de compilação. Se você estiver usando o Visual Studio, o **Build** menu, selecione **compilar solução** (ou pressione **Ctrl**+**Shift** + **B**).
+Compile a solução para verificar se que não existem erros de compilação. Se você estiver usando o Visual Studio, o **Build** menu, selecione **compilar solução** (ou pressione **Ctrl**+**Shift** + **B**).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Agora o contrato de serviço é criado e implementado. Na próxima etapa, você deve executar o serviço.
+Neste tutorial, você aprendeu como:
+> [!div class="checklist"]
+> - Adicione código para implementar o contrato de serviço do WCF.
+> - Compile a solução.
+
+Avance para o próximo tutorial para aprender a executar o serviço do WCF.
 
 > [!div class="nextstepaction"]
-> [Como hospedar e executar um serviço básico](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
-
-Para obter informações sobre solução de problemas, confira [Solução de problemas do tutorial de introdução](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
-
-## <a name="see-also"></a>Consulte também
-
-- [Introdução](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Auto-hospedagem](../../../docs/framework/wcf/samples/self-host.md)
+> [Tutorial: Hospedar e executar um serviço WCF básico](how-to-host-and-run-a-basic-wcf-service.md)

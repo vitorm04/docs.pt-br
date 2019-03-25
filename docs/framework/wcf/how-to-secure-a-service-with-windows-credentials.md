@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657552"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410921"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Como: Proteger um serviço com credenciais do Windows
 Este tópico mostra como habilitar a segurança de transporte em um serviço do Windows Communication Foundation (WCF) que reside em um domínio do Windows e é chamado por clientes no mesmo domínio. Para obter mais informações sobre esse cenário, consulte [segurança de transporte com autenticação do Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Para um aplicativo de exemplo, consulte o [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemplo.  
@@ -52,7 +52,7 @@ Este tópico mostra como habilitar a segurança de transporte em um serviço do 
   
 2.  Criar uma <xref:System.Type> variável nomeada `contractType` e atribua-o tipo da interface (`ICalculator`). Ao usar o Visual Basic, use o `GetType` operador; ao usar c#, use o `typeof` palavra-chave.  
   
-3.  Crie um segundo `Type` variável nomeada `serviceType` e atribua-o tipo do contrato implementado (`Calculator`).  
+3.  Crie um segundo <xref:System.Type> variável nomeada `serviceType` e atribua-o tipo do contrato implementado (`Calculator`).  
   
 4.  Criar uma instância das <xref:System.Uri> classe denominada `baseAddress` com o endereço básico do serviço. O endereço base deve ter um esquema que corresponde ao transporte. Nesse caso, o esquema de transporte é HTTP, e o endereço inclui especiais "Localhost" identificador de recurso uniforme (URI) e uma número de porta (8036), bem como um endereço base do ponto de extremidade ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196688"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408867"
 ---
 # <a name="data-contract-names"></a>Nomes de contrato de dados
 
@@ -64,7 +64,7 @@ Neste exemplo, o tipo `Drawing<Square,RegularRedBrush>` tem o nome do contrato d
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>Personalizando nomes de contrato de dados para tipos genéricos
 
-Às vezes, os nomes de contrato de dados gerados para tipos genéricos, como descrito anteriormente, são inaceitáveis. Por exemplo, você pode saber com antecedência que você não será executado em colisões de nome e talvez queira remover o hash. Nesse caso, você pode usar o <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> propriedade do `DataContractAttribute` atributo para especificar o outra maneira de gerar nomes. Você pode usar números entre chaves dentro do `Name` propriedade para se referir aos dados e nomes de contrato de parâmetros genéricos. (0 se refere ao primeiro parâmetro, 1 refere-se ao segundo e assim por diante). Você pode usar uma cerquilha (#) dentro das chaves para se referir ao hash. Você pode usar cada uma dessas referências várias vezes ou não de forma alguma.
+Às vezes, os nomes de contrato de dados gerados para tipos genéricos, como descrito anteriormente, são inaceitáveis. Por exemplo, você pode saber com antecedência que você não será executado em colisões de nome e talvez queira remover o hash. Nesse caso, você pode usar o <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> propriedade para especificar o outra maneira de gerar nomes. Você pode usar números entre chaves dentro do `Name` propriedade para se referir aos dados e nomes de contrato de parâmetros genéricos. (0 se refere ao primeiro parâmetro, 1 refere-se ao segundo e assim por diante). Você pode usar uma cerquilha (#) dentro das chaves para se referir ao hash. Você pode usar cada uma dessas referências várias vezes ou não de forma alguma.
 
 Por exemplo, anterior genérico `Drawing` tipo poderia ter sido declarado como mostrado no exemplo a seguir.
 

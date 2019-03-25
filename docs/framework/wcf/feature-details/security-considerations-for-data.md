@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363079"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411428"
 ---
 # <a name="security-considerations-for-data"></a>Considerações de segurança para dados
 
@@ -276,7 +276,7 @@ Essa situação pode ser evitada com esteja ciente de que os seguintes pontos:
 
 - Tenha cuidado ao usar tipos herdados marcados com o <xref:System.SerializableAttribute> atributo. Muitos deles foram projetados para funcionar com [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] comunicação remota para uso com dados confiáveis apenas. Os tipos existentes marcados com esse atributo não podem ter sido projetados com segurança de estado em mente.
 
-- Não confie na <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> propriedade do `DataMemberAttribute` atributo para garantir a presença de dados que diz respeito a segurança de estado. Dados podem ser sempre `null`, `zero`, ou `invalid`.
+- Não confie na <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> atributo para garantir a presença de dados que diz respeito a segurança de estado. Dados podem ser sempre `null`, `zero`, ou `invalid`.
 
 - Nunca confiança um grafo de objeto desserializado de uma fonte de dados não confiáveis sem validá-lo primeiro. Cada objeto individual pode estar em um estado consistente, mas o grafo de objeto que não pode ser um inteiro. Além disso, mesmo se o modo de preservação do gráfico de objeto for desabilitado, o grafo desserializado pode ter várias referências ao mesmo objeto ou ter referências circulares. Para obter mais informações, consulte [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
@@ -312,33 +312,33 @@ Observe as seguintes preocupações sobre ameaças relacionadas ao código em ex
 
 - Se você permitir acesso a código parcialmente confiável para seus <xref:System.Runtime.Serialization.DataContractSerializer> da instância ou outra forma controla a [substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md), ele pode exercer uma grande quantidade de controle sobre o processo de serialização/desserialização. Por exemplo, ele pode injetar tipos arbitrários, levar à divulgação de informações, violar o grafo de objeto resultante ou os dados serializados ou estouro resultante fluxo serializado. Equivalente a <xref:System.Runtime.Serialization.NetDataContractSerializer> ameaça é descrita na seção "Usando o NetDataContractSerializer com segurança".
 
-- Se o <xref:System.Runtime.Serialization.DataContractAttribute> atributo é aplicado a um tipo (ou o tipo é marcado como `[Serializable]` , mas não é `ISerializable`), o desserializador pode criar uma instância desse tipo, mesmo que todos os construtores não públicos ou protegidos por demanda.
+- Se o <xref:System.Runtime.Serialization.DataContractAttribute> atributo é aplicado a um tipo (ou o tipo é marcado como <xref:System.SerializableAttribute> , mas não é <xref:System.Runtime.Serialization.ISerializable>), o desserializador pode criar uma instância desse tipo, mesmo que todos os construtores não públicos ou protegidos por demanda.
 
 - Nunca confie o resultado da desserialização, a menos que os dados a ser desserializado são confiáveis e você tiver certeza de que todos os tipos conhecidos são tipos que você confia. Observe que tipos conhecidos não são carregados do arquivo de configuração de aplicativo, (mas são carregados do arquivo de configuração do computador) quando em execução em confiança parcial.
 
-- Se você passar um `DataContractSerializer` instância com um substituto adicionado ao código parcialmente confiável, o código pode alterar quaisquer configurações modificáveis que substituto.
+- Se você passar um <xref:System.Runtime.Serialization.DataContractSerializer> instância com um substituto adicionado ao código parcialmente confiável, o código pode alterar quaisquer configurações modificáveis que substituto.
 
 - Para um objeto desserializado, se o leitor de XML (ou os dados nele) vem do código parcialmente confiável, tratar o objeto desserializado resultante como dados não confiáveis.
 
 - O fato de que o <xref:System.Runtime.Serialization.ExtensionDataObject> não público do tipo tem membros não significa que os dados dentro dele são seguros. Por exemplo, se você desserializar a partir de uma fonte de dados com privilégios em um objeto no qual residem o alguns dados, mão, em seguida, esse objeto para código parcialmente confiável, o código parcialmente confiável pode ler os dados no `ExtensionDataObject` ao serializar o objeto. Considere a configuração <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> para `true` quando a desserialização de uma fonte de dados com privilégios em um objeto que é posterior passado para código parcialmente confiável.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> dão suporte à serialização de membros particulares, protegidos, internos e públicos em confiança total. No entanto, em confiança parcial, somente os membros públicos podem ser serializados. Um `SecurityException` será lançada se um aplicativo tenta serializar um membro não público.
+- <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> dão suporte à serialização de membros particulares, protegidos, internos e públicos em confiança total. No entanto, em confiança parcial, somente os membros públicos podem ser serializados. Um <xref:System.Security.SecurityException> será lançada se um aplicativo tenta serializar um membro não público.
 
-    Para permitir que internos ou membros internos protegidos a ser serializado em confiança parcial, use o `System.Runtime.CompilerServices.InternalsVisibleTo` atributo do assembly. Esse atributo permite que um assembly declarar que seus membros internos são visíveis para algum outro assembly. Nesse caso, um assembly que quer que seus membros internos serializados declara que seus membros internos são visíveis para Serialization.
+    Para permitir que internos ou membros internos protegidos a ser serializado em confiança parcial, use o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo do assembly. Esse atributo permite que um assembly declarar que seus membros internos são visíveis para algum outro assembly. Nesse caso, um assembly que quer que seus membros internos serializados declara que seus membros internos são visíveis para Serialization.
 
     A vantagem dessa abordagem é que ele não requer um caminho de geração de código com privilégios elevados.
 
     Ao mesmo tempo, há duas grandes desvantagens.
 
-    A primeira desvantagem é que a propriedade de aceitação do `InternalsVisibleTo` atributo é todo o assembly. Ou seja, você não pode especificar que somente uma determinada classe pode ter seus membros internos serializados. É claro, você ainda pode optar para não serializar um membro interno específico, simplesmente não adicionando um `DataMember` a esse membro de atributo. Da mesma forma, um desenvolvedor também pode optar por tornar um membro interno em vez de particular ou protegido com preocupações de visibilidade pequena.
+    A primeira desvantagem é que a propriedade de aceitação do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo é todo o assembly. Ou seja, você não pode especificar que somente uma determinada classe pode ter seus membros internos serializados. É claro, você ainda pode optar para não serializar um membro interno específico, simplesmente não adicionando um <xref:System.Runtime.Serialization.DataMemberAttribute> a esse membro de atributo. Da mesma forma, um desenvolvedor também pode optar por tornar um membro interno em vez de particular ou protegido com preocupações de visibilidade pequena.
 
     A segunda desvantagem é que ele ainda não suporta a membros particulares ou protegidos.
 
-    Para ilustrar o uso do `InternalsVisibleTo` de atributo em confiança parcial, considere o seguinte programa:
+    Para ilustrar o uso do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> de atributo em confiança parcial, considere o seguinte programa:
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    No exemplo acima, `PermissionsHelper.InternetZone` corresponde à `PermissionSet` para confiança parcial. Agora, sem `InternalsVisibleToAttribute`, o aplicativo falhará, gerando um `SecurityException` indicando que os membros não públicos não podem ser serializados em confiança parcial.
+    No exemplo acima, `PermissionsHelper.InternetZone` corresponde à <xref:System.Security.PermissionSet> para confiança parcial. Agora, sem a <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo, o aplicativo falhará, gerando um <xref:System.Security.SecurityException> indicando que os membros não públicos não podem ser serializados em confiança parcial.
 
     No entanto, se adicionarmos a seguinte linha ao arquivo de origem, o programa é executado com êxito.
 

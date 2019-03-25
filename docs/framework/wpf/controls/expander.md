@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371929"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410505"
 ---
 # <a name="expander"></a>Expansor
 Um <xref:System.Windows.Controls.Expander> permite que um usuário exibir um cabeçalho e expandir esse cabeçalho para ver mais detalhes, ou para recolher uma seção em um cabeçalho.  
   
  A ilustração a seguir fornece um exemplo desse controle em sua posição expandida.  
   
- ![Exemplo de expansor](./media/expanderexample.JPG "ExpanderExample")  
-Controle Expansor  
+ ![Exemplo de expansor](./media/expander/expander-control-example.jpg)
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de Expander](expander-overview.md)  

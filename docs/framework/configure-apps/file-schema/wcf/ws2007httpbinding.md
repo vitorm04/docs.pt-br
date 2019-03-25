@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 35e47d582a6b8534597945a626904d084fbeeade
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 01b8f20607de1cdd9c6b1ad9fc030c1d050ed749
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376995"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410635"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding>
 Define uma associação interoperável que fornece suporte para as versões corretas dos <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, e <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementos de associação.  
@@ -67,7 +67,7 @@ Define uma associação interoperável que fornece suporte para as versões corr
 |`allowCookies`|Um valor que indica se o cliente aceita cookies e propaga-os em solicitações futuras. O padrão é `false`.<br /><br /> Você pode usar essa propriedade quando você interage com serviços Web do ASP.NET (ASMX) que usam cookies. Isso garante que os cookies que o servidor retorna são copiados automaticamente para todas as solicitações futuras de cliente para o serviço.|  
 |`bypassProxyOnLocal`|Um valor que indica se deve ignorar o servidor proxy para endereços locais. O padrão é `false`.|  
 |`closeTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo para concluir uma operação de fechamento. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
-|`hostnameComparisonMode`|Especifica o modo de comparação de nome de host HTTP usado para analisar os identificadores de recurso uniformes (URIs). Esse atributo é do tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica se o nome do host é usado para acessar o serviço ao fazer a correspondência no URI. O valor padrão é <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que ignora o nome do host na correspondência.|  
+|`hostNameComparisonMode`|Especifica o modo de comparação de nome de host HTTP usado para analisar os identificadores de recurso uniformes (URIs). Esse atributo é do tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica se o nome do host é usado para acessar o serviço ao fazer a correspondência no URI. O valor padrão é <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que ignora o nome do host na correspondência.|  
 |`maxBufferPoolSize`|O tamanho do pool de buffer máximo para esta associação. O padrão é 524.288 bytes (512 × 1.024). Muitas partes do Windows Communication Foundation (WCF) usam buffers. Criação e destruição de buffers de cada vez que elas são usadas é caro, assim como a coleta de lixo para buffers. Com os pools de buffer, usar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Isso evita a sobrecarga na criação e destruição de buffers.|  
 |`maxReceivedMessageSize`|O tamanho máximo da mensagem, em bytes, incluindo os cabeçalhos, que pode ser receber um canal configurado com essa associação. O remetente de uma mensagem exceder esse limite recebe uma falha de SOAP. O receptor descartará a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536.|  
 |`messageEncoding`|Define o codificador usado para codificar a mensagem. Os valores válidos incluem o seguinte:<br /><br /> -   `Text`: Use um codificador de mensagem de texto.<br />-   `Mtom`: Use um codificador de organização mecanismo 1.0 MTOM (Message Transmission).<br /><br /> O padrão é `Text`.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.WSMessageEncoding>.|  

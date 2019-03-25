@@ -2,12 +2,12 @@
 title: Decodificadores personalizados
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509357"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411363"
 ---
 # <a name="custom-encoders"></a>Decodificadores personalizados
 Este tópico discute como criar codificadores personalizados.  
@@ -50,7 +50,7 @@ Este tópico discute como criar codificadores personalizados.
 ### <a name="pooling"></a>Agrupamento  
  Cada uma das implementações de codificador tenta pool tanto quanto possível. Redução das alocações é uma maneira importante de melhorar o desempenho do código gerenciado. Para atingir esse pool, usam as implementações de `SynchronizedPool` classe. O arquivo do c# contém uma descrição das otimizações adicionais usados por esta classe.  
   
- `XmlDictionaryReader` e `XmlDictionaryWriter` instâncias são agrupadas e reinicializadas para evitar a alocar novos para cada mensagem. Para os leitores, uma `OnClose` recupera o leitor o retorno de chamada quando `Close()` é chamado. O codificador também é reciclado alguns objetos de estado de mensagem usados ao construir mensagens. Os tamanhos desses pools são configuráveis pelo `MaxReadPoolSize` e `MaxWritePoolSize` propriedades em cada uma das três classes derivadas de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> instâncias são agrupadas e reinicializadas para evitar a alocar novos para cada mensagem. Para os leitores, uma `OnClose` recupera o leitor o retorno de chamada quando `Close()` é chamado. O codificador também é reciclado alguns objetos de estado de mensagem usados ao construir mensagens. Os tamanhos desses pools são configuráveis pelo `MaxReadPoolSize` e `MaxWritePoolSize` propriedades em cada uma das três classes derivadas de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Codificação binária  
  Quando usa sessões de codificação binária, a cadeia de caracteres de dicionário dinâmico deve ser comunicada para o receptor da mensagem. Isso é feito, prefixando a mensagem com as cadeias de caracteres de dicionário dinâmico. O receptor corta as cadeias de caracteres, adiciona-os à sessão e processa a mensagem. Corretamente passar cadeias de caracteres de dicionário requer que o transporte ser armazenados em buffer.  

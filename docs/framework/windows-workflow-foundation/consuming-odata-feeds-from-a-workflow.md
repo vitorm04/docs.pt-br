@@ -2,12 +2,12 @@
 title: Consumindo feeds do OData de um fluxo de trabalho - WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: ac7a5aef6a699f85ac5a1ce7417d02d42f6c0281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275815"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408989"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Consumindo feeds do OData de um fluxo de trabalho
 
@@ -25,7 +25,7 @@ Data WCF Services inclui as bibliotecas de cliente para permitir que consomem ma
 
 Para gerar as bibliotecas de cliente Northwind, você pode usar o **adicionar referência de serviço** caixa de diálogo no Visual Studio 2012 para adicionar uma referência para o serviço Northwind OData.
 
-![Adicionar referência de serviço](./media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")
+![Captura de tela que mostra a caixa de diálogo Adicionar referência de serviço.](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
 
 Observe que não há nenhuma operação de serviço expostas pelo serviço e, na **Services** lista há itens que representam as entidades expostas pelo serviço de dados Northwind. Quando a referência de serviço é adicionada, as classes serão geradas para essas entidades e podem ser usadas no código do cliente. Os exemplos neste tópico usam essas classes e a classe de `NorthwindEntities` para executar consultas.
 
@@ -43,7 +43,7 @@ Para corrigir os problemas possíveis de latência que podem ocorrer ao acessar 
 
 A classe de <xref:System.Data.Services.Client.DataServiceQuery%601> fornece <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> e métodos de <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para ver um serviço de OData de forma assíncrona. Esses métodos podem ser chamados de <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> e as substituições de <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> de uma classe derivada de <xref:System.Activities.AsyncCodeActivity> . Quando o <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> substituição retorna, o fluxo de trabalho pode ir ocioso (mas não para persistir), e quando o trabalho assíncrono é concluído, <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> é invocado pelo tempo de execução.
 
-No exemplo a seguir, uma atividade de `OrdersByCustomer` é definida que possui dois argumentos conectados. O argumento de `CustomerId` representa o cliente que identifica qual as regras para retornar, e o argumento de `ServiceUri` representa o URI de serviço de OData a ser consultado. Porque a atividade deriva de `AsyncCodeActivity<IEnumerable<Order>>` há também um argumento de saída de <xref:System.Activities.Activity%601.Result%2A> que é usado para retornar os resultados da consulta. A substituição de <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> cria uma consulta LINQ que selecionar todos os pedidos do cliente especificado. Esta consulta é especificado como <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> de <xref:System.Activities.AsyncCodeActivityContext>passado, e o método de <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> de consulta é então chamado. Observe que o retorno de chamada e indica que é passado em <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> de consulta são aqueles que são passados ao método de <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> de atividade. Quando a consulta terminou de executar, o método de <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> da atividade é chamado. A consulta é recuperada de <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, e o método de <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> de consulta é então chamado. Esse método retorna <xref:System.Collections.Generic.IEnumerable%601> do tipo de entidade especificado; nesse caso `Order`. Uma vez que `IEnumerable<Order>` é o tipo genérico do <xref:System.Activities.AsyncCodeActivity%601>, esse `IEnumerable` é definido como o <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> da atividade.
+No exemplo a seguir, uma atividade de `OrdersByCustomer` é definida que possui dois argumentos conectados. O argumento de `CustomerId` representa o cliente que identifica qual as regras para retornar, e o argumento de `ServiceUri` representa o URI de serviço de OData a ser consultado. Porque a atividade deriva de `AsyncCodeActivity<IEnumerable<Order>>` há também um argumento de saída de <xref:System.Activities.Activity%601.Result%2A> que é usado para retornar os resultados da consulta. A substituição de <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> cria uma consulta LINQ que selecionar todos os pedidos do cliente especificado. Esta consulta é especificado como <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> de <xref:System.Activities.AsyncCodeActivityContext>passado, e o método de <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> de consulta é então chamado. Observe que o retorno de chamada e indica que é passado em <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> de consulta são aqueles que são passados ao método de <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> de atividade. Quando a consulta terminou de executar, o método de <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> da atividade é chamado. A consulta é recuperada de <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, e o método de <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> de consulta é então chamado. Esse método retorna <xref:System.Collections.Generic.IEnumerable%601> do tipo de entidade especificado; nesse caso `Order`. Uma vez que `IEnumerable<Order>` é o tipo genérico do <xref:System.Activities.AsyncCodeActivity%601>, esse <xref:System.Collections.IEnumerable> é definido como o <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> da atividade.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 

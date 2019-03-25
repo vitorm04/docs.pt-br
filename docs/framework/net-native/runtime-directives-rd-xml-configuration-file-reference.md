@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8314f34f9fe0be43e7371d29cb4b366a819807c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356098"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410453"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
 
@@ -405,7 +405,7 @@ Aplicar a política `Serialize` a um campo envolve as seguintes alterações de 
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>O efeito das políticas XmlSerializer, DataContractSerializer e DataContractJsonSerializer
 
-Ao contrário da política `Serialize`, que destina-se a serializadores baseados em reflexão, as políticas `XmlSerializer`, `DataContractSerializer` e `DataContractJsonSerializer` são usadas para habilitar um conjunto de serializadores que são conhecidos como a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Esses serializadores não são implementados usando reflexão, mas o conjunto de tipos que pode ser serializado no tempo de execução é determinado de maneira semelhante, como tipos reflexíveis.
+Ao contrário da política `Serialize`, que destina-se a serializadores baseados em reflexão, as políticas <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> são usadas para habilitar um conjunto de serializadores que são conhecidos como a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Esses serializadores não são implementados usando reflexão, mas o conjunto de tipos que pode ser serializado no tempo de execução é determinado de maneira semelhante, como tipos reflexíveis.
 
 Aplicar de uma dessas políticas a um tipo permite que o tipo seja serializado com o serializador correspondente. Além disso, quaisquer tipos que o mecanismo de serialização determinar estaticamente como necessitando serialização também serão serializáveis.
 

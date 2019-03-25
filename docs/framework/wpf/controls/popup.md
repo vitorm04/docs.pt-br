@@ -9,19 +9,19 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370651"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410102"
 ---
 # <a name="popup"></a>Pop-up
 O <xref:System.Windows.Controls.Primitives.Popup> controle exibe conteúdo em uma janela separada que flutua sobre a janela atual do aplicativo.  
   
- A ilustração a seguir mostra uma <xref:System.Windows.Controls.Primitives.Popup> controle que está posicionado em relação a um <xref:System.Windows.Controls.Button> que é seu pai.  
+ A ilustração a seguir mostra uma <xref:System.Windows.Controls.Primitives.Popup> controle que está posicionado em relação a um <xref:System.Windows.Controls.Button> que é seu pai:  
   
- ![Ilustração de pop-up](./media/popuppicture.JPG "PopupPicture")  
+ ![Ilustração de pop-up](./media/popup/popup-picture-button.jpg)  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do pop-up](popup-overview.md)  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 2fb384fe0012b5c0a72e961f027c3db629891e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532286"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412260"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Como: Autenticar com um nome de usuário e senha
 
@@ -21,7 +21,7 @@ Este tópico demonstra como habilitar um serviço do Windows Communication Found
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Para configurar um serviço WCF para se autenticar usando a senha e nome de usuário de domínio Windows
   
-1.  Criar uma instância das <xref:System.ServiceModel.WSHttpBinding>, defina o modo de segurança da associação a `SecurityMode.Message`, defina o `ClientCredentialType` da associação a `MessageCredentialType.UserName`e adicione um ponto de extremidade de serviço usando a associação configurada para o host de serviço, conforme mostrado no código a seguir:  
+1.  Criar uma instância das <xref:System.ServiceModel.WSHttpBinding>, defina o modo de segurança da associação a <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, defina o `ClientCredentialType` da associação a <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>e adicione um ponto de extremidade de serviço usando a associação configurada para o host de serviço, conforme mostrado no código a seguir:  
   
     ```  
     // ...  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378999"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410805"
 ---
 # <a name="table-overview"></a>Visão geral da tabela
 <xref:System.Windows.Documents.Table> é um elemento de nível de bloco que suporta a apresentação baseada em grade do conteúdo do documento de fluxo. A flexibilidade deste elemento o torna muito útil, mas também o deixa mais difícil de entender e usar corretamente.  
@@ -72,7 +72,7 @@ ms.locfileid: "57378999"
   
  A figura a seguir mostra como esse exemplo é renderizado.  
   
- ![Captura de tela: Renderizar uma tabela básica](./media/basictablerrender.png "BasicTablerRender")  
+ ![Captura de tela que mostra como uma tabela básica é renderizado.](./media/table-overview/basic-table-render-example.png)  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Contenção de tabelas  

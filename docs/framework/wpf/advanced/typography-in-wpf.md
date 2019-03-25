@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125623"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412130"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem melhor qualidade e desempenho de renderização de texto, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] suporte a tipografia, texto internacional aperfeiçoado, suporte de fonte aperfeiçoado e APIs (interfaces de programação de aplicativo).  
@@ -121,7 +121,7 @@ Texto com suavização da direção y do ClearType
  Para obter mais informações, consulte [Documentos no WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Desenho de texto leve  
- Você pode desenhar texto diretamente para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos usando o <xref:System.Windows.Media.DrawingContext.DrawText%2A> método o <xref:System.Windows.Media.DrawingContext> objeto. Para usar esse método, você cria um <xref:System.Windows.Media.FormattedText> objeto. Esse objeto permite que você desenhe texto de várias linhas, no qual cada caractere no texto pode ser formatado individualmente. A funcionalidade do <xref:System.Windows.Media.FormattedText> objeto contém muito da funcionalidade dos sinalizadores de DrawText na API do Win32. Além disso, o <xref:System.Windows.Media.FormattedText> objeto contém a funcionalidade, como suporte a reticências, no qual reticências são exibidas quando o texto excede seu limite. O exemplo a seguir mostra o texto que tem diversos formatos aplicados a ele, incluindo um gradiente linear na segunda e terceira palavras.  
+ Você pode desenhar texto diretamente para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos usando o <xref:System.Windows.Media.DrawingContext.DrawText%2A> método o <xref:System.Windows.Media.DrawingContext> objeto. Para usar esse método, você cria um <xref:System.Windows.Media.FormattedText> objeto. Esse objeto permite que você desenhe texto de várias linhas, no qual cada caractere no texto pode ser formatado individualmente. A funcionalidade do <xref:System.Windows.Media.FormattedText> objeto contém muito da funcionalidade dos sinalizadores de DrawText na API do Windows. Além disso, o <xref:System.Windows.Media.FormattedText> objeto contém a funcionalidade, como suporte a reticências, no qual reticências são exibidas quando o texto excede seu limite. O exemplo a seguir mostra o texto que tem diversos formatos aplicados a ele, incluindo um gradiente linear na segunda e terceira palavras.  
   
  ![Texto exibido utilizando objeto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

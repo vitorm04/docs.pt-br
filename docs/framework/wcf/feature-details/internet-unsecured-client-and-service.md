@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: e8aa8d66e667036f09bd5670e779f14fa9401450
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 480242d519fee6ddabac3b39ff21f8e1b76827f0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643800"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410661"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Serviço e cliente de internet desprotegido
-A ilustração a seguir mostra um exemplo de um público, não segura cliente do Windows Communication Foundation (WCF) e serviço.  
+A ilustração a seguir mostra um exemplo de um público, não segura cliente do Windows Communication Foundation (WCF) e serviço:  
   
- ![Não seguro da Internet inseguro e cenário de serviço](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
+ ![Captura de tela que mostra um cenário de Internet desprotegido](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
@@ -40,7 +40,7 @@ A ilustração a seguir mostra um exemplo de um público, não segura cliente do
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
   
-### <a name="service-configuration"></a>Configuração de serviço  
+### <a name="service-configuration"></a>Configuração de Serviço  
  O código a seguir define o mesmo ponto de extremidade usando a configuração.  
   
 ```xml  

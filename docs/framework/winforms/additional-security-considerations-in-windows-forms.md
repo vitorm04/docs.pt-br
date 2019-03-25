@@ -7,17 +7,17 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718903"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409387"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerações adicionais sobre Segurança do Windows Forms
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configurações de segurança podem fazer com que seu aplicativo seja executado de forma diferente em um ambiente de confiança parcial que no computador local. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe o acesso a esses recursos locais críticos como o sistema de arquivos, rede e APIs não gerenciadas, entre outras coisas. As configurações de segurança afetam a capacidade de chamar a API do Microsoft Win32 ou outras APIs que não pode ser verificado pelo sistema de segurança. A segurança também afeta outros aspectos do seu aplicativo, incluindo acesso a dados e de arquivo e impressão. Para obter mais informações sobre o acesso a arquivos e dados em um ambiente de confiança parcial, consulte [acesso a dados nos Windows Forms e o arquivo mais seguro](more-secure-file-and-data-access-in-windows-forms.md). Para obter mais informações sobre a impressão em um ambiente de confiança parcial, consulte [mais seguro impressão nos Windows Forms](more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configurações de segurança podem fazer com que seu aplicativo seja executado de forma diferente em um ambiente de confiança parcial que no computador local. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe o acesso a esses recursos locais críticos como o sistema de arquivos, rede e APIs não gerenciadas, entre outras coisas. As configurações de segurança afetam a capacidade de chamar a API do Microsoft Windows ou outras APIs que não pode ser verificado pelo sistema de segurança. A segurança também afeta outros aspectos do seu aplicativo, incluindo acesso a dados e de arquivo e impressão. Para obter mais informações sobre o acesso a arquivos e dados em um ambiente de confiança parcial, consulte [acesso a dados nos Windows Forms e o arquivo mais seguro](more-secure-file-and-data-access-in-windows-forms.md). Para obter mais informações sobre a impressão em um ambiente de confiança parcial, consulte [mais seguro impressão nos Windows Forms](more-secure-printing-in-windows-forms.md).  
   
- As seções a seguir abordam como trabalhar com a área de transferência, executar a manipulação de janela e chamar a API do Win32 em aplicativos que são executados em um ambiente de confiança parcial.  
+ As seções a seguir abordam como trabalhar com a área de transferência, executar a manipulação de janela e chamar a API do Windows em aplicativos que são executados em um ambiente de confiança parcial.  
   
 ## <a name="clipboard-access"></a>Acesso de área de transferência  
  O <xref:System.Security.Permissions.UIPermission> classe controla o acesso à área de transferência e associado <xref:System.Security.Permissions.UIPermissionClipboard> valor de enumeração indica o nível de acesso. A tabela a seguir mostra os níveis de permissão possíveis.  
@@ -69,8 +69,8 @@ ms.locfileid: "57718903"
   
  Para limitar esse risco potencial, use os controles de terceiros somente de fornecedores que você pode confiar. Se você usar controles de terceiros que você baixou a partir de uma fonte não verificável, recomendamos que você examine o código-fonte para explorações potenciais. Depois de verificar que a origem é não são mal-intencionados, você deve compilar o assembly por conta própria e garantir que a origem corresponda o assembly.  
   
-## <a name="win32-api-calls"></a>Chamadas de API do Win32  
- Se o projeto de aplicativo requer chamar uma função da API do Win32, você está acessando o código não gerenciado. Nesse caso, as ações do código para a janela ou sistema operacional não podem ser determinadas quando você estiver trabalhando com valores ou chamadas de API do Win32. O <xref:System.Security.Permissions.SecurityPermission> classe e o <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> valor o <xref:System.Security.Permissions.SecurityPermissionFlag> enumeração controlar o acesso ao código não gerenciado. Um aplicativo pode acessar código não gerenciado apenas quando ele recebe o <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão. Por padrão, somente aplicativos que estão sendo executados localmente podem chamar código não gerenciado.  
+## <a name="windows-api-calls"></a>Chamadas de API do Windows  
+ Se o projeto de aplicativo requer chamar uma função da API do Windows, você está acessando o código não gerenciado. Nesse caso, as ações do código para a janela ou sistema operacional não podem ser determinadas quando você estiver trabalhando com valores ou chamadas de API do Windows. O <xref:System.Security.Permissions.SecurityPermission> classe e o <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> valor o <xref:System.Security.Permissions.SecurityPermissionFlag> enumeração controlar o acesso ao código não gerenciado. Um aplicativo pode acessar código não gerenciado apenas quando ele recebe o <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão. Por padrão, somente aplicativos que estão sendo executados localmente podem chamar código não gerenciado.  
   
  Alguns membros dos formulários do Windows fornecem um acesso não gerenciado que requer o <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão. A tabela a seguir lista os membros no <xref:System.Windows.Forms> namespace que exigem a permissão. Para obter mais informações sobre as permissões que são necessárias para um membro, consulte a documentação da biblioteca de classe do .NET Framework.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "57718903"
 |<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> Método|  
 |<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> Método<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> Método|  
   
- Se seu aplicativo não tem permissão para chamar código não gerenciado, seu aplicativo deve solicitar <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão, ou você deve considerar maneiras alternativas de implementação de recursos; em muitos casos, o Windows Forms fornece uma alternativa gerenciada para a API do Win32 funções. Se nenhuma alternativa significa que existe e o aplicativo deve acessar código não gerenciado, você terá a elevar as permissões para o aplicativo.  
+ Se seu aplicativo não tem permissão para chamar código não gerenciado, seu aplicativo deve solicitar <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão, ou você deve considerar maneiras alternativas de implementação de recursos; em muitos casos, o Windows Forms fornece uma alternativa gerenciada para Windows Funções de API. Se nenhuma alternativa significa que existe e o aplicativo deve acessar código não gerenciado, você terá a elevar as permissões para o aplicativo.  
   
  Permissão para chamar código não gerenciado permite que um aplicativo execute quase qualquer coisa. Portanto, permissão para chamar código não gerenciado somente deve ser concedida para aplicativos que vêm de uma fonte confiável. Como alternativa, dependendo do aplicativo, a parte da funcionalidade do aplicativo que faz a chamada para código não gerenciado pode ser opcional ou habilitado no ambiente de confiança total, somente. Para obter mais informações sobre permissões perigosas, consulte [permissões perigosas e administração da diretiva](../misc/dangerous-permissions-and-policy-administration.md). Para obter mais informações sobre elevar permissões, consulte [administração geral de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   

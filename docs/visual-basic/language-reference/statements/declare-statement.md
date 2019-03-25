@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973165"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411532"
 ---
 # <a name="declare-statement"></a>Instrução Declare
 Declara uma referência a um procedimento implementado em um arquivo externo.  
@@ -63,7 +63,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`Lib`|Necessário. Apresenta um `Lib` cláusula, que identifica o arquivo externo (DLL ou recurso de código) que contém um procedimento externo.|  
 |`libname`|Necessário. Nome do arquivo que contém o procedimento declarado.|  
 |`Alias`|Opcional. Indica que o procedimento que está sendo declarado não pode ser identificado em seu arquivo pelo nome especificado em `name`. Você especifica sua identificação em `aliasname`.|  
-|`aliasname`|Necessário se você usar o `Alias` palavra-chave. Cadeia de caracteres que identifica o procedimento em uma das duas maneiras:<br /><br /> O nome do ponto de entrada do procedimento em seu arquivo, dentro de aspas (`""`)<br /><br /> -ou-<br /><br /> Um sinal numérico (`#`) seguido por um inteiro que especifica o número ordinal do ponto de entrada do procedimento em seu arquivo|  
+|`aliasname`|Necessário se você usar o `Alias` palavra-chave. Cadeia de caracteres que identifica o procedimento em uma das duas maneiras:<br /><br /> O nome do ponto de entrada do procedimento em seu arquivo, dentro de aspas (`""`)<br /><br /> - ou -<br /><br /> Um sinal numérico (`#`) seguido por um inteiro que especifica o número ordinal do ponto de entrada do procedimento em seu arquivo|  
 |`parameterlist`|Necessário se o procedimento usa parâmetros. Ver [lista de parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Necessário se `Function` for especificado e `Option Strict` é `On`. Tipo de dados do valor retornado pelo procedimento.|  
   
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Mecanismo.** Visual Basic usa o .NET Framework *de invocação de plataforma* mecanismo (PInvoke) para resolver e acessar procedimentos externos. O `Declare` instrução e o <xref:System.Runtime.InteropServices.DllImportAttribute> classe os dois usam este mecanismo automaticamente e não é necessário nenhum conhecimento do PInvoke. Para obter mais informações, confira [Passo a passo: Chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Se o procedimento externo é executado fora o common language runtime (CLR), vale *código não gerenciado*. Quando você chama tal procedimento, por exemplo, uma função de API do Win32 ou um método COM, você pode expor seu aplicativo a riscos de segurança. Para obter mais informações, consulte [diretrizes de codificação segura para código não gerenciado](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
+>  Se o procedimento externo é executado fora o common language runtime (CLR), vale *código não gerenciado*. Quando você chama tal procedimento, por exemplo, uma função de API do Windows ou um método COM, você pode expor seu aplicativo a riscos de segurança. Para obter mais informações, consulte [diretrizes de codificação segura para código não gerenciado](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir declara uma referência externa para uma `Function` procedimento que retorna o nome de usuário atual. Depois, ele chama o procedimento externo `GetUserNameA` como parte do `getUser` procedimento.  

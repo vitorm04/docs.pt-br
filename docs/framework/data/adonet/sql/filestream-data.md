@@ -2,12 +2,12 @@
 title: Dados FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: cd496909a387f5726b2d22adae14085a60eae881
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674725"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410271"
 ---
 # <a name="filestream-data"></a>Dados FILESTREAM
 
@@ -180,7 +180,7 @@ A documentação completa do FILESTREAM está localizada nas seções a seguir n
 |Tópico|Descrição|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Descreve quando usar o armazenamento FILESTREAM e como ele se integra com o Mecanismo de Banco de Dados do SQL Server com um sistema de arquivos NTFS.|
-|[Criar aplicativos de cliente para dados FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Descreve as funções da API do Win32 para trabalhar com dados FILESTREAM.|
+|[Criar aplicativos de cliente para dados FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Descreve as funções de API do Windows para trabalhar com dados FILESTREAM.|
 |[FILESTREAM e outros recursos do SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Fornece considerações, diretrizes e limitações para usar dados FILESTREAM com outros recursos do SQL Server.|
 
 ## <a name="see-also"></a>Consulte também

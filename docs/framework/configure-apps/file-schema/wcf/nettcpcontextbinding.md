@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 998f44d691231db14d24c36bdf769b502642d8c5
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f508d814fb1e23c59606fcf78ad38f7661609c26
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758710"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411285"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding>
 Especifica um contexto para o <xref:System.ServiceModel.NetTcpBinding> que requer que o nível de proteção seja assinado. O contextExchangeMechanism para NetTcpContextBinding é SOAPHeader.  
@@ -68,8 +68,8 @@ Especifica um contexto para o <xref:System.ServiceModel.NetTcpBinding> que reque
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |closeTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação close. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
-|contextProtectionLevel|Válido <xref:System.Net.Security.ProtectionLevel> valor que especifica o nível de proteção desejado do cabeçalho SOAP usado para propagar as informações de contexto.  O valor padrão é `Sign`.|  
-|hostnameComparisonMode|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Esse atributo é do tipo `System.ServiceModel.HostnameComparisonMode`, que indica se o nome do host é usado para acessar o serviço ao fazer a correspondência no URI. O valor padrão é `StrongWildcard`, que ignora o nome do host na correspondência.|  
+|contextProtectionLevel|Válido <xref:System.Net.Security.ProtectionLevel> valor que especifica o nível de proteção desejado do cabeçalho SOAP usado para propagar as informações de contexto.  O valor padrão é <xref:System.Net.Security.ProtectionLevel.Sign>.|  
+|hostnameComparisonMode|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Esse atributo é do tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica se o nome do host é usado para acessar o serviço ao fazer a correspondência no URI. O valor padrão é <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que ignora o nome do host na correspondência.|  
 |listenBacklog|Um inteiro positivo que especifica o número máximo de canais esperando para serem aceitos no ouvinte. As conexões que excede esse limite são enfileiradas até que o espaço abaixo do limite fica disponível. O `connectionTimeout` atributo limita o tempo que um cliente irá esperar para ser conectado antes de lançar uma exceção de conexão. O padrão é 10.|  
 |maxBufferPoolSize|Um inteiro que especifica o tamanho do pool de buffer máximo para esta associação. O padrão é 512 * 1024 bytes. Muitas partes do Windows Communication Foundation (WCF) usam buffers. Criação e destruição de buffers de cada vez que elas são usadas são caro e coleta de lixo para buffers também é dispendiosa. Com os pools de buffer, usar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Portanto, a sobrecarga na criação e destruição de buffers é evitada.|  
 |maxBufferSize|Um inteiro positivo que especifica o tamanho máximo, em bytes, do buffer usado para armazenar mensagens na memória. Se o buffer estiver cheio, o excesso de dados permanece no soquete subjacente até que o buffer tem espaço novamente. Esse valor não pode ser menor que `maxReceivedMessageSize` atributo. O padrão é 65536. Para obter mais informações, consulte <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  

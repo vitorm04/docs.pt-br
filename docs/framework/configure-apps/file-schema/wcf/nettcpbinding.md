@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 54e9a488b9e83b07d1d6d7e18e92ecedc5c74ea6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: d719b5c65eda8299170705cede81907a51b12e79
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759178"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412273"
 ---
 # <a name="nettcpbinding"></a>\<netTcpBinding>
 
@@ -65,7 +65,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`closeTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação close. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
-|`hostnameComparisonMode`|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Esse atributo é do tipo `System.ServiceModel.HostnameComparisonMode`, que indica se o nome do host é usado para acessar o serviço ao fazer a correspondência no URI. O valor padrão é `StrongWildcard`, que ignora o nome do host na correspondência.|  
+|`hostNameComparisonMode`|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Esse atributo é do tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica se o nome do host é usado para acessar o serviço ao fazer a correspondência no URI. O valor padrão é <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que ignora o nome do host na correspondência.|  
 |`listenBacklog`|Um inteiro positivo que especifica o número máximo de canais esperando para serem aceitos no ouvinte. As conexões que excede esse limite são enfileiradas até que o espaço abaixo do limite fica disponível. O `connectionTimeout` atributo limita o tempo que um cliente irá esperar para ser conectado antes de lançar uma exceção de conexão. O padrão é 10.|  
 |`maxBufferPoolSize`|Um inteiro que especifica o tamanho do pool de buffer máximo para esta associação. O padrão é 512 * 1024 bytes. Muitas partes do Windows Communication Foundation (WCF) usam buffers. Criação e destruição de buffers de cada vez que elas são usadas são caro e coleta de lixo para buffers também é dispendiosa. Com os pools de buffer, usar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Portanto, a sobrecarga na criação e destruição de buffers é evitada.|  
 |`maxBufferSize`|Um inteiro positivo que especifica o tamanho máximo, em bytes, do buffer usado para armazenar mensagens na memória.<br /><br /> Se o `transferMode` atributo é igual a `Buffered`, esse atributo deve ser igual ao `maxReceivedMessageSize` valor do atributo.<br /><br /> Se o `transferMode` atributo é igual a `Streamed`, esse atributo não pode ser mais do que o `maxReceivedMessageSize` valor do atributo, e deve ser pelo menos o tamanho dos cabeçalhos.<br /><br /> O padrão é 65536. Para obter mais informações, consulte <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  

@@ -2,12 +2,12 @@
 title: Tempo de vida personalizado
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520765"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410375"
 ---
 # <a name="custom-lifetime"></a>Tempo de vida personalizado
 
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Por fim o <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementação é ligada ao modelo de serviço usando o <xref:System.ServiceModel.Description.IServiceBehavior> implementação. Essa implementação é colocada na `CustomLeaseTimeAttribute` classe e ele também deriva o `Attribute` classe para expor esse comportamento como um atributo base.
+ Por fim o <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementação é ligada ao modelo de serviço usando o <xref:System.ServiceModel.Description.IServiceBehavior> implementação. Essa implementação é colocada na `CustomLeaseTimeAttribute` classe e ele também deriva o <xref:System.Attribute> classe para expor esse comportamento como um atributo base.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,

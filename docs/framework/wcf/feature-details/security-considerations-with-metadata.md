@@ -2,12 +2,12 @@
 title: Considerações de segurança com metadados
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585559"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411907"
 ---
 # <a name="security-considerations-with-metadata"></a>Considerações de segurança com metadados
 Ao usar os recursos de metadados no Windows Communication Foundation (WCF), considere as implicações de segurança de publicação, recuperar e usar metadados do serviço.  
@@ -28,7 +28,7 @@ Ao usar os recursos de metadados no Windows Communication Foundation (WCF), cons
 ## <a name="using-safe-techniques-for-processing-metadata"></a>Usando técnicas de seguras para o processamento de metadados  
  Metadados de serviço com frequência é recuperado de um serviço em uma rede usando protocolos padronizados, como WS-MetadataExchange (MEX). Muitos formatos de metadados incluem referenciando mecanismos para apontando para metadados adicionais. O <xref:System.ServiceModel.Description.MetadataExchangeClient> tipo processa automaticamente referências para você em documentos de descrição linguagem WSDL (Web Services), o esquema XML e documentos MEX. O tamanho do <xref:System.ServiceModel.Description.MetadataSet> objeto criado a partir de metadados recuperados é diretamente proporcional ao <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> valor para o <xref:System.ServiceModel.Description.MetadataExchangeClient> instância que é usada e o `MaxReceivedMessageSize` valor para a associação que está sendo usada pelo <xref:System.ServiceModel.Description.MetadataExchangeClient> instância. Defina essas cotas para os valores apropriados, conforme determinado pelo seu cenário.  
   
- No WCF, os metadados de serviço é processado como XML. Durante o processamento de documentos XML, aplicativos devem protegerem contra mal-intencionado estruturas XML. Use o `XmlDictionaryReader` por apropriados cotas durante o processamento de XML e também definir o <xref:System.Xml.XmlTextReader.DtdProcessing%2A> propriedade `Prohibit`.  
+ No WCF, os metadados de serviço é processado como XML. Durante o processamento de documentos XML, aplicativos devem protegerem contra mal-intencionado estruturas XML. Use o <xref:System.Xml.XmlDictionaryReader> por apropriados cotas durante o processamento de XML e também definir o <xref:System.Xml.XmlTextReader.DtdProcessing%2A> propriedade <xref:System.Xml.DtdProcessing.Prohibit>.  
   
  O sistema de metadados no WCF é extensível e as extensões de metadados podem ser registradas em seu arquivo de configuração do aplicativo (consulte [estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). Extensões de metadados podem executar código arbitrário, portanto, você deve proteger seu arquivo de configuração de aplicativo com o controle de acesso apropriado ACLs (listas) e registrar as implementações de extensão somente metadados confiável.  
   
