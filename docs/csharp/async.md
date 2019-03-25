@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212203"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185734"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
@@ -254,12 +254,12 @@ Bloquear o thread atual como um meio de aguardar a conclusão de uma tarefa pode
 
 Não depender do estado de objetos globais ou da execução de determinados métodos. Em vez disso, depender apenas dos valores retornados dos métodos. Por quê?
 
-  * Será mais fácil raciocinar sobre o código.
-  * O código será mais fácil de testar.
-  * Misturar código assíncrono e síncrono será muito mais simples.
-  * As condições de corrida poderão, normalmente, ser completamente evitadas.
-  * Dependendo dos valores retornados, a coordenação de código assíncrono se tornará simples.
-  * (Bônus) funciona muito bem com a injeção de dependência.
+* Será mais fácil raciocinar sobre o código.
+* O código será mais fácil de testar.
+* Misturar código assíncrono e síncrono será muito mais simples.
+* As condições de corrida poderão, normalmente, ser completamente evitadas.
+* Dependendo dos valores retornados, a coordenação de código assíncrono se tornará simples.
+* (Bônus) funciona muito bem com a injeção de dependência.
 
 Uma meta recomendada é alcançar a [Transparência referencial](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) completa ou quase completa em seu código. Isso resultará em uma base de código extremamente previsível, testável e de fácil manutenção.
 

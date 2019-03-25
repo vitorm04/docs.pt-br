@@ -4,12 +4,12 @@ description: Saiba como o .NET realizar marshal de seus tipos para uma represent
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411350"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185409"
 ---
 # <a name="type-marshalling"></a>Marshalling dos tipos
 
@@ -38,8 +38,8 @@ Esta primeira tabela descreve os mapeamentos para vários tipos para os quais o 
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | `char` ou `char16_t` dependendo do `CharSet` do P/Invoke ou da estrutura. Confira a [documentação do conjunto de caracteres](/.charset.md). |
-| `string`  | `char*` ou `char16_t*` dependendo do `CharSet` do P/Invoke ou da estrutura. Confira a [documentação do conjunto de caracteres](/.charset.md). |
+| `char`    | `char` ou `char16_t` dependendo do `CharSet` do P/Invoke ou da estrutura. Confira a [documentação do conjunto de caracteres](charset.md). |
+| `string`  | `char*` ou `char16_t*` dependendo do `CharSet` do P/Invoke ou da estrutura. Confira a [documentação do conjunto de caracteres](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | Tipos de ponteiro do .NET (por exemplo: `void*`)  | `void*` |
@@ -73,7 +73,7 @@ Alguns tipos só podem ter o marshal realizado como parâmetros e não como camp
 
 | Tipo .NET | Tipo nativo (parâmetro somente) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | `char*` ou `char16_t*` dependendo do `CharSet` do P/Invoke.  Confira a [documentação do conjunto de caracteres](/.charset.md). |
+| `System.Text.StringBuilder` | `char*` ou `char16_t*` dependendo do `CharSet` do P/Invoke.  Confira a [documentação do conjunto de caracteres](charset.md). |
 | `System.ArgIterator` | `va_list` (no Windows x86/x64/arm64 somente) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |

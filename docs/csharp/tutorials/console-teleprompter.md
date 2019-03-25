@@ -3,12 +3,12 @@ title: Aplicativo do Console
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058393"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348824"
 ---
 # <a name="console-application"></a>Aplicativo do Console
 
@@ -230,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -258,8 +254,6 @@ Coloque essa classe em um novo arquivo e cerque-a pelo namespace `TeleprompterCo
 ```csharp
 using static System.Math;
 ```
-
-O outro recurso de linguagem novo é a instrução [`lock`](../language-reference/keywords/lock-statement.md). Essa instrução garante a existência de apenas um thread nesse código a qualquer momento. Se houver um thread na seção bloqueada, outros threads deverão aguardar até que o primeiro thread saia dessa seção. A instrução `lock` usa um objeto que protege a seção de bloqueio. Essa classe segue uma linguagem padrão para bloquear um objeto privado na classe.
 
 Em seguida, atualize os métodos `ShowTeleprompter` e `GetInput` para usar o novo objeto `config`. Escreva um método final `async` de retorno de `Task` para iniciar as duas tarefas e sair quando a primeira tarefa for concluída:
 
