@@ -1,6 +1,0 @@
-# [Recursos em aplicativos de área de trabalho](index.md)
-## [Criando arquivos de recurso](creating-resource-files-for-desktop-apps.md)
-### [Trabalhando com arquivos .resx de forma programática](working-with-resx-files-programmatically.md)
-## [Criando assemblies satélite](creating-satellite-assemblies-for-desktop-apps.md)
-## [Empacotando e implantando recursos](packaging-and-deploying-resources-in-desktop-apps.md)
-## [Recuperando recursos](retrieving-resources-in-desktop-apps.md)

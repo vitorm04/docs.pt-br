@@ -1,5 +1,0 @@
-# [Acessando configurações de aplicativo](accessing-application-settings.md)
-## [Como criar grades de propriedades para configurações de usuário](how-to-create-property-grids-for-user-settings.md)
-## [Como persistir configurações de usuário](how-to-persist-user-settings.md)
-## [Como alterar configurações de usuário](how-to-change-user-settings.md)
-## [Como ler configurações do aplicativo](how-to-read-application-settings.md)
