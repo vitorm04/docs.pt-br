@@ -54,8 +54,7 @@ End With
   
  O tipo de dados de `objectExpression` pode ser qualquer tipo de classe ou estrutura, ou até mesmo um tipo elementar do Visual Basic, como `Integer`.  Se `objectExpression` resultar em algo diferente de um objeto, você só poderá ler os valores de seus membros ou invocar métodos, e obterá um erro se tentar atribuir valores aos membros de uma estrutura usada em uma instrução `With...End With`.  Esse é o mesmo erro que você obteria se invocasse um método que retornasse uma estrutura e imediatamente acessasse e atribuísse um valor a um membro do resultado da função, como `GetAPoint().x = 1`.  O problema em ambos os casos é que a estrutura só existe na pilha de chamadas, e não há maneira de um membro da estrutura alterada nessas situações gravar em um local de modo que qualquer outro código no programa possa observar a alteração.  
   
- 
-  `objectExpression` é avaliada uma vez, ao entrar no bloco. Você não pode reatribuir `objectExpression` de dentro do bloco `With`.  
+ `objectExpression` é avaliada uma vez, ao entrar no bloco. Você não pode reatribuir `objectExpression` de dentro do bloco `With`.  
   
  Dentro de um bloco `With`, você pode acessar os métodos e as propriedades de apenas o objeto especificado sem qualificá-los. Você pode usar métodos e propriedades de outros objetos, mas deverá qualificá-los com seus nomes de objeto.  
   
