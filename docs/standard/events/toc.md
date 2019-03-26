@@ -1,8 +1,0 @@
-# [Eventos](index.md)
-## [Como acionar e consumir eventos](how-to-raise-and-consume-events.md)
-## [Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md)
-## [Como consumir eventos em um aplicativo Web Forms](how-to-consume-events-in-a-web-forms-application.md)
-## [Padrão de design do observador](observer-design-pattern.md)
-### [Práticas recomendadas para o padrão de design do observador](observer-design-pattern-best-practices.md)
-### [Como implementar um provedor](how-to-implement-a-provider.md)
-### [Como implementar um observador](how-to-implement-an-observer.md)

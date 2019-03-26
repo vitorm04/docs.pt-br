@@ -1,5 +1,0 @@
-# [Esquema de configurações de compilador e de provedor de idiomas](index.md)
-## [Elemento <system.codedom>](system-codedom-element.md)
-### [<compilers> Elemento](compilers-element.md)
-#### [<compiler> Elemento](compiler-element.md)
-##### [<providerOption> Elemento](provideroption-element.md)

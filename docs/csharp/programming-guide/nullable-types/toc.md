@@ -1,5 +1,0 @@
-# [Tipos que permitem valor nulo](index.md)
-## [Usando tipos que permitem valor nulo](using-nullable-types.md)
-## [Conversão boxing de tipos que permitem valor nulo](boxing-nullable-types.md)
-## [Como identificar um tipo que permite valor nulo](how-to-identify-a-nullable-type.md)
-## [Como converter bool? em bool com segurança](how-to-safely-cast-from-bool-to-bool.md)
