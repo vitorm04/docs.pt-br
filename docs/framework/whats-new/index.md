@@ -868,7 +868,7 @@ Esse comportamento não é desejável ao se conectar a Bancos de Dados SQL do Az
 
 A adição da nova palavra-chave `PoolBlockingPeriod` permite que você selecione o período de bloqueio mais adequado para seu aplicativo. Os valores são:
 
-`Auto`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
 O período de bloqueio do pool de conexão de um aplicativo que se conecta a um Banco de Dados SQL do Azure está desabilitado, e período de bloqueio do pool de conexão de um aplicativo que se conecta a qualquer outra instância do SQL Server está habilitado. Este é o valor padrão. Se o nome de ponto de extremidade do Servidor terminar com qualquer uma das seguintes opções, será considerado um Banco de Dado SQL do Azure:
 
@@ -880,11 +880,11 @@ O período de bloqueio do pool de conexão de um aplicativo que se conecta a um 
 
 - .database.cloudapi.de
 
-`AlwaysBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
 O período de bloqueio do pool de conexão está sempre habilitado.
 
-`NeverBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock>
 
 O período de bloqueio do pool de conexão está sempre desabilitado.
 
