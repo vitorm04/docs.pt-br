@@ -27,8 +27,7 @@ protected override void Execute(CodeActivityContext context)
 }
 ```
 
-
-  <xref:System.Activities.Tracking.CustomTrackingRecord> é emitido em uma atividade de código chamando o método de <xref:System.Activities.NativeActivityContext.Track%2A> em `ActivityContext`.
+<xref:System.Activities.Tracking.CustomTrackingRecord> é emitido em uma atividade de código chamando o método de <xref:System.Activities.NativeActivityContext.Track%2A> em `ActivityContext`.
 
 ## <a name="see-also"></a>Consulte também
 

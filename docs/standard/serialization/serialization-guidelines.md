@@ -69,9 +69,8 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     
-      <xref:System.Runtime.Serialization.OnDeserializedAttribute> é o atributo de retorno de chamada mais usado. Os outros atributos da família são <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
-<xref:System.Runtime.Serialization.OnSerializingAttribute> e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> é o atributo de retorno de chamada mais usado. Os outros atributos da família são <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
+    <xref:System.Runtime.Serialization.OnSerializingAttribute> e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
   
 4.  CONSIDERE o uso do <xref:System.Runtime.Serialization.KnownTypeAttribute> para indicar os tipos concretos que devem ser usados ao desserializar um grafo de objeto complexo.  
   
