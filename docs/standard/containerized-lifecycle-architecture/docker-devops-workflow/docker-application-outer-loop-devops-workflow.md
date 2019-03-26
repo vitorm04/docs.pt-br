@@ -4,12 +4,12 @@ description: Conheça as etapas de "loop externo" do fluxo de trabalho de DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 95664e20269f68a2eea5111b6c12ec7f108dc77b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676194"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462975"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo do Docker
 
@@ -90,13 +90,13 @@ Com essas tarefas do Visual Studio Team Services, uma compilação de Host do Do
 > [! INFORMAÇÕES] para ler mais sobre como montar um CI de Docker de serviços do Azure DevOps de pipeline e exibir a instruções passo a passo, visitar esses sites:
 >
 > - Executando um agente do Visual Studio Team Services (agora serviços do Azure DevOps) como um contêiner do Docker: \
->   [*https://hub.docker.com/r/microsoft/vsts-agent/*](https://hub.docker.com/r/microsoft/vsts-agent/)
+>   [https://hub.docker.com/r/microsoft/vsts-agent/](https://hub.docker.com/r/microsoft/vsts-agent/)
 >
 > - Criando imagens do Linux Docker no .NET Core com os serviços do Azure DevOps: \
->   [*https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/*](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
+>   [https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
 >
 > - Criando um serviço de equipe baseado em Linux Visual Studio crie a máquina com suporte do Docker: \
->   [*http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support*](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
+>   [http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>Integrar, testar e validar aplicativos de vários contêineres do Docker
 

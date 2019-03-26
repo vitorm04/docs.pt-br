@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373088"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466212"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) autônomo por meio do windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos fornecem suas próprias janelas usando o <xref:System.Windows.Window> classe. Este tópico apresenta <xref:System.Windows.Window> antes de abranger os fundamentos da criação e gerenciamento de janelas em aplicativos autônomos.  
@@ -44,9 +44,9 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>A classe Window  
- A figura a seguir ilustra as partes constituintes de uma janela.  
+ A figura a seguir ilustra as partes constituintes de uma janela:  
   
- ![Elementos da janela](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Captura de tela que mostra os elementos da janela.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Uma janela é dividida em duas áreas: a área de não cliente e a área de cliente.  
   
@@ -146,7 +146,7 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  A janela é finalmente aberta chamando o <xref:System.Windows.Window.Show%2A> método; o resultado é mostrado na figura a seguir.  
   
- ![Uma janela aberta chamando Window.Show](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Uma janela aberta chamando Window. show](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  Uma janela que é aberta chamando <xref:System.Windows.Window.Show%2A> é uma janela não restrita, o que significa que o aplicativo opera em um modo que permite aos usuários ativar outras janelas no mesmo aplicativo.  
   
@@ -282,13 +282,13 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Eventos de tempo de vida da janela  
- A ilustração a seguir mostra a sequência dos eventos principais no tempo de vida de uma janela.  
+ A ilustração a seguir mostra a sequência dos eventos principais no tempo de vida de uma janela:  
   
- ![Tempo de vida da janela](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Diagrama que mostra os eventos no tempo de vida de uma janela.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- A ilustração a seguir mostra a sequência dos eventos principais no tempo de vida de uma janela que é mostrada sem ativação (<xref:System.Windows.Window.ShowActivated%2A> é definido como `false` antes que a janela é mostrada).  
+ A ilustração a seguir mostra a sequência dos eventos principais no tempo de vida de uma janela que é mostrada sem ativação (<xref:System.Windows.Window.ShowActivated%2A> é definido como `false` antes que a janela é exibida):  
   
- ![Tempo de Vida da Janela &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Diagrama que mostra os eventos no tempo de vida de uma janela sem ativação.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Localização da janela  
@@ -351,21 +351,21 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  **Para propriedades de altura:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Para propriedades de largura:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- O efeito desses estilos de janela é ilustrado na figura a seguir.  
+ O efeito desses estilos de janela são ilustradas na figura a seguir:  
   
- ![Estilos de janela](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Ilustração de estilos de borda da janela.](./media/wpf-windows-overview/window-border-styles.png)  
   
  Você pode definir <xref:System.Windows.Window.WindowStyle%2A> usando um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação ou código; porque é improvável de ser alterado durante o tempo de vida de uma janela, você provavelmente irá configurá-lo usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação.  
   
@@ -448,9 +448,9 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
 #### <a name="non-rectangular-window-style"></a>Estilo de janela não retangular  
  Também há situações em que a borda estilos que <xref:System.Windows.Window.WindowStyle%2A> permite que você tenha não é suficientes. Por exemplo, você talvez queira criar um aplicativo com uma borda não retangular, como [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] usa.  
   
- Por exemplo, considere a janela de balão de fala mostrada na figura a seguir.  
+ Por exemplo, considere a janela de balão de fala mostrada na figura a seguir:  
   
- ![Janela não retangular](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Uma janela de bolhas de fala que diz que me arrastar.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  Esse tipo de janela pode ser criado, definindo a <xref:System.Windows.Window.WindowStyle%2A> propriedade para <xref:System.Windows.WindowStyle.None>e usando suporte especial que <xref:System.Windows.Window> tem para transparência.  
   
@@ -460,9 +460,10 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>Presença da barra de tarefas  
- A aparência padrão de uma janela inclui um botão da barra de tarefas, como o mostrado na figura a seguir.  
-  
- ![Janela com um botão da barra de tarefas](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+A aparência padrão de uma janela inclui um botão de barra de tarefas, como a mostrada na figura a seguir:
+
+ ![Captura de tela que mostra uma janela com um botão de barra de tarefas.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  Alguns tipos de janelas não têm um botão de barra de tarefas, como caixas de mensagens e caixas de diálogo (consulte [visão geral das caixas de diálogo](dialog-boxes-overview.md)). Você pode controlar se o botão de barra de tarefas para uma janela é mostrado, definindo a <xref:System.Windows.Window.ShowInTaskbar%2A> propriedade (`true` por padrão).  
   

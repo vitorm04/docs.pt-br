@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: d2d170679b09eb33bea3569e1e6db8954bde3659
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb7b4c06b87c8c214a6f3ed99a89707ccd0d626e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622280"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464301"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Como: Criar uma declaração personalizada
 A infraestrutura de modelo de identidade no Windows Communication Foundation (WCF) fornece um conjunto de tipos de declaração interna e direitos com as funções auxiliares para a criação de <xref:System.IdentityModel.Claims.Claim> instâncias com esses tipos e direitos. Essas declarações internas são projetadas para informações sobre o modelo encontrado em tipos de credencial de cliente WCF oferece suporte por padrão. Em muitos casos, as declarações internas são suficientes; No entanto, alguns aplicativos podem exigir declarações personalizadas. Uma declaração consiste o tipo de declaração, o recurso para o qual a declaração aplica-se a e à direita que é declarada por esse recurso. Este tópico descreve como criar uma declaração personalizada.  
@@ -80,5 +80,4 @@ A infraestrutura de modelo de identidade no Windows Communication Foundation (WC
 - <xref:System.IdentityModel.Claims.ClaimTypes>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

@@ -2,12 +2,12 @@
 title: <transport> De <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 53b434002d81e4735688ae3821db356c4e6e0fb1
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: f404782ed54d27d5dcfdfba126f6992d9badf060
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58040284"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463391"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<transport> of \<msmqIntegrationBinding>
 Define as configurações de segurança para o transporte de integração de enfileiramento de mensagens.  
@@ -59,7 +59,6 @@ msmqIntegrationBinding
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.MsmqTransportSecurity>
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)

@@ -2,12 +2,12 @@
 title: Protocolos de transação
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 26dd82936e7131dd41dd1b2ab1cf830c6fe7d591
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066227"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463937"
 ---
 # <a name="transaction-protocols"></a>Protocolos de transação
 Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination e de transações de WS-Atomic.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination 
   
  Este tópico descreve uma composição da especificação WS-Atomic transação (WS-AT) com segurança e descreve a associação de segurança usada para comunicação entre os gerenciadores de transações. A abordagem descrita neste documento foram testada com êxito com outras implementações de WS-AT e WS-Coordination incluindo IBM, IONA, Sun Microsystems e outras pessoas.  
   
- A figura a seguir ilustra a interoperabilidade entre dois gerenciadores de transações, gerente de transação 1 e 2 do Gerenciador de transações e dois aplicativos, o aplicativo 1 e 2 do aplicativo.  
+ A figura a seguir ilustra a interoperabilidade entre dois gerenciadores de transações, gerente de transação 1 e 2 do Gerenciador de transações e dois aplicativos, o aplicativo 1 e 2 do aplicativo:  
   
- ![Protocolos de transação](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![Captura de tela que mostra os gerentes de interação entre a transação.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  Considere um cenário típico de transações WS-Coordination/WS-Atomic com um iniciador (I) e um participante (P). O iniciador e o participante têm gerenciadores de transações (ITM e PTM, respectivamente). Confirmação de duas fases é conhecida como 2PC neste tópico.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714119"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462858"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Como: Use o modo de composição para controlar a combinação alfa
 Pode haver ocasiões em que é útil criar um bitmap fora da tela com as seguintes características:  
@@ -34,7 +34,7 @@ Pode haver ocasiões em que é útil criar um bitmap fora da tela com as seguint
   
  A ilustração a seguir mostra a saída do código de exemplo. Observe que as elipses são mescladas com a tela de fundo, mas elas não são mescladas uma com a outra.  
   
- ![Cópia de origem](./media/sourcecopy.png "sourcecopy")  
+ ![Diagrama mostrando elipses combinada com a tela de fundo, não entre si.](./media/how-to-use-compositing-mode-to-control-alpha-blending/ellipses-blended-background.png)  
   
  O exemplo de código contém esta instrução:  
   
@@ -48,7 +48,7 @@ Pode haver ocasiões em que é útil criar um bitmap fora da tela com as seguint
   
  A ilustração a seguir mostra a saída do código revisado.  
   
- ![Origem sobre](./media/sourceover.png "sourceover")  
+ ![Diagrama que mostra as elipses combinada juntos e em segundo plano.](./media/how-to-use-compositing-mode-to-control-alpha-blending/blend-ellipses-background.png)  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  

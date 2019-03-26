@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 05bec31cb0d1dca3dc906c183d001fb526173bb5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502545"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465861"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Controle de versão lado a lado no WorkflowServiceHost
 O controle de versões lado a lado do <xref:System.ServiceModel.Activities.WorkflowServiceHost> introduzidas no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] fornece a capacidade de hospedar várias versões de um serviço de fluxo de trabalho em um único ponto de extremidade. A funcionalidade de lado a lado fornecida permite que um serviço de fluxo de trabalho seja configurado para que novas instâncias do serviço de fluxo de trabalho sejam criadas usando a nova definição de fluxo de trabalho, enquanto executa instâncias completas usando a definição existente. Este tópico fornece uma visão geral da execução lado a lado do serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -46,7 +46,7 @@ O controle de versões lado a lado do <xref:System.ServiceModel.Activities.Workf
 ### <a name="configuring-the-definitionidentity"></a>Configurando a DefinitionIdentity  
  Quando um serviço de fluxo de trabalho é criado usando o designer de fluxo de trabalho, o <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> é definido usando o **propriedades** janela. Clique fora da atividade de raiz do serviço no designer para selecionar o serviço de fluxo de trabalho e, em seguida, escolha **janela de propriedades** da **exibição** menu. Selecione **WorkflowIdentity** na lista suspensa que aparece ao lado de **DefinitionIdentity** propriedade e, em seguida, expanda e especifique os detalhes desejados <xref:System.Activities.WorkflowIdentity> propriedades. No exemplo a seguir a <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> está configurado com o <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` e uma <xref:System.Activities.WorkflowIdentity.Version%2A> de `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> é opcional e neste exemplo é `null`.  
   
- ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv1.bmp "WorkflowServiceDefinitionIdentityv1")  
+ ![Captura de tela que mostra a propriedade DefinitionIdentity.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-property.bmp)  
   
  Quando um serviço de fluxo de trabalho é auto-hospedado, o <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> é configurado quando o serviço de fluxo de trabalho é criado. No exemplo a seguir, o <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> está configurado com os mesmos valores do exemplo anterior, com o <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` e uma <xref:System.Activities.WorkflowIdentity.Name%2A> de `1.0.0.0`.  
   
@@ -84,7 +84,7 @@ End With
 ### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>Adicionar uma nova versão a um serviço de fluxo de trabalho hospedado na web   
  A primeira etapa na configuração de uma nova versão de um serviço de fluxo de trabalho em um serviço hospedado na web é criar uma nova pasta na pasta `App_Code` com o mesmo nome do arquivo de serviço. Se arquivo `xamlx` do serviço é chamado de `MortgageWorkflow.xamlx`, a pasta deve ser nomeada como `MortgageWorkflow`. Coloque uma cópia do arquivo `xamlx` original do serviço nesta pasta e renomeie-o para um novo nome, como `MortgageWorkflowV1.xamlx`. Faça as alterações desejadas no serviço primário, atualize seu <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> e implante o serviço. No exemplo a seguir, o <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> foi atualizado com um <xref:System.Activities.WorkflowIdentity.Name%2A> de `MortageWorkflow` e um <xref:System.Activities.WorkflowIdentity.Version%2A> de `2.0.0.0`.  
   
- ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv2.bmp "WorkflowServiceDefinitionIdentityv2")  
+ ![Captura de tela que mostra a DefinitionIdentity da WorkflowIdentity.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-workflowidentity.bmp)  
   
  Quando o serviço for reiniciado, a versão anterior será automaticamente adicionada à coleção <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A>, porque ela está localizada na subpasta `App_Code` designada. Observe que, se a versão principal do serviço de fluxo de trabalho tem um `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> as versões anteriores não serão adicionadas. Uma versão pode ter um `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, mas se houver várias versões, a versão principal não deve ser aquela com o `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, senão as versões anteriores não serão adicionadas à coleção <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A>.  
   

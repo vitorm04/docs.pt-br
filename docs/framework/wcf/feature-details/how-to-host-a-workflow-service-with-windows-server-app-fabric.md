@@ -2,12 +2,12 @@
 title: 'Como: Hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 94eff2a01c70e34e57ff153d0cbdef44b6377b01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 287067391f47a0b4bcbe11bd4bfab971954cd706
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651182"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465120"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Como: Hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric
 Hospedagem de serviços de fluxo de trabalho na tela do aplicativo é semelhante ao hospedarmos no IIS / WAS. A única diferença é que as ferramentas que do App Fabric fornece para implantação, monitoramento e gerenciamento de serviços de fluxo de trabalho. Este tópico usa o serviço de fluxo de trabalho criado a [criando um serviço de fluxo de trabalho de longa execução](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Esse tópico orientará você pela criação de um serviço de fluxo de trabalho. Este tópico explica como hospedar o serviço de fluxo de trabalho usando a malha de aplicativos. Para obter mais informações sobre o Windows Server AppFabric, consulte [documentação do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Antes de concluir as etapas a seguir, certifique-se de que ter o Windows Server App Fabric instalado.  Para fazer isso, abra os serviços de informações da Internet (inetmgr.exe), clique no nome de servidor na **conexões** exibir, clique em Sites e clique em **Default Web Site**. No lado direito da tela, você deve ver uma seção chamada **App Fabric**. Se você não vir essa seção (vai estar na parte superior do painel à direita) não tem malha de aplicativos instalada. Para obter mais informações sobre como instalar o Windows Server AppFabric, consulte [instalando o Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
@@ -56,13 +56,13 @@ Hospedagem de serviços de fluxo de trabalho na tela do aplicativo é semelhante
   
 8.  Selecione o **Auto-Start** guia. Isso permite que você especifique configurações de inicialização automática para os serviços de fluxo de trabalho no aplicativo, conforme mostrado na seguinte captura de tela.  
   
-     ![Automático da malha de aplicativo&#45;Iniciar configuração](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![Captura de tela que mostra o aplicativo Fabric automática&#45;Iniciar configuração.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
   
      Para obter mais informações sobre como configurar o início automático, consulte [Configurando Auto-Start com App Fabric](https://go.microsoft.com/fwlink/?LinkId=193150).  
   
 9. Selecione o **limitação** guia. Isso permite que você defina as configurações de limitação para o serviço de fluxo de trabalho, conforme mostrado na seguinte captura de tela.  
   
-     ![Limitação da configuração da malha de aplicativos](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
+     ![Captura de tela que mostra a configuração de limitação do App Fabric.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-throttling-configuration.gif)  
   
      Para obter mais informações sobre como configurar a limitação, consulte [Configurando a limitação com o App Fabric](https://go.microsoft.com/fwlink/?LinkId=193149).  
   
@@ -82,11 +82,11 @@ Hospedagem de serviços de fluxo de trabalho na tela do aplicativo é semelhante
   
 4.  O aplicativo cliente será imediatamente chamar o serviço de fluxo de trabalho e, em seguida, aguarde. O serviço de fluxo de trabalho ficará ocioso e ser persistente. Você pode verificar isso iniciando o Internet Information Services (inetmgr.exe), navegando até o OrderService no painel de conexões e selecioná-la. Em seguida, clique no ícone do painel de aplicativo da malha no painel à direita. Em instâncias persistidas do WF, você verá há uma instância de serviço de fluxo de trabalho persistida como mostrado na seguinte captura de tela.  
   
-     ![Painel da malha de aplicativos](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
+     ![Captura de tela que mostra o painel do App Fabric.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-dashboard.gif)  
   
      O **histórico de instância de WF** lista informações sobre o serviço de fluxo de trabalho, como o número de ativações do serviço de fluxo de trabalho, o número de conclusões de instância de serviço de fluxo de trabalho e o número de instâncias de fluxo de trabalho com falhas. Em instâncias de ativo ou ocioso que será exibido um link, clicar no link exibirá mais informações sobre as instâncias de fluxo de trabalho ocioso, conforme mostrado na seguinte captura de tela.  
   
-     ![Persistente detalhes da instância de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")  
+     ![Captura de tela que mostra os detalhes da instância de fluxo de trabalho persistidas.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/persisted-workflow-instance-detail.gif)  
   
      Para obter mais informações sobre o Windows Server App Fabric Consulte recursos e como usá-los [recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   

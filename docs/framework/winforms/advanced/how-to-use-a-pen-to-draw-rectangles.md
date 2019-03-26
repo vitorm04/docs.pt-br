@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-ms.openlocfilehash: 2441687cb36d0780b7fbc935c5cb0edc74bc6ba0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a29cae5a360185b7fa5e70fc0181c0cfaac8fc09
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712169"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463183"
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>Como: Usar uma caneta para desenhar retângulos
 Para desenhar retângulos, é necessário um <xref:System.Drawing.Graphics> objeto e um <xref:System.Drawing.Pen> objeto. O <xref:System.Drawing.Graphics> objeto fornece os <xref:System.Drawing.Graphics.DrawRectangle%2A> método e o <xref:System.Drawing.Pen> objeto armazena recursos da linha, como cor e largura.  
@@ -25,7 +25,7 @@ Para desenhar retângulos, é necessário um <xref:System.Drawing.Graphics> obje
   
  A ilustração a seguir mostra o retângulo resultante. As linhas pontilhadas mostram onde o retângulo deveria ser desenhado se a largura da caneta tivesse um pixel. A exibição ampliada do canto superior esquerdo do retângulo mostra que as linhas pretas espessas são centralizadas nessas linhas pontilhadas.  
   
- ![Canetas](./media/pens1.gif "pens1")  
+ ![Captura de tela mostrando o retângulo desenhado com preto e a linha pontilhada.](./media/how-to-use-a-pen-to-draw-rectangles/drawn-rectangle-black-lines-dotted-lines.gif)  
   
  [!code-csharp[System.Drawing.UsingAPen#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingAPen#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  

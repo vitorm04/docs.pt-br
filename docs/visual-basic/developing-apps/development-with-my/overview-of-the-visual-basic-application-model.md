@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517377"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464093"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visão geral do modelo de aplicativo do Visual Basic
 Visual Basic fornece um modelo bem definido para controlar o comportamento de aplicativos Windows Forms: o modelo de aplicativo do Visual Basic. Esse modelo inclui eventos para lidar com o aplicativo inicialização e desligamento, bem como eventos para capturar exceções não manipuladas. Ele também fornece suporte para o desenvolvimento de aplicativos de única instância. O modelo de aplicativo é extensível, para que os desenvolvedores que precisam de mais controle podem personalizar seus métodos substituíveis.  
@@ -26,9 +26,9 @@ Visual Basic fornece um modelo bem definido para controlar o comportamento de ap
   
 -   Cada tentativa subsequente para iniciar o aplicativo, enquanto a primeira instância é executada, resulta em um comportamento muito diferente. A tentativa subsequente notifica a primeira instância sobre os argumentos de linha de comando e, em seguida, sai imediatamente. A primeira instância manipula o `StartupNextInstance` evento para determinar quais argumentos de linha de comando da instância subsequente foram e continuará a ser executado.  
   
-     Este diagrama mostra como uma instância subsequente sinaliza a primeira instância.  
+     Este diagrama mostra como uma instância subsequente sinaliza a primeira ocorrência:  
   
-     ![Único de imagem de aplicativo de instância](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Diagrama que mostra uma imagem de aplicativo de instância única.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  Manipulando o `StartupNextInstance` evento, você pode controlar o comportamento do seu aplicativo de instância única. Por exemplo, Microsoft Outlook normalmente é executado como um aplicativo de instância única; Quando o Outlook estiver em execução e você tentar iniciar o Outlook novamente, foco muda para a instância original, mas não abre outra instância.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 93a3ec342a852c28173d3051d65c091c0adc4492
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333021"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466160"
 ---
 # <a name="queues-overview"></a>Visão geral de filas
 Esta seção apresenta geral e principais conceitos por trás de comunicação em fila. As seções subsequentes entram em detalhes sobre como os conceitos de enfileiramento de mensagens descritos aqui se manifestam no Windows Communication Foundation (WCF).  
@@ -74,7 +74,6 @@ Esta seção apresenta geral e principais conceitos por trás de comunicação e
  Depois que uma mensagem torna-se à fila de destino, o serviço repetidamente pode falhar ao processar a mensagem. Por exemplo, um aplicativo ler uma mensagem da fila em uma transação e atualizar um banco de dados podem localizar o banco de dados temporariamente desconectado. Nesse caso, a transação é revertida, uma nova transação é criada e a mensagem é reler da fila. Uma segunda tentativa pode ser bem-sucedida ou falhar. Em alguns casos, dependendo da causa do erro, a mensagem pode repetidamente não entrega para o aplicativo. Nesse caso, a mensagem é considerada como "suspeitas". Essas mensagens são movidas para uma fila de mensagens suspeitas que pode ser lidos por um aplicativo de tratamento de suspeitas.  
   
 ## <a name="see-also"></a>Consulte também
-- [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sessões e filas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md)

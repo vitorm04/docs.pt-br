@@ -3,17 +3,17 @@ title: Modelo de programação de declarações do WIF
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316500"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462806"
 ---
 # <a name="wif-claims-programming-model"></a>Modelo de programação de declarações do WIF
 Os desenvolvedores do ASP.NET e do WCF (Windows Communication Foundation) normalmente usam as interfaces de IIdentity e IPrincipal para trabalhar com as informações de identidade do usuário. No .NET 4.5, o WIF (Windows Identity Foundation) foi integrado, de modo que as declarações agora estejam sempre presentes para qualquer entidade de segurança, conforme ilustrado no seguinte diagrama:
 
- ![Modelo de programação de declarações do WIF](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![Diagrama que mostra o modelo de programação de declarações do WIF.](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  No .NET 4.5, System.Security.Claims contém as novas classes ClaimsPrincipal e ClaimsIdentity (consulte o diagrama acima). Todas as entidades de segurança do .NET agora são derivadas de ClaimsPrincipal. Todas as classes de identidade internas, como FormsIdentity para o ASP.NET e WindowsIdentity, agora são derivadas de ClaimsIdentity. Da mesma forma, todas as classes de entidade de segurança internas como GenericPrincipal e WindowsPrincipal são derivadas de ClaimsPrincipal.
 
@@ -59,7 +59,7 @@ O WIF dá suporte a várias combinações de mecanismos de autenticação pronto
 |SAML 2.0|O mesmo que “SAML 1.1”.|O mesmo que “SAML 1.1 mapeado para a conta do Windows”.|
 |X509|1.  Declarações com o nome diferenciado do X500, emailName, dnsName, SimpleName, UpnName, UrlName, thumbprint, RsaKey (isso pode ser extraído usando o método RSACryptoServiceProvider.ExportParameters da propriedade X509Certificate2.PublicKey.Key), DsaKey (isso pode ser extraído usando o método DSACryptoServiceProvider.ExportParameters da propriedade X509Certificate2.PublicKey.Key), propriedades SerialNumber do certificado X509.<br />2.  Declaração AuthenticationMethod com o valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`. A declaração AuthenticationInstant com o valor da hora em que o certificado foi validado no formato XmlSchema DateTime.|1.  Ela usa o nome de domínio totalmente qualificado da conta do Windows como o valor da declaração `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`. .<br />2.  As declarações do Certificado X509 não mapeadas para o Windows e declarações da conta do Windows obtidas ao mapear o certificado para o Windows.|
 |UPN|1.  As declarações são semelhantes às declarações descritas na seção de autenticação do Windows.<br />2.  Declaração AuthenticationMethod com o valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`. A declaração AuthenticationInstant com o valor da hora em que a senha foi validada no formato XmlSchema DateTime.||
-|Windows (Kerberos ou NTLM)|1.  Declarações geradas do token de acesso, como: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID e Name<br />2.  AuthenticationMethod com o valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. AuthenticationInstant com o valor da hora em que o token de acesso do Windows foi criado no formato XMLSchema DateTime.||
+|Windows (Kerberos ou NTLM)|1.  Declarações geradas do token de acesso, como: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID e nome<br />2.  AuthenticationMethod com o valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. AuthenticationInstant com o valor da hora em que o token de acesso do Windows foi criado no formato XMLSchema DateTime.||
 |Par de chaves RSA|1.  A declaração `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` com o valor de RSAKeyValue.<br />2.  Declaração AuthenticationMethod com o valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`. A declaração AuthenticationInstant com o valor da hora em que a chave RSA foi autenticada (ou seja, a assinatura foi verificada) no formato XMLSchema DateTime.||
 
 |Tipo de autenticação|URI emitido na declaração “AuthenticationMethod”|

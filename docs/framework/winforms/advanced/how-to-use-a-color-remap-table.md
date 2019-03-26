@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 72965d6968aab256579929acc00e629bcd3c71f0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f4f19229a31266b406214e93e2b59acd343ca2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707321"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463885"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>Como: Usar uma tabela de remapeamento de cores
 Remapeamento é o processo de conversão de cores em uma imagem seguindo uma tabela de remapeamento de cores. A tabela de remapeamento de cores é uma matriz de <xref:System.Drawing.Imaging.ColorMap> objetos. Cada <xref:System.Drawing.Imaging.ColorMap> objeto na matriz tem um <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> propriedade e um <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> propriedade.  
@@ -28,7 +28,7 @@ Remapeamento é o processo de conversão de cores em uma imagem seguindo uma tab
   
  A ilustração a seguir mostra a imagem original à esquerda e a imagem remapeada à direita.  
   
- ![Color ReMap](./media/colortrans7.png "colortrans7")  
+ ![Captura de tela mostrando a imagem original e a imagem remapeada.](./media/how-to-use-a-color-remap-table/original-image-remap-colors.png)  
   
  [!code-csharp[System.Drawing.RecoloringImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  

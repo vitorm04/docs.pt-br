@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379634"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464951"
 ---
 # <a name="toolbar-overview"></a>Visão geral de ToolBar
 <xref:System.Windows.Controls.ToolBar> os controles são contêineres para um grupo de comandos ou controles que geralmente são relacionados em sua função. Um <xref:System.Windows.Controls.ToolBar> geralmente contém botões que invocam comandos.  
@@ -28,10 +28,9 @@ ms.locfileid: "57379634"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>ToolBars com itens de estouro  
- Muitas vezes <xref:System.Windows.Controls.ToolBar> controles contêm mais itens do que se adaptam ao tamanho da barra de ferramentas. Quando isso acontece, o <xref:System.Windows.Controls.ToolBar> exibe um botão de estouro. Para ver os itens de estouro, um usuário clica no botão de estouro e os itens são mostrados em uma janela pop-up abaixo o <xref:System.Windows.Controls.ToolBar>. A gráfico a seguir mostra um <xref:System.Windows.Controls.ToolBar> com itens de estouro.  
+ Muitas vezes <xref:System.Windows.Controls.ToolBar> controles contêm mais itens do que se adaptam ao tamanho da barra de ferramentas. Quando isso acontece, o <xref:System.Windows.Controls.ToolBar> exibe um botão de estouro. Para ver os itens de estouro, um usuário clica no botão de estouro e os itens são mostrados em uma janela pop-up abaixo o <xref:System.Windows.Controls.ToolBar>. A gráfico a seguir mostra um <xref:System.Windows.Controls.ToolBar> com itens de estouro:  
   
- ![ToolBar com estouro](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-Barra de ferramentas com itens de estouro  
+ ![Captura de tela que mostra uma barra de ferramentas com itens de estouro.](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  Você pode especificar quando um item em uma barra de ferramentas é colocado no painel de estouro definindo a <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> anexado à propriedade <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, ou <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>. O exemplo a seguir especifica que os últimos quatro botões na barra de ferramentas sempre devem estar no painel de estouro.  
   

@@ -2,12 +2,12 @@
 title: LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 9769e98d1046bbe795040782ca5d8164140b4b0d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: d7ebf32467c7ed1d54279a93c5052e7a52dc52f7
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904851"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462715"
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] torna mais fácil e mais rápida para consultar dados armazenados em cache em um <xref:System.Data.DataSet> objeto. Especificamente, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] simplifica as consultas, permitindo que os desenvolvedores escrevam consultas de linguagem de programação em si, em vez de por meio de uma linguagem de consulta separada. Isso é especialmente útil para desenvolvedores do Visual Studio, que agora podem aproveitar a vantagem de verificação de sintaxe em tempo de compilação, digitação estática e suporte do IntelliSense fornecidos pelo Visual Studio em suas consultas.  
@@ -16,7 +16,7 @@ ms.locfileid: "55904851"
   
  O [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] funcionalidade é exposta primeiramente por meio de métodos de extensão em de <xref:System.Data.DataRowExtensions> e <xref:System.Data.DataTableExtensions> classes. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] se baseia no existente e a utiliza [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] arquitetura e não se destina a substituir [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] no código do aplicativo. Código do ADO.NET 2.0 existente continuará a funcionar em um [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] aplicativo. A relação das [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] para [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] e o armazenamento de dados é ilustrado no diagrama a seguir.  
   
- ![LINQ to DataSet é baseado no provedor do ADO.NET](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")  
+ ![Diagrama mostrando que o LINQ to DataSet é baseado em provedor ADO.NET.](./media/linq-to-dataset/linq-dataset-ado-dotnet-provider.gif)  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "55904851"
  <xref:System.Data.DataRowComparer>  
   
 ## <a name="see-also"></a>Consulte também
-- [Consulta integrada à linguagem (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)
-- [Consulta integrada à linguagem (LINQ) – Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ (consulta integrada à linguagem) – C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (consulta integrada à linguagem) – Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ e ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)

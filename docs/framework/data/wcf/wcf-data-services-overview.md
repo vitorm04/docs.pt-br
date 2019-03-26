@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: eb9adf5ff66a8b45bea79a9abaa139a46abb5b39
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b7e8d0842b705a2fc8897511e1b2e01441d9c6b9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094016"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465835"
 ---
 # <a name="wcf-data-services-overview"></a>Visão geral do WCF Data Services
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite a criação e consumo de serviços de dados para a Web ou uma intranet usando o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] permite que você exponha seus dados como recursos endereçáveis por URIs. Isso permite que você acesse e alterar dados usando a semântica de transferência de estado representacional (REST), especificamente os verbos HTTP padrão de GET, PUT, POSTAM e excluir. Este tópico fornece uma visão geral dos padrões e práticas definidas pela [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] e também os recursos fornecidos pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aproveitar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] em aplicativos baseados no .NET Framework.  
@@ -53,7 +53,7 @@ ms.locfileid: "56094016"
 ## <a name="architecture-overview"></a>Visão geral da arquitetura  
  O diagrama a seguir ilustra a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] arquitetura para expor [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds e usar esses feeds em [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-bibliotecas cliente habilitadas:  
   
- ![Diagrama de arquitetura do WCF Data Services](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
+ ![Captura de tela que mostra um diagrama de arquitetura do WCF Data Services.](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
 ## <a name="see-also"></a>Consulte também
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)

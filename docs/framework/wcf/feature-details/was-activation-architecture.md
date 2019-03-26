@@ -2,12 +2,12 @@
 title: Arquitetura de ativação do WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71546bf6fb13c9d2fecf09b79460a953f60e4e3b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557101"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465753"
 ---
 # <a name="was-activation-architecture"></a>Arquitetura de ativação do WAS
 Este tópico relaciona e descreve os componentes do Windows Process Activation Service (também conhecido como WAS).  
@@ -27,7 +27,7 @@ Este tópico relaciona e descreve os componentes do Windows Process Activation S
   
  Ao WAS ativa uma instância do processo de trabalho, ele carrega os manipuladores de protocolo de processo necessários no processo de trabalho e usa o Gerenciador de aplicativos para criar um domínio de aplicativo para hospedar o aplicativo. O domínio do aplicativo carrega o código do aplicativo, bem como os manipuladores de protocolo AppDomain que os protocolos de rede usados pelo exigem aplicativo.  
   
- ![Arquitetura do WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![Captura de tela que mostra a arquitetura do WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adaptadores de escuta  
  Os adaptadores de escuta são serviços individuais do Windows que implementam a lógica de comunicação de rede usada para receber mensagens usando o protocolo de rede no qual eles escutam. A tabela a seguir lista os adaptadores de escuta para protocolos do Windows Communication Foundation (WCF).  

@@ -11,18 +11,17 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979093"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465211"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacionamentos de tipo em operações de consulta (Visual Basic)
 Variáveis usadas em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] consulta operações são fortemente tipadas e devem ser compatíveis entre si. Tipagem forte é usada na fonte de dados, na própria consulta e na execução da consulta. A ilustração a seguir identifica os termos usados para descrever um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Para obter mais informações sobre as partes de uma consulta, consulte [operações básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
- ![Consulta de pseudocódigo com elementos realçados. ](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
-Partes de uma consulta LINQ  
+ ![Captura de tela mostrando uma consulta de pseudocódigo com elementos realçados.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)  
   
  O tipo da variável de intervalo na consulta deve ser compatível com o tipo dos elementos na fonte de dados. O tipo da variável de consulta deve ser compatível com o elemento de sequência definido no `Select` cláusula. Por fim, o tipo dos elementos da sequência também deve ser compatível com o tipo da variável de controle de loop é usado no `For Each` instrução que executa a consulta. Este tipagem forte facilita a identificação de erros de tipo em tempo de compilação.  
   

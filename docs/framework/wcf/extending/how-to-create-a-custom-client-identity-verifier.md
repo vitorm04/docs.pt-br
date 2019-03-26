@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569369"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464015"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Como: Criar um verificador de identidade do cliente personalizado
 O *identidade* recurso do Windows Communication Foundation (WCF) permite que um cliente para especificar com antecedência a identidade esperada do serviço. Sempre que um servidor se autentica para o cliente, a identidade é verificada em relação a identidade esperada. (Para obter uma explicação de identidade e como ele funciona, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -86,5 +86,4 @@ O *identidade* recurso do Windows Communication Foundation (WCF) permite que um 
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
 - [Exemplo de identidade de serviço](../../../../docs/framework/wcf/samples/service-identity-sample.md)
-- [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703017"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464457"
 ---
 # <a name="how-to-translate-image-colors"></a>Como: Converter cores de imagens
 Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. As entradas de matriz de cores que representam as conversões são fornecidas na tabela a seguir.  
@@ -29,9 +29,9 @@ Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. A
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir constrói um <xref:System.Drawing.Image> objeto no arquivo Colorbars. Em seguida, o código adiciona 0,75 ao componente vermelho de cada pixel na imagem. A imagem original é desenhada ao lado da imagem transformada.  
   
- A ilustração a seguir mostra a imagem original à esquerda e a imagem transformada à direita.  
+ A ilustração a seguir mostra a imagem original à esquerda e a imagem transformada à direita:  
   
- ![Converter cores](./media/colortrans2.png "colortrans2")  
+ ![Captura de tela da imagem original e transformada.](./media/how-to-translate-image-colors/original-image-translate-colors.png)  
   
  A tabela a seguir lista os vetores de cores para as quatro barras antes e depois da conversão em vermelho. Observe que, como o valor máximo para um componente de cor é 1, o componente vermelho na segunda linha não será alterado. (Da mesma forma, o valor mínimo para um componente de cor é 0).  
   

@@ -2,12 +2,12 @@
 title: Protocolos de transação versão 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258013"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463898"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolos de transação versão 1.0
 Versão 1 do Windows Communication Foundation (WCF) implementa a versão 1.0 dos protocolos WS-Coordination e de transações de WS-Atomic. Para obter mais informações sobre a versão 1.1, consulte [protocolos de transação](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -21,9 +21,9 @@ Versão 1 do Windows Communication Foundation (WCF) implementa a versão 1.0 dos
   
  Este tópico descreve uma composição da especificação WS-Atomic transação (WS-AT) com segurança e descreve a associação de segurança usada para comunicação entre os gerenciadores de transações. A abordagem descrita neste documento foram testada com êxito com outras implementações de WS-AT e WS-Coordination incluindo IBM, IONA, Sun Microsystems e outras pessoas.  
   
- A figura a seguir ilustra a interoperabilidade entre dois gerenciadores de transações, gerente de transação 1 e 2 do Gerenciador de transações e dois aplicativos, o aplicativo 1 e 2 do aplicativo.  
+ A figura a seguir ilustra a interoperabilidade entre dois gerenciadores de transações, gerente de transação 1 e 2 do Gerenciador de transações e dois aplicativos, o aplicativo 1 e 2 do aplicativo:  
   
- ![Protocolos de transação](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![Captura de tela que mostra os gerentes de interação entre a transação.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  Considere um cenário típico de transações WS-Coordination/WS-Atomic com um iniciador (I) e um participante (P). O iniciador e o participante têm gerenciadores de transações (ITM e PTM, respectivamente). Confirmação de duas fases é conhecida como 2PC neste tópico.  
   

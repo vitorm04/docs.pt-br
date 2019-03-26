@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369845"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464561"
 ---
 # <a name="layout"></a>Layout
 Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Entender como e quando ocorrem os cálculos de layout é essencial para a criação de interfaces do usuário no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,7 +41,7 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
   
  A ilustração a seguir mostra um layout simples.  
   
- ![Uma grade típica, sem caixa delimitadora sobreposta.](./media/boundingbox1.png "boundingbox1")  
+ ![Captura de tela que mostra uma grade típica, sem caixa delimitadora sobreposta.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  Este layout pode ser alcançado usando o seguinte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -49,7 +49,7 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
   
  Uma única <xref:System.Windows.Controls.TextBlock> elemento é hospedado dentro de um <xref:System.Windows.Controls.Grid>. Enquanto o texto preenche apenas o canto superior esquerdo da primeira coluna, o espaço alocado para o <xref:System.Windows.Controls.TextBlock> é muito maior. A caixa delimitadora de qualquer <xref:System.Windows.FrameworkElement> podem ser recuperados usando o <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> método. A ilustração a seguir mostra a caixa delimitadora para o <xref:System.Windows.Controls.TextBlock> elemento.  
   
- ![A caixa delimitadora do TextBlock agora está visível.](./media/boundingbox2.png "boundingbox2")  
+ ![Captura de tela que mostra a caixa delimitadora do TextBlock agora está visível.](./media/layout/visible-textblock-bounding-box.png)  
   
  Conforme mostrado pelo retângulo amarelo, o espaço alocado para o <xref:System.Windows.Controls.TextBlock> elemento é muito maior do que parece. Como outros elementos são adicionados para o <xref:System.Windows.Controls.Grid>, essa alocação pode reduzir ou expandir, dependendo do tipo e tamanho dos elementos que são adicionados.  
   
