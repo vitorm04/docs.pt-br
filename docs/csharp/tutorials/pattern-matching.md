@@ -3,12 +3,12 @@ title: Usar o recurso de correspondência de padrões para estender padrões de 
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125805"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262515"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usar os recursos de correspondência de padrões para estender tipo de dados
 
@@ -17,9 +17,9 @@ O C#7 introduziu recursos básicos de correspondência de padrões. Esses recurs
 Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
-> * Como reconhecer situações em que a correspondência de padrões deverá ser usada.
-> * Como usar expressões de correspondência de padrões para implementar o comportamento com base em valores de propriedade e tipos.
-> * Como combinar a correspondência de padrões com outras técnicas para criar algoritmos completos.
+> * Reconhecer situações em que a correspondência de padrões deverá ser usada.
+> * Usar expressões de correspondência de padrões para implementar o comportamento com base em tipos e valores de propriedade.
+> * Combinar a correspondência de padrões com outras técnicas para criar algoritmos completos.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -45,12 +45,12 @@ Faça o download do código inicial no repositório [dotnet/samples](https://git
 
 ## <a name="pattern-matching-designs"></a>Designs de correspondência de padrões
 
-O cenário usado neste tutorial destaca os tipos de problemas que a correspondência de padrões pode resolver de forma adequada: 
+O cenário usado neste tutorial destaca os tipos de problemas que a correspondência de padrões pode resolver de forma adequada:
 
 - Os objetos com os quais você precisa trabalhar não estão em uma hierarquia de objetos que corresponde aos seus objetivos. É possível que você esteja trabalhando com classes que fazem parte dos sistemas não relacionados.
 - A funcionalidade que você está adicionando não faz parte da abstração central dessas classes. A tarifa paga por um veículo *muda* de acordo com diferentes tipos de veículos, mas o pedágio não é uma função principal do veículo.
 
-Quando a *forma* dos dados e as *operações* nos dados não são descritas em conjunto, o recurso de correspondência padrões no C# facilita o trabalho. 
+Quando a *forma* dos dados e as *operações* nos dados não são descritas em conjunto, o recurso de correspondência padrões no C# facilita o trabalho.
 
 ## <a name="implement-the-basic-toll-calculations"></a>Implementar os cálculos básicos de pedágio
 
@@ -61,7 +61,7 @@ O cálculo mais básico do pedágio dependerá apenas do tipo do veículo:
 - Um `Bus` será R$5,00.
 - Um `DeliveryTruck` será R$10,00.
 
-Crie uma nova classe `TollCalculator` e implemente a correspondência de padrões no tipo de veículo para obter a quantidade do pedágio.
+Crie uma nova classe `TollCalculator` e implemente a correspondência de padrões no tipo de veículo para obter a quantidade do pedágio. O código a seguir mostra a implementação inicial do `TollCalculator`.
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-O código anterior usa uma **expressão switch** (não igual a uma instrução [`switch`](../language-reference/keywords/switch.md)) que testa o **tipo de padrão**. A **expressão switch** inicia-se com a variável, `vehicle` no código anterior, seguida pela palavra-chave `switch`. Em seguida, estão os **braços switch** dentro de chaves. A expressão `switch` faz outros refinamentos na sintaxe que circunda a instrução `switch`. A palavra-chave `case` é omitida, e o resultado de cada braço é uma expressão. Os dois últimos braços apresentam um novo recurso de linguagem. O caso `{ }` corresponde a qualquer objeto não nulo que não correspondia a um braço anterior. Este braço captura qualquer tipo incorreto passado para esse método. Por fim, o padrão `null` captura quando `null` é passado para esse método. O padrão `null` pode ser o último, porque os outros padrões de tipo correspondem apenas a um objeto não nulo do tipo correto.
+O código anterior usa uma **expressão switch** (não igual a uma instrução [`switch`](../language-reference/keywords/switch.md)) que testa o **tipo de padrão**. A **expressão switch** inicia-se com a variável, `vehicle` no código anterior, seguida pela palavra-chave `switch`. Em seguida, estão os **braços switch** dentro de chaves. A expressão `switch` faz outros refinamentos na sintaxe que circunda a instrução `switch`. A palavra-chave `case` é omitida, e o resultado de cada braço é uma expressão. Os dois últimos braços apresentam um novo recurso de linguagem. O caso `{ }` corresponde a qualquer objeto não nulo que não correspondia a um braço anterior. Este braço captura qualquer tipo incorreto passado para esse método.  O caso `{ }` precisa seguir os casos para cada tipo de veículo. Se a ordem for revertida, o caso `{ }` terá precedência. Por fim, o padrão `null` detecta quando um `null` é passado para esse método. O padrão `null` pode ser o último, porque os outros padrões de tipo correspondem apenas a um objeto não nulo do tipo correto.
 
 Você pode testar esse código usando o seguinte código no `Program.cs`:
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -150,7 +150,7 @@ A autoridade de pedágio deseja incentivar que os veículos viagem com a capacid
 - Os ônibus com menos de 50% da capacidade completa pagam uma taxa adicional de R$ 2,00.
 - Os ônibus com 90% da capacidade de passageiros completa, ganham um desconto de R$ 1,00.
 
-Essas regras podem ser implementadas usando o **padrão de propriedade** na mesma expressão switch. O padrão de propriedade examina as propriedades do objeto depois que o tipo foi determinado.  O único caso de um `Car` se expande para quatro casos diferentes:
+Essas regras podem ser implementadas usando o **padrão de propriedade** na mesma expressão switch. O padrão de propriedade examina as propriedades do objeto depois que o tipo foi determinado. O único caso de um `Car` se expande para quatro casos diferentes:
 
 ```csharp
 vehicle switch
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-Os três primeiros casos testam o tipo como um `Car`, em seguida, verificam o valor da propriedade `Passengers`. Se ambos corresponderem, essa expressão é avaliada e retornada. A cláusula final mostra a cláusula `when` de braço switch. Você usa a cláusula `when` para testar as condições, com exceção da igualdade, em uma propriedade. No exemplo anterior, a cláusula `when` realiza o teste para verificar se há mais de dois passageiros no carro. Estritamente falando, não é necessário neste exemplo.
+Os três primeiros casos testam o tipo como um `Car`, em seguida, verificam o valor da propriedade `Passengers`. Se ambos corresponderem, essa expressão é avaliada e retornada.
 
 Você também expande os casos para táxis de maneira semelhante:
 
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-A autoridade de pedágio não está preocupada com o número de passageiros nos caminhões de carga. Em vez disso, eles cobram mais com base na classe de peso desses caminhões. Os caminhões mais de 5000 quilos pagam uma taxa adicional de R$ 5,00. Os caminhões leves, abaixo de 3000 quilos recebem um desconto de R$ 2,00.  Essa regra é implementada com o código a seguir:
+A autoridade de pedágio não está preocupada com o número de passageiros nos caminhões de carga. Em vez disso, eles cobram mais com base na classe de peso desses caminhões. Os caminhões mais de 5000 quilos pagam uma taxa adicional de R$ 5,00. Os caminhões leves abaixo de 3.000 lb recebem um desconto de US$ 2,00. Essa regra é implementada com o código a seguir:
 
 ```csharp
 vehicle switch
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-Ao terminar, o método será muito semelhante ao seguinte:
+O código anterior mostra a cláusula `when` de um braço switch. Você usa a cláusula `when` para testar as condições, com exceção da igualdade, em uma propriedade. Ao terminar, o método será muito semelhante ao seguinte:
 
 ```csharp
 vehicle switch
@@ -220,17 +220,17 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+    Car c                       => 2.00m - 1.0m,
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -274,13 +274,13 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-No exemplo anterior, usar uma expressão recursiva significa não repetir os braços `Car` e `Taxi` braços que contêm braços filho que testam o valor da propriedade. Essa técnica não é usada para os braços `Bus` e `DeliveryTruck` porque esses estão testando intervalos da propriedade, e não valores discretos.
+Na amostra anterior, o uso de uma expressão recursiva significa não repetir os braços `Car` e `Taxi` contendo braços filho que testam o valor da propriedade. Essa técnica não é usada para os braços `Bus` e `DeliveryTruck` porque esses estão testando intervalos da propriedade, e não valores discretos.
 
 ## <a name="add-peak-pricing"></a>Adicionar preço de horário de pico
 
 Para um último recurso, a autoridade de pedágio quer adicionar um preço os horários de pico. Durante os horários de pico da manhã e do final da tarde, os pedágios serão dobrados. Essa regra afetará apenas o tráfego em uma direção: entrada para a cidade, no período da manhã, e de saída da cidade, no período da tarde. Em outros períodos durante o dia útil, os pedágios aumentam 50%. Nos períodos da noite e madrugada e de manhã cedo, as tarifas são 25% mais baratas. Durante o fim de semana, a taxa é normal, independentemente da hora.
 
-Você usará a correspondência de padrões para esse recurso, mas poderá integrá-lo a outras técnicas. É possível criar uma expressão de correspondência de padrão única que daria conta de todas as combinações de direção, dia da semana e hora. O resultado seria uma expressão complicada. Seria difícil de ler e entender. O que dificulta garantir a exatidão. Em vez disso, combine esses métodos para criar uma tupla de valores que descreve de forma concisa todos os estados. Em seguida, use a correspondência de padrões para calcular um multiplicador para o pedágio. A tupla contém três condições distintas:
+Você usará a correspondência de padrões para esse recurso, mas poderá integrá-lo a outras técnicas. É possível criar uma única expressão de correspondência de padrões que leva em conta todas as combinações de direção, dia da semana e hora. O resultado seria uma expressão complicada. Seria difícil de ler e entender. O que dificulta garantir a exatidão. Em vez disso, combine esses métodos para criar uma tupla de valores que descreve de forma concisa todos os estados. Em seguida, use a correspondência de padrões para calcular um multiplicador para o pedágio. A tupla contém três condições distintas:
 
 - O dia é um dia da semana ou do fim de semana.
 - A faixa de tempo é quando o pedágio é coletado.
@@ -309,7 +309,7 @@ A tabela a seguir mostra as combinações de valores de entrada e multiplicador 
 
 Há 16 combinações diferentes das três variáveis. Ao combinar algumas das condições, você simplificará a expressão switch.
 
-O sistema que coleta as ferramentas usa uma estrutura <xref:System.DateTime> para a hora quando o pedágio foi cobrado. Construa métodos de membro que criam as variáveis da tabela anterior.  A função a seguir usa como correspondência de padrões a expressão switch para expressar se um <xref:System.DateTime> representa o fim de semana ou um dia útil:
+O sistema que coleta os pedágios usa uma estrutura <xref:System.DateTime> para a hora em que o pedágio foi cobrado. Construa métodos de membro que criam as variáveis da tabela anterior. A seguinte função usa como correspondência de padrões a expressão switch para expressar se um <xref:System.DateTime> representa um fim de semana ou um dia útil:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -345,7 +345,7 @@ O código acima funciona, mas pode ser simplificado. Todas as oito combinações
 (false, _, _) => 1.0m,
 ```
 
-Tanto o tráfego de entrada quanto o de saída têm o mesmo multiplicador durante o dia e a noite, nos dias úteis. Esses quatro braços switch podem ser substituídos pelas duas seguintes linhas:
+Tanto o tráfego de entrada quanto o de saída têm o mesmo multiplicador durante o dia e a noite, nos dias úteis. Esses quatro braços switch podem ser substituídos por estas duas linhas:
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
@@ -372,9 +372,9 @@ Por fim, você pode remover os dois horários de pico em que é pago o preço no
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-Esse exemplo mostra uma das vantagens da correspondência de padrões. As ramificações de padrão são avaliadas na ordem. Se você reorganizá-las para que uma ramificação anterior lide com um dos casos posteriores, o compilador lhe avisará. Essas regras de linguagem tornam as simplificações anteriores mais fáceis com a certeza de que o código não foi alterado.
+Este exemplo destaca uma das vantagens da correspondência de padrões: os branches de padrões são avaliados na ordem. Se você os reorganizar para que um branch anterior trate um dos casos posteriores, o compilador emitirá um aviso sobre o código inacessível. Essas regras de linguagem tornam as simplificações anteriores mais fáceis com a certeza de que o código não foi alterado.
 
-A correspondência de padrões fornece uma sintaxe natural para implementar soluções diferentes que você criaria se usasse a técnicas orientadas a objeto. A nuvem está fazendo com que os dados e a funcionalidade existam separadamente. A *forma* dos dados e as *operações* nela não são necessariamente descritas juntas. Neste tutorial, você utilizou os dados existentes de maneiras completamente diferentes de sua função original. A correspondência de padrões proporcionou a capacidade de escrever a funcionalidade acima desses tipos, ainda que não tenha sido possível estendê-las.
+A correspondência de padrões torna alguns tipos de código mais legíveis e oferece uma alternativa às técnicas orientadas a objeto quando não é possível adicionar o código às classes. A nuvem está fazendo com que os dados e a funcionalidade existam separadamente. A *forma* dos dados e as *operações* nela não são necessariamente descritas juntas. Neste tutorial, você utilizou os dados existentes de maneiras completamente diferentes de sua função original. A correspondência de padrões proporcionou a capacidade de escrever a funcionalidade que substituiu esses tipos, ainda que não tenha sido possível estendê-los.
 
 ## <a name="next-steps"></a>Próximas etapas
 

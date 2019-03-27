@@ -3,15 +3,15 @@ title: Prever os preços usando um aprendiz de regressão com o ML.NET
 description: Prever os preços usando um aprendiz de regressão com o ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 7830849efaff2aa36f9bd436851a22f948908bb6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0a027b3b4930f7dda48d884faf0484cf33856c8d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846319"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307974"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Prever os preços usando um aprendiz de regressão com o ML.NET
 
@@ -152,7 +152,7 @@ Carregue os dados, usando o wrapper `MLContext.Data.LoadFromTextFile` do [métod
 
 Como a entrada e saída de `Transforms`, um `DataView` é o tipo de pipeline de dados fundamental, comparável ao `IEnumerable` para `LINQ`.
 
-No ML.NET, os dados são semelhantes a um modo de exibição SQL. Eles são heterogêneos e avaliados e esquematizados lentamente. O objeto é a primeira parte do pipeline e carrega os dados. Neste tutorial, ele carrega um conjunto de dados com comentários e o sentimento tóxico ou não tóxico correspondente. Isso é usado para criar o modelo e treiná-lo.
+No ML.NET, os dados são semelhantes a um modo de exibição SQL. Eles são heterogêneos e avaliados e esquematizados lentamente. O objeto é a primeira parte do pipeline e carrega os dados. Para este tutorial, ele carrega um conjunto de dados com informações sobre preços de corridas de táxi. Isso é usado para criar o modelo e treiná-lo.
 
 Adicione o seguinte código como a primeira linha do método `Train`:
 
@@ -187,8 +187,6 @@ Adicione o seguinte código ao método `Train` para adicionar o `FastTreeRegress
 A etapa final é treinar o modelo. Treinamos o modelo, <xref:Microsoft.ML.Data.TransformerChain>, com base no conjunto de dados que foi carregado e transformado. Depois que o avaliador tiver sido definido, treinaremos o modelo usando o <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> e forneceremos os dados de treinamento já carregados. Isso retornará um modelo que será usado nas previsões. `pipeline.Fit()` treina o pipeline e retorna um `Transformer` com base no `DataView` passado. O experimento não será executado até que isso ocorra.
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
-
-E pronto. Você treinou com sucesso um modelo de aprendizado de máquina que pode prever tarifas de táxi em Nova York. Agora, vamos entender o nível de precisão do modelo e saber como usá-lo para prever os valores das tarifas de táxi.
 
 ### <a name="save-the-model"></a>Salvar o modelo
 

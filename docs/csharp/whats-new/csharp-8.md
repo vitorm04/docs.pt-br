@@ -2,12 +2,12 @@
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo foi atualizado com a versão prévia 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843927"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262579"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -180,6 +180,8 @@ static string Quadrant(Point p) => p switch
 ```
 
 O padrão de descarte na switch anterior encontra a correspondência quando `x` ou `y`, mas não ambos, for 0. Uma expressão switch deve produzir um valor ou lançar uma exceção. Se não houver correspondência em nenhum dos casos, a expressão switch gerará uma exceção. O compilador gerará um aviso se você não cobrir todos os casos possíveis em sua expressão switch.
+
+Explore técnicas de correspondência de padrões neste [tutorial avançado sobre correspondência de padrões](../tutorials/pattern-matching.md).
 
 ## <a name="using-declarations"></a>Declarações using
 

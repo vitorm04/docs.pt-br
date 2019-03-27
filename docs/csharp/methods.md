@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202672"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186072"
 ---
 # <a name="methods"></a>Métodos
 
@@ -62,7 +62,7 @@ Observe que a classe `Motorcycle` inclui um método sobrecarregado, `Drive`. Doi
 
 ## <a name="method-invocation"></a>Invocação de método
 
-Os métodos podem ser de *instância* ou *estáticos*. Invocar um método de instância requer que você crie uma instância de um objeto e chame o método nesse objeto. Um método de instância opera nessa instância e seus dados. Você invoca um método estático fazendo referência ao nome do tipo ao qual o método pertence. Os métodos estáticos operam não operam nos dados da instância. Tentar chamar um método estático por meio de uma instância do objeto gera um erro do compilador.
+Os métodos podem ser de *instância* ou *estáticos*. Invocar um método de instância requer que você crie uma instância de um objeto e chame o método nesse objeto. Um método de instância opera nessa instância e seus dados. Você invoca um método estático referenciando o nome do tipo ao qual o método pertence; os métodos estáticos não operam nos dados da instância. Tentar chamar um método estático por meio de uma instância do objeto gera um erro do compilador.
 
 Chamar um método é como acessar um campo. Após o nome do objeto (se você estiver chamando um método de instância) ou o nome do tipo (se você estiver chamando um método `static`), adicione um ponto, o nome do método e parênteses. Os argumentos são listados dentro dos parênteses e são separados por vírgulas.
 

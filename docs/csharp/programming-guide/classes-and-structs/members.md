@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592844"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262477"
 ---
 # <a name="members-c-programming-guide"></a>Membros (Guia de Programação em C#)
 Classes e structs têm membros que representam seus dados e comportamento. Os membros de uma classe incluem todos os membros declarados na classe, juntamente com todos os membros (exceto construtores e finalizadores) declarados em todas as classes em sua hierarquia de herança. Os membros privados em classes base são herdados, mas não podem ser acessados de classes derivadas.  
@@ -21,7 +21,7 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
 |Membro|Descrição|  
 |------------|-----------------|  
 |[Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)|Os campos são variáveis declaradas no escopo da classe. Um campo pode ser um tipo numérico interno ou uma instância de outra classe. Por exemplo, uma classe de calendário pode ter um campo que contém a data atual.|  
-|[Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)|As constantes são campos ou propriedades cujo valor é definido em tempo de compilação e não pode ser alterado.|  
+|[Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)|Constantes são campos cujo valor é definido em tempo de compilação e não pode ser alterado.|  
 |[Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)|As propriedades são métodos de uma classe acessados como se fossem campos dessa classe. Uma propriedade pode fornecer proteção para um campo de classe para evitar que ele seja alterado sem o conhecimento do objeto.|  
 |[Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)|Os métodos definem as ações que uma classe pode executar. Métodos podem usar parâmetros que fornecem dados de entrada e retornar dados de saída por meio de parâmetros. Os métodos também podem retornar um valor diretamente, sem usar um parâmetro.|  
 |[Eventos](../../../csharp/programming-guide/events/index.md)|Os eventos fornecem notificações sobre ocorrências a outros objetos, como cliques de botão ou a conclusão bem-sucedida de um método. Eventos são definidos e disparados pelos delegados.|  

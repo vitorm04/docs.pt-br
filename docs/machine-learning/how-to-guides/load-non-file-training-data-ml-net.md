@@ -1,26 +1,27 @@
 ---
 title: Treinar um modelo de machine learning usando dados que não estão em um arquivo de texto – ML.NET
 description: Descubra como usar o ML.NET para carregar dados de treinamento que não estão em um arquivo para o treinamento do modelo de machine learning durante o pipeline de previsão.
-ms.date: 03/05/2019
+ms.date: 03/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 27b327a63cb55b7fce0f4ff7facd3ee7c4a1c85c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 32de37e45b9e19669ea06d74c7f252ec885fe004
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678601"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186085"
 ---
 # <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a>Treinar um modelo de machine learning usando dados que não estão em um arquivo de texto – ML.NET
 
 > [!NOTE]
 > Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+Esta instrução e a amostra relacionada atualmente usam o **ML.NET versão 0.11**. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 O caso de uso do ML.NET que normalmente é demonstrado é usar o `TextLoader` para ler os dados de treinamento de um arquivo.
 No entanto, em cenários de treinamento em tempo real, os dados podem ser obtidos de outra forma, como:
 
 * em tabelas SQL
+* JSON/XML
 * extraídos de arquivos de log
 * gerados em tempo real
 
@@ -59,7 +60,7 @@ IEnumerable<CustomerChurnInfo> churnData = GetChurnInfo();
 // Turn the data into the ML.NET data view.
 // We can use CreateDataView or CreateStreamingDataView, depending on whether 'churnData' is an IList,
 // or merely an IEnumerable.
-var trainData = mlContext.Data.ReadFromEnumerable(churnData);
+var trainData = mlContext.Data.LoadFromEnumerable(churnData);
 
 // Build the learning pipeline.
 // In our case, we will one-hot encode the demographic category, and concatenate that with the number of visits.

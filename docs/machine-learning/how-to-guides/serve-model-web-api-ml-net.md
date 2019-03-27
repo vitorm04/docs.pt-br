@@ -3,12 +3,12 @@ title: Usar um modelo de Machine Learning em ASP.NET Core Web API
 description: Usar um modelo de Machine Learning para Análise de Sentimento com ML.NET pela internet usando o ASP.NET Web API
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 07b751caff8ef0ca9a23bed68ddf88feb7b5ae4f
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57856695"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307909"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Como fazer: Usar um modelo de Machine Learning por meio do ASP.NET Web API
 
@@ -96,56 +96,9 @@ public class SentimentPrediction
 }
 ```
 
-## <a name="create-prediction-service"></a>Criar o serviço de previsão
+## <a name="register-predictionengine-for-use-in-application"></a>Registrar o PredictionEngine para uso no aplicativo
 
-Para organizar e reutilizar a lógica de previsão em todo o aplicativo, crie um serviço de previsão.
-
-1. Crie um diretório chamado *Services* em seu projeto para manter os serviços a serem usados pelo aplicativo:
-
-    No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Adicionar > Nova pasta**. Digite "Services" e pressione **Enter**.
-
-1. No Gerenciador de Soluções, clique com o botão direito do mouse no diretório *Services* e selecione **Adicionar > Novo Item**.
-1. Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *PredictionService.cs*. Em seguida, selecione o botão **Adicionar**. O arquivo *PredictionService.cs* é aberto no editor de códigos. Adicione a seguinte instrução using na parte superior do *PredictionService.cs*:
-
-```csharp
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-Remova a definição de classe existente e adicione o seguinte código ao arquivo *PredictionService.cs*:
-
-```csharp
-public class PredictionService
-{
-    private readonly PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
-    public PredictionService(PredictionEngine<SentimentData,SentimentPrediction> predictionEngine)
-    {
-        _predictionEngine = predictionEngine;
-    }
-
-    public string Predict(SentimentData input)
-    {
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
-
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        return isToxic;
-
-    }
-}
-```
-
-## <a name="register-predictions-service-for-use-in-application"></a>Registrar o serviço de previsões para uso no aplicativo
-
-Para usar o serviço de previsão no aplicativo, será preciso criá-lo sempre que ele for necessário. Nesse caso, a prática recomendada é a injeção de dependência do ASP.NET Core.
+Para fazer uma única previsão, você pode usar o `PredictionEngine`. Para usar o `PredictionEngine` em seu aplicativo, você precisará criá-lo sempre que necessário. Nesse caso, a prática recomendada é a injeção de dependência do ASP.NET Core.
 
 O link a seguir fornece mais informações sobre a [injeção de dependência](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
@@ -161,18 +114,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
 ```
 
-1. Adicione as seguintes linhas de código ao método *ConfigureServices*:
+2. Adicione as seguintes linhas de código ao método *ConfigureServices*:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddSingleton<MLContext>();
-    services.AddSingleton<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    services.AddScoped<MLContext>();
+    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
     {
         MLContext mlContext = ctx.GetRequiredService<MLContext>();
         string modelFilePathName = "MLModels/sentiment_model.zip";
@@ -187,9 +139,11 @@ public void ConfigureServices(IServiceCollection services)
         // Return prediction engine
         return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
     });
-    services.AddSingleton<PredictionService>();
 }
 ```
+
+> [!WARNING]
+> `PredictionEngine` não é thread-safe. Uma maneira de limitar o custo da criação do objeto é definir o tempo de vida do serviço *Com escopo*. Os objetos *com escopo* são os mesmos em uma solicitação, mas diferentes entre solicitações. Visite o link a seguir para saber mais sobre [tempos de vida do serviço](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).
 
 Em um alto nível, esse código inicializa os objetos e serviços automaticamente quando solicitado pelo aplicativo em vez de precisar fazê-lo manualmente.
 
@@ -202,9 +156,10 @@ Para processar as solicitações HTTP de entrada, será necessário criar um con
 1. No prompt, altere o campo do **Nome do Controlador** para *PredictController.cs*. Em seguida, selecione o botão Adicionar. O arquivo *PredictController.cs* é aberto no editor de códigos. Adicione a seguinte instrução using na parte superior do *PredictController.cs*:
 
 ```csharp
+using System;
 using Microsoft.AspNetCore.Mvc;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
+using Microsoft.ML;
 ```
 
 Remova a definição de classe existente e adicione o seguinte código ao arquivo *PredictController.cs*:
@@ -212,12 +167,12 @@ Remova a definição de classe existente e adicione o seguinte código ao arquiv
 ```csharp
 public class PredictController : ControllerBase
 {
+    
+    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
 
-    private readonly PredictionService _predictionService;
-
-    public PredictController(PredictionService predictionService)
+    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
     {
-        _predictionService = predictionService; //Define prediction service
+        _predictionEngine = predictionEngine; //Define prediction engine
     }
 
     [HttpPost]
@@ -227,13 +182,20 @@ public class PredictController : ControllerBase
         {
             return BadRequest();
         }
-        return Ok(_predictionService.Predict(input));
-    }
 
+        // Make a prediction
+        SentimentPrediction prediction = _predictionEngine.Predict(input);
+
+        //If prediction is true then it is toxic. If it is false, the it is not.
+        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+        return Ok(isToxic);
+    }
+    
 }
 ```
 
-Com isso, o serviço de previsão é atribuído passando-o para o construtor de controlador que você obtém por meio da injeção de dependência. Em seguida, no método POST desse controlador, o serviço a previsão está sendo usado para fazer previsões e retornar os resultados para o usuário, se obtiver êxito.
+Isso atribui o `PredictionEngine` passando-o para o construtor do controlador que você obtém por meio da injeção de dependência. Em seguida, no método POST desse controlador, o `PredictionEngine` está sendo usado para fazer previsões e retornar os resultados para o usuário, em caso de êxito.
 
 ## <a name="test-web-api-locally"></a>Testar a API Web localmente
 
