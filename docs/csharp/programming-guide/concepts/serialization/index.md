@@ -8,9 +8,9 @@ A serialização é o processo de converter um objeto em um fluxo de bytes para 
 
 ## <a name="how-serialization-works"></a>Como a serialização funciona
 
-Esta ilustração mostra o processo geral de serialização.
+Esta ilustração mostra o processo geral de serialização:
 
-![Gráfico de serialização](./media/serialization.gif "serialização")
+![Gráfico de serialização](./media/index/serialization-process.gif)
 
 O objeto é serializado em um fluxo, que transporta não apenas os dados, mas informações sobre o tipo de objeto, como sua versão, cultura e nome do assembly. Desse fluxo, ele pode ser armazenado em um banco de dados, um arquivo ou uma memória.
 
