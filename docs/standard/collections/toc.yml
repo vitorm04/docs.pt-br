@@ -1,0 +1,24 @@
+items:
+- name: Coleções e estruturas de dados
+  href: index.md
+  items:
+  - name: Selecionando uma classe de coleção
+    href: selecting-a-collection-class.md
+  - name: Tipos de coleção de uso comum
+    href: commonly-used-collection-types.md
+  - name: Quando usar coleções genéricas
+    href: when-to-use-generic-collections.md
+  - name: Comparações e classificações dentro de coleções
+    href: comparisons-and-sorts-within-collections.md
+  - name: Tipos de coleção Sorted
+    href: sorted-collection-types.md
+  - name: Tipos de coleção Hashtable e Dictionary
+    href: hashtable-and-dictionary-collection-types.md
+  - name: Coleções thread-safe
+    href: thread-safe/
+ms.openlocfilehash: c9d534277d71f3cb3f18ac90809698a3e63e5145
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468051"
