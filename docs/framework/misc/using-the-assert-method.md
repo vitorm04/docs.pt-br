@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516506"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463001"
 ---
 # <a name="using-the-assert-method"></a>Usando o método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516506"
   
 -   Método um está contido em um assembly, o método B está contido no assembly B e assim por diante.  
   
- ![](../../../docs/framework/misc/media/assert.gif "assert")  
-Usar Assert  
+ ![Diagrama que mostra os assemblies de método Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  Nesse cenário, chamadas de um método B, B chamar C, E chamadas de C, e chamadas E F. método C declara permissão para ler os arquivos na unidade C (permissão P1) e o método E exige permissão para ler arquivos. txt na unidade C (permissão P1A). Quando a demanda em F é encontrada em tempo de execução, uma movimentação de pilha é executada para verificar as permissões de todos os chamadores de F, começando com E. E recebeu P1A permissão, portanto, a movimentação da pilha continuará para examinar as permissões de C, em que a declaração do C é descoberta. Como a permissão exigida (P1A) é um subconjunto da permissão declarada (P1), as paradas de movimentação da pilha e a verificação de segurança automaticamente terá êxito. Não importa que assemblies A e B não foi concedido permissão P1A. Declarando P1, o método C garante que os chamadores podem acessar o recurso protegido pela P1, mesmo que os chamadores não recebeu permissão para acessar o recurso.  
   
