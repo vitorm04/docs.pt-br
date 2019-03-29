@@ -1,17 +1,17 @@
 ---
 title: Desabilitar o reconhecimento de DPI no Visual Studio
 description: Discute as limitações do Designer de formulários do Windows em monitores HDPI e como executar o Visual Studio como um processo sem reconhecimento de DPI.
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710531"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633862"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Desabilitar o reconhecimento de DPI no Visual Studio
 
@@ -23,11 +23,14 @@ O **Designer de formulários do Windows** no Visual Studio não tem suporte a di
 
 ![Designer de formulários do Windows no monitor HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-No Visual Studio 2017 versão 15,8 e posterior, quando você abre um formulário na **Designer de formulários do Windows** em um monitor HDPI, o Visual Studio exibe uma amarela informativa barra na parte superior do designer:
+Quando você abre um formulário na **Designer de formulários do Windows** no Visual Studio em um monitor HDPI, o Visual Studio exibe uma amarela informativa barra na parte superior do designer:
 
 ![Barra informativa no Visual Studio para reiniciar no modo de reconhecimento de DPI](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Lê a mensagem **colocação em escala no vídeo principal está definida para 200% (192 dpi). Isso pode causar problemas de renderização na janela do designer.**
+
+> [!NOTE]
+> Essa barra informativa foi introduzida no Visual Studio 2017 versão 15,8.
 
 Se você não estiver trabalhando no designer e não é necessário ajustar o layout do formulário, você pode ignorar a barra informativa e continuar trabalhando no editor de código ou em outros tipos de designers. (Você também pode [desabilitar notificações](#disable-notifications) para que a barra informativa não continue a aparecer.) Somente o **Designer de formulários do Windows** é afetado. Se você precisar trabalhar **Designer de formulários do Windows**, a próxima seção ajuda você [resolver o problema](#to-resolve-the-problem).
 
@@ -51,10 +54,13 @@ Quando o Visual Studio é executado como um processo sem reconhecimento de DPI, 
 
 Você pode marcar o Visual Studio como reconhecimento de DPI modificando o registro. Abra **Editor do registro** e adicione uma entrada para o **NT\CurrentVersion\AppCompatFlags\Layers HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows** subchave:
 
-**Entrada**: C:\Program arquivos (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Entrada**: Dependendo se você estiver usando o Visual Studio 2017 ou 2019, use um destes valores:
 
-   > [!NOTE]
-   > Se você estiver usando a edição Professional ou Enterprise do Visual Studio 2017, substitua **Community** com **Professional** ou **Enterprise** na entrada. Também, substitua a letra da unidade conforme necessário.
+- C:\Program arquivos (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program arquivos (x86) \Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Se você estiver usando a edição Professional ou Enterprise do Visual Studio, substitua **Community** com **Professional** ou **Enterprise** na entrada. Também, substitua a letra da unidade conforme necessário.
 
 **Tipo**: REG_SZ
 

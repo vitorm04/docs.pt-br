@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359127"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634447"
 ---
 # <a name="dialog-boxes-overview"></a>Visão geral das caixas de diálogo
 Aplicativos autônomos geralmente têm uma janela principal que exibe os principais dados sobre os quais o aplicativo opera e expõe a funcionalidade para processar os dados por meio de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos, como barras de menus, barras de ferramentas e barras de status. Um aplicativo não trivial também pode exibir janelas adicionais para fazer o seguinte:  
@@ -40,7 +40,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 ## <a name="message-boxes"></a>Caixas de mensagem  
  Um *caixa de mensagem* é uma caixa de diálogo que pode ser usada para exibir informações textuais e permitir que os usuários tomem decisões com botões. A figura a seguir mostra uma caixa de mensagem que exibe informações textuais, faz uma pergunta e fornece ao usuário três botões para responder à pergunta.  
   
- ![Caixa de diálogo do Processador de Texto](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![Uma caixa de diálogo do processador do Word perguntando se você deseja salvar as alterações no documento antes que o aplicativo é fechado.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  Para criar uma caixa de mensagem, use o <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox> permite que você configure o texto da caixa de mensagem, título, ícone e botões, usando código semelhante ao seguinte.  
   
@@ -73,7 +73,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 ### <a name="open-file-dialog"></a>Caixa de diálogo Abrir  
  A caixa de diálogo Abrir Arquivo, mostrada na figura a seguir, é usada pela funcionalidade de abertura de arquivo para recuperar o nome de um arquivo a ser aberto.  
   
- ![Caixa de diálogo Abrir](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![Uma caixa de diálogo Abrir mostrando o local para recuperar o arquivo.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  A caixa de diálogo comum Abrir arquivo é implementada como o <xref:Microsoft.Win32.OpenFileDialog> de classe e está localizado no <xref:Microsoft.Win32> namespace. O código a seguir mostra como criar, configurar e mostrar uma e como processar o resultado.  
   
@@ -89,7 +89,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 ### <a name="save-file-dialog-box"></a>Caixa de diálogo Salvar Arquivo  
  A caixa de diálogo Salvar Arquivo, mostrada na figura a seguir, é usada pela funcionalidade de salvamento de arquivo para recuperar o nome de um arquivo a ser salvo.  
   
- ![Caixa de diálogo Salvar Como](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![Salvar como caixa de diálogo que mostra o local para salvar o arquivo.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  Salvar da caixa de diálogo de arquivo comum é implementado como o <xref:Microsoft.Win32.SaveFileDialog> classe e está localizado no <xref:Microsoft.Win32> namespace. O código a seguir mostra como criar, configurar e mostrar uma e como processar o resultado.  
   
@@ -102,7 +102,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 ### <a name="print-dialog-box"></a>Caixa de diálogo Imprimir  
  A caixa de diálogo Imprimir, mostrada na figura a seguir, é usada pela funcionalidade de impressão para escolher e configurar a impressora na qual um usuário deseja imprimir os dados.  
   
- ![Caixa de diálogo Imprimir](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![Captura de tela que mostra uma caixa de diálogo de impressão.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  A caixa de diálogo de impressão comum é implementada como o <xref:System.Windows.Controls.PrintDialog> classe e está localizado no <xref:System.Windows.Controls> namespace. O código a seguir mostra como criar, configurar e mostrar uma.  
   
@@ -119,7 +119,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 ### <a name="creating-a-modal-custom-dialog-box"></a>Criando uma caixa de diálogo personalizada restrita  
  Este tópico mostra como usar <xref:System.Windows.Window> para criar uma implementação de caixa de diálogo modal típica, usando o `Margins` caixa de diálogo como um exemplo (consulte [amostra de caixa de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)). O `Margins` caixa de diálogo é mostrada na figura a seguir.  
   
- ![Caixa de diálogo Margens](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![Uma caixa de diálogo margens com campos para definir a margem esquerda, a margem superior, a margem direita e a margem inferior.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>Configurando uma caixa de diálogo modal  
  A interface do usuário de uma caixa de diálogo típica inclui o seguinte:  
@@ -208,7 +208,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
  Depois que a regra de validação estiver associada, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicará automaticamente quando os dados são inseridos no controle associado. Quando um controle contiver dados inválidos, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] exibirá uma borda vermelha ao redor do controle inválido, conforme mostrado na figura a seguir.  
   
- ![Margem esquerda inválida](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![Uma caixa de diálogo margens com uma borda vermelha ao redor do valor da margem esquerda inválida.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não restringe um usuário ao controle inválido até que ele insira dados válidos. Esse é bom comportamento para uma caixa de diálogo; um usuário poderá navegar livremente pelos controles em uma caixa de diálogo, independentemente de os dados serem válidos ou não. No entanto, isso significa que um usuário pode inserir dados inválidos e pressionar o **Okey** botão. Por esse motivo, seu código também precisa validar todos os controles em uma caixa de diálogo caixa quando o **Okey** botão for pressionado, tratando o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
@@ -277,7 +277,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Criando uma caixa de diálogo personalizada sem janela restrita  
  Uma caixa de diálogo sem janela restrita, como a Caixa de Diálogo Localizar mostrada na figura a seguir, tem a mesma aparência básica que a caixa de diálogo modal.  
   
- ![Caixa de diálogo Localizar](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![Captura de tela que mostra uma caixa de diálogo Localizar.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  No entanto, o comportamento é ligeiramente diferente, conforme descrito nas próximas seções.  
   

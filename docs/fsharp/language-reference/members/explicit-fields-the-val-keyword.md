@@ -2,12 +2,12 @@
 title: 'Campos explícitos: O val palavra-chave'
 description: Saiba mais sobre o F# 'val' palavra-chave que é usada para declarar um local para armazenar um valor em um tipo de classe ou estrutura sem inicializar o tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773621"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634005"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campos explícitos: O val palavra-chave
 
@@ -40,7 +40,7 @@ Por exemplo, um campo imutável chamado `someField` tem um campo de suporte no .
 Para um campo mutável, a representação de .NET compilado é um campo de .NET.
 
 >[!WARNING]
-`Note` O namespace do .NET Framework `System.ComponentModel` contém um atributo que tem o mesmo nome. Para obter informações sobre esse atributo, consulte `System.ComponentModel.DefaultValueAttribute`.
+>O namespace do .NET Framework `System.ComponentModel` contém um atributo que tem o mesmo nome. Para obter informações sobre esse atributo, consulte `System.ComponentModel.DefaultValueAttribute`.
 
 O código a seguir mostra o uso de campos explícitos e, para comparação, um `let` de associação em uma classe que tem um construtor primário. Observe que o `let`-campo associado `myInt1` é privado. Quando o `let`-campo associado `myInt1` referenciado a partir de um método de membro, o identificador de self `this` não é necessária. Mas quando você está fazendo referência os campos explícitos `myInt2` e `myString`, o identificador de self é necessário.
 

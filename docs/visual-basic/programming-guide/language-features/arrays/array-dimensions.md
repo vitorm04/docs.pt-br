@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708526"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634161"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensões de matriz no Visual Basic
 Um *dimensão* é uma direção na qual você pode variar a especificação de elementos uma matriz de. Uma matriz que contém as vendas total para cada dia do mês tem uma dimensão (o dia do mês). Uma matriz que contém as total de vendas por departamento para cada dia do mês tem duas dimensões (o número de departamento e o dia do mês). O número de dimensões que tem uma matriz é chamado de seu *classificação*.  
@@ -27,14 +27,11 @@ Um *dimensão* é uma direção na qual você pode variar a especificação de e
   
  As ilustrações a seguir mostram a estrutura conceitual de matrizes com diferentes classificações. Cada elemento nas ilustrações mostra os valores de índice que acessá-lo. Por exemplo, você pode acessar o primeiro elemento da segunda linha da matriz bidimensional especificando índices `(1, 0)`.  
   
- ![Diagrama gráfico de um&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-Matriz unidimensional  
+ ![Diagrama que mostra uma matriz unidimensional.](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![Diagrama gráfico de dois&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-matriz bidimensional  
+ ![Diagrama que mostra uma matriz bidimensional.](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![Diagrama gráfico de três&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-matriz tridimensional  
+ ![Diagrama que mostra uma matriz tridimensional.](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>Uma dimensão  
  Muitas matrizes têm apenas uma dimensão, como o número de pessoas de cada idade. O único requisito para especificar um elemento é a idade para o qual esse elemento contém a contagem. Portanto, essa matriz usa apenas um índice. O exemplo a seguir declara uma variável para conter um *matriz unidimensional* de idade, contagens de idades de 0 a 120.  
