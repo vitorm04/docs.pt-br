@@ -2,7 +2,7 @@
 title: 'Os analisadores do Roslyn: .NET'
 description: Saiba mais sobre os analisadores do Roslyn que localizam problemas e sugerem correções.
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ---
