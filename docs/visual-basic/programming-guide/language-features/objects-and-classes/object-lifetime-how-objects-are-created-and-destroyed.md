@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979457"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654518"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Tempo de vida do objeto: Como os objetos são criados e destruídos (Visual Basic)
 Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`. Tarefas de inicialização geralmente devem ser executadas em novos objetos antes de serem usadas. Tarefas comuns de inicialização incluem abrir arquivos, conectar-se aos bancos de dados e ler os valores das chaves do registro. Visual Basic controla a inicialização de novos objetos usando procedimentos denominados *construtores* (métodos especiais que permitem o controle sobre a inicialização).  
@@ -70,11 +70,11 @@ Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`.
   
  Quando uma instância de uma classe derivada é criada, o construtor `Sub New` da classe base é executado primeiro, seguido pelos construtores em classes derivadas. Isso acontece porque a primeira linha do código em um construtor `Sub New` usa a sintaxe `MyBase.New()` para chamar o construtor da classe imediatamente acima de si próprio na hierarquia de classe. O construtor `Sub New` é chamado para cada classe na hierarquia de classe, até que o construtor de classe base seja atingido. Nesse ponto, o código no construtor para a classe base é executado, seguido pelo código em cada construtor em todas as classes derivadas e o código na maioria das classes derivadas é executado por último.  
   
- ![Construtores e herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
+ ![Captura de tela mostrando a herança e construtores de hierarquia de classe.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)  
   
  Quando um objeto não é mais necessário, o CLR chama o método <xref:System.Object.Finalize%2A> para esse objeto antes de liberar sua memória. O método <xref:System.Object.Finalize%2A> é denominado de `destructor` porque executa tarefas de limpeza, como salvar informações do estado, fechar arquivos e conexões ao bancos de dados e outras tarefas que devem ser executadas antes de liberar o objeto.  
   
- ![Constructors Inheritance2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
+ ![Captura de tela mostrando o destruidor de método Finalize.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)  
   
 ## <a name="idisposable-interface"></a>Interface IDisposable  
  Instâncias de classe geralmente controlam os recursos não gerenciados pelo CLR, assim como identificadores do Windows e conexões de banco de dados. Esses recursos devem ser descartados no método `Finalize` da classe, para que eles sejam liberados quando o objeto for destruído pelo coletor de lixo. No entanto, o coletor de lixo destrói objetos somente quando o CLR exige mais memória livre. Isso significa que os recursos podem não ser liberados até muito tempo depois que o objeto sair do escopo.  

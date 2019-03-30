@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972528"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654231"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parâmetros e argumentos de procedimento (Visual Basic)
 Na maioria dos casos, um procedimento precisa de algumas informações sobre as circunstâncias em que ele tiver sido chamado. Um procedimento que executa tarefas repetidas ou compartilhadas usa informações diferentes para cada chamada. Essas informações consistem em variáveis, constantes e expressões que você passa para o procedimento quando você chamá-lo.  
@@ -36,8 +36,7 @@ Na maioria dos casos, um procedimento precisa de algumas informações sobre as 
   
  A ilustração a seguir mostra o código chamando o procedimento `safeSquareRoot` de dois locais diferentes. A primeira chamada passa o valor da variável `x` (4.0) para o parâmetro `number`e o valor de retorno `root` (2.0) é atribuído à variável `y`. A segunda chamada passa o valor literal 9.0 para `number`e atribui o valor de retorno (3.0) à variável `z`.  
   
- ![Diagrama gráfico de passar o argumento ao parâmetro](./media/parametersargue.gif "ParametersArgue")  
-Passando um argumento para um parâmetro  
+ ![Diagrama que mostra a passar um argumento para um parâmetro](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  Para obter mais informações, consulte [diferenças entre parâmetros e argumentos](./differences-between-parameters-and-arguments.md).  
   

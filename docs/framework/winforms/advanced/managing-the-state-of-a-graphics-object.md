@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717616"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653776"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Gerenciando o estado de um objeto gráfico
 O <xref:System.Drawing.Graphics> classe é o cerne da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Para desenhar qualquer coisa, você deve obter um <xref:System.Drawing.Graphics> do objeto, defina suas propriedades e chamar seus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>e assim por diante).  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  A ilustração a seguir mostra as duas elipses. Observe que a rotação de 30 graus é sobre a origem do sistema de coordenadas (canto superior esquerdo da área de cliente), e não sobre os centros das elipses. Observe também que a largura da caneta de 1 significa 1 pixel para a primeira elipse e 1 milímetro para a segunda elipse.  
   
- ![Ovais](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Ilustração que mostra duas elipses: largura de rotação e caneta.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>Área de recorte  
  Um <xref:System.Drawing.Graphics> objeto mantém uma região de recorte que se aplica a todos os itens desenhados por esse <xref:System.Drawing.Graphics> objeto. Você pode definir a região de recorte chamando o <xref:System.Drawing.Graphics.SetClip%2A> método.  
@@ -146,9 +146,9 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- A ilustração a seguir mostra as linhas recortadas.  
+ A ilustração a seguir mostra as linhas recortadas:  
   
- ![Área de Recorte Limitada](./media/graphicsascon2.png "graphicsascon2")  
+ ![Diagrama que mostra a região de recorte limitada.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>Consulte também
 - [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)

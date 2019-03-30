@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707424"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653984"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Usando transformações para ajustar a escala de cores
 Uma transformação de dimensionamento multiplica um ou mais dos quatro componentes de cor por um número. As entradas de matriz de cores que representam o dimensionamento são dadas na tabela a seguir.  
@@ -31,9 +31,9 @@ Uma transformação de dimensionamento multiplica um ou mais dos quatro componen
  [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
- A ilustração a seguir mostra a imagem original à esquerda e a imagem em escala à direita.  
+ A ilustração a seguir mostra a imagem original à esquerda e a imagem dimensionada à direita:  
   
- ![Scale Colors](./media/colortrans3.png "colortrans3")  
+ ![Captura de tela que compara as cores em escala e originais.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
  A tabela a seguir lista os vetores de cores para as quatro barras antes e depois do ajuste de azul. Veja que o componente azul na quarta barra de cores foi de 0,8 para 0,6. O motivo é que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] retém apenas parte fracionária do resultado. Por exemplo, (2)(0,8) = 1,6, e a parte fracionária de 1,6 é 0,6. Reter apenas a parte fracionária assegura que o resultado esteja sempre no intervalo [0, 1].  
   
@@ -50,9 +50,9 @@ Uma transformação de dimensionamento multiplica um ou mais dos quatro componen
  [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
- A ilustração a seguir mostra a imagem original à esquerda e a imagem em escala à direita.  
+ A ilustração a seguir mostra a imagem original à esquerda e a imagem dimensionada à direita:  
   
- ![Scale Colors](./media/colortrans4.png "colortrans4")  
+ ![Captura de tela que compara as cores em escala e originais.](./media/using-transformations-to-scale-colors/four-bar-scale-multiple-colors.png)  
   
  A tabela a seguir lista os vetores de cor para as quatro barras antes e depois do ajuste de vermelho, verde e azul.  
   

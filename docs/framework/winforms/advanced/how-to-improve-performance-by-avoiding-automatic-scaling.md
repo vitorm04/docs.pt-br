@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705327"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653789"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Como: Melhorar o desempenho, evitando o dimensionamento automático
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pode ajustar a escala automaticamente de uma imagem à medida que você a desenha, o que poderia diminuir o desempenho. Como alternativa, você pode controlar a escala da imagem passando as dimensões do retângulo de destino para o <xref:System.Drawing.Graphics.DrawImage%2A> método.  
@@ -30,9 +30,9 @@ ms.locfileid: "57705327"
  Mesmo se a resolução da tela for diferente de 96 pontos por polegada, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] provavelmente ajustará a escala da imagem como se a resolução de tela fosse de 96 pontos por polegada. Isso ocorre porque uma [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> objeto está associado um contexto de dispositivo e quando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] consultas o contexto de dispositivo para a resolução da tela, o resultado geralmente é 96, independentemente da resolução de tela real. Você pode evitar o dimensionamento automático, especificando o retângulo de destino no <xref:System.Drawing.Graphics.DrawImage%2A> método.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir desenha a mesma imagem duas vezes. No primeiro caso, a largura e altura do retângulo de destino não são especificados, e a escala da imagem é ajustada automaticamente. No segundo caso, a largura e altura (medidas em pixels) do retângulo de destino são especificadas como iguais à largura e altura da imagem original. A ilustração a seguir mostra a imagem renderizada duas vezes.  
+ O exemplo a seguir desenha a mesma imagem duas vezes. No primeiro caso, a largura e altura do retângulo de destino não são especificados, e a escala da imagem é ajustada automaticamente. No segundo caso, a largura e altura (medidas em pixels) do retângulo de destino são especificadas como iguais à largura e altura da imagem original. A ilustração a seguir mostra a imagem renderizada duas vezes:  
   
- ![Textura em escala](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![Captura de tela que mostra imagens com textura em escala.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  

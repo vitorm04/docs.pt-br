@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 38c60245ff2c0b08ee731da6c1f88c30e1af8e3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43ac5bc9e32892541ed2f9b0410b6e0ef10558a6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965815"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654322"
 ---
 # <a name="option-infer-statement"></a>Instrução Option Infer
 Permite o uso de inferência de tipo local ao declarar variáveis.  
@@ -39,15 +39,17 @@ Option Infer { On | Off }
   
  Quando você define `Option Infer` para `On`, você pode declarar variáveis locais sem especificar explicitamente um tipo de dados. O compilador infere o tipo de dados de uma variável do tipo de sua expressão de inicialização.  
   
- Na ilustração a seguir, `Option Infer` está ativado. A variável na declaração `Dim someVar = 2` é declarada como um inteiro por inferência de tipo.  
+ Na ilustração a seguir, `Option Infer` está ativado. A variável na declaração `Dim someVar = 2` é declarada como um inteiro por inferência de tipo.
+
+ Captura de tela a seguir mostra o IntelliSense quando Option Infer está ligado: 
   
- ![Modo de exibição do IntelliSense da declaração. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
-IntelliSense quando o Option Infer está ligado  
+ ![Captura de tela mostrando o modo de exibição de IntelliSense quando Option Infer está ligado.](./media/option-infer-statement/option-infer-as-integer-on.png)  
   
  Na ilustração a seguir, o `Option Infer` está desativado. A variável na declaração `Dim someVar = 2` é declarada como um `Object` por inferência de tipo. Neste exemplo, o **Option Strict** configuração é definida como **Off** no [página de compilação, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![Modo de exibição do IntelliSense da declaração. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
-IntelliSense quando o Option Infer está desligado  
+ Captura de tela a seguir mostra o IntelliSense quando Option Infer está desligado:
+ 
+ ![Captura de tela mostrando o modo de exibição de IntelliSense quando Option Infer está desligado.](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
 >  Quando uma variável é declarada como um `Object`, o tipo de tempo de execução pode ser alterado enquanto o programa está sendo executado. Visual Basic executa operações denominadas *conversão boxing* e *unboxing* para converter entre um `Object` e um tipo de valor, o que torna a execução mais lenta. Para obter informações sobre conversões boxing e unboxing, consulte o [especificação da linguagem Visual Basic](~/_vblang/spec/conversions.md#value-type-conversions).

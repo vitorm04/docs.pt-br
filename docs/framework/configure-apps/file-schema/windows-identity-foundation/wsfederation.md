@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356085"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654582"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 Fornece configuração para o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -52,7 +52,7 @@ Fornece configuração para o <xref:System.IdentityModel.Services.WSFederationAu
 |---------------|-----------------|  
 |authenticationType|Um URI que especifica o tipo de autenticação. Define o parâmetro wauth a solicitação de entrada WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro wauth não está incluído na solicitação.|  
 |atualização|A desejado idade máxima de solicitações de autenticação, em minutos. Define o parâmetro wfresh a solicitação de entrada WS-Federation. Opcional. O padrão é zero. Opcional. **Aviso:**  Na próxima versão do .NET Framework 4.5, o `freshness` atributo será do tipo `xs:string` e seu valor padrão será `null`.|  
-|homeRealm|O realm inicial do provedor de identidade (IP) a ser usado para autenticação. Define o parâmetro whr a solicitação de entrada WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro whr não está incluído na solicitação.|  
+|homeRealm|O realm inicial do provedor de identidade (IdP) a ser usado para autenticação. Define o parâmetro whr a solicitação de entrada WS-Federation. Opcional. O padrão é uma cadeia de caracteres vazia, que especifica que o parâmetro whr não está incluído na solicitação.|  
 |emissor|O URI do emissor do token pretendido. Define a base URL de WS-Federation as solicitações de entrada e solicitações de saída necessárias.|  
 |persistentCookiesOnPassiveRedirects|Especifica se os cookies persistentes são emitidos na autenticação. Opcional. O padrão é "false", os cookies não são emitidos.|  
 |passiveRedirectEnabled|Especifica se o WSFAM está habilitado para redirecionar automaticamente as solicitações não autorizadas para um STS. Opcional. O padrão é "true", solicitações não autorizadas sejam redirecionadas automaticamente.|  

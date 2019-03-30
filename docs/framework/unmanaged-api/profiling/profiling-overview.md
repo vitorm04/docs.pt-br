@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862310"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654088"
 ---
 # <a name="profiling-overview"></a>Visão geral da criação de perfil
 <a name="top"></a> Um criador de perfil é uma ferramenta que monitora a execução de outro aplicativo. Um criador de perfil de runtime (CLR) de linguagem comum é uma biblioteca de vínculo dinâmico (DLL) que consiste em funções que recebem mensagens de e enviam mensagens para o CLR usando a API de criação de perfil. A DLL do criador de perfil é carregada pelo CLR no tempo de execução.  
@@ -78,13 +78,12 @@ ms.locfileid: "43862310"
   
  A ilustração a seguir mostra como a DLL do criador de perfil interage com o aplicativo que está sendo analisado e o CLR.  
   
- ![Arquitetura de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-Arquitetura de criação de perfil  
+ ![Captura de tela que mostra a arquitetura de criação de perfil.](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>As Interfaces de notificação  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) podem ser consideradas interfaces de notificação. Essas interfaces consistem em métodos como [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), e [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Cada vez que o CLR carrega ou descarrega uma classe, compila uma função, e assim por diante, ele chama o método correspondente no criador de perfil `ICorProfilerCallback` ou `ICorProfilerCallback2` interface.  
   
- Por exemplo, um criador de perfis pode medir o desempenho do código por meio de duas funções de notificação: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) e [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). Ele só carimbos de data / hora cada notificação, acumula resultados e gera uma lista que indica quais funções consumiram mais tempo da CPU ou relógio durante a execução do aplicativo.  
+ Por exemplo, um criador de perfis pode medir o desempenho de código por meio de duas funções de notificação: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) e [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). Ele só carimbos de data / hora cada notificação, acumula resultados e gera uma lista que indica quais funções consumiram mais tempo da CPU ou relógio durante a execução do aplicativo.  
   
 ### <a name="the-information-retrieval-interfaces"></a>As Interfaces de recuperação de informações  
  As outras principais interfaces envolvidas na criação de perfil são [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) e [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). O criador de perfis chama essas interfaces conforme necessário para obter mais informações para ajudar a sua análise. Por exemplo, sempre que o CLR chama o [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) função, ele fornece um identificador de função. O criador de perfil pode obter mais informações sobre essa função chamando o [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) método para descobrir a classe pai da função, seu nome e assim por diante.  

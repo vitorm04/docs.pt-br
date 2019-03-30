@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359712"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654218"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Passo a passo: Hospedando um controle composto do Windows Forms no WPF
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial em [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] código, ele pode ser mais eficiente reutilizar pelo menos parte desse código em seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo em vez de reescrevê-la a partir do zero. O cenário mais comum é quando você tem controles Windows Forms existentes. Em alguns casos, talvez você não tenha nem acesso ao código-fonte desses controles. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece um procedimento simples para hospedar esses controles em um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo. Por exemplo, você pode usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para a maioria da sua programação enquanto hospeda seus especializado <xref:System.Windows.Forms.DataGridView> controles.  
@@ -36,9 +36,10 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Implementação do controle de composição dos Windows Forms  
  O controle composto do Windows Forms usado neste exemplo é um formulário simples de entrada de dados. Este formulário recebe o nome e o endereço do usuário e, em seguida, usa um evento personalizado para retornar essa informação ao host. A ilustração a seguir mostra o controle renderizado.  
-  
- ![Controle de formulários simples do Windows](./media/wfcontrol.gif "WFControl")  
-Controle de composição dos Windows Forms  
+
+ A imagem a seguir mostra um controle composto do Windows Forms:  
+
+ ![Captura de tela que mostra um controle de formulários do Windows simples.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>Criando o Projeto  
  Para iniciar o projeto:  
@@ -128,7 +129,9 @@ Controle de composição dos Windows Forms
 ## <a name="implementing-the-wpf-host-application"></a>Implementação do aplicativo host do WPF
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedar o aplicativo usa o <xref:System.Windows.Forms.Integration.WindowsFormsHost> controle que hospedará `MyControl1`. O aplicativo manipula o `OnButtonClick` evento para receber os dados do controle. Ele também tem uma coleção de botões de opção que permitem que você altere algumas das propriedades do controle do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo. A ilustração a seguir mostra o aplicativo concluído.
 
- ![Um controle inserido em uma página do WPF](./media/avalonhost.gif "AvalonHost") o aplicativo concluído, mostrando o controle inserido no aplicativo do WPF
+A imagem a seguir mostra o aplicativo completo, incluindo o controle inserido no aplicativo do WPF:
+
+ ![Captura de tela que mostra um controle inserido em uma página do WPF.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>Criando o Projeto
  Para iniciar o projeto:
