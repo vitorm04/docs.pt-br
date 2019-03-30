@@ -2,19 +2,19 @@
 title: Operações de agregação (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: fe39c2efb5d9f24a7d9d5240b20a9ca687ed1aa9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5d8e5c589b19527062f7752b2f795c8396683bbd
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202178"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675634"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Operações de agregação (Visual Basic)
 Uma operação de agregação computa um único valor de uma coleção de valores. Um exemplo de uma operação de agregação é o cálculo da temperatura média diária dos valores válidos de temperatura diária de um mês.  
   
  A ilustração a seguir mostra os resultados de duas operações de agregação diferentes em uma sequência de números. A primeira operação soma os números. A segunda operação retorna o valor máximo na sequência.  
   
- ![Operações de agregação LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")  
+ ![Ilustração que mostra operações de agregação LINQ.](./media/aggregation-operations/linq-aggregation-operations.png)  
   
  Os métodos de operador de consulta padrão que realizam operações de agregação são listados na seção a seguir.  
   

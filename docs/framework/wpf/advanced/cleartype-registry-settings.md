@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369715"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675894"
 ---
 # <a name="cleartype-registry-settings"></a>Configurações do Registro de ClearType
 Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] configurações do registro que são usadas pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
@@ -57,7 +57,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
  Para cada nome de dispositivo de vídeo para um usuário, um `ClearTypeLevel` valor DWORD é definido. Captura de tela a seguir mostra a configuração do Editor do registro para o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] nível.  
   
- ![Configurações de ClearType no Editor do Registro](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![Configurações de ClearType no Editor do registro.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos renderizam texto em um entre dois modos, com e sem [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Quando o texto é renderizado sem [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], ele é conhecido como renderização em escala de cinza.  
@@ -75,7 +75,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
  Para cada nome de dispositivo de vídeo para um usuário, um `GammaLevel` valor DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para o nível de gama.  
   
- ![Configurações de ClearType no Editor do Registro](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![Configurações de nível de gama ClearType no Editor do registro](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>Estrutura de pixel  
@@ -99,7 +99,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
  Para cada nome de dispositivo de vídeo para um usuário, um `PixelStructure` valor DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para a estrutura de pixel.  
   
- ![Configurações de ClearType no Editor do Registro](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![Configurações de nível de gama ClearType no Editor do registro](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>Nível de Contraste do Texto  
@@ -112,7 +112,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
  Para cada nome de dispositivo de vídeo para um usuário, um `TextContrastLevel` valor DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para o nível de contraste do texto.  
   
- ![Configurações de ClearType no Editor do Registro](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![Configurações de ClearType no Editor do registro.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>Consulte também
 - [Visão geral de ClearType](cleartype-overview.md)

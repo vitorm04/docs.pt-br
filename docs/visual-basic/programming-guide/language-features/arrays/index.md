@@ -56,7 +56,7 @@ A ilustração a seguir mostra o `students` matriz. Para cada elemento da matriz
 
 - O valor contido no elemento representa o número de alunos nessa série.
 
-![Imagem de matriz mostrando números de alunos](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") elementos da matriz "alunos"
+![Diagrama que mostra uma matriz de números de alunos](./media/index/students-array-elements.gif)
 
 O exemplo a seguir contém o código do Visual Basic que cria e usa a matriz:
 
