@@ -4,12 +4,12 @@ description: Saiba como hospedar o tempo de execução do .NET Core a partir do 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980367"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654049"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o tempo de execução do .NET a partir de seu código nativo
 
@@ -208,4 +208,4 @@ Depois que o host for criado, você poderá testá-lo executando-o por meio da l
 
 Se as coisas não funcionarem no começo, verifique novamente se *coreclr.dll* está disponível no local esperado pelo host, se todas as bibliotecas do Framework necessárias estão na lista de TPA e se o número de bit de CoreCLR (32 ou 64 bits) corresponde a como o host foi compilado.
 
-A hospedagem do tempo de execução do .NET Core é um cenário avançado do qual muitos desenvolvedores não precisarão. No entanto, para aqueles que precisam inicializar o código gerenciado de um processo nativo ou que precisam de mais controle sobre o comportamento do tempo de execução do .NET Core, ela pode ser muito útil. Como o .NET Core pode ser executado lado a lado consigo mesmo, é possível até mesmo criar hosts que inicializam e iniciam várias versões do tempo de execução do .NET Core e executam aplicativos em todos eles no mesmo processo.
+A hospedagem do tempo de execução do .NET Core é um cenário avançado do qual muitos desenvolvedores não precisarão. No entanto, para aqueles que precisam inicializar o código gerenciado de um processo nativo ou que precisam de mais controle sobre o comportamento do tempo de execução do .NET Core, ela pode ser muito útil.

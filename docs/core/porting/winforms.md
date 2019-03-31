@@ -2,14 +2,15 @@
 title: Portar um aplicativo do Windows Forms para o .NET Core 3.0
 description: Ensina como portar um aplicativo do Windows Forms do .NET Framework para .NET Core 3.0 para Windows.
 author: Thraka
+ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 89540ebbed834f41ce9d84c32e69e6f5e1ab0a21
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57681491"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675855"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Como: Portar um aplicativo da área de trabalho do Windows Forms para o .NET Core
 
@@ -223,7 +224,7 @@ Considere as diferenças entre o projeto `MyControlsCore.csproj` e o projeto `My
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 -    <AssemblyName>MyCoreApp</AssemblyName>
 -    <RootNamespace>WindowsFormsApp1</RootNamespace>
-+    <AssemblyName>MyCoreControls</AssemblyName>
++    <AssemblyName>MyControlsCore</AssemblyName>
 +    <RootNamespace>WindowsFormsControlLibrary1</RootNamespace>
    </PropertyGroup>
 
@@ -265,14 +266,14 @@ Como você pode ver, o nó `<OutputType>` foi removido, o que padroniza o compil
 Em seguida, no projeto principal do .NET Core **MyFormsCore.csproj**, inclua referência à nova biblioteca de controles do Windows Forms do .NET Core. Adicione uma referência com o Visual Studio ou a CLI do .NET Core a partir do diretório **SolutionFolder**:
 
 ```cli
-dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCoreProject.csproj
+dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
 ```
 
 O comando anterior adiciona o seguinte ao projeto **MyFormsCore.csproj**:
 
 ```xml
   <ItemGroup>
-    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCoreProject.csproj" />
+    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCore.csproj" />
   </ItemGroup>
 ```
 

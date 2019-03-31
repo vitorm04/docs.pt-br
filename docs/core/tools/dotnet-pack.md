@@ -2,12 +2,12 @@
 title: Comando dotnet pack
 description: O comando dotnet pack cria pacotes NuGet para seu projeto .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: 43ee31c7cd070cf0e73975c1444ef13496afae91
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58020926"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464470"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
