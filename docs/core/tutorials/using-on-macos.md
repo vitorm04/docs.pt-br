@@ -4,12 +4,12 @@ description: Este documento fornece as etapas e o fluxo de trabalho para criar u
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788447"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409491"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>Introdução ao .NET Core no macOS
 
@@ -215,7 +215,7 @@ Defina um ponto de interrupção na instrução `WriteLine` no método `Main`. F
 
 Abra a guia do depurador selecionando o ícone Depurar na barra de ferramentas do Visual Studio Code, selecionando **Exibir > Depurar** na barra de menus ou usando o atalho de teclado <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>:
 
-![Depurador do Visual Studio Code](./media/using-on-macos/vscodedebugger.png)
+![Depurador do Visual Studio Code](./media/using-on-macos/visual-studio-code-debugger.png)
 
 Pressione o botão Reproduzir para iniciar o aplicativo no depurador. O aplicativo inicia a execução e é executado até o ponto de interrupção, quando ele para. Inspecione o método `Get` e verifique se você transmitiu os argumentos corretos. Confirme se a resposta é 42.
 
