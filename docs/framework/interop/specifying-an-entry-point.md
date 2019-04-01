@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c278eca421020bea4f36f87eb6c8a9a8ba7d2a43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658280"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411298"
 ---
 # <a name="specifying-an-entry-point"></a>Especificando um ponto de entrada
 Um ponto de entrada identifica o local de uma função em uma DLL. Em um projeto gerenciado, o nome original ou o ponto de entrada ordinal de uma função de destino identifica essa função no limite de interoperação. Além disso, é possível mapear o ponto de entrada para um nome diferente, renomeando a função efetivamente.  
@@ -33,60 +33,66 @@ Um ponto de entrada identifica o local de uma função em uma DLL. Em um projeto
 ## <a name="renaming-a-function-in-visual-basic"></a>Renomeando uma função no Visual Basic  
  O Visual Basic usa a palavra-chave **Function** na instrução **Declare** para definir o campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>. O exemplo a seguir mostra uma declaração básica.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, ByVal txt As String,_  
-       ByVal caption As String, ByVal Typ As Integer) As Integer  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
  É possível substituir o ponto de entrada **MessageBox** por **MsgBox** incluindo a palavra-chave **Alias** na definição, conforme mostrado no exemplo a seguir. Nos dois exemplos, a palavra-chave **Auto** elimina a necessidade de especificar a versão do conjunto de caracteres do ponto de entrada. Para obter mais informações sobre como selecionar um conjunto de caracteres, consulte [Especificando um conjunto de caracteres](../../../docs/framework/interop/specifying-a-character-set.md).  
   
-```vb  
-Imports System.Runtime.InteropServices  
-  
-Public Class Win32  
-    Declare Auto Function MsgBox Lib "user32.dll" _  
-       Alias "MessageBox" (ByVal hWnd As Integer, ByVal txt As String,_  
-       ByVal caption As String, ByVal Typ As Integer) As Integer  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MsgBox _
+        Lib "user32.dll" Alias "MessageBox" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
 ## <a name="renaming-a-function-in-c-and-c"></a>Renomeando uma função no C# e C++  
  É possível usar o campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> para especificar uma função de DLL por nome ou ordinal. Se o nome da função na definição de método for o mesmo do ponto de entrada na DLL, você não precisará identificar explicitamente a função com o campo **EntryPoint**. Caso contrário, use um dos seguintes formatos de atributo para indicar um nome ou um ordinal:  
   
-```  
-[DllImport("dllname", EntryPoint="Functionname")]  
-[DllImport("dllname", EntryPoint="#123")]  
-```  
+```csharp
+[DllImport("DllName", EntryPoint = "Functionname")]
+[DllImport("DllName", EntryPoint = "#123")]
+```
   
  Observe que é necessário prefixar um ordinal com o sinal de cerquilha (#).  
   
  O exemplo a seguir demonstra como substituir **MessageBoxA** por **MsgBox** no código usando o campo **EntryPoint**.  
   
-```csharp  
-using System.Runtime.InteropServices;  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll", EntryPoint = "MessageBoxA")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-public class Win32 {  
-    [DllImport("user32.dll", EntryPoint="MessageBoxA")]  
-    public static extern int MsgBox(int hWnd, String text, String caption,  
-                                    uint type);  
-}  
-```  
-  
-```cpp  
-using namespace System::Runtime::InteropServices;  
-  
-typedef void* HWND;  
-[DllImport("user32", EntryPoint="MessageBoxA")]  
-extern "C" int MsgBox(HWND hWnd,  
-                      String*  pText,  
-                      String*  pCaption,  
-                      unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+typedef void* HWND;
+[DllImport("user32", EntryPoint = "MessageBoxA")]
+extern "C" int MsgBox(
+    HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="see-also"></a>Consulte também
 - <xref:System.Runtime.InteropServices.DllImportAttribute>

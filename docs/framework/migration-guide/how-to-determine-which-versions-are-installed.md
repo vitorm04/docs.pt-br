@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262446"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504425"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como: Determinar quais versões do .NET Framework estão instaladas
 
@@ -44,14 +44,14 @@ Para obter uma lista das versões do .NET Framework instaladas em um computador,
      - [Usar o Editor do Registro para encontrar versões do .NET Framework](#net_b)  
      - [Usar o código para consultar versões do .NET Framework no Registro](#net_d)  
      - [Usar o PowerShell para consultar versões do .NET Framework no Registro](#ps_a)
- - Encontre versões mais antigas do .NET Framework (1&#8211;4):
+- Encontre versões mais antigas do .NET Framework (1&#8211;4):
      - [Usar o Editor do Registro para encontrar versões do .NET Framework](#net_a)
      - [Usar o código para consultar versões do .NET Framework no Registro](#net_c)   
 
 Para obter uma lista das versões do CLR instaladas em um computador, use uma ferramenta ou o código:  
   
- - [Usar a ferramenta Clrver](#clr_a)  
- - [Usar o código para consultar a classe Environment](#clr_b)  
+- [Usar a ferramenta Clrver](#clr_a)  
+- [Usar o código para consultar a classe Environment](#clr_b)  
 
 Para obter informações sobre como detectar as atualizações instaladas para cada versão do .NET Framework, confira [Como: Determinar quais atualizações do .NET Framework estão instaladas](how-to-determine-which-net-framework-updates-are-installed.md). 
   
@@ -133,7 +133,7 @@ Os exemplos a seguir verificam o valor da entrada **Release** para determinar se
 
 ```PowerShell
 # PowerShell 4
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 Para verificar se há uma versão mínima necessária do .NET Framework, substitua *394802* nesses exemplos por um valor de **Release** da [tabela de versões do .NET Framework](#version_table).

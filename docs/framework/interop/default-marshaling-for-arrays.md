@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219679"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410739"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshaling padrão para matrizes
 Em um aplicativo que consiste inteiramente em um código gerenciado, o Common Language Runtime passa tipos de matriz como parâmetros de Entrada/Saída. Por outro lado, o marshaler de interoperabilidade passa uma matriz como parâmetros de Entrada, por padrão.  
   
  Com a [otimização de anexação](copying-and-pinning.md), uma matriz blittable pode aparecer operar como um parâmetro de Entrada/Saída ao interagir com objetos no mesmo apartment. No entanto, se você exportar o código posteriormente para uma biblioteca de tipos usada para gerar o proxy entre computadores e essa biblioteca for usada para realizar marshaling das chamadas entre apartments, as chamadas poderão reverter como verdadeiro o comportamento do parâmetro de Entrada.  
   
- Matrizes são complexas por natureza e as distinções entre matrizes gerenciadas e não gerenciadas garantem mais informações do que outros tipos não blittable. Este tópico fornece as seguintes informações sobre o marshaling de matrizes:  
+ Matrizes são complexas por natureza e as distinções entre matrizes gerenciadas e não gerenciadas garantem mais informações do que outros tipos não blittable.  
   
--   [Matrizes gerenciadas](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [Matrizes não gerenciadas](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [Passando parâmetros de matriz para um código do .NET](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [Passando matrizes para o COM](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Matrizes gerenciadas  
  Os tipos de matriz gerenciada podem variar; no entanto, a classe <xref:System.Array?displayProperty=nameWithType> é a classe base de todos os tipos de matriz. A classe **System.Array** tem propriedades para determinar a classificação, o tamanho e os limites inferior e superior de uma matriz, bem como métodos para acessar, classificar, pesquisar, copiar e criar matrizes.  
   
@@ -46,11 +37,9 @@ Em um aplicativo que consiste inteiramente em um código gerenciado, o Common La
 |**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|Especificado pelo tipo.|1|0|*type* **[** *n* **]**|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Matrizes não gerenciadas  
  Matrizes não gerenciadas são matrizes seguras de estilo COM ou matrizes C-style com comprimento fixo ou variável. Matrizes seguras são matrizes autodescritivas que levam o tipo, a classificação e os limites dos dados da matriz associada. Matrizes C-style são matrizes tipadas unidimensionais com um limite inferior fixo igual a 0. O serviço de marshaling tem suporte limitado para ambos os tipos de matrizes.  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>Passando parâmetros de matriz para um código do .NET  
  As matrizes C-style e as matrizes seguras podem ser passadas para um código do .NET de um código não gerenciado, como uma matriz segura ou uma matriz C-style. A tabela a seguir mostra o valor de tipo não gerenciado e o tipo importado.  
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  O marshaler de interoperabilidade usa os métodos **CoTaskMemAlloc** e **CoTaskMemFree** para alocar e recuperar a memória. A alocação de memória executada pelo código não gerenciado também deve usar esses métodos.  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>Passando matrizes para o COM  
  Todos os tipos de matriz gerenciada podem ser passados para um código não gerenciado de um código gerenciado. Dependendo do tipo gerenciado e dos atributos aplicados a ele, a matriz pode ser acessada como uma matriz segura ou uma matriz C-style, conforme mostrado na tabela a seguir.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 702d38cf6f3e28d20fbd5d7826cf7f1f56f235a7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758632"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545813"
 ---
 # <a name="if-c-reference"></a>#if (Referência de C#)
 
@@ -24,7 +24,7 @@ Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualme
 #endif
 ```
 
-É possível usar os operadores [==](../operators/equality-comparison-operator.md) (igualdade) e [!=](../operators/not-equal-operator.md) (desigualdade) apenas para testar [true](../keywords/true.md) ou [false](../keywords/false.md). True significa que o símbolo foi definido. A instrução `#if DEBUG` tem o mesmo significado que `#if (DEBUG == true)`. É possível usar os operadores [&&](../operators/conditional-and-operator.md) (e), [&#124;&#124;](../operators/conditional-or-operator.md) (ou) e [!](../operators/logical-negation-operator.md) (não) para avaliar se vários símbolos foram definidos. Também é possível agrupar os símbolos e operadores com parênteses.
+É possível usar os operadores [==](../operators/equality-operators.md#equality-operator-) (igualdade) e [!=](../operators/equality-operators.md#inequality-operator-) (desigualdade) apenas para testar [true](../keywords/true.md) ou [false](../keywords/false.md). True significa que o símbolo foi definido. A instrução `#if DEBUG` tem o mesmo significado que `#if (DEBUG == true)`. É possível usar os operadores [&&](../operators/conditional-and-operator.md) (e), [&#124;&#124;](../operators/conditional-or-operator.md) (ou) e [!](../operators/logical-negation-operator.md) (não) para avaliar se vários símbolos foram definidos. Também é possível agrupar os símbolos e operadores com parênteses.
 
 ## <a name="remarks"></a>Comentários
 

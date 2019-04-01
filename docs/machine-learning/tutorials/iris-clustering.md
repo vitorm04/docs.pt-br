@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186124"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634408"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Agrupar flores íris usando um aprendiz de clustering com o ML.NET
 
@@ -136,7 +136,7 @@ Carregue os dados usando o wrapper `MLContext.Data.LoadFromTextFile` genérico p
 Para este tutorial, o pipeline de aprendizado da tarefa de clustering consiste nas duas seguintes etapas:
 
 - concatenar colunas carregadas em uma coluna **Recursos**, que é usada por um treinador de clustering;
-- usar um treinador <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer> para treinar o modelo usando o algoritmo de cluster K-means++.
+- usar um treinador <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> para treinar o modelo usando o algoritmo de cluster K-means++.
 
 Adicione o seguinte código ao método `Main`:
 

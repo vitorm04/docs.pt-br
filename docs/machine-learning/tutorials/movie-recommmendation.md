@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 9b7ef12591e0a231b633f461547ec0eeaec1a530
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: e78772df1cf7e5f8999305a1b726a7085f94601b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58308075"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410063"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Tutorial: Criar um sistema de recomendação de filmes com o ML.NET
 
@@ -106,7 +106,7 @@ Você deseja prever as classificações de filmes, portanto, a coluna de classif
 | Recursos      | Rotular         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 | `timestamp`     |               |
 
 Cabe a você decidir quais `Features` são usados para prever o `Label`. Você também pode usar métodos como [Importância de Permuta do Recurso](../how-to-guides/determine-global-feature-importance-in-model.md) para ajudar a selecionar os melhores `Features`.
@@ -116,7 +116,7 @@ Nesse caso, você deve eliminar a coluna `timestamp` como um `Feature` porque o 
 | Recursos      | Rotular         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 
 Em seguida, é necessário definir a estrutura de dados para a classe de entrada.
 

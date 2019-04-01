@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203104"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545436"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como: definir a igualdade de valor para um tipo (Guia de Programação em C#)
 Quando você define uma classe ou struct, decide se faz sentido criar uma definição personalizada de igualdade de valor (ou equivalência) para o tipo. Normalmente, você implementa igualdade de valor quando objetos do tipo devem ser adicionados a uma coleção de algum tipo ou quando seu objetivo principal é armazenar um conjunto de campos ou propriedades. Você pode basear sua definição de igualdade de valor em uma comparação de todos os campos e propriedades no tipo ou pode basear a definição em um subconjunto. Mas, em ambos os casos e em classes e struct, sua implementação deve seguir as cinco garantias de equivalência:  
@@ -37,7 +37,7 @@ Quando você define uma classe ou struct, decide se faz sentido criar uma defini
   
 2.  Implemente a interface <xref:System.IEquatable%601?displayProperty=nameWithType> fornecendo um método `Equals` específico do tipo. Isso é o local em que a comparação de equivalência de fato é realizada. Por exemplo, você pode decidir definir a igualdade comparando apenas um ou dois campos em seu tipo. Não lance exceções de `Equals`. Para classes somente: esse método deve examinar somente os campos que são declarados na classe. Ele deve chamar `base.Equals` para examinar os campos que estão na classe base. (Não faça isso se o tipo herda diretamente de <xref:System.Object>, pois a implementação <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> executa uma verificação de igualdade de referência.)  
   
-3.  Opcional, mas recomendável: Sobrecarregar os operadores [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [! =](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Opcional, mas recomendável: Sobrecarregar os operadores [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) e [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4.  Substitua <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> para que os dois objetos que têm a igualdade de valor produzam o mesmo código hash.  
   
@@ -61,7 +61,7 @@ Quando você define uma classe ou struct, decide se faz sentido criar uma defini
   
  Para estruturas, a implementação padrão de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (que é a versão substituída em <xref:System.ValueType?displayProperty=nameWithType>) executa uma verificação de igualdade de valor por meio de reflexão para comparar os valores de cada campo no tipo. Quando um implementador substitui o método `Equals` virtual em uma estrutura, a finalidade é fornecer uma maneira mais eficiente de executar a verificação de igualdade de valor e, opcionalmente, basear a comparação em algum subconjunto dos campos ou propriedades do struct.  
   
- Os operadores [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [!=](../../../csharp/language-reference/operators/not-equal-operator.md) não podem operar em um struct a menos que o struct explicitamente os sobrecarregue.  
+ Os operadores [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) e [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) não podem operar em um struct a menos que o struct explicitamente os sobrecarregue.  
   
 ## <a name="see-also"></a>Consulte também
 

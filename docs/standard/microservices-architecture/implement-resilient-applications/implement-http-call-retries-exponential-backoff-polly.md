@@ -4,12 +4,12 @@ description: Saiba como tratar falhas de HTTP com a Polly e o HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 07333b84896c223f076e9c36cc90ab7ea7ac37c7
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479640"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465718"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementar repetições de chamadas HTTP com retirada exponencial com o HttpClientFactory e políticas da Polly
 
@@ -72,16 +72,16 @@ Policy
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - **Padrão de repetição**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
+  [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
 - **Polly e HttpClientFactory**\
-  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+  [https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
 - **Polly (biblioteca de tratamento de falhas transitórias e resiliência do .NET)**\
-  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+  [https://github.com/App-vNext/Polly](https://github.com/App-vNext/Polly)
 
 - **Marc Brooker. Jitter: Making Things Better With Randomness**\ (Tremulação: melhorando as coisas com aleatoriedade)
-  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+  [https://brooker.co.za/blog/2015/03/21/backoff.html](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Anterior](explore-custom-http-call-retries-exponential-backoff.md)

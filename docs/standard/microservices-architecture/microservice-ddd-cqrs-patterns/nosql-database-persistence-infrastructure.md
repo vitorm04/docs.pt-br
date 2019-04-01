@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 7a9c6c64f5aa482b6d21aab0c88fc204c6427a41
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 07ed5ba4650eea72f29d254accaaaea5208b1129
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974777"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465939"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Usar bancos de dados NoSQL como infraestrutura de persistência
 
@@ -314,31 +314,31 @@ services:
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **Modelagem de dados de documento para bancos de dados NoSQL** \
-  [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
+  [https://docs.microsoft.com/azure/cosmos-db/modeling-data](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 - **Vaughn Vernon. O repositório de agregação de design orientado por domínio ideal?** \
   <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
 - **Introdução ao Azure Cosmos DB: API para MongoDB**  \
-  [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
+  [https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
 - **Azure Cosmos DB: Criar um aplicativo Web da API do MongoDB com o .NET e o portal do Azure**  \
-  [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet*](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
+  [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 - **Usar o emulador do Azure Cosmos DB para desenvolvimento e teste local**  \
-  [*https://docs.microsoft.com/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/azure/cosmos-db/local-emulator)
+  [https://docs.microsoft.com/azure/cosmos-db/local-emulator](https://docs.microsoft.com/azure/cosmos-db/local-emulator)
 
 - **Conectar um aplicativo do MongoDB ao Azure Cosmos DB**  \
-  [*https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)
+  [https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)
 
 - **A imagem do Docker do emulador do Cosmos DB (contêiner do Windows)**  \
-  [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
+  [https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
 
 - **A imagem do Docker do MongoDB (contêiner do Linux e do Windows)**  \
-  [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
+  [https://hub.docker.com/r/_/mongo/](https://hub.docker.com/r/_/mongo/)
 
 - **Usar o MongoChef (Studio 3T) com um Azure Cosmos DB: Conta da API do MongoDB**  \
-  [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
+  [https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 >[!div class="step-by-step"]
 >[Anterior](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

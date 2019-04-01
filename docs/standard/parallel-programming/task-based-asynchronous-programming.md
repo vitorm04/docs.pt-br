@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268022"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409920"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 
@@ -236,7 +236,7 @@ Para obter mais informações sobre exceções e tarefas, consulte [Tratamento d
 
 ## <a name="canceling-tasks"></a>Cancelando tarefas
 
-A classe `Task` oferece suporte ao cancelamento cooperativo e é totalmente integrada às classes <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> e <xref:System.Threading.CancellationToken?displayProperty=nameWithType>, as quais foram introduzidas no .NET Framework 4. Muitos dos construtores na classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> recebem um objeto <xref:System.Threading.CancellationToken> como um parâmetro de entrada. Várias das sobrecargas <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> e <xref:System.Threading.Tasks.Task.Run%2A> também incluem um parâmetro <xref:System.Threading.CancellationToken>.
+A classe <xref:System.Threading.Tasks.Task> oferece suporte ao cancelamento cooperativo e é totalmente integrada às classes <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> e <xref:System.Threading.CancellationToken?displayProperty=nameWithType>, as quais foram introduzidas no .NET Framework 4. Muitos dos construtores na classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> recebem um objeto <xref:System.Threading.CancellationToken> como um parâmetro de entrada. Várias das sobrecargas <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> e <xref:System.Threading.Tasks.Task.Run%2A> também incluem um parâmetro <xref:System.Threading.CancellationToken>.
 
 Você pode criar o token e enviar a solicitação de cancelamento algum tempo depois usando a classe <xref:System.Threading.CancellationTokenSource>. Passe o token para <xref:System.Threading.Tasks.Task> como um argumento e também referencie o mesmo token em seu delegado de usuário, o qual faz o trabalho de responder a uma solicitação de cancelamento.
 
