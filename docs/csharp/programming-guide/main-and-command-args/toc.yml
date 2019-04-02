@@ -1,0 +1,18 @@
+items:
+- name: Main() e argumentos de linha de comando
+  href: index.md
+  items:
+  - name: Argumentos de linha de comando
+    href: command-line-arguments.md
+  - name: 'Como: exibir argumentos de linha de comando'
+    href: how-to-display-command-line-arguments.md
+  - name: 'Como: acessar argumentos de linha de comando usando foreach'
+    href: how-to-access-command-line-arguments-using-foreach.md
+  - name: Valores retornados de Main()
+    href: main-return-values.md
+ms.openlocfilehash: f46f240118ac595dc8d933ecd5f7efbf16cb25ab
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467805"

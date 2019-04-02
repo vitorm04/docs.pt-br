@@ -1,0 +1,18 @@
+items:
+- name: Acessar configurações de aplicativo
+  href: index.md
+  items:
+  - name: 'Como: criar grades de propriedades para configurações de usuário'
+    href: how-to-create-property-grids-for-user-settings.md
+  - name: 'Como: persistir configurações do usuário'
+    href: how-to-persist-user-settings.md
+  - name: 'Como: alterar configurações do usuário'
+    href: how-to-change-user-settings.md
+  - name: 'Como: ler configurações de aplicativo'
+    href: how-to-read-application-settings.md
+ms.openlocfilehash: 1360983a14f27ca882a6d5323ee4620386352b99
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468090"

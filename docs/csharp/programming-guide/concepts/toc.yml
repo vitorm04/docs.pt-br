@@ -1,0 +1,34 @@
+items:
+- name: Conceitos de programação
+  href: index.md
+  items:
+  - name: Assemblies e o Cache de Assembly Global
+    href: assemblies-gac/
+  - name: Programação assíncrona com async e await
+    href: async/
+  - name: Atributos
+    href: attributes/
+  - name: Informações de chamador
+    href: caller-information.md
+  - name: Coleções
+    href: collections.md
+  - name: Covariância e contravariância
+    href: covariance-contravariance/
+  - name: Árvores de expressão
+    href: expression-trees/
+  - name: Iterators
+    href: iterators.md
+  - name: LINQ (Consulta Integrada à Linguagem)
+    href: linq/
+  - name: Programação orientada a objeto
+    href: object-oriented-programming.md
+  - name: Reflexão
+    href: reflection.md
+  - name: Serialização (C#)
+    href: serialization/
+ms.openlocfilehash: 43357f3e4d438d96ba5778100585453792ed29c6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468070"

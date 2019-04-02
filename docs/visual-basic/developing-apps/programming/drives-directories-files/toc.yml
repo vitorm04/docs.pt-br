@@ -1,0 +1,87 @@
+items:
+- name: Processar unidades, diretórios e arquivos
+  href: processing.md
+  items:
+  - name: Access de arquivo com o Visual Basic
+    href: file-access.md
+    items:
+    - name: Ler arquivos
+      href: reading-from-files.md
+      items:
+      - name: 'Como: ler de arquivos de texto'
+        href: how-to-read-from-text-files.md
+      - name: 'Como: ler de arquivos de texto separados por vírgula'
+        href: how-to-read-from-comma-delimited-text-files.md
+      - name: 'Como: ler de arquivos de texto de largura fixa'
+        href: how-to-read-from-fixed-width-text-files.md
+      - name: 'Como: ler de arquivos de texto com vários formatos'
+        href: how-to-read-from-text-files-with-multiple-formats.md
+      - name: 'Como: ler de arquivos binários'
+        href: how-to-read-from-binary-files.md
+      - name: 'Como: ler texto usando arquivos com um StreamReader'
+        href: how-to-read-text-from-files-with-a-streamreader.md
+    - name: Gravar em arquivos
+      href: writing-to-files.md
+      items:
+      - name: 'Como: gravar texto em arquivos'
+        href: how-to-write-text-to-files.md
+      - name: 'Como: acrescentar a arquivos de texto'
+        href: how-to-append-to-text-files.md
+      - name: 'Como: gravar em arquivos binários'
+        href: how-to-write-to-binary-files.md
+      - name: 'Como: gravar texto em arquivos no diretório Meus Documentos'
+        href: how-to-write-text-to-files-in-the-my-documents-directory.md
+      - name: 'Como: gravar texto em arquivos com um StreamWriter'
+        href: how-to-write-text-to-files-with-a-streamwriter.md
+    - name: Criar, excluir e mover arquivos e diretórios
+      href: creating-deleting-and-moving-files-and-directories.md
+      items:
+      - name: 'Como: copiar arquivos com um padrão específico para um diretório'
+        href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
+      - name: 'Como: criar uma cópia de um arquivo no mesmo diretório'
+        href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
+      - name: 'Como: criar uma cópia de um arquivo em outro diretório'
+        href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
+      - name: 'Como: criar um arquivo'
+        href: how-to-create-a-file.md
+      - name: 'Como: excluir um arquivo'
+        href: how-to-delete-a-file.md
+      - name: 'Como: localizar arquivos com um padrão específico'
+        href: how-to-find-files-with-a-specific-pattern.md
+      - name: 'Como: mover um arquivo'
+        href: how-to-move-a-file.md
+      - name: 'Como: renomear um arquivo'
+        href: how-to-rename-a-file.md
+      - name: 'Como: copiar um diretório para outro diretório'
+        href: how-to-copy-a-directory-to-another-directory.md
+      - name: 'Como: criar um diretório'
+        href: how-to-create-a-directory.md
+      - name: 'Como: localizar subdiretórios com um padrão específico'
+        href: how-to-find-subdirectories-with-a-specific-pattern.md
+      - name: 'Como: obter a coleção de arquivos em um diretório'
+        href: how-to-get-the-collection-of-files-in-a-directory.md
+      - name: 'Como: recuperar o conteúdo do diretório Meus Documentos'
+        href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
+      - name: 'Como: analisar caminhos de arquivo'
+        href: how-to-parse-file-paths.md
+    - name: Analisando arquivos de texto com o objeto TextFieldParser
+      href: parsing-text-files-with-the-textfieldparser-object.md
+    - name: Codificações de arquivo
+      href: file-encodings.md
+    - name: 'Solução de problemas: ler e gravar em arquivos de texto'
+      href: troubleshooting-reading-from-and-writing-to-text-files.md
+  - name: Noções Básicas de E/S de Arquivo do .NET Framework e o Sistema de Arquivos
+    href: basics-of-net-framework-file-io-and-the-file-system.md
+    items:
+    - name: Classes usadas em E/S de Arquivo do .NET Framework e o Sistema de Arquivos
+      href: classes-used-in-net-framework-file-io-and-the-file-system.md
+  - name: 'Passo a passo: manipular arquivos usando métodos do .NET Framework'
+    href: walkthrough-manipulating-files-by-using-net-framework-methods.md
+  - name: 'Passo a passo: criar arquivos e diretórios'
+    href: walkthrough-manipulating-files-and-directories.md
+ms.openlocfilehash: 04d5b3252fa087fcbba7d29662e7ad1e3fb24d2e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468056"

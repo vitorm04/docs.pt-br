@@ -1,0 +1,143 @@
+items:
+- name: Programação paralela
+  href: index.md
+  items:
+  - name: Biblioteca de tarefas paralelas (TPL)
+    href: task-parallel-library-tpl.md
+    items:
+    - name: Paralelismo de dados
+      href: data-parallelism-task-parallel-library.md
+      items:
+      - name: 'Como: Escrever um loop Parallel.For simples'
+        href: how-to-write-a-simple-parallel-for-loop.md
+      - name: 'Como: escrever um loop Parallel.ForEach simples'
+        href: how-to-write-a-simple-parallel-foreach-loop.md
+      - name: 'Como: Gravar um loop Parallel.For com variáveis locais de thread'
+        href: how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+      - name: 'Como: escrever um loop Parallel.ForEach com variáveis locais de partição'
+        href: how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+      - name: 'Como: Cancelar um loop Parallel.For ou ForEach'
+        href: how-to-cancel-a-parallel-for-or-foreach-loop.md
+      - name: 'Como: Tratar exceções em loops paralelos'
+        href: how-to-handle-exceptions-in-parallel-loops.md
+      - name: 'Como: Acelerar corpos de loop pequenos'
+        href: how-to-speed-up-small-loop-bodies.md
+      - name: 'Como: fazer iterações de diretórios de arquivos com a Classe Paralela'
+        href: how-to-iterate-file-directories-with-the-parallel-class.md
+    - name: Programação assíncrona baseada em tarefas
+      href: task-based-asynchronous-programming.md
+      items:
+      - name: Encadeando tarefas com tarefas de continuação
+        href: chaining-tasks-by-using-continuation-tasks.md
+      - name: Tarefas filho anexadas e desanexadas
+        href: attached-and-detached-child-tasks.md
+      - name: Cancelamento da tarefa
+        href: task-cancellation.md
+      - name: Tratamento de Exceção
+        href: exception-handling-task-parallel-library.md
+      - name: 'Como: usar Parallel.Invoke para executar operações paralelas'
+        href: how-to-use-parallel-invoke-to-execute-parallel-operations.md
+      - name: 'Como: Retornar um valor de uma tarefa'
+        href: how-to-return-a-value-from-a-task.md
+      - name: 'Como: Cancelar uma tarefa e seus filhos'
+        href: how-to-cancel-a-task-and-its-children.md
+      - name: 'Como: criar tarefas pré-computadas'
+        href: how-to-create-pre-computed-tasks.md
+      - name: 'Como: percorrer uma árvore binária com tarefas paralelas'
+        href: how-to-traverse-a-binary-tree-with-parallel-tasks.md
+      - name: 'Como: Desencapsular uma tarefa aninhada'
+        href: how-to-unwrap-a-nested-task.md
+      - name: 'Como: evitar que uma tarefa filha se anexe ao pai dela'
+        href: how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+    - name: Fluxo de dados
+      href: dataflow-task-parallel-library.md
+      items:
+      - name: 'Como: gravar mensagens em um bloco de fluxo de dados e ler mensagens dele'
+        href: how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+      - name: 'Como: implementar um padrão de fluxo de dados de produtor-consumidor'
+        href: how-to-implement-a-producer-consumer-dataflow-pattern.md
+      - name: 'Como: executar ações quando um bloco de fluxo de dados recebe dados'
+        href: how-to-perform-action-when-a-dataflow-block-receives-data.md
+      - name: 'Passo a passo: criar um pipeline de fluxo de dados'
+        href: walkthrough-creating-a-dataflow-pipeline.md
+      - name: 'Como: desvincular blocos de fluxo de dados'
+        href: how-to-unlink-dataflow-blocks.md
+      - name: 'Passo a passo: usar um fluxo de dados em um aplicativo do Windows Forms'
+        href: walkthrough-using-dataflow-in-a-windows-forms-application.md
+      - name: 'Como: cancelar um bloco de fluxo de dados'
+        href: how-to-cancel-a-dataflow-block.md
+      - name: 'Passo a passo: criando um tipo de bloco de fluxo de dados personalizado'
+        href: walkthrough-creating-a-custom-dataflow-block-type.md
+      - name: 'Como: usar JoinBlock para ler dados de várias fontes'
+        href: how-to-use-joinblock-to-read-data-from-multiple-sources.md
+      - name: 'Como: especificar o grau de paralelismo em um bloco de fluxo de dados'
+        href: how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+      - name: 'Como: especificar um agendador de tarefas em um bloco de fluxo de dados'
+        href: how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+      - name: 'Passo a passo: usando BatchBlock e BatchedJoinBlock para melhorar a eficiência'
+        href: walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+    - name: Usando TPL com outros padrões assíncronos
+      href: using-tpl-with-other-asynchronous-patterns.md
+      items:
+      - name: TPL e programação assíncrona do .NET Framework
+        href: tpl-and-traditional-async-programming.md
+      - name: 'Como: encapsular padrões de EAP em uma tarefa'
+        href: how-to-wrap-eap-patterns-in-a-task.md
+    - name: Armadilhas em potencial em dados e paralelismo da tarefa
+      href: potential-pitfalls-in-data-and-task-parallelism.md
+  - name: LINQ paralelo (PLINQ)
+    href: parallel-linq-plinq.md
+    items:
+    - name: Introdução ao PLINQ
+      href: introduction-to-plinq.md
+    - name: Noções básicas sobre agilização em PLINQ
+      href: understanding-speedup-in-plinq.md
+    - name: Preservação da ordem em PLINQ
+      href: order-preservation-in-plinq.md
+    - name: Opções de mesclagem em PLINQ
+      href: merge-options-in-plinq.md
+    - name: Armadilhas em potencial com PLINQ
+      href: potential-pitfalls-with-plinq.md
+    - name: 'Como: criar e executar uma consulta PLINQ simples'
+      href: how-to-create-and-execute-a-simple-plinq-query.md
+    - name: 'Como: Controlar a ordem em uma consulta PLINQ'
+      href: how-to-control-ordering-in-a-plinq-query.md
+    - name: 'Como: combinar consultas LINQ paralelas e sequenciais'
+      href: how-to-combine-parallel-and-sequential-linq-queries.md
+    - name: 'Como: Tratar exceções em uma consulta PLINQ'
+      href: how-to-handle-exceptions-in-a-plinq-query.md
+    - name: 'Como: Cancelar uma consulta PLINQ'
+      href: how-to-cancel-a-plinq-query.md
+    - name: 'Como: Escrever uma função de agregação PLINQ personalizada'
+      href: how-to-write-a-custom-plinq-aggregate-function.md
+    - name: 'Como: Especificar o modo de execução em PLINQ'
+      href: how-to-specify-the-execution-mode-in-plinq.md
+    - name: 'Como: Especificar opções de mesclagem em PLINQ'
+      href: how-to-specify-merge-options-in-plinq.md
+    - name: 'Como: iterar diretórios de arquivos com PLINQ'
+      href: how-to-iterate-file-directories-with-plinq.md
+    - name: 'Como: avaliar o desempenho da consulta PLINQ'
+      href: how-to-measure-plinq-query-performance.md
+    - name: Exemplo de dados PLINQ
+      href: plinq-data-sample.md
+  - name: Estruturas de dados para programação paralela
+    href: data-structures-for-parallel-programming.md
+  - name: Ferramentas de diagnóstico em paralelo
+    href: parallel-diagnostic-tools.md
+  - name: Particionadores personalizados para PLINQ e TPL
+    href: custom-partitioners-for-plinq-and-tpl.md
+    items:
+    - name: 'Como: Implementar partições dinâmicas'
+      href: how-to-implement-dynamic-partitions.md
+    - name: 'Como: implementar um particionador para particionamento estático'
+      href: how-to-implement-a-partitioner-for-static-partitioning.md
+  - name: Expressões lambda em PLINQ e TPL
+    href: lambda-expressions-in-plinq-and-tpl.md
+  - name: Para leitura adicional
+    href: for-further-reading-parallel-programming.md
+ms.openlocfilehash: b4b7cd0e6e93175d223cbd076712fe3b9fe436f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467878"

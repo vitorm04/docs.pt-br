@@ -1,0 +1,27 @@
+items:
+- name: Assemblies e o GAC
+  href: index.md
+  items:
+  - name: Assemblies amigáveis
+    href: friend-assemblies.md
+    items:
+    - name: 'Como: criar assemblies amigáveis sem sinal'
+      href: how-to-create-unsigned-friend-assemblies.md
+    - name: 'Como: criar assemblies amigáveis com sinal'
+      href: how-to-create-signed-friend-assemblies.md
+  - name: 'Como: criar e usar assemblies usando a linha de comando'
+    href: how-to-create-and-use-assemblies-using-the-command-line.md
+  - name: 'Como: determinar se um arquivo é um assembly'
+    href: how-to-determine-if-a-file-is-an-assembly.md
+  - name: 'Como: carregar e descarregar assemblies'
+    href: how-to-load-and-unload-assemblies.md
+  - name: 'Como: compartilhar um assembly com outros aplicativos'
+    href: how-to-share-an-assembly-with-other-applications.md
+  - name: 'Passo a passo: inserir tipos de assemblies gerenciados'
+    href: walkthrough-embedding-types-from-managed-assemblies-in-vs.md
+ms.openlocfilehash: 7b75c3f58ba680d4b49ac187cbfd8d3a5b02ee61
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467629"

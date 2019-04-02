@@ -1,0 +1,66 @@
+items:
+- name: Esquema de arquivos de configuração
+  href: index.md
+  items:
+  - name: Elemento <configuration>
+    href: configuration-element.md
+  - name: Elemento <assemblyBinding>
+    href: assemblybinding-element-for-configuration.md
+  - name: Elemento <linkedConfiguration>
+    href: linkedconfiguration-element.md
+  - name: Elemento <configSections>
+    href: configsections-element-for-configuration.md
+  - name: Elemento <clear> para <configSections>
+    href: clear-element-for-configsections.md
+  - name: Elemento <remove> para <configSections>
+    href: remove-element-for-configsections.md
+  - name: Elemento <sectionGroup>
+    href: sectiongroup-element-for-configsections.md
+  - name: Elemento personalizado para SingleTagSectionHandler
+    href: custom-element-1.md
+  - name: Elemento personalizado para NameValueSectionHandler e DictionarySectionHandler
+    href: custom-element-2.md
+  - name: Elemento <add>
+    href: add-element-for-custom-2.md
+  - name: Elemento <clear> para NameValueSectionHandler e DictionarySectionHandler
+    href: clear-element-for-custom-2.md
+  - name: Elemento <remove> para NameValueSectionHandler e DictionarySectionHandler
+    href: remove-element-for-custom-2.md
+  - name: <section> Elemento
+    href: section-element.md
+  - name: Esquema de configurações do aplicativo
+    href: appsettings/index.md
+  - name: Esquema de configurações de aplicativo
+    href: application-settings-schema.md
+  - name: Esquema de configurações de compilador e de provedor de linguagem
+    href: compiler/index.md
+  - name: Esquema de seções de configuração
+    href: configuration-sections-schema.md
+  - name: Esquema de configurações de criptografia
+    href: cryptography/index.md
+  - name: Esquema de configurações de rede
+    href: network/index.md
+  - name: Esquema de configurações do tempo de execução
+    href: runtime/index.md
+  - name: Esquema de configurações de inicialização
+    href: startup/index.md
+  - name: Esquema de configurações de rastreamento e depuração
+    href: trace-debug/index.md
+  - name: Esquema de configurações Web
+    href: web/index.md
+  - name: Esquema de configuração do WCF
+    href: wcf/index.md
+  - name: Sintaxe de diretiva do WCF
+    href: wcf-directive/index.md
+  - name: Esquema de configuração do WIF
+    href: windows-identity-foundation/index.md
+  - name: Seção de configuração do Windows Forms
+    href: winforms/index.md
+  - name: Esquema de configuração do Windows Workflow Foundation
+    href: windows-workflow-foundation/index.md
+ms.openlocfilehash: 69b0e7862ab6c9a7540469f79d6870a8f9976f14
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467632"

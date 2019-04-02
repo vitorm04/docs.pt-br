@@ -1,0 +1,32 @@
+items:
+- name: Guia de instalação
+  href: index.md
+  items:
+  - name: Instalar o .NET Framework no Windows 10 e no Windows Server 2016
+    href: on-windows-10.md
+  - name: Instalar o .NET Framework no Windows 8.1 e Windows Server 2012 R2
+    href: on-windows-8-1.md
+  - name: Instalar o .NET Framework no Windows 8 e Windows Server 2012
+    href: on-windows-8.md
+  - name: Instalar o .NET Framework no Windows 7 SP1 e Windows Server 2008 R2
+    href: on-windows-7.md
+  - name: Instalar o .NET Framework no Windows Vista e Windows Server 2008
+    href: on-windows-vista.md
+  - name: Instalar o .NET Framework no Windows XP e Windows Server 2003
+    href: on-windows-xp.md
+  - name: Guia de instalação para desenvolvedores
+    href: guide-for-developers.md
+  - name: Reparar o .NET Framework
+    href: repair.md
+  - name: Solucionar problemas de instalações e desinstalações bloqueadas do .NET Framework
+    href: troubleshoot-blocked-installations-and-uninstallations.md
+  - name: Instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8
+    href: dotnet-35-windows-10.md
+  - name: Executar aplicativos do .NET Framework 1.1 no Windows 8, Windows 8.1 ou Windows 10
+    href: run-net-framework-1-1-apps.md
+ms.openlocfilehash: b7035dfbff4d6e0e7c306f3992240ff560c5170d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468053"

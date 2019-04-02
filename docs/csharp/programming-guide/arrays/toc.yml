@@ -1,0 +1,24 @@
+items:
+- name: Matrizes
+  href: index.md
+  items:
+  - name: Matrizes como Objetos
+    href: arrays-as-objects.md
+  - name: Matrizes unidimensionais
+    href: single-dimensional-arrays.md
+  - name: Matrizes multidimensionais
+    href: multidimensional-arrays.md
+  - name: Matrizes denteadas
+    href: jagged-arrays.md
+  - name: Usar foreach com matrizes
+    href: using-foreach-with-arrays.md
+  - name: Passar matrizes como argumentos
+    href: passing-arrays-as-arguments.md
+  - name: Matrizes de tipo implícito
+    href: implicitly-typed-arrays.md
+ms.openlocfilehash: b587998861fba9ae9f13da1e58fd24e9279c6224
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468095"

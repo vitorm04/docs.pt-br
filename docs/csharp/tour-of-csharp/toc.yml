@@ -1,0 +1,32 @@
+items:
+- name: Tour do C#
+  href: index.md
+  items:
+  - name: Estrutura do programa
+    href: program-structure.md
+  - name: Tipos e variáveis
+    href: types-and-variables.md
+  - name: Expressões
+    href: expressions.md
+  - name: Instruções
+    href: statements.md
+  - name: Classes e objetos
+    href: classes-and-objects.md
+  - name: Structs
+    href: structs.md
+  - name: Matrizes
+    href: arrays.md
+  - name: Interfaces
+    href: interfaces.md
+  - name: Enums
+    href: enums.md
+  - name: Delegados
+    href: delegates.md
+  - name: Atributos
+    href: attributes.md
+ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467722"

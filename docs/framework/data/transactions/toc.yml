@@ -1,0 +1,45 @@
+items:
+- name: Processamento de transações
+  href: index.md
+  items:
+  - name: Conceitos básicos de transação
+    href: transaction-fundamentals.md
+  - name: Recursos fornecidos por System.Transactions
+    href: features-provided-by-system-transactions.md
+    items:
+    - name: Escrever um aplicativo transacional
+      href: writing-a-transactional-application.md
+      items:
+      - name: Implementar uma transação implícita usando o escopo da transação
+        href: implementing-an-implicit-transaction-using-transaction-scope.md
+      - name: Implementar uma transação explícita usando CommittableTransaction
+        href: implementing-an-explicit-transaction-using-committabletransaction.md
+      - name: Gerenciar simultaneidade com DependentTransaction
+        href: managing-concurrency-with-dependenttransaction.md
+      - name: Interoperabilidade com serviços corporativos e transações COM+
+        href: interoperability-with-enterprise-services-and-com-transactions.md
+      - name: Escalonamento de gerenciamento de transações
+        href: transaction-management-escalation.md
+      - name: Rastreamentos de diagnóstico
+        href: diagnostic-traces.md
+      - name: Usar System.Transactions no ASP.NET
+        href: using-system-transactions-in-aspnet.md
+    - name: Implementar um Gerenciador de Recursos
+      href: implementing-a-resource-manager.md
+      items:
+      - name: Inscrever recursos como participantes em uma transação
+        href: enlisting-resources-as-participants-in-a-transaction.md
+      - name: Confirmar uma transação de fase única e de várias fases
+        href: committing-a-transaction-in-single-phase-and-multi-phase.md
+      - name: Executar a recuperação
+        href: performing-recovery.md
+      - name: Níveis de confiança de segurança ao acessar recursos
+        href: security-trust-levels-in-accessing-resources.md
+      - name: Otimização usando commit de fase única e notificação de fase única promovível
+        href: optimization-spc-and-promotable-spn.md
+ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467770"
