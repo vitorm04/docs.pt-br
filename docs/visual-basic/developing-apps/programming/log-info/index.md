@@ -2,19 +2,13 @@
 title: Registrando informações em log a partir do aplicativo (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Log object
-- My.Log object
-- applications [Visual Basic], logging information from
-- logging
-- My.Application.Log object
-- examples [Visual Basic], logging application information
+  - Log object
+  - My.Log object
+  - 'applications [Visual Basic], logging information from'
+  - logging
+  - My.Application.Log object
+  - 'examples [Visual Basic], logging application information'
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: d7cdf5a309da1f32b337bea4d609fe34487a5457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746800"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Registrando informações em log a partir do aplicativo (Visual Basic)
 Esta seção contém tópicos que abordam como registrar informações em log do aplicativo usando os objetos `My.Application.Log` ou `My.Log` e como estender os recursos de registro em log do aplicativo.  
@@ -38,6 +32,7 @@ Esta seção contém tópicos que abordam como registrar informações em log do
 |Filtre a saída dos logs `My.Application.Log`.|[Passo a passo: filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Solução de problemas: ouvintes de log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

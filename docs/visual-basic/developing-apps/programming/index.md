@@ -32,6 +32,7 @@ Esta seção aborda tarefas de programação que você talvez queira saber mais 
  Contém documentação sobre como acessar o sistema de arquivos usando o objeto `My.Computer.FileSystem`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Recursos da linguagem do Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Conceitos de Programação](../../../visual-basic/programming-guide/concepts/index.md)
 - [Coleções](../../../visual-basic/programming-guide/concepts/collections.md)
