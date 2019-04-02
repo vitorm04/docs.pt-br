@@ -1,0 +1,106 @@
+items:
+- name: Esquema de configurações de rede
+  href: index.md
+  items:
+  - name: Elemento <system.Net> (configurações de rede)
+    href: system-net-element-network-settings.md
+    items:
+    - name: Elemento <authenticationModules> (Configurações de Rede)
+      href: authenticationmodules-element-network-settings.md
+      items:
+      - name: Elemento <add> para authenticationModules (Configurações de Rede)
+        href: add-element-for-authenticationmodules-network-settings.md
+      - name: Elemento <remove> para authenticationModules (Configurações de Rede)
+        href: remove-element-for-authenticationmodules-network-settings.md
+      - name: Elemento <clear> para authenticationModules (Configurações de Rede)
+        href: clear-element-for-authenticationmodules-network-settings.md
+    - name: Elemento <connectionManagement> (Configurações de Rede)
+      href: connectionmanagement-element-network-settings.md
+      items:
+      - name: Elemento <add> para connectionManagement (Configurações de Rede)
+        href: add-element-for-connectionmanagement-network-settings.md
+      - name: Elemento <clear> para connectionManagement (Configurações de Rede)
+        href: clear-element-for-connectionmanagement-network-settings.md
+      - name: Elemento <remove> para connectionManagement (Configurações de Rede)
+        href: remove-element-for-connectionmanagement-network-settings.md
+    - name: Elemento <defaultProxy> (Configurações de Rede)
+      href: defaultproxy-element-network-settings.md
+      items:
+      - name: Elemento <bypasslist> (Configurações de Rede)
+        href: bypasslist-element-network-settings.md
+        items:
+        - name: Elemento <add> para bypasslist (Configurações de Rede)
+          href: add-element-for-bypasslist-network-settings.md
+        - name: Elemento <clear> para bypasslist (Configurações de Rede)
+          href: clear-element-for-bypasslist-network-settings.md
+        - name: Elemento <remove> para bypasslist (Configurações de Rede)
+          href: remove-element-for-bypasslist-network-settings.md
+      - name: Elemento <module> (Configurações de Rede)
+        href: module-element-network-settings.md
+      - name: Elemento <proxy> (Configurações de Rede)
+        href: proxy-element-network-settings.md
+    - name: Elemento <mailSettings> (Configurações de Rede)
+      href: mailsettings-element-network-settings.md
+      items:
+      - name: Elemento <smtp> (Configurações de Rede)
+        href: smtp-element-network-settings.md
+        items:
+        - name: Elemento <specifiedPickupDirectory> (Configurações de Rede)
+          href: specifiedpickupdirectory-element-network-settings.md
+        - name: Elemento <network> (Configurações de Rede)
+          href: network-element-network-settings.md
+    - name: Elemento <requestCaching> (Configurações de Rede)
+      href: requestcaching-element-network-settings.md
+      items:
+      - name: Elemento <defaultHttpCachePolicy> (Configurações de Rede)
+        href: defaulthttpcachepolicy-element-network-settings.md
+      - name: Elemento <defaultFtpCachePolicy> (Configurações de Rede)
+        href: defaultftpcachepolicy-element-network-settings.md
+    - name: Elemento <settings> (Configurações de Rede)
+      href: settings-element-network-settings.md
+      items:
+      - name: Elemento <httpWebRequest> (Configurações de Rede)
+        href: httpwebrequest-element-network-settings.md
+      - name: Elemento <ipv6> (Configurações de Rede)
+        href: ipv6-element-network-settings.md
+      - name: Elemento <performanceCounter> (Configurações de Rede)
+        href: performancecounter-element-network-settings.md
+      - name: Elemento <servicePointManager> (Configurações de Rede)
+        href: servicepointmanager-element-network-settings.md
+      - name: Elemento <socket> (Configurações de Rede)
+        href: socket-element-network-settings.md
+      - name: Elemento <webProxyScript> (Configurações de Rede)
+        href: webproxyscript-element-network-settings.md
+      - name: Elemento <httpListener> (Configurações de Rede)
+        href: httplistener-element-network-settings.md
+    - name: Elemento <webRequestModules> (Configurações de Rede)
+      href: webrequestmodules-element-network-settings.md
+      items:
+      - name: Elemento <add> para webRequestModules (Configurações de Rede)
+        href: add-element-for-webrequestmodules-network-settings.md
+      - name: Elemento <remove> para webRequestModules (Configurações de Rede)
+        href: remove-element-for-webrequestmodules-network-settings.md
+      - name: Elemento <clear> para webRequestModules (Configurações de Rede)
+        href: clear-element-for-webrequestmodules-network-settings.md
+  - name: Elemento <Uri> (Configurações de URI)
+    href: uri-element-uri-settings.md
+    items:
+    - name: Elemento <idn> (Configurações de URI)
+      href: idn-element-uri-settings.md
+    - name: Elemento <iriParsing> (Configurações de URI)
+      href: iriparsing-element-uri-settings.md
+    - name: Elemento <schemeSettings> (Configurações de URI)
+      href: schemesettings-element-uri-settings.md
+      items:
+      - name: Elemento <add> para schemeSettings (Configurações de URI)
+        href: add-element-for-schemesettings-uri-settings.md
+      - name: Elemento <clear> para schemeSettings (Configurações de URI)
+        href: clear-element-for-schemesettings-uri-settings.md
+      - name: Elemento <remove> para schemeSettings (Configurações de URI)
+        href: remove-element-for-schemesettings-uri-settings.md
+ms.openlocfilehash: fb6762a20d1c5210e860b9720a62c200f3109ddd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467747"

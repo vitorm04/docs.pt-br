@@ -1,0 +1,96 @@
+items:
+- name: Serialização
+  href: index.md
+  items:
+  - name: Tópicos com instruções de serialização
+    href: serialization-how-to-topics.md
+  - name: Serialização binária
+    href: binary-serialization.md
+    items:
+    - name: Conceitos de serialização
+      href: serialization-concepts.md
+    - name: Serialização básica
+      href: basic-serialization.md
+    - name: Serialização seletiva
+      href: selective-serialization.md
+    - name: Serialização personalizada
+      href: custom-serialization.md
+    - name: Etapas do processo de serialização
+      href: steps-in-the-serialization-process.md
+    - name: Serialização tolerante a versão
+      href: version-tolerant-serialization.md
+    - name: Diretrizes de serialização
+      href: serialization-guidelines.md
+    - name: 'Como: partir dados serializados'
+      href: how-to-chunk-serialized-data.md
+    - name: 'Como: determinar se um objeto do .NET Standard é serializável'
+      href: how-to-determine-if-netstandard-object-is-serializable.md
+  - name: Serialização XML e SOAP
+    href: xml-and-soap-serialization.md
+    items:
+    - name: 'Como: controlar a serialização de classes derivadas'
+      href: how-to-control-serialization-of-derived-classes.md
+    - name: Apresentando a serialização XML
+      href: introducing-xml-serialization.md
+    - name: 'Como: desserializar um objeto'
+      href: how-to-deserialize-an-object.md
+    - name: Exemplos de Serialização XML
+      href: examples-of-xml-serialization.md
+    - name: A ferramenta de definição de esquema XML e a serialização XML
+      href: the-xml-schema-definition-tool-and-xml-serialization.md
+    - name: 'Como: usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML'
+      href: xml-schema-def-tool-gen.md
+    - name: Controlando a serialização XML usando atributos
+      href: controlling-xml-serialization-using-attributes.md
+    - name: Atributos que controlam a serialização XML
+      href: attributes-that-control-xml-serialization.md
+    - name: 'Como: especificar um nome de elemento alternativo para um fluxo XML'
+      href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+    - name: 'Como: serializar um objeto'
+      href: how-to-serialize-an-object.md
+    - name: 'Como: qualificar elementos XML e nomes de atributos XML'
+      href: how-to-qualify-xml-element-and-xml-attribute-names.md
+    - name: Serialização XML com Serviços Web XML
+      href: xml-serialization-with-xml-web-services.md
+    - name: 'Como: serializar um objeto como um fluxo XML codificado para SOAP'
+      href: how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+    - name: 'Como: substituir a serialização XML de SOAP codificada'
+      href: how-to-override-encoded-soap-xml-serialization.md
+    - name: Atributos que controlam a serialização SOAP codificada
+      href: attributes-that-control-encoded-soap-serialization.md
+    - name: Elemento <system.xml.serialization>
+      href: system-xml-serialization-element.md
+    - name: Elemento <dateTimeSerialization>
+      href: datetimeserialization-element.md
+    - name: Elemento <schemaImporterExtensions>
+      href: schemaimporterextensions-element.md
+    - name: Elemento <add> para <schemaImporterExtensions>
+      href: add-element-for-schemaimporterextensions.md
+    - name: Elemento <xmlSerializer>
+      href: xmlserializer-element.md
+  - name: Ferramentas de serialização
+    href: serialization-tools.md
+    items:
+    - name: Ferramenta geradora de serializador de XML (Sgen.exe)
+      href: xml-serializer-generator-tool-sgen-exe.md
+    - name: Ferramenta de Definição de Esquema XML (Xsd.exe)
+      href: xml-schema-definition-tool-xsd-exe.md
+  - name: Exemplos de serialização
+    href: serialization-samples.md
+    items:
+    - name: Exemplo de tecnologia de serialização básica
+      href: basic-serialization-technology-sample.md
+    - name: Ordem de serialização personalizada com o XmlSerializer
+      href: custom-serialization-order-with-xmlserializer.md
+    - name: Exemplo de tecnologia de SchemaImporterExtension
+      href: schemaimporterextension-technology-sample.md
+    - name: Exemplo de tecnologia de serialização básica tolerante a versões
+      href: version-tolerant-serialization-technology-sample.md
+    - name: Exemplo de tecnologia de serialização genérica de serviços Web
+      href: web-services-generics-serialization-technology-sample.md
+ms.openlocfilehash: ab9134268559fadb0e5f586773d5963535d4b12a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467633"

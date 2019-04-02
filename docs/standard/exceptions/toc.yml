@@ -1,0 +1,28 @@
+items:
+- name: Exceções
+  href: index.md
+  items:
+  - name: Classe Exception e suas propriedades
+    href: exception-class-and-properties.md
+  - name: 'Como: Usar o bloco try-catch para capturar exceções'
+    href: how-to-use-the-try-catch-block-to-catch-exceptions.md
+  - name: 'Como: usar exceções específicas em um bloco catch'
+    href: how-to-use-specific-exceptions-in-a-catch-block.md
+  - name: 'Como: acionar exceções explicitamente'
+    href: how-to-explicitly-throw-exceptions.md
+  - name: 'Como: criar exceções definidas pelo usuário'
+    href: how-to-create-user-defined-exceptions.md
+  - name: Usando manipuladores de exceções filtrados pelo usuário
+    href: using-user-filtered-exception-handlers.md
+  - name: 'Como: usar blocos finally'
+    href: how-to-use-finally-blocks.md
+  - name: Manipulando exceções de interoperabilidade COM
+    href: handling-com-interop-exceptions.md
+  - name: Práticas recomendadas para exceções
+    href: best-practices-for-exceptions.md
+ms.openlocfilehash: 30a6abc9671ff2728792e74345be12fff7cfefbc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467871"

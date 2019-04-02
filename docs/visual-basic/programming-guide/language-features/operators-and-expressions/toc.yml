@@ -1,0 +1,32 @@
+items:
+- name: Operadores e expressões
+  href: index.md
+  items:
+  - name: Tarefas comuns realizadas com operadores
+    href: common-tasks-performed-with-visual-basic-operators.md
+  - name: Operadores aritméticos
+    href: arithmetic-operators.md
+  - name: Operadores de comparação
+    href: comparison-operators.md
+  - name: 'Como: testar se dois objetos são iguais'
+    href: how-to-test-whether-two-objects-are-the-same.md
+  - name: 'Como: corresponder uma cadeia de caracteres a um padrão'
+    href: how-to-match-a-string-against-a-pattern.md
+  - name: Operadores de concatenação
+    href: concatenation-operators.md
+  - name: Operadores lógicos e bit a bit
+    href: logical-and-bitwise-operators.md
+  - name: Combinação eficiente de operadores
+    href: efficient-combination-of-operators.md
+  - name: 'Como: calcular valores numéricos'
+    href: how-to-calculate-numeric-values.md
+  - name: Comparações de valor
+    href: value-comparisons.md
+  - name: Expressões boolianas
+    href: boolean-expressions.md
+ms.openlocfilehash: b16598c335031cf099e0549d491adfc204fc6d35
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467763"

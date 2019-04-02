@@ -1,0 +1,154 @@
+items:
+- name: SQL Server e ADO.NET
+  href: index.md
+- name: Segurança do SQL Server
+  href: sql-server-security.md
+  items:
+  - name: Visão geral de segurança do SQL Server
+    href: overview-of-sql-server-security.md
+    items:
+    - name: Autenticação no SQL Server
+      href: authentication-in-sql-server.md
+    - name: Funções de servidor e banco de dados no SQL Server
+      href: server-and-database-roles-in-sql-server.md
+    - name: Propriedade e separação do esquema do usuário no SQL Server
+      href: ownership-and-user-schema-separation-in-sql-server.md
+    - name: Autorização e permissões no SQL Server
+      href: authorization-and-permissions-in-sql-server.md
+    - name: Criptografia de dados no SQL Server
+      href: data-encryption-in-sql-server.md
+    - name: Segurança da integração CLR no SQL Server
+      href: clr-integration-security-in-sql-server.md
+  - name: Cenários de segurança do aplicativo no SQL Server
+    href: application-security-scenarios-in-sql-server.md
+    items:
+    - name: Gerenciando permissões com procedimentos armazenados no SQL Server
+      href: managing-permissions-with-stored-procedures-in-sql-server.md
+    - name: Escrevendo SQL dinâmico seguro no SQL Server
+      href: writing-secure-dynamic-sql-in-sql-server.md
+    - name: Assinando procedimentos armazenados no SQL Server
+      href: signing-stored-procedures-in-sql-server.md
+    - name: Personalizando permissões com representação no SQL Server
+      href: customizing-permissions-with-impersonation-in-sql-server.md
+    - name: Conceder permissões de nível de linha no SQL Server
+      href: granting-row-level-permissions-in-sql-server.md
+    - name: Criando funções de aplicativo no SQL Server
+      href: creating-application-roles-in-sql-server.md
+    - name: Habilitando o acesso entre bancos de dados no SQL Server
+      href: enabling-cross-database-access-in-sql-server.md
+  - name: Segurança do SQL Server Express
+    href: sql-server-express-security.md
+- name: Tipos de dados do SQL Server e ADO.NET
+  href: sql-server-data-types.md
+  items:
+  - name: SqlTypes e DataSet
+    href: sqltypes-and-the-dataset.md
+  - name: Manipulando valores nulos
+    href: handling-null-values.md
+  - name: Comparando valores de GUID e uniqueidentifier
+    href: comparing-guid-and-uniqueidentifier-values.md
+  - name: Dados de data e hora
+    href: date-and-time-data.md
+  - name: UDTs grandes
+    href: large-udts.md
+  - name: Dados XML no SQL Server
+    href: xml-data-in-sql-server.md
+    items:
+    - name: Valores de coluna de XML do SQL
+      href: sql-xml-column-values.md
+    - name: Especificar valores XML como parâmetros
+      href: specifying-xml-values-as-parameters.md
+- name: Dados binários e de valor grande do SQL Server
+  href: sql-server-binary-and-large-value-data.md
+  items:
+  - name: Modificando dados de valores grandes (max) no ADO.NET
+    href: modifying-large-value-max-data.md
+  - name: Dados FILESTREAM
+    href: filestream-data.md
+  - name: Inserindo uma imagem de um arquivo
+    href: inserting-an-image-from-a-file.md
+- name: Operações de dados do SQL Server no ADO.NET
+  href: sql-server-data-operations.md
+  items:
+  - name: Operações de cópia em massa no SQL Server
+    href: bulk-copy-operations-in-sql-server.md
+    items:
+    - name: Configuração de exemplo de cópia em massa
+      href: bulk-copy-example-setup.md
+    - name: Operações únicas de cópia em massa
+      href: single-bulk-copy-operations.md
+    - name: Várias operações de cópia em massa
+      href: multiple-bulk-copy-operations.md
+    - name: Operações de transação e de cópia em massa
+      href: transaction-and-bulk-copy-operations.md
+  - name: Vários conjuntos de resultados ativos (MARS)
+    href: multiple-active-result-sets-mars.md
+    items:
+    - name: Habilitando vários conjuntos de resultados ativos
+      href: enabling-multiple-active-result-sets.md
+    - name: Manipulando dados
+      href: manipulating-data.md
+  - name: Operações assíncronas
+    href: asynchronous-operations.md
+    items:
+    - name: Aplicativos do Windows que usam retornos de chamada
+      href: windows-applications-using-callbacks.md
+    - name: Aplicativos ASP.NET que usam identificadores de espera
+      href: aspnet-apps-using-wait-handles.md
+    - name: Sondagem em aplicativos de console
+      href: polling-in-console-applications.md
+  - name: Parâmetros de valores de tabela
+    href: table-valued-parameters.md
+- name: funcionalidades do SQL Server e ADO.NET
+  href: sql-server-features-and-adonet.md
+  items:
+  - name: Enumerando instâncias do SQL Server (ADO.NET)
+    href: enumerating-instances-of-sql-server.md
+  - name: Estatísticas do provedor para SQL Server
+    href: provider-statistics-for-sql-server.md
+  - name: Instâncias de usuário do SQL Server Express
+    href: sql-server-express-user-instances.md
+  - name: Espelhamento de banco de dados no SQL Server
+    href: database-mirroring-in-sql-server.md
+  - name: Integração do Common Language Runtime do SQL
+    href: sql-server-common-language-runtime-integration.md
+    items:
+    - name: Introdução à Integração do SQL Server CLR
+      href: introduction-to-sql-server-clr-integration.md
+    - name: Funções CLR definidas pelo usuário
+      href: clr-user-defined-functions.md
+    - name: Tipos definido pelo usuário CLR
+      href: clr-user-defined-types.md
+    - name: Procedimentos armazenados CLR
+      href: clr-stored-procedures.md
+    - name: Gatilhos de CLR
+      href: clr-triggers.md
+    - name: A conexão de contexto
+      href: the-context-connection.md
+    - name: Comportamento específico do processo do SQL Server do ADO.NET
+      href: sql-server-in-process-specific-behavior-of-adonet.md
+  - name: Notificações de consulta no SQL Server
+    href: query-notifications-in-sql-server.md
+    items:
+    - name: Habilitando notificações de consulta
+      href: enabling-query-notifications.md
+    - name: SqlDependency em um aplicativo ASP.NET
+      href: sqldependency-in-an-aspnet-app.md
+    - name: Detectando alterações com SqlDependency
+      href: detecting-changes-with-sqldependency.md
+    - name: Execução de SqlCommand com um SqlNotificationRequest
+      href: sqlcommand-execution-with-a-sqlnotificationrequest.md
+  - name: Isolamento de instantâneo no SQL Server
+    href: snapshot-isolation-in-sql-server.md
+  - name: Suporte do SqlClient para alta disponibilidade, recuperação de desastre
+    href: sqlclient-support-for-high-availability-disaster-recovery.md
+  - name: Suporte do SqlClient para LocalDB
+    href: sqlclient-support-for-localdb.md
+- name: LINQ to SQL
+  href: linq/
+ms.openlocfilehash: ab9104f2a2d626748988c89bc78cbf0668c51512
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468110"

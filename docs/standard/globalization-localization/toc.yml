@@ -1,0 +1,32 @@
+items:
+- name: Globalização e localização
+  href: index.md
+  items:
+  - name: Globalização
+    href: globalization.md
+  - name: Revisão de localização
+    href: localizability-review.md
+  - name: Localização
+    href: localization.md
+  - name: Operações de cadeia de caracteres sem detecção de cultura
+    href: culture-insensitive-string-operations.md
+    items:
+    - name: Executar operações de cadeia de caracteres que não levam em conta a cultura
+      href: performing-culture-insensitive-string-operations.md
+      items:
+      - name: Comparações de cadeias de caracteres
+        href: performing-culture-insensitive-string-comparisons.md
+      - name: Alterações de maiúsculas e minúsculas
+        href: performing-culture-insensitive-case-changes.md
+      - name: Operações de cadeia de caracteres em coleções
+        href: performing-culture-insensitive-string-operations-in-collections.md
+      - name: Operações da cadeia de caracteres em matrizes
+        href: performing-culture-insensitive-string-operations-in-arrays.md
+  - name: Melhores práticas para desenvolver aplicativos preparados para globalização
+    href: best-practices-for-developing-world-ready-apps.md
+ms.openlocfilehash: afbb7d141dd544f0fd36f02f9dd9f4523df94840
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467816"

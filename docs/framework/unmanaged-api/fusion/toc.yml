@@ -1,0 +1,152 @@
+items:
+- name: Fusão
+  href: index.md
+  items:
+  - name: Interfaces de fusão
+    href: fusion-interfaces.md
+    items:
+    - name: Interface IAppIdAuthority
+      href: iappidauthority-interface.md
+    - name: Interface IAssemblyCache
+      href: iassemblycache-interface.md
+      items:
+      - name: Método CreateAssemblyCacheItem
+        href: iassemblycache-createassemblycacheitem-method.md
+      - name: Método CreateAssemblyScavenger
+        href: iassemblycache-createassemblyscavenger-method.md
+      - name: Método InstallAssembly
+        href: iassemblycache-installassembly-method.md
+      - name: Método QueryAssemblyInfo
+        href: iassemblycache-queryassemblyinfo-method.md
+      - name: Método UninstallAssembly
+        href: iassemblycache-uninstallassembly-method.md
+    - name: Interface IAssemblyCacheItem
+      href: iassemblycacheitem-interface.md
+      items:
+      - name: Método AbortItem
+        href: iassemblycacheitem-abortitem-method.md
+      - name: Método Commit
+        href: iassemblycacheitem-commit-method.md
+      - name: Método CreateStream
+        href: iassemblycacheitem-createstream-method.md
+    - name: Interface IAssemblyEnum
+      href: iassemblyenum-interface.md
+      items:
+      - name: Método Clone
+        href: iassemblyenum-clone-method.md
+      - name: Método GetNextAssembly
+        href: iassemblyenum-getnextassembly-method.md
+      - name: Método Reset
+        href: iassemblyenum-reset-method.md
+    - name: Interface IAssemblyName
+      href: iassemblyname-interface.md
+      items:
+      - name: Método Clone
+        href: iassemblyname-clone-method.md
+      - name: Método Finalize
+        href: iassemblyname-finalize-method.md
+      - name: Método GetDisplayName
+        href: iassemblyname-getdisplayname-method.md
+      - name: Método GetName
+        href: iassemblyname-getname-method.md
+      - name: Método GetProperty
+        href: iassemblyname-getproperty-method.md
+      - name: Método GetVersion
+        href: iassemblyname-getversion-method.md
+      - name: Método IsEqual
+        href: iassemblyname-isequal-method.md
+      - name: Método SetProperty
+        href: iassemblyname-setproperty-method.md
+    - name: Interface IDefinitionAppId
+      href: idefinitionappid-interface.md
+    - name: Interface IDefinitionIdentity
+      href: idefinitionidentity-interface.md
+    - name: Interface IEnumDefinitionIdentity
+      href: ienumdefinitionidentity-interface.md
+    - name: Interface IEnumIDENTITY_ATTRIBUTE
+      href: ienumidentity-attribute-interface.md
+    - name: Interface IEnumReferenceIdentity
+      href: ienumreferenceidentity-interface.md
+    - name: Interface IIdentityAuthority
+      href: iidentityauthority-interface.md
+    - name: Interface IInstallReferenceEnum
+      href: iinstallreferenceenum-interface.md
+      items:
+      - name: Método GetNextInstallReferenceItem
+        href: iinstallreferenceenum-getnextinstallreferenceitem-method.md
+    - name: Interface IInstallReferenceItem
+      href: iinstallreferenceitem-interface.md
+      items:
+      - name: Método GetReference
+        href: iinstallreferenceitem-getreference-method.md
+    - name: Interface IReferenceAppId
+      href: ireferenceappid-interface.md
+    - name: Interface IReferenceIdentity
+      href: ireferenceidentity-interface.md
+  - name: Funções estáticas globais de fusão
+    href: fusion-global-static-functions.md
+    items:
+    - name: Função ClearDownloadCache
+      href: cleardownloadcache-function.md
+    - name: Função CompareAssemblyIdentity
+      href: compareassemblyidentity-function.md
+    - name: Função CreateApplicationContext
+      href: createapplicationcontext-function.md
+    - name: Função CreateAssemblyCache
+      href: createassemblycache-function.md
+    - name: Função CreateAssemblyEnum
+      href: createassemblyenum-function.md
+    - name: Função CreateAssemblyNameObject
+      href: createassemblynameobject-function.md
+    - name: Função CreateHistoryReader
+      href: createhistoryreader-function.md
+    - name: Função CreateInstallReferenceEnum
+      href: createinstallreferenceenum-function.md
+    - name: Função GetAppIdAuthority
+      href: getappidauthority-function.md
+    - name: Função GetAssemblyIdentityFromFile
+      href: getassemblyidentityfromfile-function.md
+    - name: Função GetCachePath
+      href: getcachepath-function.md
+    - name: Função GetHistoryFileDirectory
+      href: gethistoryfiledirectory-function.md
+    - name: Função GetIdentityAuthority
+      href: getidentityauthority-function.md
+    - name: Função IsFrameworkAssembly
+      href: isframeworkassembly-function.md
+    - name: Função NukeDownloadedCache
+      href: nukedownloadedcache-function.md
+    - name: Função PreBindAssemblyEx
+      href: prebindassemblyex-function.md
+  - name: Enumerações Fusion
+    href: fusion-enumerations.md
+    items:
+    - name: Enumeração ASM_CACHE_FLAGS
+      href: asm-cache-flags-enumeration.md
+    - name: Enumeração ASM_CMP_FLAGS
+      href: asm-cmp-flags-enumeration.md
+    - name: Enumeração ASM_DISPLAY_FLAGS
+      href: asm-display-flags-enumeration.md
+    - name: Enumeração ASM_NAME
+      href: asm-name-enumeration.md
+    - name: Enumeração AssemblyComparisonResult
+      href: assemblycomparisonresult-enumeration.md
+    - name: Enumeração CREATE_ASM_NAME_OBJ_FLAGS
+      href: create-asm-name-obj-flags-enumeration.md
+  - name: Estruturas de fusão
+    href: fusion-structures.md
+    items:
+    - name: Estrutura ASSEMBLY_INFO
+      href: assembly-info-structure.md
+    - name: Estrutura FUSION_INSTALL_REFERENCE
+      href: fusion-install-reference-structure.md
+    - name: Estrutura IDENTITY_ATTRIBUTE
+      href: identity-attribute-structure.md
+    - name: Estrutura IDENTITY_ATTRIBUTE_BLOB
+      href: identity-attribute-blob-structure.md
+ms.openlocfilehash: 1f0a82977e7a39315ab8c4d328be76dd5804ae71
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467714"

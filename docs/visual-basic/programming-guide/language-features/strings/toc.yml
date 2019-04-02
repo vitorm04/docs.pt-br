@@ -1,0 +1,57 @@
+items:
+- name: Cadeias de caracteres no Visual Basic
+  href: index.md
+  items:
+  - name: Introdução a cadeias de caracteres
+    href: introduction-to-strings.md
+    items:
+    - name: Noções básicas de cadeias de caracteres
+      href: string-basics.md
+    - name: Tipos de métodos de manipulação de cadeia de caracteres
+      href: types-of-string-manipulation-methods.md
+    - name: Nothing e cadeias de caracteres
+      href: nothing-and-strings.md
+    - name: Como a cultura afeta cadeias de caracteres
+      href: how-culture-affects-strings.md
+    - name: Cadeias de caracteres interpoladas
+      href: interpolated-strings.md
+    - name: Acesso a cadeias de caracteres baseado em zero vs. baseado em um
+      href: zero-based-vs-one-based-string-access.md
+  - name: 'Como: criar cadeias de caracteres usando StringBuilder'
+    href: how-to-create-strings-using-a-stringbuilder.md
+  - name: 'Como: pesquisar em uma cadeia de caracteres'
+    href: how-to-search-within-a-string.md
+  - name: Converter entre cadeias de caracteres e outros tipos de dados
+    href: converting-between-strings-and-other-data-types.md
+    items:
+    - name: 'Como: converter uma matriz de bytes em uma cadeia de caracteres'
+      href: how-to-convert-an-array-of-bytes-into-a-string.md
+    - name: 'Como: converter cadeias de caracteres em uma matriz de bytes'
+      href: how-to-convert-strings-into-an-array-of-bytes.md
+    - name: 'Como: criar uma cadeia de caracteres de uma matriz de valores de caracteres'
+      href: how-to-create-a-string-from-an-array-of-char-values.md
+    - name: 'Como: converter cadeias de caracteres hexadecimais em números'
+      href: how-to-convert-hexadecimal-strings-to-numbers.md
+    - name: 'Como: converter uma cadeia de caracteres em uma matriz de caracteres'
+      href: how-to-convert-a-string-to-an-array-of-characters.md
+    - name: 'Como: acessar caracteres em cadeias de caracteres'
+      href: how-to-access-characters-in-strings.md
+  - name: Validar cadeias de caracteres
+    href: validating-strings.md
+    items:
+    - name: 'Como: validar nomes de arquivo e caminhos'
+      href: how-to-validate-file-names-and-paths.md
+    - name: 'Como: validar cadeias de caracteres que declaram datas ou horas'
+      href: how-to-validate-strings-that-represent-dates-or-times.md
+    - name: Usar expressões regulares com o controle MaskedTextBox
+      href: using-regular-expressions-with-the-maskedtextbox-control.md
+    - name: 'Passo a passo: validar a complexidade de senhas'
+      href: walkthrough-validating-that-passwords-are-complex.md
+  - name: 'Passo a passo: criptografar e descriptografar cadeias de caracteres'
+    href: walkthrough-encrypting-and-decrypting-strings.md
+ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467849"

@@ -1,0 +1,145 @@
+items:
+- name: Windows Forms
+  href: index.md
+  items:
+  - name: Guia de introdução ao Windows Forms
+    href: getting-started-with-windows-forms.md
+  - name: Visão geral do Windows Forms
+    href: windows-forms-overview.md
+  - name: Criando um novo formulário do Windows Forms
+    href: creating-a-new-windows-form.md
+    items:
+    - name: 'Como: criar um aplicativo do Windows Forms na linha de comando'
+      href: how-to-create-a-windows-forms-application-from-the-command-line.md
+    - name: Coordenadas do Windows Forms
+      href: windows-forms-coordinates.md
+  - name: Criando manipuladores de eventos no Windows Forms
+    href: creating-event-handlers-in-windows-forms.md
+    items:
+    - name: Visão geral sobre eventos
+      href: events-overview-windows-forms.md
+    - name: Visão geral de manipuladores de eventos
+      href: event-handlers-overview-windows-forms.md
+    - name: 'Como: criar manipuladores de eventos em tempo de execução para o Windows Forms'
+      href: how-to-create-event-handlers-at-run-time-for-windows-forms.md
+    - name: 'Como: conectar vários eventos a um único manipulador de eventos no Windows Forms'
+      href: how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md
+    - name: Ordem dos eventos em formulários do Windows Forms
+      href: order-of-events-in-windows-forms.md
+  - name: Ajustar o tamanho e a escala do Windows Forms
+    href: adjusting-the-size-and-scale-of-windows-forms.md
+    items:
+    - name: 'Como: redimensionar o Windows Forms'
+      href: how-to-resize-windows-forms.md
+    - name: Dimensionamento automático no Windows Forms
+      href: automatic-scaling-in-windows-forms.md
+      items:
+      - name: 'Como: responder a alterações no esquema de fontes em um aplicativo do Windows Forms'
+        href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
+      - name: Desabilitar o reconhecimento de DPI no Visual Studio
+        href: disable-dpi-awareness-visual-studio.md
+    - name: Suporte a alto a DPI no Windows Forms
+      href: high-dpi-support-in-windows-forms.md
+  - name: Alterando a aparência do Windows Forms
+    href: changing-the-appearance-of-windows-forms.md
+    items:
+    - name: 'Como: alterar as bordas do Windows Forms'
+      href: how-to-change-the-borders-of-windows-forms.md
+  - name: Controles de Windows Forms
+    href: ./controls/
+  - name: Entrada do usuário no Windows Forms
+    href: user-input-in-windows-forms.md
+    items:
+    - name: Entrada do usuário em um aplicativo do Windows Forms
+      href: user-input-in-a-windows-forms-application.md
+    - name: Entrada do teclado em um aplicativo do Windows Forms
+      href: keyboard-input-in-a-windows-forms-application.md
+      items:
+      - name: Como a entrada do teclado funciona
+        href: how-keyboard-input-works.md
+      - name: Usando eventos do teclado
+        href: using-keyboard-events.md
+      - name: 'Como: modificar a entrada do teclado para um controle padrão'
+        href: how-to-modify-keyboard-input-to-a-standard-control.md
+      - name: 'Como: determinar qual tecla modificadora foi pressionada'
+        href: how-to-determine-which-modifier-key-was-pressed.md
+      - name: 'Como: manipular a entrada do teclado no nível do formulário'
+        href: how-to-handle-keyboard-input-at-the-form-level.md
+    - name: Entrada do mouse em um aplicativo do Windows Forms
+      href: mouse-input-in-a-windows-forms-application.md
+      items:
+      - name: Como a entrada do mouse funciona no Windows Forms
+        href: how-mouse-input-works-in-windows-forms.md
+      - name: Eventos do mouse no Windows Forms
+        href: mouse-events-in-windows-forms.md
+      - name: 'Como: distinguir entre cliques e cliques duplos'
+        href: how-to-distinguish-between-clicks-and-double-clicks.md
+      - name: Ponteiros do mouse no Windows Forms
+        href: mouse-pointers-in-windows-forms.md
+      - name: Captura do mouse no Windows Forms
+        href: mouse-capture-in-windows-forms.md
+      - name: Funcionalidade de arrastar e soltar no Windows Forms
+        href: drag-and-drop-functionality-in-windows-forms.md
+    - name: 'Como: simular eventos de mouse e teclado no código'
+      href: how-to-simulate-mouse-and-keyboard-events-in-code.md
+    - name: 'Como: manipular eventos de entrada do usuário em controles do Windows Forms'
+      href: how-to-handle-user-input-events-in-windows-forms-controls.md
+    - name: Validação da entrada do usuário no Windows Forms
+      href: user-input-validation-in-windows-forms.md
+  - name: Caixas de diálogo no Windows Forms
+    href: dialog-boxes-in-windows-forms.md
+    items:
+    - name: 'Como: exibir caixas de diálogo para o Windows Forms'
+      href: how-to-display-dialog-boxes-for-windows-forms.md
+  - name: Associação de dados do Windows Forms
+    href: windows-forms-data-binding.md
+    items:
+    - name: Associação de dados e o Windows Forms
+      href: data-binding-and-windows-forms.md
+    - name: Fontes de dados com suporte do Windows Forms
+      href: data-sources-supported-by-windows-forms.md
+    - name: Interfaces relacionadas à associação de dados
+      href: interfaces-related-to-data-binding.md
+    - name: Notificação de alteração na associação de dados do Windows Forms
+      href: change-notification-in-windows-forms-data-binding.md
+    - name: 'Como: aplicar o padrão PropertyNameChanged'
+      href: how-to-apply-the-propertynamechanged-pattern.md
+    - name: 'Como: criar um controle associado e formatar os dados exibidos'
+      href: how-to-create-a-bound-control-and-format-the-displayed-data.md
+    - name: 'Como: criar um controle associado simples em um Windows Form'
+      href: how-to-create-a-simple-bound-control-on-a-windows-form.md
+    - name: 'Como: assegurar que vários controles associados à mesma fonte de dados permaneçam sincronizados'
+      href: multiple-controls-bound-to-data-source-synchronized.md
+    - name: 'Como: assegurar que a linha selecionada em uma tabela filho permaneça na posição correta'
+      href: ensure-the-selected-row-in-a-child-table-correct.md
+    - name: 'Como: implementar a interface IListSource'
+      href: how-to-implement-the-ilistsource-interface.md
+    - name: 'Como: implementar a interface INotifyPropertyChanged'
+      href: how-to-implement-the-inotifypropertychanged-interface.md
+    - name: 'Como: implementar a interface ITypedList'
+      href: how-to-implement-the-itypedlist-interface.md
+    - name: 'Como: navegar por dados nos Windows Forms'
+      href: how-to-navigate-data-in-windows-forms.md
+  - name: Segurança do Windows Forms
+    href: windows-forms-security.md
+    items:
+    - name: Visão geral da Segurança do Windows Forms
+      href: security-in-windows-forms-overview.md
+    - name: Acesso mais seguro a arquivos e dados no Windows Forms
+      href: more-secure-file-and-data-access-in-windows-forms.md
+    - name: Impressão mais segura no Windows Forms
+      href: more-secure-printing-in-windows-forms.md
+    - name: Considerações adicionais sobre Segurança do Windows Forms
+      href: additional-security-considerations-in-windows-forms.md
+  - name: Implantação do ClickOnce para o Windows Forms
+    href: clickonce-deployment-for-windows-forms.md
+  - name: 'Como: acessar coleções indexadas por chave no Windows Forms'
+    href: how-to-access-keyed-collections-in-windows-forms.md
+  - name: Aprimorando aplicativos do Windows Forms
+    href: ./advanced/
+ms.openlocfilehash: 4c2f21406d7017943542ff00aa7be95b8e3d5d69
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467639"

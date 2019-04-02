@@ -1,0 +1,16 @@
+items:
+- name: Associação inicial e tardia
+  href: index.md
+  items:
+  - name: Determinar o Tipo de Objeto
+    href: determining-object-type.md
+  - name: Chamando uma propriedade ou um método usando o nome de uma cadeia de caracteres
+    href: calling-a-property-or-method-using-a-string-name.md
+  - name: Trabalhar com Objetos Dinâmicos
+    href: working-with-dynamic-objects.md
+ms.openlocfilehash: edd2a6e97163ceb4dce728639a6651482e58ab6d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467652"

@@ -1,0 +1,25 @@
+items:
+- name: Tipos
+  href: index.md
+  items:
+  - name: Conversão e conversões de tipo
+    href: casting-and-type-conversions.md
+  - name: Conversão boxing e unboxing
+    href: boxing-and-unboxing.md
+  - name: Usar o tipo dynamic
+    href: using-type-dynamic.md
+    items:
+    - name: 'Passo a passo: criar e usar objetos dinâmicos (C# e Visual Basic)'
+      href: walkthrough-creating-and-using-dynamic-objects.md
+  - name: 'Como: converter uma matriz de bytes em um int'
+    href: how-to-convert-a-byte-array-to-an-int.md
+  - name: 'Como: converter uma cadeia de caracteres em um número'
+    href: how-to-convert-a-string-to-a-number.md
+  - name: 'Como: converter entre cadeias de caracteres hexadecimais e tipos numéricos'
+    href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+ms.openlocfilehash: ec544bd0f41d24e9775277ac1968787de9391dd5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467666"

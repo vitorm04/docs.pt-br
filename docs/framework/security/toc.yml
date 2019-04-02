@@ -1,0 +1,103 @@
+items:
+- name: Windows Identity Foundation
+  href: index.md
+  items:
+  - name: Novidades do Windows Identity Foundation 4.5
+    href: whats-new-in-wif.md
+  - name: Visão geral do Windows Identity Foundation 4.5
+    href: wif-overview.md
+    items:
+    - name: Modelo de identidade baseada em declarações
+      href: claims-based-identity-model.md
+    - name: Autorização baseada em declarações usando o WIF
+      href: claims-based-authorization-using-wif.md
+    - name: Modelo de programação de declarações do WIF
+      href: wif-claims-programming-model.md
+  - name: Introdução ao WIF
+    href: getting-started-with-wif.md
+    items:
+    - name: Criando meu primeiro aplicativo Web ASP.NET baseado em declarações
+      href: building-my-first-claims-aware-aspnet-web-app.md
+    - name: Criando meu primeiro serviço WCF baseado em declarações
+      href: building-my-first-claims-aware-wcf-service.md
+  - name: Recursos do WIF
+    href: wif-features.md
+    items:
+    - name: Manipuladores de token personalizados
+      href: custom-token-handlers.md
+    - name: Ferramenta de Identidade e Acesso para o Visual Studio 2012
+      href: identity-and-access-tool-for-vs.md
+    - name: Gerenciamento de sessões do WIF
+      href: wif-session-management.md
+    - name: WIF e Web Farms
+      href: wif-and-web-farms.md
+    - name: Visão geral do módulo de autenticação WSFederation
+      href: wsfederation-authentication-module-overview.md
+    - name: WSTrustChannelFactory e WSTrustChannel
+      href: wstrustchannelfactory-and-wstrustchannel.md
+  - name: Índice de instruções do WIF
+    href: wif-how-tos-index.md
+    items:
+    - name: 'Como: criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF'
+      href: how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md
+    - name: 'Como: criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF'
+      href: how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md
+    - name: 'Como: criar um aplicativo ASP.NET baseado em declarações usando a Autenticação Baseada em Formulários'
+      href: claims-aware-aspnet-app-forms-authentication.md
+    - name: 'Como: criar um aplicativo ASP.NET baseado em declarações usando a Autenticação do Windows'
+      href: how-to-build-claims-aware-aspnet-app-using-windows-authentication.md
+    - name: 'Como: depurar serviços e aplicativos baseados em declarações usando o rastreamento do WIF'
+      href: how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md
+    - name: 'Como: exibir o status de conexão usando o WIF'
+      href: how-to-display-signed-in-status-using-wif.md
+    - name: 'Como: habilitar o rastreamento do WIF'
+      href: how-to-enable-wif-tracing.md
+    - name: 'Como: habilitar a detecção de reprodução do token'
+      href: how-to-enable-token-replay-detection.md
+    - name: 'Como: habilitar o WIF para um aplicativo de serviço Web WCF'
+      href: how-to-enable-wif-for-a-wcf-web-service-application.md
+    - name: 'Como: transformar declarações de entrada'
+      href: how-to-transform-incoming-claims.md
+  - name: Diretrizes do WIF
+    href: wif-guidelines.md
+    items:
+    - name: Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5
+      href: guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md
+    - name: Mapeamento de namespace entre o WIF 3.5 e o WIF 4.5
+      href: namespace-mapping-between-wif-3-5-and-wif-4-5.md
+  - name: Índice de exemplos de código do WIF
+    href: wif-code-sample-index.md
+  - name: Extensões WIF
+    href: wif-extensions.md
+    items:
+    - name: Manipulador de Token da Web JSON
+      href: json-web-token-handler.md
+      items:
+      - name: Baixando o Pacote do Manipulador de Token da Web JSON
+        href: downloading-the-json-web-token-handler-package.md
+      - name: Referência API
+        href: json-web-token-handler-api-reference.md
+    - name: Validando Registro do nome do emissor
+      href: validating-issuer-name-registry.md
+      items:
+      - name: Baixando o Pacote de Registro do nome do emissor de validação
+        href: downloading-the-validating-issuer-name-registry-package.md
+      - name: Referência API
+        href: validating-issuer-name-registry-api-reference.md
+  - name: Referência de API do WIF
+    href: wif-api-reference.md
+  - name: Referência de configuração do WIF
+    href: wif-configuration-reference.md
+    items:
+    - name: Convenções do esquema de configuração do WIF
+      href: wif-configuration-schema-conventions.md
+- name: Alterações de segurança
+  href: security-changes.md
+- name: Diretrizes de codificação segura para código não gerenciado
+  href: secure-coding-guidelines-for-unmanaged-code.md
+ms.openlocfilehash: 4f8faea87ecbc2f3cc379aa9ed2eb7c912387e11
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467647"

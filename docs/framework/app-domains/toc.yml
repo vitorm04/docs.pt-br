@@ -1,0 +1,105 @@
+items:
+- name: Domínios do aplicativo e assemblies
+  href: index.md
+  items:
+  - name: Assemblies no Common Language Runtime
+    href: assemblies-in-the-common-language-runtime.md
+    items:
+    - name: Conteúdo de um assembly
+      href: assembly-contents.md
+    - name: Manifesto de um assembly
+      href: assembly-manifest.md
+    - name: Cache de assemblies global
+      href: gac.md
+    - name: Assemblies de nomes fortes
+      href: strong-named-assemblies.md
+    - name: Considerações sobre segurança de assemblies
+      href: assembly-security-considerations.md
+    - name: Controle de versão de assemblies
+      href: assembly-versioning.md
+    - name: Posicionamento dos assemblies
+      href: assembly-placement.md
+    - name: Assemblies e execução lado a lado
+      href: assemblies-and-side-by-side-execution.md
+  - name: Domínios do aplicativo
+    href: application-domains.md
+  - name: Tópicos explicativos sobre domínios do aplicativo e assemblies
+    href: application-domains-and-assemblies-how-to-topics.md
+  - name: Usando domínios do aplicativo
+    href: use.md
+    items:
+    - name: 'Como: Criar um domínio do aplicativo'
+      href: how-to-create-an-application-domain.md
+    - name: 'Como: Descarregar um domínio do aplicativo'
+      href: how-to-unload-an-application-domain.md
+    - name: 'Como: Configurar um domínio do aplicativo'
+      href: how-to-configure-an-application-domain.md
+    - name: Recuperando informações de instalação de um domínio de aplicativo
+      href: retrieve-setup-information.md
+    - name: 'Como: Carregar assemblies em um domínio do aplicativo'
+      href: how-to-load-assemblies-into-an-application-domain.md
+    - name: 'Como: Obter as informações de tipo e membro de um assembly'
+      href: how-to-obtain-type-and-member-information-from-an-assembly.md
+    - name: Criando cópias de sombra de assemblies
+      href: shadow-copy-assemblies.md
+    - name: 'Como: Receber notificações de exceção de primeira tentativa'
+      href: how-to-receive-first-chance-exception-notifications.md
+    - name: Resolvendo carregamentos de assembly
+      href: resolve-assembly-loads.md
+  - name: Programação com assemblies
+    href: programming-with-assemblies.md
+    items:
+    - name: Criando assemblies
+      href: create-assemblies.md
+    - name: Nomes de assembly
+      href: assembly-names.md
+    - name: 'Como: Determinar o nome totalmente qualificado de um assembly'
+      href: how-to-determine-assembly-fully-qualified-name.md
+    - name: Executando aplicativos de intranet em confiança total
+      href: running-intranet-applications-in-full-trust.md
+    - name: Local de um assembly
+      href: assembly-location.md
+    - name: 'Como: Criar um assembly de arquivo único'
+      href: how-to-build-a-single-file-assembly.md
+    - name: Assemblies de vários arquivos
+      href: multifile-assemblies.md
+    - name: 'Como: Criar um assembly de vários arquivos'
+      href: how-to-build-a-multifile-assembly.md
+    - name: Configuração de atributos de assembly
+      href: set-assembly-attributes.md
+    - name: Criando e usando assemblies de nomes fortes
+      href: create-and-use-strong-named-assemblies.md
+      items:
+      - name: 'Como: Criar um par de chaves pública/privada'
+        href: how-to-create-a-public-private-key-pair.md
+      - name: 'Como: assinar um assembly com um nome forte'
+        href: how-to-sign-an-assembly-with-a-strong-name.md
+      - name: Nomeação forte aprimorada
+        href: enhanced-strong-naming.md
+      - name: 'Como: Referenciar um assembly de nome forte'
+        href: how-to-reference-a-strong-named-assembly.md
+      - name: 'Como: Desabilitar a funcionalidade de bypass de nome forte'
+        href: how-to-disable-the-strong-name-bypass-feature.md
+    - name: Atrasando a assinatura de um assembly
+      href: delay-sign-assembly.md
+    - name: Trabalhando com assemblies e o cache de assemblies global
+      href: working-with-assemblies-and-the-gac.md
+      items:
+      - name: 'Como: Instalar um assembly no cache de assembly global'
+        href: how-to-install-an-assembly-into-the-gac.md
+      - name: 'Como: Exibir o conteúdo do cache de assembly global'
+        href: how-to-view-the-contents-of-the-gac.md
+      - name: 'Como: Remover um assembly do cache de assembly global'
+        href: how-to-remove-an-assembly-from-the-gac.md
+      - name: Usando componentes atendidos com o cache de assemblies global
+        href: use-serviced-components-with-the-gac.md
+    - name: 'Como: Exibir o conteúdo do assembly'
+      href: how-to-view-assembly-contents.md
+    - name: Encaminhamento de tipo no Common Language Runtime
+      href: type-forwarding-in-the-common-language-runtime.md
+ms.openlocfilehash: 8a928eda090b144daf61c768fb5d8b8de079af16
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467732"

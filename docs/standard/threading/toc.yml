@@ -1,0 +1,87 @@
+items:
+- name: Threading
+  href: index.md
+  items:
+  - name: Noções básicas de threading gerenciado
+    href: managed-threading-basics.md
+    items:
+    - name: Threads e threading
+      href: threads-and-threading.md
+    - name: Exceções em threads gerenciados
+      href: exceptions-in-managed-threads.md
+    - name: Sincronizando dados para multithreading
+      href: synchronizing-data-for-multithreading.md
+    - name: Threads em primeiro plano e em segundo plano
+      href: foreground-and-background-threads.md
+    - name: Threading gerenciado e não gerenciado no Windows
+      href: managed-and-unmanaged-threading-in-windows.md
+    - name: Thread.Suspend, coleta de lixo e pontos seguros
+      href: thread-suspend-garbage-collection-and-safe-points.md
+    - name: 'Armazenamento local de thread: Campos estáticos relativos a thread e slots de dados'
+      href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+  - name: Usando threads e threading
+    href: using-threads-and-threading.md
+    items:
+    - name: Criando threads e passando dados na hora de início
+      href: creating-threads-and-passing-data-at-start-time.md
+    - name: Pausando e interrompendo threads
+      href: pausing-and-resuming-threads.md
+    - name: Destruindo threads
+      href: destroying-threads.md
+    - name: Agendando threads
+      href: scheduling-threads.md
+    - name: Cancelamento em threads gerenciados
+      href: cancellation-in-managed-threads.md
+      items:
+      - name: Cancelando threads de forma cooperativa
+        href: canceling-threads-cooperatively.md
+      - name: 'Como: ouvir solicitações de cancelamento por meio de sondagem'
+        href: how-to-listen-for-cancellation-requests-by-polling.md
+      - name: 'Como: registrar retornos de chamada para solicitações de cancelamento'
+        href: how-to-register-callbacks-for-cancellation-requests.md
+      - name: 'Como: ouvir solicitações de cancelamento que têm identificadores de espera'
+        href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+      - name: 'Como: Como ouvir várias solicitações de cancelamento'
+        href: how-to-listen-for-multiple-cancellation-requests.md
+  - name: Práticas recomendadas de threading gerenciado
+    href: managed-threading-best-practices.md
+  - name: Objetos e recursos de threading
+    href: threading-objects-and-features.md
+    items:
+    - name: O pool de threads gerenciados
+      href: the-managed-thread-pool.md
+    - name: Temporizadores
+      href: timers.md
+    - name: Visão geral dos primitivos de sincronização
+      href: overview-of-synchronization-primitives.md
+    - name: EventWaitHandle
+      href: eventwaithandle.md
+    - name: CountdownEvent
+      href: countdownevent.md
+    - name: Mutexes
+      href: mutexes.md
+    - name: Semaphore e SemaphoreSlim
+      href: semaphore-and-semaphoreslim.md
+    - name: Barreira
+      href: barrier.md
+      items:
+      - name: 'Como: sincronizar operações simultâneas com uma barreira'
+        href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+    - name: SpinLock
+      href: spinlock.md
+      items:
+      - name: 'Como: usar SpinLock para sincronização de baixo nível'
+        href: how-to-use-spinlock-for-low-level-synchronization.md
+      - name: 'Como: habilitar o modo de acompanhamento de thread em SpinLock'
+        href: how-to-enable-thread-tracking-mode-in-spinlock.md
+    - name: SpinWait
+      href: spinwait.md
+      items:
+      - name: 'Como: usar SpinWait para implementar uma operação de espera em duas fases'
+        href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
+ms.openlocfilehash: c015db2bc66897ca487e29e36d93e7d84a0897f1
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467664"

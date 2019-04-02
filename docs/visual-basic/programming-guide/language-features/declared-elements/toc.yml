@@ -1,0 +1,42 @@
+items:
+- name: Elementos declarados
+  href: index.md
+  items:
+  - name: Nomes de elementos declarados
+    href: declared-element-names.md
+  - name: Características do elemento declarado
+    href: declared-element-characteristics.md
+    items:
+    - name: Tempo de vida
+      href: lifetime.md
+    - name: Escopo
+      href: scope.md
+      items:
+      - name: 'Como: controlar o escopo de uma variável'
+        href: how-to-control-the-scope-of-a-variable.md
+      - name: Promoção de tipos
+        href: type-promotion.md
+    - name: Níveis de acesso
+      href: access-levels.md
+      items:
+      - name: 'Como: controlar a disponibilidade de uma variável'
+        href: how-to-control-the-availability-of-a-variable.md
+    - name: Referências a elementos declarados
+      href: references-to-declared-elements.md
+    - name: Sombreamento
+      href: shadowing.md
+      items:
+      - name: Diferenças entre sombreamento e sobreposição
+        href: differences-between-shadowing-and-overriding.md
+      - name: 'Como: ocultar uma variável com o mesmo nome que a sua variável'
+        href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+      - name: 'Como: ocultar uma variável herdada'
+        href: how-to-hide-an-inherited-variable.md
+      - name: 'Como: acessar uma variável oculta por uma classe derivada'
+        href: how-to-access-a-variable-hidden-by-a-derived-class.md
+ms.openlocfilehash: d747436df2e7ad7187e39808ea19d64ac1b082fc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467677"

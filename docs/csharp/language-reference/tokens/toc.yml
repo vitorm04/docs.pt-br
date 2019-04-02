@@ -1,0 +1,14 @@
+items:
+- name: Caracteres especiais de C#
+  href: index.md
+  items:
+  - name: Interpolação de cadeia de caracteres -- $
+    href: interpolated.md
+  - name: '@ – identificador textual'
+    href: verbatim.md
+ms.openlocfilehash: 91b592922f9944e7ccea94babb9f1810fd22a158
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467841"

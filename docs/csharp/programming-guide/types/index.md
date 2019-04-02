@@ -66,10 +66,12 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
   
 -   Cada tipo no CTS é definido como um *tipo de valor* ou um *tipo de referência*. Isso inclui todos os tipos personalizados na biblioteca de classes do .NET, além de tipos personalizados definidos pelo usuário. Os tipos que você define usando a palavra-chave [struct](../../../csharp/language-reference/keywords/struct.md) são tipos de valor. Todos os tipos numéricos internos são `structs`. Os tipos que você define usando a palavra-chave [classe](../../../csharp/language-reference/keywords/class.md) são tipos de referência. Os tipos de referência e os tipos de valor têm diferentes regras de tempo de compilação e comportamento de tempo de execução diferente.  
   
- A ilustração a seguir mostra a relação entre tipos de referência e tipos de valor no CTS.  
+ A ilustração a seguir mostra a relação entre tipos de referência e tipos de valor no CTS.
+
+ A imagem a seguir mostra os tipos de valor e tipos de referência no CTS: 
   
- ![Tipos de valor e tipos de referência](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")  
-Tipos de Valor e tipos de referência no CTS  
+  
+ ![Captura de tela que mostra de tipos de valor CTS e tipos de referência.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
 >  Você pode ver que os tipos mais usados normalmente são todos organizados no namespace <xref:System>. No entanto, o namespace no qual um tipo está contido não tem relação com a possibilidade de ele ser um tipo de valor ou um tipo de referência.  

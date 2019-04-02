@@ -1,0 +1,41 @@
+items:
+- name: Aplicativos do serviço Windows
+  href: index.md
+  items:
+  - name: Introdução a aplicativos do Serviço Windows
+    href: introduction-to-windows-service-applications.md
+  - name: 'Passo a passo: criar um aplicativo de serviço Windows'
+    href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+  - name: Arquitetura de programação do aplicativo de serviço
+    href: service-application-programming-architecture.md
+  - name: 'Como: Criar serviços Windows'
+    href: how-to-create-windows-services.md
+    items:
+    - name: 'Como: Escrever serviços de forma programática'
+      href: how-to-write-services-programmatically.md
+    - name: 'Como: Adicionar instaladores ao aplicativo de serviço'
+      href: how-to-add-installers-to-your-service-application.md
+    - name: 'Como: Especificar o contexto de segurança para serviços'
+      href: how-to-specify-the-security-context-for-services.md
+    - name: 'Como: instalar e desinstalar serviços'
+      href: how-to-install-and-uninstall-services.md
+    - name: 'Como: Iniciar serviços'
+      href: how-to-start-services.md
+    - name: 'Como: Pausar um Serviço Windows (Visual Basic)'
+      href: how-to-pause-a-windows-service-visual-basic.md
+    - name: 'Como: Continuar um serviço Windows (Visual Basic)'
+      href: how-to-continue-a-windows-service-visual-basic.md
+    - name: 'Como: Depurar aplicativos do serviço Windows'
+      href: how-to-debug-windows-service-applications.md
+    - name: 'Como: Registrar em log informações sobre serviços'
+      href: how-to-log-information-about-services.md
+    - name: 'Solução de problemas: depurar serviços Windows'
+      href: troubleshooting-debugging-windows-services.md
+    - name: 'Solução de problemas: O aplicativo de serviço não é instalado'
+      href: troubleshooting-service-application-wont-install.md
+ms.openlocfilehash: 0b60da73c822f1b87d437076915735c327ca60f8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467700"

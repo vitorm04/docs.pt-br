@@ -1,0 +1,73 @@
+items:
+- name: E/S de arquivo e de fluxo
+  href: index.md
+  items:
+  - name: Formatos de caminho de arquivo em sistemas Windows
+    href: file-path-formats.md
+  - name: Tarefas comuns de E/S
+    href: common-i-o-tasks.md
+    items:
+    - name: 'Como: copiar diretórios'
+      href: how-to-copy-directories.md
+    - name: 'Como: enumerar diretórios e arquivos'
+      href: how-to-enumerate-directories-and-files.md
+    - name: 'Como: Ler e gravar em um arquivo de dados recém-criado'
+      href: how-to-read-and-write-to-a-newly-created-data-file.md
+    - name: 'Como: Abrir um arquivo de log e fazer acréscimos a ele'
+      href: how-to-open-and-append-to-a-log-file.md
+    - name: 'Como: gravar texto em um arquivo'
+      href: how-to-write-text-to-a-file.md
+    - name: 'Como: Ler texto de um arquivo'
+      href: how-to-read-text-from-a-file.md
+    - name: 'Como: Ler caracteres de uma cadeia de caracteres'
+      href: how-to-read-characters-from-a-string.md
+    - name: 'Como: Gravar caracteres em uma cadeia de caracteres'
+      href: how-to-write-characters-to-a-string.md
+    - name: 'Como: adicionar ou remover entradas da lista de controle de acesso'
+      href: how-to-add-or-remove-access-control-list-entries.md
+    - name: 'Como: compactar e extrair arquivos'
+      href: how-to-compress-and-extract-files.md
+    - name: Compor fluxos
+      href: composing-streams.md
+    - name: 'Como: Fazer a conversão entre fluxos do .NET Framework e fluxos do Windows Runtime'
+      href: how-to-convert-between-dotnet-streams-and-winrt-streams.md
+  - name: E/S de arquivo assíncrona
+    href: asynchronous-file-i-o.md
+  - name: Lidar com erros de E/S
+    href: handling-io-errors.md
+  - name: Armazenamentos isolado
+    href: isolated-storage.md
+    items:
+    - name: Tipos de isolamento
+      href: types-of-isolation.md
+    - name: 'Como: Obter repositórios para o armazenamento isolado'
+      href: how-to-obtain-stores-for-isolated-storage.md
+    - name: 'Como: Enumerar repositórios para o armazenamento isolado'
+      href: how-to-enumerate-stores-for-isolated-storage.md
+    - name: 'Como: Excluir repositórios no armazenamento isolado'
+      href: how-to-delete-stores-in-isolated-storage.md
+    - name: 'Como: Prever condições de espaço insuficiente com o armazenamento isolado'
+      href: how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+    - name: 'Como: Criar arquivos e diretórios no armazenamento isolado'
+      href: how-to-create-files-and-directories-in-isolated-storage.md
+    - name: 'Como: Localizar arquivos e diretórios existentes no armazenamento isolado'
+      href: how-to-find-existing-files-and-directories-in-isolated-storage.md
+    - name: 'Como: Ler e gravar em arquivos no armazenamento isolado'
+      href: how-to-read-and-write-to-files-in-isolated-storage.md
+    - name: 'Como: Excluir arquivos e diretórios no armazenamento isolado'
+      href: how-to-delete-files-and-directories-in-isolated-storage.md
+  - name: Pipes
+    href: pipe-operations.md
+    items:
+    - name: 'Como: Usar pipes anônimos para comunicação entre processos locais'
+      href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+    - name: 'Como: Usar pipes nomeados para comunicação entre processos na rede'
+      href: how-to-use-named-pipes-for-network-interprocess-communication.md
+  - name: Arquivos mapeados na memória
+    href: memory-mapped-files.md
+ms.openlocfilehash: 2da7230409fe2ccb8e6b21c21cbee57d3cd134ac
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468099"
