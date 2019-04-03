@@ -2,12 +2,12 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 0e88c57b2a18afb7f9f7d567f355d38a78892b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648135"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827504"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 Determina como uma classe de atributo personalizado pode ser usada. `AttributeUsage` é um atributo que pode ser aplicado às definições de atributo personalizado para controlar como o novo atributo pode ser aplicado. As configurações padrão têm essa aparência quando aplicadas explicitamente:  
@@ -162,6 +162,7 @@ A2
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Attribute>
 - <xref:System.Reflection>
 - [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)

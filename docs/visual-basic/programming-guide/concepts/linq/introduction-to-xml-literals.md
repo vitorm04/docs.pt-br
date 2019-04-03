@@ -2,12 +2,12 @@
 title: Introdução aos literais XML no Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624022"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841250"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introdução a literais XML no Visual Basic
 Esta seção fornece informações sobre como criar árvores XML no Visual Basic.  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>Clonagem contra. Anexar  
+### <a name="cloning-vs-attaching"></a>Clonagem contra. anexação  
  Como mencionado anteriormente, se você usar uma expressão inserida para adicionar nós existentes (incluindo elementos) e atributos para uma nova árvore XML, se os nós existentes já parented, os nós é clonados e os nós recentemente clonados são anexados a nova árvore XML. Se os nós existentes não parented, eles estão conectados somente para a nova árvore XML.  
   
 ```vb  
@@ -196,4 +196,5 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

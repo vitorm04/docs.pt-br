@@ -2,12 +2,12 @@
 title: Propriedade de navegação - ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 6729b22dbc012d5ccfabd64cd83b710833fe1b9d
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857938"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836591"
 ---
 # <a name="navigation-property"></a>Propriedade de navegação
 
@@ -29,7 +29,7 @@ O tipo de dados de uma propriedade de navegação é determinado pelo [multiplic
 
 O diagrama a seguir mostra um modelo conceitual com três tipos de entidade: `Book`, `Publisher`, e `Author`. As propriedades de navegação, `Publisher` e `Authors`, são definidas no tipo de entidade de livro. A propriedade `Books` de navegação é definida no tipo de entidade do Publisher e tipo de entidade de `Author` .
 
-![Modelo com propriedades de navegação](/media/modelwithnavprops.gif "ModelWithNavProps")
+ ![Diagrama que mostra um modelo conceitual com três tipos de entidade.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 O [ADO.NET Entity Framework](./ef/index.md) usa uma linguagem específica de domínio (DSL) chamada linguagem de definição de esquema conceitual ([CSDL](./ef/language-reference/csdl-specification.md)) para definir modelos conceituais. CSDL seguir define o tipo de entidade de `Book` mostrado no diagrama anterior:
 

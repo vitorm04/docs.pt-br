@@ -7,12 +7,12 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 053149334118d69e5e85bdbd0f9a45e855e3d4dd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980094"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841141"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Palavras-chave como nomes de elemento em código (Visual Basic)
 Qualquer elemento de programa — como uma variável, classe ou membro — pode ter o mesmo nome que uma palavra-chave restrita. Por exemplo, você pode criar uma variável chamada `Loop`. No entanto, para referir-se à sua versão dele — que tem o mesmo nome que restritas `Loop` palavra-chave — você deve precedê-lo com uma cadeia de caracteres de qualificação completa ou coloque-o entre colchetes (`[ ]`), como mostra o exemplo a seguir.  
@@ -31,6 +31,7 @@ Qualquer elemento de programa — como uma variável, classe ou membro — pode 
 >  O programa também pode incluir nomes de elemento fornecidos por outros assemblies referenciados. Se esses nomes em conflito com palavras-chave restritas, então colocar colchetes ao redor deles faz com que o Visual Basic para interpretá-los como seus elementos definidos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Convenções de nomenclatura do Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)

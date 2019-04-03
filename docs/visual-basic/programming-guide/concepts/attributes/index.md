@@ -2,6 +2,12 @@
 title: Visão geral de atributos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827686"
 ---
 # <a name="attributes-overview-visual-basic"></a>Visão geral de atributos (Visual Basic)
 Os atributos fornecem um método eficiente de associação de metadados, ou informações declarativas, ao código (assemblies, tipos, métodos, propriedades e etc.). Após um atributo ser associado a uma entidade de programa, o atributo poderá ser consultado no tempo de execução usando uma técnica chamada *reflexão*. Para obter mais informações, consulte [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -137,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [Informações do chamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Atributos](../../../../standard/attributes/index.md)

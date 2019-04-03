@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: dc7cba394f623ae94a0d9ca8285fc12af8f0dacf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600330"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831560"
 ---
 # <a name="error-types-visual-basic"></a>Tipos de erro (Visual Basic)
 No Visual Basic, erros (também chamado de *exceções*) se enquadram em uma das três categorias: erros de sintaxe, erros de tempo de execução e erros lógicos.  
@@ -33,5 +33,6 @@ No Visual Basic, erros (também chamado de *exceções*) se enquadram em uma das
  *Erros de lógica* são aqueles que aparecem depois que o aplicativo está em uso. Eles são a maioria dos resultados de muitas vezes não desejados ou inesperados em resposta às ações do usuário. Por exemplo, uma chave digitada incorretamente ou outra fora da influência pode fazer com que seu aplicativo para parar de funcionar dentro dos parâmetros esperados, ou completamente. Erros de lógica geralmente são o tipo mais difícil para corrigir, pois não é sempre claro onde eles se originam.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Noções básicas do depurador](/visualstudio/debugger/debugger-basics)

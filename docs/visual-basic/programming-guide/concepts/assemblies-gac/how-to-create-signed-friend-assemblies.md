@@ -2,12 +2,12 @@
 title: 'Como: Criar Assemblies amigáveis assinados (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 20d1bb571d9cd354ea3f3dba560743da00c8bf22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359010"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836734"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Como: Criar Assemblies amigáveis assinados (Visual Basic)
 Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes. Os dois assemblies devem ter nomes fortes. Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.  
@@ -85,6 +85,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
  Há semelhanças entre o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e a classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. A principal diferença é que <xref:System.Security.Permissions.StrongNameIdentityPermission> pode solicitar permissões de segurança para executar uma determinada seção de código, enquanto o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla a visibilidade de membros e tipos de `Friend`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
 - [Assemblies Amigáveis](../../../../standard/assembly/friend-assemblies.md)
