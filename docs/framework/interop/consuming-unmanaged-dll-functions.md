@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c13f5aef9f08929dcd17f53777ba9e23b00b838
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728379"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463079"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumindo funções de DLL não gerenciadas
-A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Win32. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
+A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Windows. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
   
  Esta seção apresenta as tarefas associadas às funções DLL não gerenciadas de consumo e fornece mais informações sobre invocação de plataforma. Além das tarefas a seguir, há considerações gerais e um link que fornece exemplos e informações adicionais.  
   
@@ -54,8 +54,7 @@ A invocação de plataforma é um serviço que permite que um código gerenciado
 ## <a name="a-closer-look-at-platform-invoke"></a>Visão aprofundada da invocação de plataforma  
  A invocação de plataforma se baseia nos metadados para localizar funções exportadas e realizar marshaling em seus argumentos em tempo de execução. A ilustração a seguir mostra esse processo.  
   
- ![Invocação de plataforma](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")  
-Uma chamada da invocação de plataforma a uma função de DLL não gerenciada  
+ ![Diagrama que mostra uma chamada de invocação de plataforma.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
  Quando uma invocação de plataforma chama uma função não gerenciada, ela executa a seguinte sequência de ações:  
   

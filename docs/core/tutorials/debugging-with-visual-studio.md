@@ -3,12 +3,12 @@ title: Depurar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
 description: Saiba como depurar um aplicativo Olá, Mundo escrito em C# ou no Visual Basic com o Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170659"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463417"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depure seu aplicativo Olá, Mundo do .NET Core em C# ou Visual Basic usando Visual Studio 2017
 
@@ -39,7 +39,7 @@ Execute o programa no modo de Depuração e teste algumas funcionalidades de dep
 
 1. A execução do programa para quando ele atinge o ponto de interrupção e antes de o método `Console.WriteLine` ser executado. A janela **Autos** exibe os valores de variáveis que são usadas ao redor da linha atual. A janela **Locais** (que você pode exibir clicando na guia **Locais**) exibe os valores de variáveis definidos no método em execução no momento.
 
-   ![Janela do aplicativo do Visual Studio](./media/debugging-with-visual-studio/break.png)
+   ![Captura de tela de um ponto de interrupção no Visual Studio.](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. Você pode alterar o valor das variáveis para ver como isso afeta o programa. Se a **Janela Imediata** não estiver visível, exiba-a escolhendo o item de menu **Depurar** > **Janelas** > **Imediata**. A **Janela Imediata** permite interagir com o aplicativo que você está depurando.
 

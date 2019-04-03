@@ -9,12 +9,12 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 92e20dad8ae6358f71137e955bb80e3641a66a54
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0f04ba837f9c03107acd0b2174cbd07c14a8c213
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237747"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504464"
 ---
 # <a name="-operator-c-reference"></a>Operador + (Referência de C#)
 
@@ -30,7 +30,9 @@ Para tipos numéricos, o operador `+` calcula a soma dos operandos:
 
 [!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
 
-## <a name="string-concatenation"></a>{1&gt;Concatenação de cadeia de caracteres&lt;1}
+Para obter mais informações sobre operadores aritméticos, confira [Operadores aritméticos](arithmetic-operators.md).
+
+## <a name="string-concatenation"></a>Concatenação de cadeia de caracteres
 
 Quando um ou os dois operandos forem do tipo [cadeia de caracteres](../keywords/string.md), o operador `+` concatenará as representações de cadeia de caracteres de seus operandos:
 

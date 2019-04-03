@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836637"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463807"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -61,7 +61,7 @@ Enquanto todos os outros membros de uma classe base são herdados por classes de
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Classes derivadas também podem *substituir* membros herdados fornecendo uma implementação alternativa. Para poder substituir um membro, o membro na classe base deve ser marcado com a palavra-chave [virtual](../language-reference/keywords/virtual.md). Por padrão, os membros da classe base não são marcados como `virtual` e não podem ser substituídos. A tentativa de substituir um membro não virtual, como faz o exemplo a seguir, gera o erro do compilador CS0506: "<member> não consegue substituir o membro herdado <member>, pois ele não está marcado como virtual, abstrato ou de substituição.
+Classes derivadas também podem *substituir* membros herdados fornecendo uma implementação alternativa. Para poder substituir um membro, o membro na classe base deve ser marcado com a palavra-chave [virtual](../language-reference/keywords/virtual.md). Por padrão, os membros da classe base não são marcados como `virtual` e não podem ser substituídos. A tentativa de substituir um membro não virtual, como faz o exemplo a seguir, gera o erro do compilador CS0506: "O \<member> não pode substituir o membro herdado \<member>, pois não está marcado como virtual, abstrato ou de substituição".
 
 ```csharp
 public class A
@@ -194,7 +194,7 @@ Em projetar a classe `Publication`, você precisa tomar várias decisões de des
 
  A classe `Publication` não tem nenhum método `abstract`, mas a classe em si é `abstract`.
 
-- Se uma classe derivada representa a classe final na hierarquia de herança e não pode se ser usada como uma classe base para outras classes derivadas. Por padrão, qualquer classe pode servir como classe base. Você pode aplicar a palavra-chave [sealed](../language-reference/keywords/sealed.md) para indicar que uma classe não pode funcionar como uma classe base para quaisquer classes adicionais. A tentativa de derivar de uma classe selada gerou o erro do compilador CS0509, "não é possível derivar do tipo sealed <typeName>".
+- Se uma classe derivada representa a classe final na hierarquia de herança e não pode se ser usada como uma classe base para outras classes derivadas. Por padrão, qualquer classe pode servir como classe base. Você pode aplicar a palavra-chave [sealed](../language-reference/keywords/sealed.md) para indicar que uma classe não pode funcionar como uma classe base para quaisquer classes adicionais. A tentativa de derivar de uma classe selada gerou o erro do compilador CS0509, "Não é possível derivar do tipo selado \<typeName>".
 
   No seu exemplo, você marcará a classe derivada como `sealed`.
 

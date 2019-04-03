@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145602"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464899"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Projetar um microsserviço orientado a DDD
 
@@ -39,7 +39,7 @@ Ao lidar com complexidade, é importante ter um modelo de domínio controlado po
 
 A Figura 7-5 mostra como um design em camadas é implementado no aplicativo eShopOnContainers.
 
-![As três camadas em um microsserviço de DDD como o de pedidos. Cada camada é um projeto do VS: a camada de aplicativo é Ordering.API, a camada de domínio é Ordering.Domain e a camada de infraestrutura é Ordering.Infrastructure.](./media/image6.png)
+![As três camadas em um microsserviço de DDD como o de pedidos. Cada camada é um projeto do VS: A camada de aplicativo é Ordering.API, a camada de domínio é Ordering.Domain e a camada de infraestrutura é Ordering.Infrastructure.](./media/image6.png)
 
 **Figura 7-5**. Camadas DDD no microsserviço de ordenação em eShopOnContainers
 
@@ -53,7 +53,7 @@ Você deseja criar o sistema de modo que cada camada se comunique apenas com det
 
 O excelente livro de Eric Evans, [Domain Driven Design](https://domainlanguage.com/ddd/) (Projeto Orientado a Domínio) diz o seguinte sobre a camada de modelo de domínio e a camada de aplicativo.
 
-**Camada de modelo de domínio**: responsável por representar conceitos de negócios, informações sobre a situação de negócios e as regras de negócio. O estado que reflete a situação de negócios é controlado e usado aqui, embora os detalhes técnicos de armazená-lo sejam delegados à infraestrutura. Essa camada é a essência do software de negócios.
+**Camada de modelo de domínio**: Responsável por representar conceitos dos negócios, informações sobre a situação de negócios e as regras de negócios. O estado que reflete a situação de negócios é controlado e usado aqui, embora os detalhes técnicos de armazená-lo sejam delegados à infraestrutura. Essa camada é a essência do software de negócios.
 
 A camada de modelo de domínio é onde os negócios é expresso. Quando você implementa uma camada de modelo de domínio de microsserviço em .NET, essa camada é codificada como uma biblioteca de classes com as entidades de domínio que capturam dados mais comportamento (métodos com lógica).
 
@@ -71,7 +71,7 @@ Além disso, isso não significa que você pode pegar um modelo criado para um b
 
 Passando para a camada de aplicativo, novamente podemos citar o livro de Eric Evans [Domain Driven Design](https://domainlanguage.com/ddd/) (Projeto Orientado a Domínio):
 
-**Camada de aplicativo:** define os trabalhos que o software deve fazer e direciona os objetos de domínio expressivos para resolver problemas. As tarefas pelas quais esta camada é responsável são significativas para os negócios ou necessárias para a interação com as camadas do aplicativo de outros sistemas. Essa camada é mantida fina. Ele não contém regras de negócio nem conhecimento, mas apenas coordena o trabalho de tarefas e delegados para colaborações de objetos de domínio na próxima camada abaixo. Ele não tem um estado refletindo a situação de negócios, mas pode ter um estado que reflita o progresso de uma tarefa para o usuário ou o programa.
+**Camada de aplicativo:** Define os trabalhos que o software deve fazer e direciona os objetos de domínio expressivos para resolver problemas. As tarefas pelas quais esta camada é responsável são significativas para os negócios ou necessárias para a interação com as camadas do aplicativo de outros sistemas. Essa camada é mantida fina. Ele não contém regras de negócio nem conhecimento, mas apenas coordena o trabalho de tarefas e delegados para colaborações de objetos de domínio na próxima camada abaixo. Ele não tem um estado refletindo a situação de negócios, mas pode ter um estado que reflita o progresso de uma tarefa para o usuário ou o programa.
 
 Uma camada de aplicativo do microsserviço no .NET é codificada como um projeto de API da Web do ASP.NET Core. O projeto implementa interação do microsserviço, o acesso remoto à rede e as APIs da Web externas usadas nos aplicativos de interface do usuário ou cliente. Ele incluirá consultas se estiver usando uma abordagem CQRS, comandos aceitos pelo microsserviço e até mesmo a comunicação controlada por evento entre microsserviços (eventos de integração). A API Web do ASP.NET Core que representa a camada de aplicativo não deve conter as regras de negócio nem o conhecimento do domínio (especialmente regras de domínio para transações ou atualizações); isso deve ser de propriedade da biblioteca de classes de modelo de domínio. A camada do aplicativo deve apenas coordenar tarefas e não deve reter nem definir qualquer estado de domínio (modelo de domínio). Ela delega a execução de regras de negócio para as classes de modelo de domínio em si (raízes agregadas e entidades de domínio), que, por fim, atualizarão os dados dentro dessas entidades de domínio.
 
@@ -96,13 +96,13 @@ Esse design de camada deve ser independente de cada microsserviço. Conforme obs
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **DevIQ. Princípio de Ignorância de persistência** \
-  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
 
 - **Oren Eini. Ignorância de infraestrutura** \
-  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
 
 - **Angel Lopez. Arquitetura em camadas no design controlado por domínio** \
-  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
 >[Anterior](cqrs-microservice-reads.md)

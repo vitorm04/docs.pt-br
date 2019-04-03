@@ -3,12 +3,12 @@ title: Classes e objetos em C# - um tour pela linguagem C#
 description: Novato em C#? Leia esta visão geral de classes, objetos e herança
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846136"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466252"
 ---
 # <a name="classes-and-objects"></a>Classes e objetos
 
@@ -217,7 +217,7 @@ Conforme mostrado no exemplo, um determinado método sempre pode ser selecionado
 
 Os membros que contêm código executável são conhecidos coletivamente como *membros de função* de uma classe. A seção anterior descreve os métodos, que são o tipo principal de membros da função. Esta seção descreve os outros tipos de membros da função com suporte do C#: construtores, propriedades, indexadores, eventos, operadores e finalizadores.
 
-A seguir é mostrada uma classe genérica chamada List<T>, que implementa uma lista crescente de objetos. A classe contém vários exemplos dos tipos mais comuns de membros da função.
+O exemplo a seguir mostra uma classe genérica chamada List\<T>, que implementa uma lista crescente de objetos. A classe contém vários exemplos dos tipos mais comuns de membros da função.
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 

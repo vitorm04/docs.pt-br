@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be1aad4d222917364a57abc93b414af40b1e9ae
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649161"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675647"
 ---
 # <a name="assembly-contents"></a>Conteúdo de um assembly
 Em geral, um assembly estático pode consistir em quatro elementos:  
@@ -31,15 +31,13 @@ Em geral, um assembly estático pode consistir em quatro elementos:
   
  Há várias maneiras de se agrupar esses elementos em um assembly. Você pode agrupar todos os elementos em um único arquivo físico, mostrado na ilustração a seguir.  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover1.gif "assemblyover1")  
-Assembly de arquivo único  
+ ![Diagrama que mostra um assembly de arquivo único chamado MyAssembly.dll.](./media/assembly-contents/single-file-assembly.gif)  
   
  Como alternativa, os elementos de um assembly podem estar contidos em vários arquivos. Esses arquivos podem ser módulos de código compilado (.netmodule), recursos (como arquivos .bmp ou .jpg) ou outros arquivos exigidos pelo aplicativo. Crie um assembly de vários arquivos quando quiser combinar módulos escritos em diferentes linguagens e otimizar o download de um aplicativo colocando tipos pouco usados em um módulo baixado apenas quando necessário.  
   
  Na ilustração a seguir, o desenvolvedor de um aplicativo hipotético optou por separar alguns códigos de utilitários em um módulo diferente e manter um arquivo de recurso grande (neste caso, uma imagem .bmp) em seu arquivo original. O .NET Framework só baixa um arquivo quando ele é referenciado; manter códigos pouco referenciados em um arquivo separado do aplicativo otimiza o download do código.  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover2.gif "assemblyover2")  
-Assembly de vários arquivos  
+ ![Diagrama que mostra um assembly de vários arquivos.](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
 >  Os arquivos que compõem um assembly de vários arquivos não estão fisicamente vinculados pelo sistema de arquivos. Em vez disso, eles estão vinculados por meio do manifesto de assembly, e o Common Language Runtime os gerencia como uma unidade.  

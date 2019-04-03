@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: affb06c62baa7f53e46e1d66b522e9ce9e74d976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666053"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411957"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (opções do compilador C#)
 A opção **-target:winexe** faz com que o compilador crie um programa do Windows executável (EXE).  
@@ -25,7 +25,7 @@ A opção **-target:winexe** faz com que o compilador crie um programa do Window
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O arquivo executável será criado com a extensão .exe. Um programa do Windows é aquele que fornece uma interface do usuário da biblioteca do .NET Framework ou com as APIs do Win32.  
+ O arquivo executável será criado com a extensão .exe. Um programa do Windows é aquele que fornece uma interface do usuário da biblioteca do .NET Framework ou com as APIs do Windows.  
   
  Use [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) para criar um aplicativo do console.  
   

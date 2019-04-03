@@ -4,12 +4,12 @@ description: Saiba como selecionar um aplicativo de console do .NET Framework e 
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126078"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633836"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Executando aplicativos de console em contêineres do Windows
 
@@ -55,7 +55,9 @@ Você precisa ter o Docker para Windows, na versão 1.12 Beta 26 ou superior, pa
 ## <a name="building-the-application"></a>Compilando o aplicativo
 Normalmente, os aplicativos de console são distribuídos por meio de um instalador, FTP ou implantação de Compartilhamento de arquivos. Durante a implantação em um contêiner, os ativos precisam ser compilados e preparados em um local que possa ser usado quando a imagem do Docker for criada.
 
-Em *build.ps1*, o script usa [MSBuild](/visualstudio/msbuild/msbuild) para compilar o aplicativo para concluir a tarefa de criação de ativos. Alguns parâmetros são passados para o MSBuild para finalizar os ativos necessários. O nome do arquivo de projeto ou solução a ser compilada, o local de saída e a configuração (versão ou depuração).
+Este é o aplicativo de exemplo: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+Em *build.ps1*<sup>[[fonte]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup>, o script usa o [MSBuild](/visualstudio/msbuild/msbuild) para compilar o aplicativo a fim de concluir a tarefa de criação de ativos. Alguns parâmetros são passados para o MSBuild para finalizar os ativos necessários. O nome do arquivo de projeto ou solução a ser compilada, o local de saída e a configuração (versão ou depuração).
 
 Na chamada para `Invoke-MSBuild`, `OutputPath` é definido como **publish** e `Configuration` é definido como **Release**. 
 

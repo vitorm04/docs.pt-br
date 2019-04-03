@@ -6,27 +6,25 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395155"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654595"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Execução lado a lado no .NET Framework
 A execução lado a lado é a capacidade de executar várias versões de um aplicativo ou componente no mesmo computador. Você pode ter várias versões do Common Language Runtime e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo.  
   
  A ilustração a seguir mostra vários aplicativos usando duas versões diferentes do tempo de execução no mesmo computador. Os aplicativos A, B e C usam a versão 1.0 do tempo de execução e o aplicativo D usa a versão 1.1 do tempo de execução.  
   
- ![Execução lado a lado](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
-Execução lado a lado de duas versões do tempo de execução  
+ ![Execução lado a lado de versões de tempo de execução diferentes](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
  O .NET Framework consiste no Common Language Runtime e uma coleção de assemblies que contêm os tipos de API. Versões são atribuídas ao tempo de execução e aos assemblies do .NET Framework separadamente. Por exemplo, a versão 4.0 do tempo de execução é realmente a versão 4.0.319, enquanto que a versão 1.0 dos assemblies do .NET Framework é a versão 1.0.3300.0.  
   
  A ilustração a seguir mostra vários aplicativos usando duas versões diferentes de um componente no mesmo computador. Os aplicativos A e B usam a versão 1.0 do componente enquanto o aplicativo C usa a versão 2.0 do mesmo componente.  
   
- ![Execução lado a lado](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
-Execução lado a lado de duas versões de um componente  
+ ![Diagrama que mostra a execução lado a lado de um componente.](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
  A execução lado a lado confere mais controle sobre a quais versões de um componente um aplicativo está associado e mais controle sobre qual versão do tempo de execução um aplicativo usa.  
   
@@ -115,7 +113,7 @@ publicKeyToken=...,
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Como habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
+|[Como: Habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
 |[Configurando o redirecionamento de associação de assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  
 |[Execução lado a lado em processo](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Discute como você pode usar a ativação de host de tempo de execução lado a lado em processo para executar várias versões do CLR em um único processo.|  
 |[Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Fornece uma visão geral conceitual de assemblies.|  

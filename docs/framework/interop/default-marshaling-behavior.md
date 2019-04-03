@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221284"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409439"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -33,7 +33,7 @@ O marshaling de interoperabilidade opera em regras que determinam como os dados 
   
 ### <a name="unmanaged-signature"></a>Assinatura não gerenciada  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -101,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>Representação da biblioteca de tipos  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -164,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>Marshaling padrão para tipos de valor  
  A maioria dos tipos de valor, como inteiros e números de ponto flutuante, é [blittable](blittable-and-non-blittable-types.md) e não exige marshaling. Outros tipos [não blittable](blittable-and-non-blittable-types.md) têm diferentes representações na memória gerenciada e não gerenciada e exigem marshaling. Além disso, outros tipos de exigem a formatação explícita no limite de interoperabilidade.  
   
- Este tópico fornece as seguintes informações sobre tipos de valor formatados:  
+ Esta seção fornece informações sobre os seguintes tipos de valor formatados:  
   
--   [Tipos de valor usados na invocação de plataforma](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [Tipos de valor usados na invocação de plataforma](#value-types-used-in-platform-invoke)  
   
--   [Tipos de valor usados na interoperabilidade COM](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [Tipos de valor usados na interoperabilidade COM](#value-types-used-in-com-interop)  
   
- Além de descrever os tipos formatados, este tópico identifica os [tipos de valor do sistema](#cpcondefaultmarshalingforvaluetypesanchor1) que têm um comportamento de marshaling incomum.  
+ Além de descrever os tipos formatados, este tópico identifica os [tipos de valor do sistema](#system-value-types) que têm um comportamento de marshaling incomum.  
   
  Um tipo formatado é um tipo complexo que contém informações que controlam explicitamente o layout de seus membros na memória. As informações de layout de membro são fornecidas usando o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. O layout pode ser um dos seguintes valores de enumeração <xref:System.Runtime.InteropServices.LayoutKind>:  
   
@@ -186,7 +186,6 @@ internal class DelegateTest {
   
      Indica que os membros são dispostos de acordo com o <xref:System.Runtime.InteropServices.FieldOffsetAttribute> fornecido com cada campo.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>Tipos de valor usados na invocação de plataforma  
  No exemplo a seguir, os tipos `Point` e `Rect` fornecem informações de layout de membro usando o **StructLayoutAttribute**.  
   
@@ -221,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- Ao ter o marshaling realizado para um código não gerenciado, esses tipos formatados têm o marshaling realizado como estruturas C-style. Isso fornece uma maneira fácil de chamar uma API não gerenciada que tem argumentos de estrutura. Por exemplo, as estruturas `POINT` e `RECT` podem ser passadas para a função **PtInRect** da API do Microsoft Win32 da seguinte maneira:  
+ Ao ter o marshaling realizado para um código não gerenciado, esses tipos formatados têm o marshaling realizado como estruturas C-style. Isso fornece uma maneira fácil de chamar uma API não gerenciada que tem argumentos de estrutura. Por exemplo, as estruturas `POINT` e `RECT` podem ser passadas para a função **PtInRect** da API do Microsoft Windows da seguinte maneira:  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  Passe estruturas usando a seguinte definição de invocação de plataforma:  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  O tipo de valor `Rect` deve ser passado por referência porque a API não gerenciada está esperando que um ponteiro para um `RECT` seja passado para a função. O tipo de valor `Point` é passado por valor porque a API não gerenciada espera que `POINT` seja passado na pilha. Essa diferença sutil é muito importante. As referências são passadas para um código não gerenciado como ponteiros. Os valores são passados para um código não gerenciado na pilha.  
   
@@ -253,7 +253,7 @@ class Win32API {
 > [!NOTE]
 >  Se um tipo de referência tiver membros de tipos não blittable, a conversão será necessária duas vezes: na primeira vez, em que um argumento é passado para o lado não gerenciado e, na segunda, após o retorno da chamada. Devido a essa sobrecarga agregada, os parâmetros de Entrada/Saída devem ser aplicados explicitamente a um argumento se o chamador deseja ver as alterações feitas pelo receptor.  
   
- No exemplo a seguir, a classe `SystemTime` tem um layout de membro sequencial e pode ser passada para a função **GetSystemTime** da API do Win32.  
+ No exemplo a seguir, a classe `SystemTime` tem um layout de membro sequencial e pode ser passada para a função **GetSystemTime** da API do Windows.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -284,25 +284,26 @@ End Class
   
  A função **GetSystemTime** é definida da seguinte maneira:  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  A definição equivalente de invocação de plataforma para **GetSystemTime** é a seguinte:  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  Observe que o argumento `SystemTime` não é digitado como um argumento de referência porque `SystemTime` é uma classe, não um tipo de valor. Ao contrário dos tipos de valor, as classes são sempre passadas por referência.  
   
@@ -329,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>Tipos de valor usados na interoperabilidade COM  
  Os tipos formatados também podem ser passados para chamadas de método da interoperabilidade COM. Na verdade, quando exportados para uma biblioteca de tipos, os tipos de valor são convertidos em estruturas automaticamente. Como mostra o exemplo a seguir, o tipo de valor `Point` se torna uma definição de tipo (typedef) com o nome `Point`. Todas as referências ao tipo de valor `Point` em outros lugares da biblioteca de tipos são substituídas pela typedef `Point`.  
   
  **Representação da biblioteca de tipos**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -353,7 +353,6 @@ interface _Graphics {
 > [!NOTE]
 >  Estruturas que têm o valor de enumeração <xref:System.Runtime.InteropServices.LayoutKind> definido como **Explicit** não podem ser usadas na interoperabilidade COM porque a biblioteca de tipos exportada não pode expressar um layout explícito.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Tipos de valor do sistema  
  O namespace <xref:System> tem vários tipos de valor que representam o formato demarcado dos tipos primitivos de tempo de execução. Por exemplo, a estrutura <xref:System.Int32?displayProperty=nameWithType> do tipo de valor representa o formato demarcado de **ELEMENT_TYPE_I4**. Em vez de realizar marshaling desses tipos como estruturas, assim como ocorre com outros tipos formatados, realize marshaling deles da mesma maneira como os tipos primitivos demarcados por eles. Portanto, **System.Int32** tem o marshaling realizado como **ELEMENT_TYPE_I4**, em vez de como uma estrutura que contém um único membro do tipo **long**. A tabela a seguir contém uma lista dos tipos de valor no namespace **System** que são representações demarcadas de tipos primitivos.  
   
@@ -388,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>Representação da biblioteca de tipos  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -430,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>Representação da biblioteca de tipos  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084713"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463248"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -59,7 +59,7 @@ Uma instrução `switch` pode incluir qualquer número de seções switch e cada
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "O controle não pode passar de um rótulo case (<case label>) para outro."
+Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "O controle não pode passar de um rótulo de caso para outro (\<case label>) para outro."
 
 ```csharp
 switch (caseSwitch)

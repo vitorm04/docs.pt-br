@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563984"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58634226"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Como comparar cadeias de caracteres no C\#
 
@@ -55,7 +55,7 @@ Ao fazer uma comparação ordinal sem distinção entre maiúsculas e minúscula
 ## <a name="linguistic-comparisons"></a>Comparações linguísticas
 
 As cadeias de caracteres também podem ser ordenadas usando regras linguísticas para a cultura atual.
-Às vezes, isso é conhecido como "ordem de classificação de palavra". Quando você executa uma comparação linguística, alguns caracteres Unicode não alfanuméricos podem ter pesos especiais atribuídos. Por exemplo, o hífen "-" pode ter um peso muito pequeno atribuído, de modo que "co-op" e "coop" apareçam próximos um do outro na ordem de classificação. Além disso, alguns caracteres Unicode podem ser equivalentes a uma sequência de instâncias <xref:System.Char>. O exemplo a seguir usa a frase "They dance in the street." em alemão, com o “ss” (U+0073 U+0073) em uma cadeia de caracteres e ‘ß’ (U+00DF) em outra. Linguisticamente (no Windows), “ss” é igual ao Essetz alemão: caractere ‘ß’ nas culturas “en-US” e “de-DE”.
+Às vezes, isso é conhecido como "ordem de classificação de palavra". Quando você executa uma comparação linguística, alguns caracteres Unicode não alfanuméricos podem ter pesos especiais atribuídos. Por exemplo, o hífen "-" pode ter um peso muito pequeno atribuído, de modo que "co-op" e "coop" apareçam próximos um do outro na ordem de classificação. Além disso, alguns caracteres Unicode podem ser equivalentes a uma sequência de instâncias <xref:System.Char>. O exemplo a seguir usa a frase "They dance in the street." em alemão, com o “ss” (U+0073 U+0073) em uma cadeia de caracteres e ‘ß’ (U+00DF) em outra. Linguisticamente (no Windows), "ss" é igual ao caractere 'ß' Esszet alemão nas culturas "en-US" e "de-DE".
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 

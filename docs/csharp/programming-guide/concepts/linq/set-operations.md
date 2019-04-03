@@ -2,12 +2,12 @@
 title: Operações de conjunto (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 169f7608409fcc0205a1f8edc69ee7a0b7785a51
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675505"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408906"
 ---
 # <a name="set-operations-c"></a>Operações de conjunto (C#)
 As operações de conjunto na LINQ referem-se a operações de consulta que geram um conjunto de resultados baseado na presença ou ausência de elementos equivalentes dentro da mesma ou de coleções (ou conjuntos) separadas.  
@@ -28,7 +28,7 @@ As operações de conjunto na LINQ referem-se a operações de consulta que gera
 ### <a name="distinct"></a>Distinct  
  A ilustração a seguir mostra o comportamento do método <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> em uma sequência de caracteres. A sequência retornada contém os elementos exclusivos da sequência de entrada.  
   
- ![Gráfico mostrando o comportamento de Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![Gráfico mostrando o comportamento de Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Exceto  
  A ilustração a seguir mostra o comportamento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. A sequência retornada contém apenas os elementos da primeira sequência de entrada que não estão na segunda sequência de entrada.  
@@ -38,13 +38,12 @@ As operações de conjunto na LINQ referem-se a operações de consulta que gera
 ### <a name="intersect"></a>Interseção  
  A ilustração a seguir mostra o comportamento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. A sequência retornada contém os elementos que são comuns a ambas as sequências de entrada.  
   
- ![Gráfico mostrando a interseção de duas sequências.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![Gráfico mostrando a interseção de duas sequências.](./media/set-operations/intersection-two-sequences.png)  
+ 
 ### <a name="union"></a>União  
  A ilustração a seguir descreve uma operação de união em duas sequências de caracteres. A sequência retornada contém os elementos exclusivos das duas sequências de entrada.  
   
- ![Gráfico mostrando a união de duas sequências. ](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![Gráfico mostrando a união de duas sequências.](./media/set-operations/union-operation-two-sequences.png)  
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq>

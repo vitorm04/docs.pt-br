@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219601"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409270"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling padrão para objetos
 Os parâmetros e os campos tipados como <xref:System.Object?displayProperty=nameWithType> podem ser expostos para um código não gerenciado como um dos seguintes tipos:  
@@ -26,19 +26,6 @@ Os parâmetros e os campos tipados como <xref:System.Object?displayProperty=name
   
  Somente a interoperabilidade COM dá suporte ao marshaling de tipos de objeto. O comportamento padrão é realizar marshaling de objetos para variantes COM. Essas regras se aplicam somente ao tipo **Object** e não se aplicam a objetos fortemente tipados derivados da classe **Object**.  
   
- Este tópico fornece as seguintes informações adicionais sobre o marshaling de tipos de objeto:  
-  
--   [Opções de marshaling](#cpcondefaultmarshalingforobjectsanchor7)  
-  
--   [Realizando marshaling de objeto para interface](#cpcondefaultmarshalingforobjectsanchor2)  
-  
--   [Realizando marshaling de objeto para variante](#cpcondefaultmarshalingforobjectsanchor3)  
-  
--   [Realizando marshaling de variante para objeto](#cpcondefaultmarshalingforobjectsanchor4)  
-  
--   [Realizando marshaling de variantes de ByRef](#cpcondefaultmarshalingforobjectsanchor6)  
-  
-<a name="cpcondefaultmarshalingforobjectsanchor7"></a>   
 ## <a name="marshaling-options"></a>Opções de marshaling  
  A tabela a seguir mostra as opções de marshaling para o tipo de dados **Object**. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornece vários valores de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para realizar marshaling de objetos.  
   
@@ -127,11 +114,9 @@ struct ObjectHolder {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
 ## <a name="marshaling-object-to-interface"></a>Realizando marshaling de objeto para interface  
  Quando um objeto é exposto para o COM como uma interface, essa interface é a interface de classe do tipo gerenciado <xref:System.Object> (a interface **_Object**). Essa interface é tipada como um **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) ou um **IUnknown** (**UnmanagedType.IUnknown**) na biblioteca de tipos resultante. Os clientes COM podem invocar dinamicamente os membros da classe gerenciada ou todos os membros implementados por suas classes derivadas por meio da interface **_Object**. O cliente também pode chamar **QueryInterface** para obter qualquer outra interface implementada explicitamente pelo tipo gerenciado.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
 ## <a name="marshaling-object-to-variant"></a>Realizando marshaling de objeto para variante  
  Quando um objeto tem o marshaling realizado como uma variante, o tipo de variante interno é determinado em tempo de execução, de acordo com as seguintes regras:  
   
@@ -255,7 +240,6 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  O valor da variante COM é determinado com uma chamada à interface **IConvertible.To** *Type*, em que **To** *Type* é a rotina de conversão que corresponde ao tipo retornado do **IConvertible.GetTypeCode**. Por exemplo, um objeto que retorna **TypeCode.Double** de **IConvertible.GetTypeCode** tem o marshaling realizado como uma variante COM do tipo **VT_R8**. É possível obter o valor da variante (armazenado no campo **dblVal** da variante COM) com a conversão para a interface **IConvertible** e uma chamada ao método <xref:System.IConvertible.ToDouble%2A>.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor4"></a>   
 ## <a name="marshaling-variant-to-object"></a>Realizando marshaling de variante para objeto  
  Ao realizar marshaling de uma variante para um objeto, o tipo e, às vezes, o valor, da variante com marshaling determina o tipo de objeto produzido. A tabela a seguir identifica cada tipo de variante e o tipo de objeto correspondente criado pelo marshaler quando uma variante é passada do COM para o .NET Framework.  
   
@@ -289,18 +273,17 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  Os tipos de variante passados do COM para o código gerenciado e, em seguida, novamente para o COM podem não manter o mesmo tipo de variante durante a chamada. Considere o que acontece quando uma variante do tipo **VT_DISPATCH** é passada do COM para o .NET Framework. Durante o marshaling, a variante é convertida em um <xref:System.Object?displayProperty=nameWithType>. Se o **Object** for então passado novamente para o COM, ele terá o marshaling realizado novamente como uma variante do tipo **VT_UNKNOWN**. Não há nenhuma garantia de que a variante produzida quando um objeto tem o marshaling realizado de um código gerenciado para o COM terá o mesmo tipo de variante usado inicialmente para produzir o objeto.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>Realizando marshaling de variantes de ByRef  
- Embora as próprias variantes possam ser passadas por valor ou por referência, o sinalizador **VT_BYREF** também pode ser usado com qualquer tipo de variante para indicar que o conteúdo da variante está sendo passado por referência, em vez de por valor. A diferença entre realizar marshaling de variantes por referência e realizar marshaling de uma variante com o sinalizador **VT_BYREF** definido pode ser confusa. A ilustração a seguir esclarece as diferenças.  
+ Embora as próprias variantes possam ser passadas por valor ou por referência, o sinalizador **VT_BYREF** também pode ser usado com qualquer tipo de variante para indicar que o conteúdo da variante está sendo passado por referência, em vez de por valor. A diferença entre realizar marshaling de variantes por referência e realizar marshaling de uma variante com o sinalizador **VT_BYREF** definido pode ser confusa. A seguinte ilustração esclarece as diferenças:  
   
- ![Variante passada na pilha](./media/interopvariant.gif "interopvariant")  
+ ![Diagrama que mostra a variante passada na pilha.](./media/default-marshaling-for-objects/interop-variant-passed-value-reference.gif)  
 Variantes passadas por valor e por referência  
   
  **Comportamento padrão de marshaling de objetos e variantes por valor**  
   
--   Ao passar objetos do código gerenciado para o COM, o conteúdo do objeto é copiado para uma nova variante criada pelo marshaler, usando as regras definidas em [Realizando marshaling de objeto para variante](#cpcondefaultmarshalingforobjectsanchor3). As alterações feitas na variante no lado não gerenciado não são propagadas novamente para o objeto original após o retorno da chamada.  
+-   Ao passar objetos do código gerenciado para o COM, o conteúdo do objeto é copiado para uma nova variante criada pelo marshaler, usando as regras definidas em [Realizando marshaling de objeto para variante](#marshaling-object-to-variant). As alterações feitas na variante no lado não gerenciado não são propagadas novamente para o objeto original após o retorno da chamada.  
   
--   Ao passar variantes do COM para o código gerenciado, o conteúdo da variante é copiado para um objeto recém-criado, usando as regras definidas em [Realizando marshaling de variante para objeto](#cpcondefaultmarshalingforobjectsanchor4). As alterações feitas no objeto no lado gerenciado não são propagadas novamente para a variante original após o retorno da chamada.  
+-   Ao passar variantes do COM para o código gerenciado, o conteúdo da variante é copiado para um objeto recém-criado, usando as regras definidas em [Realizando marshaling de variante para objeto](#marshaling-variant-to-object). As alterações feitas no objeto no lado gerenciado não são propagadas novamente para a variante original após o retorno da chamada.  
   
  **Comportamento padrão de marshaling de objetos e variantes por referência**  
   

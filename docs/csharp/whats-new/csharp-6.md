@@ -2,18 +2,18 @@
 title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084674"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654569"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
 A versão 6.0 do C# tinha muitos recursos para melhorar a produtividade para desenvolvedores. O efeito geral desses recursos é que você escreve código mais conciso e também mais legível. A sintaxe contém menos cerimônia para várias práticas comuns. É mais fácil de ver a intenção do design com menos cerimônia. Aprenda bem esses recursos para ser mais produtivo e escrever um código mais legível. Você pode se concentrar mais nos recursos do que nos constructos da linguagem.
 
-O restante deste artigo oferece uma visão geral de cada um desses recursos, com um link para explorá-los. Você também pode explorar os recursos em um [tutorial interativo sobre C# 6](../tutorials/exploration/csharp-6.yml) na seção de tutoriais.
+O restante deste artigo oferece uma visão geral de cada um desses recursos, com um link para explorá-los. Explore também os recursos em uma [exploração interativa sobre o C# 6](../tutorials/exploration/csharp-6.yml) na seção de tutoriais.
 
 ## <a name="read-only-auto-properties"></a>Propriedades automáticas somente leitura
 

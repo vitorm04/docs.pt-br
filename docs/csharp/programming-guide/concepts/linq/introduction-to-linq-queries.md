@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 7984d684987ef8acb172e8339f120c410f4885f3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1f15867c76a3498ac49df0bff6a7953f668b1a6f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362078"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462884"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introdução a consultas LINQ (C#)
 Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas normalmente são expressas em uma linguagem de consulta especializada. Diferentes linguagens foram desenvolvidas ao longo do tempo para os diversos tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que eles tinham que oferecer suporte. O [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifica essa situação ao oferecer um modelo consistente para trabalhar com os dados entre vários tipos de fontes e formatos de dados. Em uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você está sempre trabalhando com objetos. Você usa os mesmos padrões básicos de codificação para consultar e transformar dados em documentos XML, bancos de dados SQL, conjuntos de dados do [!INCLUDE[vstecado](~/includes/vstecado-md.md)], coleções do .NET e qualquer outro formato para o qual um provedor [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] estiver disponível.  
@@ -32,7 +32,7 @@ Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As co
   
  A ilustração a seguir mostra a operação de consulta completa. No [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a execução da consulta é diferente da própria consulta. Em outras palavras, você não recupera dados apenas criando uma variável de consulta.  
   
- ![Operação de consulta LINQ completa](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
+ ![Diagrama da operação completa de consulta LINQ.](./media/introduction-to-linq-queries/linq-query-complete-operation.png)  
   
 ## <a name="the-data-source"></a>A Fonte de Dados  
  No exemplo anterior, como a fonte de dados é uma matriz, ela dá suporte à interface genérica <xref:System.Collections.Generic.IEnumerable%601> de forma implícita. Isso significa que ela pode ser consultada com o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Uma consulta é executada em uma instrução `foreach`, e `foreach` requer <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Tipos que dão suporte a <xref:System.Collections.Generic.IEnumerable%601> ou uma interface derivada, como a genérica <xref:System.Linq.IQueryable%601>, são chamados *tipos passíveis de consulta*.  
@@ -91,7 +91,6 @@ IQueryable<Customer> custQuery =
 ## <a name="see-also"></a>Consulte também
 
 - [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Passo a passo: Escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [Passo a passo: Escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)

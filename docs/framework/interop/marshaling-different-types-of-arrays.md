@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219458"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654608"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshaling de diversos tipos de matrizes
 Uma matriz é um tipo de referência em código gerenciado que contém um ou mais elementos do mesmo tipo. Embora as matrizes sejam tipos de referência, elas são passadas como parâmetros para funções não gerenciadas. Esse comportamento é inconsistente com a maneira que matrizes gerenciadas são passadas para objetos gerenciados, que é na forma de parâmetros de In/Out. Para obter detalhes adicionais, consulte [Copiando e fixando](copying-and-pinning.md).  
@@ -29,7 +29,7 @@ Uma matriz é um tipo de referência em código gerenciado que contém um ou mai
 |De inteiros por valor (bidimensional).|Passa uma matriz de inteiros como um parâmetro In.|  
 |De cadeias de caracteres por valor.|Passa uma matriz de cadeias de caracteres como um parâmetro In.|  
 |De estruturas com inteiros.|Passa uma matriz de estruturas que contêm inteiros como um parâmetro In.|  
-|De estruturas com cadeias de caracteres.|Passa uma matriz de estruturas que contêm somente inteiros como um parâmetro In/Out. Os membros da matriz podem ser alterados.|  
+|De estruturas com cadeias de caracteres.|Passa uma matriz de estruturas que contêm somente cadeias de caracteres como um parâmetro Entrada/Saída. Os membros da matriz podem ser alterados.|  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo demonstra como passar os seguintes tipos de matrizes:  

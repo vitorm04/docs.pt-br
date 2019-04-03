@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219562"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412325"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
 Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
@@ -32,47 +32,60 @@ Este tópico descreve como acessar funções não gerenciadas e apresenta vário
  Antes de poder acessar uma função de DLL não gerenciada no código gerenciado, você precisa saber o nome da função e o nome da DLL que a exporta. Com essas informações, você pode começar a escrever a definição gerenciada para uma função não gerenciada que é implementada em uma DLL. Além disso, você pode ajustar a maneira como essa invocação de plataforma cria a função e realiza marshaling dos dados bidirecionalmente na função.  
   
 > [!NOTE]
->  As funções de API do Win32 que alocam uma cadeia de caracteres permitem liberar a cadeia de caracteres usando um método como `LocalFree`. A invocação de plataforma manipula esses parâmetros de maneira diferente. Para chamadas de invocação de plataforma, torne o parâmetro um tipo `IntPtr`, em vez de um tipo `String`. Use métodos que são fornecidos pela classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> para converter o tipo em uma cadeia de caracteres manualmente e libere-a manualmente.  
+>  As funções de API do Windows que alocam uma cadeia de caracteres permitem que você libere a cadeia de caracteres usando um método como `LocalFree`. A invocação de plataforma manipula esses parâmetros de maneira diferente. Para chamadas de invocação de plataforma, torne o parâmetro um tipo `IntPtr`, em vez de um tipo `String`. Use métodos que são fornecidos pela classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> para converter o tipo em uma cadeia de caracteres manualmente e libere-a manualmente.  
   
 ## <a name="declaration-basics"></a>Noções básicas sobre a declaração  
  As definições gerenciadas para funções não gerenciadas são dependentes de idioma, como é possível ver nos exemplos a seguir. Para obter exemplos de código mais completos, consulte [Exemplos de invocação de plataforma](platform-invoke-examples.md).  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
  Para aplicar os campos <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> ou <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> a uma declaração [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], use o atributo <xref:System.Runtime.InteropServices.DllImportAttribute>, em vez da instrução `Declare`.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
-   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-   End Function  
-End Class  
-```  
+```vb
+Imports System
+Imports System.Runtime.InteropServices
+
+Friend Class WindowsAPI
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Friend Shared Function MessageBox(
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+    End Function
+End Class
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-[DllImport("user32.dll")]  
-    public static extern IntPtr MessageBox(int hWnd, String text,   
-                                       String caption, uint type);  
-```  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-```cpp  
-using namespace System::Runtime::InteropServices;  
-[DllImport("user32.dll")]  
-    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
-    String* pCaption unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[DllImport("user32.dll")]
+extern "C" int MessageBox(
+    IntPtr hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="adjusting-the-definition"></a>Ajustando a definição  
  Independentemente de você defini-los explicitamente ou não, os campos de atributo estão trabalhando, definindo o comportamento do código gerenciado. A invocação de plataforma funciona de acordo com os valores padrão definidos em vários campos que existem como metadados em um assembly. Altere esse comportamento padrão ajustando os valores de um ou mais campos. Em muitos casos, use o <xref:System.Runtime.InteropServices.DllImportAttribute> para definir um valor.  

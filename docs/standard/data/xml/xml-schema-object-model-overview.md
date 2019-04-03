@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c63a21ed871bf967674d09230f897b7ab98dfa4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554940"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411688"
 ---
 # <a name="xml-schema-object-model-overview"></a>Visão geral do modelo de objeto de esquema XML
 O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que permite a você criar, editar, e validar esquemas programaticamente. O SOM opera sobre documentos de esquema XML de forma semelhante à forma como Document Object Model (DOM) opera sobre documentos XML. Documentos de esquema XML são arquivos XML válidos, que carregados uma vez no SOM, transmitem significar sobre a estrutura e a validade de outros documentos XML que estão de acordo com o esquema.  
@@ -34,7 +34,7 @@ O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que 
 ## <a name="the-schema-object-model"></a>O modelo de objeto de esquema  
  O SOM consiste em um extenso conjunto de classes no namespace de <xref:System.Xml.Schema?displayProperty=nameWithType> que corresponde a elementos em um esquema XML. Por exemplo, os mapeamentos de elemento de `<xsd:schema>...</xsd:schema>` a <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> classe, e qualquer informação que pode ser contido em um elemento de `<xsd:schema/>` pode ser representadas usando a classe de <xref:System.Xml.Schema.XmlSchema> . Da mesma forma, `<xsd:element>...</xsd:element>` e os elementos de `<xsd:attribute>...</xsd:attribute>` a classes de <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> e de <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> respectivamente. Esse mapeamento continua para todos os elementos de um esquema XML que cria um modelo de objeto de esquema XML no espaço de <xref:System.Xml.Schema> ilustrada no diagrama a seguir.  
   
- ![System.Xml.Schema Object Model](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")  
+ ![Modelo de objeto do System.Xml.Schema](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
  Para obter mais informações sobre cada classe no namespace de <xref:System.Xml.Schema> , consulte a documentação de referência do <xref:System.Xml.Schema> na biblioteca de classes do .NET Framework.  
   

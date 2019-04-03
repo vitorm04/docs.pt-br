@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153937"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409218"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à linguagem C# e ao .NET Framework
 
@@ -58,7 +58,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
  Quando o programa em C# é executado, o assembly é carregado no CLR, que pode executar várias ações de acordo com as informações no manifesto. Em seguida, se os requisitos de segurança forem atendidos, o CLR executará a compilação JIT (just in time) para converter o código de IL em instruções nativas da máquina. O CLR também oferece outros serviços relacionados à coleta automática de lixo, tratamento de exceções e gerenciamento de recursos. O código que é executado pelo CLR é, às vezes, chamado de "código gerenciado", ao contrário de "código não gerenciado", que é compilado em linguagem de máquina nativa e visa um sistema específico. O diagrama a seguir ilustra as relações em tempo de compilação e em tempo de execução dos arquivos de código-fonte em C#, as bibliotecas de classe do .NET Framework, assemblies e o CLR.  
   
- ![Do código-fonte de C&#35; até a execução na máquina](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
+ ![Do código-fonte de C&#35; até a execução no computador](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
  Interoperabilidade de linguagem é um recurso importante do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Como o código de IL produzido pelo compilador de C# está em conformidade com a CTS (Especificação de tipo comum), o código de IL gerado a partir de C# pode interagir com código gerado a partir das versões .NET do Visual Basic, Visual C++ ou qualquer uma das mais de 20 linguagens compatíveis com CTS. Um único assembly pode conter vários módulos escritos em linguagens .NET diferentes, e os tipos podem fazer referencia entre si, como se tivessem sido escritos na mesma linguagem.  
   

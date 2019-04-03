@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835350"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654348"
 ---
 # <a name="memory-mapped-files"></a>Arquivos mapeados na memória
 Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtual. Esse mapeamento entre um espaço de arquivo e a memória permite que um aplicativo, inclusive vários processos, modifique o arquivo ao ler e gravar diretamente na memória. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], é possível usar o código gerenciado para acessar arquivos mapeados na memória da mesma maneira que funções nativas do Windows acessam arquivos mapeados na memória, conforme descrito em [Gerenciamento de arquivos mapeados na memória](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -42,10 +42,11 @@ Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtu
   
  Os arquivos mapeados na memória são acessados pelo gerenciador de memória do sistema operacional, então o arquivo é automaticamente particionado em um número de páginas e acessado conforme a necessidade. Não é preciso lidar com o gerenciamento de memória por conta própria.  
   
- A ilustração a seguir mostra como vários processos podem ter modos de exibição variados e sobrepostos para o mesmo arquivo mapeado na memória ao mesmo tempo.  
+ A ilustração a seguir mostra como vários processos podem ter modos de exibição variados e sobrepostos para o mesmo arquivo mapeado na memória ao mesmo tempo.
+
+ A seguinte imagem mostra várias exibições sobrepostas em um arquivo mapeado em memória:  
   
- ![Apresenta os modos de exibição de um arquivo mapeado na memória.](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-Modos de exibição variados e sobrepostos para um arquivo mapeado na memória  
+ ![Captura de tela que mostra as exibições em um arquivo mapeado em memória.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Programar com arquivos mapeados na memória  
  A tabela a seguir orienta como usar objetos de arquivos mapeados na memória e os membros deles.  

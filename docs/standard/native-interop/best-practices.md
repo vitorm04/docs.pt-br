@@ -4,12 +4,12 @@ description: Saiba mais sobre as práticas recomendadas para fazer interface com
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "56411355"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412052"
 ---
 # <a name="native-interoperability-best-practices"></a>Práticas recomendadas de interoperabilidade nativa
 
@@ -29,7 +29,7 @@ As diretrizes nesta seção se aplicam a todos os cenários de interoperabilidad
 
 ## <a name="dllimport-attribute-settings"></a>Configurações de atributo DllImport
 
-| Configuração | Padrão | Recomendação | Details |
+| Configuração | Padrão | Recomendação | Detalhes |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  manter padrão  | Quando esta configuração é definida como false, valores de retorno HRESULT com falha serão considerados exceções (e o valor de retorno na definição torna-se nulo).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | depende da API  | Defina esta configuração como true se a API usa GetLastError e usa Marshal.GetLastWin32Error para obter o valor. Se a API definir uma condição que informa um erro, obtenha o erro antes de fazer outras chamadas para evitar que ele seja sobrescrito inadvertidamente.|
@@ -123,7 +123,7 @@ Você pode verificar se um tipo é blittable pela tentativa de criar um `GCHandl
 
 **✔️ TORNE** suas estruturas mais blittable quando possível.
 
-Para obter mais informações, confira:
+Para obter mais informações, consulte:
 
 - [Tipos blittable e não blittable](../../framework/interop/blittable-and-non-blittable-types.md)  
 - [Marshalling dos tipos](type-marshalling.md)
@@ -160,7 +160,7 @@ Não se esqueça que `GCHandle` precisa ser explicitamente liberado para evitar 
 
 ## <a name="common-windows-data-types"></a>Tipos de dados comuns do Windows
 
-Aqui está uma lista de tipos de dados comumente usados em APIs do Win32 e quais tipos de C# devem ser usados ao chamar o código do Win32.
+Veja a seguir uma lista dos tipos de dados comumente usados em APIs do Windows e quais tipos C# devem ser usados ao chamar o código do Windows.
 
 Os tipos a seguir são do mesmo tamanho no Windows de 32 e 64 bits, apesar de seus nomes.
 

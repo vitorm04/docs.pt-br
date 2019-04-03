@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: af5f2d13365a93e758962daea2b08ea3ae089aeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966795"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412195"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Como: usar argumentos nomeados e opcionais na programação do Office (Guia de Programação em C#)
 Os argumentos nomeados e opcionais, introduzidos em [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], aprimoram a conveniência, a flexibilidade e a legibilidade na programação em C#. Além disso, esses recursos facilitam bastante o acesso a interfaces COM, como as APIs de Automação do Microsoft Office.  
@@ -79,8 +79,7 @@ Os argumentos nomeados e opcionais, introduzidos em [!INCLUDE[csharp_dev10_long]
   
 1.  Use o método `ConvertToTable` para colocar o texto em uma tabela. O método tem 16 parâmetros opcionais. O IntelliSense coloca os parâmetros opcionais entre colchetes, como mostrado na ilustração a seguir.  
   
-     ![Lista de parâmetros do método ConvertToTable.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-Parâmetros de ConvertToTable  
+     ![Lista de parâmetros do método ConvertToTable](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
      Os argumentos nomeados e opcionais permitem que você especifique valores apenas para os parâmetros que deseja alterar. Adicione o seguinte código ao final do método `DisplayInWord` para criar uma tabela simples. O argumento especifica que as vírgulas na cadeia de caracteres de texto em `range` separam as células da tabela.  
   

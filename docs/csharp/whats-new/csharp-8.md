@@ -2,12 +2,12 @@
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo foi atualizado com a versão prévia 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262579"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545553"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -164,22 +164,37 @@ public class Point
 }
 ```
 
-O método a seguir usa o **padrão posicional** para extrair os valores de `x` e `y`. Em seguida, usa uma cláusula `when` para determinar o quadrante do ponto:
+Além disso, considere a seguinte enumeração que representa várias posições de um quadrante:
 
 ```csharp
-static string Quadrant(Point p) => p switch
+public enum Quadrant
 {
-    (0, 0) => "origin",
-    (var x, var y) when x > 0 && y > 0 => "Quadrant 1",
-    (var x, var y) when x < 0 && y > 0 => "Quadrant 2",
-    (var x, var y) when x < 0 && y < 0 => "Quadrant 3",
-    (var x, var y) when x > 0 && y < 0 => "Quadrant 4",
-    (var x, var y) => "on a border",
-    _ => "unknown"
+    Unknown,
+    Origin,
+    One,
+    Two,
+    Three,
+    Four,
+    OnBorder
+}
+```
+
+O método a seguir usa o **padrão posicional** para extrair os valores de `x` e `y`. Em seguida, ele usa uma cláusula `when` para determinar o `Quadrant` do ponto:
+
+```csharp
+static Quadrant GetQuadrant(Point point) => point switch
+{
+    (0, 0) => Quadrant.Origin,
+    var (x, y) when x > 0 && y > 0 => Quadrant.One,
+    var (x, y) when x < 0 && y > 0 => Quadrant.Two,
+    var (x, y) when x < 0 && y < 0 => Quadrant.Three,
+    var (x, y) when x > 0 && y < 0 => Quadrant.Four,
+    var (_, _) => Quadrant.OnBorder,
+    _ => Quadrant.Unknown
 };
 ```
 
-O padrão de descarte na switch anterior encontra a correspondência quando `x` ou `y`, mas não ambos, for 0. Uma expressão switch deve produzir um valor ou lançar uma exceção. Se não houver correspondência em nenhum dos casos, a expressão switch gerará uma exceção. O compilador gerará um aviso se você não cobrir todos os casos possíveis em sua expressão switch.
+O padrão de discard na opção anterior encontra a correspondência quando `x` ou `y` é 0, mas não ambos. Uma expressão switch deve produzir um valor ou lançar uma exceção. Se não houver correspondência em nenhum dos casos, a expressão switch gerará uma exceção. O compilador gerará um aviso se você não cobrir todos os casos possíveis em sua expressão switch.
 
 Explore técnicas de correspondência de padrões neste [tutorial avançado sobre correspondência de padrões](../tutorials/pattern-matching.md).
 
@@ -229,7 +244,7 @@ Em ambos os casos, o compilador gera a chamada para `Dispose()`. O compilador ge
 
 ## <a name="static-local-functions"></a>Funções locais estáticas
 
-Agora você pode adicionar o modificador `static` para funções locais a fim de garantir que essa função local não capture (faça referência) às variáveis no escopo delimitador. Isso gera `CS8421`, "Uma função local estática não pode conter uma referência a <variable>". 
+Agora você pode adicionar o modificador `static` para funções locais a fim de garantir que essa função local não capture (faça referência) às variáveis no escopo delimitador. Essa ação gera `CS8421`, "Uma função local estática não pode conter uma referência à \<variable>". 
 
 Considere o código a seguir. A função local `LocalFunction` acessa a variável `y`, declarada no escopo delimitador (o método `M`). Portanto, `LocalFunction` não pode ser declarada com o modificador `static`:
 

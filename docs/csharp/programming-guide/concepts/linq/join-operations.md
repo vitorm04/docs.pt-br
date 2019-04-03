@@ -2,12 +2,12 @@
 title: Operações de junção (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: d8753ef0563a665767204c1ebc0af4e4a23b4455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537940"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411454"
 ---
 # <a name="join-operations-c"></a>Operações de junção (C#)
 Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte de dados, com objetos que compartilham um atributo comum em outra fonte de dados.  
@@ -18,7 +18,7 @@ Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte
   
  A ilustração a seguir mostra uma visão conceitual de dois conjuntos e os elementos dentro desses conjuntos que estão incluídos em uma junção interna ou externa à esquerda.  
   
- ![Dois círculos sobrepostos mostrando interna&#47;externa.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![Dois círculos sobrepostos mostrando interna/externa.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Métodos  
   

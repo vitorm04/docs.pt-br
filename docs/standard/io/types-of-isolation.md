@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654653"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466147"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
 O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Para implementar esse tipo de isolamento, o common language runtime usa a mesma noção de identidade de usuário que o sistema operacional reconhece, que é a identidade associada ao processo no qual o código está em execução quando o armazenamento é aberto. Essa é uma identidade de usuário autenticado, mas a representação pode fazer com que a identidade do usuário atual seja alterada dinamicamente.  
@@ -46,10 +46,9 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
   
  Um desses isolamentos pode ser combinado a um perfil de usuário móvel. Para saber mais, confira a seção [Armazenamento isolado e roaming](#Roaming).  
   
- A ilustração a seguir demonstra como armazenamentos são isolados em escopos diferentes.  
+ A seguinte ilustração demonstra como os repositórios são isolados em escopos diferentes:  
   
- ![Isolamento por usuário e assembly](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Tipos de armazenamento isolado  
+ ![Diagrama que mostra o isolamento por usuário e assembly.](./media/types-of-isolation/isolated-storage-types.gif)  
   
  Observe que, exceto pelos armazenamentos móveis, o armazenamento isolado é sempre implicitamente isolado por computador, pois usa os recursos de armazenamento locais para determinado computador.  
   

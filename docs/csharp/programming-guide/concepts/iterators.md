@@ -2,12 +2,12 @@
 title: Iterar em coleções em C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b0e1d509cf80e13d2cee3cf0ddf2021d6c84c5b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720792"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464314"
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 
@@ -324,7 +324,7 @@ public class Stack<T> : IEnumerable<T>
 
 Um iterador pode ocorrer como um método ou como um acessador `get`. Um iterador não pode ocorrer em um evento, um construtor de instância, um construtor estático ou um finalizador estático.
 
-Deve existir uma conversão implícita do tipo de expressão na instrução `yield return`, para o argumento de tipo para o IEnumerable<T> retornado pelo iterador.
+Deve haver uma conversão implícita do tipo de expressão na instrução `yield return` para o argumento de tipo no IEnumerable\<T> retornado pelo iterador.
 
 Em C#, um método iterador não pode ter os parâmetros `in`, `ref` nem `out`.
 

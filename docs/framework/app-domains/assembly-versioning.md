@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724064"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675946"
 ---
 # <a name="assembly-versioning"></a>Controle de versão de assemblies
 Todo o controle de versão de assemblies que usam o Common Language Runtime é feito no nível do assembly. A versão específica de um assembly e as versões de assemblies dependentes são registradas no manifesto do assembly. A política de versão padrão do tempo de execução diz que aplicativos só são executados com as versões com que foram compilados e testados, a menos que essa política de versão seja substituída pela política de versão explícita em arquivos de configuração (o arquivo de configuração do aplicativo, o arquivo de política do editor e o arquivo de configuração do administrador do computador).  
@@ -33,10 +33,9 @@ Todo o controle de versão de assemblies que usam o Common Language Runtime é f
   
 4.  Verifica o cache de assembly global, as bases de código especificadas em arquivos de configuração e verifica os diretórios e os subdiretórios do aplicativo usando as regras de investigação explicadas em [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- A ilustração a seguir mostra essas etapas.  
+ A seguinte ilustração mostra estas etapas:  
   
- ![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
-Resolvendo uma solicitação de associação de assembly  
+ ![Diagrama que mostra as etapas na resolução da solicitação de associação de assembly.](./media/assembly-versioning/resolve-assembly-binding-request.gif)
   
  Para saber mais sobre como configurar aplicativos, confira [Configuração de aplicativos](../../../docs/framework/configure-apps/index.md). Para saber mais sobre a política de associação, confira [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   

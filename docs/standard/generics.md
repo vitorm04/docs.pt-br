@@ -4,16 +4,16 @@ description: Saiba como os genéricos atuam como modelos de código que permitem
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835285"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465419"
 ---
 # <a name="generic-types-overview"></a>Visão geral de tipos genéricos
 
-Desenvolvedores usam genéricos o tempo todo no .NET, seja implícita ou explicitamente. Ao usar o LINQ no .NET, você já percebeu que você está trabalhando com <xref:System.Collections.Generic.IEnumerable%601>? Ou, no caso de você já ter visto um exemplo de um "repositório genérico" online para conversar com bancos de dados usando o Entity Framework, você já viu que a maioria dos métodos retornam IQueryable<T>? Talvez você tenha se perguntado o que é o **T** nesses exemplos e por que ele está lá.
+Desenvolvedores usam genéricos o tempo todo no .NET, seja implícita ou explicitamente. Ao usar o LINQ no .NET, você já percebeu que você está trabalhando com <xref:System.Collections.Generic.IEnumerable%601>? Ou, no caso de você já ter visto uma amostra online de um "repositório genérico" para conversar com bancos de dados usando o Entity Framework, você já viu que a maioria dos métodos retorna IQueryable\<T>? Talvez você tenha se perguntado o que é o **T** nesses exemplos e por que ele está lá.
 
 Introduzidos pela primeira vez no .NET Framework 2.0, os **genéricos** são essencialmente um "modelo de código" que permite aos desenvolvedores definir estruturas de dados [fortemente tipadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) sem se comprometer com um tipo de dados real. Por exemplo, <xref:System.Collections.Generic.List%601> é uma [coleção de genéricos](xref:System.Collections.Generic) que pode ser declarada e usada com qualquer tipo, como `List<int>`, `List<string>` ou `List<Person>`.
 

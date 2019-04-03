@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221063"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409309"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshaling padrão para cadeias de caracteres
 As classes <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> têm comportamentos de marshaling semelhantes.  
@@ -220,7 +220,7 @@ struct StringInfoT {
   
  A solução é passar um buffer do <xref:System.Text.StringBuilder> como argumento, em vez de uma cadeia de caracteres. Um `StringBuilder` pode ser desreferenciado e modificado pelo receptor, desde que ele não exceda a capacidade do `StringBuilder`. Ele também pode ser inicializado com um comprimento fixo. Por exemplo, se você inicializar um buffer do `StringBuilder` em uma capacidade de `N`, o marshaler fornecerá um buffer com o tamanho de (`N`+ 1) caracteres. O + 1 leva em conta o fato de que a cadeia de caracteres não gerenciada tem um terminador nulo, ao contrário de `StringBuilder`.  
   
- Por exemplo, a função `GetWindowText` da API do Microsoft Win32 (definida em Windows.h) é um buffer de caracteres de comprimento fixo que deve ser passada para um código não gerenciado para ser manipulada. `LpString` aponta para um buffer alocado pelo chamador com o tamanho `nMaxCount`. O chamador deve alocar o buffer e definir o argumento `nMaxCount` com o tamanho do buffer alocado. O código a seguir mostra a declaração da função `GetWindowText`, conforme definido em Windows.h.  
+ Por exemplo, a função `GetWindowText` da API do Microsoft Windows (definida em Windows.h) é um buffer de caracteres de comprimento fixo que precisa ser passada para um código não gerenciado para ser manipulada. `LpString` aponta para um buffer alocado pelo chamador com o tamanho `nMaxCount`. O chamador deve alocar o buffer e definir o argumento `nMaxCount` com o tamanho do buffer alocado. O código a seguir mostra a declaração da função `GetWindowText`, conforme definido em Windows.h.  
   
 ```  
 int GetWindowText(  

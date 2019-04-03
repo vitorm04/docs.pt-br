@@ -2,15 +2,15 @@
 title: Os Analisadores de Segurança do .NET – .NET
 description: Saiba como usar os Analisadores de Segurança do .NET no pacote de Analisadores do .NET Framework para localizar e corrigir riscos à segurança
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 904218c177ea45f82a73b4532ce3230af954aa85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574615"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634460"
 ---
 # <a name="the-net-framework-analyzer"></a>O Analisador do .NET Framework
 
@@ -23,9 +23,9 @@ O analisador é executado interativamente no Visual Studio enquanto você escrev
 Os Analisadores de Segurança do .NET devem ser instalados como um pacote do NuGet em cada projeto em que você deseja executá-los. Somente um desenvolvedor precisa adicioná-los ao projeto. O pacote de analisador é uma dependência de projeto e será executado no computador de cada um dos desenvolvedores assim que ele tiver a solução atualizada.
 
 O Analisador do .NET Framework é fornecido no pacote do NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Esse pacote fornece apenas os analisadores específicos para o .NET Framework, que inclui os analisadores de segurança. Na maioria dos casos, você desejará o pacote do NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). O pacote de agregação FxCopAnalyzers contém todos os analisadores de estrutura incluídos no pacote Framework.Analyzers, bem como os analisadores a seguir:
-- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): fornece diretrizes gerais e diretrizes para APIs do .NET Standard
-- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): fornece analisadores específicos para as APIs do .NET Core.
-- [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): fornece diretrizes para texto incluído como código, incluindo comentários.
+- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): Fornece diretrizes gerais e diretrizes para APIs do .NET Standard
+- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): Fornece analisadores específicos para APIs do .NET Core.
+- [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): Fornece diretrizes para texto incluído como código, incluindo comentários.
 
 Para instalá-lo, clique com o botão direito do mouse no projeto e selecione "Gerenciar Dependências".
 Do explorador do NuGet, pesquise por "NetFramework Analyzer" ou, se você preferir, "Fx Cop Analyzer". Instale a versão estável mais recente em todos os projetos na solução.
@@ -43,27 +43,27 @@ Passe o mouse sobre qualquer problema e você verá detalhes sobre o problema e 
 
 Os analisadores examinam o código em sua solução e fornecem a você uma lista de avisos para qualquer um desses problemas:
 
-### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: os tipos não devem estender determinados tipos base
+### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Tipos não devem estender determinados tipos base
 
 Há um pequeno número de tipos do .NET Framework dos quais você não deve derivar diretamente. 
 
-**Categoria:** design
+**Categoria:** Design
 
-**Severidade:** Aviso
+**Gravidade:** Aviso
 
-Informações adicionais: [CA:1058: os tipos não devem estender determinados tipos base](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
+Informações adicionais: [CA:1058: Os tipos não devem estender determinados tipos base](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
 
-### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: não capturar exceções de estado corrompido
+### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: Não capturar exceções de estado corrompido
 
 A captura de exceções de estado corrompido pode mascarar erros (como violações de acesso), resultando em um estado inconsistente de execução ou tornando mais fácil para invasores comprometerem um sistema. Em vez disso, capture e manipule um conjunto mais específico de tipos de exceção ou gere novamente a exceção
 
-**Categoria:** segurança
+**Categoria:** Segurança
 
-**Severidade:** Aviso
+**Gravidade:** Aviso
 
-Informações adicionais: [## CA2153: não capturar exceções de estado corrompido](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
+Informações adicionais: [CA2153: Não capturar exceções de estado corrompido](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
-### <a name="ca2229-implement-serialization-constructors"></a>CA2229: implementar construtores de serialização
+### <a name="ca2229-implement-serialization-constructors"></a>CA2229: Implementar construtores de serialização
 
 O analisador gera este aviso quando você cria um tipo que implementa a interface <xref:System.Runtime.Serialization.ISerializable>, mas não define o construtor de serialização necessário. Para corrigir uma violação dessa regra, implemente o construtor de serialização. Para uma classe lacrada, torne o construtor particular; do contrário, deixe-o protegido. O construtor de serialização tem a seguinte assinatura:
 
@@ -78,61 +78,61 @@ public class MyItemType
 }
 ```
 
-**Categoria:** uso
+**Categoria:** Uso
 
-**Severidade:** Aviso
+**Gravidade:** Aviso
 
 Informações adicionais: [CA2229: implementar construtores de serialização](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
 
-### <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: marcar todos os campos não serializáveis
+### <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: Marcar todos os campos não serializáveis
 
 Um campo de instância de um tipo que não seja serializável é declarado em um tipo que é serializável. Você deve marcar explicitamente esse campo com o <xref:System.NonSerializedAttribute> para corrigir este aviso.
 
-**Categoria:** uso
+**Categoria:** Uso
 
-**Severidade:** Aviso
+**Gravidade:** Aviso
 
-Informações adicionais: [CA2235: marcar todos os campos não serializáveis](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
+Informações adicionais: [CA2235: Marcar todos os campos não serializáveis](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
 
-### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: marcar tipos ISerializable com serializable
+### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: Marcar tipos ISerializable com serializável
 
 Para serem reconhecidos pelo Common Language Runtime como serializáveis, os tipos devem ser marcados usando-se o atributo <xref:System.SerializableAttribute>, mesmo quando o tipo usa uma rotina de serialização personalizada implementando a interface <xref:System.Runtime.Serialization.ISerializable>.
 
-**Categoria:** uso
+**Categoria:** Uso
 
-**Severidade:** Aviso
+**Gravidade:** Aviso
 
-Informações adicionais: [CA2237: marcar tipos ISerializable com serializable](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+Informações adicionais: [CA2237: Marcar tipos ISerializable com serializável](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075: processamento de DTD inseguro em XML
+### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075: Processamento DTD não seguro em XML
 
 Se você usar instâncias de <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> inseguras ou referenciar origens de entidade externa, o analisador poderá aceitar a entrada não confiável e divulgar as informações confidenciais para invasores.  
 
-**Categoria:** segurança
+**Categoria:** Segurança
 
-**Severidade:** Aviso
+**Gravidade:** Aviso
 
-Informações adicionais: [A3075: processamento de DTD inseguro em XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+Informações adicionais: [A3075: Processamento DTD não seguro em XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
 
-### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: não usar algoritmos de criptografia fracos
+### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Não usar algoritmos de criptografia fracos
 
 Algoritmos de criptografia degradam-se ao longo do tempo, conforme os ataques se tornam mais avançados. Dependendo do tipo e do aplicativo desse algoritmo de criptografia, uma maior degradação de sua intensidade criptográfica poderá permitir que invasores leiam mensagens criptografadas, adulterem mensagens criptografadas, forjem assinaturas digitais, violem o conteúdo de hash ou comprometam qualquer sistema criptográfico baseado neste algoritmo. Para criptografia, use um algoritmo AES (AES-256, AES-192 e AES-128 são aceitáveis) com um comprimento de chave maior ou igual a 128 bits. Para o hash, use uma função de hash da família SHA-2, tal como SHA-2 512, SHA-2 384 ou SHA-2 256.
 
-**Categoria:** segurança
+**Categoria:** Segurança
 
-**Severidade:** Aviso
+**Gravidade:** Aviso
 
-Informações adicionais: [CA5350: não usar algoritmos de criptografia fracos](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
+Informações adicionais: [CA5350: Não usar algoritmos de criptografia fracos](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
 
-### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: não usar algoritmos de criptografia violados
+### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: Não usar algoritmos de criptografia desfeitos
 
 Existe um ataque que torna a quebra desse algoritmo computacionalmente viável. Isso permite que os invasores violem as garantias criptográficas que ele foi projetado para fornecer. Dependendo do tipo e do aplicativo desse algoritmo de criptografia, isso poderá permitir que invasores leiam e adulterem mensagens criptografadas, forjem assinaturas digitais, violem o conteúdo de hash ou comprometam qualquer sistema de criptografia baseado neste algoritmo. Para criptografia, use um algoritmo AES (AES-256, AES-192 e AES-128 são aceitáveis) com um comprimento de chave maior ou igual a 128 bits. Para o hash, use uma função de hash da família SHA-2, tal como SHA512, SHA384 ou SHA256. Para assinaturas digitais, use RSA com um comprimento de chave maior ou igual a 2.048 bits, ou então ECDSA com um comprimento de chave maior ou igual a 256 bits.
 
-**Categoria:** segurança
+**Categoria:** Segurança
 
-**Severidade:** Aviso
+**Gravidade:** Aviso
 
-Informações adicionais: [CA5351: não usar algoritmos de criptografia violados](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
+Informações adicionais: [CA5351: Não usar algoritmos de criptografia desfeitos](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
 
 
