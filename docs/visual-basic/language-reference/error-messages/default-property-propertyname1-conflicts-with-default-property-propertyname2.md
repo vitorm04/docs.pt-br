@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: bc75b01532ffb112622d7f9bc837490c627883b3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270361"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813165"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Propriedade padrão '\<propertyname1 >' está em conflito com a propriedade padrão '\<propertyname2 >' em '\<classname >' e deve ser declarado 'como Shadows'
 Uma propriedade é declarada com o mesmo nome de uma propriedade definida na classe base. Nessa situação, a propriedade nessa classe deve sombrear a propriedade de classe base.  
@@ -26,5 +26,6 @@ Uma propriedade é declarada com o mesmo nome de uma propriedade definida na cla
 -   Adicionar o `Shadows` palavra-chave para a declaração, ou alterar o nome da propriedade que está sendo declarado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Sombreamento no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

@@ -2,19 +2,19 @@
 title: Classificando dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: 5875b15dbdec69aca653b8f6cca4dd07fc9af343
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126247"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819080"
 ---
 # <a name="sorting-data-visual-basic"></a>Classificando dados (Visual Basic)
 Uma operação de classificação ordena os elementos de uma sequência com base em um ou mais atributos. O primeiro critério de classificação executa uma classificação primária dos elementos. Especificando um segundo critério de classificação, você pode classificar os elementos dentro de cada grupo de classificação primário.  
   
  A ilustração a seguir mostra os resultados de uma operação de classificação alfabética em uma sequência de caracteres.  
   
- ![Gráfico que mostra uma operação de classificação em ordem alfabética.](./media/sorting-data/alphabetical-sort-operation.png)  
+ ![Gráfico que mostra uma operação de classificação alfabética.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  Os métodos de operador de consulta padrão que classificam dados estão listados na seção a seguir.  
   
@@ -143,6 +143,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md)

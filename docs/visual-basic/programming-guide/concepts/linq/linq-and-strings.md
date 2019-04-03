@@ -2,17 +2,17 @@
 title: LINQ e cadeias de caracteres (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 0ffff11243b96d46cfd9424502ec43ed2319136d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569986"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818950"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ e cadeias de caracteres (Visual Basic)
 A LINQ pode ser usada para consultar e transformar as cadeias de caracteres e coleções de cadeias de caracteres. Ele pode ser especialmente útil com os dados semiestruturados em arquivos de texto. Consultas LINQ podem ser combinadas com expressões regulares e funções de cadeia de caracteres tradicionais. Por exemplo, você pode usar o método <xref:System.String.Split%2A> ou <xref:System.Text.RegularExpressions.Regex.Split%2A> para criar uma matriz de cadeias de caracteres que você pode consultar ou modificar usando o LINQ. Você pode usar o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> na cláusula `where` de uma consulta LINQ. E você pode usar o LINQ para consultar ou modificar os resultados de <xref:System.Text.RegularExpressions.MatchCollection> retornados por uma expressão regular.  
   
- Você também pode usar as técnicas descritas nessa seção para transformar dados de texto semiestruturados em XML. Para obter mais informações, confira [Como: Gerar XML de arquivos CSV](how-to-generate-xml-from-csv-files.md).  
+ Você também pode usar as técnicas descritas nessa seção para transformar dados de texto semiestruturados em XML. Para obter mais informações, confira [Como: Gerar um XML com base em arquivos CSV](how-to-generate-xml-from-csv-files.md).  
   
  Os exemplos nesta seção se enquadram em duas categorias:  
   
@@ -60,5 +60,6 @@ A LINQ pode ser usada para consultar e transformar as cadeias de caracteres e co
  Mostra como executar cálculos matemáticos em dados de texto em arquivos .csv.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ (consulta integrada à linguagem) (Visual Basic)](index.md)
-- [Como: Gerar XML de arquivos CSV](how-to-generate-xml-from-csv-files.md)
+- [Como: Gerar um XML com base em arquivos CSV](how-to-generate-xml-from-csv-files.md)

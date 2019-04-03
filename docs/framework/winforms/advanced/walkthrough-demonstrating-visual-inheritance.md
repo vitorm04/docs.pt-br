@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Demonstrando Herança Visual'
+title: 'Passo a passo: demonstrando herança visual'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721444"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816311"
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a>Passo a passo: Demonstrando Herança Visual
+# <a name="walkthrough-demonstrating-visual-inheritance"></a>Passo a passo: demonstrando herança visual
 A herança visual permite que você veja os controles no formulário de base e adicione novos controles. Neste passo a passo, você criará um formulário de base e o compilará em uma biblioteca de classes. Você importará esta biblioteca de classes em outro projeto e criará um novo formulário que herda do formulário de base. Durante este passo a passo, você aprenderá a:  
   
 -   Criar um projeto de biblioteca de classes que contém um formulário de base.  
@@ -140,7 +140,7 @@ A herança visual permite que você veja os controles no formulário de base e a
   
 5.  Abra o formulário herdado (**Form2**) no designer clicando duas vezes nele, se ele ainda não estiver aberto.  
   
-     No designer, os botões herdados têm um símbolo (![Captura de tela de VisualBasicInheritanceSymbol](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) no canto superior, indicando que são herdados.  
+     No designer, os botões herdados têm um símbolo (![Captura de tela do símbolo de herança Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) no seu canto, indicando que eles são herdados.  
   
 6.  Selecione o botão **Say Hello** e observe as alças de redimensionamento. Como esse botão é protegido, os herdeiros podem movê-lo, redimensioná-lo, alterar sua legenda e fazer outras modificações.  
   
