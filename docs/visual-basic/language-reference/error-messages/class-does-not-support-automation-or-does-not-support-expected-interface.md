@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
-ms.openlocfilehash: d5b47b39742a995be6076ddc0edc17f1ec94dade
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28089647e8a67d2da55ddd12288b298bcace66c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534155"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816181"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>A classe não dá suporte à automação ou à interface esperada
 A classe especificada na chamada de função `GetObject` ou `CreateObject` não expôs uma interface de programação ou você alterou um projeto de .dll para .exe, ou vice-versa.  
@@ -21,5 +21,6 @@ A classe especificada na chamada de função `GetObject` ou `CreateObject` não 
 2.  Se você alterou um projeto de .dll para .exe, ou vice-versa, deverá cancelar o registro manualmente do .dll ou do .exe antigo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Fale conosco](/visualstudio/ide/talk-to-us)

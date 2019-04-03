@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640596"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816324"
 ---
 # <a name="structure-variables-visual-basic"></a>Variáveis de estrutura (Visual Basic)
 Depois de criar uma estrutura, você pode declarar variáveis de nível de procedimento e o nível de módulo como esse tipo. Por exemplo, você pode criar uma estrutura que registra informações sobre um sistema de computador. O exemplo a seguir demonstra isso.  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  Se um elemento de estrutura é um tipo de referência, como uma `String`, `Object`, ou matriz, o ponteiro para os dados é copiado. No exemplo anterior, se `systemInfo` tivesse incluído uma variável de objeto, em seguida, o exemplo anterior seria ter copiado o ponteiro de `mySystem` para `yourSystem`, e uma alteração nos dados do objeto através de uma estrutura teriam efeito quando acessados através da estrutura.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipos de Dados Elementares](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

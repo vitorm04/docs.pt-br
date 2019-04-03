@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: a11bfe261ffb8ded95f2e513aaddf00aa00f702e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266631"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813282"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>A exceção de comentário XML deve ter um atributo 'cref'
 O \<exceção > marca fornece uma maneira de documentar as exceções que podem ser lançadas por um método. Necessário `cref` atributo designa o nome de um membro, que é verificado pelo gerador de documentação. Se o membro existe, ele é convertido para o nome de elemento canônico no arquivo de documentação.  
@@ -28,6 +28,7 @@ O \<exceção > marca fornece uma maneira de documentar as exceções que podem 
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)
 - [Como: Criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
