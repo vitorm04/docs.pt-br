@@ -6,18 +6,18 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820939"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890391"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizando projetos e estendendo My com o Visual Basic
 Você pode personalizar modelos de projeto para fornecer mais `My` objetos. Isso torna mais fácil para outros desenvolvedores a localizar e usar seus objetos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Estendendo o Meu Namespace em Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Estendendo o namespace My no Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  Descreve como adicionar membros personalizados e valores para o `My` namespace no Visual Basic.  
   
  [Empacotando e implantando minhas extensões personalizadas](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
@@ -27,7 +27,7 @@ Você pode personalizar modelos de projeto para fornecer mais `My` objetos. Isso
  Descreve como especificar suas próprias extensões para o modelo de aplicativo, substituindo os membros de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe.  
   
  [Personalizando quais objetos estão disponíveis em My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- Descreve como controlar quais `My` objetos são ativados por configuração da constante de compilação condicional MYTYPE do seu projeto.  
+ Descreve como controlar quais `My` objetos são ativados pela configuração do seu projeto \_constante de compilação condicional MYTYPE.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Desenvolvimento com My](../../../visual-basic/developing-apps/development-with-my/index.md)  
@@ -39,7 +39,7 @@ Você pode personalizar modelos de projeto para fornecer mais `My` objetos. Isso
  [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Descreve quais `My` objetos estão disponíveis em diferentes tipos de projeto por padrão.  
   
- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [Compilação condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
  Discute como o compilador usa compilação condicional para selecionar determinadas seções de código para compilar e excluir as outras seções.  
   
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
