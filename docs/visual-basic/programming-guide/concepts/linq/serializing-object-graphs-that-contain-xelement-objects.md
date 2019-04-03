@@ -2,24 +2,25 @@
 title: Serializando gráficos de objeto que contêm objetos de XElement (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c0cc5c92-5ca3-44b1-98dd-371601df721b
-ms.openlocfilehash: 7eb4ae18dcb5fe53340f9c65bc7a19457a682e2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffb348a0305b0f94c0870edead2a4852eee237cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602137"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835902"
 ---
-# <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a><span data-ttu-id="8f106-102">Serializando gráficos de objeto que contêm objetos de XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f106-102">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>
-<span data-ttu-id="8f106-103">Este tópico apresenta o recurso de serializar os grafos de objeto que contêm referências a objetos do tipo <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="8f106-103">This topic introduces the capability of serializing object graphs that contain references to objects of type <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="8f106-104">Para facilitar esse tipo de serialização, <xref:System.Xml.Linq.XElement> implementa a interface de <xref:System.Xml.Serialization.IXmlSerializable> .</span><span class="sxs-lookup"><span data-stu-id="8f106-104">To facility this type of serializing, <xref:System.Xml.Linq.XElement> implements the <xref:System.Xml.Serialization.IXmlSerializable> interface.</span></span>  
+# <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a><span data-ttu-id="66444-102">Serializando gráficos de objeto que contêm objetos de XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66444-102">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>
+<span data-ttu-id="66444-103">Este tópico apresenta o recurso de serializar os grafos de objeto que contêm referências a objetos do tipo <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="66444-103">This topic introduces the capability of serializing object graphs that contain references to objects of type <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="66444-104">Para facilitar esse tipo de serialização, <xref:System.Xml.Linq.XElement> implementa a interface de <xref:System.Xml.Serialization.IXmlSerializable> .</span><span class="sxs-lookup"><span data-stu-id="66444-104">To facility this type of serializing, <xref:System.Xml.Linq.XElement> implements the <xref:System.Xml.Serialization.IXmlSerializable> interface.</span></span>  
   
- <span data-ttu-id="8f106-105">Observe que somente a classe de <xref:System.Xml.Linq.XElement> implementa a serialização.</span><span class="sxs-lookup"><span data-stu-id="8f106-105">Note that only the <xref:System.Xml.Linq.XElement> class implements serialization.</span></span>  
+ <span data-ttu-id="66444-105">Observe que somente a classe de <xref:System.Xml.Linq.XElement> implementa a serialização.</span><span class="sxs-lookup"><span data-stu-id="66444-105">Note that only the <xref:System.Xml.Linq.XElement> class implements serialization.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8f106-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8f106-106">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="66444-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="66444-106">In This Section</span></span>  
   
-|<span data-ttu-id="8f106-107">Tópico</span><span class="sxs-lookup"><span data-stu-id="8f106-107">Topic</span></span>|<span data-ttu-id="8f106-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="8f106-108">Description</span></span>|  
+|<span data-ttu-id="66444-107">Tópico</span><span class="sxs-lookup"><span data-stu-id="66444-107">Topic</span></span>|<span data-ttu-id="66444-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="66444-108">Description</span></span>|  
 |-----------|-----------------|  
-|[<span data-ttu-id="8f106-109">Como: Serializar usando XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f106-109">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|<span data-ttu-id="8f106-110">Demonstra como serializar usando <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="8f106-110">Demonstrates how to serialize using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>|  
-|[<span data-ttu-id="8f106-111">Como: Serializar usando DataContractSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f106-111">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|<span data-ttu-id="8f106-112">Demonstra como serializar usando <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="8f106-112">Demonstrates how to serialize using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
+|[<span data-ttu-id="66444-109">Como: Serializar usando XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66444-109">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|<span data-ttu-id="66444-110">Demonstra como serializar usando <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="66444-110">Demonstrates how to serialize using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>|  
+|[<span data-ttu-id="66444-111">Como: Serializar usando DataContractSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66444-111">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|<span data-ttu-id="66444-112">Demonstra como serializar usando <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="66444-112">Demonstrates how to serialize using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="8f106-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8f106-113">See also</span></span>
-- [<span data-ttu-id="8f106-114">LINQ to XML (Visual Basic) de programação avançada</span><span class="sxs-lookup"><span data-stu-id="8f106-114">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="66444-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="66444-113">See also</span></span>
+
+- [<span data-ttu-id="66444-114">LINQ to XML (Visual Basic) de programação avançada</span><span class="sxs-lookup"><span data-stu-id="66444-114">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -9,36 +9,37 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974634"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829220"
 ---
-# <a name="how-to-define-a-conversion-operator-visual-basic"></a><span data-ttu-id="f5379-102">Como: Definir um operador de conversão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5379-102">How to: Define a Conversion Operator (Visual Basic)</span></span>
-<span data-ttu-id="f5379-103">Se você tiver definido uma classe ou estrutura, você pode definir um operador de conversão de tipo entre o tipo de sua classe ou estrutura e outro tipo de dados (como `Integer`, `Double`, ou `String`).</span><span class="sxs-lookup"><span data-stu-id="f5379-103">If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).</span></span>  
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a><span data-ttu-id="20718-102">Como: Definir um operador de conversão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20718-102">How to: Define a Conversion Operator (Visual Basic)</span></span>
+<span data-ttu-id="20718-103">Se você tiver definido uma classe ou estrutura, você pode definir um operador de conversão de tipo entre o tipo de sua classe ou estrutura e outro tipo de dados (como `Integer`, `Double`, ou `String`).</span><span class="sxs-lookup"><span data-stu-id="20718-103">If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).</span></span>  
   
- <span data-ttu-id="f5379-104">Defina a conversão de tipo como uma [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) procedimento dentro da classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="f5379-104">Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure.</span></span> <span data-ttu-id="f5379-105">Todos os procedimentos de conversão devem ser `Public Shared`, e cada um deles deve especificar [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) ou [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).</span><span class="sxs-lookup"><span data-stu-id="f5379-105">All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).</span></span>  
+ <span data-ttu-id="20718-104">Defina a conversão de tipo como uma [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) procedimento dentro da classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="20718-104">Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure.</span></span> <span data-ttu-id="20718-105">Todos os procedimentos de conversão devem ser `Public Shared`, e cada um deles deve especificar [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) ou [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).</span><span class="sxs-lookup"><span data-stu-id="20718-105">All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).</span></span>  
   
- <span data-ttu-id="f5379-106">Definir um operador em uma classe ou estrutura também é chamado *sobrecarga* o operador.</span><span class="sxs-lookup"><span data-stu-id="f5379-106">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
+ <span data-ttu-id="20718-106">Definir um operador em uma classe ou estrutura também é chamado *sobrecarga* o operador.</span><span class="sxs-lookup"><span data-stu-id="20718-106">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5379-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f5379-107">Example</span></span>  
- <span data-ttu-id="f5379-108">O exemplo a seguir define os operadores de conversão entre uma estrutura chamada `digit` e um `Byte`.</span><span class="sxs-lookup"><span data-stu-id="f5379-108">The following example defines conversion operators between a structure called `digit` and a `Byte`.</span></span>  
+## <a name="example"></a><span data-ttu-id="20718-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="20718-107">Example</span></span>  
+ <span data-ttu-id="20718-108">O exemplo a seguir define os operadores de conversão entre uma estrutura chamada `digit` e um `Byte`.</span><span class="sxs-lookup"><span data-stu-id="20718-108">The following example defines conversion operators between a structure called `digit` and a `Byte`.</span></span>  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- <span data-ttu-id="f5379-109">Você pode testar a estrutura `digit` com o código a seguir.</span><span class="sxs-lookup"><span data-stu-id="f5379-109">You can test the structure `digit` with the following code.</span></span>  
+ <span data-ttu-id="20718-109">Você pode testar a estrutura `digit` com o código a seguir.</span><span class="sxs-lookup"><span data-stu-id="20718-109">You can test the structure `digit` with the following code.</span></span>  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a><span data-ttu-id="f5379-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f5379-110">See also</span></span>
-- [<span data-ttu-id="f5379-111">Procedimentos de Operador</span><span class="sxs-lookup"><span data-stu-id="f5379-111">Operator Procedures</span></span>](./operator-procedures.md)
-- [<span data-ttu-id="f5379-112">Como: Definir um operador</span><span class="sxs-lookup"><span data-stu-id="f5379-112">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)
-- [<span data-ttu-id="f5379-113">Como: Chamar um procedimento de operador</span><span class="sxs-lookup"><span data-stu-id="f5379-113">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
-- [<span data-ttu-id="f5379-114">Como: Usar uma classe que define operadores</span><span class="sxs-lookup"><span data-stu-id="f5379-114">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)
-- [<span data-ttu-id="f5379-115">Instrução Operator</span><span class="sxs-lookup"><span data-stu-id="f5379-115">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [<span data-ttu-id="f5379-116">Instrução Structure</span><span class="sxs-lookup"><span data-stu-id="f5379-116">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [<span data-ttu-id="f5379-117">Como: declarar uma estrutura</span><span class="sxs-lookup"><span data-stu-id="f5379-117">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [<span data-ttu-id="f5379-118">Conversões Implícitas e Explícitas</span><span class="sxs-lookup"><span data-stu-id="f5379-118">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [<span data-ttu-id="f5379-119">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="f5379-119">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="20718-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="20718-110">See also</span></span>
+
+- [<span data-ttu-id="20718-111">Procedimentos de Operador</span><span class="sxs-lookup"><span data-stu-id="20718-111">Operator Procedures</span></span>](./operator-procedures.md)
+- [<span data-ttu-id="20718-112">Como: Definir um operador</span><span class="sxs-lookup"><span data-stu-id="20718-112">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)
+- [<span data-ttu-id="20718-113">Como: Chamar um procedimento de operador</span><span class="sxs-lookup"><span data-stu-id="20718-113">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
+- [<span data-ttu-id="20718-114">Como: Usar uma classe que define operadores</span><span class="sxs-lookup"><span data-stu-id="20718-114">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)
+- [<span data-ttu-id="20718-115">Instrução Operator</span><span class="sxs-lookup"><span data-stu-id="20718-115">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [<span data-ttu-id="20718-116">Instrução Structure</span><span class="sxs-lookup"><span data-stu-id="20718-116">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [<span data-ttu-id="20718-117">Como: declarar uma estrutura</span><span class="sxs-lookup"><span data-stu-id="20718-117">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="20718-118">Conversões Implícitas e Explícitas</span><span class="sxs-lookup"><span data-stu-id="20718-118">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [<span data-ttu-id="20718-119">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="20718-119">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

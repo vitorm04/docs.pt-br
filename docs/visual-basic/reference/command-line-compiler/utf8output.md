@@ -6,39 +6,40 @@ helpviewer_keywords:
 - utf8output compiler option [Visual Basic]
 - /utf8output compiler option [Visual Basic]
 ms.assetid: 8ab36b1e-027a-49ac-85b4-f48997d9e4d6
-ms.openlocfilehash: e6bb04364c2f92129993e19c746fd7cb9c18dc8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75369c3bcb19afbf98bfb80bc3e439f996d2a9d0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648528"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833611"
 ---
-# <a name="-utf8output-visual-basic"></a><span data-ttu-id="99fc7-102">-utf8output (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99fc7-102">-utf8output (Visual Basic)</span></span>
-<span data-ttu-id="99fc7-103">Exibe a saída do compilador usando a codificação UTF-8.</span><span class="sxs-lookup"><span data-stu-id="99fc7-103">Displays compiler output using UTF-8 encoding.</span></span>  
+# <a name="-utf8output-visual-basic"></a><span data-ttu-id="32007-102">-utf8output (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="32007-102">-utf8output (Visual Basic)</span></span>
+<span data-ttu-id="32007-103">Exibe a saída do compilador usando a codificação UTF-8.</span><span class="sxs-lookup"><span data-stu-id="32007-103">Displays compiler output using UTF-8 encoding.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99fc7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="99fc7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32007-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="32007-104">Syntax</span></span>  
   
 ```  
 -utf8output[+ | -]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="99fc7-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="99fc7-105">Arguments</span></span>  
- <span data-ttu-id="99fc7-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="99fc7-106">`+` &#124; `-`</span></span>  
- <span data-ttu-id="99fc7-107">Opcional.</span><span class="sxs-lookup"><span data-stu-id="99fc7-107">Optional.</span></span> <span data-ttu-id="99fc7-108">O padrão para essa opção é `-utf8output-`, que significa que a saída do compilador não usa a codificação UTF-8.</span><span class="sxs-lookup"><span data-stu-id="99fc7-108">The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding.</span></span> <span data-ttu-id="99fc7-109">Especificando `-utf8output` é o mesmo que especificar `-utf8output+`.</span><span class="sxs-lookup"><span data-stu-id="99fc7-109">Specifying `-utf8output` is the same as specifying `-utf8output+`.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="32007-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="32007-105">Arguments</span></span>  
+ <span data-ttu-id="32007-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="32007-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="32007-107">Opcional.</span><span class="sxs-lookup"><span data-stu-id="32007-107">Optional.</span></span> <span data-ttu-id="32007-108">O padrão para essa opção é `-utf8output-`, que significa que a saída do compilador não usa a codificação UTF-8.</span><span class="sxs-lookup"><span data-stu-id="32007-108">The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding.</span></span> <span data-ttu-id="32007-109">Especificando `-utf8output` é o mesmo que especificar `-utf8output+`.</span><span class="sxs-lookup"><span data-stu-id="32007-109">Specifying `-utf8output` is the same as specifying `-utf8output+`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="99fc7-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="99fc7-110">Remarks</span></span>  
- <span data-ttu-id="99fc7-111">Em algumas configurações internacionais, saída do compilador não pode ser exibida corretamente no console.</span><span class="sxs-lookup"><span data-stu-id="99fc7-111">In some international configurations, compiler output cannot be displayed correctly in the console.</span></span> <span data-ttu-id="99fc7-112">Em tais situações, use `-utf8output` e redirecione a saída do compilador para um arquivo.</span><span class="sxs-lookup"><span data-stu-id="99fc7-112">In such situations, use `-utf8output` and redirect compiler output to a file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32007-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="32007-110">Remarks</span></span>  
+ <span data-ttu-id="32007-111">Em algumas configurações internacionais, saída do compilador não pode ser exibida corretamente no console.</span><span class="sxs-lookup"><span data-stu-id="32007-111">In some international configurations, compiler output cannot be displayed correctly in the console.</span></span> <span data-ttu-id="32007-112">Em tais situações, use `-utf8output` e redirecione a saída do compilador para um arquivo.</span><span class="sxs-lookup"><span data-stu-id="32007-112">In such situations, use `-utf8output` and redirect compiler output to a file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="99fc7-113">O `-utf8output` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.</span><span class="sxs-lookup"><span data-stu-id="99fc7-113">The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+>  <span data-ttu-id="32007-113">O `-utf8output` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.</span><span class="sxs-lookup"><span data-stu-id="32007-113">The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="99fc7-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="99fc7-114">Example</span></span>  
- <span data-ttu-id="99fc7-115">O seguinte código compila `In.vb` e direciona o compilador para exibir saída usando a codificação UTF-8.</span><span class="sxs-lookup"><span data-stu-id="99fc7-115">The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.</span></span>  
+## <a name="example"></a><span data-ttu-id="32007-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="32007-114">Example</span></span>  
+ <span data-ttu-id="32007-115">O seguinte código compila `In.vb` e direciona o compilador para exibir saída usando a codificação UTF-8.</span><span class="sxs-lookup"><span data-stu-id="32007-115">The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.</span></span>  
   
 ```console  
 vbc -utf8output in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="99fc7-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="99fc7-116">See also</span></span>
-- [<span data-ttu-id="99fc7-117">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="99fc7-117">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="99fc7-118">Linhas de Comando de Compilação de Exemplo</span><span class="sxs-lookup"><span data-stu-id="99fc7-118">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="32007-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="32007-116">See also</span></span>
+
+- [<span data-ttu-id="32007-117">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="32007-117">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="32007-118">Linhas de Comando de Compilação de Exemplo</span><span class="sxs-lookup"><span data-stu-id="32007-118">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

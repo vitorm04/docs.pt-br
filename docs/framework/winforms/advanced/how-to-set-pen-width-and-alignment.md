@@ -1,5 +1,5 @@
 ---
-title: 'Como: Largura da caneta conjunto e alinhamento'
+title: 'Como: definir a largura e o alinhamento de uma caneta'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,55 +8,55 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: e82f406b4fdca93df7a811eea5506846d56fda28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703043"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828193"
 ---
-# <a name="how-to-set-pen-width-and-alignment"></a><span data-ttu-id="82cc5-102">Como: Largura da caneta conjunto e alinhamento</span><span class="sxs-lookup"><span data-stu-id="82cc5-102">How to: Set Pen Width and Alignment</span></span>
-<span data-ttu-id="82cc5-103">Quando você cria um <xref:System.Drawing.Pen>, você pode fornecer a largura da caneta como um dos argumentos para o construtor.</span><span class="sxs-lookup"><span data-stu-id="82cc5-103">When you create a <xref:System.Drawing.Pen>, you can supply the pen width as one of the arguments to the constructor.</span></span> <span data-ttu-id="82cc5-104">Você também pode alterar a largura da caneta com a <xref:System.Drawing.Pen.Width%2A> propriedade do <xref:System.Drawing.Pen> classe.</span><span class="sxs-lookup"><span data-stu-id="82cc5-104">You can also change the pen width with the <xref:System.Drawing.Pen.Width%2A> property of the <xref:System.Drawing.Pen> class.</span></span>  
+# <a name="how-to-set-pen-width-and-alignment"></a><span data-ttu-id="57084-102">Como: definir a largura e o alinhamento de uma caneta</span><span class="sxs-lookup"><span data-stu-id="57084-102">How to: Set Pen Width and Alignment</span></span>
+<span data-ttu-id="57084-103">Quando você cria um <xref:System.Drawing.Pen>, você pode fornecer a largura da caneta como um dos argumentos para o construtor.</span><span class="sxs-lookup"><span data-stu-id="57084-103">When you create a <xref:System.Drawing.Pen>, you can supply the pen width as one of the arguments to the constructor.</span></span> <span data-ttu-id="57084-104">Você também pode alterar a largura da caneta com a <xref:System.Drawing.Pen.Width%2A> propriedade do <xref:System.Drawing.Pen> classe.</span><span class="sxs-lookup"><span data-stu-id="57084-104">You can also change the pen width with the <xref:System.Drawing.Pen.Width%2A> property of the <xref:System.Drawing.Pen> class.</span></span>  
   
- <span data-ttu-id="82cc5-105">Uma linha teórica tem uma largura de 0.</span><span class="sxs-lookup"><span data-stu-id="82cc5-105">A theoretical line has a width of 0.</span></span> <span data-ttu-id="82cc5-106">Quando você desenha uma linha com um pixel de largura, os pixels são centralizados na linha teórica.</span><span class="sxs-lookup"><span data-stu-id="82cc5-106">When you draw a line that is 1 pixel wide, the pixels are centered on the theoretical line.</span></span> <span data-ttu-id="82cc5-107">Se você desenhar uma linha contendo mais de um pixel de largura, os pixels serão centralizados na linha teórica ou aparecerão em um dos lados da linha teórica.</span><span class="sxs-lookup"><span data-stu-id="82cc5-107">If you draw a line that is more than one pixel wide, the pixels are either centered on the theoretical line or appear to one side of the theoretical line.</span></span> <span data-ttu-id="82cc5-108">Você pode definir a propriedade de alinhamento da caneta de um <xref:System.Drawing.Pen> para determinar como os pixels desenhados com essa caneta serão posicionados em relação ao linhas teóricas.</span><span class="sxs-lookup"><span data-stu-id="82cc5-108">You can set the pen alignment property of a <xref:System.Drawing.Pen> to determine how the pixels drawn with that pen will be positioned relative to theoretical lines.</span></span>  
+ <span data-ttu-id="57084-105">Uma linha teórica tem uma largura de 0.</span><span class="sxs-lookup"><span data-stu-id="57084-105">A theoretical line has a width of 0.</span></span> <span data-ttu-id="57084-106">Quando você desenha uma linha com um pixel de largura, os pixels são centralizados na linha teórica.</span><span class="sxs-lookup"><span data-stu-id="57084-106">When you draw a line that is 1 pixel wide, the pixels are centered on the theoretical line.</span></span> <span data-ttu-id="57084-107">Se você desenhar uma linha contendo mais de um pixel de largura, os pixels serão centralizados na linha teórica ou aparecerão em um dos lados da linha teórica.</span><span class="sxs-lookup"><span data-stu-id="57084-107">If you draw a line that is more than one pixel wide, the pixels are either centered on the theoretical line or appear to one side of the theoretical line.</span></span> <span data-ttu-id="57084-108">Você pode definir a propriedade de alinhamento da caneta de um <xref:System.Drawing.Pen> para determinar como os pixels desenhados com essa caneta serão posicionados em relação ao linhas teóricas.</span><span class="sxs-lookup"><span data-stu-id="57084-108">You can set the pen alignment property of a <xref:System.Drawing.Pen> to determine how the pixels drawn with that pen will be positioned relative to theoretical lines.</span></span>  
   
- <span data-ttu-id="82cc5-109">Os valores <xref:System.Drawing.Drawing2D.PenAlignment.Center>, <xref:System.Drawing.Drawing2D.PenAlignment.Outset>, e <xref:System.Drawing.Drawing2D.PenAlignment.Inset> que aparecem nas seguintes exemplos de código são membros do <xref:System.Drawing.Drawing2D.PenAlignment> enumeração.</span><span class="sxs-lookup"><span data-stu-id="82cc5-109">The values <xref:System.Drawing.Drawing2D.PenAlignment.Center>, <xref:System.Drawing.Drawing2D.PenAlignment.Outset>, and <xref:System.Drawing.Drawing2D.PenAlignment.Inset> that appear in the following code examples are members of the <xref:System.Drawing.Drawing2D.PenAlignment> enumeration.</span></span>  
+ <span data-ttu-id="57084-109">Os valores <xref:System.Drawing.Drawing2D.PenAlignment.Center>, <xref:System.Drawing.Drawing2D.PenAlignment.Outset>, e <xref:System.Drawing.Drawing2D.PenAlignment.Inset> que aparecem nas seguintes exemplos de código são membros do <xref:System.Drawing.Drawing2D.PenAlignment> enumeração.</span><span class="sxs-lookup"><span data-stu-id="57084-109">The values <xref:System.Drawing.Drawing2D.PenAlignment.Center>, <xref:System.Drawing.Drawing2D.PenAlignment.Outset>, and <xref:System.Drawing.Drawing2D.PenAlignment.Inset> that appear in the following code examples are members of the <xref:System.Drawing.Drawing2D.PenAlignment> enumeration.</span></span>  
   
- <span data-ttu-id="82cc5-110">O exemplo de código a seguir desenha uma linha duas vezes: uma vez com uma caneta preta da largura 1 e uma vez com uma caneta verde da largura 10.</span><span class="sxs-lookup"><span data-stu-id="82cc5-110">The following code example draws a line twice: once with a black pen of width 1 and once with a green pen of width 10.</span></span>  
+ <span data-ttu-id="57084-110">O exemplo de código a seguir desenha uma linha duas vezes: uma vez com uma caneta preta da largura 1 e uma vez com uma caneta verde da largura 10.</span><span class="sxs-lookup"><span data-stu-id="57084-110">The following code example draws a line twice: once with a black pen of width 1 and once with a green pen of width 10.</span></span>  
   
-### <a name="to-vary-the-width-of-a-pen"></a><span data-ttu-id="82cc5-111">Variar a largura da caneta</span><span class="sxs-lookup"><span data-stu-id="82cc5-111">To vary the width of a pen</span></span>  
+### <a name="to-vary-the-width-of-a-pen"></a><span data-ttu-id="57084-111">Variar a largura da caneta</span><span class="sxs-lookup"><span data-stu-id="57084-111">To vary the width of a pen</span></span>  
   
--   <span data-ttu-id="82cc5-112">Defina o valor da <xref:System.Drawing.Pen.Alignment%2A> propriedade para <xref:System.Drawing.Drawing2D.PenAlignment.Center> (o padrão) para especificar que os pixels desenhados com a caneta verde serão centralizados na linha teórica.</span><span class="sxs-lookup"><span data-stu-id="82cc5-112">Set the value of the <xref:System.Drawing.Pen.Alignment%2A> property to <xref:System.Drawing.Drawing2D.PenAlignment.Center> (the default) to specify that pixels drawn with the green pen will be centered on the theoretical line.</span></span> <span data-ttu-id="82cc5-113">A ilustração a seguir mostra a linha resultante.</span><span class="sxs-lookup"><span data-stu-id="82cc5-113">The following illustration shows the resulting line.</span></span>  
+-   <span data-ttu-id="57084-112">Defina o valor da <xref:System.Drawing.Pen.Alignment%2A> propriedade para <xref:System.Drawing.Drawing2D.PenAlignment.Center> (o padrão) para especificar que os pixels desenhados com a caneta verde serão centralizados na linha teórica.</span><span class="sxs-lookup"><span data-stu-id="57084-112">Set the value of the <xref:System.Drawing.Pen.Alignment%2A> property to <xref:System.Drawing.Drawing2D.PenAlignment.Center> (the default) to specify that pixels drawn with the green pen will be centered on the theoretical line.</span></span> <span data-ttu-id="57084-113">A ilustração a seguir mostra a linha resultante.</span><span class="sxs-lookup"><span data-stu-id="57084-113">The following illustration shows the resulting line.</span></span>  
   
-     <span data-ttu-id="82cc5-114">![Canetas](./media/pens1a.gif "pens1A")</span><span class="sxs-lookup"><span data-stu-id="82cc5-114">![Pens](./media/pens1a.gif "pens1A")</span></span>  
+     ![Uma linha preta fina com realce verde.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
-     <span data-ttu-id="82cc5-115">O exemplo de código a seguir desenha um retângulo duas vezes: uma vez com uma caneta preta da largura 1 e uma vez com uma caneta verde da largura 10.</span><span class="sxs-lookup"><span data-stu-id="82cc5-115">The following code example draws a rectangle twice: once with a black pen of width 1 and once with a green pen of width 10.</span></span>  
+     <span data-ttu-id="57084-115">O exemplo de código a seguir desenha um retângulo duas vezes: uma vez com uma caneta preta da largura 1 e uma vez com uma caneta verde da largura 10.</span><span class="sxs-lookup"><span data-stu-id="57084-115">The following code example draws a rectangle twice: once with a black pen of width 1 and once with a green pen of width 10.</span></span>  
   
      [!code-csharp[System.Drawing.UsingAPen#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#41)]
      [!code-vb[System.Drawing.UsingAPen#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#41)]  
   
-### <a name="to-change-the-alignment-of-a-pen"></a><span data-ttu-id="82cc5-116">Alterar o alinhamento de uma caneta</span><span class="sxs-lookup"><span data-stu-id="82cc5-116">To change the alignment of a pen</span></span>  
+### <a name="to-change-the-alignment-of-a-pen"></a><span data-ttu-id="57084-116">Alterar o alinhamento de uma caneta</span><span class="sxs-lookup"><span data-stu-id="57084-116">To change the alignment of a pen</span></span>  
   
--   <span data-ttu-id="82cc5-117">Defina o valor da <xref:System.Drawing.Pen.Alignment%2A> propriedade para <xref:System.Drawing.Drawing2D.PenAlignment.Center> para especificar que os pixels desenhados com a caneta verde serão centralizados no limite do retângulo.</span><span class="sxs-lookup"><span data-stu-id="82cc5-117">Set the value of the <xref:System.Drawing.Pen.Alignment%2A> property to <xref:System.Drawing.Drawing2D.PenAlignment.Center> to specify that the pixels drawn with the green pen will be centered on the boundary of the rectangle.</span></span>  
+-   <span data-ttu-id="57084-117">Defina o valor da <xref:System.Drawing.Pen.Alignment%2A> propriedade para <xref:System.Drawing.Drawing2D.PenAlignment.Center> para especificar que os pixels desenhados com a caneta verde serão centralizados no limite do retângulo.</span><span class="sxs-lookup"><span data-stu-id="57084-117">Set the value of the <xref:System.Drawing.Pen.Alignment%2A> property to <xref:System.Drawing.Drawing2D.PenAlignment.Center> to specify that the pixels drawn with the green pen will be centered on the boundary of the rectangle.</span></span>  
   
-     <span data-ttu-id="82cc5-118">A ilustração a seguir mostra o retângulo resultante.</span><span class="sxs-lookup"><span data-stu-id="82cc5-118">The following illustration shows the resulting rectangle.</span></span>  
+     <span data-ttu-id="57084-118">A ilustração a seguir mostra o retângulo resultante:</span><span class="sxs-lookup"><span data-stu-id="57084-118">The following illustration shows the resulting rectangle:</span></span>
   
-     <span data-ttu-id="82cc5-119">![Canetas](./media/pens2.gif "pens2")</span><span class="sxs-lookup"><span data-stu-id="82cc5-119">![Pens](./media/pens2.gif "pens2")</span></span>  
+     ![Um retângulo desenhado com linhas finas pretas com realce verde.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-rectangle.gif)  
   
      [!code-csharp[System.Drawing.UsingAPen#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
      [!code-vb[System.Drawing.UsingAPen#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
   
-### <a name="to-create-an-inset-pen"></a><span data-ttu-id="82cc5-120">Criar uma caneta de baixo-relevo</span><span class="sxs-lookup"><span data-stu-id="82cc5-120">To create an inset pen</span></span>  
+### <a name="to-create-an-inset-pen"></a><span data-ttu-id="57084-120">Criar uma caneta de baixo-relevo</span><span class="sxs-lookup"><span data-stu-id="57084-120">To create an inset pen</span></span>  
   
--   <span data-ttu-id="82cc5-121">Altere o alinhamento da caneta verde modificando a terceira instrução no exemplo de código anterior da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="82cc5-121">Change the green pen's alignment by modifying the third statement in the preceding code example as follows:</span></span>  
+-   <span data-ttu-id="57084-121">Altere o alinhamento da caneta verde modificando a terceira instrução no exemplo de código anterior da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="57084-121">Change the green pen's alignment by modifying the third statement in the preceding code example as follows:</span></span>  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
   
-     <span data-ttu-id="82cc5-122">Agora os pixels na linha verde larga aparecem no interior do retângulo conforme mostrado na ilustração a seguir.</span><span class="sxs-lookup"><span data-stu-id="82cc5-122">Now the pixels in the wide green line appear on the inside of the rectangle as shown in the following illustration.</span></span>  
+     <span data-ttu-id="57084-122">Agora os pixels na linha verde larga aparecem no interior do retângulo conforme mostrado na ilustração a seguir:</span><span class="sxs-lookup"><span data-stu-id="57084-122">Now the pixels in the wide green line appear on the inside of the rectangle as shown in the following illustration:</span></span>
   
-     <span data-ttu-id="82cc5-123">![Canetas](./media/pens3.gif "pens3")</span><span class="sxs-lookup"><span data-stu-id="82cc5-123">![Pens](./media/pens3.gif "pens3")</span></span>  
+     ![Um retângulo desenhado com linhas pretas com a linha verde larga dentro.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
-## <a name="see-also"></a><span data-ttu-id="82cc5-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="82cc5-124">See also</span></span>
-- [<span data-ttu-id="82cc5-125">Usando uma caneta para desenhar linhas e formas</span><span class="sxs-lookup"><span data-stu-id="82cc5-125">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
-- [<span data-ttu-id="82cc5-126">Elementos Gráficos e Desenho nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="82cc5-126">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="57084-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="57084-124">See also</span></span>
+- [<span data-ttu-id="57084-125">Usando uma caneta para desenhar linhas e formas</span><span class="sxs-lookup"><span data-stu-id="57084-125">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
+- [<span data-ttu-id="57084-126">Elementos Gráficos e Desenho nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="57084-126">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)

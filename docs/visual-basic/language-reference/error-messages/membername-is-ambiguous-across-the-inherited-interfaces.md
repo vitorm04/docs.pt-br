@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 1548c9894d476cc4b92d6581362d309e7b4d00d4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264981"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820824"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="35566-102">'\<membername >' é ambíguo entre as interfaces herdadas\<interfacename1 >' e '\<interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="35566-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
-<span data-ttu-id="35566-103">A interface herda dois ou mais membros com o mesmo nome de várias interfaces.</span><span class="sxs-lookup"><span data-stu-id="35566-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="5f363-102">'\<membername >' é ambíguo entre as interfaces herdadas\<interfacename1 >' e '\<interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="5f363-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
+<span data-ttu-id="5f363-103">A interface herda dois ou mais membros com o mesmo nome de várias interfaces.</span><span class="sxs-lookup"><span data-stu-id="5f363-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="35566-104">**ID do erro:** BC30685</span><span class="sxs-lookup"><span data-stu-id="35566-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="5f363-104">**ID do erro:** BC30685</span><span class="sxs-lookup"><span data-stu-id="5f363-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="35566-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="35566-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5f363-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="5f363-105">To correct this error</span></span>  
   
--   <span data-ttu-id="35566-106">Converta o valor para a interface base que você deseja usar. Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="35566-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+-   <span data-ttu-id="5f363-106">Converta o valor para a interface base que você deseja usar. Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="5f363-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,5 +46,6 @@ ms.locfileid: "55264981"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="35566-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="35566-107">See also</span></span>
-- [<span data-ttu-id="35566-108">Interfaces</span><span class="sxs-lookup"><span data-stu-id="35566-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="5f363-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5f363-107">See also</span></span>
+
+- [<span data-ttu-id="5f363-108">Interfaces</span><span class="sxs-lookup"><span data-stu-id="5f363-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
