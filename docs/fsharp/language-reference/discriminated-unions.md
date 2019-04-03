@@ -2,12 +2,12 @@
 title: Uniões discriminadas
 description: Saiba como usar F# uniões discriminadas.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611835"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821413"
 ---
 # <a name="discriminated-unions"></a>Uniões discriminadas
 
@@ -156,7 +156,7 @@ As uniões discriminadas podem ser recursivas, que significa que a própria uni�
 
 No código anterior, `resultSumTree` tem o valor 10. A ilustração a seguir mostra a estrutura de árvore para `myTree`.
 
-![Estrutura de árvore para o myTree](../media/TreeStructureDiagram.png)
+![Diagrama que mostra a estrutura de árvore para o myTree.](../media/discriminated-unions/tree-structure-mytree.png)
 
 As uniões discriminadas funcionarão bem se os nós na árvore forem heterogêneos. No código a seguir, o tipo `Expression` representa a árvore de sintaxe abstrata de uma expressão em uma linguagem de programação simples que dê suporte à adição e multiplicação de números e variáveis. Alguns dos casos de união não são recursivos e representam números (`Number`) ou variáveis (`Variable`). Outros casos são recursivos e representam operações (`Add` e `Multiply`), onde os operandos também são expressões. O `Evaluate` função usa uma expressão de correspondência para processar recursivamente a árvore de sintaxe.
 

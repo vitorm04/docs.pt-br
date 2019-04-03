@@ -2,12 +2,12 @@
 title: 'Arquivo XML de exemplo: Orders3 de compra consolidados'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-ms.openlocfilehash: 2cfd996c088f29766b3878c3c5ad1fc48c69e2dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edeb1381b674ee9f6fba45f14c7b6f12b363a37a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503673"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824735"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Arquivo XML de exemplo: Ordens de compra consolidadas
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo é um conjunto de pedidos de compra com várias formas diferentes de empresas. Os pedidos de compra de cada empresa em namespaces são separadas.  
@@ -145,4 +145,5 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

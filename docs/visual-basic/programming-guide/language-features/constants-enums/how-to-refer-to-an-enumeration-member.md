@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: e4f7ede26329ed97c65be8218be78aa40b1294e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976259"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813971"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Como: Se referir a um membro de enumeração (Visual Basic)
 Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores constantes a nomes. Por exemplo, é possível declarar uma enumeração de um conjunto de constantes de inteiros associados aos dias da semana e, em seguida, usar os nomes de dias em vez de seus valores de inteiros em seu código.  
@@ -26,6 +26,7 @@ Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de c
      [!code-vb[VbEnumsTask#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#19)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Enumerações e Qualificação de Nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Como: Iterar por meio de uma enumeração no Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)

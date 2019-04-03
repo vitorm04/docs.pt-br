@@ -2,12 +2,12 @@
 title: Token personalizado
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: d00ae6eceb00ce53ad2b0bba2c14d9c4816b12e7
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f056e54197a98a0218ef94e4df2fc46745a08985
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305618"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817312"
 ---
 # <a name="custom-token"></a>Token personalizado
 Este exemplo demonstra como adicionar uma implementação personalizada de token em um aplicativo do Windows Communication Foundation (WCF). O exemplo usa um `CreditCardToken` passar com segurança as informações sobre cartões de crédito do cliente para o serviço. O token é passado no cabeçalho da mensagem do WS-Security e é assinado e criptografado usando o elemento de associação de segurança simétrica juntamente com outros cabeçalhos de mensagem e o corpo da mensagem. Isso é útil em casos em que os tokens internos não são suficientes. Este exemplo demonstra como fornecer um token de segurança personalizada para um serviço em vez de usar um dos tokens internos. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
@@ -629,4 +629,3 @@ string GetCallerCreditCardNumber()
   
 1.  Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
-## <a name="see-also"></a>Consulte também

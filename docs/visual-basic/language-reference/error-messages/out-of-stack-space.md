@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655485"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814595"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Sem espaço na pilha (Visual Basic)
 A pilha é uma área de trabalho de memória que aumenta e diminui dinamicamente com as demandas do seu programa em execução. Seus limites forem excedidos.  
@@ -29,4 +29,5 @@ A pilha é uma área de trabalho de memória que aumenta e diminui dinamicamente
 6.  Verifique se que você não causou uma cascata"eventos" Disparando um evento que chama um procedimento de evento já na pilha. Cascata de eventos é semelhante a uma chamada de procedimento recursivo não terminado, mas é menos óbvio, já que a chamada é feita pelo Visual Basic, em vez de uma chamada explícita no código. Use o `Calls` caixa de diálogo exibe quais procedimentos estão ativos na pilha.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Janelas de Memória](/visualstudio/debugger/memory-windows)

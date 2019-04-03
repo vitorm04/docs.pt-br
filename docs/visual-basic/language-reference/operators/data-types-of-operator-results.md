@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650477"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814949"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipos de dados de resultados do operador (Visual Basic)
 Visual Basic determina o tipo de dados de resultado de uma operação com base nos tipos de dados dos operandos. Em alguns casos, isso pode ser um tipo de dados com um intervalo maior do que de qualquer um dos operandos.  
@@ -176,6 +176,7 @@ Visual Basic determina o tipo de dados de resultado de uma operação com base n
  O `Like` operador é definido somente para correspondência de padrões de `String` operandos. Visual Basic tenta converter cada operando conforme necessário para `String` antes da operação. O tipo de dados do resultado é sempre `Boolean`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
 - [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Operadores aritméticos no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
