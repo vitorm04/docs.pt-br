@@ -1,15 +1,15 @@
 ---
-title: 'Padrões de design: Publicação-assinatura baseada em lista'
+title: 'Padrões de design: publicação-assinatura baseada em lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 59b56ce5b3be031a598c690976d5f9c23932fc66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333385"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815024"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Padrões de design: Publicação-assinatura baseada em lista
+# <a name="design-patterns-list-based-publish-subscribe"></a>Padrões de design: publicação-assinatura baseada em lista
 Este exemplo ilustra o padrão baseado em lista publicar-assinar, implementado como um programa do Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -161,4 +161,3 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   
-## <a name="see-also"></a>Consulte também

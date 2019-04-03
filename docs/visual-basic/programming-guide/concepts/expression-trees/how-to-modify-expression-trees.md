@@ -2,12 +2,12 @@
 title: 'Como: Modificar árvores de expressão (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 41af4ba3933931eb62f85cd4ad69eb1b8cc50ac2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c53983c6dfc601a7e8e32ad020f5f7feb66cfe04
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603516"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834329"
 ---
 # <a name="how-to-modify-expression-trees-visual-basic"></a>Como: Modificar árvores de expressão (Visual Basic)
 Este tópico mostra como modificar uma árvore de expressão. As árvores de expressão são imutáveis, o que significa que elas não podem ser diretamente modificadas. Para alterar uma árvore de expressão, você deve criar uma cópia de uma árvore de expressão existente e, ao criar a cópia, faça as alterações necessárias. Você pode usar a classe <xref:System.Linq.Expressions.ExpressionVisitor> para percorrer uma árvore de expressão existente e copiar cada nó que ela visitar.  
@@ -71,5 +71,6 @@ Este tópico mostra como modificar uma árvore de expressão. As árvores de exp
 6.  Compile e execute o aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

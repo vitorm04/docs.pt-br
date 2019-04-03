@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596001"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833991"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Conversões implícitas e explícitas (Visual Basic)
 Uma *conversão implícita* não requer nenhuma sintaxe especial no código-fonte. No exemplo a seguir, o Visual Basic converte implicitamente o valor de `k` para um valor de ponto flutuante de precisão simples antes de atribuí-lo para `q`.  
@@ -130,6 +130,7 @@ End If
  Executar uma conversão explícita é também conhecido como *conversão* uma expressão para uma classe de objeto ou tipo de dados especificados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversões entre Cadeias de Caracteres e Outros Tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [Como: Converter um objeto em outro tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

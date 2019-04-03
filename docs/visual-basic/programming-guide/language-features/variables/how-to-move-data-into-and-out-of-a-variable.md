@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: 9b34173ebb3226fa00610c124c7b680e18d80de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717925"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818522"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Como: Mover dados dentro e fora de uma variável (Visual Basic)
 Você pode armazenar um valor em uma variável, colocando o nome da variável no lado esquerdo de uma instrução de atribuição.  
@@ -36,7 +36,7 @@ Você pode armazenar um valor em uma variável, colocando o nome da variável no
   
 -   Use o nome da variável em uma expressão. Você pode usar uma variável em qualquer lugar você pode usar uma constante ou um literal, exceto em uma expressão que define o valor de uma constante.  
   
-     -ou-  
+     - ou -  
   
 -   Use o nome da variável igual a seguir (`=`) entrar em uma instrução de atribuição.  
   
@@ -50,6 +50,7 @@ Você pode armazenar um valor em uma variável, colocando o nome da variável no
      O valor da variável participa na expressão, assim como seria uma constante e, em seguida, ele é armazenado na variável ou propriedade no lado esquerdo da instrução de atribuição.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Variáveis](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

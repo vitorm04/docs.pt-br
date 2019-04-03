@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: c90e07afb1515b50ad6e2fd2a1bbe42f6da5fa95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968134"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834069"
 ---
 # <a name="option-compare-statement"></a>Instrução Option Compare
 Declara o método padrão de comparação a ser usado ao comparar dados da cadeia de caracteres.  
@@ -88,6 +88,7 @@ Option Compare { Binary | Text }
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>
 - <xref:Microsoft.VisualBasic.Strings.Replace%2A>

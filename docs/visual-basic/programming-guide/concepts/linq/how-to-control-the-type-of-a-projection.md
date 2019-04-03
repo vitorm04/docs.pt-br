@@ -2,12 +2,12 @@
 title: 'Como: Controlar o tipo de uma projeção (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-ms.openlocfilehash: e892e6328576a9727a13a4c1acd951d44ce4daa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd09914a75a8d4b20ddf9ff452f046bf7671152f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628861"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831399"
 ---
 # <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Como: Controlar o tipo de uma projeção (Visual Basic)
 A projeção é o processo de receber um dataset, de filtre-o, para alterar sua forma, e mesmo de alterar seu tipo. A maioria das expressões de consulta executam projeções. A maioria das expressões de consulta mostradas nesta seção valor para <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, mas você pode controlar o tipo de projeção para criar coleções de outros tipos. Este tópico mostra como fazer isso.  
@@ -15,7 +15,7 @@ A projeção é o processo de receber um dataset, de filtre-o, para alterar sua 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir define um novo tipo, `Customer`. A expressão de consulta cria uma instância em novos objetos de `Customer` na cláusula `Select` . Isso faz com que o tipo da expressão de consulta para ser <xref:System.Collections.Generic.IEnumerable%601> de `Customer`.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Os clientes e pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Public Class Customer  
@@ -87,5 +87,6 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Linq.Enumerable.Select%2A>
 - [Projeções e transformações (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

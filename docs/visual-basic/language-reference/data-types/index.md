@@ -37,12 +37,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 14eaacda83576b6c38d4783fba7c898a8c4aaa5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746732"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821966"
 ---
 # <a name="data-type-summary-visual-basic"></a>Resumo do tipo de dados (Visual Basic)
 A tabela a seguir mostra os tipos de dados do Visual Basic, seus tipos common language runtime suporte, a alocação de armazenamento nominal e os intervalos de valor.  
@@ -92,6 +92,7 @@ A tabela a seguir mostra os tipos de dados do Visual Basic, seus tipos common la
  Um `Object` referindo-se a todos os dados elementares ou compostos tipo usa 4 bytes, além dos dados contidos no tipo de dados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

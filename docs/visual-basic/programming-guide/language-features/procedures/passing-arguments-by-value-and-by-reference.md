@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: c2c778afea90a90b2b5f83300c2d174db39f3c15
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978469"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830351"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Passando argumentos por valor e por referência (Visual Basic)
 No Visual Basic, você pode passar um argumento para um procedimento *pelo valor* ou *por referência*. Isso é conhecido como o *mecanismo de passagem*, e determina se o procedimento pode modificar o elemento de programação subjacente do argumento no código de chamada. A declaração de procedimento determina o mecanismo de passagem para cada parâmetro, especificando o [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palavra-chave.  
@@ -69,6 +69,7 @@ No Visual Basic, você pode passar um argumento para um procedimento *pelo valor
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Como: Passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)

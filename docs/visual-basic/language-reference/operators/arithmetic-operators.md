@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
-ms.openlocfilehash: cc84ecf2bbbff1f213235750065ca17f9fcfef6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da76f528ea6087fd973bd267c67952ce8687dc86
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660964"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816791"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>Operadores aritméticos (Visual Basic)
 A seguir estão os operadores aritméticos definidos no Visual Basic.  
@@ -31,5 +31,6 @@ A seguir estão os operadores aritméticos definidos no Visual Basic.
  [-Operador](../../../visual-basic/language-reference/operators/subtraction-operator.md) (unário e binário)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operadores aritméticos no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

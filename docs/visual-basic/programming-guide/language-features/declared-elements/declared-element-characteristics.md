@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582247"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821290"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Características do elemento declarado (Visual Basic)
 Um *característica* de um elemento declarado é um aspecto do elemento que afeta como o código pode interagir com ele. Cada elemento declarado tem um ou mais das seguintes características associadas a ele:  
@@ -54,6 +54,7 @@ Um *característica* de um elemento declarado é um aspecto do elemento que afet
  <sup>1</sup> escopo às vezes é conhecido como *visibilidade*.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Nomes de Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

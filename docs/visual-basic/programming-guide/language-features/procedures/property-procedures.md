@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971527"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828336"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedimentos de propriedade (Visual Basic)
 Um procedimento de propriedade é uma série de instruções do Visual Basic que manipulam uma propriedade personalizada em um módulo, classe ou estrutura. Procedimentos de propriedade também são conhecidos como *acessadores de propriedade*.  
@@ -78,7 +78,7 @@ End Property
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
-## <a name="property-value"></a>Valor de propriedade  
+## <a name="property-value"></a>Valor da propriedade  
  Em um `Get` procedimento, o valor retornado é fornecido para a expressão de chamada como o valor da propriedade.  
   
  Em um `Set` procedimento, o novo valor da propriedade é passado para o parâmetro do `Set` instrução. Se você declarar explicitamente um parâmetro, você deve declará-la com o mesmo tipo de dados como a propriedade. Se você não declarar um parâmetro, o compilador usa o parâmetro implícito `Value` para representar o novo valor a ser atribuído à propriedade.  
@@ -106,6 +106,7 @@ End Property
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Procedimentos de Função](./function-procedures.md)
 - [Procedimentos de Operador](./operator-procedures.md)

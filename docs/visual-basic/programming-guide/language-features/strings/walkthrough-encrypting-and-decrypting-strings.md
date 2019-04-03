@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: fe91e0062ac35859a3b85eb080d16fb88a6f9aaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aaf8238a330ceb9e1cf4f9ff5892d1db1d951faa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972775"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826789"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Passo a passo: Criptografando e descriptografando cadeias de caracteres no Visual Basic
 Este passo a passo mostra como usar o <xref:System.Security.Cryptography.DESCryptoServiceProvider> classe para criptografar e descriptografar cadeias de caracteres usando a versão do CSP (provedor) de serviço criptográfico do Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algoritmo. A primeira etapa é criar uma classe de invólucro simples que encapsula o algoritmo 3DES e armazena os dados criptografados como uma cadeia de caracteres codificado em base 64. Em seguida, esse wrapper é usado para armazenar com segurança dados particulares do usuário em um arquivo de texto publicamente acessível.  
@@ -75,6 +75,7 @@ Este passo a passo mostra como usar o <xref:System.Security.Cryptography.DESCryp
      Quando você testar o aplicativo, observe que ele não descriptografa os dados se você fornecer a senha incorreta.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Security.Cryptography>
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>
 - <xref:System.Security.Cryptography.DES>

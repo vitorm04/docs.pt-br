@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: ceee1b47fb66cfb8e24b6871af3be6475031504f
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738871"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818679"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Como: Fazer um objeto variável não se referir a qualquer instância (Visual Basic)
 Você pode desassociar uma variável de objeto de qualquer instância do objeto definindo-a para [nada](../../../../visual-basic/language-reference/nothing.md).  
@@ -32,6 +32,7 @@ Você pode desassociar uma variável de objeto de qualquer instância do objeto 
  Se você usar uma variável de objeto para objetos que contêm dados confidenciais, você pode definir a variável `Nothing` quando você não está ativamente lidando com um desses objetos. Isso reduz a chance de códigos mal-intencionados obtenham acesso aos dados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.NullReferenceException>
 - [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Atribuição de variável do objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

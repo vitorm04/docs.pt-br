@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: 660fb9a7f60bc95a5039cdf3bad098c330ac969e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4e238cbc3b99209e88bb56c73097f25e56ccdfb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682674"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814478"
 ---
 # <a name="ws-reliable-session"></a>Sessão confiável de WS
 Este exemplo demonstra o uso de sessões confiáveis. Sessões confiáveis fornecem suporte para o sistema de mensagens confiável e sessões. Sistema de mensagens confiável tenta novamente a comunicação em caso de falha e permite que as garantias de entrega seja especificado, como em ordem chegada de mensagens. Sessões de mantêm o estado dos clientes entre chamadas. O exemplo implementa sessões para manter o estado do cliente e especifica as garantias de entrega em ordem.  
@@ -85,4 +85,3 @@ Press <ENTER> to terminate client.
   
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Consulte também

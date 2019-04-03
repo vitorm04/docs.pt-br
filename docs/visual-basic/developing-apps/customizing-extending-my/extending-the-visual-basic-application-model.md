@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245642"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834706"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estendendo o modelo de aplicativo do Visual Basic
 Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Overridable` os membros de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Essa técnica permite que você personalize o comportamento do modelo de aplicativo e adicionar chamadas para seus próprios métodos quando o aplicativo é inicializado e desligado.  
@@ -19,13 +19,13 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
   
  O gráfico a seguir mostra a sequência de chamadas de modelo de aplicativo em um aplicativo de formulários do Windows Visual Basic normal. A sequência começa quando o `Sub Main` chamadas de procedimento o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método.  
   
- ![Modelo de aplicativo do Visual Basic &#45; &#45; execute](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Diagrama que mostra a sequência de chamadas de modelo de aplicativo.](./media/extending-the-visual-basic-application-model/application-model-call-sequence.gif)  
   
  O modelo de aplicativo do Visual Basic também fornece o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> e <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventos. Os gráficos a seguir mostram o mecanismo para acionar esses eventos.  
   
- ![Modelo de aplicativo do Visual Basic &#45; &#45; seguida da instância](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Diagrama que mostra o método OnStartupNextInstance acionar o evento StartupNextInstance.](./media/extending-the-visual-basic-application-model/raise-startupnextinstance-event.gif)  
   
- ![Exceção sem tratamento do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
+ ![Diagrama que mostra o método OnUnhandledException acionar o evento UnhandledException.](./media/extending-the-visual-basic-application-model/raise-unhandledexception-event.gif)  
   
 ## <a name="overriding-the-base-methods"></a>Substituindo os métodos Base  
  O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método define a ordem na qual o `Application` métodos executados. Por padrão, o `Sub Main` chamadas de procedimento para um aplicativo Windows Forms a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método.  
@@ -90,13 +90,14 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Se o aplicativo salva automaticamente as alterações de configurações do usuário do aplicativo quando o aplicativo é encerrado.|**Salvar My. Settings no desligamento** caixa de seleção|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|O que faz com que o aplicativo seja finalizado, como quando fecha o formulário de inicialização ou quando o último formulário fecha.|**Modo de desligamento** lista|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- [Visão geral do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- [Página de Aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+## <a name="see-also"></a>Consulte também
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- [Visão geral do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Página de Aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

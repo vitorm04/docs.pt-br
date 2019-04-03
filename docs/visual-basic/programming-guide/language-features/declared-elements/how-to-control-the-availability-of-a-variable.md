@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 4d5db7fe474d8732e0ae37f3d95d0187eef68ec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582481"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841687"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Como: Controlar a disponibilidade de uma variável (Visual Basic)
 Controlar a disponibilidade de uma variável especificando seu *nível de acesso*. O nível de acesso determina qual código tem permissão para ler ou gravar na variável.  
@@ -45,7 +45,7 @@ Controlar a disponibilidade de uma variável especificando seu *nível de acesso
   
      Você pode ler ou gravar a variável de qualquer código que interopera com o assembly.  
   
- -ou-  
+ - ou -  
   
 1.  Para obter uma variável local, coloque o `Dim` instrução para a variável dentro de um procedimento.  
   
@@ -87,6 +87,7 @@ Private numberForMeOnly As Integer
  A configuração mais restritiva do nível de acesso de uma variável, menores as chances de que um código mal-intencionado pode fazer inadequado usá-lo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Níveis de acesso no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Público](../../../../visual-basic/language-reference/modifiers/public.md)

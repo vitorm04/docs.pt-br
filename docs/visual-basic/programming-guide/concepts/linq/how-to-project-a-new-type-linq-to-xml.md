@@ -2,12 +2,12 @@
 title: 'Como: Projetar um novo tipo (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-ms.openlocfilehash: 5d0679c3c6f1fa26408905799f5b7a5d0cef6266
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a94180705674c8aee3ce45607f89fdbba1c873b7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592092"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834654"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Como: Projetar um novo tipo (LINQ to XML) (Visual Basic)
 Outros exemplos nesta seção mostraram consultas que os resultados de retorno como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string`, e <xref:System.Collections.Generic.IEnumerable%601> de `int`. Esses são tipos comuns de resultado, mas não são adequados para cada cenário. Em muitos casos você desejará suas consultas para retornar <xref:System.Collections.Generic.IEnumerable%601> de qualquer outro tipo.  
@@ -43,7 +43,7 @@ Public Class Program
 End Class  
 ```  
   
- Este exemplo usa o `M:System.Xml.Linq.XElement.Element` método foi introduzido no tópico [como: Recuperar um único elemento filho (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Também usa conversões para recuperar os valores dos elementos que são retornados pelo método de `M:System.Xml.Linq.XElement.Element` .  
+ Este exemplo usa o método de `M:System.Xml.Linq.XElement.Element` que foi introduzido no tópico [Como: Recuperar um único elemento filho (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Também usa conversões para recuperar os valores dos elementos que são retornados pelo método de `M:System.Xml.Linq.XElement.Element` .  
   
  Este exemplo gera a seguinte saída:  
   
@@ -53,4 +53,5 @@ Baby Monitor:2
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Projeções e transformações (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

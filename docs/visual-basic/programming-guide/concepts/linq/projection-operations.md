@@ -2,12 +2,12 @@
 title: Operações de projeção (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: f7f1ba7b595d5ea63468aaa2d4fdda62cb9d0693
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408945"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820978"
 ---
 # <a name="projection-operations-visual-basic"></a>Operações de projeção (Visual Basic)
 Projeção refere-se à operação de transformar um objeto em um novo formulário que geralmente consiste apenas nas propriedades que serão usadas posteriormente. Usando a projeção, você pode construir um novo tipo que é criado de cada objeto. É possível projetar uma propriedade e executar uma função matemática nela. Também é possível projetar o objeto original sem alterá-lo.  
@@ -171,6 +171,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 867b6e560936bfd78b56da316dc1c3811cafdf48
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 05067d02258b23bf2e0fae6318aacc7a7a99dc84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304057"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822668"
 ---
 # <a name="message-security-user-name"></a>Message Security User Name
 Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de nome de usuário para o cliente e requer autenticação de servidor usando o certificado X.509v3 do servidor. Todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Por padrão, o nome de usuário e senha fornecidos pelo cliente são usados para fazer logon em uma conta válida do Windows. Este exemplo se baseia a [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Esse exemplo consiste em um programa de console de cliente (Client.exe) e uma biblioteca de serviço (Service.dll) hospedado pelo Internet Information Services (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
@@ -239,4 +239,3 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
-## <a name="see-also"></a>Consulte também

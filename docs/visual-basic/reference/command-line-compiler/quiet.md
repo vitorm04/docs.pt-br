@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: dfa85141e791cfcb28cfc6d216781f0cf14c2e4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32f82eb428c1d3bc427a10b9ca7a1a5feb9e339a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624139"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816532"
 ---
 # <a name="-quiet"></a>-quiet
 Impede que o compilador exibindo o código para avisos e erros de sintaxe.  
@@ -61,5 +61,6 @@ vbc -quiet t2.vb
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

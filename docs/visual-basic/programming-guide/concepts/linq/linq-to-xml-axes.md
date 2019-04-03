@@ -2,17 +2,17 @@
 title: Eixos LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
-ms.openlocfilehash: 2b785dd43feece816675d36064b2b4218ab94cd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a04c15357b5630de06dc0743523e5a98c91745e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684886"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831989"
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a>Eixos LINQ to XML (Visual Basic)
 Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, você poderá consultá-la para localizar elementos e atributos, e recuperar seus valores.  
   
- Antes de poder criar consultas, você deve entender os eixos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Há dois tipos de métodos de eixo: Em primeiro lugar, existem métodos que você chama em uma única <xref:System.Xml.Linq.XElement> objeto, <xref:System.Xml.Linq.XDocument> objeto, ou <xref:System.Xml.Linq.XNode> objeto. Esses métodos operam em um único objeto e retornam uma coleção de objetos <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> ou <xref:System.Xml.Linq.XNode>. Segundo, existem métodos de extensão que operam em coleções e retornam coleções. Os métodos de extensão enumeram a coleção de origem, chamam o método de eixo apropriado em cada item na coleção e concatenam os resultados.  
+ Antes de poder criar consultas, você deve entender os eixos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Há dois tipos de métodos de eixo: Primeiro, existem métodos que são chamados em um único objeto <xref:System.Xml.Linq.XElement>, objeto <xref:System.Xml.Linq.XDocument> ou objeto <xref:System.Xml.Linq.XNode>. Esses métodos operam em um único objeto e retornam uma coleção de objetos <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> ou <xref:System.Xml.Linq.XNode>. Segundo, existem métodos de extensão que operam em coleções e retornam coleções. Os métodos de extensão enumeram a coleção de origem, chamam o método de eixo apropriado em cada item na coleção e concatenam os resultados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -31,4 +31,5 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
 |[Eixos linguagem integrados no Visual Basic (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Resume os eixos integrado do Visual Basic.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de programação (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

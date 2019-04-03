@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 5ede86cca1bddb15cab6518e17405837bda008f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14085172a8f9f9d60af0495a36dd4ba7592213fa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536887"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840972"
 ---
 # <a name="character-data-types-visual-basic"></a>Tipos de dados de caractere (Visual Basic)
 O Visual Basic fornece *tipos de dados de caractere* para lidar com caracteres imprimível e que pode ser exibido. Enquanto ambos lidem com caracteres de Unicode `Char` contém um único caractere, enquanto `String` contém um número indefinido de caracteres.  
@@ -40,6 +40,7 @@ O Visual Basic fornece *tipos de dados de caractere* para lidar com caracteres i
  Para obter mais informações, consulte [tipo de dados de cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos de Dados Elementares](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971995"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830130"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Solucionando problemas de procedimentos (Visual Basic)
 Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com procedimentos.  
@@ -124,6 +124,7 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com pr
  Se duas sobrecargas de um procedimento possuem assinaturas idênticas, exceto pelo fato de que o último parâmetro é declarado [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) em um e [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) no outro, o compilador resolve uma chamada para o procedimento de acordo com a correspondência mais próxima. Para obter mais informações, consulte [resolução de sobrecarga](./overload-resolution.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Subprocedimentos](./sub-procedures.md)
 - [Procedimentos de Função](./function-procedures.md)

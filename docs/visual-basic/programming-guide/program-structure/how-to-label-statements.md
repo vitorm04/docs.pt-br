@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 2f6f0362fcec170e677d153ad9f936a5c2e55ad7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981199"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828635"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Como: Rótulo de instruções (Visual Basic)
 Blocos de instrução são compostos de linhas de código delimitado por vírgulas. Linhas de código precedida por um inteiro ou cadeia de caracteres de identificação são consideradas *rotulado*. Rótulos de instrução são usados para marcar uma linha de código para identificá-lo para uso com instruções de como `On Error Goto`.  
@@ -35,6 +35,7 @@ Blocos de instrução são compostos de linhas de código delimitado por vírgul
      [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)
 - [Nomes de Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

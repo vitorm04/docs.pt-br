@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: d20eea0890708eb2ec2ada503f5c871d54ccc035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364519"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840491"
 ---
 # <a name="how-to-position-a-tooltip"></a>Como: Posicionar um ToolTip
 Este exemplo mostra como especificar a posição de uma dica de ferramenta na tela.  
@@ -34,16 +34,19 @@ Este exemplo mostra como especificar a posição de uma dica de ferramenta na te
  Se você definir o conteúdo de uma dica de ferramenta usando um <xref:System.Windows.Controls.ToolTip> objeto, você pode usar as propriedades de qualquer classe; no entanto, o <xref:System.Windows.Controls.ToolTipService> propriedades têm precedência. Use o <xref:System.Windows.Controls.ToolTipService> propriedades de dicas de ferramenta que não são definidas como <xref:System.Windows.Controls.ToolTip> objetos.  
   
  As ilustrações a seguir mostram como posicionar uma dica de ferramenta usando essas propriedades. Embora, a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] exemplos nessas ilustrações mostram como definir as propriedades que são definidas pela <xref:System.Windows.Controls.ToolTip> classe, as propriedades correspondentes do <xref:System.Windows.Controls.ToolTipService> classe seguem as mesmas regras de layout. Para obter mais informações sobre os possíveis valores para a propriedade de Posicionamento, consulte [Comportamento de posicionamento de pop-up](popup-placement-behavior.md).  
+ 
+ A imagem a seguir mostra o posicionamento de tooltip usando a propriedade de posicionamento:  
   
- ![Posicionamento de ToolTip](./media/tooltipplacement.png "ToolTipPlacement")  
-Posicionamento de ToolTip usando a propriedade de Posicionamento  
+ ![Diagrama mostrando o posicionamento de ToolTip usando a propriedade de posicionamento.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
+ 
+ A imagem a seguir mostra o posicionamento de tooltip usando as propriedades Placement e PlacementRectangle:   
+
+ ![Diagrama mostrando o posicionamento de ToolTip usando uma propriedade PlacementRectangle.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+ 
+ A imagem a seguir mostra o posicionamento de tooltip usando as propriedades Placement, PlacementRectangle e Offset:   
   
- ![Colocando uma dica de ferramenta usando um retângulo de posicionamento](./media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
-Posicionamento de ToolTip usando as propriedades Placement e PlacementRectangle  
-  
- ![Diagrama de posicionamento da dica de ferramenta](./media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-Posicionamento de ToolTip usando as propriedades Placement, PlacementRectangle e Offset  
-  
+ ![Diagrama mostrando o posicionamento de ToolTip usando a propriedade de deslocamento.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
  O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ToolTip> propriedades para especificar a posição de uma dica de ferramenta cujo conteúdo é um <xref:System.Windows.Controls.ToolTip> objeto.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  

@@ -2,12 +2,12 @@
 title: 'Como: Gravar um LINQ para o método de eixo XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: 5d1fdaa9a5c3cb47bedd6d8f6e98b59f844d9ef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655472"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824163"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Como: Gravar um LINQ para o método de eixo XML (Visual Basic)
 Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML. Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos. Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.  
@@ -216,4 +216,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363469"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832106"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Expressões lambda (Visual Basic)
 Um *expressão lambda* é uma função ou sub-rotina sem um nome que pode ser usada sempre que um representante é válido. Expressões lambda podem ser funções ou sub-rotinas e podem ser uma linha ou várias linhas. Você pode passar valores do escopo atual para uma expressão lambda.  
@@ -152,6 +152,7 @@ End Class
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)

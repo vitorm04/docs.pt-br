@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: e0cb67b4b26bf59b074bf5964f253c007fdbe719
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736163"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830117"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Uso eficiente de tipos de dados (Visual Basic)
 Variáveis não declaradas e as variáveis declaradas sem um tipo de dados são atribuídas a `Object` tipo de dados. Isso torna mais fácil escrever programas rapidamente, mas ele pode fazer com que eles sejam executados mais lentamente.  
@@ -49,6 +49,7 @@ Protected s As String
  O `AscW` e `ChrW` funções operam em Unicode. Você deve usá-las preferencialmente a `Asc` e `Chr`, que devem traduzir dentro e fora de Unicode.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>

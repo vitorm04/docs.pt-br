@@ -2,12 +2,12 @@
 title: Tipos de retorno assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352575"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838346"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de retorno assíncronos (Visual Basic)
 Métodos assíncronos têm três tipos de retornados possíveis: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>e void. No Visual Basic, o tipo de retorno void é gravado como um procedimento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obter mais informações sobre os métodos assíncronos, consulte [programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -293,6 +293,7 @@ End Sub
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Fluxo de controle em programas assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

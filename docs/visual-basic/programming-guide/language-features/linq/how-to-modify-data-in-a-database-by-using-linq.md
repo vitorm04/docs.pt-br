@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 88597e5cfa1db46e147b829c8ffc634697cecc7e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: c92a94cd6223aad8e4ea3da86a8dd37bd71aad2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739482"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820991"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Como: Modificar dados em um banco de dados usando LINQ (Visual Basic)
 Consultas integradas à linguagem de consulta (LINQ) tornam fácil acessar as informações de banco de dados e modificar valores no banco de dados.  
@@ -161,6 +161,7 @@ Consultas integradas à linguagem de consulta (LINQ) tornam fácil acessar as in
 7.  Pressione F5 para executar o projeto. Clique em **adicionar** para adicionar um novo registro. Clique em **atualização** para modificar o novo registro. Clique em **excluir** para excluir o novo registro.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

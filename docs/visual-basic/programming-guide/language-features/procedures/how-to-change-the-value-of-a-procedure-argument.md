@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974907"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837475"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Como: Altere o valor de um argumento de procedimento (Visual Basic)
 Quando você chama um procedimento, cada argumento que você fornecer corresponde a um dos parâmetros definidos no procedimento. Em alguns casos, o código do procedimento pode alterar o valor subjacente de um argumento no código de chamada. Em outros casos, o procedimento pode alterar apenas sua cópia local de um argumento.  
@@ -48,7 +48,7 @@ Quando você chama um procedimento, cada argumento que você fornecer correspond
   
 1.  Na declaração do procedimento, especifique [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) para o parâmetro correspondente ao argumento.  
   
-     -ou-  
+     - ou -  
   
      No código de chamada, coloque o argumento entre parênteses na lista de argumentos. Isso força o Visual Basic para passar o argumento por valor, mesmo se o parâmetro correspondente especifica `ByRef`.  
   
@@ -78,6 +78,7 @@ Quando você chama um procedimento, cada argumento que você fornecer correspond
  Sempre há um risco potencial em permitir que um procedimento para alterar o valor subjacente de um argumento no código de chamada. Verifique se você espera que esse valor a ser alterado e esteja preparado para verificá-lo quanto à validade antes de usá-lo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Como: Passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)

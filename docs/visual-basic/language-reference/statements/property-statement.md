@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 0b8bec965e5a149466863cde7a2646128469cbd0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7b2d388cbcd1995178adf4102520ecaa1c9b1889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972164"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814171"
 ---
 # <a name="property-statement"></a>Instrução Property
 Declara o nome de uma propriedade e os procedimentos de propriedade usados para armazenar e recuperar o valor da propriedade.  
@@ -208,6 +208,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
  [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Propriedades Autoimplementadas](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [Instrução Get](../../../visual-basic/language-reference/statements/get-statement.md)

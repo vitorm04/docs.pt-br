@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261341"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833523"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >' (várias referências de arquivo)
 Valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Incompatibilidade de tipo pode ser devido a combinação de uma referência de arquivo para '\<filepath1 >' no projeto '\<projectname1 >' com uma referência de arquivo para '\<filepath2 >' no projeto '\<projectname2 >'. Se os dois assemblies forem idênticos, tente substituir essas referências para que ambas as referências são do mesmo local.  
@@ -32,6 +32,6 @@ Valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Incom
 -   Se os assemblies referenciados não têm a mesma identidade de assembly, altere seu código para que ele não tenta converter um tipo em um a um tipo em outro.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)
-

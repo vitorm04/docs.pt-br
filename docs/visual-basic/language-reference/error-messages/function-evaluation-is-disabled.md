@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: 6c3b0d3b86e871228c4bf3b30f0871015641a730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718267"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820715"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>A avaliação de função está desabilitada porque uma avaliação de função anterior atingiu o tempo limite
 Avaliação de função está desabilitada porque uma avaliação de função anterior atingiu o tempo limite. Para reabilitar a avaliação da função, siga as etapas novamente ou reinicie a depuração.  
@@ -32,5 +32,6 @@ Avaliação de função está desabilitada porque uma avaliação de função an
 2.  Etapa o depurador novamente, ou encerrar e reiniciar a depuração.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 - [Navegar pelo Código com o Depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger)

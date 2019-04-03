@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521397"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818717"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Como: Controlar o escopo de uma variável (Visual Basic)
 Normalmente, uma variável está no *escopo*, ou visível para referência, em toda a região na qual você declará-la. Em alguns casos, a variável *nível de acesso* podem influenciar seu escopo.  
@@ -87,6 +87,7 @@ Public strMsg As String
  Quanto mais estreito o escopo de uma variável, menores as chances de que um código mal-intencionado pode fazer inadequado usá-lo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Níveis de acesso no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

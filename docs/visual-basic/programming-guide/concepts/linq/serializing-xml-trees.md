@@ -2,12 +2,12 @@
 title: Serializando árvores XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
-ms.openlocfilehash: 54591438b49005f9016560fcc2f314d6a947d485
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddcd82a3fe8beea87913227ed0ff86fa3974bd11
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616752"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827322"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>Serializando árvores XML (Visual Basic)
 Serializar uma árvore XML significa gerar o XML a partir da árvore XML. Você pode fazer a serialização para um arquivo, para uma implementação concreta da classe <xref:System.IO.TextWriter> ou a uma implementação concreta de um <xref:System.Xml.XmlWriter>.  
@@ -24,4 +24,5 @@ Serializar uma árvore XML significa gerar o XML a partir da árvore XML. Você 
 |[Serializando para um XmlReader (invocando XSLT) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Descreve como criar um <xref:System.Xml.XmlReader> que permita que outro módulo leia o conteúdo de uma árvore XML.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de programação (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

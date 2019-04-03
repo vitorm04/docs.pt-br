@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980770"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841156"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Como: Definir várias versões de um procedimento (Visual Basic)
 Você pode definir um procedimento em várias versões por *sobrecarga* -lo, usando o mesmo nome mas uma lista de parâmetros diferentes para cada versão. O objetivo de sobrecarga é definir várias versões intimamente relacionadas de um procedimento sem a necessidade para diferenciá-los por nome.  
@@ -43,6 +43,7 @@ Você pode definir um procedimento em várias versões por *sobrecarga* -lo, usa
  Verifique se que cada uma das suas versões sobrecarregadas tem o mesmo nome de procedimento, mas uma lista de parâmetros diferentes.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)

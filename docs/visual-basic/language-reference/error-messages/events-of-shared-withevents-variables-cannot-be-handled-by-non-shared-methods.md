@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: 09f56d340322ee88afc54e7e8a53716777782d47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b32043898986b3e3e68fab18c5f907843d7691c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505754"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838645"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Eventos de variáveis WithEvents compartilhadas não podem ser identificados por métodos não compartilhados
 Uma variável declarada com o `Shared` modificador é uma variável compartilhada. Uma variável compartilhada identifica exatamente um local de armazenamento. Uma variável declarada com o `WithEvents` modificador declara que o tipo ao qual pertence a variável manipula o conjunto de eventos que aciona a variável. Quando um valor é atribuído à variável, a propriedade criada pela `WithEvents` declaração desengancha qualquer manipulador de eventos existente e conecta-se o novo manipulador de eventos por meio de `Add` método.  
@@ -24,5 +24,6 @@ Uma variável declarada com o `Shared` modificador é uma variável compartilhad
 -   Declare o manipulador de eventos `Shared`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
 - [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)

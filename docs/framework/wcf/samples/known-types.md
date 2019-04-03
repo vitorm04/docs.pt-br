@@ -2,12 +2,12 @@
 title: Tipos conhecidos
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 0f9d24f469feb3e2cc5c58cd73f671ac4837f725
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d43cdd9fff58a7918aa98616bb4195183cf3be48
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717136"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828346"
 ---
 # <a name="known-types"></a>Tipos conhecidos
 Este exemplo demonstra como especificar informações sobre tipos derivados em um contrato de dados. Contratos de dados permitem que você passe dados estruturados para e de serviços. Na programação orientada a objeto, um tipo que herda de outro tipo pode ser usado no lugar do tipo original. Na programação orientada a serviços, esquemas, em vez de tipos são comunicados e, portanto, a relação entre tipos não é preservada. O <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo permite que as informações sobre tipos derivados para ser incluído no contrato de dados. Se esse mecanismo não é usado, um tipo derivado não pode ser enviado ou recebido em que um tipo base é esperado.  
@@ -171,4 +171,3 @@ No magnitude was sent from the service
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   
-## <a name="see-also"></a>Consulte também

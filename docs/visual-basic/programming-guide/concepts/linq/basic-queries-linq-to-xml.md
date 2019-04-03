@@ -2,12 +2,12 @@
 title: Consultas básicas (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-ms.openlocfilehash: c0f1d34360b0336109cb2ba9471274e061deffca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f4a0508fddd5140ff2cc8f82f9c613a66b2d7ca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650805"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821379"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>Consultas básicas (LINQ to XML) (Visual Basic)
 Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] básicas.  
@@ -31,4 +31,5 @@ Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sql
 |[Como: Depurar conjuntos de resultados de consultas vazios (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Mostra a correção apropriada ao depurar consultas em XML que está em um namespace padrão.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Consultando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

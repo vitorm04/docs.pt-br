@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410999"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839386"
 ---
 # <a name="shadowing-in-visual-basic"></a>Sombreamento no Visual Basic
 Quando dois elementos de programação compartilham o mesmo nome, um deles pode ocultar, ou *sombra*, a outra. Nessa situação, o elemento sombreado não está disponível para referência; em vez disso, quando seu código usa o nome do elemento, o compilador do Visual Basic resolve para o elemento de sombreamento.  
@@ -138,6 +138,7 @@ End Class
  No exemplo anterior, a variável `basObj` é declarada como a classe base. Atribuindo um `dervCls` objeto nele constitui uma conversão de ampliação e, portanto, é válido. No entanto, a classe base não é possível acessar a versão da variável de sombreamento `z` na classe derivada, portanto, o compilador resolve `basObj.z` para o valor original da classe base.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

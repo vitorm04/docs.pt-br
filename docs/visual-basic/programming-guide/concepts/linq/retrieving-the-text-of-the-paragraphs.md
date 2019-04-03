@@ -2,12 +2,12 @@
 title: Recuperando o texto dos parágrafos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: 6d6f3e705e3a776f772a3507ef932d0715d2fb90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc6035c7d894d30b1441dd35925c233e02d35163
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706599"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830000"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Recuperando o texto dos parágrafos (Visual Basic)
 Este exemplo se baseia no exemplo anterior, [recuperando os parágrafos e seus estilos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Esse novo exemplo recupera o texto de cada parágrafo como uma cadeia de caracteres.  
@@ -18,7 +18,7 @@ Este exemplo se baseia no exemplo anterior, [recuperando os parágrafos e seus e
   
  Naturalmente, seria possível escrever uma única consulta que contém a funcionalidade para recuperar os parágrafos, o estilo de cada parágrafo, e o texto de cada parágrafo. No entanto, geralmente é útil dividir uma consulta mais complexa em consultas múltiplas porque o código resultante é mais modular e fácil de manter. Além disso, se você precisar de reutilizar parte de consulta, é mais fácil refatorar se as consultas são gravadas dessa maneira.  
   
- Essas consultas, que são encadeadas juntas, usam o modelo de processamento que é examinado em detalhes no tópico [Tutorial: (Visual Basic) de execução adiada](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
+ Essas consultas, que são encadeadas, usam o modelo de processamento que é examinado em detalhes no tópico [Tutorial: (Visual Basic) de execução adiada](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, determinando o nó do elemento, o nome do estilo, e o texto de cada parágrafo. Este exemplo cria nos exemplos anteriores neste tutorial. A nova consulta é chamada nos comentários no código a seguir.  
@@ -142,5 +142,6 @@ StyleName:Code >Hello World<
 -   [Refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Execução adiada e avaliação lenta em LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

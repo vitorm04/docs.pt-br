@@ -2,13 +2,19 @@
 title: Literais XML (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'declaring XML literals [Visual Basic]'
-  - 'Visual Basic, XML literals'
-  - 'Visual Basic code, XML'
-  - 'XML literals [Visual Basic]'
-  - 'XML literals [Visual Basic], reference'
-  - 'literals [Visual Basic], XML'
+- declaring XML literals [Visual Basic]
+- Visual Basic, XML literals
+- Visual Basic code, XML
+- XML literals [Visual Basic]
+- XML literals [Visual Basic], reference
+- literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
+ms.openlocfilehash: 98f81bfb4a49bbac2a1e07533e1584d7c2b23302
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842012"
 ---
 # <a name="xml-literals-visual-basic"></a>Literais XML (Visual Basic)
 Os tópicos desta seção documentam a sintaxe de literais XML no Visual Basic. A sintaxe de literal do XML permite incorporar XML diretamente ao código.  
@@ -24,4 +30,5 @@ Os tópicos desta seção documentam a sintaxe de literais XML no Visual Basic. 
 |[Literal de Instrução de Processamento XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Descreve a sintaxe de literais que representam objetos <xref:System.Xml.Linq.XProcessingInstruction>.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

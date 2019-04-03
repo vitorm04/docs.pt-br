@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 522526392dd12ede729fe8b96677029c05af57c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 437107bb522e1635dffa4a2de88c5d10d6707592
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665689"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825125"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos de valor que permitem valor nulo (Visual Basic)
 Às vezes, você trabalha com um tipo de valor que não tem um valor definido em determinadas circunstâncias. Por exemplo, um campo em um banco de dados pode ter que distinguir entre ter um valor atribuído que seja significativo e não ter um valor atribuído. Tipos de valor podem ser estendidos para levar seus valores de normais ou um valor nulo. Uma extensão desse tipo é chamada um *tipo anulável*.  
@@ -98,6 +98,7 @@ ms.locfileid: "54665689"
  Um banco de dados é um dos locais mais importantes para usar tipos anuláveis. Nem todos os objetos de banco de dados atualmente dão suporte a tipos anuláveis, mas os adaptadores de tabelas gerado pelo designer. Consulte "Suporte do TableAdapter para tipos anuláveis" em [visão geral de TableAdapter](/visualstudio/data-tools/tableadapter-overview).
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Usando tipos que permitem valor nulo](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

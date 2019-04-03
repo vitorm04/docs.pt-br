@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973295"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821004"
 ---
 # <a name="raiseevent-statement"></a>Instrução RaiseEvent
 Dispara um evento declarado no nível de módulo dentro de uma classe, formulário ou documento.  
@@ -76,6 +76,7 @@ RaiseEvent eventname[( argumentlist )]
 >  O `My.Application.DoEvents` método não processa os eventos exatamente da mesma maneira como faz o formulário. Para permitir que o formulário manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading gerenciado](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Instrução AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)

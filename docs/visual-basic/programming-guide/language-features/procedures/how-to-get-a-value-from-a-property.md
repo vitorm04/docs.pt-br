@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7dbc9d926ae937dd032c0c054bde440037ab9f0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964767"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842909"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Como: Obter um valor de uma propriedade (Visual Basic)
 Para recuperar um valor de propriedade, incluindo o nome da propriedade em uma expressão.  
@@ -24,7 +24,7 @@ Para recuperar um valor de propriedade, incluindo o nome da propriedade em uma e
   
 1.  Use o nome da propriedade em uma expressão da mesma maneira que você usaria um nome de variável. Você pode usar uma propriedade em qualquer lugar você pode usar uma variável ou uma constante.  
   
-     -ou-  
+     - ou -  
   
      Use o nome de propriedade seguido de igual (`=`) entrar em uma instrução de atribuição.  
   
@@ -39,6 +39,7 @@ Para recuperar um valor de propriedade, incluindo o nome da propriedade em uma e
  O valor da propriedade participa na expressão apenas como uma variável ou constante seria, ou ele é armazenado na variável ou propriedade no lado esquerdo da instrução de atribuição.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)

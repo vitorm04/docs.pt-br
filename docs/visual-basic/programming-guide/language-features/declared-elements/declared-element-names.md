@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5311bba92043d3fded34a5d9337b6af13e213d4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573381"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814062"
 ---
 # <a name="declared-element-names-visual-basic"></a>Nomes de elemento declarados (Visual Basic)
 Cada elemento declarado tem um nome, também chamado de um *identificador*, que é o código que se usa para se referir a ele.  
@@ -90,6 +90,7 @@ Cada elemento declarado tem um nome, também chamado de um *identificador*, que 
  Comparação de nomes é independente da localidade. Se dois nomes correspondem em uma localidade, eles são garantidos para corresponder em todas as localidades.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Características do Elemento Declarado](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: 9ee2c6eb123907a9e25092224a1f45578717a8c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977143"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814150"
 ---
 # <a name="static-visual-basic"></a>Estático (Visual Basic)
 Especifica que um ou mais variáveis locais declaradas devem continuar a existir e manter seus valores mais recentes após o encerramento do procedimento no qual eles são declarados.  
@@ -47,6 +47,7 @@ Especifica que um ou mais variáveis locais declaradas devem continuar a existir
  [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Tempo de vida no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

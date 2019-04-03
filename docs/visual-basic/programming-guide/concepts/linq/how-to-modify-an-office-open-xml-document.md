@@ -2,12 +2,12 @@
 title: 'Como: Modificar um documento do Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 333896eab6002a578b1cb53eb02f787bc9259123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ec5451112855b687abded3ec64dda18423881f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670362"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827179"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Como: Modificar um documento do Office Open XML (Visual Basic)
 Este tópico apresenta um exemplo que abre um documento do Office Open XML, modifica-o e salva-o.  
@@ -144,4 +144,5 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

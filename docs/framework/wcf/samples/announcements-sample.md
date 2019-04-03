@@ -2,12 +2,12 @@
 title: Exemplo de anúncios
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 775a56f322636664b5a0ced19df7bba347002e38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91422d9b625339236e3d8d09683deba18a24c9d4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568563"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814205"
 ---
 # <a name="announcements-sample"></a>Exemplo de anúncios
 Este exemplo mostra como usar a funcionalidade de lançamento do recurso de descoberta. Anúncios de permitir que os serviços enviar mensagens de anúncio que contêm metadados sobre o serviço. Por padrão, um anúncio hello é enviado quando o serviço é iniciado e um anúncio bye é enviado quando o serviço é desligado. Esses anúncios podem ser multicast ou eles podem ser enviados ponto a ponto. Esse exemplo consiste em cliente e o serviço de dois projetos.  
@@ -87,4 +87,3 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   
-## <a name="see-also"></a>Consulte também

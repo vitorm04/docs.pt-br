@@ -1,5 +1,5 @@
 ---
-title: <type1>'<typename>' deve implementar '<membername>' para interface '<interfacename>'
+title: <type1>'<typename>'deve implementar'<membername>'para interface'<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: de7dd9026e08495941a89be0db11ad4c68d2a748
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 485680a2984a29037b2836fcba13cf1aa1e2e699
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264226"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822746"
 ---
 # <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 >'\<typename >' deve implementar '\<membername >' para interface '\<interfacename >'
 '\<typename >' deve implementar '\<membername >' para interface '\<interfacename >'. Implementação de propriedade deve ter 'ReadOnly' / 'WriteOnly' especificadores.  
@@ -36,5 +36,6 @@ ms.locfileid: "55264226"
 4.  Quando estiver implementando uma propriedade, declare `Get` e `Set` procedimentos, conforme apropriado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: a396bede9e0004c9f0681e3399af95f31592a0b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361402"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828466"
 ---
 # <a name="flow-document-overview"></a>Visão geral do documento de fluxo
 Os documentos dinâmicos são projetados para otimizar a exibição e legibilidade. Em vez de serem configurados para um layout predefinido, os documentos dinâmicos ajustam e refluem seu conteúdo com base em variáveis de tempo de execução como tamanho da janela, resolução do dispositivo e preferências opcionais do usuário. Além disso, os documentos dinâmicos oferecem recursos de documento avançados, como paginação e colunas. Este tópico fornece uma visão geral dos documentos dinâmicos e como criá-los.  
@@ -128,9 +128,9 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
- A figura a seguir mostra como esse exemplo é renderizado.  
+ A figura a seguir mostra como esse exemplo é renderizado:  
   
- ![Captura de tela: UIElement inserido no conteúdo dinâmico](./media/blockuicontainer.png "BlockUIContainer")  
+ ![Captura de tela que mostra um UIElement inserido no conteúdo de fluxo.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
  **List**  
   

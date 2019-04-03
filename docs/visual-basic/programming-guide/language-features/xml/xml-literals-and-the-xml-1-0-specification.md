@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 5f40eb8c3fd1a90a285dfb660a48819d3d38c4f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560562"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832399"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Especificação dos literais XML e do XML 1.0 (Visual Basic)
 A sintaxe de literais XML no Visual Basic dá suporte a maior parte da especificação do Extensible Markup Language (XML) 1.0. Para obter detalhes sobre a especificação XML 1.0, consulte [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) no site do W3C.  
@@ -29,6 +29,7 @@ A sintaxe de literais XML no Visual Basic dá suporte a maior parte da especific
 -   A sintaxe de expressão incorporada permitida em literais de documento e o elemento não é um XML válido.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Literal de Documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [Literal do Elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

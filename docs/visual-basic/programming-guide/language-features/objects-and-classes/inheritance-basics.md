@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970292"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826568"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Noções básicas de herança (Visual Basic)
 O `Inherits` instrução é usada para declarar uma nova classe chamada um *classe derivada*, com base em uma classe existente, conhecida como um *classe base*. Classes derivadas herdam e podem estender, propriedades, métodos, eventos, campos e constantes definidas na classe base. A seção a seguir descreve algumas das regras de herança, e os modificadores que você pode usar para alterar as classes de forma herdam ou são herdados:  
@@ -143,5 +143,6 @@ End Class
  Embora `derivedClass` substituições `testMethod`, o `MyClass` palavra-chave na `useMyClass` anula os efeitos de substituição e o compilador resolve a chamada para a versão da classe base do `testMethod`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instrução Inherits](../../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

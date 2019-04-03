@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598809"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842285"
 ---
 # <a name="string-data-type-visual-basic"></a>Tipo de dados da cadeia de caracteres (Visual Basic)
 Contém sequências de pontos de código de (2 bytes) de 16 bits sem sinal que variam em valor de 0 a 65535. Cada *ponto de código*, ou código de caractere, representa um único caractere Unicode. Uma cadeia de caracteres pode conter de 0 a aproximadamente dois bilhões (2 ^ 31) caracteres Unicode.  
@@ -79,6 +79,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
 -   **Tipo de estrutura.** O tipo correspondente no .NET Framework é o <xref:System.String?displayProperty=nameWithType> classe.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.String?displayProperty=nameWithType>
 - [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
 - [Tipo de Dados de Caractere](../../../visual-basic/language-reference/data-types/char-data-type.md)

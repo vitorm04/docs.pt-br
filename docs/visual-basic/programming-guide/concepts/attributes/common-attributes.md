@@ -2,12 +2,12 @@
 title: Atributos comuns (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375396"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834525"
 ---
 # <a name="common-attributes-visual-basic"></a>Atributos comuns (Visual Basic)
 Este tópico descreve os atributos que são mais comumente usados em programas em Visual Basic.  
@@ -255,6 +255,7 @@ End Structure
  Use `VBFixedArrayAttribute` para declarar matrizes que são fixos em tamanho. Como cadeias de caracteres do Visual Basic, as matrizes são de comprimento variável por padrão. Esse atributo é útil para serialização ou gravar dados em arquivos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)

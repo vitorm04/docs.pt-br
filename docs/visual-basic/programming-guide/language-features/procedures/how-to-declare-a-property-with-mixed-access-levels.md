@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972575"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832119"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Como: Declarar uma propriedade com níveis de acesso mistos (Visual Basic)
 Se você quiser que o `Get` e `Set` procedimentos de uma propriedade para ter diferentes níveis de acesso, você pode usar o nível mais permissivo na `Property` instrução e o nível mais restritivo em qualquer um os `Get` ou `Set` instrução. Você pode usar níveis de acesso mistos em uma propriedade quando você deseja certas partes do código para ser capaz de obter o valor da propriedade e determinadas outras partes do código para ser capaz de alterar o valor.  
@@ -35,6 +35,7 @@ Se você quiser que o `Get` e `Set` procedimentos de uma propriedade para ter di
      No exemplo anterior, o `Get` procedimento tem o mesmo `Protected` acesso como a própria propriedade, enquanto o `Set` procedimento tem `Private` acesso. Uma classe derivada de `employee` pode ler os `salary` valor, mas apenas o `employee` classe pode defini-lo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)

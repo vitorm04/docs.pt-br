@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: 1788d06aa5236d4cfc33999df86ad72c420b41df
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a535a6b951dc9872109527f78d7de5f3fcdd3292
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821875"
 ---
 # <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>Propriedade '\<propertyname >' não retorna um valor em todos os caminhos de código
 Propriedade '\<propertyname >' não retorna um valor em todos os caminhos de código. Uma exceção de referência nula pode ocorrer em tempo de execução quando o resultado é usado.  
@@ -40,6 +40,7 @@ Propriedade '\<propertyname >' não retorna um valor em todos os caminhos de có
      É mais fácil garantir que cada retorno do procedimento retorna um valor se você usar sempre o `Return` instrução. Se você fizer isso, a última instrução antes `End Get` deve ser um `Return` instrução.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos de Propriedade](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Instrução Get](../../../visual-basic/language-reference/statements/get-statement.md)

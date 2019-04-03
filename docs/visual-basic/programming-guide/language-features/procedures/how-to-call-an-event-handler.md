@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973516"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837761"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Como: Chamar um manipulador de eventos no Visual Basic
 Uma *evento* é uma ação ou ocorrência — como um mouse clique ou um limite de crédito excedido — que é reconhecida pelo componente algum programa, e para o qual você pode escrever código para responder. Uma *manipulador de eventos* é o código que você escreve para responder a um evento.  
@@ -53,6 +53,7 @@ Uma *evento* é uma ação ou ocorrência — como um mouse clique ou um limite 
      Você pode desassociar um manipulador de eventos de um evento executando o [Instrução RemoveHandler](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Subprocedimentos](./sub-procedures.md)
 - [Instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)

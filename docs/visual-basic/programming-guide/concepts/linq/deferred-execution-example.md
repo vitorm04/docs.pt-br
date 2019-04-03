@@ -2,12 +2,12 @@
 title: Exemplo de execução adiada (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e9247c89d46cc7705ef4297868739ba85d993eec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614161"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838918"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>Exemplo de execução adiada (Visual Basic)
 Este tópico mostra como execução adiada e a avaliação lazy afetam a execução das consultas LINQ to XML.  
@@ -60,4 +60,5 @@ Main: str GHI
  Você pode ver que a matriz inteira de cadeias de caracteres não é convertida para maiúsculas antes que cada item na coleção retornada é processado no loop de `foreach` em `Main`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tutorial: Execução adiada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

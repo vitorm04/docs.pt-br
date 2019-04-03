@@ -2,12 +2,12 @@
 title: 'Como: Fragmentos XML de Stream com acesso a informações de cabeçalho (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 26d1d2166aaf8eaa62ba3ef7b3ffa9ab104574e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c11a64eb28e8952636ab877479852bd883fc7eba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657318"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829467"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Como: Fragmentos XML de Stream com acesso a informações de cabeçalho (Visual Basic)
 Às vezes você precisará ler arbitrariamente grandes arquivos XML, e escreve seu aplicativo para que os vestígio de memória do aplicativo seja previsível. Se você tentar preencher uma árvore XML com um grande arquivo XML, seu uso de memória será proporcionalmente o tamanho do arquivo que é, excessivo. Portanto, você deve usar uma técnica de streaming em vez disso.  
@@ -231,4 +231,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ to XML (Visual Basic) de programação avançada](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

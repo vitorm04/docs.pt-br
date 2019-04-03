@@ -2,12 +2,12 @@
 title: Consultando árvores XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: bb0024a6cfb93be5f1f78f33ad29c22f3400de48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3855a562ce5ec43b28fba21b2ab4db0583a2d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671376"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839620"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>Consultando árvores XML (Visual Basic)
 Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -27,5 +27,6 @@ Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sql
 |[Transformações funcionais puras de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Apresenta um pequeno tutorial de como criar consultas no estilo de programação funcional.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de programação (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
 - [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

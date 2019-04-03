@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7262fded93b02c011484919f0504bb7225d8d2af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965972"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820877"
 ---
 # <a name="string-basics-in-visual-basic"></a>Noções básicas de cadeias de caracteres no Visual Basic
 O `String` tipo de dados representa uma série de caracteres (cada uma instância de um por vez representando o `Char` tipo de dados). Este tópico apresenta os conceitos básicos de cadeias de caracteres no Visual Basic.  
@@ -72,6 +72,7 @@ World]]></xml>.Value
  Ao contrário de outros tipos de dados intrínsecos, `String` é um tipo de referência. Quando uma variável do tipo de referência é passada como um argumento para uma função ou sub-rotina, uma referência para o endereço de memória onde os dados são armazenados é passada em vez do valor real da cadeia de caracteres. Portanto, no exemplo anterior, o nome da variável permanece o mesmo, mas ele aponta para uma instância nova e diferente de `String` classe, que contém o novo valor.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Tipo de Dados de Caractere](../../../../visual-basic/language-reference/data-types/char-data-type.md)

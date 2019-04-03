@@ -1,18 +1,18 @@
 ---
-title: 'Como: Definir o tamanho de lado para um TileBrush'
+title: 'Como: Definir o tamanho de bloco um TileBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: ecac41b0ca40abf59dfcba1efffc076687c2f1ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502222"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839664"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Como: Definir o tamanho de lado para um TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Como: Definir o tamanho de bloco um TileBrush
 
 Este exemplo mostra como definir o tamanho de bloco para um <xref:System.Windows.Media.TileBrush>. Por padrão, um <xref:System.Windows.Media.TileBrush> produz um único bloco que preenche completamente a área que você está pintando. Você pode substituir esse comportamento, definindo a <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriedades.
 
@@ -20,19 +20,19 @@ O <xref:System.Windows.Media.TileBrush.Viewport%2A> propriedade especifica o tam
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir usa uma <xref:System.Windows.Media.ImageBrush>, um tipo de <xref:System.Windows.Media.TileBrush>, para desenhar um retângulo com blocos. O exemplo define cada bloco para 50% por 50% da área de saída (o retângulo). Como resultado, o retângulo é pintado com quatro projeções da imagem.
+O exemplo a seguir usa uma <xref:System.Windows.Media.ImageBrush>, um tipo de <xref:System.Windows.Media.TileBrush>, para desenhar um retângulo com blocos. O exemplo define cada bloco para 50% por 50 por cento da área de saída (o retângulo). Como resultado, o retângulo é pintado com quatro projeções da imagem.
 
-A ilustração a seguir mostra a saída que esse exemplo produz.
+A ilustração a seguir mostra a saída que esse exemplo produz:
 
-![Exemplo de agrupamento lado a lado com um pincel de imagem](./media/0.png "0")
+![Um retângulo com quatro números errados demonstrando lado a lado com um pincel de imagem.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
 O exemplo a seguir cria uma <xref:System.Windows.Media.ImageBrush>, define sua <xref:System.Windows.Media.TileBrush.Viewport%2A> para `0,0,25,25` e sua <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> para <xref:System.Windows.Media.BrushMappingMode.Absolute>e o utiliza para pintar outro retângulo. Como resultado, o pincel produz blocos com uma largura de 25 pixels e uma altura de 25 pixels.
 
-A ilustração a seguir mostra a saída que esse exemplo produz.
+A ilustração a seguir mostra a saída que esse exemplo produz:
 
-![Um TileBrush organizado lado a lado com um Viewport de 0,0,0,25,0,25](./media/25x25viewport.png "25x25viewport")
+![Um retângulo com números errados de oito quarenta e demonstrar um TileBrush lado a lado com um visor.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 

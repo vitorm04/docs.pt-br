@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: f57b5ae35bf97a04ff235d213ffad27bd015e711
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 579da4b52a9a7c4c747a9ace390c04611207c94d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981459"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822902"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Passo a passo: Chamando APIs do Windows (Visual Basic)
 APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do sistema operacional Windows. Você pode usá-los para executar tarefas quando é difícil escrever procedimentos equivalentes de sua preferência. Por exemplo, o Windows fornecem uma função chamada `FlashWindowEx` que permite que você faça a barra de título para um aplicativo alternativo entre tonalidades claras e escuras.  
@@ -148,6 +148,7 @@ APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do
 12. Clique em **Button2**. A mensagem "o arquivo foi movido com êxito" será exibida se o arquivo pode ser movido.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

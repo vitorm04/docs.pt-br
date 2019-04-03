@@ -1,19 +1,19 @@
 ---
-title: 'Como: Herdar formulários usando a caixa de diálogo selecionador de herança'
+title: 'Como: herdar formulários usando a caixa de diálogo Selecionador de Herança'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719345"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841154"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como: Herdar formulários usando a caixa de diálogo selecionador de herança
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como: herdar formulários usando a caixa de diálogo Selecionador de Herança
 A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa de diálogo **Selecionador de Herança**. Com ela, você pode aproveitar códigos ou interfaces do usuário já criados em outras soluções.  
   
 > [!NOTE]
@@ -41,7 +41,7 @@ A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa d
   
 6.  Selecione o componente.  
   
-     No **Gerenciador de Soluções**, o componente é adicionado ao seu projeto. Se ela tiver uma interface do usuário, controles que fazem parte do formulário herdado serão marcados com um glifo (![captura de tela VisualBasicInheritanceSymbol](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) e, quando selecionados, terão uma borda indicando o nível de segurança que o controle tem sobre o formulário da superclasse. Os comportamentos que correspondem aos diferentes níveis de segurança são listados na tabela a seguir.  
+     No **Gerenciador de Soluções**, o componente é adicionado ao seu projeto. Se ele tem uma interface do usuário, controles que fazem parte do formulário herdado serão marcados com um glifo (![captura de tela de símbolo de herança do Visual Basic.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) e, quando selecionado, têm uma borda que indica o nível de segurança que tem o controle sobre o formulário da superclasse. Os comportamentos que correspondem aos diferentes níveis de segurança são listados na tabela a seguir.  
   
     |Nível de segurança de controle|Interação disponível por meio do Designer e do Editor de Códigos com Formulário Herdado|  
     |-------------------------------|--------------------------------------------------------------------------------|  

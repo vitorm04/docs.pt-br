@@ -2,14 +2,20 @@
 title: Operadores e expressões no Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'operators [Visual Basic], operands'
-  - 'operators [Visual Basic]'
-  - 'operands [Visual Basic], definition'
-  - 'Visual Basic code, operators'
-  - 'Visual Basic code, expressions'
-  - operands
-  - 'expressions [Visual Basic]'
+- operators [Visual Basic], operands
+- operators [Visual Basic]
+- operands [Visual Basic], definition
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- operands
+- expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
+ms.openlocfilehash: 8de4eeaa22f83392bcb6bb79a1fea327281dfec9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843741"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operadores e expressões no Visual Basic
 Um *operador* é um elemento de código que executa uma operação em um ou mais elementos de código que retêm valores. Os elementos de valor incluem variáveis, constantes, literais, propriedades, valores retornados dos procedimentos `Function` e `Operator`, bem como expressões.  
@@ -58,6 +64,7 @@ Um *operador* é um elemento de código que executa uma operação em um ou mais
   
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operadores](../../../../visual-basic/language-reference/operators/index.md)
 - [Combinação Eficiente de Operadores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
 - [Instruções](../../../../visual-basic/language-reference/statements/index.md)

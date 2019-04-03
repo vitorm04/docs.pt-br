@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 2758dc847d6549689d688ef4742bb334b1968988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720217"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830312"
 ---
 # <a name="development-with-my-visual-basic"></a>Desenvolvimento com My (Visual Basic)
 O Visual Basic apresenta novos recursos para o método RAD que aumentam a produtividade, facilitam o uso e dão mais robustez. Um desses recursos, chamado `My`, oferece acesso a informações e a instâncias de objeto padrão relacionadas ao aplicativo e ao seu ambiente de tempo de execução. Essas informações são organizadas em um formato que pode ser descoberto por meio do IntelliSense e que é logicamente delineado de acordo com o uso.  
@@ -23,7 +23,7 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
   
  Esta tabela mostra objetos `My` de nível superior e suas relações uns com os outros.  
   
- ![Modelo d objeto para My](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")  
+ ![Diagrama mostra o modelo de objeto para o meu.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Executando tarefas com My.Application, My.Computer e My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
@@ -42,6 +42,7 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
  Fornece detalhes sobre quais os recursos `My` que estão disponíveis em diferentes tipos de projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

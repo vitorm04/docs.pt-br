@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268785"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814088"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>A primeira instrução deste 'Sub New' deve ser uma chamada explícita para 'MyBase. New' ou 'MyClass. New' porque o '\<constructorname >' na classe base\<baseclassname >' de '\<derivedclassname >' está marcado como obsoleto: '\< ErrorMessage >'
 Um construtor de classe não chama explicitamente um construtor de classe base, e o construtor de classe base implícita é marcado com o <xref:System.ObsoleteAttribute> atributo e a diretiva para tratá-lo como um erro.  
@@ -30,5 +30,5 @@ Um construtor de classe não chama explicitamente um construtor de classe base, 
 2.  Incluir uma chamada para `MyBase.New()` ou `MyClass.New()` como a primeira instrução da `Sub New` na classe derivada.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 
+- [Visão geral de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)

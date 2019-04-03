@@ -2,12 +2,12 @@
 title: 'Como: Depurar conjuntos de resultados de consultas vazios (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715446"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822769"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Como: Depurar conjuntos de resultados de consultas vazios (Visual Basic)
 Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.  
@@ -90,4 +90,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

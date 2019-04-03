@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967198"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841245"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propriedades autoimplementadas (Visual Basic)
 *Propriedades autoimplementadas* permitem que você especifique uma propriedade de uma classe rapidamente sem a necessidade de escrever código para as propriedades `Get` e `Set` . uando você escreve código criando uma propriedade implementada automaticamente, o compilador do Visual Basic cria automaticamente um campo *private* para armazenar a variável de propriedade, além de criar os procedimentos `Get` e `Set` associados.  
@@ -94,6 +94,7 @@ End Class
  Se você precisar converter uma propriedade implementada automaticamente a uma propriedade expandida que contém um `Get` ou `Set` procedimento, o Editor de código do Visual Basic pode gerar automaticamente o `Get` e `Set` eprocedimentos`End Property`instrução para a propriedade. O código é gerado se você colocar o cursor em uma linha em branco após o `Property` instrução, digite um `G` (para `Get`) ou uma `S` (para `Set`) e pressione ENTER. Editor de código do Visual Basic gera automaticamente a `Get` ou `Set` procedimento para propriedades somente leitura e somente gravação ao pressionar ENTER no final de um `Property` instrução.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Como: Declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)

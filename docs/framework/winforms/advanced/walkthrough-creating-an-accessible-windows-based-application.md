@@ -1,19 +1,19 @@
 ---
-title: 'Passo a passo: Criando um aplicativo acessível baseado em Windows'
+title: 'Passo a passo: criar um aplicativo baseado no Windows acessível'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708269"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823461"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Passo a passo: Criando um aplicativo acessível baseado em Windows
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Passo a passo: criar um aplicativo baseado no Windows acessível
 A criação de um aplicativo acessível tem implicações importantes nos negócios. Muitos órgãos governamentais tem regulamentos de acessibilidade para a compra de software. O logotipo Certified for Windows inclui requisitos de acessibilidade. Estima-se que 30 milhões de moradores, apenas dos EUA, muitos deles clientes potenciais, são afetados pela acessibilidade do software.  
   
  Este passo a passo abordará os cinco requisitos de acessibilidade para o logotipo Certified for Windows. De acordo com a esses requisitos, um aplicativo acessível:  
@@ -135,10 +135,12 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
     |MenuItem|Nome|fileCommands|  
     ||Texto|&Arquivo|  
     |MenuItem|Nome|exitApp|  
-    ||Texto|Sa&ir|  
-  
-     ![Pizza Order Form](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-Seu formulário será algo parecido com o seguinte:  
+    ||Texto|Sa&ir|
+    
+      Seu formulário será algo parecido com a imagem a seguir:
+    
+      ![O formulário de pedido de pizza com uma seleção de nome de caixa de texto e o tamanho e ingredientes.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>Suporte ao modo de alto contraste  
  O modo de Alto Contraste é uma configuração de sistema do Windows que melhora a legibilidade, usando cores contrastantes e tamanhos de fonte que são benéficos para usuários com deficiências visuais. O <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> é fornecida para determinar se o modo de alto contraste está definido.  

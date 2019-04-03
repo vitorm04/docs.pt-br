@@ -1,5 +1,5 @@
 ---
-title: 'Como: Distorcer cores'
+title: 'Como: distorcer cores'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720215"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826386"
 ---
-# <a name="how-to-shear-colors"></a>Como: Distorcer cores
+# <a name="how-to-shear-colors"></a>Como: distorcer cores
 A distorção aumenta ou diminui um componente de cor em uma quantidade proporcional a outro componente de cor. Por exemplo, considere a transformação em que o componente vermelho é aumentado pela metade do valor do componente azul. Nessa transformação, a cor (0,2, 0,5, 1) seria (0,7, 0,5, 1). O novo componente vermelho é 0,2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir constrói um <xref:System.Drawing.Image> objeto no arquivo ColorBars4.bmp. Em seguida, o código se aplica à transformação de distorção descrita no parágrafo anterior para cada pixel da imagem.  
   
- A ilustração a seguir mostra a imagem original à esquerda e a imagem distorcida à direita.  
+ A ilustração a seguir mostra a imagem original à esquerda e a imagem distorcida à direita: 
   
- ![Distorcer cores](./media/colortrans6.png "colortrans6")  
+ ![Dois quadrados com listras colorida side-by-side ilustrando a imagem original e a imagem distorcida.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  A tabela a seguir lista os vetores de cores para as quatro barras antes e depois da transformação de distorção.  
   

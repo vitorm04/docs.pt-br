@@ -2,12 +2,12 @@
 title: 'Como: Usar anotações para transformar árvores LINQ to XML em um estilo XSLT (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: ed31e00b6d67a6707a98977c58e4e7afe35c8ad7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746293"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824865"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Como: Usar anotações para transformar árvores LINQ to XML em um estilo XSLT (Visual Basic)
 As anotações podem ser usadas para facilitar tornam-se de uma árvore XML.  
@@ -34,7 +34,7 @@ As anotações podem ser usadas para facilitar tornam-se de uma árvore XML.
   
 -   O novo elemento que é adicionado como uma anotação pode conter novos nós filho; pode formar uma subárvore com qualquer forma desejada.  
   
--   Há uma regra especial: Se um nó filho do novo elemento está em um namespace diferente, um namespace que é composto para essa finalidade (neste exemplo, o namespace é `http://www.microsoft.com/LinqToXmlTransform/2007`), em seguida, esse elemento filho não é copiado para a nova árvore. Em vez disso, se o namespace é o namespace especial mencionado acima, e o nome local do elemento é `ApplyTransforms`, então os nós filho do elemento na árvore de origem são iterados, e copiados para a nova árvore (exceto para elementos filhos detalhados ele é transformadas de acordo com essas regras).  
+-   Há uma regra especial: Se um nó filho do novo elemento estiver em um namespace diferente, um namespace será criado para essa finalidade (nesse exemplo, o namespace é `http://www.microsoft.com/LinqToXmlTransform/2007`) e, em seguida, esse elemento filho não será copiado para a nova árvore. Em vez disso, se o namespace é o namespace especial mencionado acima, e o nome local do elemento é `ApplyTransforms`, então os nós filho do elemento na árvore de origem são iterados, e copiados para a nova árvore (exceto para elementos filhos detalhados ele é transformadas de acordo com essas regras).  
   
 -   Isso é um pouco análogo à especificação de transformações em XSL. A consulta selecionar um conjunto de nós é análoga a expressão XPath para um modelo. O código para criar um novo <xref:System.Xml.Linq.XElement> que é salvo como uma anotação é análogo ao construtor de sequência em XSL, e o elemento de `ApplyTransforms` são análogos a função para o elemento de `xsl:apply-templates` em XSL.  
   
@@ -379,4 +379,5 @@ After Transform
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ to XML (Visual Basic) de programação avançada](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

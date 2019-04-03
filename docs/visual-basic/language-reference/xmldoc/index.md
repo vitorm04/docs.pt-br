@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: 3ee69999b37f3cef631a1801a800c5710ad895ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600473"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814933"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>marcações XML recomendadas para comentários da documentação (Visual Basic)
 O compilador do Visual Basic pode processar comentários de documentação em seu código para um arquivo XML. Você pode usar ferramentas adicionais para processar o arquivo XML em documentação.  
@@ -40,6 +40,7 @@ O compilador do Visual Basic pode processar comentários de documentação em se
 >  Se você quiser colchetes angulares sejam exibidos no texto de um comentário de documentação, use `&lt;` e `&gt;`. Por exemplo, a cadeia de caracteres `"&lt;text in angle brackets&gt;"` será exibido como `<text in angle brackets>`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Documentando o Código com XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [Como: Criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

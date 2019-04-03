@@ -2,12 +2,12 @@
 title: Conceitos e terminologia (transformação funcional) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651858"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820796"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Conceitos e terminologia (transformação funcional) (Visual Basic)
 Este tópico apresenta os conceitos e a terminologia de transformações e puras. A abordagem funcional de transformação a transformação passa de dados codificação que geralmente é mais rápido, mais programar completo expressive, e mais fácil depurar e manter que a programação mais tradicional, mais imperativa.  
@@ -72,5 +72,6 @@ Este tópico apresenta os conceitos e a terminologia de transformações e puras
  Esses recursos de idioma serão usados em exemplos de código em todo esta seção.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Introdução às transformações funcionais puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Programação funcional versus Programação imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

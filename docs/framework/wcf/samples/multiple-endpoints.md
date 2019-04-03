@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 3b52583b8089efcee2a0251564c79e931a596bf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a9793b6598712265d47af1d31f2455436dfd855
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678064"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817688"
 ---
 # <a name="multiple-endpoints"></a>Vários pontos de extremidade
 O exemplo de vários pontos de extremidade demonstra como configurar vários pontos de extremidade em um serviço e como se comunicar com cada ponto de extremidade de um cliente. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). A configuração do serviço foi modificada para definir dois pontos de extremidade que oferecem suporte a `ICalculator` contrato, mas cada um em um endereço diferente usando outra associação. A configuração de cliente e o código foram modificadas para se comunicar com ambos os pontos de extremidade de serviço.  
@@ -119,4 +119,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   
-## <a name="see-also"></a>Consulte também

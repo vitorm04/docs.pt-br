@@ -2,12 +2,12 @@
 title: Exemplos de descoberta com escopos
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 0d874116b90f423fbb78803a3641ef55fc848952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba49021022c33c1490f3dbaafc5bba1352ecf55c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508763"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814283"
 ---
 # <a name="discovery-with-scopes-sample"></a>Exemplos de descoberta com escopos
 Este exemplo mostra como usar escopos para categorizar os pontos de extremidade podem ser descobertos como bem como usar <xref:System.ServiceModel.Discovery.DiscoveryClient> para executar uma pesquisa assíncrona para pontos de extremidade. No serviço, este exemplo mostra como personalizar a descoberta para cada ponto de extremidade, adicionando um comportamento de ponto de extremidade de descoberta e usá-lo para adicionar um escopo para o ponto de extremidade bem como controlar a capacidade de descoberta do ponto de extremidade. No cliente, a amostra passa sobre como os clientes podem criar uma <xref:System.ServiceModel.Discovery.DiscoveryClient> e ajustar parâmetros incluir escopos adicionando escopos de pesquisa a <xref:System.ServiceModel.Discovery.FindCriteria>. Este exemplo também mostra como os clientes podem restringir as respostas com a adição de um critério de término.  
@@ -37,4 +37,3 @@ Este exemplo mostra como usar escopos para categorizar os pontos de extremidade 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   
-## <a name="see-also"></a>Consulte também

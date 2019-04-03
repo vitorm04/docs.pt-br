@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 6cf45b12bebc254a0d96516ab262d7aae3d70746
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691249"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842506"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Como: Ocultar uma variável herdada (Visual Basic)
 Uma classe derivada herda todas as definições de sua classe base. Se você quiser definir uma variável usando o mesmo nome como um elemento de classe base, você pode ocultar, ou *sombra*, esse elemento quando você define sua variável na classe derivada da classe base. Se você fizer isso, o código na classe derivada acessa sua variável, a menos que explicitamente ignora o mecanismo de sombreamento.  
@@ -56,6 +56,7 @@ Uma classe derivada herda todas as definições de sua classe base. Se você qui
  Sombreamento apresenta mais de uma versão de uma variável com o mesmo nome. Quando uma declaração de código refere-se ao nome da variável, a versão à qual o compilador resolve a referência depende de fatores como o local da instrução do código e a presença de uma cadeia de caracteres de qualificação. Isso pode aumentar o risco de se referir a uma versão não intencional de uma variável sombreada. Você pode reduzir esse risco qualificar totalmente todas as referências a uma variável sombreada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Sombreamento no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Diferenças entre sombreamento e sobreposição](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

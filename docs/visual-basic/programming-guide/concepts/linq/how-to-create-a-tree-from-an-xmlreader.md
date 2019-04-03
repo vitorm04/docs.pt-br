@@ -2,12 +2,12 @@
 title: 'Como: Criar uma árvore de um XmlReader (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: 49769fea96f1ed09420f4646a21f75093ef35fce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0826112821394ac6a81ba03e7803187aaec2796
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502163"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836461"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Como: Criar uma árvore de um XmlReader (Visual Basic)
 Este tópico mostra como criar uma árvore de XML diretamente de <xref:System.Xml.XmlReader>. Para criar um <xref:System.Xml.Linq.XElement> de um <xref:System.Xml.XmlReader>, você deverá posicionar o <xref:System.Xml.XmlReader> em um nó de elemento. O <xref:System.Xml.XmlReader> ignorará comentários e instruções de processamento, mas se o <xref:System.Xml.XmlReader> estiver posicionado em um nó de texto, um erro será gerado. Para evitar esses erros, sempre posicione o <xref:System.Xml.XmlReader> em um elemento antes de criar uma árvore de XML do <xref:System.Xml.XmlReader>.  
@@ -53,4 +53,5 @@ Console.WriteLine(e)
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Analisando XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

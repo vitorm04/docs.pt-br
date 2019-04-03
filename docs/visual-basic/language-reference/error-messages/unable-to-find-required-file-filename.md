@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: b86c80fb810619adff8d9cc627cf3d70fb958652
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 35bddac0ed65499e2eb400639ab5028c6cc6ddcb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282562"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816652"
 ---
 # <a name="unable-to-find-required-file-filename"></a>Não é possível localizar o arquivo necessário '\<filename >'
 Um arquivo que é exigido pelo Visual Studio está faltando ou danificado.  
@@ -24,4 +24,5 @@ Um arquivo que é exigido pelo Visual Studio está faltando ou danificado.
 -   Reinstale o Visual Studio.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Fale conosco](/visualstudio/ide/talk-to-us)

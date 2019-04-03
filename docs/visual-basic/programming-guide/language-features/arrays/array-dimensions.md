@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634161"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836929"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensões de matriz no Visual Basic
 Um *dimensão* é uma direção na qual você pode variar a especificação de elementos uma matriz de. Uma matriz que contém as vendas total para cada dia do mês tem uma dimensão (o dia do mês). Uma matriz que contém as total de vendas por departamento para cada dia do mês tem duas dimensões (o número de departamento e o dia do mês). O número de dimensões que tem uma matriz é chamado de seu *classificação*.  
@@ -87,5 +87,6 @@ Dim salesAmounts(4, 11, 30) As Double
 >  Você pode criar uma matriz sem usar o `Dim` instrução ou o `New` cláusula. Por exemplo, você pode chamar o <xref:System.Array.CreateInstance%2A> método ou outro componente pode passar seu código de uma matriz criada dessa maneira. Como uma matriz pode ter um limite inferior diferente de 0. Você sempre pode testar o limite inferior de uma dimensão usando o <xref:System.Array.GetLowerBound%2A> método ou o `LBound` função.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Solução de problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

@@ -2,12 +2,12 @@
 title: Contrato de falha
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 39bb9b0ebd9feb6066c1c5e83128eb3a594d6d99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64d02ae6b45cd0e538509d2c7186ac63b9844c14
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653925"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840478"
 ---
 # <a name="fault-contract"></a>Contrato de falha
 O exemplo de contrato de falha demonstra como se comunicar informações de erro de um serviço para um cliente. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com algum código adicional adicionado ao serviço para converter uma exceção interna para uma falha. O cliente tenta executar a divisão por zero para forçar uma condição de erro no serviço.  
@@ -136,4 +136,3 @@ catch (FaultException<MathFault> e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   
-## <a name="see-also"></a>Consulte também

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-ms.openlocfilehash: a75984d0eb64ef8c18def3ae59d5e1f4b6d20ce2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 44eb101ebdfeb316958a659107190ef1fc84df44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980328"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821147"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Tipos de métodos de manipulação da cadeia de caracteres no Visual Basic
 Há várias maneiras diferentes de analisar e manipular suas cadeias de caracteres. Alguns dos métodos fazem parte da linguagem Visual Basic, e outros são inerentes a `String` classe.  
@@ -44,4 +44,5 @@ Há várias maneiras diferentes de analisar e manipular suas cadeias de caracter
  Para obter mais informações, consulte a documentação para o <xref:System.String> classe.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

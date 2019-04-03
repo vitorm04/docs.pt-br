@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Boolean values [Visual Basic]
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
-ms.openlocfilehash: d29553071d68319d754406b3104da6e096f908fd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8e01a0f5a3f99fdbc424d6cd7d224367c7bad08
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975518"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835798"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>Como: Validar nomes de arquivo e caminhos no Visual Basic
 Este exemplo retorna um `Boolean` valor que indica se uma cadeia de caracteres representa um nome de arquivo ou caminho. A validação verifica se o nome contém caracteres que não são permitidos pelo sistema de arquivos.  
@@ -23,5 +23,6 @@ Este exemplo retorna um `Boolean` valor que indica se uma cadeia de caracteres r
  Este exemplo verifica se o nome tiver colocado incorretamente dois-pontos ou diretórios sem nome ou se o comprimento do nome excede o comprimento máximo definido pelo sistema. Ele também verifica se o aplicativo tem permissão para acessar o recurso de sistema de arquivos com o nome especificado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IO.Path.GetInvalidPathChars%2A>
 - [Validando cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

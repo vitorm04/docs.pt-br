@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523214"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829909"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Como: Descartar um recurso do sistema (Visual Basic)
 Você pode usar um `Using` bloco para garantir que o sistema de descarte de um recurso quando seu código sai do bloco. Isso é útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou outros componentes também desejam usar.  
@@ -45,6 +45,7 @@ Você pode usar um `Using` bloco para garantir que o sistema de descarte de um r
      Você pode usar essa mesma técnica em um recurso do sistema como um identificador de arquivo ou um wrapper COM. Você usa um `Using` bloquear quando você deseja deixar o recurso disponível para outros componentes após você ter saído do `Using` bloco.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.SqlClient.SqlConnection>
 - [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

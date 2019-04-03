@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: e819ba043dec2d5e8e792fdf57dc0c273a24e881
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654809"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837527"
 ---
 # <a name="error-statement"></a>Instrução Error
 Simula a ocorrência de um erro.  
@@ -63,6 +63,7 @@ Error 11   ' Simulate the "Division by zero" error.
  **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>

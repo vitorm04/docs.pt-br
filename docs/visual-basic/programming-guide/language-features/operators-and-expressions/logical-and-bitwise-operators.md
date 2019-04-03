@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976493"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819301"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Operadores lógicos e bit a bit no Visual Basic
 Operadores lógicos comparam `Boolean` expressões e retornam um `Boolean` resultado. O `And`, `Or`, `AndAlso`, `OrElse`, e `Xor` operadores são *binário* porque elas usam dois operandos, enquanto o `Not` operador é *unário* porque ele usa um operando único. Alguns desses operadores também podem executar operações de lógicas bit a bit em valores integrais.  
@@ -96,6 +96,7 @@ Operadores lógicos comparam `Boolean` expressões e retornam um `Boolean` resul
 >  Operações bit a bit podem ser executadas em tipos integrais somente. Valores de ponto flutuante devem ser convertidos em tipos integrais antes de prosseguir com a operação bit a bit.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operadores lógicos/bit a bit (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Expressões Boolianas](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Operadores aritméticos no Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -2,12 +2,12 @@
 title: 'Como: Elementos de classificação (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: f049c4d0e8180781cb6581d4efda2297d4b7151d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746215"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841206"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Como: Elementos de classificação (Visual Basic)
 Este exemplo mostra como escrever uma consulta que classifica seus resultados.  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos em um Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -75,5 +75,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Classificando Dados](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
 - [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

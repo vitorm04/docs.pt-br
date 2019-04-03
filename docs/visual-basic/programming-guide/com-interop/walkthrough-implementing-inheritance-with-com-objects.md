@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: d3814dddb0e39bf986e8d6ee88b3c7b4ec759748
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980445"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826165"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Passo a passo: Implementando a herança com objetos COM (Visual Basic)
 Você pode derivar classes de Visual Basic de `Public` classes em objetos COM, mesmo aqueles criados em versões anteriores do Visual Basic. As propriedades e métodos das classes herdadas de objetos COM a podem ser substituídos ou sobrecarregados assim como as propriedades e métodos de qualquer outra classe base podem ser substituídos ou sobrecarregados. Herança de objetos COM é útil quando você tiver uma biblioteca de classe existente que você não deseja recompilar.  
@@ -130,6 +130,7 @@ Você pode derivar classes de Visual Basic de `Public` classes em objetos COM, m
 -   As propriedades que usam `ByRef` parâmetros não podem ser substituídos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interoperabilidade COM em Aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Tipo de Dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)

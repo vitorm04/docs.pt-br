@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261250"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842324"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>Expressão do tipo \<tipo > não é passível de consulta
 Expressão do tipo \<tipo > não é passível de consulta. Certifique-se de que não está faltando uma importação de namespace e/ou referência de assembly para o provedor LINQ.  
@@ -34,6 +34,7 @@ Expressão do tipo \<tipo > não é passível de consulta. Certifique-se de que 
 2.  Certifique-se de que o tipo que você tenha identificado como a origem da sua consulta é um tipo passível de consulta. Ou seja, um tipo que implementa <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Linq.IQueryable%601>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 - <xref:System.Xml.Linq>

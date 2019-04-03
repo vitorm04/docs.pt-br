@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737683"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841252"
 ---
 # <a name="constants-overview-visual-basic"></a>Visão geral de constantes (Visual Basic)
 Uma constante é um nome significativo que toma o lugar de um número ou cadeia de caracteres que não são alterados. Constantes armazenam valores que, como o nome implica, permanecem os mesmos durante a execução de um aplicativo. Você pode significativamente melhorar a legibilidade do código e facilitam a manutenção usando constantes. Usá-los no código que contém valores que reaparecem ou dependem de certos números que são difíceis de lembrar ou não tem significado óbvio.  
@@ -45,5 +45,6 @@ Uma constante é um nome significativo que toma o lugar de um número ou cadeia 
 |[Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Descreve o `Option Strict` instrução e seu uso.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de Enumerações](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Como: Inicializar uma variável de matriz no Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

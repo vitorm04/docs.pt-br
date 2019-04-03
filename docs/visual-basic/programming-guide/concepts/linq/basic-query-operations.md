@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 141040a715487b3cbcfff1c3b9969a0869c8a3d8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201697"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826191"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Operações de consulta básica (Visual Basic)
 Este tópico fornece uma breve introdução ao [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões no Visual Basic e para alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Para mais informações, consulte os seguintes tópicos:  
@@ -87,7 +87,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
-     -ou-  
+     - ou -  
   
 -   Definir um tipo nomeado que contém os campos específicos que você deseja incluir no resultado, criar e inicializar instâncias do tipo no `Select` cláusula. Use essa opção somente se você precisa usar os resultados individuais fora da coleção na qual eles são retornados, ou se você tiver passá-los como parâmetros nas chamadas de método. O tipo de `londonCusts5` no exemplo a seguir é IEnumerable (Of NamePhone).  
   
@@ -153,6 +153,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Para obter mais informações sobre `Group By`, consulte [por cláusula Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)

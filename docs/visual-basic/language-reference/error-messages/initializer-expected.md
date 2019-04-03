@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 1fa66a3c50b5c1eadd4c63b92c57ab60e1a11076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77cfeb57bc313ded2d2c4d5a0c59041c5c19f515
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595988"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826074"
 ---
 # <a name="initializer-expected"></a>Inicializador esperado
 Você tentou declarar uma instância de uma classe usando um inicializador de objeto no qual a lista de inicialização está vazia, conforme mostrado no exemplo a seguir.  
@@ -32,5 +32,6 @@ Você tentou declarar uma instância de uma classe usando um inicializador de ob
 1.  Inicializar pelo menos um campo ou propriedade no inicializador, ou não usar um inicializador de objeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Inicializadores de objeto: Tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Como: Declarar um objeto usando um inicializador de objeto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

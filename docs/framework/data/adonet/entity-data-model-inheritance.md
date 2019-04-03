@@ -1,15 +1,15 @@
 ---
-title: 'Modelo de dados de entidade: Herança'
+title: 'Modelo de Dados de Entidade: Herança'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: 1a5ac0e4f5d4b8fe58b5d8577a27b26163d94952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc0467ea1b242c13e00e115f07ccbc5c840df936
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684197"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837111"
 ---
-# <a name="entity-data-model-inheritance"></a>Modelo de dados de entidade: Herança
+# <a name="entity-data-model-inheritance"></a>Modelo de Dados de Entidade: Herança
 Modelo de dados de entidade (EDM) dá suporte a herança para [tipos de entidade](../../../../docs/framework/data/adonet/entity-type.md). Herança em EDM é semelhante à herança para classes em idiomas de programação orientada a objeto. Como com classes em linguagens orientadas a objeto, em um modelo conceitual você pode definir um tipo de entidade (uma *tipo derivado*) que herda de outro tipo de entidade (a *tipo de base*). No entanto, diferentemente das classes em programação orientada a objeto, em um modelo conceitual o tipo derivado herda sempre qualquer os [propriedades](../../../../docs/framework/data/adonet/property.md) e [propriedades de navegação](../../../../docs/framework/data/adonet/navigation-property.md) do tipo base. Você não pode substituir propriedades herdadas em um tipo derivado.  
   
  Em um modelo conceitual você pode criar hierarquias de herança em que um tipo derivado herda de outro tipo derivado. O tipo na parte superior da hierarquia (um tipo na hierarquia que não é um tipo derivado) é chamado de *raiz do tipo*. Em uma hierarquia de herança, a [chave de entidade](../../../../docs/framework/data/adonet/entity-key.md) deve ser definido no tipo de raiz.  
@@ -17,9 +17,10 @@ Modelo de dados de entidade (EDM) dá suporte a herança para [tipos de entidade
  Você não pode criar hierarquias de herança em que um tipo derivado herda de mais de um tipo. Por exemplo, em um modelo conceitual com um tipo de entidade de `Book` , você pode definir tipos derivados `FictionBook` e `NonFictionBook` que cada herda de `Book`. No entanto, você não pode então definir um tipo que herdasse dos tipos de `FictionBook` e de `NonFictionBook` .  
   
 ## <a name="example"></a>Exemplo  
- O diagrama a seguir mostra um modelo conceitual com quatro tipos de entidade: `Book`, `FictionBook`, `Publisher`, e `Author`. O tipo de entidade de `FictionBook` é um tipo derivado, herdando do tipo de entidade de `Book` . O tipo de `FictionBook` herda `ISBN (Key)`, `Title`, e propriedades de `Revision` , e define uma propriedade chamada adicional `Genre`.  
+
+O diagrama a seguir mostra um modelo conceitual com quatro tipos de entidade: `Book`, `FictionBook`, `Publisher`, e `Author`. O tipo de entidade de `FictionBook` é um tipo derivado, herdando do tipo de entidade de `Book` . O tipo de `FictionBook` herda `ISBN (Key)`, `Title`, e propriedades de `Revision` , e define uma propriedade chamada adicional `Genre`.  
   
- ![Inheritance](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")  
+ ![Diagrama que mostra um modelo conceitual com quatro tipos de entidade.](./media/entity-data-model-inheritance/entity-type-inheritance.gif)  
   
  O [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa uma linguagem específica de domínio (DSL) chamada linguagem de definição de esquema conceitual ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir modelos conceituais. CSDL seguir define um tipo de entidade, `FictionBook`, que herda do tipo de `Book` (como no diagrama anterior):  
   

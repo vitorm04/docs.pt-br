@@ -8,12 +8,12 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262946"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837540"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Foi criada uma referência ao assembly de interoperabilidade inserido '\<assembly1 >' devido a uma referência indireta ao assembly do assembly '\<assembly2 >'
 Foi criada uma referência para o assembly de interoperabilidade inserido '\<assembly1>' devido a uma referência indireta a esse assembly do assembly '\<assembly2>'. Considere alterar a propriedade 'Inserir Tipos de Interoperabilidade' em um dos assemblies.  
@@ -32,5 +32,6 @@ Foi criada uma referência para o assembly de interoperabilidade inserido '\<ass
 -   Para remover o aviso, você pode definir a propriedade `Embed Interop Types` do assembly1 como `False`. Nesse caso, as informações de tipo de interoperabilidade são fornecidas por um assembly de interoperabilidade primário (PIA).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)
 - [Interoperação com código não gerenciado](../../../framework/interop/index.md)

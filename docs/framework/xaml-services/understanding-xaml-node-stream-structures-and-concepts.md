@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034751"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824423"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
 
@@ -218,7 +218,7 @@ As seguintes observações de lista todos os casos em que um leitor XAML é espe
 
 - **Conteúdo desconhecido:** O nome deste nó de membro é `_UnknownContent`. Estritamente falando, é um <xref:System.Xaml.XamlDirective>, e ele é definido no namespace XAML de linguagem XAML. Essa diretiva é usada como uma Sentinela casos em que um elemento de objeto XAML contém o conteúdo na fonte de XAML, mas nenhuma propriedade de conteúdo pode ser determinada sob o contexto de esquema XAML disponível no momento. Você pode detectar esse caso em um fluxo do nó XAML através da verificação de membros nomeados `_UnknownContent`. Se nenhuma outra ação é executada em um fluxo de nó XAML do caminho de carga, o padrão <xref:System.Xaml.XamlObjectWriter> gera na tentativa `WriteEndObject` quando ele encontra o `_UnknownContent` membro em qualquer objeto. O padrão <xref:System.Xaml.XamlXmlWriter> não gerará e tratará o membro como implícita. Você pode obter uma entidade de estática para `_UnknownContent` de <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.
 
-- **Propriedade de coleção de uma coleção:** Embora o tipo de CLR de apoio de uma classe de coleção que é usado normalmente para XAML tem dedicada chamada de propriedade que contém os itens da coleção, essa propriedade não é conhecida para um sistema de tipo XAML antes do tipo subjacente resolução. Em vez disso, o fluxo do nó XAML apresenta um `Items` espaço reservado como um membro da coleção de tipo XAML. Na implementação de serviços de XAML do .NET Framework o nome dessa diretiva / membro no fluxo de nó é `_Items`. Uma constante para essa diretiva pode ser obtida em <xref:System.Xaml.XamlLanguage.Items%2A>.
+- **Propriedade de coleção de uma coleção:** Embora o tipo de CLR de apoio de uma classe de coleção que é usado normalmente para XAML tem dedicada chamada de propriedade que contém os itens da coleção, essa propriedade não é conhecida para um sistema de tipo XAML antes de fazer a resolução de tipo. Em vez disso, o fluxo do nó XAML apresenta um `Items` espaço reservado como um membro da coleção de tipo XAML. Na implementação de serviços de XAML do .NET Framework o nome dessa diretiva / membro no fluxo de nó é `_Items`. Uma constante para essa diretiva pode ser obtida em <xref:System.Xaml.XamlLanguage.Items%2A>.
 
     Observe que um fluxo do nó XAML pode conter uma propriedade de itens com os itens que não fosse analisável com base no contexto do esquema XAML e resolução de tipo de backup. Por exemplo,
 

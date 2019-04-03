@@ -2,12 +2,12 @@
 title: Operações de agregação (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 5d8e5c589b19527062f7752b2f795c8396683bbd
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675634"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817234"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Operações de agregação (Visual Basic)
 Uma operação de agregação computa um único valor de uma coleção de valores. Um exemplo de uma operação de agregação é o cálculo da temperatura média diária dos valores válidos de temperatura diária de um mês.  
@@ -63,6 +63,7 @@ Uma operação de agregação computa um único valor de uma coleção de valore
  [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md)

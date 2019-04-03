@@ -2,12 +2,12 @@
 title: 'Como: Localizar um atributo do pai (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-ms.openlocfilehash: 15752805f35b145514d25208b6de44a7ed8ade47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ded20c173063492d260aee5ba55f3c4c585bd961
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580532"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828648"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Como: Localizar um atributo do pai (XPath-LINQ to XML) (Visual Basic)
 Este tópico mostra como navegar para o elemento pai e localizar um atributo deles.  
@@ -48,4 +48,5 @@ id="bk101"
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

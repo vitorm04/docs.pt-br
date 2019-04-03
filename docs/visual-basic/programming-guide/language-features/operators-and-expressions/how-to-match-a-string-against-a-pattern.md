@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: 884c5ddf15deb49719915f10e107ba6a3431c4bc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965937"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826009"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Como: Corresponder uma cadeia de caracteres com um padrão (Visual Basic)
 Se você quiser saber se uma expressão do [tipo de dados de cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfaz um padrão, em seguida, você pode usar o [operador Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -79,6 +79,7 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
      [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operadores de Comparação](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Operadores e Expressões](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Operador Like](../../../../visual-basic/language-reference/operators/like-operator.md)

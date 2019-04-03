@@ -2,12 +2,12 @@
 title: 'Como: Localizar elementos descendentes (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: ea92a224ee5cc976b9bd93f8ac8792a67d360fae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578669"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833393"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Como: Localizar elementos descendentes (XPath-LINQ to XML) (Visual Basic)
 Este tópico mostra como obter os elementos descendentes com um nome específico.  
@@ -52,4 +52,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

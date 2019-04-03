@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974257"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814491"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Recursos do Visual Basic que suportam LINQ
 O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refere-se à tecnologia no Visual Basic que dá suporte à sintaxe de consulta e outra linguagem constrói diretamente na linguagem. Com [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você não precisa aprender uma nova linguagem de consulta em relação a uma fonte de dados externa. Você pode consultar em relação aos dados em bancos de dados relacionais, armazenamentos de XML ou objetos usando o Visual Basic. Essa integração de recursos de consulta para o idioma permite a verificação de tempo de compilação para erros de sintaxe e segurança de tipo. Essa integração também garante que você já sabe a maioria dos quais você precisa saber para escrever consultas avançadas e variadas em Visual Basic.  
@@ -94,6 +94,7 @@ O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refere-se à tecn
  Para obter mais informações, consulte [Expressões Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

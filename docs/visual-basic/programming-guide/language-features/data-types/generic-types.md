@@ -36,20 +36,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978495"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831413"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
 Um *tipo genérico* é um único elemento de programação que se adapta ao executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe genérica ou um procedimento, você não precisa definir uma versão separada para cada tipo de dados para os quais você talvez queira executar essa funcionalidade.  
   
  Uma analogia é uma chave de fenda com cabeçotes removíveis. Você inspeciona o parafuso você precisa desativar e selecione o cabeçalho correto para aquele parafuso (encaixado, ultrapassado, estrelado). Depois de inserir a cabeça correta no identificador de chave de fenda, você executar a mesma função exata com a chave de fenda, saber apertar o parafuso.  
   
- ![Diagrama de uma chave de fenda definido como uma ferramenta genérica](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
-Chave de fenda definido como uma ferramenta genérica  
+ ![Diagrama de uma chave de fenda definido com cabeçotes diferentes.](./media/generic-types/generic-screwdriver-set.gif)  
   
  Quando você define um tipo genérico, parametrize-o com um ou mais tipos de dados. Isso permite que o uso de código para personalizar os tipos de dados para seus requisitos. Seu código pode declarar vários elementos de programação diferentes a partir do elemento genérico, cada um agindo em um conjunto diferente de tipos de dados. Mas todos os elementos declarados realizam a lógica idêntica, não importa quais tipos de dados que estão usando.  
   

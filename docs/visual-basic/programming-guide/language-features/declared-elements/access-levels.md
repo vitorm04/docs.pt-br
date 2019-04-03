@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203620"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843076"
 ---
 # <a name="access-levels-in-visual-basic"></a>Níveis de acesso no Visual Basic
 O *nível de acesso* de um elemento declarado é a extensão da habilidade para acessá-lo, ou seja, o que o código tem permissão para ler ou gravar nele. Isso é determinado não apenas por como você declarar o elemento em si, mas também pelo nível de acesso do contêiner do elemento. Código que não é possível acessar um elemento contendo não pode acessar qualquer um de seus elementos contidos, mesmo aqueles declarados como `Public`. Por exemplo, uma `Public` variável em um `Private` estrutura pode ser acessada de dentro da classe que contém a estrutura, mas não de fora dessa classe.  
@@ -115,6 +115,7 @@ As palavras-chave que especificam o nível de acesso são chamadas *modificadore
 |`Private Protected`|O código na classe que declara um elemento protegido privado ou código em uma classe derivada, encontrado no mesmo assembly como a classe bas.|Interfaces<br /><br /> Classes<br /><br /> Estruturas<br /><br /> Procedimentos<br /><br /> Propriedades<br /><br /> Variáveis de membro<br /><br /> Constantes<br /><br /> Enumerações<br /><br /> Eventos<br /><br /> Declarações externas<br /><br /> Delegados|Classe|
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Estático](../../../../visual-basic/language-reference/modifiers/static.md)
 - [Nomes de Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

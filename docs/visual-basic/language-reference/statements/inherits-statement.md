@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 18e35bab219003439136bc5d88f4b2f0ea6cdd1c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965742"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817091"
 ---
 # <a name="inherits-statement"></a>Instrução Inherits
 Faz com que a classe ou interface atual herde atributos, variáveis, propriedades, procedimentos e eventos de outra classe ou conjunto de interfaces.  
@@ -28,7 +28,7 @@ Inherits basetypenames
   
 |Termo|Definição|  
 |---|---|  
-|`basetypenames`|Necessário. O nome da classe da qual essa classe deriva.<br /><br /> -ou-<br /><br /> Os nomes das interfaces da qual deriva dessa interface. Use vírgulas para separar vários nomes.|  
+|`basetypenames`|Necessário. O nome da classe da qual essa classe deriva.<br /><br /> - ou -<br /><br /> Os nomes das interfaces da qual deriva dessa interface. Use vírgulas para separar vários nomes.|  
   
 ## <a name="remarks"></a>Comentários  
  Se usado, o `Inherits` instrução deve ser a primeira linha não está em branco, sem comentário em uma definição de classe ou interface. Você deve seguir imediatamente o `Class` ou `Interface` instrução.  
@@ -64,6 +64,7 @@ Inherits basetypenames
  Interface chamada `thisInterface` agora inclui todas as definições na <xref:System.IComparable>, <xref:System.IDisposable>, e <xref:System.IFormattable> interfaces membros herdados fornecem respectivamente para comparação de tipo específico de dois objetos, o liberando alocados a recursos e expressar o valor de um objeto como um `String`. Uma classe que implementa `thisInterface` deve implementar todos os membros de interface base.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

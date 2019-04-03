@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: caa9c2cadb9194161756f89b5acb16da0a955485
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543703"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843533"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizando quais objetos estão disponíveis em My (Visual Basic)
 Este tópico descreve como você pode controlar quais `My` objetos são ativados pela configuração do seu projeto `_MYTYPE` constante de compilação condicional. O Visual Studio Development IDE (ambiente integrado) mantém o `_MYTYPE` constante de compilação condicional para um projeto em sincronia com o tipo do projeto.  
@@ -70,6 +70,7 @@ Este tópico descreve como você pode controlar quais `My` objetos são ativados
 |`_MYTYPE`|Habilita `My.Log`, `My.Request`, e `My.Response`, se a constante é "Web".|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>

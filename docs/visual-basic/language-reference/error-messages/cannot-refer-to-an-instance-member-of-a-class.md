@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: da3aa17c55a4ccc95e5f4c98d0f12712ef77d5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729217"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822564"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Não é possível fazer referência a um membro da instância de uma classe de dentro de um método compartilhado ou inicializador de membro compartilhado sem uma instância explícita da classe
 Você tentou fazer referência a um membro não compartilhado de uma classe de dentro de um procedimento compartilhado. O exemplo a seguir demonstra uma situação como essa.  
@@ -44,4 +44,5 @@ End Class
 3.  Se você quiser que cada instância tenha sua própria cópia individual do membro, não especifique `Shared` na declaração de membro. Remover o `Shared` palavra-chave da declaração de procedimento.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)

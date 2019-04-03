@@ -2,12 +2,12 @@
 title: 'Como: Ler e gravar um documento codificado (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 52360b465e40a015e2cddee62ed4197d827bc560
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538694"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825190"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Como: Ler e gravar um documento codificado (Visual Basic)
 Para criar um documento XML codificado, adicione um <xref:System.Xml.Linq.XDeclaration> à árvore XML, definindo a codificação para o nome da página de código desejada.  
@@ -77,5 +77,6 @@ Encoding of loaded document is:utf-16
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
 - [LINQ to XML (Visual Basic) de programação avançada](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

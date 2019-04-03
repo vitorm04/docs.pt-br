@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: fedebf3ee791fbab02ace2ba2dc121590a241c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627320"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822811"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 Especifica que uma propriedade ou procedimento não está implementado nesta classe e deve ser substituído em uma classe derivada antes que ele pode ser usado.  
@@ -47,6 +47,7 @@ Especifica que uma propriedade ou procedimento não está implementado nesta cla
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Substituições](../../../visual-basic/language-reference/modifiers/overrides.md)

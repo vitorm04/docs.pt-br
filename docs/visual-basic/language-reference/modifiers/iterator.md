@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 06188560163491284eab0dcfc4bba6b029e65ce8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822694"
 ---
 # <a name="iterator-visual-basic"></a>Iterador (Visual Basic)
 Especifica que uma função ou `Get` acessador é um iterador.  
@@ -51,6 +51,7 @@ Especifica que uma função ou `Get` acessador é um iterador.
  Para obter exemplos adicionais, consulte [iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>
 - [Iteradores](../../programming-guide/concepts/iterators.md)
 - [Instrução Yield](../../../visual-basic/language-reference/statements/yield-statement.md)

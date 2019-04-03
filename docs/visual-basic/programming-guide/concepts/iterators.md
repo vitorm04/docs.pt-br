@@ -2,12 +2,12 @@
 title: Iteradores (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 0e090106dbedbeb9fb0d6c272deb0299ca5fac56
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359114"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820822"
 ---
 # <a name="iterators-visual-basic"></a>Iteradores (Visual Basic)
 Um *iterador* pode ser usado para percorrer coleções, como listas e matrizes.  
@@ -445,6 +445,7 @@ End Class
 -   Encapsular a criação da lista no iterador. No método iterador, você pode criar a lista e, em seguida, gerar cada resultado em um loop.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Instrução For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

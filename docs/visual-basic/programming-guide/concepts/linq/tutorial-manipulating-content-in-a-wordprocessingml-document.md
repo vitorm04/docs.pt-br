@@ -2,12 +2,12 @@
 title: 'Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: e36e76f03476bf0504590dfcae1c7dd8fa203312
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0a400a19dbe863490e5b2e34ec367e61a413a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556266"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834953"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)
 Este tutorial mostra como aplicar a abordagem transformacional funcional e o LINQ to XML para manipular documentos XML. Os exemplos do Visual Basic consultam e manipulam informações em documentos do Office Open XML WordprocessingML que são salvos pelo Microsoft Word.  
@@ -30,5 +30,6 @@ Este tutorial mostra como aplicar a abordagem transformacional funcional e o LIN
 |[Detalhes do Office Open XML WordprocessingML documentos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Fornece alguns detalhes de documentos do Office Open XML WordprocessingML.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Transformações funcionais puras de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [Introdução às transformações funcionais puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 8339d038f845b8568f31f3068a98ccccf580aeae
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 463b4f50e8c431bbbc113509e5fd9dd1756b5928
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286644"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822512"
 ---
 # <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Classe delegate\<classname >' não tem método Invoke, portanto, uma expressão desse tipo não pode ser o destino de uma chamada de método
 Uma chamada para `Invoke` através de um delegado falhou porque `Invoke` não está implementado na classe de delegado.  
@@ -26,6 +26,7 @@ Uma chamada para `Invoke` através de um delegado falhou porque `Invoke` não es
 2.  Localize o código que implementa a classe delegada e verifique se ele implementa o `Invoke` procedimento.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Instrução Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: 062d6276ab91705a4554da2afa8459a26453906f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c85564503f3c83e436044cd92ee3014945f1ef3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703608"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818378"
 ---
 # <a name="public-visual-basic"></a>Público (Visual Basic)
 Especifica que um ou mais elementos de programação declarados não têm nenhuma restrição de acesso.  
@@ -66,6 +66,7 @@ Especifica que um ou mais elementos de programação declarados não têm nenhum
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Privado](../../../visual-basic/language-reference/modifiers/private.md)

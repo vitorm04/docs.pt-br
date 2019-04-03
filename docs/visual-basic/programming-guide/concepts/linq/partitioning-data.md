@@ -2,19 +2,19 @@
 title: O particionamento de dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 06db2ac3e556e647fed576a7fa0c89b881b748c9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202139"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839568"
 ---
 # <a name="partitioning-data-visual-basic"></a>O particionamento de dados (Visual Basic)
 Particionamento em LINQ refere-se à operação de dividir uma sequência de entrada em duas seções sem reorganizar os elementos e, depois, retornar uma das seções.  
   
  A ilustração a seguir mostra os resultados de três operações de particionamento diferentes em uma sequência de caracteres. A primeira operação retorna os três primeiros elementos na sequência. A segunda operação ignora os três primeiros elementos e retorna os elementos restantes. A terceira operação ignora os dois primeiros elementos na sequência e retorna os três elementos seguintes.  
   
- ![Operações de particionamento de LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_partition.png "LINQ_Partition")  
+ ![Ilustração que mostra três operações de particionamento de LINQ.](./media/partitioning-data/linq-partitioning-operations.png)  
   
  Os métodos de operador de consulta padrão que particionam sequências estão listados na seção a seguir.  
   
@@ -50,6 +50,7 @@ Particionamento em LINQ refere-se à operação de dividir uma sequência de ent
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula Skip](../../../../visual-basic/language-reference/queries/skip-clause.md)

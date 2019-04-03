@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 5a81cde63de258f0996c3ddbc99e0102d58d79b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973906"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839351"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices (Visual Basic)
 O [My. Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) e [My. WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objetos fornecem acesso a formulários, fontes de dados e serviços Web XML usados por seu aplicativo. Eles fazem isso, fornecendo coleções de *instâncias padrão* de cada um desses objetos.  
@@ -27,6 +27,7 @@ O [My. Forms](../../../visual-basic/language-reference/objects/my-forms-object.m
  O `My.Forms` objeto retorna uma coleção de instâncias padrão para cada `Form` classe existe em seu projeto. Da mesma forma, `My.WebServices` fornece uma instância padrão da classe de proxy para cada serviço da Web que você criou uma referência ao seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Objeto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [Objeto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
 - [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

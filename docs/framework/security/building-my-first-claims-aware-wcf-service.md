@@ -3,12 +3,12 @@ title: Criando meu primeiro serviço WCF baseado em declarações
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599199"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825762"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Criando meu primeiro serviço WCF baseado em declarações
 ## <a name="applies-to"></a>Aplica-se a  
@@ -20,7 +20,7 @@ ms.locfileid: "54599199"
 ## <a name="overview"></a>Visão geral  
  Este tópico descreve o cenário da criação de serviços WCF com reconhecimento de declarações usando o WIF. Geralmente há três participantes em um cenário de serviço Web com reconhecimento de declarações: o serviço Web em si, o usuário final e o STS (Serviço de Token de Segurança). A figura a seguir descreve esse cenário:  
   
- ![Serviço WCF básico baseado em declarações do WIF](../../../docs/framework/security/media/wifbasicclaimsawarewcfservice.gif "WIFBasicClaimsAwareWCFService")  
+ ![Diagrama mostrando componentes do WIF declarações com suporte a serviço WCF básico.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
 1.  O cliente do serviço WCF (às vezes chamado de agente) usa o WIF para enviar credenciais ao STS e, após a autenticação bem-sucedida, o agente receberá um token do STS.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: cdc610bf70480981442d6de08975dc1cafddd8d0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5003b6d4892839d43ba9da103473c4c7e3d947a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271597"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817130"
 ---
 # <a name="class-classname-cannot-be-found"></a>Classe\<classname >' não pode ser encontrado
 Classe\<classname >' não pode ser encontrado. Essa condição é geralmente o resultado de um 'Microsoft.VisualBasic.dll' incompatível.  
@@ -32,4 +32,5 @@ Classe\<classname >' não pode ser encontrado. Essa condição é geralmente o r
 4.  Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Fale conosco](/visualstudio/ide/talk-to-us)

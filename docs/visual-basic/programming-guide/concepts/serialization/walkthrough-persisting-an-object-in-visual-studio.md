@@ -2,12 +2,12 @@
 title: Mantendo um objeto no Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690430"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841570"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: Mantendo um objeto no Visual Studio (Visual Basic)
 Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
@@ -216,5 +216,6 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
  Neste ponto, você pode compilar e executar o aplicativo novamente. Inicialmente, os valores padrão aparecem nas caixas de texto. Tente alterar os valores e digite um nome na quarta caixa de texto. Feche o aplicativo e execute-o novamente. Observe que agora os novos valores aparecem nas caixas de texto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)

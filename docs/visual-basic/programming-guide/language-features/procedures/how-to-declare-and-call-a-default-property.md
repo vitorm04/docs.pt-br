@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977546"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829324"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Como: Declarar e chamar uma propriedade padrão no Visual Basic
 Um *propriedade padrão* é uma propriedade de classe ou estrutura que seu código pode acessar sem especificá-lo. Ao chamar código nomes de uma classe ou estrutura, mas não uma propriedade e o contexto permite o acesso a uma propriedade, Visual Basic decide o acesso à propriedade dessa classe ou da estrutura padrão, se houver.  
@@ -82,6 +82,7 @@ Um *propriedade padrão* é uma propriedade de classe ou estrutura que seu códi
  Por causa dessas desvantagens, você deve considerar não definir as propriedades padrão. Para facilitar a leitura do código, você deve também considerar sempre referir-se a todas as propriedades explicitamente, mesmo propriedades padrão.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos de Propriedade](./property-procedures.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)

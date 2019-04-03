@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: fb25ecad3b797a4993e7a780823a38a0f0ccbd1f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975622"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818404"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista de atributos (Visual Basic)
 Especifica os atributos a ser aplicado a um elemento de programação declarado. Vários atributos são separados por vírgulas. Esta é a sintaxe para um atributo.  
@@ -54,6 +54,7 @@ Especifica os atributos a ser aplicado a um elemento de programação declarado.
  <xref:System.Runtime.InteropServices.DllImportAttribute> indica que o procedimento atribuído representa um ponto de entrada em uma biblioteca de vínculo dinâmico (DLL) não gerenciada. O atributo fornece o nome da DLL como um argumento posicional e outras informações como inicializadores de variável.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Módulo \<palavra-chave >](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [Visão geral de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)

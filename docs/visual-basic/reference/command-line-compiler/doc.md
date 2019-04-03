@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: eccd68d77eb9afabdc3bd4301f6258b80b7d7e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736647"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824579"
 ---
 # <a name="-doc"></a>-doc
 Processa comentários de documentação para um arquivo XML.  
@@ -54,5 +54,6 @@ Processa comentários de documentação para um arquivo XML.
  Veja [Como documentar o código com XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) para obter um exemplo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Documentando o Código com XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

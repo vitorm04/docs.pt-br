@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 5d84711c9efbe8d73d1cfe1dc7ac431b675d0b50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693088"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821836"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Visão geral de enumerações (Visual Basic)
 Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores constantes a nomes. Por exemplo, é possível declarar uma enumeração de um conjunto de constantes de inteiros associados aos dias da semana e, em seguida, usar os nomes de dias em vez de seus valores de inteiros em seu código.  
@@ -29,6 +29,7 @@ Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de c
 |Decidir quando usar uma enumeração|[Quando Usar uma Enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão Geral de Constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Constantes Definidas pelo Usuário](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [Como: Declarar uma constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683684"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826725"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Usando expressões regulares com o controle MaskedTextBox no Visual Basic
 Este exemplo demonstra como converter expressões regulares simples para trabalhar com o <xref:System.Windows.Forms.MaskedTextBox> controle.  
@@ -56,6 +56,7 @@ Este exemplo demonstra como converter expressões regulares simples para trabalh
 |`$\d{6}.00`|`$999,999.00`|Um valor de moeda no intervalo de 0 a 999999. A moeda, milésimos e caracteres decimais serão substituídos no tempo de execução por seus equivalentes específicas da cultura.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Validando cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

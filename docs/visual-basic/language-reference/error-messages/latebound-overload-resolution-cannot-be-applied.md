@@ -8,12 +8,12 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272625"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814049"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Resolução de sobrecarga com associação tardia não pode ser aplicada a '\<procedurename >' porque a instância de acesso é um tipo de interface
 O compilador está tentando resolver uma referência a uma propriedade ou procedimento sobrecarregado, mas a referência falha porque um argumento é do tipo `Object` e o objeto da referência tem o tipo de dados de uma interface. O `Object` argumento força o compilador a resolver a referência de associação tardia.  
@@ -65,6 +65,7 @@ refer.s1(CType(o1, Double))
  Cada uma das linhas de código converte explicitamente o `Object` variável `o1` para um dos tipos de parâmetro definido para as sobrecargas.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Sobrecarga de Procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Resolução de Sobrecarga](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
 - [Função CType](../../../visual-basic/language-reference/functions/ctype-function.md)

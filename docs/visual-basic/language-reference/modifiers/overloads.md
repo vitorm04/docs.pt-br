@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d68846938aba809a7a3a6f7d27f185bb90a39cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624907"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819327"
 ---
 # <a name="overloads-visual-basic"></a>Sobrecargas (Visual Basic)
 Especifica que uma propriedade ou procedimento redeclara uma ou mais propriedades ou procedimentos existentes com o mesmo nome.  
@@ -74,6 +74,7 @@ Especifica que uma propriedade ou procedimento redeclara uma ou mais propriedade
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Sobrecarga de Procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

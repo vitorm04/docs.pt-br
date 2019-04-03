@@ -10,12 +10,12 @@ helpviewer_keywords:
 - time, Visual Basic keywords and run-time library members
 - time data types [Visual Basic]
 ms.assetid: 914d0563-b53c-492c-ac62-d833ce805f2f
-ms.openlocfilehash: 9cf3d26427e483a1e1e5c1bc5316a829325a841f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44bd867412c30eae9a3092446cfd9674ba5e34a4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731901"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819041"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>Resumo de datas e horas (Visual Basic)
 Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.  
@@ -30,5 +30,6 @@ Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de exe
 |Hora em que um processo.|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
 - [Membros da Biblioteca em Tempo de Execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

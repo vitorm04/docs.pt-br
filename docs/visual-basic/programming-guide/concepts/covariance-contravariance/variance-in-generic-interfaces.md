@@ -2,12 +2,12 @@
 title: Variação em Interfaces genéricas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: d39f1b125875f9a9f41ccb6b25a3a88fe577adba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618627"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828102"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Variação em Interfaces genéricas (Visual Basic)
 O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. O suporte à variação possibilita a conversão implícita de classes que implementam essas interfaces. As seguintes interfaces agora são variantes:  
@@ -92,6 +92,7 @@ Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando variação em interfaces para coleções genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
 - [Criando interfaces genéricas variantes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
 - [Interfaces genéricas](../../../../standard/generics/interfaces.md)

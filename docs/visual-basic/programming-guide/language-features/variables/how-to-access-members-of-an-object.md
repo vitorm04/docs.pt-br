@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 5e91f1b99a17f4bbdc65a77ab26050ee57e96ac4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724837"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819639"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Como: Acessar membros de um objeto (Visual Basic)
 Quando você tiver uma variável de objeto que se refere a um objeto, você geralmente deseja trabalhar com os membros desse objeto, como seus métodos, propriedades, campos e eventos. Por exemplo, depois de criar um novo <xref:System.Windows.Forms.Form> do objeto, você poderá definir seus <xref:System.Windows.Forms.Control.Text%2A> propriedade ou chamada seu <xref:System.Windows.Forms.Control.Focus%2A> método.  
@@ -71,6 +71,7 @@ Quando você tiver uma variável de objeto que se refere a um objeto, você gera
      Para poder acessar os membros de qualquer objeto que você atribui à variável de objeto, você deve definir `Option Strict Off`. Quando você fizer isso, o compilador não pode garantir que um determinado membro é exposto pelo objeto que você atribui à variável. Se o objeto não expõe um membro que você tentar acessar, um <xref:System.MemberAccessException> ocorrerá uma exceção.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980120"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822245"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Como: Recolher e ocultar seções de código (Visual Basic)
 O `#Region` diretiva permite que você recolher e ocultar seções de código em arquivos do Visual Basic. O `#Region` diretiva permite que você especifique um bloco de código que você pode expandir ou recolher ao usar o editor de código do Visual Studio. A capacidade de ocultar código seletivamente torna seus arquivos mais gerenciáveis e mais fácil de ler. Para obter mais informações, consulte [Estrutura de tópicos](/visualstudio/ide/outlining).  
@@ -30,6 +30,7 @@ O `#Region` diretiva permite que você recolher e ocultar seções de código em
     >  Ocultando código não impede que ele seja compilado e não afeta `#If...#End If` instruções.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [Diretiva #Region](../../../visual-basic/language-reference/directives/region-directive.md)
 - [Diretivas #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

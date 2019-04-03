@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 81817af230298528a766aa6494899538c35da7bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707616"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833367"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Solucionando problemas de matrizes (Visual Basic)
 Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com matrizes.  
@@ -58,5 +58,6 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com ma
  Ao determinar os limites de uma matriz multidimensional, lembre-se de como você especifica a dimensão. O `dimension` parâmetros do <xref:System.Array.GetLowerBound%2A> e <xref:System.Array.GetUpperBound%2A> métodos são baseados em 0, enquanto o `Rank` parâmetros do Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> e <xref:Microsoft.VisualBasic.Information.UBound%2A> funções são baseados em 1.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Como: Inicializar uma variável de matriz no Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

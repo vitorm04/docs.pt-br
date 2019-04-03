@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: 96941754f17326893437cdcf83c588880e010cc0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979492"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842714"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversão de delegado reduzida (Visual Basic)
 Conversão de delegado reduzida permite que você atribua sub-rotinas e funções a delegados ou manipuladores mesmo quando as assinaturas não são idênticas. Dessa forma, a ligação a delegados é consistente com a associação já permitida para invocações de método.  
@@ -83,6 +83,7 @@ End Sub
  [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Expressões Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)

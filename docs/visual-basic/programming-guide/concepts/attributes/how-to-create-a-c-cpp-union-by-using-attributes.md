@@ -2,12 +2,12 @@
 title: 'Como: Criar uma união do C / C++ usando atributos (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: e37aac03db7a24e6519acb4eb843b46b8c60b4f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829298"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Como: Criar uma união do C/C++ usando atributos (Visual Basic)
 Usando atributos, você pode personalizar como structs são dispostos na memória. Por exemplo, você pode criar o que é conhecido como uma união no C/C++ usando os atributos `StructLayout(LayoutKind.Explicit)` e `FieldOffset`.  
@@ -67,6 +67,7 @@ Structure TestExplicit
  Os dois campos inteiros, `i1` e `i2`, compartilham os mesmos locais de memória que `lg`. Esse tipo de controle sobre o layout do struct é útil ao usar a invocação de plataforma.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)

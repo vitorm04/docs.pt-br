@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: a383d0c95de5286cce722c05bd8888d5acffb173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589994"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819314"
 ---
 # <a name="other-control-structures-visual-basic"></a>Outras estruturas de controle (Visual Basic)
 Visual Basic fornece estruturas de controle que ajudam você descartar um recurso ou reduzem o número de vezes que você tenha que repetir uma referência de objeto.  
@@ -22,6 +22,7 @@ Visual Basic fornece estruturas de controle que ajudam você descartar um recurs
  O `With...End With` construção permite que você especifique uma referência de objeto de uma vez e, em seguida, executar uma série de instruções que acessam seus membros. Isso pode simplificar o seu código e melhorar o desempenho porque o Visual Basic não precisará restabelecer a referência para cada instrução que o acessa. Para obter mais informações, consulte [com... Terminar com a instrução](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

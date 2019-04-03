@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir paradas de tabulação em um texto desenhado'
+title: 'Como: definir paradas de tabulação em um texto desenhado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 2b3d019db1fd3e9eeb9def1c18b54d293e5faca9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 76431d34504b40a299200693735a0a989127d683
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722419"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832301"
 ---
-# <a name="how-to-set-tab-stops-in-drawn-text"></a>Como: Definir paradas de tabulação em um texto desenhado
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>Como: definir paradas de tabulação em um texto desenhado
 Você pode definir paradas de tabulação para texto chamando o <xref:System.Drawing.StringFormat.SetTabStops%2A> método de um <xref:System.Drawing.StringFormat> objeto e, em seguida, passando <xref:System.Drawing.StringFormat> do objeto para o <xref:System.Drawing.Graphics.DrawString%2A> método da <xref:System.Drawing.Graphics> classe.  
   
 > [!NOTE]
@@ -24,9 +24,9 @@ Você pode definir paradas de tabulação para texto chamando o <xref:System.Dra
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir define as paradas de tabulação em 150, 250 e 350. Em seguida, o código exibe uma lista com guias de nomes e pontuações de teste.  
   
- A ilustração a seguir mostra o texto com guias.  
+ A ilustração a seguir mostra o texto com guias:  
   
- ![Texto de fontes](./media/fontstext4.png "fontstext4")  
+ ![Captura de tela que mostra uma lista com guias de nomes e pontuações.](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
   
  O código a seguir passa dois argumentos para o <xref:System.Drawing.StringFormat.SetTabStops%2A> método. O segundo argumento é uma matriz que contém os deslocamentos de guia. O primeiro argumento passado para <xref:System.Drawing.StringFormat.SetTabStops%2A> é 0, que indica que o primeiro deslocamento na matriz é medido da posição 0, a borda esquerda do retângulo delimitador.  
   

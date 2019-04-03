@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 654c4e4c017141893dd14c7f0f84f76096b274d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664870"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814939"
 ---
 # <a name="keywords-visual-basic"></a>Palavras-chave (Visual Basic)
 As tabelas seguintes listam todas as palavras-chave de linguagem de Visual Basic.  
@@ -118,4 +118,5 @@ As tabelas seguintes listam todas as palavras-chave de linguagem de Visual Basic
 |[Resumo de Manipulação da Cadeia de Caracteres](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Lista as funções que são usadas para manipular cadeias de caracteres.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Membros da Biblioteca em Tempo de Execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

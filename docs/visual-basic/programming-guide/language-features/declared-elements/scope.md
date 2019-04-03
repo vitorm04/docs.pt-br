@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537225"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823539"
 ---
 # <a name="scope-in-visual-basic"></a>Escopo no Visual Basic
 O *escopo* de um elemento declarado é o conjunto de todo o código que pode fazer referência a ele sem qualificar seu nome ou tornando-os disponíveis por meio de uma [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Um elemento pode ter escopo em um dos seguintes níveis:  
@@ -135,6 +135,7 @@ Public strMsg As String
  Em geral, ao declarar qualquer variável ou constante, é boa prática para tornar o escopo tão restrito quanto possível (o escopo de bloco é o menor). Isso ajuda a conservar a memória e minimiza as chances de seu código erroneamente referir-se a variável errada. Da mesma forma, você deve declarar uma variável para ser [estático](../../../../visual-basic/language-reference/modifiers/static.md) somente quando for necessário preservar seu valor entre chamadas de procedimento.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Características do Elemento Declarado](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Como: Controlar o escopo de uma variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

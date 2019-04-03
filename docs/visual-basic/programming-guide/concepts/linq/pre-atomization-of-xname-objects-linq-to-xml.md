@@ -2,12 +2,12 @@
 title: Pré-Atomização de objetos XName (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
-ms.openlocfilehash: 51670a23bf3e8b2896b866b0dd62346d8893aff7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250b7aa8060c8196c28725fded090e2a63a0ee54
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520084"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819288"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Pré-Atomização de objetos XName (LINQ to XML) (Visual Basic)
 Uma maneira para melhorar o desempenho em LINQ to XML é pré-compilação atomizar objetos de <xref:System.Xml.Linq.XName> . a pré-compilação atomização significa que você atribuir uma cadeia de caracteres a um objeto de <xref:System.Xml.Linq.XName> antes de criar a árvore XML usando os construtores de classes de <xref:System.Xml.Linq.XElement> e de <xref:System.Xml.Linq.XAttribute> . Em seguida, em vez de passar uma cadeia de caracteres para o construtor, que usaria a conversão implícita de cadeia de caracteres a <xref:System.Xml.Linq.XName>, você passa o objeto inicializado de <xref:System.Xml.Linq.XName> .  
@@ -87,5 +87,6 @@ Console.WriteLine("Time to construct:{0}", t2 - t1)
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Desempenho (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
 - [Objetos XName e XNamespace Atomizados (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)

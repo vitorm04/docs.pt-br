@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976038"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824917"
 ---
 # <a name="lifetime-in-visual-basic"></a>Tempo de vida no Visual Basic
 O *tempo de vida* de um elemento declarado é o período de tempo durante o qual ele está disponível para uso. As variáveis são os únicos elementos que têm o tempo de vida. Para essa finalidade, o compilador trata os parâmetros de procedimento e função retorna como casos especiais de variáveis. O tempo de vida de uma variável representa o período de tempo durante o qual ele pode conter um valor. Seu valor pode mudar durante sua vida útil, mas ele sempre contém algum valor.  
@@ -72,6 +72,7 @@ O *tempo de vida* de um elemento declarado é o período de tempo durante o qual
  No exemplo anterior, você pode produzir o mesmo tempo de vida, declarando `applesSold` no nível de módulo. Se você tiver alterado o escopo de uma variável dessa forma, no entanto, o procedimento não teria acesso exclusivo a ele. Como outros procedimentos poderiam acessar `applesSold` e altere seu valor, o total de execução pode não ser confiável e o código poderia ser mais difícil de manter.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compartilhado](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Nomes de Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

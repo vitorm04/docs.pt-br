@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: a16dd616c8a38dea4bd1779e4feea779b3a18e2d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375292"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832393"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Especifica o nome do assembly do qual esse módulo fará parte.  
@@ -43,6 +43,7 @@ Especifica o nome do assembly do qual esse módulo fará parte.
 >  O `-moduleassemblyname` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível apenas quando você compila em um prompt de comando.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Criar um assembly de vários arquivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

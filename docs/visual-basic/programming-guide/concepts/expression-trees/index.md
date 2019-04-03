@@ -2,6 +2,12 @@
 title: Árvores de expressão (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
+ms.openlocfilehash: c1e576439956a735962978d37430949ed6bc39d8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832483"
 ---
 # <a name="expression-trees-visual-basic"></a>Árvores de expressão (Visual Basic)
 Árvores de expressão representam código em uma estrutura de dados de árvore, onde cada nó é, por exemplo, uma expressão, uma chamada de método ou uma operação binária como `x < y`.  
@@ -136,6 +142,7 @@ Console.WriteLine(expr.Compile()(4))
  Para obter mais informações, confira [Como: Executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Linq.Expressions>
 - [Como: Executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Como: Modificar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

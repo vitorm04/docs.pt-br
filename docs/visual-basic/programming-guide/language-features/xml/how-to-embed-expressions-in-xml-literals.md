@@ -5,12 +5,12 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 6ecb6a5d684badba68f4c224d5359ea428cfbbf2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 31e79a8787978ffab2e35cd2827b80a8f1ed843e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968701"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841574"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Como: Inserir expressões em literais XML (Visual Basic)
 Você pode combinar literais XML com expressões incorporadas para criar um documento XML, fragmento ou elemento que contém o conteúdo criado no tempo de execução. Os exemplos a seguir demonstram como usar expressões inseridas para preencher os nomes de elementos, atributos e conteúdo do elemento no tempo de execução.  
@@ -66,6 +66,7 @@ Você pode combinar literais XML com expressões incorporadas para criar um docu
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Criar literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
 - [Expressões Inseridas no XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

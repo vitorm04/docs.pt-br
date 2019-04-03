@@ -8,12 +8,12 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: d166ce62a2bb0522d1ca7011aeff7afe076c2d8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542191"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823357"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Como: Fazer referência à instância atual de um objeto (Visual Basic)
 O *instância atual* de um objeto é a instância na qual o código está sendo executado.  
@@ -32,6 +32,7 @@ O *instância atual* de um objeto é a instância na qual o código está sendo 
      Embora `Me` se comporta como um objeto variável, você não pode declará-la ou atribuir algo a ela. `Me` sempre refere-se à instância atual.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Atribuição de variável do objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

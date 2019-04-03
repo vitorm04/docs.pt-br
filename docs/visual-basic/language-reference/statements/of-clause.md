@@ -17,12 +17,12 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: e4c6c5cb8c041f1f0dfb3a9a3f858850d67d1c38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698228"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823435"
 ---
 # <a name="of-clause-visual-basic"></a>Cláusula Of (Visual Basic)
 Apresenta uma `Of` cláusula, que identifica uma *parâmetro de tipo* em uma *genérico* classe, estrutura, interface, delegado ou procedimento. Para obter informações sobre tipos genéricos, consulte [tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
@@ -65,6 +65,7 @@ Dim d As New dictionary(Of String, Integer)
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IComparable>
 - [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
 - [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

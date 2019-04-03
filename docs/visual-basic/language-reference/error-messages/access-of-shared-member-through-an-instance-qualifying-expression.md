@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 78981e5af0d4bf1694a3ad7c9ead2e4e7fd9330e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703543"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843559"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Acesso de membro compartilhado por meio de uma instância; a expressão de qualificação não será avaliada
 Uma variável de instância de uma classe ou estrutura é usada para acessar um `Shared` variável, propriedade, procedimento ou evento definido na classe ou estrutura. Esse aviso também pode ocorrer se uma variável de instância é usada para acessar um membro implicitamente compartilhado de uma classe ou estrutura, como uma constante ou enumeração, ou uma classe aninhada ou estrutura.  
@@ -56,5 +56,6 @@ End Module
 >  Ser alerta para os efeitos de escopo quando dois elementos de programação têm o mesmo nome. No exemplo anterior, se você declarar uma instância por meio `Dim testClass as testClass = Nothing`, o compilador trata uma chamada para `testClass.sayHello()` como um acesso do método por meio do nome de classe e nenhum aviso ocorre.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Escopo no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

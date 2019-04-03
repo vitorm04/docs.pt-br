@@ -2,12 +2,12 @@
 title: Ponto de extremidade de metadados seguros personalizados
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: bc96b21c4432c204160a951e5990ee1751f60e21
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 9376f98f5018a929f27fe546271c71c730185a5f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303901"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832158"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Ponto de extremidade de metadados seguros personalizados
 Este exemplo demonstra como implementar um serviço com um ponto de extremidade de metadados seguros que usa uma das associações não-metadata exchange e como configurar [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ou clientes para buscar o metadados de tal um ponto de extremidade de metadados. Há duas associações fornecidas pelo sistema disponíveis para expor pontos de extremidade de metadados: mexHttpBinding e mexHttpsBinding. mexHttpBinding é usado para expor um ponto de extremidade de metadados sobre HTTP de forma não segura. mexHttpsBinding é usado para expor um ponto de extremidade de metadados via HTTPS de uma maneira segura. Este exemplo ilustra como expor um ponto de extremidade de metadados seguros usando o <xref:System.ServiceModel.WSHttpBinding>. Você pode querer fazer isso quando você deseja alterar as configurações de segurança na associação, mas você não deseja usar HTTPS. Se você usar o mexHttpsBinding seu ponto de extremidade de metadados será seguro, mas não é possível modificar as configurações de associação.  
@@ -186,4 +186,3 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   
-## <a name="see-also"></a>Consulte também

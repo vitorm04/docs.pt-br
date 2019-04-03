@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 601f8f3a5ea86da060b2d26796b2299d87946443
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547794"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824293"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Exemplos de linhas de comando de compilação (Visual Basic)
 Como uma alternativa para compilar programas do Visual Basic de dentro do Visual Studio, você pode compilar da linha de comando para produzir arquivos executáveis (.exe) ou arquivos de biblioteca de vínculo dinâmico (. dll).  
@@ -36,5 +36,6 @@ Como uma alternativa para compilar programas do Visual Basic de dentro do Visual
 >  Quando você compila um projeto usando o IDE do Visual Studio, você pode exibir informações sobre associado **vbc** com suas opções de compilador na janela de saída. Para exibir essas informações, abra o [caixa de diálogo Opções, projetos e soluções, compilação e execução](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)e, em seguida, defina as **detalhes da saída de build do projeto do MSBuild** para **Normal** ou um nível mais alto de detalhamento.   
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

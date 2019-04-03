@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279611"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831747"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Conversão implícita de '\<typename1 >' para '\<typename2 >' ao copiar o valor do parâmetro 'ByRef' '\<parametername >' para o argumento correspondente.
 Um procedimento é chamado com um [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argumento de um tipo diferente do seu parâmetro correspondente.  
@@ -32,6 +32,7 @@ Um procedimento é chamado com um [ByRef](../../../visual-basic/language-referen
 -   Se você precisar chamar o procedimento com um argumento de tipo diferente do tipo de parâmetro, mas não precisa retornar um valor para o argumento de chamada, defina o parâmetro para ser [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) em vez de `ByRef`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Parâmetros e Argumentos de Procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [Passando Argumentos por Valor e por Referência](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

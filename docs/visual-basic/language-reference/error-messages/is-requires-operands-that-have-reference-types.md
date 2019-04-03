@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: fbd0011e76ccecc605b0355025b7ca131e44724e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263924"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843845"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' requer operandos que tenham tipos de referência, mas este operando tem o tipo de valor '\<typename >'
 O `Is` operador de comparação que determina se duas variáveis de objeto se referem à mesma instância. Essa comparação não está definida para tipos de valor.  
@@ -24,6 +24,7 @@ O `Is` operador de comparação que determina se duas variáveis de objeto se re
 -   Use o operador de comparação aritmética apropriado ou o `Like` operador para comparar dois tipos de valor.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operador Is](../../../visual-basic/language-reference/operators/is-operator.md)
 - [Operador Like](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)

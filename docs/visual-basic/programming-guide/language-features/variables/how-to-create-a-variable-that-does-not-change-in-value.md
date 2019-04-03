@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 626b46123e3047b391cd67d3e85c25c5432b2a69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640193"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823318"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Como: Criar uma variável que não se altera no valor (Visual Basic)
 A noção de uma variável que não altera seu valor pode parecer contraditório. Mas há situações quando uma constante não é viável e é útil ter uma variável com um valor fixo. Nesse caso, você pode definir uma variável de membro com o [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) palavra-chave.  
@@ -44,5 +44,6 @@ A noção de uma variável que não altera seu valor pode parecer contraditório
      Se você não souber o valor no tempo de compilação, ou não pode computar em tempo de compilação em uma única instrução, você ainda pode atribui-lo em tempo de execução em um construtor. Para fazer isso, você deve declarar o `ReadOnly` variável no nível de classe ou estrutura. No construtor de classe ou estrutura, calcular o valor da variável fixa e atribua-o à variável antes de retornar do construtor.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Instrução Const](../../../../visual-basic/language-reference/statements/const-statement.md)

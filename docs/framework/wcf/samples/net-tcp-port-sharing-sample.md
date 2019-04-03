@@ -2,12 +2,12 @@
 title: Exemplo de compartilhamento de porta Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6180e615d6ae363a4e6fe4bfca3fe0e60f403f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735484"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830169"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Exemplo de compartilhamento de porta Net.TCP
 O protocolo TCP/IP usa um número de 16 bits, chamado de porta, para diferenciar conexões para vários aplicativos de rede em execução no mesmo computador. Se um aplicativo estiver escutando em uma porta, todo o tráfego TCP para essa porta irá para esse aplicativo. Outros aplicativos não podem escutar nessa porta ao mesmo tempo.  
@@ -139,4 +139,3 @@ Press <ENTER> to terminate client.
   
 5.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Detalhes específicos para executar esse exemplo estão incluídos anteriormente em execução a seção de exemplo.  
   
-## <a name="see-also"></a>Consulte também

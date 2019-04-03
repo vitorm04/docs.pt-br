@@ -2,12 +2,12 @@
 title: Instruções a-E (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
-ms.openlocfilehash: e9fbf04260329ca7ddf1afc002f9ed7fd11a1580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4135f7154a73823400d8b1698421e138650d4854
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672351"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816741"
 ---
 # <a name="a-e-statements"></a>Instruções A-E
 A tabela a seguir contém uma lista de instruções de linguagem do Visual Basic.  
@@ -21,6 +21,7 @@ A tabela a seguir contém uma lista de instruções de linguagem do Visual Basic
 |[Exit](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instruções F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)
 - [Instruções Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)
 - [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)

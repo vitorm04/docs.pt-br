@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 38efb1ba0ed9ed34d256418ae60b863fccc8eaf1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377088"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824982"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> tem duas propriedades de conteúdo: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> e <xref:System.Windows.Controls.Decorator.Child%2A>. O <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> propriedade define o <xref:System.Windows.UIElement> para usar como um marcador. O <xref:System.Windows.Controls.Decorator.Child%2A> propriedade define um <xref:System.Windows.UIElement> que visualmente alinha com o marcador.  
   
  A ilustração a seguir mostra exemplos de controles que usam um <xref:System.Windows.Controls.Primitives.BulletDecorator>.  
   
- ![3 BulletDecorators: Caixa de seleção, o botão de opção, caixa de texto](./media/bulletdecorator.png "BulletDecorator")  
+ ![Exemplo de uma caixa de seleção, um botão de opção e um decorador de marcador de caixa de texto.](./media/bulletdecorator/three-bullet-decorators.png)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

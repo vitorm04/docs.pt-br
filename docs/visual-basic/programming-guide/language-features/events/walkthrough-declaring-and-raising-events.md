@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975388"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840998"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Passo a passo: Declarando e acionando eventos (Visual Basic)
 Este passo a passo demonstra como declarar e acionar eventos para uma classe chamada `Widget`. Depois de concluir as etapas, você talvez queira ler o tópico [passo a passo: Manipulação de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), que mostra como usar eventos de `Widget` objetos para fornecer informações de status em um aplicativo.  
@@ -74,6 +74,7 @@ Este passo a passo demonstra como declarar e acionar eventos para uma classe cha
  Agora que o `Widget` classe pode gerar eventos, você pode mover para a próximo passo a passo. [Passo a passo: Manipulação de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) demonstra como usar `WithEvents` para associar um manipulador de eventos com o `PercentDone` eventos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
 - [Passo a passo: Manipulação de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)

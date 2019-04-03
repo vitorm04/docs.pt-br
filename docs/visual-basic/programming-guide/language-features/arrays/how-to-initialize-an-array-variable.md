@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 069c03cc9666cffec2edd26afeb86f0230f9bc6f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4aa783d6179c72760a12d0259d587b5b38bb9140
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980926"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832236"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Como: Inicializar uma variável de matriz no Visual Basic
 Inicializar uma variável de matriz incluindo um literal de matriz em um `New` cláusula e especificando os valores iniciais da matriz. Você pode especificar o tipo ou permitir que ele seja inferido dos valores no literal de matriz. Para obter mais informações sobre como o tipo é inferido, consulte "Preencher uma matriz com valores iniciais" em [matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
@@ -54,5 +54,6 @@ Inicializar uma variável de matriz incluindo um literal de matriz em um `New` c
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Solução de problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

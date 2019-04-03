@@ -2,12 +2,12 @@
 title: 'Tutorial: Execução adiada (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c80d53a8-1a30-4115-b232-52f0d089fec5
-ms.openlocfilehash: 2459d9089af9886b8b2b8952a5e80832ee2d468f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d78d298f7691c4f1df291fa865c92894414ead58
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609428"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838010"
 ---
 # <a name="tutorial-deferred-execution-visual-basic"></a>Tutorial: Execução adiada (Visual Basic)
 Este tutorial mostra o modelo de processamento quando você encadea consultas juntos. Encadeamento consultas seja adjacente uma parte fundamental de escrever transformações funcionais. É importante compreender exatamente como as consultas encadeadas funcionam.  
@@ -22,4 +22,5 @@ Este tutorial mostra o modelo de processamento quando você encadea consultas ju
 |[Exemplo de execução adiada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)|Fornece um exemplo de execução adiada.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Transformações funcionais puras de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

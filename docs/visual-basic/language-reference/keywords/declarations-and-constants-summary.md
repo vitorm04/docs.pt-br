@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring constants [Visual Basic], keywords
 - declarations [Visual Basic], Visual Basic language elements
 ms.assetid: 79d64f3e-941d-4d39-bc5b-79f225d5be6e
-ms.openlocfilehash: 33f07abcb67afed8d1323e9d90d3b7aabc3b2cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00c789d01a55382254e1d90a13b9d8b0a23a81de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726624"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821849"
 ---
 # <a name="declarations-and-constants-summary-visual-basic"></a>Resumo de declarações e constantes (Visual Basic)
 Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.  
@@ -29,5 +29,6 @@ Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de exe
 |Implementar a herança.|[Herda](../../../visual-basic/language-reference/statements/inherits-statement.md), [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), [MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md), [MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md), [novo](../../../visual-basic/language-reference/operators/new-operator.md), [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [sobrecarrega](../../../visual-basic/language-reference/modifiers/overloads.md), [substituível](../../../visual-basic/language-reference/modifiers/overridable.md), [substituições](../../../visual-basic/language-reference/modifiers/overrides.md)|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
 - [Membros da Biblioteca em Tempo de Execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

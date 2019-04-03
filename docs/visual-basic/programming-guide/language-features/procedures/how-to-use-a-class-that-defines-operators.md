@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 358e81904f48ad844351a20a448b615a0fef8f89
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972503"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829402"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Como: Usar uma classe que define operadores (Visual Basic)
 Se você estiver usando uma classe ou estrutura que define seus próprio operadores, você pode acessar os operadores do Visual Basic.  
@@ -40,6 +40,7 @@ Se você estiver usando uma classe ou estrutura que define seus próprio operado
  Seu projeto deve ter referências a System. Data e System. XML.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos de Operador](./operator-procedures.md)
 - [Como: Definir um operador](./how-to-define-an-operator.md)
 - [Como: Definir um operador de conversão](./how-to-define-a-conversion-operator.md)

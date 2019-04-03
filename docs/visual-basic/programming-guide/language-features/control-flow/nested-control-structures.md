@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409790"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835187"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estruturas de controle aninhadas (Visual Basic)
 Você pode colocar instruções de controle dentro de outras instruções de controle, por exemplo uma `If...Then...Else` bloquear dentro de um `For...Next` loop. Uma instrução de controle colocada dentro de outra instrução de controle é considerada *aninhada*.  
@@ -72,6 +72,7 @@ Next ctl
  O compilador do Visual Basic detecta essas estruturas de controle sobrepostos e sinaliza um erro de tempo de compilação.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

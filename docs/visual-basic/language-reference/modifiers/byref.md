@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic]
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
-ms.openlocfilehash: a19df60d6eb272c7bb81972106e12e0efe903131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e553f350ea95f04996496b65f98f277795838e25
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619494"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822764"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
 Especifica que um argumento é passado de tal forma que o procedimento chamado pode alterar o valor de uma variável subjacente ao argumento no código de chamada.  
@@ -28,5 +28,6 @@ Especifica que um argumento é passado de tal forma que o procedimento chamado p
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
 - [Passando Argumentos por Valor e por Referência](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

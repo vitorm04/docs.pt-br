@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979912"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842246"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Literal do elemento XML (Visual Basic)
 
@@ -160,6 +160,7 @@ Um literal que representa um <xref:System.Xml.Linq.XElement> objeto.
  Observe que o compilador converteu o prefixo do namespace XML global em uma definição de prefixo para o namespace XML. O \<ns:middle > elemento redefine o prefixo de namespace XML para o \<ns:inner1 > elemento. No entanto, o \<ns:inner2 > elemento usa o namespace definido pelo `Imports` instrução.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Xml.Linq.XElement>
 - [Nomes de Elementos e Atributos XML Declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [Literal de Comentário XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)

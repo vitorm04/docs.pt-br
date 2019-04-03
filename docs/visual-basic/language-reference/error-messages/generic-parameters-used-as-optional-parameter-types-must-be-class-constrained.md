@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 7a1411daf446cbf06cd57b4e002c2c3cd77166af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507155"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813893"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>Parâmetros genéricos usados como tipos de parâmetro opcionais devem ter a classe restrita
 Um procedimento é declarado com um parâmetro opcional que usa um parâmetro de tipo que não é restrito para ser um tipo de referência.  
@@ -28,6 +28,7 @@ Um procedimento é declarado com um parâmetro opcional que usa um parâmetro de
 -   Restringir o parâmetro de tipo para aceitar apenas um tipo de referência, ou não usá-lo para o parâmetro opcional.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
 - [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)

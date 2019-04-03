@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: 6bb34eb810f6e2d0b0d631f5891e3e65aa0b170f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981394"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840166"
 ---
 # <a name="mod-operator-visual-basic"></a>Operador Mod (Visual Basic)
 Divide dois números e retorna apenas o resto.  
@@ -101,6 +101,7 @@ End Module
  [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
 - [Operadores Aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b84bf20acaaa912e47102973b0484d635f1aa244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679416"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833658"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimento principal no Visual Basic
 Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. Esse procedimento serve como o início do ponto e controle geral para seu aplicativo. O .NET Framework chama seu `Main` procedimento quando ele tiver carregado seu aplicativo e está pronto para transmitir o controle a ele. A menos que você estiver criando um aplicativo do Windows Forms, você deve escrever o `Main` procedimento para aplicativos que executam suas próprias.  
@@ -109,6 +109,7 @@ Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. E
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>

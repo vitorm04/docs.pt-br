@@ -2,12 +2,12 @@
 title: 'Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 806a1f6c5674e670402d3d612f169582df5e0155
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616973"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828544"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)
 Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.  
@@ -29,7 +29,7 @@ Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em se
     Garcia, Debra  
     ```  
   
-2.  Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na pasta do projeto: Observe que os dois arquivos tem alguns nomes em comum.  
+2.  Copie estes nomes em um arquivo de texto chamado names2.txt e salve-o na pasta do projeto: Observe que os dois arquivos tem alguns nomes em comum.  
   
     ```  
     Liu, Jinghao  
@@ -119,5 +119,6 @@ End Class
  Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

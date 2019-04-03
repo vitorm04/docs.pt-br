@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654361"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833289"
 ---
 # <a name="loop-structures-visual-basic"></a>Estruturas de loop (Visual Basic)
 Estruturas de loop do Visual Basic permitem que você execute uma ou mais linhas de código repetidamente. Você pode repetir as instruções em uma estrutura de loop até que uma condição for `True`, até que uma condição é `False`, um especificado o número de vezes ou uma vez para cada elemento em uma coleção.  
@@ -37,6 +37,7 @@ Estruturas de loop do Visual Basic permitem que você execute uma ou mais linhas
  O `For Each`... `Next` construção executa um conjunto de instruções uma vez para cada elemento em uma coleção. Especifique a variável de controle de loop, mas não é preciso determinar inicial ou final de valores para ele. Para obter mais informações, consulte [para cada um... Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Outras Estruturas de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

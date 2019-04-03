@@ -1,5 +1,5 @@
 ---
-title: 'Como: Girar, refletir e distorcer imagens'
+title: 'Como: girar, refletir e distorcer imagens'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711493"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839906"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>Como: Girar, refletir e distorcer imagens
+# <a name="how-to-rotate-reflect-and-skew-images"></a>Como: girar, refletir e distorcer imagens
 Você pode girar, refletir e distorcer uma imagem especificando pontos de destino para os cantos superior esquerdo, superior direito e inferior esquerdo da imagem original. Os três pontos de destino determinam uma transformação afim que mapeia a imagem retangular original para um paralelogramo.  
   
 ## <a name="example"></a>Exemplo  
@@ -30,15 +30,15 @@ Você pode girar, refletir e distorcer uma imagem especificando pontos de destin
   
  A ilustração a seguir mostra a imagem original e a imagem mapeada para o paralelogramo. A imagem original foi distorcida, refletida, girada e movida. O eixo x ao longo da borda superior da imagem original é mapeado para a linha que percorre (200, 20) e (110, 100). O eixo y ao longo da borda esquerda da imagem original é mapeado para a linha que percorre (200, 20) e (250, 30).  
   
- ![Faixas](./media/stripes1.gif "Stripes1")  
+ ![A imagem original e a imagem mapeada para o paralelogramo.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
- A ilustração a seguir mostra uma transformação semelhante aplicada a uma imagem fotográfica.  
+ A ilustração a seguir mostra uma transformação semelhante aplicada a uma imagem fotográfica:  
   
- ![Escalador transformado](./media/transformedclimber.png "TransformedClimber")  
+ ![A imagem de uma Alpinista e a imagem mapeada para o paralelogramo.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- A ilustração a seguir mostra uma transformação semelhante aplicada a um metarquivo.  
+ A ilustração a seguir mostra uma transformação semelhante aplicada a um metarquivo:  
   
- ![Metarquivo transformado](./media/transformedmetafile.png "TransformedMetafile")  
+ ![Ilustração de formas e texto e que é mapeada para o paralelogramo.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  O exemplo a seguir produz as imagens mostradas na primeira ilustração.  
   

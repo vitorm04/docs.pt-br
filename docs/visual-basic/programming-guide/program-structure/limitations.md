@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 0f356b52304110299ed0af9bbccd5d03893f31a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596352"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824904"
 ---
 # <a name="visual-basic-limitations"></a>Limitações do Visual Basic
 Versões anteriores do Visual Basic aplicadas limites no código, como o comprimento de nomes de variável, o número de coluna não são permitidos em módulos e o tamanho do módulo. No Visual Basic .NET, essas restrições têm foi abrandadas, dando a você maior liberdade de escrever e organizar seu código.  
@@ -33,5 +33,6 @@ Versões anteriores do Visual Basic aplicadas limites no código, como o comprim
 -   **Comprimento da cadeia de caracteres de ambiente.** Há um máximo de 32768 caracteres para qualquer cadeia de caracteres de ambiente usado como um argumento de linha de comando. Essa é uma limitação em todas as plataformas.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Convenções de nomenclatura do Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

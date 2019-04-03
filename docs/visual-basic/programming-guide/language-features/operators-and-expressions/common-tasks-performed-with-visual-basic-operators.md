@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: dbd97b23bd67b3c98fb89037205ac12f120ca490
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88c05b54402733fadb686e3c6f883b2d2d56990c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692107"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815063"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Tarefas comuns realizadas com operadores do Visual Basic
 Os operadores executam várias tarefas comuns que envolvem uma ou mais expressões chamadas *operandos*.  
@@ -79,5 +79,6 @@ Os operadores executam várias tarefas comuns que envolvem uma ou mais expressõ
 |Realizar a negação lógica de bit por bit em um valor integral|[Operador Not](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operadores e Expressões](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Operadores Listados por Funcionalidade](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

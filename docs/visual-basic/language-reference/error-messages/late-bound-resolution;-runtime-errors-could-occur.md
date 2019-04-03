@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: 9caf02907e4b6de4c2bd8de778d4ad7a9320a82b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690573"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822241"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Resolução de associação tardia; poderiam ocorrer erros de tempo de execução
 Um objeto é atribuído a uma variável declarada com o [tipo de dados do objeto](../../../visual-basic/language-reference/data-types/object-data-type.md).  
@@ -30,5 +30,6 @@ Um objeto é atribuído a uma variável declarada com o [tipo de dados do objeto
 -   Se possível, declare a variável para ser de um tipo específico.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Associação Antecipada e Tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [Declaração de Variável do Objeto](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)

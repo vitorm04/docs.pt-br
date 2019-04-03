@@ -2,12 +2,12 @@
 title: Informações do chamador (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375539"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826048"
 ---
 # <a name="caller-information-visual-basic"></a>Informações do chamador (Visual Basic)
 Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número da linha no código-fonte e o nome do membro do chamador. Essas informações são úteis para fins de rastreamento, depuração e criação de ferramentas de diagnóstico.  
@@ -75,6 +75,7 @@ End Sub
 |Nenhum membro contentor (por exemplo, nível de assembly ou atributos que são aplicadas aos tipos)|O valor padrão do parâmetro opcional.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Atributos (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
 - [Atributos comuns (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 - [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

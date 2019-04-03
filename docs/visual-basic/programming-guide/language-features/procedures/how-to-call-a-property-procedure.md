@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 6a7c55433001af5c5695044f41f866c1df8c3651
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7b85239f80b4bfa87d1dbb1e3207e63d0cef7eeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977845"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827205"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Como: Chamar um procedimento de propriedade (Visual Basic)
 Para chamar um procedimento de propriedade, armazenar um valor na propriedade ou recuperar seu valor. Você acessa uma propriedade da mesma maneira que você acessa uma variável.  
@@ -24,7 +24,7 @@ Para chamar um procedimento de propriedade, armazenar um valor na propriedade ou
   
 1.  Use o nome da propriedade em uma expressão da mesma maneira que você usaria um nome de variável. Você pode usar uma propriedade em qualquer lugar você pode usar uma variável ou uma constante.  
   
-     -ou-  
+     - ou -  
   
      Use o nome de propriedade seguido de igual (`=`) entrar em uma instrução de atribuição.  
   
@@ -53,6 +53,7 @@ Para chamar um procedimento de propriedade, armazenar um valor na propriedade ou
  O valor gerado no lado direito da instrução de atribuição é armazenado na propriedade.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos de Propriedade](./property-procedures.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)

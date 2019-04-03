@@ -2,12 +2,12 @@
 title: Refatoração usando um método de extensão (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 429f1fb106eca6b6a9ce0f64ea81c260c10a088a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 925ae6b1ae82576a830b06ef11232f7dad9875f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671571"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829987"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refatoração usando um método de extensão (Visual Basic)
 Este exemplo se baseia no exemplo anterior, [recuperando o texto dos parágrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), refatoração a concatenação de cadeias de caracteres usando uma função pura implementada como um método de extensão.  
@@ -244,5 +244,6 @@ StyleName:Code >Hello World<
 -   [Refatoração usando uma função pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refatoração em funções puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

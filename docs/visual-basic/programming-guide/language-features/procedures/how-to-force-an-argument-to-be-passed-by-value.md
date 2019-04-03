@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970279"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842038"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Como: Forçar um argumento a ser passado por valor (Visual Basic)
 A declaração de procedimento determina o mecanismo de passagem. Se um parâmetro for declarado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic espera passar o argumento correspondente por referência. Isso permite que o procedimento para alterar o valor do elemento de programação subjacente do argumento no código de chamada. Se você desejar proteger o elemento subjacente contra alteração, você pode substituir o `ByRef` mecanismo de passagem no procedimento chame colocando o nome do argumento entre parênteses. São esses parênteses, além de parênteses que incluem a lista de argumentos na chamada.  
@@ -53,6 +53,7 @@ A declaração de procedimento determina o mecanismo de passagem. Se um parâmet
  Sempre há um risco potencial em permitir que um procedimento para alterar o valor subjacente de um argumento no código de chamada. Verifique se você espera que esse valor a ser alterado e esteja preparado para verificá-lo quanto à validade antes de usá-lo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Como: Passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - information functions [Visual Basic]
 - interaction functions [Visual Basic]
 ms.assetid: 6e698461-e944-4c0f-ae48-87429f1fe740
-ms.openlocfilehash: 001b3947773e767e8c746fce84c8cbda22fdce78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1157462f743396f8fb4b4304c0529db5377bd41e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521303"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823228"
 ---
 # <a name="information-and-interaction-summary-visual-basic"></a>Informações e resumo da interação (Visual Basic)
 Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.  
@@ -26,5 +26,6 @@ Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de exe
 |Caixas de diálogo controle|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
 - [Membros da Biblioteca em Tempo de Execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

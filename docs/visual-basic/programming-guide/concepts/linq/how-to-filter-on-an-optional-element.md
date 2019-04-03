@@ -2,12 +2,12 @@
 title: 'Como: Filtrar em um elemento opcional (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: feb7c3fbf40db81835ef132c52a2d9f2af1229be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a1c7d4091af80e79a6758bcede8f4ccc753f03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552418"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820654"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Como: Filtrar em um elemento opcional (Visual Basic)
 Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML. A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele. No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.  
@@ -107,6 +107,7 @@ Child Four Text
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>

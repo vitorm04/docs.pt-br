@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: c4b23bb2d81d1f5272a5813123681da7406c3368
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a59ff4c956724c614342f0ee4c0622a67f1c25e7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817065"
 ---
 # <a name="is-operator-visual-basic"></a>Operador Is (Visual Basic)
 Compara duas variáveis de referência de objeto.  
@@ -51,6 +51,7 @@ result = object1 Is object2
  Conforme demonstrado no exemplo anterior, você pode usar o `Is` operador para o teste de associação antecipada e tardia em objetos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operador TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [Operador IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)
 - [Operadores de comparação no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

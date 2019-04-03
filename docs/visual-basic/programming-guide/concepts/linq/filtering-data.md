@@ -2,19 +2,19 @@
 title: Filtrando dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: d65b9941ceffa7ea23c4ead192ec6b97b7b4ead8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527829"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837437"
 ---
 # <a name="filtering-data-visual-basic"></a>Filtrando dados (Visual Basic)
 A filtragem é a operação de restringir o conjunto de resultados de forma que ele contenha apenas os elementos correspondentes a uma condição especificada. Ela também é conhecida como seleção.  
   
  A ilustração a seguir mostra os resultados da filtragem de uma sequência de caracteres. O predicado para a operação de filtragem especifica que o caractere deve ser "A".  
   
- ![Operação de filtragem no LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_filter.png "LINQ_Filter")  
+ ![Diagrama que mostra um operação de filtragem no LINQ](./media/filtering-data/linq-filter-operation.png)  
   
  Os métodos de operador de consulta padrão que realizam a seleção estão listados na seção a seguir.  
   
@@ -50,6 +50,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula Where](../../../../visual-basic/language-reference/queries/where-clause.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672130"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837072"
 ---
 # <a name="visual-basic-naming-conventions"></a>Convenções de nomenclatura do Visual Basic
 Quando você nomeia um elemento em seu aplicativo Visual Basic, o primeiro caractere do nome deve ser um caractere alfabético ou sublinhado. No entanto, observe que os nomes que começam com um sublinhado não são compatíveis com o [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
@@ -41,6 +41,7 @@ Quando você nomeia um elemento em seu aplicativo Visual Basic, o primeiro carac
 -   Evite usar nomes em um escopo interno que são os mesmos nomes em um escopo externo. Erros podem ocorrer se a variável errada é acessada. Se ocorrer um conflito entre uma variável e a palavra-chave do mesmo nome, você deve identificar a palavra-chave, precedendo-o com a biblioteca de tipo apropriado. Por exemplo, se você tiver uma variável chamada `Date`, você pode usar o intrínseco `Date` função apenas chamando <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Palavras-chave como Nomes de Elemento em Código](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me, My, MyBase e MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Nomes de Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

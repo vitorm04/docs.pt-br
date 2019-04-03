@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 9e018f4babd3ec6b212673494c6ae30f13c49737
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 291240bade84bcdd3d64dac24c8c91da5ff72d4f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608843"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816767"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>A cláusula de identificadores requer uma variável WithEvents definida no tipo recipiente ou em um de seus tipos base
 Você não forneceu uma `WithEvents` variável em seu `Handles` cláusula. O `Handles` palavra-chave no final de uma declaração de procedimento faz com que ele manipular eventos acionados por uma variável de objeto declarada usando o `WithEvents` palavra-chave.  
@@ -24,4 +24,5 @@ Você não forneceu uma `WithEvents` variável em seu `Handles` cláusula. O `Ha
 -   Forneça o necessário `WithEvents` variável.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

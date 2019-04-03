@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977572"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843096"
 ---
 # <a name="sub-procedures-visual-basic"></a>Subprocedimentos (Visual Basic)
 Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub` e `End Sub` instruções. O `Sub` procedimento executa uma tarefa e, em seguida, retorna o controle para o código de chamada, mas não retorna um valor para o código de chamada.  
@@ -73,6 +73,7 @@ Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Procedimentos de Função](./function-procedures.md)
 - [Procedimentos de Propriedade](./property-procedures.md)

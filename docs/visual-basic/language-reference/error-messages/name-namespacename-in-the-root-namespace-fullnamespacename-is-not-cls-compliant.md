@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: c5afdcc98b7acb1927c9b0735a69fbe64c3d8e60
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268710"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841531"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nome da \<namespacename > no namespace raiz \<fullnamespacename > não é compatível com CLS
 Um assembly é marcado como `<CLSCompliant(True)>`, mas um elemento do nome do namespace raiz começa com um sublinhado (`_`).  
@@ -34,10 +34,10 @@ Um assembly é marcado como `<CLSCompliant(True)>`, mas um elemento do nome do n
 -   Se você precisar que o nome do namespace permanecem inalterados, em seguida, remova os <xref:System.CLSCompliantAttribute> do assembly ou marcá-la como `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
 - [Página de Aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Nomes de Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Convenções de nomenclatura do Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-

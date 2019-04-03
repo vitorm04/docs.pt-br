@@ -20,12 +20,12 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: c7c7987508260a0181904feacf3782f66066309f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3ff3d67f38f510b798da3e470de066cff1e98f29
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968199"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826035"
 ---
 # <a name="doloop-statement-visual-basic"></a>Instrução Do...Loop (Visual Basic)
 Repete um bloco de instruções enquanto uma `Boolean` condição for `True` ou até que a condição se torne `True`.  
@@ -107,6 +107,7 @@ Loop { While | Until } condition
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estruturas de Loop](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Tipo de Dados Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 528e63e6b7d978b3bbdfcb78e4260b4590db6d7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520016"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821346"
 ---
 # <a name="date-data-type-visual-basic"></a>Tipo de dados Data (Visual Basic)
 Contém os valores de (8 bytes) do IEEE de 64 bits que representam datas desde 1 de janeiro do ano de 0001 até 31 de dezembro do ano 9999 e horas de 12:00:00 AM (meia-noite) por meio de 11:59:59.9999999 PM. Cada incremento representa 100 nanossegundos de tempo decorrido desde o início de 1º de janeiro do ano 1 no calendário gregoriano. O valor máximo representará 100 nanosegundos antes do início do dia 1º de janeiro do ano 10000.  
@@ -75,6 +75,7 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
 - [Cadeias de caracteres de formato de data e hora padrão](../../../standard/base-types/standard-date-and-time-format-strings.md)

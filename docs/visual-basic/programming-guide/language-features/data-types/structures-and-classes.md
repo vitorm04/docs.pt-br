@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 78c1d529053a10fc208ee5499b759623c227cb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681801"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841609"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Estruturas e classes (Visual Basic)
 Visual Basic unifica a sintaxe para estruturas e classes, com o resultado que ambas as entidades dão suporte à maioria dos mesmos recursos. No entanto, também há diferenças importantes entre as estruturas e classes.  
@@ -87,6 +87,7 @@ Visual Basic unifica a sintaxe para estruturas e classes, com o resultado que am
 -   **Igualdade.** Teste de igualdade de duas estruturas deve ser executada com um teste de elemento por elemento. Duas variáveis de objeto podem ser comparadas usando o <xref:System.Object.Equals%2A> método. <xref:System.Object.Equals%2A> Indica se as duas variáveis que apontam para a mesma instância.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

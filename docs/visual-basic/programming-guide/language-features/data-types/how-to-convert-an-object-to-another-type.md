@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 81ac65ad34ad6afdfb89a750fef39b121aabd644
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611339"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814374"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Como: Converter um objeto em outro tipo no Visual Basic
 Converter um `Object` variável em outro tipo de dados usando uma palavra-chave de conversão, como [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md).  
@@ -34,6 +34,7 @@ End Sub
 -   Uma referência para o <xref:System?displayProperty=nameWithType> namespace.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Object>
 - [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

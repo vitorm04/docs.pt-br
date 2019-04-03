@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: daaf75256b3449209b4e3c030cc6b54692c6a172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620416"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841233"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Combinação eficiente de operadores (Visual Basic)
 Expressões complexas podem conter muitos operadores diferentes. O exemplo a seguir ilustra essa situação.  
@@ -46,6 +46,7 @@ Expressões complexas podem conter muitos operadores diferentes. O exemplo a seg
  No exemplo anterior, `z + 2` é avaliado primeiro e, em seguida, as outras expressões entre parênteses. Exponenciação, que normalmente tem precedência maior do que a adição ou multiplicação, é avaliada por último neste exemplo porque outras expressões são colocados entre parênteses.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operadores aritméticos no Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Operadores de comparação no Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Operadores lógicos e bit a bit no Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: e2d7f5d570e187393b76f4af6301a81dbb350f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82b513b89d661e49853e55f26df13eb354945038
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518521"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828583"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Ocorreu um erro inesperado porque não foi possível adquirir um recurso do sistema operacional obrigatório para a inicialização de instância única
 O aplicativo não pôde adquirir um recurso do sistema operacional necessário. Algumas das causas possíveis para esse problema são:  
@@ -31,6 +31,7 @@ O aplicativo não pôde adquirir um recurso do sistema operacional necessário. 
 4.  Observe as circunstâncias sob as quais ocorreu o erro e chame o Microsoft Product Support Services  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Página de Aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Noções básicas do depurador](/visualstudio/debugger/debugger-basics)
 - [Fale conosco](/visualstudio/ide/talk-to-us)

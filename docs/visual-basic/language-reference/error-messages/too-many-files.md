@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID67
 ms.assetid: 2ff203e2-bba6-43ae-b72f-8e92a881c98f
-ms.openlocfilehash: 15e08cedbd58016959f00e1ca817019937775df2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ceacb5d83fcfc9fcbd341cc5d9579c4e2e181353
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737225"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829883"
 ---
 # <a name="too-many-files"></a>Muitos arquivos
 Mais arquivos foram criados no diretório raiz que o sistema operacional permite, ou mais arquivos foram abertos que o número especificado na **arquivos =** configuração no arquivo CONFIG. Arquivo SYS.  
@@ -21,4 +21,5 @@ Mais arquivos foram criados no diretório raiz que o sistema operacional permite
 2.  Aumentar o número de arquivos especificados no seu **arquivos =** configuração no arquivo CONFIG. SYS do arquivo e reinicie o computador.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679585"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819093"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Estruturas e outros elementos de programação (Visual Basic)
 Você pode usar as estruturas em conjunto com matrizes, objetos e procedimentos, bem como entre si. As interações usam a mesma sintaxe que esses elementos usam individualmente.  
@@ -123,6 +123,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
  Estruturas podem conter outras estruturas em uma profundidade arbitrária.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipos de Dados Elementares](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

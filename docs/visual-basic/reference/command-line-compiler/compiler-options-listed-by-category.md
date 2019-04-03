@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: e7e81715b396580208fd7bbbb797a7c93301503d
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738897"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827361"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opções de compilador do Visual Basic listadas por categoria
 O compilador de linha de comando do Visual Basic é fornecido como uma alternativa para compilar programas de dentro do ambiente de desenvolvimento integrado (IDE) do Visual Studio. O exemplo a seguir é uma lista das opções de linha de comando do compilador Visual Basic classificadas por categoria funcional.  
@@ -127,5 +127,6 @@ O compilador de linha de comando do Visual Basic é fornecido como uma alternati
 |`-checksumalgorithm:<alg>`|Especifique o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores compatíveis são: SHA1 (padrão) ou SHA256.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Opções do compilador do Visual Basic listadas em ordem alfabética](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [Gerenciar propriedades do projeto e da solução](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

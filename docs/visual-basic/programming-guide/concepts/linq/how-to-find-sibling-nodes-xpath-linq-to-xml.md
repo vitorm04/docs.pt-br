@@ -2,12 +2,12 @@
 title: 'Como: Localizar nós irmãos (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 740123077c24dd27fe1a4810d0cb45c4775894aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622631"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842103"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Como: Localizar nós irmãos (XPath-LINQ to XML) (Visual Basic)
 Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico. A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.  
@@ -68,4 +68,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 262812f5e18bb9c46ea5ec573adab914f19eef43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979470"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838983"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Como: Sobrecarregar um procedimento que usa um número indefinido de parâmetros (Visual Basic)
 Se um procedimento tem um [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parâmetro, você não pode definir uma versão sobrecarregada, levando a uma matriz unidimensional para a matriz de parâmetros. Para obter mais informações, consulte "Implícita sobrecargas para um parâmetro ParamArray" na [considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md).  
@@ -54,6 +54,7 @@ Se um procedimento tem um [ParamArray](../../../../visual-basic/language-referen
  Sempre que você lida com uma matriz que pode ser indefinidamente grande, há um risco de ultrapassar alguma capacidade interna do seu aplicativo. Se você aceitar uma matriz de parâmetros, de teste para o comprimento da matriz em que o código de chamada passado para ele e tomar as medidas adequadas se ele for muito grande para o seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Procedimentos](./index.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Parâmetros Opcionais](./optional-parameters.md)
