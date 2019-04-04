@@ -2,10 +2,16 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723108"
 ---
 # <a name="windows-forms"></a><span data-ttu-id="c6507-102">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c6507-102">Windows Forms</span></span>
 <span data-ttu-id="c6507-103">Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design.</span><span class="sxs-lookup"><span data-stu-id="c6507-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="c6507-104">Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados.</span><span class="sxs-lookup"><span data-stu-id="c6507-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="c6507-105">Para esse fim, o Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para ajudar a escrever código, bem como um controle sofisticado conjunto escrito com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c6507-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="c6507-106">Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.</span><span class="sxs-lookup"><span data-stu-id="c6507-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  

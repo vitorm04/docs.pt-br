@@ -1,10 +1,15 @@
 ---
-title: 'Um tour pelo C# – Guia do C#'
-description: 'Novato em C#? Conheça os fundamentos da linguagem.'
+title: Um tour pelo C# – Guia do C#
+description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843423"
 ---
-
 # <a name="a-tour-of-the-c-language"></a><span data-ttu-id="ae9b8-104">Um tour pela linguagem C#</span><span class="sxs-lookup"><span data-stu-id="ae9b8-104">A Tour of the C# Language</span></span>
 
 <span data-ttu-id="ae9b8-105">O C# (pronuncia-se "C Sharp") é uma linguagem de programação simples, moderna, orientada a objeto e fortemente tipada.</span><span class="sxs-lookup"><span data-stu-id="ae9b8-105">C# (pronounced "See Sharp") is a simple, modern, object-oriented, and type-safe programming language.</span></span> <span data-ttu-id="ae9b8-106">O C# tem suas raízes na família de linguagens C e os programadores em C, C++, Java e JavaScript a reconhecerão imediatamente.</span><span class="sxs-lookup"><span data-stu-id="ae9b8-106">C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers.</span></span>

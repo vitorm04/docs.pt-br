@@ -2,8 +2,13 @@
 title: Conceitos de programação – Visual Basic
 ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
+ms.openlocfilehash: 4c550002e1049fb716d2836737b6c3fa5b9df4f1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677468"
 ---
-
 # <a name="programming-concepts-visual-basic"></a><span data-ttu-id="1d759-102">Conceitos de Programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1d759-102">Programming Concepts (Visual Basic)</span></span>
 
 <span data-ttu-id="1d759-103">Esta seção explica conceitos de programação na linguagem do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1d759-103">This section explains programming concepts in the Visual Basic language.</span></span>

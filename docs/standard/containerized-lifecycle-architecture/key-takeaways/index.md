@@ -4,6 +4,12 @@ description: Revise as principais lições para o guia.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 092c182fd9246f4ded148302f6d49cbde24d27d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835831"
 ---
 # <a name="key-takeaways"></a><span data-ttu-id="37a60-103">Principais aspectos a serem lembrados</span><span class="sxs-lookup"><span data-stu-id="37a60-103">Key takeaways</span></span>
 

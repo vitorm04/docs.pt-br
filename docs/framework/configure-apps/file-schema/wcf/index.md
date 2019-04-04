@@ -2,6 +2,12 @@
 title: Esquema de configuração do WCF
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
+ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463326"
 ---
 # <a name="wcf-configuration-schema"></a><span data-ttu-id="c5cfe-102">Esquema de configuração do WCF</span><span class="sxs-lookup"><span data-stu-id="c5cfe-102">WCF Configuration Schema</span></span>
 <span data-ttu-id="c5cfe-103">Elementos de configuração do Windows Communication Foundation (WCF) permitem configurar aplicativos de serviço e cliente do WCF.</span><span class="sxs-lookup"><span data-stu-id="c5cfe-103">Windows Communication Foundation (WCF) configuration elements enable you to configure WCF service and client applications.</span></span> <span data-ttu-id="c5cfe-104">Você pode usar a [Ferramenta Editor de Configuração (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) para criar e modificar arquivos de configuração para clientes e serviços.</span><span class="sxs-lookup"><span data-stu-id="c5cfe-104">You can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to create and modify configuration files for clients and services.</span></span> <span data-ttu-id="c5cfe-105">Como os arquivos de configuração são formatados como XML, você deverá estar familiarizado com XML se desejar editá-los manualmente usando um editor de texto.</span><span class="sxs-lookup"><span data-stu-id="c5cfe-105">Since the configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="c5cfe-106">Caso contrário, você pode ter problemas, como uma marca de elemento XML unfound ou atributo.</span><span class="sxs-lookup"><span data-stu-id="c5cfe-106">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="c5cfe-107">Isso ocorre porque marcas de elementos XML e atributos diferenciam maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="c5cfe-107">This is because XML element tags and attributes are case-sensitive.</span></span>  

@@ -1,9 +1,14 @@
 ---
-title: 'Artigos de instruções (Guia de C#)'
+title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202334"
 ---
-
 # <a name="how-to-c"></a><span data-ttu-id="57d8e-103">Instruções (C#)</span><span class="sxs-lookup"><span data-stu-id="57d8e-103">How to (C#)</span></span>
 
 <span data-ttu-id="57d8e-104">Na seção de Instruções do guia de C#, é possível encontrar respostas rápidas para perguntas comuns.</span><span class="sxs-lookup"><span data-stu-id="57d8e-104">In the How to section of the C# Guide you can find quick answers to common questions.</span></span> <span data-ttu-id="57d8e-105">Em alguns casos, os artigos podem ser listados em várias seções.</span><span class="sxs-lookup"><span data-stu-id="57d8e-105">In some cases, articles may be listed in multiple sections.</span></span> <span data-ttu-id="57d8e-106">Queremos facilitar que sejam localizados por vários caminhos de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="57d8e-106">We wanted to make them easy to find for multiple search paths.</span></span> 

@@ -1,8 +1,14 @@
 ---
-title: 'Guia de F#'
-description: 'Este guia fornece uma visão geral dos vários materiais de aprendizagem para F#, uma linguagem de programação funcional que é executado no .NET.'
+title: Guia de F#
+description: Este guia fornece uma visão geral dos vários materiais de aprendizagem para F#, uma linguagem de programação funcional que é executado no .NET.
 author: cartermp
 ms.date: 08/03/2018
+ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977000"
 ---
 # <a name="f-guide"></a><span data-ttu-id="3a525-103">Guia de F#</span><span class="sxs-lookup"><span data-stu-id="3a525-103">F# Guide</span></span>
 

@@ -2,11 +2,16 @@
 title: Delegados (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674023"
 ---
-
 # <a name="delegates-visual-basic"></a><span data-ttu-id="d22dd-102">Delegados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d22dd-102">Delegates (Visual Basic)</span></span>
 
 <span data-ttu-id="d22dd-103">Os delegados são objetos que se referem aos métodos.</span><span class="sxs-lookup"><span data-stu-id="d22dd-103">Delegates are objects that refer to methods.</span></span> <span data-ttu-id="d22dd-104">Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação.</span><span class="sxs-lookup"><span data-stu-id="d22dd-104">They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages.</span></span> <span data-ttu-id="d22dd-105">Mas ao contrário dos ponteiros de função, delegados de Visual Basic são um tipo de referência com base na classe <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d22dd-105">But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="d22dd-106">Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.</span><span class="sxs-lookup"><span data-stu-id="d22dd-106">Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.</span></span>

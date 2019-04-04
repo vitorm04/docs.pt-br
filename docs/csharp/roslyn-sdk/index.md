@@ -1,10 +1,15 @@
 ---
 title: O SDK do .NET Compiler Platform (APIs do Roslyn)
-description: 'Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.'
+description: Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.
 ms.date: 10/10/2017
 ms.custom: mvc
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185838"
 ---
-
 # <a name="the-net-compiler-platform-sdk"></a><span data-ttu-id="0b816-103">O SDK do .NET Compiler Platform</span><span class="sxs-lookup"><span data-stu-id="0b816-103">The .NET Compiler Platform SDK</span></span>
 
 <span data-ttu-id="0b816-104">Os compiladores criam um modelo detalhado do código do aplicativo conforme validam a sintaxe e a semântica do código.</span><span class="sxs-lookup"><span data-stu-id="0b816-104">Compilers build a detailed model of application code as they validate the syntax and semantics of that code.</span></span> <span data-ttu-id="0b816-105">O uso desse modelo para criar a saída executável do código-fonte.</span><span class="sxs-lookup"><span data-stu-id="0b816-105">They use this model to build the executable output from the source code.</span></span> <span data-ttu-id="0b816-106">O SDK do .NET Compiler Platform fornece acesso a esse modelo.</span><span class="sxs-lookup"><span data-stu-id="0b816-106">The .NET Compiler Platform SDK provides access to this model.</span></span> <span data-ttu-id="0b816-107">Cada vez mais, contamos com recursos do IDE (ambiente de desenvolvimento integrado), como IntelliSense, refatoração, renomeação inteligente, "Localizar todas as referências" e "Ir para definição" para aumentar nossa produtividade.</span><span class="sxs-lookup"><span data-stu-id="0b816-107">Increasingly, we rely on integrated development environment (IDE) features such as IntelliSense, refactoring, intelligent rename, "Find all references," and "Go to definition" to increase our productivity.</span></span> <span data-ttu-id="0b816-108">Contamos com ferramentas de análise de código para melhorar a qualidade e com geradores de código para ajudar na criação do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0b816-108">We rely on code analysis tools to improve our code quality, and code generators to aid in application construction.</span></span> <span data-ttu-id="0b816-109">À medida que essas ferramentas ficam mais inteligentes, elas precisam de acesso a cada vez mais do modelo que somente os compiladores podem criar conforme processam o código do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0b816-109">As these tools get smarter, they need access to more and more of the model that only compilers create as they process application code.</span></span> <span data-ttu-id="0b816-110">Este é o objetivo principal das APIs do Roslyn: abrir as caixas pretas e permitir que as ferramentas e os usuários finais compartilhem a riqueza de informações que os compiladores têm sobre nosso código.</span><span class="sxs-lookup"><span data-stu-id="0b816-110">This is the core mission of the Roslyn APIs: opening up the black boxes and allowing tools and end users to share in the wealth of information compilers have about our code.</span></span>

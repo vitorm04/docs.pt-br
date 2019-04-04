@@ -4,8 +4,13 @@ description: Resume a API não gerenciada do .NET Framework para informações d
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377450"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a><span data-ttu-id="adc01-103">WMI (Instrumentação de Gerenciamento do Windows) e Contadores de Desempenho (Referência de API Não Gerenciada)</span><span class="sxs-lookup"><span data-stu-id="adc01-103">Windows Management Instrumentation (WMI) and Performance Counters (Unmanaged API Reference)</span></span>
 
 <span data-ttu-id="adc01-104">A API não gerenciada dos Contadores de Desempenho e da WMI do .NET Framework consistem em um conjunto de funções que encapsulam chamadas para a [API nativa da Instrumentação de Gerenciamento do Windows](/windows/desktop/WmiSdk/com-api-for-wmi).</span><span class="sxs-lookup"><span data-stu-id="adc01-104">The .NET Framework WMI and Performance Counters unmanaged API consists of a set of functions that wrap calls to the [native Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi).</span></span> <span data-ttu-id="adc01-105">Ela permite que você desenvolva as ferramentas e as bibliotecas que gerenciam e monitoram os sistemas de computador remoto.</span><span class="sxs-lookup"><span data-stu-id="adc01-105">It allows you to develop tools and libraries that manage and monitor remote computer systems.</span></span>

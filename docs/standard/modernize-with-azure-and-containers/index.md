@@ -4,6 +4,12 @@ description: Aprenda a comparação de precisão and -shift e modernizar aplicat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
+ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675920"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a><span data-ttu-id="d82b6-103">Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure (2ª edição)</span><span class="sxs-lookup"><span data-stu-id="d82b6-103">Modernize existing .NET applications with Azure cloud and Windows Containers (2nd edition)</span></span>
 
