@@ -3,8 +3,13 @@ title: Guia de instruções de aprendizado de máquina .NET – ML.NET
 description: Saiba como realizar tarefas específicas para ajudar na criação de soluções de IA personalizadas e na integração do Machine Learning em seus aplicativos .NET.
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 9e5bd146d636b46dcf3835c670207b647e7743c6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673044"
 ---
-
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guia de instruções de aprendizado de máquina .NET – ML.NET
 
 Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas rápidas para perguntas comuns. Em alguns casos, os artigos podem ser listados em várias seções para torná-los mais fáceis de encontrar.

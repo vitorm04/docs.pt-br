@@ -4,6 +4,12 @@ description: Segurança nos Microsserviços do .NET e aplicativos Web – Conhe�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
+ms.openlocfilehash: 3e2598f58bf2fb34a7ad7c107066d34e0e7c3408
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464808"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteger microsserviços .NET e aplicativos Web
 

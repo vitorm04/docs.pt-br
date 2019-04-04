@@ -3,14 +3,19 @@ title: Memória e extensão
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - Memory<T>
-  - Span<T>
-  - buffers"
-  - pipeline processing
+- Memory<T>
+- Span<T>
+- buffers"
+- pipeline processing
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 1a61f56eca242db65bd555553132450c3f8af7f6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680133"
 ---
-
 # <a name="memory--and-span-related-types"></a>Tipos relacionados a memória e extensão
 
 A partir do .NET Core 2.1, o .NET inclui uma variedade de tipos interrelacionados que representam uma região contígua, fortemente tipada de memória arbitrária. Elas incluem:

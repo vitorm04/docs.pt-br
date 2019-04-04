@@ -4,8 +4,13 @@ description: Resume a API não gerenciada do .NET Framework para informações d
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377450"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI (Instrumentação de Gerenciamento do Windows) e Contadores de Desempenho (Referência de API Não Gerenciada)
 
 A API não gerenciada dos Contadores de Desempenho e da WMI do .NET Framework consistem em um conjunto de funções que encapsulam chamadas para a [API nativa da Instrumentação de Gerenciamento do Windows](/windows/desktop/WmiSdk/com-api-for-wmi). Ela permite que você desenvolva as ferramentas e as bibliotecas que gerenciam e monitoram os sistemas de computador remoto.

@@ -1,7 +1,13 @@
 ---
-title: 'Referência do F# Interativo (fsi.exe)'
-description: 'Saiba como F# interativo (fsi.exe) é usado para executar F# de código interativamente no console ou para executar F# scripts.'
+title: Referência do F# Interativo (fsi.exe)
+description: Saiba como F# interativo (fsi.exe) é usado para executar F# de código interativamente no console ou para executar F# scripts.
 ms.date: 05/16/2016
+ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979873"
 ---
 # <a name="interactive-programming-with-f"></a>Programação interativa com F\#
 

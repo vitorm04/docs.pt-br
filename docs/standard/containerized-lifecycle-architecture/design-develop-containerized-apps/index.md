@@ -4,8 +4,13 @@ description: Vejamos a carga de trabalho de Design/desenvolvimento no ciclo de v
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 2ecec1412ea1c3b6ff32e6250c7cb97c531a84fd
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664998"
 ---
-
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Projeto e desenvolvimento de aplicativos em contêineres usando o Docker e o Microsoft Azure
 
 *Visão: Projetar e desenvolver soluções escalonáveis com o Docker em mente.*

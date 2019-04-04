@@ -1,13 +1,19 @@
 ---
-title: 'Referência de C#'
+title: Referência de C#
 ms.date: 02/14/2017
 helpviewer_keywords:
-  - 'Visual C#, language reference'
-  - 'language reference [C#]'
-  - 'Programmer''s Reference for C#'
-  - 'C# language, reference'
-  - 'reference, C# language'
+- Visual C#, language reference
+- language reference [C#]
+- Programmer's Reference for C#
+- C# language, reference
+- reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
+ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845412"
 ---
 # <a name="c-reference"></a>Referência de C#
 Esta seção fornece o material de referência sobre palavras-chave do C#, operadores, caracteres especiais, diretivas de pré-processador, opções de compilador e erros de compilador e avisos.  

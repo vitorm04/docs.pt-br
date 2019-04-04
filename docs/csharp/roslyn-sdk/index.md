@@ -1,10 +1,15 @@
 ---
 title: O SDK do .NET Compiler Platform (APIs do Roslyn)
-description: 'Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.'
+description: Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.
 ms.date: 10/10/2017
 ms.custom: mvc
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185838"
 ---
-
 # <a name="the-net-compiler-platform-sdk"></a>O SDK do .NET Compiler Platform
 
 Os compiladores criam um modelo detalhado do código do aplicativo conforme validam a sintaxe e a semântica do código. O uso desse modelo para criar a saída executável do código-fonte. O SDK do .NET Compiler Platform fornece acesso a esse modelo. Cada vez mais, contamos com recursos do IDE (ambiente de desenvolvimento integrado), como IntelliSense, refatoração, renomeação inteligente, "Localizar todas as referências" e "Ir para definição" para aumentar nossa produtividade. Contamos com ferramentas de análise de código para melhorar a qualidade e com geradores de código para ajudar na criação do aplicativo. À medida que essas ferramentas ficam mais inteligentes, elas precisam de acesso a cada vez mais do modelo que somente os compiladores podem criar conforme processam o código do aplicativo. Este é o objetivo principal das APIs do Roslyn: abrir as caixas pretas e permitir que as ferramentas e os usuários finais compartilhem a riqueza de informações que os compiladores têm sobre nosso código.

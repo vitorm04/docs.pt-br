@@ -2,10 +2,16 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723108"
 ---
 # <a name="windows-forms"></a>Windows Forms
 Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design. Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados. Para esse fim, o Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para ajudar a escrever código, bem como um controle sofisticado conjunto escrito com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.  

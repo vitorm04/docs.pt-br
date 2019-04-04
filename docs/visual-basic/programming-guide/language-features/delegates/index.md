@@ -2,11 +2,16 @@
 title: Delegados (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674023"
 ---
-
 # <a name="delegates-visual-basic"></a>Delegados (Visual Basic)
 
 Os delegados são objetos que se referem aos métodos. Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação. Mas ao contrário dos ponteiros de função, delegados de Visual Basic são um tipo de referência com base na classe <xref:System.Delegate?displayProperty=nameWithType>. Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.

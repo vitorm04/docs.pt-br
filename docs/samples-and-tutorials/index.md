@@ -1,11 +1,16 @@
 ---
 title: Exemplos e tutoriais do .NET
-description: 'Informações sobre exemplos e tutoriais para .NET Core, ASP.NET Core e a linguagem C# que ajudam você a saber mais sobre .NET.'
+description: Informações sobre exemplos e tutoriais para .NET Core, ASP.NET Core e a linguagem C# que ajudam você a saber mais sobre .NET.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558944"
 ---
-
 # <a name="net-samples-and-tutorials"></a>Exemplos e tutoriais do .NET
 
 A documentação do .NET contém um conjunto de exemplos e tutoriais que ensinam sobre o .NET. Este tópico descreve como localizar, exibir e baixar exemplos e tutoriais do .NET Core, ASP.NET Core e C#. Encontre recursos para aprender sobre a linguagem de programação F# no [site de fundamentos do F#](https://fsharp.org/learn.html). Se tiver interesse em explorar o C# usando um editor de códigos online, comece com [este tutorial interativo](https://www.microsoft.com/net/learn/in-browser-tutorial/1) e continue com um [tutorial de C# interativo](../csharp/tutorials/intro-to-csharp/index.md). Para obter instruções sobre como exibir e baixar o código de exemplo, confira a seção [Exibindo e baixando exemplos](#viewing-and-downloading-samples).

@@ -4,12 +4,12 @@ description: Aprenda a terminologia básica que tenha usado todos os dias, ao tr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677158"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920643"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -33,7 +33,7 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Registro**: Um serviço que fornece acesso aos repositórios. O registro padrão para as imagens mais públicas é o [Docker Hub](https://hub.docker.com/) (propriedade da Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar as imagens que criaram. O Registro de Contêiner do Azure é outro exemplo.
 
-**Imagem de vários arcos**: Para arquitetura de várias é um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma onde Docker está em execução, por exemplo, quando um Dockerfile solicita uma imagem de base **`FROM microsoft/dotnet:2.1-sdk`** do registro Na verdade, ele obtém **`2.1-sdk-nanoserver-1709`**, **`2.1-sdk-nanoserver-1803`** ou **`2.1-sdk-alpine`**, dependendo do sistema operacional e versão em que o Docker está sendo executado.
+**Imagem de vários arcos**: Para arquitetura de várias é um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma onde Docker está em execução, por exemplo, quando um Dockerfile solicita uma imagem de base **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** do registro Na verdade, ele obtém **`2.1-nanoserver-1709`**, **`2.1-nanoserver-1803`**, **`2.1-nanoserver-1809`** ou **`2.1-stretch`**, Dependendo do sistema operacional e versão em que o Docker está sendo executado.
 
 **Hub do Docker**: Um registro público para fazer upload de imagens e trabalhar com elas. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 

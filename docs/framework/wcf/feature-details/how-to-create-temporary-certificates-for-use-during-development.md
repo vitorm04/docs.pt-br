@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar certificados temporários para uso durante o desenvolvimento'
+title: 'Como: criar certificados temporários para uso durante o desenvolvimento'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738624"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921319"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como: Criar certificados temporários para uso durante o desenvolvimento
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como: criar certificados temporários para uso durante o desenvolvimento
 
 Ao desenvolver um serviço seguro ou o cliente usando o Windows Communication Foundation (WCF), muitas vezes é necessário fornecer um certificado X.509 a ser usado como uma credencial. O certificado normalmente faz parte de uma cadeia de certificados com uma autoridade raiz encontrado no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você definir o escopo de um conjunto de certificados onde normalmente na autoridade raiz é de sua organização ou a unidade de negócios. Para emular isso em tempo de desenvolvimento, você pode criar dois certificados para satisfazer os requisitos de segurança. A primeira é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis, e o segundo certificado é criado a partir do primeiro e é colocado no repositório pessoal do Local do computador local ou o repositório pessoal das Local do usuário atual. Este tópico explica as etapas para criar esses dois certificados usando o Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet.
 
@@ -78,7 +78,7 @@ Depois que você configurar os certificados temporários, você pode usá-los pa
 
 ### <a name="to-specify-a-certificate-as-the-client-credential-type"></a>Para especificar um certificado como o tipo de credencial de cliente
 
-- No arquivo de configuração para um serviço, use o seguinte XML para definir o modo de segurança para a mensagem e o tipo de credencial de cliente para o certificado.
+1. No arquivo de configuração para um serviço, use o seguinte XML para definir o modo de segurança para a mensagem e o tipo de credencial de cliente para o certificado.
 
     ```xml
     <bindings>
@@ -92,19 +92,19 @@ Depois que você configurar os certificados temporários, você pode usá-los pa
     </bindings>
     ```
 
-No arquivo de configuração para um cliente, use o seguinte XML para especificar que o certificado for encontrado no repositório do usuário e pode ser encontrado pesquisando o campo SubjectName para o valor de "CohoWinery."
+2. No arquivo de configuração para um cliente, use o seguinte XML para especificar que o certificado for encontrado no repositório do usuário e pode ser encontrado pesquisando o campo SubjectName para o valor de "CohoWinery."
 
-```xml
-<behaviors>
-  <endpointBehaviors>
-    <behavior name="CertForClient">
-      <clientCredentials>
-        <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
-       </clientCredentials>
-     </behavior>
-   </endpointBehaviors>
-</behaviors>
-```
+    ```xml
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="CertForClient">
+          <clientCredentials>
+            <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
+          </clientCredentials>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    ```
 
 Para obter mais informações sobre como usar certificados no WCF, consulte [trabalhando com certificados](working-with-certificates.md).
 
@@ -115,5 +115,5 @@ Certifique-se de excluir quaisquer certificados de autoridade raiz temporária d
 ## <a name="see-also"></a>Consulte também
 
 - [Trabalhando com certificados](working-with-certificates.md)
-- [Como: Exibir certificados com o Snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Como: exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protegendo serviços e clientes](securing-services-and-clients.md)

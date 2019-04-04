@@ -1,11 +1,16 @@
 ---
-title: 'Executar, gerenciar e monitorar ambientes de produção do Docker'
+title: Executar, gerenciar e monitorar ambientes de produção do Docker
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834934"
 ---
-
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Executar, gerenciar e monitorar ambientes de produção do Docker
 
 Visão: Aplicativos corporativos precisam ser executados com alta disponibilidade e alta escalabilidade; Operações de TI precisam ser capaz de gerenciar e monitorar os ambientes e os próprios aplicativos.
