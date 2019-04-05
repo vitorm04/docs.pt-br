@@ -1,11 +1,17 @@
 ---
-title: 'Cadeias de caracteres – Guia de Programação em C#'
+title: Cadeias de caracteres – Guia de Programação em C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, strings'
-  - 'strings [C#]'
+- C# language, strings
+- strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
+ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920682"
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -68,7 +74,7 @@ Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é
  Uma cadeia de caracteres de formato é aquela cujo conteúdo pode é determinado dinamicamente no tempo de execução. Cadeias de caracteres de formato são criadas incorporando *expressões interpoladas* ou espaços reservados dentro de chaves dentro em uma cadeia de caracteres. Tudo dentro das chaves (`{...}`) será resolvido para um valor e uma saída como uma cadeia de caracteres formatada no tempo de execução. Há dois métodos para criar cadeias de caracteres de formato: cadeia de caracteres de interpolação e formatação de composição.
 
 ### <a name="string-interpolation"></a>Interpolação de cadeia de caracteres
-Disponíveis no C# 6.0 e posterior, as [*cadeias de caracteres interpoladas*](../../language-reference/tokens/interpolated.md) são identificadas pelo caractere especial `$` e incluem expressões interpoladas entre chaves. Se você não estiver familiarizado com a interpolação de cadeia de caracteres, confira o tutorial [Interpolação de cadeia de caracteres – tutorial interativo do C#](../../tutorials/intro-to-csharp/interpolated-strings.yml).
+Disponíveis no C# 6.0 e posterior, as [*cadeias de caracteres interpoladas*](../../language-reference/tokens/interpolated.md) são identificadas pelo caractere especial `$` e incluem expressões interpoladas entre chaves. Se você não estiver familiarizado com a interpolação de cadeia de caracteres, confira o tutorial [Interpolação de cadeia de caracteres – tutorial interativo do C#](../../tutorials/exploration/interpolated-strings.yml).
 
 Use a interpolação de cadeia de caracteres para melhorar a legibilidade e a facilidade de manutenção do seu código. A interpolação de cadeia de caracteres alcança os mesmos resultados que o método `String.Format`, mas aumenta a facilidade de uso e a clareza embutida.
 
@@ -128,11 +134,11 @@ string s = String.Empty;
 |[Como: analisar cadeias de caracteres usando String.Split](../../how-to/parse-strings-using-split.md)|Contém exemplos de código que descrevem como usar o método `String.Split` para analisar cadeias de caracteres.|  
 |[Como: pesquisar cadeias de caracteres](../../how-to/search-strings.md)|Explica como usar a pesquisa para texto específico ou padrões em cadeias de caracteres.|  
 |[Como: determinar se uma cadeia de caracteres representa um valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Mostra como analisar com segurança uma cadeia de caracteres para ver se ela tem um valor numérico válido.|  
-|[Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md)|Descreve o recurso de interpolação de cadeia de caracteres que fornece uma sintaxe prática para cadeias de caracteres de formato.|
+|[Interpolação de cadeias de caracteres](../../language-reference/tokens/interpolated.md)|Descreve o recurso de interpolação de cadeia de caracteres que fornece uma sintaxe prática para cadeias de caracteres de formato.|
 |[Operações básicas de cadeias de caracteres](../../../../docs/standard/base-types/basic-string-operations.md)|Fornece links para tópicos que usam os métodos <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> para executar operações básicas de cadeia de caracteres.|  
 |[Análise de cadeias de caracteres](../../../standard/base-types/parsing-strings.md)|Descreve como converter representações de cadeia de caracteres de tipos base do .NET em instâncias de tipos correspondentes.|  
-|[Como analisar cadeias de caracteres de data e hora no .NET](../../../standard/base-types/parsing-datetime.md)|Mostra como converter uma cadeia de caracteres como "24/01/2008" em um objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
-|[Comparação de cadeias de caracteres](../../../../docs/standard/base-types/comparing.md)|Inclui informações sobre como comparar cadeias de caracteres e fornece exemplos em C# e Visual Basic.|  
+|[Analisando Cadeias de Caracteres de Data e Hora no .NET](../../../standard/base-types/parsing-datetime.md)|Mostra como converter uma cadeia de caracteres como "24/01/2008" em um objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
+|[Comparando cadeias de caracteres](../../../../docs/standard/base-types/comparing.md)|Inclui informações sobre como comparar cadeias de caracteres e fornece exemplos em C# e Visual Basic.|  
 |[Uso da classe StringBuilder](../../../standard/base-types/stringbuilder.md)|Descreve como criar e modificar objetos de cadeia de caracteres dinâmica usando a classe <xref:System.Text.StringBuilder>.|  
-|[LINQ e Cadeias de Caracteres](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Fornece informações sobre como executar várias operações de cadeia de caracteres usando consultas LINQ.|  
+|[LINQ e cadeias de caracteres](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Fornece informações sobre como executar várias operações de cadeia de caracteres usando consultas LINQ.|  
 |[Guia de Programação em C#](../../../csharp/programming-guide/index.md)|Fornece links para tópicos que explicam as construções de programação em C#.|  
