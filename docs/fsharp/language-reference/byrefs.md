@@ -2,12 +2,12 @@
 title: Byrefs
 description: Saiba mais sobre byref e tipos byref no F#, que são usados para programação de nível baixo.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976545"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055359"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 Para gravar o ponteiro, usando um `outref<'T>` ou `byref<'T>`, você também deve verificar o valor que você Pegue um ponteiro para `mutable`.
@@ -84,7 +85,7 @@ Se você estiver apenas escrevendo o ponteiro em vez de lê-lo, considere o uso 
 Considere o código a seguir:
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 Semanticamente, isso significa que o seguinte:
@@ -111,17 +112,17 @@ C# é compatível com o `in ref` e `out ref` palavras-chave, além de `ref` reto
 
 |Construção de linguagem c#|F#infere|
 |------------|---------|
-|`ref` Valor de retorno|`outref<'T>`|
-|`ref readonly` Valor de retorno|`inref<'T>`|
-|Parâmetro `in ref`|`inref<'T>`|
-|Parâmetro `out ref`|`outref<'T>`|
+|`ref` valor de retorno|`outref<'T>`|
+|`ref readonly` valor de retorno|`inref<'T>`|
+|`in ref` parâmetro|`inref<'T>`|
+|`out ref` parâmetro|`outref<'T>`|
 
 A tabela a seguir mostra o que F# emite:
 
 |F#Construir|Construção emitida|
 |------------|-----------------|
 |`inref<'T>` argumento|`[In]` atributo no argumento|
-|`inref<'T>` Retornar|`modreq` atributo de valor|
+|`inref<'T>` return|`modreq` atributo de valor|
 |`inref<'T>` no slot abstrata ou na implementação|`modreq` no argumento ou retorno|
 |`outref<'T>` argumento|`[Out]` atributo no argumento|
 

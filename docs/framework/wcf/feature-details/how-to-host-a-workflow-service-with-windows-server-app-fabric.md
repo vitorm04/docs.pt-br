@@ -1,15 +1,15 @@
 ---
-title: 'Como: Hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric'
+title: 'Como: hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 287067391f47a0b4bcbe11bd4bfab971954cd706
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 96842f103618b9c83f74c8ad0b758f7a425d8939
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465120"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055138"
 ---
-# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Como: Hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric
+# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Como: hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric
 Hospedagem de serviços de fluxo de trabalho na tela do aplicativo é semelhante ao hospedarmos no IIS / WAS. A única diferença é que as ferramentas que do App Fabric fornece para implantação, monitoramento e gerenciamento de serviços de fluxo de trabalho. Este tópico usa o serviço de fluxo de trabalho criado a [criando um serviço de fluxo de trabalho de longa execução](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Esse tópico orientará você pela criação de um serviço de fluxo de trabalho. Este tópico explica como hospedar o serviço de fluxo de trabalho usando a malha de aplicativos. Para obter mais informações sobre o Windows Server AppFabric, consulte [documentação do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Antes de concluir as etapas a seguir, certifique-se de que ter o Windows Server App Fabric instalado.  Para fazer isso, abra os serviços de informações da Internet (inetmgr.exe), clique no nome de servidor na **conexões** exibir, clique em Sites e clique em **Default Web Site**. No lado direito da tela, você deve ver uma seção chamada **App Fabric**. Se você não vir essa seção (vai estar na parte superior do painel à direita) não tem malha de aplicativos instalada. Para obter mais informações sobre como instalar o Windows Server AppFabric, consulte [instalando o Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Criando um serviço de fluxo de trabalho simples  
@@ -91,7 +91,7 @@ Hospedagem de serviços de fluxo de trabalho na tela do aplicativo é semelhante
      Para obter mais informações sobre o Windows Server App Fabric Consulte recursos e como usá-los [recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
 ## <a name="see-also"></a>Consulte também
-- [Criando um serviço de fluxo de trabalho de longa execução](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
-- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193143)
+- [Criando um serviço de fluxo de trabalho de execução longa](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
+- [Recursos de hospedagem do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193143)
 - [Instalando o Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)
 - [Documentação do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)

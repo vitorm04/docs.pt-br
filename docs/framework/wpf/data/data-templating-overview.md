@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376098"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055333"
 ---
 # <a name="data-templating-overview"></a>Visão geral de modelagem dos dados
 O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir a apresentação dos dados. Os controles do WPF têm uma funcionalidade interna para dar suporte à personalização da apresentação de dados. Primeiro, este tópico demonstra como definir um <xref:System.Windows.DataTemplate> e, em seguida, apresenta outros recursos de modelagem de dados, como a seleção de modelos com base em lógica personalizada e o suporte para a exibição de dados hierárquicos.  
@@ -41,7 +41,7 @@ O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir 
 ### <a name="without-a-datatemplate"></a>Sem um DataTemplate  
  Sem um <xref:System.Windows.DataTemplate>, nossa <xref:System.Windows.Controls.ListBox> atualmente é semelhante a esta:  
   
- ![Captura de tela da amostra de modelagem de dados](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![Captura de tela de exemplo dados templating](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
  O que acontece é que, sem instruções específicas, o <xref:System.Windows.Controls.ListBox> por padrão chama `ToString` ao tentar exibir os objetos na coleção. Portanto, se o `Task` substituições do objeto de `ToString` método, então o <xref:System.Windows.Controls.ListBox> exibe a representação de cadeia de caracteres de cada objeto de origem na coleção subjacente.  
   
@@ -52,7 +52,7 @@ O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir 
   
  Em seguida, a <xref:System.Windows.Controls.ListBox> é semelhante ao seguinte:  
   
- ![Captura de tela da amostra de modelagem de dados](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![Captura de tela de exemplo dados templating](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
  No entanto, isso é inflexível e limitante. Além disso, se você estivesse associando a dados [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], não poderia substituir `ToString`.  
   
@@ -66,7 +66,7 @@ O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir 
   
  Agora nosso <xref:System.Windows.Controls.ListBox> é semelhante ao seguinte:  
   
- ![Captura de tela da amostra de modelagem de dados](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![Captura de tela de exemplo dados templating](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>Criando o DataTemplate como um recurso  
@@ -103,7 +103,7 @@ O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir 
   
  A captura de tela a seguir mostra a <xref:System.Windows.Controls.ListBox> com essa modificação <xref:System.Windows.DataTemplate>:  
   
- ![Captura de tela da amostra de modelagem de dados](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![Captura de tela de exemplo dados templating](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
  Podemos definir <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> ao <xref:System.Windows.HorizontalAlignment.Stretch> sobre o <xref:System.Windows.Controls.ListBox> para garantir que a largura dos itens ocupa todo o espaço:  
   
@@ -111,7 +111,7 @@ O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir 
   
  Com o <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> propriedade definida como <xref:System.Windows.HorizontalAlignment.Stretch>, o <xref:System.Windows.Controls.ListBox> agora se parece com isto:  
   
- ![Captura de tela da amostra de modelagem de dados](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![Captura de tela de exemplo dados templating](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
 ### <a name="use-datatriggers-to-apply-property-values"></a>Usar DataTriggers para aplicar valores da propriedade  
@@ -125,7 +125,7 @@ O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir 
   
  Agora, nosso aplicativo tem a seguinte aparência. As tarefas de casa são exibidas com uma borda amarela, enquanto as tarefas de escritório aparecem com uma borda verde-azulada:  
   
- ![Captura de tela da amostra de modelagem de dados](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![Captura de tela de exemplo dados templating](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
  Neste exemplo o <xref:System.Windows.DataTrigger> usa um <xref:System.Windows.Setter> para definir um valor de propriedade. As classes de gatilho também têm o <xref:System.Windows.TriggerBase.EnterActions%2A> e <xref:System.Windows.TriggerBase.ExitActions%2A> propriedades que permitem que você inicie um conjunto de ações como animações. Além disso, há também um <xref:System.Windows.MultiDataTrigger> classe que permite que você aplique as alterações com base em vários valores de propriedade de associação de dados.  
   
@@ -165,7 +165,7 @@ No exemplo anterior, colocamos o gatilho dentro do <xref:System.Windows.DataTemp
   
  Com o seletor de modelo no lugar, o <xref:System.Windows.Controls.ListBox> agora aparece da seguinte maneira:  
   
- ![Captura de tela da amostra de modelagem de dados](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![Captura de tela de exemplo dados templating](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
 Isso conclui nossa discussão sobre este exemplo. Para ver a amostra completa, consulte [Amostra da introdução à modelagem de dados](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
 
@@ -191,7 +191,7 @@ Isso conclui nossa discussão sobre este exemplo. Para ver a amostra completa, c
   
  O exemplo mostra que, com o uso de <xref:System.Windows.HierarchicalDataTemplate>, você pode facilmente exibir dados de lista que contém outras listas. Segue uma captura de tela do exemplo.  
   
- ![Captura de tela da amostra de HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![Captura de tela de amostra de HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Consulte também
 - [Associação de dados](../advanced/optimizing-performance-data-binding.md)

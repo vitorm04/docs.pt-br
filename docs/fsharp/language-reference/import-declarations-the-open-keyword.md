@@ -1,13 +1,13 @@
 ---
 title: 'Declarações de importação: A palavra-chave open'
 description: Saiba mais sobre F# importar declarações e como elas especificam um módulo ou namespace cujos elementos que você pode referenciar sem usar um nome totalmente qualificado.
-ms.date: 05/16/2016
-ms.openlocfilehash: 261ffdfdea2860db72b052b2ffeb5c7e5d652c24
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 04/04/2019
+ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610314"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054995"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Declarações de importação: O `open` palavra-chave
 
@@ -68,6 +68,6 @@ Alguns módulos, registros ou tipos de união podem especificar o `RequireQualif
 
 ## <a name="see-also"></a>Consulte também
 
-- [# Referência da linguagem](index.md)
+- [Referência da linguagem F#](index.md)
 - [Namespaces](namespaces.md)
 - [Módulos](modules.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921345"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055307"
 ---
 # <a name="working-with-calendars"></a>Trabalhar com calendários
 
@@ -163,7 +163,7 @@ No .NET, inteiros que representam as eras com suporte por uma implementação es
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-O nome que corresponde a um número de era específico não pode ser recuperado com a passagem do número da era para o método <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> ou <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. O exemplo a seguir chama esses métodos para recuperar informações sobre o suporte a eras na classe <xref:System.Globalization.GregorianCalendar>.
+O nome que corresponde a um número de era específico não pode ser recuperado com a passagem do número da era para o método <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> ou <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. O exemplo a seguir chama esses métodos para recuperar informações sobre o suporte a eras na classe <xref:System.Globalization.GregorianCalendar>. Ele exibe a data do calendário gregoriano que corresponde a 1º de janeiro do ano segundo da era atual, bem como a data do calendário gregoriano que corresponde a 1º de janeiro do ano segundo da era cada calendário japonês com suporte.
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ Além disso, a cadeia de caracteres de formato de data e hora personalizado "g" 
 
 ### <a name="instantiating-a-date-with-an-era"></a>Criando uma instância de uma data com uma época
 
-Para os dois <xref:System.Globalization.Calendar> classes que oferecem suporte a várias eras, uma data que consiste em um determinado ano, mês e dia do valor de mês pode ser ambígua. Por exemplo, todas as eras com suporte a <xref:System.Globalization.JapaneseCalendar> ter anos cujo número é 1. Normalmente, se uma era não é especificada, os métodos de data e hora e calendário assumem que os valores pertencem à era atual. Isso é verdadeiro para o <xref:System.DateTime.%23ctor%2A> e <xref:System.DateTimeOffset.%23ctor%2A> construtores que incluem parâmetros de tipo <xref:System.Globalization.Calendar>, bem como o [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) e [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) métodos. O exemplo a seguir cria uma instância de uma data que representa 1 de janeiro do segundo ano de uma época não especificado. Como a saída do exemplo mostra, a data é interpretada como o segundo ano do era Heisei do calendário, a era atual no momento em que este exemplo foi executado. Era, 平成, precede o ano na cadeia de caracteres retornada pelo <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> método e corresponde a 1º de janeiro de 1990, no calendário gregoriano. (O intervalo da era Heisei do calendário é de 1989 2019 no calendário gregoriano.)
+Para os dois <xref:System.Globalization.Calendar> classes que oferecem suporte a várias eras, uma data que consiste em um determinado ano, mês e dia do valor de mês pode ser ambígua. Por exemplo, todas as eras com suporte a <xref:System.Globalization.JapaneseCalendar> ter anos cujo número é 1. Normalmente, se uma era não é especificada, os métodos de data e hora e calendário assumem que os valores pertencem à era atual. Isso é verdadeiro para o <xref:System.DateTime.%23ctor%2A> e <xref:System.DateTimeOffset.%23ctor%2A> construtores que incluem parâmetros de tipo <xref:System.Globalization.Calendar>, bem como o [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) e [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) métodos. O exemplo a seguir cria uma instância de uma data que representa 1 de janeiro do segundo ano de uma época não especificado. Se você executar o exemplo de quando a era Reiwa é era atual, a data é interpretada como o segundo ano da era Reiwa. Era, 令和, precede o ano na cadeia de caracteres retornada pelo <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> método e corresponde a 1º de janeiro de 2020 no calendário gregoriano. (A era Reiwa começa no ano de 2019 do calendário gregoriano).
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]

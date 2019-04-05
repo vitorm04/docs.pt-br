@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: b7ad8afbad212d5c79c9391bd9f6d1da7ff8fb28
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358178"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055242"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF
 
@@ -484,7 +484,7 @@ A ilustração a seguir mostra as duas páginas do `ExpenseIt` aplicativo com co
 >
 > - [Segurança](../security-wpf.md)
 >
-> - [Globalização e localização do WPF](../advanced/wpf-globalization-and-localization-overview.md)
+> - [Localização e globalização do WPF](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [Desempenho do WPF](../advanced/optimizing-wpf-application-performance.md)
 
@@ -493,7 +493,7 @@ A ilustração a seguir mostra as duas páginas do `ExpenseIt` aplicativo com co
 Neste passo a passo, você aprendeu várias técnicas para a criação de uma interface do usuário usando o Windows Presentation Foundation (WPF). Agora você deve ter uma compreensão básica dos blocos de construção de um aplicativo do .NET Framework de associação de dados. Para obter mais informações sobre os modelos de arquitetura e programação do WPF, consulte os seguintes tópicos:
 
 - [Arquitetura do WPF](../advanced/wpf-architecture.md)
-- [Visão geral do XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Visão geral XAML (WPF)](../advanced/xaml-overview-wpf.md)
 - [Visão geral das propriedades de dependência](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
@@ -501,7 +501,7 @@ Para obter mais informações sobre como criar aplicativos, consulte os seguinte
 
 - [Desenvolvimento de aplicativos](../app-development/index.md)
 - [Controles](../controls/index.md)
-- [Visão geral da associação de dados](../data/data-binding-overview.md)
+- [Visão geral da vinculação de dados](../data/data-binding-overview.md)
 - [Elementos gráficos e multimídia](../graphics-multimedia/index.md)
 - [Documentos no WPF](../advanced/documents-in-wpf.md)
 

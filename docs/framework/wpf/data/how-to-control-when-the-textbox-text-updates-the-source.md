@@ -9,18 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 702f06a37aa98e3a84858a590655e8a4311cfa48
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362130"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055125"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Como: Controlar quando o texto de TextBox atualiza a origem
 Este tópico descreve como usar o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade para controlar o tempo das atualizações de origem de associação. O tópico usa o <xref:System.Windows.Controls.TextBox> controle como um exemplo.  
   
 ## <a name="example"></a>Exemplo  
- O elemento de linguagem <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propriedade tem um padrão <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Isso significa que se um aplicativo tem um <xref:System.Windows.Controls.TextBox> com uma associação de dados <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propriedade, o texto digitado na <xref:System.Windows.Controls.TextBox> não atualiza a origem até que o <xref:System.Windows.Controls.TextBox> perde o foco (por exemplo, quando você clica fora do <xref:System.Windows.Controls.TextBox>).  
+ O <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propriedade tem um padrão <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Isso significa que se um aplicativo tem um <xref:System.Windows.Controls.TextBox> com uma associação de dados <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propriedade, o texto digitado na <xref:System.Windows.Controls.TextBox> não atualiza a origem até que o <xref:System.Windows.Controls.TextBox> perde o foco (por exemplo, quando você clica fora do <xref:System.Windows.Controls.TextBox>).  
   
  Se você quiser que o código-fonte a ser atualizado enquanto você digita, defina as <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> da associação a <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. No exemplo a seguir, as linhas realçadas de código mostram que o `Text` propriedades de ambos os <xref:System.Windows.Controls.TextBox> e o <xref:System.Windows.Controls.TextBlock> são associados à mesma propriedade de origem. O <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade do <xref:System.Windows.Controls.TextBox> associação é definida como <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
@@ -28,7 +28,7 @@ Este tópico descreve como usar o <xref:System.Windows.Data.Binding.UpdateSource
   
  Como resultado, o <xref:System.Windows.Controls.TextBlock> mostra o mesmo texto (porque a origem é alterada) enquanto o usuário insere o texto para o <xref:System.Windows.Controls.TextBox>, conforme ilustrado pela seguinte captura de tela da amostra:  
   
- ![Captura de tela do exemplo de associação de dados simples](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Captura de tela de exemplo de associação simples de dados](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
   
  Se você tiver uma caixa de diálogo ou um formulário editável pelo usuário e desejar adiar atualizações de origem até que o usuário terminou a edição de campos e clicar em "Okey", você pode definir as <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor das suas associações para <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, conforme mostrado no exemplo a seguir:  
   
@@ -46,4 +46,4 @@ Este tópico descreve como usar o <xref:System.Windows.Data.Binding.UpdateSource
 >  O <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade lida com atualizações de origem e, portanto, só é relevante para <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> associações. Para <xref:System.Windows.Data.BindingMode.TwoWay> e <xref:System.Windows.Data.BindingMode.OneWayToSource> associações funcione, o objeto de origem precisa para fornecer notificações de alteração de propriedade. Você pode consultar os exemplos citados neste tópico para obter mais informações. Além disso, você pode examinar [Implementar notificação de alteração de propriedade](how-to-implement-property-change-notification.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Tópicos explicativos ](data-binding-how-to-topics.md)

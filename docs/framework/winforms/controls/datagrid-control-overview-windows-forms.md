@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: cdf2f9aebaac09ed3e03148fdf1bc899f1e1fc45
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721990"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055203"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Visão geral do controle DataGrid (Windows Forms)
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "57721990"
   
  Se o <xref:System.Windows.Forms.DataGrid> é associado a dados com várias tabelas relacionadas e se a navegação estiver habilitada na grade, a grade exibirá expansores em cada linha. Com um expansor, o usuário pode se mover de uma tabela pai para uma tabela filho. A tabela filho é exibida ao clicar em um nó; a tabela pai original é exibida ao clicar em um botão Voltar. Dessa forma, a grade exibe as relações hierárquicas entre tabelas.  
   
- A captura de tela a seguir mostra um DataGrid associado a dados com várias tabelas.  
+ Captura de tela a seguir mostra que um DataGrid associado a dados com várias tabelas.  
   
  ![Um DataGrid associado a dados com várias tabelas](./media/vbcontrol1.gif "vbControl1")  
 Um DataGrid associado a dados com várias tabelas  
@@ -58,13 +58,13 @@ Um DataGrid associado a dados com várias tabelas
   
  Fontes de dados válidos para o <xref:System.Windows.Forms.DataGrid> incluem:  
   
--   Classe <xref:System.Data.DataTable>  
+-   <xref:System.Data.DataTable> classe  
   
--   Classe <xref:System.Data.DataView>  
+-   <xref:System.Data.DataView> classe  
   
--   Classe <xref:System.Data.DataSet>  
+-   <xref:System.Data.DataSet> classe  
   
--   Classe <xref:System.Data.DataViewManager>  
+-   <xref:System.Data.DataViewManager> classe  
   
  Se a fonte for um conjunto de dados, ele poderá ser um objeto no formulário ou um objeto passado para o formulário por um serviço Web XML. É possível associar a conjuntos de dados tipados ou não tipados.  
   
@@ -141,7 +141,7 @@ A ilustração a seguir mostra os objetos incluídos no controle DataGrid.
   
 ## <a name="see-also"></a>Consulte também
 - [Controle DataGrid](datagrid-control-windows-forms.md)
-- [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Como: Adicionar tabelas e colunas para o controle DataGrid dos Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Como: Excluir ou ocultar colunas no controle DataGrid dos Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Como: Formatar o controle DataGrid dos Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)
+- [Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Como: Adicionar tabelas e colunas ao controle DataGrid do Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Como: Excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como: Formatar o controle DataGrid do Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)
