@@ -181,7 +181,7 @@ O <xref:System.Data.DataSet> foi projetada com um design desconectado, em parte 
     vbc -t:library -out:sample.dll sample.vb -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
-     Para compilar o código de proxy c# armazenado em sample.cs como Sample, execute o comando a seguir.  
+     Para compilar o código de proxy C# armazenado em sample.cs como Sample, execute o comando a seguir.  
   
     ```console
     csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
@@ -253,7 +253,7 @@ O <xref:System.Data.DataSet> foi projetada com um design desconectado, em parte 
     vbc client.vb -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-     Para compilar a versão c# do exemplo, armazenado em client.cs arquivo, execute o comando a seguir.  
+     Para compilar a versão C# do exemplo, armazenado em client.cs arquivo, execute o comando a seguir.  
   
     ```console
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  

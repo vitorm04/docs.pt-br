@@ -146,7 +146,7 @@ A herança visual permite que você veja os controles no formulário de base e a
   
 7.  Selecione o botão particular **Say Goodbye** e observe que ele não tem alças de redimensionamento. Além disso, na janela **Propriedades**, as propriedades deste botão ficam cinza para indicar que não podem ser modificadas.  
   
-8.  Se você estiver usando o Visual c#:  
+8.  Se você estiver usando o Visual C#:  
   
     1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Form1** no projeto **InheritanceTest** e selecione **Excluir**. Na caixa de mensagem que aparece, clique em **OK** para confirmar a exclusão.  
   
@@ -161,7 +161,7 @@ A herança visual permite que você veja os controles no formulário de base e a
 12. Pressione F5 para executar o aplicativo e observe o comportamento do formulário herdado.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- A herança para controles de usuário funciona basicamente da mesma forma. Abra um novo projeto de biblioteca de classes e adicione um controle de usuário. Coloque os controles constituintes nele e compile o projeto. Abra outro novo projeto de biblioteca de classes e adicione uma referência à biblioteca de classes compilada. Além disso, tente adicionar um controle herdado (por meio da caixa de diálogo **Adicionar Novos Itens**) ao projeto e usar o **Selecionador de Herança**. Adicionar um controle de usuário e alterar o `Inherits` (`:` no Visual c#) instrução. Para obter mais informações, confira [Como: Herdar Windows Forms](how-to-inherit-windows-forms.md).  
+ A herança para controles de usuário funciona basicamente da mesma forma. Abra um novo projeto de biblioteca de classes e adicione um controle de usuário. Coloque os controles constituintes nele e compile o projeto. Abra outro novo projeto de biblioteca de classes e adicione uma referência à biblioteca de classes compilada. Além disso, tente adicionar um controle herdado (por meio da caixa de diálogo **Adicionar Novos Itens**) ao projeto e usar o **Selecionador de Herança**. Adicionar um controle de usuário e alterar o `Inherits` (`:` no Visual C#) instrução. Para obter mais informações, confira [Como: Herdar Windows Forms](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Consulte também
 - [Como: Herdar Windows Forms](how-to-inherit-windows-forms.md)

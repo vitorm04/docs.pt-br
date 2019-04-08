@@ -50,7 +50,7 @@ Este tópico mostra como habilitar a segurança de transporte em um serviço do 
   
 1.  Inserir este código de procedimento após o código do procedimento anterior.  
   
-2.  Criar uma <xref:System.Type> variável nomeada `contractType` e atribua-o tipo da interface (`ICalculator`). Ao usar o Visual Basic, use o `GetType` operador; ao usar c#, use o `typeof` palavra-chave.  
+2.  Criar uma <xref:System.Type> variável nomeada `contractType` e atribua-o tipo da interface (`ICalculator`). Ao usar o Visual Basic, use o `GetType` operador; ao usar C#, use o `typeof` palavra-chave.  
   
 3.  Crie um segundo <xref:System.Type> variável nomeada `serviceType` e atribua-o tipo do contrato implementado (`Calculator`).  
   

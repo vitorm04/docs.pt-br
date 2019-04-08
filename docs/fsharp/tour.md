@@ -96,7 +96,7 @@ F# também tem suporte completo para a otimização de chamada Tail, que é uma 
 
 Registro e tipos de união são dois tipos de dados fundamental usados no código F# e geralmente são a melhor maneira de representar dados em um programa em F#.  Embora isso os torna semelhante às classes em outras linguagens, uma das suas principais diferenças é que eles têm a semântica de igualdade estrutural.  Isso significa que eles são "nativo" comparáveis e igualdade é simples – basta verificar se uma é igual ao outro.
 
-[Registros](language-reference/records.md) são uma agregação de valores nomeados, com membros opcionais (como os métodos).  Se você estiver familiarizado com c# ou Java, em seguida, esses devem se sentir semelhantes a POCOs ou POJOs - apenas com relação à igualdade estrutural e menos cerimônia.
+[Registros](language-reference/records.md) são uma agregação de valores nomeados, com membros opcionais (como os métodos).  Se você estiver familiarizado com C# ou Java, em seguida, esses devem se sentir semelhantes a POCOs ou POJOs - apenas com relação à igualdade estrutural e menos cerimônia.
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
@@ -187,7 +187,7 @@ Os registros são um "passo" de tuplas, ter chamado rótulos e suporte para memb
 
 As uniões discriminadas têm muitos usos, mas o benefício principal é poder utilizá-las em conjunto com a correspondência de padrão para levar em conta todas as possíveis "formas" que uma data pode ter.  
 
-As classes são ótimas para um grande número de motivos, como quando for necessário representar informações e também vincular essas informações à funcionalidade.  Como regra geral, quando você tem funcionalidade que conceitualmente está associada a alguns dados, usando Classes e os princípios da programação orientada a objeto é uma grande vantagem.  As classes também são o tipo de dados preferencial ao interoperar com c# e Visual Basic, como esses idiomas usam classes para quase tudo.
+As classes são ótimas para um grande número de motivos, como quando for necessário representar informações e também vincular essas informações à funcionalidade.  Como regra geral, quando você tem funcionalidade que conceitualmente está associada a alguns dados, usando Classes e os princípios da programação orientada a objeto é uma grande vantagem.  As classes também são o tipo de dados preferencial ao interoperar com C# e Visual Basic, como esses idiomas usam classes para quase tudo.
 
 ## <a name="next-steps"></a>Próximas etapas
 

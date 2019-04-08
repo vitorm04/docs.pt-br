@@ -10,7 +10,7 @@ ms.lasthandoff: 02/12/2019
 ms.locfileid: "56092001"
 ---
 # <a name="samples"></a>Exemplos
-Este tópico fornece links para as soluções do Visual Basic e c# que contêm [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código de exemplo.  
+Este tópico fornece links para as soluções do Visual Basic e C# que contêm [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código de exemplo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Versão do Visual Basic da solução SampleQueries  

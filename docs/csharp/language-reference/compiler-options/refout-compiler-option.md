@@ -40,7 +40,7 @@ Os assemblies de referência removem ainda mais metadados (membros particulares)
 - Membros de função privados (métodos, propriedades e eventos) são removidos nos casos em que sua remoção não afeta nitidamente a compilação. Se não houver nenhum atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, faça o mesmo para os membros de função internos.
 - Mas todos os tipos (incluindo tipos aninhados ou privados) são mantidos em assemblies de referência. Todos os atributos são mantidos (até mesmo os internos).
 - Todos os métodos virtuais são mantidos. As implementações explícitas da interface são mantidas. As propriedades e eventos explicitamente implementados são mantidos, uma vez que seus acessadores são virtuais (e são, portanto, mantidos).
-- Todos os campos de um struct são mantidos. (Este é um candidato para refinamento pós-c#-7.1)
+- Todos os campos de um struct são mantidos. (Este é um candidato para refinamento pós-C#-7.1)
 
 As opções `-refout` e [`-refonly`](refonly-compiler-option.md) são mutualmente exclusivas.
 

@@ -112,7 +112,7 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-Assim como acontece com o [palavra-chave na linguagem c# yield](../../csharp/language-reference/keywords/yield.md), cada elemento na expressão de cálculo é rendido de volta como ele é iterado.
+Assim como acontece com o [palavra-chave na linguagem C# yield](../../csharp/language-reference/keywords/yield.md), cada elemento na expressão de cálculo é rendido de volta como ele é iterado.
 
 `yield` é definido pela `Yield(x)` membro no tipo de construtor, onde `x` é o item para gerar novamente.
 

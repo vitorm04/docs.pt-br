@@ -28,7 +28,7 @@ Neste tópico, você cria um serviço de dados de exemplo que usa o WCF Data Ser
 
 1. No Visual Studio, sobre o **arquivo** menu, selecione **New** > **projeto**.
 
-1. No **novo projeto** caixa de diálogo, em Visual Basic ou Visual c#, selecione a **Web** categoria e, em seguida, selecione **aplicativo Web ASP.NET**.
+1. No **novo projeto** caixa de diálogo, em Visual Basic ou Visual C#, selecione a **Web** categoria e, em seguida, selecione **aplicativo Web ASP.NET**.
 
 1. Insira `NorthwindService` como o nome do projeto e, em seguida, selecione **Okey**.
 

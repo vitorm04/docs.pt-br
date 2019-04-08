@@ -110,7 +110,7 @@ A finalidade de `outref<'T>` é para indicar que o ponteiro só deve ser lidos d
 
 C# é compatível com o `in ref` e `out ref` palavras-chave, além de `ref` retorna. A tabela a seguir mostra como F# interpreta o que C# emite:
 
-|Construção de linguagem c#|F#infere|
+|Construção de linguagem C#|F#infere|
 |------------|---------|
 |`ref` valor de retorno|`outref<'T>`|
 |`ref readonly` valor de retorno|`inref<'T>`|

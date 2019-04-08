@@ -1,6 +1,6 @@
 ---
 title: Tutoriais do C#
-description: Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.
+description: Explore estes tutoriais do C# para aprender a criar programas em C# e conhecer os recursos da linguagem C#.
 ms.date: 10/25/2018
 ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
 ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30

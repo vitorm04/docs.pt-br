@@ -17,7 +17,7 @@ WCF Data Services se integra com o Visual Studio para que você possa gerar clas
 
  O exemplo neste tópico cria classes de serviço de dados do cliente com base no serviço de dados de exemplo Northwind. Esse serviço é criado quando você concluir o [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Alguns exemplos neste tópico requerem o arquivo de modelo conceitual para o modelo do Northwind. Para obter mais informações, confira [Como: Use EdmGen.exe para gerar o modelo e arquivos de mapeamento](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Alguns exemplos neste tópico exigem o arquivo. edmx para o modelo do Northwind. Para obter mais informações, consulte [visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
 
-### <a name="to-generate-c-classes-that-support-data-binding"></a>Para gerar classes c# que dão suporte à vinculação de dados
+### <a name="to-generate-c-classes-that-support-data-binding"></a>Para gerar classes C# que dão suporte à vinculação de dados
 
 -   No prompt de comando, execute o seguinte comando sem quebras de linha:
 
@@ -39,7 +39,7 @@ WCF Data Services se integra com o Visual Studio para que você possa gerar clas
     > [!NOTE]
     >  Você deve substituir o valor fornecido para o `/uri:` parâmetro com o URI de sua instância do serviço de dados de exemplo Northwind.
 
-### <a name="to-generate-c-classes-based-on-the-service-uri"></a>Para gerar classes c# com base no URI de serviço
+### <a name="to-generate-c-classes-based-on-the-service-uri"></a>Para gerar classes C# com base no URI de serviço
 
 -   No prompt de comando, execute o seguinte comando sem quebras de linha:
 
@@ -61,7 +61,7 @@ WCF Data Services se integra com o Visual Studio para que você possa gerar clas
     > [!NOTE]
     >  Você deve substituir o valor fornecido para o `/uri:` parâmetro com o URI de sua instância do serviço de dados de exemplo Northwind.
 
-### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>Para gerar classes c# baseadas no arquivo de modelo conceitual (CSDL)
+### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>Para gerar classes C# baseadas no arquivo de modelo conceitual (CSDL)
 
 -   No prompt de comando, execute o seguinte comando sem quebras de linha:
 
@@ -77,7 +77,7 @@ WCF Data Services se integra com o Visual Studio para que você possa gerar clas
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
-### <a name="to-generate-c-classes-based-on-the-edmx-file"></a>Para gerar classes c# com base em arquivo. edmx
+### <a name="to-generate-c-classes-based-on-the-edmx-file"></a>Para gerar classes C# com base em arquivo. edmx
 
 -   No prompt de comando, execute o seguinte comando sem quebras de linha:
 

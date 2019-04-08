@@ -36,7 +36,7 @@ Modifica o comportamento de compilação de XAML para que os campos para referê
   
  O valor para o `x:FieldModifier` atributo varia por linguagem de programação e sua finalidade pode variar em estruturas específicas. A cadeia de caracteres a ser usado depende de como cada linguagem implementa sua <xref:System.CodeDom.Compiler.CodeDomProvider> e os conversores de tipo, ele retorna para definir os significados para <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> e <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, e se esse idioma é diferencia maiusculas de minúsculas.  
   
--   Para c#, a cadeia de caracteres para passar para designar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> é `public`.  
+-   Para C#, a cadeia de caracteres para passar para designar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> é `public`.  
   
 -   Para o Microsoft Visual Basic .NET, a cadeia de caracteres para passar para designar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> é `Public`.  
   

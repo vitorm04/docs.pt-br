@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Comentários
 
-Referência de código usando o caminho totalmente qualificado de namespace ou módulo sempre pode criar código que é difícil de escrever, ler e manter. Em vez disso, você pode usar o `open` palavra-chave para usados com frequência módulos e namespaces para que quando você faz referência a um membro desse módulo ou namespace, você pode usar a forma abreviada do nome em vez do nome totalmente qualificado. Essa palavra-chave é semelhante para o `using` palavra-chave em c#, `using namespace` no Visual C++, e `Imports` no Visual Basic.
+Referência de código usando o caminho totalmente qualificado de namespace ou módulo sempre pode criar código que é difícil de escrever, ler e manter. Em vez disso, você pode usar o `open` palavra-chave para usados com frequência módulos e namespaces para que quando você faz referência a um membro desse módulo ou namespace, você pode usar a forma abreviada do nome em vez do nome totalmente qualificado. Essa palavra-chave é semelhante para o `using` palavra-chave em C#, `using namespace` no Visual C++, e `Imports` no Visual Basic.
 
 O módulo ou namespace fornecido deve ser no mesmo projeto ou em um projeto referenciado ou um assembly. Se não for, você pode adicionar uma referência ao projeto ou usar o `-reference` comando`-`opção de linha (ou sua abreviação `-r`). Para obter mais informações, consulte [Opções do compilador](compiler-options.md).
 

@@ -1,8 +1,16 @@
+---
+ms.openlocfilehash: 888628a90f615943d155c6c28762a645e36699f0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760766"
+---
 ### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a>Permitir caracteres de controle bidirecionais Unicode em URIs
 
 |   |   |
 |---|---|
-|Detalhes|O Unicode especifica vários caracteres de controle especiais usados para especificar a orientação do texto. Nas versões anteriores do .NET Framework, esses caracteres eram excluídos incorretamente de todos os URIs mesmo quando estavam presentes em sua forma codificada por porcentagem. Para atender melhor ao [RFC 3987](http://tools.ietf.org/html/rfc3987), agora esses caracteres são permitidos nos URIs. Quando encontrados sem codificação em um URI, eles são codificados por porcentagem. Quando encontrados codificados por porcentagem, eles são deixados no estado em que se encontram.|
+|Detalhes|O Unicode especifica vários caracteres de controle especiais usados para especificar a orientação do texto. Nas versões anteriores do .NET Framework, esses caracteres eram excluídos incorretamente de todos os URIs mesmo quando estavam presentes em sua forma codificada por porcentagem. Para atender melhor ao [RFC 3987](https://tools.ietf.org/html/rfc3987), agora esses caracteres são permitidos nos URIs. Quando encontrados sem codificação em um URI, eles são codificados por porcentagem. Quando encontrados codificados por porcentagem, eles são deixados no estado em que se encontram.|
 |Sugestão|Para aplicativos direcionados a versões do .NET Framework começando com a 4.7.2, o suporte para caracteres bidirecionais Unicode é habilitado por padrão. Se essa alteração não for desejada, você poderá desabilitá-la adicionando a seguinte opção [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) à seção <code>&lt;runtime&gt;</code> do arquivo de configuração de aplicativo:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Para aplicativos direcionados a versões anteriores do .NET Framework, mas executados em versões começando com o .NET Framework 4.7.2, o suporte para caracteres bidirecionais Unicode é desabilitado por padrão. Você poderá habilitá-la adicionando a seguinte opção [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) à seção <code>&lt;runtime&gt;</code> do arquivo de configuração de aplicativo:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
 |Escopo|Secundário|
 |Versão|4.7.2|

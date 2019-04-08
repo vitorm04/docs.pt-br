@@ -62,7 +62,7 @@ Este exemplo requer:
 
 * Que uma referência à dll seja adicionada ao projeto.
 
-* Que o <xref:System> namespace sejam importados com o `using` instrução (necessária em código c#).
+* Que o <xref:System> namespace sejam importados com o `using` instrução (necessária em código C#).
 
 ## <a name="see-also"></a>Consulte também
 

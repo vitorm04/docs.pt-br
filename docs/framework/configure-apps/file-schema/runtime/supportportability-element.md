@@ -79,5 +79,5 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [/AppConfig (opções do compilador c#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [/AppConfig (opções do compilador C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Visão geral da Unificação de assemblies do framework .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

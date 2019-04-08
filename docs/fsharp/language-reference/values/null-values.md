@@ -31,7 +31,7 @@ Para interpretar um valor nulo que é obtido de um método do .NET, use a corres
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-Valores nulos para F# tipos também podem ser gerados de outras maneiras, como quando você usa `Array.zeroCreate`, que chama `Unchecked.defaultof`. Você deve ter cuidado com o código, para manter os valores nulos encapsulados. Em uma biblioteca destinada somente para F#, você não precise verificar valores nulos em todas as funções. Se você estiver escrevendo uma biblioteca para interoperação com outras linguagens .NET, você talvez precise adicionar verificações para null, parâmetros de entrada e gerarem um `ArgumentNullException`, exatamente como faria em código c# ou Visual Basic.
+Valores nulos para F# tipos também podem ser gerados de outras maneiras, como quando você usa `Array.zeroCreate`, que chama `Unchecked.defaultof`. Você deve ter cuidado com o código, para manter os valores nulos encapsulados. Em uma biblioteca destinada somente para F#, você não precise verificar valores nulos em todas as funções. Se você estiver escrevendo uma biblioteca para interoperação com outras linguagens .NET, você talvez precise adicionar verificações para null, parâmetros de entrada e gerarem um `ArgumentNullException`, exatamente como faria em código C# ou Visual Basic.
 
 Você pode usar o código a seguir para verificar se um valor arbitrário é nulo.
 

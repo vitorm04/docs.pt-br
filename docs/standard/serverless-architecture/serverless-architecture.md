@@ -19,7 +19,7 @@ Hosts sem servidor geralmente usam um existentes baseados em contêiner ou a cam
 
 ![Arquitetura de funções do Azure](./media/azure-functions-architecture.png)
 
-O núcleo de trabalhos Web fornece um contexto de execução para a função. O tempo de execução de linguagem executa scripts, executa a bibliotecas e hospeda a estrutura para o idioma de destino. Por exemplo, Node. js é usado para executar funções do JavaScript e o .NET Framework é usado para executar funções do c#. Você aprenderá mais sobre as opções de idioma e plataforma neste capítulo.
+O núcleo de trabalhos Web fornece um contexto de execução para a função. O tempo de execução de linguagem executa scripts, executa a bibliotecas e hospeda a estrutura para o idioma de destino. Por exemplo, Node. js é usado para executar funções do JavaScript e o .NET Framework é usado para executar funções do C#. Você aprenderá mais sobre as opções de idioma e plataforma neste capítulo.
 
 Alguns projetos podem se beneficiar de adotar uma abordagem "totalmente em" para o sem servidor. Aplicativos que dependem muito de microsserviços podem implementar todos os microsserviços usando a tecnologia sem servidor. A maioria dos aplicativos são híbridas, seguindo um design de N camadas e usando sem servidor para os componentes que fazem sentido porque os componentes são modular e escalonável de maneira independente. Para ajudar a dar sentido a esses cenários, esta seção orienta por meio de alguns exemplos comuns de arquitetura que usar sem servidor.
 

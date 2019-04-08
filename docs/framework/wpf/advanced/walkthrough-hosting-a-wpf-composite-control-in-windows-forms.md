@@ -43,7 +43,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 1.  Inicie [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]e abra o **novo projeto** caixa de diálogo.  
   
-2.  No Visual c# e a categoria do Windows, selecione o **biblioteca de controle de usuário do WPF** modelo.  
+2.  No Visual C# e a categoria do Windows, selecione o **biblioteca de controle de usuário do WPF** modelo.  
   
 3.  Dê um nome ao novo projeto `MyControls`.  
   
@@ -192,7 +192,7 @@ A imagem a seguir mostra um controle composto do WPF hospedado em um aplicativo 
   
 1.  Inicie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]e abra o **novo projeto** caixa de diálogo.  
   
-2.  No Visual c# e a categoria do Windows, selecione o **aplicativo do Windows Forms** modelo.  
+2.  No Visual C# e a categoria do Windows, selecione o **aplicativo do Windows Forms** modelo.  
   
 3.  Dê um nome ao novo projeto `WFHost`.  
   

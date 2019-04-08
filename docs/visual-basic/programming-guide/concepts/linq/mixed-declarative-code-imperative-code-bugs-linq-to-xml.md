@@ -19,11 +19,11 @@ ms.locfileid: "58842272"
   
  Misturar esses estilos de código na mesma operação é o que resulta em problemas. Considere o seguinte:  
   
- Suponha que você tenha uma lista vinculada com três itens nele (a, b, e c#):  
+ Suponha que você tenha uma lista vinculada com três itens nele (a, b, e C#):  
   
  `a -> b -> c`  
   
- Agora, suponha que você deseja mover através da lista vinculada, adicionando novos itens três (a, b, e c#). Você deseja a lista vinculada resultante para ter esta aparência:  
+ Agora, suponha que você deseja mover através da lista vinculada, adicionando novos itens três (a, b, e C#). Você deseja a lista vinculada resultante para ter esta aparência:  
   
  `a -> a' -> b -> b' -> c -> c'`  
   

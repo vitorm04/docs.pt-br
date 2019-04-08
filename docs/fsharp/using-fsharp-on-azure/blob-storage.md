@@ -242,7 +242,7 @@ Um aplicativo autônomo gratuito da Microsoft que permite trabalhar visualmente 
 
 ### <a name="related-guides"></a>Guias de relacionados
 
-- [Introdução ao armazenamento de BLOBs do Azure em c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Introdução ao armazenamento de BLOBs do Azure em C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Transferir dados com o utilitário de linha de comando do AzCopy no Windows](/azure/storage/common/storage-use-azcopy)
 - [Transferir dados com o utilitário de linha de comando do AzCopy no Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurar cadeias de conexão do armazenamento do Azure](/azure/storage/common/storage-configure-connection-string)

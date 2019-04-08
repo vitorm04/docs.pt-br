@@ -48,7 +48,7 @@ Este tópico discute como criar codificadores personalizados.
  Há uma série de recursos fornecidos pelos codificadores fornecido pelo sistema.  
   
 ### <a name="pooling"></a>Agrupamento  
- Cada uma das implementações de codificador tenta pool tanto quanto possível. Redução das alocações é uma maneira importante de melhorar o desempenho do código gerenciado. Para atingir esse pool, usam as implementações de `SynchronizedPool` classe. O arquivo do c# contém uma descrição das otimizações adicionais usados por esta classe.  
+ Cada uma das implementações de codificador tenta pool tanto quanto possível. Redução das alocações é uma maneira importante de melhorar o desempenho do código gerenciado. Para atingir esse pool, usam as implementações de `SynchronizedPool` classe. O arquivo do C# contém uma descrição das otimizações adicionais usados por esta classe.  
   
  <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> instâncias são agrupadas e reinicializadas para evitar a alocar novos para cada mensagem. Para os leitores, uma `OnClose` recupera o leitor o retorno de chamada quando `Close()` é chamado. O codificador também é reciclado alguns objetos de estado de mensagem usados ao construir mensagens. Os tamanhos desses pools são configuráveis pelo `MaxReadPoolSize` e `MaxWritePoolSize` propriedades em cada uma das três classes derivadas de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   

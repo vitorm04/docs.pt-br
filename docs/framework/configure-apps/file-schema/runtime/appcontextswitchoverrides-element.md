@@ -134,7 +134,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controla se as sequências de chaves vazias em chaves compostas são ignoradas pela validação de esquema XSD. Para obter mais informações, confira [Mitigação: Validação de esquema XML](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]
->  Em vez de adicionar um `AppContextSwitchOverrides` elemento para um arquivo de configuração de aplicativo, você também pode definir as opções programaticamente, chamando o `static` (em c#) ou `Shared` (no Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> método.  
+>  Em vez de adicionar um `AppContextSwitchOverrides` elemento para um arquivo de configuração de aplicativo, você também pode definir as opções programaticamente, chamando o `static` (em C#) ou `Shared` (no Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> método.  
   
  Os desenvolvedores de biblioteca também podem definir opções personalizadas para permitir que os chamadores recusar alterada funcionalidade introduzida em versões posteriores de suas bibliotecas. Para obter mais informações, consulte a classe <xref:System.AppContext>.  
   

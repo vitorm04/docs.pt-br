@@ -45,7 +45,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |---------------|-----------------|
 |`compilerOptions`|Atributo opcional.<br /><br /> Especifica os argumentos adicionais específicos do compilador para compilação. Os valores para o `compilerOptions` atributo normalmente são listados em um tópico de opções do compilador para o compilador.|
 |`extension`|Atributo obrigatório.<br /><br /> Fornece uma lista separada por ponto e vírgula de extensões de nome de arquivo usado por arquivos de origem para o provedor de linguagem. Por exemplo, ".cs".|
-|`language`|Atributo obrigatório.<br /><br /> Fornece uma lista separada por vírgulas de nomes de idiomas com suporte pelo provedor de linguagem. Por exemplo, "c#;cs;csharp".|
+|`language`|Atributo obrigatório.<br /><br /> Fornece uma lista separada por vírgulas de nomes de idiomas com suporte pelo provedor de linguagem. Por exemplo, "C#;cs;csharp".|
 |`type`|Atributo obrigatório.<br /><br /> Especifica o nome do tipo do provedor de linguagem, incluindo o nome do assembly que contém a implementação do provedor. O nome do tipo deve atender aos requisitos definidos na [especificando nomes de tipo totalmente qualificados](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Atributo opcional.<br /><br /> Especifica o nível de aviso do compilador padrão; Determina o nível no qual o provedor de linguagem de programação trata avisos de compilação como erros.|
 

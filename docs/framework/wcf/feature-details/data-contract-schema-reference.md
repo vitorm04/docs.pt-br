@@ -288,7 +288,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usada pelo <xref:System
 |`pattern`|Negado.|  
 |(vazio)|Com suporte, é mapeado para o tipo de enumeração vazia.|  
   
- O código a seguir mostra uma classe de enumeração do c#.  
+ O código a seguir mostra uma classe de enumeração do C#.  
   
 ```csharp  
 public enum MyEnum  

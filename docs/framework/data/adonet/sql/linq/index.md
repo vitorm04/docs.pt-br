@@ -32,7 +32,7 @@ ms.locfileid: "56092222"
  Especifica informações de referência sobre vários aspectos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Os tópicos incluem o mapeamento de tipos SQL-CLR, conversão padrão de operadores de consulta e muito mais.  
   
  [Amostras](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
- Fornece links para amostras do Visual Basic e c#.  
+ Fornece links para amostras do Visual Basic e C#.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Consulta integrada à linguagem (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\

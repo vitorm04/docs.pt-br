@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 448a6160bd64143000c00d21a9ddecdc61b53475
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760154"
+---
 ### <a name="serialport-background-thread-exceptions"></a>Exceções de thread de tela de fundo de SerialPort
 
 |   |   |

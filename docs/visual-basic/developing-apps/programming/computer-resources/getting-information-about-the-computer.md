@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
-ms.openlocfilehash: 508ab8a1cc302e58baa869fc30cea322e01235e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00e6acd7cdbb41d8d763ae2a948bf9c108d54d59
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743628"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823448"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Obtendo informações sobre o computador (Visual Basic)
 O objeto `My.Computer.Info` fornece propriedades para obter informações sobre memória, assemblies carregados, nome e sistema operacional do computador.  
@@ -26,4 +26,5 @@ O objeto `My.Computer.Info` fornece propriedades para obter informações sobre 
 |Determinar o `UICulture` instalado no computador no qual o aplicativo está sendo executado.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>

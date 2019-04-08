@@ -58,14 +58,14 @@ Especifica os atributos de versão do compilador para um provedor de linguagem.
 ## <a name="remarks"></a>Comentários  
  No .NET Framework versão 3.5, provedores de código de Code Document Object Model (CodeDOM) podem dar suporte a opções específicas do provedor usando o `<providerOption>` elemento.  
   
- O .NET Framework 3.5 inclui assemblies do .NET Framework 2.0 atualizados e fornece novos assemblies da versão 3.5 que contêm os novos tipos. Os provedores de código Microsoft c# e Visual Basic estão contidos em assemblies do .NET Framework 2.0, mas foram atualizados para dar suporte a compiladores versão 3.5. Por padrão, os provedores de código atualizado geram código para compiladores versão 2.0. Você pode usar o `<providerOption>` elemento para alterar a versão do compilador de destino para 3.5. Para fazer isso, especifique "CompilerVersion" para o `name` atributo e "v3.5" para o `value` atributo. Você deve preceder o número de versão com um "v" em letras minúsculas.  
+ O .NET Framework 3.5 inclui assemblies do .NET Framework 2.0 atualizados e fornece novos assemblies da versão 3.5 que contêm os novos tipos. Os provedores de código Microsoft C# e Visual Basic estão contidos em assemblies do .NET Framework 2.0, mas foram atualizados para dar suporte a compiladores versão 3.5. Por padrão, os provedores de código atualizado geram código para compiladores versão 2.0. Você pode usar o `<providerOption>` elemento para alterar a versão do compilador de destino para 3.5. Para fazer isso, especifique "CompilerVersion" para o `name` atributo e "v3.5" para o `value` atributo. Você deve preceder o número de versão com um "v" em letras minúsculas.  
   
  Você pode tornar a especificação de versão global adicionando o `<providerOption>` elemento para o Machine. config do .NET Framework 2.0 ou o arquivo Web. config de raiz. Se você atualizar a versão do compilador padrão para 3.5 no arquivo Machine. config, você pode alterá-lo para 2.0 em uma base por aplicativo usando o `<providerOption>` elemento no arquivo de configuração do aplicativo.  
   
  Implementadores de provedor de código codeDOM podem processar opções personalizadas, fornecendo um construtor que usa um `providerOptions` parâmetro do tipo <xref:System.Collections.Generic.IDictionary%602>.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como especificar a versão 3.5 do provedor de código c# deve ser usado.  
+ O exemplo a seguir demonstra como especificar a versão 3.5 do provedor de código C# deve ser usado.  
   
 ```xml  
 <configuration>  

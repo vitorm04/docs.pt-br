@@ -428,7 +428,7 @@ Como resultado, é melhor publicar sua funcionalidade como funções nomeadas e 
 
 #### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>Cuidadosamente, usar unidades de medida para a segurança de tipo adicionado no F# código
 
-Informações adicionais de digitação para unidades de medida são apagadas quando visualizado por outras linguagens .NET. Lembre-se de que a reflexão, ferramentas e componentes do .NET verá tipos sans unidades. Por exemplo, verá os consumidores de c# `float` em vez de `float<kg>`.
+Informações adicionais de digitação para unidades de medida são apagadas quando visualizado por outras linguagens .NET. Lembre-se de que a reflexão, ferramentas e componentes do .NET verá tipos sans unidades. Por exemplo, verá os consumidores de C# `float` em vez de `float<kg>`.
 
 ### <a name="type-abbreviations"></a>Abreviações de tipo
 
@@ -704,7 +704,7 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-using-tuples-as-return-values"></a>Evite usar tuplas como valores de retorno
 
-Em vez disso, prefira retornando um tipo nomeado que contém os dados de agregação, ou usando os parâmetros de saída para retornar vários valores. Embora existam, tuplas e tuplas de struct, no .NET (incluindo suporte à linguagem c# tuplas de struct), eles geralmente não fornecerá a API ideal e esperada para desenvolvedores do .NET.
+Em vez disso, prefira retornando um tipo nomeado que contém os dados de agregação, ou usando os parâmetros de saída para retornar vários valores. Embora existam, tuplas e tuplas de struct, no .NET (incluindo suporte à linguagem C# tuplas de struct), eles geralmente não fornecerá a API ideal e esperada para desenvolvedores do .NET.
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Evite o uso de currying de parâmetros
 
@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-Vamos dar uma olhada em como isso F# tipo será exibido para um programador usando outra linguagem .NET. Por exemplo, o aproximado c# "assinatura" é da seguinte maneira:
+Vamos dar uma olhada em como isso F# tipo será exibido para um programador usando outra linguagem .NET. Por exemplo, o aproximado C# "assinatura" é da seguinte maneira:
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -822,7 +822,7 @@ type RadialPoint =
     member Radius : double
 ```
 
-A assinatura c# agora é da seguinte maneira:
+A assinatura C# agora é da seguinte maneira:
 
 ```csharp
 public class RadialPoint
@@ -851,4 +851,4 @@ As correções feitas para preparar esse tipo para uso como parte de uma bibliot
 
 * Usado o tipo de delegado do .NET `System.Func` em vez de um F# tipo de função.
 
-Isso torna muito mais agradável consumir em código c#.
+Isso torna muito mais agradável consumir em código C#.

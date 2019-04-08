@@ -14,17 +14,17 @@ items:
     href: preprocessor-define.md
   - name: '#undef'
     href: preprocessor-undef.md
-  - name: '#aviso'
+  - name: '#warning'
     href: preprocessor-warning.md
-  - name: '#erro'
+  - name: '#error'
     href: preprocessor-error.md
-  - name: '#linha'
+  - name: '#line'
     href: preprocessor-line.md
-  - name: '#região'
+  - name: '#region'
     href: preprocessor-region.md
   - name: '#endregion'
     href: preprocessor-endregion.md
-  - name: '#(pragma)'
+  - name: '#pragma'
     href: preprocessor-pragma.md
   - name: '#pragma warning'
     href: preprocessor-pragma-warning.md

@@ -106,7 +106,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Obtendo o aplicativo atual  
- Porque a funcionalidade dos <xref:System.Windows.Application> classe são compartilhados entre um aplicativo, pode haver apenas uma instância das <xref:System.Windows.Application> classe por <xref:System.AppDomain>. Para impor isso, o <xref:System.Windows.Application> classe é implementada como uma classe singleton (consulte [implementando Singleton no c#](https://go.microsoft.com/fwlink/?LinkId=100567)), que cria uma única instância de si mesma e fornece acesso compartilhado a com o `static` <xref:System.Windows.Application.Current%2A> propriedade.  
+ Porque a funcionalidade dos <xref:System.Windows.Application> classe são compartilhados entre um aplicativo, pode haver apenas uma instância das <xref:System.Windows.Application> classe por <xref:System.AppDomain>. Para impor isso, o <xref:System.Windows.Application> classe é implementada como uma classe singleton (consulte [implementando Singleton no C#](https://go.microsoft.com/fwlink/?LinkId=100567)), que cria uma única instância de si mesma e fornece acesso compartilhado a com o `static` <xref:System.Windows.Application.Current%2A> propriedade.  
   
  O código a seguir mostra como adquirir uma referência para o <xref:System.Windows.Application> objeto atual <xref:System.AppDomain>.  
   

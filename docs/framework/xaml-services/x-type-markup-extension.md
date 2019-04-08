@@ -44,7 +44,7 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
 |`typeNameValue`|Necessário. Um nome de tipo que pode ser resolvido para o namespace XAML padrão atual; ou especificado prefixo mapeado se `prefix` for fornecido.|  
   
 ## <a name="remarks"></a>Comentários  
- O `x:Type` extensão de marcação tem uma função semelhante para o `typeof()` operador em c# ou o `GetType` operador no Microsoft Visual Basic.  
+ O `x:Type` extensão de marcação tem uma função semelhante para o `typeof()` operador em C# ou o `GetType` operador no Microsoft Visual Basic.  
   
  O `x:Type` extensão de marcação fornece um comportamento de conversão de cadeia de caracteres para propriedades que usam o tipo <xref:System.Type>. A entrada é um tipo XAML. A relação entre o tipo de XAML de entrada e saída CLR <xref:System.Type> é que a saída <xref:System.Type> é o <xref:System.Xaml.XamlType.UnderlyingType%2A> da entrada <xref:System.Xaml.XamlType>, depois de pesquisar o necessário <xref:System.Xaml.XamlType> com base no contexto do esquema XAML e o <xref:System.Windows.Markup.IXamlTypeResolver>fornece o contexto de serviço.  
   

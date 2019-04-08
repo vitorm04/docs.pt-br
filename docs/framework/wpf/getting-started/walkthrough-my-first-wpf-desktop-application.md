@@ -39,7 +39,7 @@ Este passo a passo inclui as seguintes etapas:
 Ao final do passo a passo, você será criado um aplicativo do Windows que permite aos usuários exibir relatórios de despesas para pessoas selecionadas autônomo. O aplicativo é composto de várias páginas do WPF que são hospedadas em uma janela de estilo de navegador.
 
 > [!TIP]
-> O código de exemplo que é usado para criar este passo a passo está disponível para o Visual Basic e c# na [Introdução à criação de aplicativos WPF](https://go.microsoft.com/fwlink/?LinkID=160008).
+> O código de exemplo que é usado para criar este passo a passo está disponível para o Visual Basic e C# na [Introdução à criação de aplicativos WPF](https://go.microsoft.com/fwlink/?LinkID=160008).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -51,7 +51,7 @@ Ao final do passo a passo, você será criado um aplicativo do Windows que permi
 
 A primeira etapa é criar a infraestrutura de aplicativo, que inclui uma definição de aplicativo, duas páginas e uma imagem.
 
-1. Criar um novo projeto de aplicativo do WPF no Visual Basic ou Visual c# denominado **`ExpenseIt`**:
+1. Criar um novo projeto de aplicativo do WPF no Visual Basic ou Visual C# denominado **`ExpenseIt`**:
 
    1. Abra o Visual Studio e selecione **arquivo** > **New** > **projeto**.
 
@@ -68,7 +68,7 @@ A primeira etapa é criar a infraestrutura de aplicativo, que inclui uma defini�
    > [!NOTE]
    > Este passo a passo usa o <xref:System.Windows.Controls.DataGrid> controle que está disponível no .NET Framework 4 e posterior. Ser-se de que seu projeto tem como alvo o .NET Framework 4 ou posterior. Para obter mais informações, confira [Como: Direcionar a uma versão do .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
-2. Abra *Application. XAML* (Visual Basic) ou *App. XAML* (c#).
+2. Abra *Application. XAML* (Visual Basic) ou *App. XAML* (C#).
 
     Esse arquivo XAML define um aplicativo WPF e quaisquer recursos do aplicativo. Você também usar esse arquivo para especificar a interface do usuário que mostra automaticamente quando o aplicativo é iniciado; Nesse caso, *MainWindow. XAML*.
 
@@ -118,7 +118,7 @@ A primeira etapa é criar a infraestrutura de aplicativo, que inclui uma defini�
 
     Esse arquivo é um arquivo code-behind que contém o código para manipular os eventos declarados em *MainWindow. XAML*. Esse arquivo contém uma classe parcial para a janela definida no XAML.
 
-7. Se você estiver usando c#, altere o `MainWindow` classe para derivar de <xref:System.Windows.Navigation.NavigationWindow>. (No Visual Basic, isso ocorre automaticamente quando você altera a janela no XAML.)
+7. Se você estiver usando C#, altere o `MainWindow` classe para derivar de <xref:System.Windows.Navigation.NavigationWindow>. (No Visual Basic, isso ocorre automaticamente quando você altera a janela no XAML.)
 
    Seu código deve ter esta aparência:
 
@@ -126,7 +126,7 @@ A primeira etapa é criar a infraestrutura de aplicativo, que inclui uma defini�
    [!code-vb[ExpenseIt#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]
 
    > [!TIP]
-   > Você pode alternar o idioma de código do código de exemplo entre c# e Visual Basic na **linguagem** lista suspensa no canto superior direito deste artigo.
+   > Você pode alternar o idioma de código do código de exemplo entre C# e Visual Basic na **linguagem** lista suspensa no canto superior direito deste artigo.
 
 ## <a name="add-files-to-the-application"></a>Adicionar arquivos ao aplicativo
 

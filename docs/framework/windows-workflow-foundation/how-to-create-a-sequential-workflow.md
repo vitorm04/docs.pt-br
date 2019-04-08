@@ -64,7 +64,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 ## <a name="to-add-the-workflow-activities"></a>Para adicionar as atividades de fluxo de trabalho  
   
-1.  Arraste uma **atribuir** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-o no **sequência** atividade. Tipo `Target` para o **para** caixa e a seguinte expressão na **insira uma expressão c#** ou **insira uma expressão VB** caixa.  
+1.  Arraste uma **atribuir** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-o no **sequência** atividade. Tipo `Target` para o **para** caixa e a seguinte expressão na **insira uma expressão C#** ou **insira uma expressão VB** caixa.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -111,7 +111,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     > [!NOTE]
     >  Quando você solta o **atribuir** atividade, observe como o designer de fluxo de trabalho adiciona automaticamente uma **sequência** atividade para conter o **Prompt** recém-adicionada e atividade **Atribuir** atividade.  
   
-7.  Tipo de `Turns` no **para** caixa e `Turns + 1` no **insira uma expressão c#** ou **insira uma expressão VB** caixa.  
+7.  Tipo de `Turns` no **para** caixa e `Turns + 1` no **insira uma expressão C#** ou **insira uma expressão VB** caixa.  
   
 8.  Arraste uma **se** a atividade do **fluxo de controle** seção o **caixa de ferramentas** e solte-o no **sequência** atividade para que ela siga a adicionados recentemente **atribuir** atividade.  
   
