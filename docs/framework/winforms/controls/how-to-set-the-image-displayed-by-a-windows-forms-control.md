@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir a imagem exibida pelo controle de um Windows Forms'
+title: 'Como: Definir a imagem exibida por um controle do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085084"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Como: Definir a imagem exibida pelo controle de um Windows Forms
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Como: Definir a imagem exibida por um controle do Windows Forms
 Vários controles de Windows Forms podem exibir imagens. Essas imagens podem ser ícones que esclarecem o propósito de controle, como um ícone de disquete em um botão que indica a **salvar** comando. Como alternativa, os ícones podem ser imagens de plano de fundo para dar o controle a aparência e o comportamento desejado.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Para definir a imagem exibida por um controle  
@@ -57,6 +57,7 @@ Vários controles de Windows Forms podem exibir imagens. Essas imagens podem ser
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

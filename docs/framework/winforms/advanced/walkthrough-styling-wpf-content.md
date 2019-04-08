@@ -1,19 +1,19 @@
 ---
-title: 'Passo a passo: Criando o conteúdo WPF'
+title: 'Passo a passo: definir o estilo do conteúdo do WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079351"
 ---
-# <a name="walkthrough-styling-wpf-content"></a>Passo a passo: Criando o conteúdo WPF
+# <a name="walkthrough-styling-wpf-content"></a>Passo a passo: definir o estilo do conteúdo do WPF
 Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Windows Presentation Foundation) hospedado em um Windows Form.
 
  Nesta instrução passo a passo, as seguintes tarefas serão executadas:
@@ -150,10 +150,11 @@ Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Wi
 5.  Clique nos botões OK e Cancelar e exibir as diferenças.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migração e interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
-- [Usando Controles do WPF](using-wpf-controls.md)
-- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Usando controles WPF](using-wpf-controls.md)
+- [Criar XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Visão geral de XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
 - [Estilo e modelagem](../../wpf/controls/styling-and-templating.md)

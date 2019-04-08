@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079325"
 ---
 # <a name="defining-and-specifying-faults"></a>Definindo e especificando falhas
 Falhas de SOAP transmitem condição informações de erro de um serviço para um cliente e, no caso de duplex, de um cliente para um serviço de uma maneira interoperável. Este tópico discute quando e como definir o conteúdo de falha personalizado e especificar quais operações poderá retorná-los. Para obter mais informações sobre como um serviço ou cliente duplex, pode enviar essas falhas e como um aplicativo cliente ou serviço lida com essas falhas, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obter uma visão geral de tratamento de erros em aplicativos do Windows Communication Foundation (WCF), consulte [especificação e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -88,12 +88,13 @@ End Class
  Ao acessar não serviços que a geram falhas, existem certas limitações. O WCF oferece suporte somente a falhas com tipos de detalhes que descreve o esquema e que são compatíveis com contratos de dados. Por exemplo, conforme mencionado acima, o WCF não suporta falhas que usam atributos XML em seus tipos de detalhes ou falhas com mais de um elemento de nível superior na seção de detalhes.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [Como: Declarar falhas em contratos de serviço](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [Como: declarar falhas em contratos de serviço](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [Noções básicas de nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md)
-- [Como: Defina a propriedade ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Como: definir a propriedade ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Especificando transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

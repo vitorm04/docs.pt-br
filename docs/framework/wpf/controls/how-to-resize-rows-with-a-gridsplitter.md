@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074268"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Como: Redimensionar linhas com um GridSplitter
 Este exemplo mostra como usar um horizontal <xref:System.Windows.Controls.GridSplitter> redistribuir o espaço entre duas linhas em uma <xref:System.Windows.Controls.Grid> sem alterar as dimensões do <xref:System.Windows.Controls.Grid>.  
@@ -37,5 +37,6 @@ Este exemplo mostra como usar um horizontal <xref:System.Windows.Controls.GridSp
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.GridSplitter>
-- [Tópicos de instruções](gridsplitter-how-to-topics.md)
+- [Tópicos explicativos ](gridsplitter-how-to-topics.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087619"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM
 Windows Communication Foundation (WCF) oferece ao desenvolvedor de código gerenciado com um ambiente rico para a criação de aplicativos conectados. No entanto, se você tiver um investimento substancial em código não gerenciado COM base em com e não deseja migrar, você pode ainda integrar os serviços Web WCF diretamente em seu código existente usando o moniker de serviço do WCF. O moniker de serviço pode ser usado em ambientes um amplo intervalo de COM base em desenvolvimento, como Office VBA, Visual Basic 6.0 ou Visual C++ 6.0.  
@@ -66,4 +66,5 @@ Windows Communication Foundation (WCF) oferece ao desenvolvedor de código geren
 >  `</configuration>`  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Registrar e configurar um Moniker de serviço](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [Como: registrar e configurar um moniker de serviço](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
