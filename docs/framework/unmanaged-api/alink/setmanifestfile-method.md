@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8307960166cfc668a577431d688c439f0f794be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072422"
 ---
-# <a name="setmanifestfile-method"></a><span data-ttu-id="c6195-102">Método SetManifestFile</span><span class="sxs-lookup"><span data-stu-id="c6195-102">SetManifestFile Method</span></span>
-<span data-ttu-id="c6195-103">Permite que você especificar ou redefinir o arquivo de manifesto que o vinculador usa quando cria o assembly.</span><span class="sxs-lookup"><span data-stu-id="c6195-103">Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.</span></span>  
+# <a name="setmanifestfile-method"></a><span data-ttu-id="dd357-102">Método SetManifestFile</span><span class="sxs-lookup"><span data-stu-id="dd357-102">SetManifestFile Method</span></span>
+<span data-ttu-id="dd357-103">Permite que você especificar ou redefinir o arquivo de manifesto que o vinculador usa quando cria o assembly.</span><span class="sxs-lookup"><span data-stu-id="dd357-103">Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6195-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c6195-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd357-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="dd357-104">Syntax</span></span>  
   
 ```  
 HRESULT SetManifestFile(  
@@ -34,22 +34,23 @@ HRESULT SetManifestFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c6195-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c6195-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dd357-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="dd357-105">Parameters</span></span>  
  `pszFile`  
   
- <span data-ttu-id="c6195-106">O nome do arquivo de manifesto cujos conteúdos são colocados no blob de recursos do Win32.</span><span class="sxs-lookup"><span data-stu-id="c6195-106">The name of the manifest file whose contents are put into the Win32 resources blob.</span></span>  
+ <span data-ttu-id="dd357-106">O nome do arquivo de manifesto cujos conteúdos são colocados no blob de recursos do Win32.</span><span class="sxs-lookup"><span data-stu-id="dd357-106">The name of the manifest file whose contents are put into the Win32 resources blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c6195-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="c6195-107">Return Value</span></span>  
- <span data-ttu-id="c6195-108">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="c6195-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dd357-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="dd357-107">Return Value</span></span>  
+ <span data-ttu-id="dd357-108">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="dd357-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c6195-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="c6195-109">Remarks</span></span>  
- <span data-ttu-id="c6195-110">Chame isso antes de solicitar o Win32ResBlob.</span><span class="sxs-lookup"><span data-stu-id="c6195-110">Call this before asking for the Win32ResBlob.</span></span> <span data-ttu-id="c6195-111">O valor da `pszFile` parâmetro é o nome do arquivo de manifesto cujos conteúdos são lidos e put nos recursos do Win32 com ID de RT_MANIFEST.</span><span class="sxs-lookup"><span data-stu-id="c6195-111">The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST.</span></span> <span data-ttu-id="c6195-112">Quando chamado usando um parâmetro de NULL, nenhum manifesto lida anteriormente está desmarcado.</span><span class="sxs-lookup"><span data-stu-id="c6195-112">When called by using a parameter of NULL, any previously read manifest is cleared.</span></span> <span data-ttu-id="c6195-113">Isso permite que um para redefinir o estado do vinculador para que o tempo de inicialização.</span><span class="sxs-lookup"><span data-stu-id="c6195-113">This enables one to reset the state of the linker to that of initialization time.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dd357-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="dd357-109">Remarks</span></span>  
+ <span data-ttu-id="dd357-110">Chame isso antes de solicitar o Win32ResBlob.</span><span class="sxs-lookup"><span data-stu-id="dd357-110">Call this before asking for the Win32ResBlob.</span></span> <span data-ttu-id="dd357-111">O valor da `pszFile` parâmetro é o nome do arquivo de manifesto cujos conteúdos são lidos e put nos recursos do Win32 com ID de RT_MANIFEST.</span><span class="sxs-lookup"><span data-stu-id="dd357-111">The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST.</span></span> <span data-ttu-id="dd357-112">Quando chamado usando um parâmetro de NULL, nenhum manifesto lida anteriormente está desmarcado.</span><span class="sxs-lookup"><span data-stu-id="dd357-112">When called by using a parameter of NULL, any previously read manifest is cleared.</span></span> <span data-ttu-id="dd357-113">Isso permite que um para redefinir o estado do vinculador para que o tempo de inicialização.</span><span class="sxs-lookup"><span data-stu-id="dd357-113">This enables one to reset the state of the linker to that of initialization time.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6195-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c6195-114">Requirements</span></span>  
- <span data-ttu-id="c6195-115">Requer aLink.h</span><span class="sxs-lookup"><span data-stu-id="c6195-115">Requires aLink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd357-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dd357-114">Requirements</span></span>  
+ <span data-ttu-id="dd357-115">Requer aLink.h</span><span class="sxs-lookup"><span data-stu-id="dd357-115">Requires aLink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6195-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c6195-116">See also</span></span>
-- [<span data-ttu-id="c6195-117">Interface IALink3</span><span class="sxs-lookup"><span data-stu-id="c6195-117">IALink3 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [<span data-ttu-id="c6195-118">API do ALink</span><span class="sxs-lookup"><span data-stu-id="c6195-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [<span data-ttu-id="c6195-119">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="c6195-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="c6195-120">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="c6195-120">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a><span data-ttu-id="dd357-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dd357-116">See also</span></span>
+
+- [<span data-ttu-id="dd357-117">Interface IALink3</span><span class="sxs-lookup"><span data-stu-id="dd357-117">IALink3 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
+- [<span data-ttu-id="dd357-118">API do ALink</span><span class="sxs-lookup"><span data-stu-id="dd357-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="dd357-119">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="dd357-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="dd357-120">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="dd357-120">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
