@@ -1,15 +1,15 @@
 ---
-title: 'Como: Recuperar metadados através de uma associação não MEX'
+title: 'Como: recuperar metadados através de uma associação não MEX'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074151"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Como: Recuperar metadados através de uma associação não MEX
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Como: recuperar metadados através de uma associação não MEX
 Este tópico descreve como recuperar metadados de um ponto de extremidade MEX ao longo de uma associação não MEX. O código neste exemplo é baseado na [ponto de extremidade do personalizado proteger metadados](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Para recuperar metadados sobre uma associação não MEX  
@@ -124,4 +124,5 @@ Este tópico descreve como recuperar metadados de um ponto de extremidade MEX ao
 5.  Neste ponto, você tem uma coleção de pontos de extremidade de serviço. Para obter mais informações sobre como importar metadados, consulte [como: Importar metadados para pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Metadados](../../../../docs/framework/wcf/feature-details/metadata.md)

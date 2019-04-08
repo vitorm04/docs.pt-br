@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8307960166cfc668a577431d688c439f0f794be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072422"
 ---
 # <a name="setmanifestfile-method"></a>Método SetManifestFile
 Permite que você especificar ou redefinir o arquivo de manifesto que o vinculador usa quando cria o assembly.  
@@ -49,6 +49,7 @@ HRESULT SetManifestFile(
  Requer aLink.h  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IALink3](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
 - [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)

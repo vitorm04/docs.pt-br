@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 0223e21702c2a108740341c331f93b85f271cf8a
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074021"
 ---
 # <a name="net-framework-data-providers"></a>Provedores de dados .NET Framework
-Um provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] é usado para se conectar a um banco de dados, executar comandos e recuperar resultados. Os resultados são processados diretamente, colocados no <xref:System.Data.DataSet> para serem expostos ao usuário conforme o necessário, combinados com os dados de várias fontes ou colocados remotamente entre camadas. Os provedores de dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] são leves, criando uma camada mínima entre a fonte de dados e o código, aumentando o desempenho sem sacrificar a funcionalidade.  
+Um provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] é usado para se conectar a um banco de dados, executar comandos e recuperar resultados. Os resultados são processados diretamente, colocados no <xref:System.Data.DataSet> para serem expostos ao usuário conforme o necessário, combinados com os dados de várias fontes ou colocados remotamente entre camadas. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedores de dados são leves, criando uma camada mínima entre a fonte de dados e código, aumentando o desempenho sem sacrificar a funcionalidade.  
   
  A tabela a seguir lista os provedores de dados que estão incluídos no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-|Provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|Descrição|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados|Descrição|  
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para o SQL Server|Fornece acesso a dados para o Microsoft SQL Server. Usa o namespace <xref:System.Data.SqlClient>.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para OLE DB|Para fontes de dados expostas usando o OLE DB. Usa o namespace <xref:System.Data.OleDb>.|  
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  O Provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para OLE DB não funciona com o provedor do OLE DB para ODBC (MSDASQL). Para acessar uma fonte de dados ODBC usando o [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], use o Provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para ODBC.  
   
- As classes do Provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para OLE DB estão localizadas no namespace <xref:System.Data.OleDb>. O exemplo de código a seguir mostra como incluir o namespace `System.Data.OleDb` em seus aplicativos.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para classes de OLE DB estão localizados no <xref:System.Data.OleDb> namespace. O exemplo de código a seguir mostra como incluir o namespace `System.Data.OleDb` em seus aplicativos.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Microsoft ODBC para Oracle|  
 |Driver do Microsoft Access (*.mdb)|  
   
- As classes do Provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para ODBC estão localizadas no namespace <xref:System.Data.Odbc>.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para classes ODBC estão localizados no <xref:System.Data.Odbc> namespace.  
   
  O exemplo de código a seguir mostra como incluir o namespace `System.Data.Odbc` em seus aplicativos.  
   
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  O Provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle exige o software cliente da Oracle (versão 8.1.7 ou posterior) no sistema antes que você possa se conectar a uma fonte de dados do Oracle.  
   
- As classes do Provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle estão localizadas no namespace <xref:System.Data.OracleClient> e estão contidas no assembly `System.Data.OracleClient.dll`. Você deve fazer referência a `System.Data.dll` e a `System.Data.OracleClient.dll` ao criar um aplicativo que usa o provedor de dados.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provedor de dados para classes de Oracle estão localizados na <xref:System.Data.OracleClient> namespace e estão contidas no `System.Data.OracleClient.dll` assembly. Você deve fazer referência a `System.Data.dll` e a `System.Data.OracleClient.dll` ao criar um aplicativo que usa o provedor de dados.  
   
  O exemplo de código a seguir mostra como incluir o namespace `System.Data.OracleClient` em seus aplicativos.  
   
@@ -158,6 +158,7 @@ using System.Data.OracleClient;
  O provedor EntityClient é usado para acessar dados com base no EDM (Modelo de Dados de Entidade). Diferentemente de outros provedores de dados .NET Framework, ele não interage diretamente com uma fonte de dados. Em vez disso, ele usa o Entity SQL para se comunicar com o provedor de dados subjacente. Para obter mais informações, consulte [provedor EntityClient para Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)
-- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Visão geral do ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

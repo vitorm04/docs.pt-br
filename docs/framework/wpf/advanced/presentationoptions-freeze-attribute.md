@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074651"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>Atributo PresentationOptions:Freeze
 Define o <xref:System.Windows.Freezable.IsFrozen%2A> estado `true` em que o contém <xref:System.Windows.Freezable> elemento. Comportamento padrão para um <xref:System.Windows.Freezable> sem o `PresentationOptions:Freeze` atributo especificado é que <xref:System.Windows.Freezable.IsFrozen%2A> é `false` em tempo de carregamento e dependente geral <xref:System.Windows.Freezable> comportamento em tempo de execução.  
@@ -42,6 +42,7 @@ Define o <xref:System.Windows.Freezable.IsFrozen%2A> estado `true` em que o cont
  Qualquer valor para o atributo `Freeze` diferente de `true` (não diferencia maiúsculas e minúsculas) gera um erro de tempo de carga. (Especificar o atributo `Freeze` como `false` não é um erro, porém esse já é o padrão, por isso a configuração para `false` não faz nada).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Freezable>
 - [Visão geral de objetos congeláveis](freezable-objects-overview.md)
 - [Atributo mc:Ignorable](mc-ignorable-attribute.md)

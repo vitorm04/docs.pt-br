@@ -2,12 +2,12 @@
 title: Conceitos chave do Modelo de Dados de Entidade
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074436"
 ---
 # <a name="entity-data-model-key-concepts"></a>Conceitos chave do Modelo de Dados de Entidade
 Modelo de dados de entidade (EDM) usa três conceitos principais para descrever a estrutura de dados: *tipo de entidade*, *tipo de associação*, e *propriedade*. Esses são os conceitos mais importantes para descrever a estrutura dos dados em qualquer implementação do EDM.  
@@ -39,4 +39,5 @@ Modelo de dados de entidade (EDM) usa três conceitos principais para descrever 
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
