@@ -17,8 +17,8 @@ items:
     - name: 'Como: determinar quais versões do .NET Framework estão instaladas'
       href: how-to-determine-which-versions-are-installed.md
       items:
-      - name: Chaves de versão do .NET Framework e versões do sistema operacional Windows
-        href: release-keys-and-os-versions.md
+      - name: Valores mínimos da versão DWORD para versões do .NET Framework
+        href: minimum-release-dword.md
     - name: 'Como: determinar quais atualizações do .NET Framework estão instaladas'
       href: how-to-determine-which-net-framework-updates-are-installed.md
   - name: 'Como: configurar um aplicativo para dar suporte ao .NET Framework 4 ou a versões posteriores'
@@ -27,9 +27,9 @@ items:
     href: migrating-from-the-net-framework-1-1.md
   - name: Problemas de migração do .NET Framework 4
     href: net-framework-4-migration-issues.md
-ms.openlocfilehash: c46b7ac4680e6aa988e39055cb51c80a4bb0e8b4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ad5a32ddb015693e5c146e5e3dfea3979013e18e
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467833"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054930"
