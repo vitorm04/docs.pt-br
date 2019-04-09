@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202645"
 ---
 # <a name="getnames-function"></a>Função GetNames
 Recupera um subconjunto ou todos os nomes das propriedades de um objeto. 
@@ -80,7 +80,6 @@ Nomeado retornados é controlado por uma combinação de sinalizadores e parâme
 
 O sinalizador de valores em `lFlags` são campos de bits
 
-
 Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são campos de bits que são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código.  Você pode combinar um sinalizador de cada grupo com qualquer sinalizador de nenhum outro grupo. No entanto, os sinalizadores do mesmo grupo são mutuamente exclusivos. 
 
 | Sinalizadores de grupo 1 |Valor  |Descrição  |
@@ -112,4 +111,5 @@ A função sempre aloca um novo `SAFEARRAY` se ele retornar `WBEM_S_NO_ERROR`, e
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

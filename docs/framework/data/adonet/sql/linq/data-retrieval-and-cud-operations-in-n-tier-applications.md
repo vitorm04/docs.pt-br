@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: ebbc53f2962c99bc31f998f1afcb4316f3ea81f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209808"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperação de dados e operações de COMIDA RUMINADA em aplicativos de n camadas (LINQ to SQL)
 Quando você serializa objetos de entidade como clientes ou pedidos para um cliente em uma rede, essas entidades são desanexadas de seu contexto de dados. O contexto de dados não controla as alterações ou suas associações com outros objetos. Isso não é um problema que os clientes estão lê apenas os dados. Também é relativamente simples permitir que clientes para adicionar novas linhas em uma base de dados. No entanto, se seu aplicativo requer que os clientes possam atualizar ou excluir dados, você deve anexar as entidades a um novo contexto de dados antes de chamar <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Além disso, se você estiver usando uma verificação de simultaneidade otimista com valores originais, então você também precisará de uma maneira de fornecer a base de dados a entidade original e a entidade como modificada. Os métodos de `Attach` são fornecidos para permite que você coloque entidades em um novo contexto de dados depois que foram separados.  
@@ -208,7 +208,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>Atualizando dados  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] suporta atualizações nesses cenários que envolvem concorrência otimista:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a atualizações nesses cenários que envolvem concorrência otimista:  
   
 -   Concorrência otimista com base em carimbos de data/hora ou em números de RowVersion.  
   
@@ -407,5 +407,6 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
  Quando você anexa com `IEnumerable` conjunto de objetos, <xref:System.Data.Linq.DuplicateKeyException> é acionada quando uma chave já existente estiver presente. Os objetos restantes não estão conectados.  
   
 ## <a name="see-also"></a>Consulte também
-- [Aplicativos de N camadas e remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+
+- [Aplicativos de n camadas e remoto com LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

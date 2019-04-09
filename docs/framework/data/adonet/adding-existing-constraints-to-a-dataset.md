@@ -1,18 +1,18 @@
 ---
-title: Adicionando restrições existentes a um conjunto de dados
+title: Adicionar restrições existentes a um DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 39b1e9945a1cf6cd847fbe82c0b29e50f23bf785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210549"
 ---
-# <a name="adding-existing-constraints-to-a-dataset"></a>Adicionando restrições existentes a um conjunto de dados
+# <a name="adding-existing-constraints-to-a-dataset"></a>Adicionar restrições existentes a um DataSet
 O **preencher** método o **DataAdapter** preenche um <xref:System.Data.DataSet> somente com colunas de tabelas e linhas de uma fonte de dados; no entanto as restrições são geralmente definidas pela fonte de dados, o **preencher** método não adiciona essas informações de esquema para o **conjunto de dados** por padrão. Para preencher uma **DataSet** com informações de restrição de chave primária existente de uma fonte de dados, você pode chamar o **FillSchema** método da **DataAdapter**, ou defina o **MissingSchemaAction** propriedade da **DataAdapter** para **AddWithKey** antes de chamar **preencher**. Isso garantirá que a chave primária restrições na **conjunto de dados** refletem as na fonte de dados. Informações de restrição de chave estrangeira não está incluídas e devem ser criadas explicitamente, conforme mostrado na [restrições de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
   
  Adicionando informações de esquema para um **DataSet** antes de preenchê-lo com dados garante que as restrições de chave primária são incluídas com o <xref:System.Data.DataTable> objetos no **conjunto de dados**. Como resultado, quando adicionais chamadas para preencher a **conjunto de dados** forem feitas, o primário informações de coluna de chave são usadas para corresponder as novas linhas da fonte de dados com linhas atuais em cada **DataTable**e os dados atuais as tabelas serão substituídas pelos dados da fonte de dados. Sem as informações de esquema, as novas linhas da fonte de dados são acrescentadas à **conjunto de dados**, resultando em linhas duplicadas.  
@@ -61,7 +61,8 @@ custAdapter.Fill(custDataSet, "Customers");
 >  Se o **FillSchema** método o **OleDbDataAdapter** objeto é chamado para um comando que retorna vários conjuntos de resultados, somente as informações de esquema do primeiro conjunto de resultados serão retornadas. Quando, retornando informações de esquema de resultados múltiplos conjuntos usando o **OleDbDataAdapter**, é recomendável que você especifique uma **MissingSchemaAction** dos **AddWithKey** e obter as informações de esquema ao chamar o **preencher** método.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DataSets, DataTables, and DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
-- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [DataSets, DataTables e DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

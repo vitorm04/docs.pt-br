@@ -2,12 +2,12 @@
 title: FindCriteria e descoberta achada
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 21bfde1dae99a09e278a51ed330166551d4dca8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095770"
 ---
 # <a name="discovery-find-and-findcriteria"></a>FindCriteria e descoberta achada
 Uma operação de localização de descoberta é iniciada por um cliente para descobrir um ou mais serviços e é uma das principais ações na descoberta. Executar um localizar envia uma mensagem de teste do WS-Discovery pela rede. Serviços que correspondem aos critérios especificados responder com mensagens WS-Discovery ProbeMatch. Para obter mais informações sobre as mensagens de descoberta, consulte o [especificação WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -65,7 +65,8 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Usando o canal de cliente de descoberta](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [Usando o canal cliente Discovery](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
 - [Descoberta com escopos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
-- [Básico](../../../../docs/framework/wcf/samples/basic-sample.md)
+- [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)

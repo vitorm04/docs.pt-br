@@ -1,18 +1,18 @@
 ---
-title: 'Como: Chamar operações assíncronas usando uma fábrica de canais'
+title: 'Como: chamar operações assíncronas usando uma fábrica de canais'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: e266dbf3fed2c1f1bcadd010e2ad6dfd0804230d
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 0662b82661e4fb3cde85930c2c4544f541d3a2a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202723"
 ---
-# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Como: Chamar operações assíncronas usando uma fábrica de canais
+# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Como: chamar operações assíncronas usando uma fábrica de canais
 Este tópico aborda como um cliente pode acessar uma operação de serviço assincronamente ao usar um <xref:System.ServiceModel.ChannelFactory%601>-com base em aplicativo cliente. (Ao usar um <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> objeto no qual invocar um serviço que você pode usar o modelo de chamada assíncrona controlada por evento. Para obter mais informações, confira [Como: Chamar operações de serviço de forma assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obter mais informações sobre o modelo de chamada assíncrono baseado em evento, consulte [padrão assíncrono baseado em evento (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
   
  Implementa o serviço neste tópico o `ICalculator` interface. O cliente pode chamar as operações nesta interface de forma assíncrona, o que significa que operações com `Add` são divididas em dois métodos, `BeginAdd` e `EndAdd`, a primeira opção que inicia a chamada e recupera o último resultado Quando a operação for concluída. Para obter um exemplo que mostra como implementar uma operação de forma assíncrona em um serviço, consulte [como: Implementar uma operação de serviço assíncrona](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Para obter detalhes sobre as operações síncronas e assíncronas, consulte [síncrona e operações assíncronas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -46,4 +46,3 @@ Este tópico aborda como um cliente pode acessar uma operação de serviço assi
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
-  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c778cc4bc1172763c2473b472d02dc7b19d545
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207019"
 ---
 # <a name="serialization-and-metadata"></a>Serialização e metadados
 Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adicionar entradas aos seus arquivos de diretivas de tempo de execução (.rd.xml) para garantir que os metadados necessários estejam presentes no tempo de execução. Há duas categorias de serializadores e cada uma necessita de um tratamento diferente no arquivo de diretivas de tempo de execução:  
@@ -65,7 +65,8 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
  Para obter informações sobre a sintaxe usada no exemplo, consulte [Elemento \<Type>](../../../docs/framework/net-native/type-element-net-native.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Elemento \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [\<Namespace > elemento](../../../docs/framework/net-native/namespace-element-net-native.md)

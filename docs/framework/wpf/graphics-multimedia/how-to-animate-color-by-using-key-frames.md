@@ -1,5 +1,5 @@
 ---
-title: 'Como: Animar cor usando quadros-chave'
+title: 'Como: Animar cor usando quadros principais'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: ca669cee0fa978ca45efc57b4807b83df5c9086c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d911b1f14cf71aebf95b566eb710fec8ec9e2a29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095161"
 ---
-# <a name="how-to-animate-color-by-using-key-frames"></a>Como: Animar cor usando quadros-chave
+# <a name="how-to-animate-color-by-using-key-frames"></a>Como: Animar cor usando quadros principais
 Este exemplo mostra como animar a <xref:System.Windows.Media.SolidColorBrush.Color%2A> de um <xref:System.Windows.Media.SolidColorBrush> usando quadros-chave.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,6 +35,7 @@ Este exemplo mostra como animar a <xref:System.Windows.Media.SolidColorBrush.Col
  Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.SolidColorBrush.Color%2A>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>

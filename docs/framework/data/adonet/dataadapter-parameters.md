@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: dcc4c5485e59456d75c0f183e9b53b457072ab94
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b8284f45d769f018655ee35a5f0b067703963634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199096"
 ---
 # <a name="dataadapter-parameters"></a>Parâmetros DataAdapter
 O <xref:System.Data.Common.DbDataAdapter> tem quatro propriedades que são usadas para recuperar dados da fonte de dados e atualizá-los nela: a propriedade <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> retorna dados da fonte de dados; e as propriedades <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> e <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> são usadas para gerenciar alterações na fonte de dados. A propriedade `SelectCommand` deve ser definida antes que você chame o método `Fill` do `DataAdapter`. A propriedade `InsertCommand`, `UpdateCommand` ou `DeleteCommand` deve ser definida antes que o método `Update` do `DataAdapter` seja chamado, dependendo de quais alterações foram feitas nos dados da <xref:System.Data.DataTable>. Por exemplo, se as linhas tiverem sido adicionadas, o `InsertCommand` deve ser definido antes de chamar `Update`. Quando `Update` estiver processando uma linha inserida, atualizada ou excluída, o `DataAdapter` usará a respectiva propriedade `Command` para processar a ação. As informações atuais sobre a linha modificada são passadas para o objeto `Command` através da coleção `Parameters`.  
@@ -165,9 +165,10 @@ adapter.Fill(customers, "Customers");
 >  Se um nome de parâmetro não for fornecido para um parâmetro, o parâmetro é fornecido um nome padrão incremental de parâmetro*N* *,* começando com "Parameter1". É recomendável que você evite o parâmetro*N* convenção de nomenclatura ao fornecer um nome de parâmetro, porque o nome que você fornece pode entrar em conflito com um nome de parâmetro padrão existente no `ParameterCollection`. Se o nome fornecido já existir, será gerada uma exceção.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+- [Atualizando fontes de dados com DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Modificando dados com procedimentos armazenados](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Mapeamentos de tipos de dados no ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

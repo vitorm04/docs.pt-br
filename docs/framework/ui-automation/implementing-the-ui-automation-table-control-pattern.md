@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 45a2a3c158fb77c878673c00f73694fec7c1ac58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: dc1ddfaa13b83d06b1d3211e9d21bd82bfeabc3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144645"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementando o padrão de controle de tabela de automação de interface de usuário
 > [!NOTE]
@@ -59,10 +59,11 @@ Exemplo de uma tabela com RowOrColumnMajor ambíguas
  Esse padrão de controle não tem exceção associada.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Implementando o padrão de controle TableItem de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)
-- [Implementando o padrão de controle Grid de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)
-- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+
+- [Visão Geral de Padrões de Controle de Automação de Interface de Usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Padrões de controle de suporte em um provedor de automação da interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Padrões de Controle para Clientes de Automação de IU](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Implementando o padrão de controle TableItem de interface de usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)
+- [Implementando o Padrão de Controle Grid de Automação de Interface de Usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)
+- [Visão geral da árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Usar armazenamento em cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

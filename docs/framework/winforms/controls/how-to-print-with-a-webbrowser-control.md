@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-ms.openlocfilehash: fbbbba1bd620858eaa57559b1a9787956bfef1f5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094938"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Como: Imprimir com um controle WebBrowser
 O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.WebBrowser> controle para imprimir uma página da Web sem exibi-la.  
@@ -33,11 +33,12 @@ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.W
 -   Referências aos assemblies `System` e `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Print%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [Como: Navegue até uma URL com o controle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Como: Adicionar recursos do navegador da Web a um aplicativo do Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Como: Criar um visualizador de documento HTML em um aplicativo do Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Como: Navegar até uma URL com o controle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Como: Adicionar recursos do navegador da Web a um Aplicativo do Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Como: Criar um visualizador de documento HTML em um Aplicativo do Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
 - [Visão geral do controle WebBrowser](webbrowser-control-overview.md)
-- [Segurança do WebBrowser](webbrowser-security.md)
+- [Segurança de WebBrowser](webbrowser-security.md)

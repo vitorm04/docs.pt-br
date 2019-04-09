@@ -1,5 +1,5 @@
 ---
-title: 'Como: Acessar a fonte HTML no modelo de objeto do documento HTML gerenciado'
+title: 'Como: Acessar a fonte HTML no Modelo de Objeto do Documento HTML gerenciado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: b9122e2c5bebdde2e04507973ccfeb924d0ad23e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203256"
 ---
-# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Como: Acessar a fonte HTML no modelo de objeto do documento HTML gerenciado
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Como: Acessar a fonte HTML no Modelo de Objeto do Documento HTML gerenciado
 As propriedades <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> e <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> no controle <xref:System.Windows.Forms.WebBrowser> retornam o HTML do documento atual do modo que foi inicialmente exibido. No entanto, caso modificar a página usando chamadas de método e propriedade como <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> e <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, essas mudanças não aparecerão quando chamar <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> e <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>. Para obter a fonte HTML mais atualizada do DOM, é necessário chamar a <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> propriedade no elemento HTML.  
   
  O procedimento a seguir mostra como recuperar a fonte dinâmica e exibi-la em um menu de atalho separado.  
@@ -46,5 +46,6 @@ As propriedades <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> e <xref
  Sempre teste o valor de <xref:System.Windows.Forms.WebBrowser.Document%2A> antes de tentar recuperá-lo. Se a página atual não tiver terminado de carregar, o <xref:System.Windows.Forms.WebBrowser.Document%2A> ou um ou mais de seus objetos filhos podem não ser inicializados.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando o Modelo de Objeto do Documento HTML gerenciado](using-the-managed-html-document-object-model.md)
+
+- [Usando o Document Object Model HTML gerenciado](using-the-managed-html-document-object-model.md)
 - [Visão geral do controle WebBrowser](webbrowser-control-overview.md)

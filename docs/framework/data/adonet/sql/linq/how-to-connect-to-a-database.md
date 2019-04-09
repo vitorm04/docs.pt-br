@@ -1,18 +1,18 @@
 ---
-title: 'Como: Conectar-se a um banco de dados'
+title: 'Como: conectar-se a um banco de dados'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: 8b30e6226b7663761b520258a37df0ebdda81fa6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f04726bc12fdfbca530ee5533d5b8969addf962e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208131"
 ---
-# <a name="how-to-connect-to-a-database"></a>Como: Conectar-se a um banco de dados
+# <a name="how-to-connect-to-a-database"></a>Como: conectar-se a um banco de dados
 O <xref:System.Data.Linq.DataContext> é o principal conduto pelo qual você se conecta a um banco de dados, recupera objetos deles e envia alterações de volta para ele. Você usa o <xref:System.Data.Linq.DataContext> exatamente como você usaria um [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. Na verdade, o <xref:System.Data.Linq.DataContext> é inicializado com uma conexão ou com uma cadeia de conexão que você fornece. Para obter mais informações, consulte [métodos de DataContext (Designer relacional de objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
   
  O objetivo do <xref:System.Data.Linq.DataContext> é converter suas solicitações de objetos em consultas SQL a serem feitas no banco de dados e montar objetos a partir dos resultados. O <xref:System.Data.Linq.DataContext> permite o [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] implementando o mesmo padrão de operador que os operadores de consulta padrão, como `Where` e `Select`.  
@@ -40,4 +40,5 @@ O <xref:System.Data.Linq.DataContext> é o principal conduto pelo qual você se 
  [!code-vb[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Comunicação com o banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

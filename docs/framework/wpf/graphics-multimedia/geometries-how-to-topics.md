@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: f2a45cf48c1d0cc097cea956d22fed2079e657a8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096225"
 ---
 # <a name="geometries-how-to-topics"></a>Tópicos explicativos de geometrias
 Os tópicos nesta seção demonstram como usar <xref:System.Windows.Media.Geometry> objetos em seus aplicativos.  
@@ -27,14 +27,15 @@ Os tópicos nesta seção demonstram como usar <xref:System.Windows.Media.Geomet
  [Criar um LineSegment em uma PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)  
  [Criar uma forma usando um PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)  
  [Criar uma forma usando um StreamGeometry](how-to-create-a-shape-using-a-streamgeometry.md)  
- [Criar uma curva de Bézier quadrática](how-to-create-a-quadratic-bezier-curve.md)  
+ [Criar uma curva de Bezier quadrática](how-to-create-a-quadratic-bezier-curve.md)  
  [Criar um arco elíptico](how-to-create-an-elliptical-arc.md)  
  [Criar vários subcaminhos dentro de um PathGeometry](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
  [Definir um retângulo usando um RectangleGeometry](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
  [Arredondar os cantos de um RectangleGeometry](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
 - [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Elementos gráficos e multimídia](index.md)
+- [Gráficos e multimídia](index.md)

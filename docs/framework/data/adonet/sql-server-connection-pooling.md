@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203932"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 Para se conectar a um servidor de banco de dados, existem, normalmente, várias etapas demoradas. Um canal físico, como um soquete ou um pipe nomeado, deve ser estabelecido, o handshake inicial com o servidor deve ocorrer, informações de cadeia de conexão devem ser analisadas, a conexão deve ser autenticada pelo servidor, verificações devem ser realizadas para a inscrição na transação atual e assim por diante.  
@@ -19,7 +19,7 @@ Para se conectar a um servidor de banco de dados, existem, normalmente, várias 
   
  O pool de conexões reduz o número de vezes que as novas conexões devem ser abertas. O *pooler* mantém a propriedade da conexão física. Para gerenciar as conexões, ele mantém um conjunto de conexões ativas para cada configuração de conexão específica. Sempre que um usuário chama `Open` em uma conexão, o pooler procura uma conexão disponível no pool. Se houver uma conexão agrupada disponível, ele retornará essa conexão para o chamador, em vez de abrir uma nova conexão. Quando o aplicativo chama `Close` na conexão, o pooler retorna essa chamada para o conjunto de conexões ativas agrupadas, em vez de fechar a conexão. Depois de retornada ao pool, a conexão está pronta para ser reutilizada na próxima chamada `Open`.  
   
- Somente conexões com a mesma configuração podem ser agrupadas. O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mantém vários pools ao mesmo tempo, um para cada configuração. As conexões são separadas em pools pela cadeia de conexão e, quando o modo de segurança integrada é usado, pela identidade do Windows. As conexões também são agrupadas conforme estejam ou não inscritas em uma transação. Ao usar o <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, a instância <xref:System.Data.SqlClient.SqlCredential> afeta o pool de conexões. As instâncias diferentes de <xref:System.Data.SqlClient.SqlCredential> usarão pools de conexões diferentes, mesmo se a identificação do usuário e a senha forem iguais.  
+ Somente conexões com a mesma configuração podem ser agrupadas. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mantém vários pools ao mesmo tempo, um para cada configuração. As conexões são separadas em pools pela cadeia de conexão e, quando o modo de segurança integrada é usado, pela identidade do Windows. As conexões também são agrupadas conforme estejam ou não inscritas em uma transação. Ao usar o <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, a instância <xref:System.Data.SqlClient.SqlCredential> afeta o pool de conexões. As instâncias diferentes de <xref:System.Data.SqlClient.SqlCredential> usarão pools de conexões diferentes, mesmo se a identificação do usuário e a senha forem iguais.  
   
  O pooling de conexões pode melhorar significativamente o desempenho e a escalabilidade do aplicativo. Por padrão, o pool de conexões é habilitado no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. A menos que você explicitamente o desabilite, o pooler otimiza as conexões quando elas são abertas e fechadas no aplicativo. Você também pode fornecer vários modificadores de cadeias de conexão para controlar o comportamento do pool de conexões. Para obter mais informações, consulte "Controlando o pool de conexões com palavras-chave de cadeias de conexão" posteriormente neste tópico.  
   
@@ -80,7 +80,7 @@ Para obter mais informações sobre os eventos associados a abertura e fechament
  Se uma conexão com um servidor desapareceu, ela pode ser removida do pool mesmo se o pooler de conexões não tiver detectado a conexão interrompida e a marcado como inválida. Este é o caso porque a sobrecarga de verificar se a conexão ainda é válida eliminaria os benefícios de se ter um pooler, provocando outra viagem de ida e volta ao servidor. Quando isso ocorrer, a primeira tentativa de usar a conexão detectará que a conexão foi interrompida e uma exceção será gerada.  
   
 ## <a name="clearing-the-pool"></a>Limpando o pool  
- O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduziu dois novos métodos para limpar o pool: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> e <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` limpa os pools de conexões de um provedor específico e `ClearPool` limpa o pool de conexões associado a uma conexão específica. Se houver conexões em uso no momento da chamada, elas serão devidamente marcadas. Quando fechadas, serão descartadas, em vez de retornadas ao pool.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduziu dois novos métodos para limpar o pool: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> e <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` Limpa os pools de conexão para um provedor específico e `ClearPool` limpa o pool de conexão que está associado com uma conexão específica. Se houver conexões em uso no momento da chamada, elas serão devidamente marcadas. Quando fechadas, serão descartadas, em vez de retornadas ao pool.  
   
 ## <a name="transaction-support"></a>Suporte a transações  
  As conexões são removidas do pool e atribuídas com base no contexto de transação. A menos que `Enlist=false` seja especificado na cadeia de conexão, o pool de conexões verifica se a conexão está inscrita no contexto de <xref:System.Transactions.Transaction.Current%2A>. Quando uma conexão é fechada e retornada ao pool com uma transação `System.Transactions` inscrita, ela é reservada para que a próxima solicitação desse pool de conexões com a mesma transação `System.Transactions` seja retornada à mesma conexão, se disponível. Se uma solicitação desse tipo for emitida, e não houver conexões agrupadas disponíveis, uma conexão será removida da parte não transacionada do pool e depois inscrita. Se não houver conexões disponíveis em nenhuma área do pool, uma nova conexão será criada e inscrita.  
@@ -130,7 +130,8 @@ using (SqlConnection connection = new SqlConnection(
  Recomendamos que você aproveite todas as vantagens dos mecanismos de segurança que podem ser usados no lugar de funções de aplicativo. Para obter mais informações, consulte [criando funções de aplicativo no SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Pooling de Conexão](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [SQL Server and ADO.NET](../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+
+- [Pool de conexões](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Contadores de desempenho](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

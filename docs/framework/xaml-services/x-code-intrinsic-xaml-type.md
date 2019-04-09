@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145230"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Tipo intrínseco x:Code (XAML)
 Permite o posicionamento de código dentro de uma produção de XAML. Esse código também pode ser compilado por qualquer implementação do processador XAML que compila XAML ou à esquerda na produção para uso posterior, como de interpretação XAML por um tempo de execução.  
@@ -49,6 +49,7 @@ Permite o posicionamento de código dentro de uma produção de XAML. Esse códi
 -   Referências a entidades de código fora do namespace CLR de classe parcial devem ser totalmente qualificadas. Se os membros que estão sendo declarados são substituições para os membros de classe parcial substituível, isso deve ser especificado com a palavra-chave específicas de idioma de substituição. Se os membros declarados em `x:Code` escopo estão em conflito com os membros da classe parcial, criada a partir do XAML, de forma que o compilador relatará o conflito, o arquivo XAML não é possível compilar ou carregar.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Diretiva x:Class](x-class-directive.md)
 - [Code-behind e XAML no WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

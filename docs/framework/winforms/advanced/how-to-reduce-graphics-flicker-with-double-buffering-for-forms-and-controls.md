@@ -1,5 +1,5 @@
 ---
-title: 'Como: Reduzir a cintilação em elementos gráficos com buffers duplos para formulários e controles'
+title: 'Como: reduzir a cintilação em elementos gráficos com buffers duplos em formulários e controles'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-ms.openlocfilehash: 95f8bdd9c30533b35782971459bad887e145adfe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ef05b72b33d3f28d1811389dfae65554a1567d43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096947"
 ---
-# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Como: Reduzir a cintilação em elementos gráficos com buffers duplos para formulários e controles
+# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Como: reduzir a cintilação em elementos gráficos com buffers duplos em formulários e controles
 O buffer duplo usa um buffer de memória para resolver os problemas de cintilação associados a várias operações de pintura. Quando o buffer duplo estiver habilitado, todas as operações de pintura serão renderizadas primeiro em um buffer de memória, em vez de na superfície de desenho na tela. Depois que todas as operações de pintura estiverem concluídas, o buffer de memória será copiado diretamente para a superfície de desenho associada a ele. Como apenas uma operação de elemento gráfico é executada na tela, a cintilação da imagem associada a operações de pintura complexas é eliminada. Para a maioria dos aplicativos, o buffer duplo padrão fornecido pelo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] oferecerá os melhores resultados. Controles padrão dos Windows Forms são buffers duplos por padrão. Você pode habilitar o buffer duplo padrão em seus formulários e controles criados de duas maneiras. Você pode definir as <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propriedade para `true`, ou você pode chamar o <xref:System.Windows.Forms.Control.SetStyle%2A> método para definir a <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> sinalizador como `true`. Ambos os métodos habilitarão o buffer duplo padrão para o formulário ou controle e fornecerão a renderização de gráficos sem cintilações. Chamar o <xref:System.Windows.Forms.Control.SetStyle%2A> método é recomendado somente para controles personalizados para o qual você tenha escrito o código de renderização.  
   
  Para cenários de buffer duplo mais avançados, como animação ou gerenciamento avançado de memória, você pode implementar sua própria lógica de buffer duplo. Para obter mais informações, confira [Como: Gerenciar elementos gráficos em buffer manualmente](how-to-manually-manage-buffered-graphics.md).  
@@ -35,7 +35,8 @@ O buffer duplo usa um buffer de memória para resolver os problemas de cintilaç
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Control.DoubleBuffered%2A>
 - <xref:System.Windows.Forms.Control.SetStyle%2A>
-- [Elementos Gráficos em Buffer Duplo](double-buffered-graphics.md)
-- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Elementos gráficos em buffer duplo](double-buffered-graphics.md)
+- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)

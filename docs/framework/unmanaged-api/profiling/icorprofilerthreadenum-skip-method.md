@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90d9935da313b85e336dc8cb2e461b2d88db8db8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cce96e8c6d046beba9e45c7121bf68444fd51c95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173336"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>Método ICorProfilerThreadEnum::Skip
 Avança o cursor do enumerador de sua posição atual para ignorar o número especificado de elementos.  
@@ -59,5 +59,6 @@ HRESULT Skip (    [in] ULONG celt
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil de interfaces](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

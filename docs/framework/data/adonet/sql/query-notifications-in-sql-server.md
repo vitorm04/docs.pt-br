@@ -2,12 +2,12 @@
 title: Notificações de consulta no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 2a564ba1e06741523b9b3a005be86b13339889ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203672"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificações de consulta no SQL Server
 Criado utilizando a infraestrutura de Service Broker, as notificações de consulta permitem que os aplicativos sejam notificados quando os dados tiverem sido alterados. Esse recurso é especialmente útil para aplicativos que fornecem um cache de informações de um banco de dados, como um aplicativo Web, e precisam ser notificados quando os dados de origem são alterados.  
@@ -34,7 +34,7 @@ Criado utilizando a infraestrutura de Service Broker, as notificações de consu
   
 -   [Desenvolvimento (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [InfoCenter do desenvolvedor do Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+-   [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
 -   [Guia do desenvolvedor (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
@@ -62,5 +62,6 @@ Criado utilizando a infraestrutura de Service Broker, as notificações de consu
  Descreve a classe <xref:System.Web.Caching.SqlCacheDependency> e todos os seus membros.  
   
 ## <a name="see-also"></a>Consulte também
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
