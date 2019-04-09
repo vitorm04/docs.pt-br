@@ -16,33 +16,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2da802d410dd16381a86c8fdc358949eefe1d78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86d59c86df88bc1c17e27ad020aa2db10d3fae67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144216"
 ---
-# <a name="iclrprofiling-interface"></a><span data-ttu-id="ca555-102">Interface ICLRProfiling</span><span class="sxs-lookup"><span data-stu-id="ca555-102">ICLRProfiling Interface</span></span>
-<span data-ttu-id="ca555-103">Fornece o [iclrprofiling:: Attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) método, que permite que um criador de perfil anexar a um processo em execução.</span><span class="sxs-lookup"><span data-stu-id="ca555-103">Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.</span></span>  
+# <a name="iclrprofiling-interface"></a><span data-ttu-id="5956b-102">Interface ICLRProfiling</span><span class="sxs-lookup"><span data-stu-id="5956b-102">ICLRProfiling Interface</span></span>
+<span data-ttu-id="5956b-103">Fornece o [iclrprofiling:: Attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) método, que permite que um criador de perfil anexar a um processo em execução.</span><span class="sxs-lookup"><span data-stu-id="5956b-103">Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ca555-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="ca555-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5956b-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="5956b-104">Methods</span></span>  
   
-|<span data-ttu-id="ca555-105">Método</span><span class="sxs-lookup"><span data-stu-id="ca555-105">Method</span></span>|<span data-ttu-id="ca555-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="ca555-106">Description</span></span>|  
+|<span data-ttu-id="5956b-105">Método</span><span class="sxs-lookup"><span data-stu-id="5956b-105">Method</span></span>|<span data-ttu-id="5956b-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="5956b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ca555-107">Método AttachProfiler</span><span class="sxs-lookup"><span data-stu-id="ca555-107">AttachProfiler Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|<span data-ttu-id="ca555-108">Anexa o criador de perfil especificado para o processo especificado.</span><span class="sxs-lookup"><span data-stu-id="ca555-108">Attaches the specified profiler to the specified process.</span></span>|  
+|[<span data-ttu-id="5956b-107">Método AttachProfiler</span><span class="sxs-lookup"><span data-stu-id="5956b-107">AttachProfiler Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|<span data-ttu-id="5956b-108">Anexa o criador de perfil especificado para o processo especificado.</span><span class="sxs-lookup"><span data-stu-id="5956b-108">Attaches the specified profiler to the specified process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ca555-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="ca555-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5956b-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="5956b-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca555-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ca555-110">Requirements</span></span>  
- <span data-ttu-id="ca555-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca555-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5956b-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5956b-110">Requirements</span></span>  
+ <span data-ttu-id="5956b-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5956b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca555-112">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ca555-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5956b-112">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5956b-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ca555-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca555-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5956b-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5956b-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ca555-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca555-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="5956b-114">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="5956b-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ca555-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ca555-115">See also</span></span>
-- [<span data-ttu-id="ca555-116">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="ca555-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="ca555-117">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="ca555-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5956b-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5956b-115">See also</span></span>
+
+- [<span data-ttu-id="5956b-116">Criação de perfil de interfaces</span><span class="sxs-lookup"><span data-stu-id="5956b-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="5956b-117">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="5956b-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
