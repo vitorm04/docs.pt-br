@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], checkbox controls
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-ms.openlocfilehash: 003e57db16c35b519d3948fc24e82a94a5c3744d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121778"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>Visão geral do controle CheckBox (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.CheckBox> controle indica se uma determinada condição é ativada ou desativada. É usado normalmente para apresentar uma seleção Sim/Não ou Verdadeiro/Falso ao usuário. Use os controles de caixa de seleção em grupos para exibir múltiplas opções entre as quais o usuário pode escolher uma ou mais.  
@@ -25,7 +25,8 @@ Os formulários do Windows <xref:System.Windows.Forms.CheckBox> controle indica 
  O <xref:System.Windows.Forms.CheckBox> controle tem duas propriedades importantes, <xref:System.Windows.Forms.CheckBox.Checked%2A> e <xref:System.Windows.Forms.CheckBox.CheckState%2A>. O <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade retorna um `true` ou `false`. O <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriedade retorna um <xref:System.Windows.Forms.CheckState.Checked> ou <xref:System.Windows.Forms.CheckState.Unchecked>; ou, se o <xref:System.Windows.Forms.CheckBox.ThreeState%2A> estiver definida como `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> também podem retornar <xref:System.Windows.Forms.CheckState.Indeterminate>. No estado indeterminado, a caixa é mostrada com uma aparência esmaecida para indicar que a opção não está disponível.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.CheckBox>
-- [Como: Definir opções com controles CheckBox dos Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [Como: Responder ao Windows Forms cliques no CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [Controle CheckBox](checkbox-control-windows-forms.md)
+- [Como: Definir opções com controles CheckBox do Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Como: Responder a cliques CheckBox do Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [Controle de CheckBox](checkbox-control-windows-forms.md)

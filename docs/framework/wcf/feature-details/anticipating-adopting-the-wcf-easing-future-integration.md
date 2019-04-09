@@ -1,15 +1,15 @@
 ---
-title: 'Antecipando a adoção do Windows Communication Foundation: Facilitando a futura integração'
+title: 'Antecipar a adoção do Windows Communication Foundation: facilitar a integração futura'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124794"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Antecipando a adoção do Windows Communication Foundation: Facilitando a futura integração
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Antecipar a adoção do Windows Communication Foundation: facilitar a integração futura
 Se você usa o ASP.NET e antecipa o uso do WCF no futuro, este tópico fornece diretrizes para garantir que novos serviços Web do ASP.NET funcione bem junto com os aplicativos do WCF.  
   
 ## <a name="general-recommendations"></a>Recomendações gerais  
@@ -44,4 +44,5 @@ public interface IEcho
  Evite usar as opções de autenticação fornecidas pelo Internet Information Services (IIS). Clientes do WCF não oferecem suporte a isso. Se um serviço precisa ser protegido, use as opções fornecidas pelo WCF, porque essas opções são mais sofisticadas e se baseiam nos protocolos padrão.  
   
 ## <a name="see-also"></a>Consulte também
-- [Antecipando a adoção do Windows Communication Foundation: Facilitando a migração futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+
+- [Antecipar a adoção do Windows Communication Foundation: facilitar a migração futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

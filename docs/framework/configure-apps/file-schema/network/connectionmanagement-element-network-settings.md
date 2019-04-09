@@ -1,5 +1,5 @@
 ---
-title: Elemento <connectionManagement> (configurações de rede)
+title: <connectionManagement> (Configurações de rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 61fd40500934bc7b67d2960f4a64f8ac12466883
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125179"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > (configurações de rede)
 Especifica o número máximo de conexões para um host de rede.  
@@ -39,7 +39,7 @@ Especifica o número máximo de conexões para um host de rede.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.|  
+|[adicionar](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Limpa a lista de gerenciamento de conexão.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.|  
   
@@ -70,6 +70,7 @@ Especifica o número máximo de conexões para um host de rede.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

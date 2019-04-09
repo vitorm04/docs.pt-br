@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 32e74a76b6b1bedee4efc5715d0710c8efce2455
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305619"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120751"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nomenclatura forte (referência de API não gerenciada)
 A API de nomenclatura forte permite que um cliente administre a assinatura de nome forte para assemblies.  
@@ -107,5 +107,6 @@ A API de nomenclatura forte permite que um cliente administre a assinatura de no
  Representa a chave pública de um par de chaves públicas/privadas em formato binário.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
 - [Referência de API não gerenciada](../../../../docs/framework/unmanaged-api/index.md)

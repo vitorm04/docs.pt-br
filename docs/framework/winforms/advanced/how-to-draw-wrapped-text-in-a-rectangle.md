@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desenhar texto encapsulado em um retângulo'
+title: 'Como: desenhar texto ajustado um retângulo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: ae6ceb2ca3e541be1d7dd3e5a61a6e52b27e93c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152783"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Como: Desenhar texto encapsulado em um retângulo
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Como: desenhar texto ajustado um retângulo
 Você pode desenhar texto encapsulado em um retângulo usando o <xref:System.Drawing.Graphics.DrawString%2A> sobrecarregada do método da <xref:System.Drawing.Graphics> classe que usa um <xref:System.Drawing.Rectangle> ou <xref:System.Drawing.RectangleF> parâmetro. Você também usará um <xref:System.Drawing.Brush> e um <xref:System.Drawing.Font>.  
   
  Você também pode desenhar texto encapsulado em um retângulo usando o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> sobrecarregada do método da <xref:System.Windows.Forms.TextRenderer> que usa um <xref:System.Drawing.Rectangle> e um <xref:System.Windows.Forms.TextFormatFlags> parâmetro. Você também usará um <xref:System.Drawing.Color> e um <xref:System.Drawing.Font>.  
@@ -45,7 +45,8 @@ Você pode desenhar texto encapsulado em um retângulo usando o <xref:System.Dra
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Desenhar texto com GDI](how-to-draw-text-with-gdi.md)
+
+- [Como: desenhar texto com o GDI](how-to-draw-text-with-gdi.md)
 - [Usando fontes e texto](using-fonts-and-text.md)
-- [Como: Construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md)
-- [Como: Desenhar texto em um local especificado](how-to-draw-text-at-a-specified-location.md)
+- [Como: construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md)
+- [Como: desenhar texto em um local especificado](how-to-draw-text-at-a-specified-location.md)

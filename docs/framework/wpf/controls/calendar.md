@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a64c6cd6fc1cc53383f2617f7a7a78959e87c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124774"
 ---
 # <a name="calendar"></a>Calendário
 Um calendário permite ao usuário selecionar uma data usando uma exibição visual do calendário.  
@@ -52,5 +52,6 @@ Controles de calendário
 |BARRA DE ESPAÇOS ou ENTER|<xref:System.Windows.Controls.CalendarMode.Year> ou <xref:System.Windows.Controls.CalendarMode.Decade>|Comutadores <xref:System.Windows.Controls.Calendar.DisplayMode%2A> para o <xref:System.Windows.Controls.CalendarMode.Month> ou <xref:System.Windows.Controls.CalendarMode.Year> representado pelo item focalizado.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controles](index.md)
 - [Estilo e modelagem](styling-and-templating.md)

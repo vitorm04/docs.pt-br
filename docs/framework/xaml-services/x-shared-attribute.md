@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125730"
 ---
 # <a name="xshared-attribute"></a>Atributo x:Shared
 Quando definido como `false`, modifica o comportamento de recuperação de recursos do WPF para que as solicitações para o recurso atribuído criam uma nova instância para cada solicitação em vez de compartilhar a mesma instância para todas as solicitações.  
@@ -50,6 +50,7 @@ Quando definido como `false`, modifica o comportamento de recuperação de recur
 -   O <xref:System.Windows.ResourceDictionary> que contém os itens não deve ser aninhado dentro de outra <xref:System.Windows.ResourceDictionary>. Por exemplo, você não pode usar `x:Shared` para itens em uma <xref:System.Windows.ResourceDictionary> que está em um <xref:System.Windows.Style> que já está um <xref:System.Windows.ResourceDictionary> item.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.ResourceDictionary>
 - [Recursos XAML](../wpf/advanced/xaml-resources.md)
 - [Elementos base](../wpf/advanced/base-elements.md)
