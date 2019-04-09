@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162417"
 ---
 # <a name="read-only-dependency-properties"></a>Propriedades de dependência somente leitura
 Este tópico descreve propriedades de dependência somente leitura, incluindo as propriedades de dependência somente leitura existentes e os cenários e técnicas para criação de uma propriedade de dependência somente leitura personalizada.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico pressupõe que você compreenda os cenários básicos de implementar uma propriedade de dependência e como os metadados são aplicados a uma propriedade de dependência personalizada. Consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md) e [Metadados de propriedade de dependência](dependency-property-metadata.md) para ver o contexto.  
@@ -44,6 +42,7 @@ Este tópico descreve propriedades de dependência somente leitura, incluindo as
  Porque o <xref:System.Windows.DependencyPropertyKey> é privado e não é propagada pelo sistema de propriedades fora do seu código, uma propriedade de dependência somente leitura tem uma melhor configuração de segurança que uma propriedade de dependência de leitura / gravação. Para uma propriedade de dependência de leitura/gravação, o campo de identificação é implicitamente ou explicitamente público e, portanto, a propriedade é amplamente configurável. Para obter informações mais específicas, consulte [Segurança das propriedades de dependência](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)
 - [Estilo e modelagem](../controls/styling-and-templating.md)

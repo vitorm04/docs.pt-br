@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131164"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipos de dados comuns (referência API não gerenciada)
 Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas para o .NET Framework que são definidas por instruções `typedef` do C/C++. Esses tipos de dados são geralmente aliases para tipos de dados primitivos do C/C++. Geralmente, os valores desses tipos de dados são opacos, ou seja, eles são retornados por uma função ou um método específico para que possam ser transmitidos para outras funções ou métodos sem modificação.  
@@ -40,4 +40,5 @@ Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas par
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|O identificador de um thread gerenciado.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de API não gerenciada](../../../docs/framework/unmanaged-api/index.md)

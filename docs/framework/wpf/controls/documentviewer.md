@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: dd87b81dbfc412168566f5b58bb2040c0e05b080
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167850"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 O <xref:System.Windows.Controls.DocumentViewer> controle é usado para exibir <xref:System.Windows.Documents.FixedDocument> conteúdo (como [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documentos) em um formato paginado.  
@@ -23,6 +23,7 @@ O <xref:System.Windows.Controls.DocumentViewer> controle é usado para exibir <x
  <xref:System.Windows.Documents.FixedDocument>  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Documentos](../advanced/documents.md)
-- [Serialização e armazenamento de documentos](../advanced/document-serialization-and-storage.md)
-- [Visão Geral da Impressão](../advanced/printing-overview.md)
+- [Serialização e armazenamento do documento](../advanced/document-serialization-and-storage.md)
+- [Visão geral da impressão](../advanced/printing-overview.md)

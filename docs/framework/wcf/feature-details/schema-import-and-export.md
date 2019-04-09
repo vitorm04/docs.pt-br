@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 0529f112192fa64746d8c6dc7a49433b33bafbf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133770"
 ---
 # <a name="schema-import-and-export"></a>Importação e exportação de esquemas
 Windows Communication Foundation (WCF) inclui um novo mecanismo de serialização, o <xref:System.Runtime.Serialization.DataContractSerializer>. O `DataContractSerializer` converte entre [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] objetos e XML (em ambas as direções). Além do serializador em si, o WCF inclui mecanismos de exportação de esquema e importação de esquema associado. *Esquema* é uma descrição formal, precisa e legível por máquina da forma do XML que produz o serializador ou que o desserializador pode acessar. O WCF usa a linguagem de definição de esquema do World Wide Web Consortium (W3C) XML (XSD) como sua representação de esquema, que é amplamente interoperável com várias plataformas de terceiros.  
@@ -60,8 +60,9 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
  Para obter mais informações sobre como usar o <xref:System.Runtime.Serialization.XsdDataContractExporter>, consulte [exportando esquemas de Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
-- [Importando o esquema para gerar classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
-- [Exportando esquemas de Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Importando esquema para gerar classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+- [Exportando esquemas de classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)

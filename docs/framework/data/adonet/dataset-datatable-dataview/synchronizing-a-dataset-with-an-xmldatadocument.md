@@ -1,18 +1,18 @@
 ---
-title: Sincronizando um conjunto de dados com um XmlDataDocument
+title: Sincronizar um DataSet com um XmlDataDocument
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: ef0518bfd53ea5696c9369fe78e4ceccd3c6260c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133725"
 ---
-# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizando um conjunto de dados com um XmlDataDocument
+# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizar um DataSet com um XmlDataDocument
 Esta seção demonstra uma etapa no processamento de uma ordem de compra, usando um fortemente tipados <xref:System.Data.DataSet> sincronizado com um <xref:System.Xml.XmlDataDocument>. Os exemplos a seguir criam uma **conjunto de dados** com um esquema minimizado que corresponde a apenas uma parte do documento XML de origem. Os exemplos usam um **XmlDataDocument** para preservar a fidelidade do documento XML de origem, permitindo que o **conjunto de dados** a ser usado para expor um subconjunto do documento XML.  
   
  O seguinte documento XML contém todas as informações que pertencem a uma ordem de compra: informações do cliente, itens ordenados, informações de remessa e assim por diante.  
@@ -232,5 +232,6 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Sincronização de DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

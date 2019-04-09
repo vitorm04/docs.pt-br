@@ -2,12 +2,12 @@
 title: Snap-in do MMC de configuração de WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 8dfb9c9a9f6a007e65dbf819d347f335a93d1749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138197"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in do MMC de configuração de WS-AtomicTransaction
 O Snap-in do MMC de configuração WS-AtomicTransaction é usado para configurar uma parte das configurações WS-AtomicTransaction nos computadores locais e remoto.  
@@ -87,6 +87,7 @@ regasm.exe /codebase WsatUI.dll
  Para obter mais informações sobre o rastreamento e registro em log, consulte [administração e diagnósticos](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Configurando o suporte a transações WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+
+- [Configurando suporte de transações de WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [Utilitário de configuração de transações WS-Atomic (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [Administração e diagnósticos](../../../docs/framework/wcf/diagnostics/index.md)

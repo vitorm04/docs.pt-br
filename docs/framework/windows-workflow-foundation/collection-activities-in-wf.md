@@ -2,15 +2,15 @@
 title: Atividades de coleção em WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6ce7dd348a19608d35bf448bda2e1380e5af1130
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133771"
 ---
 # <a name="collection-activities-in-wf"></a>Atividades de coleção em WF
-As atividades de coleção são usadas para trabalhar com objetos de coleção em um fluxo de trabalho. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tem sistema forneceu atividades adicionando e removendo itens de uma coleção, testando a existência de um item em uma coleção, e desmarcando uma coleção. `ExistsInCollection` e `RemoveFromCollection` tem um <xref:System.Activities.OutArgument%601> do tipo <xref:System.Boolean>, que indica o resultado.  
+As atividades de coleção são usadas para trabalhar com objetos de coleção em um fluxo de trabalho. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tem sistema forneceu atividades adicionando e removendo itens de uma coleção, testando a existência de um item em uma coleção e desmarcando uma coleção. `ExistsInCollection` e `RemoveFromCollection` tem um <xref:System.Activities.OutArgument%601> do tipo <xref:System.Boolean>, que indica o resultado.  
   
 > [!IMPORTANT]
 >  Se uma atividade de coleção é executada antes de definir o objeto subjacente da coleção, <xref:System.InvalidOperationException> é lançado e falhas de atividade.  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Exemplos de código anterior também podem ser criadas usando <xref:Microsoft.CSharp.Activities.CSharpValue%601> em vez de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Os exemplos de código acima também podem ser criados usando <xref:Microsoft.CSharp.Activities.CSharpValue%601> em vez de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -426,4 +426,5 @@ Activity wf = new Sequence
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criando fluxos de trabalho, atividades e expressões de design usando o código obrigatório](authoring-workflows-activities-and-expressions-using-imperative-code.md)

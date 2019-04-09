@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171568"
 ---
 # <a name="how-to-localize-an-application"></a>Como: Localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
@@ -210,5 +210,6 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
  Agora você deve ter um entendimento básico de como usar a ferramenta LocBaml.  Você deve ser capaz de criar um arquivo que contém Uids. Ao usar a ferramenta LocBaml, você deverá ser capaz de analisar um arquivo para extrair o conteúdo localizável e, depois que o conteúdo for traduzido, você deverá ser capaz de gerar um arquivo .resources.dll que mescla o conteúdo traduzido. Este tópico não inclui todos os detalhes possíveis, mas agora você tem o conhecimento necessário para usar a LocBaml na localização de seus aplicativos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Globalização para WPF](globalization-for-wpf.md)
+
+- [Globalização do WPF](globalization-for-wpf.md)
 - [Visão geral do uso de layout automático](use-automatic-layout-overview.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Exemplos de sintaxe de expressão de consulta: Operadores agregados'
+title: 'Exemplos de sintaxe de expressão de consulta: Operadores de agregação'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: bc3a6de1101b3e7626312197bc2d1ba37f7e04a4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d9d53e91f5252a0ac44822ac6252ce02e9697d33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825791"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130579"
 ---
-# <a name="query-expression-syntax-examples-aggregate-operators"></a>Exemplos de sintaxe de expressão de consulta: Operadores agregados
+# <a name="query-expression-syntax-examples-aggregate-operators"></a>Exemplos de sintaxe de expressão de consulta: Operadores de agregação
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, e <xref:System.Linq.Enumerable.Sum%2A> métodos para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de expressão de consulta. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
  Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
@@ -91,4 +91,5 @@ Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Av
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

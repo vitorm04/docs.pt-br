@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 84dcc6471ad37bfda90f58c748c99ff514f7eb3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168305"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Elementos Return ou Skip em uma sequência
 Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número específico de elementos em uma sequência e ignorar o restante.  
@@ -18,7 +18,7 @@ Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número esp
  Use o operador <xref:System.Linq.Queryable.Skip%2A> para ignorar um número específico de elementos em uma sequência e retornar o restante.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando são usados em consultas no SQL Server 2000. Para obter mais informações, consulte a entrada "Exceções Skip e Take no SQL Server 2000" em [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando eles são usados em consultas no SQL Server 2000. Para obter mais informações, consulte a entrada "Exceções Skip e Take no SQL Server 2000" em [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduz <xref:System.Linq.Queryable.Skip%2A> por meio de uma subconsulta com o SQL `NOT EXISTS` cláusula. Essa conversão apresenta as seguintes limitações:  
   
@@ -44,7 +44,7 @@ Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número esp
  [!code-csharp[DLinqQueryExamples#18](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#18)]
  [!code-vb[DLinqQueryExamples#18](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#18)]  
   
- As operações <xref:System.Linq.Queryable.Take%2A> e <xref:System.Linq.Queryable.Skip%2A> são bem definidas somente em conjuntos ordenados. A semântica de conjuntos não ordenados ou de vários conjuntos é indefinida.  
+ <xref:System.Linq.Queryable.Take%2A> e <xref:System.Linq.Queryable.Skip%2A> operações são bem definidas somente em conjuntos ordenados. A semântica de conjuntos não ordenados ou de vários conjuntos é indefinida.  
   
  Devido às limitações de ordenamento no SQL, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta mover a ordenação do argumento do operador <xref:System.Linq.Queryable.Take%2A> ou <xref:System.Linq.Queryable.Skip%2A> para o resultado do operador.  
   
@@ -56,7 +56,7 @@ Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número esp
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
- O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] move a ordenação para o final do código SQL, da seguinte maneira:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Move a ordenação para o final no código SQL, da seguinte maneira:  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
@@ -79,5 +79,6 @@ ORDER BY [t0].[CustomerID]
  Para argumentos integrais constantes e não negativos, baseados na especificação SQL, <xref:System.Linq.Queryable.Take%2A> e <xref:System.Linq.Queryable.Skip%2A> são bem definidos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Conversão de operador de consulta padrão](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Conversão padrão de operador de consulta](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

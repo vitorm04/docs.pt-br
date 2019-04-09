@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Material class [WPF], applying to both sides of 3-D object
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
-ms.openlocfilehash: 644de103d923cfc30bcf8716a8b454d967469eac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168045"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Como: Aplicar material à frente e ao verso de um objeto 3D
 O exemplo a seguir mostra como aplicar um <xref:System.Windows.Media.Media3D.Material> do objeto para a frente e ao verso de um 3D e animar o objeto para mostrar ambos os lados do objeto. O <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propriedade de um <xref:System.Windows.Media.Media3D.GeometryModel3D> é usado para aplicar um vermelho <xref:System.Windows.Media.Brush> ao lado frontal do objeto e o <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> propriedade do <xref:System.Windows.Media.Media3D.GeometryModel3D> é usado para aplicar uma azul <xref:System.Windows.Media.Brush> para a parte de trás do objeto. O código a seguir mostra o aplicativo de materiais para o objeto:  
@@ -24,6 +24,7 @@ O exemplo a seguir mostra como aplicar um <xref:System.Windows.Media.Media3D.Mat
  [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexamplewholepage)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criar uma cena 3D](how-to-create-a-3-d-scene.md)
 - [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md)
 - [Animar propriedades de material em uma cena 3D](how-to-animate-material-properties-in-a-3-d-scene.md)

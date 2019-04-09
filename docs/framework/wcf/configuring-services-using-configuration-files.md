@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132568"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo de configuração fornece a flexibilidade de fornecer o ponto de extremidade e os dados de comportamento de serviço no ponto de implantação, em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
@@ -108,7 +108,7 @@ Para obter mais informações sobre como configurar serviços e clientes, consul
 ### <a name="the-behaviors-element"></a>O \<comportamentos > elemento  
  Esse é um elemento contêiner dos elementos `behavior` que definem os comportamentos de um serviço.  
   
- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<comportamentos >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>O \<comportamento > elemento  
  Cada `behavior` elemento é identificado por um `name` do atributo e fornece um comportamento fornecido pelo sistema, como <`throttling`>, ou um comportamento personalizado. Se nenhum nome for fornecido, esse elemento de comportamento corresponderá ao comportamento padrão do serviço ou do ponto de extremidade.  
@@ -263,6 +263,7 @@ Para obter mais informações sobre como configurar serviços e clientes, consul
  Se uma coleção de comportamentos filho contiver um comportamento que já esteja presente na coleção de comportamentos pai, o comportamento filho substituirá o pai. Portanto, se uma coleção de comportamentos pai tivesse `<serviceMetadata httpGetEnabled="False" />` e uma coleção de comportamentos filho tivesse `<serviceMetadata httpGetEnabled="True" />`, o comportamento filho substituiria o comportamento pai na coleção de comportamentos e httpGetEnabled seria "true".  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)
 - [Configurando serviços WCF](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)

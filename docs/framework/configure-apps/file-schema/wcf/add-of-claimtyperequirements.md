@@ -2,12 +2,12 @@
 title: <add> De <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 6a8c96fb2cb2050cac7b8853b84caecc883449d7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168838"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<Adicionar > de \<claimTypeRequirements >
 Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada. Por exemplo, serviços de estado os requisitos de credenciais de entrada, que devem ter um determinado conjunto de tipos de declaração.  
@@ -73,6 +73,7 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>
@@ -84,5 +85,5 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

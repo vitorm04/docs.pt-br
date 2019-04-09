@@ -2,12 +2,12 @@
 title: Segurança de canal par
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: 09979cee48522355631c79e0bdf4c0fba6be782e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129448"
 ---
 # <a name="peer-channel-security"></a>Segurança de canal par
 Canal par permite uma variedade de tipos de aplicativo distribuído que dependem de mensagens entre vários participantes. Alguns exemplos incluem a distribuição de conteúdo de escala da Internet, em que uma fonte confiável distribui o conteúdo (como atualizações de software ou de mídia), um grupo de amigos do exchange músicas e fotos ou uma equipe de colegas colaborativamente editar um documento. Cada um desses cenários exige que um modelo de segurança exclusivo. O modelo de segurança de canal par foi projetado para lidar com esses cenários e fornece um modelo de segurança de som para as respectivas necessidades de diferentes modelos de identidade, autenticação e autorização.  
@@ -34,6 +34,7 @@ Canal par permite uma variedade de tipos de aplicativo distribuído que dependem
  Canal par não requer um modelo de identidade específico, desde que o aplicativo escolhe um dos tipos de token com suporte. Aplicativos completamente possui o ciclo de vida dessas identidades e as decisões de autenticação.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Protegendo aplicativos de canal par](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [Conceitos de canal par](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [Compilando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

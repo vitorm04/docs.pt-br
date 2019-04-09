@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169735"
 ---
 # <a name="application-settings-for-custom-controls"></a>Configurações do aplicativo para controles personalizados
 É necessário concluir algumas tarefas para que os controles personalizados tenham a capacidade de persistir as configurações de aplicativo quando os controles estão hospedados em aplicativos de terceiros.  
@@ -46,6 +46,7 @@ ms.locfileid: "57714340"
  Todas as instâncias de um controle que não fornecer um valor para <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> compartilharão as mesmas configurações.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Arquitetura das Configurações do Aplicativo](application-settings-architecture.md)
+- [Arquitetura das configurações do aplicativo](application-settings-architecture.md)

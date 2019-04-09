@@ -9,12 +9,12 @@ helpviewer_keywords:
 - states [WPF], Frame
 - styles [WPF], Frame
 ms.assetid: a01c32e2-c951-46a0-a82f-2614ca241f0b
-ms.openlocfilehash: 0d6860af587da89094663779c894689e8a911af8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b084cfa31efebe2456871a99cd810741aa26609
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131009"
 ---
 # <a name="frame-styles-and-templates"></a>Estilos e modelos de quadro
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Frame> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -47,6 +47,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)

@@ -10,17 +10,16 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a61031c36dea84449ad07175287bf834544df886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129084"
 ---
 # <a name="drawing-formatted-text"></a>Desenhando texto formatado
 Este tópico fornece uma visão geral dos recursos do <xref:System.Windows.Media.FormattedText> objeto. Este objeto fornece controle de baixo nível para desenhar texto em aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
-  
+
 ## <a name="technology-overview"></a>Visão geral da tecnologia  
  O <xref:System.Windows.Media.FormattedText> objeto permite que você desenhe texto de várias linhas, no qual cada caractere no texto pode ser formatado individualmente. O exemplo a seguir mostra um texto ao qual forma aplicados diversos formatos.  
   
@@ -30,7 +29,7 @@ Este tópico fornece uma visão geral dos recursos do <xref:System.Windows.Media
 >  Para desenvolvedores que estão migrando da API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], a tabela na seção [Migração do Win32](#win32_migration) lista os sinalizadores DrawText [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] e o equivalente aproximado em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Motivos para usar texto formatado  
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui vários controles para desenhar texto na tela. Cada controle é destinado a um cenário diferente e tem sua própria lista de recursos e limitações. Em geral, o <xref:System.Windows.Controls.TextBlock> elemento deve ser usado quando suporte limitado a texto é necessário, como uma breve frase em um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> pode ser usado quando suporte mínimo a texto é necessário. Para obter mais informações, consulte [Documentos no WPF](documents-in-wpf.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui vários controles para desenhar texto na tela. Cada controle é destinado a um cenário diferente e tem sua própria lista de recursos e limitações. Em geral, o <xref:System.Windows.Controls.TextBlock> elemento deve ser usado quando suporte limitado a texto é necessário, como uma breve frase em um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> pode ser usado quando suporte mínimo a texto é necessário. Para obter mais informações, consulte [Documentos no WPF](documents-in-wpf.md).  
   
  O <xref:System.Windows.Media.FormattedText> objeto fornece os recursos do que de formatação de texto maior [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controles de texto e pode ser útil em casos em que você deseja usar texto como um elemento decorativo. Para obter mais informações, consulte a seção a seguir [Convertendo texto formatado em uma geometria](#converting_formatted_text).  
   
@@ -117,6 +116,7 @@ Esfera seguindo a geometria de caminho do texto
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Use o <xref:System.Windows.Media.FormattedText.Trimming%2A> propriedade com o valor <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.FormattedText>
 - [Documentos no WPF](documents-in-wpf.md)
 - [Tipografia no WPF](typography-in-wpf.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171672"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>Como: Desenhar um único B&#233;Spline de Bézier
 Uma spline de Bézier é definida por quatro pontos: um ponto de início, dois pontos de controle e um ponto de extremidade.  
@@ -32,6 +32,7 @@ Uma spline de Bézier é definida por quatro pontos: um ponto de início, dois p
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
 - [Splines de Bézier no GDI+](bezier-splines-in-gdi.md)
-- [Como: Desenhar uma sequência de Splines de Bézier](how-to-draw-a-sequence-of-bezier-splines.md)
+- [Como: desenhar uma sequência de splines de Bézier](how-to-draw-a-sequence-of-bezier-splines.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: bbcdd544e79197c9cb35d13bd09cffde9962030d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167187"
 ---
 # <a name="adonet-and-linq-to-sql"></a>O ADO.NET e LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é parte do [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] família de tecnologias. É baseada em serviços fornecidos pelo modelo de provedor de [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] . Portanto, você pode misturar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código com existente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] aplicativos e migrar atual [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] soluções para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. A ilustração a seguir fornece uma exibição de alto nível de relacionamento.  
@@ -55,8 +55,9 @@ ms.locfileid: "54553666"
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  Os parâmetros são expressos no texto da consulta usando a mesma notação encaracolado usada por `Console.WriteLine()` e por `String.Format()`. `String.Format()` leva a cadeia de caracteres de consulta que você fornece e substitui os parâmetros encaracolado- apoiados com nomes de parâmetro gerados como `@p0`, `@p1` …, `@p(n)`.  
+>  Os parâmetros são expressos no texto da consulta usando a mesma notação encaracolado usada por `Console.WriteLine()` e por `String.Format()`. `String.Format()` usa a cadeia de caracteres de consulta você fornece e substitui os parâmetros encaracolado-com nomes de parâmetro gerados como `@p0`, `@p1` ..., `@p(n)`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Como: Reutilizar uma Conexão entre um comando ADO.NET e um DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Como: reutilizar uma conexão entre um comando ADO.NET e um DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attached properties [WPF], registering
 - registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
-ms.openlocfilehash: 3cbbc8a1ea8419df408cda76de3459be9464a100
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c678a64b62b8f4db24cf39ffbafac52e56c9982
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137625"
 ---
 # <a name="how-to-register-an-attached-property"></a>Como: Registrar uma propriedade anexada
 Este exemplo mostra como registrar uma propriedade anexada e fornecer acessadores públicos para que você possa usar a propriedade no [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e no código. Propriedades anexadas são um conceito de sintaxe definido pelo [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. A maioria das propriedades anexadas para tipos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também são implementadas como propriedades de dependência. Você pode usar as propriedades de dependência em qualquer <xref:System.Windows.DependencyObject> tipos.  
@@ -27,7 +27,8 @@ Este exemplo mostra como registrar uma propriedade anexada e fornecer acessadore
  [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.DependencyProperty>
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)
-- [Tópicos de instruções](properties-how-to-topics.md)
+- [Tópicos explicativos ](properties-how-to-topics.md)

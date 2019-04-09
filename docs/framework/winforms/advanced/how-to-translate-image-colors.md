@@ -1,5 +1,5 @@
 ---
-title: 'Como: Converter cores de imagens'
+title: 'Como: converter cores de imagens'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 04e61383ef79b17ea6e1523588cd9593ec9b082c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132633"
 ---
-# <a name="how-to-translate-image-colors"></a>Como: Converter cores de imagens
+# <a name="how-to-translate-image-colors"></a>Como: converter cores de imagens
 Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. As entradas de matriz de cores que representam as conversões são fornecidas na tabela a seguir.  
   
 |Componente a ser convertido|Entrada da matriz|  
@@ -46,10 +46,11 @@ Uma conversão adiciona um valor a um ou mais dos componentes de quatro cores. A
  [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `ColorBars.bmp` por um nome de arquivo de imagem e um caminho que sejam válidos no sistema.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs>`e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `ColorBars.bmp` por um nome de arquivo de imagem e um caminho que sejam válidos no sistema.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Recolorindo Imagens](recoloring-images.md)
+- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Recolorindo imagens](recoloring-images.md)

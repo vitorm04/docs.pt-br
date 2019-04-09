@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132048"
 ---
 # <a name="distributed-application-security"></a>Segurança de aplicativos distribuídos
 Segurança do Windows Communication Foundation (WCF) é dividida em três áreas funcionais principais: segurança, controle de acesso e auditoria de transferência. Segurança de transferência fornece integridade, confidencialidade e autenticação. Segurança de transferência é fornecida por um dos seguintes: segurança, segurança de mensagem de transporte ou `TransportWithMessageCredential`.  
@@ -95,6 +95,7 @@ Segurança do Windows Communication Foundation (WCF) é dividida em três áreas
  O modo de segurança de mensagem também permite que você execute a segurança de transferência para que a credencial de serviço é trocada com o cliente como parte de uma negociação inicial. Para habilitar a negociação, defina as <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> propriedade para `true`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)

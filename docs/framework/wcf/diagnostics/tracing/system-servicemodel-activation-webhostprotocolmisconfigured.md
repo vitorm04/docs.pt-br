@@ -2,12 +2,12 @@
 title: System.ServiceModel.Activation.WebHostProtocolMisconfigured
 ms.date: 03/30/2017
 ms.assetid: cb5bdc6b-4281-452d-bc42-1181f2966e2a
-ms.openlocfilehash: 64f617e505e80a05cd3e0a605726d10fac5cac26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71dc60c932871608b9ac832331de82db818c525e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171906"
 ---
 # <a name="systemservicemodelactivationwebhostprotocolmisconfigured"></a>System.ServiceModel.Activation.WebHostProtocolMisconfigured
 O protocolo está configurado incorretamente no serviço de ativação de processos para Windows (WAS).  
@@ -19,6 +19,7 @@ O protocolo está configurado incorretamente no serviço de ativação de proces
  Verifique e corrija o transporte de parâmetros de configuração no Web. config.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

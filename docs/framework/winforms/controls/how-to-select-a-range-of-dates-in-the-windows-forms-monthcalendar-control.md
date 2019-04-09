@@ -1,5 +1,5 @@
 ---
-title: 'Como: Selecione um intervalo de datas no controle MonthCalendar dos Windows Forms'
+title: 'Como: Selecionar um intervalo de datas no controle MonthCalendar do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 21cda9fb11edd3f6148d7128621fbde8d3ff913c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0e032a6285c43d7e96c7d59444da6d6598bd8100
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129942"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Como: Selecione um intervalo de datas no controle MonthCalendar dos Windows Forms
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Como: Selecionar um intervalo de datas no controle MonthCalendar do Windows Forms
 Um recurso importante dos formulários Windows <xref:System.Windows.Forms.MonthCalendar> controle é que o usuário pode selecionar um intervalo de datas. Esse recurso é um aprimoramento o recurso de seleção de data do <xref:System.Windows.Forms.DateTimePicker> controle, que permite apenas que o usuário selecione um valor único de data/hora. Você pode definir um intervalo de datas ou obter um intervalo de seleção definido pelo usuário usando as propriedades do <xref:System.Windows.Forms.MonthCalendar> controle. O exemplo de código a seguir demonstra como definir um intervalo de seleção.  
   
 ### <a name="to-select-a-range-of-dates"></a>Para selecionar um intervalo de datas  
@@ -75,7 +75,8 @@ Um recurso importante dos formulários Windows <xref:System.Windows.Forms.MonthC
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle MonthCalendar](monthcalendar-control-windows-forms.md)
-- [Como: Alterar a aparência do controle do Windows Forms MonthCalendar](how-to-change-monthcalendar-control-appearance.md)
-- [Como: Exibir dias específicos em negrito com o Windows Forms controle MonthCalendar](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Como: Exibir mais de um mês no controle MonthCalendar dos Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Como: Alterar a aparência do controle MonthCalendar do Windows Forms](how-to-change-monthcalendar-control-appearance.md)
+- [Como: Exibir dias específicos em negrito com o controle MonthCalendar do Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Como: Exibir mais de um mês no controle MonthCalendar do Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

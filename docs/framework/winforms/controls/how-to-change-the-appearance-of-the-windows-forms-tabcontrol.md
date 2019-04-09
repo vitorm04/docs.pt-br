@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alterar a aparência do TabControl dos Windows Forms'
+title: 'Como: Alterar a aparência do TabControl do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 642115eeb61649eb369058947e5347d4389182a0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c84ce67225b70933e65b8f88da1eaef6b1f3de99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133127"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Como: Alterar a aparência do TabControl dos Windows Forms
+# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Como: Alterar a aparência do TabControl do Windows Forms
 Você pode alterar a aparência das guias nos Windows Forms usando propriedades do <xref:System.Windows.Forms.TabControl> e o <xref:System.Windows.Forms.TabPage> objetos que compõem guias individuais no controle. Ao configurar essas propriedades, é possível exibir imagens em guias, exibir guias verticalmente em vez de horizontalmente, exibir várias linhas de guias e habilitar ou desabilitar guias com programação.  
   
 ### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a>Exibir um ícone na parte de rótulo de uma guia  
@@ -66,8 +66,9 @@ Você pode alterar a aparência das guias nos Windows Forms usando propriedades 
 -   Defina as <xref:System.Windows.Forms.TabControl.Appearance%2A> propriedade do <xref:System.Windows.Forms.TabControl> para <xref:System.Windows.Forms.TabAppearance.Buttons> ou <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle TabControl](tabcontrol-control-windows-forms.md)
 - [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Como: Adicionar um controle a uma página da guia](how-to-add-a-control-to-a-tab-page.md)
 - [Como: Desabilitar páginas de guia](how-to-disable-tab-pages.md)
-- [Como: Adicionar e remover guias com o TabControl dos Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Como: Adicionar e remover guias com o controle TabControl do Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

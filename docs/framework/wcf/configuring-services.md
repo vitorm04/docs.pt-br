@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 2435d5c4592de60e07b60f1bf749f2421c798535
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156501"
 ---
 # <a name="configuring-wcf-services"></a>Configurando serviços WCF
 
@@ -30,10 +30,10 @@ Depois que você tiver projetado e implementado o contrato de serviço, você es
  [Pontos de extremidade](../../../docs/framework/wcf/endpoints.md)  
  Toda a comunicação com um serviço WCF ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade contêm o contrato, as informações de configuração que são especificadas nas associações e os endereços que indicam onde encontrar o serviço ou onde obter informações sobre o serviço.  
   
- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
+ [Serviços de segurança](../../../docs/framework/wcf/securing-services.md)  
  Usando o WCF e existente mecanismos de segurança, você pode implementar a confidencialidade, integridade, autenticação e autorização em qualquer serviço. Você também pode fazer a auditoria para falhas e êxitos de segurança.  
   
- [Criando serviços interoperáveis de perfil básico do WS-I 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
+ [Criando serviços interoperáveis de perfil básico de WS-I 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Os requisitos para implantar um serviço que é interoperável com serviços e clientes em qualquer plataforma ou sistema operacional são descritos em WS-I Basic Profile 1.1 especificação.  
   
 ## <a name="reference"></a>Referência  
@@ -46,9 +46,9 @@ Depois que você tiver projetado e implementado o contrato de serviço, você es
 ## <a name="related-sections"></a>Seções relacionadas  
  [Ciclo de vida de programação básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   
- [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Serviços de implantação e projeção](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
- [Hospedando serviços](../../../docs/framework/wcf/hosting-services.md)  
+ [Serviços de hospedagem](../../../docs/framework/wcf/hosting-services.md)  
   
  [Compilando clientes](../../../docs/framework/wcf/building-clients.md)  
   
@@ -57,6 +57,7 @@ Depois que você tiver projetado e implementado o contrato de serviço, você es
  [Administração e diagnósticos](../../../docs/framework/wcf/diagnostics/index.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+
+- [Programação de WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)
-- [Detalhes de recursos do WCF](../../../docs/framework/wcf/feature-details/index.md)
+- [Detalhes de funcionalidades do WCF](../../../docs/framework/wcf/feature-details/index.md)
