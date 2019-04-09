@@ -7,39 +7,39 @@ helpviewer_keywords:
 - data grids [Windows Forms], examples
 - DataGridView control [Windows Forms], examples
 ms.assetid: 78085f26-d5d2-4b75-813e-e932b72fd06f
-ms.openlocfilehash: ed98c277661b141eaef2472b717ea595ca918b6a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4c755d5f0c2e134b83beb27ebbd06080bad620b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115226"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Funcionalidades de coluna, linha e célula básicas no controle DataGridView dos Windows Forms
 Várias funcionalidades básicas de `DataGridView` células, linhas e colunas podem ser modificadas configurando propriedades individuais. Os tópicos nesta seção descrevem vários dos recursos mais usados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: Ocultar colunas no controle DataGridView dos Windows Forms](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+ [Como: Ocultar colunas no controle DataGridView do Windows Forms](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  Descreve como impedir que colunas específicas apareçam no controle.  
   
- [Como: Ocultar cabeçalhos de coluna no controle DataGridView dos Windows Forms](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+ [Como: Ocultar cabeçalhos no controle DataGridView do Windows Forms](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
  Descreve como impedir que os cabeçalhos das colunas apareçam no controle.  
   
- [Como: Habilitar a reorganização de colunas no controle DataGridView dos Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+ [Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
  Descreve como habilitar usuários para reorganizar colunas no controle.  
   
- [Como: Congelar colunas no controle DataGridView dos Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+ [Como: Congelar colunas no controle DataGridView do Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
  Descreve como evitar que uma ou mais colunas adjacentes rolem.  
   
- [Como: Tornar colunas somente leitura no controle DataGridView dos Windows Forms](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+ [Como: Tornar colunas somente leitura no controle DataGridView do Windows Forms](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
  Descreve como evitar que os usuários editem colunas específicas no controle.  
   
- [Como: Evitar a adição de linha e exclusão no controle DataGridView dos Windows Forms](prevent-row-addition-and-deletion-datagridview.md)  
+ [Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms](prevent-row-addition-and-deletion-datagridview.md)  
  Descreve como remover a linha para novos registros na parte inferior do controle para evitar que os usuários adicionem linhas. Também descreve como evitar que os usuários apaguem linhas.  
   
- [Como: Obter e definir a célula atual no controle DataGridView dos Windows Forms](get-and-set-the-current-cell-wf-datagridview-control.md)  
+ [Como: Obter e definir a célula atual no controle DataGridView do Windows Forms](get-and-set-the-current-cell-wf-datagridview-control.md)  
  Descreve como acessar a célula que tem foco no controle atualmente.  
   
- [Como: Exibir imagens em células do controle DataGridView dos Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [Como: Exibir imagens em células do controle DataGridView do Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  Descreve como criar uma coluna de imagem exibindo um ícone em cada célula.  
   
 ## <a name="reference"></a>Referência  
@@ -47,12 +47,13 @@ Várias funcionalidades básicas de `DataGridView` células, linhas e colunas po
  Fornece documentação de referência para o controle.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Formatação e definição de estilos básicas no controle DataGridView dos Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Formatação básica e estilos no controle DataGridView dos Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem como modificar a aparência básica do controle e a formatação de exibição de dados da célula.  
   
- [Programando com células, linhas e colunas no controle DataGridView do Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [Programando com células, linhas e colunas no controle DataGridView dos Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Fornece tópicos que descrevem como programar com objetos de célula, linha e coluna.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle DataGridView](datagridview-control-windows-forms.md)
 - [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

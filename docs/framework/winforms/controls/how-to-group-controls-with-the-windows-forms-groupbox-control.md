@@ -1,19 +1,19 @@
 ---
-title: 'Como: Agrupar controles com o controle de caixa de grupo do Windows Forms'
+title: 'Como: Agrupar controles com o controle GroupBox do Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179615"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Como: Agrupar controles com o controle de caixa de grupo do Windows Forms
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Como: Agrupar controles com o controle GroupBox do Windows Forms
 Windows Forms <xref:System.Windows.Forms.GroupBox> controles são usados para agrupar outros controles. Há três razões para agrupar controles:  
   
 -   Para criar um agrupamento visual dos elementos de formulário relacionados para uma interface do usuário clara.  
@@ -33,5 +33,6 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> controles são usados para ag
 3.  Defina o <xref:System.Windows.Forms.GroupBox.Text%2A> propriedade da caixa de grupo para uma legenda apropriada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.GroupBox>
 - [Controle GroupBox](groupbox-control-windows-forms.md)

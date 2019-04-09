@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 67382c0383726d2c2caabde1e80bfb37a1a9c27c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 29a6b897115c5f2f3ae8d7e4ec708be59dc0d85b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115330"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automação de Interface do usuário e Microsoft Active Accessibility
 > [!NOTE]
@@ -68,7 +68,7 @@ ms.locfileid: "57679262"
   
  A tabela a seguir mostra o mapeamento de [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] funções para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tipos de controle.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Função|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Tipo de controle|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] função|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Tipo de controle|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 |ROLE_SYSTEM_PUSHBUTTON|Botão|  
 |ROLE_SYSTEM_CLIENT|Calendário|  
@@ -137,7 +137,7 @@ ms.locfileid: "57679262"
   
  A tabela a seguir mostra quais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades correspondem aos [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] constantes de estado.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Estado|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Alteração de estado de disparadores?|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] estado|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedade|Alteração de estado de disparadores?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
 |STATE_SYSTEM_CHECKED|Caixa de seleção <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Para o botão de opção <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|S|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|S|  
@@ -160,7 +160,7 @@ ms.locfileid: "57679262"
   
  Os seguintes estados não foram implementados pela maioria [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] controlar os servidores ou não têm equivalentes em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Estado|Comentários|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] estado|Comentários|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|Não disponível em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|Não disponível em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -195,7 +195,7 @@ ms.locfileid: "57679262"
 |EVENT_OBJECT_DESCRIPTIONCHANGE|Nenhum equivalente exato; Talvez <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> ou <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> alteração de propriedade|  
 |EVENT_OBJECT_DESTROY|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_FOCUS|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
-|EVENT_OBJECT_HELPCHANGE|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty> Alteração|  
+|EVENT_OBJECT_HELPCHANGE|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty> alterar|  
 |EVENT_OBJECT_HIDE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_LOCATIONCHANGE|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> Alteração de propriedade|  
 |EVENT_OBJECT_NAMECHANGE|<xref:System.Windows.Automation.AutomationElement.NameProperty> Alteração de propriedade|  
@@ -240,7 +240,7 @@ ms.locfileid: "57679262"
 |Não há equivalência|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> Alteração de propriedade|  
 |Não há equivalência|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> Alteração de propriedade|  
 |Não há equivalência|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> Alteração de propriedade|  
-|Não há equivalência|Evento <xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent>|  
+|Não há equivalência|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> evento|  
 |Não há equivalência|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>   
@@ -250,4 +250,5 @@ ms.locfileid: "57679262"
  O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] modelo elimina a necessidade dos provedores chamar por meio de outro código de provedor. O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] serviço principal faz toda a agregação necessário.  
   
 ## <a name="see-also"></a>Consulte também
-- [UI Automation Fundamentals](../../../docs/framework/ui-automation/index.md) (Fundamentos da Automação da Interface do Usuário)
+
+- [Fundamentos de automação da interface do usuário](../../../docs/framework/ui-automation/index.md)

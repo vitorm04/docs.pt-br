@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183034"
 ---
 # <a name="imaging-how-to-topics"></a>Tópicos explicativos da geração de imagens
 Os tópicos nesta seção demonstram como usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para exibir ou alterar as imagens de bitmap.  
@@ -21,7 +21,7 @@ Os tópicos nesta seção demonstram como usar [!INCLUDE[TLA#tla_winclient](../.
  [Usar um BitmapImage em XAML](how-to-use-a-bitmapimage.md)  
  [Carregar uma imagem como uma miniatura](how-to-load-an-image-as-a-thumbnail.md)  
  [Aplicar uma transformação a uma imagem de bitmap](how-to-apply-a-transform-to-a-bitmapimage.md)  
- [Criar um bitmap a partir de um visual](how-to-create-a-bitmap-from-a-visual.md)  
+ [Criar um bitmap usando um visual](how-to-create-a-bitmap-from-a-visual.md)  
  [Codificar um visual em um arquivo de imagem](how-to-encode-a-visual-to-an-image-file.md)  
  [Criar um novo BitmapSource](how-to-create-a-new-bitmapsource.md)  
  [Encadear objetos BitmapSource](how-to-chain-bitmapsource-objects-together.md)  
@@ -44,4 +44,5 @@ Os tópicos nesta seção demonstram como usar [!INCLUDE[TLA#tla_winclient](../.
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da geração de imagens](imaging-overview.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: 5aa0e5b617d952fd5df1f80ae0ff146a6899aa32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134531"
 ---
 # <a name="how-to-create-a-grid-element"></a>Como: Criar um elemento de grade
 ## <a name="example"></a>Exemplo  
@@ -26,5 +26,6 @@ ms.locfileid: "57379504"
 
   ![uma captura de tela mostra uma interface de usuário do WPF que contém uma grade, dividida em três colunas.  Ele tem o título '2018 produtos fornecidos' abrangendo todas as colunas da linha superior e tem três colunas cada com dados de vendas para um determinado trimestre.  A linha inferior tem abrangendo duas colunas com a mensagem de texto ' Total de unidades: 300,000'](././media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Grid>
 - [Visão geral de painéis](panels-overview.md)

@@ -2,12 +2,12 @@
 title: <security> De <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 552b28c4e4368ec4a01502a1df65cb46aa17c05d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182033"
 ---
 # <a name="security-of-custombinding"></a>\<segurança > de \<customBinding >
 Especifica as opções de segurança para uma associação personalizada.  
@@ -57,7 +57,7 @@ Especifica as opções de segurança para uma associação personalizada.
 |requireDerivedKeys|Um valor booliano que especifica se chaves podem ser derivadas das chaves de prova originais. O padrão é `true`.|  
 |requireSecurityContextCancellation|Opcional. Um valor booliano que especifica se contexto de segurança deve ser cancelado e encerrado quando ele não for mais necessário. O padrão é `true`.|  
 |requireSignatureConfirmation|Opcional. Um valor booliano que especifica se a confirmação de assinatura de WS-Security está habilitada. Quando definido como `true`, as assinaturas de mensagem são confirmadas pelo respondente.  Quando a ligação personalizada está configurada para certificados mútuos ou ele está configurado para esse atributo usa como padrão de tokens de uso emitido (associações de WSS 1.1) `true`. Caso contrário, o padrão é `false`.<br /><br /> Confirmação de assinatura é usada para confirmar que o serviço está respondendo no reconhecimento total de uma solicitação.|  
-|securityHeaderLayout|Opcional. Especifica a ordenação dos elementos no cabeçalho de segurança. Os valores válidos são<br /><br /> -   `Strict`: Itens são adicionados ao cabeçalho de segurança de acordo com o princípio geral de "declarar antes do uso".<br />-   `Lax`: Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: Segurança de mensagem SOAP.<br />-   `LaxWithTimestampFirst`: Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: Segurança de mensagem de SOAP, exceto pelo fato de que o primeiro elemento no cabeçalho de segurança deve ser um elemento wsse: timestamp.<br />-   `LaxWithTimestampLast`: Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: Segurança de mensagem de SOAP, exceto pelo fato de que o último elemento no cabeçalho de segurança deve ser um elemento wsse: timestamp.<br /><br /> O padrão é `Strict`.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|securityHeaderLayout|Opcional. Especifica a ordenação dos elementos no cabeçalho de segurança. Os valores válidos são<br /><br /> -   `Strict`: Itens são adicionados ao cabeçalho de segurança de acordo com o princípio geral de "declarar antes do uso".<br />-   `Lax`: Os itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para o WSS: Segurança da Mensagem SOAP.<br />-   `LaxWithTimestampFirst`: Os itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para o WSS: Segurança da Mensagem de SOAP, exceto pelo fato de que o primeiro elemento no cabeçalho de segurança precisa ser um elemento wsse:Timestamp.<br />-   `LaxWithTimestampLast`: Os itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para o WSS: Segurança da Mensagem de SOAP, exceto pelo fato de que o último elemento no cabeçalho de segurança precisa ser um elemento wsse:Timestamp.<br /><br /> O padrão é `Strict`.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode atributo  
   
@@ -167,6 +167,7 @@ Especifica as opções de segurança para uma associação personalizada.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -174,5 +175,5 @@ Especifica as opções de segurança para uma associação personalizada.
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

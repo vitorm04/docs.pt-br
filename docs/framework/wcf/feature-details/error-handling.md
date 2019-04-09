@@ -2,12 +2,12 @@
 title: Tratamento de erros
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136429"
 ---
 # <a name="error-handling"></a>Tratamento de erros
 ## <a name="error-handling-in-windows-communication-foundation"></a>Tratamento de erro no Windows Communication Foundation  
@@ -68,4 +68,5 @@ ms.locfileid: "56261139"
  Uma falha de expedição de conversão de tipo pode ser inspecionado o mesmo assim como acontece com muitos outros tipos de falhas de expedição instalando um manipulador de erro. O ponto de extensibilidade IErrorHandler é chamado para manipular exceções de nível de serviço. A partir daí, a resposta seja enviada para o chamador –, bem como executar quaisquer tarefas personalizadas e emissão de relatórios – pode ser escolhida.  
   
 ## <a name="see-also"></a>Consulte também
-- [Programação básica do WCF](../basic-wcf-programming.md)
+
+- [Programação de WCF básica](../basic-wcf-programming.md)

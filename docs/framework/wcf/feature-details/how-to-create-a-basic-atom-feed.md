@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar um Feed Atom básico'
+title: 'Como: criar um feed Atom básico'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 1229257cc8c15ea67bd4fdf3ff6ffa959a6bfe02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d254d0c87bb9e0a2ce10b8cba0233680b24f4be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181552"
 ---
-# <a name="how-to-create-a-basic-atom-feed"></a>Como: Criar um Feed Atom básico
+# <a name="how-to-create-a-basic-atom-feed"></a>Como: criar um feed Atom básico
 Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um feed de sindicalização. Este tópico discute como criar um serviço de distribuição que expõe um feed de distribuição Atom.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Para criar um serviço básico de distribuição  
@@ -97,5 +97,6 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
  Ao compilar o código anterior, fazer referência a ServiceModel. dll e System.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

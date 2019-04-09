@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ef262fcae117b27f06d4dba3b2087028b5cfa65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f15a4557be0dc633fb9ecda5916896e340f00da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136884"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>Enumeração CorDebugJITCompilerFlagsDeprecated
 Esta enumeração é obsoleta. Use o `CORDEBUG_JIT_DEFAULT` membro a [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeração em vez disso.  
@@ -50,4 +50,5 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
  **Versões do .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

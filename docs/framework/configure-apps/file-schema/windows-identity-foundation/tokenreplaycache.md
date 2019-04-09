@@ -3,12 +3,12 @@ title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: dfa6c0d84582d55595f00f149adfdcaa9d554d6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1567c669b5e682a7a771d7bedc95a8effa474e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113380"
 ---
 # <a name="tokenreplaycache"></a>\<tokenReplayCache>
 Registra um cache de reprodução de token com um serviço ou uma coleção de manipulador de token de segurança.  
@@ -63,5 +63,6 @@ Registra um cache de reprodução de token com um serviço ou uma coleção de m
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IdentityModel.Tokens.TokenReplayCache>
 - [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

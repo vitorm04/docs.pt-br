@@ -1,5 +1,5 @@
 ---
-title: 'Como: Distinguir entre cliques e cliques duplos'
+title: 'Como: distinguir entre cliques e cliques duplos'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 2d02e8faac1dd55e2a7e64b00137df011c931f32
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26b3a64533747e80c7b9270918030da76d5e00c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139393"
 ---
-# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Como: Distinguir entre cliques e cliques duplos
+# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Como: distinguir entre cliques e cliques duplos
 Normalmente, um único *clique* inicia uma interface do usuário e um *clique duplo* estende a ação. Por exemplo, um clique normalmente seleciona um item e um clique duplo edita o item selecionado. No entanto, eventos de clique a formulários do Windows não acomodam facilmente um cenário onde um clique e um clique duplo executam ações incompatíveis, como uma ação associada à <xref:System.Windows.Forms.Control.Click> ou <xref:System.Windows.Forms.Control.MouseClick> eventos é executado antes da ação ligada para o <xref:System.Windows.Forms.Control.DoubleClick>ou <xref:System.Windows.Forms.Control.MouseDoubleClick> eventos. Este tópico demonstra duas soluções para esse problema. Uma solução é manipular o evento de clique duplo e reverter as ações no tratamento de evento de clique. Em raras situações, você talvez seja necessário simular um clique e comportamento de clique duplo manipulando o <xref:System.Windows.Forms.Control.MouseDown> evento e, usando o <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> e <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> propriedades do <xref:System.Windows.Forms.SystemInformation> classe. Você medir o tempo entre cliques e se um segundo clique ocorre antes do valor de <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> for atingido e o clique foi dentro de um retângulo definido por <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, executar a ação de clique duplo; caso contrário, execute a ação de clique.  
   
 ### <a name="to-roll-back-a-click-action"></a>Reverter uma ação de clique  
@@ -43,4 +43,5 @@ Normalmente, um único *clique* inicia uma interface do usuário e um *clique du
  Para obter informações sobre como compilar esses exemplos da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar esses exemplos no Visual Studio colando o código em novos projetos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+
+- [Entrada do mouse em um aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)

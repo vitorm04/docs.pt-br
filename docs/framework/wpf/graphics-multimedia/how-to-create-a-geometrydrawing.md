@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], GeometryDrawing class
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
-ms.openlocfilehash: 6eb604a8446000ef308c2b5a99480fb6a476c949
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179780"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>Como: Criar um GeometryDrawing
 Este exemplo mostra como criar e exibir um <xref:System.Windows.Media.GeometryDrawing>. Um <xref:System.Windows.Media.GeometryDrawing> permite que você criar uma forma com um preenchimento e uma estrutura de tópicos associando uma <xref:System.Windows.Media.Pen> e uma <xref:System.Windows.Media.Brush> com um <xref:System.Windows.Media.Geometry>. O <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> descreve a estrutura da forma, o <xref:System.Windows.Media.GeometryDrawing.Brush%2A> descreve o preenchimento da forma e o <xref:System.Windows.Media.GeometryDrawing.Pen%2A> descreve o contorno da forma.  
@@ -30,7 +30,8 @@ Este exemplo mostra como criar e exibir um <xref:System.Windows.Media.GeometryDr
  Para criar desenhos mais complexos, você pode combinar vários objetos de desenho em um único desenho composto usando um <xref:System.Windows.Media.DrawingGroup>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [Visão geral dos objetos de desenho](drawing-objects-overview.md)
-- [Visão geral de geometria](geometry-overview.md)
+- [Visão geral da geometria](geometry-overview.md)
 - [Criar um desenho composto](how-to-create-a-composite-drawing.md)

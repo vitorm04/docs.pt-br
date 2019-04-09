@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: d07af0df30f46d272b81042b009fca9661bbcbe5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181319"
 ---
 # <a name="guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas
 Esta seção contém tópicos que fornecem diretrizes para criação de aplicativos do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Práticas recomendadas: Controle de versão de contrato de dados](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Melhores práticas: Controle de versão de contrato de dados](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Explica como e quando criar contratos de dados que não são interrompidas quando versões futuras são criadas.  
   
  [Controle de versão de serviço](../../../docs/framework/wcf/service-versioning.md)  
@@ -28,10 +28,10 @@ Esta seção contém tópicos que fornecem diretrizes para criação de aplicati
  [Balanceamento de carga](../../../docs/framework/wcf/load-balancing.md)  
  Lista as diretrizes para balanceamento de carga com uma Web farm.  
   
- [Controlando o consumo de recursos e a melhoria do desempenho](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
+ [Controlando o consumo de recursos e a melhoria de desempenho](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
  Descreve as propriedades que são projetadas para ajudar a evitar o consumo de recursos desnecessários e melhorar a segurança e aponta para obter informações mais completas sobre seu uso.  
   
- [Implantando aplicativos do WCF com ClickOnce](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
+ [Implantando aplicativos do WCF com um clique](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
  Descreve as considerações para ser feitas ao usar o recurso do ClickOnce.  
   
 ## <a name="reference"></a>Referência  
@@ -42,9 +42,10 @@ Esta seção contém tópicos que fornecem diretrizes para criação de aplicati
 ## <a name="related-sections"></a>Seções relacionadas  
  [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)  
   
- [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Programação de WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Exemplos do Windows Communication Foundation (WCF)](./samples/index.md)
 - [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)

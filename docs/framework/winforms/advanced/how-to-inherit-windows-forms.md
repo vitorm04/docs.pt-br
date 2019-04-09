@@ -1,5 +1,5 @@
 ---
-title: 'Como: Herdar Windows Forms'
+title: 'Como: herdar Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112736"
 ---
-# <a name="how-to-inherit-windows-forms"></a>Como: Herdar Windows Forms
+# <a name="how-to-inherit-windows-forms"></a>Como: herdar Windows Forms
 Criar novo Windows Forms herdando de formulários base é uma maneira prática de duplicar seus melhores esforços sem passar pelo processo de recriar inteiramente um formulário toda vez que precisar dele.  
   
  Para obter mais informações sobre herdar formulários em tempo de design usando o **selecionador de herança** controles de caixa de diálogo e como distinguir visualmente entre níveis de segurança de herdados, consulte [como: Herdar formulários usando a caixa de diálogo selecionador de herança](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
@@ -41,8 +41,9 @@ Criar novo Windows Forms herdando de formulários base é uma maneira prática d
  Ao herdar formulários, tenha em mente que podem surgir problemas em relação a manipuladores de eventos sendo chamado duas vezes, porque cada evento está sendo manipulado pela classe base e pela classe herdada. para mais informações sobre como evitar esse problema, consulte [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instrução Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [Instrução Imports (Tipo e Namespace .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Instrução Imports (tipo e namespace .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Efeitos da Modificação da Aparência de um Formulário Base](effects-of-modifying-base-form-appearance.md)
-- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)
+- [Efeitos da modificação da aparência de um formulário base](effects-of-modifying-base-form-appearance.md)
+- [Herança visual dos Windows Forms](windows-forms-visual-inheritance.md)

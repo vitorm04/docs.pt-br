@@ -1,19 +1,19 @@
 ---
-title: 'Como: Criar uma curva de Bézier quadrática'
+title: 'Como: Criar uma curva de Bezier quadrática'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Bezier curves [WPF], creating
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-ms.openlocfilehash: 8adb5d0348fe53cecbdabf8ffa3b244fe34831e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134855"
 ---
-# <a name="how-to-create-a-quadratic-bezier-curve"></a>Como: Criar uma curva de Bézier quadrática
+# <a name="how-to-create-a-quadratic-bezier-curve"></a>Como: Criar uma curva de Bezier quadrática
 Este exemplo mostra como criar uma curva de Bezier quadrática.  Para criar uma curva de Bezier quadrática, use o <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.QuadraticBezierSegment> classes.  
   
 ## <a name="example"></a>Exemplo  
@@ -36,5 +36,6 @@ Este exemplo mostra como criar uma curva de Bezier quadrática.  Para criar uma 
  Este exemplo faz parte de um exemplo maior; para ver o exemplo completo, confira o [Exemplo de geometrias](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criar um arco elíptico](how-to-create-an-elliptical-arc.md)
 - [Criar uma curva de Bézier cúbica](how-to-create-a-cubic-bezier-curve.md)

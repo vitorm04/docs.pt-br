@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182462"
 ---
 # <a name="path-animations-overview"></a>Visão geral de animações do caminho
 <a name="introduction"></a> Este tópico apresenta animações de caminho, que permitem que você use um caminho geométrico para gerar valores de saída. Animações de caminho são úteis para mover e girar objetos junto em caminhos complexos.  
@@ -45,11 +45,11 @@ ms.locfileid: "57367850"
   
  Classes de animação de caminho pertencem ao <xref:System.Windows.Media.Animation> namespace e use a seguinte convenção de nomenclatura:  
   
- *\<Type>* `AnimationUsingPath`  
+ *\<tipo >* `AnimationUsingPath`  
   
  Em que *\<Type>* é o tipo de valor animado pela classe.  
   
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece as classes de animação de caminho a seguir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece classes de animação de caminho a seguir.  
   
 |Tipo de propriedade|Classe de animação de caminho correspondente|Exemplo|  
 |-------------------|----------------------------------------|-------------|  
@@ -90,8 +90,9 @@ ms.locfileid: "57367850"
  Para obter mais informações sobre a sintaxe de caminho que é usada na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo, consulte a [sintaxe de marcação de caminho](path-markup-syntax.md) visão geral.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Sintaxe de marcação de caminho](path-markup-syntax.md)
+- [Sintaxe de marcação do caminho](path-markup-syntax.md)
 - [Tópicos explicativos de animação do caminho](path-animation-how-to-topics.md)
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral das técnicas de animação da propriedade](property-animation-techniques-overview.md)

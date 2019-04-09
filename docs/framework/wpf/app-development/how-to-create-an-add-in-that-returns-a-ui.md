@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115739"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Como: Criar um suplemento que retorne uma interface do usuário
 Este exemplo mostra como criar um suplemento que retorna um Windows Presentation Foundation (WPF) para um host de aplicativo autônomo do WPF.  
@@ -31,8 +31,7 @@ Este exemplo mostra como criar um suplemento que retorna um Windows Presentation
   
 ## <a name="example"></a>Exemplo  
  Para criar um suplemento que retorna uma UI do WPF requer código específico para cada segmento de pipeline, o suplemento e o aplicativo host.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementando o segmento de pipeline de contrato  
  Um método deve ser definido pelo contrato para retornar uma interface do usuário e seu valor de retorno deve ser do tipo <xref:System.AddIn.Contract.INativeHandleContract>. Isso é demonstrado pelo `GetAddInUI` método da `IWPFAddInContract` de contrato no código a seguir.  
@@ -90,5 +89,6 @@ Este exemplo mostra como criar um suplemento que retorna um Windows Presentation
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Visão geral dos suplementos do WPF](wpf-add-ins-overview.md)

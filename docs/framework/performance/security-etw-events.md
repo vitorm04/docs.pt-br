@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cd5e660778b852cfee84359bb4d7253ca8f118d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134024"
 ---
 # <a name="security-etw-events"></a>Eventos ETW de segurança
 <a name="top"></a> Eventos de segurança são gerados durante a verificação de nome forte e a verificação de Authenticode.  
@@ -29,7 +29,7 @@ ms.locfileid: "54608070"
   
 |Palavra-chave para acionar o evento|Nível|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword`(0x400)|Informativo(4)|  
+|`SecurityKeyword` (0x400)|Informativo(4)|  
   
  A tabela a seguir mostra as informações do evento.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54608070"
   
 |Palavra-chave para acionar o evento|Nível|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword`(0x400)|Informativo(4)|  
+|`SecurityKeyword` (0x400)|Informativo(4)|  
   
  A tabela a seguir mostra as informações do evento.  
   
@@ -74,4 +74,5 @@ ms.locfileid: "54608070"
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)

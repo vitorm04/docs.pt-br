@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Rotation3DAnimation [WPF]
 - animation [WPF], 3-D translations [WPF], with Rotation3DAnimation
 ms.assetid: a92223ec-b634-4f5e-8e79-d33bc43ecfb3
-ms.openlocfilehash: 36c0e1c92d9f8f8480336a85ff86ec81fe1a8e81
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dd804fefc174e28fc5211a0222ab13f38c6b6e5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114394"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a>Como: Animar uma rotação 3D usando Rotation3DAnimation
 O exemplo a seguir mostra como fazer um objeto 3D gire enquanto ele "chacoalha" usando <xref:System.Windows.Media.Animation.Rotation3DAnimation> animar o <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> propriedade do <xref:System.Windows.Media.Media3D.RotateTransform3D> objeto aplicado ao objeto 3D.  
@@ -20,8 +20,9 @@ O exemplo a seguir mostra como fazer um objeto 3D gire enquanto ele "chacoalha" 
  [!code-xaml[Animation3DGallery_snip#Rotation3DAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationExample.xaml#rotation3danimationexamplewholepage)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md)
 - [Animar uma rotação 3D usando quadros principais (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)
 - [Animar uma rotação 3D usando storyboards](how-to-animate-a-3-d-rotation-using-storyboards.md)
-- [Animar uma rotação 3D usando Quaternions](how-to-animate-a-3-d-rotation-using-quaternions.md)
+- [Animar uma rotação 3D usando quaternions](how-to-animate-a-3-d-rotation-using-quaternions.md)
 - [Visão geral da animação](animation-overview.md)

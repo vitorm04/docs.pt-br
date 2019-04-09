@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c1723facca3c547c275ee44f0abefe21a177eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac0f5d522a24394369583692f8c564254529bf13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137340"
 ---
 # <a name="stackoverflowinfo-structure"></a>Estrutura StackOverflowInfo
 Armazena o tipo de estouro que ocorreram e informações sobre a exceção que foi gerada devido ao estouro.  
@@ -55,4 +55,5 @@ typedef struct _StackOverflowInfo {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

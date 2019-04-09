@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b620357967d5d22148f64a3258fbb8dc52361d86
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7edf103e397c6e3e1577b5ed4bc8fc0df264b843
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137989"
 ---
 # <a name="icordebugthreadenum-interface"></a>Interface ICorDebugThreadEnum
 Implementa métodos ICorDebugEnum e enumera matrizes de ICorDebugThread.  
@@ -47,4 +47,5 @@ Implementa métodos ICorDebugEnum e enumera matrizes de ICorDebugThread.
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

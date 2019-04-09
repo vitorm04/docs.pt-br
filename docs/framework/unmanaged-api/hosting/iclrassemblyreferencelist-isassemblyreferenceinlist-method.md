@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 557b15fe2bd04a3362532f190a88ee2ad52ed366
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e6a95a636623f0b4ea75706039194572ecf1bbe0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136195"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>Método ICLRAssemblyReferenceList::IsAssemblyReferenceInList
 Obtém um valor que indica se o ponteiro fornecido se refere a um assembly na lista.  
@@ -57,6 +57,7 @@ HRESULT IsAssemblyReferenceInList (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [Interface ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [Interface IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)

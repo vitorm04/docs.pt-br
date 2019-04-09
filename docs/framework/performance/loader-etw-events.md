@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141525"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de carregador
 <a name="top"></a> Esses eventos coletam informações relacionadas ao carregamento e descarregamento de domínios do aplicativo, assemblies e módulos.  
@@ -45,7 +45,7 @@ ms.locfileid: "54578998"
   
 |evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (registrado para todos os domínios do aplicativo)|156|Gerado sempre que um domínio do aplicativo é criado durante o tempo de vida de um processo.|  
+|`AppDomainLoad_V1` (registrado para todos os domínios de aplicativo)|156|Gerado sempre que um domínio do aplicativo é criado durante o tempo de vida de um processo.|  
 |`AppDomainUnLoad_V1`|157|Gerado sempre que um domínio do aplicativo é destruído durante o tempo de vida de um processo.|  
 |`AppDomainDCStart_V1`|157|Enumera os domínios de aplicativo durante um encerramento inicial.|  
 |`AppDomainDCEnd_V1`|158|Enumera os domínios de aplicativo durante um encerramento final.|  
@@ -213,4 +213,5 @@ ms.locfileid: "54578998"
  Eventos de intervalo do módulo são acionados em qualquer nível de ETW maior ou igual a 4 e são classificados como eventos informativos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)

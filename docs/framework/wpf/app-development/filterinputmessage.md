@@ -5,12 +5,12 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: 65d7795b6c4d8f1386ac9a74772fe8b76bb47622
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bd696752a287a78533d55c0fd3ad9986a32bd180
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111313"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 Chamado pelo PresentationHost.exe sempre que uma mensagem é recebida, a menos que E_NOTIMPL seja retornado.  
@@ -43,4 +43,5 @@ HRESULT FilterInputMessage( [in] MSG* pMsg ) ;
  O aplicativo hospedado recebe mensagens de entrada não processada registrando com o conjunto de dispositivos de entrada não processada (dispositivos de interface humana) retornado pelo [GetRawInputDevices](getrawinputdevices.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Mensagem WM_INPUT](/windows/desktop/inputdev/wm-input)

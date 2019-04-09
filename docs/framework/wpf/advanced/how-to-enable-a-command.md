@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-ms.openlocfilehash: a24a7a31154de58051677ba41496fcf4da3f2568
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bf01066a35672e1996f193abc6d76153e5e9dd46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181695"
 ---
 # <a name="how-to-enable-a-command"></a>Como: Habilitar um comando
 O exemplo a seguir demonstra como usar comandos em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  O exemplo mostra como associar um <xref:System.Windows.Input.RoutedCommand> para um <xref:System.Windows.Controls.Button>, criar um <xref:System.Windows.Input.CommandBinding>e criar manipuladores de eventos que implementam o <xref:System.Windows.Input.RoutedCommand>.  Para obter mais informações sobre comandos, consulte [Visão geral de comandos](commanding-overview.md).  
@@ -40,4 +40,5 @@ O exemplo a seguir demonstra como usar comandos em [!INCLUDE[TLA#tla_winclient](
  [!code-vb[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de comandos](commanding-overview.md)
+
+- [Visão geral dos comandos](commanding-overview.md)

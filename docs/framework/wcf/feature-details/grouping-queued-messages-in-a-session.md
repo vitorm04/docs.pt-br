@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115265"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Agrupamento de mensagens em fila em uma sessão
 Windows Communication Foundation (WCF) oferece uma sessão que lhe permite agrupar um conjunto de mensagens relacionadas juntas para processamento por um único aplicativo de recebimento. As mensagens que fazem parte de uma sessão devem ser parte da mesma transação. Como todas as mensagens fazem parte da mesma transação, se uma mensagem falhar ao ser processada toda a sessão será revertida. As sessões têm comportamentos semelhantes em relação a filas e filas suspeitas. O tempo para a propriedade de vida (TTL) definida em uma associação enfileirada configurada para sessões é aplicado à sessão como um todo. Se apenas algumas das mensagens da sessão são enviadas antes que o TTL expire, toda a sessão é colocada na fila de inatividade. Da mesma forma, quando mensagens em uma sessão não conseguir ser enviadas para um aplicativo da fila de aplicativos, toda a sessão é colocada na fila de mensagens suspeitas (se disponível).  
@@ -76,15 +76,12 @@ Windows Communication Foundation (WCF) oferece uma sessão que lhe permite agrup
 ### <a name="code-for-the-service"></a>Código do serviço  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
  [!code-vb[S_Msmq_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/service.vb#1)]  
-  
-  
-  
+
 ### <a name="code-for-the-client"></a>Código do cliente  
  [!code-csharp[S_Msmq_Session#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/client.cs#3)]
  [!code-vb[S_Msmq_Session#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/client.vb#3)]  
-  
-  
-  
+
 ## <a name="see-also"></a>Consulte também
+
 - [Sessões e filas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)

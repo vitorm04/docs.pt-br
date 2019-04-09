@@ -2,12 +2,12 @@
 title: ServiceDescription and WSDL Reference
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182878"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription and WSDL Reference
 Este tópico descreve como o Windows Communication Foundation (WCF) mapeia documentos de descrição linguagem WSDL (Web Services) para e de <xref:System.ServiceModel.Description.ServiceDescription> instâncias.  
@@ -152,4 +152,5 @@ Este tópico descreve como o Windows Communication Foundation (WCF) mapeia docum
 |`Name, ContractDescription.Name, OperationDescription.Name,`|Usado para derivar a `wsdl:message` /@name valor para a mensagem de falha.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Description>

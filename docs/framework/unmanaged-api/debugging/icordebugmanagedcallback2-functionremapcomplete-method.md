@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5f4c9b6afd9b0a7a43c279c9a070740100d8f86
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 515d434e8d8f1c99cf5052ef9a2f1e098f6021b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140550"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>Método ICorDebugManagedCallback2::FunctionRemapComplete
 Notifica o depurador para que a execução de código mudou para uma nova versão de uma função editada.  
@@ -60,5 +60,6 @@ HRESULT FunctionRemapComplete (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
 - [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

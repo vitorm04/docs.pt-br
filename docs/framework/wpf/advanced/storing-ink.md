@@ -11,12 +11,12 @@ helpviewer_keywords:
 - retrieving ink [WPF]
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
-ms.openlocfilehash: aec89286cfac9b0a315dc2d00135543511b2d1ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4089aa7942105c14eb628c75edb7f53ffacfaeb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182332"
 ---
 # <a name="storing-ink"></a>Armazenando tinta
 O <xref:System.Windows.Ink.StrokeCollection.Save%2A> métodos oferecem suporte para armazenar a tinta em tinta serializada Format (ISF). Construtores para o <xref:System.Windows.Ink.StrokeCollection> classe dão suporte para a leitura de dados de tinta.  
@@ -35,5 +35,6 @@ O <xref:System.Windows.Ink.StrokeCollection.Save%2A> métodos oferecem suporte p
  [!code-vb[DigitalInkTopics#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.InkCanvas>
 - [Windows Presentation Foundation](../index.md)

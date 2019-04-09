@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115070"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Compartilhando loops de mensagem entre Win32 e WPF
 Este tópico descreve como implementar um loop de mensagem para interoperação com [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], usando existente de exposição de loop em mensagem <xref:System.Windows.Threading.Dispatcher> ou criando um loop de mensagem separado no [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] lado de seu código de interoperação.  
@@ -62,8 +62,9 @@ Este tópico descreve como implementar um loop de mensagem para interoperação 
  Uma mensagem que vai para o coletor de teclado não pode ser enviada ao HWND se você tiver adicionado ganchos para aquela mensagem usando o <xref:System.Windows.Interop.HwndSource.AddHook%2A> método. A mensagem pode ser sido tratada no nível de bomba de mensagens diretamente e não enviada para a função `DispatchMessage`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
+- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
 - [Modelo de threading](threading-model.md)
 - [Visão geral da entrada](input-overview.md)

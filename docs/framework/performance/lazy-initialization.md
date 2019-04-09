@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182293"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
 *Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  
@@ -23,7 +23,7 @@ ms.locfileid: "54492943"
   
 -   Quando você tem um objeto cuja criação é dispendiosa e você deseja adiar a criação até após a conclusão de outras operações dispendiosas. Por exemplo, suponha que seu programa carrega várias instâncias de objeto quando ele é iniciado, mas apenas algumas delas são necessárias imediatamente. Você pode melhorar o desempenho de inicialização do programa, adiando a inicialização dos objetos que não são necessários até que os objetos necessários tenham sido criados.  
   
- Embora você possa escrever seu próprio código para executar a inicialização lenta, recomendamos que você use <xref:System.Lazy%601> em vez disso. <xref:System.Lazy%601> e seus tipos relacionados também dão suporte a segurança do thread e fornecem uma política de propagação de exceção consistente.  
+ Embora você possa escrever seu próprio código para executar a inicialização lenta, recomendamos que você use <xref:System.Lazy%601> em vez disso. <xref:System.Lazy%601> e seus tipos relacionados também dão suporte a acesso thread-safe e fornecem uma política de propagação de exceção consistente.  
   
  A tabela a seguir lista os tipos que o .NET Framework versão 4 fornece para permitir a inicialização lenta em cenários diferentes.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54492943"
   
  Alguns construtores <xref:System.Lazy%601> têm um parâmetro <xref:System.Threading.LazyThreadSafetyMode> chamado `mode`. Esses construtores fornecem um modo adicional de acesso thread-safe. A tabela a seguir mostra como o acesso thread-safe de um objeto <xref:System.Lazy%601> é afetado pelos parâmetros de construtor que especificam o acesso thread-safe. Cada construtor tem no máximo um desses parâmetros.  
   
-|Acesso thread-safe do objeto|Parâmetro de `mode` `LazyThreadSafetyMode`|Parâmetro `isThreadSafe` booliano|Sem parâmetros de acesso thread-safe|  
+|Acesso thread-safe do objeto|`LazyThreadSafetyMode` `mode` parâmetro|Parâmetro `isThreadSafe` booliano|Sem parâmetros de acesso thread-safe|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Totalmente thread-safe; apenas um thread por vez tenta inicializar o valor.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Sim.|  
 |Não é thread-safe.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Não aplicável.|  
@@ -140,7 +140,7 @@ ms.locfileid: "54492943"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variáveis locais de thread em Parallel.For e ForEach  
- Quando você usa o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou o método <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar por fontes de dados em paralelo, você pode usar as sobrecargas que têm suporte interno para dados locais de thread. Esses métodos, a localidade do thread é obtida usando delegados locais para criar, acessar e limpar os dados. Para obter mais informações, confira [Como: Escrever um Loop Parallel. for com variáveis locais de Thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [como: Escrever um Loop Parallel. ForEach com variáveis locais para a partição](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Quando você usa o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou o método <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar por fontes de dados em paralelo, você pode usar as sobrecargas que têm suporte interno para dados locais de thread. Esses métodos, a localidade do thread é obtida usando delegados locais para criar, acessar e limpar os dados. Para obter mais informações, confira [Como: Gravar um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Como: Gravar um loop Parallel.ForEach com variáveis locais de partição](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Usando inicialização lenta para cenários de baixa sobrecarga  
  Em cenários em que você precisa fazer inicialização lenta de um grande número de objetos, você pode decidir que encapsular cada objeto em um <xref:System.Lazy%601> requer memória ou recursos de computação demais. Ou então, você pode ter requisitos rigorosos para como a inicialização lenta é exposta. Nesses casos, você pode usar os métodos `static` (`Shared` no Visual Basic) da classe <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> para fazer inicialização lenta de cada objeto sem encapsulá-lo em uma instância de <xref:System.Lazy%601>.  
@@ -153,7 +153,8 @@ ms.locfileid: "54492943"
  Neste exemplo, observe que o procedimento de inicialização é invocado em cada iteração do loop. Em cenários com vários threads, o primeiro thread a invocar o procedimento de inicialização é aquele cujo valor é visto por todos os threads. Threads posteriores também chamam o procedimento de inicialização, mas os resultados não são usados. Se esse tipo de condição de corrida potencial não é aceitável, use a sobrecarga de <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> que usa um argumento booliano e um objeto de sincronização.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)
 - [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)
-- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Como: Executar a inicialização lenta de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Biblioteca de tarefas paralelas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Como: executar a inicialização lenta de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

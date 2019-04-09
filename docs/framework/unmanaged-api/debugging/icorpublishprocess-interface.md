@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19bd34f95e17094a89e4929a5b6ae936afe39885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08dfa3ddbfd9cffdb0cb88d0325e5703a854668a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182956"
 ---
 # <a name="icorpublishprocess-interface"></a>Interface ICorPublishProcess
 Fornece métodos que acessam informações a serem exibidos sobre um processo.  
@@ -45,5 +45,6 @@ Fornece métodos que acessam informações a serem exibidos sobre um processo.
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Coclass CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

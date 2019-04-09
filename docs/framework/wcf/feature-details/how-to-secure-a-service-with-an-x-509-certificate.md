@@ -1,18 +1,18 @@
 ---
-title: 'Como: Proteger um serviço com um certificado X.509'
+title: 'Como: proteger um serviço com um certificado X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6757d6375cbe1662b8bd7beb8a7562be166bc414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181500"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Como: Proteger um serviço com um certificado X.509
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Como: proteger um serviço com um certificado X.509
 Proteger um serviço com um certificado X.509 é uma técnica básica que usam a maioria das ligações no Windows Communication Foundation (WCF). Este tópico explica as etapas de configuração de um serviço auto-hospedado com um certificado X.509.  
   
  Um pré-requisito é um certificado válido que pode ser usado para autenticar o servidor. O certificado deve ser emitido para o servidor por uma autoridade de certificação confiável. Se o certificado não é válido, qualquer tentativa de usar o serviço de cliente não confiará o serviço e, consequentemente, nenhuma conexão será feita. Para obter mais informações sobre como usar certificados, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -83,4 +83,5 @@ Proteger um serviço com um certificado X.509 é uma técnica básica que usam a
 -   <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
