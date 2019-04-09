@@ -2,12 +2,12 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: 6eed4e8c549bccb06d8d425b084554a2ec7a1183
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272754"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113029"
 ---
 # <a name="bindingextensions"></a>\<bindingExtensions>
 Esta seção permite o uso de uma associação definida pelo usuário de um computador ou arquivo de configuração do aplicativo. Você pode adicionar uma associação definida pelo usuário a essa coleção usando o `add` palavra-chave e a configuração o `type` atributo do elemento para uma associação definida pelo usuário, bem como o `name` atributo para o nome do usuário de associação definida pelo.  
@@ -42,4 +42,5 @@ Esta seção permite o uso de uma associação definida pelo usuário de um comp
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
