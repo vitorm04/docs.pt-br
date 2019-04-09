@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir o texto exibido pelo controle de um Windows Forms'
+title: 'Como: Definir o texto exibido por um controle do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 8ebb39e4e9337ede0dc8c7f5569ea27d8cfafd26
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9bf2077f10648dbe3ebf214bbbf9546cbb398c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096180"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Como: Definir o texto exibido pelo controle de um Windows Forms
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Como: Definir o texto exibido por um controle do Windows Forms
 Controles dos Windows Forms normalmente exibem algum texto que está relacionado à função primária do controle. Por exemplo, um <xref:System.Windows.Forms.Button> controle normalmente exibe uma legenda que indica qual ação será executada quando o botão é clicado. Para todos os controles, você pode definir ou retornar o texto usando o <xref:System.Windows.Forms.Control.Text%2A> propriedade. Você pode alterar a fonte usando o <xref:System.Windows.Forms.Control.Font%2A> propriedade. Você também pode definir o texto usando o designer.  Consulte também [como: Criar chaves de acesso para controles usando o Designer de formulários do Windows](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [como: Definir o texto exibido por um Windows Forms usando o Designer de controle](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [como: Definir a imagem exibida por um Windows Forms usando o Designer de controle](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Como definir o texto exibido por um controle de forma programática  
@@ -72,6 +72,7 @@ Controles dos Windows Forms normalmente exibem algum texto que está relacionado
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Como: Criar chaves de acesso para controles dos Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Como: Responder a cliques de botão do Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Como: Criar chaves de acesso para controles do Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Como: Responder a cliques no botão do Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

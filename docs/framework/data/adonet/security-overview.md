@@ -2,12 +2,12 @@
 title: Segurança 2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089855"
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que um desenvolvedor pode garantir que um aplicativo está protegido contra todos os ataques, porque é impossível prever quais tipos de novas tecnologias de ataques futuros trará. Por outro lado, apenas porque ninguém tem falhas de segurança ainda descobertos (ou publicado) em um sistema não significa que nenhum existir ou podem existir. Você precisa planejar a segurança durante a fase de design do projeto, bem como para planejar como segurança será mantida durante a vida útil do aplicativo.  
@@ -88,7 +88,7 @@ Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que u
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)|Fornece uma visão geral de segurança do SQL Server com cenários de aplicativos que fornecem diretrizes para criar aplicativos ADO.NET seguros que direcionam SQL Server.|  
+|[Segurança do SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Fornece uma visão geral de segurança do SQL Server com cenários de aplicativos que fornecem diretrizes para criar aplicativos ADO.NET seguros que direcionam SQL Server.|  
 |[Recomendações para estratégias de acesso a dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fornece recomendações para acessar dados e executar operações de banco de dados.|  
   
 ## <a name="security-policy-and-administration"></a>Diretiva de segurança e administração  
@@ -102,7 +102,8 @@ Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que u
 |[Práticas recomendadas de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Fornece links que descrevem como administrar a política de segurança.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+
+- [Protegendo aplicativos ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Segurança no .NET](../../../standard/security/index.md)
-- [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Segurança do SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

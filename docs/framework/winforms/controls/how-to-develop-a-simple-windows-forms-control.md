@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desenvolver um controle de formulários do Windows simples'
+title: 'Como: Desenvolver um controle simples do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 398ba4961f9f803ea12e4ddda16fee65ac99d1d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089349"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>Como: Desenvolver um controle de formulários do Windows simples
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Como: Desenvolver um controle simples do Windows Forms
 Esta seção explica as etapas principais para a criação de um controle personalizado dos Windows Forms. O controle simples desenvolvido neste passo a passo permite que o alinhamento de seu <xref:System.Windows.Forms.Control.Text%2A> propriedade a ser alterada. Ele não gera ou manipula eventos.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Para criar um controle personalizado simples  
@@ -103,5 +103,6 @@ Esta seção explica as etapas principais para a criação de um controle person
  [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Propriedades em controles do Windows Forms](properties-in-windows-forms-controls.md)
-- [Eventos em controles do Windows Forms](events-in-windows-forms-controls.md)
+
+- [Propriedades em controles dos Windows Forms](properties-in-windows-forms-controls.md)
+- [Eventos em controles dos Windows Forms](events-in-windows-forms-controls.md)

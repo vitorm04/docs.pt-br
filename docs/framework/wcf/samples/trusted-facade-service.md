@@ -2,12 +2,12 @@
 title: Serviço de fachada confiável
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 78eae4a632317e8d31c64cd3c249adc7994f0d86
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4b02928224f1cb96a25dc71941273625e7d9e5e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091545"
 ---
 # <a name="trusted-facade-service"></a>Serviço de fachada confiável
 Este exemplo de cenário demonstra como fluxo de informações de identidade do chamador de um serviço para outro usando o Windows Communication Foundation (WCF) infraestrutura de segurança.  
@@ -290,4 +290,3 @@ Press <ENTER> to terminate client.
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
-  

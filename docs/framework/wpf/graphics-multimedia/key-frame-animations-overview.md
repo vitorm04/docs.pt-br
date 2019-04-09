@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191575"
 ---
 # <a name="key-frame-animations-overview"></a>Visão geral das animações de quadro-chave
 Este tópico apresenta as animações de quadro-chave. As animações de quadro-chave permitem realizar animações usando mais de dois valores de destino e controlam o método de interpolação de uma animação.  
@@ -46,11 +46,11 @@ Este tópico apresenta as animações de quadro-chave. As animações de quadro-
   
  As classes de animação de quadro-chave pertencem ao <xref:System.Windows.Media.Animation> namespace e seguem Esta convenção de nomenclatura:  
   
- *\<Type>* `AnimationUsingKeyFrames`  
+ *\<tipo >* `AnimationUsingKeyFrames`  
   
  Em que *\<Type>* é o tipo de valor animado pela classe.  
   
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece as classes de animação de quadro-chave a seguir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece as seguintes classes de animação de quadro-chave.  
   
 |Tipo de propriedade|Classe de animação De/Para/Por correspondente|Métodos de interpolação com suporte|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -284,6 +284,7 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
 8.  Classifique os quadros-chave na ordem de tempo resolvido (chave primária) e ordem de declaração (chave secundária), ou seja, use uma classificação estável com base no quadro-chave resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>

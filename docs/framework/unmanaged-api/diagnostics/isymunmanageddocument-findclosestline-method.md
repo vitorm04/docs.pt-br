@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 760a6feb8400e60b7e14bf244d66c9026031e5dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ab7df9b77b1820f291c1b1873b4dfb39e326bc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193155"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>Método ISymUnmanagedDocument::FindClosestLine
 Retorna a linha mais próxima que é um ponto de sequência, considerando uma linha neste documento que pode ou não ser um ponto de sequência.  
@@ -46,4 +46,5 @@ HRESULT FindClosestLine(
  S_OK se o método for bem-sucedido; Caso contrário, um código de erro.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

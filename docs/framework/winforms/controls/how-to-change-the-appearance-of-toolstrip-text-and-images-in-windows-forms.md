@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alterar a aparência do texto da faixa de ferramentas e imagens no Windows Forms'
+title: 'Como: Alterar a aparência de texto e imagens de ToolStrip nos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: cd15e581e646f53ed56af654917c7543bf18617e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088464"
 ---
-# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Como: Alterar a aparência do texto da faixa de ferramentas e imagens no Windows Forms
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Como: Alterar a aparência de texto e imagens de ToolStrip nos Windows Forms
 Você pode controlar se o texto e imagens são exibidas em uma <xref:System.Windows.Forms.ToolStripItem> e como eles são alinhados relativos uns aos outros e a <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Para definir o que é exibido em um ToolStripItem  
@@ -76,7 +76,8 @@ Você pode controlar se o texto e imagens são exibidas em uma <xref:System.Wind
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStrip>
 - [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)
-- [Arquitetura de controle do ToolStrip](toolstrip-control-architecture.md)
+- [Arquitetura de controle ToolStrip](toolstrip-control-architecture.md)
 - [Resumo da tecnologia de ToolStrip](toolstrip-technology-summary.md)

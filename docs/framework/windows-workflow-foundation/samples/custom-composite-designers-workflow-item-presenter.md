@@ -2,12 +2,12 @@
 title: Designer de compostos personalizados - apresentador de item de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: d201dad45f4ed31d7c06f3302a9cdfbb01647722
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c1258a49ac3ef2227d520fe11f341819f8663a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089182"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Designer de compostos personalizados - apresentador de item de fluxo de trabalho
 O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chave no WF designer modelo de programação que permite a criação de um "soltar" onde uma atividade arbitrária pode ser colocada. Este exemplo mostra como criar um designer de atividade que surija tal uma "zona de descarte."
@@ -81,5 +81,6 @@ O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chav
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
-- [Desenvolvendo aplicativos com o Designer de Fluxo de Trabalho](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [Desenvolvendo aplicativos com designers de Fluxo de Trabalho](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

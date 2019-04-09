@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar e definir um renderizador personalizado para o controle ToolStrip nos Windows Forms'
+title: 'Como: Criar e definir um renderizador personalizado para o controle ToolStrip no Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: 379cb8862ce5dda5cfffc625cc72906cf6a2c305
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d8a85edf8c001b19191fdfd74d1f9ebdf87024ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195482"
 ---
-# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Como: Criar e definir um renderizador personalizado para o controle ToolStrip nos Windows Forms
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Como: Criar e definir um renderizador personalizado para o controle ToolStrip no Windows Forms
 <xref:System.Windows.Forms.ToolStrip> controles oferecem suporte fácil para temas e estilos. Você pode obter aparência e comportamento (aparência) completamente personalizados, configuração tanto a <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> propriedade ou o <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> propriedade para um renderizador personalizado.  
   
  Você pode atribuir renderizadores a cada indivíduo <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, ou <xref:System.Windows.Forms.StatusStrip> controle, ou você pode usar o <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> propriedade afete todos os objetos, definindo o <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> propriedade <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
@@ -82,9 +82,10 @@ ms.locfileid: "57721002"
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>
 - [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)
-- [Arquitetura de controle do ToolStrip](toolstrip-control-architecture.md)
+- [Arquitetura de controle ToolStrip](toolstrip-control-architecture.md)
 - [Resumo da tecnologia de ToolStrip](toolstrip-technology-summary.md)

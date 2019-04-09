@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197731"
 ---
 # <a name="drawings-how-to-topics"></a>Tópicos explicativos de desenhos
 Os tópicos nesta seção descrevem como usar <xref:System.Windows.Media.Drawing> objetos para desenhar formas, imagens ou texto.  
@@ -30,7 +30,8 @@ Os tópicos nesta seção descrevem como usar <xref:System.Windows.Media.Drawing
   [Usar um desenho como uma fonte de imagem](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Drawing>
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)
 - [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Elementos gráficos e multimídia](index.md)
+- [Gráficos e multimídia](index.md)

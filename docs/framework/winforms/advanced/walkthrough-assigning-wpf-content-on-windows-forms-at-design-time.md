@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Atribuindo conteúdo WPF nos Windows Forms em tempo de Design'
+title: 'Passo a passo: atribuir conteúdo WPF no Windows Forms na hora do design'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108674"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: Atribuindo conteúdo WPF nos Windows Forms em tempo de Design
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: atribuir conteúdo WPF no Windows Forms na hora do design
 Essa instrução passo a passo mostra como selecionar os tipos de controle do WPF (Windows Presentation Foundation) que você deseja exibir em seu formulário. Você pode selecionar qualquer tipo de controle WPF incluído no seu projeto.
 
  Nesta instrução passo a passo, as seguintes tarefas serão executadas:
@@ -97,8 +97,9 @@ Essa instrução passo a passo mostra como selecionar os tipos de controle do WP
 9. O controle `elementHost2` agora hospeda uma instância do tipo `UserControl1`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migração e interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
-- [Usando Controles do WPF](using-wpf-controls.md)
-- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Usando controles WPF](using-wpf-controls.md)
+- [Criar XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

@@ -8,18 +8,16 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197380"
 ---
 # <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos
 Um nível de renderização define um nível de funcionalidade de hardware de gráficos e de desempenho para um dispositivo que executa um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
 
-  
 <a name="graphics_hardware"></a>   
 ## <a name="graphics-hardware"></a>Hardware de gráficos  
  Os recursos do hardware gráfico que mais afetam os níveis de camada de renderização são:  
@@ -58,7 +56,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
   
 |Recurso|Camada 1|Camada 2|  
 |-------------|------------|------------|  
-|Versão do [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]|Deve ser maior que ou igual a 9.0.|Deve ser maior que ou igual a 9.0.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|Deve ser maior que ou igual a 9.0.|Deve ser maior que ou igual a 9.0.|  
 |RAM de vídeo|Deve ser maior que ou igual a 60MB.|Deve ser maior que ou igual a 120MB.|  
 |Sombreador de pixel|Nível de versão deve ser maior que ou igual ao 2.0.|Nível de versão deve ser maior que ou igual ao 2.0.|  
 |Sombreador de vértice|Nenhum requisito.|Nível de versão deve ser maior que ou igual ao 2.0.|  
@@ -98,19 +96,19 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
  Os recursos a seguir podem ajudá-lo a analisar as características de desempenho de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ### <a name="graphics-rendering-registry-settings"></a>Configurações do Registro de renderização dos elementos gráficos  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece quatro configurações do Registro para controlar a renderização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece quatro configurações do registro para controlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderização:  
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
 |**Desabilitar Opção de Aceleração de hardware**|Especifica se a aceleração de hardware deve ser habilitada.|  
 |**Valor máximo de Multisample**|Especifica o grau de multisampling para suavização [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] de conteúdo.|  
 |**Driver de vídeo configuração de data necessário**|Especifica se o sistema desabilita a aceleração de hardware para drivers lançados antes de novembro de 2004.|  
-|**Use a opção de rasterizador de referência**|Especifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve utilizar o rasterizador de referência.|  
+|**Usar a opção de rasterizador de referência**|Especifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve utilizar o rasterizador de referência.|  
   
  Essas configurações podem ser acessadas por qualquer utilitário de configuração externo que sabe como referenciar as configurações do Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Editor do Registro. Para obter mais informações, consulte as [configurações de Registro de renderização de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Ferramentas de criação de perfil de desempenho do WPF  
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um pacote de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A tabela a seguir lista as ferramentas incluídas de perfis de desempenho na [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] ferramenta, pacote de desempenho WPF:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece um conjunto de ferramentas que permitem que você analise o comportamento de tempo de execução do seu aplicativo e determinar os tipos de otimizações de desempenho, que você pode aplicar de criação de perfil de desempenho. A tabela a seguir lista as ferramentas incluídas de perfis de desempenho na [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] ferramenta, pacote de desempenho WPF:  
   
 |Ferramenta|Descrição|  
 |----------|-----------------|  
@@ -130,9 +128,10 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 Janela principal da Ferramenta de diagnóstico do DirectX  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
+- [Conjunto de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Configurações do Registro de renderização dos elementos gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Dicas e truques de animação](../graphics-multimedia/animation-tips-and-tricks.md)

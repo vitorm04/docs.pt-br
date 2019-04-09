@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d89a531ad09e6865bd9c7dad00c1d8c1840fab8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188546"
 ---
 # <a name="iassemblycacheitem-interface"></a>Interface IAssemblyCacheItem
 Representa um único assembly no cache de assembly global.  
@@ -42,6 +42,7 @@ Representa um único assembly no cache de assembly global.
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Cache de assembly global](../../../../docs/framework/app-domains/gac.md)
+- [Cache de assemblies global](../../../../docs/framework/app-domains/gac.md)
 - [Interface IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

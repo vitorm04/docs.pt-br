@@ -2,12 +2,12 @@
 title: <msmqTransport>
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: 7f60fd43cb05749bf4b6ce31d4571e120c498235
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9bdaccd6183bc4ea58ed610b58aceddcb6ba0351
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106563"
 ---
 # <a name="msmqtransport"></a>\<msmqTransport>
 Faz com que um canal transferir mensagens sobre o transporte MSMQ quando ele é incluído em uma associação personalizada.  
@@ -87,13 +87,14 @@ Faz com que um canal transferir mensagens sobre o transporte MSMQ quando ele é 
  Este elemento de associação é o elemento de associação padrão usado pela associação padrão enfileiramento de mensagens (`netMsmqBinding`).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.MsmqTransportElement>
 - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Filas no WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)

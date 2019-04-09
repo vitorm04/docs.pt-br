@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar um contexto de segurança Token para uma sessão segura'
+title: 'Como: criar um token de contexto de segurança para uma sessão segura'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 3d37d3894f7e6a1146cc4f04f53512ef06911ac7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189333"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Como: Criar um contexto de segurança Token para uma sessão segura
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Como: criar um token de contexto de segurança para uma sessão segura
 Usando um token de contexto de segurança com monitoração de estado (SCT) em uma sessão segura, a sessão pode suportar o serviço que está sendo reciclado. Por exemplo, quando um SCT sem monitoração de estado é usado em uma sessão segura e redefinição de serviços de informações da Internet (IIS), os dados da sessão que está associados com o serviço são perdidos. Esses dados de sessão incluem um cache de token SCT. Portanto, na próxima vez que um cliente envia o serviço um SCT sem monitoração de estado, um erro será retornado, porque a chave que está associada com o SCT não pode ser recuperada. Se, no entanto, é usado um SCT com monitoração de estado, a chave que está associada com o SCT está contida dentro do SCT. Porque a chave é contida em SCT e, portanto, contida dentro da mensagem, a sessão segura não é afetada pelo serviço que está sendo reciclado. Por padrão, o Windows Communication Foundation (WCF) usa SCTs sem monitoração de estado em uma sessão segura. Este tópico fornece detalhes sobre como usar SCTs com monitoração de estado em uma sessão segura.  
   
 > [!NOTE]
@@ -110,4 +110,5 @@ Usando um token de contexto de segurança com monitoração de estado (SCT) em u
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

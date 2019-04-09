@@ -1,5 +1,5 @@
 ---
-title: 'Como: Exibir várias linhas no controle TextBox de formulários do Windows'
+title: 'Como: Exibir várias linhas no controle TextBox do Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - newline
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: d80a0262455b9b5e0e8535d88eb6292ab60e3ea8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190906"
 ---
-# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Como: Exibir várias linhas no controle TextBox de formulários do Windows
+# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Como: Exibir várias linhas no controle TextBox do Windows Forms
 Por padrão, os formulários do Windows <xref:System.Windows.Forms.TextBox> controle exibe uma única linha de texto e não exibe barras de rolagem. Se o texto for maior que o espaço disponível, apenas parte do texto ficará visível. Você pode alterar esse comportamento padrão definindo a <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, e <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propriedades com valores apropriados.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Exibir um retorno de carro no controle TextBox  
@@ -31,7 +31,7 @@ Por padrão, os formulários do Windows <xref:System.Windows.Forms.TextBox> cont
   
 1.  Defina a propriedade <xref:System.Windows.Forms.TextBox.Multiline%2A> como `true`. Se <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> é `true` (o padrão), em seguida, o texto no controle aparecerá como um ou mais parágrafos; caso contrário, ele será exibido como uma lista, em que algumas linhas poderão ser cortadas na borda do controle.  
   
-2.  Defina o <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propriedade para um valor apropriado.  
+2.  Defina a propriedade <xref:System.Windows.Forms.TextBox.ScrollBars%2A> com um valor apropriado.  
   
     |Valor|Descrição|  
     |-----------|-----------------|  
@@ -39,7 +39,7 @@ Por padrão, os formulários do Windows <xref:System.Windows.Forms.TextBox> cont
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Use esse valor se você deseja exibir uma lista de linhas, algumas das quais podem ser maiores que a largura do <xref:System.Windows.Forms.TextBox> controle.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|Use esse valor se a lista pode ser maior que a altura do controle.|  
   
-3.  Defina o <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> propriedade para um valor apropriado.  
+3.  Defina a propriedade <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> com um valor apropriado.  
   
     |Valor|Descrição|  
     |-----------|-----------------|  
@@ -47,11 +47,12 @@ Por padrão, os formulários do Windows <xref:System.Windows.Forms.TextBox> cont
     |`true` (padrão)|A barra de rolagem horizontal não será exibida. Use esse valor se você escolheu <xref:System.Windows.Forms.ScrollBars.Vertical> barras de rolagem ou <xref:System.Windows.Forms.ScrollBars.None>, acima, para exibir um ou mais parágrafos.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.TextBox>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)
-- [Como: Controlar o ponto de inserção em um controle TextBox dos Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Como: Criar uma caixa de texto de senha com o controle TextBox dos Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Como: Controlar o ponto de inserção em um controle TextBox do Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Como: Criar uma caixa de texto de senha com o controle TextBox do Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Como: Criar uma caixa de texto somente leitura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Como: Inserir aspas em uma cadeia de caracteres](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Como: Selecione o texto no controle TextBox de formulários do Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Como: Selecionar texto no controle TextBox do Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [Controle TextBox](textbox-control-windows-forms.md)

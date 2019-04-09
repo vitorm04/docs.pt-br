@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-ms.openlocfilehash: 9b280bf86f12b406582cb2f534edb85618515d76
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 06508e1198736ccb1cbda41641dff4bc634ef82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194403"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Como: Obter ou definir propriedades de posicionamento da tela
 Este exemplo mostra como usar os métodos de posicionamento a <xref:System.Windows.Controls.Canvas> elemento para posicionar conteúdo filho. Este exemplo usa conteúdo em um <xref:System.Windows.Controls.ListBoxItem> para representar valores de posicionamento e converte os valores em instâncias de <xref:System.Double>, que é um argumento requerido para posicionamento. Os valores são, em seguida, convertidos de volta em cadeias de caracteres e exibidos como texto em uma <xref:System.Windows.Controls.TextBlock> elemento usando o <xref:System.Windows.Controls.Canvas.GetLeft%2A> método.  
@@ -30,6 +30,7 @@ Este exemplo mostra como usar os métodos de posicionamento a <xref:System.Windo
  [!code-vb[CanvasPositioningProperties#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.ListBoxItem>
 - <xref:System.Windows.LengthConverter>

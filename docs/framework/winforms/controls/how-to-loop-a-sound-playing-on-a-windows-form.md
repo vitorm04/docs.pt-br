@@ -1,5 +1,5 @@
 ---
-title: 'Como: Loop de um som tocado em um formulário do Windows'
+title: 'Como: Fazer Loop de um Som Tocado em um Formulário do Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188507"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Como: Loop de um som tocado em um formulário do Windows
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Como: Fazer Loop de um Som Tocado em um Formulário do Windows
 O exemplo de código a seguir toca um som repetidamente. Quando o código a `stopPlayingButton_Click` manipulador de eventos é executado, nenhum som é interrompido em reprodução no momento. Se nenhum som estiver em execução, nada acontece.  
   
 ## <a name="example"></a>Exemplo  
@@ -54,6 +54,7 @@ O exemplo de código a seguir toca um som repetidamente. Quando o código a `sto
  Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo. Por exemplo, o arquivo Form1.vb pode não ser um arquivo de código-fonte do Visual Basic. Verifique todas as entradas antes de usar os dados no seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Como: Reproduzir um som de um formulário do Windows](how-to-play-a-sound-from-a-windows-form.md)
+- [Como: Reproduzir um som de um Windows Form](how-to-play-a-sound-from-a-windows-form.md)
 - [Visão geral da classe SoundPlayer](soundplayer-class-overview.md)

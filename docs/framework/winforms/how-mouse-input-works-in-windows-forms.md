@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203009"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Como a entrada do mouse funciona no Windows Forms
 Receber e manipular entradas de mouse é uma parte importante qualquer aplicativo do Windows. Você pode manipular eventos de mouse para executar uma ação em seu aplicativo ou usar informações sobre a localização do mouse para executar testes de clique ou outras ações. Além disso, é possível alterar a maneira como os controles em seu aplicativo manipulam as entradas de mouse. Este tópico descreve esses eventos de mouse de forma detalhada, bem como obter e alterar configurações do sistema para o mouse. Para obter mais informações sobre os dados fornecidos com os eventos de mouse e a ordem em que os eventos de clique do mouse são gerados, consulte [Eventos de mouse nos Windows Forms](mouse-events-in-windows-forms.md).  
@@ -53,6 +53,7 @@ Receber e manipular entradas de mouse é uma parte importante qualquer aplicativ
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Obtém o número de linhas a rolar quando o botão de rolagem do mouse é girado.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Captura do mouse nos Windows Forms](mouse-capture-in-windows-forms.md)
-- [Ponteiros do mouse nos Windows Forms](mouse-pointers-in-windows-forms.md)
+
+- [Entrada do mouse em um aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Captura do mouse no Windows Forms](mouse-capture-in-windows-forms.md)
+- [Ponteiros do mouse no Windows Forms](mouse-pointers-in-windows-forms.md)

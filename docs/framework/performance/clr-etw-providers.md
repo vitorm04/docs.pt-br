@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188598"
 ---
 # <a name="clr-etw-providers"></a>Provedores ETW no CLR
 O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de execução e o provedor de encerramento.  
@@ -92,4 +92,5 @@ O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de exec
  Uma ferramenta pode executar as etapas 2 e 3 (iniciar uma sessão de encerramento e, em seguida, terminar a criação de perfil), em vez de desativar a criação de perfil imediatamente quando um usuário solicitar que a criação de perfil seja interrompida. Uma ferramenta também pode executar a etapa 4.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

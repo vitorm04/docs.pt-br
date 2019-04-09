@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186661"
 ---
 # <a name="toolstrip-control-architecture"></a>Arquitetura de controle ToolStrip
 O <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripItem> classes fornecem um sistema flexível e extensível para exibir itens de menu, status e barra de ferramentas. Essas classes estão contidas na <xref:System.Windows.Forms> namespace e eles todos geralmente são nomeados com o prefixo "ToolStrip" (como <xref:System.Windows.Forms.ToolStripOverflow>) ou com o sufixo "Strip" (como <xref:System.Windows.Forms.MenuStrip>).  
@@ -316,7 +316,7 @@ O <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripIt
  <xref:System.Windows.Forms.ToolStripMenuItem> é um <xref:System.Windows.Forms.ToolStripDropDownItem> que funciona com <xref:System.Windows.Forms.ToolStripDropDownMenu> e <xref:System.Windows.Forms.ContextMenuStrip> para lidar com a disposição de coluna, layout e realce especial para menus.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> é semelhante a <xref:System.Windows.Forms.ToolStripButton>, mas ele mostra uma área suspensa quando o usuário clica nele. Ocultar ou mostrar a seta suspensa definindo o <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> propriedade. <xref:System.Windows.Forms.ToolStripDropDownButton> hosts de um <xref:System.Windows.Forms.ToolStripOverflowButton> que exibe itens que estouram o <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> é semelhante a <xref:System.Windows.Forms.ToolStripButton>, mas ele mostra uma área suspensa quando o usuário clica nele. Ocultar ou mostrar a seta suspensa definindo o <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> propriedade. <xref:System.Windows.Forms.ToolStripDropDownButton> Hosts de um <xref:System.Windows.Forms.ToolStripOverflowButton> que exibe itens que estouram o <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> combina um botão e a funcionalidade do botão suspenso.  
@@ -377,6 +377,7 @@ O <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripIt
 -   <xref:System.Windows.Forms.ToolStripPanel> Fornece espaço para mover e organizar <xref:System.Windows.Forms.ToolStrip> controles. Você pode usar somente um painel se preferir, e <xref:System.Windows.Forms.ToolStripPanel> funciona bem em cenários MDI.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Resumo da tecnologia de ToolStrip](toolstrip-technology-summary.md)
 - [Controle ToolStrip](toolstrip-control-windows-forms.md)

@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1c576bd4a7bc29be2647a858a680b91e602d2c4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f82303a3d38e7a5baaf1c3edcc41518228360d34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088451"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>Função ClrCreateManagedInstance
 Cria uma instância do tipo gerenciado especificado.  
@@ -65,5 +65,6 @@ STDAPI ClrCreateManagedInstance (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+
+- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
 - [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

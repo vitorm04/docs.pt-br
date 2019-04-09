@@ -1,5 +1,5 @@
 ---
-title: 'Como: Posicionar o cursor no início ou no término do texto em um controle TextBox'
+title: 'Como: Posicionar o cursor no início ou no fim do texto em um controle TextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - TextBox control [WPF], positioning cursor
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
-ms.openlocfilehash: e4058518e4eb56e1cd9d5fdafd792d8f8d3b77ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3d7da5daf09e06938b8366e0f5f98a599cae4571
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186219"
 ---
-# <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Como: Posicionar o cursor no início ou no término do texto em um controle TextBox
+# <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Como: Posicionar o cursor no início ou no fim do texto em um controle TextBox
 Este exemplo mostra como posicionar o cursor no início ou no final do conteúdo de texto de um <xref:System.Windows.Controls.TextBox> controle.  
   
 ## <a name="example"></a>Exemplo  
@@ -37,5 +37,6 @@ Este exemplo mostra como posicionar o cursor no início ou no final do conteúdo
  [!code-vb[TextBox_MiscCode#_CursorToEnd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_cursortoend)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de TextBox](textbox-overview.md)
 - [Visão geral de RichTextBox](richtextbox-overview.md)

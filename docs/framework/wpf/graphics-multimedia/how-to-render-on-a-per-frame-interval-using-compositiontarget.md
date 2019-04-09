@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: 919e39dbe96a1a72ce517d59dcb239636f5aa692
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089404"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Como: Renderizar em um intervalo por quadro usando CompositionTarget
 O mecanismo de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece vários recursos para criar animações baseadas em quadros. No entanto, há cenários de aplicativo em que é necessário um controle mais refinado da renderização por quadro. O <xref:System.Windows.Media.CompositionTarget> objeto fornece a capacidade de criar animações personalizadas com base em um retorno de chamada por quadro.  
@@ -41,5 +41,6 @@ O mecanismo de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
  Adicionando ou removendo uma renderização <xref:System.EventHandler> delegado enquanto o evento está disparando será adiado até depois que o evento tenha terminado de acionamento. Isso é consistente com como <xref:System.MulticastDelegate>-eventos com base são manipulados no tempo de execução do CLR (Common Language). Observe também que não há uma garantia de que os eventos de renderização serão chamados em uma ordem específica. Se você tiver vários <xref:System.EventHandler> delegados que se baseiam em uma ordem específica, você deve registrar um único <xref:System.Windows.Media.CompositionTarget.Rendering> eventos e multiplexar os delegados no item correto ordem por conta própria.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.CompositionTarget>
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)

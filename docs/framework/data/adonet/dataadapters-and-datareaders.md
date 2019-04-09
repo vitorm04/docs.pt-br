@@ -2,12 +2,12 @@
 title: DataAdapters e DataReaders
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189657"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters e DataReaders
 Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados somente leitura, somente encaminhamento de um banco de dados. Os resultados são retornados como a consulta é executada e são armazenados no buffer de rede no cliente até que você os solicite usando o **leitura** método o **DataReader**. Usando o **DataReader** pode aumentar o desempenho do aplicativo recuperando dados assim que ele está disponível e (por padrão) armazenando apenas uma linha por vez na memória, reduzindo a sobrecarga do sistema.  
@@ -20,13 +20,13 @@ Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados soment
  [Recuperando dados usando um DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
  Descreve o ADO.NET **DataReader** objeto e como usá-lo para retornar um fluxo de resultados de uma fonte de dados.  
   
- [Populating a DataSet from a DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) (Preenchendo um DataSet por meio de um DataAdapter)  
+ [Populando um DataSet a partir de um DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Descreve como preencher um `DataSet` com tabelas, colunas, e linhas usando um `DataAdapter`.  
   
  [Parâmetros DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  Descreve como usar parâmetros com as propriedades de comando de um `DataAdapter` incluindo como mapear o conteúdo de uma coluna em um `DataSet` para um parâmetro de comando.  
   
- [Adding Existing Constraints to a DataSet](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md) (Adicionando restrições existentes a um DataSet)  
+ [Adicionar restrições existentes a um DataSet](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Descreve como adicionar as restrições existentes a um `DataSet`.  
   
  [Mapeamentos de DataTable e de DataColumn do DataAdapter](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
@@ -35,7 +35,7 @@ Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados soment
  [Paginação por um resultado de consulta](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
  Fornece um exemplo de como exibir os resultados de uma consulta como páginas de dados.  
   
- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)  
+ [Atualizando fontes de dados com DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  Descreve como usar um `DataAdapter` para resolver alterações em um `DataSet` de volta para o banco de dados.  
   
  [Manipulação de eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
@@ -45,8 +45,9 @@ Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados soment
  Descreve como melhorar o desempenho do aplicativo reduzindo o número de viagens de ida e volta ao SQL Server para aplicar atualizações do `DataSet`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [DataSets, DataTables, and DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [DataSets, DataTables e DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

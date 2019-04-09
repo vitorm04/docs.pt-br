@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 352951c4ee6a96e0bf91b583ad61b431f490a624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089908"
 ---
 # <a name="group-elements-in-a-sequence"></a>Agrupar os elementos em uma sequência
 O operador de <xref:System.Linq.Enumerable.GroupBy%2A> agrupa elementos de uma sequência. Os exemplos usam o base de dados Northwind.  
@@ -73,5 +73,6 @@ O operador de <xref:System.Linq.Enumerable.GroupBy%2A> agrupa elementos de uma s
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

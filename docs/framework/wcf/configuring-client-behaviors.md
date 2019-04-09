@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: bf65844cda195847989d1eb8ef752fe87c9de22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193649"
 ---
 # <a name="configuring-client-behaviors"></a>Configurando comportamentos do cliente
 Windows Communication Foundation (WCF) configura a comportamentos de duas maneiras: referindo-se às configurações de comportamento – que são definidas no `<behavior>` seção de um arquivo de configuração de aplicativo do cliente – ou programaticamente na chamada aplicativo. Este tópico descreve as duas abordagens.  
@@ -52,4 +52,5 @@ Windows Communication Foundation (WCF) configura a comportamentos de duas maneir
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>Consulte também
-- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+
+- [\<comportamentos >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

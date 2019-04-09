@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f81b671721e1416ab9717442d4d7fc727b938ee2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7628aa0ad10398f92d475c4c776810e13fac22b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107543"
 ---
 # <a name="icordebugcontroller-interface"></a>Interface ICorDebugController
 
@@ -33,7 +33,7 @@ Representa um escopo, um <xref:System.Diagnostics.Process> ou um <xref:System.Ap
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|Esse método é obsoleto.|  
 |`ICorDebugController::CommitChanges`|Esse método é obsoleto.|  
-|[Método continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|Retoma a execução de threads gerenciados após uma chamada para [icordebugcontroller:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).|  
+|[Método Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|Retoma a execução de threads gerenciados após uma chamada para [icordebugcontroller:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).|  
 |[Método Detach](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-detach-method.md)|Desanexa o depurador do domínio de aplicativo ou processo.|  
 |[Método EnumerateThreads](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)|Obtém um enumerador para os Active Directory threads gerenciados no processo.|  
 |[Método HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)|Obtém um valor que indica se qualquer retorno de chamada gerenciado atualmente na fila para o thread especificado.|  
@@ -58,4 +58,5 @@ Representa um escopo, um <xref:System.Diagnostics.Process> ou um <xref:System.Ap
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

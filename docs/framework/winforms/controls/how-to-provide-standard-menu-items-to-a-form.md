@@ -1,5 +1,5 @@
 ---
-title: 'Como: Fornecer itens de Menu padrão para um formulário'
+title: 'Como: Fornecer itens de menu padrão para um formulário'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: 3cf53a6934190cd0e7cd7e18bc57fb5fbfb57a86
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb101c57cfb453e0419357741c5cf42dc29221b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086709"
 ---
-# <a name="how-to-provide-standard-menu-items-to-a-form"></a>Como: Fornecer itens de Menu padrão para um formulário
+# <a name="how-to-provide-standard-menu-items-to-a-form"></a>Como: Fornecer itens de menu padrão para um formulário
 Você pode fornecer um menu padrão para os formulários com o <xref:System.Windows.Forms.MenuStrip> controle.  
   
  Há suporte abrangente para este recurso no Visual Studio.  
@@ -37,6 +37,7 @@ Você pode fornecer um menu padrão para os formulários com o <xref:System.Wind
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>

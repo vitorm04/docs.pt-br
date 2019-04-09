@@ -1,5 +1,5 @@
 ---
-title: 'Como: Imprimir um arquivo de texto de várias páginas nos Windows Forms'
+title: 'Como: imprimir um arquivo de texto de várias páginas nos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: f2f91fbaab7fb999a2243e13be9af0bbff0e41ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 69fe58292eda2bb283488252f571d3c3691f6392
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192167"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Como: Imprimir um arquivo de texto de várias páginas nos Windows Forms
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Como: imprimir um arquivo de texto de várias páginas nos Windows Forms
 É muito comum aplicativos do Windows imprimirem texto. O <xref:System.Drawing.Graphics> classe fornece métodos para desenhar objetos (elementos gráficos ou texto) em um dispositivo, como uma tela ou impressora.  
   
 > [!NOTE]
@@ -61,6 +61,7 @@ ms.locfileid: "57714132"
 -   Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)
+- [Suporte à impressão no Windows Forms](windows-forms-print-support.md)

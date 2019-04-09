@@ -1,5 +1,5 @@
 ---
-title: Elemento <sharedListeners>
+title: <sharedListeners> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190792"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners> Element
 Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento.  Esses ouvintes não recebem os rastreamentos por padrão, e não é possível recuperar esses ouvintes em tempo de execução. Ouvintes identificados como ouvintes compartilhados podem ser adicionados à fontes ou rastreamentos por nome.  
@@ -89,6 +89,7 @@ Contém os ouvintes que podem ser referenciados por qualquer elemento de origem 
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Diagnostics.TraceListener>
 - [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [Ouvintes de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

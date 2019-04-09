@@ -2,12 +2,12 @@
 title: <clear> de <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: b20d5c1808bf41d1ecd6b3e3a61606ae45b0fbdd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 35d0391951204bd352918d3004f0cc4f9480b0e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090304"
 ---
 # <a name="clear-of-claimtyperequirements-element"></a>\<Limpar > de \<claimTypeRequirements > elemento
 Especifica que todos os tipos de declaração a serem removidos na credencial federada. Isso garante que a coleção começa vazia.  
@@ -44,6 +44,7 @@ Especifica que todos os tipos de declaração a serem removidos na credencial fe
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Especifica uma coleção de tipos de declaração exigidos. Cada elemento é do tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> Em um cenário federado, os serviços de estado os requisitos de credenciais de entrada. Por exemplo, as credenciais de entrada devem ter um determinado conjunto de tipos de declaração. Cada elemento nesta coleção Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer em uma credencial federada.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>

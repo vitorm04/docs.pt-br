@@ -2,12 +2,12 @@
 title: Atributos de ServiceModel e referência de ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: 3b1b10f34e300d77943a93d180b5be9e4a3366c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195339"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atributos de ServiceModel e referência de ServiceDescription
 O *árvore descrição* é a hierarquia de tipos (começando com o <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) que juntos descrevem todos os aspectos de um serviço. Windows Communication Foundation (WCF) usa uma árvore de descrição para criar um tempo de execução de serviço válido, para publicar a Web Services Description Language (WSDL), linguagem de definição de esquema XML (XSD) e declarações de política (metadados) sobre o serviço que os clientes podem usar para conectar e usar o serviço e para gerar várias representações de arquivo de código e a configuração dos valores de árvore de descrição.  
@@ -114,4 +114,5 @@ O *árvore descrição* é a hierarquia de tipos (começando com o <xref:System.
  Para obter mais informações sobre como os valores de árvore de descrição são convertidos em metadados, consulte [referência WSDL e ServiceDescription](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência WSDL e ServiceDescription](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+
+- [ServiceDescription and WSDL Reference](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

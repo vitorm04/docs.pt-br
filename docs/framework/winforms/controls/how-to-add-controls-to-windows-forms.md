@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar controles ao Windows Forms'
+title: 'Como: Adicionar Controles ao Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106477"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Como: Adicionar controles ao Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Como: Adicionar Controles ao Windows Forms
 A maioria dos formulários é projetada adicionando controles à superfície do formulário para definir uma interface do usuário (IU). Um *controle* é um componente em um formulário usado para exibir informações ou aceitar a entrada do usuário. Para obter mais informações sobre controles, consulte [Controles do Windows Forms](index.md).  
   
 > [!NOTE]
@@ -90,8 +90,9 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
     >  Você poderia expor seu computador local a um risco de segurança por meio da rede referenciando um `UserControl` mal-intencionado. Isso seria um problemas apenas no caso de uma pessoa mal-intencionada criar um controle personalizado prejudicial e você adicioná-lo por engano ao seu projeto.  
   
 ## <a name="see-also"></a>Consulte também
-- [Controles dos Windows Forms](index.md)
-- [Organizando Controles nos Windows Forms](arranging-controls-on-windows-forms.md)
+
+- [Controles de Windows Forms](index.md)
+- [Organizando controles nos Windows Forms](arranging-controls-on-windows-forms.md)
 - [Como: Redimensionar controles nos Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Como: Definir o texto exibido pelo controle de um Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Como: Definir o texto exibido por um controle do Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

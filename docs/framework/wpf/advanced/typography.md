@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: f9257414a90cd3d4f64653893c5fa6e19963ad3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195508"
 ---
 # <a name="typography"></a>Tipografia
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui suporte para apresentação avançada de conteúdo de texto. Texto no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é processado usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], que melhora a clareza e legibilidade do texto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também dá suporte à [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes, que fornecem funcionalidades adicionais além daqueles definidos pelo [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato.  
@@ -21,14 +21,15 @@ ms.locfileid: "57369546"
 ## <a name="in-this-section"></a>Nesta seção  
  [Tipografia no WPF](typography-in-wpf.md)  
  [Visão geral de ClearType](cleartype-overview.md)  
- [Configurações do Registro ClearType](cleartype-registry-settings.md)  
+ [Configurações do Registro de ClearType](cleartype-registry-settings.md)  
  [Desenhando texto formatado](drawing-formatted-text.md)  
  [Formatação de texto avançada](advanced-text-formatting.md)  
  [Fontes](fonts-wpf.md)  
  [Glifos](glyphs.md)  
- [Tópicos de instruções](typography-how-to-topics.md)  
+ [Tópicos explicativos ](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Documents.Typography>
 - [Documentos no WPF](documents-in-wpf.md)
 - [Recursos de fonte OpenType](opentype-font-features.md)

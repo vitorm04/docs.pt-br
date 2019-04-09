@@ -1,5 +1,5 @@
 ---
-title: Elemento <GCCpuGroup>
+title: <GCCpuGroup> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GCCpuGroup element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 85cfe57f7a3b8cfecfae4c4ae00efaea464e6120
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090336"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > elemento
 Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.  
@@ -73,6 +73,7 @@ Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Para desabilitar a coleta de lixo simultânea](gcconcurrent-element.md#to-disable-background-garbage-collection)

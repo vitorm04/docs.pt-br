@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar recursos de pesquisa a um controle ListView'
+title: 'Como: Adicionar Recursos de Pesquisa a um Controle ListView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c25349d4ab981d422ade93944f709c3068a7aba9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108544"
 ---
-# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Como: Adicionar recursos de pesquisa a um controle ListView
+# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Como: Adicionar Recursos de Pesquisa a um Controle ListView
 Muitas vezes, ao trabalhar com uma grande lista de itens em um <xref:System.Windows.Forms.ListView> controle, que você deseja oferecer recursos de pesquisa para o usuário. O <xref:System.Windows.Forms.ListView> controle oferece essa funcionalidade de duas maneiras diferentes: correspondência de texto e pesquisa de localização.  
   
  O <xref:System.Windows.Forms.ListView.FindItemWithText%2A> método permite que você execute uma pesquisa de texto em um <xref:System.Windows.Forms.ListView> na exibição de lista ou detalhes, dada uma cadeia de caracteres de pesquisa e um opcional Iniciando e encerrando o índice. Em contraste, o <xref:System.Windows.Forms.ListView.FindNearestItem%2A> método permite que você encontre um item em um <xref:System.Windows.Forms.ListView> no modo de exibição de ícone ou bloco, dado um conjunto de coordenadas x e y e uma direção de pesquisa.  
@@ -48,6 +48,7 @@ Muitas vezes, ao trabalhar com uma grande lista de itens em um <xref:System.Wind
  [!code-vb[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>

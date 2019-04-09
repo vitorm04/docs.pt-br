@@ -1,15 +1,15 @@
 ---
-title: 'Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation'
+title: 'Tarefa 1: Criar um aplicativo do Windows Presentation Foundation do Windows'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dae523714862ed36d36e65b51be62acff9b17f51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193389"
 ---
-# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarefa 1: Criar um aplicativo do Windows Presentation Foundation do Windows
 Nesta tarefa, você criará um aplicativo vazio do Windows Presentation Foundation (WPF) usando o modelo de aplicativo WPF Visual Studio e adicionar referências a apropriado [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] assemblies de fluxo de trabalho.  
   
 ### <a name="to-create-the-wpf-application-project"></a>Para criar o projeto de aplicativo de WPF  
@@ -43,5 +43,6 @@ Nesta tarefa, você criará um aplicativo vazio do Windows Presentation Foundati
 11. Consulte [tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md) para aprender a hospedar a tela de design do designer de fluxo de trabalho.  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedando novamente o Designer de Fluxo de Trabalho](rehosting-the-workflow-designer.md)
-- [Tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md)
+
+- [Hospedando novamente o designer de fluxo de trabalho](rehosting-the-workflow-designer.md)
+- [Tarefa 2: Hospedar o Designer de Fluxo de Trabalho](task-2-host-the-workflow-designer.md)

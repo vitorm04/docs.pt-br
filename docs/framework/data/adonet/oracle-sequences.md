@@ -2,12 +2,12 @@
 title: Sequências da Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 1646ae7c2732fe152c9028ac6f4c1e4cbba85520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192648"
 ---
 # <a name="oracle-sequences"></a>Sequências da Oracle
 O provedor de dados .NET Framework para Oracle fornece suporte para recuperar os principais valores do Oracle Sequence gerados pelo servidor depois de executar inserções usando o <xref:System.Data.OracleClient.OracleDataAdapter>.  
@@ -99,5 +99,6 @@ public void OracleSequence(String connectionString)
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Oracle and ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md) (Oracle e ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

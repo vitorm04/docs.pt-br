@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197146"
 ---
 # <a name="datagrid"></a>DataGrid
 O <xref:System.Windows.Controls.DataGrid> controle lhe permite exibir e editar dados de várias fontes diferentes, como de um banco de dados SQL, consulta LINQ ou qualquer outra fonte de dados vinculável. Para obter mais informações, consulte [Visão geral de origens da associação](../data/binding-sources-overview.md).  
@@ -49,14 +49,15 @@ O <xref:System.Windows.Controls.DataGrid> controle lhe permite exibir e editar d
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Passo a passo: Exibir dados de um banco de dados do SQL Server em um controle DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Descreve como configurar um novo projeto do WPF, adicione um elemento do Entity Framework, defina a fonte e exibir os dados em um <xref:System.Windows.Controls.DataGrid>.|  
-|[Como: Adicionar detalhes de linha para um controle DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Descreve como criar detalhes da linha para um <xref:System.Windows.Controls.DataGrid>.|  
-|[Como: Implementar validação com o controle DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Descreve como validar valores em <xref:System.Windows.Controls.DataGrid> células e linhas e comentários de validação de exibição.|  
-|[Comportamento padrão de teclado e mouse no controle DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Descreve como interagir com o <xref:System.Windows.Controls.DataGrid> controle usando o teclado e mouse.|  
-|[Como: Grupo, classificar e filtrar dados no controle DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Descreve como exibir dados em um <xref:System.Windows.Controls.DataGrid> de maneiras diferentes agrupando, classificando e filtrando os dados.|  
+|[Passo a passo: exibir dados de um banco de dados do SQL Server em um controle DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Descreve como configurar um novo projeto do WPF, adicione um elemento do Entity Framework, defina a fonte e exibir os dados em um <xref:System.Windows.Controls.DataGrid>.|  
+|[Como: adicionar detalhes de linha a um controle DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Descreve como criar detalhes da linha para um <xref:System.Windows.Controls.DataGrid>.|  
+|[Como: implementar validação com o controle DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Descreve como validar valores em <xref:System.Windows.Controls.DataGrid> células e linhas e comentários de validação de exibição.|  
+|[Teclado padrão e comportamento do mouse no controle DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Descreve como interagir com o <xref:System.Windows.Controls.DataGrid> controle usando o teclado e mouse.|  
+|[Como: agrupar, classificar e filtrar dados no controle DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Descreve como exibir dados em um <xref:System.Windows.Controls.DataGrid> de maneiras diferentes agrupando, classificando e filtrando os dados.|  
 |[Opções de dimensionamento no controle DataGrid](sizing-options-in-the-datagrid-control.md)|Descreve como controlar o dimensionamento automático e absoluto no <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.DataGrid>
 - [Estilo e modelagem](styling-and-templating.md)
 - [Visão geral da vinculação de dados](../data/data-binding-overview.md)

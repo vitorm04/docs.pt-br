@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parent-child tables [Windows Forms], displaying on Windows Forms
 - master-details lists [Windows Forms], creating
 ms.assetid: 99f6e876-3f7f-4139-9063-e36587c95b02
-ms.openlocfilehash: 1a3ae14ba1dee704b3502146006bfa9f5d1ae637
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ccd9354d623cf1b452bc3890b7fd9a5248cb69c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088789"
 ---
-# <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Como: Criar um formulário mestre/detalhes usando dois controles de Windows Forms DataGridView
+# <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Como: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms
 O exemplo de código a seguir cria um formulário mestre/detalhes usando dois <xref:System.Windows.Forms.DataGridView> controles associados a dois <xref:System.Windows.Forms.BindingSource> componentes. A fonte de dados é um <xref:System.Data.DataSet> que contém o `Customers` e `Orders` tabelas do banco de dados de exemplo Northwind do SQL Server juntamente com um <xref:System.Data.DataRelation> que relaciona as duas as `CustomerID` coluna.  
   
  Uma <xref:System.Windows.Forms.BindingSource> está associado ao pai `Customers` tabela no conjunto de dados. Esses dados são exibidos no mestre <xref:System.Windows.Forms.DataGridView> controle. O outro <xref:System.Windows.Forms.BindingSource> está associado ao primeiro conector de dados. O <xref:System.Windows.Forms.BindingSource.DataMember%2A> propriedade da segunda <xref:System.Windows.Forms.BindingSource> é definido como o <xref:System.Data.DataRelation> nome. Isso faz com que os detalhes associados <xref:System.Windows.Forms.DataGridView> controle para exibir as linhas do filho `Orders` tabela que correspondem à linha atual no mestre <xref:System.Windows.Forms.DataGridView> controle.  
@@ -38,8 +38,9 @@ O exemplo de código a seguir cria um formulário mestre/detalhes usando dois <x
  O armazenamento das informações confidenciais (tal como uma senha) dentro da cadeia de conexão pode afetar a segurança do aplicativo. O uso da Autenticação do Windows (também conhecida como segurança integrada) é uma maneira mais segura de controlar o acesso a um banco de dados. Para obter mais informações, consulte [Protegendo informações de conexão](../../data/adonet/protecting-connection-information.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Passo a passo: Criando um formulário mestre/detalhes usando dois controles de Windows Forms DataGridView](creating-a-master-detail-form-using-two-datagridviews.md)
-- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Passo a passo: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)
+- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Protegendo informações de conexão](../../data/adonet/protecting-connection-information.md)

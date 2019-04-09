@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d09877d9ca8dde601d2b515bce63bfdca53b6ab0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 784e58e0c5c2329705671580d53763f2ac30f0b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201345"
 ---
 # <a name="importfileex2-method"></a>Método ImportFileEx2
 Importa os assemblies e módulos não associados. Esse método é como [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), mas funciona mesmo se o arquivo que está sendo importado não existe no disco.  
@@ -73,6 +73,7 @@ HRESULT ImportFileEx2(
  Requer alink.h.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

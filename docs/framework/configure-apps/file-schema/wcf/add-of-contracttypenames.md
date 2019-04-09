@@ -2,12 +2,12 @@
 title: <add> De <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: fa67d2ec21494bb3d84861f4c2e2e39151aac28f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091311"
 ---
 # <a name="add-of-contracttypenames"></a>\<Adicionar > de \<contractTypeNames >
 Um elemento de configuração que especifica o nome do contrato de serviços que está sendo pesquisados e os critérios normalmente usados durante a pesquisa para um serviço. Se mais de um nome de contrato for especificado, somente pontos de extremidade correspondentes a todos os contratos responderá. Observe que no Windows Communication Foundation (WCF), um ponto de extremidade pode apenas suporta um contrato.  
@@ -61,6 +61,7 @@ Um elemento de configuração que especifica o nome do contrato de serviços que
 |[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Uma coleção de nomes de tipo de contrato.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Discovery.FindCriteria>
 - <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
 - <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>

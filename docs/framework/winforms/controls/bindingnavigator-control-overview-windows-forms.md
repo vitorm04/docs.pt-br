@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: b6413c8481a021afa34b7de228df14c109a50889
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ad63f622aae55cb4175eddc93ab5e086965a8fe8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109103"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Visão geral do controle BindingNavigator (Windows Forms)
 Você pode usar o <xref:System.Windows.Forms.BindingNavigator> controle para criar um meio padronizado para que os usuários a pesquisar e alterar dados em um formulário do Windows. Você usa frequentemente <xref:System.Windows.Forms.BindingNavigator> com o <xref:System.Windows.Forms.BindingSource> para permitir aos usuários percorrer os registros de dados em um formulário e interagir com os registros.  
@@ -43,6 +43,7 @@ Você pode usar o <xref:System.Windows.Forms.BindingNavigator> controle para cri
  Se os botões padrão não são adequados para seu aplicativo, ou se você precisar de botões adicionais para dar suporte a outros tipos de funcionalidade, você pode fornecer seu próprio <xref:System.Windows.Forms.ToolStrip> botões. Consulte também [como: Adicione carga, salvar, e botões de cancelamento para o Windows Forms controle BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - [Controle BindingNavigator](bindingnavigator-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Suporte a transações
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: f53a6081102991c73543b4cd76365f7e2c0faf89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196146"
 ---
 # <a name="transaction-support"></a>Suporte a transações
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a três diferentes modelos de transação. Veja a seguir esses modelos na ordem das verificações executadas.  
@@ -24,5 +24,6 @@ ms.locfileid: "54517195"
  Quando você chama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verifica se a chamada está no escopo de uma <xref:System.Transactions.Transaction> ou, se o `Transaction` propriedade (`IDbTransaction`) é definido como uma transação local iniciada pelo usuário. Caso não encontre nenhuma transação [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] inicia uma transação local (`IDbTransaction`) e o utiliza para executar os comandos SQL gerados. Quando todos os comandos SQL tiverem sido concluídos com êxito, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] confirma a transação local e retorna.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Como: Envios de dados colchete usando transações](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [Como: delimitar submissões de dados entre colchetes usando transações](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

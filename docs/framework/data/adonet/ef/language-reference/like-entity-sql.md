@@ -2,12 +2,12 @@
 title: COMO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197705"
 ---
 # <a name="like-entity-sql"></a>COMO (Entity SQL)
 Determina se um elemento `String` de caracteres corresponde a um padrão especificado.  
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  Especifica que o resultado de LIKE seja negado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` se `string` corresponde ao padrão; caso contrário, `false`.  
+ `true` Se o `string` corresponde ao padrão; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressões que usam o operador LIKE são avaliadas basicamente da mesma maneira que expressões que usam igualdade como critérios de filtro. No entanto, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressões que usam o operador LIKE podem incluir literais e caracteres curinga.  
@@ -57,7 +57,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  Você pode usar extensões específicas ao provedor se o destino for um provedor específico. No entanto, esses construtores podem ser tratados de maneira diferente por outros provedores, por exemplo. O SqlServer dá suporte aos padrões [first-last] e [^first-last], onde o primeiro padrão corresponde exatamente a um caractere entre o primeiro e o último, e o segundo padrão corresponde exatamente a um caractere que não esteja entre o primeiro e o último.  
   
 ### <a name="escape"></a>Escape  
- Ao usar a cláusula ESCAPE, você pode pesquisar cadeias de caracteres que incluam um ou mais dos caracteres curinga especiais descritos na tabela da seção anterior. Por exemplo, suponha que vários documentos incluam o literal "100%" no título e que você deseje pesquisar em todos esses documentos. Como o caractere de porcentagem (%)) é um caractere curinga, você deve escapá-la usando o [!INCLUDE[esql](../../../../../../includes/esql-md.md)] cláusula de ESCAPE para executar com êxito a pesquisa. Veja a seguir um exemplo desse filtro.  
+ Ao usar a cláusula ESCAPE, você pode pesquisar cadeias de caracteres que incluam um ou mais dos caracteres curinga especiais descritos na tabela da seção anterior. Por exemplo, suponha que vários documentos incluam o literal "100%" no título e que você deseje pesquisar em todos esses documentos. Porque a porcentagem (%)) é um caractere curinga, você deve escapá-la usando o [!INCLUDE[esql](../../../../../../includes/esql-md.md)] cláusula de ESCAPE para executar com êxito a pesquisa. Veja a seguir um exemplo desse filtro.  
   
 ```  
 "title like '%100!%%' escape '!'"  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

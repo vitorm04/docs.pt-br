@@ -2,36 +2,36 @@
 title: funcionalidades do SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107517"
 ---
 # <a name="sql-server-features-and-adonet"></a>funcionalidades do SQL Server e ADO.NET
 Os tópicos desta seção discutem os recursos do SQL Server que são destinados a desenvolver aplicativos de banco de dados usando o ADO.NET.  
   
  Para obter mais informações, consulte os Manuais Online do SQL Server da versão do SQL Server que você está usando, conforme listado na tabela a seguir.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Manuais Online do SQL Server**  
   
 1.  [Desenvolvimento (mecanismo de banco de dados)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Enumeração de instâncias do SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+ [Enumerando instâncias do SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  Descreve como enumerar instâncias ativas do SQL Server.  
   
- [Estatísticas do provedor do SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ [Estatísticas do provedor para SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  Descreve o suporte para obter estatísticas de tempo de execução do SQL Server.  
   
- [Instâncias do usuário do SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [Instâncias de usuário do SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  Descreve o suporte para instâncias de usuário do SQL Server Express.  
   
  [Espelhamento de banco de dados no SQL Server](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
  Descreve a funcionalidade de espelhamento de banco de dados.  
   
- [Integração do Common Language Runtime ao SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
+ [Integração do Common Language Runtime do SQL](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
  Descreve como os dados podem ser acessados de dentro de um objeto de banco de dados CLR no SQL Server.  
   
  [Notificações de consulta no SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
@@ -40,15 +40,16 @@ Os tópicos desta seção discutem os recursos do SQL Server que são destinados
  [Isolamento de instantâneo no SQL Server](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
  Descreve o suporte para isolamento de instantâneo, um mecanismo de controle de versão de linha criado para reduzir o bloqueio em aplicativos transacionais.  
   
- [Suporte do SqlClient para alta disponibilidade, recuperação de desastres](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [Suporte do SqlClient para alta disponibilidade, recuperação de desastre](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  Descreve o suporte a SqlClient para alta disponibilidade, grupos de disponibilidade de recuperação de desastres (AlwaysOn).  
   
  [Suporte do SqlClient para LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  Descreve o suporte do SqlClient para bancos de dados LocalDB.  
   
 ## <a name="see-also"></a>Consulte também
-- [SQL Server Data Operations in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md) (Operações de dados do SQL Server no ADO.NET)
-- [Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+
+- [Operações de dados do SQL Server no ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [Recuperando e modificando dados no ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 87d69f58fc0c45eacb4ee63997129347f7f2a857
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195742"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 Determina se o tipo de uma expressão é do tipo especificado ou um de seus subtipos.  
@@ -32,7 +32,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  O tipo para testar `expression` contra. O tipo URL deve ser qualificada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` se `expression` é do tipo T e T é um tipo base, ou um tipo derivado de `type`; se `expression` nulo é nulo em tempo de execução; caso contrário, `false`.  
+ `true` Se `expression` é do tipo T e T é um tipo base ou um tipo derivado de `type`; nulo se `expression` nulo em tempo de execução; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
  As expressões `expression IS NOT OF (type)` e `expression IS NOT OF (ONLY type)` são sintaticamente equivalentes à `NOT (expression IS OF (type))` e `NOT (expression IS OF (ONLY type))`, respectivamente.  
@@ -57,4 +57,5 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

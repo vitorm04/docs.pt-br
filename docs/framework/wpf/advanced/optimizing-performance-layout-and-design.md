@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107062"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Otimizando desempenho: Layout e design
 O design de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode afetar o desempenho criando sobrecarga desnecessária no cálculo de layout e validando referências de objetos. A construção de objetos, particularmente no tempo de execução, pode afetar as características de desempenho do seu aplicativo.  
@@ -57,7 +57,7 @@ O design de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
 ### <a name="build-your-tree-top-down"></a>Compilar sua árvore de cima para baixo  
  Quando um nó é adicionado ou removido da árvore lógica, invalidações de propriedade são geradas no pai do nó e todos os seus filhos. Como resultado, um padrão de construção de cima para baixo deve sempre ser seguido para evitar o custo de invalidações desnecessárias em nós que já foram validados. A tabela a seguir mostra a diferença no tempo de execução entre compilar uma árvore de cima para baixo versus de baixo para cima, onde a árvore tem 150 níveis de profundidade com um único <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Controls.DockPanel> em cada nível.  
   
-|**Ação**|**Build da árvore (em ms)**|**Renderizar – inclui o build da árvore (em ms)**|  
+|**Ação**|**Construção da árvore (em ms)**|**Renderizar – inclui a construção da árvore (em ms)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |De baixo para cima|366|454|  
 |De cima para baixo|11|96|  
@@ -70,9 +70,10 @@ O design de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
  Para obter mais informações sobre a árvore lógica, consulte [Árvores no WPF](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
-- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Planejando-se para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitar o hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)
 - [Recursos do aplicativo](optimizing-performance-application-resources.md)
