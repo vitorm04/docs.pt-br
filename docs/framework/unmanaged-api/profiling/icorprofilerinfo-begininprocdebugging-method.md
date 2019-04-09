@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e23f39f8e7a1812366e15ffec9589f756c73f94
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f12442eb5596ff3dca49cf24e27040f3e92d3a7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072604"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>Método ICorProfilerInfo::BeginInprocDebugging
 Inicializa suporte à depuração em processo. Este método é obsoleto no .NET Framework versão 2.0.  
@@ -55,4 +55,5 @@ HRESULT BeginInprocDebugging(
  **Versão do .NET framework:** 1.0  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

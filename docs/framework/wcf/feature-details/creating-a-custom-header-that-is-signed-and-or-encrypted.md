@@ -1,15 +1,15 @@
 ---
-title: Criar um cabeçalho personalizado que é assinado e- ou criptografado
+title: Criar um cabeçalho personalizado que é assinado e/ou criptografado
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075620"
 ---
-# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Criar um cabeçalho personalizado que é assinado e- ou criptografado
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Criar um cabeçalho personalizado que é assinado e/ou criptografado
 Ao chamar um serviço não WCF usando um cliente WCF, às vezes, é necessário usar cabeçalhos SOAP personalizados. Há um bug de conversão em formato canônico no WCF que impede que os cabeçalhos personalizados que são assinados e criptografados trabalhando com um serviço não WCF. O problema é causado pela concessão incorreta de namespaces XML padrão. Isso só é um problema ao chamar os serviços não WCF com cabeçalhos personalizados que são assinados e/ou criptografados.  Quando o serviço recebe a mensagem que contém o cabeçalho personalizado assinado e/ou criptografado não consegue verificar a assinatura. Essa solução alternativa evita o bug de conversão em formato canônico, permite a interoperabilidade com serviços não WCF, mas não impede que a interoperabilidade com serviços WCF.  
   
 ## <a name="defining-the-custom-header"></a>Definindo o cabeçalho personalizado  
@@ -57,6 +57,7 @@ public  class MyMessageContract
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Contrato de mensagem padrão](../../../../docs/framework/wcf/samples/default-message-contract.md)
+
+- [Contrato padrão de mensagem](../../../../docs/framework/wcf/samples/default-message-contract.md)
 - [Contratos de mensagem](../../../../docs/framework/wcf/samples/message-contracts.md)
-- [Usando contratos de mensagem](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Utilizando contratos de mensagem](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df1e9d317294127a931bebf100295290a0dd6b23
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 494f39855132bc4a9551b78f746517862d285034
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074723"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>Método ISymENCUnmanagedMethod::GetFileNameFromOffset
 Obtém o nome do arquivo para a linha associada a um deslocamento.  
@@ -58,4 +58,5 @@ HRESULT GetFileNameFromOffset(
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

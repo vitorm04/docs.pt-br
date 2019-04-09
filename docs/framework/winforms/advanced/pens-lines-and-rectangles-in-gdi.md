@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078220"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Canetas, linhas e retângulos no GDI+
 Para desenhar linhas com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] você precisa criar um <xref:System.Drawing.Graphics> objeto e um <xref:System.Drawing.Pen> objeto. O <xref:System.Drawing.Graphics> objeto fornece os métodos que realmente fazem o desenho, e o <xref:System.Drawing.Pen> objeto armazena atributos, como cor da linha, largura e estilo.  
@@ -68,9 +68,10 @@ Para desenhar linhas com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdi
  Um <xref:System.Drawing.Rectangle> objeto tem métodos e propriedades para manipular e coletar informações sobre o retângulo. Por exemplo, o <xref:System.Drawing.Rectangle.Inflate%2A> e <xref:System.Drawing.Rectangle.Offset%2A> os métodos de alterar o tamanho e posição do retângulo. O <xref:System.Drawing.Rectangle.IntersectsWith%2A> método informa se o retângulo intersecciona outro dado retângulo e o <xref:System.Drawing.Rectangle.Contains%2A> método informa se um determinado ponto está dentro do retângulo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
-- [Como: Criar uma caneta](how-to-create-a-pen.md)
-- [Como: Desenhar uma linha em um formulário do Windows](how-to-draw-a-line-on-a-windows-form.md)
-- [Como: Desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)
+- [Como: criar uma caneta](how-to-create-a-pen.md)
+- [Como: desenhar uma linha em um formulário do Windows](how-to-draw-a-line-on-a-windows-form.md)
+- [Como: desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desenhar texto com GDI'
+title: 'Como: desenhar texto com o GDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 644e180e2f15592db2112a5cd6f5b0130c6abea8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4bf72998c798040451b814a7f0287bca65f5300
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073319"
 ---
-# <a name="how-to-draw-text-with-gdi"></a>Como: Desenhar texto com GDI
-Com o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método na <xref:System.Windows.Forms.TextRenderer> classe, você pode acessar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] funcionalidade para desenhar texto em um formulário ou controle. A renderização de texto do [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] normalmente oferece melhor desempenho e medição de texto mais precisa do que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+# <a name="how-to-draw-text-with-gdi"></a>Como: desenhar texto com o GDI
+Com o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método na <xref:System.Windows.Forms.TextRenderer> classe, você pode acessar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] funcionalidade para desenhar texto em um formulário ou controle. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] renderização de texto normalmente oferece melhor desempenho e texto mais precisa medir que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 > [!NOTE]
 >  O <xref:System.Windows.Forms.TextRenderer.DrawText%2A> métodos do <xref:System.Windows.Forms.TextRenderer> classe não dá suporte para impressão. Ao imprimir, sempre use a <xref:System.Drawing.Graphics.DrawString%2A> métodos do <xref:System.Drawing.Graphics> classe.  
@@ -34,9 +34,10 @@ Com o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método na <xref:Syst
  Para obter mais informações sobre como obter um <xref:System.Drawing.Graphics>, consulte [como: Criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md). Para obter mais informações sobre como construir uma <xref:System.Drawing.Font>, consulte [como: Construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md).  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo de código anterior foi projetado para uso com o Windows Forms e requer o <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+ O exemplo de código anterior foi projetado para uso com o Windows Forms e requer o <xref:System.Windows.Forms.PaintEventArgs>`e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.TextRenderer>
 - <xref:System.Drawing.Font>
 - <xref:System.Drawing.Color>

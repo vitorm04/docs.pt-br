@@ -1,18 +1,18 @@
 ---
-title: 'Como: Importar asserções de política personalizada'
+title: 'Como: importar declarações de política personalizadas'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073618"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Como: Importar asserções de política personalizada
+# <a name="how-to-import-custom-policy-assertions"></a>Como: importar declarações de política personalizadas
 Declarações de política descrevem os recursos e os requisitos de um ponto de extremidade de serviço.  Aplicativos cliente podem usar as declarações de política nos metadados de serviço para configurar a associação de cliente ou para personalizar o contrato de serviço para um ponto de extremidade de serviço.  
   
  Declarações de política personalizadas são importadas, Implementando o <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> interface e passando esse objeto para o sistema de metadados ou Registrando a implementação do tipo em seu arquivo de configuração do aplicativo.  Implementações do <xref:System.ServiceModel.Description.IPolicyImportExtension> interface deve fornecer um construtor padrão.  
@@ -64,6 +64,7 @@ Declarações de política descrevem os recursos e os requisitos de um ponto de 
 1.  Adicionar o importador para o <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> propriedade (por exemplo, se você estiver usando o <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>) antes de importar os metadados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
