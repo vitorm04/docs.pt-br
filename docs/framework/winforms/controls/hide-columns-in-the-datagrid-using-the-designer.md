@@ -1,5 +1,5 @@
 ---
-title: 'Como: Ocultar colunas no controle DataGridView do Windows Forms usando o Designer'
+title: 'Como: Ocultar colunas no controle DataGridView do Windows Forms usando o designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column hiding
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
-ms.openlocfilehash: b65c83592334c84c7790da5877efdc9af84380f0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e0255cca5c614f07bbc4a7dfc9a908612e8867a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122376"
 ---
-# <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Ocultar colunas no controle DataGridView do Windows Forms usando o Designer
+# <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Ocultar colunas no controle DataGridView do Windows Forms usando o designer
 Às vezes você desejará exibir somente algumas das colunas que estão disponíveis em um Windows Forms <xref:System.Windows.Forms.DataGridView> controle. Por exemplo, talvez você queira mostrar uma coluna de salário de funcionários para usuários com credenciais de gerenciamento enquanto a oculta de outros usuários. Como alternativa, talvez você queira associar o controle a uma fonte de dados que contém várias colunas, sendo que você deseja exibir apenas algumas delas. Nesse caso, você normalmente removerá as colunas que não está interessado em exibir em vez de ocultá-las. Para obter mais informações, confira [Como: Adicionar e remover colunas no Windows Forms usando o Designer de controle de DataGridView](add-and-remove-columns-in-the-datagrid-using-the-designer.md).  
   
  O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contém um <xref:System.Windows.Forms.DataGridView> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -34,8 +34,9 @@ ms.locfileid: "57708386"
     >  Você também pode ocultar uma coluna ao adicioná-la desmarcando a caixa de seleção **Visível** na caixa de diálogo **Adicionar Coluna**.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
-- [Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o Designer](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o designer](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
 - [Como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Como: Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)

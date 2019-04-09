@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 59384900226fbbcfc879650402b1a5df80b69cd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169007"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Elementos de tipo em uma sequência
 Use o operador de <xref:System.Linq.Enumerable.OrderBy%2A> para classificar uma sequência de acordo com um ou mais chaves.  
@@ -89,5 +89,6 @@ Use o operador de <xref:System.Linq.Enumerable.OrderBy%2A> para classificar uma 
  `Carnarvon Tigers`  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

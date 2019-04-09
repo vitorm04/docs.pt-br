@@ -2,12 +2,12 @@
 title: Resolvedor peer
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151613"
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
 Para se conectar a uma malha, um nó par exige que os endereços IP dos outros nós. Endereços IP são obtidos por entrar em contato com um serviço de resolvedor, que usa a ID de malha e retorna uma lista de endereços correspondentes a nós registrados com essa ID de malha. O resolvedor mantém uma lista de endereços registrados, que será criado, fazendo com que cada nó na malha registrar com o serviço.  
@@ -35,9 +35,10 @@ Para se conectar a uma malha, um nó par exige que os endereços IP dos outros n
  Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor de pares personalizado Peer Channel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [O custompeerresolverservice: Registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Sobre o CustomPeerResolverService: registros de clientes](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Conceitos de canal par](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [Segurança de canal par](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [Compilando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

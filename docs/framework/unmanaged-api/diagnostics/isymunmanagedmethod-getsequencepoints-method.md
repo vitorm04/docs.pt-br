@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad9e552d31944523222798fe7dba2201461b1243
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f6b1e253fb7bf1a97f44e1eb05676fc356af9837
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123702"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>Método ISymUnmanagedMethod::GetSequencePoints
 Obtém todos os pontos de sequência dentro desse método.  
@@ -73,4 +73,5 @@ HRESULT GetSequencePoints(
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

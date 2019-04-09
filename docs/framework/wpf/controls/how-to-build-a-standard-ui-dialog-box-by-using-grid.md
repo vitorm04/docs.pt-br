@@ -1,5 +1,5 @@
 ---
-title: 'Como: Compilar uma caixa de diálogo de interface do usuário padrão usando grade'
+title: 'Como: Criar uma caixa de diálogo de interface do usuário padrão usando grade'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 57edaa173b85bc06c6859b08d3edec281e1b8942
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149520"
 ---
-# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Como: Compilar uma caixa de diálogo de interface do usuário padrão usando grade
+# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Como: Criar uma caixa de diálogo de interface do usuário padrão usando grade
 Este exemplo mostra como criar um padrão [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] caixa de diálogo usando o <xref:System.Windows.Controls.Grid> elemento.  
   
 ## <a name="example"></a>Exemplo  
@@ -33,7 +33,8 @@ Este exemplo mostra como criar um padrão [!INCLUDE[TLA#tla_ui](../../../../incl
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
 - [Visão geral de painéis](panels-overview.md)
-- [Tópicos de instruções](grid-how-to-topics.md)
+- [Tópicos explicativos ](grid-how-to-topics.md)

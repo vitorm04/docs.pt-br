@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar um classe de renderização do controle'
+title: 'Como: Usar uma classe de renderização do controle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - visual themes [Windows Forms], applying to Windows Forms controls
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
-ms.openlocfilehash: d9da43b1686f416cf2149cef07665b0a726c3b0c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7115c227cb24cf12a50073d0dc587524abf0cbb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163565"
 ---
-# <a name="how-to-use-a-control-rendering-class"></a>Como: Usar um classe de renderização do controle
+# <a name="how-to-use-a-control-rendering-class"></a>Como: Usar uma classe de renderização do controle
 Este exemplo demonstra como usar o <xref:System.Windows.Forms.ComboBoxRenderer> classe para renderizar a seta suspensa de uma combinação de controle de caixa. O exemplo consiste de <xref:System.Windows.Forms.Control.OnPaint%2A> método de um controle personalizado simple. O <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> propriedade é usada para determinar se os estilos visuais estão habilitados na área de cliente do windows do aplicativo. Se os estilos visuais estiverem ativos, em seguida, a <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> método processará a seta suspensa com estilos visuais; caso contrário, o <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> método processará a seta suspensa no estilo clássico do Windows.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,4 +35,5 @@ Este exemplo demonstra como usar o <xref:System.Windows.Forms.ComboBoxRenderer> 
 -   Referências para o <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, e <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespaces.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Renderizando controles com estilos visuais](rendering-controls-with-visual-styles.md)

@@ -2,12 +2,12 @@
 title: <security> De <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 8bc35b3bc8f0cbe1a51ceab63d876d5859d6b325
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171503"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<segurança > de \<wsDualHttpBinding >
 Define os recursos de segurança de [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -60,6 +60,7 @@ Define os recursos de segurança de [ \<wsDualHttpBinding >](../../../../../docs
  Uma dupla associação expõe o endereço IP do cliente para o serviço. O cliente deve usar a segurança para garantir que ele só se conecta aos serviços-relações de confiança.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.WSDualHttpSecurity>
 - <xref:System.ServiceModel.BasicHttpSecurity>
 - [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

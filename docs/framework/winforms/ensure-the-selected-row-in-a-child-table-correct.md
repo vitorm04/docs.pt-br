@@ -1,5 +1,5 @@
 ---
-title: 'Como: Verifique se que a linha selecionada em uma tabela filho permaneça na posição correta'
+title: 'Como: assegurar que a linha selecionada em uma tabela filho permaneça na posição correta'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149104"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Como: Verifique se que a linha selecionada em uma tabela filho permaneça na posição correta
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Como: assegurar que a linha selecionada em uma tabela filho permaneça na posição correta
 Muitas vezes, ao trabalhar com a vinculação de dados nos Windows Forms, você exibirá dados no que é chamado de modo de exibição pai/filho ou detalhes/mestre. Isso se refere a um cenário de associação de dados em que os dados da mesma fonte são exibidos em dois controles. Alterar a seleção em um controle faz com que os dados exibidos no segundo controle mudem. Por exemplo, o primeiro controle pode conter uma lista de clientes e o segundo, uma lista de pedidos relacionada ao cliente selecionado no primeiro controle.  
   
  Iniciando com o .NET Framework versão 2.0, quando você exibe dados no modo de exibição pai/filho, pode ser necessário executar etapas adicionais para que a linha selecionada atualmente na tabela filho não seja redefinida para a primeira linha da tabela. Para fazer isso, será preciso armazenar em cache a posição da tabela filho e redefini-la após a alteração da tabela pai. Normalmente, a redefinição do filho ocorre na primeira vez que um campo em uma linha da tabela pai muda.  
@@ -84,6 +84,7 @@ Muitas vezes, ao trabalhar com a vinculação de dados nos Windows Forms, você 
  Para obter informações sobre como criar este exemplo da linha de comando do Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [construção de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Certifique-se de vários controles associados à mesma fonte de dados permaneçam sincronizados](multiple-controls-bound-to-data-source-synchronized.md)
+
+- [Como: assegurar que vários controles associados à mesma fonte de dados permaneçam sincronizados](multiple-controls-bound-to-data-source-synchronized.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)
-- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+- [Associação de dados e o Windows Forms](data-binding-and-windows-forms.md)

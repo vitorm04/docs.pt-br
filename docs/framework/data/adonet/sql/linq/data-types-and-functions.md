@@ -2,12 +2,12 @@
 title: Tipos de dados e funções
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151938"
 ---
 # <a name="data-types-and-functions"></a>Tipos de dados e funções
 Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para membros, construções e conversões do CLR (Common Language Runtime). Os membros e as construções com suporte estão disponíveis para uso em suas consultas LINQ to SQL.  
@@ -16,11 +16,11 @@ Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para mem
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Mapeamento de tipo CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Fornece uma matriz detalhada de mapeamentos entre os tipos de CLR e SQL Server.|  
+|[Mapeamento de tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Fornece uma matriz detalhada de mapeamentos entre os tipos de CLR e SQL Server.|  
 |[Tipos de dados básicos](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Tipos de dados booliano](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
+|[Tipos de dados booleano](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Semântica nula](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|Fornece links para os tópicos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que discutem problemas de nulo e anulável.|  
-|[Operadores numéricos e de comparação](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
+|[Numérico e operadores de comparação](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Operadores de sequência](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Métodos de System.Convert](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Métodos de System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|Descreve suporte do LINQ to SQL para membros de estrutura <xref:System.DateTime?displayProperty=nameWithType>.|  
@@ -32,5 +32,6 @@ Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para mem
 |[Funcionalidade sem suporte](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Descreve a funcionalidade que não tem suporte no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
   
 ## <a name="see-also"></a>Consulte também
-- [Tipos incompatíveis CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+
+- [Incompatibilidade de SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

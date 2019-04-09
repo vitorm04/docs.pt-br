@@ -2,12 +2,12 @@
 title: DEFINIR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 28b4deac-c7e4-4f09-b428-4d352ef2dc94
-ms.openlocfilehash: b6adce314e5d4fb1e4077b0efef758d07444e496
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: dab124e139f3491c4a7a42eb90c4ffb3b3a92258
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158555"
 ---
 # <a name="set-entity-sql"></a>DEFINIR (Entity SQL)
 A expressão SET é usada para converter uma coleção de objetos em um conjunto rendendo uma nova coleção com todos os elementos duplicados removidos.  
@@ -29,7 +29,7 @@ SET ( expression )
 SELECT VALUE DISTINCT c FROM c  
 ```  
   
- `SET` é um dos operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Todos os operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são avaliados da esquerda para a direita. Ver [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) para obter informações de precedência para a [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores definidos.  
+ `SET` é um do [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores definidos. Todos os operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são avaliados da esquerda para a direita. Ver [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) para obter informações de precedência para a [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores definidos.  
   
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa a expressão SET para converter uma coleção de objetos em um dataset. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
@@ -41,4 +41,5 @@ SELECT VALUE DISTINCT c FROM c
  [!code-csharp[DP EntityServices Concepts 2#SET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#set)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

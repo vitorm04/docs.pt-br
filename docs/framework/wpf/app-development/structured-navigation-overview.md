@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161500"
 ---
 # <a name="structured-navigation-overview"></a>Visão geral da navegação estruturada
 Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], um <xref:System.Windows.Controls.Frame>, ou uma <xref:System.Windows.Navigation.NavigationWindow> é composto de páginas que podem ser identificadas pelo pacote [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] e acessadas por hiperlinks. A estrutura de páginas e as maneiras pelas quais elas podem ser navegadas, como definidas pelos hiperlinks, é conhecida como uma topologia de navegação. Uma topologia como esta serve a uma variedade de tipos de aplicativos, especialmente aqueles que navegam através de documentos. Para tais aplicativos, o usuário pode navegar de uma página à outra sem que as páginas precisem saber qualquer coisa sobre a outra.  
@@ -20,9 +20,7 @@ Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../incl
  No entanto, outros tipos de aplicativos têm páginas que precisam saber quando houve navegação entre elas. Por exemplo, considere um aplicativo de recursos humanos que tem uma página para listar todos os funcionários de uma organização, a página "Lista de funcionários". Esta página também pode permitir que os usuários adicionem um novo funcionário, clicando em um hiperlink. Ao clicar, a página navega para uma página "Adicionar um funcionário" para obter detalhes do novo empregado e retorná-los para a página "Lista de funcionários" para criar o novo funcionário e atualizar a lista. Este estilo de navegação é semelhante a chamar um método para fazer algum processamento e retornar um valor, que é conhecido como programação estruturada. Assim, este estilo de navegação é conhecido como *navegação estruturada*.  
   
  O <xref:System.Windows.Controls.Page> classe não implementa o suporte à navegação estruturada. Em vez disso, o <xref:System.Windows.Navigation.PageFunction%601> deriva de classe <xref:System.Windows.Controls.Page> e a estende com as construções básicas necessárias para a navegação estruturada. Este tópico mostra como estabelecer a navegação estruturada usando <xref:System.Windows.Navigation.PageFunction%601>.  
-  
- 
-  
+
 <a name="Structured_Navigation"></a>   
 ## <a name="structured-navigation"></a>Navegação estruturada  
  Quando uma página chama outra página em uma navegação estruturada, alguns ou todos os seguintes comportamentos são necessários:  
@@ -170,6 +168,7 @@ Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../incl
  Em outros casos, os aplicativos podem ter topologias complexas de navegação que dependem da navegação estruturada para operar com eficiência. Para obter mais informações, consulte [Visão geral de topologias de navegação](navigation-topologies-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
-- [Visão geral de topologias de navegação](navigation-topologies-overview.md)
+- [Visão geral de topologias da navegação](navigation-topologies-overview.md)

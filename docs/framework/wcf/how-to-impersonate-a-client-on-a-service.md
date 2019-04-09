@@ -1,5 +1,5 @@
 ---
-title: 'Como: Representar um cliente em um serviço'
+title: 'Como: representar um cliente em um serviço'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 260ff8b2131e1ee3c42197187f7067ab9c1328d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c414d0af033d9d703fcf947d008aeefcef5b876
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169111"
 ---
-# <a name="how-to-impersonate-a-client-on-a-service"></a>Como: Representar um cliente em um serviço
+# <a name="how-to-impersonate-a-client-on-a-service"></a>Como: representar um cliente em um serviço
 Representando um cliente em um serviço do Windows Communication Foundation (WCF) permite que o serviço executar ações em nome do cliente. Para ações sujeita ao acesso (ACL) lista de controle verificações, como acesso a diretórios e arquivos em um computador ou acesso a um banco de dados do SQL Server, a verificação ACL é contra a conta de usuário do cliente. Este tópico mostra as etapas básicas necessárias para permitir que um cliente em um domínio do Windows definir um nível de representação do cliente. Para obter um exemplo de funcionamento de isso, consulte [representar o cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter mais informações sobre representação do cliente, consulte [delegação e representação](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
@@ -46,7 +46,8 @@ Representando um cliente em um serviço do Windows Communication Foundation (WCF
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.Security.Principal.TokenImpersonationLevel>
-- [Representar o cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Representando o cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md)
 - [Delegação e representação](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

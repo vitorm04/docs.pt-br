@@ -2,12 +2,12 @@
 title: Atualizações de fluxo personalizadas
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cd8385194e1f24d246e6fc398462b45bacbe15d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127355"
 ---
 # <a name="custom-stream-upgrades"></a>Atualizações de fluxo personalizadas
 Transportes e orientada a Stream como TCP e Pipes nomeados operam em um fluxo contínuo de bytes entre o cliente e servidor. Esse fluxo é realizado uma <xref:System.IO.Stream> objeto. Em uma atualização de fluxo, o cliente quer adicionar uma camada de protocolo opcional para a pilha de canais e solicita que a outra extremidade do canal de comunicação para fazê-lo. A atualização de fluxo consiste em Substituir o original <xref:System.IO.Stream> objeto com um atualizado.  
@@ -93,6 +93,7 @@ Transportes e orientada a Stream como TCP e Pipes nomeados operam em um fluxo co
 4.  O fluxo será atualizado após cada chamada para <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> e <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
 - <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
 - <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>

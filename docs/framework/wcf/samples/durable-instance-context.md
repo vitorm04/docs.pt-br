@@ -2,12 +2,12 @@
 title: Contexto de instância durável
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160960"
 ---
 # <a name="durable-instance-context"></a>Contexto de instância durável
 Este exemplo demonstra como personalizar o tempo de execução do Windows Communication Foundation (WCF) para permitir que os contextos de instância durável. Ele usa o SQL Server 2005 como seu armazenamento de backup (SQL Server 2005 Express neste caso). No entanto, ele também fornece uma maneira de acessar os mecanismos de armazenamento personalizado.  
@@ -459,4 +459,3 @@ Press ENTER to shut down client
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
-  

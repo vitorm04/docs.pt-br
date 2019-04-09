@@ -1,17 +1,17 @@
 ---
-title: 'Passo a passo: Modelo de objeto simples e consulta (Visual Basic)'
+title: 'Passo a passo: modelo e consulta de objeto simples (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169098"
 ---
-# <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Passo a passo: Modelo de objeto simples e consulta (Visual Basic)
+# <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Passo a passo: modelo e consulta de objeto simples (Visual Basic)
 Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] com complexidades mínimas. Você criará uma classe de entidade que modela a tabela Customers no banco de dados de exemplo Northwind. Em seguida, você irá criar uma consulta simples para listar os clientes que estão localizados em Londres.  
   
  Este passo a passo é orientado a código por design para ajudar a mostrar os conceitos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Normalmente, você usa o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para criar seu modelo de objeto.  
@@ -91,7 +91,7 @@ Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdl
   
 -   Você designa a propriedade `CustomerID` como a representação de uma coluna de chave primária no banco de dados.  
   
--   Você designa os campos `_CustomerID` e `_City` para armazenamento particular. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode então armazenar e recuperar valores diretamente, em vez de usar acessadores públicos, que podem incluir lógica de negócios.  
+-   Você designa os campos `_CustomerID` e `_City` para armazenamento particular. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode, em seguida, armazenar e recuperar valores diretamente, em vez de usar acessadores públicos, que podem incluir a lógica de negócios.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Para representar características de duas colunas do banco de dados  
   
@@ -153,4 +153,5 @@ Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdl
  Se você desejar realizar o passo a passo Consultando através de relações, salve a solução do passo a passo que você acabou de concluir, que é um pré-requisito.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

@@ -12,18 +12,16 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165263"
 ---
 # <a name="binding-declarations-overview"></a>Visão geral das declarações de associação
 Este tópico discute as diferentes maneiras que você pode declarar uma associação.  
-  
- 
-  
+
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Antes de ler este tópico, é importante que você esteja familiarizado com o conceito e o uso de extensões de marcação. Para obter mais informações sobre extensões de marcação, consulte [Extensões de marcação e XAML WPF](../advanced/markup-extensions-and-wpf-xaml.md).  
@@ -36,7 +34,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>Uso da extensão de marcação  
- <xref:System.Windows.Data.Binding> é uma extensão da marcação. Quando você usa a extensão de associação para declarar uma associação, a declaração consiste em uma série de cláusulas após a palavra-chave `Binding` separadas por vírgulas (,). As cláusulas na declaração da associação podem estar em qualquer ordem e há várias combinações possíveis. As cláusulas são *nome*=*valor* pares onde *nome* é o nome da <xref:System.Windows.Data.Binding> propriedade e *valor* é o valor que você está definindo a propriedade.  
+ <xref:System.Windows.Data.Binding> é uma extensão de marcação. Quando você usa a extensão de associação para declarar uma associação, a declaração consiste em uma série de cláusulas após a palavra-chave `Binding` separadas por vírgulas (,). As cláusulas na declaração da associação podem estar em qualquer ordem e há várias combinações possíveis. As cláusulas são *nome*=*valor* pares onde *nome* é o nome da <xref:System.Windows.Data.Binding> propriedade e *valor* é o valor que você está definindo a propriedade.  
   
  Ao criar cadeias de caracteres de declaração de associação em marcação, elas devem ser anexadas à propriedade de dependência específica de um objeto de destino. O exemplo a seguir mostra como associar o <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> propriedade usando a extensão de associação, especificando as <xref:System.Windows.Data.Binding.Source%2A> e <xref:System.Windows.Data.Binding.Path%2A> propriedades.  
   
@@ -81,7 +79,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 -   Os indexadores de uma propriedade podem ser especificados dentro de colchetes após o nome da propriedade na qual o indexador é aplicado. Por exemplo, a cláusula `Path=ShoppingCart[0]` define a associação ao índice que corresponde a como a indexação interna de sua propriedade lida com a cadeia de caracteres literal "0". Os indexadores aninhados também têm suporte.  
   
--   Os indexadores e as subpropriedades podem ser combinados em uma cláusula `Path`. Por exemplo,`Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Indexadores e subpropriedades podem ser combinadas um `Path` cláusula; por exemplo, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   Dentro dos indexadores, você pode ter vários parâmetros de indexador separados por vírgulas (,). O tipo de cada parâmetro pode ser especificado com parênteses. Por exemplo, você pode ter `Path="[(sys:Int32)42,(sys:Int32)24]"`, em que `sys` é mapeado para o namespace `System`.  
   
@@ -126,7 +124,8 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
 -   O padrão <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor varia entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> e <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> , dependendo da propriedade de dependência associada também. O valor padrão para a maioria das propriedades de dependência é <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, enquanto a propriedade <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> tem um valor padrão de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Tópicos explicativos ](data-binding-how-to-topics.md)
 - [Associação de dados](../advanced/optimizing-performance-data-binding.md)
-- [Sintaxe PropertyPath XAML](../advanced/propertypath-xaml-syntax.md)
+- [Sintaxe PropertyPath (XAML)](../advanced/propertypath-xaml-syntax.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1371fa901bebc503a0091f3229a8fd7e6ccc2c86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162627"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Considerações sobre desempenho para interoperabilidade entre Direct3D9 e WPF
 Você pode hospedar conteúdo de Direct3D9 usando a <xref:System.Windows.Interop.D3DImage> classe. Hospedar conteúdo de Direct3D9 pode afetar o desempenho do seu aplicativo. Este tópico descreve as práticas recomendadas para otimizar o desempenho ao hospedar conteúdo de Direct3D9 em um aplicativo WPF (Windows Presentation Foundation). Essas práticas recomendadas incluem como usar <xref:System.Windows.Interop.D3DImage> e as práticas recomendadas quando você estiver usando o Windows Vista, Windows XP, e exibe vários monitores.  
@@ -60,7 +60,8 @@ Você pode hospedar conteúdo de Direct3D9 usando a <xref:System.Windows.Interop
 |D3DFMT_A8R8G8B8 (bloqueável)|**Atualização de hardware**|Atualização de software|**Atualização de hardware**|Atualização de software|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Interoperação Direct3D9 e WPF](wpf-and-direct3d9-interoperation.md)
-- [Passo a passo: Criando conteúdo Direct3D9 para hospedar no WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Passo a passo: Hospedando conteúdo Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Passo a passo: criar conteúdo Direct3D9 para hospedar no WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Passo a passo: hospedar o conteúdo de Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

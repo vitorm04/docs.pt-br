@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162666"
 ---
 # <a name="xaml-security-considerations"></a>Considerações sobre segurança XAML
 Este tópico descreve as práticas recomendadas de segurança em aplicativos quando você usa XAML e a API de serviços XAML do .NET Framework.  
@@ -42,4 +42,5 @@ Este tópico descreve as práticas recomendadas de segurança em aplicativos qua
  XAML dá suporte a seu próprio sistema de tipo, que é um par para como o CLR implementa o sistema de tipo CLR básico de várias maneiras. No entanto, para determinados aspectos de reconhecimento de tipo no qual você está tomando decisões de confiança sobre um tipo com base em suas informações de tipo, você deve adiar as informações de tipo no CLR, tipos de suporte. Isso ocorre porque alguns dos recursos de relatório específicos do sistema de tipo XAML são deixadas abertas como métodos virtuais e, portanto, não são totalmente sob o controle das implementações de serviços de XAML do .NET Framework do originais. Esses pontos de extensibilidade existem porque o sistema de tipo XAML é extensível, para corresponder a extensibilidade do XAML em si e suas possíveis estratégias alternativas de mapeamento de tipo versus a implementação do padrão baseado em CLR e o contexto de esquema XAML padrão. Para obter mais informações, consulte as notas específicas em diversas propriedades de <xref:System.Xaml.XamlType> e <xref:System.Xaml.XamlMember>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

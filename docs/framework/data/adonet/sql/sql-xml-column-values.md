@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 1cd6962a02a50ecd9f9b634148eeb38ad0a45e05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 803357f9ae97eee2cbbf5e777dbc1210ded26ab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149702"
 ---
 # <a name="sql-xml-column-values"></a>Valores de coluna de XML do SQL
 SQL Server oferece suporte a `xml` tipo de dados, e os desenvolvedores podem recuperar conjuntos de resultados, incluindo esse tipo usando o comportamento padrão da <xref:System.Data.SqlClient.SqlCommand> classe. Uma `xml` coluna pode ser recuperada, assim como qualquer coluna é recuperada (em um <xref:System.Data.SqlClient.SqlDataReader>, por exemplo), mas se você quiser trabalhar com o conteúdo da coluna como XML, você deve usar um <xref:System.Xml.XmlReader>.  
@@ -25,6 +25,7 @@ SQL Server oferece suporte a `xml` tipo de dados, e os desenvolvedores podem rec
  [!code-vb[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [Dados XML no SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: <msmqIntegration>
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 8412862237ccf4c0f5b880d8ae33e0a55f9557f3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 850d117ca17b5929c219c3b7d6453cf76136bad3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284993"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165204"
 ---
 # <a name="msmqintegration"></a>\<msmqIntegration>
 Especifica um transporte MSMQ para associação personalizada.  
@@ -80,12 +80,13 @@ Especifica um transporte MSMQ para associação personalizada.
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [Filas no WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)

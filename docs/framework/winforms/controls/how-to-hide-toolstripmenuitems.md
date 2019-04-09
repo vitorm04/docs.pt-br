@@ -12,12 +12,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
-ms.openlocfilehash: a82df42240ae045f0d6f355f642acfb8082c87a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dc9daa945f2a546548f2cc6ea033378bd9ceff93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127420"
 ---
 # <a name="how-to-hide-toolstripmenuitems"></a>Como: Ocultar ToolStripMenuItems
 Ocultando itens de menu é uma maneira de controlar a interface do usuário do seu aplicativo e restringir comandos do usuário. Geralmente, é recomendável ocultar um menu inteiro quando todos os itens de menu estão indisponíveis. Isso apresenta menos distrações para o usuário. Além disso, pode ser útil ocultar e desabilitar o menu ou item de menu, visto que apenas ocultar não impede que o usuário acesse um comando de menu usando uma tecla de atalho.  
@@ -39,6 +39,7 @@ Ocultando itens de menu é uma maneira de controlar a interface do usuário do s
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
 - [Visão geral do controle MenuStrip](menustrip-control-overview-windows-forms.md)

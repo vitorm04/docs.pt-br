@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 62cc25b705b382e1f4ef32ae6889df785a6a9173
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 679333186d9f9b791e5ad9c2e1cb74f69e051a62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168539"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Como: Ancorar e encaixar controles filho em um controle FlowLayoutPanel
 O <xref:System.Windows.Forms.FlowLayoutPanel> controlar dá suporte a <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> propriedades em seus controles filho.  
@@ -61,5 +61,6 @@ O <xref:System.Windows.Forms.FlowLayoutPanel> controlar dá suporte a <xref:Syst
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - [Visão geral do controle FlowLayoutPanel](flowlayoutpanel-control-overview.md)

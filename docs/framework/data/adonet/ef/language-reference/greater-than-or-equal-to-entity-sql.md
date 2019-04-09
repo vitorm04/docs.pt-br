@@ -2,14 +2,14 @@
 title: '>= (Maior que ou igual a) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: 4b7b2aa7be0b978fb6b1317393fb3c6e9a87c621
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 1e2eef7c98aefd93c6ef388888661ac758fd8e30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166108"
 ---
-# <a name="-greater-than-or-equal-to-entity-sql"></a>>= (Maior que ou igual a) (Entity SQL)
+# <a name="-greater-than-or-equal-to-entity-sql"></a>> = (maior que ou igual a) (Entity SQL)
 Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que ou igual à expressão da direita.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,10 +23,10 @@ expression >= expression
  Qualquer expressão válida. As duas expressões devem ter os tipos de dados implicitamente conversíveis.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- `true` se a expressão esquerda tem um valor maior ou igual a expressão direita; caso contrário, `false`.  
+ `true` Se a expressão esquerda tem um valor maior que ou igual a expressão direita; Caso contrário, `false`.  
   
 ## <a name="example"></a>Exemplo  
- A seguinte consulta SQL Entity usa >= operador de comparação para comparar duas expressões para determinar se a expressão esquerda tem um valor maior ou igual a expressão direita. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
+ A seguinte consulta SQL Entity usa > = operador de comparação para comparar duas expressões para determinar se a expressão esquerda tem um valor maior que ou igual à expressão da direita. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
 1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
@@ -35,4 +35,5 @@ expression >= expression
  [!code-csharp[DP EntityServices Concepts 2#GREATER_OR_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater_or_equals)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

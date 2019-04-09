@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153238"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM+
 Windows Communication Foundation (WCF) fornece um ambiente avançado para criar aplicativos distribuídos. Se você já estiver usando a lógica de aplicativo baseado em componente hospedada em COM+, você pode usar o WCF para estender sua lógica existente em vez de precisar reescrevê-la. Um cenário comum é quando você deseja expor COM+ ou serviços corporativos lógica de negócios existentes por meio de serviços da Web.  
@@ -102,4 +102,5 @@ Windows Communication Foundation (WCF) fornece um ambiente avançado para criar 
  O processo de COM+ reciclagem de recursos não pode ser usado em aplicativos integrados. Se o aplicativo está configurado para usar a reciclagem de processo e os componentes estão em execução em um processo hospedada em COM+, o serviço não for iniciado. Esse requisito não inclui serviços usando o modo em processo hospedado na Web porque não são aplicadas as configurações de reciclagem de processo.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral da integração de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+
+- [Integração com visão geral de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

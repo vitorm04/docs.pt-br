@@ -2,12 +2,12 @@
 title: Preocupações de segurança e dicas úteis para rastreamento
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130788"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Preocupações de segurança e dicas úteis para rastreamento
 Este tópico descreve como você pode proteger informações confidenciais sejam expostas, bem como dicas úteis ao usar o WebHost.  
@@ -91,4 +91,5 @@ Este tópico descreve como você pode proteger informações confidenciais sejam
  Além disso, o endereço IP do remetente da mensagem é registrado uma vez por conexão para transportes voltados para conexão e, uma vez por mensagem enviada, caso contrário. Isso é feito sem o consentimento do remetente. No entanto, esse registro em log somente ocorre nos níveis de rastreamento informações ou detalhado, que não são o padrão ou recomendado níveis de rastreamento em produção, com exceção de depuração ao vivo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

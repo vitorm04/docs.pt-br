@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122779"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Ponteiros do mouse no Windows Forms
 O *ponteiro* do mouse, que às vezes é conhecido como o cursor, é um bitmap que especifica um ponto de foco na tela para entrada do usuário com o mouse. Este tópico fornece uma visão geral do ponteiro do mouse no Windows Forms e descreve algumas maneiras de modificar e controlar o ponteiro do mouse.  
@@ -31,6 +31,7 @@ O *ponteiro* do mouse, que às vezes é conhecido como o cursor, é um bitmap qu
  A principal maneira de alterar o ponteiro do mouse está definindo o <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.Control.DefaultCursor%2A> propriedade de um controle para um novo <xref:System.Windows.Forms.Cursor>. Para obter exemplos de alterar o ponteiro do mouse, consulte o exemplo de código a <xref:System.Windows.Forms.Cursor> classe. Além disso, o <xref:System.Windows.Forms.Cursors> classe expõe um conjunto de <xref:System.Windows.Forms.Cursor> objetos para muitos tipos diferentes de ponteiros, como um ponteiro que lembra uma mão. Para exibir o ponteiro de espera, que lembra uma ampulheta, sempre que o ponteiro do mouse está sobre o controle, use o <xref:System.Windows.Forms.Control.UseWaitCursor%2A> propriedade do <xref:System.Windows.Forms.Control> classe.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Cursor>
-- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Funcionalidade do tipo "arrastar e soltar" no Windows Forms](drag-and-drop-functionality-in-windows-forms.md)
+- [Entrada do mouse em um aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Funcionalidade de arrastar e soltar no Windows Forms](drag-and-drop-functionality-in-windows-forms.md)
