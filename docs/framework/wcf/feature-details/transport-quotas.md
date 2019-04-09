@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174623"
 ---
 # <a name="transport-quotas"></a>Cotas de transporte
 Cotas de transporte são um mecanismo de política para decidir quando uma conexão está consumindo recursos excessivos. Uma cota é um limite rígido que impede o uso de recursos adicionais depois que o valor da cota é excedido. Cotas de transporte impedir mal-intencionados ou não intencionais ataques de negação de serviço.  
@@ -108,6 +108,7 @@ Cotas de transporte são um mecanismo de política para decidir quando uma conex
  Configuração de aplicativo pode definir as cotas de transporte mesmo como acessar diretamente as propriedades em uma associação. Arquivos de configuração, o nome de uma cota de transporte sempre começa com uma letra minúscula. Por exemplo, o `CloseTimeout` propriedade em uma associação corresponde à `closeTimeout` na configuração e o `MaxConnections` propriedade em uma associação corresponde à `maxConnections` na configuração.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

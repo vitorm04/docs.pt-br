@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177405"
 ---
 # <a name="dialog-boxes-overview"></a>Visão geral das caixas de diálogo
 Aplicativos autônomos geralmente têm uma janela principal que exibe os principais dados sobre os quais o aplicativo opera e expõe a funcionalidade para processar os dados por meio de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos, como barras de menus, barras de ferramentas e barras de status. Um aplicativo não trivial também pode exibir janelas adicionais para fazer o seguinte:  
@@ -33,9 +33,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
  Um *sem janela restrita* caixa de diálogo, por outro lado, não impede que um usuário ative outras janelas enquanto ele está aberto. Por exemplo, se um usuário desejar localizar ocorrências de uma palavra específica em um documento, uma janela principal geralmente abrirá uma caixa de diálogo para solicitar a um usuário qual palavra ele está procurando. No entanto, como a localização de uma palavra não impede que um usuário edite o documento, a caixa de diálogo não precisa ser restrita. Uma caixa de diálogo sem janela restrita fornece pelo menos um **feche** botão para fechar a caixa de diálogo e pode fornecer outros botões para executar funções específicas, como um **Localizar próximo** botão para localizar a próxima palavra que corresponde a critérios de localização de uma pesquisa de palavra.  
   
  Windows Presentation Foundation (WPF) permite que você crie vários tipos de caixas de diálogo, incluindo caixas de mensagem, caixas de diálogo comuns e caixas de diálogo personalizadas. Este tópico aborda cada um e o [amostra de caixa de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984) fornece os exemplos correspondentes.  
-  
- 
-  
+
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Caixas de mensagem  
  Um *caixa de mensagem* é uma caixa de diálogo que pode ser usada para exibir informações textuais e permitir que os usuários tomem decisões com botões. A figura a seguir mostra uma caixa de mensagem que exibe informações textuais, faz uma pergunta e fornece ao usuário três botões para responder à pergunta.  
@@ -47,7 +45,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Para mostrar uma caixa de mensagem, você chama o `static` <xref:System.Windows.MessageBox.Show%2A> método, conforme demonstrado no código a seguir.  
+ Para mostrar uma caixa de mensagem, você chama o `static`<xref:System.Windows.MessageBox.Show%2A> método, conforme demonstrado no código a seguir.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -65,7 +63,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Caixas de diálogo comuns  
- O [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa uma variedade de caixas de diálogo reutilizáveis que são comuns a todos os aplicativos, incluindo caixas de diálogo Abrir Arquivo, Salvar Arquivo e Imprimir. Como essas caixas de diálogo são implementadas pelo sistema operacional, elas podem ser compartilhadas entre todos os aplicativos executados no sistema operacional, o que ajuda na consistência da experiência do usuário. Quando os usuários estiverem familiarizados com o uso de uma caixa de diálogo fornecida pelo sistema operacional em um aplicativo, eles não precisarão aprender a usar a caixa de diálogo em outros aplicativos. Porque essas caixas de diálogo estão disponíveis para todos os aplicativos e como elas ajudam a fornecer uma experiência de usuário consistente, elas são conhecidas como *caixas de diálogo comuns*.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa uma variedade de caixas de diálogo reutilizáveis que são comuns a todos os aplicativos, incluindo caixas de diálogo Abrir arquivo, salvar arquivos e impressão. Como essas caixas de diálogo são implementadas pelo sistema operacional, elas podem ser compartilhadas entre todos os aplicativos executados no sistema operacional, o que ajuda na consistência da experiência do usuário. Quando os usuários estiverem familiarizados com o uso de uma caixa de diálogo fornecida pelo sistema operacional em um aplicativo, eles não precisarão aprender a usar a caixa de diálogo em outros aplicativos. Porque essas caixas de diálogo estão disponíveis para todos os aplicativos e como elas ajudam a fornecer uma experiência de usuário consistente, elas são conhecidas como *caixas de diálogo comuns*.  
   
  Windows Presentation Foundation (WPF) encapsula o arquivo aberto, salve o arquivo e caixas de diálogo comuns de impressão e as expõe como classes gerenciadas para uso em aplicativos autônomos. Este tópico fornece uma visão geral breve de cada uma delas.  
   
@@ -210,7 +208,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
  ![Uma caixa de diálogo margens com uma borda vermelha ao redor do valor da margem esquerda inválida.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não restringe um usuário ao controle inválido até que ele insira dados válidos. Esse é bom comportamento para uma caixa de diálogo; um usuário poderá navegar livremente pelos controles em uma caixa de diálogo, independentemente de os dados serem válidos ou não. No entanto, isso significa que um usuário pode inserir dados inválidos e pressionar o **Okey** botão. Por esse motivo, seu código também precisa validar todos os controles em uma caixa de diálogo caixa quando o **Okey** botão for pressionado, tratando o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não restringe um usuário ao controle inválido até que ele tenha inserido dados válidos. Esse é bom comportamento para uma caixa de diálogo; um usuário poderá navegar livremente pelos controles em uma caixa de diálogo, independentemente de os dados serem válidos ou não. No entanto, isso significa que um usuário pode inserir dados inválidos e pressionar o **Okey** botão. Por esse motivo, seu código também precisa validar todos os controles em uma caixa de diálogo caixa quando o **Okey** botão for pressionado, tratando o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -345,6 +343,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral do pop-up](../controls/popup-overview.md)
 - [Amostra de caixa de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)
-- [Amostra de controle personalizado ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)
+- [Exemplo de controle personalizado ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)

@@ -1,5 +1,5 @@
 ---
-title: 'Práticas recomendadas: Controle de versão de contrato de dados'
+title: 'Melhores práticas: Controle de versão de contrato de dados'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118996"
 ---
-# <a name="best-practices-data-contract-versioning"></a>Práticas recomendadas: Controle de versão de contrato de dados
+# <a name="best-practices-data-contract-versioning"></a>Melhores práticas: Controle de versão de contrato de dados
 Este tópico lista as práticas recomendadas para a criação de contratos de dados que podem evoluir facilmente ao longo do tempo. Para obter mais informações sobre contratos de dados, consulte os tópicos [contratos de dados usando](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Observação sobre validação de esquema  
@@ -91,6 +91,7 @@ Este tópico lista as práticas recomendadas para a criação de contratos de da
  Algumas das diretrizes listadas aqui podem ser ignoradas com segurança quando circunstâncias especiais se aplicam. Certifique-se de que entender completamente a serialização, desserialização e mecanismos de esquema envolverem antes desviam-se das diretrizes.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
@@ -103,5 +104,5 @@ Este tópico lista as práticas recomendadas para a criação de contratos de da
 - [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Controle de versão de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [Nomes de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Contratos de dados compatíveis com encaminhamento](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Contratos de dados compatíveis por encaminhamento](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [Retornos de chamada de serialização tolerantes à versão](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

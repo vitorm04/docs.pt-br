@@ -1,15 +1,15 @@
 ---
-title: 'Modelo de dados de entidade: Tipos de dados primitivos'
+title: 'Modelo de Dados de Entidade: Tipos de dados primitivos'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 2c2e1056c43f974ec38407372a8f447e52b4a630
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142643"
 ---
-# <a name="entity-data-model-primitive-data-types"></a>Modelo de dados de entidade: Tipos de dados primitivos
+# <a name="entity-data-model-primitive-data-types"></a>Modelo de Dados de Entidade: Tipos de dados primitivos
 Modelo de dados de entidade (EDM) suporta um conjunto de tipos de dados primitivo abstrato (como cadeia de caracteres, Boolean, Int32 e assim por diante) que são usadas para definir [propriedades](../../../../docs/framework/data/adonet/property.md) em um modelo conceitual. Esses tipos de dados primitivos são proxies para os tipos de dados primitivos reais que são suportados no armazenamento ou no ambiente de hospedagem, como um base de dados SQL Server ou Common Language Runtime (CLR). EDM não define a semântica das operações ou das conversões sobre tipos de dados primitivos; essa semântica é definida pelo armazenamento ou pelo ambiente de hospedagem. Normalmente, os tipos de dados primitivos em EDM são mapeados para os tipos de dados primitivos no armazenamento ou no ambiente de hospedagem. Para obter informações sobre como o Entity Framework mapeia tipos primitivos em EDM aos tipos de dados do SQL Server, consulte [SqlClient para Entity FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
   
 > [!NOTE]
@@ -39,5 +39,6 @@ Modelo de dados de entidade (EDM) suporta um conjunto de tipos de dados primitiv
 |Hora|Contém uma hora.|Precisão, anulável, opção|  
   
 ## <a name="see-also"></a>Consulte também
-- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+
+- [Conceitos chave do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

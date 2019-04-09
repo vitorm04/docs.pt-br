@@ -1,18 +1,18 @@
 ---
-title: 'Exemplos de sintaxe de consulta com base em método: Ordenação (LINQ to DataSet)'
+title: 'Exemplos de sintaxe de consulta baseada em método: Ordenação (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
-ms.openlocfilehash: ee9f03abceb07f0cb9e94baccd4b7f4ec708e574
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 76bc4751a25e82a731e136f838d12b8d1c1d691f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119555"
 ---
-# <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Exemplos de sintaxe de consulta com base em método: Ordenação (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Exemplos de sintaxe de consulta baseada em método: Ordenação (LINQ to DataSet)
 Os exemplos neste tópico demonstram como usar <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, e métodos de <xref:System.Linq.Enumerable.ThenBy%2A> para ver <xref:System.Data.DataSet> e para ordenar os resultados usando a sintaxe da consulta de método.  
   
  O `FillDataSet` método usado nesses exemplos é especificado no [carregamento de dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
@@ -51,7 +51,8 @@ Os exemplos neste tópico demonstram como usar <xref:System.Linq.Enumerable.Orde
  [!code-vb[DP LINQ to DataSet Examples#ThenByDescendingComparer_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#thenbydescendingcomparer_mq)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+
+- [Carregando dados em um DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [LINQ para exemplos de DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Visão geral de operadores de consulta padrão (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

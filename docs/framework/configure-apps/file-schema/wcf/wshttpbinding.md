@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: d22065abcb04209ebd1ad51b41bfc9167af6d4c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6059bc91588492afdd1f205398e6cdfdba0be7ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177457"
 ---
 # <a name="wshttpbinding"></a>\<wsHttpBinding>
 Define uma associação segura, confiável e interoperável adequada para contratos de serviço não duplex. A associação implementa as seguintes especificações: WS-Reliable Messaging para confiabilidade e WS-Security para autenticação e segurança de mensagem. O transporte é HTTP, e a codificação de mensagem é texto/XML de codificação.  
@@ -85,7 +85,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
+|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições na complexidade das mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica se as sessões confiáveis são estabelecidas entre pontos de extremidade de canal.|  
   
@@ -137,6 +137,7 @@ Define uma associação segura, confiável e interoperável adequada para contra
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSHttpBindingElement>
 - [Associações](../../../../../docs/framework/wcf/bindings.md)

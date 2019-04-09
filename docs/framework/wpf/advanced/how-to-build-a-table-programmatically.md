@@ -1,5 +1,5 @@
 ---
-title: 'Como: Compilar uma tabela de forma programática'
+title: 'Como: Criar uma tabela de forma programática'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-ms.openlocfilehash: 3848032bf527f64ce591eb2cda98028c835d79f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 315154b37218c0a6845f0a46149fc056780ee650
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172621"
 ---
-# <a name="how-to-build-a-table-programmatically"></a>Como: Compilar uma tabela de forma programática
+# <a name="how-to-build-a-table-programmatically"></a>Como: Criar uma tabela de forma programática
 Os exemplos a seguir mostram como criar programaticamente um <xref:System.Windows.Documents.Table> e preenchê-lo com conteúdo. O conteúdo da tabela é particionado em cinco linhas (representado por <xref:System.Windows.Documents.TableRow> objetos contidos em um <xref:System.Windows.Documents.Table.RowGroups%2A> objeto) e seis colunas (representado por <xref:System.Windows.Documents.TableColumn> objetos). As linhas são usadas para fins de apresentação diferentes, incluindo uma linha de título para ser usada como título da tabela inteira, uma linha de cabeçalho para descrever as colunas de dados na tabela e uma linha de rodapé com informações resumidas.  Observe que a noção das linhas de “título”, “cabeçalho” e “rodapé” não são inerentes à tabela; essas são apenas linhas com características diferentes. Células de tabela contêm o conteúdo real, que pode ser composto por texto, imagens ou quase qualquer outro [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] elemento.  
   
 ## <a name="example"></a>Exemplo  
@@ -57,4 +57,5 @@ Os exemplos a seguir mostram como criar programaticamente um <xref:System.Window
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da tabela](table-overview.md)

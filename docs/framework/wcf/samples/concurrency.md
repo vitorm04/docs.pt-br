@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 81abc4cd3d9f5be3ca461754f9f84287ffe2f752
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: f0d4996a7ea8ab49df780635127f39064b1050c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119139"
 ---
 # <a name="concurrency"></a>Concorrência
 O exemplo de simultaneidade demonstra como usar o <xref:System.ServiceModel.ServiceBehaviorAttribute> com o <xref:System.ServiceModel.ConcurrencyMode> enumeração, que controla se uma instância de um serviço processa mensagens consecutivamente ou simultaneamente. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Este exemplo define um novo contrato, `ICalculatorConcurrency`, que herda de `ICalculator`, fornecendo duas operações adicionais para inspecionar o estado de simultaneidade de serviço. Alterando a configuração de simultaneidade, você pode observar a alteração no comportamento executando o cliente.  
@@ -111,4 +111,3 @@ public class CalculatorService : ICalculatorConcurrency
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  
-  

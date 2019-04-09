@@ -9,17 +9,16 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 935d86195acaca94b0115a8cdcf7289c23613f7f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369754"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125114"
 ---
 # <a name="textelement-content-model-overview"></a>Visão geral do modelo de conteúdo TextElement
 Esta visão geral do modelo de conteúdo descreve o conteúdo com suporte por um <xref:System.Windows.Documents.TextElement>. O <xref:System.Windows.Documents.Paragraph> classe é um tipo de <xref:System.Windows.Documents.TextElement>. Um modelo de conteúdo descreve quais objetos/elementos podem estar contidos em outros. Esta visão geral resume o modelo de conteúdo usado para objetos derivados de <xref:System.Windows.Documents.TextElement>. Para obter mais informações, consulte [visão geral do documento de fluxo](flow-document-overview.md).  
-  
-  
+
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>Diagrama do modelo de conteúdo  
  O diagrama a seguir resume o modelo de conteúdo para as classes derivadas <xref:System.Windows.Documents.TextElement> , bem como como outras não - `TextElement` classes ajustar a esse modelo.  
@@ -58,9 +57,9 @@ Esta visão geral do modelo de conteúdo descreve o conteúdo com suporte por um
 ## <a name="working-with-textelement-content-programmatically"></a>Trabalhando com conteúdo TextElement programaticamente  
  O conteúdo de um <xref:System.Windows.Documents.TextElement> é composto por coleções e portanto manipular programaticamente o conteúdo de <xref:System.Windows.Documents.TextElement> objetos é feito ao trabalhar com essas coleções. Há três coleções diferentes usadas pelo <xref:System.Windows.Documents.TextElement> -as classes derivadas:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Representa uma coleção de elementos <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> define o conteúdo filho permitido dos elementos <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> e <xref:System.Windows.Controls.TextBlock>.  
+-   <xref:System.Windows.Documents.InlineCollection>: Representa uma coleção de elementos <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> Define o conteúdo filho permitido dos <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, e <xref:System.Windows.Controls.TextBlock> elementos.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Representa uma coleção de elementos <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> define o conteúdo filho permitido dos elementos <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> e <xref:System.Windows.Documents.Figure>.  
+-   <xref:System.Windows.Documents.BlockCollection>: Representa uma coleção de elementos <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> Define o conteúdo filho permitido dos <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, e <xref:System.Windows.Documents.Figure> elementos.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Um elemento de conteúdo de fluxo que representa um item de conteúdo específico em uma <xref:System.Windows.Documents.List> ordenada ou desordenada.  
   
@@ -102,6 +101,7 @@ Esta visão geral do modelo de conteúdo descreve o conteúdo com suporte por um
  Ver [modelo de conteúdo WPF](../controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Manipular um FlowDocument por meio da propriedade Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Manipular elementos de conteúdo de fluxo por meio da propriedade Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [Manipular um FlowDocument por meio da propriedade Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)

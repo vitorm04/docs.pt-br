@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0361a4cd048f0b3be6bce47e52dd44ba3cea3475
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121609"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Método ICorProfilerInfo4::GetReJITIDs
 Retorna uma matriz de IDs que identificam todos os recompilado por JIT versões da função especificada que ainda são alocadas. Isso inclui versões recompilado por JIT funções que foram revertidas, posteriormente, mas ainda não liberadas (por exemplo, quando o domínio do aplicativo que contém a função revertida ainda está em uso).  
@@ -63,6 +63,7 @@ HRESULT GetReJITIDs (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil de interfaces](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)

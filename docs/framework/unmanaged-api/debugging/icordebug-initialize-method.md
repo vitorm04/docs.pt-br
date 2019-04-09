@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7b4cf6c50d624f82a75f19b8e3f42c73910c4e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd09ce27c0fea9dca8fd86afc563651d68542e13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173141"
 ---
 # <a name="icordebuginitialize-method"></a>Método ICorDebug::Initialize
 Inicializa o objeto `ICorDebug`.  
@@ -46,4 +46,5 @@ HRESULT Initialize ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

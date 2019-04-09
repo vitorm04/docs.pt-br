@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4623fecd210ac716824fdc5fede99ec40145e8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3476a338191a4af9cc01b7e44456f1bd20f52a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179004"
 ---
 # <a name="icorprofilerinfo2-interface"></a>Interface ICorProfilerInfo2
 Fornece métodos que os criadores de perfil de código usam para se comunicar com o CLR (CLR) para controlar o monitoramento de eventos e informações de solicitação. O `ICorProfilerInfo2` interface é uma extensão do [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface. Ou seja, ele fornece novos métodos com suporte no .NET Framework versão 2.0 e versões posteriores.  
@@ -69,5 +69,6 @@ Fornece métodos que os criadores de perfil de código usam para se comunicar co
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+
+- [Criação de perfil de interfaces](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

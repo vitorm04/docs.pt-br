@@ -1,15 +1,15 @@
 ---
-title: SqlClient para Entity FrameworkTypes
+title: SqlClient para a entidade FrameworkTypes
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: b121020c8779cfb3959425b1019eaf085b97d6cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147648"
 ---
-# <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient para Entity FrameworkTypes
+# <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient para a entidade FrameworkTypes
 O provedor de dados. NET Framework para o arquivo de manifesto do provedor SQL Server (SqlClient) inclui a lista de tipos primitivos de provedor, de facetas para cada tipo, de mapeamento entre os tipos primitivos e modelo conceitual de armazenamento, e regras da promoção e de conversão entre os tipos primitivos modelo conceitual e do armazenamento.  
   
  A tabela a seguir descreve os tipos do SQL Server 2008, [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], e [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] bancos de dados e como esses tipos são mapeados para conceitual tipos de modelo. Alguns novos tipos foram introduzidos em versões posteriores do SQL Server não são suportados nas versões anteriores do SQL Server. Esses tipos são observados na tabela abaixo.  
@@ -51,4 +51,5 @@ O provedor de dados. NET Framework para o arquivo de manifesto do provedor SQL S
 |`xml`|Igual comparáveis: False<br /><br /> Ordem comparáveis: False|`Edm.String`|MaxLength:<br /><br /> -Padrão: 1073741823<br /><br /> -Constante: verdadeiro<br /><br /> Unicode:<br /><br /> -Padrão: verdadeiro<br /><br /> -Constante: verdadeiro<br /><br /> FixedLength:<br /><br /> -Padrão: False<br /><br /> -Constante: verdadeiro|  
   
 ## <a name="see-also"></a>Consulte também
-- [CSDL, SSDL, and MSL Specifications](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md) (Especificações CSDL, SSDL e MSL)
+
+- [Especificações de CSDL, SSDL e MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

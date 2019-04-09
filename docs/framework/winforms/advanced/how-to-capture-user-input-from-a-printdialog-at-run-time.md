@@ -1,5 +1,5 @@
 ---
-title: 'Como: Capturar a entrada do usuário de um PrintDialog em tempo de execução'
+title: 'Como: capturar a entrada do usuário de um PrintDialog em tempo de execução'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: 69a3632ddb4d68f5a916f5ffca020630abe1bd68
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c1b0a7e66a4c2050ea5b92a55a39ea46a7b762c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176716"
 ---
-# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Como: Capturar a entrada do usuário de um PrintDialog em tempo de execução
+# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Como: capturar a entrada do usuário de um PrintDialog em tempo de execução
 Embora você possa definir as opções relacionadas à impressão em tempo de design, às vezes, convém alterar essas opções em tempo de execução, provavelmente devido a escolhas feitas pelo usuário. Você pode capturar a entrada do usuário para imprimir um documento usando o <xref:System.Windows.Forms.PrintDialog> e o <xref:System.Drawing.Printing.PrintDocument> componentes.  
   
 ### <a name="to-change-print-options-programmatically"></a>Para alterar as opções de impressão de forma programática  
@@ -56,5 +56,6 @@ Embora você possa definir as opções relacionadas à impressão em tempo de de
 4.  Opções de impressão do usuário na caixa de diálogo serão copiadas para o <xref:System.Drawing.Printing.PrinterSettings> propriedade do <xref:System.Drawing.Printing.PrintDocument> componente.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Imprimir um arquivo de texto de várias páginas nos Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)
+
+- [Como: imprimir um arquivo de texto de várias páginas nos Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Suporte à impressão no Windows Forms](windows-forms-print-support.md)

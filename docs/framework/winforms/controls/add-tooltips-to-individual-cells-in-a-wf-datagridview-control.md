@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar ToolTips a células individuais em um controle do Windows Forms DataGridView'
+title: 'Como: Adicionar ToolTips a células individuais em um controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: 5198bec11142e31d60f9127ecebc4ffc8ee8b8ec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3307c92a13e5730de6dce0fe45b924e44b7af554
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119633"
 ---
-# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Como: Adicionar ToolTips a células individuais em um controle do Windows Forms DataGridView
+# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Como: Adicionar ToolTips a células individuais em um controle DataGridView do Windows Forms
 Por padrão, as dicas de ferramentas são usadas para exibir os valores de <xref:System.Windows.Forms.DataGridView> células que são pequenas demais para mostrar todo o seu conteúdo. Contudo, é possível substituir esse comportamento para definir valores de texto de dicas de ferramentas para células individuais. Isso é útil para exibir aos usuários informações adicionais sobre uma célula ou para fornecer aos usuários uma descrição alternativa do conteúdo da célula. Por exemplo, se você tiver uma linha que exibe ícones de status, talvez seja recomendável fornecer explicações de texto usando dicas de ferramenta.  
   
  Você também pode desativar a exibição de dicas de ferramentas de nível de célula, definindo o <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> propriedade para `false`.  
@@ -42,6 +42,7 @@ Por padrão, as dicas de ferramentas são usadas para exibir os valores de <xref
  Quando você associa o <xref:System.Windows.Forms.DataGridView> controle a uma fonte de dados externa ou fornecer sua própria fonte de dados Implementando o modo virtual, você pode encontrar problemas de desempenho. Para evitar uma penalidade de desempenho ao trabalhar com grandes quantidades de dados, manipular a <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> evento em vez da definição de <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> propriedade de várias células. Quando você manipula esse evento, obtendo o valor de uma célula <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> gera o evento de propriedade e retorna o valor da <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> a propriedade como especificado no evento de manipulador.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>

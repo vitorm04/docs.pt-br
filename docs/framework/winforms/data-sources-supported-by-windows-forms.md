@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124612"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Fontes de dados com suporte do Windows Forms
 Tradicionalmente, a associação de dados era usada nos aplicativos para tirar proveito dos dados armazenados em bancos de dados. Com a associação de dados do Windows Forms, você pode acessar dados de bancos de dados, bem como dados em outras estruturas, como matrizes e coleções, desde que certos requisitos mínimos sejam atendidos.  
@@ -44,8 +44,8 @@ Tradicionalmente, a associação de dados era usada nos aplicativos para tirar p
  <xref:System.Collections.IEnumerable>  
  Controles dos Windows Forms podem ser vinculados a fontes de dados que oferecem suporte apenas a <xref:System.Collections.IEnumerable> se eles estiverem associados por meio da interface um <xref:System.Windows.Forms.BindingSource> componente.  
   
- Objetos de dados [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] fornece um número de estruturas de dados adequadas para associação. Cada uma delas varia em termos de sofisticação e complexidade.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] objetos de dados  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Fornece uma série de estruturas de dados adequadas para associação a. Cada uma delas varia em termos de sofisticação e complexidade.  
   
 -   <xref:System.Data.DataColumn>. Um <xref:System.Data.DataColumn> é o bloco de construção essencial de um <xref:System.Data.DataTable>, em que um número de colunas compõem uma tabela. Cada <xref:System.Data.DataColumn> tem um <xref:System.Data.DataColumn.DataType%2A> propriedade que determina o tipo de dados, a coluna contém (por exemplo, a marca de um automóvel em uma tabela que descreve carros). Você pode associar de maneira simples um controle (como uma <xref:System.Windows.Forms.TextBox> do controle <xref:System.Windows.Forms.Control.Text%2A> propriedade) para uma coluna dentro de uma tabela de dados.  
   
@@ -58,6 +58,7 @@ Tradicionalmente, a associação de dados era usada nos aplicativos para tirar p
 -   <xref:System.Data.DataViewManager>. Um <xref:System.Data.DataViewManager> é uma exibição personalizada de todo o <xref:System.Data.DataSet>, análogo a um <xref:System.Data.DataView>, mas com relações incluídas. Com uma <xref:System.Data.DataViewManager.DataViewSettings%2A> coleção, você pode definir opções de classificação para todas as exibições e filtros padrão que o <xref:System.Data.DataViewManager> tem para uma determinada tabela.  
   
 ## <a name="see-also"></a>Consulte também
-- [Notificação de alteração na vinculação de dados dos Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+
+- [Notificação de alteração na associação de dados do Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Associação de dados e o Windows Forms](data-binding-and-windows-forms.md)
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)

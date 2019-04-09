@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar um dicionário de recursos de escopo do aplicativo'
+title: 'Como: Usar um dicionário de recursos no escopo do aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: a2453ae7fad56205ae06835d8710ca126bba17c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125367"
 ---
-# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Como: Usar um dicionário de recursos de escopo do aplicativo
+# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Como: Usar um dicionário de recursos no escopo do aplicativo
 Este exemplo mostra como definir e usar um dicionário de recursos personalizado de escopo do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
@@ -42,6 +42,7 @@ Este exemplo mostra como definir e usar um dicionário de recursos personalizado
  Há duas considerações a fazer ao usar <xref:System.Windows.Application.Resources%2A>. Primeiro, o dicionário *chave* é um objeto, então você deve usar exatamente a mesma instância de objeto quando ambos definem e obtêm um valor da propriedade. (Note que a chave faz distinção entre maiúsculas e minúsculas ao usar uma cadeia de caracteres.) Segundo, o dicionário *valor* é um objeto, então você precisará converter o valor para o tipo desejado ao obter um valor de propriedade.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
 - [Recursos XAML](../advanced/xaml-resources.md)

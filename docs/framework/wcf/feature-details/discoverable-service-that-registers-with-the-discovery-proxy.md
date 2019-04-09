@@ -1,15 +1,15 @@
 ---
-title: 'Como: Implementar um serviço de descoberta que registra com o Proxy de descoberta'
+title: 'Como: implementar um serviço de descoberta que registra usando o proxy de descoberta'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: c708942265ae39ee6e4f198118741068a37512ba
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
-ms.translationtype: MT
+ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177821"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Como: Implementar um serviço de descoberta que registra com o Proxy de descoberta
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Como: implementar um serviço de descoberta que registra usando o proxy de descoberta
 Este tópico é o segundo de quatro tópicos que discute como implementar um proxy de descoberta. No tópico anterior, [como: Implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), você implementou um proxy de descoberta. Neste tópico, você cria um serviço WCF que envia mensagens de comunicado (`Hello` e `Bye`) para o proxy de descoberta, fazendo com que ele se registrar e cancelar seu registro com o proxy de descoberta.
 
 ### <a name="to-define-the-service-contract"></a>Para definir o contrato de serviço
@@ -290,6 +290,7 @@ namespace Microsoft.Samples.Discovery
 ```
 
 ## <a name="see-also"></a>Consulte também
-- [Descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [Como: Implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Como: Implementar um aplicativo cliente que usa o Proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+
+- [Descoberta de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Como: implementar um proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Como: implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

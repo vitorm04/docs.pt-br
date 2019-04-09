@@ -1,5 +1,5 @@
 ---
-title: 'Como: Ler metadados de imagem'
+title: 'Como: ler metadados de imagem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173609"
 ---
-# <a name="how-to-read-image-metadata"></a>Como: Ler metadados de imagem
+# <a name="how-to-read-image-metadata"></a>Como: ler metadados de imagem
 Alguns arquivos de imagem contêm metadados que você pode ler para determinar os recursos da imagem. Por exemplo, uma fotografia digital pode conter metadados que você pode ler para determinar a marca e modelo da câmera usada para capturar a imagem. Com o [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], você pode ler os metadados existentes e escrever novos metadados para os arquivos de imagem.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] armazena um item individual de metadados em um <xref:System.Drawing.Imaging.PropertyItem> objeto. Você pode ler o <xref:System.Drawing.Image.PropertyItems%2A> propriedade de um <xref:System.Drawing.Image> objeto para recuperar todos os metadados de um arquivo. O <xref:System.Drawing.Image.PropertyItems%2A> propriedade retorna uma matriz de <xref:System.Drawing.Imaging.PropertyItem> objetos.  
@@ -124,5 +124,6 @@ Alguns arquivos de imagem contêm metadados que você pode ler para determinar o
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Lidar com o formulário <xref:System.Windows.Forms.Control.Paint> eventos e cole este código no manipulador de eventos de pintura. Você deve substituir `FakePhoto.jpg` por um nome e caminho de imagem válidos no seu sistema e importar o namespace `System.Drawing.Imaging`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Trabalhando com imagens, bitmaps, ícones e metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
