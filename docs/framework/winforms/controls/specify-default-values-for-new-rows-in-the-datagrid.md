@@ -1,5 +1,5 @@
 ---
-title: 'Como: Especificar valores padrão para novas linhas no controle DataGridView dos Windows Forms'
+title: 'Como: Especificar valores padrão para novas linhas no controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: cc854f0cdbef8373b74a16c7d5bc044cfee5aa84
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8a90cbef7032fd3753a6c9ec0b856a4e2ea1db27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193688"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Como: Especificar valores padrão para novas linhas no controle DataGridView dos Windows Forms
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Como: Especificar valores padrão para novas linhas no controle DataGridView do Windows Forms
 Você pode fazer mais conveniente a entrada de dados quando o aplicativo em default preenche os valores para linhas recém-adicionadas. Com o <xref:System.Windows.Forms.DataGridView> classe, você pode preencher em default valores com o <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> eventos. Esse evento é gerado quando o usuário insere a linha para novos registros. Quando seu código manipula esse evento, você pode preencher desejadas células com valores de sua escolha.  
   
  O exemplo de código a seguir demonstra como especificar valores padrão para novas linhas usando o <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> eventos.  
@@ -36,7 +36,8 @@ Você pode fazer mais conveniente a entrada de dados quando o aplicativo em defa
 -   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Entrada de Dados no controle DataGridView dos Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Entrada de dados no controle DataGridView dos Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
 - [Usando a linha para novos registros no controle DataGridView dos Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

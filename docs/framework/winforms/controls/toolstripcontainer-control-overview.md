@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-ms.openlocfilehash: 1f8d8bf8edd7968ed2d2a5c4ddd654dccf318f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c279316c2a372a1498707b27ec8658813306304b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191257"
 ---
 # <a name="toolstripcontainer-control-overview"></a>Visão geral do controle ToolStripContainer
 Um <xref:System.Windows.Forms.ToolStripContainer> tem painéis em seu esquerda, direita, superior e lados da parte inferior para posicionamento e reposicionamento <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles são empilhados verticalmente ao colocá-los na esquerda ou direita <xref:System.Windows.Forms.ToolStripContainer>. Eles são empilhados horizontalmente se colocá-los na parte superior ou inferior <xref:System.Windows.Forms.ToolStripContainer>. Você pode usar a central <xref:System.Windows.Forms.ToolStripContentPanel> do <xref:System.Windows.Forms.ToolStripContainer> para posicionar controles tradicionais no formulário.  
@@ -33,5 +33,6 @@ Um <xref:System.Windows.Forms.ToolStripContainer> tem painéis em seu esquerda, 
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|Obtém ou define um valor que indica se o painel superior do <xref:System.Windows.Forms.ToolStripContainer> está visível.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>
