@@ -1,5 +1,5 @@
 ---
-title: 'Como: Escolher as impressoras conectadas ao computador de um usuário nos Windows Forms'
+title: 'Como: escolher as impressoras conectadas ao computador de um usuário no Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184022"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Como: Escolher as impressoras conectadas ao computador de um usuário nos Windows Forms
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Como: escolher as impressoras conectadas ao computador de um usuário no Windows Forms
 Geralmente, os usuários escolhem uma impressora diferente da impressora padrão para imprimir. Você pode habilitar os usuários escolham uma impressora dentre as instaladas no momento usando o <xref:System.Windows.Forms.PrintDialog> componente. Por meio de <xref:System.Windows.Forms.PrintDialog> componente, o <xref:System.Windows.Forms.DialogResult> da <xref:System.Windows.Forms.PrintDialog> componente é capturado e usado para selecionar a impressora.  
   
  No procedimento a seguir, um arquivo de texto é selecionado para ser impresso na impressora padrão. O <xref:System.Windows.Forms.PrintDialog> classe é então instanciada.  
@@ -107,4 +107,5 @@ Geralmente, os usuários escolhem uma impressora diferente da impressora padrão
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)
+
+- [Suporte à impressão no Windows Forms](windows-forms-print-support.md)

@@ -2,22 +2,19 @@
 title: Opção de compilador
 description: Use F# opções do compilador de linha de comando para controlar a compilação de seu F# aplicativos e bibliotecas.
 ms.date: 12/10/2018
-ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "53614487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089751"
 ---
 # <a name="compiler-options"></a>Opção de compilador
 
 Este tópico descreve as opções do compilador de linha de comando para o F# compilador, fsc.exe. O ambiente de compilação também pode ser controlado definindo as propriedades do projeto.
 
-
 ## <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 A tabela a seguir mostra as opções do compilador listadas em ordem alfabética. Alguns do F# opções do compilador são semelhantes para o C# opções do compilador. Se esse for o caso, um link para o C# tópico de opções do compilador é fornecido.
-
-
 
 |Opção de compilador|Descrição|
 |---------------|-----------|
@@ -74,4 +71,4 @@ A tabela a seguir mostra as opções do compilador listadas em ordem alfabética
 |Título|Descrição|
 |-----|-----------|
 |[Opções do F# Interativo](fsharp-interactive-options.md)|Descreve as opções de linha de comando com suporte a F# interpretador, fsi.exe.|
-|[Referência de Propriedades do Projeto](/visualstudio/ide/reference/project-properties-reference)|Descreve a interface do usuário para projetos, incluindo páginas de propriedades de projeto que fornecem opções de compilação.|
+|[Referência de propriedades de projeto](/visualstudio/ide/reference/project-properties-reference)|Descreve a interface do usuário para projetos, incluindo páginas de propriedades de projeto que fornecem opções de compilação.|

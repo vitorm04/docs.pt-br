@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: cc998fd88f3487aa20f6cef73aacb6c07f92c7ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109429"
 ---
 # <a name="webbrowser-control-overview"></a>Visão geral do controle WebBrowser
 O <xref:System.Windows.Forms.WebBrowser> controle fornece um wrapper gerenciado para o controle WebBrowser ActiveX. O wrapper gerenciado permite exibir páginas da Web em seus aplicativos cliente dos Windows Forms. Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para duplicar a funcionalidade de navegação da Web Internet Explorer em seu aplicativo, ou você pode desabilitar a funcionalidade padrão do Internet Explorer e usar o controle como um visualizador de documentos HTML simple. Você também pode usar o controle para adicionar elementos da interface do usuário com base em DHTML ao seu formulário e ocultar o fato de que eles são hospedados no <xref:System.Windows.Forms.WebBrowser> controle. Essa abordagem permite combinar perfeitamente controles Web com controles dos Windows Forms em um único aplicativo.  
@@ -26,21 +26,22 @@ O <xref:System.Windows.Forms.WebBrowser> controle fornece um wrapper gerenciado 
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Propriedade <xref:System.Windows.Forms.WebBrowser.Document%2A>|Obtém um objeto que fornece acesso gerenciado para DOM (Modelo de Objeto do Documento) HTML da página da Web atual.|  
-|Evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>|Ocorre quando uma página da Web conclui o carregamento.|  
-|Propriedade <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>|Obtém ou define o conteúdo HTML da página da Web atual.|  
-|Propriedade <xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A>|Obtém o título da página da Web atual.|  
-|Método <xref:System.Windows.Forms.WebBrowser.GoBack%2A>|Navega para a página anterior no histórico.|  
-|Método <xref:System.Windows.Forms.WebBrowser.GoForward%2A>|Navega para a próxima página no histórico.|  
-|Método <xref:System.Windows.Forms.WebBrowser.Navigate%2A>|Navega para a URL especificada.|  
-|Evento <xref:System.Windows.Forms.WebBrowser.Navigating>|Ocorre antes do início de navegação, permitindo que a ação seja cancelada.|  
-|Propriedade <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>|Obtém ou define um objeto que o código de script da página da Web pode usar para se comunicar com o aplicativo.|  
-|Método <xref:System.Windows.Forms.WebBrowser.Print%2A>|Imprime a página da Web atual.|  
-|Método <xref:System.Windows.Forms.WebBrowser.Refresh%2A>|Recarrega a página da Web atual.|  
-|Método <xref:System.Windows.Forms.WebBrowser.Stop%2A>|Interrompe a navegação atual e para elementos de página dinâmicos, como sons e animação.|  
-|Propriedade <xref:System.Windows.Forms.WebBrowser.Url%2A>|Obtém ou define a URL da página da Web atual. Configurar essa propriedade leva o controle para a nova URL.|  
+|<xref:System.Windows.Forms.WebBrowser.Document%2A> propriedade|Obtém um objeto que fornece acesso gerenciado para DOM (Modelo de Objeto do Documento) HTML da página da Web atual.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> evento|Ocorre quando uma página da Web conclui o carregamento.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> propriedade|Obtém ou define o conteúdo HTML da página da Web atual.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> propriedade|Obtém o título da página da Web atual.|  
+|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> method|Navega para a página anterior no histórico.|  
+|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> method|Navega para a próxima página no histórico.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> method|Navega para a URL especificada.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating> evento|Ocorre antes do início de navegação, permitindo que a ação seja cancelada.|  
+|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> propriedade|Obtém ou define um objeto que o código de script da página da Web pode usar para se comunicar com o aplicativo.|  
+|<xref:System.Windows.Forms.WebBrowser.Print%2A> method|Imprime a página da Web atual.|  
+|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> method|Recarrega a página da Web atual.|  
+|<xref:System.Windows.Forms.WebBrowser.Stop%2A> method|Interrompe a navegação atual e para elementos de página dinâmicos, como sons e animação.|  
+|<xref:System.Windows.Forms.WebBrowser.Url%2A> propriedade|Obtém ou define a URL da página da Web atual. Configurar essa propriedade leva o controle para a nova URL.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>
@@ -52,9 +53,9 @@ O <xref:System.Windows.Forms.WebBrowser> controle fornece um wrapper gerenciado 
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [Como: Navegue até uma URL com o controle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Como: Navegar até uma URL com o controle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
 - [Como: Imprimir com um controle WebBrowser](how-to-print-with-a-webbrowser-control.md)
-- [Como: Adicionar recursos do navegador da Web a um aplicativo do Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Como: Criar um visualizador de documento HTML em um aplicativo do Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Como: Adicionar recursos do navegador da Web a um Aplicativo do Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Como: Criar um visualizador de documento HTML em um Aplicativo do Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
 - [Como: Implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](implement-two-way-com-between-dhtml-and-client.md)
-- [Segurança do WebBrowser](webbrowser-security.md)
+- [Segurança de WebBrowser](webbrowser-security.md)

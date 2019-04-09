@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 31f701223912d577d1ef4f738639186e8d413697
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 694cb88807f718a1f3122ae8cd9d7d4af4e576e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192596"
 ---
 # <a name="toolstrippanel-control-overview"></a>Visão geral do controle ToolStripPanel
 Um <xref:System.Windows.Forms.ToolStripPanel> fornece uma única área para posicionamento e reposicionamento <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles de pilha vertical ou horizontalmente, dependendo do <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> da <xref:System.Windows.Forms.ToolStripPanel>.  
@@ -29,6 +29,7 @@ Um <xref:System.Windows.Forms.ToolStripPanel> fornece uma única área para posi
 |<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|Adiciona um <xref:System.Windows.Forms.ToolStrip> a um <xref:System.Windows.Forms.ToolStripPanel>.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>
 - [Exemplo de ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms181005(v=vs.90))

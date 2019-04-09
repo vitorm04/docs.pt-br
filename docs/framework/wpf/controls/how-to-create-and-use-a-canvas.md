@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-ms.openlocfilehash: 13ed32195621350284530da78544e026ed341658
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190763"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>Como: Criar e usar uma tela
 Este exemplo mostra como criar e usar uma instância de <xref:System.Windows.Controls.Canvas>.  
@@ -29,6 +29,7 @@ Este exemplo mostra como criar e usar uma instância de <xref:System.Windows.Con
  [!code-vb[CanvasCode#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.TextBlock>
 - <xref:System.Windows.Controls.Canvas.SetTop%2A>
@@ -36,4 +37,4 @@ Este exemplo mostra como criar e usar uma instância de <xref:System.Windows.Con
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Canvas.Left%2A>
 - [Visão geral de painéis](panels-overview.md)
-- [Tópicos de instruções](canvas-how-to-topics.md)
+- [Tópicos explicativos ](canvas-how-to-topics.md)

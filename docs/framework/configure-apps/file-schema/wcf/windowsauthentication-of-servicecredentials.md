@@ -2,12 +2,12 @@
 title: <windowsAuthentication> De <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: f366c85f895356594cf8bd9049ca41c8fb458c4c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200383"
 ---
 # <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication > de \<serviceCredentials >
 Especifica as configurações de uma credencial de serviço do Windows.  
@@ -49,6 +49,7 @@ Especifica as configurações de uma credencial de serviço do Windows.
  Use esse elemento para especificar se deseja permitir acesso de usuários anônimos do Windows, definindo o `allowAnonymousLogons` atributo. Você também pode especificar se deseja incluir informações de grupo ao qual pertencem os usuários no AuthorizationContext, definindo o `includeWindowsGroups` atributo. Se ele for definido como `true` (a configuração padrão), o serviço pode determinar os grupos do Windows ao qual pertence o cliente.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.WindowsServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>

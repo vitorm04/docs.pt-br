@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 1704a7a86e89685763da7bf49a67c1fe8373124a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200981"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Conversores de tipo e extensões de marcação para XAML
 Conversores de tipo e extensões de marcação são duas técnicas que os sistemas de tipos XAML e gravadores XAML usam para gerar os componentes do grafo de objeto. Embora eles compartilham algumas características, conversores de tipo e extensões de marcação são representadas de forma diferente em um fluxo de nó XAML. Nesta documentação conjunto, conversores de tipo, extensões de marcação e construções semelhantes são, às vezes, coletivamente denominadas conversores de valor.  
@@ -66,6 +66,7 @@ Conversores de tipo e extensões de marcação são duas técnicas que os sistem
  Quando você implementa um conversor de valor, você geralmente precisa de acesso a um contexto em que o conversor de valor é aplicado. Nesse contexto é conhecido como o contexto de serviço. O contexto de serviço podem incluir informações como o contexto de esquema XAML ativo, acesso ao sistema de mapeamento de tipo que o contexto de esquema XAML e o gravador de XAML do objeto forneçam e assim por diante. Para obter mais informações sobre os contextos de serviço disponíveis para um conversor de valor e como acessar os serviços que pode ser fornecer um contexto de serviço, consulte [contextos de serviço disponíveis para conversores de tipo e extensões de marcação](service-contexts-available-to-type-converters-and-markup-extensions.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
 - [Visão geral das extensões de marcação para XAML](markup-extensions-for-xaml-overview.md)

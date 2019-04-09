@@ -2,12 +2,12 @@
 title: Práticas recomendadas de confiança parcial
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184074"
 ---
 # <a name="partial-trust-best-practices"></a>Práticas recomendadas de confiança parcial
 Este tópico descreve as práticas recomendadas ao executar o Windows Communication Foundation (WCF) em um ambiente de confiança parcial.  
@@ -66,5 +66,6 @@ Este tópico descreve as práticas recomendadas ao executar o Windows Communicat
  Como uma prática recomendada, evite criar contexto de permissão específicas de thread chamando <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, ou <xref:System.Security.PermissionSet.Deny%2A>. Em vez disso, conceder ou negar o privilégio para o aplicativo em si, para que nenhum <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A>, ou <xref:System.Security.PermissionSet.PermitOnly%2A> é necessária.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>

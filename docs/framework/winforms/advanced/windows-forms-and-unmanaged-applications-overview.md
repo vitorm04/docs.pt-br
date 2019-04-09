@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: cb7df844458be083adefa16421a7088bd1e74893
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195638"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
 Aplicativos do Windows Forms e controles podem interoperar com aplicativos não gerenciados, com algumas restrições. As seções a seguir descrevem os cenários e as configurações com suporte em controles e aplicativos do Windows Forms e aqueles que não têm suporte.  
@@ -56,13 +56,14 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
 -   Exiba cada Formulário do Windows em um novo thread. Para obter mais informações, confira [Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Windows Forms e Aplicativos Não Gerenciados](windows-forms-and-unmanaged-applications.md)
+
+- [Windows Forms e aplicativos não gerenciados](windows-forms-and-unmanaged-applications.md)
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Interoperabilidade COM em Aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [Interoperabilidade COM em aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Exemplos de interoperabilidade COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
 - [Aximp.exe (Importador de Controle ActiveX do Windows Forms)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [Expondo componentes do .NET Framework ao COM](../../interop/exposing-dotnet-components-to-com.md)
-- [Empacotando um assembly para COM](../../interop/packaging-an-assembly-for-com.md)
-- [Registrando assemblies usando COM](../../interop/registering-assemblies-with-com.md)
-- [Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Expondo componentes do .NET Framework para COM](../../interop/exposing-dotnet-components-to-com.md)
+- [Empacotando um assembly para o COM](../../interop/packaging-an-assembly-for-com.md)
+- [Registrando assemblies com o COM](../../interop/registering-assemblies-with-com.md)
+- [Como: dar suporte à interoperabilidade COM exibindo um formulário do Windows com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Como: dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

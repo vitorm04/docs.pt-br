@@ -1,5 +1,5 @@
 ---
-title: 'Como: Enviar dados para o filho MDI ativo'
+title: 'Como: enviar dados para o filho MDI ativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203321"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>Como: Enviar dados para o filho MDI ativo
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>Como: enviar dados para o filho MDI ativo
 Muitas vezes, dentro do contexto de [aplicativos de Interface de documentos múltiplos (MDI)](multiple-document-interface-mdi-applications.md), você precisará enviar dados para a janela filho ativa, como quando o usuário cola dados da área de transferência em um aplicativo MDI.  
   
 > [!NOTE]
@@ -92,8 +92,9 @@ Muitas vezes, dentro do contexto de [aplicativos de Interface de documentos múl
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)
-- [Como: Criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
-- [Como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md)
-- [Como: Determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
-- [Como: Organizar formulários filho MDI](how-to-arrange-mdi-child-forms.md)
+
+- [Aplicativos de Interface de Documentos Múltiplos (MDI)](multiple-document-interface-mdi-applications.md)
+- [Como: criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
+- [Como: criar formulários filho MDI](how-to-create-mdi-child-forms.md)
+- [Como: determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
+- [Como: organizar formulários MDI filho](how-to-arrange-mdi-child-forms.md)

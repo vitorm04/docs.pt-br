@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d25afe5ecc8dd23e78fd60fbf8452e28c5aa8be5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8062ab151efc6175aa68cb0563cd2ad042ee9cd8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189047"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>Ponteiro de função FLockClrVersionCallback
 Aponta para uma função que as chamadas de runtime (CLR) de linguagem comum para indicar que a inicialização foi iniciada ou concluída.  
@@ -47,5 +47,6 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Função LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

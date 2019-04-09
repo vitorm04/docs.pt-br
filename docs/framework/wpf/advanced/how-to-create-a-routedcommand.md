@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109038"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Como: Criar um RoutedCommand
 Este exemplo mostra como criar um personalizado <xref:System.Windows.Input.RoutedCommand> e como implementar o comando personalizado, criando um <xref:System.Windows.Input.ExecutedRoutedEventHandler> e uma <xref:System.Windows.Input.CanExecuteRoutedEventHandler> e anexá-los para um <xref:System.Windows.Input.CommandBinding>.  Para obter mais informações sobre comandos, consulte [Visão geral de comandos](commanding-overview.md).  
@@ -48,5 +48,6 @@ Este exemplo mostra como criar um personalizado <xref:System.Windows.Input.Route
  Quando o botão é clicado, o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método no personalizado <xref:System.Windows.Input.RoutedCommand> é chamado.  O <xref:System.Windows.Input.RoutedCommand> gera a <xref:System.Windows.Input.CommandManager.PreviewExecuted> e <xref:System.Windows.Input.CommandManager.Executed> eventos roteados.  Esses eventos atravessam a árvore de elementos procurando um <xref:System.Windows.Input.CommandBinding> para esse determinado comando.  Se um <xref:System.Windows.Input.CommandBinding> for encontrado, o <xref:System.Windows.Input.ExecutedRoutedEventHandler> associado <xref:System.Windows.Input.CommandBinding> é chamado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Input.RoutedCommand>
-- [Visão geral de comandos](commanding-overview.md)
+- [Visão geral dos comandos](commanding-overview.md)

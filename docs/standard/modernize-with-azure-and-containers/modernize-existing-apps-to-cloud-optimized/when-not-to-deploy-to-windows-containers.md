@@ -1,17 +1,17 @@
 ---
-title: Quando não implantar para contêineres do Windows
+title: Quando não implantar Contêineres do Windows
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Quando não implantar para contêineres do Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 75db31a8f4599e9681c2c4156d93db5416d2ca96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200734"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>Quando não implantar para contêineres do Windows
+# <a name="when-not-to-deploy-to-windows-containers"></a>Quando não implantar Contêineres do Windows
 
 Algumas tecnologias do Windows não têm suporte pelos contêineres do Windows. Nesses casos, você ainda precisará migrar para VMs de padrões, geralmente com apenas o Windows e o IIS.
 
@@ -34,7 +34,6 @@ Casos de não tem suportados em contêineres do Windows, a partir de maio de 201
 -   Aplicativos de interface do usuário (aplicativos de cliente com uma interface do usuário visual) não são cenários com suporte.
 
 -   Funções de infraestrutura do Windows (DNS, DHCP, DC, NTP, impressão, servidor de arquivos, etc. IAM) não são os cenários com suporte.
-
 
 Para solicitações da comunidade e outros cenários sem suporte, consulte o fórum do UserVoice para contêineres do Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
 

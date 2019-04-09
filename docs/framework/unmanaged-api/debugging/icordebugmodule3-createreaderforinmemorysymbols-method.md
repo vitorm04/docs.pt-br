@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f553870399a8f2ddb78e01d27a7f7e5bd32d786b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ccfe83707b6354c42a4c3c81e911918b2ea79ec4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108908"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>Método ICorDebugModule3::CreateReaderForInMemorySymbols
 Cria um leitor de símbolo de depuração para um módulo dinâmico.  
@@ -72,6 +72,7 @@ HRESULT CreateReaderForInMemorySymbols (
  **Versões do .NET framework:** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

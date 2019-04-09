@@ -2,12 +2,12 @@
 title: LINQ to SQL de n camadas com serviços da Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107400"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL de n camadas com serviços da Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é projetado principalmente para uso na camada intermediária em uma camada de acesso de dados flexível (DAL) como um serviço Web. Se a camada de apresentação é uma página da Web ASP.NET, então você usa o controle de servidor Web de <xref:System.Web.UI.WebControls.LinqDataSource> para gerenciar a transferência de dados entre a interface do usuário e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na camada intermediária. Se a camada de apresentação não é uma página ASP.NET, então a camada intermediária e a camada de apresentação devem fazer qualquer trabalho adicional para gerenciar serialização e desserialização de dados.  
@@ -30,12 +30,13 @@ ms.locfileid: "56092716"
  Para inserir dados, a camada de apresentação pode criar um novo objeto e enviá-lo para a camada intermediária, ou pode fazer com que a camada intermediária criar o objeto com base nos valores que fornece. Em geral, recuperar e inserir dados em aplicativos n-tier não difere do processo muito 2 em aplicativos de camada. Para obter mais informações, consulte [consulta o banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) e [tomada e enviando alterações de dados](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md).  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Controlar alterações para atualizações e exclusões  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] suporta concorrência otimista com base nos carimbos de data/hora (também chamados RowVersions) e valores originais. Se as tabelas de base de dados têm carimbos de data/hora, então atualizações e exclusões exigem vez trabalho adicional na camada intermediária na camada de apresentação. Entretanto, se você deve usar valores originais para verificação de simultaneidade otimista, então a camada de apresentação é responsável para controlar os valores e enviá-los novamente quando fazer atualizações. Isso ocorre porque as alterações que foram feitas às entidades na camada de apresentação não são controladas na camada intermediária. De fato, a recuperação original de uma entidade, e a atualização feita a eventual ele normalmente são executadas por duas instâncias separadas de <xref:System.Data.Linq.DataContext>completamente.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte à simultaneidade otimista com base em carimbos de hora (também chamados RowVersions) e valores originais. Se as tabelas de base de dados têm carimbos de data/hora, então atualizações e exclusões exigem vez trabalho adicional na camada intermediária na camada de apresentação. Entretanto, se você deve usar valores originais para verificação de simultaneidade otimista, então a camada de apresentação é responsável para controlar os valores e enviá-los novamente quando fazer atualizações. Isso ocorre porque as alterações que foram feitas às entidades na camada de apresentação não são controladas na camada intermediária. De fato, a recuperação original de uma entidade, e a atualização feita a eventual ele normalmente são executadas por duas instâncias separadas de <xref:System.Data.Linq.DataContext>completamente.  
   
  Maior o número de alterações que a camada de apresentação isso, ele fica mais complexa para controlar as alterações e para empacotar-las de volta para a camada intermediária. A implementação de um mecanismo para alterações de comunicação é completamente até o aplicativo. O único requisito é que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deve ser fornecido os valores originais que são necessários para verificação de simultaneidade otimista.  
   
  Para obter mais informações, consulte [recuperação de dados e operações de CUD em aplicativos de N camadas (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Aplicativos de N camadas e remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+
+- [Aplicativos de n camadas e remoto com LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Visão geral do controle de servidor Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

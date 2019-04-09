@@ -1,19 +1,19 @@
 ---
-title: 'Como: Associar dados ao controle DataGridView do Windows Forms usando o Designer'
+title: 'Como: Associar dados ao controle DataGridView do Windows Forms usando o designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, binding to a data source
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 8c90366111957f27a6bd86035013eba00426f46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200227"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Associar dados ao controle DataGridView do Windows Forms usando o Designer
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Associar dados ao controle DataGridView do Windows Forms usando o designer
 Você pode usar o designer para conectar-se um <xref:System.Windows.Forms.DataGridView> controle a fontes de dados de diferentes variedades, incluindo bancos de dados, objetos de negócios ou serviços da Web. Quando você associa o controle a uma fonte de dados usando o designer, o controle é automaticamente associado a um <xref:System.Windows.Forms.BindingSource> componente que representa a fonte de dados. Além disso, as colunas são automaticamente geradas no controle para coincidir com as informações de esquema fornecidas pela fonte de dados.  
   
  Depois que as colunas tiverem sido geradas, você poderá modificá-las para atender às suas necessidades. Por exemplo, você pode remover ou ocultar colunas que você não queira exibir, pode reorganizar as colunas ou pode modificar os tipos de coluna. Para obter mais informações sobre como modificar colunas, consulte os tópicos listados na seção Consulte também.  
@@ -45,18 +45,19 @@ Você pode usar o designer para conectar-se um <xref:System.Windows.Forms.DataGr
     >  Se o projeto já tiver uma fonte de dados, você também poderá usar a janela **Fontes de Dados** para criar um formulário de dados. Para obter mais informações, consulte [Janela de Fontes de Dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [Como: Conectar a dados em um banco de dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o Designer](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Como: Alterar a ordem das colunas no controle DataGridView do Windows Forms usando o Designer](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [Como: Alterar o tipo de uma coluna de DataGridView dos Windows Forms usando o Designer](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [Como: Congelar colunas no controle DataGridView do Windows Forms usando o Designer](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [Como: Ocultar colunas no controle DataGridView do Windows Forms usando o Designer](hide-columns-in-the-datagrid-using-the-designer.md)
-- [Como: Tornar colunas somente leitura no controle DataGridView do Windows Forms usando o Designer](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o designer](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Como: Alterar a ordem de colunas no controle DataGridView do Windows Forms usando o designer](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [Como: Alterar o tipo de uma coluna DataGridView do Windows Forms usando o designer](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [Como: Congelar colunas no controle DataGridView do Windows Forms usando o designer](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [Como: Ocultar colunas no controle DataGridView do Windows Forms usando o designer](hide-columns-in-the-datagrid-using-the-designer.md)
+- [Como: Deixar as colunas somente leitura no controle DataGridView do Windows Forms usando o designer](make-columns-read-only-in-the-datagrid-using-the-designer.md)
 - [Como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Como: Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Janela Fontes de Dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [Como: Exibir dados relacionados em um aplicativo do Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

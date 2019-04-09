@@ -1,5 +1,5 @@
 ---
-title: Elemento <servicePointManager> (configurações de rede)
+title: <servicePointManager> (Configurações de rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 3a18f9eb3d38ef272b7a4df58d8588b622662184
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277544"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202203"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > (configurações de rede)
 Configura as conexões aos recursos da rede.  
@@ -67,6 +67,7 @@ Configura as conexões aos recursos da rede.
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

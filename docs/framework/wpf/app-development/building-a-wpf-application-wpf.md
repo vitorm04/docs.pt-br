@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184477"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 Aplicativos do Windows Presentation Foundation (WPF) podem ser criados como [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] executáveis (.exe), bibliotecas (. dll) ou uma combinação de ambos os tipos de assemblies. Este tópico apresenta como compilar aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve as principais etapas no processo de build.  
-  
-  
+
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>Compilando um aplicativo WPF  
  Um aplicativo WPF pode ser compilado das seguintes maneiras:  
@@ -102,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Compilação de marcação — passo 2  
- Nem todos as páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] são compiladas durante o passo 1 da compilação de marcação. Os arquivos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que têm referências de tipo definidas localmente (referências a tipos definidos no código em outro local do mesmo projeto) são isentos de compilação nesse momento. Isso ocorre porque esses tipos definidos localmente existem somente na fonte e ainda não foram compilados. Para determinar isso, o analisador usa heurísticas que envolvem a procura de itens como `x:Name` no arquivo de marcação. Quando uma instância dessas é encontrada, a compilação desse arquivo de marcação é adiada até que os arquivos de código tenham sido compilados, e depois disso, o segundo passo da compilação da marcação processa esses arquivos.  
+ Nem todos as páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] são compiladas durante o passo 1 da compilação de marcação. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos que têm referências de tipo (referências a tipos definidos no código em outro lugar no mesmo projeto) definidas localmente são isentos de compilação no momento. Isso ocorre porque esses tipos definidos localmente existem somente na fonte e ainda não foram compilados. Para determinar isso, o analisador usa heurísticas que envolvem a procura de itens como `x:Name` no arquivo de marcação. Quando uma instância dessas é encontrada, a compilação desse arquivo de marcação é adiada até que os arquivos de código tenham sido compilados, e depois disso, o segundo passo da compilação da marcação processa esses arquivos.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Classificação de arquivos  
@@ -167,7 +166,8 @@ End Sub
 -   Nada é recompilado (se nada no projeto tiver sido alterado).  
   
 ## <a name="see-also"></a>Consulte também
-- [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)
+
+- [Implantar um aplicativo WPF](deploying-a-wpf-application-wpf.md)
 - [Referência do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
 - [URIs "pack://" no WPF](pack-uris-in-wpf.md)
-- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](wpf-application-resource-content-and-data-files.md)
+- [Arquivos de recurso, conteúdo e dados do aplicativo WPF](wpf-application-resource-content-and-data-files.md)

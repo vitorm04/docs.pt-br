@@ -1,15 +1,15 @@
 ---
-title: 'Como: Especifique os nomes de banco de dados'
+title: 'Como: especificar nomes de banco de dados'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: a1198a294cd4921728919981bae213c0ee891da6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c694678dc3a60cf91dea62f2a17973b396e2b19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184516"
 ---
-# <a name="how-to-specify-database-names"></a>Como: Especifique os nomes de banco de dados
+# <a name="how-to-specify-database-names"></a>Como: especificar nomes de banco de dados
 Use a propriedade de <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> em um atributo de <xref:System.Data.Linq.Mapping.DatabaseAttribute> para especificar o nome de uma base de dados quando um nome não é fornecido pela conexão.  
   
  Para exemplos de códigos, consulte <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
@@ -23,5 +23,6 @@ Use a propriedade de <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> e
 3.  Definir o valor da propriedade de <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> o nome que você deseja especificar.  
   
 ## <a name="see-also"></a>Consulte também
-- [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Como: Personalizar Classes de entidade usando o Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+
+- [Modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Como: personalizar classes de entidade usando o editor de códigos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

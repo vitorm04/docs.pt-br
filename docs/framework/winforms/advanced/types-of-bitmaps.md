@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089146"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de bitmaps
 Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz retangular de pixels. O número de bits dedicados a um pixel individual determina o número de cores que podem ser atribuídos a esse pixel. Por exemplo, se cada pixel é representado por 4 bits, em seguida, um determinado pixel pode ser atribuído um dos 16 cores diferentes (2^4 = 16). A tabela a seguir mostra alguns exemplos do número de cores que podem ser atribuídos a um pixel representado por um determinado número de bits.  
@@ -53,7 +53,7 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
  ![Exemplo de bitmap](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formatos de arquivos gráficos  
- Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dá suporte a formatos de arquivo gráfico descritos nos parágrafos a seguir.  
+ Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] suporta o arquivo gráfico formatos descritos nos parágrafos a seguir.  
   
 ### <a name="bmp"></a>BMP  
  BMP é um formato padrão usado pelo Windows para armazenar imagens independente de dispositivo e aplicativo. O número de bits por pixel (1, 4, 8, 15, 24, 32 ou 64) para um determinado arquivo BMP é especificado no cabeçalho do arquivo. Arquivos BMP com 24 bits por pixel são comuns. Arquivos BMP geralmente não são compactados e, portanto, não são adequados para a transferência pela Internet.  
@@ -86,8 +86,9 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
  TIFF é um formato flexível e extensível que tem suporte em uma ampla variedade de plataformas e aplicativos de processamento de imagem. Arquivos TIFF podem armazenar imagens com um número arbitrário de bits por pixel e podem empregar uma variedade de algoritmos de compactação. Várias imagens podem ser armazenadas em um único arquivo TIFF de várias páginas. Informações relacionadas à imagem (marca de scanner, computador host, tipo de compactação, orientação, amostras por pixel e assim por diante) podem ser armazenadas no arquivo e organizadas com o uso de marcas. O formato TIFF pode ser estendido conforme necessário para a aprovação e a adição de novas marcas.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
 - [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Trabalhando com imagens, bitmaps, ícones e metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Determinar os parâmetros com suporte em um codificador'
+title: 'Como: determinar os parâmetros com suporte de um codificador'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-ms.openlocfilehash: f5af00833c8d8373444b475673709d902598d9d0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204569"
 ---
-# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Como: Determinar os parâmetros com suporte em um codificador
+# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Como: determinar os parâmetros com suporte de um codificador
 Você pode ajustar os parâmetros de imagem, como o nível de qualidade e compactação, mas você deve saber quais parâmetros são suportados por um codificador de determinada imagem. O <xref:System.Drawing.Image> classe fornece o <xref:System.Drawing.Image.GetEncoderParameterList%2A> método para que você possa determinar quais parâmetros de imagem têm suporte para um codificador específico. Você pode especificar o codificador com um GUID. O <xref:System.Drawing.Image.GetEncoderParameterList%2A> método retorna uma matriz de <xref:System.Drawing.Imaging.EncoderParameter> objetos.  
   
 ## <a name="example"></a>Exemplo  
@@ -31,6 +31,7 @@ Você pode ajustar os parâmetros de imagem, como o nível de qualidade e compac
 -   Um <xref:System.Windows.Forms.PaintEventArgs>, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Listar os codificadores instalados](how-to-list-installed-encoders.md)
-- [Tipos de Bitmaps](types-of-bitmaps.md)
-- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)
+
+- [Como: listar os codificadores instalados](how-to-list-installed-encoders.md)
+- [Tipos de bitmaps](types-of-bitmaps.md)
+- [Usando codecs de imagem no GDI+ gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)

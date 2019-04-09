@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desenhar uma linha tracejada personalizada'
+title: 'Como: desenhar uma linha tracejada personalizada'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109181"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>Como: Desenhar uma linha tracejada personalizada
+# <a name="how-to-draw-a-custom-dashed-line"></a>Como: desenhar uma linha tracejada personalizada
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] oferece diversos estilos de traço que estão listados no <xref:System.Drawing.Drawing2D.DashStyle> enumeração. Se esses estilos de traço padrão não atenderem às suas necessidades, será possível criar um padrão de traço personalizado.  
   
 ## <a name="example"></a>Exemplo  
@@ -33,4 +33,5 @@ ms.locfileid: "58410219"
  Criar um formulário do Windows e lidar com o formulário <xref:System.Windows.Forms.Control.Paint> eventos. Cole o código anterior para o <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando uma caneta para desenhar linhas e formas](using-a-pen-to-draw-lines-and-shapes.md)

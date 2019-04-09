@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108960"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicialização de elementos de objeto que não estejam em uma árvore de objetos
 Alguns aspectos da inicialização de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] são deixados para processos que normalmente dependem de aquele elemento estar conectado à árvore lógica ou à árvore visual. Este tópico descreve as etapas que podem ser necessárias para inicializar um elemento que não está conectado a nenhuma árvore.  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>Elementos e a árvore lógica  
  Quando você cria uma instância de uma classe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] no código, deve estar ciente de que diversos aspectos da inicialização do objeto para uma classe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deliberadamente não fazem parte do código executado ao chamar o construtor da classe. Especialmente para uma classe de controle, a maior parte da representação visual do controle não é definida pelo construtor. Em vez disso, a representação visual é definida pelo modelo do controle. O modelo pode vir de uma variedade de fontes, mas geralmente é obtido de estilos de tema. Os modelos são efetivamente de associação tardia; o modelo necessário não é anexado ao controle em questão até que o controle esteja pronto para o layout. E o controle não está pronto para o layout até seja anexado a uma árvore lógica que se conecte a uma superfície de renderização na raiz. É esse elemento de nível raiz que inicia a renderização de todos os seus elementos filho, conforme definido na árvore lógica.  
   
@@ -43,6 +41,7 @@ Alguns aspectos da inicialização de [!INCLUDE[TLA#tla_winclient](../../../../i
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Árvores no WPF](trees-in-wpf.md)
 - [Visão geral de renderização de gráficos do WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-ms.openlocfilehash: 2397662c79af208f2528f6eedcd5995cfac9526c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203607"
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>Como: Executar mídia usando um VideoDrawing
 Para reproduzir um arquivo de áudio ou vídeo, você deve usar um <xref:System.Windows.Media.VideoDrawing> e um <xref:System.Windows.Media.MediaPlayer>. Há duas maneiras de carregar e reproduzir mídia. A primeira é usar um <xref:System.Windows.Media.MediaPlayer> e uma <xref:System.Windows.Media.VideoDrawing> por si só e a segunda maneira é criar seu próprio <xref:System.Windows.Media.MediaTimeline> para usar com o <xref:System.Windows.Media.MediaPlayer> e <xref:System.Windows.Media.VideoDrawing>.  
@@ -33,5 +33,6 @@ Para reproduzir um arquivo de áudio ou vídeo, você deve usar um <xref:System.
  Observe que, quando você usa um <xref:System.Windows.Media.MediaTimeline>, você usar o interactive <xref:System.Windows.Media.Animation.ClockController> retornados da <xref:System.Windows.Media.Animation.Clock.Controller%2A> propriedade do <xref:System.Windows.Media.MediaClock> para controlar a reprodução de mídia em vez dos métodos interativos do <xref:System.Windows.Media.MediaPlayer>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.VideoDrawing>
 - [Visão geral dos objetos de desenho](drawing-objects-overview.md)

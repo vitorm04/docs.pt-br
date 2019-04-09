@@ -2,12 +2,12 @@
 title: Estados e controle de alterações de objeto
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191148"
 ---
 # <a name="object-states-and-change-tracking"></a>Estados e controle de alterações de objeto
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos sempre participam em qualquer *estado*. Por exemplo, quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cria um novo objeto, o objeto está no estado de `Unchanged` . Um novo objeto que você mesmo criar for desconhecido para o <xref:System.Data.Linq.DataContext> e está em `Untracked` estado. Após a execução com êxito de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, todos os objetos conhecidos a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] estão no estado de `Unchanged` . (A única exceção é representada por aqueles que foram excluídas com êxito de base de dados, que estão no estado de `Deleted` e inutilizável que a instância de <xref:System.Data.Linq.DataContext> .)  
@@ -63,5 +63,6 @@ ms.locfileid: "54683304"
  Se você atualizar a referência ambos necessário e a chave estrangeira correspondente, você deve certificar-se que concordam. Uma exceção de <xref:System.InvalidOperationException> é lançada se os dois não são sincronizados momento em que você chamar <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Embora as alterações de valor de chave estrangeira são suficientes para afetar uma atualização de linha base, você deve alterar a referência para manter a conectividade do grafo de objeto e consistência bidirecional relações.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
